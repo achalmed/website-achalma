@@ -1,14 +1,17 @@
 ---
-title: Comandos básicos de VIM
-subtitle: Mensaje del Primero de Mayo del Partido Comunista del Perú.
+title: Comandos básicos de Vim para mejorar tu flujo de trabajo
+subtitle: Aprende a utilizar los comandos esenciales de Vim para ser más productivo en tu programación.
 description: |
-  Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
+  En este artículo encontrarás una guía completa de los comandos básicos de Vim, uno de los editores de texto más populares en el mundo de la programación. Desde cómo abrir y cerrar archivos, hasta cómo buscar y reemplazar texto, aprenderás a utilizar Vim para mejorar tu flujo de trabajo y ser más eficiente en tu programación.
 categories:
-  - Política
+  - Programación
+  - Productividad
+  - Tecnología
 tags:
-  - Partido Comunista del Perú
-  - Revolución
-  - Día del proletariado
+  - Vim
+  - Editor de texto
+  - Comandos
+  - Programación
 author: Edison Achalma Mendoza
 date: "09/27/2022"
 date-modified: "today"

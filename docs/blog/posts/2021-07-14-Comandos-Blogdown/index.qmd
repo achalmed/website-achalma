@@ -1,14 +1,17 @@
 ---
-title: Comandos de Blogdown
-subtitle: Mensaje del Primero de Mayo del Partido Comunista del Perú.
+title: Comandos útiles de Blogdown para crear sitios web con R
+subtitle: Una guía completa para comenzar a utilizar Blogdown en RStudio
 description: |
-  Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
+  Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.
 categories:
-  - Política
+  - Herramientas de programación
+  - Desarrollo web
+  - Análisis de datos.
 tags:
-  - Partido Comunista del Perú
-  - Revolución
-  - Día del proletariado
+  - RStudio
+  - Blogdown
+  - Comandos
+  - Sitios web
 author: Edison Achalma Mendoza
 date: "07/14/2021"
 date-modified: "today"

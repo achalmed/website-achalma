@@ -5,10 +5,14 @@ description: |
   Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
 categories:
   - Política
+  - Filosofía
+  - Educación
+  - Eventos
 tags:
-  - Partido Comunista del Perú
-  - Revolución
-  - Día del proletariado
+  - Seminario
+  - Filosofía contemporánea
+  - Reflexiones
+  - Vida cotidiana
 author: Comité Central Partido Comunista del Perú
 date: "04/29/2023"
 ---

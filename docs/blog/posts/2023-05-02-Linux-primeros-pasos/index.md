@@ -1,14 +1,17 @@
 ---
-title: Linux primeros pasos
-subtitle: Mensaje del Primero de Mayo del Partido Comunista del Perú.
+title: Linux Primeros Pasos
+subtitle: Una guía para principiantes en Linux
 description: |
-  Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
+  Aprende los fundamentos de Linux en esta guía para principiantes, que te llevará a través de los primeros pasos para empezar a trabajar con este sistema operativo de código abierto.
 categories:
-  - Política
+  - Tecnología
+  - Informática
+  - Sistemas Operativos
 tags:
-  - Partido Comunista del Perú
-  - Revolución
-  - Día del proletariado
+  - Linux
+  - Principiantes
+  - Código Abierto
+  - Comandos
 author: Edison Achalma Mendoza
 date: "05/02/2023"
 date-modified: "today"

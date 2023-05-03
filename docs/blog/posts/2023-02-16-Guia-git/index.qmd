@@ -1,17 +1,17 @@
 ---
-title: Comandos de git 
-subtitle: guia completa
+title: Guía de Git Cómo trabajar en equipo en proyectos de desarrollo de software
+subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.guia completa
 description: |
-  Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
+  Esta guía detallada de Git te enseñará todo lo que necesitas saber para empezar a trabajar en equipo en proyectos de desarrollo de software. Desde la instalación hasta la colaboración con otros desarrolladores, esta guía te proporcionará las herramientas necesarias para mantener tu código organizado y siempre actualizado.
 categories:
-  - Política
+  - Desarrollo de software
+  - Control de versiones
+  - Trabajo en equipo
 tags:
   - Git
-  - Github
-  - GitBasic
-  - GitAdvanced
-  - GitTips
-  - OpenSource
+  - GitHub
+  - colaboración
+  - desarrollo de software
 author: Edison Achalma Mendoza
 date: "02/16/2023"
 date-modified: "today"

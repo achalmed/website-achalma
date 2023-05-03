@@ -1,14 +1,17 @@
 ---
-title: Comandos google assistant
-subtitle: Mensaje del Primero de Mayo del Partido Comunista del Perú.
+title: Aprende a usar Google Assistant Comandos útiles y trucos
+subtitle: Maximiza tu experiencia con el asistente virtual de Google
 description: |
-  Comité Central del Partido Comunista del Perú llama a seguir sembrando revolución en el día del proletariado.
+  Descubre los comandos más útiles y trucos para utilizar Google Assistant en tu vida diaria. Desde programar recordatorios hasta controlar dispositivos inteligentes en tu hogar, este blog te mostrará cómo aprovechar al máximo esta herramienta.
 categories:
-  - Política
+  - Tecnología
+  - Productividad
+  - Asistentes Virtuales
 tags:
-  - Partido Comunista del Perú
-  - Revolución
-  - Día del proletariado
+  - Google Assistant
+  - Comandos de voz
+  - Trucos de productividad
+  - Automatización
 author: Edison Achalma Mendoza
 date: "05/23/2020"
 date-modified: "today"

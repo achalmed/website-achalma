@@ -10,12 +10,14 @@ website:
   title: "achalmaedison"
   image: "quarto.png"
   favicon: "favicon.png"
-  google-analytics: "G-FV9Z7SDZ0M"
+  google-analytics: "G-XGH6TP6RB3"
   open-graph: true
   twitter-card: true
   site-url: https://achalmawebsite.netlify.app/
+  repo-url: https://github.com/achalmed/website-achalma
   repo-actions: [edit, issue]
   page-navigation: true
+  reader-mode: true
   search:
     type: overlay
     algolia:
@@ -28,13 +30,13 @@ website:
     left: |
       © 2023 Edison Achalma, Ayacucho
     center:
-      - text: "About"
+      - text: "Acerca de"
         href: about.qmd
       - text: "FAQ"
         href: docs/faq/index.qmd
-      - text: "License"
+      - text: "Licencia"
         href: license.qmd
-      - text: "Trademark"
+      - text: "Marca comercial"
         href: trademark.qmd
     right:
       - icon: twitter
@@ -56,7 +58,7 @@ website:
         href: docs/get-started/index.qmd
       - text: "Cursos"
         href: docs/guide/index.qmd
-      - text: Extensions
+      - text: Extensiones
         href: docs/extensions/index.qmd
       - text: "Referencias"
         href: docs/reference/index.qmd
@@ -500,7 +502,6 @@ format:
 
 filters:
   - filters/tools-tabset.lua
-
 
 freeze: true
 

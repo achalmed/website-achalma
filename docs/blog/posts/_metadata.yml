@@ -1,6 +1,6 @@
 comments:
   giscus:
-    repo: quarto-dev/quarto-web
+    repo: achalmed/website-achalma
     category: Blog
 title-block-banner: "#EDF3F9"
 title-block-banner-color: body
@@ -10,4 +10,6 @@ format:
   html:
     include-after-body:
       - ../signup.html
+execute:
+  keep-md: true
 search: false

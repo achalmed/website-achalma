@@ -13,6 +13,7 @@ website:
   google-analytics: "G-XGH6TP6RB3"
   open-graph: true
   twitter-card: true
+  cookie-consent: true
   site-url: https://achalmawebsite.netlify.app/
   repo-url: https://github.com/achalmed/website-achalma
   repo-actions: [edit, issue]
@@ -498,6 +499,7 @@ format:
       sidebar-width: 250px
       body-width: 900px
       margin-width: 300px
+
 
 
 filters:

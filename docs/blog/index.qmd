@@ -1,0 +1,16 @@
+---
+title: Blogs
+subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+listing:
+  sort: "date desc"
+  contents: "posts/*/index.qmd"
+  sort-ui: false
+  filter-ui: false
+  categories: true
+  feed: true
+page-layout: full
+margin-header: signup.html
+title-block-banner: "#EDF3F9"
+title-block-banner-color: body
+search: false
+---

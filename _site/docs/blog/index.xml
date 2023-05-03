@@ -17,7 +17,408 @@
 <width>144</width>
 </image>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Mon, 01 May 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 02 May 2023 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Linux primeros pasos</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>LINUX<br>
+primeros pasos como usuario</p>
+<p>SISTEMAS OPERATIVOS</p>
+<p>SISTEMA OPERATIVO es el conjunto de programas que proporciona los mecanismos y reglas básicas de funcionamiento para acceder a los recursos del ordenador de forma adecuada, especialmente a todos los dispositivos periféricos.</p>
+<ul>
+<li><strong>MS-DOS</strong></li>
+<li><strong>WINDOWS</strong></li>
+<li><strong>Mac-OS</strong></li>
+<li><strong>UNIX</strong>&nbsp;(Grandes máquinas)&nbsp;——&nbsp;&nbsp;<strong>LINUX</strong>&nbsp;(PCs)</li>
+</ul>
+<p>Tipos de programas:</p>
+<ul>
+<li><strong>Programas de Control</strong>: Gestión de software y hardware, p.e. colas de impresión, etc.</li>
+<li><strong>Utilidades del sistema</strong>: editores de texto, compiladores, gestión de correo, etc.</li>
+</ul>
+<p>ORIGEN Y DESARROLLO DE LINUX</p>
+<ul>
+<li>Creado por&nbsp;<strong>Linus Torvalds</strong>&nbsp;en 1991. Inspirado en&nbsp;<strong>UNIX</strong>.</li>
+<li>Sistema&nbsp;<strong>multiusuario</strong>&nbsp;y&nbsp;<strong>multitarea</strong>.</li>
+<li>Desarrollado por miles de programadores en la red.</li>
+<li>Filosofía&nbsp;<strong>GNU</strong>. Libre distribución bajo&nbsp;<strong>GPL</strong>&nbsp;(General Public License).</li>
+<li>No garantizado. Flexible, estable y barato.</li>
+<li>Al principio no era fácil de usar, porque estaba pensado para programadores.</li>
+<li>Cada vez se desarrollan más aplicaciones y utilidades pensando en usuarios no programadores, para facilitar el uso de INTERNET y competir con WINDOWS.</li>
+</ul>
+<p><strong>Distribuciones</strong>: Núcleo (<strong>Kernel</strong>) de Linux +&nbsp; Aplicaciones y Utilidades para un grupo específico de usuarios</p>
+<ul>
+<li>Algunas distribuciones son gratuitas y otras no.</li>
+<li>Algunas de las distribuciones están mantenidas por empresas comerciales (ej. RedHat, Fedora, openSUSE, Ubuntu), y otras son mantenidas por una comunidad de programadores (ej. Debian).</li>
+<li>Normalmente se obtiene una distribución descargándola de Internet.</li>
+<li>Distribuciones mas usadas:
+<ul>
+<li><strong>Debian</strong></li>
+<li><strong>Slackware</strong></li>
+<li><strong>SUSE</strong></li>
+<li><strong>Caldera</strong></li>
+<li><strong>Red Hat Enterprise Linux</strong>(comercial)</li>
+<li><strong>Fedora Project</strong>&nbsp;(basada en RedHat)</li>
+<li><strong>Mandriva</strong>&nbsp;(basada en RedHat)</li>
+<li><strong>Ubuntu</strong>&nbsp;(basada en Debian)</li>
+<li><strong>Guadalinex</strong>&nbsp;(basado en Debian, promovido por la Junta de Andalucía)</li>
+</ul></li>
+</ul>
+<p>PRIMEROS PASOS</p>
+<p><strong>ARRANQUE DEL SISTEMA</strong></p>
+<ul>
+<li><strong>LILO o GRUB:</strong>&nbsp;programa que se encarga de arrancar el S.O. deseado por el usuario cuando coexisten Windows y Linux</li>
+</ul>
+<p><strong>INICIO DE UNA SESIÓN DE USUARIO</strong></p>
+<ul>
+<li><strong>Login</strong>:Nombre del usuario.</li>
+<li><strong>Password</strong>: Contraseña secreta de acceso privado de cada usuario. (Sólo aparecen asteriscos cuando se teclea)</li>
+</ul>
+<p><strong>ELECCIÓN DE PASSWORDS</strong></p>
+<p>La utilización de passwords está hoy en día extendida a muchos aspectos de la vida cotidiana, no sólo a la utilización de máquinas compartidas.</p>
+<p>La elección de un&nbsp;<strong>password seguro</strong>&nbsp;es tanto más crucial cuanto mayor sea la importancia de lo que “protege”: cuentas bancarias, messenger, cuenta de e-mail, reserva de biletes de tren, etc.</p>
+<p>Passwords no seguros pueden ser averiguados por programas especializados en un tiempo inferior a 1 segundo (por ejemplo para una palabra de diccionario) o en pocas horas (passwords de hasta 6 caracteres formados por letras mayúsculas, minúsculas y números).</p>
+<p>Variantes del tipo sustituir A por 4 , la E por un 3, o la I por un 1 están ya incorporadas en los crackers.</p>
+<p>Recomendación para passwords importantes:</p>
+<ul>
+<li>Utilizar passwords cuanto más largos mejor, al menos de 6 caracteres (mejor 8)</li>
+<li>Utilizar letras mayúsculas, minúsculas, números y caracteres especiales&nbsp; como&nbsp;<strong>! ” $ % &amp; / ( ) = ? ¿</strong></li>
+<li>El tiempo para crackear un password así con 8 caracteres es de 39 años !!!</li>
+</ul>
+<p>Lo que NO debes hacer con un password:</p>
+<ul>
+<li>Apuntarlo en un post-it y pegarlo en la pantalla</li>
+<li>Decírselo a cualquiera</li>
+<li>Usar palabras de un diccionario, ni siquiera concatenadas (megustaminovio)</li>
+<li>Usar passwords de menos de 6 caracteres</li>
+<li>Llevar las claves de tarjetas y los passwords de las cuentas bancarias por internet en la cartera, o en una agenda en el bolso.</li>
+</ul>
+<p><strong>EL PROBLEMA DE LOS BUENOS PASSWORDS ES ACORDARSE DE ELLOS: aqui tienes un truco</strong></p>
+<p>Piensa en una frase y utiliza las iniciales de las palabras, mezcladas con números y algún signo, de forma que&nbsp; puedas recordarla.</p>
+<p>Ejemplos:</p>
+<p><strong>E95faP+L</strong></p>
+<p>(El 95 fui a Paris y Londres)</p>
+<p><strong>Uiv+q%p</strong></p>
+<p>(Una imagen vale más que 100 palabras)</p>
+<p><strong>2+2s4!</strong></p>
+<p>(dos más dos son cuatro!)</p>
+<p><strong>$90%pa</strong></p>
+<p>(somos 90 por ciento pura agua)</p>
+<p><strong>V(aLy$l</strong></p>
+<p>(Vente conmigo a Lepe y serás lepera)</p>
+<p>Puedes crear tus propias reglas personales: elegir las segundas letras, tomar las dos primeras …</p>
+<p><strong>CAMBIO DEL PASSWORD DE USUARIO</strong></p>
+<ol type="1">
+<li>Elegir una contraseña nueva atendiendo a las recomendaciones anteriores.</li>
+<li>Abrir un Emulador de Terminal desde el panel.</li>
+<li>Teclear en la Linea de Comandos del terminal una de los siguientes instrucciones:</li>
+</ol>
+<ul>
+<li><strong>passwd</strong>&nbsp;(para instalaciones locales de Linux)</li>
+<li><strong>yppasswd</strong>&nbsp;(para instalaciones de Linux con sistema de archivos compartidos)</li>
+</ul>
+<ol start="5" type="1">
+<li>Teclear la contraseña actual.&nbsp; (No se visualiza)</li>
+<li>Teclear la nueva contraseña.&nbsp; (No se visualiza)</li>
+<li>Confirmar la nueva contraseña. (No se visualiza)</li>
+<li>Salir del terminal con la instrucción&nbsp;<strong>exit</strong></li>
+</ol>
+<p><strong>SALIDA DE LA SESIÓN</strong></p>
+<ul>
+<li>Sesión Failsafe:&nbsp; tecleando&nbsp;&nbsp;<strong>exit</strong></li>
+<li>Sesiones en entorno de ventanas:&nbsp; eligiendo&nbsp;<strong>Terminar</strong>&nbsp;en el&nbsp;<strong>Menú de Inicio</strong>.</li>
+</ul>
+<p><strong>CIERRE DEL SISTEMA</strong></p>
+<ul>
+<li>Eligiendo&nbsp;<strong>Apagar</strong>&nbsp;o&nbsp;<strong>Reiniciar</strong>&nbsp;en el&nbsp;<strong>Menú Sistema</strong></li>
+</ul>
+<p>SISTEMA MULTIUSUARIO</p>
+<ul>
+<li>LINUX&nbsp; puede tener habilitados muchos usuarios.</li>
+<li>Pueden trabajar simultáneamente a través de la red.</li>
+<li>Cada usuario tiene una&nbsp;<strong>cuota de disco</strong>&nbsp;duro, una cantidad máxima de disco que puede usar.</li>
+<li>Hay un superusuario llamado&nbsp;&nbsp;<strong>root</strong>&nbsp; que actua como administrador del sistema y que dispone de permisos PARA TODO. Son funciones exclusivas del&nbsp;&nbsp;<strong>root</strong>:</li>
+</ul>
+<blockquote class="blockquote">
+<ul>
+<li>Habilitar y deshabilitar usuarios.</li>
+<li>Cambiar contraseñas de otros usuarios.</li>
+<li>Asignar o modificar las cuotas de disco.</li>
+<li>Decidir qué aplicaciones y utilidades puede usar cada usuario.</li>
+<li>Organizar a los usuarios por grupos.</li>
+<li>Instalar o desinstalar programas.</li>
+<li>…</li>
+</ul>
+</blockquote>
+<p><strong>Nota:</strong>&nbsp;Es muy importante reservar el usuario&nbsp;<strong>root</strong>&nbsp;exclusivamente para labores de administración del sistema, incluso cuando se instale un sistema LINUX particular, es decir, que vaya a ser utilizado por un único usuario. Debe tenerse en cuenta que, debido a que el&nbsp;<strong>root</strong>&nbsp;dispone de TODOS LOS PERMISOS, un error puede resultar catastrófico. Por ello se debe dar de alta, al menos, un usuario “corriente” y trabajar habitualmente con esa cuenta. Utilizar la cuenta del&nbsp;<strong>root</strong>&nbsp;sólo para administración, instalación de nuevo software, etc.</p>
+<p><strong>NUNCA</strong>&nbsp;utilices la cuenta del&nbsp;<strong>root</strong>&nbsp;para acceder a Internet. Y esmérate con su password.</p>
+<p>MODOS DE TRABAJO</p>
+<ul>
+<li><p><strong>Modo de comandos</strong>: El usuario se comunica con el ordenador mediante la&nbsp;<strong>Linea de Comandos</strong>&nbsp;de un terminal o de un emulador de terminal. Estos comandos o instrucciones pueden ser interpretados por el sistema usando diferentes programas denominados&nbsp;<strong>Shell</strong>. (Lo usaremos sólo esporádicamente).</p></li>
+<li><p><strong>Modo gráfico</strong>: El usuario se comunica con el ordenador&nbsp; mediante un&nbsp;<strong>Interfaz Gráfico de Usuario</strong>&nbsp;(<strong>GUI</strong>) que se encarga de interpretar las diferentes acciones realizadas con el teclado o con el ratón sobre diferentes objetos gráficos como&nbsp;<strong>iconos</strong>,&nbsp;<strong>botones</strong>,&nbsp;<strong>ventanas</strong>,&nbsp;&nbsp;<strong>menús</strong>,&nbsp;<strong>barras de desplazamiento</strong>&nbsp;(<strong>scroll</strong>),&nbsp;<strong>lineas separadoras</strong>, etc.</p>
+<ul>
+<li>En UNIX, el GUI habitual es el sistema&nbsp;<strong>X Window</strong>&nbsp;que está formado fundamentalmente por dos programas:
+<ul>
+<li><strong>Servidor X</strong>&nbsp;(<strong>X Server</strong>): programa que dibuja en la pantalla los objetos gráficos</li>
+<li><strong>Gestor de Ventanas</strong>&nbsp;(<strong>Window Manager</strong>): los más usados son&nbsp;&nbsp;<strong>GNOME</strong>&nbsp; y&nbsp;&nbsp;<strong>KDE</strong>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>SISTEMA DE ARCHIVOS Y CARPETAS</p>
+<p><strong>NOMBRES DE FICHEROS Y DIRECTORIOS</strong></p>
+<p><strong>Archivos o Ficheros</strong>&nbsp;(<strong>Files</strong>) : Reglas para los nombres</p>
+<ul>
+<li><p>De 1 a&nbsp; 255 caracteres. Se pueden usar todos menos el&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****/****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aunque …</p></li>
+<li><p>No es recomendable usar caracteres como&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**=&nbsp;&nbsp; ^&nbsp;&nbsp; ~&nbsp;&nbsp; ’&nbsp;&nbsp; “&nbsp;&nbsp; `&nbsp;&nbsp; *&nbsp;&nbsp; ;&nbsp;&nbsp; -&nbsp;&nbsp; ?&nbsp;&nbsp; [ ] ( ) ! &amp;&nbsp;&gt;&nbsp;&lt;**</p></li>
+<li><p>Pueden aparecer sólo números</p></li>
+<li><p>Se distinguen mayúsculas y minúsculas: README no es lo mismo que ReaDme</p></li>
+<li><p>IMPORTANTE: Si se van a compartir archivos con WINDOWS no se debe usar esa distinción</p></li>
+<li><p>Los nombres de archivos pueden, aunque no es necesario, llevar una extensión o sufijo (lo que aparece al final del nombre, después de un punto) : &nbsp;&nbsp;&nbsp;<strong>Nombre.extension</strong></p></li>
+<li><p>Las extensiones sirven principalmente a título orientativo. Algunos programas reconocen determinadas extensiones y las aceptan “por defecto”:</p></li>
+<li><p><strong>txt</strong>&nbsp;para archivos de texto</p></li>
+<li><p><strong>htm</strong>&nbsp; y&nbsp;<strong>html</strong>&nbsp;para archivos de hipertexto (formato usual de las páginas de Internet)</p></li>
+<li><p><strong>png</strong>,&nbsp;&nbsp;<strong>tif</strong>,&nbsp;&nbsp;<strong>jpg</strong>&nbsp;y&nbsp;<strong>gif</strong>&nbsp;para archivos de imagenes en distintos formatos</p></li>
+<li><p><strong>f</strong>&nbsp; y &nbsp;<strong>f90</strong>&nbsp;para archivos fuente en lenguaje Fortran</p></li>
+<li><p><strong>m</strong>&nbsp; archivos conteniendo programas MATLAB</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p><strong>Carpetas o Directorios</strong>&nbsp;(<strong>Folder</strong>&nbsp;o&nbsp;<strong>Directory</strong>)</p>
+<ul>
+<li>Tipo especial de fichero que contiene a su vez otros ficheros y/o subcarpetas.</li>
+<li>Mismas reglas para los nombres que los ficheros.</li>
+<li>Las carpetas no suelen tener extensiones.</li>
+</ul>
+<p><strong>ESTRUCTURA DEL SISTEMA DE FICHEROS</strong></p>
+<p>El sistema de archivos es, más o menos, “la forma de organizar la información almacenada en el disco duro”. La mayoría de los sistemas operativos posee su propio sistema de archivos. El sistema de archivos nativo de Linux es el&nbsp;<strong>EXT2</strong>. Normalmente, los sistemas operativos proveen los mecanismos para crear, mover, renombrar y eliminar tanto archivos como directorios.</p>
+<p>La estructura de directorios suele ser jerárquica, ramificada o “en árbol”:</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/https:/personal.us.es/echevarria/Curso/images/FilesAndFolders.png" class="img-fluid" alt="Organización jeráquica de archivos"><br>
+<a href="http://es.wikipedia.org/wiki/Archivo:FilesAndFolders.png">Origen de la imagen</a></p>
+<p>La estructura de directorios que sigue Linux es similar a la de cualquier sistema UNIX. La estructura del sistema de archivos NO está ligada de forma directa a la estructura de hardware. A diferencia de Windows, es independiente del número de discos duros, disqueteras o CDROMs. No hay una “unidad” para cada unidad física de disco o partición como en Windows (**A:**,&nbsp;**C:**, etc.), sino que todos los discos duros o de red se montan bajo un sistema de directorios en árbol, y algunos de esos directorios enlazan con estas unidades físicas de disco. IMPORTANTE: Las barras en Linux al igual que en cualquier UNIX son inclinadas hacia la derecha, como se puede ver más abajo (ese es el motivo de que en internet sean inclinadas hacia la derecha, ya que nació bajo UNIX).</p>
+<ul>
+<li><p>Estructura jerárquica de árbol invertido:</p></li>
+<li><p>Desde una&nbsp;<strong>carpeta raiz</strong>, denotada por&nbsp;&nbsp;/&nbsp;, “cuelgan” otros archivos y/o carpetas.</p></li>
+<li><p>De cada subcarpeta pueden “colgar” a su vez otros archivos y/o carpetas.</p></li>
+<li><p>etc</p></li>
+<li><p>“Colgar” significa&nbsp; “estar contenido en”</p></li>
+<li><p>Todos los archivos y/o carpetas están&nbsp; finalmente colgados de la carpeta raíz&nbsp;&nbsp;/</p></li>
+<li><p>Carpeta “<strong>padre</strong>” de una carpeta es aquella que la contiene y está en el nivel inmediatamente superior de la estructura de árbol.</p></li>
+</ul>
+<p>La ubicación de un fichero en la estructura de archivos se denota mediante su&nbsp;<strong>path</strong>&nbsp;ó&nbsp;<strong>ruta</strong>: se trata de una cadena de caracteres que incluye todo el “camino” de directorios que llevan desde el directorio raiz (&nbsp;&nbsp;/&nbsp;&nbsp;) hasta el fichero considerado. Se separa un directorio del siguiente de nuevo mediante el caracter especial &nbsp;&nbsp;/&nbsp;&nbsp; .</p>
+<p>Ejemplo: el path&nbsp;&nbsp;<strong>/usr/local/bin/readme.txt</strong>&nbsp;&nbsp;indica la ubicación del fichero de nombre&nbsp;&nbsp;<strong>readme.txt</strong>&nbsp;&nbsp;que cuelga de la carpeta&nbsp;&nbsp;<strong>bin</strong>&nbsp;&nbsp;que a su vez cuelga de la carpeta&nbsp;&nbsp;<strong>local</strong>&nbsp;&nbsp;que a su vez cuelga de la carpeta&nbsp;&nbsp;<strong>usr</strong>&nbsp;&nbsp;que cuelga de la raiz del sistema de archivos &nbsp;&nbsp;/&nbsp;&nbsp;.</p>
+<p><strong>ALGUNOS DIRECTORIOS IMPORTANTES</strong></p>
+<p>Los directorios principales que podemos encontrar en cualquier sistema Linux son:</p>
+<p>Directorio</p>
+<p>Descripción</p>
+<p><strong>/</strong></p>
+<p>Es la raíz del sistema de directorios. Aquí se monta la partición principal Linux EXT.</p>
+<p><strong>/etc</strong></p>
+<p>Contiene los archivos de configuración de la mayoría de los programas.</p>
+<p><strong>/home</strong></p>
+<p>Contiene los archivos personales de los usuarios.</p>
+<p><strong>/bin</strong></p>
+<p>Contiene comandos básicos y muchos programas.</p>
+<p><strong>/dev</strong></p>
+<p>Contiene archivos simbólicos que representan partes del hardware, tales como discos duros, memoria…</p>
+<p><strong>/mnt</strong></p>
+<p>Contiene subdirectorios donde se montan (se enlaza con) otras particiones de disco duro, CDROMs, etc.</p>
+<p><strong>/tmp</strong></p>
+<p>Ficheros temporales o de recursos de programas.</p>
+<p><strong>/usr</strong></p>
+<p>Programas y librerías instalados con la distribución</p>
+<p><strong>/usr/local</strong></p>
+<p>Programas y librerías instalados por el administrador</p>
+<p><strong>/sbin</strong></p>
+<p>Comandosadministrativos</p>
+<p><strong>/lib</strong></p>
+<p>Librerías varias y módulos (“trozos”) del kernel</p>
+<p><strong>/var</strong></p>
+<p>Datos varios como archivos de log (registro de actividad) de programas, bases de datos, contenidos del servidor web, copias de seguridad…</p>
+<p><strong>/proc</strong></p>
+<p>Información temporal sobre los procesos del sistema (explicaremos esto más en profundidad posteriormente).</p>
+<p><strong>OTROS CONCEPTOS RELACIONADOS CON DIRECTORIOS:</strong></p>
+<ul>
+<li><p><strong>Directorio</strong>&nbsp;o&nbsp;<strong>Carpeta de trabajo (Working Directory)</strong>: es, en cada momento, el directorio en que se está trabajando. Cualquier fichero que el S.O. tenga que buscar, lo hará en primer lugar en dicho directorio.</p></li>
+<li><p><strong>Ruta</strong>&nbsp;<strong>(Path) de un fichero</strong>: secuencia de directorios, separados por el símbolo&nbsp;<strong>/</strong>,&nbsp; que se ha de recorrer en la estructura de árbol para llegar a un fichero determinado.</p></li>
+<li><p><strong>Path absoluto</strong>: muestra toda la ruta desde la raiz del sistema de ficheros&nbsp;<strong>/</strong>&nbsp;&nbsp;</p></li>
+<li><p><strong>Path relativo</strong>: muestra la ruta desde el directorio de trabajo.&nbsp; Puede empezar en:</p></li>
+<li><p>una subdirectorio del directorio de trabajo,&nbsp; si el camino es descendente</p></li>
+<li><p><strong>. .</strong>&nbsp;&nbsp;si el camino comienza de forma ascendente</p></li>
+<li><p><strong>.</strong>&nbsp;&nbsp; denota el directorio de trabajo</p></li>
+<li><p><strong>. .</strong>&nbsp;&nbsp;denota el directorio padre del directorio de trabajo</p></li>
+<li><p><strong>Directorio o carpeta personal</strong>&nbsp;de un usuario (<strong>home directory</strong>): es el que contiene los ficheros de un usuario del sistema. Cada usuario tiene su propio directorio personal. Frecuentemente, los directorios personales cuelgan del directorio&nbsp;<strong>/home</strong>, es decir, son de la forma&nbsp;<strong>/home/usuario</strong>. Cuando se empieza una sesión en un sistema Linux, de forma automática se elige el&nbsp;<strong>home directory</strong>&nbsp;como&nbsp;<strong>working directory</strong>.</p></li>
+</ul>
+<p><strong>PUNTOS DE MONTAJE DE DISPOSITIVOS:</strong></p>
+<p>En Linux, los distintos dispositivos conectados al ordenador forman parte del sistema de archivos, de manera que, una vez montados, para el usuario son como una carpeta más del sistema de ficheros. Habitualmente se montan en&nbsp;<strong>/mnt</strong><br>
+Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<strong>/mnt/floppy</strong>&nbsp;&nbsp;&nbsp; y el&nbsp;&nbsp;<strong>CDROM</strong>&nbsp;&nbsp; suele ser&nbsp;&nbsp;&nbsp;<strong>/mnt/cdrom</strong></p>
+<p><strong>SISTEMAS DE ARCHIVOS COMPARTIDOS&nbsp;Yellow Pages</strong></p>
+<p>Este sistema permite que un conjunto de máquinas con sistemas Linux&nbsp; conectadas en red compartan un sistema de archivos común. Esto permite que todos los usuarios de esas máquinas dispongan de todos sus archivos en todas las máquinas. En este caso, el sistema de archivos suele estar físicamente en una de las máquinas. Un usuario puede, así, acceder a cualquiera de las máquinas con el mismo login y el mismo password.</p>
+<p>Cuando se usa el servicio yellow pages (páginas amarillas), para cambiar el password de un usuario es necesario utilizar el comando&nbsp;<strong>yppasswd</strong>&nbsp; en lugar de passwd.</p>
+<p>PROPIEDAD, PERMISOS Y DERECHOS DE ACCESO A CARPETAS Y FICHEROS</p>
+<p>Al ser Linux un sistema multiusuario, es preciso que esté definido de quién es cada cosa (carpetas y ficheros) y qué derechos de acceso tiene cada usuario.</p>
+<p>Cada usuario es propietario, en general, de todos los ficheros y subdirectorios que cuelgan de su directorio personal: puede crear, modificar y borrar en él todo lo que quiera. Ningún otro usuario (excepto el root) puede acceder&nbsp;a los ficheros de otro, ni siquiera verlos.</p>
+<p>En Linux, cada fichero y carpeta tiene un&nbsp;<strong>propietario</strong>&nbsp;(<strong>owner</strong>). El propietario es el que define los permisos de acceso de otros usuarios a sus ficheros. Para ello, el conjunto de usuarios de una máquina se entiende dividido en tres grupos:</p>
+<ul>
+<li>el mismo propietario (<strong>owner</strong>)</li>
+<li>el grupo de usuarios al que pertenece el propietario (<strong>group</strong>)</li>
+<li>el resto del mundo (<strong>world</strong>)</li>
+</ul>
+<p>Dichos permisos, a su vez, son de tres tipos:</p>
+<ul>
+<li>de lectura (<strong>read</strong>)</li>
+<li>de escritura (<strong>write</strong>)</li>
+<li>de ejecución (<strong>execute</strong>)</li>
+</ul>
+<p>Los permisos de acceso a un fichero sólo los puede cambiar el propietario y el (todopoderoso)&nbsp;<strong>root</strong>. En general, cada usuario puede leer en el resto de directorios del sistema de ficheros, excepto en la del root y en las de los otros usuarios.</p>
+<ul>
+<li>Los ficheros y carpetas del sistema son propiedad del root</li>
+<li>Los ficheros y carpetas de programas instalados son propiedad del&nbsp; root</li>
+<li>El&nbsp; root tiene todos los permisos sobre todos los ficheros de todos los usuarios.</li>
+</ul>
+<p>EL GESTOR DE VENTANAS KDE</p>
+<p><strong>PANTALLA KDE:</strong></p>
+<blockquote class="blockquote">
+<p><strong>Panel de KDE:</strong></p>
+<ul>
+<li>Menú de inicio de aplicaciones</li>
+<li>Escritorios virtuales</li>
+<li>Directorio Personal</li>
+<li>Lista de ventanas abiertas</li>
+<li>Emulador de Terminal</li>
+<li>Editores sencillos: Kedit, Kwrite</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Ventanas:</strong></p>
+<ul>
+<li><p>Barra de títulos:</p></li>
+<li><p>Icono de aplicación (Manipulación de ventanas)</p></li>
+<li><p>Fijación de ventana</p></li>
+<li><p>Minimizar, maximizar y cerrar</p></li>
+<li><p>Barra de menús</p></li>
+<li><p>Barra de herramientas</p></li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Konqueror: Gestor gráfico de archivos (File Manager):</strong></p>
+<ul>
+<li>Navegar por la estructura de directorios</li>
+<li>Crear y borrar carpetas</li>
+<li>Copiar y mover carpetas</li>
+<li>Cambiar nombre a ficheros y carpetas</li>
+<li>Abrir y borrar ficheros</li>
+<li>Ver y modificar las propiedades de ficheros y carpetas</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Konsole: Emulador de terminal</strong></p>
+<p>Se usa para trabajar con el Sistema Operativo en modo de comandos, es decir para introducir directamente instrucciones UNIX al sistema. Las instrucciones se escriben en la Línea de Comandos, después del&nbsp;<strong>prompt</strong>&nbsp;del usuario.</p>
+</blockquote>
+<p><strong>ALGUNOS COMANDOS:</strong></p>
+<blockquote class="blockquote">
+<p><strong>clear</strong></p>
+<p>limpia la pantalla</p>
+<p><strong>date</strong></p>
+<p>devuelve la fecha y hora actuales</p>
+<p><strong>cal</strong></p>
+<p>muestra el calendario</p>
+<p><strong>history</strong></p>
+<p>muestra la historia de los últimos comandos usados</p>
+<p><strong>man comando</strong></p>
+<p>Muestra la página del manual correspondiente al comando</p>
+<p><strong>more file</strong></p>
+<p>Si&nbsp;<strong>file</strong>&nbsp;es un fichero de texto, lo muestra de página en página. Se pasa página con la barra espaciadora. Se termina con&nbsp;<strong>q</strong></p>
+<p><strong>ls</strong></p>
+<p>muestra el contenido del directorio de trabajo</p>
+<p><strong>ls -l</strong></p>
+<p>muestra el contenido del directorio de trabajo en forma de lista, incluyendo información extra</p>
+<p><strong>ls -a</strong></p>
+<p>muestra el contenido del directorio de trabajo incluídos los ficheros ocultos</p>
+<p><strong>ls dir</strong></p>
+<p>ejecuta&nbsp;<strong>ls</strong>&nbsp;sobre el directorio&nbsp;<strong>dir</strong>&nbsp;- se pueden usar opciones:&nbsp;<strong>ls -la dir</strong></p>
+<p><strong>pwd</strong></p>
+<p>muestra el nombre del directorio de trabajo (print working directory)</p>
+<p><strong>df</strong></p>
+<p>muestra el espacio libre y usado en los discos</p>
+<p><strong>du -sk dir</strong></p>
+<p>muestra la cantidad de espacio de disco usada por el directorio&nbsp;<strong>dir</strong>&nbsp;(y todo lo que hay dentro)</p>
+<p><strong>du -Sk dir</strong></p>
+<p>lo mismo, pero especificando por subdirectorios</p>
+<p><strong>mkdir name</strong></p>
+<p>crea un directorio de nombre&nbsp;<strong>name</strong>&nbsp;(make directory) - si&nbsp;<strong>name</strong>&nbsp;no incluye un&nbsp;<strong>path</strong>, el directorio se crea en el directorio de trabajo</p>
+<p><strong>rm fich</strong></p>
+<p>borra el fichero&nbsp;<strong>fich</strong>&nbsp;(remove)</p>
+<p><strong>rmdir direc</strong></p>
+<p>borra el directorio&nbsp;&nbsp;<strong>dir</strong>&nbsp;(tiene que estar vacío)</p>
+<p><strong>rm -i fich</strong></p>
+<p>antes de borrar el fichero&nbsp;<strong>fich</strong>, pide confirmación (modo interactivo)</p>
+<p><strong>cp fich dir</strong></p>
+<p>crea una copia del fichero&nbsp;<strong>fich</strong>&nbsp;en el directorio&nbsp;<strong>dir</strong></p>
+<p><strong>cp fich1 fich2</strong></p>
+<p>crea una copia del fichero&nbsp;<strong>fich1</strong>&nbsp;y le pone el nombre&nbsp;<strong>fich2</strong></p>
+<p><strong>mv fich dir</strong></p>
+<p>“mueve” el fichero&nbsp;<strong>fich</strong>&nbsp;&nbsp;al directorio&nbsp;<strong>dir</strong></p>
+<p><strong>mv fich1 fich2</strong></p>
+<p>“mueve” el fichero&nbsp;<strong>fich1</strong>&nbsp;&nbsp;al fichero&nbsp;<strong>fich2</strong>&nbsp;(es decir, lo cambia de nombre) (<strong>fich2</strong>&nbsp;puede también incluir un&nbsp;<strong>path</strong>; en ese caso también lo cambia de sitio)</p>
+<p><strong>cd</strong></p>
+<p>cambia el directorio de trabajo al directorio personal (home)</p>
+<p><strong>cd dir</strong></p>
+<p>cambia el directorio de trabajo al directorio&nbsp;<strong>dir</strong></p>
+<p><strong>cd ..</strong></p>
+<p>cambia el directorio de trabajo al “padre” del actual</p>
+<p><strong>ps</strong></p>
+<p>proporciona información sobre los procesos activos del usuario</p>
+<p><strong>ps aux</strong></p>
+<p>proporciona información sobre todos los procesos activos en el sistema</p>
+<p><strong>kill -9 PID</strong></p>
+<p>elimina el proceso con número de identificación PID</p>
+<p><strong>gzip fich</strong></p>
+<p>crea un fichero de nombre&nbsp;<strong>fich.gz</strong>, comprimido de&nbsp;<strong>fich</strong></p>
+<p><strong>gunzip fich.gz</strong></p>
+<p>descomprime el fichero&nbsp;<strong>fich.gz</strong></p>
+<p><strong>tar</strong></p>
+<p>condensa directorios en un sólo fichero y viceversa</p>
+<p><strong>tar -cf file.tar direc</strong></p>
+<p>crea el fichero&nbsp;<strong>file.tar</strong>&nbsp;con el contenido del directorio&nbsp;<strong>direc</strong></p>
+<p><strong>tar -cvf file.tar direc</strong></p>
+<p>lo mismo, pero con explicaciones (v==verbose)</p>
+<p><strong>tar -xf file.tar</strong></p>
+<p>extrae los ficheros de&nbsp;<strong>file.tar</strong></p>
+<p><strong>tar -xvf file.tar</strong></p>
+<p>los mismo, pero con explicaciones</p>
+<p><strong>exit</strong></p>
+<p>finaliza la sesión de trabajo; en un terminal, cierra el terminal.</p>
+</blockquote>
+<p><strong>PERSONALIZACIÓN DE LAS CUENTAS:</strong></p>
+<blockquote class="blockquote">
+<ul>
+<li>el fichero de configuración&nbsp;<strong>.bashrc</strong></li>
+<li>definición o modificación de comandos:&nbsp;<strong>alias</strong></li>
+<li>variable de entorno&nbsp;<strong>PATH</strong>: definición de los caminos de búsqueda</li>
+<li>ejecución de un fichero de configuración:&nbsp;<strong>source</strong></li>
+</ul>
+</blockquote>
+<p><strong>MODIFICACIÓN DEL FICHERO DE CONFIGURACIÓN .bahsrc PARA EL ACENTO ^ EN MATLAB:</strong></p>
+<blockquote class="blockquote">
+<ul>
+<li>En el directorio personal, editar el fichero oculto&nbsp;<strong>.bashrc</strong></li>
+<li>Añadir, al final, la orden:&nbsp;<strong>setxkbmap -variant nodeadkeys</strong></li>
+</ul>
+</blockquote>
+
+
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/index.html</guid>
+  <pubDate>Tue, 02 May 2023 05:00:00 GMT</pubDate>
+  <media:content url="https://personal.us.es/echevarria/Curso/images/FilesAndFolders.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Día Internacional de los Trabajadores de mayo de 2023.</title>
   <dc:creator>Comité Central Partido Comunista del Perú</dc:creator>
@@ -576,6 +977,826 @@ Quarto 1.3 Feature
   <media:content url="https://achalmawebsite.netlify.app/docs/blog/posts/2023-03-13-code-annotation/annotation.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
+  <title>Comandos de git</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Achalma Edison. ¿Necesitas aprender algunos comandos de&nbsp;<a href="https://git-scm.com/">GIT</a>&nbsp;básicos? Has venido al lugar correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos que puedes utilizar como referencia diaria.</p>
+<p>¡Empecemos!</p>
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>Los sistemas de control de versiones como Git son imprescindibles para las prácticas recomendadas del desarrollo de software moderno. El control de versiones le permite realizar un seguimiento de su software a nivel de fuente. Puede rastrear cambios, volver a etapas anteriores y producir ramificaciones para crear versiones alternativas de archivos y directorios.</p>
+<p>Los archivos de muchos proyectos de software se mantienen en repositorios de Git y las plataformas como GitHub, GitLab y Bitbucket facilitan el intercambio y la colaboración en proyectos de desarrollo de software.</p>
+<p>En esta guía, mostraremos cómo instalar y configurar Git en un servidor de Ubuntu 20.04. Abordaremos la instalación del software de dos formas diferentes: a través del&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04#installing-git-with-default-packages">administrador de paquetes integrado</a>&nbsp;y a través de la&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source">fuente</a>. Cada uno de estos enfoques ofrece sus propios beneficios, dependiendo de sus necesidades específicas.</p>
+</section>
+<section id="entendiendo-cómo-funciona-git" class="level1">
+<h1>Entendiendo cómo funciona GIT</h1>
+<p>GIT es el SCV (sistema de control de versiones) de código abierto&nbsp;<a href="https://www.g2.com/categories/version-control-systems?utf8=%E2%9C%93&amp;order=g2_score">más utilizado</a>&nbsp;que te permite rastrear los cambios realizados en los archivos. Las empresas y los programadores suelen utilizar el GIT para colaborar en el desarrollo de software y aplicaciones.</p>
+<p>Un proyecto GIT consta de tres secciones principales:&nbsp;<strong>el directorio de trabajo,&nbsp;el área de preparación&nbsp;y&nbsp;el directorio git.</strong></p>
+<p>El directorio de trabajo es donde se agregan, borran y editan los archivos. Luego, los cambios son preparados (indexados) en el área de preparación. Después de que confirmes tus cambios, la instantánea de los cambios se guardará en el directorio git.</p>
+<p>Todo el mundo puede usar GIT ya que está disponible para&nbsp;<a href="https://git-scm.com/book/es/v2">Linux</a>,&nbsp;<a href="https://gitforwindows.org/">Windows</a>,&nbsp;<a href="https://git-scm.com/download/mac">Mac</a>&nbsp;y&nbsp;<a href="https://www.opencsw.org/packages/git/">Solaris</a>. El software puede tener una fuerte curva de aprendizaje, pero hay muchos&nbsp;<a href="https://www.hostinger.es/tutoriales/instalar-git-en-distintos-sistemas-operativos">tutoriales</a>&nbsp;disponibles para ayudarte.</p>
+</section>
+<section id="comandos-de-git-básicos" class="level1">
+<h1>Comandos de GIT básicos</h1>
+<p>Aquí hay algunos comandos básicos de GIT que debes conocer:</p>
+<ol type="1">
+<li><code>git init</code>: Inicializa un nuevo repositorio de Git en la carpeta actual.</li>
+<li><code>git clone [url]</code>: Clona un repositorio existente a la carpeta actual.</li>
+<li><code>git add [file]</code>: Agrega un archivo al área de stage (preparación) para ser incluido en el próximo commit.</li>
+<li><code>git commit -m "[message]"</code>: Realiza un commit (guarda un punto de referencia) con un mensaje describiendo los cambios realizados.</li>
+<li><code>git status</code>: Muestra el estado actual del repositorio, incluyendo los archivos modificados y los que están pendientes de commit.</li>
+<li><code>git log</code>: Muestra un historial de todos los commits realizados en el repositorio.</li>
+<li><code>git diff</code>: Muestra las diferencias entre los cambios realizados y el último commit.</li>
+<li><code>git branch</code>: Muestra una lista de todas las ramas existentes en el repositorio.</li>
+<li><code>git checkout [branch]</code>: Cambia a una rama específica.</li>
+<li><code>git merge [branch]</code>: Combina los cambios de una rama específica con la rama actual.</li>
+<li><code>git config --global user.email "achalmaedison@outlook.com"</code></li>
+<li><code>git config --global user.name "achalmed"</code></li>
+</ol>
+<p>Estos son solo algunos de los comandos básicos de Git, hay muchos otros comandos avanzados disponibles para realizar tareas más complejas como trabajar con ramas remotas y manejar conflictos.</p>
+</section>
+<section id="instalar-y-configurar-git-en-ubuntu-20.04" class="level1">
+<h1>Instalar y Configurar Git en Ubuntu 20.04</h1>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tags/git">Git</a></li>
+<li><a href="https://www.digitalocean.com/community/tags/open-source">Open Source</a></li>
+<li><a href="https://www.digitalocean.com/community/tags/ubuntu">Ubuntu</a></li>
+</ul>
+<p>By&nbsp;<a href="https://www.digitalocean.com/community/users/ltagliaferri">Lisa Tagliaferri</a></p>
+<section id="instalación-de-git-con-paquetes-predeterminados" class="level2">
+<h2 class="anchored" data-anchor-id="instalación-de-git-con-paquetes-predeterminados">Instalación de Git con paquetes predeterminados</h2>
+<p>La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source">instalación desde la fuente</a>.</p>
+<p>Es probable que Git ya esté instalado en el servidor Ubuntu 20.04. Puede confirmar que ese es el caso de su servidor con el siguiente comando:</p>
+<p><code>git --version</code></p>
+<p>Si obtiene un resultado similar al siguiente, significa que Git ya está instalado.</p>
+<p>Output git version 2.25.1&nbsp;&nbsp;</p>
+<p>De ser así, puede pasar a la&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#setting-up-git">configuración de Git</a>, o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source">cómo instalar desde la fuente</a>.</p>
+<p>Sin embargo, si no obtuvo como resultado un número de versión de Git, puede instalarlo con el administrador de paquetes predeterminado APT de Ubuntu.</p>
+<ol type="1">
+<li>Abre una terminal.</li>
+<li>Ejecuta el siguiente comando para actualizar la lista de paquetes disponibles: <code>sudo apt update</code></li>
+<li>Instala Git usando el siguiente comando: <code>sudo apt install git</code></li>
+<li>Verifica la instalación de Git ejecutando el comando <code>git --version</code></li>
+</ol>
+<p>Una vez que Git esté instalado, puedes configurarlo para que se adapte a tus necesidades. Para configurar Git en Ubuntu, sigue estos pasos:</p>
+<ol type="1">
+<li>Establece tu nombre de usuario en Git utilizando el comando <code>git config --global user.name "Your Name"</code></li>
+<li>Establece tu dirección de correo electrónico en Git utilizando el comando <code>git config --global user.email "your.email@example.com"</code></li>
+<li>Para verificar la configuración actual de Git, utiliza el comando <code>git config --list</code></li>
+</ol>
+<p>Es recomendable usar un editor de texto para escribir los mensajes de commit, para esto se puede configurar con el siguiente comando <code>git config --global core.editor "nano"</code> o <code>git config --global core.editor "vi"</code> o el editor de tu preferencia.</p>
+</section>
+<section id="instalación-de-git-desde-la-fuente" class="level2">
+<h2 class="anchored" data-anchor-id="instalación-de-git-desde-la-fuente">Instalación de Git desde la fuente</h2>
+<p>Si busca un método más flexible para instalar Git, puede optar por compilar el software desde la fuente, lo cual explicaremos en esta sección. Esto toma más tiempo y no se mantendrá en su administrador de paquetes, pero le permitirá descargar la versión más reciente y le brindará mayor control sobre las opciones que incluya si quiere personalizarlo.</p>
+<p>Verifique la versión de Git que está instalada actualmente en el servidor: <code>git --version</code></p>
+<p>Si Git está instalado, obtendrá un resultado similar al siguiente:</p>
+<p>Output git version 2.25.1</p>
+<p>Antes de comenzar, debe instalar el software necesario para Git. Todo se encuentra disponible en los repositorios predeterminados, de modo que podemos actualizar nuestro índice local de paquetes y luego instalar los paquetes pertinentes. <code>sudo apt update</code>&nbsp;&nbsp;</p>
+<p><code>sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc</code>&nbsp;&nbsp;</p>
+<p>Tras haber instalado las dependencias necesarias, cree un directorio temporal y vaya a él. Aquí es donde descargaremos nuestro tarball de Git. <code>mkdir tmp</code></p>
+<p><code>cd /tmp</code></p>
+<p>Desde el&nbsp;<a href="https://git-scm.com/">sitio web del proyecto Git</a>, podemos navegar a la lista de tarball disponible en&nbsp;<a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">https://mirrors.edge.kernel.org/pub/software/scm/git/</a>&nbsp;y descargar la versión que quiera utilizar. En el momento de escribir este artículo, la versión más reciente es 2.26.2, así que descargaremos esa versión para nuestra demostración. Utilizaremos curl y enviaremos el archivo que descarguemos a&nbsp;git.tar.gz. <code>curl -o git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz</code>&nbsp;&nbsp;</p>
+<p>Descomprima el archivo tarball:</p>
+<p><code>tar -zxf git.tar.gz</code></p>
+<p>A continuación, vaya al nuevo directorio de Git: <code>cd git-*</code>&nbsp;&nbsp;</p>
+<p>Ahora, podrá crear el paquete e instalarlo escribiendo estos dos comandos: <code>make prefix=/usr/local all</code></p>
+<p><code>sudo make prefix=/usr/local install</code>&nbsp;&nbsp;</p>
+<p>Ahora, sustituya el proceso de shell para que se utilice la versión de Git que acabamos de instalar: <code>exec bash</code>&nbsp;&nbsp;</p>
+<p>Una vez completado esto, puede estar seguro de que su instalación se realizó correctamente comprobando la versión. <code>git --version</code></p>
+<p>Output</p>
+<p>git version 2.26.2</p>
+<p>Con Git instalado correctamente, ahora puede finalizar su configuración.</p>
+</section>
+<section id="configuración-de-git" class="level2">
+<h2 class="anchored" data-anchor-id="configuración-de-git">Configuración de Git</h2>
+<p>Una vez que esté satisfecho con la versión de Git, debería configurar Git de modo que los mensajes de confirmación que genere contengan la información correcta y lo respalden a medida que compile su proyecto de software.</p>
+<p>Esta configuración es posible si aplicamos el comando&nbsp;git config. Específicamente, debemos proporcionar nuestro nombre y nuestra dirección de correo electrónico debido a que Git inserta esta información en cada confirmación que hacemos. Podemos añadir esta información escribiendo lo siguiente: <code>git config --global user.name "Your Name"</code></p>
+<p>For example:&nbsp;<code>git config --global user.name "achalmed"</code></p>
+<p><code>git config --global user.email "youremail@domain.com"</code></p>
+<p><code>git config --global user.email "achalmaedison@outlook.com"</code></p>
+<p>Podemos ver todos los elementos de configuración creados escribiendo lo siguiente: <code>git config --list</code></p>
+<p>Output</p>
+<p>user.name=Your Name user.email=youremail@domain.com …</p>
+<p>La información que ingresa se almacena en el archivo de configuración de Git. Tendrá la opción de editarlo manualmente con el editor de texto que prefiera (en este tutorial utilizaremos nano) como se muestra a continuación: <code>nano ~/.gitconfig</code>&nbsp;&nbsp;</p>
+<p>~/.gitconfig contents</p>
+<p>[user] name = Your Name email =&nbsp;youremail@domain.com</p>
+<p>Para salir del editor de texto pulse&nbsp;CTRL&nbsp;y&nbsp;X, luego&nbsp;Y&nbsp;y, a continuación,&nbsp;ENTER.</p>
+<p>Existen muchas otras opciones que puede configurar, pero estas son las dos esenciales que se necesitan. Si omite este paso, probablemente verá mensajes de advertencia cuando realice una confirmación con Git. Esto implica un mayor trabajo para usted, pues tendrá que revisar las confirmaciones que haya realizado con la información corregida.</p>
+</section>
+<section id="conclusión" class="level2">
+<h2 class="anchored" data-anchor-id="conclusión">Conclusión</h2>
+<p>De esta manera, deberá tener Git instalado y listo para utilizarlo en su sistema.</p>
+</section>
+</section>
+<section id="cómo-obtener-y-configurar-tus-claves-ssh-para-git-y-github" class="level1">
+<h1>Cómo Obtener y Configurar tus Claves SSH para Git y GitHub</h1>
+<p>Recortado de:&nbsp;<a href="https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/">https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/</a></p>
+<p>Si usas GitHub sin configurar una clave SSH, realmente te estás perdiendo de algo genial. Piensa en todo el tiempo que pasaste introduciendo tu correo electrónico y tu contraseña en la consola cada vez que haces un commit podrías haberlo pasado programando.</p>
+<p>Bueno, ya no más. Aquí hay una guía rápida para generar y configurar una clave SSH con GitHub para que nunca más tengas que autentificarte a la antigua.</p>
+<section id="comprobar-si-existe-una-clave-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="comprobar-si-existe-una-clave-ssh">Comprobar si existe una clave SSH</h2>
+<p>Primero, comprueba si ya has generado las claves SSH para tu máquina. Abre una terminal e introduce el siguiente comando:</p>
+<p><code>ls -al ~/.ssh</code></p>
+<p>Si ya has generado las claves SSH, deberías ver una salida similar a esta:</p>
+<p>-rw——-&nbsp; 1 usuario usuario&nbsp; 1766 Jul&nbsp; 7&nbsp; 2018 id_rsa -rw-r–r–&nbsp; 1 usuario usuario&nbsp;&nbsp; 414 Jul&nbsp; 7&nbsp; 2018 id_rsa.pub -rw——-&nbsp; 1 usuario usuario 12892 Feb&nbsp; 5 18:39 known_hosts</p>
+<p>Si tus claves ya existen, pasa a la sección&nbsp;<strong>Copia tu clave pública de SSH</strong>&nbsp;abajo.</p>
+<p>Si no ves ninguna salida o ese directorio no existe (obtienes un mensaje de&nbsp;No such file or directory), entonces ejecuta:</p>
+<p><code>mkdir $HOME/.ssh</code></p>
+<p>Luego genera un nuevo conjunto de claves con:</p>
+<p><code>ssh-keygen -t rsa -b 4096 -C achalmaedison@outlook.com</code></p>
+<p>**Enter para crear el archivo con código con el nombre default, luego pide poner una clave para el uso del archivo for example 345320</p>
+<p><em>Ahora comprueba que tus claves existen con el comando&nbsp;ls -al ~/.ssh&nbsp;y asegúrate de que la salida es similar a la anterior.</em></p>
+<p><strong>Nota:</strong>&nbsp;Las claves SSH siempre se generan como un par de claves públicas (id_rsa.pub) y privadas (id_rsa). Es extremadamente importante que&nbsp;<strong>nunca reveles tu clave privada,</strong> y que&nbsp;<strong>sólo uses tu clave pública</strong>&nbsp;para cosas como la autenticación de GitHub. Puedes leer más sobre cómo funcionan los pares de claves SSH / RSA&nbsp;<a href="https://www.freecodecamp.org/news/a-top-down-introduction-to-ssh-965f4fadd32e/">aquí</a>.</p>
+</section>
+<section id="agrega-tu-clave-ssh-a-ssh-agent" class="level2">
+<h2 class="anchored" data-anchor-id="agrega-tu-clave-ssh-a-ssh-agent">Agrega tu clave SSH a ssh-agent</h2>
+<p>ssh-agent&nbsp;es un programa que se inicia cuando te conectas y almacena tus claves privadas. Para que funciones correctamente, debe estar ejecutándose y tener una copia de tu clave privada.</p>
+<p>Primero, asegúrate de que&nbsp;ssh-agent&nbsp;se está ejecutando con:</p>
+<p><code>eval "$(ssh-agent -s)"</code>&nbsp;# para Mac y Linux</p>
+<p>o:</p>
+<p><code>eval ssh-agent -s</code></p>
+<p><code>ssh-agent -s</code> # para Windows</p>
+<p>Entonces, agrega tu clave privada a&nbsp;ssh-agent&nbsp;con:</p>
+<p><code>ssh-add ~/.ssh/id_rsa</code></p>
+</section>
+<section id="copia-tu-clave-pública-de-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="copia-tu-clave-pública-de-ssh">Copia tu clave pública de SSH</h2>
+<p>A continuación, tienes que copiar tu clave pública de SSH en el portapapeles.</p>
+<p>Para Linux o Mac, imprime el contenido de tu clave pública en la consola con:</p>
+<p><code>cat ~/.ssh/id_rsa.pub</code>&nbsp;# Linux</p>
+<p>Sale un conjunto números y letras, si al final está el correo que registro antes debe borrar para pegar en GitHub</p>
+<p>Luego resalta y copia la salida.</p>
+<p>O para Windows, simplemente ejecuta:</p>
+<p><code>clip &lt; ~/.ssh/id_rsa.pub</code> # Windows</p>
+</section>
+<section id="agrega-tu-clave-ssh-pública-a-github" class="level2">
+<h2 class="anchored" data-anchor-id="agrega-tu-clave-ssh-pública-a-github">Agrega tu clave SSH pública a GitHub</h2>
+<p>Ve a la página de&nbsp;<a href="https://github.com/settings/keys">configuración</a>&nbsp;de tu GitHub y haz clic en el botón “New SSH key”:</p>
+<p>Luego dale a tu clave un título reconocible y pégala en tu clave pública (id_rsa.pub):</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/GetImage (46).png" class="img-fluid"></p>
+<p>Finalmente, prueba la autenticación con:</p>
+<p><code>ssh -T&nbsp;git@github.com</code></p>
+<p>Si has seguido todos estos pasos correctamente, deberías ver este mensaje:</p>
+<p>Hi tu_usuario! You’ve successfully authenticated, but GitHub does not provide shell access.&nbsp;&nbsp;</p>
+<p>or</p>
+<p>Warning: Permanently added the ECDSA host key for IP address ‘140.82.114.3’ to the list of known hosts.</p>
+<p>Hi achalmed! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</section>
+<section id="más-información-sobre-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="más-información-sobre-ssh">Más información sobre SSH</h2>
+<p>Traducido del artículo -&nbsp;<a href="https://www.freecodecamp.org/news/git-ssh-how-to/">How to Get and Configure Your Git and GitHub SSH Keys</a></p>
+<p>VER DCUMENTACIO&nbsp;<a href="https://cli.github.com/">https://cli.github.com/</a>&nbsp;&nbsp;</p>
+</section>
+<section id="cli-de-github" class="level2">
+<h2 class="anchored" data-anchor-id="cli-de-github">CLI de github</h2>
+<p>PRIMERO INSTALAR&nbsp;Installing gh on Linux&nbsp;&nbsp;</p>
+<p><code>gh auth login</code></p>
+<p><code>sudo apt&nbsp; install gh&nbsp; # version 2.12.1+dfsg1-1</code></p>
+<p><code>gh auth login</code></p>
+<p>Eligir estas opciones</p>
+<p>? What account do you want to log into?&nbsp;GitHub.com ? What is your preferred protocol for Git operations?&nbsp;SSH ? Generate a new SSH key to add to your GitHub account?&nbsp;Yes ? Enter a passphrase for your new SSH key (Optional) ****** es 345320 ? Title for your SSH key:&nbsp;achalmagit ? How would you like to authenticate GitHub CLI?&nbsp;Login with a web browser</p>
+<p>Luego copiar el codifo en el navegador para conectar con github</p>
+<p>! First copy your one-time code: 5DCA-FB42</p>
+<p>Enter</p>
+<p>Press Enter to open github.com in your browser…&nbsp;&nbsp;</p>
+<p>Listo usa el coigo 345320 para trabajar con repostios de github en terminal</p>
+<p>LISTO</p>
+<p>VER DOCUMETACION DE GIT HUB</p>
+<p><a href="https://cli.github.com/">https://cli.github.com/</a></p>
+</section>
+</section>
+<section id="create-a-repository" class="level1">
+<h1>Create a Repository</h1>
+<section id="git-init-project-name" class="level2">
+<h2 class="anchored" data-anchor-id="git-init-project-name">git init [project name]</h2>
+<p><code>git init</code>&nbsp;creará un nuevo repositorio local GIT.&nbsp;Inicializa un nuevo repositorio.</p>
+<p><code>git init [project name]</code></p>
+<blockquote class="blockquote">
+<p>Se hace solo una vez.&nbsp;Como alternativa, puedes crear un repositorio dentro de un nuevo directorio especificando el nombre del proyecto:&nbsp; <code>git init [nombre del proyecto]</code></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Comandos en visual code.</strong> Los archivos con&nbsp;U&nbsp;indican que no tiene seguimiento. Los archivos con&nbsp;A&nbsp;ya estan en seguimiento con git. Cuando no hay A ni U entonces los archivos ya estan en linea. La M indica Modificaciones pendientes</p>
+</blockquote>
+<section id="git-en-visual-code" class="level3">
+<h3 class="anchored" data-anchor-id="git-en-visual-code">Git en Visual Code</h3>
+<p>Primero configurar git – paso anterior, usar cod ssh o instalar gh y usar git hub cli</p>
+<p>Primero creamos espacio de trabajo en la carpeta del proyecto (el nombre puede ser distinto o igual a la carpeta)</p>
+<p><strong>…or create a new repository on the command line</strong></p>
+<p>echo “# achalmaedison.web” &gt;&gt; README.md&nbsp;&nbsp;</p>
+<ol type="1">
+<li>Abrir el terminar integrado de la carpeta del proyecto en VCODE</li>
+<li><code>git init</code></li>
+<li><code>git add README.md</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m "comienzo del proyecto"</code> (enviamos al repostio en línea)</li>
+<li><code>git branch -M main</code> Una vez haya modificaciones&nbsp;&nbsp;</li>
+</ol>
+<p>Podemos agregar los archivos mod con en el comando&nbsp;&nbsp;</p>
+<ol start="7" type="1">
+<li><code>git add index.html</code> (agregar archivos individuales)</li>
+<li><code>git commit - m "comienzo b"</code></li>
+<li><code>git remote add origin&nbsp;https://github.com/achalmed/achalmaedison.web.git</code></li>
+<li><code>git push -u origin main</code> Aqui se agrega el nombre del usuario “achalmed” y la contraseña 8920[ACHAL09med]2397 se debe escribir, no copy</li>
+</ol>
+<p><strong>…or push an existing repository from the command line</strong></p>
+<ol type="1">
+<li><code>git remote add origin https://github.com/achalmed/achalmaedison.web.git</code>&nbsp;&nbsp;</li>
+<li><code>git branch -M main</code></li>
+<li><code>git push -u origin main</code></li>
+</ol>
+<p><strong>…or import code from another repository</strong></p>
+<p>You can initialize this repository with code from a Subversion, Mercurial, or TFS project.</p>
+</section>
+</section>
+<section id="git-clone-my_url" class="level2">
+<h2 class="anchored" data-anchor-id="git-clone-my_url">git clone my_url</h2>
+<p><code>git clone my_url</code>: se usa para copiar un repositorio. Si el repositorio está en un servidor remoto, usa:&nbsp;<code>git clone nombredeusuario@host:/path/to/repository</code>&nbsp;&nbsp;</p>
+<p>A la inversa, ejecuta el siguiente comando básico para copiar un repositorio local:&nbsp;<code>git clone /path/to/repository</code></p>
+<section id="cómo-clonar-el-repositorio-git" class="level3">
+<h3 class="anchored" data-anchor-id="cómo-clonar-el-repositorio-git">Cómo clonar el repositorio git</h3>
+<p>Git es un popular sistema de control de versiones utilizado por muchas empresas de todo el mundo. Sin embargo, requiere que tenga una copia del repositorio git antes de poder comenzar a trabajar en él. Debe clonar un repositorio de git en su computadora de escritorio o portátil local, antes de poder comenzar a realizar cambios en él. En este artículo, veremos cómo clonar un repositorio git en Ubuntu. Puede usar estos pasos para clonar un repositorio en github, bitbucket, gitlab y otras plataformas de desarrollo populares basadas en git.</p>
+</section>
+<section id="qué-es-git-clone" class="level3">
+<h3 class="anchored" data-anchor-id="qué-es-git-clone">¿Qué es git clone?</h3>
+<p>Git clone es básicamente un comando para apuntar a un repositorio existente y hacer una copia de él, en otra ubicación. En este caso, el comando git creará un nuevo directorio, lo configurará para su uso con git y copiará archivos en él. A menos que clone un repositorio git, no podrá contribuir con cambios a él.</p>
+</section>
+<section id="clonar-un-repositorio-remoto" class="level3">
+<h3 class="anchored" data-anchor-id="clonar-un-repositorio-remoto">Clonar un repositorio remoto</h3>
+<p>Supongamos que desea clonar un repositorio remoto desde Github, Bitbucket o cualquier otra plataforma en la nube a su máquina local.</p>
+<p>Abra el terminal y navegue hasta la ubicación (por ejemplo, /home/ubuntu) donde desea que se copie el repositorio.</p>
+<p><code>cd /home/ubuntu/</code></p>
+<p>Cada repositorio remoto de git tendrá una URL. Inicie sesión en su plataforma de desarrollo, como Github, y anote su URL. Será del formato.</p>
+<p><a href="https://git-website.com/username/repository-name">https://git-website.com/username/repository-name</a></p>
+<p>Por ejemplo, su repositorio de git (por ejemplo, demostración) tendrá las siguientes URL, dependiendo de la plataforma.</p>
+<p>Github</p>
+<p><a href="https://github.com/username/demo.git">https://github.com/username/demo.git</a></p>
+<p>Bitbucket</p>
+<p><a href="https://bitbucket.com/username/demo.git">https://bitbucket.com/username/demo.git</a></p>
+<p>A veces, la URL también puede ser de la forma</p>
+<p>ssh://username@example.com/path/to/my-project.git &nbsp;</p>
+<p>Lea también: <a href="https://fedingo.com/how-to-install-virtualenv-in-ubuntu/">Cómo instalar Virtualenv en Ubuntu</a></p>
+<p>Anote la URL de su repositorio y utilícela en el comando git clone como se muestra a continuación.</p>
+<p><code>sudo git clone&nbsp;https://github.com/username/repository-name</code></p>
+<p>Reemplace el nombre de usuario con su nombre de usuario de Github y el nombre del repositorio con el nombre de su repositorio. Por ejemplo</p>
+<p><code>sudo git clone&nbsp;https://github.com/test_user/demo.git</code></p>
+<p>Se le pedirá su contraseña para la autenticación, después de lo cual Git descargará automáticamente la copia de su repositorio a su directorio de trabajo actual.</p>
+<p>Lea también: <a href="https://fedingo.com/how-to-upgrade-python-in-ubuntu/">Cómo actualizar Python en Ubuntu</a></p>
+</section>
+<section id="clonación-a-una-carpeta-específica" class="level3">
+<h3 class="anchored" data-anchor-id="clonación-a-una-carpeta-específica">Clonación a una carpeta específica</h3>
+<p>Este es el comando para clonar el repositorio en una carpeta específica.</p>
+<p><code>sudo git clone &lt;repo&gt; &lt;directory&gt;</code></p>
+<p>Por ejemplo, supongamos que desea clonar su repositorio a la carpeta /home/developer</p>
+<p><code>sudo git clone&nbsp;https://github.com/test_user/demo.git&nbsp;/home/developer</code></p>
+</section>
+<section id="clonar-superficialmente-un-repositorio" class="level3">
+<h3 class="anchored" data-anchor-id="clonar-superficialmente-un-repositorio">Clonar superficialmente un repositorio</h3>
+<p>Si necesita clonar un repositorio grande con un gran historial de confirmaciones, puede llevar mucho tiempo. En tales casos, puede hacer un clon superficial donde puede especificar las últimas n confirmaciones que desea clonar. Será mucho más rápido y ocupará muy poco espacio en su sistema.</p>
+<p>Aquí está la sintaxis para el clon superficial, donde n es el número de confirmaciones más recientes que desea clonar.</p>
+<p><code>sudo git clone -depth=n &lt;repo&gt;</code></p>
+<p>Lea también: <a href="https://fedingo.com/vps-vs-shared-hosting-in-depth-comparison/">VPS vs alojamiento compartido: comparación en profundidad</a></p>
+<p>Aquí está el comando para clonar la última confirmación de 1 de su repositorio.</p>
+<p><code>sudo git clone -depth=1&nbsp;https://github.com/test_user/demo.git</code></p>
+<p>Del mismo modo, aquí está el comando para clonar las últimas 10 confirmaciones de su repositorio.</p>
+<p><code>sudo git clone -depth=10&nbsp;https://github.com/test_user/demo.git</code></p>
+<p>Clonar una rama de Git</p>
+<p>Si solo desea clonar una rama específica (por ejemplo, trabajar) y no todo el repositorio, use la opción -branch en git clone.</p>
+<p><code>git clone -branch working&nbsp;https://github.com/test_user/demo.git</code></p>
+<p>Eso es todo. Como puede ver, es muy fácil clonar un repositorio git en Ubuntu.</p>
+<p>From &lt;<a href="https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007">https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007</a>&gt;</p>
+</section>
+<section id="utilizar-git-y-github-para-subir-proyectos" class="level3">
+<h3 class="anchored" data-anchor-id="utilizar-git-y-github-para-subir-proyectos">Utilizar Git y Github para subir proyectos</h3>
+<p><code>git clone&nbsp;https://github.com/achalmed/P-1-Thesis-economic-growth-poverty.git</code></p>
+<p>Recortado de:&nbsp;<a href="https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726">https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726</a></p>
+<p>En&nbsp;<a href="https://www.redeszone.net/2013/06/07/utilizar-git-y-github-desde-ubuntu-i/">este artículo anterior</a> <strong>os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.</strong></p>
+<p>En ese artículo vamos a enseñar cómo podemos subir un proyecto desde el PC a GitHub para comenzar a gestionarlo desde allí. También os enseñaremos a utilizar los principales comandos para utilizarlo a través del terminal de Linux.</p>
+<p><strong>Crear un nuevo repositorio</strong></p>
+<p>En primer lugar debemos crear un nuevo repositorio desde la web de GitHub. Creamos un nuevo desde la página **«New Project«.* <img src="https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/Pasted image 20230128185950.png" class="img-fluid"></p>
+<p>Introduciremos el nombre del repositorio, una descripción y seleccionaremos si queremos que el repositorio sea público o privado (como privado habrá que pagar una suscripción). Una vez rellenado pulsamos sobre «Create Repository» y ya tenemos creado nuestro repositorio.</p>
+<p><strong>Subir un proyecto</strong></p>
+<p>Para subir un proyecto en primer lugar debemos crear nuestro proyecto Git de forma local en nuestro PC. Para ello debemos situarnos sobre la ruta del proyecto desde un terminal mediante el siguiente comando.</p>
+<p><code>cd ruta/al/archivo</code>&nbsp;&nbsp;</p>
+<p>Una vez situados allí debemos teclear el comando para crear un proyecto Git.</p>
+<p><code>git init</code>&nbsp;&nbsp;</p>
+<p>Veremos que el programa nos devuelve una línea de confirmación.</p>
+<p>Ahora debemos añadir los archivos correspondientes a Git. Para ello debemos teclear una de las siguientes funciones dependiendo si queremos añadir únicamente un archivo o añadir todos los existentes en el proyecto.</p>
+<p><code>git add .</code> (añade todos los archivos existentes en la carpeta al proyecto Git)&nbsp;&nbsp;</p>
+<p><code>git add nombredelarchivo.extension</code> (solo añade al proyecto el archivo especificado)&nbsp;&nbsp;</p>
+<p>Todos los cambios que se vayan realizando en nuestro proyecto deben ser identificados por un comentario. Añadimos el comentario mediante:</p>
+<p><code>git commit -m 'comentario'</code>&nbsp;&nbsp;</p>
+<p>Y ya podemos proceder a subir el proyecto a GitHub. Para ello debemos teclear en el terminal:</p>
+<p><code>git remote add origin&nbsp;git@github.com:achalmed/achalmaedison.web.git</code></p>
+<p>Debemos cambiar nick por nuestro nombre de usuario en GitHub y repositorio.git por el nombre del repositorio que hemos creado anteriormente. Pulsamos enter y ya podemos subir el proyecto mediante:</p>
+<p><code>git push -u origin&nbsp;master</code>&nbsp;&nbsp;</p>
+<p>Ya tenemos el proyecto subido en nuestra cuenta de GitHub. Podemos comprobarlo accediendo a la página del proyecto.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/Pasted image 20230128190024.png" class="img-fluid"></p>
+<p>En caso de que en el paso anterior ocurra un error denominado: «fatal: remote origin already exists» debemos teclear:</p>
+<p><code>git remote rm origin</code>&nbsp;&nbsp;</p>
+<p>Y a continuación volver a realizar el proceso anterior.</p>
+</section>
+</section>
+</section>
+<section id="observe-your-repository" class="level1">
+<h1>Observe your Repository</h1>
+<section id="git-status" class="level2">
+<h2 class="anchored" data-anchor-id="git-status">git status</h2>
+<p><code>git status</code>&nbsp;muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.</p>
+<p><code>git status -s</code>&nbsp;lista archivos sin sincronizar.</p>
+<blockquote class="blockquote">
+<p>Checa el estatus del repositorio actual.&nbsp; List new or modified files not yet committed:&nbsp;<code>git status</code></p>
+</blockquote>
+</section>
+<section id="git-diff" class="level2">
+<h2 class="anchored" data-anchor-id="git-diff">git diff</h2>
+<ul>
+<li><p><code>git diff</code>&nbsp;&nbsp;Show the changes to files not yet staged, se usa para hacer una lista de todos los conflictos.</p></li>
+<li><p><code>git diff --base &lt;file-name&gt;</code>&nbsp;Para poder ver conflictos con respecto al archivo base</p></li>
+<li><p><code>git diff &lt;source-branch&gt; &lt;target-branch&gt;</code>&nbsp;&nbsp;se usa para ver los conflictos que hay entre ramas antes de fusionarlas:</p></li>
+<li><p><code>git diff --cached</code>&nbsp;&nbsp;Show the changes to staged files</p></li>
+<li><p><code>git diff HEAD</code>&nbsp;Show all staged and unstaged file changes</p></li>
+<li><p><code>git diff commit1 commit2</code>&nbsp;Show the changes between two commit ids</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Muestra las diferencias de los cambios hechos y que no han sido añadidos a un commit</p>
+</blockquote>
+</section>
+<section id="git-blame-file" class="level2">
+<h2 class="anchored" data-anchor-id="git-blame-file">git blame [file]</h2>
+<p><code>git blame [file]</code>&nbsp;List the change dates and authors for a file.</p>
+</section>
+<section id="git-show" class="level2">
+<h2 class="anchored" data-anchor-id="git-show">git show</h2>
+<ul>
+<li><p><code>git show</code>&nbsp;se usa para mostrar información sobre cualquier objeto git.</p></li>
+<li><p><code>git show [commit]:[file]</code>&nbsp;Show the file changes for a commit id and/or file.</p></li>
+</ul>
+</section>
+<section id="git-log" class="level2">
+<h2 class="anchored" data-anchor-id="git-log">git log</h2>
+<p><code>git log</code>&nbsp;: Muestra la lista de cambios hechos (commits),&nbsp;cuántas copias hay en respostorio, número de commits, show full change history.</p>
+<p><code>git log -p [file/directory]</code>&nbsp;: Show change history for file/directory including diffs.</p>
+<p><code>git log --oneline</code></p>
+<p><code>git log --oneline --decorate --all --graph --since=2018-12-04</code></p>
+<blockquote class="blockquote">
+<ul>
+<li>git log&nbsp;se usa para ver el historial del repositorio listando ciertos detalles de la confirmación. Al ejecutar el comando se obtiene una salida como ésta:&nbsp; commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw&nbsp;Author: Alex Hunter&nbsp;<a href="mailto:%3Calexh@gmail.com">&lt;alexh@gmail.com</a>&gt;&nbsp;Date:   Mon Oct 1 12:56:29 2016 -0600</li>
+</ul>
+</blockquote>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<p>achalmaubuntu@DESKTOP-ACHI23E:~/Documents/GitHub/achalmed$&nbsp;git log commit 8668f30bf15bb2b60d7a56ac0b41fc1d66f43afe (HEAD -&gt; main) Author: achalmed <a href="mailto:achalmaedison@outlook.com" class="email">achalmaedison@outlook.com</a> Date:&nbsp;&nbsp; Sat Apr 16 22:41:20 2022 -0500 &nbsp;&nbsp;&nbsp; actualizando pefil</p>
+</section>
+</section>
+</section>
+<section id="working-with-branches" class="level1">
+<h1>Working with Branches</h1>
+<section id="git-branch" class="level2">
+<h2 class="anchored" data-anchor-id="git-branch">git branch</h2>
+<ul>
+<li><p><code>git branch</code>&nbsp;List all local branches, se usa para listar, crear o borrar ramas. si quieres listar todas las ramas presentes en el repositorio.</p></li>
+<li><p><code>git branch -av</code>&nbsp;List all branches, local and remote</p></li>
+<li><p><code>git checkout [my_branch]</code>&nbsp;Switch to a branch, my_branch, and update working directory&nbsp;&nbsp;</p></li>
+<li><p><code>git branch [new_branch_name]</code>&nbsp;Create a new branch called new_branch&nbsp;&nbsp;</p></li>
+<li><p><code>git branch -d [branch_name]</code>&nbsp;Delete the branch called my_branch,&nbsp; Si quieres borrar una rama</p></li>
+<li><p><code>git branch –a</code></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Muestra la lista de las ramas creadas</p>
+</blockquote>
+<section id="creando-ramas-sirven-para-pruebas-de-version-etc" class="level3">
+<h3 class="anchored" data-anchor-id="creando-ramas-sirven-para-pruebas-de-version-etc">Creando ramas (sirven para pruebas de version, etc)</h3>
+<ol type="1">
+<li><code>git branch&nbsp;[Rama2]</code>&nbsp;(Creación de una nueva rama basada en la rama actual)</li>
+<li><code>git log --oneline</code>&nbsp;(me indica todos los commit de la rama)</li>
+<li><code>git branch</code>&nbsp;(indica las ramas del proyecto e indica en que rama me encuentro)</li>
+</ol>
+<p>*movernos a otra rama para hacer las modificaciones</p>
+<ol start="4" type="1">
+<li><code>git checkout Rama2</code>&nbsp;(se movió mi flujo de trabajo a otra rama) por ejemplo esta rama puede ser rama de prueba</li>
+</ol>
+<p>Una vez hecho las modificaciones de prueba&nbsp;&nbsp;</p>
+<ol start="5" type="1">
+<li><code>git add .</code>&nbsp;(agregamos los archivos modificados) AGREGANDO CAMBIOS</li>
+<li><code>git commit - m "saludos agrado a la rama de prueba"</code></li>
+<li><code>git log --oneline</code>&nbsp;(me indica todos los commit de la rama nueva)</li>
+</ol>
+<p>*Regresando a la rama Master o main</p>
+<ol start="8" type="1">
+<li><code>git checkout&nbsp;[master]</code>&nbsp;(OJO LAS MODIFICACIONES HECHAS NO ESTAN AQUI)</li>
+</ol>
+<p>OJO PARA NOTAR LOS CAMBIOS EN LOS ARCHIVOS MINIMIZAR EL CONSALA DE GIT</p>
+<p>Para enviar finalmente los archivos al repositorio online se debe tipear:</p>
+<ol start="9" type="1">
+<li><code>git push origin&nbsp;[Rama2]</code>&nbsp;: también puede ser main (es la rama,&nbsp;Enviar al GitHub)</li>
+</ol>
+</section>
+</section>
+<section id="git-checkout-file" class="level2">
+<h2 class="anchored" data-anchor-id="git-checkout-file">git checkout&nbsp;[file]</h2>
+<ul>
+<li><code>git checkout [file]</code>&nbsp;crea ramas y te ayuda a navegar entre ellas. Por ejemplo, el siguiente comando crea una nueva y automáticamente se cambia a ella:</li>
+</ul>
+<p>command <code>git checkout -b&nbsp;[branch-name]</code>&nbsp;&nbsp;</p>
+<ul>
+<li>Para cambiar de una rama a otra, sólo usa:</li>
+</ul>
+<p><code>git checkout&nbsp;[branch-name]</code>&nbsp;&nbsp;</p>
+<p>Merge branch_a into branch_b</p>
+<ul>
+<li><code>git checkout&nbsp;[branch_b]</code></li>
+<li><code>git merge&nbsp;[branch_a]</code></li>
+</ul>
+<blockquote class="blockquote">
+<p>Creación de una nueva rama y ubicación dentro de esa rama.&nbsp;Solucionar conflictos de … con Visual Code es más sencillo</p>
+</blockquote>
+<section id="fusionando-ramas" class="level3">
+<h3 class="anchored" data-anchor-id="fusionando-ramas">Fusionando ramas</h3>
+<p>PRIMERO debemos estar en la rama MASTER antes de hacer la fusión</p>
+<ol type="1">
+<li><code>git checkout&nbsp;[master]</code></li>
+<li><code>git merge&nbsp;[Rama2]</code></li>
+</ol>
+</section>
+</section>
+<section id="git-rebase-branch_name" class="level2">
+<h2 class="anchored" data-anchor-id="git-rebase-branch_name">git rebase branch_name</h2>
+<p><code>git rebase branch_name</code>: Alcanzar los cambios de un branch</p>
+</section>
+<section id="git-tag-nombre_tag" class="level2">
+<h2 class="anchored" data-anchor-id="git-tag-nombre_tag">git tag&nbsp;[nombre_tag]&nbsp;&nbsp;</h2>
+<ul>
+<li><p><code>git checkout&nbsp;[nombre_tag]</code></p></li>
+<li><p><code>git tag [nombre_tag]</code>&nbsp;Tag the current commit,&nbsp;creación de una etiqueta con el texto v0.0.1 (indica la version v0.0.1)</p></li>
+<li><p><code>git tag&nbsp;[nombre_tag]/commit_SHA1</code>&nbsp;Creación de un tag a un commit en especifico&nbsp;&nbsp;</p></li>
+</ul>
+<p>Se puede acceder al commit donde se encuentra un tag mediante este comando</p>
+<blockquote class="blockquote">
+<p><code>git tag</code>&nbsp;TAGS (INDICAN LAS VERSIONES DE UN PROYECTO). marca commits específicos. Los desarrolladores lo usan para marcar puntos de lanzamiento como v1.0 y v2.0.&nbsp; <code>git tag 1.1.0&nbsp;[instert-commitID-here]</code></p>
+</blockquote>
+<section id="ejemplos-1" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h3>
+<ol type="1">
+<li><p><code>git tag&nbsp;[26-03-2022v1]&nbsp;-m "Version 1 del proyecto"</code>&nbsp;(creando una version), por ejemplo sirve para descargar.</p></li>
+<li><p><code>git push --tags</code>&nbsp;(subimos las versiones a línea)</p></li>
+</ol>
+</section>
+</section>
+<section id="git-config" class="level2">
+<h2 class="anchored" data-anchor-id="git-config">git config</h2>
+<p><code>git config --global alias.lodag‘log --oneline --decorate --all --graph’</code>&nbsp;&nbsp;Agregar un alias&nbsp;&nbsp;</p>
+<p><code>git config --global --get-regexp alias</code>&nbsp;&nbsp;Ver la lista de alias creados&nbsp;&nbsp;</p>
+<p><code>git config --global --unset alias.trololo</code>&nbsp;&nbsp;Quitar un alias</p>
+<ul>
+<li><code>git config</code>&nbsp;puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, el siguiente comando se usa para establecer un email:</li>
+</ul>
+<p><code>git config --global user.email&nbsp;tuemail@ejemplo.com</code></p>
+<ul>
+<li>La opción -global le dice a GIT que vas a usar ese correo electrónico para todos los repositorios locales. Si quieres utilizar diferentes correos electrónicos para diferentes repositorios, usa el siguiente comando:</li>
+</ul>
+<p><code>git config --local user.email&nbsp;tuemail@ejemplo.com</code></p>
+</section>
+</section>
+<section id="make-a-change" class="level1">
+<h1>Make a change</h1>
+<section id="git-add-file" class="level2">
+<h2 class="anchored" data-anchor-id="git-add-file">git add&nbsp;[file]</h2>
+<ul>
+<li><p><code>git add -u</code></p></li>
+<li><p><code>git add [file]</code>&nbsp;Stages the file, ready for commit, se usa para agregar archivos al área de preparación. Por ejemplo, el siguiente comando de Git básico indexará el archivo temp.txt:</p></li>
+</ul>
+<p><code>git add &lt;temp.txt&gt;</code>&nbsp;&nbsp;</p>
+<ul>
+<li><code>git add .</code>&nbsp;&nbsp;Stage all changed files, ready for commit,</li>
+</ul>
+<blockquote class="blockquote">
+<p>Con el nombre del archivo se registra dicho cambio en el caso de alguna creación, con el punto (.) se preparan todos los cambios realizados en el proyecto actual.&nbsp;&nbsp;Lista de cambios preparados para subir en el siguiente commit.&nbsp;&nbsp;(sincroniza todos los archivos)</p>
+</blockquote>
+<section id="ejemplos-2" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-2">Ejemplos</h3>
+<p><code>git add&nbsp;[index.html]</code>&nbsp;(agregamos unos de los archivos por ejemplo el index.html)</p>
+<p><code>git add</code> -actualiza todos tus cambios</p>
+<ol type="1">
+<li>Al modificar un/unos archivo/s:</li>
+</ol>
+<p><code>git branch</code>&nbsp;: para saber el rama actual</p>
+<p><code>git add .</code>&nbsp;Esto añade todos los archivos al repositorio local (no al web)</p>
+<p>o sino también</p>
+<p><code>git add nombreDelArchivo</code>&nbsp;Esto añade solamente el archivo indicado al repositorio local.</p>
+<ol start="2" type="1">
+<li>Luego… se genera un commit para confirmar todos los archivos modificados agregando un mensaje que brinde una idea de lo que se modificó en el/los dichos archivo/s</li>
+</ol>
+<p><code>git commit -m "aquí el mensaje"</code></p>
+<ol start="3" type="1">
+<li>Para enviar finalmente los archivos al repositorio online se debe tipear:</li>
+</ol>
+<p><code>git push origin&nbsp;[master]</code>&nbsp;: también puede ser&nbsp;main&nbsp;(es la rama)</p>
+<p>Apendice A)</p>
+<p>Si se quiere ir verificando el estado de la transacción luego de cada instrucción, puede tipear el siguiente comando:</p>
+<p><code>git status</code></p>
+<p>From &lt;<a href="https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt">https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt</a>&gt;</p>
+</section>
+</section>
+<section id="git-commit" class="level2">
+<h2 class="anchored" data-anchor-id="git-commit">git commit</h2>
+<ul>
+<li><p><code>git commit</code> creará una instantánea de los cambios y la guardará en el directorio git.</p></li>
+<li><p><code>git commit –m “El mensaje que acompaña al commit va aquí”</code>&nbsp;&nbsp;</p></li>
+</ul>
+<p>Ten en cuenta que los cambios confirmados no llegarán al repositorio remoto.</p>
+<ul>
+<li><code>git commit -am “commit message”</code>&nbsp;&nbsp;Commit all your tracked files to versioned history,&nbsp;agrega y envía</li>
+</ul>
+<blockquote class="blockquote">
+<p>Genera un archivo de los cambios realizados en el proyecto, en el archivo que se mostrará se agrega una descripción del cambio realizado.&nbsp;(toma una captura o crea una version)</p>
+</blockquote>
+<section id="ejemplos-3" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-3">Ejemplos</h3>
+<p><code>git commit -m "Comienzo del proyecto"</code></p>
+<p><code>git commit -am "párrafo y tamaño fuente"</code>&nbsp;(agrega y envía )</p>
+</section>
+</section>
+<section id="git-add-.-git-commit--m-cambionumeros" class="level2">
+<h2 class="anchored" data-anchor-id="git-add-.-git-commit--m-cambionumeros">git add . &amp;&amp; git commit -m “Cambionumeros”</h2>
+<p><code>git add . &amp;&amp; git commit -m "Cambionumeros"</code></p>
+<section id="descripción" class="level3">
+<h3 class="anchored" data-anchor-id="descripción">Descripción</h3>
+<p><code>git add . &amp;&amp; git commit -m "Cambionumeros"</code>&nbsp;Add y commit en una sola línea</p>
+</section>
+</section>
+<section id="git-merge-branch_name" class="level2">
+<h2 class="anchored" data-anchor-id="git-merge-branch_name">git merge branch_name</h2>
+<p><code>git merge branch_name</code></p>
+<section id="descripción-1" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-1">Descripción</h3>
+<p>Para este paso suponemos un ejemplo Tenemos el branchdevelop y feature, y queremos integrar la rama feature a develop por lo que debemos hacer los siguientes pasos:&nbsp;&nbsp;</p>
+<ol type="1">
+<li>Ubicarse en la rama develop mediante el comando:</li>
+</ol>
+<p><code>gitcheckoutdevelop</code>&nbsp;&nbsp;</p>
+<ol start="2" type="1">
+<li>Ingresar el comando&nbsp;&nbsp;</li>
+</ol>
+<p><code>gitmergefeature</code></p>
+<blockquote class="blockquote">
+<p><code>git merge</code> se usa para fusionar una rama con otra rama activa:&nbsp;<code>git merge [branch-name]</code></p>
+</blockquote>
+</section>
+</section>
+<section id="git-revert-m-1-sha1_merge" class="level2">
+<h2 class="anchored" data-anchor-id="git-revert-m-1-sha1_merge">git revert –m 1&nbsp;SHA1_merge</h2>
+<p><code>git revert –m 1&nbsp;SHA1_merge</code></p>
+<section id="descripción-2" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-2">Descripción</h3>
+<p>Revierte un merge, especificando el SHA1 del merge que se quiere revertir</p>
+</section>
+</section>
+<section id="git-revert-head" class="level2">
+<h2 class="anchored" data-anchor-id="git-revert-head">git revert HEAD</h2>
+<p><code>git revert HEAD</code>&nbsp;&nbsp;</p>
+<p><code>git revert --no-commit HEAD</code>&nbsp;&nbsp;</p>
+<p><code>git revert --no-commit HEAD~1</code>&nbsp;&nbsp;</p>
+<p><code>git revert --continue</code></p>
+<section id="descripción-3" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-3">Descripción</h3>
+<p>Revierte un commit hecho sobre la rama actual&nbsp;&nbsp;</p>
+<p>Revertir dos o más commit junto al mismo comando de revert para ser tomados en cuenta como uno solo</p>
+</section>
+</section>
+<section id="git-reset" class="level2">
+<h2 class="anchored" data-anchor-id="git-reset">git reset</h2>
+<p><code>git reset SHA_1_commit/[branch_name]</code>&nbsp;&nbsp;</p>
+<p><code>git reset --soft SHA_1_commit/[branch_name]</code>&nbsp;&nbsp;</p>
+<p><code>git reset --hard SHA_1_commit/[branch_nam]</code></p>
+<section id="descripción-4" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-4">Descripción</h3>
+<p>Regresar a una rama anterior, quita los cambios y los deja fuera del área de preparación&nbsp;&nbsp;</p>
+<p>Regresa a un commit o rama anterior, y deja los cambios hechos en el commit que se va a quitar listos en el área de preparación&nbsp;&nbsp;</p>
+<p>Regresa a un commit o rama anterior, y deja en blanco el área de preparación y el directorio de trabajo&nbsp;&nbsp;</p>
+<p><code>766abcd</code>, es el identificador del commit al que deseamos regresar. Esta operación, si lo hacemos desde  una rama, no afectará a otras, de modo que puedes hacer diferentes commit a partir de ese punto, sin que se modifiquen otras ramas  del proyecto.</p>
+<blockquote class="blockquote">
+<p><code>git reset</code>&nbsp;sirve para resetear el index y el directorio de trabajo al último estado de confirmación.</p>
+</blockquote>
+<p><code>git reset - -hard HEAD</code>&nbsp;&nbsp;</p>
+<blockquote class="blockquote">
+<p>El conocimiento y el uso de log con sus diferente posibilidades, nos permitirá manejar acertadamente, la creación de ramas, los movimientos entre ellas y los avances y retrocesos entre commits.</p>
+</blockquote>
+</section>
+<section id="regresar-a-un-commit-anterior-en-git" class="level3">
+<h3 class="anchored" data-anchor-id="regresar-a-un-commit-anterior-en-git">Regresar a un commit anterior en Git</h3>
+<p>Recortado de:&nbsp;<a href="https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/">https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/</a></p>
+<p>Muchas veces, nos damos cuenta de que necesitamos regresar en el tiempo  a un punto de nuestro proyecto, para ello el comando&nbsp;checkout&nbsp;nos permite  regresar a un&nbsp;commit&nbsp;anterior en Git,  de esta manera:</p>
+<p>Primero ver la estructura de los últimos commit con este comando</p>
+<p><code>git log --oneline</code>&nbsp;&nbsp;</p>
+<p>Su salida, será algo como esto</p>
+<p>8674e5f commit  test3 jº44568 commit segunda parte&nbsp;&nbsp; 55df4c2 commit de inicio.</p>
+<p><code>git checkout&nbsp;[766abcd]</code>&nbsp;&nbsp;</p>
+<p>Existen diferentes formas de retroceder en el tiempo a commits previos,&nbsp;<strong>checkout</strong>&nbsp;es una de ellas, pero también se utiliza&nbsp;<strong>reset</strong>&nbsp;con sus atributos&nbsp;<strong>soft</strong>&nbsp;o&nbsp;<strong>hard</strong></p>
+<p>Con una sintaxis como:</p>
+<p><code>git reset --soft</code>&nbsp;referencia del commit&nbsp;&nbsp;</p>
+<p>Esto nos permitirá retroceder a un commit previo, manteniendo los cambios:&nbsp;&nbsp;</p>
+<p><code>git reset --soft&nbsp;[568abcj]</code>&nbsp;&nbsp;</p>
+<p>Si queremos deshacer solo el ultimo:&nbsp;&nbsp;</p>
+<p><code>git reset --soft HEAD~</code>&nbsp;&nbsp;</p>
+<p>Si lo que se desea es eliminar permanentemente los cambios realizado después de un commit  específico, el comando a usar es:&nbsp;&nbsp;</p>
+<p><code>git reset --hard&nbsp;[789abcd]</code>&nbsp;(regresar a una version, el codigo es el ultimo commit que queremos mantener)</p>
+<p>Si queremos eliminar los cambios después del último commit lo que hacemos es usar el atributo hard del comando reset, pero dirigiéndolo al apuntador especial HEAD.</p>
+<p><code>git reset --hard HEAD~</code>&nbsp;&nbsp;</p>
+<p>para descartar los cambios antes de retornar a un commit, se utiliza el comando stash</p>
+<p><code>git commit stash</code></p>
+</section>
+</section>
+</section>
+<section id="synchronize" class="level1">
+<h1>Synchronize</h1>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p><code>git fetch</code>&nbsp;le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no se encuentran en el directorio de trabajo local.</p>
+<p><code>git fetch origin</code></p>
+</section>
+<section id="git-pull" class="level2">
+<h2 class="anchored" data-anchor-id="git-pull">git pull</h2>
+<p><code>git pull</code>&nbsp;fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local (actualizar las ediciones de línea en el repostorio local). <code>git pull</code></p>
+<section id="ejemplos-4" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-4">Ejemplos</h3>
+<ol type="1">
+<li>Para obtener los cambios desde el repositorio github.com debe tipear:</li>
+</ol>
+<p><code>git pull --rebase</code></p>
+<p>o tambien</p>
+<p><code>git pull origin&nbsp;[master]</code></p>
+</section>
+</section>
+<section id="git-remote-add-name_repo-url" class="level2">
+<h2 class="anchored" data-anchor-id="git-remote-add-name_repo-url">git remote add NAME_REPO URL</h2>
+<p><code>git remote add NAME_REPO URL</code>&nbsp;&nbsp;</p>
+<p><code>git remote</code>&nbsp;&nbsp;</p>
+<p><code>git remote –v</code></p>
+<section id="descripción-5" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-5">Descripción</h3>
+<ul>
+<li><p><code>git remote</code>&nbsp;te permite ver todos los repositorios remotos. El siguiente comando listará todas las conexiones junto con sus URLs:&nbsp;<code>git remote -v</code>&nbsp;&nbsp;</p></li>
+<li><p>Para conectar el repositorio local a un servidor remoto, usa este comando:&nbsp;<code>git remote add origin [host-or-remoteURL]</code>&nbsp;&nbsp;</p></li>
+<li><p>Por otro lado, el siguiente comando borrará una conexión a un repositorio remoto especificado:&nbsp;<code>git remote [nombre-del-repositorio]</code></p></li>
+</ul>
+</section>
+<section id="ejemplos-5" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-5">Ejemplos</h3>
+<p>Adición de un repositorio&nbsp;&nbsp;</p>
+<p>Listado de los repositorios</p>
+</section>
+</section>
+<section id="git-push-set-upstream-name_repo-master" class="level2">
+<h2 class="anchored" data-anchor-id="git-push-set-upstream-name_repo-master">git push –set-upstream NAME_REPO master</h2>
+<p><code>git push --set-upstream NAME_REPO master</code>&nbsp;&nbsp;</p>
+<p><code>git push NAME_REPO BRANCH_NAME</code>&nbsp;&nbsp;</p>
+<p><code>git push REMOTE --all git push REMOTE --tags</code></p>
+<section id="descripción-6" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-6">Descripción</h3>
+<ul>
+<li><p><code>git push</code>&nbsp;se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto. Aquí está la estructura básica del código:&nbsp;<code>git push  origin [master]</code>&nbsp;&nbsp;</p></li>
+<li><p>Reemplaza [master] con la rama en la que quieres enviar los cambios cuando no quieras enviarlos a la rama maestra.</p></li>
+</ul>
+</section>
+<section id="ejemplos-6" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-6">Ejemplos</h3>
+<p>Subir cambios de un Proyecto a gitLab&nbsp;&nbsp;</p>
+<ol start="3" type="1">
+<li>Para enviar finalmente los archivos al repositorio online se debe tipear:</li>
+</ol>
+<p><code>git push origin&nbsp;[master]</code>&nbsp;:&nbsp;también puede ser main (es la rama)</p>
+</section>
+</section>
+</section>
+<section id="finally" class="level1">
+<h1>Finally</h1>
+<section id="git-command-help" class="level2">
+<h2 class="anchored" data-anchor-id="git-command-help">git command –help</h2>
+<p><code>git command --help</code></p>
+<p><code>git command --help</code>&nbsp;When in doubt, use git help</p>
+</section>
+<section id="git-stash" class="level2">
+<h2 class="anchored" data-anchor-id="git-stash">git stash</h2>
+<p><code>git stash</code> guardará momentáneamente los cambios que no están listos para ser confirmados. De esta manera, pudes volver al proyecto más tarde.</p>
+</section>
+<section id="git-ls-tree" class="level2">
+<h2 class="anchored" data-anchor-id="git-ls-tree">git ls-tree</h2>
+<p><code>git ls-tree</code></p>
+<p><code>git ls-tree HEAD</code></p>
+<section id="descripción-7" class="level3">
+<h3 class="anchored" data-anchor-id="descripción-7">Descripción</h3>
+<ul>
+<li><code>git ls-tree</code>&nbsp;te permite ver un objeto de árbol junto con el nombre y modo de cada ítem, y el valor blob de SHA-1. Si quieres ver el HEAD, usa:</li>
+</ul>
+<p><code>git ls-tree HEAD</code></p>
+</section>
+</section>
+<section id="git-cat-file" class="level2">
+<h2 class="anchored" data-anchor-id="git-cat-file">git cat-file</h2>
+<p><code>git cat-file</code>: se usa para ver la información de tipo y tamaño de un objeto del repositorio. Usa la opción -p junto con el valor SHA-1 del objeto para ver la información de un objeto específico.</p>
+<section id="ejemplos-7" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-7">Ejemplos</h3>
+<p><code>git cat-file –p d670460b4b4aece5915caf5c68d12f560a9fe3e4</code></p>
+</section>
+</section>
+<section id="git-grep" class="level2">
+<h2 class="anchored" data-anchor-id="git-grep">git grep</h2>
+<p><code>git grep</code>: le permite al usuario buscar frases y palabras específicas en los árboles de confirmación, el directorio de trabajo y en el área de preparación. Para buscar por&nbsp;<a href="http://www.hostinger.com/">www.hostinger.com</a>&nbsp;en todos los archivos, usa:</p>
+<p><code>git grep “www.hostinger.com”</code></p>
+</section>
+<section id="gitk" class="level2">
+<h2 class="anchored" data-anchor-id="gitk">gitk</h2>
+<p><code>gitk</code>: muestra la interfaz gráfica para un repositorio local.</p>
+</section>
+<section id="git-instaweb" class="level2">
+<h2 class="anchored" data-anchor-id="git-instaweb">git instaweb</h2>
+<p><code>git instaweb</code>: te permite explorar tu repositorio local en la interfaz GitWeb. Por ejemplo:</p>
+<p><code>git instaweb –http=webrick</code></p>
+</section>
+<section id="git-gc" class="level2">
+<h2 class="anchored" data-anchor-id="git-gc">git gc</h2>
+<p><code>git gc</code>: &nbsp;limpiará archivos innecesarios y optimizará el repositorio local.</p>
+</section>
+<section id="git-archive" class="level2">
+<h2 class="anchored" data-anchor-id="git-archive">git archive</h2>
+<p><code>git archive</code>: le permite al usuario crear archivos zip o tar que contengan los constituyentes de un solo árbol de repositorio.</p>
+<section id="ejemplos-8" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-8">Ejemplos</h3>
+<p><code>git archive - -format=tar master</code></p>
+</section>
+</section>
+<section id="git-prune" class="level2">
+<h2 class="anchored" data-anchor-id="git-prune">git prune</h2>
+<p><code>git prune</code>: elimina los objetos que no tengan ningún apuntador entrante.</p>
+</section>
+<section id="git-fsck" class="level2">
+<h2 class="anchored" data-anchor-id="git-fsck">git fsck</h2>
+<p><code>git fsck</code>: realiza una comprobación de integridad del sistema de archivos git e identifica cualquier objeto corrupto</p>
+</section>
+<section id="git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="git-rebase">git rebase</h2>
+<p><code>git rebase</code>: se usa para aplicar ciertos cambios de una rama en otra.</p>
+<section id="ejemplos-9" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-9">Ejemplos</h3>
+<p><code>git rebase master</code></p>
+</section>
+</section>
+<section id="git-rm" class="level2">
+<h2 class="anchored" data-anchor-id="git-rm">git rm</h2>
+<p><code>git rm</code></p>
+<section id="borrar-archivoscarpetas-del-repositorio" class="level3">
+<h3 class="anchored" data-anchor-id="borrar-archivoscarpetas-del-repositorio">Borrar archivos/carpetas del repositorio</h3>
+<p>Para borrar archivos o carpetas también «arriba» en nuestro respositorio (bitbucket, github…) se usa el comando «rm» de git siguiendo los siguientes pasos.</p>
+<p><code>git add -u</code>&nbsp;: actualiza todos los cambios</p>
+<p><code>git commit -m "elimino archivos innecesarios"</code></p>
+<ol start="3" type="1">
+<li>Para enviar finalmente los archivos al repositorio online se debe tipear:</li>
+</ol>
+<p><code>git push origin&nbsp;master</code>&nbsp;: también puede ser main (es la rama)</p>
+<p>1.A Si quieres eliminar un archivo:</p>
+<p><code>git rm miarchivo.php</code></p>
+<p>1.B. Si quieres eliminar una carpeta:</p>
+<p><code>git rm -r micarpeta</code></p>
+<ol start="2" type="1">
+<li>Creamos el commit</li>
+</ol>
+<p><code>git commit -m "elimino archivos innecesarios"</code></p>
+<ol start="3" type="1">
+<li>Subimos los cambios al repositorio</li>
+</ol>
+<p><code>git push</code></p>
+</section>
+</section>
+</section>
+<section id="hoja-de-trucos-de-los-comandos-de-git-en-.pdf" class="level1">
+<h1>Hoja de trucos de los comandos de GIT en .pdf</h1>
+<p>Si estás empezando con GIT, puede ser difícil recordar incluso los comandos básicos. Por eso, hemos preparado una hoja de trucos de GIT para ayudarte a dominar el software. Guarda el archivo en tus dispositivos o imprímelo para tenerlo siempre listo cuando tengas que recordar los comandos de GIT.</p>
+<p><a href="https://cdn.hostinger.com/tutorials/pdf/Git-Cheat-Sheet-EN.pdf">Descargar (tamaño: 1.2 MB)</a></p>
+</section>
+<section id="conclusión-1" class="level1">
+<h1>Conclusión</h1>
+<p>Aprender los comandos básicos de GIT será de gran ayuda para los desarrolladores, ya que pueden controlar fácilmente el código fuente de los proyectos. Puede que te lleve algo de tiempo recordarlos todos, por eso nuestra hoja de trucos de GIT podría resultarte útil.</p>
+<p>¡Practica estos comandos de GIT y aprovecha al máximo tus habilidades en desarrollo! ¡Buena suerte!</p>
+<p>El autor&nbsp;&nbsp;</p>
+<p>Gustavo B.</p>
+<p>Gustavo es un apasionado por la creación de sitios web. Se enfoca en la aplicación de estrategias SEO en Hostinger para España y Latinoamérica, así como la creación de contenidos de alto nivel. Cuando no está aplicando nuevos trucos en WordPress lo puedes encontrar tocando la guitarra, viajando o tomando un curso online.&nbsp;&nbsp;</p>
+<p><a href="https://www.hostinger.es/tutoriales/author/gustavohostinger">Más de Gustavo B.</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</guid>
+  <pubDate>Thu, 16 Feb 2023 05:00:00 GMT</pubDate>
+  <media:content url="https://achalmawebsite.netlify.app/docs/blog/posts/2023-02-16-Guia-git/GetImage%20(46" medium="image"/>
+</item>
+<item>
   <title>Shinylive Extension</title>
   <dc:creator>Winston Chang</dc:creator>
   <link>https://achalmawebsite.netlify.app/docs/blog/posts/2022-10-25-shinylive-extension/index.html</link>
@@ -604,6 +1825,182 @@ Quarto 1.3 Feature
   <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2022-10-25-shinylive-extension/index.html</guid>
   <pubDate>Tue, 25 Oct 2022 05:00:00 GMT</pubDate>
   <media:content url="https://achalmawebsite.netlify.app/docs/blog/posts/2022-10-25-shinylive-extension/shinylive-embedded-app.png" medium="image" type="image/png" height="97" width="144"/>
+</item>
+<item>
+  <title>Usando APK en Windows 11</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="level1">
+<h1>Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</h1>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/install-logo-759x427.png?width=600" class="img-fluid"></p>
+<p>Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android.&nbsp;Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">guía aquí</a>&nbsp;.</p>
+<p><a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#">Mostrar</a>&nbsp;<strong>CONTENIDO</strong>&nbsp;<a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#"></a></p>
+<section id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows">Paso 1: habilite el modo de desarrollador en el subsistema de Windows</h2>
+<p>Instale&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">el Subsistema de Windows para Android</a>&nbsp;primero.&nbsp;Cuando haya terminado, abra la aplicación ‘Subsistema de Windows para Android’ en su PC.&nbsp;Para esto, presione la tecla de Windows y busque Subsistema de Windows para Android.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-09.png?width=800" class="img-fluid"></p>
+<p>Haga clic en Subsistema de Windows para Android.&nbsp;O haga clic en Abrir.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-08.png?width=800" class="img-fluid"></p>
+<p>En el Subsistema de Windows para Android, active el modo Desarrollador.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-10-2.png?width=800" class="img-fluid"></p>
+</section>
+<section id="paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-instale-las-herramientas-de-la-plataforma-sdk">Paso 2: Instale las herramientas de la plataforma SDK</h2>
+<p>Visite la página de herramientas de la plataforma SDK de Google&nbsp;<a href="https://developer.android.com/studio/releases/platform-tools.html">aquí</a>&nbsp;.</p>
+<p>Haga clic en Descargar SDK Platform-Tools para Windows.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-11.png?width=800" class="img-fluid"></p>
+<p>Desplácese hacia abajo hasta el final y seleccione la casilla de verificación para aceptar los términos y condiciones.&nbsp;Luego haga clic en el botón verde para descargar las herramientas de la plataforma.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-12.png?width=700" class="img-fluid"></p>
+<p>Se descargará en su PC un archivo zip llamado platform-tools_r31.0.3-windows (la versión puede cambiar).</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-13.png?width=700" class="img-fluid"></p>
+<p>Para su comodidad, cree una nueva carpeta separada llamada carpeta para aplicaciones en el Explorador de Windows.&nbsp;Ahora, transfiera el archivo de herramientas de la plataforma a esta carpeta.</p>
+<p>Haga clic con el botón derecho en el archivo de herramientas de la plataforma y seleccione Extraer todo.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-14.png?width=500" class="img-fluid"></p>
+<p>Haga clic en Extraer.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-15-2.png?width=700" class="img-fluid"></p>
+<p>El archivo será extraído.&nbsp;Abra la carpeta llamada herramientas de la plataforma.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-16.png?width=500" class="img-fluid"></p>
+<p>Tendrá adb.exe y algunos otros archivos aquí.</p>
+<p><strong>Relacionado:</strong>&nbsp;<a href="https://nerdschalk.com/how-to-restart-windows-explorer-on-windows-11-and-what-happens-when-you-do-it/">Cómo reiniciar el Explorador de Windows en Windows 11 y qué sucede cuando lo hace</a></p>
+</section>
+<section id="paso-3-instale-la-aplicación-de-android" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-instale-la-aplicación-de-android">Paso 3: Instale la aplicación de Android</h2>
+<p>Haga doble clic en la carpeta de herramientas de la plataforma para abrirla.</p>
+<p>Aquí, haga clic en la barra de direcciones y escriba&nbsp;<strong>cmd,</strong>&nbsp;y luego presione la tecla Intro.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-20.png?width=500" class="img-fluid"></p>
+<p>Se abrirá una ventana de comando con su ubicación establecida en la carpeta de herramientas de la plataforma.&nbsp;Esto es importante.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-21.png?width=800" class="img-fluid"></p>
+<p>Ahora, tenemos la ventana del símbolo del sistema en la carpeta donde tenemos el archivo adb.exe.&nbsp;Es decir, nuestra carpeta de herramientas de plataforma.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-17.png?width=700" class="img-fluid"></p>
+<p>Ahora, descargue el archivo APK de la aplicación de Android que desea instalar.&nbsp;Por ejemplo, si desea instalar Snapchat, busque&nbsp;<strong>Snapchat APK</strong>&nbsp;en Google y descargue su archivo APK desde cualquier sitio web confiable en el que confíe.&nbsp;Luego, cambie el nombre del archivo a algo más simple como snapchat.apk.&nbsp;Ahora, transfiera snapchat.apk a la carpeta de herramientas de la plataforma.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-18.png?width=700" class="img-fluid"></p>
+<p>Ahora podemos instalar la aplicación Snapchat para Android usando snapchat.apk y adb en su PC.</p>
+<p>Abra el Subsistema de Windows para Android y busque la IP donde se puede conectar con ADB en la opción de modo Desarrollador.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-19.png?width=800" class="img-fluid"></p>
+<p>En la ventana del símbolo del sistema, escriba el siguiente comando y presione Entrar:</p>
+<p>adb.exe connect (dirección IP-aquí)</p>
+<p>Ejemplo: adb.exe conectar 127.0.0.1:12345</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-22.png?width=800" class="img-fluid"></p>
+<p>Ahora, escriba el comando de instalación que se proporciona a continuación y luego presione Enter:</p>
+<p>adb.exe install (apk-file-name-here.apk)</p>
+<p>Ejemplo: adb.exe instalar Snapchat.apk</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-23.png?width=800" class="img-fluid"></p>
+<p>La aplicación de Android ahora se instalará en su PC usando ADB y el archivo APK que proporcionó.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-24.png?width=800" class="img-fluid"></p>
+<p>Cuando haya terminado, verá el mensaje de Éxito.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-25.png?width=800" class="img-fluid"></p>
+<p>Puede cerrar la ventana CMD ahora.</p>
+<p>Ahora puede abrir la aplicación de Android en su PC.</p>
+<p>Presione la tecla de Windows y luego escriba el nombre de su aplicación.&nbsp;En nuestro caso, es Snapchat.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-27.png?width=800" class="img-fluid"></p>
+<p>Así es como se ve Snapchat en Windows 11.</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-26.jpg?width=800" class="img-fluid"></p>
+<p>Eso es todo.</p>
+</section>
+<section id="cargar-apk-automáticamente-con-un-doble-clic" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-apk-automáticamente-con-un-doble-clic">Cargar APK automáticamente con un doble clic</h2>
+<p>Sabemos que usar un comando adb no es la forma más fácil de instalar una aplicación de Android en su PC.&nbsp;Afortunadamente, ahora puede hacer doble clic en un archivo APK para instalarlo.&nbsp;Consulta el siguiente enlace para saber cómo configurarlo.</p>
+<p><strong>Leer:</strong>&nbsp;<a href="https://nerdschalk.com/how-to-sideload-apk-on-windows-11-automatically-with-a-double-click/">Cómo descargar APK en Windows 11 automáticamente con un doble clic</a></p>
+<p>Háganos saber cuál es su método favorito para cargar archivos APK en la PC.</p>
+<p><strong>RELACIONADO</strong></p>
+<ul>
+<li><a href="https://nerdschalk.com/how-to-disable-vbs-on-windows-11-and-does-it-help/">¿Cómo deshabilitar VBS en Windows 11 y ayuda?</a></li>
+<li><a href="https://nerdschalk.com/first-10-things-to-do-on-windows-11/">Las 10 primeras cosas que hacer en Windows 11</a></li>
+<li><a href="https://nerdschalk.com/windows-11-how-to-create-live-tiles-and-widgets/">Windows 11: Cómo crear mosaicos y widgets en vivo usted mismo</a></li>
+<li><a href="https://nerdschalk.com/how-to-extend-volume-windows-11-or-windows-10/">Cómo extender el volumen de Windows 11 o Windows 10</a></li>
+<li><a href="https://nerdschalk.com/how-to-facetime-windows-users/">Cómo usar Facetime en Windows</a>&nbsp;&nbsp;|&nbsp;<a href="https://nerdschalk.com/how-to-facetime-android-users/">Androide</a></li>
+<li><a href="https://nerdschalk.com/how-to-calibrate-monitor-on-windows-11-pc/">Cómo calibrar el monitor en una PC con Windows 11</a></li>
+<li><a href="https://nerdschalk.com/how-to-run-old-games-on-windows-11/">Cómo ejecutar juegos antiguos en Windows 11</a></li>
+</ul>
+<p><a href="https://nerdschalk.com/tag/how-to/">cómo</a><a href="https://nerdschalk.com/tag/windows-11/">ventanas 11</a></p>
+<p>[</p>
+<p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/secure.gravatar.com/avatar/8ddaa30f5018c02bbfc30545a9a2b72a?s=96&amp;d=retro&amp;r=g.png" class="img-fluid"></p>
+<p>](https://nerdschalk.com/author/ka1385/)</p>
+<p>[publicado por</p>
+<section id="kapil-malani" class="level6">
+<h6 class="anchored" data-anchor-id="kapil-malani">kapil malani</h6>
+<p>](https://nerdschalk.com/author/ka1385/)</p>
+<p>Aficionado acérrimo del Liverpool FC, Kapil es un gran admirador de Batman, Android y Street Cricket.&nbsp;En ese orden, probablemente.&nbsp;Correo electrónico:&nbsp;kapil@theandroidsoul.com</p>
+
+
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.html</guid>
+  <pubDate>Tue, 27 Sep 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/install-logo-759x427.png?width=600" medium="image"/>
+</item>
+<item>
+  <title>Comandos básicos de VIM</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2022-09-27-Comandos-VIM/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Vim es un editor de texto muy poderoso utilizado en sistemas Linux y Unix. A continuación, se presentan algunos de los comandos y combinaciones de teclas más utilizados en Vim:</p>
+<ol type="1">
+<li><p>Modos de Vim:</p>
+<ul>
+<li><p>Modo de comandos: el modo predeterminado de Vim, en el que se pueden ingresar comandos para editar el texto. Para activar el modo comando en Vim, debes presionar la tecla “Esc”. Esto te llevará al modo comando desde cualquier otro modo en el que te encuentres, como el modo insertar o el modo de reemplazo. Una vez que estés en el modo comando, puedes utilizar una variedad de comandos y combinaciones de teclas para navegar, editar y guardar tus archivos. Para salir de Vim, puedes ingresar el comando “:q” seguido de Enter. Si has realizado cambios y deseas guardarlos antes de salir, utiliza el comando “:wq” para escribir y guardar los cambios y salir de Vim.</p></li>
+<li><p>Modo de inserción: el modo en el que se puede ingresar texto normal.</p></li>
+<li><p>Modo de visualización: el modo utilizado para seleccionar y manipular bloques de texto.</p></li>
+</ul></li>
+<li><p>Comandos de movimiento de cursor:</p>
+<ul>
+<li>h: mueve el cursor una posición a la izquierda.</li>
+<li>j: mueve el cursor una posición hacia abajo.</li>
+<li>k: mueve el cursor una posición hacia arriba.</li>
+<li>l: mueve el cursor una posición a la derecha.</li>
+<li>0: mueve el cursor al inicio de la línea.</li>
+<li>$: mueve el cursor al final de la línea.</li>
+<li>w: mueve el cursor a la siguiente palabra.</li>
+<li>b: mueve el cursor a la palabra anterior.</li>
+<li>gg: mueve el cursor al inicio del archivo.</li>
+<li>G: mueve el cursor al final del archivo.</li>
+<li>:numero: mueve el cursor a la línea con el número especificado.</li>
+</ul></li>
+<li><p>Comandos de edición:</p>
+<ul>
+<li>i: entra en el modo de inserción antes del cursor.</li>
+<li>a: entra en el modo de inserción después del cursor.</li>
+<li>o: inserta una nueva línea debajo del cursor y entra en el modo de inserción.</li>
+<li>d: elimina el texto seleccionado.</li>
+<li>y: copia el texto seleccionado.</li>
+<li>p: pega el texto copiado o eliminado después del cursor.</li>
+<li>u: deshace la última acción.</li>
+<li>Ctrl+r: rehace la última acción.</li>
+<li>:w: guarda el archivo.</li>
+<li>:q: sale de Vim.</li>
+<li>:q!: sale de Vim sin guardar los cambios.</li>
+</ul></li>
+<li><p>Comandos de búsqueda y reemplazo:</p>
+<ul>
+<li>/: busca el texto especificado hacia adelante.</li>
+<li>?: busca el texto especificado hacia atrás.</li>
+<li>n: busca la siguiente ocurrencia del texto especificado.</li>
+<li>N: busca la ocurrencia anterior del texto especificado.</li>
+<li>:s/old/new/g: reemplaza la primera ocurrencia de “old” con “new” en la línea actual.</li>
+<li>:s/old/new/gc: reemplaza todas las ocurrencias de “old” con “new” en la línea actual y pide confirmación antes de cada reemplazo.</li>
+</ul></li>
+</ol>
+<p>Estos son solo algunos de los comandos y combinaciones de teclas más utilizados en Vim. Hay muchos más disponibles, y la lista completa se puede encontrar en la documentación de Vim.</p>
+
+
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2022-09-27-Comandos-VIM/index.html</guid>
+  <pubDate>Tue, 27 Sep 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Quarto Extensions</title>
@@ -1100,6 +2497,731 @@ Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Defi
   <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2022-02-13-feature-callouts/index.html</guid>
   <pubDate>Sun, 13 Feb 2022 05:00:00 GMT</pubDate>
   <media:content url="https://achalmawebsite.netlify.app/docs/blog/posts/2022-02-13-feature-callouts/callouts.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Comandos de Blogdown</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Blogdown es un paquete de R que permite crear sitios web utilizando R Markdown y Hugo. Algunos de los comandos más comunes de Blogdown son:</p>
+<ol type="1">
+<li><code>blogdown::new_site()</code>: Crea un nuevo sitio web de Blogdown en el directorio actual.</li>
+<li><code>blogdown::serve_site()</code>: Inicia el servidor local y visualiza el sitio web en el navegador web.</li>
+<li><code>blogdown::stop_server()</code>: Detiene el servidor local que está ejecutando el sitio web.</li>
+<li><code>blogdown::new_post()</code>: Crea un nuevo archivo de publicación en el directorio <code>content/post</code>.</li>
+<li><code>blogdown::build_site()</code>: Compila y genera el sitio web estático en el directorio <code>public</code>.</li>
+<li><code>blogdown::clean()</code>: Limpia el directorio <code>public</code> eliminando todos los archivos generados anteriormente.</li>
+<li><code>blogdown::check_site()</code>: Verifica si hay errores en el sitio web antes de construirlo.</li>
+<li><code>blogdown::update_hugo()</code>: Actualiza la versión de Hugo utilizada por el sitio web.</li>
+<li><code>blogdown::update_dependencies()</code>: Actualiza todas las dependencias de Blogdown.</li>
+<li><code>blogdown::check_new_version()</code>: Verifica si hay una nueva versión de Blogdown disponible.</li>
+<li><code>blogdown::hugo_cmd()</code>: Ejecuta un comando de Hugo personalizado en el sitio web.</li>
+<li><code>blogdown::edit_theme()</code>: Abre el directorio del tema utilizado por el sitio web para editarlo.</li>
+<li><code>blogdown::install_theme()</code>: Instala un tema de Hugo adicional en el sitio web.</li>
+<li><code>blogdown::update_academic()</code>: Actualiza el tema Académico utilizado por el sitio web.</li>
+<li><code>blogdown::update_netlify()</code>: Actualiza la configuración de Netlify para implementar el sitio web.</li>
+</ol>
+
+
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</guid>
+  <pubDate>Wed, 14 Jul 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Comandos google assistant</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmawebsite.netlify.app/docs/blog/posts/2020-05-23-Comandos-goole-assistant/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Basic</p>
+<p>Stop playing</p>
+<ul>
+<li>OK Google, stop. /&nbsp;stäp</li>
+</ul>
+<p>Pause&nbsp;&nbsp;</p>
+<ul>
+<li>OK Google, pause.&nbsp;/&nbsp;pôz</li>
+<li>OK Google, resume.&nbsp; /&nbsp;&nbsp;rəˈzo͞om</li>
+</ul>
+<p>Control the volume</p>
+<ul>
+<li>OK Google, increase volume.&nbsp; /ɪnˈkris/  /ˈvɑl·jum, ˈvɑl·jəm/</li>
+<li>OK Google, volume up.</li>
+<li>OK Google, decrease volume.</li>
+<li>OK Google, volume down.</li>
+</ul>
+<p>Ask for help</p>
+<ul>
+<li>OK Google, help.</li>
+</ul>
+<p>Examples of what you can ask</p>
+<ul>
+<li>OK Google, what can you do?</li>
+</ul>
+<p>Ask to repeat the last phrase</p>
+<ul>
+<li>OK Google, repeat.</li>
+</ul>
+<p>Change Google Assistant’s voice</p>
+<ul>
+<li>OK Google, change your voice.</li>
+</ul>
+<p>You can string two commands together&nbsp;&nbsp;</p>
+<ul>
+<li>OK Google, what is time, and what’s the weather?</li>
+</ul>
+<p>Bluetooth</p>
+<p>Pair a Bluetooth device</p>
+<ul>
+<li>OK Google, pair Bluetooth.</li>
+</ul>
+<p>Connect to a Bluetooth device</p>
+<ul>
+<li>OK Google, connect.</li>
+<li>OK Google, connect to my phone.</li>
+</ul>
+<p>Disconnecting from a Bluetooth device</p>
+<ul>
+<li>OK Google, disconnect.</li>
+<li>OK Google, disconnect from my phone.</li>
+</ul>
+<p>Calendar</p>
+<p>Hear information about agenda / Calendar</p>
+<ul>
+<li>OK Google, what’s my calendar for today?</li>
+<li>OK Google, what’s my agenda for Friday?</li>
+<li>OK Google, calendar for tomorrow.</li>
+</ul>
+<p>Add a calendar event</p>
+<ul>
+<li>OK Google, add an event to my calendar.</li>
+<li>OK Google, add the meeting to my calendar for tomorrow at 5 p.m.</li>
+</ul>
+<p>How many days until holiday</p>
+<ul>
+<li>OK Google, how many days until Christmas?</li>
+<li>OK Google, how many days until new year?</li>
+</ul>
+<p>Calls and messages</p>
+<p>Call a contact</p>
+<ul>
+<li>OK Google, call.</li>
+<li>OK Google, make a call.</li>
+<li>OK Google, call Eugene.</li>
+<li>OK Google, call Eugene on speaker.</li>
+<li>OK Google, find Eugene phone number.</li>
+</ul>
+<p>SMS</p>
+<ul>
+<li>OK Google, SMS.</li>
+<li>OK Google, text Eugene.</li>
+<li>OK Google, text John &lt;<buy some="" milk="">&gt;.</buy></li>
+<li>OK Google, message to John &lt;Hello, John&gt;.</li>
+</ul>
+<p>Send a WhatsApp or Viber message</p>
+<ul>
+<li>OK Google, message Eugene via WhatsApp.</li>
+<li>OK Google, message Eugene via Viber.</li>
+<li>OK Google, message Eugene &lt;Hello, Eugene&gt;.</li>
+<li>OK Google, WhatsApp John.</li>
+<li>OK Google, Viber John.</li>
+<li>OK Google, voice message to Eugene.</li>
+<li>OK Google, voice message to Eugene via WhatsApp.</li>
+</ul>
+<p>Calculator</p>
+<p>Arithmetic</p>
+<ul>
+<li>OK Google, multiply 15 to 16.</li>
+<li>OK Google, what’s 15 times 16?</li>
+<li>OK Google, what is 15% of 50?</li>
+<li>OK Google, what’s the square root of 42?</li>
+</ul>
+<p>Unit Converter</p>
+<ul>
+<li>OK Google, how many meters are in a mile?</li>
+<li>OK Google, 10 inches in meters.</li>
+<li>OK Google, how many grams are in a kilogram?</li>
+<li>OK Google, 5 liters in gallons.</li>
+<li>OK Google, how many pounds in a kilo?</li>
+</ul>
+<p>Currency exchange rate</p>
+<ul>
+<li>OK Google, how many dollars is a euro?</li>
+<li>OK Google, 15 US dollars in Russian rubles.</li>
+</ul>
+<p>Stock Exchange</p>
+<ul>
+<li>OK Google, What’s the stock price of Apple?</li>
+<li>OK Google, how much the bitcoin costs?</li>
+</ul>
+<p>Cooking</p>
+<p>Named timer</p>
+<ul>
+<li>OK Google, set chicken timer to 10 minutes.</li>
+<li>OK Google, how much time is left for chicken?</li>
+</ul>
+<p>Dish caloricity</p>
+<ul>
+<li>OK Google, how many calories are in a beefsteak?</li>
+<li>OK Google, how many calories are in a glass of Cola?</li>
+</ul>
+<p>The nutritional value</p>
+<ul>
+<li>OK Google, how much sugar in Cola?</li>
+<li>OK Google, how much protein in chicken?</li>
+<li>OK Google, how much vitamin A in a carrot?</li>
+</ul>
+<p>Dictionary</p>
+<p>&nbsp;Word meanings</p>
+<ul>
+<li>OK Google, What is the definition of the word <instant>?</instant></li>
+<li>OK Google, What does the word <mammal> mean?</mammal></li>
+<li>OK Google, find the definition of <agila>.</agila></li>
+</ul>
+<p>Word spelling</p>
+<ul>
+<li>OK Google, How do you spell <ambassador>?</ambassador></li>
+</ul>
+<p>Easter Eggs</p>
+<p>Getting to know Google Assistant</p>
+<ul>
+<li><p>OK Google, what are you?</p></li>
+<li><p>OK Google, what’s your favorite color?</p></li>
+<li><p>OK Google, how are you?</p></li>
+<li><p>OK Google, do you have kids?</p></li>
+<li><p>OK Google, what’s your quest ?</p></li>
+<li><p>OK Google, tell me about your childhood.</p></li>
+<li><p>OK Google, can you drive?</p></li>
+<li><p>OK Google, who made you?</p></li>
+<li><p>OK Google, where do you live?</p></li>
+<li><p>OK Google, what do you dream about?</p></li>
+<li><p>OK Google, do you have feelings?</p></li>
+</ul>
+<p>Party tricks</p>
+<ul>
+<li><p>OK Google, I need the poem.</p></li>
+<li><p>OK Google, tell me a story.</p></li>
+<li><p>OK Google, roll a dice.</p></li>
+<li><p>OK Google, flip a coin.</p></li>
+<li><p>OK Google, tell me a joke.</p></li>
+<li><p>OK Google, sing a song.</p></li>
+<li><p>OK Google, beatbox.</p></li>
+<li><p>OK Google, tell me something I don’t know.</p></li>
+<li><p>OK Google, sing a lullaby.</p></li>
+<li><p>OK Google, what am I thinking now?</p></li>
+<li><p>OK Google, surprise me.</p></li>
+</ul>
+<p>Email</p>
+<p>Send email</p>
+<ul>
+<li><p>OK Google, email.</p></li>
+<li><p>OK Google, send an email.</p></li>
+<li><p>OK Google, send an email to Eugene.</p></li>
+<li><p>OK Google, send email to Eugene <buy some="" milk="">&gt;.</buy></p></li>
+</ul>
+<p>Geography&nbsp;&nbsp;</p>
+<p>Country facts</p>
+<ul>
+<li><p>OK Google, how many people live in Russia?</p></li>
+<li><p>OK Google, what’s the capital of Austria?</p></li>
+<li><p>OK Google, Spain area.</p></li>
+</ul>
+<p>Facts about oceans/seas/rivers/lakes</p>
+<ul>
+<li><p>OK Google, biggest ocean.</p></li>
+<li><p>OK Google, Depth of the Pacific Ocean</p></li>
+<li><p>OK Google, the saltiest ocean.</p></li>
+<li><p>OK Google, the longest river.</p></li>
+<li><p>OK Google, what’s the longest river in Russia?</p></li>
+<li><p>OK Google, deepest lake.</p></li>
+<li><p>OK Google, the deepest lake in Canada.</p></li>
+</ul>
+<p>Discover facts about nature</p>
+<ul>
+<li><p>OK Google, why is the sky blue?</p></li>
+<li><p>OK Google, where does the rain come from?</p></li>
+</ul>
+<p>History</p>
+<p>Historical events</p>
+<ul>
+<li><p>OK Google, what happened during enlightenment?</p></li>
+<li><p>OK Google, when did World War 2 begin?</p></li>
+<li><p>OK Google, Olympic Games in the USSR.</p></li>
+<li><p>OK Google, when was the Cold War?</p></li>
+</ul>
+<p>Lists</p>
+<p>Add item to the list</p>
+<ul>
+<li><p>OK Google, add bread to my shopping list.</p></li>
+<li><p>OK Google, add milk and potatoes to my shopping list.</p></li>
+</ul>
+<p>Ask what’s on list</p>
+<ul>
+<li><p>OK Google, what’s on my shopping list?</p></li>
+<li><p>OK Google, my shopping list.</p></li>
+</ul>
+<p>Music</p>
+<p>Play music on Google Music</p>
+<ul>
+<li><p>OK Google, play some music on Google Play.</p></li>
+<li><p>OK Google, play jazz music on Google Play.</p></li>
+</ul>
+<p>Play a Google Music playlist</p>
+<ul>
+<li>OK Google, play my Trance playlist on Google Play.</li>
+</ul>
+<p>Play a song</p>
+<ul>
+<li><p>OK Google, play &lt;Can’t Stop&gt; on Google Play Music.</p></li>
+<li><p>OK Google, plays <at the="" end=""> by <linkin park="">.</linkin></at></p></li>
+</ul>
+<p>Play an artist</p>
+<ul>
+<li><p>OK Google, play music by Taylor Swift.</p></li>
+<li><p>OK Google, play One Republic.</p></li>
+</ul>
+<p>Play an album</p>
+<ul>
+<li><p>OK Google, play the last U2 album.</p></li>
+<li><p>OK Google, play Essential Classical on Google Play.</p></li>
+</ul>
+<p>Control what’s playing</p>
+<ul>
+<li><p>OK Google, next.</p></li>
+<li><p>OK Google, previous.</p></li>
+<li><p>OK Google, repeat this song.</p></li>
+</ul>
+<p>Fast forward or rewind</p>
+<ul>
+<li><p>OK Google, ski forward 1 minute.</p></li>
+<li><p>OK Google, skin back 1 minute.</p></li>
+</ul>
+<p>Play music based on genre /mood/activity</p>
+<ul>
+<li><p>OK Google, play some fun music.</p></li>
+<li><p>OK Google, play music for a workout.</p></li>
+<li><p>OK Google, play songs for sleeping.</p></li>
+</ul>
+<p>Find the song by part of the lyrics</p>
+<ul>
+<li>OK Google, play the song that goes:
+
+.</li>
+</ul>
+<p>Ask what’s playing</p>
+<ul>
+<li><p>OK Google, what song is this?</p></li>
+<li><p>OK Google, what song is playing?</p></li>
+<li><p>OK Google, what’s this album?</p></li>
+</ul>
+<p>Get information</p>
+<ul>
+<li><p>OK Google, who sings the song <let it="" go="">?</let></p></li>
+<li><p>OK Google, who is in the band <daft punk="">?</daft></p></li>
+<li><p>OK Google, what year did Linkin Park release <hybrid theory=""></hybrid></p></li>
+</ul>
+<p>Movies</p>
+<p>Today in the cinema</p>
+<ul>
+<li><p>OK Google, what movies are playing tonight?</p></li>
+<li><p>OK Google, movie schedule.</p></li>
+</ul>
+<p>Movies short summary</p>
+<ul>
+<li><p>OK Google, tell me about the movie “The Matrix”.</p></li>
+<li><p>OK Google, «Blade Runner» duration</p></li>
+<li><p>OK Google, how many seasons in “Game of Thrones”?</p></li>
+</ul>
+<p>Info about actors</p>
+<ul>
+<li><p>OK Google, who plays in “Blade Runner”?</p></li>
+<li><p>OK Google, what is Johnny Depp’s latest movie?</p></li>
+<li><p>OK Google, how many Oscars has Tom Cruise won?</p></li>
+<li><p>OK Google, who plays Doctor Who?</p></li>
+</ul>
+<p>News</p>
+<p>Listen to the latest news</p>
+<ul>
+<li><p>OK Google, tell me the news.</p></li>
+<li><p>OK Google, news.&nbsp;&nbsp;</p></li>
+</ul>
+<p>Listen to the latest news about a specific news category</p>
+<ul>
+<li><p>OK Google, what’s the latest in technology?</p></li>
+<li><p>OK Google, sports news.</p></li>
+</ul>
+<p>Ask what’s playing (news)</p>
+<ul>
+<li>OK Google, what’s playing?</li>
+</ul>
+<p>Summary of your day, including weather, traffic, and some news.</p>
+<ul>
+<li>OK Google, what’s my Flash Briefing?</li>
+</ul>
+<p>Navigation</p>
+<p>Routes</p>
+<ul>
+<li><p>OK Google, the pathway to the nearest supermarket.</p></li>
+<li><p>OK Google, the route to Moscow.</p></li>
+</ul>
+<p>Hear commute conditions</p>
+<ul>
+<li><p>OK Google, what’s the traffic?</p></li>
+<li><p>OK Google, what’s the traffic like?</p></li>
+</ul>
+<p>Travel time to home or work</p>
+<ul>
+<li><p>OK Google, how long drive to work?</p></li>
+<li><p>OK Google, time to home.</p></li>
+</ul>
+<p>Specify destination</p>
+<ul>
+<li><p>OK Google, how long will it take to drive to Red Square?</p></li>
+<li><p>OK Google, how long will it take to walk to Historical Museum?</p></li>
+</ul>
+<p>Nearby places</p>
+<ul>
+<li><p>OK Google, where’s the nearest swimming pool?</p></li>
+<li><p>OK Google, find me a fast food store.</p></li>
+<li><p>OK Google, where can I buy a coffee?</p></li>
+</ul>
+<p>People</p>
+<p>Facts about celebrities</p>
+<ul>
+<li><p>OK Google, who is James Watson?</p></li>
+<li><p>OK Google, tell me about Thomas Edison.</p></li>
+<li><p>OK Google, how tall is Barack Obama?</p></li>
+<li><p>OK Google, who invented the phone?</p></li>
+<li><p>OK Google, when was Donald Trump born?</p></li>
+<li><p>OK Google, who is the president of Croatia?</p></li>
+</ul>
+<p>Physics &amp; Chemistry&nbsp;&nbsp;</p>
+<p>Physical</p>
+<ul>
+<li><p>OK Google, gravity on Earth.</p></li>
+<li><p>OK Google, speed of light.</p></li>
+<li><p>OK Google, what is gravity?</p></li>
+<li><p>OK Google, Newton’s first law.</p></li>
+</ul>
+<p>Chemical</p>
+<ul>
+<li><p>OK Google, air composition.</p></li>
+<li><p>OK Google, petroleum composition.</p></li>
+<li><p>OK Google, the atomic number of oxygen.</p></li>
+<li><p>OK Google, uranium half-life.</p></li>
+</ul>
+<p>Places</p>
+<p>Near places</p>
+<ul>
+<li><p>OK Google, where’s the nearest swimming pool?</p></li>
+<li><p>OK Google, find me a fast food shop.</p></li>
+<li><p>OK Google, where can I buy a coffee?</p></li>
+</ul>
+<p>Radio</p>
+<p>Listen to the radio station by <radio station="" name=""> using the Tuneln Radio app</radio></p>
+<ul>
+<li><p>OK Google, play Bloomberg Radio on Tunnel.</p></li>
+<li><p>OK Google, play BBC on Tunnel.</p></li>
+</ul>
+<p>Listen to radio station by frequency</p>
+<ul>
+<li><p>OK Google, play 103.1 FM.</p></li>
+<li><p>OK Google, play 106.1 FM Boston.</p></li>
+</ul>
+<p>Reminders</p>
+<p>Create a time-based reminder</p>
+<ul>
+<li><p>OK Google, create a reminder.</p></li>
+<li><p>OK Google, a new reminder.</p></li>
+</ul>
+<p>Create a time-based reminder for a specific action</p>
+<ul>
+<li><p>OK Google, remind me to visit Mom.</p></li>
+<li><p>OK Google, remind me to buy milk.</p></li>
+</ul>
+<p>Create a time-based reminder at one go</p>
+<ul>
+<li><p>OK Google, remind me to call Grandma tomorrow at 9 p.m.</p></li>
+<li><p>OK Google, remind me to buy some coffee on Friday at 10p.m.</p></li>
+</ul>
+<p>Check reminders</p>
+<ul>
+<li><p>OK Google, what’s in my reminders?</p></li>
+<li><p>OK Google, what are my reminders for tomorrow?</p></li>
+<li><p>OK Google, my reminders for tomorrow.</p></li>
+<li><p>OK Google, check my reminders.</p></li>
+<li><p>OK Google, check all my reminders.&nbsp;&nbsp;</p></li>
+</ul>
+<p>Cancel reminders</p>
+<ul>
+<li><p>OK Google, delete the reminder.</p></li>
+<li><p>OK Google, remove the reminder.</p></li>
+<li><p>OK Google, cancel the reminder to buy milk.</p></li>
+<li><p>OK Google, delete all reminders.</p></li>
+</ul>
+<p>Smart Home</p>
+<p>Call on Android-phone</p>
+<ul>
+<li>OK Google, where is my phone?</li>
+</ul>
+<p>Control the light</p>
+<ul>
+<li><p>OK Google, turn on lights.</p></li>
+<li><p>OK Google, turn off lights.</p></li>
+</ul>
+<p>Controls the brightness of light</p>
+<ul>
+<li>OK Google, set the lights to 50%.</li>
+</ul>
+<p>Control the smart plug</p>
+<ul>
+<li><p>OK Google, turn on my smart plug.</p></li>
+<li><p>OK Google, turn off my smart plug.</p></li>
+</ul>
+<p>Control the thermostat</p>
+<ul>
+<li><p>OK Google, raise temp 2 degrees.</p></li>
+<li><p>OK Google, set the temperature to 72.</p></li>
+<li><p>OK Google, what’s the temperature inside?</p></li>
+</ul>
+<p>Sports</p>
+<p>Sports news</p>
+<ul>
+<li>OK Google, what is my Sports Update?</li>
+</ul>
+<p>Result of last match</p>
+<ul>
+<li><p>OK Google, what was the score for the Washington Capitals game?</p></li>
+<li><p>OK Google, last Chicago Bulls game?</p></li>
+<li><p>OK Google, did Washington Capitals win?</p></li>
+</ul>
+<p>League position</p>
+<ul>
+<li><p>OK Google, how are the Lakers doing?</p></li>
+<li><p>OK Google, what are the Pittsburgh Penguins standings?</p></li>
+</ul>
+<p>Next match time</p>
+<ul>
+<li>OK Google, when Washington Capitals playing next?</li>
+</ul>
+<p>The club’s roster</p>
+<ul>
+<li><p>OK Google, French national football team lineup.</p></li>
+<li><p>OK Google, who plays for Real Madrid?</p></li>
+<li><p>OK Google, Barcelona team lineup.</p></li>
+<li><p>OK Google, Washington Capitals roster.</p></li>
+</ul>
+<p>Get player info</p>
+<ul>
+<li><p>OK Google, where does Messi play?</p></li>
+<li><p>OK Google,&nbsp; what team does Cristiano Ronaldo play for?</p></li>
+<li><p>OK Google, Cristiano Ronaldo height.</p></li>
+<li><p>OK Google, Messi’s age.</p></li>
+</ul>
+<p>Timer &amp; Alarm</p>
+<p>Find out time / Date</p>
+<ul>
+<li><p>OK Google, what time is it?</p></li>
+<li><p>OK Google, what’s the date?</p></li>
+</ul>
+<p>Time zones</p>
+<ul>
+<li><p>OK Google, what time is it in Berlin?</p></li>
+<li><p>OK Google, time in New York?</p></li>
+<li><p>OK Google, the time difference between Moscow and Washington.</p></li>
+</ul>
+<p>Set a timer</p>
+<ul>
+<li><p>OK Google, set a timer for 1 minute.</p></li>
+<li><p>OK Google, set timer 5 minutes for paste.</p></li>
+</ul>
+<p>Set a timer with name</p>
+<ul>
+<li><p>OK Google, set timer&nbsp; <pizza> for 5 minutes.</pizza></p></li>
+<li><p>OK Google, set timer <pasta> for 10 minutes.</pasta></p></li>
+</ul>
+<p>Check timers</p>
+<ul>
+<li><p>OK Google, my timers.</p></li>
+<li><p>OK Google, how much time is left for pasta?</p></li>
+</ul>
+<p>Cancel timers</p>
+<ul>
+<li>OK Google, cancel timers.</li>
+</ul>
+<p>Set an alarm</p>
+<ul>
+<li><p>OK Google, set an alarm for 8 a.m.</p></li>
+<li><p>OK Google, set an alarm for weekdays at 7 a.m.</p></li>
+<li><p>OK Google, snooze.</p></li>
+<li><p>OK Google, snooze for 10 minutes.&nbsp;&nbsp;</p></li>
+</ul>
+<p>Check / Cancel alarms</p>
+<ul>
+<li><p>OK Google, what alarms are set?</p></li>
+<li><p>OK Google, cancel my alarms.&nbsp;&nbsp;</p></li>
+</ul>
+<p>Set a sleep timer</p>
+<ul>
+<li><p>OK Google, set a sleep timer for 30 minutes.</p></li>
+<li><p>OK Google, stop playing in 30 minutes.</p></li>
+</ul>
+<p>Translations</p>
+<p>Translate to Russian</p>
+<ul>
+<li><p>OK Google, how do we say <good night="">&gt; in Russian?</good></p></li>
+<li><p>OK Google, translates <excusez-moi> to Russian.</excusez-moi></p></li>
+</ul>
+<p>Translate to French</p>
+<ul>
+<li>OK Google, how do we say <excuse me=""> in French?</excuse></li>
+</ul>
+<p>Translate to German</p>
+<ul>
+<li>OK Google, translate <good evening=""> to German.</good></li>
+</ul>
+<p>Translate to Spanish</p>
+<ul>
+<li>OK Google, how do we say <guten tag=""> in English?</guten></li>
+</ul>
+<p>Travel</p>
+<p>Flights</p>
+<ul>
+<li><p>OK Google, how much is a round-trip flight to New York?</p></li>
+<li><p>OK Google, how much is a one-way flight to New York cost?</p></li>
+<li><p>OK Google, how much are flights to St.&nbsp;Petersburg in weeks?</p></li>
+<li><p>OK Google, prices for an airline ticket to St.&nbsp;Petersburg.</p></li>
+<li><p>OK Google, find me flights to Paris.</p></li>
+<li><p>OK Google, what is the schedules for flights to New York?</p></li>
+<li><p>OK Google, find flights with United Airlines?</p></li>
+<li><p>OK Google, the state of United Airlines 515.</p></li>
+<li><p>OK Google, when does Delta Flight 315 arrive?</p></li>
+<li><p>OK Google, when does United Airlines 515 leave?</p></li>
+</ul>
+<p>Find restaurant to try&nbsp;&nbsp;</p>
+<ul>
+<li><p>OK Google, what hotels are nearby?</p></li>
+<li><p>OK Google, hotels in Moscow.&nbsp;&nbsp;</p></li>
+</ul>
+<p>Discover place to visit</p>
+<ul>
+<li><p>OK Google, attractions in Saint Petersburg?</p></li>
+<li><p>OK Google, things to do in St.&nbsp;Petersburg?</p></li>
+</ul>
+<p>TV</p>
+<p>Control TV</p>
+<ul>
+<li><p>OK Google, turn on TV.</p></li>
+<li><p>OK Google, volume up.</p></li>
+<li><p>OK Google, volume down.</p></li>
+<li><p>OK Google, turn off my TV.</p></li>
+</ul>
+<p>Play music</p>
+<ul>
+<li><p>OK Google, play rock music on my TV.</p></li>
+<li><p>OK Google, play Eminem on my TV.</p></li>
+</ul>
+<p>Play radio</p>
+<ul>
+<li><p>OK Google, play NBC on Tunnel on my TV.</p></li>
+<li><p>OK Google, play BBC on Tunnel on my TV.</p></li>
+</ul>
+<p>Play recommended video on YouTube</p>
+<ul>
+<li><p>OK Google, play YouTube.</p></li>
+<li><p>OK Google, open YouTube.</p></li>
+<li><p>OK Google, next.</p></li>
+<li><p>OK Google, turn on subtitles</p></li>
+</ul>
+<p>Find the video on YouTube&nbsp;&nbsp;</p>
+<ul>
+<li><p>OK Google, play funny cat videos</p></li>
+<li><p>OK Google, play the latest from Euronews.</p></li>
+<li><p>OK Google, play yoga videos.</p></li>
+</ul>
+<p>Netflix</p>
+<ul>
+<li><p>OK Google, play Stranger Things on Netflix</p></li>
+<li><p>OK Google, play Disenchantment episode 2 on Netflix.</p></li>
+</ul>
+<p>News</p>
+<ul>
+<li><p>OK Google, watch the news.</p></li>
+<li><p>OK Google, watch technology news</p></li>
+<li><p>OK Google, watch Fox news.</p></li>
+<li><p>OK Google, next.</p></li>
+</ul>
+<p>Google Photos</p>
+<ul>
+<li><p>OK Google, show me photos on TV.</p></li>
+<li><p>OK Google, show me photos of San Francisco on TV.</p></li>
+<li><p>OK Google, show me photos of mountains on TV</p></li>
+<li><p>OK Google, show me photos of the beach trip 2018 on TV</p></li>
+</ul>
+<p>Security Camera</p>
+<ul>
+<li><p>OK Google, show me front door on my TV</p></li>
+<li><p>OK Google, what’s on my backyard?</p></li>
+</ul>
+<p>Weather&nbsp;&nbsp;</p>
+<ul>
+<li><p>OK Google, show me the weather on my TV</p></li>
+<li><p>OK Google, show me the weather for tomorrow on my TV.</p></li>
+</ul>
+<p>Calculator&nbsp;&nbsp;</p>
+<ul>
+<li><p>OK Google, show me Google´s stock price on my TV</p></li>
+<li><p>OK Google, show me how many feet are in a mile on my TV.</p></li>
+</ul>
+<p>Sport</p>
+<ul>
+<li>OK Google, show the score of the Capitals game on my TV</li>
+</ul>
+<p>Translate and dictionary</p>
+<ul>
+<li><p>OK Google, show me how to say “Good morning” in French on my TV.</p></li>
+<li><p>OK Google, show me how to say “How are you?” in Spanish on my TV.</p></li>
+<li><p>OK Google, show me the definition of “perseverance” on my TV.</p></li>
+</ul>
+<p>Weather</p>
+<p>Ask for current weather (for your Google Home device address)</p>
+<ul>
+<li>OK Google, what’s the weather?</li>
+</ul>
+<p>Weather forecast</p>
+<ul>
+<li><p>OK Google, what’s the weather tomorrow?</p></li>
+<li><p>OK Google, weather on Monday.</p></li>
+<li><p>OK Google, weather on weekend.</p></li>
+<li><p>OK Google, what’s the weather next week?</p></li>
+</ul>
+<p>Specific questions about weather / forecast</p>
+<ul>
+<li><p>OK Google, is it sunny today?</p></li>
+<li><p>OK Google, is it going to rain tomorrow?</p></li>
+<li><p>OK Google, should I take an umbrella?</p></li>
+</ul>
+<p>Weather forecast for a specific location</p>
+<ul>
+<li><p>OK Google, weather tomorrow in Moscow?</p></li>
+<li><p>OK Google, will it rain tomorrow in St.&nbsp;Petersburg?</p></li>
+</ul>
+
+
+
+ ]]></description>
+  <category>Política</category>
+  <guid>https://achalmawebsite.netlify.app/docs/blog/posts/2020-05-23-Comandos-goole-assistant/index.html</guid>
+  <pubDate>Sat, 23 May 2020 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

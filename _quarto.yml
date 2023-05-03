@@ -13,7 +13,7 @@ website:
   google-analytics: "G-FV9Z7SDZ0M"
   open-graph: true
   twitter-card: true
-  site-url: https://quarto.org
+  site-url: https://achalmawebsite.netlify.app/
   repo-actions: [edit, issue]
   page-navigation: true
   search:
@@ -41,7 +41,7 @@ website:
         href: https://twitter.com/achalmaedison
         aria-label: Quarto Twitter
       - icon: github
-        href: https://github.com/achalmed
+        href: https://github.com/achalmed/website-achalma
         aria-label: Quarto GitHub       
   navbar:
     background: light
@@ -66,21 +66,21 @@ website:
         href: docs/blog/index.qmd
       - text: "Ayuda"
         menu:
-          - text: "Report a Bug"
+          - text: "Reportar un error"
             icon: "bug"
-            href: "https://github.com/quarto-dev/quarto-cli/issues"
-          - text: "Ask a Question"
+            href: "https://github.com/achalmed/website-achalma/issues"
+          - text: "Hacer una pregunta"
             icon: "chat-right-text"
-            href: "https://github.com/quarto-dev/quarto-cli/discussions"
+            href: "https://github.com/achalmed/website-achalma/discussions"
           - text: "FAQ"
             icon: "question-circle"
             href: docs/faq/index.qmd
     tools:
       - icon: twitter
-        href: https://twitter.com/quarto_pub
+        href: https://twitter.com/achalmaedison
         text: Quarto Twitter
       - icon: github
-        href: https://github.com/quarto-dev/quarto-cli
+        href: https://github.com/achalmed
         text: Quarto GitHub       
 
   sidebar:

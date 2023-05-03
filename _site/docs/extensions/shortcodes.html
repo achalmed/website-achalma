@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>achalmaedison - Creating Shortcodes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/extensions/filters.html" rel="next">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="achalmaedison - Creating Shortcodes">
+<meta property="og:description" content="Shortcodes are special markdown directives that generate various types of content. Quarto shortcodes are similar in form and function to Hugo shortcodes and WordPress shortcodes.">
+<meta property="og:site-name" content="achalmaedison">
+<meta name="twitter:title" content="achalmaedison - Creating Shortcodes">
+<meta name="twitter:description" content="Shortcodes are special markdown directives that generate various types of content. Quarto shortcodes are similar in form and function to Hugo shortcodes and WordPress shortcodes.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/guide/index.html">
+ <span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/extensions/index.html" aria-current="page">
+ <span class="menu-text">Extensions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html">
+ <span class="menu-text">Referencias</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html">
+ <span class="menu-text">Galería</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ayuda</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Ask a Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Creating Shortcodes</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/index.html" class="sidebar-item-text sidebar-link">Quarto Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-filters.html" class="sidebar-item-text sidebar-link">Shortcodes &amp; Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-journals.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Extensions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/managing.html" class="sidebar-item-text sidebar-link">Managing Extensions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Creating Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua.html" class="sidebar-item-text sidebar-link">Lua Development</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua-api.html" class="sidebar-item-text sidebar-link">Lua API Reference</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/distributing.html" class="sidebar-item-text sidebar-link">Distribution</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/shortcodes.html" class="sidebar-item-text sidebar-link active">Shortcodes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/filters.html" class="sidebar-item-text sidebar-link">Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/templates.html" class="sidebar-item-text sidebar-link">Article Templates</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/authors.html" class="sidebar-item-text sidebar-link">Authors &amp; Affiliations</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Plugins</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/project-types.html" class="sidebar-item-text sidebar-link">Project Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/starter-templates.html" class="sidebar-item-text sidebar-link">Starter Templates</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
+  <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development">Development</a></li>
+  <li><a href="#distribution" id="toc-distribution" class="nav-link" data-scroll-target="#distribution">Distribution</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#raw-output" id="toc-raw-output" class="nav-link" data-scroll-target="#raw-output">Raw Output</a></li>
+  <li><a href="#named-arguments" id="toc-named-arguments" class="nav-link" data-scroll-target="#named-arguments">Named Arguments</a></li>
+  <li><a href="#metadata-options" id="toc-metadata-options" class="nav-link" data-scroll-target="#metadata-options">Metadata Options</a></li>
+  </ul></li>
+  <li><a href="#raw-arguments" id="toc-raw-arguments" class="nav-link" data-scroll-target="#raw-arguments">Raw Arguments</a></li>
+  <li><a href="#escaping" id="toc-escaping" class="nav-link" data-scroll-target="#escaping">Escaping</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Creating Shortcodes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Shortcodes are special markdown directives that generate various types of content. Quarto shortcodes are similar in form and function to <a href="https://gohugo.io/content-management/shortcodes/">Hugo shortcodes</a> and <a href="https://codex.wordpress.org/Shortcode">WordPress shortcodes</a>.</p>
+<p>For example, the following shortcode prints the <code>title</code> from document metadata:</p>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{{&lt; meta title &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quarto supports several shortcodes natively:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Shortcode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../../docs/authoring/variables.html#var">var</a></td>
+<td>Print value from <code>_variables.yml</code> file</td>
+</tr>
+<tr class="even">
+<td><a href="../../docs/authoring/variables.html#meta">meta</a></td>
+<td>Print value from document metadata</td>
+</tr>
+<tr class="odd">
+<td><a href="../../docs/authoring/variables.html#url">env</a></td>
+<td>Print system environment variable</td>
+</tr>
+<tr class="even">
+<td><a href="../../docs/authoring/markdown-basics.html#page-breaks">pagebreak</a></td>
+<td>Insert a native page-break</td>
+</tr>
+<tr class="odd">
+<td><a href="../../docs/authoring/markdown-basics.html#keyboard-shortcuts">kbd</a></td>
+<td>Describe keyboard shortcuts</td>
+</tr>
+<tr class="even">
+<td><a href="../../docs/authoring/videos.html">video</a></td>
+<td>Embed a video in a document</td>
+</tr>
+<tr class="odd">
+<td><a href="../../docs/authoring/includes.html">include</a></td>
+<td>Include contents of another qmd</td>
+</tr>
+<tr class="even">
+<td><a href="../../docs/authoring/notebook-embed.html">embed</a></td>
+<td>Embed cells from a Jupyter Notebook</td>
+</tr>
+</tbody>
+</table>
+<p>This article describes how to create your own shortcodes.</p>
+</section>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">Quick Start</h2>
+<p>Here we’ll describe how to create a simple shortcode extension. We’ll use the <code>quarto create</code> command to do this. If you are using VS Code or RStudio you should execute <code>quarto create</code> within their respective integrated Terminal panes.</p>
+<p>To get started, execute <code>quarto create extension shortcode</code> within the parent directory where you’d like the shortcode extension to be created:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto create extension shortcode</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">?</span> Extension Name › shorty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As shown above, you’ll be prompted for an extension name. Type <code>shorty</code> and press Enter—the shortcode extension is then created:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Creating</span> extension at /Users/jjallaire/extensions/shorty/shorty:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created README.md</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created _extensions/shorty/shorty.lua</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created _extensions/shorty/_extension.yml</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created .gitignore</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created example.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you are running within VS Code or RStudio a new window will open with the extension project.</p>
+<p>Here’s what the contents of the files in <code>_extensions/shorty/</code> look like:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_extensions/shorty/_extension.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Shorty</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> J.J. Allaire</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0.0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">quarto-required</span><span class="kw">:</span><span class="at"> </span><span class="st">"&gt;=1.2.222"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">contributes</span><span class="kw">:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">shortcodes</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> shorty.lua</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_extensions/shorty/shorty.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="st">'shorty'</span><span class="op">]</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>args<span class="op">,</span> kwargs<span class="op">,</span> meta<span class="op">)</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Str<span class="op">(</span><span class="st">"Hello from Shorty!"</span><span class="op">)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, the <code>example.qmd</code> file includes code that exercises the extension. For example:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>example.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Shorty Example"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>{{&lt; shorty &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To develop your shortcode, render/preview <code>example.qmd</code>, and then make changes to <code>shorty.lua</code> (the preview will automatically refresh when you change <code>shorty.lua</code>).</p>
+</section>
+<section id="development" class="level2">
+<h2 class="anchored" data-anchor-id="development">Development</h2>
+<p>Shortcodes are created using Lua. If you aren’t familar with Lua (or with Pandoc filters), here are some resources to help you along:</p>
+<ul>
+<li><p><a href="../../docs/extensions/lua.html">Lua Development</a> (Lua is the language used to create shortcodes).</p></li>
+<li><p><a href="../../docs/extensions/lua-api.html">Lua API Reference</a>, which describes the Lua extension API for Quarto.</p></li>
+</ul>
+<p>Shortcodes are implemented as Lua functions that take one or more arguments and return a Pandoc AST node (or list of nodes).</p>
+<p>Here’s the implementation of the <code>env</code> shortcode that is built in to Quarto:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>env.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> env<span class="op">(</span>args<span class="op">)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> var <span class="op">=</span> pandoc<span class="op">.</span>utils<span class="op">.</span>stringify<span class="op">(</span>args<span class="op">[</span><span class="dv">1</span><span class="op">])</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> value <span class="op">=</span> <span class="fu">os.getenv</span><span class="op">(</span>var<span class="op">)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> value <span class="op">~=</span> <span class="kw">nil</span> <span class="cf">then</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Str<span class="op">(</span>value<span class="op">)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Null<span class="op">()</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note that arguments to shortcodes are provided in <code>args</code> (a 1-based array), and that each argument is a list of Pandoc inlines (i.e.&nbsp;markdown AST parsed from the text).</p>
+<p>We use the <code>pandoc.utils.stringify()</code> function to convert the inlines to an ordinary string, and then the <code>os.getenv()</code> function to get its value.</p>
+<p>You would use this shortcode as follows:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{{&lt; env HOME &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="distribution" class="level2">
+<h2 class="anchored" data-anchor-id="distribution">Distribution</h2>
+<p>If your extension source code is located within a GitHub repository, then it can be installed by referencing the GitHub organization and repository name. For example:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install the current HEAD of the extension</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension cooltools/shorty</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># install a branch or tagged release of the extension</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension cooltools/shorty@v1.2</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension cooltools/shorty@bugfix-22</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note that it is possible to bundle and distribute extensions as simple gzip archives (as opposed to using a GitHub repository as described above). See the article on <a href="../../docs/extensions/distributing.html">Distributing Extensions</a> for additional details.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p>You might find it instructive to examine the source code of these shortcode extensions authored by the Quarto team:</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extension</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/fancy-text">fancy-text</a></td>
+<td>Output nicely formatted versions of fancy strings such as LaTeX and BibTeX in multiple formats.</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/fontawesome">fontawesome</a></td>
+<td>Use Font Awesome icons in HTML and PDF documents.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/extensions/quarto/video">video</a></td>
+<td>Embed videos in HTML documents and Revealjs presentations.</td>
+</tr>
+</tbody>
+</table>
+<p>Some additional annotated examples are provided below.</p>
+<section id="raw-output" class="level3">
+<h3 class="anchored" data-anchor-id="raw-output">Raw Output</h3>
+<p>Shortcodes can tailor their output to the format being rendered to. This is often useful when you want to conditionally generate rich HTML output but still have the same document render properly to PDF or MS Word.</p>
+<p>The <code>pagebreak</code> shortcode generates “native” pagebreaks in a variety of formats. Here’s the implementation of <code>pagebreak</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>pagebreak.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> pagebreak<span class="op">()</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> raw <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    epub <span class="op">=</span> <span class="st">'&lt;p style="page-break-after: always;"&gt; &lt;/p&gt;'</span><span class="op">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    html <span class="op">=</span> <span class="st">'&lt;div style="page-break-after: always;"&gt;&lt;/div&gt;'</span><span class="op">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    latex <span class="op">=</span> <span class="st">'</span><span class="sc">\\</span><span class="st">newpage{}'</span><span class="op">,</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    ooxml <span class="op">=</span> <span class="st">'&lt;w:p&gt;&lt;w:r&gt;&lt;w:br w:type="page"/&gt;&lt;/w:r&gt;&lt;/w:p&gt;'</span><span class="op">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    odt <span class="op">=</span> <span class="st">'&lt;text:p text:style-name="Pagebreak"/&gt;'</span><span class="op">,</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    context <span class="op">=</span> <span class="st">'</span><span class="sc">\\</span><span class="st">page'</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'docx'</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'openxml'</span><span class="op">,</span> raw<span class="op">.</span>ooxml<span class="op">)</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'pdf'</span><span class="op">)</span>  <span class="cf">then</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'tex'</span><span class="op">,</span> raw<span class="op">.</span>latex<span class="op">)</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'odt'</span><span class="op">)</span>  <span class="cf">then</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'opendocument'</span><span class="op">,</span> raw<span class="op">.</span>odt<span class="op">)</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'epub'</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'html'</span><span class="op">,</span> raw<span class="op">.</span>epub<span class="op">)</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'html'</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'html'</span><span class="op">,</span> raw<span class="op">.</span>html<span class="op">)</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>isFormat<span class="op">(</span><span class="st">'context'</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>RawBlock<span class="op">(</span><span class="st">'context'</span><span class="op">,</span> raw<span class="op">.</span>context<span class="op">)</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- fall back to insert a form feed character</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Para<span class="op">{</span>pandoc<span class="op">.</span>Str <span class="st">'</span><span class="sc">\f</span><span class="st">'</span><span class="op">}</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We use the <code>pandoc.RawBlock()</code> function to output the appropriate raw content for the target format. Note that raw blocks are passed straight through to the output file and are not processed as markdown.</p>
+<p>You’d use this shortcode as follows:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="named-arguments" class="level3">
+<h3 class="anchored" data-anchor-id="named-arguments">Named Arguments</h3>
+<p>The examples above use either a single argument (<code>env</code>) or no arguments at all (<code>pagebreak</code>). Here we demonstrate named argument handling by implementing a <code>git-rev</code> shortcode that prints the current git revision, providing a <code>short</code> option to determine whether a short or long SHA1 is displayed:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>git.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- run git and read its output</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> git<span class="op">(</span>command<span class="op">)</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> p <span class="op">=</span> <span class="fu">io.popen</span><span class="op">(</span><span class="st">"git "</span> <span class="op">..</span> command<span class="op">)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> output <span class="op">=</span> p<span class="op">:</span><span class="fu">read</span><span class="op">(</span><span class="st">'*all'</span><span class="op">)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  p<span class="op">:</span><span class="fu">close</span><span class="op">()</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> output</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- return a table containing shortcode definitions</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- defining shortcodes this way allows us to create helper </span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">-- functions that are not themselves considered shortcodes </span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="op">{</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="st">"git-rev"</span><span class="op">]</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>args<span class="op">,</span> kwargs<span class="op">)</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- command line args</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> cmdArgs <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> short <span class="op">=</span> pandoc<span class="op">.</span>utils<span class="op">.</span>stringify<span class="op">(</span>kwargs<span class="op">[</span><span class="st">"short"</span><span class="op">])</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> short <span class="op">==</span> <span class="st">"true"</span> <span class="cf">then</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>      cmdArgs <span class="op">=</span> cmdArgs <span class="op">..</span> <span class="st">"--short "</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- run the command</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> cmd <span class="op">=</span> <span class="st">"rev-parse "</span> <span class="op">..</span> cmdArgs <span class="op">..</span> <span class="st">"HEAD"</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> rev <span class="op">=</span> git<span class="op">(</span>cmd<span class="op">)</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- return as string</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Str<span class="op">(</span>rev<span class="op">)</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There are some new things demonstrated here :</p>
+<ol type="1">
+<li><p>Rather than defining our shortcode functions globally, we return a table with the shortcode definitions. This allows us to define helper functions that are not themselves registered as shortcodes. It also enables us to define a shortcode with a dash (<code>-</code>) in its name.</p></li>
+<li><p>There is a new argument to our shortcode handler: <code>kwargs</code>. This holds any named arguments to the shortcode. As with <code>args</code>, values in <code>kwargs</code> will always be a list of Pandoc inlines (allowing you to accept markdown as an argument). Since <code>short</code> is a simple boolean value we need to call <code>pandoc.utils.stringify()</code> to treat it as a string and then compare it to <code>"true"</code>.</p></li>
+</ol>
+<p>We’d use this shortcode as follows:</p>
+<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "My Document"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>{{&lt; git-rev &gt;}}</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>{{&lt; git-rev short=true &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="metadata-options" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-options">Metadata Options</h3>
+<p>In some cases you may want to provide options that affect how you shortcode behaves. There is a third argument to shortcode handlers (<code>meta</code>) that provides access to document and/or project level metadata.</p>
+<p>Let’s implement a different version of the <code>git-rev</code> shortcode that emits the revision as a link to GitHub rather than plain text. To do this we make use of <code>github.owner</code> and <code>github.repo</code> metadata values:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>git.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> git<span class="op">(</span>command<span class="op">)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> p <span class="op">=</span> <span class="fu">io.popen</span><span class="op">(</span><span class="st">"git "</span> <span class="op">..</span> command<span class="op">)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> output <span class="op">=</span> p<span class="op">:</span><span class="fu">read</span><span class="op">(</span><span class="st">'*all'</span><span class="op">)</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  p<span class="op">:</span><span class="fu">close</span><span class="op">()</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> output</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="op">{</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="st">"git-rev"</span><span class="op">]</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>args<span class="op">,</span> kwargs<span class="op">,</span> meta<span class="op">)</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- run the command</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> rev <span class="op">=</span> git<span class="op">(</span><span class="st">"rev-parse HEAD"</span><span class="op">)</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- target repo</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> owner <span class="op">=</span> pandoc<span class="op">.</span>utils<span class="op">.</span>stringify<span class="op">(</span>meta<span class="op">[</span><span class="st">"github.owner"</span><span class="op">])</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> repo <span class="op">=</span> pandoc<span class="op">.</span>utils<span class="op">.</span>stringify<span class="op">(</span>meta<span class="op">[</span><span class="st">"github.repo"</span><span class="op">])</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">local</span> url <span class="op">=</span> <span class="st">"https://github.com/"</span> </span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">..</span> owner <span class="op">..</span> <span class="st">"/"</span> <span class="op">..</span> repo <span class="op">..</span> <span class="st">"/"</span> <span class="op">..</span> rev </span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- return as link</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Link<span class="op">(</span>pandoc<span class="op">.</span>Str<span class="op">(</span>rev<span class="op">),</span> url<span class="op">)</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As with <code>args</code> and <code>kwargs</code>, <code>meta</code> values are always provided as a list of Pandoc inlines so often need to be converted to string using <code>pandoc.utils.stringify()</code>.</p>
+<p>To use this shortcode in a document we provide the GitHub info as document options, then include the shortcode where we want the link to be:</p>
+<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "My Document"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">github:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">  owner: quarto-dev</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">  repo: quarto-cli</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>{{&lt; git-rev &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The shortcode registration and GitHub metadata could just as well been provided in a project-level <code>_quarto.yml</code> file or a directory-level <code>_metadata.yml</code> file.</p>
+</section>
+</section>
+<section id="raw-arguments" class="level2">
+<h2 class="anchored" data-anchor-id="raw-arguments">Raw Arguments</h2>
+<p>In Quarto &gt;= 1.3 you can also access the raw stream of inlines passed to a shortcode, you can add a <code>raw_args</code> parameter. For example:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> shorty<span class="op">(</span>args<span class="op">,</span> kwargs<span class="op">,</span> meta<span class="op">,</span> raw_args<span class="op">)</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="escaping" class="level2">
+<h2 class="anchored" data-anchor-id="escaping">Escaping</h2>
+<p>If you are writing documentation about using variable shortcodes (for example, this article!) you might need to prevent them from being processed. You can do this in two ways:</p>
+<ol type="1">
+<li><p>Escape the shortcode reference with extra braces like this:</p>
+<div class="sourceCode" id="cb17" data-shortcodes="false"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>{{{&lt; var version &gt;}}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Add a <code>shortcodes=false</code> attribute to any code block you want to prevent processing of shortcodes within:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>```{shortcodes=false}</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>{{&lt; var version &gt;}}</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/extensions/filters.html" class="pagination-link">
+        <span class="nav-page-text">Filters</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">FAQ</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">Trademark</a>
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

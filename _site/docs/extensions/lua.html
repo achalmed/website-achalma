@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>achalmaedison - Lua Development</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/extensions/lua-api.html" rel="next">
+<link href="../../docs/extensions/creating.html" rel="prev">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="achalmaedison - Lua Development">
+<meta property="og:description" content="The programming language used to create filters and shortcodes is Lua, a lightweight, high-level scripting language.">
+<meta property="og:site-name" content="achalmaedison">
+<meta name="twitter:title" content="achalmaedison - Lua Development">
+<meta name="twitter:description" content="The programming language used to create filters and shortcodes is Lua, a lightweight, high-level scripting language.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/guide/index.html">
+ <span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/extensions/index.html" aria-current="page">
+ <span class="menu-text">Extensions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html">
+ <span class="menu-text">Referencias</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html">
+ <span class="menu-text">Galería</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ayuda</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Ask a Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Lua Development</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/index.html" class="sidebar-item-text sidebar-link">Quarto Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-filters.html" class="sidebar-item-text sidebar-link">Shortcodes &amp; Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-journals.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Extensions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/managing.html" class="sidebar-item-text sidebar-link">Managing Extensions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Creating Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua.html" class="sidebar-item-text sidebar-link active">Lua Development</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua-api.html" class="sidebar-item-text sidebar-link">Lua API Reference</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/distributing.html" class="sidebar-item-text sidebar-link">Distribution</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/shortcodes.html" class="sidebar-item-text sidebar-link">Shortcodes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/filters.html" class="sidebar-item-text sidebar-link">Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/templates.html" class="sidebar-item-text sidebar-link">Article Templates</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/authors.html" class="sidebar-item-text sidebar-link">Authors &amp; Affiliations</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Plugins</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/project-types.html" class="sidebar-item-text sidebar-link">Project Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/starter-templates.html" class="sidebar-item-text sidebar-link">Starter Templates</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#learning-lua" id="toc-learning-lua" class="nav-link" data-scroll-target="#learning-lua">Learning Lua</a></li>
+  <li><a href="#development-tools" id="toc-development-tools" class="nav-link" data-scroll-target="#development-tools">Development Tools</a>
+  <ul class="collapse">
+  <li><a href="#quarto-preview" id="toc-quarto-preview" class="nav-link" data-scroll-target="#quarto-preview">Quarto Preview</a></li>
+  <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">VS Code</a></li>
+  </ul></li>
+  <li><a href="#diagnostic-logging" id="toc-diagnostic-logging" class="nav-link" data-scroll-target="#diagnostic-logging">Diagnostic Logging</a>
+  <ul class="collapse">
+  <li><a href="#quarto.log.output" id="toc-quarto.log.output" class="nav-link" data-scroll-target="#quarto.log.output">quarto.log.output</a></li>
+  <li><a href="#quarto.log.warning" id="toc-quarto.log.warning" class="nav-link" data-scroll-target="#quarto.log.warning">quarto.log.warning</a></li>
+  <li><a href="#quarto.log.debug" id="toc-quarto.log.debug" class="nav-link" data-scroll-target="#quarto.log.debug">quarto.log.debug</a></li>
+  </ul></li>
+  <li><a href="#native-format" id="toc-native-format" class="nav-link" data-scroll-target="#native-format">Native Format</a></li>
+  <li><a href="#lua-in-vs-code" id="toc-lua-in-vs-code" class="nav-link" data-scroll-target="#lua-in-vs-code">Lua in VS Code</a>
+  <ul class="collapse">
+  <li><a href="#type-hints" id="toc-type-hints" class="nav-link" data-scroll-target="#type-hints">Type Hints</a></li>
+  <li><a href="#settings" id="toc-settings" class="nav-link" data-scroll-target="#settings">Settings</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Lua Development</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The programming language used to create <a href="../../docs/extensions/filters.html">filters</a> and <a href="../../docs/extensions/shortcodes.html">shortcodes</a> is Lua, a lightweight, high-level scripting language. <a href="https://www.lua.org/">Lua</a> is the extension language for Pandoc (which includes an embedded Lua interpreter). This means that Quarto extensions have no additional runtime dependencies or requirements.</p>
+<p>This article will start by providing an orientation to learning Lua for those new to the language. Then, we’ll provide some tips for productive Lua development.</p>
+<p>See the <a href="../../docs/extensions/lua-api.html">Lua API Reference</a> for additional details on the APIs available for developing extensions.</p>
+</section>
+<section id="learning-lua" class="level2">
+<h2 class="anchored" data-anchor-id="learning-lua">Learning Lua</h2>
+<p>Lua is a scripting language similar to Python, R, Julia, and JavaScript. If you are familiar with one or more of those languages you won’t have trouble picking up Lua.</p>
+<p>Here is a recommended approach for learning Lua for use with Quarto:</p>
+<ol type="1">
+<li><p>Read <a href="https://learnxinyminutes.com/docs/lua/">Learn Lua in 15 Minutes</a> for a quick overview of the language and its syntax.</p></li>
+<li><p>Check out the first two sections of the <a href="https://pandoc.org/lua-filters.html">Pandoc Lua Filters</a> documentation then skip ahead to the <a href="https://pandoc.org/lua-filters.html#macro-substitution">Filter Examples</a> section to make things a bit more concrete.</p></li>
+<li><p>Once you have the basic idea of Lua and filters, get a more complete picture by skimming the full <a href="https://pandoc.org/lua-filters.html">Pandoc Lua Filters</a> documentation. You won’t understand everything, but its a good orientation to all of the moving parts.</p></li>
+<li><p>Finally, check out the source code of the extensions published in the <a href="https://github.com/quarto-ext">Quarto Extensions</a> GitHub organization (these are extensions maintained by the Quarto core team). Once you are able to read and understand that code you are ready to start developing your own extensions!</p></li>
+</ol>
+<p>Some additional learning resources you might find useful include:</p>
+<ol type="1">
+<li><p><a href="luarefv51.pdf">Lua Quick Reference</a>, a PDF with a compact summary of the language and base library.</p></li>
+<li><p><a href="https://www.amazon.com/exec/obidos/ASIN/8590379868/lua-pilindex-20">Programming in Lua</a>, a book by Roberto Ierusalimschy, the chief architect of the language.</p></li>
+<li><p><a href="https://www.lua.org/manual/5.3/">Lua Reference Manual</a>, a complete definition of the language and base library.</p></li>
+</ol>
+</section>
+<section id="development-tools" class="level2">
+<h2 class="anchored" data-anchor-id="development-tools">Development Tools</h2>
+<section id="quarto-preview" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-preview">Quarto Preview</h3>
+<p>Quarto preview, <code>quarto preview</code>, is aware of Lua source files within extensions, and will automatically reload the preview whenever a Lua source file changes.</p>
+<p>This makes it very easy to incrementally develop and debug Lua code (especially when combined with the <a href="#native-format">native</a> format a described below). Live reloading for Lua files will work no matter what source code editor you are using (VS Code, RStudio, Neovim, etc.).</p>
+</section>
+<section id="vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
+<p>While you can use any text editor along with <code>quarto preview</code> for developing Lua extensions, we strongly recommend that you consider using VS Code, as it provides a number of additional tools including:</p>
+<ol type="1">
+<li><p>Code completion and type checking.</p></li>
+<li><p>Diagnostics for various common problems with code.</p></li>
+<li><p>The ability to add types to your own functions.</p></li>
+</ol>
+<p>Code completion covers the Lua base library as well as the Pandoc and Quarto Lua APIs, and also provides documentation on hover:</p>
+<p><img src="images/vscode-lua-completions.png" class="border img-fluid" style="width:95.0%" alt="Screenshot of Lua file open in VS Code with code completion popup showing for Lua function."></p>
+<p>Diagnostics check for many common errors including failing to check for <code>nil</code>, undefined global values, shadowing of local variables, unused functions, etc.</p>
+<p><img src="images/vscode-lua-diagnostics.png" class="border img-fluid" style="width:95.0%" alt="Screenshot of Lua file open in VS Code with diagnostic errors shown in Problems pane below the code editor."></p>
+<section id="installation" class="level4">
+<h4 class="anchored" data-anchor-id="installation">Installation</h4>
+<p>To get started with using VS Code for Lua extension development, install the following software:</p>
+<ol type="1">
+<li><p>Install the latest version (v1.2 or greater) of <a href="https://quarto.org/docs/download/">Quarto</a></p></li>
+<li><p>Install the latest version (v1.40.0 or greater) of the <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto VS Code Extension</a>.</p></li>
+<li><p>For Lua code intelligence, install the <a href="https://marketplace.visualstudio.com/items?itemName=sumneko.lua">Lua LSP VS Code Extension</a>.</p></li>
+</ol>
+<p>Once you’ve installed these components you should see the features described above appear automatically in your Quarto workspaces that include Lua code.</p>
+<p>There are many options available for configuring Lua completion and diagnostics. It’s also possible to provide type information for your own functions. See the section on <a href="#lua-in-vs-code">Lua in VS Code</a> below for details.</p>
+</section>
+</section>
+</section>
+<section id="diagnostic-logging" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-logging">Diagnostic Logging</h2>
+<p>Use the functions in the <code>quarto.log</code> module to add diagnostic logging to your extension. You can use both temporary logging calls to debug a particular problem as well as add logging calls that are always present but only activated when the <code>--trace</code> flag is passed to <code>quarto render</code> or <code>quarto preview</code>.</p>
+<p>The <code>quarto.log</code> module is based on the <a href="https://github.com/wlupton/pandoc-lua-logging">pandoc-lua-logging</a> project from <a href="https://github.com/wlupton">@wlupton</a>. You’ll recognize the functions described below from that module (e.g.&nbsp;<code>logging.output()</code>, <code>logging.warning()</code>, etc). For documentation on using all of the logging functions see the project <a href="https://github.com/wlupton/pandoc-lua-logging">README</a> file.</p>
+<section id="quarto.log.output" class="level3">
+<h3 class="anchored" data-anchor-id="quarto.log.output">quarto.log.output</h3>
+<p>To log any object (including Pandoc AST elements), you the <code>quarto.log.output()</code> function. For example, here we log the <code>Div</code> passed to us in our filter callback function as well as some diagnostic text:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>filter.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Header<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  quarto<span class="op">.</span>log<span class="op">.</span>output<span class="op">(</span><span class="st">"=== Handling Header ==="</span><span class="op">)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  quarto<span class="op">.</span>log<span class="op">.</span>output<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is log output you’d see in the terminal when the filter is executed:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>=== Handling Header ===</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Header {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  attr: Attr {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    attributes: AttributeList {}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    classes: List {}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    identifier: "section-one"</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  content: Inlines {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    [1] Str "Section"</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    [2] Space</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    [3] Str "One"</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  level: 2</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quarto.log.warning" class="level3">
+<h3 class="anchored" data-anchor-id="quarto.log.warning">quarto.log.warning</h3>
+<p>Use the <code>quarto.log.warning()</code> function to output warnings that can be suppressed with the <code>--quiet</code> flag:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>filter.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> RawBlock<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> el<span class="op">.</span>format <span class="op">==</span> <span class="st">"html"</span> <span class="cf">then</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    quarto<span class="op">.</span>log<span class="op">.</span>warning<span class="op">(</span><span class="st">"Raw HTML not supported"</span><span class="op">)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pandoc<span class="op">.</span>Null<span class="op">()</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example, the warning above will not appear for this call to <code>quarto render</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render document.qmd <span class="at">--quiet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quarto.log.debug" class="level3">
+<h3 class="anchored" data-anchor-id="quarto.log.debug">quarto.log.debug</h3>
+<p>Use the <code>quarto.log.debug()</code> function to write output whenever the <code>--trace</code> flag is present:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>filter.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Header<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  quarto<span class="op">.</span>log<span class="op">.</span>debug<span class="op">(</span><span class="st">"Header: "</span> <span class="op">..</span> el<span class="op">.</span>identifier<span class="op">)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For example, the debug message will appear for this call to <code>quarto preview</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview document.qmd <span class="at">--trace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can keep these calls in your filter since they won’t produce output unless <code>--trace</code> is specified.</p>
+</section>
+</section>
+<section id="native-format" class="level2">
+<h2 class="anchored" data-anchor-id="native-format">Native Format</h2>
+<p>A great tool for understanding the behavior of a Lua filter or shortcode in more depth is to target the <code>native</code> format (as opposed to <code>html</code>, <code>pdf</code>, etc.). The <code>native</code> format will show you the raw contents of the Pandoc AST. For example, here’s a simple markdown document alongside it’s <code>native</code> output:</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>document.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> native</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Some text below</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<pre class="border"><code>Pandoc
+  Meta
+    { unMeta = fromList [] }
+  [ Header
+      2
+      ( "heading" , [] , [] )
+      [ Str "Heading" ]
+  , Para
+      [ Str "Some"
+      , Space
+      , Str "text"
+      , Space
+      , Str "below"
+      ]
+  ]</code></pre>
+</div>
+</div>
+</div>
+<p>Here we add a simple filter to the document that wraps all headers in <code>pandoc.Emph</code> (italics). You can see that the <code>Emph</code> AST element now wraps the heading text in the <code>native</code> output:</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>document.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> native</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">filters:</span><span class="co"> [filter.lua]</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>Some text below</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>filter.lua</strong></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Header<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  el<span class="op">.</span>content <span class="op">=</span> <span class="op">{</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    pandoc<span class="op">.</span>Emph<span class="op">(</span>el<span class="op">.</span>content<span class="op">)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> el</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="font-monospace border quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div style="font-size: 0.875em; padding: 4px;">
+<p>Pandoc<br>
+&nbsp;&nbsp;Meta<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{ unMeta = fromList [] }<br>
+&nbsp;&nbsp;[ Header<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( “heading” , [] , [] )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>[ Emph [ Str “Heading” ]</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+&nbsp;&nbsp;, Para<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ Str “Some”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Str “text”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Str “below”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+&nbsp;&nbsp;]<br>
+<br>
+<br>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lua-in-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="lua-in-vs-code">Lua in VS Code</h2>
+<section id="type-hints" class="level3">
+<h3 class="anchored" data-anchor-id="type-hints">Type Hints</h3>
+<p>While Quarto provides type information for the Pandoc and Quarto Lua APIs, this doesn’t cover functions that you write within your own extensions. You can however add type information using <a href="https://github.com/sumneko/lua-language-server/wiki/Annotations">Annotations</a>. For example, here we indicate that a function takes a <code>string</code> and a <code>pandoc.List()</code> and returns either a <code>pandoc.List()</code> or <code>nil</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span><span class="an">@param</span><span class="co"> </span><span class="cv">text</span><span class="co"> string</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">---</span><span class="an">@param</span><span class="co"> </span><span class="cv">blocks</span><span class="co"> pandoc.List</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span><span class="an">@return</span><span class="co"> pandoc.List|nil</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> check_for_text<span class="op">(</span>text<span class="op">,</span> blocks<span class="op">)</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- implementation</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With these type declarations, any attempt to call the function without the correct types will result in a diagnostic message. Further, if a caller fails to check for <code>nil</code> before using the return value a diagnostic will also occur.</p>
+<p>You can learn more about all of the available type annotations in the <a href="https://github.com/sumneko/lua-language-server/wiki/Annotations">Annotations Reference</a> for the Lua Language Server.</p>
+</section>
+<section id="settings" class="level3">
+<h3 class="anchored" data-anchor-id="settings">Settings</h3>
+<p>The <a href="https://marketplace.visualstudio.com/items?itemName=sumneko.lua">Lua Language Server</a> extension includes a wide variety of options to customize its behavior (e.g.&nbsp;what diagnostics to show, which completions to offer, etc.).</p>
+<p>All of the available options are documented in the <a href="https://github.com/sumneko/lua-language-server/wiki/Settings">Settings Reference</a> for the Lua Language Server.</p>
+<p>Quarto provides a default configuration file (<code>.luarc.json</code>) within the root of any workspace that includes Quarto Lua extensions. This file is necessary because it provides a reference to the Lua type definitions for Pandoc and Quarto within your currently installed version of Quarto. Without it, the Lua extension wouldn’t know anything about Quarto and would report errors for “unknown” Pandoc modules.</p>
+<p>If, for example, Quarto is installed at <code>/opt/quarto/</code>, the default contents of the configuration file will be:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>.luarc.json</strong></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Generator"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"Quarto"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.runtime.version"</span><span class="fu">:</span> <span class="st">"Lua 5.3"</span><span class="fu">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.workspace.checkThirdParty"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.workspace.library"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"/opt/quarto/share/lua-types"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.runtime.plugin"</span><span class="fu">:</span> <span class="st">"/opt/quarto/share/lua-plugin/plugin.lua"</span><span class="fu">,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.completion.showWord"</span><span class="fu">:</span> <span class="st">"Disable"</span><span class="fu">,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.completion.keywordSnippet"</span><span class="fu">:</span> <span class="st">"Both"</span><span class="fu">,</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Lua.diagnostics.disable"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"lowercase-global"</span><span class="ot">,</span> <span class="st">"trailing-space"</span><span class="ot">]</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>.luarc.json</code> file will also be automatically added to <code>.gitignore</code> since it points to the absolute path of Quarto on the local system.</p>
+<p>You can change any of the settings within this file save for the <code>Lua.workspace.library</code> and <code>Lua.runtime.plugin</code> (these are automatically maintained by the Quarto extension based on where Quarto is installed). See the <a href="https://github.com/sumneko/lua-language-server/wiki/Settings">Settings Reference</a> for all available settings.</p>
+<p>If you prefer to mange this file manually, simply remove the <code>Generator</code> key and Quarto will no longer update the <code>Lua.workspace.library</code> and <code>Lua.runtime.plugin</code> settings automatically.</p>
+<p>You can also globally disable the automatic creation of <code>.luarc.json</code> using the <strong>Quarto &gt; Lua: Provide Types</strong> VS Code setting.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/extensions/creating.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Creating Extensions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/extensions/lua-api.html" class="pagination-link">
+        <span class="nav-page-text">Lua API Reference</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">FAQ</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">Trademark</a>
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

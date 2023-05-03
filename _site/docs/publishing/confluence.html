@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>achalmaedison - Confluence</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/publishing/other.html" rel="next">
+<link href="../../docs/publishing/netlify.html" rel="prev">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="achalmaedison - Confluence">
+<meta property="og:description" content="Atlassian Confluence is a publishing platform for supporting team collaboration. Confluence has a variety of hosting options which include both free and paid subscription plans.">
+<meta property="og:image" content="https://quarto.org/docs/publishing/images/confluence-demo-preview.png">
+<meta property="og:site-name" content="achalmaedison">
+<meta property="og:image:height" content="578">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="achalmaedison - Confluence">
+<meta name="twitter:description" content="Atlassian Confluence is a publishing platform for supporting team collaboration. Confluence has a variety of hosting options which include both free and paid subscription plans.">
+<meta name="twitter:image" content="https://quarto.org/docs/publishing/images/confluence-demo-preview.png">
+<meta name="twitter:image-height" content="578">
+<meta name="twitter:image-width" content="1600">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/guide/index.html" aria-current="page">
+ <span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/extensions/index.html">
+ <span class="menu-text">Extensions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html">
+ <span class="menu-text">Referencias</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html">
+ <span class="menu-text">Galería</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ayuda</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Ask a Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Confluence</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/guide/index.html" class="sidebar-item-text sidebar-link">Cursos</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Macroeconomía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/markdown-basics.html" class="sidebar-item-text sidebar-link">Markdown Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/figures.html" class="sidebar-item-text sidebar-link">Figures</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/tables.html" class="sidebar-item-text sidebar-link">Tables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/diagrams.html" class="sidebar-item-text sidebar-link">Diagrams</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/videos.html" class="sidebar-item-text sidebar-link">Videos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/notebook-embed.html" class="sidebar-item-text sidebar-link">Jupyter Notebooks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/callouts.html" class="sidebar-item-text sidebar-link">Callout Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/code-annotation.html" class="sidebar-item-text sidebar-link">Code Annotation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/article-layout.html" class="sidebar-item-text sidebar-link">Article Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Scholarly Writing</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/title-blocks.html" class="sidebar-item-text sidebar-link">Title Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/footnotes-and-citations.html" class="sidebar-item-text sidebar-link">Citations &amp; Footnotes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-references.html" class="sidebar-item-text sidebar-link">Cross References</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/create-citeable-articles.html" class="sidebar-item-text sidebar-link">Creating Citeable Articles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/appendices.html" class="sidebar-item-text sidebar-link">Appendices</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Microeconomía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/python.html" class="sidebar-item-text sidebar-link">Using Python</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/r.html" class="sidebar-item-text sidebar-link">Using R</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/julia.html" class="sidebar-item-text sidebar-link">Using Julia</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/ojs.html" class="sidebar-item-text sidebar-link">Using Observable</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/execution-options.html" class="sidebar-item-text sidebar-link">Execution Options</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/parameters.html" class="sidebar-item-text sidebar-link">Parameters</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Investigacion de mercados</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">JupyterLab</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab.html" class="sidebar-item-text sidebar-link">JupyterLab Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab-extension.html" class="sidebar-item-text sidebar-link">JupyterLab Extension</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">RStudio IDE</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/rstudio.html" class="sidebar-item-text sidebar-link">RStudio Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">Visual Editor</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">Editor Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/technical.html" class="sidebar-item-text sidebar-link">Technical Writing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/content.html" class="sidebar-item-text sidebar-link">Content Editing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/options.html" class="sidebar-item-text sidebar-link">Shortcuts &amp; Options</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/markdown.html" class="sidebar-item-text sidebar-link">Markdown Output</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link">VS Code</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link">VS Code Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/vscode/index.html" class="sidebar-item-text sidebar-link">Visual Editor</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode-notebook.html" class="sidebar-item-text sidebar-link">Notebook Editor</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/neovim.html" class="sidebar-item-text sidebar-link">Neovim</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/text-editors.html" class="sidebar-item-text sidebar-link">Text Editors</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">Python</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">HTML</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-basics.html" class="sidebar-item-text sidebar-link">HTML Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-code.html" class="sidebar-item-text sidebar-link">HTML Code Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-themes.html" class="sidebar-item-text sidebar-link">HTML Theming</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-multi-format.html" class="sidebar-item-text sidebar-link">Including Other Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-publishing.html" class="sidebar-item-text sidebar-link">Publishing HTML</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">PDF</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-basics.html" class="sidebar-item-text sidebar-link">PDF Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-engine.html" class="sidebar-item-text sidebar-link">PDF Engines</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">MS Word</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word.html" class="sidebar-item-text sidebar-link">Word Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word-templates.html" class="sidebar-item-text sidebar-link">Word Templates</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">Markdown</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/gfm.html" class="sidebar-item-text sidebar-link">GitHub (GFM)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/hugo.html" class="sidebar-item-text sidebar-link">Hugo</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/docusaurus.html" class="sidebar-item-text sidebar-link">Docusaurus</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/all-formats.html" class="sidebar-item-text sidebar-link">All Formats</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">Stata</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">Revealjs</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">Reveal Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/presenting.html" class="sidebar-item-text sidebar-link">Presenting Slides</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/advanced.html" class="sidebar-item-text sidebar-link">Advanced Reveal</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/themes.html" class="sidebar-item-text sidebar-link">Reveal Themes</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/powerpoint.html" class="sidebar-item-text sidebar-link">PowerPoint</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/beamer.html" class="sidebar-item-text sidebar-link">Beamer</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">Filosofía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">Creating a Website</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-navigation.html" class="sidebar-item-text sidebar-link">Website Navigation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-blog.html" class="sidebar-item-text sidebar-link">Creating a Blog</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-search.html" class="sidebar-item-text sidebar-link">Website Search</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-tools.html" class="sidebar-item-text sidebar-link">Website Tools</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-about.html" class="sidebar-item-text sidebar-link">About Pages</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">Listing Pages</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">Document Listings</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings-custom.html" class="sidebar-item-text sidebar-link">Custom Listings</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">Linux</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">Creating a Book</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-structure.html" class="sidebar-item-text sidebar-link">Book Structure</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-crossrefs.html" class="sidebar-item-text sidebar-link">Book Crossrefs</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-output.html" class="sidebar-item-text sidebar-link">Customizing Output</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">Investigacion de operaciones</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">Observable JS</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/libraries.html" class="sidebar-item-text sidebar-link">Libraries</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/data-sources.html" class="sidebar-item-text sidebar-link">Data Sources</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/ojs-cells.html" class="sidebar-item-text sidebar-link">OJS Cells</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/shiny.html" class="sidebar-item-text sidebar-link">Shiny Reactives</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/code-reuse.html" class="sidebar-item-text sidebar-link">Code Reuse</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/penguins.html" class="sidebar-item-text sidebar-link">Penguins</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/sunburst.html" class="sidebar-item-text sidebar-link">Sunburst</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/arquero.html" class="sidebar-item-text sidebar-link">Arquero</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/population.html" class="sidebar-item-text sidebar-link">Population</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/noaa-co2.html" class="sidebar-item-text sidebar-link">NOAA CO2</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/github.html" class="sidebar-item-text sidebar-link">GitHub API</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/layout.html" class="sidebar-item-text sidebar-link">Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">Shiny</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/kmeans-shiny-ojs/" class="sidebar-item-text sidebar-link">K-Means</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/binning-shiny-ojs/" class="sidebar-item-text sidebar-link">Binning</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/data-shiny-ojs/" class="sidebar-item-text sidebar-link">Data Binding</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/covid19-bicartogram/" class="sidebar-item-text sidebar-link">Covid Map</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">Shiny</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/running.html" class="sidebar-item-text sidebar-link">Running Documents</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/execution.html" class="sidebar-item-text sidebar-link">Execution Contexts</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/resources.html" class="sidebar-item-text sidebar-link">External Resources</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-old-faithful/" class="sidebar-item-text sidebar-link">Old Faithful</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-k-means/" class="sidebar-item-text sidebar-link">K-Means</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-diamonds/" class="sidebar-item-text sidebar-link">Diamonds</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">Widgets</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/jupyter.html" class="sidebar-item-text sidebar-link">Jupyter Widgets</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/htmlwidgets.html" class="sidebar-item-text sidebar-link">htmlwidgets for R</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/layout.html" class="sidebar-item-text sidebar-link">Component Layout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="true">Publishing</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/index.html" class="sidebar-item-text sidebar-link">Publishing Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/quarto-pub.html" class="sidebar-item-text sidebar-link">Quarto Pub</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/github-pages.html" class="sidebar-item-text sidebar-link">GitHub Pages</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/rstudio-connect.html" class="sidebar-item-text sidebar-link">Posit Connect</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/netlify.html" class="sidebar-item-text sidebar-link">Netlify</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/confluence.html" class="sidebar-item-text sidebar-link active">Confluence</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/other.html" class="sidebar-item-text sidebar-link">Other Services</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/ci.html" class="sidebar-item-text sidebar-link">Publishing with CI</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">Projects</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/quarto-projects.html" class="sidebar-item-text sidebar-link">Project Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/code-execution.html" class="sidebar-item-text sidebar-link">Managing Execution</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/profiles.html" class="sidebar-item-text sidebar-link">Project Profiles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/environment.html" class="sidebar-item-text sidebar-link">Environment Variables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/scripts.html" class="sidebar-item-text sidebar-link">Project Scripts</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/virtual-environments.html" class="sidebar-item-text sidebar-link">Virtual Environments</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">Advanced</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/includes.html" class="sidebar-item-text sidebar-link">Includes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/variables.html" class="sidebar-item-text sidebar-link">Variables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/page-layout.html" class="sidebar-item-text sidebar-link">Page Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/language.html" class="sidebar-item-text sidebar-link">Document Language</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/conditional.html" class="sidebar-item-text sidebar-link">Conditional Content</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/nbfilter.html" class="sidebar-item-text sidebar-link">Notebook Filters</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#publishing-basics" id="toc-publishing-basics" class="nav-link" data-scroll-target="#publishing-basics">Confluence Publishing Basics</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-account" id="toc-setting-up-account" class="nav-link" data-scroll-target="#setting-up-account">Setting Up Your Account</a></li>
+  <li><a href="#selecting-destination" id="toc-selecting-destination" class="nav-link" data-scroll-target="#selecting-destination">Selecting a Destination</a></li>
+  </ul></li>
+  <li><a href="#collection-of-documents" id="toc-collection-of-documents" class="nav-link" data-scroll-target="#collection-of-documents">Publishing Projects</a>
+  <ul class="collapse">
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
+  <li><a href="#index.qmd" id="toc-index.qmd" class="nav-link" data-scroll-target="#index.qmd"><code>index.qmd</code></a></li>
+  </ul></li>
+  <li><a href="#publishing-workflow" id="toc-publishing-workflow" class="nav-link" data-scroll-target="#publishing-workflow">Publishing Workflow</a></li>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link" data-scroll-target="#authoring">Authoring</a>
+  <ul class="collapse">
+  <li><a href="#content-limitations" id="toc-content-limitations" class="nav-link" data-scroll-target="#content-limitations">Content Limitations</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
+  <li><a href="#raw-confluence-blocks" id="toc-raw-confluence-blocks" class="nav-link" data-scroll-target="#raw-confluence-blocks">Raw Confluence Blocks</a></li>
+  <li><a href="#website-limitations" id="toc-website-limitations" class="nav-link" data-scroll-target="#website-limitations">Website Limitations</a></li>
+  <li><a href="#confluence-limitations" id="toc-confluence-limitations" class="nav-link" data-scroll-target="#confluence-limitations">Confluence Limitations</a></li>
+  </ul></li>
+  <li><a href="#publishing-settings" id="toc-publishing-settings" class="nav-link" data-scroll-target="#publishing-settings">Publishing Settings</a>
+  <ul class="collapse">
+  <li><a href="#publish.yml" id="toc-publish.yml" class="nav-link" data-scroll-target="#publish.yml">_publish.yml</a></li>
+  <li><a href="#account-management" id="toc-account-management" class="nav-link" data-scroll-target="#account-management">Account Management</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Confluence</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Quarto 1.3 Feature
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This feature is new in Quarto 1.3, which you can download at <a href="https://quarto.org/docs/download/" class="uri">https://quarto.org/docs/download/</a></p>
+</div>
+</div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><a href="https://www.atlassian.com/software/confluence">Atlassian Confluence</a> is a publishing platform for supporting team collaboration. Confluence has a variety of hosting options which include both free and paid subscription plans.</p>
+<p>Quarto provides support for publishing individual documents, as well as projects composed of multiple documents, into <a href="https://support.atlassian.com/confluence-cloud/docs/use-spaces-to-organize-your-work/">Confluence Spaces</a>.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/confluence-qmd.png" class="img-fluid figure-img" alt="A screenshot of a Quarto document with the title Using R - Doc in the RStudio Editor."></p>
+<p></p><figcaption class="figure-caption">A Quarto Document</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/confluence-page.png" class="img-fluid figure-img" alt="A screenshot of a document with the title Using R - Doc in a Confluence Space."></p>
+<p></p><figcaption class="figure-caption">Published to Confluence</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 45.2%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/confluence-project.png" class="img-fluid figure-img" alt="A screenshot of a Quarto project in VS Code. On the left in the Explorer, the project folder is called 'Guide-site', and contains folders 'authoring', and 'computation', along with some other files. A document from the folder 'python' inside the folder 'computations' with the title 'Using Python - site' is open in the Source Pane. "></p>
+<p></p><figcaption class="figure-caption">A Quarto Project</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 54.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/confluence-site.png" class="img-fluid figure-img" alt="A screenshot of Space in Confluence. On the left in the Sdiebar under Pages is a page called 'Guide-site'. Nested under this page are pages called 'authoring', and 'computation', along with some other pages. The 'computation' page item is expanded and shows a page called 'Using Python - site', nested under a page called 'python'. A page is displayed on the right with the title 'Using Python - site'"></p>
+<p></p><figcaption class="figure-caption">Published to Confluence</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Managing Confluence content with Quarto allows you to author content in Markdown, manage that content with your usual version control tools like Git and GitHub, and leverage Quarto’s tools for including computational output.</p>
+<p>The next section, <a href="#publishing-basics">Confluence Publishing Basics</a>, walks through the process of publishing a single page to Confluence, including how to <a href="#setting-up-account">set up your Confluence account</a> in Quarto, and how to <a href="#selecting-destination">specify a destination</a> for your document in your Confluence Space.</p>
+<p>Before you use Confluence Publishing for your own project you’ll want to read the remaining sections on this page:</p>
+<ul>
+<li><p><a href="#collection-of-documents">Publishing Projects</a> describes how to publish a collection of documents, including how your <a href="#project-structure">project structure</a> translates to the structure of pages in your Confluence Space.</p></li>
+<li><p><a href="#publishing-workflow">Publishing Workflow</a> describes the model for making updates to Confluence pages published from Quarto, including the page permissions that are set when you publish from Quarto.</p></li>
+<li><p><a href="#authoring">Authoring for Confluence</a> describes some of the differences between authoring for Confluence and authoring for a Quarto website.</p></li>
+<li><p><a href="#publishing-settings">Publishing Settings</a> covers how to manage your publishing settings.</p></li>
+</ul>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Be Careful with Sensitive or Confidential Content
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Publishing Quarto documents to a public Confluence space will make the content of those documents public. It is your responsibility to understand the permissions of your Confluence Space and verify your publishing destination to protect against any sensitive or confidential content from being made publicly available.</p>
+</div>
+</div>
+</section>
+<section id="publishing-basics" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-basics">Confluence Publishing Basics</h2>
+<p>To demonstrate the process of publishing to Confluence, we’ll take a single document, <a href="_confluence_examples/confluence-demo.qmd"><code>confluence-demo.qmd</code></a>, and publish it as a page to a Confluence space. Here’s the contents of <code>confluence-demo.qmd</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Confluence Demo</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> confluence-html</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Write your content in Quarto documents and publish to Confluence.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice that the format is set to <code>confluence-html</code> in the document YAML. This allows the local preview of the document to mimic the eventual appearance on Confluence. You can preview your document locally as you would any other Quarto document, by using the <strong>Render</strong> command in VS Code and RStudio, or by using <code>quarto preview</code> from the command line:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview confluence-demo.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The result of previewing <code>confluence-demo.qmd</code> locally is shown below:</p>
+<p><img src="images/confluence-demo-preview.png" class="img-fluid" alt="Screenshot of the result of previewing the file confluence-demo.qmd."></p>
+<p>The preview attempts to provide an accurate idea of how your content will look. However, some items in the preview are merely placeholders, like the publishing date, author, and read time in the header. When the document is published to Confluence, these items will be generated by Confluence.</p>
+<p>To publish a document to Confluence use <code>quarto publish confluence</code> followed by the file name:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish confluence confluence-demo.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Unless you’ve published to Confluence before, you’ll be prompted to set up an account and select a destination for your page.</p>
+<section id="setting-up-account" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-account">Setting Up Your Account</h3>
+<p>When you publish to Confluence for the first time, you’ll be prompted to set up a Confluence account in Quarto. To prepare, log in to Confluence, and navigate to the space, or page within a space, which you wish to publish to.</p>
+<p>You’ll first be prompted for your Confluence Domain. This is the first part of the URL to the Confluence page you wish to publish to. For example:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Confluence Domain: ›</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> e.g. https://mydomain.atlassian.net/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, you’ll be asked to enter the Email Address for the account used in this Confluence Domain (if you are unsure, look at your account profile on Confluence):</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Confluence Account Email: › </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, you’ll be asked for an API Token:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Confluence API Token: ›</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> Create an API token at https://id.atlassian.com/manage/api-tokens</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Confluence API Tokens are specific to your account. You’ll need to <a href="https://id.atlassian.com/manage/api-tokens">create a token</a>, copy, and then paste it into this prompt. For more information on Access Tokens please see the <a href="https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/">Confluence Documentation on API Tokens</a>.</p>
+<p>Quarto saves this account information (domain, email and token) so it can be used for future calls to <code>quarto publish confluence</code>. The final prompt will ask you to select a destination for your page.</p>
+</section>
+<section id="selecting-destination" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-destination">Selecting a Destination</h3>
+<p>Pages in Confluence are arranged in a hierarchy: every page has a parent. When you publish from Quarto to Confluence you’ll be asked to specify the parent for your page by providing its URL:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Space or Parent Page URL: ›</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> Browse in Confluence to the space or parent, then copy the URL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you want your page to be at the top level of your space, specify the space itself, e.g.:</p>
+<pre><code>https://domain.atlassian.net/wiki/spaces/ABBR</code></pre>
+<p>Otherwise, specify the URL for the parent page, e.g.:</p>
+<pre><code>https://domain.atlassian.net/wiki/spaces/ABBR/pages/123456</code></pre>
+<p>Once the destination is specified, Quarto will render the page for publishing, publish it to Confluence, and open a browser to view the published page.</p>
+<p>An example of the published version of <code>confluence-demo.qmd</code> is shown below:</p>
+<p><img src="images/confluence-demo-published.png" class="img-fluid" alt="Screenshot of the published confluence-demo.qmd file on Confluence. In the sidebar, the page Confluence Demo is listed under Pages at the top level."></p>
+<p>In the sidebar navigation this page is listed at the top level under Pages because the destination was set to the space URL.</p>
+</section>
+</section>
+<section id="collection-of-documents" class="level2">
+<h2 class="anchored" data-anchor-id="collection-of-documents">Publishing Projects</h2>
+<p>To publish a collection of documents, organize your documents in a <a href="../../docs/projects/quarto-projects.html">Quarto project</a>, and use the <code>confluence</code> project type. Here’s a minimal <code>_quarto.yml</code> file for a Confluence project:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> confluence</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Include this file in a project directory, then arrange your <code>.qmd</code> or <code>.ipynb</code> documents into whatever hierarchy you want to use for publishing. For example:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>_quarto.yml</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>index.qmd</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>team.qmd</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>projects/</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  planning.qmd</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  retrospectives.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Alternatively, to get started with a template project in a new directory, use <code>quarto create</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create project confluence</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As with documents, you can preview your project using the <strong>Render</strong> command in VS Code and RStudio, or by using <code>quarto preview</code> from the command line:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The project preview produces an HTML website with navigation automatically added to the sidebar. This navigation is for convenience, the navigation for the published pages will be handled internally by Confluence.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The project preview attempts to style your content as it will appear on Confluence, however, you may notice some differences in appearance.</p>
+</div>
+</div>
+<p>To publish your project run <code>quarto publish confluence</code> from your project folder:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish confluence </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You’ll be walked through the same steps as publishing a single document, <a href="#setting-up-account">setting up an account</a>, if needed, and <a href="#selecting-destination">selecting a destination</a> for your project on Confluence, before publishing your project to Confluence.</p>
+<section id="project-structure" class="level3">
+<h3 class="anchored" data-anchor-id="project-structure">Project Structure</h3>
+<p>The hierarchy of documents inside folders in your project will be respected in the publishing process. Confluence’s concept of folders is that pages can have children, so your folders will be represented by pages in Confluence.</p>
+<p>When a project is published, a single page is created in Confluence to hold it. Documents at the top level of the project are published as pages nested under this project page. Folders inside the project are represented by a page, and any documents (or other folders) inside the folder are represented as pages nested under the folder page.</p>
+<p>As an example, consider the following project structure:</p>
+<pre><code>example-project/
+├── _quarto.yml
+├── project-roadmap.qmd
+├── reports-folder
+│   ├── 2023-01.qmd
+│   └── 2023-03.qmd
+└── team-members.qmd</code></pre>
+<p>The Confluence structure resulting from publishing this project to the top level of the space is shown below:</p>
+<p><img src="images/confluence-project-structure.png" class="img-fluid" style="width:60.0%" alt="A zoomed in view of the navigation sidebar in Confluence. Under Pages is a page called Project Example Site, nested under this page are pages called Team Members, Project Roadmap, and Reports-folder. Under the Reports-folder page are pages called: Reports, March, and January."></p>
+<p>The titles used in the Confluence sidebar navigation are taken from the page and project title, as specified in the document YAML and <code>_quarto.yml</code> respectively, and generated from the folder name for folders. Quarto may add some additional characters to meet the Confluences requirement that every page in a space has a unique name.</p>
+</section>
+<section id="index.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="index.qmd"><code>index.qmd</code></h3>
+<p>Pages in Confluence that represent folders will have no content unless an <code>index.qmd</code> is found inside the folder. If an <code>index.qmd</code> file exists its content will populate the folder page. For example, consider the following <code>index.qmd</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>index.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Reports</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>Monthly reports on project progress</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Adding this to the folder <code>reports-folder</code> and re-publishing the site, changes the name of the page representing this folder to “Reports” and adds this contents to the page.</p>
+<p><img src="images/confluence-index.png" class="img-fluid" alt="Screenshot of a page in Confluence titled Reports, with a single sentence 'Monthly reports on project progress'. In the sidebar navigation this page is called 'Reports' and is nested under the page called 'Project Example Site'."></p>
+</section>
+</section>
+<section id="publishing-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-workflow">Publishing Workflow</h2>
+<p>In Confluence, many people are able to make direct edits to pages. However, managing your content from Quarto requires a shift in perspective: edits to pages are made only in the Quarto project, and only one account should publish those changes to Confluence.</p>
+<p>Publishing to Confluence is a one-way street: there is no way to bring back content edits from Confluence to your Quarto project. Edits that are made on Confluence will be overwritten next time the page is published from Quarto. Updating a page requires editing the document in Quarto, and rerunning:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish confluence </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To help avoid a situation where someone inadvertently edits a page being managed in Quarto, the permissions for pages are set when you publish so everyone with access to the space can view the page, but only you, the publisher, can edit the page.</p>
+<p><img src="images/confluence-permissions.png" class="img-fluid" alt="Screenshot of the Confluence permissions on a page, with two items: Everyone is set to View; and Charlotte Wickham (Me) is set to Can Edit"></p>
+<p>Permission to edit the page includes publishing updates, so any updates to a page need to be published from the same account as the original publish.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Publishing without Control over Permissions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We attempt to detect if you are publishing to a destination where you do not have control over page permissions and you’ll receive a warning. You may proceed with the publish, but any page you publish can be both viewed and edited by anyone with access to the space.</p>
+</div>
+</div>
+<p>If you delete a page on Confluence, and republish it from Quarto, you’ll see the error:</p>
+<pre><code>ERROR: API Error: 404 - Not Found</code></pre>
+<p>This occurs because Quarto stores and reuses the location of your page on Confluence in <code>_publish.yml</code>. If the page is deleted on Confluence, this location will no longer exist. To solve the problem, delete the corresponding entry in <code>_publish.yml</code>, and publish again. You’ll then be prompted to set the destination. You can read more about <code>_publish.yml</code> in the <a href="#publishing-settings">Publishing Settings</a> section.</p>
+</section>
+<section id="authoring" class="level2">
+<h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
+<p>Authoring for Confluence is very similar to authoring HTML documents and Quarto webpages. However, you should be aware of some key limitations as well as some features specific to Confluence publishing.</p>
+<section id="content-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="content-limitations">Content Limitations</h3>
+<p>The <code>confluence-html</code> format supports nearly all of the standard Quarto markdown content types, including tables, callouts, and cross references.</p>
+<p>However, there is currently no support for Citations, Videos, Diagrams, Tabsets, or Equations. In the future, we may add these features if there is a Confluence equivalent that can support the functionality.</p>
+</section>
+<section id="links" class="level3">
+<h3 class="anchored" data-anchor-id="links">Links</h3>
+<p>When creating links between pages in your Confluence Project, you can provide the source file as the link target (rather than the path to the Confluence page). You can also add hash identifiers (<code>#</code>) to the source file if you want to link to a particular section in the document. For example:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">about</span><span class="co">](about.qmd)</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">about</span><span class="co">](about.qmd#section)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="raw-confluence-blocks" class="level3">
+<h3 class="anchored" data-anchor-id="raw-confluence-blocks">Raw Confluence Blocks</h3>
+<p>Raw Confluence blocks allow you to include content that should pass through Quarto unchanged and be interpreted directly by Confluence. For example, <a href="https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html">Confluence’s Storage Format</a> includes specific tags for a task list. To include a Confluence task list in your document, use these tags inside a raw Confluence block:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{=confluence}</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;ac:task-list&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;ac:task&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;ac:task-status&gt;incomplete&lt;/ac:task-status&gt;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;ac:task-body&gt;task list item&lt;/ac:task-body&gt;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/ac:task&gt;</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/ac:task-list&gt;</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When published to Confluence this results in the following list:</p>
+<p><img src="images/confluence-task-list.png" class="img-fluid" style="width:25.0%" alt="A screenshot of list with one item. To the left of the item text is an unchecked checkbox."></p>
+</section>
+<section id="website-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="website-limitations">Website Limitations</h3>
+<p>Confluence projects are a special type of website that don’t support the traditional Website features like Listings, Themes and Navigation (as these things are taken care of internally by Confluence).</p>
+</section>
+<section id="confluence-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="confluence-limitations">Confluence Limitations</h3>
+<p>As discussed in <a href="#publishing-workflow">Publishing Workflow</a> edits to page content made in Confluence are overwritten when content is published from Quarto. This is also the case for any inline comments made on Confluence. Page level emojis and page level comments are preserved across publishes.</p>
+</section>
+</section>
+<section id="publishing-settings" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-settings">Publishing Settings</h2>
+<p>Once you have published to Confluence, you might be interested in understanding how to manage your publishing and account settings.</p>
+<section id="publish.yml" class="level3">
+<h3 class="anchored" data-anchor-id="publish.yml">_publish.yml</h3>
+<p>The <code>_publish.yml</code> file is used to specify the publishing destination. This file is automatically created (or updated) whenever you execute the <code>quarto publish</code> command, and is located within the project or document directory.</p>
+<p>The service, id, and URL of the published content is specified in <code>_publish.yml</code>. For example:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">source</span><span class="kw">:</span><span class="at"> project</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">confluence</span><span class="kw">:</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="st">"5f3abafe-68f9-4c1d-835b-9d668b892001"</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://myteam.atlassian.net/wiki/spaces/TEAMSPACE/pages/123456/Plan"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The next time you publish the same document or project, the <code>_publish.yml</code> file will be used to provide account and space information so that you are not prompted for this information again.</p>
+<p>If you have an existing Confluence Space that you want to publish to, you should manually create a <code>_publish.yml</code> file that looks like the example above, but with the appropriate <code>id</code> and <code>url</code> values for your document.</p>
+<p>Account information is not stored in <code>_publish.yml</code>, so it is suitable for checking in to version control and being shared by multiple publishers.</p>
+</section>
+<section id="account-management" class="level3">
+<h3 class="anchored" data-anchor-id="account-management">Account Management</h3>
+<p>You can list and remove saved Confluence accounts using the <code>quarto publish accounts</code> command:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>$ quarto publish accounts</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a> ? Manage Publishing Accounts</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a> ❯ ✔ Confluence: jj@posit.co</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>   ✔ Netlify: jj@posit.co</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a> ❯ Use the arrow keys and spacebar to specify </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>   accounts you would like to remove. Press </span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>   Enter to confirm the list of accounts you</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>   wish to remain available.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/publishing/netlify.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Netlify</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/publishing/other.html" class="pagination-link">
+        <span class="nav-page-text">Other Services</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">FAQ</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">Trademark</a>
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

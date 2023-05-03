@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>achalmaedison - VS Code</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/visual-editor/vscode/index.html" rel="next">
+<link href="../../docs/visual-editor/markdown.html" rel="prev">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="achalmaedison - VS Code">
+<meta property="og:description" content="Quarto can render Jupyter notebooks represented as plain text (.qmd) or as a normal notebook file (.ipynb).">
+<meta property="og:image" content="https://quarto.org/docs/computations/images/python-vscode.png">
+<meta property="og:site-name" content="achalmaedison">
+<meta property="og:image:height" content="1302">
+<meta property="og:image:width" content="2242">
+<meta name="twitter:title" content="achalmaedison - VS Code">
+<meta name="twitter:description" content="Quarto can render Jupyter notebooks represented as plain text (.qmd) or as a normal notebook file (.ipynb).">
+<meta name="twitter:image" content="https://quarto.org/docs/computations/images/python-vscode.png">
+<meta name="twitter:image-height" content="1302">
+<meta name="twitter:image-width" content="2242">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/guide/index.html" aria-current="page">
+ <span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/extensions/index.html">
+ <span class="menu-text">Extensions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html">
+ <span class="menu-text">Referencias</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html">
+ <span class="menu-text">Galería</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ayuda</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Ask a Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">VS Code</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/guide/index.html" class="sidebar-item-text sidebar-link">Cursos</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Macroeconomía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/markdown-basics.html" class="sidebar-item-text sidebar-link">Markdown Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/figures.html" class="sidebar-item-text sidebar-link">Figures</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/tables.html" class="sidebar-item-text sidebar-link">Tables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/diagrams.html" class="sidebar-item-text sidebar-link">Diagrams</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/videos.html" class="sidebar-item-text sidebar-link">Videos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/notebook-embed.html" class="sidebar-item-text sidebar-link">Jupyter Notebooks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/callouts.html" class="sidebar-item-text sidebar-link">Callout Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/code-annotation.html" class="sidebar-item-text sidebar-link">Code Annotation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/article-layout.html" class="sidebar-item-text sidebar-link">Article Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Scholarly Writing</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/title-blocks.html" class="sidebar-item-text sidebar-link">Title Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/footnotes-and-citations.html" class="sidebar-item-text sidebar-link">Citations &amp; Footnotes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/cross-references.html" class="sidebar-item-text sidebar-link">Cross References</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/create-citeable-articles.html" class="sidebar-item-text sidebar-link">Creating Citeable Articles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/appendices.html" class="sidebar-item-text sidebar-link">Appendices</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Microeconomía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/python.html" class="sidebar-item-text sidebar-link">Using Python</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/r.html" class="sidebar-item-text sidebar-link">Using R</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/julia.html" class="sidebar-item-text sidebar-link">Using Julia</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/ojs.html" class="sidebar-item-text sidebar-link">Using Observable</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/execution-options.html" class="sidebar-item-text sidebar-link">Execution Options</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/computations/parameters.html" class="sidebar-item-text sidebar-link">Parameters</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Investigacion de mercados</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">JupyterLab</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab.html" class="sidebar-item-text sidebar-link">JupyterLab Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/jupyter-lab-extension.html" class="sidebar-item-text sidebar-link">JupyterLab Extension</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">RStudio IDE</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/rstudio.html" class="sidebar-item-text sidebar-link">RStudio Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">Visual Editor</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/index.html" class="sidebar-item-text sidebar-link">Editor Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/technical.html" class="sidebar-item-text sidebar-link">Technical Writing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/content.html" class="sidebar-item-text sidebar-link">Content Editing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/options.html" class="sidebar-item-text sidebar-link">Shortcuts &amp; Options</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/markdown.html" class="sidebar-item-text sidebar-link">Markdown Output</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link active">VS Code</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode.html" class="sidebar-item-text sidebar-link active">VS Code Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/visual-editor/vscode/index.html" class="sidebar-item-text sidebar-link">Visual Editor</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/vscode-notebook.html" class="sidebar-item-text sidebar-link">Notebook Editor</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/neovim.html" class="sidebar-item-text sidebar-link">Neovim</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/tools/text-editors.html" class="sidebar-item-text sidebar-link">Text Editors</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">Python</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">HTML</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-basics.html" class="sidebar-item-text sidebar-link">HTML Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-code.html" class="sidebar-item-text sidebar-link">HTML Code Blocks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-themes.html" class="sidebar-item-text sidebar-link">HTML Theming</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-multi-format.html" class="sidebar-item-text sidebar-link">Including Other Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/html-publishing.html" class="sidebar-item-text sidebar-link">Publishing HTML</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">PDF</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-basics.html" class="sidebar-item-text sidebar-link">PDF Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/pdf-engine.html" class="sidebar-item-text sidebar-link">PDF Engines</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">MS Word</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word.html" class="sidebar-item-text sidebar-link">Word Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/ms-word-templates.html" class="sidebar-item-text sidebar-link">Word Templates</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">Markdown</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/gfm.html" class="sidebar-item-text sidebar-link">GitHub (GFM)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/hugo.html" class="sidebar-item-text sidebar-link">Hugo</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/docusaurus.html" class="sidebar-item-text sidebar-link">Docusaurus</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/all-formats.html" class="sidebar-item-text sidebar-link">All Formats</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">Stata</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">Revealjs</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/index.html" class="sidebar-item-text sidebar-link">Reveal Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/presenting.html" class="sidebar-item-text sidebar-link">Presenting Slides</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/advanced.html" class="sidebar-item-text sidebar-link">Advanced Reveal</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/revealjs/themes.html" class="sidebar-item-text sidebar-link">Reveal Themes</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/powerpoint.html" class="sidebar-item-text sidebar-link">PowerPoint</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/presentations/beamer.html" class="sidebar-item-text sidebar-link">Beamer</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">Filosofía</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/index.html" class="sidebar-item-text sidebar-link">Creating a Website</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-navigation.html" class="sidebar-item-text sidebar-link">Website Navigation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-blog.html" class="sidebar-item-text sidebar-link">Creating a Blog</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-search.html" class="sidebar-item-text sidebar-link">Website Search</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-tools.html" class="sidebar-item-text sidebar-link">Website Tools</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-about.html" class="sidebar-item-text sidebar-link">About Pages</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">Listing Pages</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings.html" class="sidebar-item-text sidebar-link">Document Listings</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/websites/website-listings-custom.html" class="sidebar-item-text sidebar-link">Custom Listings</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">Linux</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/index.html" class="sidebar-item-text sidebar-link">Creating a Book</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-structure.html" class="sidebar-item-text sidebar-link">Book Structure</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-crossrefs.html" class="sidebar-item-text sidebar-link">Book Crossrefs</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/books/book-output.html" class="sidebar-item-text sidebar-link">Customizing Output</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">Investigacion de operaciones</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">Observable JS</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/libraries.html" class="sidebar-item-text sidebar-link">Libraries</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/data-sources.html" class="sidebar-item-text sidebar-link">Data Sources</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/ojs-cells.html" class="sidebar-item-text sidebar-link">OJS Cells</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/shiny.html" class="sidebar-item-text sidebar-link">Shiny Reactives</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/code-reuse.html" class="sidebar-item-text sidebar-link">Code Reuse</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/penguins.html" class="sidebar-item-text sidebar-link">Penguins</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/sunburst.html" class="sidebar-item-text sidebar-link">Sunburst</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/arquero.html" class="sidebar-item-text sidebar-link">Arquero</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/population.html" class="sidebar-item-text sidebar-link">Population</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/noaa-co2.html" class="sidebar-item-text sidebar-link">NOAA CO2</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/github.html" class="sidebar-item-text sidebar-link">GitHub API</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/ojs/examples/layout.html" class="sidebar-item-text sidebar-link">Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">Shiny</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth4 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/kmeans-shiny-ojs/" class="sidebar-item-text sidebar-link">K-Means</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/binning-shiny-ojs/" class="sidebar-item-text sidebar-link">Binning</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/data-shiny-ojs/" class="sidebar-item-text sidebar-link">Data Binding</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/covid19-bicartogram/" class="sidebar-item-text sidebar-link">Covid Map</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">Shiny</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/running.html" class="sidebar-item-text sidebar-link">Running Documents</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/execution.html" class="sidebar-item-text sidebar-link">Execution Contexts</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/shiny/resources.html" class="sidebar-item-text sidebar-link">External Resources</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-old-faithful/" class="sidebar-item-text sidebar-link">Old Faithful</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-k-means/" class="sidebar-item-text sidebar-link">K-Means</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://jjallaire.shinyapps.io/shiny-diamonds/" class="sidebar-item-text sidebar-link">Diamonds</a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">Widgets</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/jupyter.html" class="sidebar-item-text sidebar-link">Jupyter Widgets</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/widgets/htmlwidgets.html" class="sidebar-item-text sidebar-link">htmlwidgets for R</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/interactive/layout.html" class="sidebar-item-text sidebar-link">Component Layout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">Publishing</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/index.html" class="sidebar-item-text sidebar-link">Publishing Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/quarto-pub.html" class="sidebar-item-text sidebar-link">Quarto Pub</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/github-pages.html" class="sidebar-item-text sidebar-link">GitHub Pages</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/rstudio-connect.html" class="sidebar-item-text sidebar-link">Posit Connect</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/netlify.html" class="sidebar-item-text sidebar-link">Netlify</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/confluence.html" class="sidebar-item-text sidebar-link">Confluence</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/other.html" class="sidebar-item-text sidebar-link">Other Services</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/publishing/ci.html" class="sidebar-item-text sidebar-link">Publishing with CI</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">Projects</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/quarto-projects.html" class="sidebar-item-text sidebar-link">Project Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/code-execution.html" class="sidebar-item-text sidebar-link">Managing Execution</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/profiles.html" class="sidebar-item-text sidebar-link">Project Profiles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/environment.html" class="sidebar-item-text sidebar-link">Environment Variables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/scripts.html" class="sidebar-item-text sidebar-link">Project Scripts</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/projects/virtual-environments.html" class="sidebar-item-text sidebar-link">Virtual Environments</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">Advanced</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/includes.html" class="sidebar-item-text sidebar-link">Includes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/variables.html" class="sidebar-item-text sidebar-link">Variables</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/output-formats/page-layout.html" class="sidebar-item-text sidebar-link">Page Layout</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/language.html" class="sidebar-item-text sidebar-link">Document Language</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/authoring/conditional.html" class="sidebar-item-text sidebar-link">Conditional Content</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/nbfilter.html" class="sidebar-item-text sidebar-link">Notebook Filters</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#vs-code-editors" id="toc-vs-code-editors" class="nav-link" data-scroll-target="#vs-code-editors">VS Code Editors</a></li>
+  <li><a href="#render-and-preview" id="toc-render-and-preview" class="nav-link" data-scroll-target="#render-and-preview">Render and Preview</a></li>
+  <li><a href="#render-on-save" id="toc-render-on-save" class="nav-link" data-scroll-target="#render-on-save">Render on Save</a></li>
+  <li><a href="#external-preview" id="toc-external-preview" class="nav-link" data-scroll-target="#external-preview">External Preview</a></li>
+  <li><a href="#code-cells" id="toc-code-cells" class="nav-link" data-scroll-target="#code-cells">Code Cells</a>
+  <ul class="collapse">
+  <li><a href="#execution-directory" id="toc-execution-directory" class="nav-link" data-scroll-target="#execution-directory">Execution Directory</a></li>
+  </ul></li>
+  <li><a href="#contextual-assistance" id="toc-contextual-assistance" class="nav-link" data-scroll-target="#contextual-assistance">Contextual Assistance</a></li>
+  <li><a href="#live-preview" id="toc-live-preview" class="nav-link" data-scroll-target="#live-preview">Live Preview</a></li>
+  <li><a href="#yaml-intelligence" id="toc-yaml-intelligence" class="nav-link" data-scroll-target="#yaml-intelligence">YAML Intelligence</a></li>
+  <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code Snippets</a>
+  <ul class="collapse">
+  <li><a href="#intellisense" id="toc-intellisense" class="nav-link" data-scroll-target="#intellisense">IntelliSense</a></li>
+  </ul></li>
+  <li><a href="#document-navigation" id="toc-document-navigation" class="nav-link" data-scroll-target="#document-navigation">Document Navigation</a></li>
+  <li><a href="#learning-more" id="toc-learning-more" class="nav-link" data-scroll-target="#learning-more">Learning More</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">VS Code</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Quarto can render Jupyter notebooks represented as plain text (<code>.qmd</code>) or as a normal notebook file (<code>.ipynb</code>). The <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto VS Code Extension</a> includes many tools that enhance working these documents, including:</p>
+<ul>
+<li>Integrated render and preview for Quarto documents.</li>
+<li>Syntax highlighting for markdown and embedded languages</li>
+<li>Completion and diagnostics for YAML options</li>
+<li>Completion for embedded languages (e.g.&nbsp;Python, R, Julia, etc.)</li>
+<li>Commands and key-bindings for running cells and selected lines.</li>
+<li>Live preview for LaTeX math as well as Mermaid and Graphviz diagrams</li>
+</ul>
+<p>The Quarto extension integrates directly with the Jupyter, R, and Julia extensions. For example, here the Quarto extension runs a Python cell and shows contextual help for Python functions:</p>
+<p><img src="../../docs/computations/images/python-vscode.png" class="border preview-image img-fluid" alt="Screen shot of VS Code editor with three vertical sections. The leftmost includes the file explorer, and quarto help. The second pane is the source code for a quarto file with python code. The third is interactive with Python running and output of the code cells shown."></p>
+<p>You can install the Quarto extension from the <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">VS Code Extension Marketplace</a> or the <a href="https://open-vsx.org/extension/quarto/quarto">Open VSX Registry</a>.</p>
+</section>
+<section id="vs-code-editors" class="level2">
+<h2 class="anchored" data-anchor-id="vs-code-editors">VS Code Editors</h2>
+<p>Depending on your prefernces and the task at hand, you can author documents for rendering by Quarto using three different editors within VS Code:</p>
+<ol type="1">
+<li><p>The source code editor for editing <code>.qmd</code> documents as text.</p></li>
+<li><p>The <a href="../../docs/visual-editor/vscode/index.html">Visual Editor</a> for WYSIWYG editing of <code>.qmd</code> documents.</p></li>
+<li><p>The <a href="../../docs/tools/vscode-notebook.html">Notebook Editor</a> for editing <code>.ipynb</code> notebooks.</p></li>
+</ol>
+<p>We’ll cover the the source code editor below, however you might also want to consult the documentation for the <a href="../../docs/visual-editor/vscode/index.html">Visual Editor</a> or <a href="../../docs/tools/vscode-notebook.html">Notebook Editor</a> after you’ve become familar with the basics.</p>
+</section>
+<section id="render-and-preview" class="level2">
+<h2 class="anchored" data-anchor-id="render-and-preview">Render and Preview</h2>
+<p>The Quarto VS Code extension includes commands and keyboard shortcuts for rendering Quarto documents (both standalone and within websites or books). After rendering, <code>quarto preview</code> is used behind the scenes to provide a preview pane within VS Code alongside your document:</p>
+<p><img src="images/vscode-render.png" class="border img-fluid" alt="Two windows arranged side by side. The window on the left is a qmd file opened in VSCode. The contents of this document are the same as the first part of the Getting Started: Welcome section of this website. The contents of this document are rendered by Quarto in the window on the right."></p>
+<p>To render and preview, execute the <strong>Quarto: Render</strong> command. You can alternatively use the <kbd>Ctrl+Shift+K</kbd> keyboard shortcut, or the <strong>Render</strong> button at the top right of the editor:</p>
+<p><img src="images/vscode-render-button.png" class="border img-fluid" alt="The top of the Visual Studio code editor. The right side of the editor tab area includes a Render button."></p>
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Note that on the Mac you should use <code>Cmd</code> rather than <code>Ctrl</code> as the prefix for all Quarto keyboard shortcuts.</p>
+</div>
+</div>
+</div>
+<p>Additionally, there are commands available to render specific formats. Here is a complete list of the supported render commands:</p>
+<ul>
+<li>Quarto: Render</li>
+<li>Quarto: Render HTML</li>
+<li>Quarto: Render PDF</li>
+<li>Quarto: Render DOCX</li>
+</ul>
+<p>The <strong>Quarto: Render</strong> command renders the default format of the currently active document. The other commands render specific formats (regardless of the document’s default format). The <kbd>Ctrl+Shift+K</kbd> keyboard shortcut will re-execute the most recently executed render command.</p>
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Embedded preview is currently supported for HTML and PDF based formats (including <code>revealjs</code> and <code>beamer</code> slideshows). However, for Word and other formats you need to use an appropriate external program to preview the output.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="render-on-save" class="level2">
+<h2 class="anchored" data-anchor-id="render-on-save">Render on Save</h2>
+<p>By default Quarto does not automatically render <code>.qmd</code> or <code>.ipynb</code> files when you save them. This is because rendering might be very time consuming (e.g.&nbsp;it could include long running computations) and it’s good to have the option to save periodically without doing a full render.</p>
+<p>However, you can configure the Quarto extension to automatically render whenever you save. You can do this either within VS Code settings or within the YAML options for your project or document. To configure the VS Code setting, search for <code>quarto.render</code> in settings and you’ll find the <strong>Render on Save</strong> option:</p>
+<p><img src="images/vscode-render-on-save.png" class="border img-fluid" alt="The Visual Studio Code Quarto render settings. The Render on Save option is checked."></p>
+<p>You might also want to control this behavior on a per-document or per-project basis. If you include the <code>editor: render-on-save</code> option in your document or project YAML it will supersede whatever your VS Code setting is. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">render-on-save</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="external-preview" class="level2">
+<h2 class="anchored" data-anchor-id="external-preview">External Preview</h2>
+<p>If you prefer to use an external browser for preview (or have no preview triggered at all by rendering) you can use the <strong>Preview Type</strong> option to specify an alternate behavior:</p>
+<p><img src="images/vscode-preview-settings.png" class="border img-fluid" alt="VS Code settings interface with 'quarto preview type' entered into the search bar. User settings reveals Quarto > Render: Preview Type, with a dropdown to select location for document preview after render. The default, internal, is selected, which previews using a side-by-side panel in VS Code. The other two options in the dropdown are external and none."></p>
+</section>
+<section id="code-cells" class="level2">
+<h2 class="anchored" data-anchor-id="code-cells">Code Cells</h2>
+<p>There are a variety of tools that make it easier to edit and execute code cells. Editing tools include syntax highlighting, code folding, code completion, and signature tips:</p>
+<p><img src="images/vscode-code-cell.png" class="border img-fluid" alt="A Quarto document in VS Code with a python code cell. There is a code completion helper active in the python cell."></p>
+<p>For Python, R, and Julia cells, commands are available to execute the current cell, previous cells, or the currently selected line(s). Cell output is shown side by side in the Jupyter interactive console:</p>
+<p><img src="images/vscode-execute-cell.png" class="border img-fluid" alt="VS Code with two panes open, vscode.qmd source code on the right, and the interactive output of that code shown in a second pane on the left."></p>
+<p>Here are all of the commands and keyboard shortcuts available for executing cells:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Quarto Command</th>
+<th>Keyboard Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Run Current Cell</td>
+<td><kbd>⇧⌘ Enter</kbd></td>
+</tr>
+<tr class="even">
+<td>Run Selected Line(s)</td>
+<td><kbd>⌘ Enter</kbd></td>
+</tr>
+<tr class="odd">
+<td>Run Next Cell</td>
+<td><kbd>⌥⌘ N</kbd></td>
+</tr>
+<tr class="even">
+<td>Run Previous Cell</td>
+<td><kbd>⌥⌘ P</kbd></td>
+</tr>
+<tr class="odd">
+<td>Run All Cells</td>
+<td><kbd>⌥⌘ R</kbd></td>
+</tr>
+<tr class="even">
+<td>Run Cells Above</td>
+<td><kbd>⇧⌥⌘ P</kbd></td>
+</tr>
+<tr class="odd">
+<td>Run Cells Below</td>
+<td><kbd>⇧⌥⌘ N</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>You can quickly insert a new code cell using the <kbd>Ctrl+Shift+I</kbd> keyboard shortcut.</p>
+<p>Enhanced features for embedded languages (e.g.&nbsp;completion, code execution) can be enabled by installing the most recent version(s) of these extensions:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python Extension</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r">R Extension</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">Julia Extension</a></li>
+</ul>
+<section id="execution-directory" class="level3">
+<h3 class="anchored" data-anchor-id="execution-directory">Execution Directory</h3>
+<p>Embedded language extensions handle the working directory for execution in distinct ways:</p>
+<ol type="1">
+<li><p>The Python Extension runs code within the directory of the source file from which code is executed. You can customize this behavior using the <code>jupyter.notebookFileRoot</code> option.</p></li>
+<li><p>The R Extension runs code within the working directory of the R session running in the <strong>R Interactive</strong> terminal. You can change this directory manually using <code>setwd()</code>.</p></li>
+<li><p>The Julia Extension runs code within the working directory of the Julia session running in the <strong>Julia REPL</strong> terminal. You can change this direcdtory manually using <code>cd()</code>.</p></li>
+</ol>
+</section>
+</section>
+<section id="contextual-assistance" class="level2">
+<h2 class="anchored" data-anchor-id="contextual-assistance">Contextual Assistance</h2>
+<p>Execute the <strong>Quarto: Show Assist Panel</strong> command to show a panel in the sidebar that shows contextual assistance depending on the current cursor location:</p>
+<ol type="1">
+<li>Help/documentation is shown when editing code</li>
+<li>A realtime preview of equations is shown when editing LaTeX math</li>
+<li>Thumbnail previews are shown when your cursor is located on a markdown image.</li>
+</ol>
+<p>For example, below help on the matplotlib <code>plot()</code> function is shown automatically when the cursor is located on the function:</p>
+<p><img src="../../docs/computations/images/python-vscode.png" class="border img-fluid" alt="Screenshot of VS Code editor with three vertical sections. The leftmost includes the file explorer, and quarto help. The second pane is the source code for a quarto file with python code. The third is interactive with Python running and output of the code cells shown."></p>
+</section>
+<section id="live-preview" class="level2">
+<h2 class="anchored" data-anchor-id="live-preview">Live Preview</h2>
+<p>While editing LaTeX math or Mermaid and Graphviz diagrams, click the <strong>Preview</strong> button above the code (or use the <kbd>Ctrl+Shift+L</kbd> keyboard shortcut) to open a live preview which will update automatically as you edit.</p>
+<p>Here we see a preview of the currently edited LaTeX equation displayed in the Quarto assist panel:</p>
+<p><img src="images/vscode-equation.png" class="border img-fluid" alt="Quarto document open in VS Code with a LaTeX equation shown in the 'Quarto Equation' section of the panel to the left of the document."></p>
+<p>Here we see a Graphviz diagram preview automatically updated as we edit:</p>
+<p><img src="../../docs/authoring/images/vscode-graphviz.gif" class="border img-fluid" alt="A Quarto document being edited in Visual Studio Code, with a live preview of the currently edited diagram shown in a pane to the right"></p>
+</section>
+<section id="yaml-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-intelligence">YAML Intelligence</h2>
+<p>YAML code completion is available for project files, YAML front matter, and executable cell options:</p>
+<p><img src="images/vscode-yaml-completion.png" class="border img-fluid" alt="Quarto document with YAML being edited. Next to the cursor code completion helper is open showing YAML options beginning with the letters preceding the cursor ('co')."></p>
+<p>If you have incorrect YAML it will also be highlighted when documents are saved:</p>
+<p><img src="images/vscode-yaml-diagnostics.png" class="border img-fluid" alt="Quarto document YAML metadata with an incorrect option underlined in red."></p>
+</section>
+<section id="code-snippets" class="level2">
+<h2 class="anchored" data-anchor-id="code-snippets">Code Snippets</h2>
+<p>Code snippets are templates that make it easier to enter repeating code patterns (e.g.&nbsp;code blocks, callouts, divs, etc.). Execute the <strong>Insert Snippet</strong> command within a Quarto document to insert a markdown snippet:</p>
+<p><img src="images/vscode-snippets.png" class="border img-fluid" alt="Quarto document with dropdown 'Select a snippet' dropdown, the first item (bold - insert bold text) is selected."></p>
+<section id="intellisense" class="level3">
+<h3 class="anchored" data-anchor-id="intellisense">IntelliSense</h3>
+<p>VSCode uses IntelliSense to suggest snippets or possible values for a specific function while typing. This is turned off by default for snippets, but not for values. To enable snippet suggestions in IntelliSense while typing or when selecting a text snippet and pressing <code>ctrl+space</code>, the setting <code>editor.snippetSuggestions</code> needs to be set to a value other than <code>none</code> (for example to <code>inline</code>).</p>
+<ul>
+<li>Press <code>F1</code> and search for <code>Preferences: Open Settings (UI)</code> or <code>File</code> &gt; <code>Preferences</code> &gt; <code>Settings</code></li>
+<li>Search for following term <code>@lang:quarto editor.snippetSuggestions</code>. <code>Editor: Snippet Suggestions</code> should show up.</li>
+<li>Change value to a not-<code>none</code> value.</li>
+</ul>
+</section>
+</section>
+<section id="document-navigation" class="level2">
+<h2 class="anchored" data-anchor-id="document-navigation">Document Navigation</h2>
+<p>If you have a large document use the outline view for quick navigation between sections:</p>
+<p><img src="images/vscode-outline.png" class="border img-fluid" alt="Quarto document with outline view shown in left-hand panel. The outline shows the section headers of the quarto documents."></p>
+<p>You can also use the <strong>Go to Symbol in Editor</strong> command or keyboard shortcut <kbd>Ctrl+Shift+O</kbd> for type-ahead navigation of the current document’s outline.</p>
+<p>Use the <strong>Go to File</strong> command <kbd>Ctrl+P</kbd> to navigate to other files and the <strong>Go to Symbol in Workspace</strong> command <kbd>Ctrl+T</kbd> for type-ahead navigation to all headings in the workspace:</p>
+<p><img src="images/vscode-workspace-symbols.png" class="border img-fluid" alt="Quarto document in VS Code with command palette open showing the files in the project with the entered term, 'margin'."></p>
+</section>
+<section id="learning-more" class="level2">
+<h2 class="anchored" data-anchor-id="learning-more">Learning More</h2>
+<p>Besides the traditional source editor described above, you can also use one of the following other editors depending on your preferences and task at hand:</p>
+<ol type="1">
+<li><p>The <a href="../../docs/visual-editor/vscode/index.html">Visual Editor</a> for WYSIWYG editing of <code>.qmd</code> documents.</p></li>
+<li><p>The <a href="../../docs/tools/vscode-notebook.html">Notebook Editor</a> for editing <code>.ipynb</code> notebooks.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/visual-editor/markdown.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Markdown Output</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/visual-editor/vscode/index.html" class="pagination-link">
+        <span class="nav-page-text">Visual Editor</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">FAQ</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">Trademark</a>
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

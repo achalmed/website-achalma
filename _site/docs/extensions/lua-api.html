@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>achalmaedison - Lua API Reference</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/extensions/distributing.html" rel="next">
+<link href="../../docs/extensions/lua.html" rel="prev">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FV9Z7SDZ0M"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV9Z7SDZ0M', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="achalmaedison - Lua API Reference">
+<meta property="og:description" content="This article provides documentation on the standard APIs available when implementing Lua filters and shortcodes. There are three major sets of APIs available:">
+<meta property="og:site-name" content="achalmaedison">
+<meta name="twitter:title" content="achalmaedison - Lua API Reference">
+<meta name="twitter:description" content="This article provides documentation on the standard APIs available when implementing Lua filters and shortcodes. There are three major sets of APIs available:">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/get-started/index.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/guide/index.html">
+ <span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../docs/extensions/index.html" aria-current="page">
+ <span class="menu-text">Extensions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/reference/index.html">
+ <span class="menu-text">Referencias</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/gallery/index.html">
+ <span class="menu-text">Galería</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/blog/index.html">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Ayuda</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Ask a Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Lua API Reference</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/index.html" class="sidebar-item-text sidebar-link">Quarto Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-filters.html" class="sidebar-item-text sidebar-link">Shortcodes &amp; Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-journals.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/listing-revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Extensions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/managing.html" class="sidebar-item-text sidebar-link">Managing Extensions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Creating Extensions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/creating.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua.html" class="sidebar-item-text sidebar-link">Lua Development</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/lua-api.html" class="sidebar-item-text sidebar-link active">Lua API Reference</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/distributing.html" class="sidebar-item-text sidebar-link">Distribution</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/shortcodes.html" class="sidebar-item-text sidebar-link">Shortcodes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/filters.html" class="sidebar-item-text sidebar-link">Filters</a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Articles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/formats.html" class="sidebar-item-text sidebar-link">Journal Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/templates.html" class="sidebar-item-text sidebar-link">Article Templates</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/journals/authors.html" class="sidebar-item-text sidebar-link">Authors &amp; Affiliations</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/formats.html" class="sidebar-item-text sidebar-link">Custom Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/revealjs.html" class="sidebar-item-text sidebar-link">Revealjs Plugins</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/project-types.html" class="sidebar-item-text sidebar-link">Project Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/extensions/starter-templates.html" class="sidebar-item-text sidebar-link">Starter Templates</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#lua-base-api" id="toc-lua-base-api" class="nav-link" data-scroll-target="#lua-base-api">Lua Base API</a></li>
+  <li><a href="#pandoc-lua-api" id="toc-pandoc-lua-api" class="nav-link" data-scroll-target="#pandoc-lua-api">Pandoc Lua API</a></li>
+  <li><a href="#quarto-lua-api" id="toc-quarto-lua-api" class="nav-link" data-scroll-target="#quarto-lua-api">Quarto Lua API</a>
+  <ul class="collapse">
+  <li><a href="#utility-functions" id="toc-utility-functions" class="nav-link" data-scroll-target="#utility-functions">Utility Functions</a></li>
+  <li><a href="#format-detection" id="toc-format-detection" class="nav-link" data-scroll-target="#format-detection">Format Detection</a></li>
+  <li><a href="#includes" id="toc-includes" class="nav-link" data-scroll-target="#includes">Includes</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">Dependencies</a></li>
+  <li><a href="#json-encoding" id="toc-json-encoding" class="nav-link" data-scroll-target="#json-encoding">JSON Encoding</a></li>
+  <li><a href="#base64-encoding" id="toc-base64-encoding" class="nav-link" data-scroll-target="#base64-encoding">Base64 Encoding</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Lua API Reference</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This article provides documentation on the standard APIs available when implementing Lua filters and shortcodes. There are three major sets of APIs available:</p>
+<ul>
+<li><p><strong>Lua Base API</strong>—Base functions provided for string handling, pattern matching, table manipulation, and file input and output.</p></li>
+<li><p><strong>Pandoc Lua API</strong>—Core API provided by Pandoc for filter development, and includes both core AST types (e.g.&nbsp;<code>pandoc.Div</code>, <code>pandoc.CodeBlock</code>, etc.) as well as a wide variety of helper functions for common tasks.</p></li>
+<li><p><strong>Quarto Lua API</strong>—Additional functions used for debugging, format detection, encoding (e.g.&nbsp;JSON), and adding dependencies to documents (e.g.&nbsp;JavaScript libraries or LaTeX packages).</p></li>
+</ul>
+<p>To get started with programming in Lua and learn about some recommended tools and workflow, see the article on <a href="../../docs/extensions/lua.html">Lua Development</a>.</p>
+</section>
+<section id="lua-base-api" class="level2">
+<h2 class="anchored" data-anchor-id="lua-base-api">Lua Base API</h2>
+<p>The Lua standard library provides core functions for low-level string, math, table, and file operations. Here we provide links to a few of the more useful standard libaries (complete documentation can be found in the <a href="https://www.lua.org/manual/5.3/">Lua Reference Manual</a>).</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Library</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></td>
+<td>This library provides generic functions for string manipulation, such as finding and extracting substrings, and pattern matching.</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.5">utf8</a></td>
+<td>This library provides basic support for UTF-8 encoding.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></td>
+<td>This library provides generic functions for table manipulation.</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.7">math</a></td>
+<td>This library provides basic mathematical functions.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.8">io</a>, <a href="https://www.lua.org/manual/5.3/manual.html#6.8">file</a></td>
+<td>The I/O library provides two different styles for file manipulation: one uses implicit file handles and the other explicit handles.</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.lua.org/manual/5.3/manual.html#6.9">os</a></td>
+<td>Date/time, locales, environment variables, etc.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pandoc-lua-api" class="level2">
+<h2 class="anchored" data-anchor-id="pandoc-lua-api">Pandoc Lua API</h2>
+<p>Complete documentation for the Pandoc Lua API can be found in the <a href="https://pandoc.org/lua-filters.html">Lua Filters</a> article available on the Pandoc website. Here are the various components of the API along with links to their reference documentation:</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lua Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc">pandoc</a> (ast)</td>
+<td>Constructors for document tree elements (e.g.&nbsp;<code>pandoc.Div()</code>, <code>pandoc.Strong()</code>, etc.) as well as core components (e.g.&nbsp;<code>pandoc.Attr()</code>)</td>
+</tr>
+<tr class="even">
+<td><a href="https://pandoc.org/lua-filters.html#helper-functions">pandoc</a> (functions)</td>
+<td>Functions to parse text in a given format, filter and modify a sub-tree, and run child processes.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://pandoc.org/lua-filters.html#module-text">pandoc.text</a></td>
+<td>UTF-8 aware text manipulation functions (e.g.&nbsp;<code>upper()</code>, <code>lower()</code>, etc.)</td>
+</tr>
+<tr class="even">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.list">pandoc.List</a></td>
+<td>This module defines pandoc’s list type. It comes with useful methods and convenience function (e.g <code>find_if()</code>, <code>includes()</code>, <code>filter()</code>, <code>map()</code>, etc.)</td>
+</tr>
+<tr class="odd">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.utils">pandoc.utils</a></td>
+<td>Internal pandoc functions and utility functions (e.g.&nbsp;<code>blocks_to_inlines()</code>, <code>stringify()</code>, <code>citeproc()</code>, etc.)</td>
+</tr>
+<tr class="even">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.path">pandoc.path</a></td>
+<td>Module for file path manipulations (e.g.&nbsp;<code>is_absolute()</code>, <code>is_relative()</code>, <code>join()</code>, etc.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.system">pandoc.system</a></td>
+<td>Access to system information and functionality (e.g.&nbsp;<code>get_working_directory()</code>, <code>list_directory()</code>, etc.</td>
+</tr>
+<tr class="even">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.mediabag">pandoc.mediabag</a></td>
+<td>Access to pandoc’s media storage. The “media bag” is used when pandoc is called with the <code>--extract-media</code> or (for HTML only) <code>--embed-resources</code> option.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.template">pandoc.template</a></td>
+<td>Compile and access defualt pandoc templates (e.g.&nbsp;<code>compile()</code>)</td>
+</tr>
+<tr class="even">
+<td><a href="https://pandoc.org/lua-filters.html#module-pandoc.types">pandoc.types</a></td>
+<td>Constructors for types which are not part of the pandoc AST (e.g.&nbsp;<code>Version()</code>)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quarto-lua-api" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-lua-api">Quarto Lua API</h2>
+<section id="utility-functions" class="level3">
+<h3 class="anchored" data-anchor-id="utility-functions">Utility Functions</h3>
+<p>Various utility functions are provided:</p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.version()</code></td>
+<td>Return the current Quarto version as a <code>pandoc.Version</code> object.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.utils.dump(obj)</code></td>
+<td>Dump a text representation of the passed object to stdout.</td>
+</tr>
+<tr class="odd">
+<td><code>quarto.utils.resolve_path(path)</code></td>
+<td>Compute the full path to a file that is installed alongside your extension’s Lua script. This is useful for <em>internal</em> resources that your filter needs but should not be visible to the user.</td>
+</tr>
+</tbody>
+</table>
+<p>Quarto includes the <a href="https://github.com/wlupton/pandoc-lua-logging">pandoc-lua-logging</a> library, which should be used in preference to the dump function. For example, you can examine an element passed to a filter function as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Div<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  quarto<span class="op">.</span>log<span class="op">.</span>output<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="format-detection" class="level3">
+<h3 class="anchored" data-anchor-id="format-detection">Format Detection</h3>
+<p>Extensions will often need to detect the current format to create custom content depending on the target output medium. The <code>quarto.doc.is_format()</code> function</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.doc.is_format(name)</code></td>
+<td>Detect if the current format matches <code>name</code>.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.doc.has_bootstrap()</code></td>
+<td>Query whether <a href="https://getbootstrap.com/">Bootstrap CSS</a> is available within the current document (it is by default for standard <code>html</code> documents but this may have been overridden by e.g.&nbsp;<code>theme: none</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>name</code> parameter can match an exact Pandoc format name (e.g.&nbsp;<code>docx</code>, <code>latex</code>, etc. or can match based on an alias that groups commonly targeted formats together. The following values format aliases are handled specially by <code>quarto.doc.is_format()</code>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Alias</th>
+<th>Formats</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>latex</code></td>
+<td><code>latex</code>, <code>pdf</code></td>
+</tr>
+<tr class="even">
+<td><code>pdf</code></td>
+<td><code>latex</code>, <code>pdf</code></td>
+</tr>
+<tr class="odd">
+<td><code>epub</code></td>
+<td><code>epub*</code></td>
+</tr>
+<tr class="even">
+<td><code>html</code></td>
+<td><code>html*</code>, <code>epub*</code>, <code>revealjs</code></td>
+</tr>
+<tr class="odd">
+<td><code>html:js</code></td>
+<td><code>html*</code>, <code>revealjs</code></td>
+</tr>
+<tr class="even">
+<td><code>markdown</code></td>
+<td><code>markdown*</code>, <code>commonmark*</code>, <code>gfm</code>, <code>markua</code></td>
+</tr>
+</tbody>
+</table>
+<p>Note that the <code>html:js</code> alias indicates that the target format is capable of executing JavaScript (this maps to all HTML formats save for ePub).</p>
+<p>For example, here we check for PDF and HTML output:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> quarto<span class="op">.</span>doc<span class="op">.</span>is_format<span class="op">(</span><span class="st">"pdf"</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- pdf specific output</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elseif</span> quarto<span class="op">.</span>doc<span class="op">.</span>is_format<span class="op">(</span><span class="st">"html"</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- html specific output</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- output for other formats</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For LaTeX output, you may need to additionally detect which citation utility and pdf engine are being used for the current render. You can use these functions to do that detection:</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.doc.cite_method()</code></td>
+<td>Returns a string (<code>citeproc</code>, <code>natbib</code>, or <code>biblatex)</code> indicating the cite method in use.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.doc.pdf_engine()</code></td>
+<td>Returns a string (<code>pdflatex</code>, <code>xelatex</code>, <code>lualatex</code>, or <code>tectonic</code>) indicating the PDF engine being used to render the document.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="includes" class="level3">
+<h3 class="anchored" data-anchor-id="includes">Includes</h3>
+<p>Sometimes extensions need to inject content into the target document. There are three locations that content can be included (pass one of these locations as the first argument of the include functions):</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>in-header</code></td>
+<td>In the header of the document (HTML <code>&lt;head&gt;</code> tag or LaTeX preamble)</td>
+</tr>
+<tr class="even">
+<td><code>before-body</code></td>
+<td>Before the document body</td>
+</tr>
+<tr class="odd">
+<td><code>after-body</code></td>
+<td>After the document body</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the included content should use the <em>raw target format</em> (e.g.&nbsp;HTML or LaTeX) rather than markdown. You can use these functions to include text or the contents of a file:</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.doc.include_text(location, text)</code></td>
+<td>Include text at the specified location (<code>in-header</code>, <code>before-body</code>, or <code>after-body</code>)</td>
+</tr>
+<tr class="even">
+<td><code>quarto.doc.include_file(location, file)</code></td>
+<td>Include file at the specified location (<code>in-header</code>, <code>before-body</code>, or <code>after-body</code>). The path to the file should <em>relative</em> to the Lua script calling this function.</td>
+</tr>
+</tbody>
+</table>
+<p>For example the following code includes an HTML file after the body in the rendered document:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>quarto<span class="op">.</span>doc<span class="op">.</span>include_file<span class="op">(</span><span class="st">"after-body"</span><span class="op">,</span> <span class="st">"comments.html"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="dependencies">Dependencies</h3>
+<p>Extensions will sometimes want to add external dependencies (for example, a JavaScript library and related CSS, or the usage of a LaTeX package). This can be accomplished with the following functions:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.doc.add_html_dependency(dep)</code></td>
+<td>Add an HTML dependency (additional resources and content) to a document. See docs on the <a href="#html-dependencies">HTML Dependencies</a> below for additional details.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.doc.attach_to_dependency(name, attach)</code></td>
+<td>Attach a file to an existing dependency. <code>attach</code> is a file path relative to the Lua filter or table with `path` and `name` for renaming the file as its copied.</td>
+</tr>
+<tr class="odd">
+<td><code>quarto.doc.use_latex_package(pkg, opt)</code></td>
+<td>Adds a <code>\usepackage</code> statement to the LaTeX output (along an options string specified in <code>opt</code>)</td>
+</tr>
+<tr class="even">
+<td><code>quarto.doc.add_format_resource(path)</code></td>
+<td>Add a format resource to the document. Format resources will be copied into the directory next to the rendered output. This is useful, for example, if your format references a <code>bst</code> or <code>cls</code> file which must be copied into the LaTeX output directory.</td>
+</tr>
+</tbody>
+</table>
+<p>For example, here we add a LaTeX package dependency:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>quarto<span class="op">.</span>doc<span class="op">.</span>use_latex_package<span class="op">(</span><span class="st">"gamebook"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="html-dependencies" class="level4">
+<h4 class="anchored" data-anchor-id="html-dependencies">HTML Dependencies</h4>
+<p>HTML Dependencies can bundle together JavaScript, CSS, and even arbitrary content to inject into the <code>&lt;head&gt;</code> of the document. These dependencies have a name and a version, which is used to ensure that the same dependency isn’t bundled into the document more than once.</p>
+<p>The <code>dep</code> object passed to <code>quarto.doc.add_html_dependency()</code> has the following fields:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td>Unique name. Required.</td>
+</tr>
+<tr class="even">
+<td><code>version</code></td>
+<td>Version number (as a string). Required.</td>
+</tr>
+<tr class="odd">
+<td><code>scripts</code></td>
+<td>List of scripts to include (paths can be absolute or relative to the Lua file calling the function). Scripts can be either a simple path or a <a href="#script-object">script object</a>.</td>
+</tr>
+<tr class="even">
+<td><code>stylesheets</code></td>
+<td>List of CSS style-sheets to include (paths can be absolute or relative to the Lua file calling the function). Stylesheets can either be a simple path or a <a href="#stylesheet-object">stylesheet object</a></td>
+</tr>
+<tr class="odd">
+<td><code>links</code></td>
+<td>List of link tags to add to the document. Each tag should be a table with <code>rel</code> and <code>ref</code> (required) and optionally <code>type</code></td>
+</tr>
+<tr class="even">
+<td><code>resources</code></td>
+<td>Additional files to copy to the input directory (each resource is an object with <code>name</code> (target file name in input directory) and <code>path</code> (source file name relative to Lua script).</td>
+</tr>
+<tr class="odd">
+<td><code>serviceworkers</code></td>
+<td>JavaScript serviceworker files that should be copied to the root output directory (can be a simple string file name or table with `path` and `name` for renaming the file as its copied).</td>
+</tr>
+<tr class="even">
+<td><code>meta</code></td>
+<td>Table of optional <code>key = value</code> meta tags to insert into the document <code>&lt;head&gt;</code></td>
+</tr>
+<tr class="odd">
+<td><code>head</code></td>
+<td>Arbitrary string to include in document <code>&lt;head&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example, here we add a dependency to a JavaScript library:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>quarto<span class="op">.</span>doc<span class="op">.</span>add_html_dependency<span class="op">({</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  name <span class="op">=</span> <span class="st">"glightbox"</span><span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  version <span class="op">=</span> <span class="st">"3.2.0"</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  scripts <span class="op">=</span> <span class="op">{</span><span class="st">"glightbox.min.js"</span><span class="op">},</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  stylesheets <span class="op">=</span> <span class="op">{</span><span class="st">"glightbox.min.css"</span><span class="op">}</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="script-object" class="level4">
+<h4 class="anchored" data-anchor-id="script-object">Script Object</h4>
+<p>The easiest way to specify <code>scripts</code> is with simple paths. However, in some cases you may need to add attributes to the <code>&lt;script&gt;</code> tag or specify that the script should go after the body. In those cases pass a script object:</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>path</code></td>
+<td>Path to the script (relative to the calling Lua script)</td>
+</tr>
+<tr class="even">
+<td><code>attribs</code></td>
+<td>Table with <code>key = value</code> attributes to add to the <code>&lt;script&gt;</code> tag</td>
+</tr>
+<tr class="odd">
+<td><code>afterBody</code></td>
+<td>Specify that the <code>&lt;script&gt;</code> tag should be inserted after the body</td>
+</tr>
+</tbody>
+</table>
+<p>For example, here update the previous example to add an <code>integrity</code> attribute to the script:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>quarto<span class="op">.</span>doc<span class="op">.</span>add_html_dependency<span class="op">({</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  name <span class="op">=</span> <span class="st">"glightbox"</span><span class="op">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  version <span class="op">=</span> <span class="st">"3.2.0"</span><span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  scripts <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> path <span class="op">=</span> <span class="st">"glightbox.min.js "</span><span class="op">,</span> attribs <span class="op">=</span> <span class="op">{</span>integrity <span class="op">=</span> <span class="st">"R9GqQ8K/uxy9rx"</span><span class="op">}</span> <span class="op">}</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">},</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  stylesheets <span class="op">=</span> <span class="op">{</span><span class="st">"glightbox.min.css"</span><span class="op">}</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="stylesheet-object" class="level4">
+<h4 class="anchored" data-anchor-id="stylesheet-object">Stylesheet Object</h4>
+<p>The easiest way to specify <code>stylesheets</code> is with simple paths. However, in some cases you may need to add attributes to the <code>&lt;link&gt;</code> tag generated for the stylesheet. In those cases pass a stylesheet object:</p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>path</code></td>
+<td>Path to the stylesheet (relative to the calling Lua script)</td>
+</tr>
+<tr class="even">
+<td><code>attribs</code></td>
+<td>Table with <code>key = value</code> attributes to add to the <code>&lt;link&gt;</code> tag</td>
+</tr>
+</tbody>
+</table>
+<p>For example, here we update the previous example to add an <code>integrity</code> attribute to the stylesheet:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>quarto<span class="op">.</span>doc<span class="op">.</span>add_html_dependency<span class="op">({</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  name <span class="op">=</span> <span class="st">"glightbox"</span><span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  version <span class="op">=</span> <span class="st">"3.2.0"</span><span class="op">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  scripts <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      path <span class="op">=</span> <span class="st">"glightbox.min.js "</span><span class="op">,</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      attribs <span class="op">=</span> <span class="op">{</span>integrity <span class="op">=</span> <span class="st">"R9GqQ8K/uxy9rx"</span><span class="op">}</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">},</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  stylesheets <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      path <span class="op">=</span> <span class="st">"glightbox.min.css "</span><span class="op">,</span> </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      attribs <span class="op">=</span> <span class="op">{</span>integrity <span class="op">=</span> <span class="st">"GYl1kPzQho1wx"</span><span class="op">}</span> </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="json-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="json-encoding">JSON Encoding</h3>
+<p>Quarto includes a copy of <a href="https://github.com/rxi/json.lua">json.lua</a>. a lightweight JSON library for Lua. You can access the JSON functions as follows:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.json.encode(input)</code></td>
+<td>Encode a Lua table into a JSON string.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.json.decode(str)</code></td>
+<td>Parse a JSON string into a Lua table.</td>
+</tr>
+</tbody>
+</table>
+<p>For example, here we encode and then decode a table:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> json <span class="op">=</span> quarto<span class="op">.</span>json<span class="op">.</span>encode<span class="op">({</span>foo <span class="op">=</span> <span class="st">"bar"</span><span class="op">})</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> obj <span class="op">=</span> quarto<span class="op">.</span>json<span class="op">.</span>decode<span class="op">(</span>json<span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="base64-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="base64-encoding">Base64 Encoding</h3>
+<p>Quarto includes a copy of <a href="https://github.com/iskolbin/lbase64">lbase64</a>, a pure Lua implementation of Base64 encoding. You can access the Base 64 encoding functions as follows:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.base64.encode(str)</code></td>
+<td>Encode a string into Base 64.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.base64.decode(b64str)</code></td>
+<td>Decode a Base 64 string.</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/extensions/lua.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lua Development</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/extensions/distributing.html" class="pagination-link">
+        <span class="nav-page-text">Distribution</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/faq/index.html">FAQ</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../trademark.html">Trademark</a>
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

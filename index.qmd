@@ -24,7 +24,7 @@ resources:
 ### Descubre. Reflexiona. Conecta. Explorando los complejos entrelazamientos de política, filosofía, economía e informática en el mundo de hoy.
 
 ::: hero-buttons
-[CV](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Sobre mí](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Cursos](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 :::
 :::
 
@@ -47,19 +47,9 @@ resources:
 
 <li class="nav-item" role="presentation">
 
-<button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="true">
+<button class="nav-link active" id="economia-tab" data-bs-toggle="tab" data-bs-target="#economia" type="button" role="tab" aria-controls="economia" aria-selected="true">
 
-Python
-
-</button>
-
-</li>
-
-<li class="nav-item" role="presentation">
-
-<button class="nav-link" id="knitr-tab" data-bs-toggle="tab" data-bs-target="#knitr" type="button" role="tab" aria-controls="knitr" aria-selected="false">
-
-R
+Economía
 
 </button>
 
@@ -67,9 +57,9 @@ R
 
 <li class="nav-item" role="presentation">
 
-<button class="nav-link" id="julia-tab" data-bs-toggle="tab" data-bs-target="#julia" type="button" role="tab" aria-controls="julia" aria-selected="false">
+<button class="nav-link" id="filosofia-tab" data-bs-toggle="tab" data-bs-target="#filosofia" type="button" role="tab" aria-controls="filosofia" aria-selected="false">
 
-Julia
+Filosofía
 
 </button>
 
@@ -77,9 +67,19 @@ Julia
 
 <li class="nav-item" role="presentation">
 
-<button class="nav-link" id="observable-tab" data-bs-toggle="tab" data-bs-target="#observable" type="button" role="tab" aria-controls="observable" aria-selected="false">
+<button class="nav-link" id="matematica-tab" data-bs-toggle="tab" data-bs-target="#matematica" type="button" role="tab" aria-controls="matematica" aria-selected="false">
 
-Observable
+Matemática
+
+</button>
+
+</li>
+
+<li class="nav-item" role="presentation">
+
+<button class="nav-link" id="informatica-tab" data-bs-toggle="tab" data-bs-target="#informatica" type="button" role="tab" aria-controls="informatica" aria-selected="false">
+
+Informática
 
 </button>
 
@@ -89,8 +89,8 @@ Observable
 :::
 
 ::: {#hello-quarto-tabcontent .tab-content}
-::: {#python .tab-pane .fade .show .active role="tabpanel" aria-labelledby="python-tab"}
-Combine Jupyter notebooks with flexible options to produce production quality output in a wide variety of formats. Author using traditional notebook UIs or with a plain text markdown representation of notebooks.
+::: {#economia .tab-pane .fade .show .active role="tabpanel" aria-labelledby="economia-tab"}
+La economía es una disciplina que estudia la producción, distribución y consumo de bienes y servicios. Analiza cómo las personas, empresas e instituciones toman decisiones sobre cómo utilizar los recursos limitados para satisfacer sus necesidades y deseos. También examina los fenómenos económicos a nivel macroeconómico, como el crecimiento económico, la inflación y el desempleo.
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
@@ -103,8 +103,8 @@ Combine Jupyter notebooks with flexible options to produce production quality ou
 :::
 :::
 
-::: {#knitr .tab-pane .fade role="tabpanel" aria-labelledby="knitr-tab"}
-Quarto is a multi-language, next generation version of R Markdown from Posit, with many new new features and capabilities. Like R Markdown, Quarto uses [Knitr](https://yihui.org/knitr/) to execute R code, and is therefore able to render most existing Rmd files without modification.
+::: {#filosofia .tab-pane .fade role="tabpanel" aria-labelledby="filosofia-tab"}
+La filosofía es una disciplina que busca comprender y cuestionar aspectos fundamentales de la existencia humana, como la realidad, el conocimiento, los valores, la moral y la ética. Se ocupa de preguntas profundas sobre el significado de la vida, la naturaleza del ser, la verdad y la justicia. La filosofía utiliza el razonamiento lógico y la reflexión crítica para explorar diferentes perspectivas y argumentos en busca de respuestas a estos interrogantes.
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
@@ -145,8 +145,8 @@ ggplot(airquality, aes(Temp, Ozone)) +
 :::
 :::
 
-::: {#julia .tab-pane .fade role="tabpanel" aria-labelledby="julia-tab"}
-Combine markdown and Julia code to create dynamic documents that are fully reproducible. Quarto executes Julia code via the [IJulia](https://github.com/JuliaLang/IJulia.jl) Jupyter kernel, enabling you to author in plain text (as shown below) or render existing Jupyter notebooks.
+::: {#matematica .tab-pane .fade role="tabpanel" aria-labelledby="matematica-tab"}
+Las matemáticas son una disciplina que se dedica al estudio de las propiedades y relaciones de los números, las estructuras abstractas y los patrones. Se utiliza para describir y analizar fenómenos cuantitativos en una amplia gama de campos, desde las ciencias naturales y la ingeniería hasta las ciencias sociales y la economía. Las matemáticas proporcionan herramientas y métodos para el razonamiento lógico, la resolución de problemas y el modelado de situaciones complejas.
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
@@ -188,8 +188,8 @@ plot(sin,
 :::
 :::
 
-::: {#observable .tab-pane .fade role="tabpanel" aria-labelledby="observable-tab"}
-Quarto includes native support for Observable JS, a set of JavaScript enhancements created by Mike Bostock (the author of D3). Observable JS uses a reactive execution model, and is especially well suited for interactive data exploration and analysis.
+::: {#informatica .tab-pane .fade role="tabpanel" aria-labelledby="informatica-tab"}
+La informática es una disciplina que se ocupa del estudio y desarrollo de sistemas de información y computación. Comprende el diseño, la programación, la gestión y el uso de sistemas y software para procesar, almacenar y transmitir información de manera eficiente. La informática abarca áreas como la programación, las bases de datos, la inteligencia artificial, la seguridad informática y el desarrollo de aplicaciones y sistemas. Su objetivo principal es aprovechar la tecnología de la información para resolver problemas y mejorar la eficiencia en diversos ámbitos de la sociedad.
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
@@ -303,6 +303,6 @@ Publish collections of documents as a blog or full website. Create books and man
 
 ::: {.get-started .alt-background}
 ::: content-block
-[Get Started](docs/get-started/index.html){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
+[Sobre mi](docs/get-started/index.html){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
 :::
 :::

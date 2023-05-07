@@ -12,72 +12,87 @@ resources:
   - images/hero_animation.mp4
 ---
 
-::: {.hero-banner}
-
-
-::: {.content-block}
-
-::: {.hero-text}
+::: hero-banner
+::: content-block
+::: hero-text
 # Achalma Edison^[®]{.trademark}^ {.mt-1}
 
-### Estudiante de economía @ UNSCH
-¡Hola! Soy [achalmaedison](https://achalmaedison.netlify.app/), un economista en proceso y entusiasta de la tecnología. Aunque todavía me considero un programador novato, he adquirido conocimientos en áreas como Hacking y Ciberseguridad, entre otros. Cuando no estoy frente a mi computadora, disfruto de la fotografía y de viajar a nuevos lugares. Además, me encanta pasar el tiempo en cafeterías, preferiblemente con un delicioso capuchino en la mano. De vez en cuando, publicaré contenido en mi blog cuando tenga la oportunidad. 📷 ☕ ️😅 ¡Gracias por visitar mi página web!
+### Estudiante de economía \@ UNSCH
 
-- Author using [Jupyter](https://jupyter.org) notebooks or with plain text markdown in your favorite editor.
-- Create dynamic content with [Python](docs/computations/python.qmd), [R](docs/computations/r.qmd), [Julia](docs/computations/julia.qmd), and [Observable](docs/computations/ojs.qmd).
-- Publish reproducible, production quality articles, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
-- Share knowledge and insights organization-wide by publishing to [Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html), [Confluence](docs/publishing/confluence.qmd), or other publishing systems. 
-- Write using [Pandoc](https://pandoc.org) markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
+¡Hola! Soy [achalmaedison](https://achalmaedison.netlify.app/), un economista en proceso y entusiasta de la tecnología. Aunque todavía me considero un programador novato, he adquirido conocimientos en áreas como Hacking y Ciberseguridad, entre otros. Cuando no estoy frente a mi computadora, disfruto de la fotografía y de viajar a nuevos lugares. Además, me encanta pasar el tiempo en cafeterías, preferiblemente con un delicioso capuchino en la mano. De vez en cuando, publicaré contenido en mi blog cuando tenga la oportunidad. 📷 ☕ ️😅 ¡Gracias por visitar mi página web!
 
 ### Descubre. Reflexiona. Conecta. Explorando los complejos entrelazamientos de política, filosofía, economía e informática en el mundo de hoy.
 
-::: {.hero-buttons}
-[CV](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
-[Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
-::: 
+::: hero-buttons
+[CV](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+:::
 :::
 
-::: {.hero-animation}
-
+::: hero-animation
 <video autoplay muted playsinline loop>
+
 <source src="images/hero_animation.mp4" type="video/mp4"/>
+
 </video>
 :::
-
 :::
-
-
 :::
-
 
 ::: {.hello-quarto .alt-background}
-::: {.content-block}
-
-::: {.hello-quarto-banner}
+::: content-block
+::: hello-quarto-banner
 # Hola, bienvenido
+
 <ul class="nav nav-pills" id="hello-quarto-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="true">Python</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="knitr-tab" data-bs-toggle="tab" data-bs-target="#knitr" type="button" role="tab" aria-controls="knitr" aria-selected="false">R</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="julia-tab" data-bs-toggle="tab" data-bs-target="#julia" type="button" role="tab" aria-controls="julia" aria-selected="false">Julia</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="observable-tab" data-bs-toggle="tab" data-bs-target="#observable" type="button" role="tab" aria-controls="observable" aria-selected="false">Observable</button>
-  </li>
+
+<li class="nav-item" role="presentation">
+
+<button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="true">
+
+Python
+
+</button>
+
+</li>
+
+<li class="nav-item" role="presentation">
+
+<button class="nav-link" id="knitr-tab" data-bs-toggle="tab" data-bs-target="#knitr" type="button" role="tab" aria-controls="knitr" aria-selected="false">
+
+R
+
+</button>
+
+</li>
+
+<li class="nav-item" role="presentation">
+
+<button class="nav-link" id="julia-tab" data-bs-toggle="tab" data-bs-target="#julia" type="button" role="tab" aria-controls="julia" aria-selected="false">
+
+Julia
+
+</button>
+
+</li>
+
+<li class="nav-item" role="presentation">
+
+<button class="nav-link" id="observable-tab" data-bs-toggle="tab" data-bs-target="#observable" type="button" role="tab" aria-controls="observable" aria-selected="false">
+
+Observable
+
+</button>
+
+</li>
+
 </ul>
 :::
 
-<div class="tab-content" id="hello-quarto-tabcontent">
-
-<div class="tab-pane fade  show active" id="python" role="tabpanel" aria-labelledby="python-tab">
-
+::: {#hello-quarto-tabcontent .tab-content}
+::: {#python .tab-pane .fade .show .active role="tabpanel" aria-labelledby="python-tab"}
 Combine Jupyter notebooks with flexible options to produce production quality output in a wide variety of formats. Author using traditional notebook UIs or with a plain text markdown representation of notebooks.
 
-::: {.grid}
+::: grid
 ::: {.g-col-lg-6 .g-col-12}
 ![](images/demo-jupyter-plain.png){.hello-output style="height: 605px;"}
 :::
@@ -86,16 +101,14 @@ Combine Jupyter notebooks with flexible options to produce production quality ou
 ![](images/demo-jupyter-output.png)
 :::
 :::
+:::
 
-</div>
-
-<div class="tab-pane fade" id="knitr" role="tabpanel" aria-labelledby="knitr-tab">
-
+::: {#knitr .tab-pane .fade role="tabpanel" aria-labelledby="knitr-tab"}
 Quarto is a multi-language, next generation version of R Markdown from Posit, with many new new features and capabilities. Like R Markdown, Quarto uses [Knitr](https://yihui.org/knitr/) to execute R code, and is therefore able to render most existing Rmd files without modification.
 
-::: {.grid}
+::: grid
 ::: {.g-col-lg-6 .g-col-12}
-````markdown
+```` markdown
 ---
 title: "ggplot2 demo"
 author: "Norah Jones"
@@ -123,8 +136,6 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_smooth(method = "loess"
 )
 ```
-
-
 ````
 :::
 
@@ -132,16 +143,14 @@ ggplot(airquality, aes(Temp, Ozone)) +
 ![](images/hello-knitr.png){.hello-output fig-alt="Example output with title (ggplot2 demo), author (Norah Jones), and date (5/22/2021). Below is a header reading Air Quality followed by body text (Figure 1 further explores the impact of temperature on ozone level.) with a toggleable code field, and figure with caption Figure 1 Temperature and ozone level."}
 :::
 :::
+:::
 
-</div>
-
-<div class="tab-pane fade" id="julia" role="tabpanel" aria-labelledby="julia-tab">
-
+::: {#julia .tab-pane .fade role="tabpanel" aria-labelledby="julia-tab"}
 Combine markdown and Julia code to create dynamic documents that are fully reproducible. Quarto executes Julia code via the [IJulia](https://github.com/JuliaLang/IJulia.jl) Jupyter kernel, enabling you to author in plain text (as shown below) or render existing Jupyter notebooks.
 
-::: {.grid}
+::: grid
 ::: {.g-col-lg-6 .g-col-12}
-````markdown
+```` markdown
 ---
 title: "Plots Demo"
 author: "Norah Jones"
@@ -170,8 +179,6 @@ plot(sin,
      leg=false, 
      fill=(0,:lavender))
 ```
-
-
 ````
 :::
 
@@ -179,18 +186,14 @@ plot(sin,
 ![](images/hello-julia.png){.hello-output fig-alt="Example Plots Demo output with title, author, date published and main section on Parametric plots which contains text, a toggleable code field, and the output of the plot, with the caption Figure 1 Parametric Plots."}
 :::
 :::
+:::
 
-</div>
-
-<div class="tab-pane fade" id="observable" role="tabpanel" aria-labelledby="observable-tab">
-
+::: {#observable .tab-pane .fade role="tabpanel" aria-labelledby="observable-tab"}
 Quarto includes native support for Observable JS, a set of JavaScript enhancements created by Mike Bostock (the author of D3). Observable JS uses a reactive execution model, and is especially well suited for interactive data exploration and analysis.
 
-
-
-::: {.grid}
+::: grid
 ::: {.g-col-lg-6 .g-col-12}
-````markdown
+```` markdown
 ---
 title: "observable plot"
 author: "Norah Jones"
@@ -222,94 +225,84 @@ Plot.plot({
 ````
 :::
 
-
 ::: {.g-col-lg-6 .g-col-12}
 ![](images/hello-observable.png){style="background-color: white; border: 1px solid #dee2e6; height: 625px;" fig-alt="Example output with title, author, and date. Below, the main section reads Seattle Precipitation by Day (2012 to 2016) with a toggleable section to show code and a heatmap of the precipitation by day."}
 :::
-
-
-:::
-
-</div>
-
-</div>
-
-
-
-::: {.grid}
-
-
 :::
 :::
 :::
 
+::: grid
+:::
+:::
+:::
 
-::: {.content-block}
-::: {.features}
-
-::: {.feature}
+::: content-block
+::: features
+::: feature
 ### Dynamic Documents
+
 Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/computations/python.qmd)
 :::
 :::
 
-::: {.feature}
+::: feature
 ### Beautiful Publications
+
 Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/output-formats/all-formats.qmd)
 :::
 :::
 
-::: {.feature}
+::: feature
 ### Scientific Markdown
+
 Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/authoring/markdown-basics.qmd)
 :::
 :::
 
-::: {.feature}
+::: feature
 ### Authoring Tools
+
 Use your favorite tools including VS Code, RStudio, Jupyter Lab, or any text editor. Use the Quarto visual markdown editor for long-form documents.
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/tools/jupyter-lab.qmd)
 :::
 :::
 
-::: {.feature}
+::: feature
 ### Interactivity
+
 Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/interactive/)
 :::
 :::
 
-::: {.feature}
+::: feature
 ### Websites and Books
+
 Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).
 
-::: {.learn-more}
+::: learn-more
 [Learn more »](docs/websites/)
 :::
 :::
-
 :::
 :::
-
 
 ::: {.get-started .alt-background}
-::: {.content-block}
-
-[Get Started](docs/get-started/index.html){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
-
+::: content-block
+[Get Started](docs/get-started/index.html){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button" style="margin-top: 1em;"}
 :::
 :::
-

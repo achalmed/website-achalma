@@ -1,14 +1,10 @@
 project:
   type: website
   output-dir: _site
-  resources:
-    - "/docs/download/_download.json"
-    - "/docs/download/_prerelease.json"
-    - "/_redirects"
 
 website:
   title: "achalmaedison"
-  image: "quarto.png"
+  image: "Aukihack.png"
   favicon: "favicon.png"
   google-analytics: "G-XGH6TP6RB3"
   open-graph: true
@@ -48,21 +44,17 @@ website:
         aria-label: Quarto GitHub       
   navbar:
     background: light
-    logo: quarto.png
-    logo-alt: "Quarto logo."
+    logo: Aukihack.png
+    logo-alt: "Aukihack logo."
     title: false
     collapse-below: lg
     left:
       - text: "Inicio"
         href: index.qmd
-      - text: "CV"
+      - text: "Sobre mi"
         href: docs/get-started/index.qmd
       - text: "Cursos"
         href: docs/guide/index.qmd
-      - text: Extensiones
-        href: docs/extensions/index.qmd
-      - text: "Referencias"
-        href: docs/reference/index.qmd
       - text: "Galería"
         href: docs/gallery/index.qmd
       - text: "Blogs"
@@ -94,254 +86,6 @@ website:
       align: left
       contents:
         - docs/get-started/index.qmd
-        - text: "Tutorial: Hello, Quarto"
-          href: docs/get-started/hello/
-        - text: "Tutorial: Computations"
-          href: docs/get-started/computations/
-        - text: "Tutorial: Authoring"
-          href: docs/get-started/authoring/
-
-    - id: guide
-      collapse-level: 1
-      contents:
-        - text: "Cursos"
-          href: docs/guide/index.qmd
-        - section: "Macroeconomía"
-          contents:
-            - docs/authoring/markdown-basics.qmd
-            - docs/authoring/figures.qmd
-            - docs/authoring/tables.qmd
-            - docs/authoring/diagrams.qmd
-            - docs/authoring/videos.qmd
-            - text: "Jupyter Notebooks"
-              href: docs/authoring/notebook-embed.qmd
-            - docs/authoring/callouts.qmd
-            - docs/authoring/code-annotation.qmd
-            - docs/authoring/article-layout.qmd
-            - section: "Scholarly Writing"
-              contents:
-                - docs/authoring/title-blocks.qmd
-                - docs/authoring/footnotes-and-citations.qmd
-                - docs/authoring/cross-references.qmd
-                - docs/authoring/create-citeable-articles.qmd
-                - docs/authoring/appendices.qmd
-        - section: "Microeconomía"
-          contents:
-            - docs/computations/python.qmd
-            - docs/computations/r.qmd
-            - docs/computations/julia.qmd
-            - docs/computations/ojs.qmd
-            - docs/computations/execution-options.qmd
-            - docs/computations/parameters.qmd
-        - section: "Investigacion de mercados"
-          contents:
-            - section: "JupyterLab"
-              contents:
-                - text: "JupyterLab Basics"
-                  href: docs/tools/jupyter-lab.qmd
-                - text: "JupyterLab Extension"
-                  href: docs/tools/jupyter-lab-extension.qmd
-            - section: "RStudio IDE"
-              contents: 
-                - text: "RStudio Basics"
-                  href: docs/tools/rstudio.qmd
-                - section: "Visual Editor"
-                  href: docs/visual-editor/index.qmd
-                  contents:
-                    - text: Editor Basics
-                      href: docs/visual-editor/index.qmd
-                    - docs/visual-editor/technical.qmd
-                    - docs/visual-editor/content.qmd
-                    - docs/visual-editor/options.qmd
-                    - docs/visual-editor/markdown.qmd
-            - section: "VS Code"
-              href: docs/tools/vscode.qmd
-              contents:
-                - text: "VS Code Basics"
-                  href: docs/tools/vscode.qmd
-                - text: "Visual Editor"
-                  href: docs/visual-editor/vscode/index.qmd
-                - text: "Notebook Editor"
-                  href: docs/tools/vscode-notebook.qmd
-               
-            - docs/tools/neovim.qmd
-            - docs/tools/text-editors.qmd
-        - section: "Python"
-          contents:
-            - section: "HTML"
-              contents:
-                - docs/output-formats/html-basics.qmd
-                - docs/output-formats/html-code.qmd
-                - docs/output-formats/html-themes.qmd
-                - docs/output-formats/html-multi-format.qmd
-                - docs/output-formats/html-publishing.qmd
-            - section: "PDF"
-              contents:
-                - docs/output-formats/pdf-basics.qmd
-                - docs/output-formats/pdf-engine.qmd
-            - section: "MS Word"
-              contents:
-                - docs/output-formats/ms-word.qmd
-                - docs/output-formats/ms-word-templates.qmd
-            - section: "Markdown"
-              contents:
-                - docs/output-formats/gfm.qmd
-                - docs/output-formats/hugo.qmd
-                - docs/output-formats/docusaurus.qmd
-            - docs/output-formats/all-formats.qmd
-        - section: "Stata"
-          contents:
-            - text: "Overview"
-              href: docs/presentations/index.qmd
-            - section: docs/presentations/revealjs/index.qmd
-              contents:
-                - text: "Reveal Basics"
-                  href: docs/presentations/revealjs/index.qmd
-                - docs/presentations/revealjs/presenting.qmd
-                - docs/presentations/revealjs/advanced.qmd
-                - docs/presentations/revealjs/themes.qmd
-            - docs/presentations/powerpoint.qmd
-            - docs/presentations/beamer.qmd
-        - section: "Filosofía"
-          href: docs/websites/website-basics.qmd
-          contents:
-            - docs/websites/website-basics.qmd
-            - docs/websites/website-navigation.qmd
-            - docs/websites/website-blog.qmd
-            - docs/websites/website-search.qmd
-            - docs/websites/website-tools.qmd
-            - docs/websites/website-about.qmd
-            - section: "Listing Pages"
-              href: docs/websites/website-listings.qmd
-              contents:
-                - docs/websites/website-listings.qmd
-                - docs/websites/website-listings-custom.qmd
-        - section: "Linux"
-          href: docs/books/book-basics.qmd
-          contents:
-            - docs/books/book-basics.qmd
-            - docs/books/book-structure.qmd
-            - docs/books/book-crossrefs.qmd
-            - text: "Customizing Output"
-              href: docs/books/book-output.qmd
-        - section: "Investigacion de operaciones"
-          contents:
-            - text: "Overview"
-              href: docs/interactive/index.qmd
-            - section: docs/interactive/ojs/index.qmd
-              contents:
-                - text: "Introduction"
-                  href: docs/interactive/ojs/index.qmd
-                - docs/interactive/ojs/libraries.qmd
-                - docs/interactive/ojs/data-sources.qmd
-                - docs/interactive/ojs/ojs-cells.qmd
-                - docs/interactive/ojs/shiny.qmd
-                - docs/interactive/ojs/code-reuse.qmd
-                - section: "Examples"
-                  contents:
-                    - docs/interactive/ojs/examples/penguins.qmd
-                    - docs/interactive/ojs/examples/sunburst.qmd
-                    - docs/interactive/ojs/examples/arquero.qmd
-                    - docs/interactive/ojs/examples/population.qmd
-                    - docs/interactive/ojs/examples/noaa-co2.qmd
-                    - docs/interactive/ojs/examples/github.qmd
-                    - docs/interactive/ojs/examples/layout.qmd
-                    - section: "Shiny"
-                      contents:
-                        - text: "K-Means"
-                          href: https://jjallaire.shinyapps.io/kmeans-shiny-ojs/
-                        - text: "Binning"
-                          href: https://jjallaire.shinyapps.io/binning-shiny-ojs/
-                        - text: "Data Binding"
-                          href: https://jjallaire.shinyapps.io/data-shiny-ojs/
-                        - text: "Covid Map"
-                          href: https://jjallaire.shinyapps.io/covid19-bicartogram/
-            - section: docs/interactive/shiny/index.qmd
-              contents:
-                - text: "Introduction"
-                  href: docs/interactive/shiny/index.qmd
-                - docs/interactive/shiny/running.qmd
-                - docs/interactive/shiny/execution.qmd
-                - docs/interactive/shiny/resources.qmd
-                - section: "Examples"
-                  contents:
-                    - text: "Old Faithful"
-                      href: https://jjallaire.shinyapps.io/shiny-old-faithful/
-                    - text: "K-Means"
-                      href: https://jjallaire.shinyapps.io/shiny-k-means/
-                    - text: "Diamonds"
-                      href: https://jjallaire.shinyapps.io/shiny-diamonds/
-            - section: "Widgets"
-              contents:
-                - docs/interactive/widgets/jupyter.qmd
-                - docs/interactive/widgets/htmlwidgets.qmd
-            - docs/interactive/layout.qmd
-        - section: "Publishing"
-          contents:
-            - docs/publishing/index.qmd
-            - docs/publishing/quarto-pub.qmd
-            - docs/publishing/github-pages.qmd
-            - docs/publishing/rstudio-connect.qmd
-            - docs/publishing/netlify.qmd
-            - docs/publishing/confluence.qmd
-            - docs/publishing/other.qmd
-            - text: "Publishing with CI"
-              href: docs/publishing/ci.qmd
-        - section: "Projects"
-          contents:
-            - docs/projects/quarto-projects.qmd
-            - docs/projects/code-execution.qmd
-            - docs/projects/profiles.qmd
-            - docs/projects/environment.qmd
-            - docs/projects/scripts.qmd
-            - docs/projects/virtual-environments.qmd
-        - section: "Advanced"
-          contents:
-            - docs/authoring/includes.qmd
-            - docs/authoring/variables.qmd
-            - docs/output-formats/page-layout.qmd
-            - docs/authoring/language.qmd
-            - docs/authoring/conditional.qmd
-            - docs/extensions/nbfilter.qmd
-    - id: extensions
-      title: "Extensions"
-      contents:
-        - "---"
-        - section: docs/extensions/index.qmd
-          contents: 
-            - text: "Shortcodes & Filters"
-              href: docs/extensions/listing-filters.qmd
-            - text: "Journal Articles"
-              href: docs/extensions/listing-journals.qmd
-            - text: "Custom Formats"
-              href: docs/extensions/listing-formats.qmd
-            - text: "Revealjs Extensions"
-              href: docs/extensions/listing-revealjs.qmd
-            - docs/extensions/managing.qmd
-        - "---"
-        - section: docs/extensions/creating.qmd
-          contents:
-            - text: "Overview"
-              href: docs/extensions/creating.qmd
-            - docs/extensions/lua.qmd
-            - docs/extensions/lua-api.qmd
-            - text: "Distribution"
-              href: docs/extensions/distributing.qmd
-            - "---"
-            - text: "Shortcodes"
-              href: docs/extensions/shortcodes.qmd
-            - text: "Filters"
-              href: docs/extensions/filters.qmd
-            - section: "Journal Articles"
-              href: docs/journals/formats.qmd
-              contents:
-                - docs/journals/formats.qmd
-                - docs/journals/templates.qmd
-                - docs/journals/authors.qmd
-            - docs/extensions/formats.qmd
-            - docs/extensions/revealjs.qmd
-            - docs/extensions/project-types.qmd
-            - docs/extensions/starter-templates.qmd
 
     - id: reference
       title: "Reference"

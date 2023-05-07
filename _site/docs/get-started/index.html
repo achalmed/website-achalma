@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>achalmaedison - Get Started</title>
+<title>achalmaedison - Sobre mi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/get-started/hello/" rel="next">
 <link href="../../favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -110,362 +109,17 @@ cookieconsent.run({
 </script> 
   
 
-<script type="application/javascript" src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.min.js"></script>
-
-<script type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function () {
-    const downloadDatas = [];
-    if (window["quarto-download-release"]) {
-      downloadDatas.push({
-        prefix: "download",
-        dataPath: "/docs/download/_download.json",
-        releaseDesc: undefined,
-      });
-    }
-    if (window["quarto-download-prerelease"]) {
-      downloadDatas.push({
-        prefix: "download-pre",
-        dataPath: "/docs/download/_prerelease.json",
-        releaseDesc: window["quarto-prerelease-mode"],
-      });
-    }
-
-    for (const downloadData of downloadDatas) {
-      const dataPath = downloadData.dataPath;
-      fetch(dataPath)
-        .then((response) => {
-          return response.json();
-        })
-        .then((dlData) => {
-
-          notifyListeners(
-            dlData
-          );
-
-          populateDownloadButton(
-            downloadData.prefix,
-            downloadData.releaseDesc,
-            dlData.version,
-            dlData.assets
-          );
-          populateDownloadTable(
-            downloadData.prefix,
-            dlData.version,
-            dlData.assets
-          );
-
-          populateVersion(
-            downloadData.prefix,
-            dlData.version,
-            downloadData.releaseDesc
-          );
-          populateDate(
-            downloadData.prefix,
-            new Date(dlData.created).toLocaleString("en-US", {
-              dateStyle: "medium",
-            })
-          );
-
-          if (!window["quarto-download-nonews"]) {
-            populateNews(downloadData.prefix, dlData.description);
-          } else {
-            const newsSection = window.document.getElementById(
-              `${downloadData.prefix}-section-news`
-            );
-            if (newsSection) {
-              newsSection.remove();
-            }
-          }
-
-          window.tippy("a.checksum[data-tippy-content]", {
-            interactive: true,
-            placement: "top-end",
-            maxWidth: "none",
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  });
-
-  // Only assets named in this list will be displayed in the list of downloads
-  // (Using the label value)
-  function downloadMappings(version) {
-    const mappings = {
-      [`quarto-${version}-win.msi`]: "Windows",
-      [`quarto-${version}-macos.pkg`]: "Mac OS",
-      [`quarto-${version}-linux-amd64.deb`]: "Ubuntu 18+/Debian 10+",
-      [`quarto-${version}-linux-arm64.deb`]: "Linux Arm64",
-      
-    };
-
-    if (window["quarto-download-archives"]) {
-      mappings[`quarto-${version}-win.zip`] = "Windows Zip";
-      mappings[`quarto-${version}-macos.tar.gz`] = "Mac Tarball";
-    }
-
-    if (window["quarto-download-archives"] || isLinux()) {
-      mappings[`quarto-${version}-linux-amd64.tar.gz`] = "Linux x86 Tarball";
-      mappings[`quarto-${version}-linux-arm64.tar.gz`] = "Linux Arm64 Tarball";
-      mappings[`quarto-${version}-linux-rhel7-amd64.tar.gz`] = "RHEL 7 Tarball";
-    }
-
-    return mappings;
-  }
-
-  function populateVersion(idPrefix, version, releaseDesc) {
-    const versionNodes = window.document.querySelectorAll(
-      `.${idPrefix}-version`
-    );
-    for (const node of versionNodes) {
-      node.innerHTML = version;
-    }
-  }
-
-  function populateDate(idPrefix, date) {
-    const dateNodes = window.document.querySelectorAll(`.${idPrefix}-date`);
-    for (const node of dateNodes) {
-      node.innerHTML = date;
-    }
-  }
-
-  function populateNews(idPrefix, markdown) {
-    if (markdown) {
-      markdown = markdown.replace(/^#{1,6} (.*)$/gm, "###### $1");
-      var reader = new commonmark.Parser();
-      var writer = new commonmark.HtmlRenderer();
-      var parsed = reader.parse(markdown);
-      var newsHtml = writer.render(parsed);
-      const newsDiv = window.document.getElementById(`${idPrefix}-news`);
-      if (newsDiv) {
-        newsDiv.innerHTML = newsHtml;
-      }
-    }
-  }
-
-  function notifyListeners(dlData) {
-    if (window["quarto-dl-listeners"]) {
-      for (const listener of window["quarto-dl-listeners"]) {
-        listener(dlData);
-      }
-    }
-  }
-
-  function populateDownloadButton(idPrefix, releaseDesc, version, assets) {
-    const osData = window["quarto-force-os"] || guessOS();
-    const extension = window["quarto-force-download"]
-      ? window["quarto-force-download"]
-      : osData.install_extension;
-    const osAsset = assets.find((asset) => asset.name.endsWith(extension));
-
-    if (isLinux() && !window["quarto-force-os"]) {
-      const mainDownloadLink = window.document.getElementById(
-        `${idPrefix}-url`
-      );
-      if (mainDownloadLink) {
-        mainDownloadLink.classList.add("hidden");
-      }
-      const mainDownloadText = window.document.getElementById(
-        `${idPrefix}-text`
-      );
-      if (mainDownloadText) {
-        mainDownloadText.classList.remove("hidden");
-      }
-    } else {
-      const mainDownloadLink = window.document.getElementById(
-        `${idPrefix}-url`
-      );
-      if (mainDownloadLink) {
-        mainDownloadLink.href = osAsset.download_url;
-        mainDownloadLink.innerText = "";
-
-        const containerEl = window.document.createElement("div");
-        containerEl.className = "container";
-
-        const iconEl = window.document.createElement("div");
-        iconEl.innerHTML = osData.icon;
-        iconEl.className = "icon-container";
-        if (osData.icon_margin) {
-          iconEl.style.paddingTop = osData.icon_margin;
-        }
-        containerEl.append(iconEl);
-
-        const textContainerEl = window.document.createElement("div");
-        textContainerEl.className = "text-container";
-
-        const mainTextEl = window.document.createElement("div");
-        mainTextEl.innerHTML = `Download Quarto CLI`;
-        textContainerEl.append(mainTextEl);
-
-        const secondaryTextEl = window.document.createElement("div");
-        secondaryTextEl.className = "secondary";
-        secondaryTextEl.innerText = `${version}${
-          releaseDesc ? " " + releaseDesc : ""
-        } (${osData.name})`;
-        textContainerEl.append(secondaryTextEl);
-
-        containerEl.append(textContainerEl);
-        mainDownloadLink.append(containerEl);
-      }
-    }
-  }
-
-  function populateDownloadTable(idPrefix, version, assets) {
-    const downloadTableContainer = window.document.getElementById(
-      `${idPrefix}-table`
-    );
-    if (!downloadTableContainer) {
-      return;
-    }
-
-    const table = createTable();
-    createHeadingRow(table, ["Platform", "Download", "Size", "SHA-256"]);
-
-    const tbody = table.createTBody();
-    assets.forEach((asset) => {
-      createDownloadRow(tbody, version, asset, idPrefix);
-    });
-    if (!window["quarto-download-archives"]) {
-      createMoreRow(version, tbody);
-    }
-
-    downloadTableContainer.append(table);
-    window.tippy(".checksum[data-tippy-content]", {
-      interactive: true,
-      placement: "top-end",
-      maxWidth: "none",
-    });
-  }
-
-  function createTable() {
-    const table = window.document.createElement("table");
-    table.className = "table";
-    return table;
-  }
-
-  function createHeadingRow(table, headings) {
-    const header = table.createTHead();
-    var row = header.insertRow(0);
-    row.className = "header";
-    let cellCount = 0;
-    headings.forEach((heading) => {
-      const cell = (row.insertCell(
-        cellCount
-      ).outerHTML = `<th>${heading}</th>`);
-      cellCount = cellCount + 1;
-    });
-  }
-
-  function createDownloadRow(tbody, version, asset, idPrefix) {
-    // Ignore assets that aren't in the download mapping structure
-    const mapping = downloadMappings(version);
-    if (mapping[asset.name]) {
-      const row = tbody.insertRow();
-
-      let i = 0;
-      const platformCell = row.insertCell(i++);
-      platformCell.innerText = mapping[asset.name];
-
-      const downloadCell = row.insertCell(i++);
-      const downloadLinkEl = window.document.createElement("a");
-      if (asset.name.endsWith("linux-amd64.tar.gz")) {
-        downloadLinkEl.href =
-          "/docs/download/tarball.html?version=" +
-          version +
-          "&idPrefix=" +
-          idPrefix;
-      } else {
-        downloadLinkEl.href = asset.download_url;
-      }
-
-      downloadLinkEl.innerText = asset.name;
-
-      downloadCell.appendChild(downloadLinkEl);
-
-      const sizeCell = row.insertCell(i++);
-      if (asset.size) {
-        sizeCell.innerText = humanFileSize(asset.size);
-      }
-
-      const checksumCell = row.insertCell(i++);
-      if (asset.checksum) {
-        const checkSumSlice = asset.checksum.slice(0, 7);
-
-        const checksumEl = window.document.createElement("div");
-        checksumEl.className = "checksum font-monospace";
-        checksumEl.setAttribute("data-tippy-content", asset.checksum);
-        checksumEl.innerText = checkSumSlice;
-        checksumCell.appendChild(checksumEl);
-      }
-    }
-  }
-
-  function createMoreRow(version, tbody) {
-    const moreRow = tbody.insertRow();
-    moreRow.insertCell(0);
-    const cell = moreRow.insertCell(1);
-
-    const moreLinkEl = window.document.createElement("a");
-    moreLinkEl.href = "/docs/download";
-    moreLinkEl.innerText = "Release notes and more downloads…";
-    cell.appendChild(moreLinkEl);
-
-    moreRow.insertCell(2);
-    moreRow.insertCell(3);
-  }
-
-  function isLinux() {
-    const userAgent = window.navigator.userAgent;
-    return !userAgent.includes("Mac OS") && !userAgent.includes("Windows");
-  }
-
-  function guessOS() {
-    const userAgent = window.navigator.userAgent;
-    if (userAgent.includes("Mac OS")) {
-      return {
-        name: "Mac OS",
-        install_extension: "pkg",
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>',
-      };
-    } else if (userAgent.includes("Windows")) {
-      return {
-        name: "Windows",
-        install_extension: "msi",
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>',
-        icon_margin: "6px",
-      };
-    } else {
-      return {
-        name: "Linux",
-        install_extension: "deb",
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"/></svg>',
-        icon_margin: "6px",
-      };
-    }
-  }
-
-  function humanFileSize(size) {
-    var i = Math.floor(Math.log(size) / Math.log(1024));
-    return (
-      (size / Math.pow(1024, i)).toFixed(2) * 1 +
-      " " +
-      ["B", "kB", "MB", "GB", "TB"][i]
-    );
-  }
-</script>
-
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="tutorial.css">
-<meta property="og:title" content="achalmaedison - Get Started">
-<meta property="og:description" content="Install Quarto, then check out the tutorials to learn the basics.">
+<meta property="og:title" content="achalmaedison - Sobre mi">
+<meta property="og:description" content="cv">
 <meta property="og:image" content="https://achalmawebsite.netlify.app//images/hero_right.png">
 <meta property="og:site-name" content="achalmaedison">
 <meta property="og:image:height" content="752">
 <meta property="og:image:width" content="840">
-<meta name="twitter:title" content="achalmaedison - Get Started">
-<meta name="twitter:description" content="Install Quarto, then check out the tutorials to learn the basics.">
+<meta name="twitter:title" content="achalmaedison - Sobre mi">
+<meta name="twitter:description" content="cv">
 <meta name="twitter:image" content="https://achalmawebsite.netlify.app//images/hero_right.png">
 <meta name="twitter:image-height" content="752">
 <meta name="twitter:image-width" content="840">
@@ -480,7 +134,7 @@ cookieconsent.run({
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../quarto.png" alt="Quarto logo." class="navbar-logo">
+    <img src="../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -494,19 +148,11 @@ cookieconsent.run({
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../docs/get-started/index.html" aria-current="page">
- <span class="menu-text">CV</span></a>
+ <span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/guide/index.html">
+    <a class="nav-link" href="../../docs/guide/index.qmd">
  <span class="menu-text">Cursos</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../docs/extensions/index.html">
- <span class="menu-text">Extensiones</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../docs/reference/index.html">
- <span class="menu-text">Referencias</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../docs/gallery/index.html">
@@ -552,7 +198,7 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Get Started</h1>
+      <h1 class="quarto-secondary-nav-title">Sobre mi</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -567,22 +213,7 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/get-started/index.html" class="sidebar-item-text sidebar-link active">Get Started</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/get-started/hello/" class="sidebar-item-text sidebar-link">Tutorial: Hello, Quarto</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/get-started/computations/" class="sidebar-item-text sidebar-link">Tutorial: Computations</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/get-started/authoring/" class="sidebar-item-text sidebar-link">Tutorial: Authoring</a>
+  <a href="../../docs/get-started/index.html" class="sidebar-item-text sidebar-link active">Sobre mi</a>
   </div>
 </li>
     </ul>
@@ -591,12 +222,12 @@ cookieconsent.run({
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Get Started</h1>
-<p class="subtitle lead">Install Quarto, then check out the tutorials to learn the basics.</p>
+<h1 class="title d-none d-lg-block">Sobre mi</h1>
+<p class="subtitle lead">cv</p>
 </div>
 
 
@@ -611,51 +242,196 @@ cookieconsent.run({
 
 </header>
 
-<div class="grid step column-page-right">
-<section id="step-1" class="level2 g-col-lg-3 g-col-12">
-<h2 data-anchor-id="step-1">Step 1</h2>
-<section id="install-quarto" class="level4 fw-light">
-<h4 class="fw-light" data-anchor-id="install-quarto">Install Quarto</h4>
+<section id="elmer-edison-achalma-mendoza" class="level1">
+<h1>Elmer Edison ACHALMA MENDOZA</h1>
+<p><strong>Economía | Pre Grado</strong></p>
+<ul>
+<li>LinkedIn: <a href="https://chat.openai.com/c/linkedin.com/in/achalmaedison">linkedin.com/in/achalmaedison</a></li>
+<li>GitHub: <a href="https://chat.openai.com/c/github.com/achalmed">github.com/achalmed</a></li>
+<li>Sitio web: <a href="https://chat.openai.com/c/achalmaedison.netlify.app">achalmaedison.netlify.app</a></li>
+<li>Teléfono: +51 934 179 301</li>
+<li>Correo electrónico: <a href="mailto:achalmed.18@gmail.com">achalmed.18@gmail.com</a></li>
+</ul>
+<p>Ubicación: Asoc Micaela Bastidas Mzna D1 - N° 06, Jesús Nazareno, Ayacucho - Perú</p>
+<p>Como estudiante de Economía en mi último ciclo en la Universidad Nacional de San Cristóbal de Huamanga, estoy entusiasmado por la oportunidad de unirme a una entidad privada o pública que me permita aplicar mis conocimientos y habilidades mientras sigo desarrollándome profesionalmente. Con una formación especializada, estoy seguro de que puedo aportar valor a una entidad que comparta mis valores y expectativas.</p>
+<p>Soy una persona altamente organizada y motivada, capaz de adaptarme a cualquier entorno y ofrecer siempre lo mejor de mí en cualquier proyecto. Me apasiona trabajar en equipo y fomentar valores como el compañerismo en el lugar de trabajo. Estoy ansioso por contribuir a una organización que valore el crecimiento profesional y la colaboración.</p>
+</section>
+<section id="experiencias" class="level1">
+<h1>EXPERIENCIAS</h1>
+<section id="docente-universidad-autónoma-de-huanta-huanta" class="level2">
+<h2 data-anchor-id="docente-universidad-autónoma-de-huanta-huanta">Docente, UNIVERSIDAD AUTÓNOMA DE HUANTA, Huanta</h2>
+<section id="abril-2022---julio-2022" class="level3">
+<h3 data-anchor-id="abril-2022---julio-2022">Abril 2022 - Julio 2022</h3>
+<p>Enseñé el curso de Gestión de Proyectos a estudiantes de pregrado en la UNH, lo que me permitió desarrollar habilidades de enseñanza y comunicación efectiva.</p>
 </section>
 </section>
-<div class="g-col-lg-9 g-col-12">
-<div>
-<div id="download-button" class="download-button">
-<div>
-<p><a href="_" id="download-url" class="btn btn-action btn-action-primary" title="Download Quarto">_</a> <span id="download-text" class="hidden download-text">Find your operating system in the table below</span></p>
-</div>
-</div>
-<div id="download-table" class="download-table">
+<section id="practicante-dirección-de-información-agraria-y-estudios-económicos-dra-ayacucho" class="level2">
+<h2 data-anchor-id="practicante-dirección-de-información-agraria-y-estudios-económicos-dra-ayacucho">Practicante, DIRECCIÓN DE INFORMACIÓN AGRARIA Y ESTUDIOS ECONÓMICOS, DRA-Ayacucho</h2>
+<section id="agosto-2021---abril-2022" class="level3">
+<h3 data-anchor-id="agosto-2021---abril-2022">Agosto 2021 - Abril 2022</h3>
+<p>Contribuí en la formulación de estudios económicos y en la generación y procesamiento de información relevante para el sector agrario de la región. Adquirí habilidades en análisis de datos, investigación y trabajo en equipo en un entorno profesional.</p>
+</section>
+</section>
+<section id="secretario-centro-de-estudiantes-de-economía-ayacucho" class="level2">
+<h2 data-anchor-id="secretario-centro-de-estudiantes-de-economía-ayacucho">Secretario, CENTRO DE ESTUDIANTES DE ECONOMÍA, Ayacucho</h2>
+<section id="agosto-2021---julio-2020" class="level3">
+<h3 data-anchor-id="agosto-2021---julio-2020">Agosto 2021 - Julio 2020</h3>
+<p>Como Secretario de Prensa del Centro de Estudiantes de Economía, fui responsable de la difusión de las actividades y eventos del centro, así como de mantener una comunicación fluida y efectiva con los estudiantes y demás miembros del centro. Desarrollé habilidades en comunicación, trabajo en equipo y organización.</p>
+</section>
+</section>
+<section id="secretario-de-archivos-municipalidad-provincial-de-cangallo.-cangallo" class="level2">
+<h2 data-anchor-id="secretario-de-archivos-municipalidad-provincial-de-cangallo.-cangallo">Secretario de archivos, MUNICIPALIDAD PROVINCIAL DE CANGALLO., Cangallo</h2>
+<section id="abril-2019---enero-2019" class="level3">
+<h3 data-anchor-id="abril-2019---enero-2019">Abril 2019 - Enero 2019</h3>
+<p>Desempeñé el cargo de Secretario de Archivos en la Oficina de Archivos de la Municipalidad Provincial de Cangallo.</p>
+</section>
+</section>
+<section id="parlamentario-joven-congreso-de-la-república-ayacucho" class="level2">
+<h2 data-anchor-id="parlamentario-joven-congreso-de-la-república-ayacucho">Parlamentario Joven, CONGRESO DE LA REPÚBLICA, Ayacucho</h2>
+<section id="diciembre-2018---enero-2018" class="level3">
+<h3 data-anchor-id="diciembre-2018---enero-2018">Diciembre 2018 - Enero 2018</h3>
+<p>Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudadana del Congreso de la República del Perú, fortalecí mis capacidades de liderazgo y aprendí sobre el funcionamiento del Congreso de la República, sus comisiones de trabajo y la valoración del trabajo en un espacio de participación y fomento de valores democráticos.</p>
+</section>
+</section>
+</section>
+<section id="formación-académica" class="level1">
+<h1>Formación Académica</h1>
+<ul>
+<li><p>Hoy: Economía, UNIVERSIDAD NACIONAL DE SAN CRISTÓBAL DE HUAMANGA, Ayacucho</p>
+<ul>
+<li>Título esperado: Economista</li>
+<li>Facultad de Ciencias Económicas, Administrativas y Contables (FCEAC), UNSCH</li>
+</ul></li>
+<li><p>Hoy: Inglés, INSTITUTO CULTURAL PERUANO NORTEAMERICANO, Huamanga</p>
+<ul>
+<li>Nivel Básico B10</li>
+<li>ICPNA</li>
+</ul></li>
+<li><p>Diciembre 2013 - Marzo 2009: Secundaria, I.E.P. “SIETE DE JUNIO”, C.P. Catalinayocc</p>
+<ul>
+<li>EBR (Educación Básica Regular)</li>
+</ul></li>
+</ul>
+<section id="conocimientos-informáticos" class="level2">
+<h2 data-anchor-id="conocimientos-informáticos">CONOCIMIENTOS INFORMÁTICOS</h2>
+<ul>
+<li><p>Programación</p>
+<ul>
+<li>Fundamentos de programación</li>
+<li>Machine learning con R</li>
+<li>MATLAB</li>
+<li>Python</li>
+<li>Visual Basic</li>
+</ul></li>
+<li><p>Microsoft Office</p>
+<ul>
+<li>Word Intermedio</li>
+<li>Excel Intermedio</li>
+</ul></li>
+<li><p>Software</p>
+<ul>
+<li>EViews</li>
+<li>LáTex</li>
+<li>Stata</li>
+</ul></li>
+</ul>
+</section>
+<section id="idiomas" class="level2">
+<h2 data-anchor-id="idiomas">IDIOMAS</h2>
+<ul>
+<li>Español: ○ ○ ○ ○ ○ ∠ Motivado</li>
+<li>Quechua: ○ ○ ○ ○ ○ ∠ Liderazgo</li>
+<li>Inglés: ○ ○ ○ ∠ Autónomo ∠ Trabajo en equipo ∠ Adaptación al cambio</li>
+</ul>
+</section>
+<section id="habilidades-destacadas" class="level2">
+<h2 data-anchor-id="habilidades-destacadas">HABILIDADES DESTACADAS</h2>
+<ul>
+<li>Liderazgo</li>
+<li>Motivado</li>
+</ul>
+</section>
+<section id="logros" class="level2">
+<h2 data-anchor-id="logros">LOGROS</h2>
+<ul>
+<li>2022: Ubicado en el tercio superior de mi escuela profesional durante todo mi tiempo en la universidad, reconocimiento otorgado por la excelencia académica en mi carrera.</li>
+<li>2022: Autor de varios publicaciones, entre los que se destacan el Boletín Estadístico de Palto Ayacucho, Encuesta Nacional de Intenciones de Siembra Campaña Agrícola 2022-2023 y Boletín Estadístico de Quinua Ayacucho, que han sido ampliamente reconocidos por su rigor y calidad.</li>
+<li>2018: Fui seleccionado para participar en el Plenario Regional como Parlamentario Joven en 2018, organizado por la Oficina de Participación Ciudadana del Congreso de la República. Como uno de los pocos seleccionados de entre un gran número de participantes, tuve la oportunidad de representar a mi región y fortalecer mis habilidades de liderazgo y debate constructivo en un espacio importante para la promoción de valores democráticos.</li>
+<li>2017: Becario de Beca Permanencia 2017, lo que me permitió seguir estudiando y desarrollando mis habilidades en mi carrera universitaria, logrando así una mayor preparación para enfrentar nuevos desafíos.</li>
+</ul>
+</section>
+<section id="proyectos" class="level2">
+<h2 data-anchor-id="proyectos">PROYECTOS</h2>
+<section id="chat-bot" class="level3">
+<h3 data-anchor-id="chat-bot">CHAT BOT</h3>
+<p><em>2021 - 2022</em></p>
+<ul>
+<li>Repositorio: <a href="https://chat.openai.com/c/github.com/achalmed/bot-whatsapp">github.com/achalmed/bot-whatsapp</a></li>
+<li>Descripción: Creación e implementación de un chatbot para la MDSJB-Ayacucho utilizando node.js y dialogflow.</li>
+<li>Tecnologías utilizadas: Node.js, Dialogflow.</li>
+<li>Herramientas utilizadas: Whatsapp.</li>
+</ul>
+</section>
+<section id="voluntariado" class="level3">
+<h3 data-anchor-id="voluntariado">VOLUNTARIADO</h3>
+<ul>
+<li><p><strong>NATS de Movimiento de Adolescentes y Niños Trabajadores Hijos de Obreros Cristianos – MANTHOC</strong></p>
+<ul>
+<li>Año: 2016</li>
+</ul></li>
+<li><p><strong>Corresponsal de No Apto Para Adultos – NAPA</strong></p>
+<ul>
+<li>Año: 2014</li>
+<li>Descripción: Colaboración en la creación del magazine televisivo diario de media hora de duración con información y reportajes de actualidad para niños y adolescentes de 13 a 17 años. NAPA es difundido por 40 canales de Red TV en todo el Perú, y en Lima a través de la señal de JN19 UHF y en el canal 57 de Cable Mágico.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="cursos-yo-estudios-complementarios" class="level1">
+<h1>CURSOS Y/O ESTUDIOS COMPLEMENTARIOS</h1>
+<ul>
+<li>2022 - Diplomado de especialización en ofimática profesional, Escuela Superior de Negocios y Asesoría Profesional, NR : 49823</li>
+<li>2022 - Diplomado de especialización en sistemas gubernamentales : SIAF, SIGA Y SEACE, Instituto Interamericano de Alta Asesoría Empresarial, NR : 0035470</li>
+<li>2022 - Curso de redacción de documentos académicos, Centro de Competencias del Agua - CCA-AA-PICS-001</li>
+<li>2021 - Foro regional de Alto Desarrollo Lima y Callao de CAENE, ID de la credencial : 21FLC05-079</li>
+<li>2020 - Finanzas básicas y planeamiento estratégico, de Grupo IDDEA, ID de la credencial : CERT EEA FBYPE SM CE2229</li>
+<li>2020 - Inversión Extranjera como Motor del Desarrollo para América Latina y el Caribe, de Banco Interamericano Del Desarrollo</li>
+<li>2019 - Corrupción, sistema financiero y distribución de las riquezas en el Perú, de Universidad Nacional San Luis Gonzaga de Ica</li>
+<li>2018 - IV ENCUENTRO DE LÍDERES EMPRESARIALES ELE18 de Confederación Nacional de Instituciones Empresariales Privadas (CONFIEP)</li>
+<li>2017 - Plataformas de marketing digital &amp; social media business, Google for Education</li>
+</ul>
+</section>
+<section id="referencias" class="level1">
+<h1>REFERENCIAS</h1>
+<ul>
+<li>Leny Palma - Encargada de Oficina de Participación Ciudadana del Congreso de la República 2018, CONGRESO DE LA REPÚBLICA
+<ul>
+<li>Email: <a href="mailto:parlamentojoven@congreso.gob.pe">parlamentojoven@congreso.gob.pe</a></li>
+<li>Teléfono: +687 987 654</li>
+</ul></li>
+<li>Mag. Econ. Efraín Castillo - Director de la Escuela de Economia, ECONOMÍA UNSCH
+<ul>
+<li>Email: <a href="mailto:efrain.castillo@unsch.edu.pe">efrain.castillo@unsch.edu.pe</a></li>
+<li>Teléfono: +51 966 935 394</li>
+</ul></li>
+<li>Mag. Ing. William Blas Torres Gutiérrez - Director de la Direccion de Información Agraria y Estudios Económicos, DIAEE
+<ul>
+<li>Email: <a href="mailto:dia@agroayacucho.gob.pe">dia@agroayacucho.gob.pe</a></li>
+<li>Teléfono: (66)312387</li>
+</ul></li>
+</ul>
+<section id="publicaciones" class="level2">
+<h2 data-anchor-id="publicaciones">PUBLICACIONES</h2>
+<ul>
+<li>Boletín Estadístico de Palto Ayacucho, Ayacucho (2022)</li>
+<li>Encuesta Nacional de Intenciones de Siembra Campaña Agrícola 2022-2023, DRA Ayacucho (2022)</li>
+<li>Boletín Estadístico de Quinua Ayacucho, Ayacucho (2022)</li>
+</ul>
 
-</div>
-<div id="download-section-news">
-<section id="release-notes-1" class="level3">
-<h3 data-anchor-id="release-notes-1">Release Notes</h3>
-<div id="download-news" class="download-news">
 
-</div>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div class="grid step column-page-right">
-<section id="step-2" class="level2 g-col-lg-3 g-col-12">
-<h2 data-anchor-id="step-2">Step 2</h2>
-<section id="choose-your-tool-and-get-started" class="level4 fw-light">
-<h4 class="fw-light" data-anchor-id="choose-your-tool-and-get-started">Choose your tool<br>and get started</h4>
 </section>
 </section>
-<div class="tool g-col-lg-9 g-col-12">
-<p><a href="hello/vscode.html" role="button" class="btn btn-outline-light"> <img src="images/vscode-logo.png" class="img-fluid" alt="VS Code logo." width="77">VS Code </a></p>
-<p><a href="hello/jupyter.html" role="button" class="btn btn-outline-light"> <img src="images/jupyter-logo.png" class="img-fluid" alt="Jupyter logo." width="77">Jupyter </a></p>
-<p><a href="hello/rstudio.html" role="button" class="btn btn-outline-light"> <img src="images/rstudio-logo.png" class="img-fluid" alt="RStudio logo." width="77">RStudio </a></p>
-<p><a href="hello/neovim.html" role="button" class="btn btn-outline-light"> <img src="images/neovim-logo.svg" class="img-fluid" alt="Neovim logo." width="77">Neovim </a></p>
-<p><a href="hello/text-editor.html" role="button" class="btn btn-outline-light"> <img src="images/text-editor-logo.png" class="img-fluid" alt="Text Editor logo: circle with white outline and black fill inside of which is a command-line prompt." width="77">Text Editor </a></p>
-</div>
-</div>
-
-
 
 </main> <!-- /main -->
 <script type="text/javascript">
@@ -796,15 +572,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../docs/get-started/hello/" class="pagination-link">
-        <span class="nav-page-text">Tutorial: Hello, Quarto</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -843,12 +610,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script type="text/javascript">
-window['quarto-download-release'] = true;
-window['quarto-download-prerelease'] = true;
-window['quarto-download-nonews'] = true;
-window["quarto-prerelease-mode"] = '';
-</script>
 
 
 

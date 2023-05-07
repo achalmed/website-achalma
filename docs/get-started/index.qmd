@@ -1,18 +1,10 @@
 ---
-title: "Get Started"
-subtitle: "Install Quarto, then check out the tutorials to learn the basics."
+title: "Sobre mi"
+subtitle: "cv"
 format:
   html:
     include-in-header: 
-      - '../download/_download.html'
-    include-after-body: 
-      text: |
-        <script type="text/javascript">
-        window['quarto-download-release'] = true;
-        window['quarto-download-prerelease'] = true;
-        window['quarto-download-nonews'] = true;
-        window["quarto-prerelease-mode"] = '{{< meta prerelease-mode >}}';
-        </script>      
+      - '../download/_download.html'    
 page-layout: full
 toc: false
 anchor-sections: false
@@ -22,63 +14,158 @@ aliases:
 image: /images/hero_right.png
 ---
 
-::: {.grid .step .column-page-right}
-::: {.g-col-lg-3 .g-col-12}
-## Step 1 
+# Elmer Edison ACHALMA MENDOZA
 
-#### Install Quarto {.fw-light}
-:::
+**Economía \| Pre Grado**
 
-::: {.g-col-lg-9 .g-col-12}
+-   LinkedIn: [linkedin.com/in/achalmaedison](https://chat.openai.com/c/linkedin.com/in/achalmaedison)
+-   GitHub: [github.com/achalmed](https://chat.openai.com/c/github.com/achalmed)
+-   Sitio web: [achalmaedison.netlify.app](https://chat.openai.com/c/achalmaedison.netlify.app)
+-   Teléfono: +51 934 179 301
+-   Correo electrónico: [achalmed.18\@gmail.com](mailto:achalmed.18@gmail.com)
 
+Ubicación: Asoc Micaela Bastidas Mzna D1 - N° 06, Jesús Nazareno, Ayacucho - Perú
 
-::: {.content-visible when-profile="rc"}
+Como estudiante de Economía en mi último ciclo en la Universidad Nacional de San Cristóbal de Huamanga, estoy entusiasmado por la oportunidad de unirme a una entidad privada o pública que me permita aplicar mis conocimientos y habilidades mientras sigo desarrollándome profesionalmente. Con una formación especializada, estoy seguro de que puedo aportar valor a una entidad que comparta mis valores y expectativas.
 
-{{< include ../download/_download-pre.md >}}
-
-:::
-
-::: {.content-visible unless-profile="rc"}
-
-{{< include ../download/_download.md >}}
-
-:::
+Soy una persona altamente organizada y motivada, capaz de adaptarme a cualquier entorno y ofrecer siempre lo mejor de mí en cualquier proyecto. Me apasiona trabajar en equipo y fomentar valores como el compañerismo en el lugar de trabajo. Estoy ansioso por contribuir a una organización que valore el crecimiento profesional y la colaboración.
 
 
-:::
-:::
+# EXPERIENCIAS
 
-::: {.grid .step .column-page-right}
-::: {.g-col-lg-3 .g-col-12}
-## Step 2 
+## Docente, UNIVERSIDAD AUTÓNOMA DE HUANTA, Huanta
 
-#### Choose your tool<br/>and get started{.fw-light}
-:::
+### Abril 2022 - Julio 2022
 
-::: {.tool .g-col-lg-9 .g-col-12}
+Enseñé el curso de Gestión de Proyectos a estudiantes de pregrado en la UNH, lo que me permitió desarrollar habilidades de enseñanza y comunicación efectiva.
 
+## Practicante, DIRECCIÓN DE INFORMACIÓN AGRARIA Y ESTUDIOS ECONÓMICOS, DRA-Ayacucho
 
-<a href="hello/vscode.html" role="button" class="btn btn-outline-light">
-![](images/vscode-logo.png){width="77" fig-alt="VS Code logo."}VS Code
-</a>
+### Agosto 2021 - Abril 2022
 
-<a href="hello/jupyter.html" role="button" class="btn btn-outline-light">
-![](images/jupyter-logo.png){width="77" fig-alt="Jupyter logo."}Jupyter
-</a>
+Contribuí en la formulación de estudios económicos y en la generación y procesamiento de información relevante para el sector agrario de la región. Adquirí habilidades en análisis de datos, investigación y trabajo en equipo en un entorno profesional.
 
-<a href="hello/rstudio.html" role="button" class="btn btn-outline-light">
-![](images/rstudio-logo.png){width="77" fig-alt="RStudio logo."}RStudio
-</a>
+## Secretario, CENTRO DE ESTUDIANTES DE ECONOMÍA, Ayacucho
 
+### Agosto 2021 - Julio 2020
 
-<a href="hello/neovim.html" role="button" class="btn btn-outline-light">
-![](images/neovim-logo.svg){width="77" fig-alt="Neovim logo."}Neovim
-</a>
+Como Secretario de Prensa del Centro de Estudiantes de Economía, fui responsable de la difusión de las actividades y eventos del centro, así como de mantener una comunicación fluida y efectiva con los estudiantes y demás miembros del centro. Desarrollé habilidades en comunicación, trabajo en equipo y organización.
 
+## Secretario de archivos, MUNICIPALIDAD PROVINCIAL DE CANGALLO., Cangallo
 
-<a href="hello/text-editor.html" role="button" class="btn btn-outline-light">
-![](images/text-editor-logo.png){width="77" fig-alt="Text Editor logo: circle with white outline and black fill inside of which is a command-line prompt."}Text Editor
-</a>
+### Abril 2019 - Enero 2019
 
-:::
-:::
+Desempeñé el cargo de Secretario de Archivos en la Oficina de Archivos de la Municipalidad Provincial de Cangallo.
+
+## Parlamentario Joven, CONGRESO DE LA REPÚBLICA, Ayacucho
+
+### Diciembre 2018 - Enero 2018
+
+Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudadana del Congreso de la República del Perú, fortalecí mis capacidades de liderazgo y aprendí sobre el funcionamiento del Congreso de la República, sus comisiones de trabajo y la valoración del trabajo en un espacio de participación y fomento de valores democráticos.
+
+# Formación Académica
+
+-   Hoy: Economía, UNIVERSIDAD NACIONAL DE SAN CRISTÓBAL DE HUAMANGA, Ayacucho
+
+    -   Título esperado: Economista
+    -   Facultad de Ciencias Económicas, Administrativas y Contables (FCEAC), UNSCH
+
+-   Hoy: Inglés, INSTITUTO CULTURAL PERUANO NORTEAMERICANO, Huamanga
+
+    -   Nivel Básico B10
+    -   ICPNA
+
+-   Diciembre 2013 - Marzo 2009: Secundaria, I.E.P. "SIETE DE JUNIO", C.P. Catalinayocc
+
+    -   EBR (Educación Básica Regular)
+
+## CONOCIMIENTOS INFORMÁTICOS
+
+-   Programación
+
+    -   Fundamentos de programación
+    -   Machine learning con R
+    -   MATLAB
+    -   Python
+    -   Visual Basic
+
+-   Microsoft Office
+
+    -   Word Intermedio
+    -   Excel Intermedio
+
+-   Software
+
+    -   EViews
+    -   LáTex
+    -   Stata
+
+## IDIOMAS
+
+-   Español: ○ ○ ○ ○ ○ ∠ Motivado
+-   Quechua: ○ ○ ○ ○ ○ ∠ Liderazgo
+-   Inglés: ○ ○ ○ ∠ Autónomo ∠ Trabajo en equipo ∠ Adaptación al cambio
+
+## HABILIDADES DESTACADAS
+
+-   Liderazgo
+-   Motivado
+
+## LOGROS
+
+-   2022: Ubicado en el tercio superior de mi escuela profesional durante todo mi tiempo en la universidad, reconocimiento otorgado por la excelencia académica en mi carrera.
+-   2022: Autor de varios publicaciones, entre los que se destacan el Boletín Estadístico de Palto Ayacucho, Encuesta Nacional de Intenciones de Siembra Campaña Agrícola 2022-2023 y Boletín Estadístico de Quinua Ayacucho, que han sido ampliamente reconocidos por su rigor y calidad.
+-   2018: Fui seleccionado para participar en el Plenario Regional como Parlamentario Joven en 2018, organizado por la Oficina de Participación Ciudadana del Congreso de la República. Como uno de los pocos seleccionados de entre un gran número de participantes, tuve la oportunidad de representar a mi región y fortalecer mis habilidades de liderazgo y debate constructivo en un espacio importante para la promoción de valores democráticos.
+-   2017: Becario de Beca Permanencia 2017, lo que me permitió seguir estudiando y desarrollando mis habilidades en mi carrera universitaria, logrando así una mayor preparación para enfrentar nuevos desafíos.
+
+## PROYECTOS
+
+### CHAT BOT
+
+*2021 - 2022*
+
+-   Repositorio: [github.com/achalmed/bot-whatsapp](https://chat.openai.com/c/github.com/achalmed/bot-whatsapp)
+-   Descripción: Creación e implementación de un chatbot para la MDSJB-Ayacucho utilizando node.js y dialogflow.
+-   Tecnologías utilizadas: Node.js, Dialogflow.
+-   Herramientas utilizadas: Whatsapp.
+
+### VOLUNTARIADO
+
+-   **NATS de Movimiento de Adolescentes y Niños Trabajadores Hijos de Obreros Cristianos -- MANTHOC**
+
+    -   Año: 2016
+
+-   **Corresponsal de No Apto Para Adultos -- NAPA**
+
+    -   Año: 2014
+    -   Descripción: Colaboración en la creación del magazine televisivo diario de media hora de duración con información y reportajes de actualidad para niños y adolescentes de 13 a 17 años. NAPA es difundido por 40 canales de Red TV en todo el Perú, y en Lima a través de la señal de JN19 UHF y en el canal 57 de Cable Mágico.
+
+# CURSOS Y/O ESTUDIOS COMPLEMENTARIOS
+
+-   2022 - Diplomado de especialización en ofimática profesional, Escuela Superior de Negocios y Asesoría Profesional, NR : 49823
+-   2022 - Diplomado de especialización en sistemas gubernamentales : SIAF, SIGA Y SEACE, Instituto Interamericano de Alta Asesoría Empresarial, NR : 0035470
+-   2022 - Curso de redacción de documentos académicos, Centro de Competencias del Agua - CCA-AA-PICS-001
+-   2021 - Foro regional de Alto Desarrollo Lima y Callao de CAENE, ID de la credencial : 21FLC05-079
+-   2020 - Finanzas básicas y planeamiento estratégico, de Grupo IDDEA, ID de la credencial : CERT EEA FBYPE SM CE2229
+-   2020 - Inversión Extranjera como Motor del Desarrollo para América Latina y el Caribe, de Banco Interamericano Del Desarrollo
+-   2019 - Corrupción, sistema financiero y distribución de las riquezas en el Perú, de Universidad Nacional San Luis Gonzaga de Ica
+-   2018 - IV ENCUENTRO DE LÍDERES EMPRESARIALES ELE18 de Confederación Nacional de Instituciones Empresariales Privadas (CONFIEP)
+-   2017 - Plataformas de marketing digital & social media business, Google for Education
+
+# REFERENCIAS
+
+-   Leny Palma - Encargada de Oficina de Participación Ciudadana del Congreso de la República 2018, CONGRESO DE LA REPÚBLICA
+    -   Email: [parlamentojoven\@congreso.gob.pe](mailto:parlamentojoven@congreso.gob.pe)
+    -   Teléfono: +687 987 654
+-   Mag. Econ. Efraín Castillo - Director de la Escuela de Economia, ECONOMÍA UNSCH
+    -   Email: [efrain.castillo\@unsch.edu.pe](mailto:efrain.castillo@unsch.edu.pe)
+    -   Teléfono: +51 966 935 394
+-   Mag. Ing. William Blas Torres Gutiérrez - Director de la Direccion de Información Agraria y Estudios Económicos, DIAEE
+    -   Email: [dia\@agroayacucho.gob.pe](mailto:dia@agroayacucho.gob.pe)
+    -   Teléfono: (66)312387
+
+## PUBLICACIONES
+
+-   Boletín Estadístico de Palto Ayacucho, Ayacucho (2022)
+-   Encuesta Nacional de Intenciones de Siembra Campaña Agrícola 2022-2023, DRA Ayacucho (2022)
+-   Boletín Estadístico de Quinua Ayacucho, Ayacucho (2022)

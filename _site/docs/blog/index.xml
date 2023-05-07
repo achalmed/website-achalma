@@ -10,10 +10,10 @@
 <atom:link href="https://achalmawebsite.netlify.app/docs/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <image>
-<url>https://achalmawebsite.netlify.app/quarto.png</url>
+<url>https://achalmawebsite.netlify.app/Aukihack.png</url>
 <title>achalmaedison</title>
 <link>https://achalmawebsite.netlify.app/docs/blog/index.html</link>
-<height>35</height>
+<height>45</height>
 <width>144</width>
 </image>
 <generator>quarto-1.2.335</generator>
@@ -634,7 +634,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p></p><figcaption class="figure-caption">Code Annotation in an HTML document</figcaption><p></p>
 </figure>
 </div>
-<p>To learn more, check out the <a href="../../../../docs/authoring/code-annotation.html">Code Annotation</a> documentation.</p>
+<p>To learn more, check out the <a href="../../../../docs/authoring/code-annotation.qmd">Code Annotation</a> documentation.</p>
 </section>
 <section id="multi-format-publishing" class="level2">
 <h2 class="anchored" data-anchor-id="multi-format-publishing">Multi-format Publishing</h2>
@@ -653,7 +653,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p></p><figcaption class="figure-caption">An HTML document with a link to another format</figcaption><p></p>
 </figure>
 </div>
-<p>Find out more in the documentation on <a href="../../../../docs/output-formats/html-multi-format.html">Including Other Formats</a>.</p>
+<p>Find out more in the documentation on <a href="../../../../docs/output-formats/html-multi-format.qmd">Including Other Formats</a>.</p>
 </section>
 <section id="jupyter-cell-embedding" class="level2">
 <h2 class="anchored" data-anchor-id="jupyter-cell-embedding">Jupyter Cell Embedding</h2>
@@ -664,7 +664,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p></p><figcaption class="figure-caption">A plot embedded in a document from a Jupyter Notebook</figcaption><p></p>
 </figure>
 </div>
-<p>Learn more about the embed shortcode in <a href="../../../../docs/authoring/notebook-embed.html">Embedding Jupyter Notebook Cells</a> in the docs.</p>
+<p>Learn more about the embed shortcode in <a href="../../../../docs/authoring/notebook-embed.qmd">Embedding Jupyter Notebook Cells</a> in the docs.</p>
 </section>
 <section id="confluence-publishing" class="level2">
 <h2 class="anchored" data-anchor-id="confluence-publishing">Confluence Publishing</h2>
@@ -689,18 +689,18 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </div>
 </div>
 </div>
-<p>To learn more, head to the documentation on <a href="../../../../docs/publishing/confluence.html">Confluence Publishing</a>.</p>
+<p>To learn more, head to the documentation on <a href="../../../../docs/publishing/confluence.qmd">Confluence Publishing</a>.</p>
 </section>
 <section id="other-highlights" class="level2">
 <h2 class="anchored" data-anchor-id="other-highlights">Other Highlights</h2>
 <p>Some other notable highlights include:</p>
 <ul>
 <li><p><a href="../../../../docs/output-formats/page-layout.html#grid-customization">Article Grid Customization</a>—Customize the widths of layout components in HTML documents</p></li>
-<li><p><a href="../../../../docs/books/index.html">Quarto Book AsciiDoc Support</a>—Output Quarto books to AsciiDoc files</p></li>
+<li><p><a href="../../../../docs/books/book-basics.qmd">Quarto Book AsciiDoc Support</a>—Output Quarto books to AsciiDoc files</p></li>
 <li><p><a href="../../../../docs/prerelease/1.3/website-nav.html">Website Navigation Improvements</a>—Include tools in your navbar, and provide better navigation for Quarto websites on mobile devices</p></li>
-<li><p><a href="../../../../docs/authoring/diagrams.html#mermaid-theming">Mermaid Diagram Theming</a>—Use your document theme, or built-in Mermaid themes, for your Mermaid diagrams</p></li>
+<li><p><a href="../../../../docs/authoring/diagrams.qmd#mermaid-theming">Mermaid Diagram Theming</a>—Use your document theme, or built-in Mermaid themes, for your Mermaid diagrams</p></li>
 <li><p><a href="../../../../docs/prerelease/1.3/pdf.html">PDF: SVG and Remote Images</a>—Include SVG images and remote images in PDF documents</p></li>
-<li><p><a href="../../../../docs/authoring/markdown-basics.html#keyboard-shortcuts"><code>kbd</code> Shortcode</a>—Show well-formatted keyboard shortcuts in Quarto documents.</p></li>
+<li><p><a href="../../../../docs/authoring/markdown-basics.qmd#keyboard-shortcuts"><code>kbd</code> Shortcode</a>—Show well-formatted keyboard shortcuts in Quarto documents.</p></li>
 </ul>
 <p>You can find all the other changes in 1.3, in the <a href="https://quarto.org/docs/download/#download-section-news">Release Notes</a>.</p>
 </section>
@@ -826,12 +826,12 @@ Quarto 1.3 Feature
 <p></p>
 <p>A link to the source notebook is automatically provided beneath the plot. Following the link takes users to a rendered version of the notebook, allowing them to explore the notebook without having to download and run it locally. For example, clicking on the link to <code>penguins.ipynb</code> gets you to a page that looks like the following:</p>
 <p><img src="https://achalmawebsite.netlify.app/docs/blog/posts/2023-03-17-jupyter-cell-embedding/notebook-view.png" class="border img-fluid" alt="A screenshot of webpage with the title 'penguins.ipynb', a large blue button labelled 'Download Notebook', followed by the notebook contents."></p>
-<p>Beyond this basic usage, head to the <a href="../../../../docs/authoring/notebook-embed.html">Jupyter Cell Embedding highlight docs</a> to learn how to:</p>
+<p>Beyond this basic usage, head to the <a href="../../../../docs/authoring/notebook-embed.qmd">Jupyter Cell Embedding highlight docs</a> to learn how to:</p>
 <ul>
-<li><p>Specify cells in multiple ways, see <a href="../../../../docs/authoring/notebook-embed.html#specifying-cells">Specifying Cells</a>.</p></li>
-<li><p>Control the output using code cell options in the source Notebook, including things like figure captions, figure layout, and code display, see <a href="../../../../docs/authoring/notebook-embed.html#code-cell-options">Code Cell Options</a>.</p></li>
-<li><p>Include the cell code along with the output by adding an <code>echo</code> option to the shortcode, see <a href="../../../../docs/authoring/notebook-embed.html#embedding-code">Embedding Code</a>.</p></li>
-<li><p>Customize or exclude the link to the source notebook, see <a href="../../../../docs/authoring/notebook-embed.html#linked-source-notebooks">Links to Source Notebooks</a>.</p></li>
+<li><p>Specify cells in multiple ways, see <a href="../../../../docs/authoring/notebook-embed.qmd#specifying-cells">Specifying Cells</a>.</p></li>
+<li><p>Control the output using code cell options in the source Notebook, including things like figure captions, figure layout, and code display, see <a href="../../../../docs/authoring/notebook-embed.qmd#code-cell-options">Code Cell Options</a>.</p></li>
+<li><p>Include the cell code along with the output by adding an <code>echo</code> option to the shortcode, see <a href="../../../../docs/authoring/notebook-embed.qmd#embedding-code">Embedding Code</a>.</p></li>
+<li><p>Customize or exclude the link to the source notebook, see <a href="../../../../docs/authoring/notebook-embed.qmd#linked-source-notebooks">Links to Source Notebooks</a>.</p></li>
 </ul>
 
 
@@ -2024,9 +2024,9 @@ Quarto 1.3 Feature
 
 <p>Quarto Extensions are a powerful way to modify or extend the behavior of Quarto, and can be created and distributed by anyone. There are three types of extensions available:</p>
 <ul>
-<li><p><a href="../../../../docs/extensions/shortcodes.html">Shortcodes</a> are special markdown directives that generate various types of content. For example, you could create shortcodes to embed tweets or videos in a document.</p></li>
-<li><p><a href="../../../../docs/extensions/filters.html">Filters</a> are a flexible and powerful tool for introducing new global behaviors and/or new markdown rendering behaviors. For example, you could create filters to implement output folding, an image carousel, or just about anything you can imagine!</p></li>
-<li><p><a href="../../../../docs/extensions/formats.html">Formats</a> enable you to create new output formats by bundling together document options, templates, stylesheets, and other content.</p></li>
+<li><p><a href="../../../extensions/shortcodes.qmd">Shortcodes</a> are special markdown directives that generate various types of content. For example, you could create shortcodes to embed tweets or videos in a document.</p></li>
+<li><p><a href="../../../extensions/filters.qmd">Filters</a> are a flexible and powerful tool for introducing new global behaviors and/or new markdown rendering behaviors. For example, you could create filters to implement output folding, an image carousel, or just about anything you can imagine!</p></li>
+<li><p><a href="../../../extensions/formats.qmd">Formats</a> enable you to create new output formats by bundling together document options, templates, stylesheets, and other content.</p></li>
 </ul>
 <p>Here are some examples of extensions developed and maintained by the core Quarto team:</p>
 <table class="table">
@@ -2059,7 +2059,7 @@ Quarto 1.3 Feature
 </tr>
 </tbody>
 </table>
-<p>To learn more about using extensions, see the <a href="../../../../docs/extensions/index.html">Extensions</a> documentation on the Quarto website. If you want to dive in to creating your own extensions check out the articles on <a href="../../../../docs/extensions/shortcodes.html">Creating Shortcodes</a>, <a href="../../../../docs/extensions/filters.html">Creating Filters</a>, and <a href="../../../../docs/extensions/formats.html">Creating Formats</a>.</p>
+<p>To learn more about using extensions, see the <a href="../../../extensions/index.qmd">Extensions</a> documentation on the Quarto website. If you want to dive in to creating your own extensions check out the articles on <a href="../../../extensions/shortcodes.qmd">Creating Shortcodes</a>, <a href="../../../extensions/filters.qmd">Creating Filters</a>, and <a href="../../../extensions/formats.qmd">Creating Formats</a>.</p>
 
 
 
@@ -2187,7 +2187,7 @@ Quarto 1.3 Feature
 <li>Spans the entire page</li>
 <li>Occupies the document margin</li>
 </ul>
-<p>This post will demonstrate a few of the capabilities for positioning content in the margin of the page. You can read more about the complete capabilities in the the <a href="../../../../docs/authoring/article-layout.html">Article Layout Guide</a>.<br>
+<p>This post will demonstrate a few of the capabilities for positioning content in the margin of the page. You can read more about the complete capabilities in the the <a href="../../../../docs/authoring/article-layout.qmd">Article Layout Guide</a>.<br>
 </p>
 <section id="margin-figures" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="margin-figures">Margin Figures</h2>
@@ -2347,7 +2347,7 @@ Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Defi
 <li>Providing captions, subcaptions, and cross-references.</li>
 <li>Generating tables dynamically from executable code cells.</li>
 </ul>
-<p>This post provides an overview of these capabilities in Quarto. For more detail about all the features Quarto for authoring tables, see <a href="../../../../docs/authoring/tables.html">Tables</a>.</p>
+<p>This post provides an overview of these capabilities in Quarto. For more detail about all the features Quarto for authoring tables, see <a href="../../../../docs/authoring/tables.qmd">Tables</a>.</p>
 <section id="markdown-tables" class="level2">
 <h2 class="anchored" data-anchor-id="markdown-tables">Markdown Tables</h2>
 <p>The most commonly used markdown table is known as a pipe table. Pipe tables support specifying per column alignment as well as captions. For example:</p>
@@ -2444,7 +2444,7 @@ Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Defi
 <span id="cb4-6"><span class="fu" style="color: #4758AB;">library</span>(knitr)</span>
 <span id="cb4-7"><span class="fu" style="color: #4758AB;">kable</span>(<span class="fu" style="color: #4758AB;">head</span>(cars))</span>
 <span id="cb4-8"><span class="in" style="color: #5E5E5E;">```</span></span></code></pre></div>
-<p>In addition to the above, which focused on some of the features of Quarto when writing pipe tables in markdown, you can also author tables using grid syntax. You review the <a href="../../../../docs/authoring/tables.html">documentation</a>. for more detail.</p>
+<p>In addition to the above, which focused on some of the features of Quarto when writing pipe tables in markdown, you can also author tables using grid syntax. You review the <a href="../../../../docs/authoring/tables.qmd">documentation</a>. for more detail.</p>
 
 
 </section>
@@ -2497,7 +2497,7 @@ Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Defi
 <span id="cb1-8"></span>
 <span id="cb1-9">This is an example of a callout with a caption.</span>
 <span id="cb1-10">:::</span></code></pre></div>
-<p>See our documentation on <a href="../../../../docs/authoring/callouts.html">Callouts</a>, to learn more, including more about how to customize the appearance and behavior of callouts.</p>
+<p>See our documentation on <a href="../../../../docs/authoring/callouts.qmd">Callouts</a>, to learn more, including more about how to customize the appearance and behavior of callouts.</p>
 
 
 </section>

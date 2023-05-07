@@ -14,146 +14,6 @@
     "text": "What can I use Quarto for?\nQuarto® is an open-source scientific and technical publishing system built on Pandoc. You can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more. \n\n\nQuarto sounds similar to R Markdown. What is the difference and why create a new project?\nAt its core, Quarto works the same way as R Markdown: \n\nThe goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. Quarto combines the functionality of R Markdown, bookdown, distill, xaringian, etc into a single consistent system with “batteries included” that reflects everything we’ve learned from R Markdown over the past 10 years.\nThe number of languages and runtimes used for scientific discourse is very broad (and the Jupyter ecosystem in particular is extraordinarily popular). Quarto is at its core multi-language and multi-engine (supporting Knitr, Jupyter, and Observable today and potentially other engines tomorrow).\nOn the other hand, R Markdown is fundamentally tied to R which severely limits the number of practitioners it can benefit. Quarto is Posit’s attempt to bring R Markdown to everyone! Unlike R Markdown, Quarto doesn’t have a dependency or requirement for R. Quarto was developed to be multilingual, beginning with R, Python, Javascript, and Julia, with the idea that it will work even for languages that don’t yet exist.\nWhile it is a “new” system, it should also be noted that it is highly compatible with existing content: you can render most R Markdown documents and Jupyter notebooks unmodified with Quarto. The concept is to make a major, long term investment in reproducible research, while keeping it compatible with existing formats and adaptable to the various environments users work in.\n\n\nIs R Markdown going away? Will my R Markdown documents continue to work?\nR Markdown is not going away! R Markdown is used extensively and continues to work well. It will continue to be actively supported. We’re not leaving R Markdown, we’re expanding our scope. Over the years there have been many feature requests, and rather than implementing them all in R Markdown, for certain features we may refer you to Quarto. Everything that is currently in R Markdown will continue to work and be supported. There are no plans for deprecation.\nRead more about this in Yihui Xie’s blog post With Quarto Coming, is R Markdown Going Away? No.\n\n\nShould I switch from R Markdown to Quarto?\nIf you like using R Markdown, there’s no need to switch! R Markdown will continue to be supported and work as it always has been. You’re welcome to try Quarto if you like, but there’s no need to switch. Some new features may only exist in Quarto, so if you want to use those, then that’s where you would give those a try.  \nWe should emphasize that switching is not imperative. While we don’t plan on major feature initiatives in R Markdown and related packages, we are going to continue to maintain them (smaller improvements and bug fixes) for a long time to come. Furthermore, since Rmd files can in most cases be rendered without modification by Quarto, you can continue using R Markdown and the switching cost will still be minimal whenever you decide to do it. \n\n\nI use X (bookdown, blogdown, etc.). What is the Quarto equivalent?\nHere are the Quarto equivalents for various packages and features of the R Markdown ecosystem (in some cases Quarto equivalents are not yet available but will be later this year):\n\n\n\n\nFeature\nR Markdown\nQuarto\n\n\n\n\nBasic Formats\n\nhtml_document\npdf_document\nword_document\n\n\nhtml\npdf\ndocx\n\n\n\nBeamer\n\nbeamer_presentation\n\n\nbeamer\n\n\n\nPowerPoint\n\npowerpoint_presentation\n\n\npptx\n\n\n\nHTML Slides\n\nxaringan\nioslides\nrevealjs\n\n\nrevealjs\n\n\n\nAdvanced Layout\n\ntufte\ndistill\n\n\nQuarto Article Layout\n\n\n\nCross References\n\nhtml_document2\npdf_document2\nword_document2\n\n\nQuarto Crossrefs\n\n\n\nWebsites & Blogs\n\nblogdown\ndistill\n\n\nQuarto Websites\nQuarto Blogs\n\n\n\nBooks\n\nbookdown\n\n\nQuarto Books\n\n\n\nInteractivity\nShiny Documents\nQuarto Interactive Documents\n\n\nJournal Articles\nrticles\nQuarto Journal Articles\n\n\nPaged HTML\npagedown\nPlanned\n\n\nDashboards\nflexdashboard\nPlanned\n\n\nInteractive Tutorials\nlearnr\nNo equivalent planned\n\n\n\n\n\n\nCan you create custom formats for Quarto like you can for R Markdown?\nQuarto offers an Extension mechanism to add features to a format using Shortcodes or Filters but also create custom formats. A major difference with custom output format in R Markdown is that Quarto Extension does not use R but Lua, for example if you need to add some logic behind custom metadata fields. See Developing with Lua to get started if you need use it your extension. Some of the features from R Markdown custom formats like customizing knitting behavior can also now be done in YAML with execution options.\nAs example of custom formats for Quarto, Journal Articles for Quarto are port of some custom output format inside the rticles R package. Extensions lives in Quarto Journals Github organization, and you can find information on how to customize templates and manage Authors for you format.\nIf you are an advanced developer of R Markdown custom format, the Extension mechanism may still have limitation (like pre and post processor). The Extension feature in Quarto will be improved over time - do not hesitate to share with us your use case or wished in our Discussion Board.\n\n\nWhen would be a good time to start new projects in Quarto rather than R Markdown?\nQuarto v1.0 was announced at rstudio::conf(2022). This is the first stable release which is already an excellent foundation for starting new projects with Quarto or migrating existing R Markdown projects (if you are so inclined). If you start using Quarto, please do stay updated with latest release and changes as development is very active.\n\n\nDoes the RStudio IDE support Quarto?\nYes! You need to use RStudio v2022.07 or a later version, which includes support for editing and preview of Quarto documents.\nYou can download the latest release (v2023.03) of RStudio v2023.03 from https://posit.co/download/rstudio-desktop/.\n\n\nDoes Posit Connect support Quarto?\nYes! You can publish Quarto content to Posit Connect v2021.08.0 or later. Quarto has to be enabled as documented in the Posit Connect admin guide. Connect’s user documentation refers to Quarto.org docs on how to publish from the RStudio IDE. To publish Python-based Quarto content, you can use the rsconnect-python CLI from various locations, including VSCode, JupyterLab or the terminal."
   },
   {
-    "objectID": "docs/prerelease/1.3/ast.html",
-    "href": "docs/prerelease/1.3/ast.html",
-    "title": "Custom AST Nodes",
-    "section": "",
-    "text": "Pre-release Feature\n\n\n\nThis feature is new in the upcoming Quarto 1.3 release. To use the feature now, you’ll need to download and install the Quarto pre-release."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/ast.html#overview",
-    "href": "docs/prerelease/1.3/ast.html#overview",
-    "title": "Custom AST Nodes",
-    "section": "Overview",
-    "text": "Overview\nQuarto now supports custom AST nodes in Pandoc filters. This allows more flexibility in defining and using Lua filters.\nWe will slowly roll out more extensive changes of the AST, but currently, the following objects are custom AST nodes:\n\nCallouts\nTabsets\nConditional Blocks"
-  },
-  {
-    "objectID": "docs/prerelease/1.3/ast.html#example-callouts",
-    "href": "docs/prerelease/1.3/ast.html#example-callouts",
-    "title": "Custom AST Nodes",
-    "section": "Example: Callouts",
-    "text": "Example: Callouts\nIn previous versions of Quarto, callouts would be represented directly as a div with a class starting with callout, and the contents laid out in a particular way.\nWhile authoring documents, this syntax remains unchanged. But when processing the document, the callout divs are now represented as a custom AST node, which can be processed directly in Lua filters. In Quarto 1.3, callouts can be captured in Lua filters more directly. For example, here is a filter that forces every callout to be of type “caution”:\nfunction Callout(callout)\n  -- do something with the callout\n  callout.type = \"caution\"\n\n  -- note that custom AST nodes are passed by reference. You can\n  -- return the value if you choose, but you do not need to.\nend\nFinally, custom AST node constructors are available in the quarto object: quarto.Callout, quarto.Tabset, etc. See the pages above for details."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/pdf.html",
-    "href": "docs/prerelease/1.3/pdf.html",
-    "title": "PDF Format Improvements",
-    "section": "",
-    "text": "Pre-release Feature\n\n\n\nThis feature is new in the upcoming Quarto 1.3 release. To use the feature now, you’ll need to download and install the Quarto pre-release."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/pdf.html#svg-images",
-    "href": "docs/prerelease/1.3/pdf.html#svg-images",
-    "title": "PDF Format Improvements",
-    "section": "SVG Images",
-    "text": "SVG Images\nStarting in Quarto 1.3, we support rendering of PDF documents that include SVG files, automatically converting them to PDF images if rsvg-convert is available on the system path during rendering.\nYou can learn more about installing librsvg (which provides rsvg-convert), see https://wiki.gnome.org/Projects/LibRsvg. To install on specific platforms, follow the below instructions:\n\nOn MacOS, you an use Homebrew (https://formulae.brew.sh/formula/librsvg) brew install librsvg\nTarballs for Linux are available here: https://download.gnome.org/sources/librsvg/\nOn Windows, you can install using chocolatey https://community.chocolatey.org/packages/r… choco install rsvg-convert"
-  },
-  {
-    "objectID": "docs/prerelease/1.3/pdf.html#remote-images",
-    "href": "docs/prerelease/1.3/pdf.html#remote-images",
-    "title": "PDF Format Improvements",
-    "section": "Remote Images",
-    "text": "Remote Images\nStarting in Quarto 1.3, when rendering PDFs, Quarto will automatically fetch remote image references and properly embed them within the PDF."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/pdf.html#filenames-with-modifiers",
-    "href": "docs/prerelease/1.3/pdf.html#filenames-with-modifiers",
-    "title": "PDF Format Improvements",
-    "section": "Filenames with Modifiers",
-    "text": "Filenames with Modifiers\nIn quarto 1.3, the default filename for PDF files includes variants and modifiers, and so the following YAML front matter will work:\n# example.qmd\nformat:\n  pdf+simple: default # generates example+simple.pdf\n  pdf: default # generates example.pdf"
-  },
-  {
-    "objectID": "docs/prerelease/1.3/tables.html",
-    "href": "docs/prerelease/1.3/tables.html",
-    "title": "HTML Table Processing",
-    "section": "",
-    "text": "Pre-release Feature\n\n\n\nThis feature is new in the upcoming Quarto 1.3 release. To use the feature now, you’ll need to download and install the Quarto pre-release."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/tables.html#overview",
-    "href": "docs/prerelease/1.3/tables.html#overview",
-    "title": "HTML Table Processing",
-    "section": "Overview",
-    "text": "Overview\nIn Quarto 1.3, we have made some changes to how tables are processed. Recent Pandoc versions have added support for parsing HTML tables into Pandoc’s native data structures (including features such as rowspans and colspans), and Quarto now leverages this to make it easier to produce properly formatted tables in more formats.\n\nHTML tables are now processed in every format\nSpecifically, Quarto will now attempt to parse HTML tables in RawBlock nodes in html format and convert them to Markdown tables, regardless of output format (intentionally including non-HTML formats). As a result, you can now use HTML table syntax in your documents and they will be properly converted to Markdown tables for all formats, and libraries which emit computational tables in HTML format can work in other output formats. In addition, this will allow Lua filters to manipulate the content of tables specified in HTML format.\n\n\n\n\n\n\nNote\n\n\n\nIf you’re a library author, we hope that you will consider emitting HTML tables in your output. This will allow your users to use the full power of Quarto’s table processing in all formats.\nWith that said, it’s possible that our processing of HTML tables interferes with your library’s processing. If this is the case, you can disable Quarto’s processing of HTML tables by adding the following data attribute to your table:\n<table data-quarto-disable-processing=\"true\">\n  ...\n</table>\n\n\n\n\nBootstrap classes can be added to tables\nBootstrap table classes given as attributes next to a table caption are now inserted into the <table> element. The classes permitted are those that apply expressly to the entire table, and these are: \"primary\", \"secondary\", \"success\", \"danger\", \"warning\", \"info\", \"light\", \"dark\", \"striped\", \"hover\", \"active\", \"bordered\", \"borderless\", \"sm\", \"responsive\", \"responsive-sm\", \"responsive-md\", \"responsive-lg\", \"responsive-xl\", \"responsive-xxl\". For example, the following Markdown table will be rendered with row stripes and the rows will also be highlighted on hover:\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {.striped .hover}\n\n\nEmbedded Markdown content can be specified\nIn addition, Quarto now supports the specification of embedded Markdown content in tables. This is done by providing a data attribute qmd or qmd-base64 in an embedded span or div node. These nodes can appear anywhere that such content is allowed: table headers, footers, cells, captions, etc. For example, consider the following table:\n<table>\n  <caption><span data-qmd=\"As described in @Lovelace1864, computers are great.\"></span></caption>\n  <thead>\n    <tr>\n      <th><span data-qmd=\"_Header 1_\"></span></th>\n      <th><span data-qmd=\"_Header 2_\"></span></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><span data-qmd=\"\"></span></td>\n      <td>Regular output</td>\n    </tr>\n  </tbody>\n</table>\nThe span nodes with the data-qmd attribute will be processed as embedded Markdown content. This allows you to embed arbitrary Markdown content in your tables, including citations, videos, etc. One thing to keep in mind is that the content of data-qmd needs to be escaped properly. Authors of libraries which generate table outputs should consider using the data-qmd-base64 attribute, which will be decoded and then processed by Quarto."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/tables.html#limitations",
-    "href": "docs/prerelease/1.3/tables.html#limitations",
-    "title": "HTML Table Processing",
-    "section": "Limitations",
-    "text": "Limitations\nQuarto doesn’t support processing of:\n\nnested <table> elements.\ninvalid HTML tables. Make sure your emitted HTML passes validation."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/website-nav.html",
-    "href": "docs/prerelease/1.3/website-nav.html",
-    "title": "Responsive Website Navigation Improvements",
-    "section": "",
-    "text": "The navbar can now display a set of tools (e.g. social actions, GitHub view or edit actions, etc.), see Navbar Tools."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/website-nav.html#responsive-navbar",
-    "href": "docs/prerelease/1.3/website-nav.html#responsive-navbar",
-    "title": "Responsive Website Navigation Improvements",
-    "section": "Responsive Navbar",
-    "text": "Responsive Navbar\nWe’ve updated the responsive behavior of the navbar to improve the usability of Quarto websites on mobile devices. Changes include:\n\nWhen the items in a navbar collapse into a menu, we’ve moved the ‘hamburger’ button which controls the menu to the right side of the navbar. This makes it easier to access the menu on mobile devices.\nWhen the items in a navbar collapse into a menu, we place the search icon on right side of the navbar (rather than placing in the collapsed menu). This makes search always available, even when on small screens."
-  },
-  {
-    "objectID": "docs/prerelease/1.3/website-nav.html#responsive-sidebar",
-    "href": "docs/prerelease/1.3/website-nav.html#responsive-sidebar",
-    "title": "Responsive Website Navigation Improvements",
-    "section": "Responsive Sidebar",
-    "text": "Responsive Sidebar\nWe’ve updated the responsive behavior of the sidebar to improve the usability of Quarto websites on mobile devices. Changes include:\n\nThe collapsed sidebar now appears as a vertically smaller band which includes a ‘sidebar’ icon on the left side. Clicking this icon will expand the sidebar to full width. In addition, this collapsed view includes ‘breadcrumbs’ for the current page which allow simple navigation up the hierarchy.\nWhen revealed, the sidebar will now animate from the side of the screen."
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html",
-    "href": "docs/prerelease/1.4/typst.html",
-    "title": "Typst Format",
-    "section": "",
-    "text": "Quarto v1.4 includes support for the typst output format. Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use. Typst creates beautiful PDF output with blazing fast render times."
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#getting-started",
-    "href": "docs/prerelease/1.4/typst.html#getting-started",
-    "title": "Typst Format",
-    "section": "Getting Started",
-    "text": "Getting Started\nTo try out the typst format:\n\nDownload and install the latest version of the Typst CLI (v0.2 or later is required).\nCreate a document that uses format: typst. For example:\n---\ntitle: \"My document\"\nformat: typst\n---\n\nHello, typst!\n\nRendering or previewing this document will invoke the Typst CLI to create a PDF from your markdown source file."
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#typst-format",
-    "href": "docs/prerelease/1.4/typst.html#typst-format",
-    "title": "Typst Format",
-    "section": "Typst Format",
-    "text": "Typst Format\nWhen authoring a Typst document you’ll be using a Quarto format that is in turn based on a Typst template, which defines its structure, layout, and available options. The default Typst format and template that ships with Quarto (format: typst) includes options for specifying title, author, and abstract information along with basic layout and appearance (numbering, margins, fonts, columns, etc.).\nThe following options are available for customizing Typst output:\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\ntitle\nMain document title\n\n\nauthor\nOne or more document authors.\n\n\ndate\nDate of publication\n\n\nabstract\nArticle abstract\n\n\ntoc\nInclude a table of contents.\n\n\nnumber-sections\nApply numbering to sections and sub-sections\n\n\nsection-numbering\nSchema to use for numbering sections, e.g. 1.1.a.\n\n\nmargin\nMargins: x, y, top, bottom, left, right. Specified with units (e.g. y: 1.25in or x: 2cm).\n\n\npapersize\nPaper size: a4, us-letter, etc. See the docs on paper sizes for all available sizes.\n\n\nfontsize\nFont size (e.g., 12pt)\n\n\nsection-numbering\nSchema to use for numbering sections, e.g. 1.1.a.\n\n\ncolumns\nNumber of columns for body text.\n\n\ninclude-in-header\n.typ file to include in header\n\n\ninclude-before-body\n.typ file to include before body\n\n\ninclude-after-body\n.typ file to include after the body\n\n\nkeep-typ\nKeep the intermediate .typ file after render.\n\n\n\nFor example:\n---\ntitle: \"My Document\"\nformat:\n  typst:\n    toc: true\n    section-numbering: true\n    columns: 2\nbibliography: refs.bib\n---\nSee the section below on Custom Formats for details on creating your own specialized formats for use with Typst."
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#raw-blocks",
-    "href": "docs/prerelease/1.4/typst.html#raw-blocks",
-    "title": "Typst Format",
-    "section": "Raw Blocks",
-    "text": "Raw Blocks\nIf you want to use raw typst markup, use a raw typst block. For example:\n```{=typst} \n#set par(justify: true)\n\n== Background \nIn the case of glaciers, fluid dynamics principles can be used to understand how the movement and behavior of the ice is influenced by factors such as temperature, pressure, and the presence of other fluids (such as water).\n```\nTo learn more about typst markup, see the tutorial here: https://typst.app/docs/tutorial/."
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#typst-file-.typ",
-    "href": "docs/prerelease/1.4/typst.html#typst-file-.typ",
-    "title": "Typst Format",
-    "section": "Typst File (.typ)",
-    "text": "Typst File (.typ)\nThe rendering process produces a native Typst file (.typ) which is then compiled to PDF using the Typst CLI. This intermediate file is then automatically removed. If you want to preserve the .typ file, use the keep-typ option. For example:\n---\ntitle: \"My Document\"\nformat:\n  typst:\n    keep-typ: true\n---\nYou can compile a .typ file to PDF directly using the typst compile command in a terminal. For example:\n\n\nTerminal\n\n$ typst compile article.typ"
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#known-limitations",
-    "href": "docs/prerelease/1.4/typst.html#known-limitations",
-    "title": "Typst Format",
-    "section": "Known Limitations",
-    "text": "Known Limitations\n\nCross references are supported for figures, sections, and equations (but not subfigures, tables ,or theorems as these aren’t yet supported in typst)\nCallouts are not yet supported (they become block quotes with a bold heading)\nFigure panels/layout are not currently supported.\nAdvanced page layout (panel layout, margin layout, etc.) does not work\nVarious other small things might not yet be implemented, please let us know if you see things that could use improvement!"
-  },
-  {
-    "objectID": "docs/prerelease/1.4/typst.html#custom-formats",
-    "href": "docs/prerelease/1.4/typst.html#custom-formats",
-    "title": "Typst Format",
-    "section": "Custom Formats",
-    "text": "Custom Formats\nYou can create highly customized output with Typst by defining a new format based on a custom Typst template. The Typst team has created several useful templates, a few which which have been adapted for use with Quarto as custom formats. These formats include:\n\n\n\n\n\n\n\nFormat\nUsage\n\n\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\n\nThe source code for these formats is available at https://github.com/quarto-ext/typst-templates.\nTo create a new custom Typst format (or package an existing Typst template for use with Quarto) use the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nThen, choose typst as the base format and provide a name for the extension (e.g. letter). A sample Typst format extension will be created based on the code used in the default template that ships with Quarto. It will include the following files which you can edit to implement your custom format:\nTo implement the custom format, edit the following files:\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\nAdditional resources you might find useful when creating custom formats include:\n\nThe official Typst tutorial on Making a Template\nList of third party templates from the Awesome Quarto repo.\n\n\nTemplate Partials\n\n\n\n\n\n\nNote\n\n\n\nThis section covers advanced customization of Typst format output and can be safely ignored unless you have found the method of defining custom Typst formats described above too limited.\n\n\nAbove we describe a method of creating a Typst format based on specifying two template partials (typst-template.typ and typst-show.typ). These partials customize components of the default Typst Pandoc template, but leave some of the core scaffolding including definitions required by Pandoc for its Typst output as well as handling of bibliographies and footnotes (this means that your own custom Typst formats do not need to explicitly handle them).\nIf you would like to fully override the Pandoc template used for rendering Typst, use the template option in your custom format (rather than template-partials) and provide an alternate implementation of the default template. For example, your _extensions.yml might look like this:\n\n\n_extensions.yml\n\n---\ntitle: Typst Custom Format\nauthor: Jane Smith\nversion: \"0.2.0\"\nquarto-required: \">=1.4.11\"\ncontributes:\n  formats:\n    typst:\n      template: template.typ\n      template-partials:\n        - typst-template.typ\n        - typst-show.typ\n---\n\nUse the source codeof the default template as a starting point for your template.typ. Note that you can call all of the template partials provided by Quarto (e.g. biblio.typ() or notes.typ() from within your custom template implementation."
-  },
-  {
     "objectID": "docs/troubleshooting/index.html",
     "href": "docs/troubleshooting/index.html",
     "title": "Troubleshooting",
@@ -471,23 +331,16 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About Quarto",
+    "title": "Acerca de mí",
     "section": "",
-    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software licensed under the GNU GPL v2. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+    "text": "¡Hola! Mi nombre es Edison Achalma y te doy la bienvenida a mi página web personal. Permíteme compartir un poco sobre quién soy y qué me apasiona.\nSoy achalmaedison, estudiante de economía. A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informtica. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.\nEn este sitio web, encontrarás información sobre mis intereses, habilidades y proyectos en los que he trabajado. Además, estaré compartiendo contenido relacionado con la economía, la filosofía, la matemática y la informática.\nMi objetivo principal es brindar información relevante y de calidad sobre temas que me apasionan y en los cuales tengo conocimientos sólidos con el fin de inspirar, educar y generar discusiones constructivas. Me apasiona la economía y la informática y estoy emocionado de poder compartir mi conocimiento y experiencias contigo.\nTe invito a explorar las diferentes secciones de mi página para conocer más sobre mis proyectos, publicaciones y logros. Si tienes alguna pregunta o te gustaría colaborar en algún proyecto, no dudes en contactarme a través de la sección de contacto.\n¡Espero que encuentres este sitio interesante y útil! ¡Gracias por visitar!\nAchalma Edison"
   },
   {
-    "objectID": "about.html#project",
-    "href": "about.html#project",
-    "title": "About Quarto",
-    "section": "Project",
-    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark."
-  },
-  {
-    "objectID": "about.html#contribute",
-    "href": "about.html#contribute",
-    "title": "About Quarto",
-    "section": "Contribute",
-    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/<username>/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests."
+    "objectID": "about.html#contribuir",
+    "href": "about.html#contribuir",
+    "title": "Acerca de mí",
+    "section": "Contribuir",
+    "text": "Contribuir\nPuedes contribuir a Quarto de varias formas:\n\nAbriendo problemas para brindar comentarios y compartir ideas.\nEnviando solicitudes de extracción (PR) para solucionar problemas abiertos.\nEnviando solicitudes de extracción (PR) para sugerir nuevas características (se considera una buena práctica abrir un problema para discusión antes de trabajar en una solicitud de extracción para una nueva característica).\n\nPor favor, ten en cuenta nuestro código de conducta mientras interactúas con otros miembros de la comunidad.\n\nSolicitudes de extracción\n¡Las solicitudes de extracción son muy bienvenidas! Aquí te explicamos cómo contribuir mediante una solicitud de extracción (PR):\n\nHaz un fork del repositorio, clónalo localmente y realiza tus cambios en una nueva rama específica para la solicitud de extracción. Por ejemplo:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/<username>/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nPara cambios significativos (por ejemplo, más que pequeñas correcciones de errores), asegúrate de haber firmado el acuerdo de contribución individual o corporativo según corresponda. Puedes enviar una copia firmada a jj@rstudio.com.\nEnvía la solicitud de extracción. Puedes enviarla como borrador si aún estás trabajando en ella pero deseas recibir comentarios. Siempre es bueno compartir abiertamente que estás trabajando en ello.\n\nHaremos todo lo posible para revisar y aceptar las solicitudes de extracción de manera oportuna."
   },
   {
     "objectID": "bug-reports.html",

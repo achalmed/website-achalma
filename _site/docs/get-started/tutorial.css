@@ -1,126 +1,163 @@
-
-.nav-tabs {
-  border-bottom: none;
+/* Estilos para el bloque de contenido */
+.content-block {
+  padding-top: 20px; /* Espacio superior de 20px */
+  padding-bottom: 10px; /* Espacio inferior de 10px */
+  margin-left: 30px; /* Margen izquierdo de 30px */
+  margin-right: 30px; /* Margen derecho de 30px */
 }
 
-.nav-tabs .nav-link {
-  text-align: center;
-  margin-right: 10px;
-  margin-top: 10px;
-  color: inherit;
-  width: 102px;
-  font-size: 0.8em;
+/* Estilos para pantallas con un ancho mínimo de 900px */
+@media (min-width: 900px) {
+  .content-block {
+    margin-left: 50px; /* Margen izquierdo de 50px */
+    margin-right: 50px; /* Margen derecho de 50px */
+  }
 }
 
-.nav-tabs .nav-link, 
-.nav-tabs .nav-link.active, 
-.nav-tabs .nav-item.show .nav-link {
-  border: 1px solid  rgb(222, 226, 230);
-  border-radius: 10px;
-}
-.nav-tabs .nav-link:hover {
-   border-color: rgb(80,146,221);
-   border-width: 1px;
-} 
-
-.nav-tabs .nav-link.active, 
-.nav-tabs .nav-item.show .nav-link {
-  border-color: rgb(80,146,221);
-  border-width: 2px;
+/* Estilos para pantallas con un ancho mínimo de 1200px */
+@media (min-width: 1200px) {
+  .content-block {
+    max-width: 1100px; /* Ancho máximo de 1100px */
+    margin-left: auto; /* Margen izquierdo automático para centrar */
+    margin-right: auto; /* Margen derecho automático para centrar */
+  }
 }
 
-.nav-tabs .nav-link img {
-  width: 65px;
-  height: 65px;
-  display: block;
-  margin-bottom: 2px;
+/* Estilos para el banner de héroe */
+.hero-banner h1 {
+  color: #39729E;
+  font-size: 2.5rem;
 }
 
-#text-editor-logo {
-  opacity: 0.7;
-}
-
-#choose-your-tool h3 {
-  max-width: 70px;
-  margin-right: 25px;
-  margin-top: 20px;
-  font-weight: 300;
-  font-size: 1.3rem;
-  text-align: right;
-  vertical-align: center;
+.hero-banner .hero-image {
+  position: absolute;
   display: none;
+  height: auto;
 }
 
-@media(min-width: 1320px) {
-#choose-your-tool h3 {
-  display: initial; 
-}
-} 
-
-  
-.step {
-  padding-top: 20px;
-  margin-bottom: 10px;
-  margin-right: 70px;
-}
-.step h2 {
-  border-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.step h4 {
-  margin-top: 0;
-}
-
-.step #download-button {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.step .btn-action {
-  font-size: 1.1em;
-}
-
-.step .btn-action svg {
-  margin-top: 5px;
-}
-
-.step .table>:not(caption)>*>* {
-  border-bottom-width: 0;
-}
-
-.tool {
+.hero-banner .content-block {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  
 }
 
-.tool a[role="button"] {
-  width: 100px;
-  color: rgb(55, 58, 60);
-  text-align: center;
-  border: 1px solid rgb(222, 226, 230);
-  border-radius: 10px;
-  margin-right: 20px;
+.hero-banner .content-block .hero-text {
+  width: 65%;
+}
+
+.hero-banner .content-block .hero-animation {
+  margin-left: 40px;
+  margin-top: 45px;
+  width: 350px;
+  height: 455px;
+}
+
+.hero-banner .content-block .hero-animation video {
+  width: 350px;
+  height: 455px;
+}
+
+
+/* Estilos para pantallas con un ancho mínimo de 1000px */
+@media (min-width: 1000px) {
+  .hero-banner .hero-image {
+    display: initial;
+    width: 270px;
+  }
+}
+
+/* Estilos para pantallas con un ancho mínimo de 1200px */
+@media (min-width: 1200px) {
+  .hero-banner .hero-image {
+    width: 340px;
+  }
+}
+
+/* Estilos para pantallas con un ancho mínimo de 1400px */
+@media (min-width: 1400px) {
+  .hero-banner .hero-image {
+    width: 440px;
+  }
+}
+
+.hero-banner .hero-image p {
   margin-bottom: 0;
-  margin-top: 10px;
-  font-size: 0.85em;
 }
 
-.tool .btn-outline-light:hover {
-  border-color: rgb(80,146,221);
-  background-color: transparent;
+.hero-banner .hero-image-left {
+  left: 0;
+  bottom: 0;
 }
 
-.tool a[role="button"] img {
-  display: block;
-  width: 67px;
-  height: 67px;
-  margin: auto;
-  margin-bottom: 5px;
+.hero-banner .hero-image-right {
+  right: 0;
+  bottom: 0;
 }
 
+.hero-banner .content-block {
+  z-index: 2;
+}
 
+/* Estilos para dispositivos que reducen el movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner .content-block {
+    max-width: 660px;
+  }
+  .hero-banner .content-block .hero-text {
+    width: 100%;
+  }
+  .hero-banner .content-block .hero-animation {
+    display: none;
+  }
+}
 
+/* Estilos para pantallas con un ancho máximo de 1200px */
+@media (max-width: 1200px) {
+  .hero-banner .content-block {
+    max-width: 660px; /* Ancho máximo de 660px para el bloque de contenido */
+  }
+  .hero-banner .content-block .hero-text {
+    width: 100%; /* Ancho del 100% para el texto del héroe */
+  }
+  .hero-banner .content-block .hero-animation {
+    display: none; /* Ocultar la animación del héroe */
+  }
+}
+
+.hero-banner a {
+  text-decoration: none; /* Quitar la decoración de texto en los enlaces */
+}
+
+.hero-banner h3 {
+  margin-top: 1.3rem; /* Margen superior de 1.3rem para los encabezados h3 */
+  margin-bottom: 1.3rem; /* Margen inferior de 1.3rem para los encabezados h3 */
+}
+
+.hero-banner h4 {
+  margin-top: 0; /* Margen superior de 0 para los encabezados h4 */
+}
+
+.hero-banner a[role="button"] {
+  margin-right: 17px; /* Margen derecho de 17px para los enlaces con rol de botón */
+  margin-top: 0.6rem; /* Margen superior de 0.6rem para los enlaces con rol de botón */
+  margin-bottom: 1.6rem; /* Margen inferior de 1.6rem para los enlaces con rol de botón */
+}
+
+.hero-banner #btn-guide {
+  background-color: #959595 !important; /* Color de fondo #959595 importante para el botón con ID btn-guide */
+  border: none; /* Sin borde para el botón con ID btn-guide */
+}
+
+.hero-banner ul {
+  padding-inline-start: 21px; /* Espaciado interno a partir de la posición de inicio de 21px para las listas no ordenadas */
+  font-size: 1.1rem; /* Tamaño de fuente de 1.1rem para las listas no ordenadas */
+}
+
+.hero-banner ul li {
+  padding-bottom: 0.4rem; /* Espaciado inferior de 0.4rem para los elementos de la lista no ordenada */
+}
+
+.alt-background {
+  background-color: rgb(247, 249, 251); /* Color de fondo rgb(247, 249, 251) para el fondo alternativo */
+  border-top: 1px solid #dee2e6; /* Borde superior de 1px sólido #dee2e6 para el fondo alternativo */
+  border-bottom: 1px solid #dee2e6; /* Borde inferior de 1px sólido #dee2e6 para el fondo alternativo */
+}

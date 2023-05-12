@@ -1,6 +1,6 @@
 ---
-title: "Sobre mi"
-subtitle: "cv"
+title: "Hello, I’m Edison Achalma."
+subtitle: "Economista"
 format:
   html:
     include-in-header: 
@@ -9,15 +9,13 @@ page-layout: full
 toc: false
 anchor-sections: false
 editor: source
-aliases:
-  - /docs/getting-started/installation.html
-image: /images/hero_right.png
+resources: 
+  - images/hero_animation.mp4
 ---
 
-# Elmer Edison ACHALMA MENDOZA
-
-**Economía \| Pre Grado**
-
+::: hero-banner
+::: content-block
+::: hero-text
 -   LinkedIn: [linkedin.com/in/achalmaedison](https://chat.openai.com/c/linkedin.com/in/achalmaedison)
 -   GitHub: [github.com/achalmed](https://chat.openai.com/c/github.com/achalmed)
 -   Sitio web: [achalmaedison.netlify.app](https://chat.openai.com/c/achalmaedison.netlify.app)
@@ -29,10 +27,21 @@ Ubicación: Asoc Micaela Bastidas Mzna D1 - N° 06, Jesús Nazareno, Ayacucho - 
 Como estudiante de Economía en mi último ciclo en la Universidad Nacional de San Cristóbal de Huamanga, estoy entusiasmado por la oportunidad de unirme a una entidad privada o pública que me permita aplicar mis conocimientos y habilidades mientras sigo desarrollándome profesionalmente. Con una formación especializada, estoy seguro de que puedo aportar valor a una entidad que comparta mis valores y expectativas.
 
 Soy una persona altamente organizada y motivada, capaz de adaptarme a cualquier entorno y ofrecer siempre lo mejor de mí en cualquier proyecto. Me apasiona trabajar en equipo y fomentar valores como el compañerismo en el lugar de trabajo. Estoy ansioso por contribuir a una organización que valore el crecimiento profesional y la colaboración.
+:::
 
+::: hero-animation
+<video autoplay muted playsinline loop>
+
+<source src="images/hero_animation.mp4" type="video/mp4"/>
+
+</video>
+:::
+:::
+:::
 
 # EXPERIENCIAS
 
+::: {#experiencias .experiencias}
 ## Docente, UNIVERSIDAD AUTÓNOMA DE HUANTA, Huanta
 
 ### Abril 2022 - Julio 2022
@@ -62,9 +71,13 @@ Desempeñé el cargo de Secretario de Archivos en la Oficina de Archivos de la M
 ### Diciembre 2018 - Enero 2018
 
 Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudadana del Congreso de la República del Perú, fortalecí mis capacidades de liderazgo y aprendí sobre el funcionamiento del Congreso de la República, sus comisiones de trabajo y la valoración del trabajo en un espacio de participación y fomento de valores democráticos.
+:::
 
-# Formación Académica
+# 
 
+# FORMACIÓN ACADÉMICA
+
+::: {#Academia .Academia}
 -   Hoy: Economía, UNIVERSIDAD NACIONAL DE SAN CRISTÓBAL DE HUAMANGA, Ayacucho
 
     -   Título esperado: Economista
@@ -78,9 +91,12 @@ Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudada
 -   Diciembre 2013 - Marzo 2009: Secundaria, I.E.P. "SIETE DE JUNIO", C.P. Catalinayocc
 
     -   EBR (Educación Básica Regular)
+    -   
+:::
 
 ## CONOCIMIENTOS INFORMÁTICOS
 
+::: {#informatica .informatica}
 -   Programación
 
     -   Fundamentos de programación
@@ -99,17 +115,22 @@ Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudada
     -   EViews
     -   LáTex
     -   Stata
+:::
 
 ## IDIOMAS
 
--   Español: ○ ○ ○ ○ ○ ∠ Motivado
--   Quechua: ○ ○ ○ ○ ○ ∠ Liderazgo
--   Inglés: ○ ○ ○ ∠ Autónomo ∠ Trabajo en equipo ∠ Adaptación al cambio
+::: {#idiomas .idiomas}
+-   Español: ○ ○ ○ ○ ○
+-   Quechua: ○ ○ ○ ○ ○
+-   Inglés: ○ ○ ○
+:::
 
 ## HABILIDADES DESTACADAS
 
+::: {#habilidades .habilidades}
 -   Liderazgo
 -   Motivado
+:::
 
 ## LOGROS
 

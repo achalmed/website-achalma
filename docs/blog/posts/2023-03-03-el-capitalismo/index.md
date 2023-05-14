@@ -16,7 +16,6 @@ date: "04/29/2023"
 
 
 
-
 En 1987 el mundo tenía 1.5 billones de pobres (con menos de 1 dólar al día) en 2015 son 1.9 billones. El índice internacional de pobreza se ha modificado varias veces en nombre de buenas campañas de relaciones públicas para el world bank.
 
 El índice actual es 1.25 $/día, ajustado a inflación es menor que en ajustes anteriores. Mas allá de los defensores del capitalismo sean las personas más ignorantes y ciegas de su privilegio de la modernidad, nadie puede realmente vivir con 1.25 /día.

@@ -264,7 +264,6 @@ Ve a la página de [configuración](https://github.com/settings/keys) de tu Gi
 
 Luego dale a tu clave un título reconocible y pégala en tu clave pública (id_rsa.pub):
 
-![](GetImage%20(46).png)
 
 Finalmente, prueba la autenticación con:
 

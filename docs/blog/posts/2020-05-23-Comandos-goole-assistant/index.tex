@@ -1,0 +1,1446 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[lmargin=2.54cm,rmargin=2.54cm,tmargin=2.54cm,bmargin=2.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{3}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Aprende a usar Google Assistant Comandos útiles y trucos},
+  pdfauthor={Edison Achalma Mendoza},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Aprende a usar Google Assistant Comandos útiles y trucos}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Maximiza tu experiencia con el asistente virtual de Google}
+\author{Edison Achalma Mendoza}
+\date{5/23/20}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Contenidos}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\listoffigures
+\listoftables
+Basic
+
+Stop playing
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, stop. /~stäp
+\end{itemize}
+
+Pause~~
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, pause.~/~pôz
+\item
+  OK Google, resume.~ /~~rəˈzo͞om
+\end{itemize}
+
+Control the volume
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, increase volume.~ /ɪnˈkris/ \,/ˈvɑl·jum,\,ˈvɑl·jəm/
+\item
+  OK Google, volume up.
+\item
+  OK Google, decrease volume.
+\item
+  OK Google, volume down.
+\end{itemize}
+
+Ask for help
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, help.
+\end{itemize}
+
+Examples of what you can ask
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what can you do?
+\end{itemize}
+
+Ask to repeat the last phrase
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, repeat.
+\end{itemize}
+
+Change Google Assistant's voice
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, change your voice.
+\end{itemize}
+
+You can string two commands together~~
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what is time, and what's the weather?
+\end{itemize}
+
+Bluetooth
+
+Pair a Bluetooth device
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, pair Bluetooth.
+\end{itemize}
+
+Connect to a Bluetooth device
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, connect.
+\item
+  OK Google, connect to my phone.
+\end{itemize}
+
+Disconnecting from a Bluetooth device
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, disconnect.
+\item
+  OK Google, disconnect from my phone.
+\end{itemize}
+
+Calendar
+
+Hear information about agenda / Calendar
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what's my calendar for today?
+\item
+  OK Google, what's my agenda for Friday?
+\item
+  OK Google, calendar for tomorrow.
+\end{itemize}
+
+Add a calendar event
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, add an event to my calendar.
+\item
+  OK Google, add the meeting to my calendar for tomorrow at 5 p.m.
+\end{itemize}
+
+How many days until holiday
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how many days until Christmas?
+\item
+  OK Google, how many days until new year?
+\end{itemize}
+
+Calls and messages
+
+Call a contact
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, call.
+\item
+  OK Google, make a call.
+\item
+  OK Google, call Eugene.
+\item
+  OK Google, call Eugene on speaker.
+\item
+  OK Google, find Eugene phone number.
+\end{itemize}
+
+SMS
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, SMS.
+\item
+  OK Google, text Eugene.
+\item
+  OK Google, text John \textless{}\textgreater.
+\item
+  OK Google, message to John \textless Hello, John\textgreater.
+\end{itemize}
+
+Send a WhatsApp or Viber message
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, message Eugene via WhatsApp.
+\item
+  OK Google, message Eugene via Viber.
+\item
+  OK Google, message Eugene \textless Hello, Eugene\textgreater.
+\item
+  OK Google, WhatsApp John.
+\item
+  OK Google, Viber John.
+\item
+  OK Google, voice message to Eugene.
+\item
+  OK Google, voice message to Eugene via WhatsApp.
+\end{itemize}
+
+Calculator
+
+Arithmetic
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, multiply 15 to 16.
+\item
+  OK Google, what's 15 times 16?
+\item
+  OK Google, what is 15\% of 50?
+\item
+  OK Google, what's the square root of 42?
+\end{itemize}
+
+Unit Converter
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how many meters are in a mile?
+\item
+  OK Google, 10 inches in meters.
+\item
+  OK Google, how many grams are in a kilogram?
+\item
+  OK Google, 5 liters in gallons.
+\item
+  OK Google, how many pounds in a kilo?
+\end{itemize}
+
+Currency exchange rate
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how many dollars is a euro?
+\item
+  OK Google, 15 US dollars in Russian rubles.
+\end{itemize}
+
+Stock Exchange
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, What's the stock price of Apple?
+\item
+  OK Google, how much the bitcoin costs?
+\end{itemize}
+
+Cooking
+
+Named timer
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, set chicken timer to 10 minutes.
+\item
+  OK Google, how much time is left for chicken?
+\end{itemize}
+
+Dish caloricity
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how many calories are in a beefsteak?
+\item
+  OK Google, how many calories are in a glass of Cola?
+\end{itemize}
+
+The nutritional value
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how much sugar in Cola?
+\item
+  OK Google, how much protein in chicken?
+\item
+  OK Google, how much vitamin A in a carrot?
+\end{itemize}
+
+Dictionary
+
+~Word meanings
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, What is the definition of the word ?
+\item
+  OK Google, What does the word mean?
+\item
+  OK Google, find the definition of .
+\end{itemize}
+
+Word spelling
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, How do you spell ?
+\end{itemize}
+
+Easter Eggs
+
+Getting to know Google Assistant
+
+\begin{itemize}
+\item
+  OK Google, what are you?
+\item
+  OK Google, what's your favorite color?
+\item
+  OK Google, how are you?
+\item
+  OK Google, do you have kids?
+\item
+  OK Google, what's your quest ?
+\item
+  OK Google, tell me about your childhood.
+\item
+  OK Google, can you drive?
+\item
+  OK Google, who made you?
+\item
+  OK Google, where do you live?
+\item
+  OK Google, what do you dream about?
+\item
+  OK Google, do you have feelings?
+\end{itemize}
+
+Party tricks
+
+\begin{itemize}
+\item
+  OK Google, I need the poem.
+\item
+  OK Google, tell me a story.
+\item
+  OK Google, roll a dice.
+\item
+  OK Google, flip a coin.
+\item
+  OK Google, tell me a joke.
+\item
+  OK Google, sing a song.
+\item
+  OK Google, beatbox.
+\item
+  OK Google, tell me something I don't know.
+\item
+  OK Google, sing a lullaby.
+\item
+  OK Google, what am I thinking now?
+\item
+  OK Google, surprise me.
+\end{itemize}
+
+Email
+
+Send email
+
+\begin{itemize}
+\item
+  OK Google, email.
+\item
+  OK Google, send an email.
+\item
+  OK Google, send an email to Eugene.
+\item
+  OK Google, send email to Eugene \textgreater.
+\end{itemize}
+
+Geography~~
+
+Country facts
+
+\begin{itemize}
+\item
+  OK Google, how many people live in Russia?
+\item
+  OK Google, what's the capital of Austria?
+\item
+  OK Google, Spain area.
+\end{itemize}
+
+Facts about oceans/seas/rivers/lakes
+
+\begin{itemize}
+\item
+  OK Google, biggest ocean.
+\item
+  OK Google, Depth of the Pacific Ocean
+\item
+  OK Google, the saltiest ocean.
+\item
+  OK Google, the longest river.
+\item
+  OK Google, what's the longest river in Russia?
+\item
+  OK Google, deepest lake.
+\item
+  OK Google, the deepest lake in Canada.
+\end{itemize}
+
+Discover facts about nature
+
+\begin{itemize}
+\item
+  OK Google, why is the sky blue?
+\item
+  OK Google, where does the rain come from?
+\end{itemize}
+
+History
+
+Historical events
+
+\begin{itemize}
+\item
+  OK Google, what happened during enlightenment?
+\item
+  OK Google, when did World War 2 begin?
+\item
+  OK Google, Olympic Games in the USSR.
+\item
+  OK Google, when was the Cold War?
+\end{itemize}
+
+Lists
+
+Add item to the list
+
+\begin{itemize}
+\item
+  OK Google, add bread to my shopping list.
+\item
+  OK Google, add milk and potatoes to my shopping list.
+\end{itemize}
+
+Ask what's on list
+
+\begin{itemize}
+\item
+  OK Google, what's on my shopping list?
+\item
+  OK Google, my shopping list.
+\end{itemize}
+
+Music
+
+Play music on Google Music
+
+\begin{itemize}
+\item
+  OK Google, play some music on Google Play.
+\item
+  OK Google, play jazz music on Google Play.
+\end{itemize}
+
+Play a Google Music playlist
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, play my Trance playlist on Google Play.
+\end{itemize}
+
+Play a song
+
+\begin{itemize}
+\item
+  OK Google, play \textless Can't Stop\textgreater{} on Google Play
+  Music.
+\item
+  OK Google, plays by .
+\end{itemize}
+
+Play an artist
+
+\begin{itemize}
+\item
+  OK Google, play music by Taylor Swift.
+\item
+  OK Google, play One Republic.
+\end{itemize}
+
+Play an album
+
+\begin{itemize}
+\item
+  OK Google, play the last U2 album.
+\item
+  OK Google, play Essential Classical on Google Play.
+\end{itemize}
+
+Control what's playing
+
+\begin{itemize}
+\item
+  OK Google, next.
+\item
+  OK Google, previous.
+\item
+  OK Google, repeat this song.
+\end{itemize}
+
+Fast forward or rewind
+
+\begin{itemize}
+\item
+  OK Google, ski forward 1 minute.
+\item
+  OK Google, skin back 1 minute.
+\end{itemize}
+
+Play music based on genre /mood/activity
+
+\begin{itemize}
+\item
+  OK Google, play some fun music.
+\item
+  OK Google, play music for a workout.
+\item
+  OK Google, play songs for sleeping.
+\end{itemize}
+
+Find the song by part of the lyrics
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, play the song that goes:
+
+  .
+\end{itemize}
+
+Ask what's playing
+
+\begin{itemize}
+\item
+  OK Google, what song is this?
+\item
+  OK Google, what song is playing?
+\item
+  OK Google, what's this album?
+\end{itemize}
+
+Get information
+
+\begin{itemize}
+\item
+  OK Google, who sings the song ?
+\item
+  OK Google, who is in the band ?
+\item
+  OK Google, what year did Linkin Park release
+\end{itemize}
+
+Movies
+
+Today in the cinema
+
+\begin{itemize}
+\item
+  OK Google, what movies are playing tonight?
+\item
+  OK Google, movie schedule.
+\end{itemize}
+
+Movies short summary
+
+\begin{itemize}
+\item
+  OK Google, tell me about the movie ``The Matrix''.
+\item
+  OK Google, «Blade Runner» duration
+\item
+  OK Google, how many seasons in ``Game of Thrones''?
+\end{itemize}
+
+Info about actors
+
+\begin{itemize}
+\item
+  OK Google, who plays in ``Blade Runner''?
+\item
+  OK Google, what is Johnny Depp's latest movie?
+\item
+  OK Google, how many Oscars has Tom Cruise won?
+\item
+  OK Google, who plays Doctor Who?
+\end{itemize}
+
+News
+
+Listen to the latest news
+
+\begin{itemize}
+\item
+  OK Google, tell me the news.
+\item
+  OK Google, news.~~
+\end{itemize}
+
+Listen to the latest news about a specific news category
+
+\begin{itemize}
+\item
+  OK Google, what's the latest in technology?
+\item
+  OK Google, sports news.
+\end{itemize}
+
+Ask what's playing (news)
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what's playing?
+\end{itemize}
+
+Summary of your day, including weather, traffic, and some news.
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what's my Flash Briefing?
+\end{itemize}
+
+Navigation
+
+Routes
+
+\begin{itemize}
+\item
+  OK Google, the pathway to the nearest supermarket.
+\item
+  OK Google, the route to Moscow.
+\end{itemize}
+
+Hear commute conditions
+
+\begin{itemize}
+\item
+  OK Google, what's the traffic?
+\item
+  OK Google, what's the traffic like?
+\end{itemize}
+
+Travel time to home or work
+
+\begin{itemize}
+\item
+  OK Google, how long drive to work?
+\item
+  OK Google, time to home.
+\end{itemize}
+
+Specify destination
+
+\begin{itemize}
+\item
+  OK Google, how long will it take to drive to Red Square?
+\item
+  OK Google, how long will it take to walk to Historical Museum?
+\end{itemize}
+
+Nearby places
+
+\begin{itemize}
+\item
+  OK Google, where's the nearest swimming pool?
+\item
+  OK Google, find me a fast food store.
+\item
+  OK Google, where can I buy a coffee?
+\end{itemize}
+
+People
+
+Facts about celebrities
+
+\begin{itemize}
+\item
+  OK Google, who is James Watson?
+\item
+  OK Google, tell me about Thomas Edison.
+\item
+  OK Google, how tall is Barack Obama?
+\item
+  OK Google, who invented the phone?
+\item
+  OK Google, when was Donald Trump born?
+\item
+  OK Google, who is the president of Croatia?
+\end{itemize}
+
+Physics \& Chemistry~~
+
+Physical
+
+\begin{itemize}
+\item
+  OK Google, gravity on Earth.
+\item
+  OK Google, speed of light.
+\item
+  OK Google, what is gravity?
+\item
+  OK Google, Newton's first law.
+\end{itemize}
+
+Chemical
+
+\begin{itemize}
+\item
+  OK Google, air composition.
+\item
+  OK Google, petroleum composition.
+\item
+  OK Google, the atomic number of oxygen.
+\item
+  OK Google, uranium half-life.
+\end{itemize}
+
+Places
+
+Near places
+
+\begin{itemize}
+\item
+  OK Google, where's the nearest swimming pool?
+\item
+  OK Google, find me a fast food shop.
+\item
+  OK Google, where can I buy a coffee?
+\end{itemize}
+
+Radio
+
+Listen to the radio station by using the Tuneln Radio app
+
+\begin{itemize}
+\item
+  OK Google, play Bloomberg Radio on Tunnel.
+\item
+  OK Google, play BBC on Tunnel.
+\end{itemize}
+
+Listen to radio station by frequency
+
+\begin{itemize}
+\item
+  OK Google, play 103.1 FM.
+\item
+  OK Google, play 106.1 FM Boston.
+\end{itemize}
+
+Reminders
+
+Create a time-based reminder
+
+\begin{itemize}
+\item
+  OK Google, create a reminder.
+\item
+  OK Google, a new reminder.
+\end{itemize}
+
+Create a time-based reminder for a specific action
+
+\begin{itemize}
+\item
+  OK Google, remind me to visit Mom.
+\item
+  OK Google, remind me to buy milk.
+\end{itemize}
+
+Create a time-based reminder at one go
+
+\begin{itemize}
+\item
+  OK Google, remind me to call Grandma tomorrow at 9 p.m.
+\item
+  OK Google, remind me to buy some coffee on Friday at 10p.m.
+\end{itemize}
+
+Check reminders
+
+\begin{itemize}
+\item
+  OK Google, what's in my reminders?
+\item
+  OK Google, what are my reminders for tomorrow?
+\item
+  OK Google, my reminders for tomorrow.
+\item
+  OK Google, check my reminders.
+\item
+  OK Google, check all my reminders.~~
+\end{itemize}
+
+Cancel reminders
+
+\begin{itemize}
+\item
+  OK Google, delete the reminder.
+\item
+  OK Google, remove the reminder.
+\item
+  OK Google, cancel the reminder to buy milk.
+\item
+  OK Google, delete all reminders.
+\end{itemize}
+
+Smart Home
+
+Call on Android-phone
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, where is my phone?
+\end{itemize}
+
+Control the light
+
+\begin{itemize}
+\item
+  OK Google, turn on lights.
+\item
+  OK Google, turn off lights.
+\end{itemize}
+
+Controls the brightness of light
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, set the lights to 50\%.
+\end{itemize}
+
+Control the smart plug
+
+\begin{itemize}
+\item
+  OK Google, turn on my smart plug.
+\item
+  OK Google, turn off my smart plug.
+\end{itemize}
+
+Control the thermostat
+
+\begin{itemize}
+\item
+  OK Google, raise temp 2 degrees.
+\item
+  OK Google, set the temperature to 72.
+\item
+  OK Google, what's the temperature inside?
+\end{itemize}
+
+Sports
+
+Sports news
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what is my Sports Update?
+\end{itemize}
+
+Result of last match
+
+\begin{itemize}
+\item
+  OK Google, what was the score for the Washington Capitals game?
+\item
+  OK Google, last Chicago Bulls game?
+\item
+  OK Google, did Washington Capitals win?
+\end{itemize}
+
+League position
+
+\begin{itemize}
+\item
+  OK Google, how are the Lakers doing?
+\item
+  OK Google, what are the Pittsburgh Penguins standings?
+\end{itemize}
+
+Next match time
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, when Washington Capitals playing next?
+\end{itemize}
+
+The club's roster
+
+\begin{itemize}
+\item
+  OK Google, French national football team lineup.
+\item
+  OK Google, who plays for Real Madrid?
+\item
+  OK Google, Barcelona team lineup.
+\item
+  OK Google, Washington Capitals roster.
+\end{itemize}
+
+Get player info
+
+\begin{itemize}
+\item
+  OK Google, where does Messi play?
+\item
+  OK Google,~ what team does Cristiano Ronaldo play for?
+\item
+  OK Google, Cristiano Ronaldo height.
+\item
+  OK Google, Messi's age.
+\end{itemize}
+
+Timer \& Alarm
+
+Find out time / Date
+
+\begin{itemize}
+\item
+  OK Google, what time is it?
+\item
+  OK Google, what's the date?
+\end{itemize}
+
+Time zones
+
+\begin{itemize}
+\item
+  OK Google, what time is it in Berlin?
+\item
+  OK Google, time in New York?
+\item
+  OK Google, the time difference between Moscow and Washington.
+\end{itemize}
+
+Set a timer
+
+\begin{itemize}
+\item
+  OK Google, set a timer for 1 minute.
+\item
+  OK Google, set timer 5 minutes for paste.
+\end{itemize}
+
+Set a timer with name
+
+\begin{itemize}
+\item
+  OK Google, set timer~ for 5 minutes.
+\item
+  OK Google, set timer for 10 minutes.
+\end{itemize}
+
+Check timers
+
+\begin{itemize}
+\item
+  OK Google, my timers.
+\item
+  OK Google, how much time is left for pasta?
+\end{itemize}
+
+Cancel timers
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, cancel timers.
+\end{itemize}
+
+Set an alarm
+
+\begin{itemize}
+\item
+  OK Google, set an alarm for 8 a.m.
+\item
+  OK Google, set an alarm for weekdays at 7 a.m.
+\item
+  OK Google, snooze.
+\item
+  OK Google, snooze for 10 minutes.~~
+\end{itemize}
+
+Check / Cancel alarms
+
+\begin{itemize}
+\item
+  OK Google, what alarms are set?
+\item
+  OK Google, cancel my alarms.~~
+\end{itemize}
+
+Set a sleep timer
+
+\begin{itemize}
+\item
+  OK Google, set a sleep timer for 30 minutes.
+\item
+  OK Google, stop playing in 30 minutes.
+\end{itemize}
+
+Translations
+
+Translate to Russian
+
+\begin{itemize}
+\item
+  OK Google, how do we say \textgreater{} in Russian?
+\item
+  OK Google, translates to Russian.
+\end{itemize}
+
+Translate to French
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how do we say in French?
+\end{itemize}
+
+Translate to German
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, translate to German.
+\end{itemize}
+
+Translate to Spanish
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, how do we say in English?
+\end{itemize}
+
+Travel
+
+Flights
+
+\begin{itemize}
+\item
+  OK Google, how much is a round-trip flight to New York?
+\item
+  OK Google, how much is a one-way flight to New York cost?
+\item
+  OK Google, how much are flights to St.~Petersburg in weeks?
+\item
+  OK Google, prices for an airline ticket to St.~Petersburg.
+\item
+  OK Google, find me flights to Paris.
+\item
+  OK Google, what is the schedules for flights to New York?
+\item
+  OK Google, find flights with United Airlines?
+\item
+  OK Google, the state of United Airlines 515.
+\item
+  OK Google, when does Delta Flight 315 arrive?
+\item
+  OK Google, when does United Airlines 515 leave?
+\end{itemize}
+
+Find restaurant to try~~
+
+\begin{itemize}
+\item
+  OK Google, what hotels are nearby?
+\item
+  OK Google, hotels in Moscow.~~
+\end{itemize}
+
+Discover place to visit
+
+\begin{itemize}
+\item
+  OK Google, attractions in Saint Petersburg?
+\item
+  OK Google, things to do in St.~Petersburg?
+\end{itemize}
+
+TV
+
+Control TV
+
+\begin{itemize}
+\item
+  OK Google, turn on TV.
+\item
+  OK Google, volume up.
+\item
+  OK Google, volume down.
+\item
+  OK Google, turn off my TV.
+\end{itemize}
+
+Play music
+
+\begin{itemize}
+\item
+  OK Google, play rock music on my TV.
+\item
+  OK Google, play Eminem on my TV.
+\end{itemize}
+
+Play radio
+
+\begin{itemize}
+\item
+  OK Google, play NBC on Tunnel on my TV.
+\item
+  OK Google, play BBC on Tunnel on my TV.
+\end{itemize}
+
+Play recommended video on YouTube
+
+\begin{itemize}
+\item
+  OK Google, play YouTube.
+\item
+  OK Google, open YouTube.
+\item
+  OK Google, next.
+\item
+  OK Google, turn on subtitles
+\end{itemize}
+
+Find the video on YouTube~~
+
+\begin{itemize}
+\item
+  OK Google, play funny cat videos
+\item
+  OK Google, play the latest from Euronews.
+\item
+  OK Google, play yoga videos.
+\end{itemize}
+
+Netflix
+
+\begin{itemize}
+\item
+  OK Google, play Stranger Things on Netflix
+\item
+  OK Google, play Disenchantment episode 2 on Netflix.
+\end{itemize}
+
+News
+
+\begin{itemize}
+\item
+  OK Google, watch the news.
+\item
+  OK Google, watch technology news
+\item
+  OK Google, watch Fox news.
+\item
+  OK Google, next.
+\end{itemize}
+
+Google Photos
+
+\begin{itemize}
+\item
+  OK Google, show me photos on TV.
+\item
+  OK Google, show me photos of San Francisco on TV.
+\item
+  OK Google, show me photos of mountains on TV
+\item
+  OK Google, show me photos of the beach trip 2018 on TV
+\end{itemize}
+
+Security Camera
+
+\begin{itemize}
+\item
+  OK Google, show me front door on my TV
+\item
+  OK Google, what's on my backyard?
+\end{itemize}
+
+Weather~~
+
+\begin{itemize}
+\item
+  OK Google, show me the weather on my TV
+\item
+  OK Google, show me the weather for tomorrow on my TV.
+\end{itemize}
+
+Calculator~~
+
+\begin{itemize}
+\item
+  OK Google, show me Google´s stock price on my TV
+\item
+  OK Google, show me how many feet are in a mile on my TV.
+\end{itemize}
+
+Sport
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, show the score of the Capitals game on my TV
+\end{itemize}
+
+Translate and dictionary
+
+\begin{itemize}
+\item
+  OK Google, show me how to say ``Good morning'' in French on my TV.
+\item
+  OK Google, show me how to say ``How are you?'' in Spanish on my TV.
+\item
+  OK Google, show me the definition of ``perseverance'' on my TV.
+\end{itemize}
+
+Weather
+
+Ask for current weather (for your Google Home device address)
+
+\begin{itemize}
+\tightlist
+\item
+  OK Google, what's the weather?
+\end{itemize}
+
+Weather forecast
+
+\begin{itemize}
+\item
+  OK Google, what's the weather tomorrow?
+\item
+  OK Google, weather on Monday.
+\item
+  OK Google, weather on weekend.
+\item
+  OK Google, what's the weather next week?
+\end{itemize}
+
+Specific questions about weather / forecast
+
+\begin{itemize}
+\item
+  OK Google, is it sunny today?
+\item
+  OK Google, is it going to rain tomorrow?
+\item
+  OK Google, should I take an umbrella?
+\end{itemize}
+
+Weather forecast for a specific location
+
+\begin{itemize}
+\item
+  OK Google, weather tomorrow in Moscow?
+\item
+  OK Google, will it rain tomorrow in St.~Petersburg?
+\end{itemize}
+
+
+\printbibliography
+
+
+\end{document}

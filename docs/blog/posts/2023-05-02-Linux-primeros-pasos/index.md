@@ -20,8 +20,7 @@ draft: false
 
 
 
-LINUX  
-primeros pasos como usuario
+# LINUX primeros pasos como usuario
 
 SISTEMAS OPERATIVOS
 

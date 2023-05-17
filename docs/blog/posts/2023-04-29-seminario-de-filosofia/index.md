@@ -19,7 +19,6 @@ date: "04/29/2023"
 
 
 
-
 ## SEMINARIO DE FILOSOFÍA DEL PRESIDENTE GONZALO (NOTAS 1987)
 
 Textos de referencia:

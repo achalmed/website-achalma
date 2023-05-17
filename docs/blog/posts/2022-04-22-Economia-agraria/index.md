@@ -23,6 +23,8 @@ draft: false
 
 
 
+# Econompia agraria y rural
+
 ## La economía agraria
 
 En sus inicios aplicó los principios de la agricultura van juntamente con la ganadería, que posteriormente es como una disciplina científica que se ocupó muy primitivamente, al convertirse en las necesidades de mejorar los rendimientos y la productividad se ocupó del uso de la tierra y los métodos para optimizar para la toma de decisiones de los productores agropecuarios.
@@ -105,7 +107,7 @@ Influencia del lugar:
 
 Además de incorporar en este análisis, el surgimiento o la aparición y el desempeño de las instituciones agrarias tanto privadas como públicas la economía rural influye en la participación de organismos públicos. que acuden en su apoyo o puede y no colabora con actividad que normalmente ocurre, por ejemplo, con la Dirección Regional Agraria se limita a entregar mangueras a enviar un par de técnicos agropecuarios a ver.
 
-## ¿Qué es economía rural?
+### ¿Qué es economía rural?
 
 La economía rural, tiene un concepto más amplio del sector, porque ya la unidad de análisis ya viene ser el hogar del trabajador en el área rural, como un subconjunto de la actividad económica, pero no deja de analizar la economía agraria, incorpora el comportamiento y cuáles son los ingresos del área rural. Ha empezado a desarrollarse gracias a la heterogeneidad, un comportamiento diferente según su grado de influencia, en el ambiente en el cual se desenvuelven, en la sierra itinerante, costa más sedentaria, porque los ingresos varían, según el tipo de cultivos, si rotan rápidamente, o solo si es una cosecha al año, los padres salen para obtener más ingresos, para su bienestar familiar. De modo que el hogar se fracciona. La economía rural incorpora el comportamiento, el quehacer diario y las fuentes de ingreso de la familia rural. Fuentes de ingreso, tamaño de la tierra. Analizamos al actor principal que es el hombre, la pobreza, la transferencia del área rural al área urbano. Educación del poblador. Análisis de derechos humanos.
 
@@ -149,7 +151,7 @@ Es un acto deliberado controlado de los vegetales y animales, un poco juntando s
 
 Manejo el forestal por eso se amplía su aspecto, porque su campo de acción de amplia **aún es restringido porque no considera el análisis del agricultor, allí ingresa el concepto de economía rural**.
 
-## ¿Qué es la actividad agraria?
+### ¿Qué es la actividad agraria?
 
 En la actividad agraria nos referimos solo al sectorial los productores y consumidores, procesamiento y mercadeo, pero de la actividad agraria, no incluimos a la actividad hombre.
 
@@ -183,7 +185,7 @@ A veces más se le ponen obstáculos al agricultor. O mejor darlo al campesino, 
 
 -   Un director regional, cómo obtiene la información estadística, saca una muestra, solo unas cuantas hectáreas.
 
-## La agricultura y el desarrollo
+# La agricultura y el desarrollo
 
 En la actividad agropecuaria es importante el estudio de los efectos del rápido crecimiento de la población, entendiendo que debe afectar al desarrollo integral del país.
 
@@ -352,7 +354,7 @@ Los valores son muy importantes y ver las condiciones que tenemos como sociedad.
 
 En armonía al que hacer con la población por eso es siempre el factor ideológico del que prima. El progreso de los derechos civiles individuales.
 
-## Crecimiento y desarrollo
+# Crecimiento y desarrollo
 
 * Concepto ideológico que implicaba **metas principalmente en la distribución del ingreso**
 * debe haber **metas en la justicia**
@@ -418,7 +420,7 @@ D=p+g*n+he
 
 Donde d= demanda, p=tasa de crecimiento de la población, n=elasticidad ingreso, g= tasa de crecimiento del ingreso, h= tasa de crecimiento del precio, e= elasticidad precio.
 
-## La agricultura en el desarrollo económico
+# La agricultura en el desarrollo económico
 
 Debido a que el crecimiento económico requiere un incremento más rápido de los sectores: industrial y servicios. **Los planes y las inversiones para el desarrollo nacional se han centrado en los sectores no agrícolas**. **Contribución de la agricultura a otros sectores**:
 
@@ -496,7 +498,7 @@ Se refiere a las instituciones públicas relacionados al sector agrícola; ósea
 
 **Misión:** "diseñar y ejecutar políticas para el desarrollo de negocios agrarios y de la agricultura familiar, a través de la provisión de bienes y servicios públicos de calidad". "diseñar y ejecutar políticas para el desarrollo de negocios agrarios y de la agricultura familiar, a través de la provisión de bienes y servicios públicos de calidad".
 
-## Teoría de la empresa
+# Teoría de la empresa
 
 Elasticidad precio de la demanda (elástica, unitaria, inelástica), Elasticidad ingreso (lujo, normal, inferior), Elasticidad cruzada. (dQx/dPy X Py/Qx)**,** por ejemplo, si consumimos papa y suponiendo que los precios son bastante altos, podemos sustituir por el maíz, la gente puede migrar al consumo de maíz.
 
@@ -506,7 +508,7 @@ El uso de agua debe ser pagado, para hacer mantenimiento, en las partes altas ha
 
 Los pequeños y medianos agricultores en su gran mayoría lo que quieren es todo del aparato estatal, tienen una tendencia de dependencia del estado. La educación que tenemos no está hecha a nuestra realidad, y la enseñanza es estatista, o sea nos enseña todo dependiendo del estado.
 
-## Teoría de la oferta
+# Teoría de la oferta
 
 La agricultura es descentralizada porque consta de varios procesos. La agricultura es oportuna y se tiene que sembrar en el tiempo adecuado. Más del 30% se dedica a esta actividad. Diversas estructuras empresariales (cooperativas, medianos propietarios, etc.), tenemos que homogeneizar estas estructuras. Se desenvuelven en diversas condiciones climatológicas (Perú 48 de las 108 zonas ecológicas). No se puede hacer políticas únicas para el agro sino políticas para cada uno de la población. Depende también de factores no controlables (plagas, clima, etc.)
 
@@ -530,7 +532,7 @@ Si los pobres no quieren que lo ayudemos es imposible que nosotros le saquemos d
 
 Se invierte en Lima y no en Ayacucho por el mercado, además Ayacucho no genera utilidad, no permite obtener utilidad alta, entonces también no hay condiciones para generar inversión.
 
-## La industria y el campesino
+# La industria y el campesino
 
 El capitalismo se desarrolla más en la industria y en la ciudad. El agro se desarrolla en el área rural y es autosuficiente. El campesino antes tenía todo, pero ahora recurre al mercado. El campesino necesita dinero, entonces vende sus productos. La división de trabajo era débil por eso la industria urbana supera a la rural. La máquina sustituye el salario no la mano de obra. El servicio militar hace que los jóvenes migren del campo a la ciudad. La producción artesanal rural es reemplazada por la urbana porque tiene menores costos de producción (ruina de los pobres). Hay lugares en los cuales la producción artesanal es más cómoda que la industrial. La artesanía no es fuente de enriquecimiento. La industria desplaza a la artesanía.
 
@@ -592,7 +594,7 @@ Uno de los indicadores de qué la agricultura es influenciada por el mercado de 
 
 Nuevas prácticas como el vegetarianismo y también los menores ingresos dan pie a buscar sustitutos o dejar de comer carne, teniendo así un incremento en la población en condiciones de pobreza exactamente en 39.8% de pobreza en el área rural y un 26% de pobreza en el área urbana esto dato del INE, significa que a menor consumo de carne mayor pobreza.
 
-## Rotación del cultivo y división del trabajo
+# Rotación del cultivo y división del trabajo
 
 La rotación de cultivos es el resultado de la transformación de la explotación de la agricultura a lo largo de la historia, se podrían incrementar los rendimientos y hacer más productiva la mano de obra haciendo que se roten los cultivos.
 
@@ -633,9 +635,9 @@ Hay qué ver en los ciclos de producción porque caen heladas, problemas climát
 Se tiene que ver los beneficios que le da el sembrío que se cosechó, al sembrío que le sigue, no todas son favorables para la rotación de cultivos, ejemplo de esto es el tomate y la lechuga dónde se ha sembrado tomates crece mejor la lechuga aportando sus beneficios a esta y no ocurriría lo mismo con otros cultivos.
 
 
-## El valor la plusvalía y el beneficio
+# El valor la plusvalía y el beneficio
 
-**El valor**
+## El valor
 
 El valor se basa en la producción mercantil, cuando el producto tiene destino al mercado, el fin principal es el mercado mas no el consumo.
 
@@ -655,17 +657,19 @@ La diferencia entre el pobre y el rico es cada vez mayor, comparando el crecimie
 
 Podemos decir que la mercancía es todo bien o servicio que satisface una determinada necesidad del hombre y el destino de ese producto es el cambio. (características; satisfacer una necesidad, destinado al cambio), entendida esta característica se saca el valor de uso y el valor de cambio.
 
-**valor de uso:**
+### Valor de uso
 
 la satisfacción de las necesidades, la utilidad de las cosas y para qué sirven eso es el valor de uso, las cualidades que permiten a un producto satisfacer necesidades. La herramienta en tu trabajo es un producto que satisface una necesidad indirectamente porque sirve como un medio de producción.
 
-**valor de cambio:** su finalidad es el cambio, se expresa en una relación cuantitativa y su principal característica es el cambio y su destino es la venta, si el producto es solo para consumo entonces no es mercancía.
+### valor de cambio
+su finalidad es el cambio, se expresa en una relación cuantitativa y su principal característica es el cambio y su destino es la venta, si el producto es solo para consumo entonces no es mercancía.
 
 Si tú tienes un carro y lo usas a tu disposición es valor de uso, pero en cambio si tu ofreces un servicio de taxi con ese carro ya sería una mercancía porque estás vendiendo un servicio con ese producto y tendría un valor de cambio.
 
 En síntesis, el valor es el trabajo social de los productores que se expresa y se materializa en la mercancía. Un ejemplo de eso sería un bolígrafo que es resultado de un proceso de producción social ósea no ha trabajado un solo trabajador es resultado del esfuerzo social de la sociedad y materializado por un valor de 2 soles.
 
-**el doble carácter de la mercancía:** conociendo las dos características anteriores se habla de
+### El doble carácter de la mercancía
+Conociendo las dos características anteriores se habla de
 
 * **trabajo concreto:** es el trabajo que genera el valor, es el trabajo físico y mental para generar el producto, es el hecho de que está hecho con el esfuerzo humano por eso tiene valor.
 
@@ -707,7 +711,7 @@ Estado Gasta no invierte
 
 el dinero es la mercancía, que sirve de equivalente universal, cumple la función de dinero en tanto sea de aceptación general, el dinero también expresa la materialización del Trabajo Social por eso es por lo que sube y baja los productos el precio de los productos, es la expresión de la materialización del trabajo socialmente necesario. no es trabajo de individual resultado del esfuerzo individual es el resultado de esfuerzo social de esfuerzo de muchos entonces esa se debe expresar a través de los precios, entonces la expresión se expresa las relaciones de producción entre los productores de las mercancías,
 
-Plus Plusvalía
+### Plus Plusvalía
 
 Valor de trabajo que el obrero crea después de cubrir el valor de su fuerza de trabajo (quitándole todos los costos).
 
@@ -793,7 +797,7 @@ KFIJO: transfiere valor, pero a lo largo de su vida útil.
 
 Cuota de la plusvalía=total plusvalía/capital variable\*100
 
-Tipos de plusvalía:
+###  Tipos de plusvalía:
 
 Absoluta: se amplía la jornada laboral
 
@@ -1024,7 +1028,7 @@ Vamos a ver cómo es lo que se genera la plusvalía y como se puede hacer el cá
 
 -   Si hablamos de beneficio: hablamos del capital circulante y del capital fijo y ahí desaparece el concepto de plusvalía porque ya no estamos relacionándolo solo con el monto invertido de remuneraciones y salarios o vale decir del capital variable.
 
-**Renta diferencial**
+# Renta diferencial
 
 Es como una definición usual como lo llaman muchos en el capitalismo de la ganancia aquí en este caso tenemos que ver el manejo de los beneficios en la actividad agropecuaria no en la fábrica o en las empresas que se desarrollan en la ciudad si no en el área rural. Entonces una de las fuentes que surge de hecho en el capitalismo es el beneficio que debe lograr el capitalista o el empresario luego de tener beneficios normales o puede obtener beneficios extraordinarios o un super beneficio entre los diversos tipos de beneficios, lo que aquí interesa lo relacionado con el campo de la producción en relación con los medios de producción particularmente aplicado en el área rural o sea en el campo agropecuario. En el campo industrial como ya sabemos de qué las empresas que incorporan maquinaria y equipo de última generación en el corto plazo van a obtener beneficios extraordinarios, entonces eso es lo que les empuja a hacer cambios o mejoras permanentes en la tecnología como las fábricas que van a estar en una lucha feroz de incorporar mejoras tecnológicas. Al tratar de obtener beneficios extraordinarios se le llama como renta diferencial, en este caso nos interesa la parte en la que la producción que gracias a los medios de producción especiales o particulares, o ventajas especiales que tiene los tipos de terrenos o ubicación, etc. Produce a un precio de costos menores, y se imponen condiciones de producción dominantes. Aquí el que se va a imponer en el mercado es el precio del peor terreno en el agro, en la industria el que se impone en el mercado es el que produce a los costos más bajos posibles, y cada vez la tendencia de los costos es a la baja para emplear los beneficios y eso hace que quiebren las empresas.
 
@@ -1205,7 +1209,7 @@ para que entren en producción tiene que haber subido los precios lo suficiente 
 
 El pequeño agricultor no produce con alta tecnología, sino ha estado trabajando con insumos tradicionales, el efecto en el pequeño agricultor va a ser mínimo, el efecto va ser en aquellos que van producir sus producto con destino al extranjero, esos son los medianos y grandes,
 
-**Superioridad técnica de la gran explotación**
+# Superioridad técnica de la gran explotación
 
 es hacer un comparativo de la explotación de la pequeña y la grande.
 
@@ -1238,7 +1242,7 @@ En pequeña explotación hay mayor inversión de capital y sin embargo los rendi
 es importante en agrandar la propiedad, capacitar, ya no en la producción porque ellos saben, sino capacitar en manejo de costos, en mercados, como debe llegar y en qué momento
 
 
-## Rentabilidad en la Agricultura
+# Rentabilidad en la Agricultura
 
 Lo vemos considerando incorporar subsidios para el agro solo así se va a ser rentable.
 
@@ -1421,7 +1425,7 @@ PALTA
 
 El fracaso estará al final del túnel, al momento de vender vamos a tener problemas, ahorita vienen a comprar, el esfuerzo de todo un año se fue al agua, no estuvimos capacitados, esperando que llegue el comercio, y que llegue a nuestra puerta, si seguíamos vendiendo a esos volúmenes, vendieron la palta, a 8 soles te pago a 3 soles.
 
-## Los conocimientos en el agro
+# Los conocimientos en el agro
 
 Los conocimientos en el agro son subestimados por los agricultores, el especializado en maíz, trigo, el productor de alfalfa cree saber todo, mira la siembra es así no se debe utilizar esto, es para la babosa, deben fumigar todos. El agricultor dice: que se cree, yo sembrando alfalfa 20 años y me va enseñar.
 
@@ -1510,7 +1514,7 @@ El estado debe de dar mayor apoyo político y financiero a las instituciones ema
 
 Debemos de brindar las condiciones para liberar y apoyar a las entidades emancipadoras como las universidades, eliminar los sobre dimensionamientos en el aparato estatal, eliminar la burocracia, los gastos improductivos.
 
-## Errores básicos en la actividad agropecuaria
+# Errores básicos en la actividad agropecuaria
 
 * **Los agricultores no llevan los registros mínimos** para mejorar la administración de la propiedad (finca)
 
@@ -1573,7 +1577,7 @@ la sociedad en su conjunto no hemos trabajado adecuadamente para adaptar, readap
 
 El pequeño agricultor del minifundio, o sea de ese que tiene 0.5 hectáreas 0.8 hectáreas es el promedio de tamaño de la Tierra en Ayacucho es el principal problema para que el agro no crezca más.
 
-## Agricultura y seguridad alimentaria.
+# Agricultura y seguridad alimentaria.
 
 Control del medio ambiente
 
@@ -1642,7 +1646,7 @@ Mejora de tecnología en el área rural, mayor tecnología mayor sustitución de
 Estado de propiedad
 
 
-## Políticas fiscla y monetaria
+# Políticas fiscla y monetaria
 
 ### Política fiscal
 
@@ -1669,7 +1673,7 @@ la política monetaria pues no influye significativamente viene el corto ni en e
 
 la política monetaria y la política fiscal a hacia sector agrario a la actividad agropecuaria no a la actividad agropecuaria claro adicionalmente a estas dos grandes políticas económicas podemos hablar de política tributaria que es importantísimo porque es parte de la política fiscal por eso que este depende Del Ministerio de Economía y Finanzas rectores del Ministerio de Finanzas aun cuando sea un organismo público descentralizado.
 
-## La reforma agraria
+# La reforma agraria
 
 · La reforma se presenta bajo la coyuntura de transformación de haciendas a empresas asociativas. En 1963 ofreció llevar a cabo una reforma agraria y su eslogan es Peruanicemos el Perú. Sería un conjunto de invasiones Entonces se dio la primera Ley de reforma agraria el 21 de mayo de 1964. Decreto ley 17716 el 24 de junio de 1969.
 
@@ -1697,12 +1701,13 @@ la política monetaria y la política fiscal a hacia sector agrario a la activid
 * Se generó abuso en la etapa de afectación y expropiación
 * Eliminó la eficiencia y productividad
 
-## Etapas de la reforma agraria en el Perú
+# Etapas de la reforma agraria en el Perú
 
 
-### Afectación, expropiación y adjudicación
+## Afectación, expropiación y adjudicación
 
-**AFECTACIÓN. -** Se constituyó en la limitación a la conducción de la propiedad. causales:
+### Afectación
+Se constituyó en la limitación a la conducción de la propiedad. causales:
 
 * conducción indirecta
 * contravención a la legislación laboral
@@ -1722,13 +1727,13 @@ la política monetaria y la política fiscal a hacia sector agrario a la activid
 * con o sin observación se podía impugnar ante la dirección regional
 * absuelta la impugnación se solicitaba el D. supremo correspondiente. Periodo promedio 90 días.
 
-**EXPROPIACIÓN**
+### Expropiación
 
 * El propietario podía recurrir al tribunal Agrario
 * Luego de resuelto se interponía la demanda para pago en efectivo o en bono
 * Se pasaba nombre de los bienes a nombre de la DRA y se pasaba al consejo transitorio de administración o directamente a los campesinos que previamente habían sido calificados.
 
-**ADJUDICACIÓN**
+### Adjudicación
 
 * proceso mediante el cual se calificaba a los beneficiarios
 * Luego se transfiere en propiedad a favor del adjudicatario
@@ -1742,7 +1747,7 @@ la política monetaria y la política fiscal a hacia sector agrario a la activid
 * El coordinador de cada empresa.
 
 
-## Reforma agraria
+# Reforma agraria
 
 Se había dado el fracaso de la reforma agraria, principalmente por el cobro de impuestos adelantados a las cooperativas, por la comercialización integrada con intervención del estado, y porque desfinancio el agro, es decir les quitó las maquinarias y equipos agrícolas. Es así, que en el gobierno de Velasco Alvarado se triplicó la deuda pública.
 
@@ -1763,7 +1768,7 @@ El gobierno de Velasco Alvarado entró en un periodo de politización, agitació
 
 Es así, que la colectivización de la propiedad en el agro, el modelo organizacional empresarial que imprimió la reforma agraria no permitió, no posibilitó que incremente la productividad. El fracaso y el trauma al agricultor, no permite el éxito de este tipo de organizaciones más modernas porque ya han sufrido fracasos y experiencias a sido heredado por las siguientes generaciones, que ya son adversos a cualquier tipo de asociación, es decir, las malas experiencias no nos permiten implementar políticas de apoyo efectivo a los trabajadores.
 
-### Consecuencias positivas de la reforma agraria
+## Consecuencias positivas de la reforma agraria
 
 1.  Mejora del nivel socio económico de los trabajadores, ya que hubo bastante migración del campo a la ciudad y ello favoreció, incentivo la implementación de empresas o fábricas en las ciudades iniciando el movimiento hacia la industrialización del país.
 
@@ -1850,7 +1855,7 @@ En las comunidades campesinas no hay incentivo a la inversión Por qué es propi
 
 
 
-## Retos o acciones estratégicos para el desarrollo del Perú partiendo del derecho de Propiedad y tenencia de la Tierra
+# Retos o acciones estratégicos para el desarrollo del Perú partiendo del derecho de Propiedad y tenencia de la Tierra
 
 Lograr que el proceso de descentralización sea exitoso Osea que los gobiernos regionales alcance niveles de desarrollo rápidamente
 
@@ -1872,7 +1877,7 @@ Se debe titularizar todas las tierras Rurales de modo que puedan servir como par
 
 Con pequeñas explotaciones no se podrá llegar a producir lo que está haciendo un solo propietario con 10 hectáreas, por lo que los rendimientos se van a reducir, la productividad la competitividad se va a reducir. Este es el gran problema del agro.
 
-## Las oportunidades de inversión
+# Las oportunidades de inversión
 
 nos referimos A qué debemos tener en consideración que la economía que se desarrolla en el Perú y el mundo debe estar orientado al mercado mundial para tener acceso a fondos o recursos como conocimientos y tecnologías.
 

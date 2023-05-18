@@ -30,6 +30,31 @@ format:
       caption: none
     include-after-body:
       - ../signup.html
+  pdf:
+    documentclass: article
+    papersize: a4
+    language: es
+    margin-left: 2.54cm
+    margin-right: 2.54cm
+    margin-bottom: 2.54cm
+    margin-top: 2.54cm
+    toc: true
+    toc-depth: 3
+    toc-title: Contenidos
+    lof: true
+    lot: true
+    number-sections: true
+    number-depth: 3
+    highlight-style: github
+    colorlinks: true
+    cite-method: biblatex
+    link-citation: true
+    link-bibliography: true
+    keep-tex: true
+    cap-location: top
+    fig-cap-location: top
+    tbl-cap-location: top
+    pdf-engine: pdflatex
 execute:
   keep-md: true
 search: false

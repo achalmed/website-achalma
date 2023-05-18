@@ -26,7 +26,6 @@ draft: false
 
 
 
-
 # **¿Qué hacer?**
 
 ## **¿Reformar la gestión pública?**

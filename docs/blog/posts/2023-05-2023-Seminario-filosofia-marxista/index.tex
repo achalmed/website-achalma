@@ -135,8 +135,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Comandos útiles de Blogdown para crear sitios web con R},
-  pdfauthor={Edison Achalma Mendoza},
+  pdftitle={Seminario de filosofía},
+  pdfauthor={Achalma Mendoza Elmer Edison},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -144,21 +144,20 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Comandos útiles de Blogdown para crear sitios web con R}
+\title{Seminario de filosofía\thanks{gracias}}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Una guía completa para comenzar a utilizar Blogdown en
-RStudio}
-\author{Edison Achalma Mendoza}
-\date{7/14/21}
+\subtitle{Notas sobre filosofía marxista}
+\author{Achalma Mendoza Elmer Edison}
+\date{5/16/23}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, breakable, sharp corners, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Contenidos}
 {
@@ -168,58 +167,7 @@ RStudio}
 }
 \listoffigures
 \listoftables
-Blogdown es un paquete de R que permite crear sitios web utilizando R
-Markdown y Hugo. Algunos de los comandos más comunes de Blogdown son:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \texttt{blogdown::new\_site()}: Crea un nuevo sitio web de Blogdown en
-  el directorio actual.
-\item
-  \texttt{blogdown::serve\_site()}: Inicia el servidor local y visualiza
-  el sitio web en el navegador web.
-\item
-  \texttt{blogdown::stop\_server()}: Detiene el servidor local que está
-  ejecutando el sitio web.
-\item
-  \texttt{blogdown::new\_post()}: Crea un nuevo archivo de publicación
-  en el directorio \texttt{content/post}.
-\item
-  \texttt{blogdown::build\_site()}: Compila y genera el sitio web
-  estático en el directorio \texttt{public}.
-\item
-  \texttt{blogdown::clean()}: Limpia el directorio \texttt{public}
-  eliminando todos los archivos generados anteriormente.
-\item
-  \texttt{blogdown::check\_site()}: Verifica si hay errores en el sitio
-  web antes de construirlo.
-\item
-  \texttt{blogdown::update\_hugo()}: Actualiza la versión de Hugo
-  utilizada por el sitio web.
-\item
-  \texttt{blogdown::update\_dependencies()}: Actualiza todas las
-  dependencias de Blogdown.
-\item
-  \texttt{blogdown::check\_new\_version()}: Verifica si hay una nueva
-  versión de Blogdown disponible.
-\item
-  \texttt{blogdown::hugo\_cmd()}: Ejecuta un comando de Hugo
-  personalizado en el sitio web.
-\item
-  \texttt{blogdown::edit\_theme()}: Abre el directorio del tema
-  utilizado por el sitio web para editarlo.
-\item
-  \texttt{blogdown::install\_theme()}: Instala un tema de Hugo adicional
-  en el sitio web.
-\item
-  \texttt{blogdown::update\_academic()}: Actualiza el tema Académico
-  utilizado por el sitio web.
-\item
-  \texttt{blogdown::update\_netlify()}: Actualiza la configuración de
-  Netlify para implementar el sitio web.
-\end{enumerate}
+hola
 
 
 \printbibliography

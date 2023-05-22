@@ -161,3 +161,25 @@
   border-top: 1px solid #dee2e6; /* Borde superior de 1px sólido #dee2e6 para el fondo alternativo */
   border-bottom: 1px solid #dee2e6; /* Borde inferior de 1px sólido #dee2e6 para el fondo alternativo */
 }
+
+
+h1 {
+  color: rgb(206, 23, 23);
+}
+
+h2 {
+  color: #39729E;
+}
+
+h3 {
+  color: aquamarine;
+}
+
+p {
+  color: #27965e;
+}
+
+
+* {
+  color: #000000;
+}

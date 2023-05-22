@@ -164,7 +164,7 @@
 
 
 h1 {
-  color: rgb(206, 23, 23);
+  color: #477d75;
 }
 
 h2 {
@@ -175,10 +175,39 @@ h3 {
   color: aquamarine;
 }
 
-p {
+/*Experiencias*/
+
+.experiencias {
+  /* border: 5px black solid; */
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+div.experiencia div.experiencia_date p {
   color: #27965e;
 }
 
+/*
+BORDES: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden*/
+
+/*Formación académica*/
+
+div.educacion div.educacion_date p {
+  color: #27965e;
+}
+
+div.educacion div.educacion_titulo p {
+  color: #39729E;
+}
+
+div.educacion div.educacion_grado p {
+  color: aquamarine;
+}
+
+
+/*Selector universal*/
 
 * {
   color: #000000;

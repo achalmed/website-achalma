@@ -1,4 +1,6 @@
 
+/*Presentación*/
+
 .content-block {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -22,15 +24,20 @@
 }
 }
 
+/*Fondo de pantalla principal*/
 .hero-banner {
   position: relative;
-  background-color: rgb(240,245,249);
+  background-color: rgb(249, 240, 246);
+  background-image: url('images/avatarachalma.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
 }
 
+/*Título principal Achalma Edison*/
 .hero-banner h1 {
-  color: #39729E;
+  color: #477d75;
   font-size: 2.5rem;
 }
 
@@ -146,9 +153,9 @@
   margin-bottom: 1.6rem;
 }
 
-
+/*Botón de cursos*/
 .hero-banner #btn-guide {
-  background-color: #959595 !important;
+  background-color: #477d75 !important;
   border: none;
 }
 
@@ -165,11 +172,8 @@
 }
 
 
-.alt-background {
-  background-color: rgb(247,249,251);
-  border-top: 1px solid #dee2e6;
-  border-bottom: 1px solid #dee2e6;
-}
+
+/*Bienvenida*/
 
 .hello-quarto {
   padding-bottom: 1rem;
@@ -250,16 +254,6 @@
 .feature p:first-of-type {
   margin-bottom: 0.2rem;
   color: rgb(84, 85, 85);
-}
-
-.get-started {
-   text-align: center;
-   padding-bottom: 2rem;
-}
-
-.get-started h3 {
-   margin-top: 1rem;
-   margin-bottom: 2rem;
 }
 
 nav.page-navigation {

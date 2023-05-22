@@ -228,9 +228,10 @@ iframe.reveal-demo {
   column-gap: 10px;
 }
 
+/*Botón de sobre mi*/
 .btn-action-primary {
   color: white;
-  background-color: #447099 !important;
+  background-color: #477d75 !important;
 }
 
 .btn-action-primary:hover {
@@ -335,5 +336,5 @@ iframe.reveal-demo {
 }
 
 .illustration {
-  border: 1px solid #dee2e6;
+  border: 1px solid #e5dee6;
 }

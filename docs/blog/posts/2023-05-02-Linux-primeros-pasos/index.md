@@ -12,7 +12,7 @@ tags:
   - Principiantes
   - Código Abierto
   - Comandos
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "05/02/2023"
 date-modified: "today"
 draft: false

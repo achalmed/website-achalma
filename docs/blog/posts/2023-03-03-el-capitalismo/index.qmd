@@ -10,7 +10,7 @@ tags:
   - Capitalismo
   - Desigualdad
   - Pobreza
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "04/29/2023"
 ---
 

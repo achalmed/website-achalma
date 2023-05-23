@@ -20,7 +20,7 @@ tags:
   - Serenidad
   - Enfocado en resultados
   - Sabe delegar
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "05/11/2023"
 ---
 

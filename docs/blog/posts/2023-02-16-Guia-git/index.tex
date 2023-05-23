@@ -1,0 +1,1914 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a2paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[lmargin=0.54cm,rmargin=0.54cm,tmargin=0.54cm,bmargin=0.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{1}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Guía de Git Cómo trabajar en equipo en proyectos de desarrollo de software},
+  pdfauthor={Achalma Mendoza Elmer Edison},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Guía de Git Cómo trabajar en equipo en proyectos de desarrollo de
+software}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Aprende a usar Git para controlar versiones, colaborar con
+otros desarrolladores y mantener tu código organizado.guia completa}
+\author{Achalma Mendoza Elmer Edison}
+\date{2/16/23}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, enhanced, frame hidden, breakable, interior hidden]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Contenidos}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\listoffigures
+\listoftables
+Achalma Edison. ¿Necesitas aprender algunos comandos
+de~\href{https://git-scm.com/}{GIT}~básicos? Has venido al lugar
+correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos
+que puedes utilizar como referencia diaria.
+
+¡Empecemos!
+
+\hypertarget{introducciuxf3n}{%
+\section{Introducción}\label{introducciuxf3n}}
+
+Los sistemas de control de versiones como Git son imprescindibles para
+las prácticas recomendadas del desarrollo de software moderno. El
+control de versiones le permite realizar un seguimiento de su software a
+nivel de fuente. Puede rastrear cambios, volver a etapas anteriores y
+producir ramificaciones para crear versiones alternativas de archivos y
+directorios.
+
+Los archivos de muchos proyectos de software se mantienen en
+repositorios de Git y las plataformas como GitHub, GitLab y Bitbucket
+facilitan el intercambio y la colaboración en proyectos de desarrollo de
+software.
+
+En esta guía, mostraremos cómo instalar y configurar Git en un servidor
+de Ubuntu 20.04. Abordaremos la instalación del software de dos formas
+diferentes: a través
+del~\href{https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04\#installing-git-with-default-packages}{administrador
+de paquetes integrado}~y a través de
+la~\href{https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04\#installing-git-from-source}{fuente}.
+Cada uno de estos enfoques ofrece sus propios beneficios, dependiendo de
+sus necesidades específicas.
+
+\hypertarget{entendiendo-cuxf3mo-funciona-git}{%
+\section{Entendiendo cómo funciona
+GIT}\label{entendiendo-cuxf3mo-funciona-git}}
+
+GIT es el SCV (sistema de control de versiones) de código
+abierto~\href{https://www.g2.com/categories/version-control-systems?utf8=\%E2\%9C\%93\&order=g2_score}{más
+utilizado}~que te permite rastrear los cambios realizados en los
+archivos. Las empresas y los programadores suelen utilizar el GIT para
+colaborar en el desarrollo de software y aplicaciones.
+
+Un proyecto GIT consta de tres secciones principales:~\textbf{el
+directorio de trabajo,~el área de preparación~y~el directorio git.}
+
+El directorio de trabajo es donde se agregan, borran y editan los
+archivos. Luego, los cambios son preparados (indexados) en el área de
+preparación. Después de que confirmes tus cambios, la instantánea de los
+cambios se guardará en el directorio git.
+
+Todo el mundo puede usar GIT ya que está disponible
+para~\href{https://git-scm.com/book/es/v2}{Linux},~\href{https://gitforwindows.org/}{Windows},~\href{https://git-scm.com/download/mac}{Mac}~y~\href{https://www.opencsw.org/packages/git/}{Solaris}.
+El software puede tener una fuerte curva de aprendizaje, pero hay
+muchos~\href{https://www.hostinger.es/tutoriales/instalar-git-en-distintos-sistemas-operativos}{tutoriales}~disponibles
+para ayudarte.
+
+\hypertarget{comandos-de-git-buxe1sicos}{%
+\section{Comandos de GIT básicos}\label{comandos-de-git-buxe1sicos}}
+
+Aquí hay algunos comandos básicos de GIT que debes conocer:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{git\ init}: Inicializa un nuevo repositorio de Git en la
+  carpeta actual.
+\item
+  \texttt{git\ clone\ {[}url{]}}: Clona un repositorio existente a la
+  carpeta actual.
+\item
+  \texttt{git\ add\ {[}file{]}}: Agrega un archivo al área de stage
+  (preparación) para ser incluido en el próximo commit.
+\item
+  \texttt{git\ commit\ -m\ "{[}message{]}"}: Realiza un commit (guarda
+  un punto de referencia) con un mensaje describiendo los cambios
+  realizados.
+\item
+  \texttt{git\ status}: Muestra el estado actual del repositorio,
+  incluyendo los archivos modificados y los que están pendientes de
+  commit.
+\item
+  \texttt{git\ log}: Muestra un historial de todos los commits
+  realizados en el repositorio.
+\item
+  \texttt{git\ diff}: Muestra las diferencias entre los cambios
+  realizados y el último commit.
+\item
+  \texttt{git\ branch}: Muestra una lista de todas las ramas existentes
+  en el repositorio.
+\item
+  \texttt{git\ checkout\ {[}branch{]}}: Cambia a una rama específica.
+\item
+  \texttt{git\ merge\ {[}branch{]}}: Combina los cambios de una rama
+  específica con la rama actual.
+\item
+  \texttt{git\ config\ -\/-global\ user.email\ "achalmaedison@outlook.com"}
+\item
+  \texttt{git\ config\ -\/-global\ user.name\ "achalmed"}
+\end{enumerate}
+
+Estos son solo algunos de los comandos básicos de Git, hay muchos otros
+comandos avanzados disponibles para realizar tareas más complejas como
+trabajar con ramas remotas y manejar conflictos.
+
+\hypertarget{instalar-y-configurar-git-en-ubuntu-20.04}{%
+\section{Instalar y Configurar Git en Ubuntu
+20.04}\label{instalar-y-configurar-git-en-ubuntu-20.04}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.digitalocean.com/community/tags/git}{Git}
+\item
+  \href{https://www.digitalocean.com/community/tags/open-source}{Open
+  Source}
+\item
+  \href{https://www.digitalocean.com/community/tags/ubuntu}{Ubuntu}
+\end{itemize}
+
+By~\href{https://www.digitalocean.com/community/users/ltagliaferri}{Lisa
+Tagliaferri}
+
+\hypertarget{instalaciuxf3n-de-git-con-paquetes-predeterminados}{%
+\subsection{Instalación de Git con paquetes
+predeterminados}\label{instalaciuxf3n-de-git-con-paquetes-predeterminados}}
+
+La opción de instalar con paquetes predeterminados es recomendable si
+quiere activar y ejecutar con Git rápidamente, si prefiere una versión
+estable ampliamente utilizada o si no busca las funciones más recientes
+disponibles. Si busca la versión más reciente, debería ir directamente a
+la sección sobre
+la~\href{https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04\#installing-git-from-source}{instalación
+desde la fuente}.
+
+Es probable que Git ya esté instalado en el servidor Ubuntu 20.04. Puede
+confirmar que ese es el caso de su servidor con el siguiente comando:
+
+\texttt{git\ -\/-version}
+
+Si obtiene un resultado similar al siguiente, significa que Git ya está
+instalado.
+
+Output git version 2.25.1~~
+
+De ser así, puede pasar a
+la~\href{https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04\#setting-up-git}{configuración
+de Git}, o bien si necesita una versión más actualizada, puede leer la
+siguiente sección
+sobre~\href{https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04\#installing-git-from-source}{cómo
+instalar desde la fuente}.
+
+Sin embargo, si no obtuvo como resultado un número de versión de Git,
+puede instalarlo con el administrador de paquetes predeterminado APT de
+Ubuntu.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Abre una terminal.
+\item
+  Ejecuta el siguiente comando para actualizar la lista de paquetes
+  disponibles: \texttt{sudo\ apt\ update}
+\item
+  Instala Git usando el siguiente comando:
+  \texttt{sudo\ apt\ install\ git}
+\item
+  Verifica la instalación de Git ejecutando el comando
+  \texttt{git\ -\/-version}
+\end{enumerate}
+
+Una vez que Git esté instalado, puedes configurarlo para que se adapte a
+tus necesidades. Para configurar Git en Ubuntu, sigue estos pasos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Establece tu nombre de usuario en Git utilizando el comando
+  \texttt{git\ config\ -\/-global\ user.name\ "Your\ Name"}
+\item
+  Establece tu dirección de correo electrónico en Git utilizando el
+  comando
+  \texttt{git\ config\ -\/-global\ user.email\ "your.email@example.com"}
+\item
+  Para verificar la configuración actual de Git, utiliza el comando
+  \texttt{git\ config\ -\/-list}
+\end{enumerate}
+
+Es recomendable usar un editor de texto para escribir los mensajes de
+commit, para esto se puede configurar con el siguiente comando
+\texttt{git\ config\ -\/-global\ core.editor\ "nano"} o
+\texttt{git\ config\ -\/-global\ core.editor\ "vi"} o el editor de tu
+preferencia.
+
+\hypertarget{instalaciuxf3n-de-git-desde-la-fuente}{%
+\subsection{Instalación de Git desde la
+fuente}\label{instalaciuxf3n-de-git-desde-la-fuente}}
+
+Si busca un método más flexible para instalar Git, puede optar por
+compilar el software desde la fuente, lo cual explicaremos en esta
+sección. Esto toma más tiempo y no se mantendrá en su administrador de
+paquetes, pero le permitirá descargar la versión más reciente y le
+brindará mayor control sobre las opciones que incluya si quiere
+personalizarlo.
+
+Verifique la versión de Git que está instalada actualmente en el
+servidor: \texttt{git\ -\/-version}
+
+Si Git está instalado, obtendrá un resultado similar al siguiente:
+
+Output git version 2.25.1
+
+Antes de comenzar, debe instalar el software necesario para Git. Todo se
+encuentra disponible en los repositorios predeterminados, de modo que
+podemos actualizar nuestro índice local de paquetes y luego instalar los
+paquetes pertinentes. \texttt{sudo\ apt\ update}~~
+
+\texttt{sudo\ apt\ install\ libz-dev\ libssl-dev\ libcurl4-gnutls-dev\ libexpat1-dev\ gettext\ cmake\ gcc}~~
+
+Tras haber instalado las dependencias necesarias, cree un directorio
+temporal y vaya a él. Aquí es donde descargaremos nuestro tarball de
+Git. \texttt{mkdir\ tmp}
+
+\texttt{cd\ /tmp}
+
+Desde el~\href{https://git-scm.com/}{sitio web del proyecto Git},
+podemos navegar a la lista de tarball disponible
+en~\url{https://mirrors.edge.kernel.org/pub/software/scm/git/}~y
+descargar la versión que quiera utilizar. En el momento de escribir este
+artículo, la versión más reciente es 2.26.2, así que descargaremos esa
+versión para nuestra demostración. Utilizaremos curl y enviaremos el
+archivo que descarguemos a~git.tar.gz.
+\texttt{curl\ -o\ git.tar.gz\ https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz}~~
+
+Descomprima el archivo tarball:
+
+\texttt{tar\ -zxf\ git.tar.gz}
+
+A continuación, vaya al nuevo directorio de Git: \texttt{cd\ git-*}~~
+
+Ahora, podrá crear el paquete e instalarlo escribiendo estos dos
+comandos: \texttt{make\ prefix=/usr/local\ all}
+
+\texttt{sudo\ make\ prefix=/usr/local\ install}~~
+
+Ahora, sustituya el proceso de shell para que se utilice la versión de
+Git que acabamos de instalar: \texttt{exec\ bash}~~
+
+Una vez completado esto, puede estar seguro de que su instalación se
+realizó correctamente comprobando la versión. \texttt{git\ -\/-version}
+
+Output
+
+git version 2.26.2
+
+Con Git instalado correctamente, ahora puede finalizar su configuración.
+
+\hypertarget{configuraciuxf3n-de-git}{%
+\subsection{Configuración de Git}\label{configuraciuxf3n-de-git}}
+
+Una vez que esté satisfecho con la versión de Git, debería configurar
+Git de modo que los mensajes de confirmación que genere contengan la
+información correcta y lo respalden a medida que compile su proyecto de
+software.
+
+Esta configuración es posible si aplicamos el comando~git config.
+Específicamente, debemos proporcionar nuestro nombre y nuestra dirección
+de correo electrónico debido a que Git inserta esta información en cada
+confirmación que hacemos. Podemos añadir esta información escribiendo lo
+siguiente: \texttt{git\ config\ -\/-global\ user.name\ "Your\ Name"}
+
+For example:~\texttt{git\ config\ -\/-global\ user.name\ "achalmed"}
+
+\texttt{git\ config\ -\/-global\ user.email\ "youremail@domain.com"}
+
+\texttt{git\ config\ -\/-global\ user.email\ "achalmaedison@outlook.com"}
+
+Podemos ver todos los elementos de configuración creados escribiendo lo
+siguiente: \texttt{git\ config\ -\/-list}
+
+Output
+
+user.name=Your Name user.email=youremail@domain.com \ldots{}
+
+La información que ingresa se almacena en el archivo de configuración de
+Git. Tendrá la opción de editarlo manualmente con el editor de texto que
+prefiera (en este tutorial utilizaremos nano) como se muestra a
+continuación: \texttt{nano\ \textasciitilde{}/.gitconfig}~~
+
+\textasciitilde/.gitconfig contents
+
+{[}user{]} name = Your Name email =~youremail@domain.com
+
+Para salir del editor de texto pulse~CTRL~y~X, luego~Y~y, a
+continuación,~ENTER.
+
+Existen muchas otras opciones que puede configurar, pero estas son las
+dos esenciales que se necesitan. Si omite este paso, probablemente verá
+mensajes de advertencia cuando realice una confirmación con Git. Esto
+implica un mayor trabajo para usted, pues tendrá que revisar las
+confirmaciones que haya realizado con la información corregida.
+
+\hypertarget{conclusiuxf3n}{%
+\subsection{Conclusión}\label{conclusiuxf3n}}
+
+De esta manera, deberá tener Git instalado y listo para utilizarlo en su
+sistema.
+
+\hypertarget{cuxf3mo-obtener-y-configurar-tus-claves-ssh-para-git-y-github}{%
+\section{Cómo Obtener y Configurar tus Claves SSH para Git y
+GitHub}\label{cuxf3mo-obtener-y-configurar-tus-claves-ssh-para-git-y-github}}
+
+Recortado
+de:~\url{https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/}
+
+Si usas GitHub sin configurar una clave SSH, realmente te estás
+perdiendo de algo genial. Piensa en todo el tiempo que pasaste
+introduciendo tu correo electrónico y tu contraseña en la consola cada
+vez que haces un commit podrías haberlo pasado programando.
+
+Bueno, ya no más. Aquí hay una guía rápida para generar y configurar una
+clave SSH con GitHub para que nunca más tengas que autentificarte a la
+antigua.
+
+\hypertarget{comprobar-si-existe-una-clave-ssh}{%
+\subsection{Comprobar si existe una clave
+SSH}\label{comprobar-si-existe-una-clave-ssh}}
+
+Primero, comprueba si ya has generado las claves SSH para tu máquina.
+Abre una terminal e introduce el siguiente comando:
+
+\texttt{ls\ -al\ \textasciitilde{}/.ssh}
+
+Si ya has generado las claves SSH, deberías ver una salida similar a
+esta:
+
+-rw-------~ 1 usuario usuario~ 1766 Jul~ 7~ 2018 id\_rsa -rw-r--r--~ 1
+usuario usuario~~ 414 Jul~ 7~ 2018 id\_rsa.pub -rw-------~ 1 usuario
+usuario 12892 Feb~ 5 18:39 known\_hosts
+
+Si tus claves ya existen, pasa a la sección~\textbf{Copia tu clave
+pública de SSH}~abajo.
+
+Si no ves ninguna salida o ese directorio no existe (obtienes un mensaje
+de~No such file or directory), entonces ejecuta:
+
+\texttt{mkdir\ \$HOME/.ssh}
+
+Luego genera un nuevo conjunto de claves con:
+
+\texttt{ssh-keygen\ -t\ rsa\ -b\ 4096\ -C\ achalmaedison@outlook.com}
+
+**Enter para crear el archivo con código con el nombre default, luego
+pide poner una clave para el uso del archivo for example 345320
+
+\emph{Ahora comprueba que tus claves existen con el comando~ls -al
+\textasciitilde/.ssh~y asegúrate de que la salida es similar a la
+anterior.}
+
+\textbf{Nota:}~Las claves SSH siempre se generan como un par de claves
+públicas (id\_rsa.pub) y privadas (id\_rsa). Es extremadamente
+importante que~\textbf{nunca reveles tu clave privada,} y
+que~\textbf{sólo uses tu clave pública}~para cosas como la autenticación
+de GitHub. Puedes leer más sobre cómo funcionan los pares de claves SSH
+/
+RSA~\href{https://www.freecodecamp.org/news/a-top-down-introduction-to-ssh-965f4fadd32e/}{aquí}.
+
+\hypertarget{agrega-tu-clave-ssh-a-ssh-agent}{%
+\subsection{Agrega tu clave SSH a
+ssh-agent}\label{agrega-tu-clave-ssh-a-ssh-agent}}
+
+ssh-agent~es un programa que se inicia cuando te conectas y almacena tus
+claves privadas. Para que funciones correctamente, debe estar
+ejecutándose y tener una copia de tu clave privada.
+
+Primero, asegúrate de que~ssh-agent~se está ejecutando con:
+
+\texttt{eval\ "\$(ssh-agent\ -s)"}~\# para Mac y Linux
+
+o:
+
+\texttt{eval\ ssh-agent\ -s}
+
+\texttt{ssh-agent\ -s} \# para Windows
+
+Entonces, agrega tu clave privada a~ssh-agent~con:
+
+\texttt{ssh-add\ \textasciitilde{}/.ssh/id\_rsa}
+
+\hypertarget{copia-tu-clave-puxfablica-de-ssh}{%
+\subsection{Copia tu clave pública de
+SSH}\label{copia-tu-clave-puxfablica-de-ssh}}
+
+A continuación, tienes que copiar tu clave pública de SSH en el
+portapapeles.
+
+Para Linux o Mac, imprime el contenido de tu clave pública en la consola
+con:
+
+\texttt{cat\ \textasciitilde{}/.ssh/id\_rsa.pub}~\# Linux
+
+Sale un conjunto números y letras, si al final está el correo que
+registro antes debe borrar para pegar en GitHub
+
+Luego resalta y copia la salida.
+
+O para Windows, simplemente ejecuta:
+
+\texttt{clip\ \textless{}\ \textasciitilde{}/.ssh/id\_rsa.pub} \#
+Windows
+
+\hypertarget{agrega-tu-clave-ssh-puxfablica-a-github}{%
+\subsection{Agrega tu clave SSH pública a
+GitHub}\label{agrega-tu-clave-ssh-puxfablica-a-github}}
+
+Ve a la página
+de~\href{https://github.com/settings/keys}{configuración}~de tu GitHub y
+haz clic en el botón ``New SSH key'':
+
+Luego dale a tu clave un título reconocible y pégala en tu clave pública
+(id\_rsa.pub):
+
+Finalmente, prueba la autenticación con:
+
+\texttt{ssh\ -T~git@github.com}
+
+Si has seguido todos estos pasos correctamente, deberías ver este
+mensaje:
+
+Hi tu\_usuario! You've successfully authenticated, but GitHub does not
+provide shell access.~~
+
+or
+
+Warning: Permanently added the ECDSA host key for IP address
+`140.82.114.3' to the list of known hosts.
+
+Hi achalmed! You've successfully authenticated, but GitHub does not
+provide shell access.
+
+\hypertarget{muxe1s-informaciuxf3n-sobre-ssh}{%
+\subsection{Más información sobre
+SSH}\label{muxe1s-informaciuxf3n-sobre-ssh}}
+
+Traducido del artículo
+-~\href{https://www.freecodecamp.org/news/git-ssh-how-to/}{How to Get
+and Configure Your Git and GitHub SSH Keys}
+
+VER DCUMENTACIO~\url{https://cli.github.com/}~~
+
+\hypertarget{cli-de-github}{%
+\subsection{CLI de github}\label{cli-de-github}}
+
+PRIMERO INSTALAR~Installing gh on Linux~~
+
+\texttt{gh\ auth\ login}
+
+\texttt{sudo\ apt~\ install\ gh~\ \#\ version\ 2.12.1+dfsg1-1}
+
+\texttt{gh\ auth\ login}
+
+Eligir estas opciones
+
+? What account do you want to log into?~GitHub.com ? What is your
+preferred protocol for Git operations?~SSH ? Generate a new SSH key to
+add to your GitHub account?~Yes ? Enter a passphrase for your new SSH
+key (Optional) ****** es 345320 ? Title for your SSH key:~achalmagit ?
+How would you like to authenticate GitHub CLI?~Login with a web browser
+
+Luego copiar el codifo en el navegador para conectar con github
+
+! First copy your one-time code: 5DCA-FB42
+
+Enter
+
+Press Enter to open github.com in your browser\ldots~~
+
+Listo usa el coigo 345320 para trabajar con repostios de github en
+terminal
+
+LISTO
+
+VER DOCUMETACION DE GIT HUB
+
+\url{https://cli.github.com/}
+
+\hypertarget{create-a-repository}{%
+\section{Create a Repository}\label{create-a-repository}}
+
+\hypertarget{git-init-project-name}{%
+\subsection{git init {[}project name{]}}\label{git-init-project-name}}
+
+\texttt{git\ init}~creará un nuevo repositorio local GIT.~Inicializa un
+nuevo repositorio.
+
+\texttt{git\ init\ {[}project\ name{]}}
+
+\begin{quote}
+Se hace solo una vez.~Como alternativa, puedes crear un repositorio
+dentro de un nuevo directorio especificando el nombre del proyecto:~
+\texttt{git\ init\ {[}nombre\ del\ proyecto{]}}
+\end{quote}
+
+\begin{quote}
+\textbf{Comandos en visual code.} Los archivos con~U~indican que no
+tiene seguimiento. Los archivos con~A~ya estan en seguimiento con git.
+Cuando no hay A ni U entonces los archivos ya estan en linea. La M
+indica Modificaciones pendientes
+\end{quote}
+
+\hypertarget{git-en-visual-code}{%
+\subsubsection{Git en Visual Code}\label{git-en-visual-code}}
+
+Primero configurar git -- paso anterior, usar cod ssh o instalar gh y
+usar git hub cli
+
+Primero creamos espacio de trabajo en la carpeta del proyecto (el nombre
+puede ser distinto o igual a la carpeta)
+
+\textbf{\ldots or create a new repository on the command line}
+
+echo ``\# achalmaedison.web'' \textgreater\textgreater{} README.md~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Abrir el terminar integrado de la carpeta del proyecto en VCODE
+\item
+  \texttt{git\ init}
+\item
+  \texttt{git\ add\ README.md}
+\item
+  \texttt{git\ add\ .}
+\item
+  \texttt{git\ commit\ -m\ "comienzo\ del\ proyecto"} (enviamos al
+  repostio en línea)
+\item
+  \texttt{git\ branch\ -M\ main} Una vez haya modificaciones~~
+\end{enumerate}
+
+Podemos agregar los archivos mod con en el comando~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \texttt{git\ add\ index.html} (agregar archivos individuales)
+\item
+  \texttt{git\ commit\ -\ m\ "comienzo\ b"}
+\item
+  \texttt{git\ remote\ add\ origin~https://github.com/achalmed/achalmaedison.web.git}
+\item
+  \texttt{git\ push\ -u\ origin\ main} Aqui se agrega el nombre del
+  usuario ``achalmed'' y la contraseña 8920{[}ACHAL09med{]}2397 se debe
+  escribir, no copy
+\end{enumerate}
+
+\textbf{\ldots or push an existing repository from the command line}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{git\ remote\ add\ origin\ https://github.com/achalmed/achalmaedison.web.git}~~
+\item
+  \texttt{git\ branch\ -M\ main}
+\item
+  \texttt{git\ push\ -u\ origin\ main}
+\end{enumerate}
+
+\textbf{\ldots or import code from another repository}
+
+You can initialize this repository with code from a Subversion,
+Mercurial, or TFS project.
+
+\hypertarget{git-clone-my_url}{%
+\subsection{git clone my\_url}\label{git-clone-my_url}}
+
+\texttt{git\ clone\ my\_url}: se usa para copiar un repositorio. Si el
+repositorio está en un servidor remoto,
+usa:~\texttt{git\ clone\ nombredeusuario@host:/path/to/repository}~~
+
+A la inversa, ejecuta el siguiente comando básico para copiar un
+repositorio local:~\texttt{git\ clone\ /path/to/repository}
+
+\hypertarget{cuxf3mo-clonar-el-repositorio-git}{%
+\subsubsection{Cómo clonar el repositorio
+git}\label{cuxf3mo-clonar-el-repositorio-git}}
+
+Git es un popular sistema de control de versiones utilizado por muchas
+empresas de todo el mundo. Sin embargo, requiere que tenga una copia del
+repositorio git antes de poder comenzar a trabajar en él. Debe clonar un
+repositorio de git en su computadora de escritorio o portátil local,
+antes de poder comenzar a realizar cambios en él. En este artículo,
+veremos cómo clonar un repositorio git en Ubuntu. Puede usar estos pasos
+para clonar un repositorio en github, bitbucket, gitlab y otras
+plataformas de desarrollo populares basadas en git.
+
+\hypertarget{quuxe9-es-git-clone}{%
+\subsubsection{¿Qué es git clone?}\label{quuxe9-es-git-clone}}
+
+Git clone es básicamente un comando para apuntar a un repositorio
+existente y hacer una copia de él, en otra ubicación. En este caso, el
+comando git creará un nuevo directorio, lo configurará para su uso con
+git y copiará archivos en él. A menos que clone un repositorio git, no
+podrá contribuir con cambios a él.
+
+\hypertarget{clonar-un-repositorio-remoto}{%
+\subsubsection{Clonar un repositorio
+remoto}\label{clonar-un-repositorio-remoto}}
+
+Supongamos que desea clonar un repositorio remoto desde Github,
+Bitbucket o cualquier otra plataforma en la nube a su máquina local.
+
+Abra el terminal y navegue hasta la ubicación (por ejemplo,
+/home/ubuntu) donde desea que se copie el repositorio.
+
+\texttt{cd\ /home/ubuntu/}
+
+Cada repositorio remoto de git tendrá una URL. Inicie sesión en su
+plataforma de desarrollo, como Github, y anote su URL. Será del formato.
+
+\url{https://git-website.com/username/repository-name}
+
+Por ejemplo, su repositorio de git (por ejemplo, demostración) tendrá
+las siguientes URL, dependiendo de la plataforma.
+
+Github
+
+\url{https://github.com/username/demo.git}
+
+Bitbucket
+
+\url{https://bitbucket.com/username/demo.git}
+
+A veces, la URL también puede ser de la forma
+
+ssh://username@example.com/path/to/my-project.git\,~
+
+Lea
+también:\,\href{https://fedingo.com/how-to-install-virtualenv-in-ubuntu/}{Cómo
+instalar Virtualenv en Ubuntu}
+
+Anote la URL de su repositorio y utilícela en el comando git clone como
+se muestra a continuación.
+
+\texttt{sudo\ git\ clone~https://github.com/username/repository-name}
+
+Reemplace\,el nombre de usuario\,con su nombre de usuario de Github
+y\,el nombre del repositorio\,con el nombre de su repositorio. Por
+ejemplo
+
+\texttt{sudo\ git\ clone~https://github.com/test\_user/demo.git}
+
+Se le pedirá su contraseña para la autenticación, después de lo cual Git
+descargará automáticamente la copia de su repositorio a su directorio de
+trabajo actual.
+
+Lea
+también:\,\href{https://fedingo.com/how-to-upgrade-python-in-ubuntu/}{Cómo
+actualizar Python en Ubuntu}
+
+\hypertarget{clonaciuxf3n-a-una-carpeta-especuxedfica}{%
+\subsubsection{Clonación a una carpeta
+específica}\label{clonaciuxf3n-a-una-carpeta-especuxedfica}}
+
+Este es el comando para clonar el repositorio en una carpeta específica.
+
+\texttt{sudo\ git\,clone\,\textless{}repo\textgreater{}\,\textless{}directory\textgreater{}}
+
+Por ejemplo, supongamos que desea clonar su repositorio a la carpeta
+/home/developer
+
+\texttt{sudo\ git\ clone~https://github.com/test\_user/demo.git~/home/developer}
+
+\hypertarget{clonar-superficialmente-un-repositorio}{%
+\subsubsection{Clonar superficialmente un
+repositorio}\label{clonar-superficialmente-un-repositorio}}
+
+Si necesita clonar un repositorio grande con un gran historial de
+confirmaciones, puede llevar mucho tiempo. En tales casos, puede hacer
+un clon superficial donde puede especificar las
+últimas\,n\,confirmaciones que desea clonar. Será mucho más rápido y
+ocupará muy poco espacio en su sistema.
+
+Aquí está la sintaxis para el clon superficial, donde n es el número de
+confirmaciones más recientes que desea clonar.
+
+\texttt{sudo\ git\,clone\,-depth=n\,\textless{}repo\textgreater{}}
+
+Lea
+también:\,\href{https://fedingo.com/vps-vs-shared-hosting-in-depth-comparison/}{VPS
+vs alojamiento compartido: comparación en profundidad}
+
+Aquí está el comando para clonar la última confirmación de 1 de su
+repositorio.
+
+\texttt{sudo\ git\ clone\ -depth=1~https://github.com/test\_user/demo.git}
+
+Del mismo modo, aquí está el comando para clonar las últimas 10
+confirmaciones de su repositorio.
+
+\texttt{sudo\ git\ clone\ -depth=10~https://github.com/test\_user/demo.git}
+
+Clonar una rama de Git
+
+Si solo desea clonar una rama específica (por ejemplo, trabajar) y no
+todo el repositorio, use la opción\,-branch\,en git clone.
+
+\texttt{git\,clone\,-branch\,working~https://github.com/test\_user/demo.git}
+
+Eso es todo. Como puede ver, es muy fácil clonar un repositorio git en
+Ubuntu.
+
+From
+\textless{}\url{https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007}\textgreater{}
+
+\hypertarget{utilizar-git-y-github-para-subir-proyectos}{%
+\subsubsection{Utilizar Git y Github para subir
+proyectos}\label{utilizar-git-y-github-para-subir-proyectos}}
+
+\texttt{git\ clone~https://github.com/achalmed/P-1-Thesis-economic-growth-poverty.git}
+
+Recortado
+de:~\url{https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726}
+
+En~\href{https://www.redeszone.net/2013/06/07/utilizar-git-y-github-desde-ubuntu-i/}{este
+artículo anterior}\,\textbf{os hemos hecho una pequeña introducción a
+Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo,
+identificarnos y a la vez identificarnos en GitHub.}
+
+En ese artículo vamos a enseñar cómo podemos subir un proyecto desde el
+PC a GitHub para comenzar a gestionarlo desde allí. También os
+enseñaremos a utilizar los principales comandos para utilizarlo a través
+del terminal de Linux.
+
+\textbf{Crear un nuevo repositorio}
+
+En primer lugar debemos crear un nuevo repositorio desde la web de
+GitHub. Creamos un nuevo desde la página **«New Project«.*
+
+Introduciremos el nombre del repositorio, una descripción y
+seleccionaremos si queremos que el repositorio sea público o privado
+(como privado habrá que pagar una suscripción). Una vez rellenado
+pulsamos sobre «Create Repository» y ya tenemos creado nuestro
+repositorio.
+
+\textbf{Subir un proyecto}
+
+Para subir un proyecto en primer lugar debemos crear nuestro proyecto
+Git de forma local en nuestro PC. Para ello debemos situarnos sobre la
+ruta del proyecto desde un terminal mediante el siguiente comando.
+
+\texttt{cd\ ruta/al/archivo}~~
+
+Una vez situados allí debemos teclear el comando para crear un proyecto
+Git.
+
+\texttt{git\ init}~~
+
+Veremos que el programa nos devuelve una línea de confirmación.
+
+Ahora debemos añadir los archivos correspondientes a Git. Para ello
+debemos teclear una de las siguientes funciones dependiendo si queremos
+añadir únicamente un archivo o añadir todos los existentes en el
+proyecto.
+
+\texttt{git\ add\ .} (añade todos los archivos existentes en la carpeta
+al proyecto Git)~~
+
+\texttt{git\ add\ nombredelarchivo.extension} (solo añade al proyecto el
+archivo especificado)~~
+
+Todos los cambios que se vayan realizando en nuestro proyecto deben ser
+identificados por un comentario. Añadimos el comentario mediante:
+
+\texttt{git\ commit\ -m\ \textquotesingle{}comentario\textquotesingle{}}~~
+
+Y ya podemos proceder a subir el proyecto a GitHub. Para ello debemos
+teclear en el terminal:
+
+\texttt{git\ remote\ add\ origin~git@github.com:achalmed/achalmaedison.web.git}
+
+Debemos cambiar nick por nuestro nombre de usuario en GitHub y
+repositorio.git por el nombre del repositorio que hemos creado
+anteriormente. Pulsamos enter y ya podemos subir el proyecto mediante:
+
+\texttt{git\ push\ -u\ origin~master}~~
+
+Ya tenemos el proyecto subido en nuestra cuenta de GitHub. Podemos
+comprobarlo accediendo a la página del proyecto.
+
+En caso de que en el paso anterior ocurra un error denominado: «fatal:
+remote origin already exists» debemos teclear:
+
+\texttt{git\ remote\ rm\ origin}~~
+
+Y a continuación volver a realizar el proceso anterior.
+
+\hypertarget{observe-your-repository}{%
+\section{Observe your Repository}\label{observe-your-repository}}
+
+\hypertarget{git-status}{%
+\subsection{git status}\label{git-status}}
+
+\texttt{git\ status}~muestra la lista de los archivos que se han
+cambiado junto con los archivos que están por ser preparados o
+confirmados.
+
+\texttt{git\ status\ -s}~lista archivos sin sincronizar.
+
+\begin{quote}
+Checa el estatus del repositorio actual.~ List new or modified files not
+yet committed:~\texttt{git\ status}
+\end{quote}
+
+\hypertarget{git-diff}{%
+\subsection{git diff}\label{git-diff}}
+
+\begin{itemize}
+\item
+  \texttt{git\ diff}~~Show the changes to files not yet staged, se usa
+  para hacer una lista de todos los conflictos.
+\item
+  \texttt{git\ diff\ -\/-base\ \textless{}file-name\textgreater{}}~Para
+  poder ver conflictos con respecto al archivo base
+\item
+  \texttt{git\ diff\ \textless{}source-branch\textgreater{}\ \textless{}target-branch\textgreater{}}~~se
+  usa para ver los conflictos que hay entre ramas antes de fusionarlas:
+\item
+  \texttt{git\ diff\ -\/-cached}~~Show the changes to staged files
+\item
+  \texttt{git\ diff\ HEAD}~Show all staged and unstaged file changes
+\item
+  \texttt{git\ diff\ commit1\ commit2}~Show the changes between two
+  commit ids
+\end{itemize}
+
+\begin{quote}
+Muestra las diferencias de los cambios hechos y que no han sido añadidos
+a un commit
+\end{quote}
+
+\hypertarget{git-blame-file}{%
+\subsection{git blame {[}file{]}}\label{git-blame-file}}
+
+\texttt{git\ blame\ {[}file{]}}~List the change dates and authors for a
+file.
+
+\hypertarget{git-show}{%
+\subsection{git show}\label{git-show}}
+
+\begin{itemize}
+\item
+  \texttt{git\ show}~se usa para mostrar información sobre cualquier
+  objeto git.
+\item
+  \texttt{git\ show\ {[}commit{]}:{[}file{]}}~Show the file changes for
+  a commit id and/or file.
+\end{itemize}
+
+\hypertarget{git-log}{%
+\subsection{git log}\label{git-log}}
+
+\texttt{git\ log}~: Muestra la lista de cambios hechos
+(commits),~cuántas copias hay en respostorio, número de commits, show
+full change history.
+
+\texttt{git\ log\ -p\ {[}file/directory{]}}~: Show change history for
+file/directory including diffs.
+
+\texttt{git\ log\ -\/-oneline}
+
+\texttt{git\ log\ -\/-oneline\ -\/-decorate\ -\/-all\ -\/-graph\ -\/-since=2018-12-04}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  git log~se usa para ver el historial del repositorio listando ciertos
+  detalles de la confirmación. Al ejecutar el comando se obtiene una
+  salida como ésta:~ commit
+  15f4b6c44b3c8344caasdac9e4be13246e21sadw~Author: Alex
+  Hunter~\href{mailto:\%3Calexh@gmail.com}{\nolinkurl{\textless alexh@gmail.com}}\textgreater~Date:
+  \, Mon Oct 1 12:56:29 2016 -0600
+\end{itemize}
+\end{quote}
+
+\hypertarget{ejemplos}{%
+\subsubsection{Ejemplos}\label{ejemplos}}
+
+achalmaubuntu@DESKTOP-ACHI23E:\textasciitilde/Documents/GitHub/achalmed\$~git
+log commit 8668f30bf15bb2b60d7a56ac0b41fc1d66f43afe (HEAD
+-\textgreater{} main) Author: achalmed
+\href{mailto:achalmaedison@outlook.com}{\nolinkurl{achalmaedison@outlook.com}}
+Date:~~ Sat Apr 16 22:41:20 2022 -0500 ~~~ actualizando pefil
+
+\hypertarget{working-with-branches}{%
+\section{Working with Branches}\label{working-with-branches}}
+
+\hypertarget{git-branch}{%
+\subsection{git branch}\label{git-branch}}
+
+\begin{itemize}
+\item
+  \texttt{git\ branch}~List all local branches, se usa para listar,
+  crear o borrar ramas. si quieres listar todas las ramas presentes en
+  el repositorio.
+\item
+  \texttt{git\ branch\ -av}~List all branches, local and remote
+\item
+  \texttt{git\ checkout\ {[}my\_branch{]}}~Switch to a branch,
+  my\_branch, and update working directory~~
+\item
+  \texttt{git\ branch\ {[}new\_branch\_name{]}}~Create a new branch
+  called new\_branch~~
+\item
+  \texttt{git\ branch\ -d\ {[}branch\_name{]}}~Delete the branch called
+  my\_branch,~ Si quieres borrar una rama
+\item
+  \texttt{git\ branch\ –a}
+\end{itemize}
+
+\begin{quote}
+Muestra la lista de las ramas creadas
+\end{quote}
+
+\hypertarget{creando-ramas-sirven-para-pruebas-de-version-etc}{%
+\subsubsection{Creando ramas (sirven para pruebas de version,
+etc)}\label{creando-ramas-sirven-para-pruebas-de-version-etc}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{git\ branch~{[}Rama2{]}}~(Creación de una nueva rama basada en
+  la rama actual)
+\item
+  \texttt{git\ log\ -\/-oneline}~(me indica todos los commit de la rama)
+\item
+  \texttt{git\ branch}~(indica las ramas del proyecto e indica en que
+  rama me encuentro)
+\end{enumerate}
+
+*movernos a otra rama para hacer las modificaciones
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \texttt{git\ checkout\ Rama2}~(se movió mi flujo de trabajo a otra
+  rama) por ejemplo esta rama puede ser rama de prueba
+\end{enumerate}
+
+Una vez hecho las modificaciones de prueba~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \texttt{git\ add\ .}~(agregamos los archivos modificados) AGREGANDO
+  CAMBIOS
+\item
+  \texttt{git\ commit\ -\ m\ "saludos\ agrado\ a\ la\ rama\ de\ prueba"}
+\item
+  \texttt{git\ log\ -\/-oneline}~(me indica todos los commit de la rama
+  nueva)
+\end{enumerate}
+
+*Regresando a la rama Master o main
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  \texttt{git\ checkout~{[}master{]}}~(OJO LAS MODIFICACIONES HECHAS NO
+  ESTAN AQUI)
+\end{enumerate}
+
+OJO PARA NOTAR LOS CAMBIOS EN LOS ARCHIVOS MINIMIZAR EL CONSALA DE GIT
+
+Para enviar finalmente los archivos al repositorio online se debe
+tipear:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  \texttt{git\ push\ origin~{[}Rama2{]}}~: también puede ser main (es la
+  rama,~Enviar al GitHub)
+\end{enumerate}
+
+\hypertarget{git-checkout-file}{%
+\subsection{git checkout~{[}file{]}}\label{git-checkout-file}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ checkout\ {[}file{]}}~crea ramas y te ayuda a navegar
+  entre ellas. Por ejemplo, el siguiente comando crea una nueva y
+  automáticamente se cambia a ella:
+\end{itemize}
+
+command \texttt{git\ checkout\ -b~{[}branch-name{]}}~~
+
+\begin{itemize}
+\tightlist
+\item
+  Para cambiar de una rama a otra, sólo usa:
+\end{itemize}
+
+\texttt{git\ checkout~{[}branch-name{]}}~~
+
+Merge branch\_a into branch\_b
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ checkout~{[}branch\_b{]}}
+\item
+  \texttt{git\ merge~{[}branch\_a{]}}
+\end{itemize}
+
+\begin{quote}
+Creación de una nueva rama y ubicación dentro de esa rama.~Solucionar
+conflictos de \ldots{} con Visual Code es más sencillo
+\end{quote}
+
+\hypertarget{fusionando-ramas}{%
+\subsubsection{Fusionando ramas}\label{fusionando-ramas}}
+
+PRIMERO debemos estar en la rama MASTER antes de hacer la fusión
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{git\ checkout~{[}master{]}}
+\item
+  \texttt{git\ merge~{[}Rama2{]}}
+\end{enumerate}
+
+\hypertarget{git-rebase-branch_name}{%
+\subsection{git rebase branch\_name}\label{git-rebase-branch_name}}
+
+\texttt{git\ rebase\ branch\_name}: Alcanzar los cambios de un branch
+
+\hypertarget{git-tag-nombre_tag}{%
+\subsection{git tag~{[}nombre\_tag{]}~~}\label{git-tag-nombre_tag}}
+
+\begin{itemize}
+\item
+  \texttt{git\ checkout~{[}nombre\_tag{]}}
+\item
+  \texttt{git\ tag\ {[}nombre\_tag{]}}~Tag the current commit,~creación
+  de una etiqueta con el texto v0.0.1 (indica la version v0.0.1)
+\item
+  \texttt{git\ tag~{[}nombre\_tag{]}/commit\_SHA1}~Creación de un tag a
+  un commit en especifico~~
+\end{itemize}
+
+Se puede acceder al commit donde se encuentra un tag mediante este
+comando
+
+\begin{quote}
+\texttt{git\ tag}~TAGS (INDICAN LAS VERSIONES DE UN PROYECTO). marca
+commits específicos. Los desarrolladores lo usan para marcar puntos de
+lanzamiento como v1.0 y v2.0.~
+\texttt{git\ tag\ 1.1.0~{[}instert-commitID-here{]}}
+\end{quote}
+
+\hypertarget{ejemplos-1}{%
+\subsubsection{Ejemplos}\label{ejemplos-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \texttt{git\ tag~{[}26-03-2022v1{]}~-m\ "Version\ 1\ del\ proyecto"}~(creando
+  una version), por ejemplo sirve para descargar.
+\item
+  \texttt{git\ push\ -\/-tags}~(subimos las versiones a línea)
+\end{enumerate}
+
+\hypertarget{git-config}{%
+\subsection{git config}\label{git-config}}
+
+\texttt{git\ config\ -\/-global\ alias.lodag‘log\ -\/-oneline\ -\/-decorate\ -\/-all\ -\/-graph’}~~Agregar
+un alias~~
+
+\texttt{git\ config\ -\/-global\ -\/-get-regexp\ alias}~~Ver la lista de
+alias creados~~
+
+\texttt{git\ config\ -\/-global\ -\/-unset\ alias.trololo}~~Quitar un
+alias
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ config}~puede ser usado para establecer una configuración
+  específica de usuario, como el email, nombre de usuario y tipo de
+  formato, etc. Por ejemplo, el siguiente comando se usa para establecer
+  un email:
+\end{itemize}
+
+\texttt{git\ config\ -\/-global\ user.email~tuemail@ejemplo.com}
+
+\begin{itemize}
+\tightlist
+\item
+  La opción -global le dice a GIT que vas a usar ese correo electrónico
+  para todos los repositorios locales. Si quieres utilizar diferentes
+  correos electrónicos para diferentes repositorios, usa el siguiente
+  comando:
+\end{itemize}
+
+\texttt{git\ config\ -\/-local\ user.email~tuemail@ejemplo.com}
+
+\hypertarget{make-a-change}{%
+\section{Make a change}\label{make-a-change}}
+
+\hypertarget{git-add-file}{%
+\subsection{git add~{[}file{]}}\label{git-add-file}}
+
+\begin{itemize}
+\item
+  \texttt{git\ add\ -u}
+\item
+  \texttt{git\ add\ {[}file{]}}~Stages the file, ready for commit, se
+  usa para agregar archivos al área de preparación. Por ejemplo, el
+  siguiente comando de Git básico indexará el archivo temp.txt:
+\end{itemize}
+
+\texttt{git\ add\ \textless{}temp.txt\textgreater{}}~~
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ add\ .}~~Stage all changed files, ready for commit,
+\end{itemize}
+
+\begin{quote}
+Con el nombre del archivo se registra dicho cambio en el caso de alguna
+creación, con el punto (.) se preparan todos los cambios realizados en
+el proyecto actual.~~Lista de cambios preparados para subir en el
+siguiente commit.~~(sincroniza todos los archivos)
+\end{quote}
+
+\hypertarget{ejemplos-2}{%
+\subsubsection{Ejemplos}\label{ejemplos-2}}
+
+\texttt{git\ add~{[}index.html{]}}~(agregamos unos de los archivos por
+ejemplo el index.html)
+
+\texttt{git\ add} -actualiza todos tus cambios
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Al modificar un/unos archivo/s:
+\end{enumerate}
+
+\texttt{git\ branch}~: para saber el rama actual
+
+\texttt{git\ add\ .}~Esto añade todos los archivos al repositorio local
+(no al web)
+
+o sino también
+
+\texttt{git\ add\ nombreDelArchivo}~Esto añade solamente el archivo
+indicado al repositorio local.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Luego\ldots{} se genera un commit para confirmar todos los archivos
+  modificados agregando un mensaje que brinde una idea de lo que se
+  modificó en el/los dichos archivo/s
+\end{enumerate}
+
+\texttt{git\ commit\ -m\ "aquí\ el\ mensaje"}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Para enviar finalmente los archivos al repositorio online se debe
+  tipear:
+\end{enumerate}
+
+\texttt{git\ push\ origin~{[}master{]}}~: también puede ser~main~(es la
+rama)
+
+Apendice A)
+
+Si se quiere ir verificando el estado de la transacción luego de cada
+instrucción, puede tipear el siguiente comando:
+
+\texttt{git\ status}
+
+From
+\textless{}\url{https://github.com/cristian87dev/comandos-git/blob/master/Para\%20subir\%20cambios\%20al\%20servidor\%20github.txt}\textgreater{}
+
+\hypertarget{git-commit}{%
+\subsection{git commit}\label{git-commit}}
+
+\begin{itemize}
+\item
+  \texttt{git\ commit}\,creará una instantánea de los cambios y la
+  guardará en el directorio git.
+\item
+  \texttt{git\ commit\ –m\ “El\ mensaje\ que\ acompaña\ al\ commit\ va\ aquí”}~~
+\end{itemize}
+
+Ten en cuenta que los cambios confirmados no llegarán al repositorio
+remoto.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ commit\ -am\ “commit\ message”}~~Commit all your tracked
+  files to versioned history,~agrega y envía
+\end{itemize}
+
+\begin{quote}
+Genera un archivo de los cambios realizados en el proyecto, en el
+archivo que se mostrará se agrega una descripción del cambio
+realizado.~(toma una captura o crea una version)
+\end{quote}
+
+\hypertarget{ejemplos-3}{%
+\subsubsection{Ejemplos}\label{ejemplos-3}}
+
+\texttt{git\ commit\ -m\ "Comienzo\ del\ proyecto"}
+
+\texttt{git\ commit\ -am\ "párrafo\ y\ tamaño\ fuente"}~(agrega y envía
+)
+
+\hypertarget{git-add-.-git-commit--m-cambionumeros}{%
+\subsection{git add . \&\& git commit -m
+``Cambionumeros''}\label{git-add-.-git-commit--m-cambionumeros}}
+
+\texttt{git\ add\ .\ \&\&\ git\ commit\ -m\ "Cambionumeros"}
+
+\hypertarget{descripciuxf3n}{%
+\subsubsection{Descripción}\label{descripciuxf3n}}
+
+\texttt{git\ add\ .\ \&\&\ git\ commit\ -m\ "Cambionumeros"}~Add y
+commit en una sola línea
+
+\hypertarget{git-merge-branch_name}{%
+\subsection{git merge branch\_name}\label{git-merge-branch_name}}
+
+\texttt{git\ merge\ branch\_name}
+
+\hypertarget{descripciuxf3n-1}{%
+\subsubsection{Descripción}\label{descripciuxf3n-1}}
+
+Para este paso suponemos un ejemplo Tenemos el branchdevelop y feature,
+y queremos integrar la rama feature a develop por lo que debemos hacer
+los siguientes pasos:~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Ubicarse en la rama develop mediante el comando:
+\end{enumerate}
+
+\texttt{gitcheckoutdevelop}~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Ingresar el comando~~
+\end{enumerate}
+
+\texttt{gitmergefeature}
+
+\begin{quote}
+\texttt{git\ merge}\,se usa para fusionar una rama con otra rama
+activa:~\texttt{git\ merge\ {[}branch-name{]}}
+\end{quote}
+
+\hypertarget{git-revert-m-1-sha1_merge}{%
+\subsection{git revert --m
+1~SHA1\_merge}\label{git-revert-m-1-sha1_merge}}
+
+\texttt{git\ revert\ –m\ 1~SHA1\_merge}
+
+\hypertarget{descripciuxf3n-2}{%
+\subsubsection{Descripción}\label{descripciuxf3n-2}}
+
+Revierte un merge, especificando el SHA1 del merge que se quiere
+revertir
+
+\hypertarget{git-revert-head}{%
+\subsection{git revert HEAD}\label{git-revert-head}}
+
+\texttt{git\ revert\ HEAD}~~
+
+\texttt{git\ revert\ -\/-no-commit\ HEAD}~~
+
+\texttt{git\ revert\ -\/-no-commit\ HEAD\textasciitilde{}1}~~
+
+\texttt{git\ revert\ -\/-continue}
+
+\hypertarget{descripciuxf3n-3}{%
+\subsubsection{Descripción}\label{descripciuxf3n-3}}
+
+Revierte un commit hecho sobre la rama actual~~
+
+Revertir dos o más commit junto al mismo comando de revert para ser
+tomados en cuenta como uno solo
+
+\hypertarget{git-reset}{%
+\subsection{git reset}\label{git-reset}}
+
+\texttt{git\ reset\ SHA\_1\_commit/{[}branch\_name{]}}~~
+
+\texttt{git\ reset\ -\/-soft\ SHA\_1\_commit/{[}branch\_name{]}}~~
+
+\texttt{git\ reset\ -\/-hard\ SHA\_1\_commit/{[}branch\_nam{]}}
+
+\hypertarget{descripciuxf3n-4}{%
+\subsubsection{Descripción}\label{descripciuxf3n-4}}
+
+Regresar a una rama anterior, quita los cambios y los deja fuera del
+área de preparación~~
+
+Regresa a un commit o rama anterior, y deja los cambios hechos en el
+commit que se va a quitar listos en el área de preparación~~
+
+Regresa a un commit o rama anterior, y deja en blanco el área de
+preparación y el directorio de trabajo~~
+
+\texttt{766abcd}, es el identificador del commit al que deseamos
+regresar. Esta operación, si lo hacemos desde \,una rama, no afectará a
+otras, de modo que puedes hacer diferentes commit a partir de ese punto,
+sin que se modifiquen otras ramas\, del proyecto.
+
+\begin{quote}
+\texttt{git\ reset}~sirve para resetear el index y el directorio de
+trabajo al último estado de confirmación.
+\end{quote}
+
+\texttt{git\ reset\ -\ -hard\ HEAD}~~
+
+\begin{quote}
+El conocimiento y el uso de log con sus diferente posibilidades, nos
+permitirá manejar acertadamente, la creación de ramas, los movimientos
+entre ellas y los avances y retrocesos entre commits.
+\end{quote}
+
+\hypertarget{regresar-a-un-commit-anterior-en-git}{%
+\subsubsection{Regresar a un commit anterior en
+Git}\label{regresar-a-un-commit-anterior-en-git}}
+
+Recortado
+de:~\url{https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/}
+
+Muchas veces, nos damos cuenta de que necesitamos regresar en el
+tiempo\, a un punto de nuestro proyecto, para ello el
+comando~checkout~nos permite\, regresar a un~commit~anterior en Git,\,
+de esta manera:
+
+Primero ver la estructura de los últimos commit con este comando
+
+\texttt{git\ log\ -\/-oneline}~~
+
+Su salida, será algo como esto
+
+8674e5f commit \,test3 jº44568 commit segunda parte~~ 55df4c2 commit de
+inicio.
+
+\texttt{git\ checkout~{[}766abcd{]}}~~
+
+Existen diferentes formas de retroceder en el tiempo a commits
+previos,~\textbf{checkout}~es una de ellas, pero también se
+utiliza~\textbf{reset}~con sus atributos~\textbf{soft}~o~\textbf{hard}
+
+Con una sintaxis como:
+
+\texttt{git\ reset\ -\/-soft}~referencia del commit~~
+
+Esto nos permitirá retroceder a un commit previo, manteniendo los
+cambios:~~
+
+\texttt{git\ reset\ -\/-soft~{[}568abcj{]}}~~
+
+Si queremos deshacer solo el ultimo:~~
+
+\texttt{git\ reset\ -\/-soft\ HEAD\textasciitilde{}}~~
+
+Si lo que se desea es eliminar permanentemente los cambios realizado
+después de un commit \,específico, el comando a usar es:~~
+
+\texttt{git\ reset\ -\/-hard~{[}789abcd{]}}~(regresar a una version, el
+codigo es el ultimo commit que queremos mantener)
+
+Si queremos eliminar los cambios después del último commit lo que
+hacemos es usar el atributo hard del comando reset, pero dirigiéndolo al
+apuntador especial HEAD.
+
+\texttt{git\ reset\ -\/-hard\ HEAD\textasciitilde{}}~~
+
+para descartar los cambios antes de retornar a un commit, se utiliza el
+comando stash
+
+\texttt{git\ commit\ stash}
+
+\hypertarget{synchronize}{%
+\section{Synchronize}\label{synchronize}}
+
+\hypertarget{section}{%
+\subsection{}\label{section}}
+
+\texttt{git\ fetch}~le permite al usuario buscar todos los objetos de un
+repositorio remoto que actualmente no se encuentran en el directorio de
+trabajo local.
+
+\texttt{git\ fetch\ origin}
+
+\hypertarget{git-pull}{%
+\subsection{git pull}\label{git-pull}}
+
+\texttt{git\ pull}~fusiona todos los cambios que se han hecho en el
+repositorio remoto con el directorio de trabajo local (actualizar las
+ediciones de línea en el repostorio local). \texttt{git\ pull}
+
+\hypertarget{ejemplos-4}{%
+\subsubsection{Ejemplos}\label{ejemplos-4}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Para obtener los cambios desde el repositorio github.com debe tipear:
+\end{enumerate}
+
+\texttt{git\ pull\ -\/-rebase}
+
+o tambien
+
+\texttt{git\ pull\ origin~{[}master{]}}
+
+\hypertarget{git-remote-add-name_repo-url}{%
+\subsection{git remote add NAME\_REPO
+URL}\label{git-remote-add-name_repo-url}}
+
+\texttt{git\ remote\ add\ NAME\_REPO\ URL}~~
+
+\texttt{git\ remote}~~
+
+\texttt{git\ remote\ –v}
+
+\hypertarget{descripciuxf3n-5}{%
+\subsubsection{Descripción}\label{descripciuxf3n-5}}
+
+\begin{itemize}
+\item
+  \texttt{git\ remote}~te permite ver todos los repositorios remotos. El
+  siguiente comando listará todas las conexiones junto con sus
+  URLs:~\texttt{git\ remote\ -v}~~
+\item
+  Para conectar el repositorio local a un servidor remoto, usa este
+  comando:~\texttt{git\ remote\ add\ origin\ {[}host-or-remoteURL{]}}~~
+\item
+  Por otro lado, el siguiente comando borrará una conexión a un
+  repositorio remoto
+  especificado:~\texttt{git\ remote\ {[}nombre-del-repositorio{]}}
+\end{itemize}
+
+\hypertarget{ejemplos-5}{%
+\subsubsection{Ejemplos}\label{ejemplos-5}}
+
+Adición de un repositorio~~
+
+Listado de los repositorios
+
+\hypertarget{git-push-set-upstream-name_repo-master}{%
+\subsection{git push --set-upstream NAME\_REPO
+master}\label{git-push-set-upstream-name_repo-master}}
+
+\texttt{git\ push\ -\/-set-upstream\ NAME\_REPO\ master}~~
+
+\texttt{git\ push\ NAME\_REPO\ BRANCH\_NAME}~~
+
+\texttt{git\ push\ REMOTE\ -\/-all\ git\ push\ REMOTE\ -\/-tags}
+
+\hypertarget{descripciuxf3n-6}{%
+\subsubsection{Descripción}\label{descripciuxf3n-6}}
+
+\begin{itemize}
+\item
+  \texttt{git\ push}~se usa para enviar confirmaciones locales a la rama
+  maestra del repositorio remoto. Aquí está la estructura básica del
+  código:~\texttt{git\ push\ \,origin\ {[}master{]}}~~
+\item
+  Reemplaza {[}master{]} con la rama en la que quieres enviar los
+  cambios cuando no quieras enviarlos a la rama maestra.
+\end{itemize}
+
+\hypertarget{ejemplos-6}{%
+\subsubsection{Ejemplos}\label{ejemplos-6}}
+
+Subir cambios de un Proyecto a gitLab~~
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Para enviar finalmente los archivos al repositorio online se debe
+  tipear:
+\end{enumerate}
+
+\texttt{git\ push\ origin~{[}master{]}}~:~también puede ser main (es la
+rama)
+
+\hypertarget{finally}{%
+\section{Finally}\label{finally}}
+
+\hypertarget{git-command-help}{%
+\subsection{git command --help}\label{git-command-help}}
+
+\texttt{git\ command\ -\/-help}
+
+\texttt{git\ command\ -\/-help}~When in doubt, use git help
+
+\hypertarget{git-stash}{%
+\subsection{git stash}\label{git-stash}}
+
+\texttt{git\ stash} guardará momentáneamente los cambios que no están
+listos para ser confirmados. De esta manera, pudes volver al proyecto
+más tarde.
+
+\hypertarget{git-ls-tree}{%
+\subsection{git ls-tree}\label{git-ls-tree}}
+
+\texttt{git\ ls-tree}
+
+\texttt{git\ ls-tree\ HEAD}
+
+\hypertarget{descripciuxf3n-7}{%
+\subsubsection{Descripción}\label{descripciuxf3n-7}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ ls-tree}~te permite ver un objeto de árbol junto con el
+  nombre y modo de cada ítem, y el valor blob de SHA-1. Si quieres ver
+  el HEAD, usa:
+\end{itemize}
+
+\texttt{git\ ls-tree\ HEAD}
+
+\hypertarget{git-cat-file}{%
+\subsection{git cat-file}\label{git-cat-file}}
+
+\texttt{git\ cat-file}: se usa para ver la información de tipo y tamaño
+de un objeto del repositorio. Usa la opción -p junto con el valor SHA-1
+del objeto para ver la información de un objeto específico.
+
+\hypertarget{ejemplos-7}{%
+\subsubsection{Ejemplos}\label{ejemplos-7}}
+
+\texttt{git\ cat-file\ –p\ d670460b4b4aece5915caf5c68d12f560a9fe3e4}
+
+\hypertarget{git-grep}{%
+\subsection{git grep}\label{git-grep}}
+
+\texttt{git\ grep}: le permite al usuario buscar frases y palabras
+específicas en los árboles de confirmación, el directorio de trabajo y
+en el área de preparación. Para buscar
+por~\href{http://www.hostinger.com/}{www.hostinger.com}~en todos los
+archivos, usa:
+
+\texttt{git\ grep\ “www.hostinger.com”}
+
+\hypertarget{gitk}{%
+\subsection{gitk}\label{gitk}}
+
+\texttt{gitk}: muestra la interfaz gráfica para un repositorio local.
+
+\hypertarget{git-instaweb}{%
+\subsection{git instaweb}\label{git-instaweb}}
+
+\texttt{git\ instaweb}: te permite explorar tu repositorio local en la
+interfaz GitWeb. Por ejemplo:
+
+\texttt{git\ instaweb\ –http=webrick}
+
+\hypertarget{git-gc}{%
+\subsection{git gc}\label{git-gc}}
+
+\texttt{git\ gc}: ~limpiará archivos innecesarios y optimizará el
+repositorio local.
+
+\hypertarget{git-archive}{%
+\subsection{git archive}\label{git-archive}}
+
+\texttt{git\ archive}: le permite al usuario crear archivos zip o tar
+que contengan los constituyentes de un solo árbol de repositorio.
+
+\hypertarget{ejemplos-8}{%
+\subsubsection{Ejemplos}\label{ejemplos-8}}
+
+\texttt{git\ archive\ -\ -format=tar\ master}
+
+\hypertarget{git-prune}{%
+\subsection{git prune}\label{git-prune}}
+
+\texttt{git\ prune}: elimina los objetos que no tengan ningún apuntador
+entrante.
+
+\hypertarget{git-fsck}{%
+\subsection{git fsck}\label{git-fsck}}
+
+\texttt{git\ fsck}: realiza una comprobación de integridad del sistema
+de archivos git e identifica cualquier objeto corrupto
+
+\hypertarget{git-rebase}{%
+\subsection{git rebase}\label{git-rebase}}
+
+\texttt{git\ rebase}: se usa para aplicar ciertos cambios de una rama en
+otra.
+
+\hypertarget{ejemplos-9}{%
+\subsubsection{Ejemplos}\label{ejemplos-9}}
+
+\texttt{git\ rebase\ master}
+
+\hypertarget{git-rm}{%
+\subsection{git rm}\label{git-rm}}
+
+\texttt{git\ rm}
+
+\hypertarget{borrar-archivoscarpetas-del-repositorio}{%
+\subsubsection{Borrar archivos/carpetas del
+repositorio}\label{borrar-archivoscarpetas-del-repositorio}}
+
+Para borrar archivos o carpetas también «arriba» en nuestro respositorio
+(bitbucket, github\ldots) se usa el comando «rm» de git siguiendo los
+siguientes pasos.
+
+\texttt{git\ add\ -u}~: actualiza todos los cambios
+
+\texttt{git\ commit\ -m\ "elimino\ archivos\ innecesarios"}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Para enviar finalmente los archivos al repositorio online se debe
+  tipear:
+\end{enumerate}
+
+\texttt{git\ push\ origin~master}~: también puede ser main (es la rama)
+
+1.A Si quieres eliminar un archivo:
+
+\texttt{git\ rm\ miarchivo.php}
+
+1.B. Si quieres eliminar una carpeta:
+
+\texttt{git\ rm\ -r\ micarpeta}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Creamos el commit
+\end{enumerate}
+
+\texttt{git\ commit\ -m\ "elimino\ archivos\ innecesarios"}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Subimos los cambios al repositorio
+\end{enumerate}
+
+\texttt{git\ push}
+
+\hypertarget{hoja-de-trucos-de-los-comandos-de-git-en-.pdf}{%
+\section{Hoja de trucos de los comandos de GIT en
+.pdf}\label{hoja-de-trucos-de-los-comandos-de-git-en-.pdf}}
+
+Si estás empezando con GIT, puede ser difícil recordar incluso los
+comandos básicos. Por eso, hemos preparado una hoja de trucos de GIT
+para ayudarte a dominar el software. Guarda el archivo en tus
+dispositivos o imprímelo para tenerlo siempre listo cuando tengas que
+recordar los comandos de GIT.
+
+\href{https://cdn.hostinger.com/tutorials/pdf/Git-Cheat-Sheet-EN.pdf}{Descargar
+(tamaño: 1.2 MB)}
+
+\hypertarget{conclusiuxf3n-1}{%
+\section{Conclusión}\label{conclusiuxf3n-1}}
+
+Aprender los comandos básicos de GIT será de gran ayuda para los
+desarrolladores, ya que pueden controlar fácilmente el código fuente de
+los proyectos. Puede que te lleve algo de tiempo recordarlos todos, por
+eso nuestra hoja de trucos de GIT podría resultarte útil.
+
+¡Practica estos comandos de GIT y aprovecha al máximo tus habilidades en
+desarrollo! ¡Buena suerte!
+
+El autor~~
+
+Gustavo B.
+
+Gustavo es un apasionado por la creación de sitios web. Se enfoca en la
+aplicación de estrategias SEO en Hostinger para España y Latinoamérica,
+así como la creación de contenidos de alto nivel. Cuando no está
+aplicando nuevos trucos en WordPress lo puedes encontrar tocando la
+guitarra, viajando o tomando un curso online.~~
+
+\href{https://www.hostinger.es/tutoriales/author/gustavohostinger}{Más
+de Gustavo B.}
+
+
+\printbibliography
+
+
+\end{document}

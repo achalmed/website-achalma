@@ -16,11 +16,11 @@ tags:
   - Gobierno
   - Servicios Públicos
 author:
-  - ACHALMA MENDOZA Elmer Edison
-  - BERMUDO HEREDIA Felix Manuel
-  - BORDA TORRES Noe
-  - CASTILLO LOPEZ Kattya Yasitrh
-  - FERNANDEZ NÚÑEZ Yuri David
+  - Achalma Mendoza Elmer Edison
+  - Bermudo Heredia Felix Manuel
+  - Borda Torres Noe
+  - Castillo Lopez Kattya Yasitrh
+  - Fernandez Núñez Yuri David
 date: "10/01/2021"
 date-modified: "today"
 draft: false

@@ -12,7 +12,7 @@ tags:
   - Comandos de voz
   - Trucos de productividad
   - Automatización
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "05/23/2020"
 date-modified: "today"
 draft: false

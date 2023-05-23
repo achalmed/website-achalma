@@ -13,7 +13,7 @@ tags:
   - Economía Peruana
   - Políticas Económicas
   - Desafíos Socioeconómicos
-author: ACHALMA MENDOZA Elmer Edison
+author: Achalma Mendoza Elmer Edison
 date: "05/12/2023"
 date-modified: "today"
 draft: false

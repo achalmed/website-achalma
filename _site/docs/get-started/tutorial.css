@@ -23,18 +23,6 @@
   }
 }
 
-/* Estilos para el banner de héroe */
-.hero-banner h1 {
-  color: #39729E;
-  font-size: 2.5rem;
-}
-
-.hero-banner .hero-image {
-  position: absolute;
-  display: none;
-  height: auto;
-}
-
 .hero-banner .content-block {
   display: flex;
   flex-direction: row;
@@ -165,6 +153,7 @@
 
 h1 {
   color: #477d75;
+  margin: 0px 0px 10px;
 }
 
 h2 {
@@ -177,16 +166,27 @@ h3 {
 
 /*Experiencias*/
 
-.experiencias {
+.bordes {
   /* border: 5px black solid; */
   border-style: solid;
   border-color: black;
-  border-radius: 5px;
+  border-radius: 0px;
   border-width: 1px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
 }
 
-div.experiencia div.experiencia_date p {
-  color: #27965e;
+.bloques {
+  padding: 50px 0px 0px;
+}
+
+p {
+  color: #000000;
+  margin: 0px 0px 0px;
 }
 
 /*
@@ -199,11 +199,11 @@ div.educacion div.educacion_date p {
 }
 
 div.educacion div.educacion_titulo p {
-  color: #39729E;
+  color: #000000;
 }
 
 div.educacion div.educacion_grado p {
-  color: aquamarine;
+  color: rgb(0, 0, 0);
 }
 
 

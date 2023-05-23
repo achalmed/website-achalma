@@ -12,7 +12,7 @@ tags:
   - GitHub
   - colaboración
   - desarrollo de software
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "02/16/2023"
 date-modified: "today"
 draft: false
@@ -20,7 +20,6 @@ draft: false
 
 
 
-Achalma Edison.
 ¿Necesitas aprender algunos comandos de [GIT](https://git-scm.com/) básicos? Has venido al lugar correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos que puedes utilizar como referencia diaria.
 
 ¡Empecemos!
@@ -68,11 +67,9 @@ Estos son solo algunos de los comandos básicos de Git, hay muchos otros comando
 - [Open Source](https://www.digitalocean.com/community/tags/open-source)
 - [Ubuntu](https://www.digitalocean.com/community/tags/ubuntu)
 
-By [Lisa Tagliaferri](https://www.digitalocean.com/community/users/ltagliaferri)
-
 ## Instalación de Git con paquetes predeterminados
 
-La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la [instalación desde la fuente](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source).
+La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la instalación desde la fuente.
 
 Es probable que Git ya esté instalado en el servidor Ubuntu 20.04. Puede confirmar que ese es el caso de su servidor con el siguiente comando:
 
@@ -83,7 +80,7 @@ Si obtiene un resultado similar al siguiente, significa que Git ya está instala
 Output
 git version 2.25.1  
 
-De ser así, puede pasar a la [configuración de Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#setting-up-git), o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre [cómo instalar desde la fuente](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source).
+De ser así, puede pasar a la configuración de Git, o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre cómo instalar desde la fuente.
 
 Sin embargo, si no obtuvo como resultado un número de versión de Git, puede instalarlo con el administrador de paquetes predeterminado APT de Ubuntu.
 
@@ -190,8 +187,6 @@ De esta manera, deberá tener Git instalado y listo para utilizarlo en su sistem
 
 # Cómo Obtener y Configurar tus Claves SSH para Git y GitHub
 
-Recortado de: [https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/](https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/)
-
 Si usas GitHub sin configurar una clave SSH, realmente te estás perdiendo de algo genial. Piensa en todo el tiempo que pasaste introduciendo tu correo electrónico y tu contraseña en la consola cada vez que haces un commit podrías haberlo pasado programando.
 
 Bueno, ya no más. Aquí hay una guía rápida para generar y configurar una clave SSH con GitHub para que nunca más tengas que autentificarte a la antigua.
@@ -281,9 +276,7 @@ Hi achalmed! You've successfully authenticated, but GitHub does not provide shel
 
 ## Más información sobre SSH
 
-Traducido del artículo - [How to Get and Configure Your Git and GitHub SSH Keys](https://www.freecodecamp.org/news/git-ssh-how-to/)
-
-VER DCUMENTACIO [https://cli.github.com/](https://cli.github.com/)  
+VER DCUMENTACIÓN [https://cli.github.com/](https://cli.github.com/)  
 
 ## CLI de github
 
@@ -407,7 +400,6 @@ A veces, la URL también puede ser de la forma
 
 ssh://username@example.com/path/to/my-project.git  
 
-Lea también: [Cómo instalar Virtualenv en Ubuntu](https://fedingo.com/how-to-install-virtualenv-in-ubuntu/)
 
 Anote la URL de su repositorio y utilícela en el comando git clone como se muestra a continuación.
 
@@ -419,7 +411,6 @@ Reemplace el nombre de usuario con su nombre de usuario de Github y el nom
 
 Se le pedirá su contraseña para la autenticación, después de lo cual Git descargará automáticamente la copia de su repositorio a su directorio de trabajo actual.
 
-Lea también: [Cómo actualizar Python en Ubuntu](https://fedingo.com/how-to-upgrade-python-in-ubuntu/)
 
 ### Clonación a una carpeta específica
 
@@ -439,7 +430,6 @@ Aquí está la sintaxis para el clon superficial, donde n es el número de confi
 
 `sudo git clone -depth=n <repo>`
 
-Lea también: [VPS vs alojamiento compartido: comparación en profundidad](https://fedingo.com/vps-vs-shared-hosting-in-depth-comparison/)
 
 Aquí está el comando para clonar la última confirmación de 1 de su repositorio.
 
@@ -457,22 +447,19 @@ Si solo desea clonar una rama específica (por ejemplo, trabajar) y no todo el r
 
 Eso es todo. Como puede ver, es muy fácil clonar un repositorio git en Ubuntu.
 
-From <[https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007](https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007)>
 
 ### Utilizar Git y Github para subir proyectos
 
 `git clone https://github.com/achalmed/P-1-Thesis-economic-growth-poverty.git`
 
-Recortado de: [https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726](https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726)
 
-En [este artículo anterior](https://www.redeszone.net/2013/06/07/utilizar-git-y-github-desde-ubuntu-i/) **os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.**
+**os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.**
 
 En ese artículo vamos a enseñar cómo podemos subir un proyecto desde el PC a GitHub para comenzar a gestionarlo desde allí. También os enseñaremos a utilizar los principales comandos para utilizarlo a través del terminal de Linux.
 
 **Crear un nuevo repositorio**
 
 En primer lugar debemos crear un nuevo repositorio desde la web de GitHub. Creamos un nuevo desde la página **«New Project«.*
-![](Pasted%20image%2020230128185950.png)
 
 Introduciremos el nombre del repositorio, una descripción y seleccionaremos si queremos que el repositorio sea público o privado (como privado habrá que pagar una suscripción). Una vez rellenado pulsamos sobre «Create Repository» y ya tenemos creado nuestro repositorio.
 
@@ -508,7 +495,6 @@ Debemos cambiar nick por nuestro nombre de usuario en GitHub y repositorio.git p
 
 Ya tenemos el proyecto subido en nuestra cuenta de GitHub. Podemos comprobarlo accediendo a la página del proyecto.
 
-![](Pasted%20image%2020230128190024.png)
 
 En caso de que en el paso anterior ocurra un error denominado: «fatal: remote origin already exists» debemos teclear:
 
@@ -722,8 +708,6 @@ Si se quiere ir verificando el estado de la transacción luego de cada instrucci
 
 `git status`
 
-From <[https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt](https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt)>
-
 ## git commit
 
 - `git commit` creará una instantánea de los cambios y la guardará en el directorio git.
@@ -818,7 +802,6 @@ Regresa a un commit o rama anterior, y deja en blanco el área de preparación y
 
 ### Regresar a un commit anterior en Git
 
-Recortado de: [https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/](https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/)
 
 Muchas veces, nos damos cuenta de que necesitamos regresar en el tiempo  a un punto de nuestro proyecto, para ello el comando checkout nos permite  regresar a un commit anterior en Git,  de esta manera:
 
@@ -1039,8 +1022,6 @@ Para borrar archivos o carpetas también «arriba» en nuestro respositorio (bit
 
 Si estás empezando con GIT, puede ser difícil recordar incluso los comandos básicos. Por eso, hemos preparado una hoja de trucos de GIT para ayudarte a dominar el software. Guarda el archivo en tus dispositivos o imprímelo para tenerlo siempre listo cuando tengas que recordar los comandos de GIT.
 
-[Descargar (tamaño: 1.2 MB)](https://cdn.hostinger.com/tutorials/pdf/Git-Cheat-Sheet-EN.pdf)
-
 # Conclusión
 
 Aprender los comandos básicos de GIT será de gran ayuda para los desarrolladores, ya que pueden controlar fácilmente el código fuente de los proyectos. Puede que te lleve algo de tiempo recordarlos todos, por eso nuestra hoja de trucos de GIT podría resultarte útil.
@@ -1049,8 +1030,3 @@ Aprender los comandos básicos de GIT será de gran ayuda para los desarrollador
 
 El autor  
 
-Gustavo B.
-
-Gustavo es un apasionado por la creación de sitios web. Se enfoca en la aplicación de estrategias SEO en Hostinger para España y Latinoamérica, así como la creación de contenidos de alto nivel. Cuando no está aplicando nuevos trucos en WordPress lo puedes encontrar tocando la guitarra, viajando o tomando un curso online.  
-
-[Más de Gustavo B.](https://www.hostinger.es/tutoriales/author/gustavohostinger)

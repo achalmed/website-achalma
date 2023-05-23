@@ -1167,7 +1167,7 @@
 </item>
 <item>
   <title>La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y Desafíos</title>
-  <dc:creator>ACHALMA MENDOZA Elmer Edison</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos/index.html</link>
   <description><![CDATA[ 
 
@@ -1306,7 +1306,7 @@
 </item>
 <item>
   <title>¿Cuáles son las cualidades de los servidores públicos?</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-05-11-cualidades-servidores-publicos/index.html</link>
   <description><![CDATA[ 
 
@@ -1382,7 +1382,7 @@
 </item>
 <item>
   <title>Linux Primeros Pasos</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/index.html</link>
   <description><![CDATA[ 
 
@@ -1840,7 +1840,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>El capitalismo ¿Cáncer de nuestra era?</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-03-03-el-capitalismo/index.html</link>
   <description><![CDATA[ 
 
@@ -1868,14 +1868,14 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Guía de Git Cómo trabajar en equipo en proyectos de desarrollo de software</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>Achalma Edison. ¿Necesitas aprender algunos comandos de&nbsp;<a href="https://git-scm.com/">GIT</a>&nbsp;básicos? Has venido al lugar correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos que puedes utilizar como referencia diaria.</p>
+<p>¿Necesitas aprender algunos comandos de&nbsp;<a href="https://git-scm.com/">GIT</a>&nbsp;básicos? Has venido al lugar correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos que puedes utilizar como referencia diaria.</p>
 <p>¡Empecemos!</p>
 <section id="introducción" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
@@ -1916,15 +1916,14 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <li><a href="https://www.digitalocean.com/community/tags/open-source">Open Source</a></li>
 <li><a href="https://www.digitalocean.com/community/tags/ubuntu">Ubuntu</a></li>
 </ul>
-<p>By&nbsp;<a href="https://www.digitalocean.com/community/users/ltagliaferri">Lisa Tagliaferri</a></p>
 <section id="instalación-de-git-con-paquetes-predeterminados" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="instalación-de-git-con-paquetes-predeterminados"><span class="header-section-number">4.1</span> Instalación de Git con paquetes predeterminados</h2>
-<p>La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source">instalación desde la fuente</a>.</p>
+<p>La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la&nbsp;instalación desde la fuente.</p>
 <p>Es probable que Git ya esté instalado en el servidor Ubuntu 20.04. Puede confirmar que ese es el caso de su servidor con el siguiente comando:</p>
 <p><code>git --version</code></p>
 <p>Si obtiene un resultado similar al siguiente, significa que Git ya está instalado.</p>
 <p>Output git version 2.25.1&nbsp;&nbsp;</p>
-<p>De ser así, puede pasar a la&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#setting-up-git">configuración de Git</a>, o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre&nbsp;<a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source">cómo instalar desde la fuente</a>.</p>
+<p>De ser así, puede pasar a la&nbsp;configuración de Git, o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre&nbsp;cómo instalar desde la fuente.</p>
 <p>Sin embargo, si no obtuvo como resultado un número de versión de Git, puede instalarlo con el administrador de paquetes predeterminado APT de Ubuntu.</p>
 <ol type="1">
 <li>Abre una terminal.</li>
@@ -1985,7 +1984,6 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </section>
 <section id="cómo-obtener-y-configurar-tus-claves-ssh-para-git-y-github" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Cómo Obtener y Configurar tus Claves SSH para Git y GitHub</h1>
-<p>Recortado de:&nbsp;<a href="https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/">https://www.freecodecamp.org/espanol/news/como-obtener-y-configurar-tus-claves-ssh-para-git-y-github/</a></p>
 <p>Si usas GitHub sin configurar una clave SSH, realmente te estás perdiendo de algo genial. Piensa en todo el tiempo que pasaste introduciendo tu correo electrónico y tu contraseña en la consola cada vez que haces un commit podrías haberlo pasado programando.</p>
 <p>Bueno, ya no más. Aquí hay una guía rápida para generar y configurar una clave SSH con GitHub para que nunca más tengas que autentificarte a la antigua.</p>
 <section id="comprobar-si-existe-una-clave-ssh" class="level2" data-number="5.1">
@@ -2038,8 +2036,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </section>
 <section id="más-información-sobre-ssh" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="más-información-sobre-ssh"><span class="header-section-number">5.5</span> Más información sobre SSH</h2>
-<p>Traducido del artículo -&nbsp;<a href="https://www.freecodecamp.org/news/git-ssh-how-to/">How to Get and Configure Your Git and GitHub SSH Keys</a></p>
-<p>VER DCUMENTACIO&nbsp;<a href="https://cli.github.com/">https://cli.github.com/</a>&nbsp;&nbsp;</p>
+<p>VER DCUMENTACIÓN&nbsp;<a href="https://cli.github.com/">https://cli.github.com/</a>&nbsp;&nbsp;</p>
 </section>
 <section id="cli-de-github" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="cli-de-github"><span class="header-section-number">5.6</span> CLI de github</h2>
@@ -2128,13 +2125,11 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p><a href="https://bitbucket.com/username/demo.git">https://bitbucket.com/username/demo.git</a></p>
 <p>A veces, la URL también puede ser de la forma</p>
 <p>ssh://username@example.com/path/to/my-project.git &nbsp;</p>
-<p>Lea también: <a href="https://fedingo.com/how-to-install-virtualenv-in-ubuntu/">Cómo instalar Virtualenv en Ubuntu</a></p>
 <p>Anote la URL de su repositorio y utilícela en el comando git clone como se muestra a continuación.</p>
 <p><code>sudo git clone&nbsp;https://github.com/username/repository-name</code></p>
 <p>Reemplace el nombre de usuario con su nombre de usuario de Github y el nombre del repositorio con el nombre de su repositorio. Por ejemplo</p>
 <p><code>sudo git clone&nbsp;https://github.com/test_user/demo.git</code></p>
 <p>Se le pedirá su contraseña para la autenticación, después de lo cual Git descargará automáticamente la copia de su repositorio a su directorio de trabajo actual.</p>
-<p>Lea también: <a href="https://fedingo.com/how-to-upgrade-python-in-ubuntu/">Cómo actualizar Python en Ubuntu</a></p>
 </section>
 <section id="clonación-a-una-carpeta-específica" class="level3" data-number="6.2.4">
 <h3 data-number="6.2.4" class="anchored" data-anchor-id="clonación-a-una-carpeta-específica"><span class="header-section-number">6.2.4</span> Clonación a una carpeta específica</h3>
@@ -2148,7 +2143,6 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p>Si necesita clonar un repositorio grande con un gran historial de confirmaciones, puede llevar mucho tiempo. En tales casos, puede hacer un clon superficial donde puede especificar las últimas n confirmaciones que desea clonar. Será mucho más rápido y ocupará muy poco espacio en su sistema.</p>
 <p>Aquí está la sintaxis para el clon superficial, donde n es el número de confirmaciones más recientes que desea clonar.</p>
 <p><code>sudo git clone -depth=n &lt;repo&gt;</code></p>
-<p>Lea también: <a href="https://fedingo.com/vps-vs-shared-hosting-in-depth-comparison/">VPS vs alojamiento compartido: comparación en profundidad</a></p>
 <p>Aquí está el comando para clonar la última confirmación de 1 de su repositorio.</p>
 <p><code>sudo git clone -depth=1&nbsp;https://github.com/test_user/demo.git</code></p>
 <p>Del mismo modo, aquí está el comando para clonar las últimas 10 confirmaciones de su repositorio.</p>
@@ -2157,16 +2151,14 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p>Si solo desea clonar una rama específica (por ejemplo, trabajar) y no todo el repositorio, use la opción -branch en git clone.</p>
 <p><code>git clone -branch working&nbsp;https://github.com/test_user/demo.git</code></p>
 <p>Eso es todo. Como puede ver, es muy fácil clonar un repositorio git en Ubuntu.</p>
-<p>From &lt;<a href="https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007">https://fedingo.com/how-to-clone-git-repository-in-ubuntu/?msclkid=98a3c8fbbcd911ec855d68473f662007</a>&gt;</p>
 </section>
 <section id="utilizar-git-y-github-para-subir-proyectos" class="level3" data-number="6.2.6">
 <h3 data-number="6.2.6" class="anchored" data-anchor-id="utilizar-git-y-github-para-subir-proyectos"><span class="header-section-number">6.2.6</span> Utilizar Git y Github para subir proyectos</h3>
 <p><code>git clone&nbsp;https://github.com/achalmed/P-1-Thesis-economic-growth-poverty.git</code></p>
-<p>Recortado de:&nbsp;<a href="https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726">https://www.redeszone.net/2013/06/08/utilizar-git-y-github-para-subir-proyectos-desde-ubuntu-ii/?msclkid=e54919b4be0411ec84047adbcd737726</a></p>
-<p>En&nbsp;<a href="https://www.redeszone.net/2013/06/07/utilizar-git-y-github-desde-ubuntu-i/">este artículo anterior</a> <strong>os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.</strong></p>
+<p><strong>os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.</strong></p>
 <p>En ese artículo vamos a enseñar cómo podemos subir un proyecto desde el PC a GitHub para comenzar a gestionarlo desde allí. También os enseñaremos a utilizar los principales comandos para utilizarlo a través del terminal de Linux.</p>
 <p><strong>Crear un nuevo repositorio</strong></p>
-<p>En primer lugar debemos crear un nuevo repositorio desde la web de GitHub. Creamos un nuevo desde la página **«New Project«.* <img src="https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-02-16-Guia-git/Pasted image 20230128185950.png" class="img-fluid"></p>
+<p>En primer lugar debemos crear un nuevo repositorio desde la web de GitHub. Creamos un nuevo desde la página **«New Project«.*</p>
 <p>Introduciremos el nombre del repositorio, una descripción y seleccionaremos si queremos que el repositorio sea público o privado (como privado habrá que pagar una suscripción). Una vez rellenado pulsamos sobre «Create Repository» y ya tenemos creado nuestro repositorio.</p>
 <p><strong>Subir un proyecto</strong></p>
 <p>Para subir un proyecto en primer lugar debemos crear nuestro proyecto Git de forma local en nuestro PC. Para ello debemos situarnos sobre la ruta del proyecto desde un terminal mediante el siguiente comando.</p>
@@ -2184,7 +2176,6 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p>Debemos cambiar nick por nuestro nombre de usuario en GitHub y repositorio.git por el nombre del repositorio que hemos creado anteriormente. Pulsamos enter y ya podemos subir el proyecto mediante:</p>
 <p><code>git push -u origin&nbsp;master</code>&nbsp;&nbsp;</p>
 <p>Ya tenemos el proyecto subido en nuestra cuenta de GitHub. Podemos comprobarlo accediendo a la página del proyecto.</p>
-<p><img src="https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-02-16-Guia-git/Pasted image 20230128190024.png" class="img-fluid"></p>
 <p>En caso de que en el paso anterior ocurra un error denominado: «fatal: remote origin already exists» debemos teclear:</p>
 <p><code>git remote rm origin</code>&nbsp;&nbsp;</p>
 <p>Y a continuación volver a realizar el proceso anterior.</p>
@@ -2388,7 +2379,6 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <p>Apendice A)</p>
 <p>Si se quiere ir verificando el estado de la transacción luego de cada instrucción, puede tipear el siguiente comando:</p>
 <p><code>git status</code></p>
-<p>From &lt;<a href="https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt">https://github.com/cristian87dev/comandos-git/blob/master/Para%20subir%20cambios%20al%20servidor%20github.txt</a>&gt;</p>
 </section>
 </section>
 <section id="git-commit" class="level2" data-number="9.2">
@@ -2478,7 +2468,6 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </section>
 <section id="regresar-a-un-commit-anterior-en-git" class="level3" data-number="9.7.2">
 <h3 data-number="9.7.2" class="anchored" data-anchor-id="regresar-a-un-commit-anterior-en-git"><span class="header-section-number">9.7.2</span> Regresar a un commit anterior en Git</h3>
-<p>Recortado de:&nbsp;<a href="https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/">https://frankgalandev.com/regresando-a-un-commit-anterior-en-git/</a></p>
 <p>Muchas veces, nos damos cuenta de que necesitamos regresar en el tiempo  a un punto de nuestro proyecto, para ello el comando&nbsp;checkout&nbsp;nos permite  regresar a un&nbsp;commit&nbsp;anterior en Git,  de esta manera:</p>
 <p>Primero ver la estructura de los últimos commit con este comando</p>
 <p><code>git log --oneline</code>&nbsp;&nbsp;</p>
@@ -2665,16 +2654,12 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <section id="hoja-de-trucos-de-los-comandos-de-git-en-.pdf" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> Hoja de trucos de los comandos de GIT en .pdf</h1>
 <p>Si estás empezando con GIT, puede ser difícil recordar incluso los comandos básicos. Por eso, hemos preparado una hoja de trucos de GIT para ayudarte a dominar el software. Guarda el archivo en tus dispositivos o imprímelo para tenerlo siempre listo cuando tengas que recordar los comandos de GIT.</p>
-<p><a href="https://cdn.hostinger.com/tutorials/pdf/Git-Cheat-Sheet-EN.pdf">Descargar (tamaño: 1.2 MB)</a></p>
 </section>
 <section id="conclusión-1" class="level1" data-number="13">
 <h1 data-number="13"><span class="header-section-number">13</span> Conclusión</h1>
 <p>Aprender los comandos básicos de GIT será de gran ayuda para los desarrolladores, ya que pueden controlar fácilmente el código fuente de los proyectos. Puede que te lleve algo de tiempo recordarlos todos, por eso nuestra hoja de trucos de GIT podría resultarte útil.</p>
 <p>¡Practica estos comandos de GIT y aprovecha al máximo tus habilidades en desarrollo! ¡Buena suerte!</p>
 <p>El autor&nbsp;&nbsp;</p>
-<p>Gustavo B.</p>
-<p>Gustavo es un apasionado por la creación de sitios web. Se enfoca en la aplicación de estrategias SEO en Hostinger para España y Latinoamérica, así como la creación de contenidos de alto nivel. Cuando no está aplicando nuevos trucos en WordPress lo puedes encontrar tocando la guitarra, viajando o tomando un curso online.&nbsp;&nbsp;</p>
-<p><a href="https://www.hostinger.es/tutoriales/author/gustavohostinger">Más de Gustavo B.</a></p>
 
 
 <!-- -->
@@ -2687,11 +2672,10 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
   <category>Trabajo en equipo</category>
   <guid>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</guid>
   <pubDate>Thu, 16 Feb 2023 05:00:00 GMT</pubDate>
-  <media:content url="https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2023-02-16-Guia-git/Pasted%20image%2020230128185950.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Cómo usar APK en Windows 11 una guía paso a paso</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.html</link>
   <description><![CDATA[ 
 
@@ -2807,7 +2791,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Comandos básicos de Vim para mejorar tu flujo de trabajo</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2022-09-27-Comandos-VIM/index.html</link>
   <description><![CDATA[ 
 
@@ -4584,11 +4568,11 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación</title>
-  <dc:creator>ACHALMA MENDOZA Elmer Edison</dc:creator>
-  <dc:creator>BERMUDO HEREDIA Felix Manuel</dc:creator>
-  <dc:creator>BORDA TORRES Noe</dc:creator>
-  <dc:creator>CASTILLO LOPEZ Kattya Yasitrh</dc:creator>
-  <dc:creator>FERNANDEZ NÚÑEZ Yuri David</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
+  <dc:creator>Bermudo Heredia Felix Manuel</dc:creator>
+  <dc:creator>Borda Torres Noe</dc:creator>
+  <dc:creator>Castillo Lopez Kattya Yasitrh</dc:creator>
+  <dc:creator>Fernandez Núñez Yuri David</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion/index.html</link>
   <description><![CDATA[ 
 
@@ -4665,11 +4649,11 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Reformas y Modernización de la Gestión Pública en Perú.</title>
-  <dc:creator>ACHALMA MENDOZA Elmer Edison</dc:creator>
-  <dc:creator>BERMUDO HEREDIA Felix Manuel</dc:creator>
-  <dc:creator>BORDA TORRES Noe</dc:creator>
-  <dc:creator>CASTILLO LOPEZ Kattya Yasitrh</dc:creator>
-  <dc:creator>FERNANDEZ NÚÑEZ Yuri Davi</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
+  <dc:creator>Bermudo Heredia Felix Manuel</dc:creator>
+  <dc:creator>Borda Torres Noe</dc:creator>
+  <dc:creator>Castillo Lopez Kattya Yasitrh</dc:creator>
+  <dc:creator>Fernandez Núñez Yuri David</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru/index.html</link>
   <description><![CDATA[ 
 
@@ -4775,7 +4759,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Comandos útiles de Blogdown para crear sitios web con R</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</link>
   <description><![CDATA[ 
 
@@ -4814,7 +4798,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </item>
 <item>
   <title>Aprende a usar Google Assistant Comandos útiles y trucos</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <link>https://curious-figolla-90b3ad.netlify.app/docs/blog/posts/2020-05-23-Comandos-goole-assistant/index.html</link>
   <description><![CDATA[ 
 

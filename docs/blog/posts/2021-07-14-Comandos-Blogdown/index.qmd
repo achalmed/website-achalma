@@ -12,7 +12,7 @@ tags:
   - Blogdown
   - Comandos
   - Sitios web
-author: Edison Achalma Mendoza
+author: Achalma Mendoza Elmer Edison
 date: "07/14/2021"
 date-modified: "today"
 draft: false

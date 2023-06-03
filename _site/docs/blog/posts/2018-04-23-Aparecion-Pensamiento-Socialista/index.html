@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -133,7 +104,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
@@ -177,10 +149,11 @@ cookieconsent.run({
   
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      background: #EDF3F9;
-    }
-    </style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #EDF3F9;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../../../../styles.css">
@@ -204,58 +177,60 @@ cookieconsent.run({
     <img src="../../../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html">
+    <a class="nav-link" href="../../../../index.html" rel="" target="">
  <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/get-started/index.html">
+    <a class="nav-link" href="../../../../docs/get-started/index.html" rel="" target="">
  <span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/gallery/index.html">
+    <a class="nav-link" href="../../../../docs/gallery/index.html" rel="" target="">
  <span class="menu-text">Galería</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/blog/index.html">
+    <a class="nav-link" href="../../../../docs/blog/index.html" rel="" target="">
  <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Ayuda</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Reportar un error</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Hacer una pregunta</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+    <a class="dropdown-item" href="../../../../docs/faq/index.html" rel="" target=""><i class="bi bi-question-circle" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -297,7 +272,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 23, 2023</p>
+        <p class="date-modified">June 3, 2023</p>
       </div>
     </div>
       
@@ -306,49 +281,50 @@ cookieconsent.run({
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación"><span class="toc-section-number">1</span>  Presentación</a></li>
-  <li><a href="#aparición-del-pensamiento-socialista" id="toc-aparición-del-pensamiento-socialista" class="nav-link" data-scroll-target="#aparición-del-pensamiento-socialista"><span class="toc-section-number">2</span>  Aparición del pensamiento socialista</a>
+  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación"><span class="header-section-number">1</span> Presentación</a></li>
+  <li><a href="#aparición-del-pensamiento-socialista" id="toc-aparición-del-pensamiento-socialista" class="nav-link" data-scroll-target="#aparición-del-pensamiento-socialista"><span class="header-section-number">2</span> Aparición del pensamiento socialista</a>
   <ul class="collapse">
-  <li><a href="#antecedentes-históricos-del-socialismo" id="toc-antecedentes-históricos-del-socialismo" class="nav-link" data-scroll-target="#antecedentes-históricos-del-socialismo"><span class="toc-section-number">2.1</span>  Antecedentes históricos del socialismo</a></li>
+  <li><a href="#antecedentes-históricos-del-socialismo" id="toc-antecedentes-históricos-del-socialismo" class="nav-link" data-scroll-target="#antecedentes-históricos-del-socialismo"><span class="header-section-number">2.1</span> Antecedentes históricos del socialismo</a></li>
   </ul></li>
-  <li><a href="#tipos-de-socialismo" id="toc-tipos-de-socialismo" class="nav-link" data-scroll-target="#tipos-de-socialismo"><span class="toc-section-number">3</span>  Tipos de Socialismo</a>
+  <li><a href="#tipos-de-socialismo" id="toc-tipos-de-socialismo" class="nav-link" data-scroll-target="#tipos-de-socialismo"><span class="header-section-number">3</span> Tipos de Socialismo</a>
   <ul class="collapse">
-  <li><a href="#socialismo-utópico-alrededor-de-1800" id="toc-socialismo-utópico-alrededor-de-1800" class="nav-link" data-scroll-target="#socialismo-utópico-alrededor-de-1800"><span class="toc-section-number">3.1</span>  Socialismo Utópico (alrededor de 1800)</a></li>
-  <li><a href="#socialismo-de-estado" id="toc-socialismo-de-estado" class="nav-link" data-scroll-target="#socialismo-de-estado"><span class="toc-section-number">3.2</span>  Socialismo de Estado</a></li>
-  <li><a href="#socialismo-cristiano" id="toc-socialismo-cristiano" class="nav-link" data-scroll-target="#socialismo-cristiano"><span class="toc-section-number">3.3</span>  Socialismo Cristiano</a></li>
-  <li><a href="#anarquismo" id="toc-anarquismo" class="nav-link" data-scroll-target="#anarquismo"><span class="toc-section-number">3.4</span>  Anarquismo</a></li>
-  <li><a href="#socialismo-marxista" id="toc-socialismo-marxista" class="nav-link" data-scroll-target="#socialismo-marxista"><span class="toc-section-number">3.5</span>  Socialismo Marxista</a>
+  <li><a href="#socialismo-utópico-alrededor-de-1800" id="toc-socialismo-utópico-alrededor-de-1800" class="nav-link" data-scroll-target="#socialismo-utópico-alrededor-de-1800"><span class="header-section-number">3.1</span> Socialismo Utópico (alrededor de 1800)</a></li>
+  <li><a href="#socialismo-de-estado" id="toc-socialismo-de-estado" class="nav-link" data-scroll-target="#socialismo-de-estado"><span class="header-section-number">3.2</span> Socialismo de Estado</a></li>
+  <li><a href="#socialismo-cristiano" id="toc-socialismo-cristiano" class="nav-link" data-scroll-target="#socialismo-cristiano"><span class="header-section-number">3.3</span> Socialismo Cristiano</a></li>
+  <li><a href="#anarquismo" id="toc-anarquismo" class="nav-link" data-scroll-target="#anarquismo"><span class="header-section-number">3.4</span> Anarquismo</a></li>
+  <li><a href="#socialismo-marxista" id="toc-socialismo-marxista" class="nav-link" data-scroll-target="#socialismo-marxista"><span class="header-section-number">3.5</span> Socialismo Marxista</a>
   <ul class="collapse">
-  <li><a href="#el-socialismo-marxista-o-científico" id="toc-el-socialismo-marxista-o-científico" class="nav-link" data-scroll-target="#el-socialismo-marxista-o-científico"><span class="toc-section-number">3.5.1</span>  El socialismo marxista o científico:</a></li>
-  <li><a href="#comunismo-según-marx" id="toc-comunismo-según-marx" class="nav-link" data-scroll-target="#comunismo-según-marx"><span class="toc-section-number">3.5.2</span>  Comunismo según Marx:</a></li>
+  <li><a href="#el-socialismo-marxista-o-científico" id="toc-el-socialismo-marxista-o-científico" class="nav-link" data-scroll-target="#el-socialismo-marxista-o-científico"><span class="header-section-number">3.5.1</span> El socialismo marxista o científico:</a></li>
+  <li><a href="#comunismo-según-marx" id="toc-comunismo-según-marx" class="nav-link" data-scroll-target="#comunismo-según-marx"><span class="header-section-number">3.5.2</span> Comunismo según Marx:</a></li>
   </ul></li>
-  <li><a href="#revisionismo" id="toc-revisionismo" class="nav-link" data-scroll-target="#revisionismo"><span class="toc-section-number">3.6</span>  Revisionismo</a></li>
-  <li><a href="#sindicalismo" id="toc-sindicalismo" class="nav-link" data-scroll-target="#sindicalismo"><span class="toc-section-number">3.7</span>  Sindicalismo</a></li>
-  <li><a href="#socialismo-de-gremios" id="toc-socialismo-de-gremios" class="nav-link" data-scroll-target="#socialismo-de-gremios"><span class="toc-section-number">3.8</span>  Socialismo de gremios</a></li>
+  <li><a href="#revisionismo" id="toc-revisionismo" class="nav-link" data-scroll-target="#revisionismo"><span class="header-section-number">3.6</span> Revisionismo</a></li>
+  <li><a href="#sindicalismo" id="toc-sindicalismo" class="nav-link" data-scroll-target="#sindicalismo"><span class="header-section-number">3.7</span> Sindicalismo</a></li>
+  <li><a href="#socialismo-de-gremios" id="toc-socialismo-de-gremios" class="nav-link" data-scroll-target="#socialismo-de-gremios"><span class="header-section-number">3.8</span> Socialismo de gremios</a></li>
   </ul></li>
-  <li><a href="#características-comunes-del-socialismo" id="toc-características-comunes-del-socialismo" class="nav-link" data-scroll-target="#características-comunes-del-socialismo"><span class="toc-section-number">4</span>  Características comunes del Socialismo</a>
+  <li><a href="#características-comunes-del-socialismo" id="toc-características-comunes-del-socialismo" class="nav-link" data-scroll-target="#características-comunes-del-socialismo"><span class="header-section-number">4</span> Características comunes del Socialismo</a>
   <ul class="collapse">
-  <li><a href="#a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo" id="toc-a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo" class="nav-link" data-scroll-target="#a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo"><span class="toc-section-number">4.1</span>  ¿A quiénes beneficiaba o trataba de beneficiar el socialismo?</a></li>
-  <li><a href="#en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época" id="toc-en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época" class="nav-link" data-scroll-target="#en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época"><span class="toc-section-number">4.2</span>  ¿En qué forma el socialismo era válido, útil o correcto en su época?</a></li>
-  <li><a href="#principios-perdurables-del-socialismo" id="toc-principios-perdurables-del-socialismo" class="nav-link" data-scroll-target="#principios-perdurables-del-socialismo"><span class="toc-section-number">4.3</span>  Principios perdurables del socialismo</a></li>
+  <li><a href="#a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo" id="toc-a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo" class="nav-link" data-scroll-target="#a-quiénes-beneficiaba-o-trataba-de-beneficiar-el-socialismo"><span class="header-section-number">4.1</span> ¿A quiénes beneficiaba o trataba de beneficiar el socialismo?</a></li>
+  <li><a href="#en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época" id="toc-en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época" class="nav-link" data-scroll-target="#en-qué-forma-el-socialismo-era-válido-útil-o-correcto-en-su-época"><span class="header-section-number">4.2</span> ¿En qué forma el socialismo era válido, útil o correcto en su época?</a></li>
+  <li><a href="#principios-perdurables-del-socialismo" id="toc-principios-perdurables-del-socialismo" class="nav-link" data-scroll-target="#principios-perdurables-del-socialismo"><span class="header-section-number">4.3</span> Principios perdurables del socialismo</a></li>
   </ul></li>
-  <li><a href="#principales-representantes" id="toc-principales-representantes" class="nav-link" data-scroll-target="#principales-representantes"><span class="toc-section-number">5</span>  Principales representantes</a>
+  <li><a href="#principales-representantes" id="toc-principales-representantes" class="nav-link" data-scroll-target="#principales-representantes"><span class="header-section-number">5</span> Principales representantes</a>
   <ul class="collapse">
-  <li><a href="#henry-comte-de-saint-simon-1760-1825" id="toc-henry-comte-de-saint-simon-1760-1825" class="nav-link" data-scroll-target="#henry-comte-de-saint-simon-1760-1825"><span class="toc-section-number">5.1</span>  Henry Comte de Saint-Simon (1760-1825)</a></li>
-  <li><a href="#charles-fourier-1772-1837" id="toc-charles-fourier-1772-1837" class="nav-link" data-scroll-target="#charles-fourier-1772-1837"><span class="toc-section-number">5.2</span>  Charles Fourier (1772-1837)</a></li>
-  <li><a href="#simonde-de-sismondi-1773-1842" id="toc-simonde-de-sismondi-1773-1842" class="nav-link" data-scroll-target="#simonde-de-sismondi-1773-1842"><span class="toc-section-number">5.3</span>  Simonde de Sismondi (1773-1842)</a></li>
-  <li><a href="#robert-owen-1771-1858" id="toc-robert-owen-1771-1858" class="nav-link" data-scroll-target="#robert-owen-1771-1858"><span class="toc-section-number">5.4</span>  Robert Owen (1771-1858):</a></li>
-  <li><a href="#louis-blanc-1811-1882" id="toc-louis-blanc-1811-1882" class="nav-link" data-scroll-target="#louis-blanc-1811-1882"><span class="toc-section-number">5.5</span>  Louis Blanc (1811-1882)</a></li>
-  <li><a href="#charles-kingsley-1819-1875" id="toc-charles-kingsley-1819-1875" class="nav-link" data-scroll-target="#charles-kingsley-1819-1875"><span class="toc-section-number">5.6</span>  Charles Kingsley (1819-1875)</a></li>
+  <li><a href="#henry-comte-de-saint-simon-1760-1825" id="toc-henry-comte-de-saint-simon-1760-1825" class="nav-link" data-scroll-target="#henry-comte-de-saint-simon-1760-1825"><span class="header-section-number">5.1</span> Henry Comte de Saint-Simon (1760-1825)</a></li>
+  <li><a href="#charles-fourier-1772-1837" id="toc-charles-fourier-1772-1837" class="nav-link" data-scroll-target="#charles-fourier-1772-1837"><span class="header-section-number">5.2</span> Charles Fourier (1772-1837)</a></li>
+  <li><a href="#simonde-de-sismondi-1773-1842" id="toc-simonde-de-sismondi-1773-1842" class="nav-link" data-scroll-target="#simonde-de-sismondi-1773-1842"><span class="header-section-number">5.3</span> Simonde de Sismondi (1773-1842)</a></li>
+  <li><a href="#robert-owen-1771-1858" id="toc-robert-owen-1771-1858" class="nav-link" data-scroll-target="#robert-owen-1771-1858"><span class="header-section-number">5.4</span> Robert Owen (1771-1858):</a></li>
+  <li><a href="#louis-blanc-1811-1882" id="toc-louis-blanc-1811-1882" class="nav-link" data-scroll-target="#louis-blanc-1811-1882"><span class="header-section-number">5.5</span> Louis Blanc (1811-1882)</a></li>
+  <li><a href="#charles-kingsley-1819-1875" id="toc-charles-kingsley-1819-1875" class="nav-link" data-scroll-target="#charles-kingsley-1819-1875"><span class="header-section-number">5.6</span> Charles Kingsley (1819-1875)</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2018-04-23-Aparecion-Pensamiento-Socialista/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -599,9 +575,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -717,6 +707,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -755,12 +831,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/curious-figolla-90b3ad\.netlify\.app\//);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -995,8 +1071,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="../../../../about.html">Acerca de</a>
   </li>  
@@ -1010,7 +1086,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../../../trademark.html">Marca comercial</a>
   </li>  
 </ul>
-      <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

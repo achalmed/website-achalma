@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -133,7 +104,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
@@ -177,19 +149,20 @@ cookieconsent.run({
   
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      background: #EDF3F9;
-    }
-    </style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #EDF3F9;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../../../../styles.css">
 <link rel="stylesheet" href="../index.css">
 <meta property="og:title" content="achalmaedison - Impulsando el Desarrollo Económico Regional Claves para un Futuro Próspero">
-<meta property="og:description" content="Descubre cómo potenciar el crecimiento económico regional y superar los desafíos en el contexto actual.">
+<meta property="og:description" content="Descubre cómo potenciar el crecimiento económico regional y superar los desafíos en el contexto actual. Este artículo ofrece información valiosa sobre estrategias clave, tendencias económicas y herramientas para impulsar el desarrollo regional y crear un futuro próspero para latinoamérica.">
 <meta property="og:site-name" content="achalmaedison">
 <meta name="twitter:title" content="achalmaedison - Impulsando el Desarrollo Económico Regional Claves para un Futuro Próspero">
-<meta name="twitter:description" content="Descubre cómo potenciar el crecimiento económico regional y superar los desafíos en el contexto actual.">
+<meta name="twitter:description" content="Descubre cómo potenciar el crecimiento económico regional y superar los desafíos en el contexto actual. Este artículo ofrece información valiosa sobre estrategias clave, tendencias económicas y herramientas para impulsar el desarrollo regional y crear un futuro próspero para latinoamérica.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -204,58 +177,60 @@ cookieconsent.run({
     <img src="../../../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html">
+    <a class="nav-link" href="../../../../index.html" rel="" target="">
  <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/get-started/index.html">
+    <a class="nav-link" href="../../../../docs/get-started/index.html" rel="" target="">
  <span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/gallery/index.html">
+    <a class="nav-link" href="../../../../docs/gallery/index.html" rel="" target="">
  <span class="menu-text">Galería</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/blog/index.html">
+    <a class="nav-link" href="../../../../docs/blog/index.html" rel="" target="">
  <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Ayuda</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Reportar un error</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Hacer una pregunta</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+    <a class="dropdown-item" href="../../../../docs/faq/index.html" rel="" target=""><i class="bi bi-question-circle" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -300,7 +275,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 23, 2023</p>
+        <p class="date-modified">June 3, 2023</p>
       </div>
     </div>
       
@@ -309,112 +284,113 @@ cookieconsent.run({
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#países-en-vías-de-desarrollo" id="toc-países-en-vías-de-desarrollo" class="nav-link active" data-scroll-target="#países-en-vías-de-desarrollo"><span class="toc-section-number">1</span>  Países en vías de desarrollo</a>
+  <li><a href="#países-en-vías-de-desarrollo" id="toc-países-en-vías-de-desarrollo" class="nav-link active" data-scroll-target="#países-en-vías-de-desarrollo"><span class="header-section-number">1</span> Países en vías de desarrollo</a>
   <ul class="collapse">
-  <li><a href="#a-qué-se-debe-esto" id="toc-a-qué-se-debe-esto" class="nav-link" data-scroll-target="#a-qué-se-debe-esto"><span class="toc-section-number">1.1</span>  ¿A qué se debe esto?</a></li>
-  <li><a href="#países-industrializados" id="toc-países-industrializados" class="nav-link" data-scroll-target="#países-industrializados"><span class="toc-section-number">1.2</span>  Países industrializados</a></li>
-  <li><a href="#las-características-de-una-sociedad-en-desarrollo-son" id="toc-las-características-de-una-sociedad-en-desarrollo-son" class="nav-link" data-scroll-target="#las-características-de-una-sociedad-en-desarrollo-son"><span class="toc-section-number">1.3</span>  Las características de una sociedad en desarrollo son:</a></li>
-  <li><a href="#características-de-los-países-con-problemas-de-desarollo" id="toc-características-de-los-países-con-problemas-de-desarollo" class="nav-link" data-scroll-target="#características-de-los-países-con-problemas-de-desarollo"><span class="toc-section-number">1.4</span>  Características de los países con problemas de desarollo</a></li>
-  <li><a href="#clasificamos-en-tres-sectores-a-la-economía" id="toc-clasificamos-en-tres-sectores-a-la-economía" class="nav-link" data-scroll-target="#clasificamos-en-tres-sectores-a-la-economía"><span class="toc-section-number">1.5</span>  Clasificamos en tres sectores a la economía</a></li>
-  <li><a href="#a-qué-se-debe-que-no-transformamos-los-minerales" id="toc-a-qué-se-debe-que-no-transformamos-los-minerales" class="nav-link" data-scroll-target="#a-qué-se-debe-que-no-transformamos-los-minerales"><span class="toc-section-number">1.6</span>  ¿A qué se debe que no transformamos los minerales?</a></li>
+  <li><a href="#a-qué-se-debe-esto" id="toc-a-qué-se-debe-esto" class="nav-link" data-scroll-target="#a-qué-se-debe-esto"><span class="header-section-number">1.1</span> ¿A qué se debe esto?</a></li>
+  <li><a href="#países-industrializados" id="toc-países-industrializados" class="nav-link" data-scroll-target="#países-industrializados"><span class="header-section-number">1.2</span> Países industrializados</a></li>
+  <li><a href="#las-características-de-una-sociedad-en-desarrollo-son" id="toc-las-características-de-una-sociedad-en-desarrollo-son" class="nav-link" data-scroll-target="#las-características-de-una-sociedad-en-desarrollo-son"><span class="header-section-number">1.3</span> Las características de una sociedad en desarrollo son:</a></li>
+  <li><a href="#características-de-los-países-con-problemas-de-desarollo" id="toc-características-de-los-países-con-problemas-de-desarollo" class="nav-link" data-scroll-target="#características-de-los-países-con-problemas-de-desarollo"><span class="header-section-number">1.4</span> Características de los países con problemas de desarollo</a></li>
+  <li><a href="#clasificamos-en-tres-sectores-a-la-economía" id="toc-clasificamos-en-tres-sectores-a-la-economía" class="nav-link" data-scroll-target="#clasificamos-en-tres-sectores-a-la-economía"><span class="header-section-number">1.5</span> Clasificamos en tres sectores a la economía</a></li>
+  <li><a href="#a-qué-se-debe-que-no-transformamos-los-minerales" id="toc-a-qué-se-debe-que-no-transformamos-los-minerales" class="nav-link" data-scroll-target="#a-qué-se-debe-que-no-transformamos-los-minerales"><span class="header-section-number">1.6</span> ¿A qué se debe que no transformamos los minerales?</a></li>
   </ul></li>
-  <li><a href="#la-globalización-y-las-economías-regionales" id="toc-la-globalización-y-las-economías-regionales" class="nav-link" data-scroll-target="#la-globalización-y-las-economías-regionales"><span class="toc-section-number">2</span>  La globalización y las economías regionales</a>
+  <li><a href="#la-globalización-y-las-economías-regionales" id="toc-la-globalización-y-las-economías-regionales" class="nav-link" data-scroll-target="#la-globalización-y-las-economías-regionales"><span class="header-section-number">2</span> La globalización y las economías regionales</a>
   <ul class="collapse">
-  <li><a href="#cuáles-son-las-necesidades-de-la-mano-de-obra" id="toc-cuáles-son-las-necesidades-de-la-mano-de-obra" class="nav-link" data-scroll-target="#cuáles-son-las-necesidades-de-la-mano-de-obra"><span class="toc-section-number">2.1</span>  ¿Cuáles son las necesidades de la mano de obra?</a></li>
+  <li><a href="#cuáles-son-las-necesidades-de-la-mano-de-obra" id="toc-cuáles-son-las-necesidades-de-la-mano-de-obra" class="nav-link" data-scroll-target="#cuáles-son-las-necesidades-de-la-mano-de-obra"><span class="header-section-number">2.1</span> ¿Cuáles son las necesidades de la mano de obra?</a></li>
   </ul></li>
-  <li><a href="#la-economía-regional-en-el-contexto-de-la-globalización" id="toc-la-economía-regional-en-el-contexto-de-la-globalización" class="nav-link" data-scroll-target="#la-economía-regional-en-el-contexto-de-la-globalización"><span class="toc-section-number">3</span>  La economía regional en el contexto de la globalización</a>
+  <li><a href="#la-economía-regional-en-el-contexto-de-la-globalización" id="toc-la-economía-regional-en-el-contexto-de-la-globalización" class="nav-link" data-scroll-target="#la-economía-regional-en-el-contexto-de-la-globalización"><span class="header-section-number">3</span> La economía regional en el contexto de la globalización</a>
   <ul class="collapse">
-  <li><a href="#alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación" id="toc-alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación" class="nav-link" data-scroll-target="#alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación"><span class="toc-section-number">3.1</span>  Alcanzar el bienestar en ámbitos regionales y la importancia de la innovación</a></li>
-  <li><a href="#percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización" id="toc-percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización" class="nav-link" data-scroll-target="#percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización"><span class="toc-section-number">3.2</span>  Percepción de la disociación social y la importancia de la regionalización</a></li>
-  <li><a href="#aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional" id="toc-aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional" class="nav-link" data-scroll-target="#aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional"><span class="toc-section-number">3.3</span>  Aprovechando los beneficios de la globalización para el desarrollo regional</a></li>
-  <li><a href="#diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional" id="toc-diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional" class="nav-link" data-scroll-target="#diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional"><span class="toc-section-number">3.4</span>  Diversas perspectivas sobre la relación entre globalización y desarrollo regional</a></li>
-  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen"><span class="toc-section-number">3.5</span>  Resumen</a></li>
+  <li><a href="#alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación" id="toc-alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación" class="nav-link" data-scroll-target="#alcanzar-el-bienestar-en-ámbitos-regionales-y-la-importancia-de-la-innovación"><span class="header-section-number">3.1</span> Alcanzar el bienestar en ámbitos regionales y la importancia de la innovación</a></li>
+  <li><a href="#percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización" id="toc-percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización" class="nav-link" data-scroll-target="#percepción-de-la-disociación-social-y-la-importancia-de-la-regionalización"><span class="header-section-number">3.2</span> Percepción de la disociación social y la importancia de la regionalización</a></li>
+  <li><a href="#aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional" id="toc-aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional" class="nav-link" data-scroll-target="#aprovechando-los-beneficios-de-la-globalización-para-el-desarrollo-regional"><span class="header-section-number">3.3</span> Aprovechando los beneficios de la globalización para el desarrollo regional</a></li>
+  <li><a href="#diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional" id="toc-diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional" class="nav-link" data-scroll-target="#diversas-perspectivas-sobre-la-relación-entre-globalización-y-desarrollo-regional"><span class="header-section-number">3.4</span> Diversas perspectivas sobre la relación entre globalización y desarrollo regional</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen"><span class="header-section-number">3.5</span> Resumen</a></li>
   </ul></li>
-  <li><a href="#el-crecimiento-económico-y-la-reducción-de-la-pobreza" id="toc-el-crecimiento-económico-y-la-reducción-de-la-pobreza" class="nav-link" data-scroll-target="#el-crecimiento-económico-y-la-reducción-de-la-pobreza"><span class="toc-section-number">4</span>  El crecimiento económico y la reducción de la pobreza</a>
+  <li><a href="#el-crecimiento-económico-y-la-reducción-de-la-pobreza" id="toc-el-crecimiento-económico-y-la-reducción-de-la-pobreza" class="nav-link" data-scroll-target="#el-crecimiento-económico-y-la-reducción-de-la-pobreza"><span class="header-section-number">4</span> El crecimiento económico y la reducción de la pobreza</a>
   <ul class="collapse">
-  <li><a href="#indicadores" id="toc-indicadores" class="nav-link" data-scroll-target="#indicadores"><span class="toc-section-number">4.1</span>  Indicadores</a></li>
-  <li><a href="#cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia" id="toc-cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia" class="nav-link" data-scroll-target="#cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia"><span class="toc-section-number">4.2</span>  ¿Cómo erradicar la pobreza en un mundo de abundancia?</a></li>
-  <li><a href="#el-rol-económico-del-estado" id="toc-el-rol-económico-del-estado" class="nav-link" data-scroll-target="#el-rol-económico-del-estado"><span class="toc-section-number">4.3</span>  El Rol Económico del Estado</a></li>
-  <li><a href="#cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza" id="toc-cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza" class="nav-link" data-scroll-target="#cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza"><span class="toc-section-number">4.4</span>  ¿Cómo es que se implementa la política social dentro de este encare de reducción de pobreza y extrema pobreza?</a></li>
-  <li><a href="#quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza" id="toc-quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza" class="nav-link" data-scroll-target="#quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza"><span class="toc-section-number">4.5</span>  ¿Quién Implementa la Política Social en la Reducción de la Pobreza y la Extrema Pobreza?</a></li>
-  <li><a href="#estrategias-de-inversión-para-reducir-la-pobreza" id="toc-estrategias-de-inversión-para-reducir-la-pobreza" class="nav-link" data-scroll-target="#estrategias-de-inversión-para-reducir-la-pobreza"><span class="toc-section-number">4.6</span>  Estrategias de Inversión para Reducir la Pobreza</a></li>
-  <li><a href="#resumen-1" id="toc-resumen-1" class="nav-link" data-scroll-target="#resumen-1"><span class="toc-section-number">4.7</span>  Resumen</a></li>
-  <li><a href="#gobernabilidad-e-instituciones" id="toc-gobernabilidad-e-instituciones" class="nav-link" data-scroll-target="#gobernabilidad-e-instituciones"><span class="toc-section-number">4.8</span>  Gobernabilidad e instituciones</a></li>
-  <li><a href="#en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone" id="toc-en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone" class="nav-link" data-scroll-target="#en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone"><span class="toc-section-number">4.9</span>  ¿En el Perú la calidad de las instituciones está a la altura de las metas, están las instituciones públicas organizadas para alcanzar las metas que se les propone?</a></li>
-  <li><a href="#los-4-principios-básicos-de-la-buena-gobernabilidad" id="toc-los-4-principios-básicos-de-la-buena-gobernabilidad" class="nav-link" data-scroll-target="#los-4-principios-básicos-de-la-buena-gobernabilidad"><span class="toc-section-number">4.10</span>  Los 4 principios básicos de la buena gobernabilidad:</a></li>
+  <li><a href="#indicadores" id="toc-indicadores" class="nav-link" data-scroll-target="#indicadores"><span class="header-section-number">4.1</span> Indicadores</a></li>
+  <li><a href="#cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia" id="toc-cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia" class="nav-link" data-scroll-target="#cómo-erradicar-la-pobreza-en-un-mundo-de-abundancia"><span class="header-section-number">4.2</span> ¿Cómo erradicar la pobreza en un mundo de abundancia?</a></li>
+  <li><a href="#el-rol-económico-del-estado" id="toc-el-rol-económico-del-estado" class="nav-link" data-scroll-target="#el-rol-económico-del-estado"><span class="header-section-number">4.3</span> El Rol Económico del Estado</a></li>
+  <li><a href="#cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza" id="toc-cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza" class="nav-link" data-scroll-target="#cómo-es-que-se-implementa-la-política-social-dentro-de-este-encare-de-reducción-de-pobreza-y-extrema-pobreza"><span class="header-section-number">4.4</span> ¿Cómo es que se implementa la política social dentro de este encare de reducción de pobreza y extrema pobreza?</a></li>
+  <li><a href="#quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza" id="toc-quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza" class="nav-link" data-scroll-target="#quién-implementa-la-política-social-en-la-reducción-de-la-pobreza-y-la-extrema-pobreza"><span class="header-section-number">4.5</span> ¿Quién Implementa la Política Social en la Reducción de la Pobreza y la Extrema Pobreza?</a></li>
+  <li><a href="#estrategias-de-inversión-para-reducir-la-pobreza" id="toc-estrategias-de-inversión-para-reducir-la-pobreza" class="nav-link" data-scroll-target="#estrategias-de-inversión-para-reducir-la-pobreza"><span class="header-section-number">4.6</span> Estrategias de Inversión para Reducir la Pobreza</a></li>
+  <li><a href="#resumen-1" id="toc-resumen-1" class="nav-link" data-scroll-target="#resumen-1"><span class="header-section-number">4.7</span> Resumen</a></li>
+  <li><a href="#gobernabilidad-e-instituciones" id="toc-gobernabilidad-e-instituciones" class="nav-link" data-scroll-target="#gobernabilidad-e-instituciones"><span class="header-section-number">4.8</span> Gobernabilidad e instituciones</a></li>
+  <li><a href="#en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone" id="toc-en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone" class="nav-link" data-scroll-target="#en-el-perú-la-calidad-de-las-instituciones-está-a-la-altura-de-las-metas-están-las-instituciones-públicas-organizadas-para-alcanzar-las-metas-que-se-les-propone"><span class="header-section-number">4.9</span> ¿En el Perú la calidad de las instituciones está a la altura de las metas, están las instituciones públicas organizadas para alcanzar las metas que se les propone?</a></li>
+  <li><a href="#los-4-principios-básicos-de-la-buena-gobernabilidad" id="toc-los-4-principios-básicos-de-la-buena-gobernabilidad" class="nav-link" data-scroll-target="#los-4-principios-básicos-de-la-buena-gobernabilidad"><span class="header-section-number">4.10</span> Los 4 principios básicos de la buena gobernabilidad:</a></li>
   </ul></li>
-  <li><a href="#la-prestación-de-servicios-públicos" id="toc-la-prestación-de-servicios-públicos" class="nav-link" data-scroll-target="#la-prestación-de-servicios-públicos"><span class="toc-section-number">5</span>  La prestación de servicios públicos</a>
+  <li><a href="#la-prestación-de-servicios-públicos" id="toc-la-prestación-de-servicios-públicos" class="nav-link" data-scroll-target="#la-prestación-de-servicios-públicos"><span class="header-section-number">5</span> La prestación de servicios públicos</a>
   <ul class="collapse">
-  <li><a href="#desarrollo-territorial" id="toc-desarrollo-territorial" class="nav-link" data-scroll-target="#desarrollo-territorial"><span class="toc-section-number">5.1</span>  Desarrollo territorial</a></li>
-  <li><a href="#cómo-planteamos-el-desarrollo-considerando-e-territorio" id="toc-cómo-planteamos-el-desarrollo-considerando-e-territorio" class="nav-link" data-scroll-target="#cómo-planteamos-el-desarrollo-considerando-e-territorio"><span class="toc-section-number">5.2</span>  ¿Cómo planteamos el desarrollo considerando e territorio?</a></li>
+  <li><a href="#desarrollo-territorial" id="toc-desarrollo-territorial" class="nav-link" data-scroll-target="#desarrollo-territorial"><span class="header-section-number">5.1</span> Desarrollo territorial</a></li>
+  <li><a href="#cómo-planteamos-el-desarrollo-considerando-e-territorio" id="toc-cómo-planteamos-el-desarrollo-considerando-e-territorio" class="nav-link" data-scroll-target="#cómo-planteamos-el-desarrollo-considerando-e-territorio"><span class="header-section-number">5.2</span> ¿Cómo planteamos el desarrollo considerando e territorio?</a></li>
   </ul></li>
-  <li><a href="#ley-de-bases-de-la-descentralización" id="toc-ley-de-bases-de-la-descentralización" class="nav-link" data-scroll-target="#ley-de-bases-de-la-descentralización"><span class="toc-section-number">6</span>  Ley de bases de la descentralización</a></li>
-  <li><a href="#ley-orgánica-de-gobiernos-regionales" id="toc-ley-orgánica-de-gobiernos-regionales" class="nav-link" data-scroll-target="#ley-orgánica-de-gobiernos-regionales"><span class="toc-section-number">7</span>  Ley orgánica de gobiernos regionales</a>
+  <li><a href="#ley-de-bases-de-la-descentralización" id="toc-ley-de-bases-de-la-descentralización" class="nav-link" data-scroll-target="#ley-de-bases-de-la-descentralización"><span class="header-section-number">6</span> Ley de bases de la descentralización</a></li>
+  <li><a href="#ley-orgánica-de-gobiernos-regionales" id="toc-ley-orgánica-de-gobiernos-regionales" class="nav-link" data-scroll-target="#ley-orgánica-de-gobiernos-regionales"><span class="header-section-number">7</span> Ley orgánica de gobiernos regionales</a>
   <ul class="collapse">
-  <li><a href="#régimen-normativo" id="toc-régimen-normativo" class="nav-link" data-scroll-target="#régimen-normativo"><span class="toc-section-number">7.1</span>  Régimen normativo</a></li>
-  <li><a href="#lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021" id="toc-lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021" class="nav-link" data-scroll-target="#lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021"><span class="toc-section-number">7.2</span>  Lineamientos prioritarios de la política general del gobierno al 2021</a></li>
-  <li><a href="#ejes-de-la-política-general-de-gobierno" id="toc-ejes-de-la-política-general-de-gobierno" class="nav-link" data-scroll-target="#ejes-de-la-política-general-de-gobierno"><span class="toc-section-number">7.3</span>  Ejes de la política general de Gobierno</a></li>
-  <li><a href="#los-lineamientos-que-se-basan-un" id="toc-los-lineamientos-que-se-basan-un" class="nav-link" data-scroll-target="#los-lineamientos-que-se-basan-un"><span class="toc-section-number">7.4</span>  Los lineamientos que se basan un</a></li>
+  <li><a href="#régimen-normativo" id="toc-régimen-normativo" class="nav-link" data-scroll-target="#régimen-normativo"><span class="header-section-number">7.1</span> Régimen normativo</a></li>
+  <li><a href="#lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021" id="toc-lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021" class="nav-link" data-scroll-target="#lineamientos-prioritarios-de-la-política-general-del-gobierno-al-2021"><span class="header-section-number">7.2</span> Lineamientos prioritarios de la política general del gobierno al 2021</a></li>
+  <li><a href="#ejes-de-la-política-general-de-gobierno" id="toc-ejes-de-la-política-general-de-gobierno" class="nav-link" data-scroll-target="#ejes-de-la-política-general-de-gobierno"><span class="header-section-number">7.3</span> Ejes de la política general de Gobierno</a></li>
+  <li><a href="#los-lineamientos-que-se-basan-un" id="toc-los-lineamientos-que-se-basan-un" class="nav-link" data-scroll-target="#los-lineamientos-que-se-basan-un"><span class="header-section-number">7.4</span> Los lineamientos que se basan un</a></li>
   </ul></li>
-  <li><a href="#la-descentralización" id="toc-la-descentralización" class="nav-link" data-scroll-target="#la-descentralización"><span class="toc-section-number">8</span>  La descentralización</a>
+  <li><a href="#la-descentralización" id="toc-la-descentralización" class="nav-link" data-scroll-target="#la-descentralización"><span class="header-section-number">8</span> La descentralización</a>
   <ul class="collapse">
-  <li><a href="#los-desafíos-de-la-descentralización" id="toc-los-desafíos-de-la-descentralización" class="nav-link" data-scroll-target="#los-desafíos-de-la-descentralización"><span class="toc-section-number">8.1</span>  Los desafíos de la descentralización</a></li>
+  <li><a href="#los-desafíos-de-la-descentralización" id="toc-los-desafíos-de-la-descentralización" class="nav-link" data-scroll-target="#los-desafíos-de-la-descentralización"><span class="header-section-number">8.1</span> Los desafíos de la descentralización</a></li>
   </ul></li>
-  <li><a href="#la-regionalización" id="toc-la-regionalización" class="nav-link" data-scroll-target="#la-regionalización"><span class="toc-section-number">9</span>  La regionalización</a>
+  <li><a href="#la-regionalización" id="toc-la-regionalización" class="nav-link" data-scroll-target="#la-regionalización"><span class="header-section-number">9</span> La regionalización</a>
   <ul class="collapse">
-  <li><a href="#tipos-de-racionalización" id="toc-tipos-de-racionalización" class="nav-link" data-scroll-target="#tipos-de-racionalización"><span class="toc-section-number">9.1</span>  Tipos de racionalización</a>
+  <li><a href="#tipos-de-racionalización" id="toc-tipos-de-racionalización" class="nav-link" data-scroll-target="#tipos-de-racionalización"><span class="header-section-number">9.1</span> Tipos de racionalización</a>
   <ul class="collapse">
-  <li><a href="#región-homogénea" id="toc-región-homogénea" class="nav-link" data-scroll-target="#región-homogénea"><span class="toc-section-number">9.1.1</span>  Región homogénea</a></li>
-  <li><a href="#región-plan" id="toc-región-plan" class="nav-link" data-scroll-target="#región-plan"><span class="toc-section-number">9.1.2</span>  Región-Plan</a></li>
+  <li><a href="#región-homogénea" id="toc-región-homogénea" class="nav-link" data-scroll-target="#región-homogénea"><span class="header-section-number">9.1.1</span> Región homogénea</a></li>
+  <li><a href="#región-plan" id="toc-región-plan" class="nav-link" data-scroll-target="#región-plan"><span class="header-section-number">9.1.2</span> Región-Plan</a></li>
   </ul></li>
-  <li><a href="#regionalismo" id="toc-regionalismo" class="nav-link" data-scroll-target="#regionalismo"><span class="toc-section-number">9.2</span>  Regionalismo</a></li>
-  <li><a href="#regionalización" id="toc-regionalización" class="nav-link" data-scroll-target="#regionalización"><span class="toc-section-number">9.3</span>  Regionalización</a></li>
-  <li><a href="#criterios-de-identificación-de-regiones" id="toc-criterios-de-identificación-de-regiones" class="nav-link" data-scroll-target="#criterios-de-identificación-de-regiones"><span class="toc-section-number">9.4</span>  Criterios de identificación de regiones</a></li>
-  <li><a href="#región-política" id="toc-región-política" class="nav-link" data-scroll-target="#región-política"><span class="toc-section-number">9.5</span>  Región política</a></li>
-  <li><a href="#región-polarizada" id="toc-región-polarizada" class="nav-link" data-scroll-target="#región-polarizada"><span class="toc-section-number">9.6</span>  Región polarizada</a></li>
-  <li><a href="#reorganización" id="toc-reorganización" class="nav-link" data-scroll-target="#reorganización"><span class="toc-section-number">9.7</span>  Reorganización</a></li>
-  <li><a href="#economía-regional" id="toc-economía-regional" class="nav-link" data-scroll-target="#economía-regional"><span class="toc-section-number">9.8</span>  Economía regional</a></li>
-  <li><a href="#centralismo" id="toc-centralismo" class="nav-link" data-scroll-target="#centralismo"><span class="toc-section-number">9.9</span>  Centralismo</a></li>
-  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo"><span class="toc-section-number">9.10</span>  Desarrollo</a>
+  <li><a href="#regionalismo" id="toc-regionalismo" class="nav-link" data-scroll-target="#regionalismo"><span class="header-section-number">9.2</span> Regionalismo</a></li>
+  <li><a href="#regionalización" id="toc-regionalización" class="nav-link" data-scroll-target="#regionalización"><span class="header-section-number">9.3</span> Regionalización</a></li>
+  <li><a href="#criterios-de-identificación-de-regiones" id="toc-criterios-de-identificación-de-regiones" class="nav-link" data-scroll-target="#criterios-de-identificación-de-regiones"><span class="header-section-number">9.4</span> Criterios de identificación de regiones</a></li>
+  <li><a href="#región-política" id="toc-región-política" class="nav-link" data-scroll-target="#región-política"><span class="header-section-number">9.5</span> Región política</a></li>
+  <li><a href="#región-polarizada" id="toc-región-polarizada" class="nav-link" data-scroll-target="#región-polarizada"><span class="header-section-number">9.6</span> Región polarizada</a></li>
+  <li><a href="#reorganización" id="toc-reorganización" class="nav-link" data-scroll-target="#reorganización"><span class="header-section-number">9.7</span> Reorganización</a></li>
+  <li><a href="#economía-regional" id="toc-economía-regional" class="nav-link" data-scroll-target="#economía-regional"><span class="header-section-number">9.8</span> Economía regional</a></li>
+  <li><a href="#centralismo" id="toc-centralismo" class="nav-link" data-scroll-target="#centralismo"><span class="header-section-number">9.9</span> Centralismo</a></li>
+  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo"><span class="header-section-number">9.10</span> Desarrollo</a>
   <ul class="collapse">
-  <li><a href="#desarrollo-regional" id="toc-desarrollo-regional" class="nav-link" data-scroll-target="#desarrollo-regional"><span class="toc-section-number">9.10.1</span>  Desarrollo regional</a></li>
-  <li><a href="#objetivo-principal" id="toc-objetivo-principal" class="nav-link" data-scroll-target="#objetivo-principal"><span class="toc-section-number">9.10.2</span>  Objetivo principal</a></li>
+  <li><a href="#desarrollo-regional" id="toc-desarrollo-regional" class="nav-link" data-scroll-target="#desarrollo-regional"><span class="header-section-number">9.10.1</span> Desarrollo regional</a></li>
+  <li><a href="#objetivo-principal" id="toc-objetivo-principal" class="nav-link" data-scroll-target="#objetivo-principal"><span class="header-section-number">9.10.2</span> Objetivo principal</a></li>
   </ul></li>
-  <li><a href="#la-descentralización-1" id="toc-la-descentralización-1" class="nav-link" data-scroll-target="#la-descentralización-1"><span class="toc-section-number">9.11</span>  La descentralización</a>
+  <li><a href="#la-descentralización-1" id="toc-la-descentralización-1" class="nav-link" data-scroll-target="#la-descentralización-1"><span class="header-section-number">9.11</span> La descentralización</a>
   <ul class="collapse">
-  <li><a href="#descentralización-administrativa" id="toc-descentralización-administrativa" class="nav-link" data-scroll-target="#descentralización-administrativa"><span class="toc-section-number">9.11.1</span>  Descentralización administrativa</a></li>
+  <li><a href="#descentralización-administrativa" id="toc-descentralización-administrativa" class="nav-link" data-scroll-target="#descentralización-administrativa"><span class="header-section-number">9.11.1</span> Descentralización administrativa</a></li>
   </ul></li>
-  <li><a href="#la-desconcentración" id="toc-la-desconcentración" class="nav-link" data-scroll-target="#la-desconcentración"><span class="toc-section-number">9.12</span>  La desconcentración</a>
+  <li><a href="#la-desconcentración" id="toc-la-desconcentración" class="nav-link" data-scroll-target="#la-desconcentración"><span class="header-section-number">9.12</span> La desconcentración</a>
   <ul class="collapse">
-  <li><a href="#desconcentración-administrativa" id="toc-desconcentración-administrativa" class="nav-link" data-scroll-target="#desconcentración-administrativa"><span class="toc-section-number">9.12.1</span>  Desconcentración administrativa</a></li>
-  <li><a href="#acción-administrativa" id="toc-acción-administrativa" class="nav-link" data-scroll-target="#acción-administrativa"><span class="toc-section-number">9.12.2</span>  Acción administrativa</a></li>
+  <li><a href="#desconcentración-administrativa" id="toc-desconcentración-administrativa" class="nav-link" data-scroll-target="#desconcentración-administrativa"><span class="header-section-number">9.12.1</span> Desconcentración administrativa</a></li>
+  <li><a href="#acción-administrativa" id="toc-acción-administrativa" class="nav-link" data-scroll-target="#acción-administrativa"><span class="header-section-number">9.12.2</span> Acción administrativa</a></li>
   </ul></li>
-  <li><a href="#el-estado" id="toc-el-estado" class="nav-link" data-scroll-target="#el-estado"><span class="toc-section-number">9.13</span>  El estado</a>
+  <li><a href="#el-estado" id="toc-el-estado" class="nav-link" data-scroll-target="#el-estado"><span class="header-section-number">9.13</span> El estado</a>
   <ul class="collapse">
-  <li><a href="#elemento-del-estado" id="toc-elemento-del-estado" class="nav-link" data-scroll-target="#elemento-del-estado"><span class="toc-section-number">9.13.1</span>  Elemento del estado</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#organización-del-país" id="toc-organización-del-país" class="nav-link" data-scroll-target="#organización-del-país"><span class="toc-section-number">10</span>  Organización del país</a>
-  <ul class="collapse">
-  <li><a href="#componentes-de-la-gestión-pública-como-está-dividido" id="toc-componentes-de-la-gestión-pública-como-está-dividido" class="nav-link" data-scroll-target="#componentes-de-la-gestión-pública-como-está-dividido"><span class="toc-section-number">10.1</span>  Componentes de la gestión pública como está dividido</a></li>
-  <li><a href="#tipos-de-gestión" id="toc-tipos-de-gestión" class="nav-link" data-scroll-target="#tipos-de-gestión"><span class="toc-section-number">10.2</span>  Tipos de gestión</a></li>
-  <li><a href="#gobierno" id="toc-gobierno" class="nav-link" data-scroll-target="#gobierno"><span class="toc-section-number">10.3</span>  Gobierno</a>
-  <ul class="collapse">
-  <li><a href="#cuál-es-el-rol-del-estado" id="toc-cuál-es-el-rol-del-estado" class="nav-link" data-scroll-target="#cuál-es-el-rol-del-estado"><span class="toc-section-number">10.3.1</span>  ¿Cuál es el rol del estado?</a></li>
-  <li><a href="#el-estado-quienes-lo-constituyen" id="toc-el-estado-quienes-lo-constituyen" class="nav-link" data-scroll-target="#el-estado-quienes-lo-constituyen"><span class="toc-section-number">10.3.2</span>  ¿El estado quienes lo constituyen?</a></li>
-  <li><a href="#en-qué-se-debe-centrar-el-estado-hacia-la-modernización" id="toc-en-qué-se-debe-centrar-el-estado-hacia-la-modernización" class="nav-link" data-scroll-target="#en-qué-se-debe-centrar-el-estado-hacia-la-modernización"><span class="toc-section-number">10.3.3</span>  ¿En qué se debe centrar el estado hacia la modernización?</a></li>
-  <li><a href="#por-qué-es-necesario-impulsar-un-proceso-de-modernización" id="toc-por-qué-es-necesario-impulsar-un-proceso-de-modernización" class="nav-link" data-scroll-target="#por-qué-es-necesario-impulsar-un-proceso-de-modernización"><span class="toc-section-number">10.3.4</span>  ¿Por qué es necesario impulsar un proceso de modernización?</a></li>
+  <li><a href="#elemento-del-estado" id="toc-elemento-del-estado" class="nav-link" data-scroll-target="#elemento-del-estado"><span class="header-section-number">9.13.1</span> Elemento del estado</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#realidad-nacional" id="toc-realidad-nacional" class="nav-link" data-scroll-target="#realidad-nacional"><span class="toc-section-number">11</span>  Realidad nacional</a></li>
+  <li><a href="#organización-del-país" id="toc-organización-del-país" class="nav-link" data-scroll-target="#organización-del-país"><span class="header-section-number">10</span> Organización del país</a>
+  <ul class="collapse">
+  <li><a href="#componentes-de-la-gestión-pública-como-está-dividido" id="toc-componentes-de-la-gestión-pública-como-está-dividido" class="nav-link" data-scroll-target="#componentes-de-la-gestión-pública-como-está-dividido"><span class="header-section-number">10.1</span> Componentes de la gestión pública como está dividido</a></li>
+  <li><a href="#tipos-de-gestión" id="toc-tipos-de-gestión" class="nav-link" data-scroll-target="#tipos-de-gestión"><span class="header-section-number">10.2</span> Tipos de gestión</a></li>
+  <li><a href="#gobierno" id="toc-gobierno" class="nav-link" data-scroll-target="#gobierno"><span class="header-section-number">10.3</span> Gobierno</a>
+  <ul class="collapse">
+  <li><a href="#cuál-es-el-rol-del-estado" id="toc-cuál-es-el-rol-del-estado" class="nav-link" data-scroll-target="#cuál-es-el-rol-del-estado"><span class="header-section-number">10.3.1</span> ¿Cuál es el rol del estado?</a></li>
+  <li><a href="#el-estado-quienes-lo-constituyen" id="toc-el-estado-quienes-lo-constituyen" class="nav-link" data-scroll-target="#el-estado-quienes-lo-constituyen"><span class="header-section-number">10.3.2</span> ¿El estado quienes lo constituyen?</a></li>
+  <li><a href="#en-qué-se-debe-centrar-el-estado-hacia-la-modernización" id="toc-en-qué-se-debe-centrar-el-estado-hacia-la-modernización" class="nav-link" data-scroll-target="#en-qué-se-debe-centrar-el-estado-hacia-la-modernización"><span class="header-section-number">10.3.3</span> ¿En qué se debe centrar el estado hacia la modernización?</a></li>
+  <li><a href="#por-qué-es-necesario-impulsar-un-proceso-de-modernización" id="toc-por-qué-es-necesario-impulsar-un-proceso-de-modernización" class="nav-link" data-scroll-target="#por-qué-es-necesario-impulsar-un-proceso-de-modernización"><span class="header-section-number">10.3.4</span> ¿Por qué es necesario impulsar un proceso de modernización?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#realidad-nacional" id="toc-realidad-nacional" class="nav-link" data-scroll-target="#realidad-nacional"><span class="header-section-number">11</span> Realidad nacional</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2023-05-16-Economia-Regional/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -1475,9 +1451,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1593,6 +1583,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1631,12 +1707,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/curious-figolla-90b3ad\.netlify\.app\//);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -3093,8 +3169,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="../../../../about.html">Acerca de</a>
   </li>  
@@ -3108,7 +3184,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../../../trademark.html">Marca comercial</a>
   </li>  
 </ul>
-      <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

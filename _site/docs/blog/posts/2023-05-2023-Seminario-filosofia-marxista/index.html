@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -133,7 +104,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
@@ -177,10 +149,11 @@ cookieconsent.run({
   
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      background: #EDF3F9;
-    }
-    </style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #EDF3F9;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../../../../styles.css">
@@ -204,58 +177,60 @@ cookieconsent.run({
     <img src="../../../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html">
+    <a class="nav-link" href="../../../../index.html" rel="" target="">
  <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/get-started/index.html">
+    <a class="nav-link" href="../../../../docs/get-started/index.html" rel="" target="">
  <span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/gallery/index.html">
+    <a class="nav-link" href="../../../../docs/gallery/index.html" rel="" target="">
  <span class="menu-text">Galería</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/blog/index.html">
+    <a class="nav-link" href="../../../../docs/blog/index.html" rel="" target="">
  <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Ayuda</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Reportar un error</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Hacer una pregunta</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/faq/index.html"><i class="bi bi-question-circle" role="img">
+    <a class="dropdown-item" href="../../../../docs/faq/index.html" rel="" target=""><i class="bi bi-question-circle" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -299,7 +274,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 23, 2023</p>
+        <p class="date-modified">June 3, 2023</p>
       </div>
     </div>
       
@@ -308,18 +283,20 @@ cookieconsent.run({
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#seminario-de-filosofía" id="toc-seminario-de-filosofía" class="nav-link active" data-scroll-target="#seminario-de-filosofía"><span class="toc-section-number">1</span>  Seminario de filosofía</a></li>
-  <li><a href="#escuela-materialista" id="toc-escuela-materialista" class="nav-link" data-scroll-target="#escuela-materialista"><span class="toc-section-number">2</span>  Escuela materialista</a></li>
-  <li><a href="#escuelas" id="toc-escuelas" class="nav-link" data-scroll-target="#escuelas"><span class="toc-section-number">3</span>  Escuelas</a></li>
-  <li><a href="#existencialismo" id="toc-existencialismo" class="nav-link" data-scroll-target="#existencialismo"><span class="toc-section-number">4</span>  Existencialismo</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a></li>
+  <li><a href="#escuela-materialista" id="toc-escuela-materialista" class="nav-link" data-scroll-target="#escuela-materialista"><span class="header-section-number">2</span> Escuela materialista</a></li>
+  <li><a href="#escuelas" id="toc-escuelas" class="nav-link" data-scroll-target="#escuelas"><span class="header-section-number">3</span> Escuelas</a></li>
+  <li><a href="#existencialismo" id="toc-existencialismo" class="nav-link" data-scroll-target="#existencialismo"><span class="header-section-number">4</span> Existencialismo</a></li>
+  <li><a href="#individualismo" id="toc-individualismo" class="nav-link" data-scroll-target="#individualismo"><span class="header-section-number">5</span> Individualismo</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2023-05-2023-Seminario-filosofia-marxista/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -329,8 +306,8 @@ cookieconsent.run({
 
 
 
-<section id="seminario-de-filosofía" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Seminario de filosofía</h1>
+<section id="introducción" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
 <p>Textos de referencia:</p>
 <ol type="1">
 <li><p>“Introducción a la dialéctica” de Friedrich Engels.</p></li>
@@ -429,7 +406,10 @@ cookieconsent.run({
 <p><strong>Marcel</strong>, otro exponente del existencialismo, sostiene que el hombre viene de Dios y se dirige hacia Dios, por lo que el problema radica en alcanzar a Dios. Estas diferentes corrientes existencialistas son expresiones de una clase que no encuentra una salida.</p>
 <p>El neotomismo, representado por Maritain, busca ajustar el tomismo católico teniendo en cuenta el desarrollo de la ciencia y la filosofía. Sin embargo, al intentar adoptar una concepción feudal, muestra la pobreza ideológica de la iglesia, ya que se trata de una filosofía obsoleta desde su origen. Los sucesores de Husserl, como Deconte y García Baca, intentan superar los errores del neotomismo, pero siguen anclados en su influencia. El presidente Mao destaca la importancia de conocer el idealismo para poder combatirlo.</p>
 <p>En <strong>el marxismo</strong>, la ley principal es la contradicción, y Plejanov plantea que el materialismo es la base y la dialéctica es la guía, siendo la contradicción el elemento central. Sin embargo, no se establece claramente cuál es el punto medular de la filosofía marxista. Bajo el liderazgo de Stalin, se produce una regresión en este sentido, pero es el presidente Mao quien plantea la ley de la contradicción como la única ley, llegando a un monismo filosófico. Aunque se ha alcanzado una ley única, esto no significa que el sistema esté completo. En cuanto a la libertad, se considera tanto la conciencia de la necesidad como la transformación de esa necesidad, siendo esta última el aspecto principal. La dialéctica abarca las leyes más generales del desarrollo del mundo natural, social y del conocimiento. La dificultad radica en comprender y aplicar estas leyes, y es el presidente Mao quien establece la ley de la contradicción como la única ley fundamental.</p>
-<p><strong>El individualismo</strong>, según Plejanov, también se aborda desde el monismo, ya que si bien se tienen en cuenta las leyes y las clases, se reconoce que el individuo puede perturbarlas. La clave radica en asumir y llevar adelante las leyes de la forma más pura posible para cumplir el papel exigido por la revolución. El marxismo-leninismo-maoísmo combate el individualismo y su raíz, el egoísmo, y rechaza la idea del “yo” como lo principal. Históricamente, el individuo se ha desarrollado a medida que la propiedad privada ha potenciado la individualidad y el egoísmo, especialmente bajo la influencia de la burguesía. El marxismo, al centrarse en la clase, rechaza el individualismo y el egoísmo, y en el partido, se moldea una nueva forma de ser. La acción colectiva en la lucha de clases es lo primordial y al trabajar en equipo, se diluye la formación individualista.</p>
+</section>
+<section id="individualismo" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Individualismo</h1>
+<p>Según Plejanov, también se aborda desde el monismo, ya que si bien se tienen en cuenta las leyes y las clases, se reconoce que el individuo puede perturbarlas. La clave radica en asumir y llevar adelante las leyes de la forma más pura posible para cumplir el papel exigido por la revolución. El marxismo-leninismo-maoísmo combate el individualismo y su raíz, el egoísmo, y rechaza la idea del “yo” como lo principal. Históricamente, el individuo se ha desarrollado a medida que la propiedad privada ha potenciado la individualidad y el egoísmo, especialmente bajo la influencia de la burguesía. El marxismo, al centrarse en la clase, rechaza el individualismo y el egoísmo, y en el partido, se moldea una nueva forma de ser. La acción colectiva en la lucha de clases es lo primordial y al trabajar en equipo, se diluye la formación individualista.</p>
 <p>La revolución transforma tanto el mundo como a los hombres. La raíz del egoísmo es una de las bases del revisionismo y su erradicación requerirá tiempo. Deshacerse del individualismo será un proceso largo. A medida que se generan relaciones de producción más avanzadas, esto se reflejará cada vez más en la conciencia de toda la sociedad.</p>
 <p>Como comunistas, debemos ser los heraldos del futuro. La ideología nos permite avanzar en la lucha contra el egoísmo y debemos ser los más avanzados en esta tarea. Trabajamos por una meta que puede que no lleguemos a ver personalmente. Reducir cada vez más el individualismo y el egoísmo es fundamental. En la lucha, la acción golpea directamente al individualismo. La ideología es lo que nos impulsa a avanzar.</p>
 
@@ -506,9 +486,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -624,6 +618,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -662,12 +742,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/curious-figolla-90b3ad\.netlify\.app\//);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -686,7 +766,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> Notas sobre filosofía marxista</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  Notas de filosofía marxista</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">thanks:</span><span class="co"> gracias</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">thanks:</span><span class="co"> Universidad Nacional de San Cristóbal de Huamanga</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  - Política</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - Filosofía</span></span>
@@ -699,7 +779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Seminario de filosofía</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introducción</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Textos de referencia:</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
@@ -873,18 +953,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>En **el marxismo**, la ley principal es la contradicción, y Plejanov plantea que el materialismo es la base y la dialéctica es la guía, siendo la contradicción el elemento central. Sin embargo, no se establece claramente cuál es el punto medular de la filosofía marxista. Bajo el liderazgo de Stalin, se produce una regresión en este sentido, pero es el presidente Mao quien plantea la ley de la contradicción como la única ley, llegando a un monismo filosófico. Aunque se ha alcanzado una ley única, esto no significa que el sistema esté completo. En cuanto a la libertad, se considera tanto la conciencia de la necesidad como la transformación de esa necesidad, siendo esta última el aspecto principal. La dialéctica abarca las leyes más generales del desarrollo del mundo natural, social y del conocimiento. La dificultad radica en comprender y aplicar estas leyes, y es el presidente Mao quien establece la ley de la contradicción como la única ley fundamental.</span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**El individualismo**, según Plejanov, también se aborda desde el monismo, ya que si bien se tienen en cuenta las leyes y las clases, se reconoce que el individuo puede perturbarlas. La clave radica en asumir y llevar adelante las leyes de la forma más pura posible para cumplir el papel exigido por la revolución. El marxismo-leninismo-maoísmo combate el individualismo y su raíz, el egoísmo, y rechaza la idea del "yo" como lo principal. Históricamente, el individuo se ha desarrollado a medida que la propiedad privada ha potenciado la individualidad y el egoísmo, especialmente bajo la influencia de la burguesía. El marxismo, al centrarse en la clase, rechaza el individualismo y el egoísmo, y en el partido, se moldea una nueva forma de ser. La acción colectiva en la lucha de clases es lo primordial y al trabajar en equipo, se diluye la formación individualista.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu"># Individualismo</span></span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>La revolución transforma tanto el mundo como a los hombres. La raíz del egoísmo es una de las bases del revisionismo y su erradicación requerirá tiempo. Deshacerse del individualismo será un proceso largo. A medida que se generan relaciones de producción más avanzadas, esto se reflejará cada vez más en la conciencia de toda la sociedad.</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>Según Plejanov, también se aborda desde el monismo, ya que si bien se tienen en cuenta las leyes y las clases, se reconoce que el individuo puede perturbarlas. La clave radica en asumir y llevar adelante las leyes de la forma más pura posible para cumplir el papel exigido por la revolución. El marxismo-leninismo-maoísmo combate el individualismo y su raíz, el egoísmo, y rechaza la idea del "yo" como lo principal. Históricamente, el individuo se ha desarrollado a medida que la propiedad privada ha potenciado la individualidad y el egoísmo, especialmente bajo la influencia de la burguesía. El marxismo, al centrarse en la clase, rechaza el individualismo y el egoísmo, y en el partido, se moldea una nueva forma de ser. La acción colectiva en la lucha de clases es lo primordial y al trabajar en equipo, se diluye la formación individualista.</span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>Como comunistas, debemos ser los heraldos del futuro. La ideología nos permite avanzar en la lucha contra el egoísmo y debemos ser los más avanzados en esta tarea. Trabajamos por una meta que puede que no lleguemos a ver personalmente. Reducir cada vez más el individualismo y el egoísmo es fundamental. En la lucha, la acción golpea directamente al individualismo. La ideología es lo que nos impulsa a avanzar.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>La revolución transforma tanto el mundo como a los hombres. La raíz del egoísmo es una de las bases del revisionismo y su erradicación requerirá tiempo. Deshacerse del individualismo será un proceso largo. A medida que se generan relaciones de producción más avanzadas, esto se reflejará cada vez más en la conciencia de toda la sociedad.</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>Como comunistas, debemos ser los heraldos del futuro. La ideología nos permite avanzar en la lucha contra el egoísmo y debemos ser los más avanzados en esta tarea. Trabajamos por una meta que puede que no lleguemos a ver personalmente. Reducir cada vez más el individualismo y el egoísmo es fundamental. En la lucha, la acción golpea directamente al individualismo. La ideología es lo que nos impulsa a avanzar.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="../../../../about.html">Acerca de</a>
   </li>  
@@ -898,7 +980,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../../../trademark.html">Marca comercial</a>
   </li>  
 </ul>
-      <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

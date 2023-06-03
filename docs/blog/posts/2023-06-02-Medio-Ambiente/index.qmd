@@ -1,12 +1,17 @@
 ---
-title: Economía de los Recursos y del Medio Ambiente
-subtitle: Una 
+title: Abordando el cambio climático y otros desafíos ambientales Perspectivas y soluciones
+subtitle: Explorando el impacto, mitigación y adaptación al cambio climático, reformas inclusivas y análisis de productos tradicionales y recursos naturales
 description: |
-  De
+  Este artículo ofrece una visión integral sobre el cambio climático y otros problemas ambientales que afectan nuestro planeta y nuestra vida diaria. Explora estrategias para promover reformas inclusivas que aborden los desafíos ambientales. El análisis detallado de las exportaciones de productos tradicionales, los precios del petróleo crudo y derivados, y los precios del gas natural durante un período específico proporciona información valiosa sobre la economía y el medio ambiente. Además, se examina la relación entre el volumen del cobre y el oro, dos recursos naturales clave. ¡Explora este contenido para obtener conocimientos profundos y soluciones prácticas!
 categories:
   - Economía de los Recursos y del Medio Ambiente
 tags:
   - Economía de los Recursos y del Medio Ambiente
+  - Cambio climático
+  - Medio ambiente
+  - Sostenibilidad
+  - Economía
+  - Recursos naturales
 author: 
   - Achalma Mendoza Elmer Edison
   - Añanca Mitma Zahira Melissa
@@ -84,7 +89,7 @@ Aquí está el texto mejorado:
 
 # Otros problemas ambientales.
 
-a. El cambio climático no es el único factor que amenaza el desarrollo sostenible. Existen otros componentes críticos del capital natural que también están en peligro, como la pérdida de biodiversidad, la contaminación del aire, el uso insostenible del agua, la erosión del suelo y la deforestación.
+a. **El cambio climático no es el único factor que amenaza el desarrollo sostenible. Existen otros componentes críticos del capital natural que también están en peligro, como la pérdida de biodiversidad, la contaminación del aire, el uso insostenible del agua, la erosión del suelo y la deforestación.**
 
 Utilizando la afirmación anterior, planteamos un modelo económico y un modelo econométrico que especifica las variables y los datos que se utilizarían para analizar estas variables.
 
@@ -103,10 +108,6 @@ En este sentido, se plantean las variables con las que se desarrollará el model
 
 A continuación, se proporciona la definición conceptual, los indicadores y las unidades de medida de estas variables:
 
-**Tabla 1**
-
-_Variables e indicadores del modelo de economía circular_
-
 | Variable | Definición Conceptual | Indicador |
 | --- | --- | --- |
 | **Variable Endógena:** Desarrollo sostenible | Se refiere al desarrollo que satisface las necesidades del presente sin comprometer la capacidad de las futuras generaciones, garantizando el equilibrio entre crecimiento económico, cuidado del medio ambiente y bienestar social. | Índice de Enriquecimiento inclusivo (PBI verde) |
@@ -115,27 +116,32 @@ _Variables e indicadores del modelo de economía circular_
 | Pérdida de biodiversidad | Hace referencia a la disminución o desaparición de los seres vivos que habitan el planeta, incluyendo los distintos niveles de organización biológica y su variabilidad genética, así como los patrones naturales presentes en los ecosistemas. | Número de especies de fauna y flora |
 | Deforestación | Se refiere a la eliminación completa de un bosque mediante la tala, para dar espacio a otros usos en su lugar. | Pérdida de superficie forestal medida en hectáreas |
 
+: Variables e indicadores del modelo de economía circular {#tbl-1}
+
 En base a lo expuesto, planteamos el siguiente modelo econométrico:
 
 
-$$ PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu $$
+$$ 
+PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu 
+$$ {#eq-1}
+
 
 Donde:
 
-PBI_{V}: Producto Bruto Interno Verde
+$PBI_{V}$: Producto Bruto Interno Verde
 
-CA: Contaminación del aire
+$CA$: Contaminación del aire
 
-BIO: Pérdida de biodiversidad
+$BIO$: Pérdida de biodiversidad
 
-DEF: Deforestación
+$DEF$: Deforestación
 
-μ: Término de perturbación
+$μ$: Término de perturbación
 
 Con este modelo, buscamos analizar la relación entre el Producto Bruto Interno Verde y las variables exógenas de contaminación del aire, pérdida de biodiversidad y deforestación. Estos datos nos permitirán comprender cómo influyen estos factores en el desarrollo sostenible y orientar las políticas y acciones necesarias para promover un crecimiento económico más sostenible y resiliente al cambio climático.
 
 
-b. Las prácticas agrícolas insostenibles tienen un impacto negativo en el medio ambiente, erosionando el suelo, agotando las reservas de agua dulce y reduciendo la superficie forestal. Estas acciones provocan la disminución de la capacidad del planeta para absorber dióxido de carbono y contribuyen a la pérdida de biodiversidad, la cual es fundamental para adaptarse al cambio climático.
+b. **Las prácticas agrícolas insostenibles tienen un impacto negativo en el medio ambiente, erosionando el suelo, agotando las reservas de agua dulce y reduciendo la superficie forestal. Estas acciones provocan la disminución de la capacidad del planeta para absorber dióxido de carbono y contribuyen a la pérdida de biodiversidad, la cual es fundamental para adaptarse al cambio climático.**
 
 Utilice la afirmación (b) y explique y grafique la relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad.
 
@@ -150,11 +156,11 @@ En la gráfica, se observa una relación positiva entre las prácticas agrícola
 
 La ecuación que representa esta relación es:
 
+$$
 PD = b0 + b1 * PAI
+$$
 
-↑PAI → ↑PD:
-
-A mayor cantidad de prácticas agrícolas insostenibles, se genera una mayor pérdida de diversidad.
+$↑PAI → ↑PD$: A mayor cantidad de prácticas agrícolas insostenibles, se genera una mayor pérdida de diversidad.
 
 Donde b1 es la sensibilidad y mide la variación de la pérdida de biodiversidad ante cambios en las prácticas agrícolas insostenibles.
 
@@ -345,11 +351,12 @@ _**Nota:** Datos obtenidos del BCRP y gráfico elaborado por nosotros._
 **Interpretación:** En el gráfico, se puede observar una relación lineal positiva moderada entre el precio del petróleo y el precio del gas. A medida que el precio del petróleo aumenta, el precio del gas también tiende a aumentar.
 
 
-La Tabla 1 muestra los resultados de la regresión entre el precio del petróleo y el precio del gas.
+La Tabla 2 muestra los resultados de la regresión entre el precio del petróleo y el precio del gas.
 
-![Tabla 1: Regresión de precio de petróleo y precio del gas](20230603100307.png)
+![Tabla 2: Regresión de precio de petróleo y precio del gas](20230603100307.png)
 
 _**Nota:** Datos obtenidos del BCRP._
+
 
 El valor P < 0.05 en el análisis de regresión indica que el precio del petróleo que estamos analizando es significativo y tiene una relación con el precio del gas.
 

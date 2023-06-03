@@ -2837,7 +2837,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
   <pubDate>Tue, 27 Sep 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Economía de los Recursos y del Medio Ambiente</title>
+  <title>Abordando el cambio climático y otros desafíos ambientales Perspectivas y soluciones</title>
   <dc:creator>Achalma Mendoza Elmer Edison</dc:creator>
   <dc:creator>Añanca Mitma Zahira Melissa</dc:creator>
   <dc:creator>Fernández Pujaico Anais Marina</dc:creator>
@@ -2896,7 +2896,7 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <section id="otros-problemas-ambientales." class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Otros problemas ambientales.</h1>
 <ol type="a">
-<li>El cambio climático no es el único factor que amenaza el desarrollo sostenible. Existen otros componentes críticos del capital natural que también están en peligro, como la pérdida de biodiversidad, la contaminación del aire, el uso insostenible del agua, la erosión del suelo y la deforestación.</li>
+<li><strong>El cambio climático no es el único factor que amenaza el desarrollo sostenible. Existen otros componentes críticos del capital natural que también están en peligro, como la pérdida de biodiversidad, la contaminación del aire, el uso insostenible del agua, la erosión del suelo y la deforestación.</strong></li>
 </ol>
 <p>Utilizando la afirmación anterior, planteamos un modelo económico y un modelo econométrico que especifica las variables y los datos que se utilizarían para analizar estas variables.</p>
 <p>Ante los desafíos del cambio climático y las amenazas a nuestro capital natural, se propone el uso de un modelo económico que busca contrarrestar estos efectos:</p>
@@ -2909,9 +2909,9 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 <li><strong>Variables exógenas:</strong> Pérdida de biodiversidad, contaminación del aire, uso insostenible del agua y deforestación.</li>
 </ul>
 <p>A continuación, se proporciona la definición conceptual, los indicadores y las unidades de medida de estas variables:</p>
-<p><strong>Tabla 1</strong></p>
-<p><em>Variables e indicadores del modelo de economía circular</em></p>
+<div id="tbl-1" class="anchored">
 <table class="table">
+<caption>Tabla&nbsp;1. Variables e indicadores del modelo de economía circular</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -2952,17 +2952,18 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </tr>
 </tbody>
 </table>
+</div>
 <p>En base a lo expuesto, planteamos el siguiente modelo econométrico:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%20PBI_%7BV%7D%20=%20%5Cbeta_%7B0%7D%20+%20%5Cbeta_%7B1%7DCA%20+%20%5Cbeta_%7B2%7DBIO%20+%20%5Cbeta_%7B3%7DDEF%20+%20%5Cmu%20"></p>
+<p><span id="eq-1"><img src="https://latex.codecogs.com/png.latex?%0APBI_%7BV%7D%20=%20%5Cbeta_%7B0%7D%20+%20%5Cbeta_%7B1%7DCA%20+%20%5Cbeta_%7B2%7DBIO%20+%20%5Cbeta_%7B3%7DDEF%20+%20%5Cmu%0A%5Ctag%7B1%7D"></span></p>
 <p>Donde:</p>
-<p>PBI_{V}: Producto Bruto Interno Verde</p>
-<p>CA: Contaminación del aire</p>
-<p>BIO: Pérdida de biodiversidad</p>
-<p>DEF: Deforestación</p>
-<p>μ: Término de perturbación</p>
+<p><img src="https://latex.codecogs.com/png.latex?PBI_%7BV%7D">: Producto Bruto Interno Verde</p>
+<p><img src="https://latex.codecogs.com/png.latex?CA">: Contaminación del aire</p>
+<p><img src="https://latex.codecogs.com/png.latex?BIO">: Pérdida de biodiversidad</p>
+<p><img src="https://latex.codecogs.com/png.latex?DEF">: Deforestación</p>
+<p><img src="https://latex.codecogs.com/png.latex?%CE%BC">: Término de perturbación</p>
 <p>Con este modelo, buscamos analizar la relación entre el Producto Bruto Interno Verde y las variables exógenas de contaminación del aire, pérdida de biodiversidad y deforestación. Estos datos nos permitirán comprender cómo influyen estos factores en el desarrollo sostenible y orientar las políticas y acciones necesarias para promover un crecimiento económico más sostenible y resiliente al cambio climático.</p>
 <ol start="2" type="a">
-<li>Las prácticas agrícolas insostenibles tienen un impacto negativo en el medio ambiente, erosionando el suelo, agotando las reservas de agua dulce y reduciendo la superficie forestal. Estas acciones provocan la disminución de la capacidad del planeta para absorber dióxido de carbono y contribuyen a la pérdida de biodiversidad, la cual es fundamental para adaptarse al cambio climático.</li>
+<li><strong>Las prácticas agrícolas insostenibles tienen un impacto negativo en el medio ambiente, erosionando el suelo, agotando las reservas de agua dulce y reduciendo la superficie forestal. Estas acciones provocan la disminución de la capacidad del planeta para absorber dióxido de carbono y contribuyen a la pérdida de biodiversidad, la cual es fundamental para adaptarse al cambio climático.</strong></li>
 </ol>
 <p>Utilice la afirmación (b) y explique y grafique la relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad.</p>
 <p>Para comprender la relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad, podemos analizarla tanto de manera explicativa como visual. En la Figura&nbsp;1, presentada a continuación, se grafica esta relación:</p>
@@ -2974,9 +2975,8 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </div>
 <p>En la gráfica, se observa una relación positiva entre las prácticas agrícolas insostenibles (PAI) y la pérdida de diversidad (PD). A medida que las prácticas agrícolas insostenibles aumentan, la pérdida de biodiversidad también se incrementa. Sin embargo, la magnitud del impacto de las prácticas agrícolas insostenibles en la pérdida de biodiversidad se mide mediante la sensibilidad o elasticidad, que se calcula como el cambio porcentual de las prácticas agrícolas insostenibles dividido por el cambio porcentual en la pérdida de diversidad.</p>
 <p>La ecuación que representa esta relación es:</p>
-<p>PD = b0 + b1 * PAI</p>
-<p>↑PAI → ↑PD:</p>
-<p>A mayor cantidad de prácticas agrícolas insostenibles, se genera una mayor pérdida de diversidad.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0APD%20=%20b0%20+%20b1%20*%20PAI%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%E2%86%91PAI%20%E2%86%92%20%E2%86%91PD">: A mayor cantidad de prácticas agrícolas insostenibles, se genera una mayor pérdida de diversidad.</p>
 <p>Donde b1 es la sensibilidad y mide la variación de la pérdida de biodiversidad ante cambios en las prácticas agrícolas insostenibles.</p>
 <p>Este análisis se fundamenta en el respaldo teórico proporcionado por la Secretaría del Convenio sobre la Diversidad Biológica (2008), que señala cómo en las últimas cinco décadas la expansión agrícola, especialmente en zonas tropicales y subtropicales, ha reducido significativamente los niveles de diversidad biológica y los servicios ecosistémicos en áreas clave, socavando así la sostenibilidad a largo plazo de la producción agrícola en sí (p.&nbsp;22).</p>
 </section>
@@ -3156,11 +3156,11 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP y gráfico elaborado por nosotros.</em></p>
 <p><strong>Interpretación:</strong> En el gráfico, se puede observar una relación lineal positiva moderada entre el precio del petróleo y el precio del gas. A medida que el precio del petróleo aumenta, el precio del gas también tiende a aumentar.</p>
-<p>La Tabla 1 muestra los resultados de la regresión entre el precio del petróleo y el precio del gas.</p>
+<p>La Tabla 2 muestra los resultados de la regresión entre el precio del petróleo y el precio del gas.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-02-Medio-Ambiente/20230603100307.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Tabla 1: Regresión de precio de petróleo y precio del gas</figcaption>
+<figcaption class="figure-caption">Tabla 2: Regresión de precio de petróleo y precio del gas</figcaption>
 </figure>
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP.</em></p>

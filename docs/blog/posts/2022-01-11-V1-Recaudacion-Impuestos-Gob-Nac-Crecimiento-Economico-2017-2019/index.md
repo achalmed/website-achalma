@@ -1,0 +1,98 @@
+---
+title: La recaudacion de impuestos del gobierno nacional en el crecimiento economico durante el periodo 2007 al 2019
+subtitle: Exp
+description: |
+  En este blog, 
+categories:
+  - Econometría
+tags:
+  - Econometría
+author:
+  - Achalma Mendoza Elmer Edison
+  - Bañico Espinoza Nataly Mireya
+  - Berrocal Quispe Nikole Valery
+  - Carbajal López Elvis Elian
+  - Castillo López Kattya Yashitrh
+  - Castro Vilca Hans Jorge
+  - Cuba Palomino Luz Maryori
+crossref:
+  fig-title: Figura
+  fig-prefix: Figura
+  tbl-title: Tabla
+  tbl-prefix: Tabla
+  title-delim: .
+  ref-hyperlink: true
+date: "01/11/2021"
+date-modified: "today"
+draft: false
+---
+
+
+# Introducción
+
+En el Perú, al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), "Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19".
+
+Es crucial comprender la relación entre estas dos variables para establecer políticas económicas contracíclicas, que nos ayuden a generar mayores ingresos en la recaudación tributaria durante períodos de menor crecimiento económico. En los últimos diez años (2010-2019), la economía peruana ha experimentado un crecimiento anual promedio del 4.5%, y en los últimos cinco años (2015-2019) se ha expandido a una tasa promedio anual del 3.2% (INEI, 2019).
+
+Aunque existen investigaciones previas sobre este tema, el objetivo de este estudio es aclarar y mejorar algunas afirmaciones, relacionando y explicando de manera más precisa la influencia y correlación entre el crecimiento económico y la recaudación tributaria en el Departamento de Ayacucho durante el período 2007-2019.
+
+Esperamos que un mayor crecimiento económico se traduzca en una mayor recaudación tributaria, y que esta última tenga un impacto positivo en la inversión estatal en obras públicas, beneficiando así a la población y mejorando la calidad de los servicios de salud, infraestructura y educación, que son áreas prioritarias en Perú. Esta mejora en los sectores más necesitados a su vez influye en el crecimiento económico y, por lo tanto, en la recaudación tributaria.
+
+Para abordar esta problemática, hemos llevado a cabo una exhaustiva búsqueda de información, desde artículos científicos hasta fuentes proporcionadas por entidades como SUNAT, BCRP e INEI.
+
+El desarrollo de la investigación se dividió de la siguiente manera:
+
+1. En la primera parte, se explicó el planteamiento del problema principal y sus problemas específicos, se establecieron los objetivos y se justificó teórica, práctica y metodológicamente la investigación. Luego, se presentaron investigaciones científicas relevantes relacionadas con nuestro tema de investigación.
+
+2. A continuación, se detalló el marco conceptual de los principales términos, se plantearon las hipótesis, variables e indicadores, y se estableció la metodología a utilizar en el presente trabajo.
+
+3. Finalmente, se llevaron a cabo diversos análisis estadísticos para obtener los resultados y presentar las conclusiones de nuestro estudio.
+
+# Planteamiento del problema
+
+## Problema General
+
+¿En qué medida influye el crecimiento económico en la recaudación de impuestos por la SUNAT en el departamento de Ayacucho, periodo 2007-2019?
+
+## Problemas específicos
+
+1. ¿Cuál ha sido la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019?
+2. ¿Cuál ha sido la tendencia del crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019?
+3. ¿Cuál es la relación entre la recaudación de impuestos por la SUNAT respecto al crecimiento económico durante el periodo 2007-2019?
+
+# Objetivos
+
+## Objetivos generales
+
+Determinar la influencia del crecimiento económico en la recaudación de impuestos por la SUNAT en el departamento de Ayacucho, periodo 2007-2019.
+
+## Objetivos específicos
+
+1. Analizar la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019.
+2. Analizar la tendencia de crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019.
+3. Analizar la relación existente entre crecimiento económico y la recaudación de impuestos durante el periodo 2007-2019.
+
+# Justificación
+
+<!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
+
+¿Cuáles son los beneficios que se obtienen con su realización?
+
+¿Por qué es necesaria esta investigación?
+
+¿A quién o a quiénes beneficia?
+
+¿Quién o quiénes serán los usuarios? -->
+
+## Justificación teórica
+
+El presente trabajo busca analizar e interpretar de manera fundamentada los efectos de la influencia del crecimiento económico en la recaudación de impuestos en la región de Ayacucho. A través de esta investigación, se espera contribuir teóricamente al conocimiento de los patrones de los diferentes sectores económicos que son importantes para el crecimiento económico. Los resultados obtenidos servirán como base para futuros estudios similares, generando un aporte significativo al entendimiento de estos fenómenos económicos.
+
+## Justificación práctica
+
+Los resultados de esta investigación ofrecerán información relevante para la toma de decisiones en el ámbito fiscal, lo cual puede traducirse en mejores resultados económicos tanto en la región de Ayacucho como en otras partes de Perú. Las autoridades regionales y municipales podrán utilizar estos resultados para anticipar posibles ineficiencias en la recaudación de impuestos, permitiendo un mejor manejo de los recursos fiscales en beneficio de la población. Asimismo, esta investigación ayudará a evaluar si las reformas implementadas en la política tributaria contribuyen al crecimiento económico, lo que a su vez permitirá al Estado tomar acciones para abordar la elusión y evasión fiscal en los diferentes sectores económicos y promover el desarrollo del país.
+
+## Justificación metodológica
+
+Esta investigación se basa en un análisis estadístico aplicado, descriptivo y cuantitativo para determinar los efectos del crecimiento económico en la recaudación de impuestos por la SUNAT. Se emplearán técnicas de análisis de datos que permitirán obtener resultados más precisos y confiables. Además, se generarán nuevas fuentes de información que podrían utilizarse en futuros estudios para explorar la relación entre el crecimiento económico, la recaudación de impuestos y otras variables relacionadas, en aras de obtener resultados más técnicos y robustos.
+

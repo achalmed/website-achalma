@@ -2,10 +2,11 @@
     documentclass: article
     papersize: a4
     language: es
-    margin-left: 2.54cm
-    margin-right: 2.54cm
-    margin-bottom: 2.54cm
-    margin-top: 2.54cm
+    geometry: 
+      - top=2.54cm
+      - right=2.54cm
+      - bottom=2.54cm
+      - left=2.54cm
     toc: true
     toc-depth: 3
     toc-title: Contenidos
@@ -21,3 +22,6 @@
     fig-cap-location: top
     tbl-cap-location: top
     pdf-engine: pdflatex
+    include-in-header: 
+      - text: |
+          \usepackage{amsmath}

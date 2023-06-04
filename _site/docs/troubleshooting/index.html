@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.361">
@@ -93,16 +93,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "libDir": "site_libs"
   },
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
@@ -166,8 +166,8 @@ cookieconsent.run({
     <img src="../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -214,7 +214,7 @@ cookieconsent.run({
             <div class="quarto-navbar-tools ms-auto tools-wide">
     <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -225,38 +225,12 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a>
-  <ul class="collapse">
-  <li><a href="#check-the-version-of-quarto-and-its-dependencies" id="toc-check-the-version-of-quarto-and-its-dependencies" class="nav-link" data-scroll-target="#check-the-version-of-quarto-and-its-dependencies">Check the version of quarto and its dependencies</a></li>
-  <li><a href="#get-a-stack-trace" id="toc-get-a-stack-trace" class="nav-link" data-scroll-target="#get-a-stack-trace">Get a stack trace</a></li>
-  <li><a href="#verbose-mode" id="toc-verbose-mode" class="nav-link" data-scroll-target="#verbose-mode">Verbose mode</a></li>
-  <li><a href="#log-files" id="toc-log-files" class="nav-link" data-scroll-target="#log-files">Inspect log files</a></li>
-  <li><a href="#out-of-memory-issues" id="toc-out-of-memory-issues" class="nav-link" data-scroll-target="#out-of-memory-issues">Out-of-memory issues</a></li>
-  <li><a href="#installer-issues" id="toc-installer-issues" class="nav-link" data-scroll-target="#installer-issues">Installer issues</a></li>
-  <li><a href="#pdflatex-issues" id="toc-pdflatex-issues" class="nav-link" data-scroll-target="#pdflatex-issues">PDF/LaTeX issues</a></li>
-  </ul></li>
-  <li><a href="#environment-libraries-and-dependencies" id="toc-environment-libraries-and-dependencies" class="nav-link" data-scroll-target="#environment-libraries-and-dependencies">Environment, Libraries, and Dependencies</a>
-  <ul class="collapse">
-  <li><a href="#knitr" id="toc-knitr" class="nav-link" data-scroll-target="#knitr">knitr</a></li>
-  </ul></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a>
-  <ul class="collapse">
-  <li><a href="#debugging-jupyter-engine-issues" id="toc-debugging-jupyter-engine-issues" class="nav-link" data-scroll-target="#debugging-jupyter-engine-issues">Debugging Jupyter engine issues</a></li>
-  <li><a href="#debugging-lua-filters" id="toc-debugging-lua-filters" class="nav-link" data-scroll-target="#debugging-lua-filters">Debugging Lua filters</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/troubleshooting/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -317,11 +291,11 @@ cookieconsent.run({
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>On PowerShell:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$env</span><span class="op">:</span>QUARTO_PRINT_STACK <span class="op">=</span> <span class="st">"true"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$env</span><span class="op">:</span>QUARTO_PRINT_STACK <span class="op">=</span> <span class="st">"true"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>On bash-like shells:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">QUARTO_PRINT_STACK</span><span class="op">=</span>true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">QUARTO_PRINT_STACK</span><span class="op">=</span>true</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -357,11 +331,11 @@ cookieconsent.run({
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p>On PowerShell:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">$env</span><span class="op">:</span>QUARTO_DENO_EXTRA_OPTIONS <span class="op">=</span> <span class="st">"--v8-flags=--max-old-space-size=8192"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">$env</span><span class="op">:</span>QUARTO_DENO_EXTRA_OPTIONS <span class="op">=</span> <span class="st">"--v8-flags=--max-old-space-size=8192"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p>On bash-like shells:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">QUARTO_DENO_EXTRA_OPTIONS</span><span class="op">=</span>--v8-flags=--max-old-space-size=8192</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">QUARTO_DENO_EXTRA_OPTIONS</span><span class="op">=</span>--v8-flags=--max-old-space-size=8192</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -379,7 +353,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Advertencia
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -414,9 +388,9 @@ Warning
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># it provides output that is easier to read,</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># and can write its results to a file</span></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">:::</span><span class="fu">session_info</span>(<span class="at">to_file =</span> <span class="st">"quarto-session-info-output.txt"</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can then also run those commands from your R environment, and compare the output. If <code>sessioninfo</code> is available, then you can ask for a difference between the outputs more directly:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">:::</span><span class="fu">session_diff</span>(<span class="at">new =</span> <span class="st">"quarto-session-info-output.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">:::</span><span class="fu">session_diff</span>(<span class="at">new =</span> <span class="st">"quarto-session-info-output.txt"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="advanced" class="level2">
@@ -425,7 +399,7 @@ Warning
 <h3 class="anchored" data-anchor-id="debugging-jupyter-engine-issues">Debugging Jupyter engine issues</h3>
 <p>To enable Jupyter debugging, add the following to your YAML front matter:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">debug</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">debug</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Quarto creates a log of the execution of jupyter notebooks in its <a href="#log-files">log directory</a> under <code>jupyter-kernel.log</code>.</p>
 <p>If Jupyter execution is hanging instead of failing, you can force immediate flushing of the log by setting <code>QUARTO_JUPYTER_FLUSH_LOGS=true</code> in your environment before running quarto.</p>
 </section>
@@ -434,7 +408,7 @@ Warning
 <section id="useful-lua-helper-functions" class="level4">
 <h4 class="anchored" data-anchor-id="useful-lua-helper-functions">Useful Lua helper functions</h4>
 <p>Quarto includes a number of useful Lua helper functions that can be used to debug Lua filters. These are available in the <code>quarto</code> module, and can be used as follows:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">quarto</span><span class="op">.</span><span class="va">log</span><span class="op">.</span>output<span class="op">(</span><span class="va">obj</span><span class="op">)</span> <span class="co">-- prints a potentially complex object to the console</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">quarto</span><span class="op">.</span><span class="va">log</span><span class="op">.</span>output<span class="op">(</span><span class="va">obj</span><span class="op">)</span> <span class="co">-- prints a potentially complex object to the console</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="filter-tracing" class="level4">
 <h4 class="anchored" data-anchor-id="filter-tracing">Filter tracing</h4>
@@ -512,12 +486,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -710,7 +684,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../trademark.html">Marca comercial</a>
   </li>  
 </ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/troubleshooting/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

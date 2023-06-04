@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.361">
@@ -59,16 +59,16 @@ ul.task-list li input[type="checkbox"] {
     "libDir": "site_libs"
   },
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
@@ -133,8 +133,8 @@ cookieconsent.run({
     <img src="../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -181,7 +181,7 @@ cookieconsent.run({
             <div class="quarto-navbar-tools ms-auto tools-wide">
     <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -192,13 +192,13 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -216,30 +216,7 @@ cookieconsent.run({
   
 
 </header>
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#what-can-i-use-quarto-for" id="toc-what-can-i-use-quarto-for">What can I use Quarto for?</a></li>
-  <li><a href="#how-do-i-install-quarto" id="toc-how-do-i-install-quarto">How do I install Quarto?</a></li>
-  <li><a href="#is-quarto-free-to-use" id="toc-is-quarto-free-to-use">Is Quarto free to use?</a></li>
-  <li><a href="#what-output-formats-can-quarto-create" id="toc-what-output-formats-can-quarto-create">What output formats can Quarto create?</a></li>
-  <li><a href="#what-editing-tools-can-i-use-with-quarto" id="toc-what-editing-tools-can-i-use-with-quarto">What editing tools can I use with Quarto?</a></li>
-  <li><a href="#can-i-use-jupyter-notebooks-with-quarto" id="toc-can-i-use-jupyter-notebooks-with-quarto">Can I use Jupyter notebooks with Quarto?</a></li>
-  <li><a href="#what-programming-languages-are-supported-in-quarto" id="toc-what-programming-languages-are-supported-in-quarto">What programming languages are supported in Quarto?</a></li>
-  <li><a href="#what-human-languages-are-supported-in-quarto" id="toc-what-human-languages-are-supported-in-quarto">What human languages are supported in Quarto?</a></li>
-  <li><a href="#can-i-use-quarto-to-develop-proprietary-content" id="toc-can-i-use-quarto-to-develop-proprietary-content">Can I use Quarto to develop proprietary content?</a></li>
-  <li><a href="#but-doesnt-the-gpl-cover-exported-html-documents-when-they-include-styles-or-functionalities-from-quarto" id="toc-but-doesnt-the-gpl-cover-exported-html-documents-when-they-include-styles-or-functionalities-from-quarto">But doesn’t the GPL cover exported HTML documents when they include styles or functionalities from Quarto?</a></li>
-  <li><a href="#how-can-i-share-documents-and-have-people-comment-on-them" id="toc-how-can-i-share-documents-and-have-people-comment-on-them">How can I share documents and have people comment on them?</a></li>
-  <li><a href="#can-i-do-collaborative-editing-with-quarto" id="toc-can-i-do-collaborative-editing-with-quarto">Can I do collaborative editing with Quarto?</a></li>
-  <li><a href="#where-can-i-publish-quarto-websites" id="toc-where-can-i-publish-quarto-websites">Where can I publish Quarto websites?</a></li>
-  <li><a href="#does-posit-connect-support-quarto" id="toc-does-posit-connect-support-quarto">Does Posit Connect support Quarto?</a></li>
-  <li><a href="#who-are-the-developers-of-quarto" id="toc-who-are-the-developers-of-quarto">Who are the developers of Quarto?</a></li>
-  <li><a href="#why-the-name-quarto" id="toc-why-the-name-quarto">Why the name Quarto?</a></li>
-  <li><a href="#where-can-i-report-bugs-or-request-features" id="toc-where-can-i-report-bugs-or-request-features">Where can I report bugs or request features?</a></li>
-  <li><a href="#where-can-i-ask-questions-and-discuss-using-quarto-with-others" id="toc-where-can-i-ask-questions-and-discuss-using-quarto-with-others">Where can I ask questions and discuss using Quarto with others?</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/faq/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+
 <p>If you are an R Markdown user wondering about the relationship between Quarto and R Markdown, see also our <a href="../../docs/faq/rmarkdown.html">FAQ for R Markdown Users</a>.</p>
 <section id="what-can-i-use-quarto-for" class="level3">
 <h3 class="anchored" data-anchor-id="what-can-i-use-quarto-for">What can I use Quarto for?</h3>
@@ -396,12 +373,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -594,7 +571,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../trademark.html">Marca comercial</a>
   </li>  
 </ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/faq/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

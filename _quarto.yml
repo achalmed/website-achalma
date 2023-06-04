@@ -75,13 +75,12 @@ website:
       - icon: github
         href: https://github.com/achalmed
         text: Quarto GitHub       
- 
 
 bibliography: references.bib
-
+lang: es
 format:
   html:
-    toc: true
+    page-layout: full
     theme:
       light: [cosmo, theme.scss]
     code-copy: true
@@ -93,12 +92,10 @@ format:
       body-width: 900px
       margin-width: 300px
 
-
-
 filters:
   - filters/tools-tabset.lua
 
-freeze: true
+freeze: auto
 
 editor: visual
 

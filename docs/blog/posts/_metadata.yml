@@ -3,7 +3,6 @@ title-block-banner-color: body
 toc-location: left
 fig-cap-location: top
 tbl-cap-location: top
-freeze: true
 csl: apa-6th-edition.csl
 author:
   - name: Edison Achalma Mendoza
@@ -23,6 +22,7 @@ date-modified: "today"
 draft: false
 format:
   html:
+    page-layout: article
     toc: true
     toc-depth: 3
     toc-expand: 2
@@ -48,4 +48,5 @@ format:
       - ../signup.html
 execute:
   keep-md: true
+  keep-tex: true
 search: false

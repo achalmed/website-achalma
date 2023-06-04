@@ -27,7 +27,7 @@ date: "01/11/2021"
 
 
 
-# Introducción {#sec-introducción}
+# Introducción {#sec-introducción .unnumbered}
 
 **En el Perú,** al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), "Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19".
 
@@ -106,7 +106,7 @@ Esta investigación se basa en un análisis estadístico aplicado, descriptivo y
 
 Según @akanbi_impact_2020 en su artículo científico investigó "The Impact of Tax Collection and Incentives on Economic Growth: Evidence from Nigeria". Para ello se utilizó el modelo econométrico de análisis de regresión múltiple entre el producto bruto interno real (variable dependiente) y las variables de recaudación de impuestos e incentivos que afectan al crecimiento económico, como los ingresos fiscales, la inversión extranjera directa de capital, la inversión extranjera directa de otro capital que mide los incentivos (variables independientes) que cubre un período de ocho años entre 2011 y 2018 obtenidos del Servicio Federal de Impuestos Internos y del Banco Central de Nigeria. Dada la siguiente ecuación de estimación:
 
-$PIB = a + β_i TAXR + β_2 FDI + β_3 FDIC + e$
+$PIB = \alpha + \beta_{i}TAXR + \beta_{2}EID + \beta_{3}FDIC + \epsilon$
 
 $TAXR$: Impuesto recaudado
 
@@ -211,9 +211,9 @@ Esta investigación contribuye a la política fiscal para crear una estructura t
 
 @chiappelo_crecimiento_2018 investigaron el "Crecimiento económico y el rol de los impuestos: evidencia para América" analizando la relación entre el crecimiento económico y los impuestos al ingreso personal y corporativo para las economías más considerables de América, buscando evidencia empírica de la existencia de una curva de crecimiento de Laffer. Para ello trabajaron con 20 países de América en el periodo de 1990 a 2016 y utilizando una relación cuadrática, entre el crecimiento del PBI per cápita y las tasas de los impuestos a estudiar, estimando a través de efectos fijos.
 
-$g_{i, t} = \alpha + \beta_{1}X_{i, t}^{´} + \beta_{2}X_{i, t}^{´2} + \beta_{3}Z_{i, t}^{´} + \delta_{i, t}^{´} + u_{i, t} + \epsilon_{i, t}$
+$g_{i, t} = \alpha + \beta_{1}X_{i, t}^{´} + \beta_{2}X_{i, t}^{´2} + \beta_{3}Z_{i, t}^{´} + \delta_{i, t}^{´} + \mu_{i, t} + \epsilon_{i, t}$
 
-Donde los subíndices indican el país (i) y el periodo (t), la variable dependiente es el promedio de tres años de la tasa de crecimiento del PBI per cápita $g_{i, t}$, y las variables dependientes son: el vector de las tasas máximas marginales de los impuestos al ingreso personal y corporativo en el año inicial de cada subperiodo $X_{i, t}$, el factor cuadrático de la medida anterior para controlar la no-linealidad de las tasas, el vector de las variables explicativas basadas en la literatura de crecimiento $Z_{i, t}$, dummies de tiempo capturando shocks que afectan el crecimiento de la economía $\delta_{i, t}^{´}$, el efecto fijo del país i $u_{i}$ y finalmente el término del error del modelo $\epsilon_{i, t}$.
+Donde los subíndices indican el país (i) y el periodo (t), la variable dependiente es el promedio de tres años de la tasa de crecimiento del PBI per cápita $g_{i, t}$, y las variables dependientes son: el vector de las tasas máximas marginales de los impuestos al ingreso personal y corporativo en el año inicial de cada subperiodo $X_{i, t}$, el factor cuadrático de la medida anterior para controlar la no-linealidad de las tasas, el vector de las variables explicativas basadas en la literatura de crecimiento $Z_{i, t}$, dummies de tiempo capturando shocks que afectan el crecimiento de la economía $\delta_{i, t}^{´}$, el efecto fijo del país i $\mu_{i}$ y finalmente el término del error del modelo $\epsilon_{i, t}$.
 
 Encontrando que el aumento en la tasa de impuestos al ingreso personal y corporativo, causan un incremento en el crecimiento, hasta que en un punto los resultados se revierten y se vuelve negativo. Así mismo, estimando el modelo con diversas especificaciones de la literatura, se confirma la existencia de una curva de crecimiento de Laffer (growth Laffer curve).
 
@@ -235,7 +235,7 @@ En los hallazgos previos, se comprueba que los impuestos al ingreso impactan neg
 
 Kalas,B.; Mirovic V. & Milenković, N. (2018) en su artículo científico investigó "The Relationship Between Taxes And Economic Growth: Evidence From Serbia And Croatia". Para ello utilizó el modelo de una regresión de panel para estudiar la relación entre las variables. Tomando como período desde el 2007 hasta el 2016 en Serbia y Croacia, utilizando la participación porcentual del PIB a partir de los datos oficiales del Fondo Monetario Internacional. Estableciendo el siguiente modelo de regresión:
 
-$GDP_{i, t} = β_0 + β_{1}CIT_{i, t}+ β_{2}VAT_{i, t} + β_{3}SSC_{i, t} + β_{4}EXC_{i, t} + ε_{i, t}$
+$GDP_{i, t} = \beta_{0} + \beta_{1}CIT_{i, t}+ \beta_{2}VAT_{i, t} + \beta_{3}SSC_{i, t} + \beta_{4}EXC_{i, t} + \epsilon_{i, t}$
 
 $CIT$: Impuesto sobre la renta de sociedades
 
@@ -267,23 +267,23 @@ En cambio, para el modelo de elasticidad estimados en el largo plazo indican que
 
 @nina_politicas_2017 investigaron "Las políticas tributarias en el crecimiento económico de Ecuador, 2000-2015" para determinar la incidencia de las políticas tributarias en el crecimiento económico en la economía ecuatoriana en dicho periodo. Para ello trabajaron con datos de serie de tiempo de recaudación tributaria desde el año 2000, debido a que en ese año toma mayor importancia las políticas tributarias; la investigación se basa en un enfoque cuantitativo y deductivo empleando un análisis de tipo correlacional, porque se busca una asociación y correlación entre las variables de estudio. El modelo econométrico aplicado es con logaritmos, siendo un modelo de regresión múltiple.
 
-$𝑙𝑛𝑌_𝑖 = 𝛽_0 + 𝛽_{1}𝑙𝑛𝑋_1 + 𝛽_{2}𝑙𝑛𝑋_2 + 𝛽_{3}𝑙𝑛𝑋_3 + 𝛽_{4}𝑙𝑛𝑋_4 + 𝛽_{5}𝑙𝑛𝑋_5 + 𝑈_𝑖$
+$\ln(Y_i) = \beta_{0} + \beta_{1}\ln(X_1) + \beta_{2}\ln(X_2) + \beta_{3}\ln(X_3) + \beta_{4}\ln(X_4) + \beta_{5}\ln(X_5) + \mu_{i}$
 
 Dónde:
 
-$LnY_i$= Logaritmo del Producto Interno Bruto (PIB)
+$\ln(Y_i)$= Logaritmo del Producto Interno Bruto (PIB)
 
-$LnX_1$= Logaritmo del Impuesto a la renta
+$\ln(X_1)$= Logaritmo del Impuesto a la renta
 
-$LnX_2$= Logaritmo del Impuesto al valor agregado (IVA)
+$\ln(X_2)$= Logaritmo del Impuesto al valor agregado (IVA)
 
-$LnX_3$= Logaritmo del Impuesto a los consumos especiales (ICE)
+$\ln(X_3)$= Logaritmo del Impuesto a los consumos especiales (ICE)
 
-$LnX_4$= Logaritmo del Impuestos agregados especiales
+$\ln(X_4)$= Logaritmo del Impuestos agregados especiales
 
-$LnX_5$= Logaritmo de Otros impuestos
+$\ln(X_5)$= Logaritmo de Otros impuestos
 
-$U_i$= Término de perturbación estocástica.
+$\mu_{i}$= Término de perturbación estocástica.
 
 Los resultados establecen una correlación significativa entre las políticas tributarias y el crecimiento económico de Ecuador, así mismo, existe una dependencia de las variables, por lo tanto, la variable dependiente (crecimiento económico) está explicada por la variable independiente (políticas tributarias). Concluyendo que existe una relación positiva entre los ingresos por concepto de tributación y el crecimiento económico y que los ingresos tributarios constituyen una fuente importante de ingresos para la economía de Ecuador, siendo los principales y más representativos en la recaudación: el impuesto a la renta, al valor agregado y a los consumos especiales, las cuales tuvieron un comportamiento creciente a lo largo del periodo de estudio.
 
@@ -305,7 +305,7 @@ Con los resultados obtenidos del análisis se mostró que existe una relación s
 
 @shuai_effect_2013 en su artículo científico investigó "The Effect of State Corporate Income Tax Rate Cuts on Job Creation". Para ello, utilizó un modelo econométrico de panel de datos con efectos fijos. Por lo cual, con el fin de seleccionar el más apropiado realizó la prueba de Haussman del siguiente modelo especificado:
 
-$EG_{i, t} = β_{1}PG_{i, t-1} + β_{2}TaxRate_{i, t} + β_{3}TaxCutInd_{i, t-L} + γ_t + ε_{i, t}$
+$EG_{i, t} = \beta_{1}PG_{i, t-1} + \beta_{2}TaxRate_{i, t} + \beta_{3}TaxCutInd_{i, t-L} + \gamma_{t} + \epsilon_{i, t}$
 
 $EG_{i, t}$: Tasas de crecimiento anual del empleo
 
@@ -341,7 +341,7 @@ Se aplica un análisis de regresión lineal a las series de recaudación de tasa
 
 Modelo teórico
 
-$Y_t=β_0+β_{1}INFL+β_{2}PBI+μ_t$
+$Y_t= \beta_{0} + \beta_{1}INFL + \beta_{2}PBI + \mu_{t}$
 
 $Y_t$= Tasa de variación de la recaudación real
 
@@ -637,9 +637,8 @@ La evolución del Valor Agregado Bruto (VAB) en la región de Ayacucho se muestr
 
 Nuestro objetivo es analizar la relación entre el crecimiento económico y la recaudación de impuestos en el departamento de Ayacucho. Utilizamos como indicador de crecimiento económico la actividad económica de la región y la recaudación de impuestos por parte de la SUNAT. Para lograrlo, aplicamos estimaciones econométricas lineales mediante un modelo de regresión lineal simple. El propósito de este enfoque es demostrar el efecto del crecimiento económico en la recaudación de impuestos. Los parámetros estimados en el modelo son los siguientes:
 
-Modelo: $R_i = β_1 + β_{2}*VAB + u_i$
+Modelo: $R_i = \beta_{1} + \beta_{2}VAB + \mu_{i}$
 
-:   Resultados del modelo estimado inicial {#tbl-4}
 
 Dependent Variable: RI
 
@@ -650,6 +649,8 @@ Date: 12/27/21 Time: 19:06
 Sample: 2007-2019
 
 Included observations: 13
+
+: Resultados del modelo estimado inicial {#tbl-4}
 
 | Variable           | Coefficient | Std. Error            | t-Statistic | Prob.  |
 |---------------|---------------|---------------|---------------|---------------|

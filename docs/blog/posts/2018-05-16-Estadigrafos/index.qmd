@@ -12,22 +12,14 @@ tags:
   - Características demográficas
   - Nivel de instrucción
   - Análisis sociodemográfico
-author:
-  - Achalma Mendoza Elmer Edison
-  - Ayala Soto Angie Rocío
-  - Ccallocunto Rejas Eliana Guisela
-  - Lope Contreras Annie Katherine
-  - Mendivil Castro Yuditza
-crossref:
-  fig-title: Figura
-  fig-prefix: Figura
-  tbl-title: Tabla
-  tbl-prefix: Tabla
-  title-delim: .
-  ref-hyperlink: true
+citation: 
+  author:
+  - Edison Achalma Mendoza 
+  - Angie Ayala Soto
+  - Eliana Ccallocunto Rejas 
+  - Annie Lope Contreras
+  - Yuditza Mendivil Castro
 date: "04/16/2018"
-date-modified: "today"
-draft: false
 ---
 
 

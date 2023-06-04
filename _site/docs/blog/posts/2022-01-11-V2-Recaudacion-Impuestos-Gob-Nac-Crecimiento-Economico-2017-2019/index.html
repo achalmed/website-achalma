@@ -6,15 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Achalma Mendoza Elmer Edison">
-<meta name="author" content="Ayala Soto Angie Rocío">
-<meta name="author" content="Ccallocunto Rejas Eliana Guisela">
-<meta name="author" content="Lope Contreras Annie Katherine">
-<meta name="author" content="Mendivil Castro Yuditza">
-<meta name="dcterms.date" content="2018-04-16">
-<meta name="description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
+<meta name="author" content="Edison Achalma Mendoza">
+<meta name="dcterms.date" content="2021-01-11">
+<meta name="description" content="Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.">
 
-<title>achalmaedison - Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I</title>
+<title>achalmaedison - v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,12 +158,37 @@ cookieconsent.run({
 
 <link rel="stylesheet" href="../../../../styles.css">
 <link rel="stylesheet" href="../index.css">
-<meta property="og:title" content="achalmaedison - Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I">
-<meta property="og:description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
+<meta property="og:title" content="achalmaedison - v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho">
+<meta property="og:description" content="Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.">
+<meta property="og:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site-name" content="achalmaedison">
-<meta name="twitter:title" content="achalmaedison - Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I">
-<meta name="twitter:description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="achalmaedison - v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho">
+<meta name="twitter:description" content="Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.">
+<meta name="twitter:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho">
+<meta name="citation_author" content="Edison Achalma Mendoza">
+<meta name="citation_author" content="Nataly Bañico Espinoza">
+<meta name="citation_author" content="Nikole Berrocal Quispe">
+<meta name="citation_author" content="Elvis Carbajal López">
+<meta name="citation_author" content="Kattya Castillo López">
+<meta name="citation_author" content="Hans Castro Vilca">
+<meta name="citation_author" content="Luz Cuba Palomino">
+<meta name="citation_publication_date" content="2021-01-11">
+<meta name="citation_cover_date" content="2021-01-11">
+<meta name="citation_year" content="2021">
+<meta name="citation_online_date" content="2021-01-11">
+<meta name="citation_fulltext_html_url" content="https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Dynamic Documents with R and knitr;,citation_author=Yihui Xie;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://yihui.name/knitr/;">
+<meta name="citation_reference" content="citation_title=bookdown: Authoring Books and Technical Documents with R Markdown;,citation_author=Yihui Xie;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://github.com/rstudio/bookdown;">
+<meta name="citation_reference" content="citation_title=blogdown: Creating Websites with R Markdown;,citation_author=Yihui Xie;,citation_author=Alison Presmanes Hill;,citation_author=Amber Thomas;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://github.com/rstudio/blogdown;">
+<meta name="citation_reference" content="citation_title=R Markdown: The Definitive Guide;,citation_author=Yihui Xie;,citation_author=J. J. Allaire;,citation_author=Garrett Grolemund;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://bookdown.org/yihui/rmarkdown;">
+<meta name="citation_reference" content="citation_title=R Packages;,citation_author=Hadley Wickham;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=1491910593, 9781491910597;">
+<meta name="citation_reference" content="citation_title=How R Helps Airbnb Make the Most of its Data;,citation_author=Ricardo Bion;,citation_author=Robert Chang;,citation_author=Jason Goodman;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://doi.org/10.1080/00031305.2017.1392362;,citation_issue=1;,citation_doi=10.1080/00031305.2017.1392362;,citation_volume=72;,citation_journal_title=The American Statistician;,citation_publisher=Taylor &amp;amp;amp; Francis;">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_issue=2;,citation_volume=27;,citation_journal_title=The Computer Journal;,citation_publisher=British Computer Society;">
+<meta name="citation_reference" content="citation_title=Too good to be false: Nonsignificant results revisited;,citation_author=Chris HJ Hartgerink;,citation_author=Jelte M Wicherts;,citation_author=Marcel ALM Assen;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=1;,citation_volume=3;,citation_journal_title=Collabra: Psychology;,citation_publisher=The Regents of the University of California;">
+<meta name="citation_reference" content="citation_title=Our path to better science in less time using open data science tools;,citation_author=Julia S Stewart Lowndes;,citation_author=Benjamin D Best;,citation_author=Courtney Scarborough;,citation_author=Jamie C Afflerbach;,citation_author=Melanie R Frazier;,citation_author=Casey C O’Hara;,citation_author=Ning Jiang;,citation_author=Benjamin S Halpern;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=6;,citation_volume=1;,citation_journal_title=Nature ecology &amp;amp;amp; evolution;,citation_publisher=Nature Publishing Group;">
 </head>
 
 <body class="floating nav-fixed">
@@ -243,44 +264,49 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
-            <p class="subtitle lead">Explorando los estadígrafos</p>
+      <div class="quarto-title-block"><div><h1 class="title">v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+            <p class="subtitle lead">Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019</p>
                   <div>
         <div class="description">
-          <p>En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.</p>
+          <p>Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.</p>
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Estadística</div>
+                <div class="quarto-category">Econometría</div>
               </div>
                   </div>
   </div>
     
-  
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma Mendoza</a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://www.gob.pe/unsch">
+              Universidad Nacional de San Critóbla de Huamanga
+              </a>
+            </p>
+        </div>
+      </div>
+
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Authors</div>
-      <div class="quarto-title-meta-contents">
-               <p>Achalma Mendoza Elmer Edison </p>
-               <p>Ayala Soto Angie Rocío </p>
-               <p>Ccallocunto Rejas Eliana Guisela </p>
-               <p>Lope Contreras Annie Katherine </p>
-               <p>Mendivil Castro Yuditza </p>
-            </div>
-    </div>
-      
+        
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 16, 2018</p>
+        <p class="date">January 11, 2021</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">June 3, 2023</p>
+        <p class="date-modified">June 4, 2023</p>
       </div>
     </div>
       
@@ -307,7 +333,22 @@ cookieconsent.run({
 <!-- -->
 
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma mendoza2021,
+  author = {Achalma Mendoza, Edison and Bañico Espinoza, Nataly and
+    Berrocal Quispe, Nikole and Carbajal López, Elvis and Castillo
+    López, Kattya and Castro Vilca, Hans and Cuba Palomino, Luz},
+  title = {V2 {Análisis} Del {Impacto} Del {Crecimiento} {Económico} En
+    La {Recaudación} de {Impuestos} En {Ayacucho}},
+  date = {2021-01-11},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma mendoza2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Achalma Mendoza, E., Bañico Espinoza, N., Berrocal Quispe, N., Carbajal
+López, E., Castillo López, K., Castro Vilca, H., &amp; Cuba Palomino, L.
+(2021, January 11). v2 Análisis del Impacto del Crecimiento Económico en
+la Recaudación de Impuestos en Ayacucho. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019">https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V2-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019</a>
+</div></div></section></div></main> <!-- /main -->
 <script type="text/javascript">
 
 // replace cmd keyboard shortcut w/ control on non-Mac platforms
@@ -651,36 +692,30 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://giscus.app/client.js" data-repo="achalmed/website-achalma" data-repo-id="" data-category="Blog" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> Explorando los estadígrafos</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Estadística</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Econometría</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - Estadística</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Estadísticas de estudiantes</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - Serie 200 Economía 2018-I</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Características demográficas</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - Nivel de instrucción</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - Análisis sociodemográfico</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - Achalma Mendoza Elmer Edison</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ayala Soto Angie Rocío</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ccallocunto Rejas Eliana Guisela</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - Lope Contreras Annie Katherine</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - Mendivil Castro Yuditza</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">crossref:</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  fig-title: Figura</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  fig-prefix: Figura</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">  tbl-title: Tabla</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">  tbl-prefix: Tabla</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">  title-delim: .</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">  ref-hyperlink: true</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "04/16/2018"</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> "today"</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - Econometría</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ayacucho</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - Crecimiento económico</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Recaudación de impuestos</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - Valor Agregado Bruto (VAB)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - Análisis estadístico</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  author:</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - Edison Achalma Mendoza</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - Nataly Bañico Espinoza </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - Nikole Berrocal Quispe </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - Elvis Carbajal López </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">  - Kattya Castillo López </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  - Hans Castro Vilca </span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  - Luz Cuba Palomino </span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "01/11/2021"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

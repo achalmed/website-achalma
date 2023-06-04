@@ -7,11 +7,7 @@ categories:
   - Economía Política
 tags:
   - Economía Política
-author: 
-  - Achalma Mendoza Elmer Edison
 date: "04/23/2018"
-date-modified: "today"
-draft: false
 ---
 
 

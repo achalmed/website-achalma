@@ -10,15 +10,13 @@ categories:
   - Marxismo
 tags:
   - Filosofía
-author: Achalma Mendoza Elmer Edison
 date: "05/19/2023"
-date-modified: "today"
-draft: false
 ---
 
 
 
 # Introducción
+
 
 Textos de referencia:
 

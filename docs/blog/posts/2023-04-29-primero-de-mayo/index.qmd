@@ -11,8 +11,6 @@ tags:
   - Día del proletariado
 author: Comité Central Partido Comunista del Perú
 date: "05/01/2023"
-date-modified: "today"
-draft: false
 image: DALL·E 2023-04-29 23.15.46.png
 image-alt: "¡En este primero de mayo: seguir sembrando revolución!"
 ---

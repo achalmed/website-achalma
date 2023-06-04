@@ -12,10 +12,7 @@ tags:
   - APK
   - Instalación de aplicaciones
   - Emulador de Android
-author: Achalma Mendoza Elmer Edison
 date: "09/27/2022"
-date-modified: "today"
-draft: false
 ---
 
 

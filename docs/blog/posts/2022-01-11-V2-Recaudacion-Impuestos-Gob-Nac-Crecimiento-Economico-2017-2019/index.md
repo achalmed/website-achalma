@@ -1,31 +1,25 @@
 ---
-title: Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I
-subtitle: Explorando los estadígrafos
+title: v2 Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho
+subtitle: Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
 description: |
-  En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.
+  Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.
 categories:
-  - Estadística
+  - Econometría
 tags:
-  - Estadística
-  - Estadísticas de estudiantes
-  - Serie 200 Economía 2018-I
-  - Características demográficas
-  - Nivel de instrucción
-  - Análisis sociodemográfico
-author:
-  - Achalma Mendoza Elmer Edison
-  - Ayala Soto Angie Rocío
-  - Ccallocunto Rejas Eliana Guisela
-  - Lope Contreras Annie Katherine
-  - Mendivil Castro Yuditza
-crossref:
-  fig-title: Figura
-  fig-prefix: Figura
-  tbl-title: Tabla
-  tbl-prefix: Tabla
-  title-delim: .
-  ref-hyperlink: true
-date: "04/16/2018"
-date-modified: "today"
-draft: false
+  - Econometría
+  - Ayacucho
+  - Crecimiento económico
+  - Recaudación de impuestos
+  - Valor Agregado Bruto (VAB)
+  - Análisis estadístico
+citation:
+  author:
+  - Edison Achalma Mendoza
+  - Nataly Bañico Espinoza 
+  - Nikole Berrocal Quispe 
+  - Elvis Carbajal López 
+  - Kattya Castillo López 
+  - Hans Castro Vilca 
+  - Luz Cuba Palomino 
+date: "01/11/2021"
 ---

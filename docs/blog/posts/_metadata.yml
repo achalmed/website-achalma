@@ -6,6 +6,23 @@ title-block-banner: "#EDF3F9"
 title-block-banner-color: body
 toc-location: left
 freeze: true
+csl: apa-6th-edition.csl
+author:
+  - name: Edison Achalma Mendoza
+    url: https://achalmaedison.netlify.app
+    affiliation: Universidad Nacional de San Critóbla de Huamanga
+    affiliation-url: https://www.gob.pe/unsch
+    orcid: 0000-0001-6996-3364
+citation: true
+google-scholar: true
+crossref:
+  fig-title: Figura
+  fig-prefix: Figura
+  tbl-title: Tabla
+  tbl-prefix: Tabla
+  ref-hyperlink: true
+date-modified: "today"
+draft: false
 format:
   html:
     toc: true

@@ -12,22 +12,14 @@ tags:
   - Universidad Nacional de San Cristóbal de Huamanga
   - Diferencias de género
   - Influencia del género en la educación
-author: 
-  - Achalma Mendoza Elmer Edison
-  - Alcarraz Ortega Geancarlos
-  - Alfaro Calderón Juan Carlos
-  - De La Cruz Palomino Luis Alberto
-  - Pérez Oré David Richard
-crossref: 
-  fig-title: Figura
-  fig-prefix: Figura
-  tbl-title: Tabla
-  tbl-prefix: Tabla
-  title-delim: .
-  ref-hyperlink: true
+citation:
+  author: 
+  - Edison Achalma Mendoza
+  - Geancarlos Alcarraz Ortega
+  - Juan Alfaro Calderón
+  - Luis De La Cruz Palomino
+  - David Pérez Oré
 date: "12/30/2019"
-date-modified: "today"
-draft: false
 ---
 
 

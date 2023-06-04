@@ -7,18 +7,12 @@ abstract: hola
 thanks: gracias
 categories:
   - Economía Agraria
-  - Reforma Agraria y Control Estatal
-  - Ajuste Económico y Crisis
-  - Políticas Heterodoxas y Desafíos Socioeconómicos
 tags:
   - Economía Agraria
   - Economía Peruana
   - Políticas Económicas
   - Desafíos Socioeconómicos
-author: Achalma Mendoza Elmer Edison
 date: "04/22/2022"
-date-modified: "today"
-draft: false
 ---
 
 

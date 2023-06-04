@@ -7,7 +7,6 @@ categories:
   - Econometría
   - Economía
   - Invetigación económica
-  - Informes de investigación
 tags:
   - Econometría
   - Análisis económico
@@ -15,18 +14,7 @@ tags:
   - Influencia de factores externos
   - Crisis políticas y economía
   - Relaciones económicas y financieras
-author:
-  - Achalma Mendoza Elmer Edison
-crossref:
-  fig-title: Figura
-  fig-prefix: Figura
-  tbl-title: Tabla
-  tbl-prefix: Tabla
-  title-delim: .
-  ref-hyperlink: true
 date: "06/03/2023"
-date-modified: "today"
-draft: false
 ---
 
 

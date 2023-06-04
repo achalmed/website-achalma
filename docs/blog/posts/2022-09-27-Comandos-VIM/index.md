@@ -5,17 +5,12 @@ description: |
   En este artículo encontrarás una guía completa de los comandos básicos de Vim, uno de los editores de texto más populares en el mundo de la programación. Desde cómo abrir y cerrar archivos, hasta cómo buscar y reemplazar texto, aprenderás a utilizar Vim para mejorar tu flujo de trabajo y ser más eficiente en tu programación.
 categories:
   - Programación
-  - Productividad
-  - Tecnología
 tags:
   - Vim
   - Editor de texto
   - Comandos
   - Programación
-author: Achalma Mendoza Elmer Edison
 date: "09/27/2022"
-date-modified: "today"
-draft: false
 ---
 
 

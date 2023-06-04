@@ -15,15 +15,14 @@ tags:
   - Recursos Públicos
   - Gobierno
   - Servicios Públicos
-author:
-  - Achalma Mendoza Elmer Edison
-  - Bermudo Heredia Felix Manuel
-  - Borda Torres Noe
-  - Castillo Lopez Kattya Yasitrh
-  - Fernandez Núñez Yuri David
+citation:
+  author:
+  - Edison Achalma Mendoza
+  - Felix Bermudo Heredia
+  - Noe Borda Torres
+  - Kattya Castillo Lopez
+  - Yuri Fernandez Núñez
 date: "10/01/2021"
-date-modified: "today"
-draft: false
 ---
 
 

@@ -6,11 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Achalma Mendoza Elmer Edison">
-<meta name="author" content="Ayala Soto Angie Rocío">
-<meta name="author" content="Ccallocunto Rejas Eliana Guisela">
-<meta name="author" content="Lope Contreras Annie Katherine">
-<meta name="author" content="Mendivil Castro Yuditza">
+<meta name="author" content="Edison Achalma Mendoza">
 <meta name="dcterms.date" content="2018-04-16">
 <meta name="description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
 
@@ -164,10 +160,33 @@ cookieconsent.run({
 <link rel="stylesheet" href="../index.css">
 <meta property="og:title" content="achalmaedison - Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I">
 <meta property="og:description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
+<meta property="og:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2018-05-16-Estadigrafos/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site-name" content="achalmaedison">
 <meta name="twitter:title" content="achalmaedison - Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I">
 <meta name="twitter:description" content="En este blog, se presenta un análisis detallado de las características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. Se examinan variables como el lugar de residencia, nivel educativo de los padres, actividad laboral, uso del comedor universitario, estado civil, entre otros. Los cuadros presentados muestran la distribución de los datos y proporcionan información clave para comprender el perfil de los estudiantes y su entorno.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2018-05-16-Estadigrafos/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Análisis estadístico de los alumnos de Estadística de la serie 200 de Economía 2018-I">
+<meta name="citation_author" content="Edison Achalma Mendoza">
+<meta name="citation_author" content="Angie Ayala Soto">
+<meta name="citation_author" content="Eliana Ccallocunto Rejas">
+<meta name="citation_author" content="Annie Lope Contreras">
+<meta name="citation_author" content="Yuditza Mendivil Castro">
+<meta name="citation_publication_date" content="2018-04-16">
+<meta name="citation_cover_date" content="2018-04-16">
+<meta name="citation_year" content="2018">
+<meta name="citation_online_date" content="2018-04-16">
+<meta name="citation_fulltext_html_url" content="https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-Estadigrafos">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Dynamic Documents with R and knitr;,citation_author=Yihui Xie;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://yihui.name/knitr/;">
+<meta name="citation_reference" content="citation_title=bookdown: Authoring Books and Technical Documents with R Markdown;,citation_author=Yihui Xie;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://github.com/rstudio/bookdown;">
+<meta name="citation_reference" content="citation_title=blogdown: Creating Websites with R Markdown;,citation_author=Yihui Xie;,citation_author=Alison Presmanes Hill;,citation_author=Amber Thomas;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://github.com/rstudio/blogdown;">
+<meta name="citation_reference" content="citation_title=R Markdown: The Definitive Guide;,citation_author=Yihui Xie;,citation_author=J. J. Allaire;,citation_author=Garrett Grolemund;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://bookdown.org/yihui/rmarkdown;">
+<meta name="citation_reference" content="citation_title=R Packages;,citation_author=Hadley Wickham;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=1491910593, 9781491910597;">
+<meta name="citation_reference" content="citation_title=How R Helps Airbnb Make the Most of its Data;,citation_author=Ricardo Bion;,citation_author=Robert Chang;,citation_author=Jason Goodman;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://doi.org/10.1080/00031305.2017.1392362;,citation_issue=1;,citation_doi=10.1080/00031305.2017.1392362;,citation_volume=72;,citation_journal_title=The American Statistician;,citation_publisher=Taylor &amp;amp;amp; Francis;">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_issue=2;,citation_volume=27;,citation_journal_title=The Computer Journal;,citation_publisher=British Computer Society;">
+<meta name="citation_reference" content="citation_title=Too good to be false: Nonsignificant results revisited;,citation_author=Chris HJ Hartgerink;,citation_author=Jelte M Wicherts;,citation_author=Marcel ALM Assen;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=1;,citation_volume=3;,citation_journal_title=Collabra: Psychology;,citation_publisher=The Regents of the University of California;">
+<meta name="citation_reference" content="citation_title=Our path to better science in less time using open data science tools;,citation_author=Julia S Stewart Lowndes;,citation_author=Benjamin D Best;,citation_author=Courtney Scarborough;,citation_author=Jamie C Afflerbach;,citation_author=Melanie R Frazier;,citation_author=Casey C O’Hara;,citation_author=Ning Jiang;,citation_author=Benjamin S Halpern;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=6;,citation_volume=1;,citation_journal_title=Nature ecology &amp;amp;amp; evolution;,citation_publisher=Nature Publishing Group;">
 </head>
 
 <body class="floating nav-fixed">
@@ -256,20 +275,25 @@ cookieconsent.run({
                   </div>
   </div>
     
-  
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma Mendoza</a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://www.gob.pe/unsch">
+              Universidad Nacional de San Critóbla de Huamanga
+              </a>
+            </p>
+        </div>
+      </div>
+
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Authors</div>
-      <div class="quarto-title-meta-contents">
-               <p>Achalma Mendoza Elmer Edison </p>
-               <p>Ayala Soto Angie Rocío </p>
-               <p>Ccallocunto Rejas Eliana Guisela </p>
-               <p>Lope Contreras Annie Katherine </p>
-               <p>Mendivil Castro Yuditza </p>
-            </div>
-    </div>
-      
+        
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
@@ -280,7 +304,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">June 3, 2023</p>
+        <p class="date-modified">June 4, 2023</p>
       </div>
     </div>
       
@@ -304,7 +328,7 @@ cookieconsent.run({
 
 <div id="tbl-1" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;1. Distribución de la edad de los estudiantes de la serie 200 de Economía durante el curso de Estadística en el período 2018-I</caption>
+<caption>Tabla&nbsp;1: Distribución de la edad de los estudiantes de la serie 200 de Economía durante el curso de Estadística en el período 2018-I</caption>
 <colgroup>
 <col style="width: 10%">
 <col style="width: 15%">
@@ -452,7 +476,7 @@ cookieconsent.run({
 </ul>
 <div id="tbl-2" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;2. Distribución de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;2: Distribución de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 10%">
 <col style="width: 15%">
@@ -509,7 +533,7 @@ cookieconsent.run({
 </ul>
 <div id="tbl-3" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;3. Distribución del tiempo de llegada de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;3: Distribución del tiempo de llegada de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -659,7 +683,7 @@ cookieconsent.run({
 </ul>
 <div id="tbl-4" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;4. Distribución del número de cursos matriculados por los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;4: Distribución del número de cursos matriculados por los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 10%">
 <col style="width: 15%">
@@ -746,7 +770,7 @@ cookieconsent.run({
 </ul>
 <div id="tbl-5" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;5. Distribución del número de veces que los estudiantes de la serie 200 de Economía llevan el curso de Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;5: Distribución del número de veces que los estudiantes de la serie 200 de Economía llevan el curso de Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 10%">
 <col style="width: 15%">
@@ -812,7 +836,7 @@ cookieconsent.run({
 </ul>
 <div id="tbl-6" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;6. Distribución del género de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;6: Distribución del género de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 13%">
 <col style="width: 15%">
@@ -856,7 +880,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-7" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;7. Distribución de la estatura de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;7: Distribución de la estatura de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 20%">
 <col style="width: 13%">
@@ -942,7 +966,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-8" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;8. Distribución del peso de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;8: Distribución del peso de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 10%">
 <col style="width: 15%">
@@ -1028,7 +1052,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-9" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;9. Distribución del distrito de residencia de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;9: Distribución del distrito de residencia de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 27%">
 <col style="width: 12%">
@@ -1114,7 +1138,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-10" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;10. Distribución del índice académico de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;10: Distribución del índice académico de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1214,7 +1238,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-11" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;11. Distribución del intervalo de notas de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;11: Distribución del intervalo de notas de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1286,7 +1310,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-12" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;12. Distribución del departamento del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;12: Distribución del departamento del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1365,7 +1389,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-13" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;13. Distribución de la provincia del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;13: Distribución de la provincia del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1493,7 +1517,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-14" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;14. Distribución del distrito del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;14: Distribución del distrito del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 27%">
 <col style="width: 12%">
@@ -1768,7 +1792,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-15" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;15. Distribución del número de hermanos de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;15: Distribución del número de hermanos de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1868,7 +1892,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-16" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;16. Distribución de la actividad laboral de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;16: Distribución de la actividad laboral de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -1926,7 +1950,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-17" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;17. Distribución del uso del comedor de la UNSCH entre los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
+<caption>Tabla&nbsp;17: Distribución del uso del comedor de la UNSCH entre los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I</caption>
 <colgroup>
 <col style="width: 26%">
 <col style="width: 12%">
@@ -1984,7 +2008,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-18" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;18. Distribución de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I según si viven solos o no.</caption>
+<caption>Tabla&nbsp;18: Distribución de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I según si viven solos o no.</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -2042,7 +2066,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-19" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;19. Distribución del estado civil de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;19: Distribución del estado civil de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 17%">
 <col style="width: 14%">
@@ -2100,7 +2124,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-20" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;20. Distribución de la dependencia económica de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;20: Distribución de la dependencia económica de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 26%">
 <col style="width: 12%">
@@ -2158,7 +2182,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-21" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;21. Distribución de la primera profesión de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;21: Distribución de la primera profesión de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 22%">
 <col style="width: 13%">
@@ -2202,7 +2226,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-22" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;22. Distribución de la movilidad propia de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;22: Distribución de la movilidad propia de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 21%">
 <col style="width: 13%">
@@ -2246,7 +2270,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-23" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;23. Características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;23: Características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 9%">
 <col style="width: 11%">
@@ -2287,7 +2311,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-24" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;24. Nivel de instrucción de los padres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;24: Nivel de instrucción de los padres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 14%">
 <col style="width: 14%">
@@ -2338,7 +2362,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-25" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;25. Nivel de instrucción de las madres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;25: Nivel de instrucción de las madres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -2410,7 +2434,7 @@ cookieconsent.run({
 </div>
 <div id="tbl-26" class="anchored">
 <table class="table">
-<caption>Tabla&nbsp;26. Número de hijos de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
+<caption>Tabla&nbsp;26: Número de hijos de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I.</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -2520,7 +2544,22 @@ cookieconsent.run({
 <!-- -->
 
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma mendoza2018,
+  author = {Achalma Mendoza, Edison and Ayala Soto, Angie and
+    Ccallocunto Rejas, Eliana and Lope Contreras, Annie and Mendivil
+    Castro, Yuditza},
+  title = {Análisis Estadístico de Los Alumnos de {Estadística} de La
+    Serie 200 de {Economía} {2018-I}},
+  date = {2018-04-16},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-Estadigrafos},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma mendoza2018" class="csl-entry quarto-appendix-citeas" role="listitem">
+Achalma Mendoza, E., Ayala Soto, A., Ccallocunto Rejas, E., Lope
+Contreras, A., &amp; Mendivil Castro, Y. (2018, April 16). Análisis
+estadístico de los alumnos de Estadística de la serie 200 de Economía
+2018-I. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-Estadigrafos">https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-Estadigrafos</a>
+</div></div></section></div></main> <!-- /main -->
 <script type="text/javascript">
 
 // replace cmd keyboard shortcut w/ control on non-Mac platforms
@@ -2877,430 +2916,422 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Características demográficas</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - Nivel de instrucción</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - Análisis sociodemográfico</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - Achalma Mendoza Elmer Edison</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ayala Soto Angie Rocío</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - Ccallocunto Rejas Eliana Guisela</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - Lope Contreras Annie Katherine</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - Mendivil Castro Yuditza</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">crossref:</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  fig-title: Figura</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  fig-prefix: Figura</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">  tbl-title: Tabla</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">  tbl-prefix: Tabla</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">  title-delim: .</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">  ref-hyperlink: true</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "04/16/2018"</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> "today"</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>|   10    |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>|   17    |     1      |    0,9     |        0,9        |         1,8          |</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>|   18    |     6      |    5,4     |        5,4        |         7,2          |</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>|   19    |     25     |    22,5    |       22,5        |         29,7         |</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>|   20    |     20     |    18,0    |       18,0        |         47,7         |</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>|   21    |     22     |    19,8    |       19,8        |         67,6         |</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>|   22    |     13     |    11,7    |       11,7        |         79,3         |</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>|   23    |     5      |    4,5     |        4,5        |         83,8         |</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>|   24    |     3      |    2,7     |        2,7        |         86,5         |</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>|   25    |     7      |    6,3     |        6,3        |         92,8         |</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>|   26    |     2      |    1,8     |        1,8        |         94,6         |</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>|   27    |     2      |    1,8     |        1,8        |         96,4         |</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>|   28    |     1      |    0,9     |        0,9        |         97,3         |</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>|   29    |     2      |    1,8     |        1,8        |         99,1         |</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>|   42    |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>: Distribución de la edad de los estudiantes de la serie 200 de Economía durante el curso de Estadística en el período 2018-I {#tbl-1}</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>El cuadro muestra la distribución de la edad de los estudiantes de la serie 200 de Economía en el periodo 2018-I. A continuación, se proporciona una interpretación de las columnas del cuadro:</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frecuencia: Indica la cantidad de estudiantes que se encuentran en cada grupo de edad.</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje: Representa el porcentaje de estudiantes que corresponde a cada grupo de edad con respecto al total de estudiantes.</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje válido: Muestra el porcentaje de estudiantes excluyendo aquellos valores nulos o no aplicables.</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje acumulado: Indica el porcentaje acumulado de estudiantes desde el inicio hasta cada grupo de edad.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Se observa que la mayoría de los estudiantes se encuentran en un rango de edad entre los 19 y los 25 años, con una mayor concentración en la edad de 19 años (22.5% de los estudiantes) y 21 años (19.8% de los estudiantes).</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A medida que aumenta la edad, la cantidad de estudiantes tiende a disminuir.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En total, se registraron 111 estudiantes en la muestra.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span><span class="co"> </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  author:</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - Edison Achalma Mendoza </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - Angie Ayala Soto</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - Eliana Ccallocunto Rejas </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - Annie Lope Contreras</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">  - Yuditza Mendivil Castro</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "04/16/2018"</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>|   10    |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>|   17    |     1      |    0,9     |        0,9        |         1,8          |</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>|   18    |     6      |    5,4     |        5,4        |         7,2          |</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>|   19    |     25     |    22,5    |       22,5        |         29,7         |</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>|   20    |     20     |    18,0    |       18,0        |         47,7         |</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>|   21    |     22     |    19,8    |       19,8        |         67,6         |</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>|   22    |     13     |    11,7    |       11,7        |         79,3         |</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>|   23    |     5      |    4,5     |        4,5        |         83,8         |</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>|   24    |     3      |    2,7     |        2,7        |         86,5         |</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>|   25    |     7      |    6,3     |        6,3        |         92,8         |</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>|   26    |     2      |    1,8     |        1,8        |         94,6         |</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>|   27    |     2      |    1,8     |        1,8        |         96,4         |</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>|   28    |     1      |    0,9     |        0,9        |         97,3         |</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>|   29    |     2      |    1,8     |        1,8        |         99,1         |</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>|   42    |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>: Distribución de la edad de los estudiantes de la serie 200 de Economía durante el curso de Estadística en el período 2018-I {#tbl-1}</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>El cuadro muestra la distribución de la edad de los estudiantes de la serie 200 de Economía en el periodo 2018-I. A continuación, se proporciona una interpretación de las columnas del cuadro:</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frecuencia: Indica la cantidad de estudiantes que se encuentran en cada grupo de edad.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje: Representa el porcentaje de estudiantes que corresponde a cada grupo de edad con respecto al total de estudiantes.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje válido: Muestra el porcentaje de estudiantes excluyendo aquellos valores nulos o no aplicables.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje acumulado: Indica el porcentaje acumulado de estudiantes desde el inicio hasta cada grupo de edad.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Se observa que la mayoría de los estudiantes se encuentran en un rango de edad entre los 19 y los 25 años, con una mayor concentración en la edad de 19 años (22.5% de los estudiantes) y 21 años (19.8% de los estudiantes).</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A medida que aumenta la edad, la cantidad de estudiantes tiende a disminuir.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En total, se registraron 111 estudiantes en la muestra.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>|   200   |    105     |    94,6    |       94,6        |         94,6         |</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>|   300   |     6      |    5,4     |        5,4        |        100,0         |</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>: Distribución de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-2}</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>|   200   |    105     |    94,6    |       94,6        |         94,6         |</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>|   300   |     6      |    5,4     |        5,4        |        100,0         |</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>: Distribución de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-2}</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>El cuadro muestra información sobre el número de estudiantes de Economía que están llevando el curso de Estadística de la serie 200 en el periodo 2018-I. A continuación, se proporciona una interpretación de las columnas del cuadro:</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frecuencia: Indica la cantidad de estudiantes que están tomando el curso de Estadística.</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje: Representa el porcentaje de estudiantes que corresponde a cada categoría con respecto al total de estudiantes.</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje válido: Muestra el porcentaje de estudiantes excluyendo aquellos valores nulos o no aplicables.</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje acumulado: Indica el porcentaje acumulado de estudiantes desde el inicio hasta cada categoría.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Del total de estudiantes de la serie 200 de Economía en el periodo 2018-I, se encontró que 105 estudiantes (94.6%) están llevando el curso de Estadística.</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Además, hay 6 estudiantes (5.4%) que no están llevando el curso de Estadística.</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En resumen, se registraron 111 estudiantes en total en la muestra.</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>|      Valores       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>|         2          |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>|         5          |     1      |    0,9     |        0,9        |         1,8          |</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>|         10         |     6      |    5,4     |        5,5        |         7,3          |</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>|         12         |     1      |    0,9     |        0,9        |         8,2          |</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>|         15         |     15     |    13,5    |       13,6        |         21,8         |</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>|         20         |     21     |    18,9    |       19,1        |         40,9         |</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>|         25         |     15     |    13,5    |       13,6        |         54,5         |</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>|         27         |     1      |    0,9     |        0,9        |         55,5         |</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>|         30         |     28     |    25,2    |       25,5        |         80,9         |</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>|         35         |     4      |    3,6     |        3,6        |         84,5         |</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>|         40         |     7      |    6,3     |        6,4        |         90,9         |</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>|         45         |     6      |    5,4     |        5,5        |         96,4         |</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>|         60         |     3      |    2,7     |        2,7        |         99,1         |</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>|         70         |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>|       Total        |    110     |    99,1    |       100,0       |                      |</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0,9     |                   |                      |</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>: Distribución del tiempo de llegada de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-3}</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el tiempo de llegada de los alumnos que están tomando el curso de Estadística de la serie 200 en Economía durante el periodo 2018-I. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que el tiempo de llegada más común para los estudiantes es de 20 minutos, con 21 estudiantes (18.9%) llegando en ese intervalo.</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El segundo tiempo de llegada más frecuente es de 30 minutos, con 28 estudiantes (25.2%) llegando en ese lapso.</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En general, la mayoría de los estudiantes (99.1%) llega dentro de un rango de tiempo de 2 a 70 minutos.</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay un estudiante que no especificó su tiempo de llegada.</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>|    2    |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>|    3    |     1      |    0,9     |        0,9        |         1,8          |</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>|    4    |     12     |    10,8    |       10,8        |         12,6         |</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>|    5    |     32     |    28,8    |       28,8        |         41,4         |</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>|    6    |     57     |    51,4    |       51,4        |         92,8         |</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>|    7    |     6      |    5,4     |        5,4        |         98,2         |</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>|    8    |     2      |    1,8     |        1,8        |        100,0         |</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>: Distribución del número de cursos matriculados por los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-4}</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el número de cursos matriculados por los alumnos que están tomando el curso de Estadística de la serie 200 en Economía durante el periodo 2018-I. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que la mayoría de los estudiantes (51.4%) se matricularon en 6 cursos.</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El segundo número de cursos más común es 5, con 32 estudiantes (28.8%) inscribiéndose en esa cantidad.</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En general, la mayoría de los estudiantes (98.2%) se matriculó en 7 cursos o menos.</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay 2 estudiantes (1.8%) que se matricularon en 8 cursos.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>El cuadro muestra información sobre el número de estudiantes de Economía que están llevando el curso de Estadística de la serie 200 en el periodo 2018-I. A continuación, se proporciona una interpretación de las columnas del cuadro:</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frecuencia: Indica la cantidad de estudiantes que están tomando el curso de Estadística.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje: Representa el porcentaje de estudiantes que corresponde a cada categoría con respecto al total de estudiantes.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje válido: Muestra el porcentaje de estudiantes excluyendo aquellos valores nulos o no aplicables.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Porcentaje acumulado: Indica el porcentaje acumulado de estudiantes desde el inicio hasta cada categoría.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Del total de estudiantes de la serie 200 de Economía en el periodo 2018-I, se encontró que 105 estudiantes (94.6%) están llevando el curso de Estadística.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Además, hay 6 estudiantes (5.4%) que no están llevando el curso de Estadística.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En resumen, se registraron 111 estudiantes en total en la muestra.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>|      Valores       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>|         2          |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>|         5          |     1      |    0,9     |        0,9        |         1,8          |</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>|         10         |     6      |    5,4     |        5,5        |         7,3          |</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>|         12         |     1      |    0,9     |        0,9        |         8,2          |</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>|         15         |     15     |    13,5    |       13,6        |         21,8         |</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>|         20         |     21     |    18,9    |       19,1        |         40,9         |</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>|         25         |     15     |    13,5    |       13,6        |         54,5         |</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>|         27         |     1      |    0,9     |        0,9        |         55,5         |</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>|         30         |     28     |    25,2    |       25,5        |         80,9         |</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>|         35         |     4      |    3,6     |        3,6        |         84,5         |</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>|         40         |     7      |    6,3     |        6,4        |         90,9         |</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>|         45         |     6      |    5,4     |        5,5        |         96,4         |</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>|         60         |     3      |    2,7     |        2,7        |         99,1         |</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>|         70         |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>|       Total        |    110     |    99,1    |       100,0       |                      |</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0,9     |                   |                      |</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>: Distribución del tiempo de llegada de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-3}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el tiempo de llegada de los alumnos que están tomando el curso de Estadística de la serie 200 en Economía durante el periodo 2018-I. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que el tiempo de llegada más común para los estudiantes es de 20 minutos, con 21 estudiantes (18.9%) llegando en ese intervalo.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El segundo tiempo de llegada más frecuente es de 30 minutos, con 28 estudiantes (25.2%) llegando en ese lapso.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En general, la mayoría de los estudiantes (99.1%) llega dentro de un rango de tiempo de 2 a 70 minutos.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay un estudiante que no especificó su tiempo de llegada.</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>|    2    |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>|    3    |     1      |    0,9     |        0,9        |         1,8          |</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>|    4    |     12     |    10,8    |       10,8        |         12,6         |</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>|    5    |     32     |    28,8    |       28,8        |         41,4         |</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>|    6    |     57     |    51,4    |       51,4        |         92,8         |</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>|    7    |     6      |    5,4     |        5,4        |         98,2         |</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>|    8    |     2      |    1,8     |        1,8        |        100,0         |</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>: Distribución del número de cursos matriculados por los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-4}</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el número de cursos matriculados por los alumnos que están tomando el curso de Estadística de la serie 200 en Economía durante el periodo 2018-I. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que la mayoría de los estudiantes (51.4%) se matricularon en 6 cursos.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El segundo número de cursos más común es 5, con 32 estudiantes (28.8%) inscribiéndose en esa cantidad.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En general, la mayoría de los estudiantes (98.2%) se matriculó en 7 cursos o menos.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay 2 estudiantes (1.8%) que se matricularon en 8 cursos.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>|    0    |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>|    1    |     86     |    77,5    |       77,5        |         78,4         |</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>|    2    |     20     |    18,0    |       18,0        |         96,4         |</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>|    3    |     4      |    3,6     |        3,6        |        100,0         |</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>|    0    |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>|    1    |     86     |    77,5    |       77,5        |         78,4         |</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>|    2    |     20     |    18,0    |       18,0        |         96,4         |</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>|    3    |     4      |    3,6     |        3,6        |        100,0         |</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>: Distribución del número de veces que los estudiantes de la serie 200 de Economía llevan el curso de Estadística durante el período 2018-I {#tbl-5}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el número de veces que los alumnos de la serie 200 en Economía durante el periodo 2018-I han llevado el curso de Estadística. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que la mayoría de los estudiantes (77.5%) han llevado el curso de Estadística una vez.</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un número considerable de estudiantes (18.0%) ha llevado el curso dos veces.</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solo un pequeño porcentaje de estudiantes (3.6%) ha llevado el curso tres veces.</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay 1 estudiante (0.9%) que no ha llevado el curso de Estadística.</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>: Distribución del número de veces que los estudiantes de la serie 200 de Economía llevan el curso de Estadística durante el período 2018-I {#tbl-5}</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>El cuadro presenta datos sobre el número de veces que los alumnos de la serie 200 en Economía durante el periodo 2018-I han llevado el curso de Estadística. A continuación, se realiza una interpretación de las columnas del cuadro:</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>Interpretación:</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Según los datos, se observa que la mayoría de los estudiantes (77.5%) han llevado el curso de Estadística una vez.</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un número considerable de estudiantes (18.0%) ha llevado el curso dos veces.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solo un pequeño porcentaje de estudiantes (3.6%) ha llevado el curso tres veces.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>También se indica que hay 1 estudiante (0.9%) que no ha llevado el curso de Estadística.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>|  Valores  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>| :-------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>| Femenino  |     40     |    36,0    |       36,0        |         36,0         |</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>| Masculino |     71     |    64,0    |       64,0        |        100,0         |</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>|   Total   |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>: Distribución del género de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-6}</span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>|  Valores  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>| :-------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>| Femenino  |     40     |    36,0    |       36,0        |         36,0         |</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>| Masculino |     71     |    64,0    |       64,0        |        100,0         |</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>|   Total   |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>: Distribución del género de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-6}</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>|     Valores     | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>| :-------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">146,98;150,60</span><span class="co">]</span> |     12     |    10,8    |       10,8        |         10,8         |</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">150,61;154,23</span><span class="co">]</span> |     10     |    9,0     |        9,0        |         19,8         |</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">154,24;157,86</span><span class="co">]</span> |     9      |    8,1     |        8,1        |         27,9         |</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">157,87;161,49</span><span class="co">]</span> |     17     |    15,3    |       15,3        |         43,2         |</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">161,50;165,12</span><span class="co">]</span> |     28     |    25,2    |       25,2        |         68,5         |</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">165,13;168,75</span><span class="co">]</span> |     15     |    13,5    |       13,5        |         82,0         |</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">168,76;172,38</span><span class="co">]</span> |     12     |    10,8    |       10,8        |         92,8         |</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">172,39;176,02</span><span class="co">]</span> |     8      |    7,2     |        7,2        |        100,0         |</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>|      Total      |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>: Distribución de la estatura de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-7}</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">40;44</span><span class="co">]</span> |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">45;49</span><span class="co">]</span> |     18     |    16,2    |       16,2        |         17,1         |</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">50;54</span><span class="co">]</span> |     19     |    17,1    |       17,1        |         34,2         |</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">55;59</span><span class="co">]</span> |     25     |    22,5    |       22,5        |         56,8         |</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">60;64</span><span class="co">]</span> |     25     |    22,5    |       22,5        |         79,3         |</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">65;69</span><span class="co">]</span> |     15     |    13,5    |       13,5        |         92,8         |</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">70;74</span><span class="co">]</span> |     2      |    1,8     |        1,8        |         94,6         |</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">75;80</span><span class="co">]</span> |     6      |    5,4     |        5,4        |        100,0         |</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>: Distribución del peso de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-8}</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>| Distrito               | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>| :--------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>| AYACUCHO               |     42     |    37,8    |       38,5        |         38,5         |</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>| SAN JUAN BAUTISTA      |     28     |    25,2    |       25,7        |         64,2         |</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>| CARMEN ALTO            |     8      |    7,2     |        7,3        |         71,6         |</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>| JESÚS NAZARENO         |     25     |    22,5    |       22,9        |         94,5         |</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>| ANDRÉS AVELINO CÁCERES |     5      |    4,5     |        4,6        |         99,1         |</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>| HUANTA                 |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>| Total                  |    109     |    98,2    |       100,0       |                      |</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema     |     2      |    1,8     |                   |                      |</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>| Total                  |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>: Distribución del distrito de residencia de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-9}</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>|  Índice académico  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">4,98;6,18</span><span class="co">]</span>     |     4      |    3,6     |        3,7        |         3,7          |</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">6,18;7,38</span><span class="co">]</span>     |     1      |    0,9     |        0,9        |         4,6          |</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">7,38;8,58</span><span class="co">]</span>     |     2      |    1,8     |        1,9        |         6,5          |</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">8,58;9,78</span><span class="co">]</span>     |     6      |    5,4     |        5,6        |         12,0         |</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">9,78;10,98</span><span class="co">]</span>    |     28     |    25,2    |       25,9        |         38,0         |</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">10,98;12,18</span><span class="co">]</span>    |     42     |    37,8    |       38,9        |         76,9         |</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">12,18;13,38</span><span class="co">]</span>    |     18     |    16,2    |       16,7        |         93,5         |</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">13,38;14,58</span><span class="co">]</span>    |     7      |    6,3     |        6,5        |        100,0         |</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>|       Total        |    108     |    97,3    |       100,0       |                      |</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     3      |    2,7     |                   |                      |</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>: Distribución del índice académico de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-10}</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>| Intervalo de notas | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>| DEFICIENTE         |     3      |    2,7     |        2,8        |         2,8          |</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>| BAJO               |     28     |    25,2    |       25,9        |         28,7         |</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>| REGULAR            |     76     |    68,5    |       70,4        |         99,1         |</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>| BUENO              |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>| Total              |    108     |    97,3    |       100,0       |                      |</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     3      |    2,7     |                   |                      |</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>: Distribución del intervalo de notas de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-11}</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>| Departamento       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>| AYACUCHO           |    102     |    91,9    |       93,6        |         93,6         |</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>| APURÍMAC           |     2      |    1,8     |        1,8        |         95,4         |</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>| CUSCO              |     3      |    2,7     |        2,8        |         98,2         |</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>| ICA                |     1      |    0,9     |        0,9        |         99,1         |</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>| LIMA               |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>: Distribución del departamento del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-12}</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>| Provincia          | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>| ANDAHUAYLAS        |     2      |    1,8     |        1,8        |         1,8          |</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>| CANGALLO           |     4      |    3,6     |        3,6        |         5,5          |</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>| CHINCHEROS         |     2      |    1,8     |        1,8        |         7,3          |</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>| HUAMANGA           |     61     |    55,0    |       55,5        |         62,7         |</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>| HUANCA SANCOS      |     2      |    1,8     |        1,8        |         64,5         |</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>| HUANTA             |     17     |    15,3    |       15,5        |         80,0         |</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>| ICA                |     1      |    0,9     |        0,9        |         80,9         |</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>| LA CONVENCIÓN      |     2      |    1,8     |        1,8        |         82,7         |</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>| LA MAR             |     11     |    9,9     |       10,0        |         92,7         |</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>| LIMA               |     1      |    0,9     |        0,9        |         93,6         |</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>| VÍCTOR FAJARDO     |     5      |    4,5     |        4,5        |         98,2         |</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>| VILCAS HUAMÁN      |     2      |    1,8     |        1,8        |        100,0         |</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>| Total              |    110     |    99,1    |       100,0       |                      |</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0,9     |                   |                      |</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>: Distribución de la provincia del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-13}</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>| Distrito               | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>| :--------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>| ANDAHUAYLAS            |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>| ANDRÉS AVELINO CÁCERES |     4      |    3,6     |        3,6        |         4,5          |</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>| AYACUCHO               |     35     |    31,5    |       31,5        |         36,0         |</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>| BELÉN                  |     1      |    0,9     |        0,9        |         36,9         |</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>| CARAPO                 |     1      |    0,9     |        0,9        |         37,8         |</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>| CARMEN ALTO            |     5      |    4,5     |        4,5        |         42,3         |</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>| CHIARA                 |     1      |    0,9     |        0,9        |         43,2         |</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>| CHOSICA                |     1      |    0,9     |        0,9        |         44,1         |</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>| CHUSCHI                |     1      |    0,9     |        0,9        |         45,0         |</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>| CUSCO                  |     1      |    0,9     |        0,9        |         45,9         |</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>| HUACCANA               |     1      |    0,9     |        0,9        |         46,8         |</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>| HUALLA                 |     2      |    1,8     |        1,8        |         48,6         |</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>| HUAMANGUILLA           |     1      |    0,9     |        0,9        |         49,5         |</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>| HUANCAPI               |     1      |    0,9     |        0,9        |         50,5         |</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>| HUANCARAYLLA           |     1      |    0,9     |        0,9        |         51,4         |</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>| HUANTA                 |     15     |    13,5    |       13,5        |         64,9         |</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>| JESÚS NAZARENO         |     6      |    5,4     |        5,4        |         70,3         |</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>| KIMBIRI                |     1      |    0,9     |        0,9        |         71,2         |</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>| LOS MOROCHUCOS         |     2      |    1,8     |        1,8        |         73,0         |</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>| OCOBAMBA               |     1      |    0,9     |        0,9        |         73,9         |</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>| SACSAMARCA             |     1      |    0,9     |        0,9        |         74,8         |</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>| SALAS                  |     1      |    0,9     |        0,9        |         75,7         |</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>| SAN FRANCISCO          |     1      |    0,9     |        0,9        |         76,6         |</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>| SAN JUAN BAUTISTA      |     8      |    7,2     |        7,2        |         83,8         |</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>| SANTA ROSA             |     4      |    3,6     |        3,6        |         87,4         |</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>| SARHUA                 |     1      |    0,9     |        0,9        |         88,3         |</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>| SUARAMA                |     1      |    0,9     |        0,9        |         89,2         |</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>| SECCLLA                |     1      |    0,9     |        0,9        |         90,1         |</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>| SIVIA                  |     1      |    0,9     |        0,9        |         91,0         |</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>| TALAVERA               |     1      |    0,9     |        0,9        |         91,9         |</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>| TAMBO                  |     5      |    4,5     |        4,5        |         96,4         |</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>| TOTOS                  |     1      |    0,9     |        0,9        |         97,3         |</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>| VILCAS HUAMÁN          |     1      |    0,9     |        0,9        |         98,2         |</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>| VINCHOS                |     1      |    0,9     |        0,9        |         99,1         |</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>| CHUNGUI                |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>| Total                  |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>: Distribución del distrito del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-14}</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>| Número de hermanos | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>|         0          |     3      |    2,7     |        2,7        |         2,7          |</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>|         1          |     7      |    6,3     |        6,3        |         9,0          |</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>|         2          |     17     |    15,3    |       15,3        |         24,3         |</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>|         3          |     28     |    25,2    |       25,2        |         49,5         |</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>|         4          |     20     |    18,0    |       18,0        |         67,6         |</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>|         5          |     13     |    11,7    |       11,7        |         79,3         |</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>|         6          |     9      |    8,1     |        8,1        |         87,4         |</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>|         7          |     9      |    8,1     |        8,1        |         95,5         |</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>|         8          |     4      |    3,6     |        3,6        |         99,1         |</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>|         9          |     1      |    0,9     |        0,9        |        100,0         |</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>: Distribución del número de hermanos de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-15}</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>|     Valores     | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>| :-------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">146,98;150,60</span><span class="co">]</span> |     12     |    10,8    |       10,8        |         10,8         |</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">150,61;154,23</span><span class="co">]</span> |     10     |    9,0     |        9,0        |         19,8         |</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">154,24;157,86</span><span class="co">]</span> |     9      |    8,1     |        8,1        |         27,9         |</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">157,87;161,49</span><span class="co">]</span> |     17     |    15,3    |       15,3        |         43,2         |</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">161,50;165,12</span><span class="co">]</span> |     28     |    25,2    |       25,2        |         68,5         |</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">165,13;168,75</span><span class="co">]</span> |     15     |    13,5    |       13,5        |         82,0         |</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">168,76;172,38</span><span class="co">]</span> |     12     |    10,8    |       10,8        |         92,8         |</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">172,39;176,02</span><span class="co">]</span> |     8      |    7,2     |        7,2        |        100,0         |</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>|      Total      |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>: Distribución de la estatura de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-7}</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>| Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>| :-----: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">40;44</span><span class="co">]</span> |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">45;49</span><span class="co">]</span> |     18     |    16,2    |       16,2        |         17,1         |</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">50;54</span><span class="co">]</span> |     19     |    17,1    |       17,1        |         34,2         |</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">55;59</span><span class="co">]</span> |     25     |    22,5    |       22,5        |         56,8         |</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">60;64</span><span class="co">]</span> |     25     |    22,5    |       22,5        |         79,3         |</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">65;69</span><span class="co">]</span> |     15     |    13,5    |       13,5        |         92,8         |</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">70;74</span><span class="co">]</span> |     2      |    1,8     |        1,8        |         94,6         |</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>| <span class="co">[</span><span class="ot">75;80</span><span class="co">]</span> |     6      |    5,4     |        5,4        |        100,0         |</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>|  Total  |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>: Distribución del peso de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-8}</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>| Distrito               | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>| :--------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>| AYACUCHO               |     42     |    37,8    |       38,5        |         38,5         |</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>| SAN JUAN BAUTISTA      |     28     |    25,2    |       25,7        |         64,2         |</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>| CARMEN ALTO            |     8      |    7,2     |        7,3        |         71,6         |</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>| JESÚS NAZARENO         |     25     |    22,5    |       22,9        |         94,5         |</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>| ANDRÉS AVELINO CÁCERES |     5      |    4,5     |        4,6        |         99,1         |</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>| HUANTA                 |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>| Total                  |    109     |    98,2    |       100,0       |                      |</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema     |     2      |    1,8     |                   |                      |</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>| Total                  |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>: Distribución del distrito de residencia de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-9}</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>|  Índice académico  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">4,98;6,18</span><span class="co">]</span>     |     4      |    3,6     |        3,7        |         3,7          |</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">6,18;7,38</span><span class="co">]</span>     |     1      |    0,9     |        0,9        |         4,6          |</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">7,38;8,58</span><span class="co">]</span>     |     2      |    1,8     |        1,9        |         6,5          |</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">8,58;9,78</span><span class="co">]</span>     |     6      |    5,4     |        5,6        |         12,0         |</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>|    <span class="co">[</span><span class="ot">9,78;10,98</span><span class="co">]</span>    |     28     |    25,2    |       25,9        |         38,0         |</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">10,98;12,18</span><span class="co">]</span>    |     42     |    37,8    |       38,9        |         76,9         |</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">12,18;13,38</span><span class="co">]</span>    |     18     |    16,2    |       16,7        |         93,5         |</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>|   <span class="co">[</span><span class="ot">13,38;14,58</span><span class="co">]</span>    |     7      |    6,3     |        6,5        |        100,0         |</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>|       Total        |    108     |    97,3    |       100,0       |                      |</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     3      |    2,7     |                   |                      |</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>: Distribución del índice académico de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-10}</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>| Intervalo de notas | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>| DEFICIENTE         |     3      |    2,7     |        2,8        |         2,8          |</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>| BAJO               |     28     |    25,2    |       25,9        |         28,7         |</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>| REGULAR            |     76     |    68,5    |       70,4        |         99,1         |</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>| BUENO              |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>| Total              |    108     |    97,3    |       100,0       |                      |</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     3      |    2,7     |                   |                      |</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>: Distribución del intervalo de notas de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-11}</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>| Departamento       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>| AYACUCHO           |    102     |    91,9    |       93,6        |         93,6         |</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>| APURÍMAC           |     2      |    1,8     |        1,8        |         95,4         |</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>| CUSCO              |     3      |    2,7     |        2,8        |         98,2         |</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>| ICA                |     1      |    0,9     |        0,9        |         99,1         |</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>| LIMA               |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>: Distribución del departamento del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-12}</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>| Provincia          | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>| ANDAHUAYLAS        |     2      |    1,8     |        1,8        |         1,8          |</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>| CANGALLO           |     4      |    3,6     |        3,6        |         5,5          |</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>| CHINCHEROS         |     2      |    1,8     |        1,8        |         7,3          |</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>| HUAMANGA           |     61     |    55,0    |       55,5        |         62,7         |</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>| HUANCA SANCOS      |     2      |    1,8     |        1,8        |         64,5         |</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>| HUANTA             |     17     |    15,3    |       15,5        |         80,0         |</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>| ICA                |     1      |    0,9     |        0,9        |         80,9         |</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>| LA CONVENCIÓN      |     2      |    1,8     |        1,8        |         82,7         |</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>| LA MAR             |     11     |    9,9     |       10,0        |         92,7         |</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>| LIMA               |     1      |    0,9     |        0,9        |         93,6         |</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>| VÍCTOR FAJARDO     |     5      |    4,5     |        4,5        |         98,2         |</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>| VILCAS HUAMÁN      |     2      |    1,8     |        1,8        |        100,0         |</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>| Total              |    110     |    99,1    |       100,0       |                      |</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0,9     |                   |                      |</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>: Distribución de la provincia del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-13}</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>| Distrito               | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>| :--------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>| ANDAHUAYLAS            |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>| ANDRÉS AVELINO CÁCERES |     4      |    3,6     |        3,6        |         4,5          |</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>| AYACUCHO               |     35     |    31,5    |       31,5        |         36,0         |</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>| BELÉN                  |     1      |    0,9     |        0,9        |         36,9         |</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>| CARAPO                 |     1      |    0,9     |        0,9        |         37,8         |</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>| CARMEN ALTO            |     5      |    4,5     |        4,5        |         42,3         |</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>| CHIARA                 |     1      |    0,9     |        0,9        |         43,2         |</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>| CHOSICA                |     1      |    0,9     |        0,9        |         44,1         |</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>| CHUSCHI                |     1      |    0,9     |        0,9        |         45,0         |</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>| CUSCO                  |     1      |    0,9     |        0,9        |         45,9         |</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>| HUACCANA               |     1      |    0,9     |        0,9        |         46,8         |</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>| HUALLA                 |     2      |    1,8     |        1,8        |         48,6         |</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>| HUAMANGUILLA           |     1      |    0,9     |        0,9        |         49,5         |</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>| HUANCAPI               |     1      |    0,9     |        0,9        |         50,5         |</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>| HUANCARAYLLA           |     1      |    0,9     |        0,9        |         51,4         |</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>| HUANTA                 |     15     |    13,5    |       13,5        |         64,9         |</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>| JESÚS NAZARENO         |     6      |    5,4     |        5,4        |         70,3         |</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>| KIMBIRI                |     1      |    0,9     |        0,9        |         71,2         |</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>| LOS MOROCHUCOS         |     2      |    1,8     |        1,8        |         73,0         |</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>| OCOBAMBA               |     1      |    0,9     |        0,9        |         73,9         |</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>| SACSAMARCA             |     1      |    0,9     |        0,9        |         74,8         |</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>| SALAS                  |     1      |    0,9     |        0,9        |         75,7         |</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>| SAN FRANCISCO          |     1      |    0,9     |        0,9        |         76,6         |</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>| SAN JUAN BAUTISTA      |     8      |    7,2     |        7,2        |         83,8         |</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>| SANTA ROSA             |     4      |    3,6     |        3,6        |         87,4         |</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>| SARHUA                 |     1      |    0,9     |        0,9        |         88,3         |</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>| SUARAMA                |     1      |    0,9     |        0,9        |         89,2         |</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>| SECCLLA                |     1      |    0,9     |        0,9        |         90,1         |</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>| SIVIA                  |     1      |    0,9     |        0,9        |         91,0         |</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>| TALAVERA               |     1      |    0,9     |        0,9        |         91,9         |</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>| TAMBO                  |     5      |    4,5     |        4,5        |         96,4         |</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>| TOTOS                  |     1      |    0,9     |        0,9        |         97,3         |</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>| VILCAS HUAMÁN          |     1      |    0,9     |        0,9        |         98,2         |</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>| VINCHOS                |     1      |    0,9     |        0,9        |         99,1         |</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>| CHUNGUI                |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>| Total                  |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>: Distribución del distrito del colegio de los estudiantes de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-14}</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>| Número de hermanos | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>|         0          |     3      |    2,7     |        2,7        |         2,7          |</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>|         1          |     7      |    6,3     |        6,3        |         9,0          |</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>|         2          |     17     |    15,3    |       15,3        |         24,3         |</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>|         3          |     28     |    25,2    |       25,2        |         49,5         |</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>|         4          |     20     |    18,0    |       18,0        |         67,6         |</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>|         5          |     13     |    11,7    |       11,7        |         79,3         |</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>|         6          |     9      |    8,1     |        8,1        |         87,4         |</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>|         7          |     9      |    8,1     |        8,1        |         95,5         |</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>|         8          |     4      |    3,6     |        3,6        |         99,1         |</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>|         9          |     1      |    0,9     |        0,9        |        100,0         |</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>: Distribución del número de hermanos de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-15}</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>| Actividad laboral  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>| Sí                 |     42     |    37,8    |       38,5        |         38,5         |</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>| No                 |     67     |    60,4    |       61,5        |        100,0         |</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>| Actividad laboral  | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>| Sí                 |     42     |    37,8    |       38,5        |         38,5         |</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>| No                 |     67     |    60,4    |       61,5        |        100,0         |</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>: Distribución de la actividad laboral de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-16}</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>: Distribución de la actividad laboral de los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-16}</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>| Uso del comedor UNSCH | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>| :-------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>| Sí                    |     60     |    54,1    |       54,5        |         54,5         |</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>| No                    |     50     |    45,0    |       45,5        |        100,0         |</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>| Total                 |    110     |    99,1    |       100,0       |                      |</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema    |     1      |    0,9     |                   |                      |</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>| Total                 |    111     |   100,0    |                   |                      |</span>
 <span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>| Uso del comedor UNSCH | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>| :-------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>| Sí                    |     60     |    54,1    |       54,5        |         54,5         |</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>| No                    |     50     |    45,0    |       45,5        |        100,0         |</span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>| Total                 |    110     |    99,1    |       100,0       |                      |</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema    |     1      |    0,9     |                   |                      |</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>| Total                 |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>: Distribución del uso del comedor de la UNSCH entre los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-17}</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>: Distribución del uso del comedor de la UNSCH entre los alumnos de la serie 200 de Economía que cursan Estadística durante el período 2018-I {#tbl-17}</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>| ¿Viven solo?       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>| Sí                 |     35     |    31,5    |       32,1        |         32,1         |</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>| No                 |     74     |    66,7    |       67,9        |        100,0         |</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>| ¿Viven solo?       | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>| Sí                 |     35     |    31,5    |       32,1        |         32,1         |</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>| No                 |     74     |    66,7    |       67,9        |        100,0         |</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>| Total              |    109     |    98,2    |       100,0       |                      |</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     2      |    1,8     |                   |                      |</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100,0    |                   |                      |</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>: Distribución de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I según si viven solos o no. {#tbl-18}</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>: Distribución de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I según si viven solos o no. {#tbl-18}</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>| Estado Civil | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>| :----------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>| Casado       |     1      |    0,9     |        0,9        |         0,9          |</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>| Comprometido |     1      |    0,9     |        0,9        |         1,8          |</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>| Soltero      |     70     |    63,1    |       63,1        |         64,9         |</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>| Soltera      |     39     |    35,1    |       35,1        |        100,0         |</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>| Total        |    111     |   100,0    |       100,0       |                      |</span>
 <span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>| Estado Civil | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>| :----------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>| Casado       |     1      |    0,9     |        0,9        |         0,9          |</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>| Comprometido |     1      |    0,9     |        0,9        |         1,8          |</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>| Soltero      |     70     |    63,1    |       63,1        |         64,9         |</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>| Soltera      |     39     |    35,1    |       35,1        |        100,0         |</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>| Total        |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>: Distribución del estado civil de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-19}</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>: Distribución del estado civil de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-19}</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>| Dependencia Económica | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>| :-------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>| Sí                    |     81     |    73,0    |       74,3        |         74,3         |</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>| No                    |     28     |    25,2    |       25,7        |        100,0         |</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>| Total                 |    109     |    98,2    |       100,0       |                      |</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema    |     2      |    1,8     |                   |                      |</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>| Total                 |    111     |   100,0    |                   |                      |</span>
 <span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>| Dependencia Económica | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>| :-------------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>| Sí                    |     81     |    73,0    |       74,3        |         74,3         |</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>| No                    |     28     |    25,2    |       25,7        |        100,0         |</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>| Total                 |    109     |    98,2    |       100,0       |                      |</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema    |     2      |    1,8     |                   |                      |</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>| Total                 |    111     |   100,0    |                   |                      |</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>: Distribución de la dependencia económica de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-20}</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>| Primera Profesión | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>| :---------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>| Sí                |    109     |    98,2    |       98,2        |         98,2         |</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>| No                |     2      |    1,8     |        1,8        |        100,0         |</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>| Total             |    111     |   100,0    |       100,0       |                      |</span>
 <span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>: Distribución de la dependencia económica de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-20}</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>: Distribución de la primera profesión de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-21}</span>
 <span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>| Primera Profesión | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>| :---------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>| Sí                |    109     |    98,2    |       98,2        |         98,2         |</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>| No                |     2      |    1,8     |        1,8        |        100,0         |</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>| Total             |    111     |   100,0    |       100,0       |                      |</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>| Movilidad Propia | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>| :--------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>| Sí               |     3      |    2,7     |        2,7        |         2,7          |</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>| No               |    108     |    97,3    |       97,3        |        100,0         |</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>| Total            |    111     |   100,0    |       100,0       |                      |</span>
 <span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>: Distribución de la primera profesión de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-21}</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>: Distribución de la movilidad propia de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-22}</span>
 <span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>| Movilidad Propia | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>| :--------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>| Sí               |     3      |    2,7     |        2,7        |         2,7          |</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>| No               |    108     |    97,3    |       97,3        |        100,0         |</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>| Total            |    111     |   100,0    |       100,0       |                      |</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>: Distribución de la movilidad propia de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-22}</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>|          | ¿Trabajas? | ¿Usa el comedor? | ¿Vive solo? | ¿Es tu primera profesión? | ¿Tienes movilidad? |</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>| :------- | :--------: | :--------------: | :---------: | :-----------------------: | :----------------: |</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>| Perdidos |     2      |        1         |      2      |             2             |         0          |</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>| Válido   |    109     |       110        |     109     |            109            |        111         |</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>: Características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-23}</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>|            | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>| :--------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>| PRIMARIA   |     31     |    27.9    |       27.9        |         27.9         |</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>| SECUNDARIA |     48     |    43.2    |       43.2        |         71.2         |</span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>| SUPERIOR   |     32     |    28.8    |       28.8        |        100.0         |</span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>| Total      |    111     |   100.0    |       100.0       |                      |</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>: Nivel de instrucción de los padres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-24}</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>|                    | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>| SIN INSTRUCCIÓN    |     4      |    3.6     |        3.6        |         3.6          |</span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>| PRIMARIA           |     58     |    52.3    |       52.7        |         56.4         |</span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>| SECUNDARIA         |     38     |    34.2    |       34.5        |         90.9         |</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>| SUPERIOR           |     10     |    9.0     |        9.1        |        100.0         |</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>| Total              |    110     |    99.1    |       100.0       |                      |</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0.9     |                   |                      |</span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100.0    |                   |                      |</span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>: Nivel de instrucción de las madres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-25}</span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>|                    | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>|         0          |     80     |    72.1    |       74.8        |         74.8         |</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>|         1          |     7      |    6.3     |        6.5        |         81.3         |</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>|         2          |     2      |    1.8     |        1.9        |         83.2         |</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>|         3          |     5      |    4.5     |        4.7        |         87.9         |</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>|         4          |     2      |    1.8     |        1.9        |         89.7         |</span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>|         5          |     4      |    3.6     |        3.7        |         93.5         |</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>|         6          |     3      |    2.7     |        2.8        |         96.3         |</span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>|         7          |     3      |    2.7     |        2.8        |         99.1         |</span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>|         9          |     1      |    0.9     |        0.9        |        100.0         |</span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>|       Total        |    107     |    96.4    |       100.0       |                      |</span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     4      |    3.6     |                   |                      |</span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100.0    |                   |                      |</span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>: Número de hijos de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-26}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>|          | ¿Trabajas? | ¿Usa el comedor? | ¿Vive solo? | ¿Es tu primera profesión? | ¿Tienes movilidad? |</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>| :------- | :--------: | :--------------: | :---------: | :-----------------------: | :----------------: |</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>| Perdidos |     2      |        1         |      2      |             2             |         0          |</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>| Válido   |    109     |       110        |     109     |            109            |        111         |</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>: Características de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-23}</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>|            | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>| :--------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>| PRIMARIA   |     31     |    27.9    |       27.9        |         27.9         |</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>| SECUNDARIA |     48     |    43.2    |       43.2        |         71.2         |</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>| SUPERIOR   |     32     |    28.8    |       28.8        |        100.0         |</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>| Total      |    111     |   100.0    |       100.0       |                      |</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>: Nivel de instrucción de los padres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-24}</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>|                    | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>| :----------------- | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>| SIN INSTRUCCIÓN    |     4      |    3.6     |        3.6        |         3.6          |</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>| PRIMARIA           |     58     |    52.3    |       52.7        |         56.4         |</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>| SECUNDARIA         |     38     |    34.2    |       34.5        |         90.9         |</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>| SUPERIOR           |     10     |    9.0     |        9.1        |        100.0         |</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>| Total              |    110     |    99.1    |       100.0       |                      |</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     1      |    0.9     |                   |                      |</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>| Total              |    111     |   100.0    |                   |                      |</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>: Nivel de instrucción de las madres de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-25}</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>|                    | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>| :----------------: | :--------: | :--------: | :---------------: | :------------------: |</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>|         0          |     80     |    72.1    |       74.8        |         74.8         |</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>|         1          |     7      |    6.3     |        6.5        |         81.3         |</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>|         2          |     2      |    1.8     |        1.9        |         83.2         |</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>|         3          |     5      |    4.5     |        4.7        |         87.9         |</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>|         4          |     2      |    1.8     |        1.9        |         89.7         |</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>|         5          |     4      |    3.6     |        3.7        |         93.5         |</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>|         6          |     3      |    2.7     |        2.8        |         96.3         |</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>|         7          |     3      |    2.7     |        2.8        |         99.1         |</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>|         9          |     1      |    0.9     |        0.9        |        100.0         |</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>|       Total        |    107     |    96.4    |       100.0       |                      |</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>| Perdidos - Sistema |     4      |    3.6     |                   |                      |</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>|       Total        |    111     |   100.0    |                   |                      |</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>: Número de hijos de los alumnos de Estadística de la serie 200 de Economía durante el período 2018-I. {#tbl-26}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

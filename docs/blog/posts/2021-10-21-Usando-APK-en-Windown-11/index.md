@@ -12,7 +12,7 @@ tags:
   - APK
   - Instalación de aplicaciones
   - Emulador de Android
-date: "09/27/2022"
+date: "10/21/2022"
 ---
 
 

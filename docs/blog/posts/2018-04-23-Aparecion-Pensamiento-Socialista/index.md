@@ -22,7 +22,6 @@ Además, Charles Fourier propone la formación de grupos autosuficientes conocid
 
 El estudio de estos pensadores socialistas y su legado resulta esencial para comprender los fundamentos y los desafíos del movimiento de resistencia global actual y reafirmar la consigna de "otro mundo es posible".
 
-
 # Aparición del pensamiento socialista
 
 ## Antecedentes históricos del socialismo
@@ -33,7 +32,7 @@ En aquel entonces, las familias de los trabajadores que resultaban heridos o fal
 
 Cada periodo de declive en la producción y el empleo agravaba la miseria de los trabajadores, y cada nuevo avance en la industrialización, si bien a largo plazo generaba más empleos de los que destruía, implicaba que cientos de miles de artesanos se veían arrojados al mercado laboral.
 
-La creciente pobreza de las masas resultaba cada vez más opresiva a medida que las grandes fortunas se multiplicaban." 
+La creciente pobreza de las masas resultaba cada vez más opresiva a medida que las grandes fortunas se multiplicaban."
 
 # Tipos de Socialismo
 
@@ -43,13 +42,11 @@ El socialismo utópico, la primera corriente del pensamiento socialista moderno,
 
 Estos pensadores desarrollaron sus ideas en una época en la que los trabajadores industriales aún eran débiles y estaban desorganizados. Estaban desmoralizados por los rápidos cambios de la Revolución Industrial, carecían de protecciones laborales y aún no eran conscientes de su poder latente. Los socialistas utópicos consideraban que la economía de mercado competitiva era injusta e irracional. Abogaban por la solidaridad universal en lugar de la lucha de clases, y buscaban la cooperación de los capitalistas en sus proyectos, incluso buscando su financiamiento.
 
-
 ## Socialismo de Estado
 
 El socialismo de Estado se refiere a un sistema en el cual el gobierno posee y opera todos o algunos sectores específicos de la economía, con el objetivo de lograr objetivos sociales más allá de la mera obtención de utilidades. Un ejemplo de esto fue la antigua Unión Soviética, donde hasta hace poco tiempo, los sectores más importantes de la economía eran propiedad y estaban bajo el control del Estado. Sin embargo, el socialismo de Estado también puede existir dentro de un sistema capitalista. En Estados Unidos, podemos encontrar ejemplos como el sistema federal de seguridad social, la Tennessee Valley Authority y el servicio postal.
 
 Históricamente, el Estado socialista se consideraba como un poder imparcial que podía ser influenciado para beneficiar a la clase trabajadora si se extendía el derecho al voto y se educaba y organizaba a los trabajadores. En este contexto, el Estado asumía el rol de empleador al hacerse cargo de las empresas, o podía fomentar y subsidiar cooperativas, donde los trabajadores o los consumidores se convertían en propietarios. Louis Blanc fue uno de los principales defensores del Estado socialista.
-
 
 ## Socialismo Cristiano
 
@@ -61,7 +58,7 @@ El socialismo cristiano rechazaba la violencia y la lucha de clases, abogando en
 
 El anarquismo, con Pierre-Joseph Proudhon (1809-1865) como uno de sus primeros defensores, sostiene la abolición de todas las formas de gobierno por considerarlas coercitivas. Los anarquistas rechazan la noción de un orden impuesto en la sociedad y en su lugar promueven la formación de grupos autónomos basados en el esfuerzo voluntario y la asociación. Argumentan que la naturaleza humana es intrínsecamente buena y que es el Estado y sus instituciones quienes la corrompen. Proponen reemplazar la propiedad privada por la propiedad colectiva del capital, administrada por grupos cooperativos.
 
-Los anarquistas imaginan comunidades dedicadas a la producción y al intercambio con otras comunidades, donde las asociaciones de productores controlan la producción en sectores agrícolas, industriales e incluso intelectuales y artísticos. Se espera que las asociaciones de consumidores coordinen aspectos como la vivienda, la iluminación, la salud, los alimentos y la higiene pública. La sociedad anarquista se caracterizaría por la comprensión mutua, la cooperación y la absoluta libertad. Se fomentaría la iniciativa individual y se evitaría cualquier tendencia hacia la uniformidad y la autoridad centralizada. Aunque los métodos para lograr sus objetivos pueden variar, la comunidad ideal propuesta por los anarquistas guarda similitudes con la de los socialistas utópicos. 
+Los anarquistas imaginan comunidades dedicadas a la producción y al intercambio con otras comunidades, donde las asociaciones de productores controlan la producción en sectores agrícolas, industriales e incluso intelectuales y artísticos. Se espera que las asociaciones de consumidores coordinen aspectos como la vivienda, la iluminación, la salud, los alimentos y la higiene pública. La sociedad anarquista se caracterizaría por la comprensión mutua, la cooperación y la absoluta libertad. Se fomentaría la iniciativa individual y se evitaría cualquier tendencia hacia la uniformidad y la autoridad centralizada. Aunque los métodos para lograr sus objetivos pueden variar, la comunidad ideal propuesta por los anarquistas guarda similitudes con la de los socialistas utópicos.
 
 ## Socialismo Marxista
 
@@ -102,15 +99,10 @@ El socialismo de gremios se inspiró en parte en los gremios de artesanos y otro
 Las diversas corrientes del socialismo comparten características comunes:
 
 1.  Rechazo de la armonía de intereses: Todas estas corrientes rechazan la noción clásica de que los intereses de diferentes clases sociales están en armonía. Reconocen los conflictos inherentes al sistema capitalista y la desigualdad de poder entre capital y trabajo.
-    
 2.  Oposición al laissez-faire: Con excepción de los anarquistas, todas las corrientes socialistas se oponen al concepto de laissez-faire, que defiende una mínima intervención del Estado en la economía. Consideran necesario un mayor control estatal para regular y proteger los derechos de los trabajadores.
-    
 3.  Crítica a la ley de los mercados de Say: Los socialistas rechazan la idea de Jean-Baptiste Say de que la oferta crea su propia demanda y sostienen que el capitalismo es propenso a crisis periódicas o estancamiento general. Argumentan que el sistema no garantiza un equilibrio económico y puede llevar a desequilibrios y problemas.
-    
 4.  Crítica al egoísmo del capitalismo: El capitalismo, según los socialistas, fomenta una mentalidad egoísta basada en la obtención de ganancias y la acumulación de riqueza. Sin embargo, consideran que en un entorno adecuado pueden surgir virtudes humanas más nobles, como la solidaridad y el espíritu de compartir.
-    
 5.  Acción pública y propiedad colectiva: Todas las corrientes socialistas abogan por la intervención estatal y la propiedad colectiva de los medios de producción con el objetivo de mejorar las condiciones de las masas. Esto puede ser a través del gobierno central, gobiernos locales o empresas cooperativas.
-    
 
 ## ¿A quiénes beneficiaba o trataba de beneficiar el socialismo?
 
@@ -138,14 +130,14 @@ Proveniente de una familia noble francesa empobrecida, Henry Comte de Saint-Simo
 
 Sus principales ideas y propuestas fueron las siguientes:
 
--   Estableció una distinción entre los productores y los no productores.
--   Propuso un parlamento industrial compuesto por tres cámaras: la cámara de invención, integrada por artistas e ingenieros encargados de diseñar obras públicas; la cámara de revisión, dirigida por científicos, encargada de evaluar proyectos y supervisar la educación; y la cámara de ejecución, compuesta por líderes de la industria, encargada de llevar a cabo los proyectos y controlar el presupuesto.
--   Rechazó la suposición fundamental de los economistas clásicos de que los intereses de la industria coinciden con el interés general. En sus últimos escritos, mostró una preocupación humanitaria por la clase trabajadora.
--   Su entusiasmo por la industria a gran escala inspiró el desarrollo de grandes bancos, ferrocarriles, carreteras, el Canal de Suez y grandes empresas industriales.
--   Sostenía que la prosperidad de Francia depende del progreso de las ciencias, las bellas artes y las profesiones.
--   Consideraba que los científicos, artesanos y líderes de las empresas industriales eran los más capacitados y útiles para dirigir la sociedad en la época actual, por lo que deberían tener el poder administrativo.
--   Comparaba la comunidad con una pirámide, donde la nación debía ser estructurada de manera similar, con capas cada vez más valiosas desde la base hasta la cima, siendo la monarquía la corona de esa pirámide.
--   Aunque algunos de sus discípulos defendían la apropiación de la propiedad privada, él mismo no lo respaldaba.
+- Estableció una distinción entre los productores y los no productores.
+- Propuso un parlamento industrial compuesto por tres cámaras: la cámara de invención, integrada por artistas e ingenieros encargados de diseñar obras públicas; la cámara de revisión, dirigida por científicos, encargada de evaluar proyectos y supervisar la educación; y la cámara de ejecución, compuesta por líderes de la industria, encargada de llevar a cabo los proyectos y controlar el presupuesto.
+- Rechazó la suposición fundamental de los economistas clásicos de que los intereses de la industria coinciden con el interés general. En sus últimos escritos, mostró una preocupación humanitaria por la clase trabajadora.
+- Su entusiasmo por la industria a gran escala inspiró el desarrollo de grandes bancos, ferrocarriles, carreteras, el Canal de Suez y grandes empresas industriales.
+- Sostenía que la prosperidad de Francia depende del progreso de las ciencias, las bellas artes y las profesiones.
+- Consideraba que los científicos, artesanos y líderes de las empresas industriales eran los más capacitados y útiles para dirigir la sociedad en la época actual, por lo que deberían tener el poder administrativo.
+- Comparaba la comunidad con una pirámide, donde la nación debía ser estructurada de manera similar, con capas cada vez más valiosas desde la base hasta la cima, siendo la monarquía la corona de esa pirámide.
+- Aunque algunos de sus discípulos defendían la apropiación de la propiedad privada, él mismo no lo respaldaba.
 
 ## Charles Fourier (1772-1837)
 
@@ -153,52 +145,48 @@ Charles Fourier fue un excéntrico socialista utópico que logró reunir un nume
 
 Sus principales ideas y propuestas fueron las siguientes:
 
--   Fourier consideraba que la competencia multiplicaba el desperdicio en la venta, y los empresarios se veían obligados a retener o destruir bienes para aumentar los precios.
--   Su solución para los problemas sociales era eliminar las barreras artificiales que impedían la interacción armónica de las doce pasiones humanas (cinco sentidos, cuatro grupos de pasiones: amistad, amor, sentimiento familiar y ambición, y tres pasiones distributivas: planeación, cambio y unidad).
--   Propuso la organización de comunidades cooperativas llamadas falansterios o falanges.
--   La vida cooperativa era fundamental en su pensamiento, ya que creía que era la forma de transformar el entorno y generar un nuevo tipo de persona noble. Estas falanges proporcionarían seguridad social desde el nacimiento hasta la muerte.
--   Fourier defendía la idea de brindar garantías a cada individuo, asegurando un mínimo de subsistencia, seguridad y comodidad.
--   Criticaba la excesiva especialización y advertía que el trabajo rutinario en la línea de ensamblaje desviaba y frustraba al individuo, a pesar de aumentar considerablemente la producción.
+- Fourier consideraba que la competencia multiplicaba el desperdicio en la venta, y los empresarios se veían obligados a retener o destruir bienes para aumentar los precios.
+- Su solución para los problemas sociales era eliminar las barreras artificiales que impedían la interacción armónica de las doce pasiones humanas (cinco sentidos, cuatro grupos de pasiones: amistad, amor, sentimiento familiar y ambición, y tres pasiones distributivas: planeación, cambio y unidad).
+- Propuso la organización de comunidades cooperativas llamadas falansterios o falanges.
+- La vida cooperativa era fundamental en su pensamiento, ya que creía que era la forma de transformar el entorno y generar un nuevo tipo de persona noble. Estas falanges proporcionarían seguridad social desde el nacimiento hasta la muerte.
+- Fourier defendía la idea de brindar garantías a cada individuo, asegurando un mínimo de subsistencia, seguridad y comodidad.
+- Criticaba la excesiva especialización y advertía que el trabajo rutinario en la línea de ensamblaje desviaba y frustraba al individuo, a pesar de aumentar considerablemente la producción.
 
 ## Simonde de Sismondi (1773-1842)
+
 Simonde de Sismondi fue un economista e historiador suizo de ascendencia francesa. Durante los disturbios revolucionarios de 1793-1794, él y su familia se refugiaron en Inglaterra. A su regreso a Suiza, vendieron la mayor parte de sus propiedades y adquirieron una pequeña granja en Italia, donde trabajaban personalmente. Más tarde, Sismondi regresó a Ginebra, donde escribió numerosas obras eruditas, incluyendo "History of the Italian Republic of the Middle Ages" en dieciséis tomos, y "History of the French" en veintinueve tomos.
 
 Las principales ideas y propuestas de Sismondi fueron las siguientes:
 
--   Manifestó que la empresa capitalista sin restricciones no producía los resultados esperados por Adam Smith y Jean-Baptiste Say, sino que estaba destinada a generar amplia miseria y desempleo.
--   Contribuyó a la teoría del ciclo de negocios al plantear la posibilidad de la sobreproducción y las crisis. Creía que cuando los salarios se mantienen en el nivel de subsistencia, se liberan fondos de capital para invertir en maquinaria.
--   Sostenía que solo la intervención del Estado podía garantizar un salario suficiente para vivir y una seguridad social mínima para los trabajadores. Sismondi negaba que la mayor producción posible coincidiera necesariamente con la mayor felicidad de las personas. Consideraba que una producción más pequeña pero bien distribuida era preferible para el interés general.
--   Abogaba por promover la agricultura en lugar de la urbanización. Apoyaba impuestos sobre herencias, la descontinuación de los derechos de patente para frenar nuevos inventos y enfriar el fervor por los descubrimientos, instar a los empleadores a proporcionar seguridad a los trabajadores en su vejez, enfermedad y desempleo, fomentar la cooperación y solidaridad entre trabajadores y empleadores, y compartir las ganancias.
--   Fue el primero en aplicar el término "proletario" para referirse al trabajador asalariado, refiriéndose a aquellos que no tenían nada, no pagaban impuestos y solo podían contribuir al país mediante su progenie, es decir, su prole.
+- Manifestó que la empresa capitalista sin restricciones no producía los resultados esperados por Adam Smith y Jean-Baptiste Say, sino que estaba destinada a generar amplia miseria y desempleo.
+- Contribuyó a la teoría del ciclo de negocios al plantear la posibilidad de la sobreproducción y las crisis. Creía que cuando los salarios se mantienen en el nivel de subsistencia, se liberan fondos de capital para invertir en maquinaria.
+- Sostenía que solo la intervención del Estado podía garantizar un salario suficiente para vivir y una seguridad social mínima para los trabajadores. Sismondi negaba que la mayor producción posible coincidiera necesariamente con la mayor felicidad de las personas. Consideraba que una producción más pequeña pero bien distribuida era preferible para el interés general.
+- Abogaba por promover la agricultura en lugar de la urbanización. Apoyaba impuestos sobre herencias, la descontinuación de los derechos de patente para frenar nuevos inventos y enfriar el fervor por los descubrimientos, instar a los empleadores a proporcionar seguridad a los trabajadores en su vejez, enfermedad y desempleo, fomentar la cooperación y solidaridad entre trabajadores y empleadores, y compartir las ganancias.
+- Fue el primero en aplicar el término "proletario" para referirse al trabajador asalariado, refiriéndose a aquellos que no tenían nada, no pagaban impuestos y solo podían contribuir al país mediante su progenie, es decir, su prole.
 
 ## Robert Owen (1771-1858):
+
 Robert Owen fue el socialista utópico más espectacular y famoso. Hijo de un quincallero y talabartero galés, asistió a la escuela solo durante unos años. A los nueve años, comenzó a trabajar como ayudante en una tienda del vecindario y más adelante en tiendas de mercancías generales en Londres. A los dieciocho años, solicitó un préstamo de 100 libras y se asoció con un mecánico capaz de construir la recién inventada maquinaria textil.
 
 Las principales ideas y propuestas de Robert Owen fueron las siguientes:
 
--   Su tesis fundamental sostenía que el entorno modela la naturaleza humana, ya sea para bien o para mal. Según Owen, los seres humanos no tienen la capacidad de moldear sus propios caracteres, sino que son moldeados por las circunstancias que los rodean. Debido a que el carácter está determinado por estas circunstancias, las personas no son verdaderamente responsables de sus acciones. Por lo tanto, Owen abogaba por moldear a las personas hacia el bien en lugar de castigarlas por sus acciones negativas. Tanto Owen como Fourier basaban todas sus teorías, sueños y programas en la creencia de que proporcionar mejores condiciones de trabajo resultaría en el desarrollo de individuos mejores. Owen creía firmemente en que todos deberían esforzarse por servir a la comunidad como medio para alcanzar la máxima felicidad personal.
-    
--   Owen fue pionero en la implementación de salarios de eficiencia, que consistían en ofrecer un salario por encima del nivel de mercado, con el objetivo de mejorar la productividad y reducir la rotación del personal.
-    
--   Abogaba por la adopción de una tasa de interés fija, con la esperanza de que los propietarios de capital la abandonaran voluntariamente en el futuro.
-    
--   Su influencia en el socialismo, las cooperativas y el sindicalismo fue significativa. La palabra "socialismo", en su sentido moderno, se utilizó por primera vez en la revista oweniana "Co-operative Magazine" en 1827 para referirse a los seguidores de las doctrinas cooperativistas de Owen.
--   
+- Su tesis fundamental sostenía que el entorno modela la naturaleza humana, ya sea para bien o para mal. Según Owen, los seres humanos no tienen la capacidad de moldear sus propios caracteres, sino que son moldeados por las circunstancias que los rodean. Debido a que el carácter está determinado por estas circunstancias, las personas no son verdaderamente responsables de sus acciones. Por lo tanto, Owen abogaba por moldear a las personas hacia el bien en lugar de castigarlas por sus acciones negativas. Tanto Owen como Fourier basaban todas sus teorías, sueños y programas en la creencia de que proporcionar mejores condiciones de trabajo resultaría en el desarrollo de individuos mejores. Owen creía firmemente en que todos deberían esforzarse por servir a la comunidad como medio para alcanzar la máxima felicidad personal.
+- Owen fue pionero en la implementación de salarios de eficiencia, que consistían en ofrecer un salario por encima del nivel de mercado, con el objetivo de mejorar la productividad y reducir la rotación del personal.
+- Abogaba por la adopción de una tasa de interés fija, con la esperanza de que los propietarios de capital la abandonaran voluntariamente en el futuro.
+- Su influencia en el socialismo, las cooperativas y el sindicalismo fue significativa. La palabra "socialismo", en su sentido moderno, se utilizó por primera vez en la revista oweniana "Co-operative Magazine" en 1827 para referirse a los seguidores de las doctrinas cooperativistas de Owen.
+-
 
-## Louis Blanc (1811-1882) 
+## Louis Blanc (1811-1882)
 
 Considerado uno de los fundadores del socialismo de Estado. Fue un reformador, periodista e historiador francés proveniente de una familia monárquica. Durante la Revolución Francesa, su abuelo, un próspero comerciante, fue guillotinado, lo que llevó a la empobrecimiento de su familia tras la caída de Napoleón. La publicación de su obra "Organisation du Travail" en 1839 lo catapultó a la fama y le otorgó una posición de liderazgo en el movimiento socialista. En la revolución de 1848, fue elegido para formar parte del gobierno provisional que derrocó a la monarquía, convirtiéndose en el primer socialista reconocido en ocupar un cargo público en cualquier parte. Bajo la presión de Blanc y sus seguidores, el gobierno estableció talleres nacionales con el fin de brindar empleo a los desempleados.
--   Blanc sostenía que el sufragio universal transformaría al Estado en un instrumento de progreso y bienestar.
-    
--   Propugnaba que el Estado se convirtiera en el "banquero de los pobres" y abogaba por la creación de un banco de propiedad pública encargado de distribuir crédito entre las cooperativas.
-    
--   Planteaba que los capitalistas podrían unirse a las asociaciones y recibir una tasa de interés fija sobre su capital, garantizada por el Estado.
-    
--   Según Blanc, bajo el reinado de la libre competencia, los salarios tenderían a disminuir continuamente, lo que consideraba una ley general. Ante el crecimiento demográfico, abogaba por instar a las madres de familias pobres a ser estériles, lo cual consideraba una lucha necesaria debido a la limitación de recursos.
-    
--   Proponía que el gobierno se considerara como el regulador supremo de la producción y se le otorgara un gran poder para cumplir con esta función. Esto implicaba combatir y superar la competencia. Blanc abogaba por que el gobierno emitiese un préstamo para establecer talleres sociales en las ramas más importantes de la industria nacional.
 
-## Charles Kingsley (1819-1875) 
+- Blanc sostenía que el sufragio universal transformaría al Estado en un instrumento de progreso y bienestar.
+- Propugnaba que el Estado se convirtiera en el "banquero de los pobres" y abogaba por la creación de un banco de propiedad pública encargado de distribuir crédito entre las cooperativas.
+- Planteaba que los capitalistas podrían unirse a las asociaciones y recibir una tasa de interés fija sobre su capital, garantizada por el Estado.
+- Según Blanc, bajo el reinado de la libre competencia, los salarios tenderían a disminuir continuamente, lo que consideraba una ley general. Ante el crecimiento demográfico, abogaba por instar a las madres de familias pobres a ser estériles, lo cual consideraba una lucha necesaria debido a la limitación de recursos.
+- Proponía que el gobierno se considerara como el regulador supremo de la producción y se le otorgara un gran poder para cumplir con esta función. Esto implicaba combatir y superar la competencia. Blanc abogaba por que el gobierno emitiese un préstamo para establecer talleres sociales en las ramas más importantes de la industria nacional.
+
+## Charles Kingsley (1819-1875)
 
 Fue un clérigo, poeta, novelista y reformador. Además de ser profesor de historia moderna en Cambridge y canónigo de Westminster, Kingsley y otros socialistas se esforzaron por socializar a los cristianos y cristianizar a los socialistas.
 

@@ -14,13 +14,13 @@ tags:
   - Análisis estadístico
 citation:
   author:
-  - Edison Achalma Mendoza
-  - Nataly Bañico Espinoza 
-  - Nikole Berrocal Quispe 
-  - Elvis Carbajal López 
-  - Kattya Castillo López 
-  - Hans Castro Vilca 
-  - Luz Cuba Palomino 
+    - Edison Achalma Mendoza
+    - Nataly Bañico Espinoza
+    - Nikole Berrocal Quispe
+    - Elvis Carbajal López
+    - Kattya Castillo López
+    - Hans Castro Vilca
+    - Luz Cuba Palomino
 bibliography: references.bib
 date: "01/11/2021"
 ---
@@ -450,7 +450,7 @@ La influencia del crecimiento económico en recaudación de impuestos por la SUN
 
 En el presente estudio se analizan diversas variables e indicadores para comprender la relación entre el crecimiento económico y la recaudación de impuestos. A continuación, se detallan las variables e indicadores utilizados:
 
-## Variable independiente:
+## Variable independiente
 
 - Crecimiento económico: Esta variable representa la tasa de crecimiento económico de la región o país en estudio. Se utiliza como un indicador del desarrollo y la expansión de la actividad económica.
 
@@ -458,7 +458,7 @@ Indicador:
 
 - Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007 (Miles de soles): Este indicador cuantifica el valor total de la producción económica de la región o país, ajustado a precios constantes de 2007. El VAB es una medida ampliamente utilizada para evaluar el desempeño económico y el nivel de actividad productiva.
 
-## Variable dependiente:
+## Variable dependiente
 
 - Recaudación de impuestos: Esta variable representa la cantidad total de impuestos recaudados por el gobierno o la entidad fiscalizadora en la región o país en estudio. Indica la capacidad de generar ingresos fiscales a partir de la imposición de tributos.
 
@@ -602,24 +602,23 @@ Aunque el impuesto selectivo al consumo (ISC) es uno de los sectores de menor re
 
 ### Crecimiento económico del departamento de Ayacucho en el periodo 2007 – 2019
 
-
 : Valor Agregado Bruto (VAB) según actividad económica en Ayacucho (2007-2019, Tasa de crecimiento %) {#tbl-3}
 
-| Actividades                                | 2007  | 2008  | 2009  | 2010  | 2011  | 2012  | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  |
-|--------------------------------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Agricultura, Ganadería, Caza y Silvicultura | 3.3   | 14.3  | 3.2   | -5.1  | -4.1  | 16.1  | -5.3  | -9.2  | 1.3   | -1.2  | 6.1   | 15.2  | -1.3  |
-| Pesca y Acuicultura                        | -13.4 | -18.5 | 10.8  | -7.7  | 121.7 | 37.4  | 2.3   | 5.5   | 13.6  | 12.1  | 41.9  | 1.9   | -51.7 |
-| Extracción de Petróleo, Gas y Minerales     | 107.4 | 49.6  | 35.8  | 6.2   | 3.3   | 2.7   | 25.9  | -3.1  | 14.8  | -0.8  | 6.4   | 3.4   | 6.2   |
-| Manufactura                                | 6.7   | 6.0   | 0.2   | 7.4   | 4.4   | 2.0   | -0.3  | -7.9  | -2.4  | 3.7   | 2.1   | 5.6   | 0.1   |
-| Electricidad, Gas y Agua                   | 2.1   | 7.4   | -1.6  | 8.1   | 5.6   | 10.8  | 6.1   | 15.2  | 7.0   | -18.2 | 4.9   | 6.3   | 0.5   |
-| Construcción                               | 36.6  | 10.9  | 14.2  | 12.3  | 21.8  | 23.9  | 26.4  | 0.3   | 2.2   | -15.5 | 11.0  | 7.7   | -1.1  |
-| Comercio                                   | 6.7   | 12.6  | 2.3   | 10.1  | 6.8   | 13.2  | 6.1   | 1.0   | 1.9   | 1.6   | 1.1   | 1.4   | 2.4   |
-| Transporte, Almacenamiento, Correo y Mensajería| 10.7| 8.2   | 2.5   | 8.2   | 8.5   | 7.0   | 6.0   | 3.7   | 3.5   | 3.3   | 2.9   | 2.6   | 2.2   |
-| Alojamiento y Restaurantes                 | 8.5   | 9.9   | 0.6   | 5.6   | 8.5   | 9.0   | 6.9   | 4.2   | 2.8   | 3.2   | 2.0   | 4.0   | 4.8   |
-| Telecomunicaciones y Otros Servicios de Información| 0| 24.5  | 14.3  | 15.9  | 15.0  | 17.9  | 14.1  | 11.0  | 10.1  | 13.8  | 12.4  | 9.8   | 7.8   |
-| Administración Pública y Defensa            | 4.7   | 7.5   | 13.2  | 2.9   | 3.8   | 4.0   | 4.0   | 4.6   | 6.6   | 7.6   | 5.4   | 5.7   | 6.0   |
-| Otros Servicios                            | 6.9   | 3.9   | 5.2   | 3.7   | 5.0   | 6.7   | 5.8   | 5.7   | 6.0   | 4.6   | 3.7   | 3.6   | 2.9   |
-| Valor Agregado Bruto                       | 12.3  | 14.3  | 10.3  | 4.6   | 4.8   | 9.0   | 9.4   | -0.5  | 5.8   | 0.3   | 5.3   | 5.6   | 2.9   |
+| Actividades                                         | 2007  | 2008  | 2009 | 2010 | 2011  | 2012 | 2013 | 2014 | 2015 | 2016  | 2017 | 2018 | 2019  |
+| --------------------------------------------------- | ----- | ----- | ---- | ---- | ----- | ---- | ---- | ---- | ---- | ----- | ---- | ---- | ----- |
+| Agricultura, Ganadería, Caza y Silvicultura         | 3.3   | 14.3  | 3.2  | -5.1 | -4.1  | 16.1 | -5.3 | -9.2 | 1.3  | -1.2  | 6.1  | 15.2 | -1.3  |
+| Pesca y Acuicultura                                 | -13.4 | -18.5 | 10.8 | -7.7 | 121.7 | 37.4 | 2.3  | 5.5  | 13.6 | 12.1  | 41.9 | 1.9  | -51.7 |
+| Extracción de Petróleo, Gas y Minerales             | 107.4 | 49.6  | 35.8 | 6.2  | 3.3   | 2.7  | 25.9 | -3.1 | 14.8 | -0.8  | 6.4  | 3.4  | 6.2   |
+| Manufactura                                         | 6.7   | 6.0   | 0.2  | 7.4  | 4.4   | 2.0  | -0.3 | -7.9 | -2.4 | 3.7   | 2.1  | 5.6  | 0.1   |
+| Electricidad, Gas y Agua                            | 2.1   | 7.4   | -1.6 | 8.1  | 5.6   | 10.8 | 6.1  | 15.2 | 7.0  | -18.2 | 4.9  | 6.3  | 0.5   |
+| Construcción                                        | 36.6  | 10.9  | 14.2 | 12.3 | 21.8  | 23.9 | 26.4 | 0.3  | 2.2  | -15.5 | 11.0 | 7.7  | -1.1  |
+| Comercio                                            | 6.7   | 12.6  | 2.3  | 10.1 | 6.8   | 13.2 | 6.1  | 1.0  | 1.9  | 1.6   | 1.1  | 1.4  | 2.4   |
+| Transporte, Almacenamiento, Correo y Mensajería     | 10.7  | 8.2   | 2.5  | 8.2  | 8.5   | 7.0  | 6.0  | 3.7  | 3.5  | 3.3   | 2.9  | 2.6  | 2.2   |
+| Alojamiento y Restaurantes                          | 8.5   | 9.9   | 0.6  | 5.6  | 8.5   | 9.0  | 6.9  | 4.2  | 2.8  | 3.2   | 2.0  | 4.0  | 4.8   |
+| Telecomunicaciones y Otros Servicios de Información | 0     | 24.5  | 14.3 | 15.9 | 15.0  | 17.9 | 14.1 | 11.0 | 10.1 | 13.8  | 12.4 | 9.8  | 7.8   |
+| Administración Pública y Defensa                    | 4.7   | 7.5   | 13.2 | 2.9  | 3.8   | 4.0  | 4.0  | 4.6  | 6.6  | 7.6   | 5.4  | 5.7  | 6.0   |
+| Otros Servicios                                     | 6.9   | 3.9   | 5.2  | 3.7  | 5.0   | 6.7  | 5.8  | 5.7  | 6.0  | 4.6   | 3.7  | 3.6  | 2.9   |
+| Valor Agregado Bruto                                | 12.3  | 14.3  | 10.3 | 4.6  | 4.8   | 9.0  | 9.4  | -0.5 | 5.8  | 0.3   | 5.3  | 5.6  | 2.9   |
 
 Fuente: Elaboración propia (datos: INEI, BCRP)
 
@@ -633,32 +632,29 @@ Nuestro objetivo es analizar la relación entre el crecimiento económico y la r
 
 Modelo: $R_i = β_1 + β_{2}*VAB + u_i$
 
-
 : Resultados del modelo estimado inicial {#tbl-4}
 
 Dependent Variable: RI
 
 Method: Least Squares
 
-Date: 12/27/21   Time: 19:06
+Date: 12/27/21 Time: 19:06
 
 Sample: 2007-2019
 
 Included observations: 13
 
-
-| Variable           | Coefficient | Std. Error | t-Statistic | Prob.    |
-| ------------------ | ----------- | ---------- | ----------- | -------- |
-| C                  | -135238.1   | 18103.46   | -7.470290   | 0.0000   |
-| VAB                | 0.046999    | 0.003858   | 12.18173    | 0.0000   |
-| R-squared          | 0.930989                  | Mean dependent var | 81344.83                  |
-| Adjusted R-squared | 0.924715                  | S.D. dependent var | 44814.89                  |
-| S.E. of regression | 12296.35                  | Akaike info criterion | 21.81263                |
-| Sum squared resid  | 1.66E+09                  | Schwarz criterion  | 21.89955                  |
-| Log likelihood     | -139.7821                 | Hannan-Quinn criter. | 21.79477                 |
-| F-statistic        | 148.3945                  | Durbin-Watson stat | 0.880483                  |
-| Prob(F-statistic)  | 0.000000                  |
-
+| Variable           | Coefficient | Std. Error            | t-Statistic | Prob.  |
+| ------------------ | ----------- | --------------------- | ----------- | ------ |
+| C                  | -135238.1   | 18103.46              | -7.470290   | 0.0000 |
+| VAB                | 0.046999    | 0.003858              | 12.18173    | 0.0000 |
+| R-squared          | 0.930989    | Mean dependent var    | 81344.83    |
+| Adjusted R-squared | 0.924715    | S.D. dependent var    | 44814.89    |
+| S.E. of regression | 12296.35    | Akaike info criterion | 21.81263    |
+| Sum squared resid  | 1.66E+09    | Schwarz criterion     | 21.89955    |
+| Log likelihood     | -139.7821   | Hannan-Quinn criter.  | 21.79477    |
+| F-statistic        | 148.3945    | Durbin-Watson stat    | 0.880483    |
+| Prob(F-statistic)  | 0.000000    |
 
 La variable independiente del PBI departamental explica el 93.1% de la variabilidad de los impuestos, con un total de 13 observaciones. Según la prueba de t de Student, los parámetros del modelo son estadísticamente significativos con un nivel de significancia del 5%. Además, de acuerdo a la prueba F, el modelo es estadísticamente significativo.
 
@@ -673,7 +669,6 @@ Para detectar la presencia de **heterocedasticidad** en los errores, se llevaron
 Se realizó una **prueba de autocorrelación** utilizando el estadístico Durbin-Watson. Un valor de d menor que 1.01 o mayor que 2.99 indica un problema potencialmente grave de autocorrelación. En nuestro caso, el estadístico Durbin-Watson es 0.8880485, que es menor que 1.5, lo que indica la presencia de problemas de autocorrelación (Anexo-Figuras 13 y 14).
 
 Se llevó a cabo un análisis de causalidad utilizando la **prueba de Granger** para examinar las combinaciones de las variables de recaudación de impuestos y Valor Agregado Bruto (VAB). El resultado de la prueba de causalidad de Granger muestra un p-valor menor que 0.05, lo cual nos lleva a rechazar la hipótesis nula de que el VAB causa cambios en la recaudación de impuestos. Para determinar el rezago óptimo, se utilizó el criterio de información de Akaike, y se encontró que el primer rezago era el más adecuado (Anexo-Figura 9).
-
 
 # Discusión de los Resultados
 
@@ -695,4 +690,3 @@ Por otro lado, mediante una regresión lineal simple se estableció el grado de 
 
 ::: {#refs}
 :::
-

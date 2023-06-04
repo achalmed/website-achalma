@@ -69,12 +69,12 @@ PRIMEROS PASOS
 
 **ELECCIÓN DE PASSWORDS**
 
-La utilización de passwords está hoy en día extendida a muchos aspectos de la vida cotidiana, no sólo a la utilización de máquinas compartidas.  
-  
-La elección de un **password seguro** es tanto más crucial cuanto mayor sea la importancia de lo que "protege": cuentas bancarias, messenger, cuenta de e-mail, reserva de biletes de tren, etc.  
-  
-Passwords no seguros pueden ser averiguados por programas especializados en un tiempo inferior a 1 segundo (por ejemplo para una palabra de diccionario) o en pocas horas (passwords de hasta 6 caracteres formados por letras mayúsculas, minúsculas y números).  
-  
+La utilización de passwords está hoy en día extendida a muchos aspectos de la vida cotidiana, no sólo a la utilización de máquinas compartidas.
+
+La elección de un **password seguro** es tanto más crucial cuanto mayor sea la importancia de lo que "protege": cuentas bancarias, messenger, cuenta de e-mail, reserva de biletes de tren, etc.
+
+Passwords no seguros pueden ser averiguados por programas especializados en un tiempo inferior a 1 segundo (por ejemplo para una palabra de diccionario) o en pocas horas (passwords de hasta 6 caracteres formados por letras mayúsculas, minúsculas y números).
+
 Variantes del tipo sustituir A por 4 , la E por un 3, o la I por un 1 están ya incorporadas en los crackers.
 
 Recomendación para passwords importantes:
@@ -93,8 +93,8 @@ Lo que NO debes hacer con un password:
 
 **EL PROBLEMA DE LOS BUENOS PASSWORDS ES ACORDARSE DE ELLOS: aqui tienes un truco**
 
-Piensa en una frase y utiliza las iniciales de las palabras, mezcladas con números y algún signo, de forma que  puedas recordarla.  
-  
+Piensa en una frase y utiliza las iniciales de las palabras, mezcladas con números y algún signo, de forma que  puedas recordarla.
+
 Ejemplos:
 
 **E95faP+L**
@@ -155,8 +155,7 @@ SISTEMA MULTIUSUARIO
 > - Decidir qué aplicaciones y utilidades puede usar cada usuario.
 > - Organizar a los usuarios por grupos.
 > - Instalar o desinstalar programas.
-> - ...  
->
+> - ...
 
 **Nota:** Es muy importante reservar el usuario **root** exclusivamente para labores de administración del sistema, incluso cuando se instale un sistema LINUX particular, es decir, que vaya a ser utilizado por un único usuario. Debe tenerse en cuenta que, debido a que el **root** dispone de TODOS LOS PERMISOS, un error puede resultar catastrófico. Por ello se debe dar de alta, al menos, un usuario "corriente" y trabajar habitualmente con esa cuenta. Utilizar la cuenta del **root** sólo para administración, instalación de nuevo software, etc.
 
@@ -164,7 +163,7 @@ SISTEMA MULTIUSUARIO
 
 MODOS DE TRABAJO
 
-- **Modo de comandos**: El usuario se comunica con el ordenador mediante la **Linea de Comandos** de un terminal o de un emulador de terminal. Estos comandos o instrucciones pueden ser interpretados por el sistema usando diferentes programas denominados **Shell**. (Lo usaremos sólo esporádicamente).  
+- **Modo de comandos**: El usuario se comunica con el ordenador mediante la **Linea de Comandos** de un terminal o de un emulador de terminal. Estos comandos o instrucciones pueden ser interpretados por el sistema usando diferentes programas denominados **Shell**. (Lo usaremos sólo esporádicamente).
 
 - **Modo gráfico**: El usuario se comunica con el ordenador  mediante un **Interfaz Gráfico de Usuario** (**GUI**) que se encarga de interpretar las diferentes acciones realizadas con el teclado o con el ratón sobre diferentes objetos gráficos como **iconos**, **botones**, **ventanas**,  **menús**, **barras de desplazamiento** (**scroll**), **lineas separadoras**, etc.
   - En UNIX, el GUI habitual es el sistema **X Window** que está formado fundamentalmente por dos programas:
@@ -177,8 +176,8 @@ SISTEMA DE ARCHIVOS Y CARPETAS
 
 **Archivos o Ficheros** (**Files**) : Reglas para los nombres
 
-- De 1 a  255 caracteres. Se pueden usar todos menos el     ****/****      aunque ...
-- No es recomendable usar caracteres como       **=   ^   ~   '   "   `   *   ;   -   ?   [ ] ( ) ! & > <**
+- De 1 a  255 caracteres. Se pueden usar todos menos el     \***\*/\*\***      aunque ...
+- No es recomendable usar caracteres como       **=   ^   ~   '   "   `   \*   ;   -   ?   [ ] ( ) ! & > <**
 - Pueden aparecer sólo números
 - Se distinguen mayúsculas y minúsculas: README no es lo mismo que ReaDme
 - IMPORTANTE: Si se van a compartir archivos con WINDOWS no se debe usar esa distinción
@@ -207,7 +206,7 @@ La estructura de directorios suele ser jerárquica, ramificada o "en árbol":
 ![Organización jeráquica de archivos](https://personal.us.es/echevarria/Curso/images/FilesAndFolders.png)  
 [Origen de la imagen](http://es.wikipedia.org/wiki/Archivo:FilesAndFolders.png)
 
-La estructura de directorios que sigue Linux es similar a la de cualquier sistema UNIX. La estructura del sistema de archivos NO está ligada de forma directa a la estructura de hardware. A diferencia de Windows, es independiente del número de discos duros, disqueteras o CDROMs. No hay una "unidad" para cada unidad física de disco o partición como en Windows (**A:\**, **C:\**, etc.), sino que todos los discos duros o de red se montan bajo un sistema de directorios en árbol, y algunos de esos directorios enlazan con estas unidades físicas de disco. IMPORTANTE: Las barras en Linux al igual que en cualquier UNIX son inclinadas hacia la derecha, como se puede ver más abajo (ese es el motivo de que en internet sean inclinadas hacia la derecha, ya que nació bajo UNIX).
+La estructura de directorios que sigue Linux es similar a la de cualquier sistema UNIX. La estructura del sistema de archivos NO está ligada de forma directa a la estructura de hardware. A diferencia de Windows, es independiente del número de discos duros, disqueteras o CDROMs. No hay una "unidad" para cada unidad física de disco o partición como en Windows (**A:\*\*, **C:\*\*, etc.), sino que todos los discos duros o de red se montan bajo un sistema de directorios en árbol, y algunos de esos directorios enlazan con estas unidades físicas de disco. IMPORTANTE: Las barras en Linux al igual que en cualquier UNIX son inclinadas hacia la derecha, como se puede ver más abajo (ese es el motivo de que en internet sean inclinadas hacia la derecha, ya que nació bajo UNIX).
 
 - Estructura jerárquica de árbol invertido:
 
@@ -288,7 +287,7 @@ Información temporal sobre los procesos del sistema (explicaremos esto más en 
 - **Directorio** o **Carpeta de trabajo (Working Directory)**: es, en cada momento, el directorio en que se está trabajando. Cualquier fichero que el S.O. tenga que buscar, lo hará en primer lugar en dicho directorio.
 - **Ruta** **(Path) de un fichero**: secuencia de directorios, separados por el símbolo **/**,  que se ha de recorrer en la estructura de árbol para llegar a un fichero determinado.
 
-- **Path absoluto**: muestra toda la ruta desde la raiz del sistema de ficheros **/**  
+- **Path absoluto**: muestra toda la ruta desde la raiz del sistema de ficheros **/**
 - **Path relativo**: muestra la ruta desde el directorio de trabajo.  Puede empezar en:
 
 - una subdirectorio del directorio de trabajo,  si el camino es descendente
@@ -304,10 +303,10 @@ Información temporal sobre los procesos del sistema (explicaremos esto más en 
 En Linux, los distintos dispositivos conectados al ordenador forman parte del sistema de archivos, de manera que, una vez montados, para el usuario son como una carpeta más del sistema de ficheros. Habitualmente se montan en **/mnt**  
 Por ejemplo, la **disquetera** suele ser  **/mnt/floppy**    y el  **CDROM**   suele ser   **/mnt/cdrom**
 
-**SISTEMAS DE ARCHIVOS COMPARTIDOS Yellow Pages**  
+**SISTEMAS DE ARCHIVOS COMPARTIDOS Yellow Pages**
 
-Este sistema permite que un conjunto de máquinas con sistemas Linux  conectadas en red compartan un sistema de archivos común. Esto permite que todos los usuarios de esas máquinas dispongan de todos sus archivos en todas las máquinas. En este caso, el sistema de archivos suele estar físicamente en una de las máquinas. Un usuario puede, así, acceder a cualquiera de las máquinas con el mismo login y el mismo password.  
-  
+Este sistema permite que un conjunto de máquinas con sistemas Linux  conectadas en red compartan un sistema de archivos común. Esto permite que todos los usuarios de esas máquinas dispongan de todos sus archivos en todas las máquinas. En este caso, el sistema de archivos suele estar físicamente en una de las máquinas. Un usuario puede, así, acceder a cualquiera de las máquinas con el mismo login y el mismo password.
+
 Cuando se usa el servicio yellow pages (páginas amarillas), para cambiar el password de un usuario es necesario utilizar el comando **yppasswd**  en lugar de passwd.
 
 PROPIEDAD, PERMISOS Y DERECHOS DE ACCESO A CARPETAS Y FICHEROS
@@ -368,7 +367,6 @@ EL GESTOR DE VENTANAS KDE
 > - Ver y modificar las propiedades de ficheros y carpetas
 
 > **Konsole: Emulador de terminal**
->
 >
 > Se usa para trabajar con el Sistema Operativo en modo de comandos, es decir para introducir directamente instrucciones UNIX al sistema. Las instrucciones se escriben en la Línea de Comandos, después del **prompt** del usuario.
 

@@ -2,7 +2,7 @@
 title: La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y Desafíos
 subtitle: Una revisión detallada de los gobiernos y políticas económicas que marcaron la evolución del Perú.
 description: |
-  Descubre cómo la economía peruana enfrentó importantes cambios y desafíos desde 1970 hasta 1990. A través de este análisis exhaustivo, exploraremos los períodos clave y las políticas económicas implementadas. Desde la reforma agraria hasta las crisis económicas y las políticas heterodoxas, este estudio revela los altibajos y las decisiones cruciales que influyeron en el desarrollo económico del Perú en ese período. 
+  Descubre cómo la economía peruana enfrentó importantes cambios y desafíos desde 1970 hasta 1990. A través de este análisis exhaustivo, exploraremos los períodos clave y las políticas económicas implementadas. Desde la reforma agraria hasta las crisis económicas y las políticas heterodoxas, este estudio revela los altibajos y las decisiones cruciales que influyeron en el desarrollo económico del Perú en ese período.
 categories:
   - Economía Política
   - Reforma Agraria y Control Estatal
@@ -13,16 +13,12 @@ tags:
   - Economía Peruana
   - Políticas Económicas
   - Desafíos Socioeconómicos
-author: Achalma Mendoza Elmer Edison
 date: "05/12/2023"
-date-modified: "today"
-draft: false
 ---
 
 
 
 # LA ECONOMÍA PERUANA DESDE 1970 HASTA 1990
-    
 
 ## PERÍODO DE 1970 – 1975
 
@@ -31,27 +27,16 @@ PRESIDENTE : General JUAN VELASCO ALVARADO (3 de octubre de 1968)
 Las principales medidas que adoptó en el plano económico el gobierno del General Juan Velasco Alvarado fueron:
 
 1.  En 1969 se promulgó la Ley de Reforma Agraria. Los grandes y medianos latifundios serían expropiados y transformados, básicamente, en cooperativas. La tierra era de quien la trabajaba.
-    
 2.  En 1970 se aprobó industrias, cuyos lineamientos estaban contenidos en la Ley General de Industria. En ella se establecían una serie de prioridades industriales y se establecían incentivos tributarios para los sectores elegidos. Se trató de una ley promocional; el estado reservó el monopolio de la industria básica.
-    
 3.  La ley de la minería fue promulgada en 1970, Esta ley tenía como objetivo controlar la inversión extranjera de modo que sirviera a los intereses del Perú y le otorgaba al estado el monopolio de la comercialización de todos los productos mineros. La intención de esta ley era regular la inversión.
-    
 4.  Se establecieron las comunidades laborales en industria, minería y pesca entre 1970 y 1971. Los trabajadores, organizados en las comunidades laborales, tendrían participación directa en la administración y beneficios de las empresas. Se establecieron las cooperativas de producción en el transporte urbano, en algunas industrias y en la agricultura. La comunidad industrial fue establecida en las empresas industriales del sector moderno.
-    
 5.  En 1970 se decretó la Ley de Estabilidad Laboral, de acuerdo con la cual, luego de tres meses, un trabajador adquiría estabilidad laboral y no podía ser despedido.
-    
 6.  En 1973 se crearon las Empresas de Propiedad, que eran empresas manejadas por los trabajadores, similares a las que existían en Yugoslavia.
-    
 7.  Se estableció una nueva política con respecto al capital extranjero. La mayoría de activos extranjeros en el sector primario, en comunicaciones y en pesca, fueron expropiados.
-    
 8.  Se creó un gran número de empresas estatales, incrementándose en el papel planificador del estado y su injerencia en la economía. Prueba de ese deseo del estado de participar más activamente en los diversos sectores económicos fue la creación de los ministerios de minería y petróleo y el de industria.
-    
 9.  Se organizaron los sectores financieros y comerciales. Se reforzó el papel de la Banca de Fomento. Se crearon las corporaciones Financieras de Desarrollo (COFIDE), con el objetivo de financiar proyectos de desarrollo, y la Comisión Supervisora de Empresas y Valores. El estado pasó a controlar el crédito comprando varios bancos comerciales (Banco Popular, Banco Internacional, el Banco Continental). El crédito se otorgaría selectivamente por regiones y por sectores económicos.
-    
-10.  Se establecieron controles cambiarios y se incrementó la protección a la industria, creándose el Registro Nacional de Manufacturas. Este registro era un listado de todos los productos manufacturados producidos localmente; las importaciones de los sustitutos de los mismos quedaron prohibidos.
-    
-11.  Se reforzó el sistema de planificación nacional, que se encargaría de establecer metas, formular planes de desarrollo de corto, mediano y largo plazo y coordinar la inversión sectorial. El Instituto Nacional de Planificación (INP) tendría a su cargo la planificación, buscando conciliar el crecimiento económico con la equidad distributiva. Demostración de ello fueron el plan inca y el plan Túpac Amaru.
-    
+10. Se establecieron controles cambiarios y se incrementó la protección a la industria, creándose el Registro Nacional de Manufacturas. Este registro era un listado de todos los productos manufacturados producidos localmente; las importaciones de los sustitutos de los mismos quedaron prohibidos.
+11. Se reforzó el sistema de planificación nacional, que se encargaría de establecer metas, formular planes de desarrollo de corto, mediano y largo plazo y coordinar la inversión sectorial. El Instituto Nacional de Planificación (INP) tendría a su cargo la planificación, buscando conciliar el crecimiento económico con la equidad distributiva. Demostración de ello fueron el plan inca y el plan Túpac Amaru.
 
 Pero el proceso fue muy contradictorio; llevado adelante sin respetar las libertades ciudadanas se hizo evidente su naturaleza autoritaria y vertical.
 
@@ -62,51 +47,32 @@ PRESIDENTE: General FRANCISCO MORALES BERMÚDEZ CERRUTI (29 de agosto de 1975)
 Las principales medidas que adoptó en el plano económico el gobierno del General Francisco Morales Bermúdez fueron:
 
 1.  El gobierno buscó promover la inversión privada, tratando de recuperar la confianza de los inversionistas extranjeros.
-    
 2.  Se disminuyeron los subsidios, para reducir el gasto público.
-    
 3.  Se anuncia el 12 de enero de 1976 un programa de ajuste.
-    
 
--   Eliminación de subsidios para reducir el déficit de las empresas públicas.
-    
--   Elevar precios en los mercados.
-    
--   Devaluación del sol.
-    
--   En 1976 las reservas internacionales netas se tornaron negativas.
-    
--   El déficit fiscal llegó a 6.3% del PBI.
-    
--   La brecha externa fue del 8.6% del PBI.
-    
+- Eliminación de subsidios para reducir el déficit de las empresas públicas.
+- Elevar precios en los mercados.
+- Devaluación del sol.
+- En 1976 las reservas internacionales netas se tornaron negativas.
+- El déficit fiscal llegó a 6.3% del PBI.
+- La brecha externa fue del 8.6% del PBI.
 
 4.  La inflación a fin de periodo fue del 44% aprox.
-    
 
--   El servicio de la deuda externa fue el 36.3% de las exportaciones.
-    
--   El FMI exigía liberar el tipo de cambio, para reducir el déficit fiscal.
-    
--   En 1977, el crédito al sector público representaba el 49%.
-    
+- El servicio de la deuda externa fue el 36.3% de las exportaciones.
+- El FMI exigía liberar el tipo de cambio, para reducir el déficit fiscal.
+- En 1977, el crédito al sector público representaba el 49%.
 
 5.  El tipo de cambio aumentó para mejorar las exportaciones pero el PBI cayó en 1.2% en 1977 y en 1978 el tipo de cambio se devaluó 15,4%; con un sistema de minidevaluaciones..
-    
 
--   Al utilizarse la estrategia de disminución de la demanda interna, surgieron problemas sociales como las famosas huelgas generales, debido a los periodos de ajuste y caída de salarios reales.
-    
--   La inflación a fin de periodo aumentó de 32.4% en 1977 a 73.7% en 1978. El PBI creció 0.6 en 1977, y cayó en - 3.8% en 1978. Las importaciones disminuyeron 24.5% en 1978.La brecha externa se cerró: pasó de - 7.4% en 1977 a -1.8% del PBI en 1978. Crisis de balanza de pagos, RIN negativas entre 1976 y 1978, el déficit fiscal se redujo de un 5.1% en 1978 a 0.6% del PBI en 1979
-    
+- Al utilizarse la estrategia de disminución de la demanda interna, surgieron problemas sociales como las famosas huelgas generales, debido a los periodos de ajuste y caída de salarios reales.
+- La inflación a fin de periodo aumentó de 32.4% en 1977 a 73.7% en 1978. El PBI creció 0.6 en 1977, y cayó en - 3.8% en 1978. Las importaciones disminuyeron 24.5% en 1978.La brecha externa se cerró: pasó de - 7.4% en 1977 a -1.8% del PBI en 1978. Crisis de balanza de pagos, RIN negativas entre 1976 y 1978, el déficit fiscal se redujo de un 5.1% en 1978 a 0.6% del PBI en 1979
 
 6.  En1979 los términos de intercambio aumentaron por razones internacionales, mejorando los precios internacionales de materias primas y se empieza a exportar petróleo.
-    
 
--   Entre 1977 y 1979 el volumen exportado de petróleo aumentó 488%; y los ingresos por exportación, 254% anual, pasando a ser el segundo producto de exportación después del cobre, motivo por el cual, la brecha externa (cuenta corriente) mejoró llegando a 11.3% del PBI en 1975.
-    
+- Entre 1977 y 1979 el volumen exportado de petróleo aumentó 488%; y los ingresos por exportación, 254% anual, pasando a ser el segundo producto de exportación después del cobre, motivo por el cual, la brecha externa (cuenta corriente) mejoró llegando a 11.3% del PBI en 1975.
 
 7.  La deuda pública representaba el 16.1% del PBI en 1973, y pasó al 42% en 1979
-    
 
 ## PERÍODO DE 1980 - 1985
 
@@ -118,9 +84,9 @@ Regida por la Constitución política de 1979, tuvo como régimen económico: la
 
 Política Económica: ortodoxa
 
-Fernando Belaunde emprendió la difícil tarea de superar la profunda crisis que heredó del gobierno militar. 
+Fernando Belaunde emprendió la difícil tarea de superar la profunda crisis que heredó del gobierno militar.
 
-Fenómeno del niño de 1983, que ocasiono el alza del déficit fiscal. Bajo la supervisión del FMI, aplicó medidas _ortodoxas_, que redujo el déficit fiscal. En este año, la agricultura cayó en 12%, la pesca en 40% y la minería, en 8%, industria procesadora de recursos primarios, en 17%. Se redujo el gasto fiscal y la participación estatal en la economía, y se promovió el crédito y la inversión extranjera
+Fenómeno del niño de 1983, que ocasiono el alza del déficit fiscal. Bajo la supervisión del FMI, aplicó medidas *ortodoxas*, que redujo el déficit fiscal. En este año, la agricultura cayó en 12%, la pesca en 40% y la minería, en 8%, industria procesadora de recursos primarios, en 17%. Se redujo el gasto fiscal y la participación estatal en la economía, y se promovió el crédito y la inversión extranjera
 
 El gobierno de Belaúnde dejó al país en una profunda crisis económica. Las inversiones habían caído de 21,2 % del Producto Bruto Interno (PBI), en 1982, a 12,2 % en 1985. En 1982, la economía peruana no creció y, en 1983, el crecimiento fue negativo: -12,2 %. Si, en 1980, el ingreso per cápita era de 1,232 dólares por peruano, en 1985 llegaba tan sólo a 1,050 dólares. El desastre económico del gobierno de Belaúnde se debió, principalmente, a una caída de precios de productos que Perú exportaba (cobre, plata, plomo, café).
 
@@ -134,7 +100,7 @@ Política Económica: heterodoxa, (sin ceñirse a los dictados del Fondo Monetar
 
 En 1987, el peligro de una crisis en la balanza de pagos y en las reservas internacionales era evidente. A medida que los límites al programa se hacían evidentes y los desequilibrios macroeconómicos se hacían insostenibles, ya desde Mayo de 1988 se comienzan a sentir ajustes a la economía los llamados “paquetazos” llevando a una gran recesión económica. Intento de estatizar la banca privada, como consecuencia nace el movimiento libertad de Vargas Llosa.
 
-Los efectos de la desastrosa política del gobierno se mostraron no sólo con las colas interminables para conseguir los productos alimenticios, sino que se produjeron huelgas, desabastecimiento, violencia, especulación, se incrementó la gasolina en 30 %; el servicio postal y telefónico 20 %; agua potable y alcantarillado 10 %, el déficit fiscal aumentó considerablemente, el PBI real cayó y una Inflación acumulada de 2,178.482 %.  
+Los efectos de la desastrosa política del gobierno se mostraron no sólo con las colas interminables para conseguir los productos alimenticios, sino que se produjeron huelgas, desabastecimiento, violencia, especulación, se incrementó la gasolina en 30 %; el servicio postal y telefónico 20 %; agua potable y alcantarillado 10 %, el déficit fiscal aumentó considerablemente, el PBI real cayó y una Inflación acumulada de 2,178.482 %.
 
 Es por ello que el gobierno de García ha sido catalogado como el peor gobierno de la historia del Perú.
 
@@ -146,50 +112,28 @@ Se inició con las reformas económicas e institucionales, más conocidas como a
 
 Las políticas de corte neoliberal que Fujimori aplicó tuvieron un elevado costo social: trabajadores, campesinos, jubilados, fueron quienes cargaron con el grueso del ajuste, mediante alzas de precios, reducción de salarios y pensiones reales, pérdida de empleos y recorte de derechos laborales, etc. cuando Fujimori asumió el Gobierno, el 44% de los peruanos vivían en situación de pobreza. Tras la aplicación del “Fujishock” esta cifra creció al 60%.
 
-
 # CONCLUSIÓN
 
 La economía peruana ha sufrido de una deficiente asignación de recursos y bajos niveles de inversión privada. Durante las décadas de los sesenta, setenta y ochenta el sistema económico presentaba un cuadro con precios regulados y excesivo intervencionismo estatal. Asimismo, la actividad económica se desarrollaba en un ambiente de fuerte inestabilidad macroeconómica y los altos endeudamientos públicos terminaban con episodios de insolvencia fiscal. De otro lado, eran recurrentes las crisis de balanza de pagos, que terminaban en grandes devaluaciones de la moneda; y, por si fuera poco, se vivieron periodos inflacionarios e hiperinflacionarios, mientras en la década de los 90 se inició con los ajustes para estabilizar la economía peruana.
 
 El Perú de hoy es macro económicamente más estable y próspero, pero es también más desigual y excluyente. La riqueza se ha concentrado y el Estado se ha debilitado y retrocedido, mientras los sempiternos problemas de la pobreza y la discriminación se han profundizado.
 
-
-
 # BIBLIOGRAFÍA
 
--   Carlos PARODI TRECE, “Perú, 1960-2000: políticas económicas y sociales en entornos cambiantes.” 2001
-    
--   SEGUNDO GOBIERNO DE FERNANDO BELAUNDE TERRY: TRABAJO REALIZADO POR ESTUDIANTES DE LA UNIVERSIDAD DE LIMA
-    
--   Waldo, M. B. (2013). Contexto internacional y desempeño macroeconómico en américa latina y el Perú: 1980-2012. Lima, Perú: Departamento de Economía – Pontificia Universidad Católica del Perú
-    
--   Alfredo, D., & Raúl, G.C. (2013).La economía mundial ¿Hacia dónde vamos? Lima, Perú: Pontificia Universidad Católica del Perú.
-    
--   Efraín, G. O. (1991) Una economía bajo violencia: Perú, 1980-1990. Lima, Perú: IEP Instituto de Estudios Peruanos
-    
--   Eduardo, M.P. (2013). Los desafíos del Perú. Lima, Perú: Universidad del Pacífico.
-    
--   Abusada, R., F. Dubois, E. Morón (2000) La Reforma Incompleta: Rescatando los noventa. Lima, Perú. Instituto Peruano de Economía/Universidad del Pacífico
-    
--   Galeón. (n.d). Historia. Obtenida el 11 de julio del 2015, de [http://mayormenor.galeon.com/8.html](http://mayormenor.galeon.com/8.html)
-    
--   La década de los noventa y los dos gobiernos de Alberto Fujimori. Obtenida el 11 de julio del 2015, de [http://www.cverdad.org.pe/ifinal/pdf/TOMO%20III/Cap.%202%20Los%20actores%20polIticos/2.3%20LA%20DECADA%20DEL%2090.pdf](http://www.cverdad.org.pe/ifinal/pdf/TOMO%20III/Cap.%202%20Los%20actores%20polIticos/2.3%20LA%20DECADA%20DEL%2090.pdf)
-    
--   http://accion-popular-juventud-arequipa.blogspot.com/2010/03/segundo-gobierno-de-fernando-belaunde.html
-    
-
--   Álvarez Palenzuela, V.A. (coord.) (2008). Historia Universal de la Edad Media, Barcelona: Ariel.
-    
--   Bloch, M. (1989). Feudal Society: The Growth of Ties of Dependence, Londres: Routledge.
-    
--   Boutruche, R. (1995). Señorío y feudalismo, 1.Los vínculos de dependencia, Madrid: Siglo XXI.
-    
--   Calva, J. L. (1988). Los campesinos y su devenir en las economías de mercado, México, Siglo XXI.
-    
--   Ganshof, F.L. (1975). El feudalismo, Barcelona: Ariel, Barcelona.
-    
--   Huizinga, J. (2001). El Otoño de la Edad Media, Madrid: Alianza.
-    
--   Little, L. y B. Rosenwein (ed.) (2003). La Edad Media a debate, Madrid: Akal.
-    
--   Mitre, E. (2004). Introducción a la Historia de la Edad Media europea, Madrid: Istmo.
+- Carlos PARODI TRECE, “Perú, 1960-2000: políticas económicas y sociales en entornos cambiantes.” 2001
+- SEGUNDO GOBIERNO DE FERNANDO BELAUNDE TERRY: TRABAJO REALIZADO POR ESTUDIANTES DE LA UNIVERSIDAD DE LIMA
+- Waldo, M. B. (2013). Contexto internacional y desempeño macroeconómico en américa latina y el Perú: 1980-2012. Lima, Perú: Departamento de Economía – Pontificia Universidad Católica del Perú
+- Alfredo, D., & Raúl, G.C. (2013).La economía mundial ¿Hacia dónde vamos? Lima, Perú: Pontificia Universidad Católica del Perú.
+- Efraín, G. O. (1991) Una economía bajo violencia: Perú, 1980-1990. Lima, Perú: IEP Instituto de Estudios Peruanos
+- Eduardo, M.P. (2013). Los desafíos del Perú. Lima, Perú: Universidad del Pacífico.
+- Abusada, R., F. Dubois, E. Morón (2000) La Reforma Incompleta: Rescatando los noventa. Lima, Perú. Instituto Peruano de Economía/Universidad del Pacífico
+- Galeón. (n.d). Historia. Obtenida el 11 de julio del 2015
+- La década de los noventa y los dos gobiernos de Alberto Fujimori. Obtenida el 11 de julio del 2015, de http://accion-popular-juventud-arequipa.blogspot.com/2010/03/segundo-gobierno-de-fernando-belaunde.html
+- Álvarez Palenzuela, V.A. (coord.) (2008). Historia Universal de la Edad Media, Barcelona: Ariel.
+- Bloch, M. (1989). Feudal Society: The Growth of Ties of Dependence, Londres: Routledge.
+- Boutruche, R. (1995). Señorío y feudalismo, 1.Los vínculos de dependencia, Madrid: Siglo XXI.
+- Calva, J. L. (1988). Los campesinos y su devenir en las economías de mercado, México, Siglo XXI.
+- Ganshof, F.L. (1975). El feudalismo, Barcelona: Ariel, Barcelona.
+- Huizinga, J. (2001). El Otoño de la Edad Media, Madrid: Alianza.
+- Little, L. y B. Rosenwein (ed.) (2003). La Edad Media a debate, Madrid: Akal.
+- Mitre, E. (2004). Introducción a la Historia de la Edad Media europea, Madrid: Istmo.

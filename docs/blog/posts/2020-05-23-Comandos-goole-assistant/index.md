@@ -23,7 +23,7 @@ Stop playing
 
 - OK Google, stop. / stäp
 
-Pause  
+Pause
 
 - OK Google, pause. / pôz
 - OK Google, resume.  /  rəˈzo͞om
@@ -51,7 +51,7 @@ Change Google Assistant's voice
 
 - OK Google, change your voice.
 
-You can string two commands together  
+You can string two commands together
 
 - OK Google, what is time, and what's the weather?
 
@@ -103,14 +103,14 @@ SMS
 
 - OK Google, SMS.
 - OK Google, text Eugene.
-- OK Google, text John <<Buy some milk>>.
-- OK Google, message to John <Hello, John>.
+- OK Google, text John Buy some milk.
+- OK Google, message to John Hello, John.
 
 Send a WhatsApp or Viber message
 
 - OK Google, message Eugene via WhatsApp.
 - OK Google, message Eugene via Viber.
-- OK Google, message Eugene <Hello, Eugene>.
+- OK Google, message Eugene Hello, Eugene.
 - OK Google, WhatsApp John.
 - OK Google, Viber John.
 - OK Google, voice message to Eugene.
@@ -163,15 +163,15 @@ The nutritional value
 
 Dictionary
 
- Word meanings
+Word meanings
 
-- OK Google, What is the definition of the word <instant>?
-- OK Google, What does the word <mammal> mean?
-- OK Google, find the definition of <agila>.
+- OK Google, What is the definition of the word instant?
+- OK Google, What does the word mammal mean?
+- OK Google, find the definition of agila.
 
 Word spelling
 
-- OK Google, How do you spell <ambassador>?
+- OK Google, How do you spell ambassador?
 
 Easter Eggs
 
@@ -233,9 +233,9 @@ Send email
 
 - OK Google, send an email to Eugene.
 
-- OK Google, send email to Eugene <Buy some milk>>.
+- OK Google, send email to Eugene Buy some milk.
 
-Geography  
+Geography
 
 Country facts
 
@@ -307,9 +307,9 @@ Play a Google Music playlist
 
 Play a song
 
-- OK Google, play <Can't Stop> on Google Play Music.
+- OK Google, play Can't Stop on Google Play Music.
 
-- OK Google, plays <At The End> by <Linkin Park>.
+- OK Google, plays At The End by Linkin Park.
 
 Play an artist
 
@@ -347,7 +347,7 @@ Play music based on genre /mood/activity
 
 Find the song by part of the lyrics
 
-- OK Google, play the song that goes: <Head out on the highway>.
+- OK Google, play the song that goes: Head out on the highway.
 
 Ask what's playing
 
@@ -359,11 +359,11 @@ Ask what's playing
 
 Get information
 
-- OK Google, who sings the song <Let It Go>?
+- OK Google, who sings the song Let It Go?
 
-- OK Google, who is in the band <Daft Punk>?
+- OK Google, who is in the band Daft Punk?
 
-- OK Google, what year did Linkin Park release <Hybrid Theory>
+- OK Google, what year did Linkin Park release Hybrid Theory
 
 Movies
 
@@ -397,7 +397,7 @@ Listen to the latest news
 
 - OK Google, tell me the news.
 
-- OK Google, news.  
+- OK Google, news.
 
 Listen to the latest news about a specific news category
 
@@ -463,7 +463,7 @@ Facts about celebrities
 
 - OK Google, who is the president of Croatia?
 
-Physics & Chemistry  
+Physics & Chemistry
 
 Physical
 
@@ -497,7 +497,7 @@ Near places
 
 Radio
 
-Listen to the radio station by <Radio Station Name> using the Tuneln Radio app
+Listen to the radio station by Radio Station Name using the Tuneln Radio app
 
 - OK Google, play Bloomberg Radio on Tunnel.
 
@@ -539,7 +539,7 @@ Check reminders
 
 - OK Google, check my reminders.
 
-- OK Google, check all my reminders.  
+- OK Google, check all my reminders.
 
 Cancel reminders
 
@@ -649,9 +649,9 @@ Set a timer
 
 Set a timer with name
 
-- OK Google, set timer  <Pizza> for 5 minutes.
+- OK Google, set timer  Pizza for 5 minutes.
 
-- OK Google, set timer <Pasta> for 10 minutes.
+- OK Google, set timer Pasta for 10 minutes.
 
 Check timers
 
@@ -671,13 +671,13 @@ Set an alarm
 
 - OK Google, snooze.
 
-- OK Google, snooze for 10 minutes.  
+- OK Google, snooze for 10 minutes.
 
 Check / Cancel alarms
 
 - OK Google, what alarms are set?
 
-- OK Google, cancel my alarms.  
+- OK Google, cancel my alarms.
 
 Set a sleep timer
 
@@ -689,21 +689,21 @@ Translations
 
 Translate to Russian
 
-- OK Google, how do we say <good night>> in Russian?
+- OK Google, how do we say good night in Russian?
 
-- OK Google, translates <Excusez-Moi> to Russian.
+- OK Google, translates Excusez-Moi to Russian.
 
 Translate to French
 
-- OK Google, how do we say <excuse me> in French?
+- OK Google, how do we say excuse me in French?
 
 Translate to German
 
-- OK Google, translate <Good evening> to German.
+- OK Google, translate Good evening to German.
 
 Translate to Spanish
 
-- OK Google, how do we say <Guten Tag> in English?
+- OK Google, how do we say Guten Tag in English?
 
 Travel
 
@@ -729,11 +729,11 @@ Flights
 
 - OK Google, when does United Airlines 515 leave?
 
-Find restaurant to try  
+Find restaurant to try
 
 - OK Google, what hotels are nearby?
 
-- OK Google, hotels in Moscow.  
+- OK Google, hotels in Moscow.
 
 Discover place to visit
 
@@ -775,7 +775,7 @@ Play recommended video on YouTube
 
 - OK Google, turn on subtitles
 
-Find the video on YouTube  
+Find the video on YouTube
 
 - OK Google, play funny cat videos
 
@@ -815,13 +815,13 @@ Security Camera
 
 - OK Google, what's on my backyard?
 
-Weather  
+Weather
 
 - OK Google, show me the weather on my TV
 
 - OK Google, show me the weather for tomorrow on my TV.
 
-Calculator  
+Calculator
 
 - OK Google, show me Google´s stock price on my TV
 

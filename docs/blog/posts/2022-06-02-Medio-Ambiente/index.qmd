@@ -13,12 +13,12 @@ tags:
   - Economía
   - Recursos naturales
 citation:
-  author: 
-  - Edison Achalma Mendoza
-  - Zahira Añanca Mitma 
-  - Anais Fernández Pujaico 
-  - Brenda Gamboa Rua 
-  - Margoth Gómez Ayala 
+  author:
+    - Edison Achalma Mendoza
+    - Zahira Añanca Mitma
+    - Anais Fernández Pujaico
+    - Brenda Gamboa Rua
+    - Margoth Gómez Ayala
 date: "06/03/2022"
 ---
 
@@ -53,13 +53,9 @@ Además, es fundamental promover la conciencia ambiental y la educación sobre e
 Cuando se trata de adaptarnos a las consecuencias del cambio climático, existen diversas medidas que nos ayudan a reducir nuestra vulnerabilidad. A continuación, se presentan algunas acciones clave:
 
 - Construir edificaciones e infraestructuras más seguras y sostenibles, teniendo en cuenta los posibles impactos del cambio climático. Además, es importante enfocarse en la restauración de los ecosistemas dañados, lo que contribuye a fortalecer la resiliencia frente a eventos climáticos extremos.
-    
 - Llevar a cabo la restauración paisajística y la reforestación de bosques, ya que estas acciones no solo promueven la conservación de la biodiversidad, sino que también ayudan a mitigar los efectos del cambio climático.
-    
 - Fomentar la diversificación de los cultivos, de manera que sean capaces de adaptarse a las condiciones climáticas cambiantes. Esto implica explorar variedades de cultivos más resistentes y promover prácticas agrícolas sostenibles que se adapten a los cambios en los patrones de lluvia y temperatura.
-    
 - Promover la investigación y el desarrollo de soluciones innovadoras para la prevención y gestión de catástrofes naturales, con el objetivo de anticiparse y responder de manera eficiente a los eventos climáticos extremos.
-    
 - Establecer protocolos de actuación claros y eficaces para situaciones de emergencia climática, con el fin de minimizar los riesgos y proteger a la población de manera rápida y efectiva.
 
 ## ¿Cómo promover reformas inclusivas?
@@ -69,13 +65,9 @@ Una forma efectiva de promover reformas inclusivas es a través de la "Creación
 La creación y el fomento de capacidades se refieren a fortalecer el conocimiento y las habilidades de las personas, permitiéndoles participar de manera activa y significativa en la toma de decisiones y acciones relacionadas con el cambio climático. Algunas acciones clave en este enfoque incluyen:
 
 - Promover programas educativos y de sensibilización sobre el cambio climático, dirigidos a diferentes grupos de la sociedad, desde estudiantes hasta profesionales y líderes comunitarios. Estos programas deben abordar tanto los aspectos científicos como los sociales y económicos del cambio climático, fomentando una comprensión integral del tema.
-    
 - Impulsar la investigación y el desarrollo de soluciones innovadoras para abordar los desafíos del cambio climático. Esto incluye apoyar la investigación científica, tecnológica y social, así como fomentar la colaboración entre instituciones académicas, organizaciones de la sociedad civil y el sector privado.
-    
 - Facilitar el acceso a recursos y oportunidades para que las comunidades vulnerables puedan adaptarse y mitigar los impactos del cambio climático. Esto implica brindar apoyo técnico, financiero y de capacitación para promover la resiliencia en estas comunidades.
-    
 - Fomentar la participación activa de la sociedad civil en la toma de decisiones y en la formulación de políticas relacionadas con el cambio climático. Esto incluye la creación de espacios de diálogo y consulta, así como la promoción de la inclusión de diferentes grupos de interés en el proceso de toma de decisiones.
-
 
 Aquí está el texto mejorado:
 
@@ -100,21 +92,20 @@ En este sentido, se plantean las variables con las que se desarrollará el model
 
 A continuación, se proporciona la definición conceptual, los indicadores y las unidades de medida de estas variables:
 
-| Variable | Definición Conceptual | Indicador |
-| --- | --- | --- |
-| **Variable Endógena:** Desarrollo sostenible | Se refiere al desarrollo que satisface las necesidades del presente sin comprometer la capacidad de las futuras generaciones, garantizando el equilibrio entre crecimiento económico, cuidado del medio ambiente y bienestar social. | Índice de Enriquecimiento inclusivo (PBI verde) |
-| **Variables Exógenas:** |  |  |
-| Contaminación del aire | Se refiere a la presencia en el aire de partículas pequeñas o productos gaseosos secundarios que pueden representar riesgos, daños o molestias para las personas, las plantas y los animales expuestos a dicho ambiente. | Emisiones anuales de CO2 en toneladas por año |
-| Pérdida de biodiversidad | Hace referencia a la disminución o desaparición de los seres vivos que habitan el planeta, incluyendo los distintos niveles de organización biológica y su variabilidad genética, así como los patrones naturales presentes en los ecosistemas. | Número de especies de fauna y flora |
-| Deforestación | Se refiere a la eliminación completa de un bosque mediante la tala, para dar espacio a otros usos en su lugar. | Pérdida de superficie forestal medida en hectáreas |
+| Variable                                     | Definición Conceptual                                                                                                                                                                                                                           | Indicador                                          |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| **Variable Endógena:** Desarrollo sostenible | Se refiere al desarrollo que satisface las necesidades del presente sin comprometer la capacidad de las futuras generaciones, garantizando el equilibrio entre crecimiento económico, cuidado del medio ambiente y bienestar social.            | Índice de Enriquecimiento inclusivo (PBI verde)    |
+| **Variables Exógenas:**                      |                                                                                                                                                                                                                                                 |                                                    |
+| Contaminación del aire                       | Se refiere a la presencia en el aire de partículas pequeñas o productos gaseosos secundarios que pueden representar riesgos, daños o molestias para las personas, las plantas y los animales expuestos a dicho ambiente.                        | Emisiones anuales de CO2 en toneladas por año      |
+| Pérdida de biodiversidad                     | Hace referencia a la disminución o desaparición de los seres vivos que habitan el planeta, incluyendo los distintos niveles de organización biológica y su variabilidad genética, así como los patrones naturales presentes en los ecosistemas. | Número de especies de fauna y flora                |
+| Deforestación                                | Se refiere a la eliminación completa de un bosque mediante la tala, para dar espacio a otros usos en su lugar.                                                                                                                                  | Pérdida de superficie forestal medida en hectáreas |
 
 : Variables e indicadores del modelo de economía circular {#tbl-1}
 
 En base a lo expuesto, planteamos el siguiente modelo econométrico:
 
-
-$$ 
-PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu 
+$$
+PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
 $$ {#eq-1}
 
 
@@ -148,8 +139,11 @@ En la gráfica, se observa una relación positiva entre las prácticas agrícola
 
 La ecuación que representa esta relación es:
 
+
 $$
-PD = b0 + b1 * PAI
+
+PD = b0 + b1 \* PAI
+
 $$
 
 $↑PAI → ↑PD$: A mayor cantidad de prácticas agrícolas insostenibles, se genera una mayor pérdida de diversidad.
@@ -169,35 +163,35 @@ En 2014, las regiones más afectadas por emergencias de origen climático fueron
 Los sectores agrícola y pesquero, esenciales para la seguridad alimentaria del país, dependen directamente del clima. Estos sectores contribuyen con el 5,7% del Producto Bruto Interno (PBI) y emplean al 25,8% de la población económicamente activa ocupada a nivel nacional y al 74% de la población económicamente activa rural. Dado que el 55% de la población en situación de pobreza trabaja en estas actividades, queda en evidencia la sensibilidad de un gran número de personas al cambio climático. Además, el clima también afecta a sectores relevantes como la minería y la energía hidroeléctrica, que dependen de los recursos hídricos para su funcionamiento.
 
 - **Sector Agrícola**
-    
+
 La agricultura en el Perú es vulnerable a las variaciones climáticas, como inundaciones, granizadas, heladas y eventos del fenómeno El Niño (ENSO), que afectan el rendimiento de los cultivos. El 34% de la superficie agrícola se riega y se concentra en la costa, donde hay mayor infraestructura. El 66% de la agricultura se desarrolla bajo secano, dependiendo exclusivamente de las lluvias, y se encuentra principalmente en la sierra y la selva. La sierra enfrenta deficiencias en infraestructura de almacenamiento de agua y riego, a pesar de recibir mayores precipitaciones. Además, la topografía accidentada limita la disponibilidad de nuevas tierras para el cultivo. Las sequías tienen efectos negativos significativos en esta zona. Por otro lado, la selva experimenta altas precipitaciones durante seis meses al año, pero cuenta con áreas limitadas propicias para la agricultura debido a restricciones naturales.
 
 - **Sector Ganadero**
-    
+
 El cambio climático también generará cambios importantes en el sector ganadero, como la disminución de las áreas de pastoreo y la competencia espacial con la agricultura. Se espera una reducción de aproximadamente el 50% en la extensión de los pajonales, bofedales y arbustales en la puna, que representan el 77,6% de la extensión total de la región. Esta reducción afectará la capacidad de carga y la contribución relativa de la ganadería al PBI. Además, la disminución de los bofedales, una fuente importante de forraje durante los períodos de sequía, dificultará el desarrollo de la ganadería, especialmente en áreas áridas donde son la principal fuente de agua durante períodos críticos.
 
 - **Sector Pesquero**
-    
+
 La disponibilidad de la anchoveta, recurso pesquero clave, se verá afectada negativamente por el cambio climático, especialmente en los escenarios RCP 8.5 y RCP 4.5. Se esperan cambios en las condiciones de temperatura, oxígeno disuelto y productividad primaria. Esto resultará en una disminución importante de la contribución económica del sector pesquero a la economía nacional.
 
 - **Sector Minero**
-    
+
 En la mayoría de las cuencas mineras, los impactos del cambio climático en la disponibilidad hídrica no son significativos, excepto en las cuencas mineras de cobre y zinc. La eficiencia en el uso y consumo del agua contribuirá a reducir futuros conflictos por este recurso y garantizar su disponibilidad para la minería, considerando que el consumo humano y agrícola tienen prioridad legal.
 
 - **Sector de Hidroenergía**
-    
+
 La producción eléctrica del sector de hidroenergía en el Perú está estrechamente relacionada con la disponibilidad de agua en las cuencas. Por lo tanto, el cambio climático puede afectar la actividad de este sector debido a las variaciones en las condiciones de precipitación.
 
 - **Sector de Infraestructura**
-    
+
 La infraestructura se verá afectada por eventos climáticos extremos, especialmente relacionados con las precipitaciones. Se espera que el aumento de lluvias genere modificaciones en los caudales de agua cerca de las redes viales, lo que afectaría las estructuras de drenaje y aumentaría la probabilidad de daños en las carreteras. Esto se traduciría en un aumento en los costos de mantenimiento y reparación de infraestructuras viales.
 
 - **Sector Turismo**
-    
+
 El turismo es un sector importante para la economía peruana en términos de generación de empleo, divisas, comercio e inversión. El cambio climático afectará directamente los destinos turísticos debido a factores como temperatura, precipitación, viento, humedad y aumento del nivel del mar, así como eventos climáticos extremos. Estos cambios causarán daños a la infraestructura y requerirán medidas adicionales de emergencia, lo que aumentará los gastos en seguros, sistemas de reserva de agua, electricidad y evacuación, afectando la competitividad, la demanda turística, la estacionalidad y los gastos de adaptación y mitigación.
 
 - **Sector Salud**
-    
+
 El cambio climático representa una amenaza directa para el sector de la salud y la economía en general. Puede afectar directamente a la población al modificar la frecuencia y distribución de enfermedades transmitidas por vectores, como la malaria, y también puede tener efectos indirectos al empeorar la economía de los hogares.
 
 En cuanto a las emisiones de gases de efecto invernadero, no todos los sectores productivos contribuyen de la misma manera. Según el Panel Intergubernamental sobre el Cambio Climático, los principales emisores a nivel mundial son la generación de electricidad, las actividades agropecuarias y la industria.
@@ -359,3 +353,4 @@ La ecuación de regresión muestra que, por cada aumento en el precio del petró
 # Relación entre el volumen del cobre (miles de toneladas) y el oro (miles de onzas troy).
 
 Para analizar la relación entre el volumen del cobre (medido en miles de toneladas) y el oro (medido en miles de onzas troy), consideramos las series mensuales de exportaciones de productos tradicionales del BCRP. Graficaremos y explicaremos su comportamiento, evaluando si existe una relación de largo plazo (cointegración) entre ambas variables en el Perú, utilizando el mismo período que en las preguntas anteriores (mencionar el período específico).
+$$

@@ -5,7 +5,8 @@
 %
 \documentclass[
   letterpaper,
-]{article}
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -41,7 +42,7 @@
 \usepackage{xcolor}
 \usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
@@ -78,7 +79,184 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\usepackage{amsmath}
+% Preámbulo
+\usepackage[utf8]{inputenc} % Codificación de entrada en UTF-8
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+\usepackage{float} % Permite controlar la ubicación de figuras y tablas
+\usepackage[normalem]{ulem} % Permite subrayar texto
+%\usepackage[spanish]{babel} % Configuración para escribir en español
+%\selectlanguage{spanish} % Selecciona el idioma español
+\useunder{\uline}{\ul}{} % Crea una nueva macro para subrayar
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+
+% Otros paquetes
+%\usepackage[natbibapa]{apacite} % Formato de citación APA
+\setcounter{secnumdepth}{3} % Numera las secciones
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{setspace} % Controla el espacio entre líneas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{multirow} % Permite crear tablas con varias filas
+\usepackage{array} % Da formato a las tablas
+\usepackage{subcaption} % Permite insertar subimágenes
+%\usetikzlibrary{calc,positioning,shapes.geometric,shapes.symbols,shapes.misc} % Biblioteca de TikZ
+
+% Cambiar titulo de bibliografía
+%\addto\captionsspanish{\renewcommand{\bibname}{\centering REFERENCIAS BIBLIOGRÁFICAS}}
+
+% Numeración de las secciones con números romanos mayúsculas
+\renewcommand{\thesection}{\Roman{section}} %Las secciones estaran con numeración romana MAYUSCULA
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+
+%---- DEDICATORIA -----------------------------------
+\newenvironment{dedicatoria}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+  \vspace*{\stretch{8}}% some space at the top 
+  \itshape             % Texto en cursiva (italica)
+  \raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+  \vspace{\stretch{0.6}} % space at bottom is three times that at the top
+  \clearpage           % Termina la página
+}
+
+%----------------------------------------------
+
+
+%---- PERMISOS -----------------------------------
+\newenvironment{permisos}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+  \vspace*{\fill}
+  \raggedright          % flush to the Left margin
+}
+{\par % end the paragraph
+  \clearpage           % Termina la página
+}
+
+%----------------------------------------------
+
+
+%---- AGRADECIMIENTOS -----------------------------------
+\newenvironment{agradecimientos}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+
+}
+{\par % end the paragraph
+  \clearpage           % Termina la página
+}
+
+%-------------------------------------------------------
+
+
+%---------------- ENCABEZADOS Y PIE DE PÁGINA --------------------
+%\usepackage[left=3.81 cm,right=2.54 cm,top=2.54 cm,bottom=2.54 cm]{geometry}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+
+%\renewcommand{\headrulewidth}{0.5 pt}
+%\renewcommand{\footrulewidth}{0.5 pt}
+
+
+%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize{\@facultad}}}
+%\rhead[]{\textit{\scriptsize \leftmark}}
+
+%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
+%\rfoot[]{\small \thepage}
+%---------------------------------------
+
+%MODIFICACIONES  A ENCABEZADO Y PIE DE PÁGINA
+
+%\fancypagestyle{plain}{
+%\fancyhf{}
+
+%Líneas superiores e inferiores del encabezado y pie de página respectivamente.
+
+%\renewcommand{\headrulewidth}{0.5 pt}
+%\renewcommand{\footrulewidth}{0.5 pt}
+
+% Contenido del encabezado y pie de página 
+
+%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize {\@facultad}}}
+%\rhead[]{\textit{\scriptsize \leftmark}}
+
+
+%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
+%\rfoot[]{\small \thepage}
+%}
+%----------------------------------------------
+
+%RMARDOW%
+
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{rotating, graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+% new command for pretty oversets with \sim
+\newcommand\simcal[1]{\stackrel{\sim}{\smash{\mathcal{#1}}\rule{0pt}{0.5ex}}}
+
+\newcommand{\comma}{,\,}
+
+\floatplacement{figure}{H}
+
+\PassOptionsToPackage{table}{xcolor}
+
+\usepackage{tcolorbox}
+
+\definecolor{kcblue}{HTML}{D7DDEF}
+\definecolor{kcdarkblue}{HTML}{2B4E70}
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+% \makeatletter % undo the wrong changes made by mathspec
+% \let\RequirePackage\original@RequirePackage
+% \let\usepackage\RequirePackage
+% \makeatother
+
+\newenvironment{rmdknit}
+{\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline \\
+      }
+      {
+      \\\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newenvironment{rmdnote}
+{\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline \\
+      }
+      {
+      \\\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newtcolorbox[auto counter, number within=section]{keyconcepts}[2][]{%
+  colback=kcblue,colframe=kcdarkblue,fonttitle=\bfseries, title=Key Concept~#2, after title={\newline #1}, beforeafter skip=15pt}
+
+
+\KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
 \makeatletter
@@ -175,18 +353,13 @@ los ingresos fiscales en el periodo 2007-2019}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
-\renewcommand*\contentsname{Contenidos}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
-\tableofcontents
-}
-\hypertarget{introducciuxf3n}{%
-\section{Introducción}\label{introducciuxf3n}}
+\hypertarget{sec-introducciuxf3n}{%
+\section*{Introducción}\label{sec-introducciuxf3n}}
+\addcontentsline{toc}{section}{Introducción}
 
-En el Perú, al igual que en otros países de Latinoamérica, el
+\textbf{En el Perú,} al igual que en otros países de Latinoamérica, el
 crecimiento económico juega un papel fundamental en la recaudación de
 impuestos. Sin embargo, eventos externos y factores negativos pueden
 afectar el crecimiento económico y, por ende, el crecimiento tributario.
@@ -241,18 +414,19 @@ El desarrollo de la investigación se dividió de la siguiente manera:
   estudio.
 \end{enumerate}
 
-\hypertarget{planteamiento-del-problema}{%
-\section{Planteamiento del problema}\label{planteamiento-del-problema}}
+\hypertarget{sec-planteamiento-del-problema}{%
+\section{Planteamiento del
+problema}\label{sec-planteamiento-del-problema}}
 
-\hypertarget{problema-general}{%
-\subsection{Problema General}\label{problema-general}}
+\hypertarget{sec-problema-general}{%
+\subsection{Problema General}\label{sec-problema-general}}
 
 ¿En qué medida influye el crecimiento económico en la recaudación de
 impuestos por la SUNAT en el departamento de Ayacucho, periodo
 2007-2019?
 
-\hypertarget{problemas-especuxedficos}{%
-\subsection{Problemas específicos}\label{problemas-especuxedficos}}
+\hypertarget{sec-problemas-especuxedficos}{%
+\subsection{Problemas específicos}\label{sec-problemas-especuxedficos}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -268,18 +442,18 @@ impuestos por la SUNAT en el departamento de Ayacucho, periodo
   respecto al crecimiento económico durante el periodo 2007-2019?
 \end{enumerate}
 
-\hypertarget{objetivos}{%
-\section{Objetivos}\label{objetivos}}
+\hypertarget{sec-objetivos}{%
+\section{Objetivos}\label{sec-objetivos}}
 
-\hypertarget{objetivos-generales}{%
-\subsection{Objetivos generales}\label{objetivos-generales}}
+\hypertarget{sec-objetivos-generales}{%
+\subsection{Objetivos generales}\label{sec-objetivos-generales}}
 
 Determinar la influencia del crecimiento económico en la recaudación de
 impuestos por la SUNAT en el departamento de Ayacucho, periodo
 2007-2019.
 
-\hypertarget{objetivos-especuxedficos}{%
-\subsection{Objetivos específicos}\label{objetivos-especuxedficos}}
+\hypertarget{sec-objetivos-especuxedficos}{%
+\subsection{Objetivos específicos}\label{sec-objetivos-especuxedficos}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -295,11 +469,12 @@ impuestos por la SUNAT en el departamento de Ayacucho, periodo
   recaudación de impuestos durante el periodo 2007-2019.
 \end{enumerate}
 
-\hypertarget{justificaciuxf3n}{%
-\section{Justificación}\label{justificaciuxf3n}}
+\hypertarget{sec-justificaciuxf3n}{%
+\section{Justificación}\label{sec-justificaciuxf3n}}
 
-\hypertarget{justificaciuxf3n-teuxf3rica}{%
-\subsection{Justificación teórica}\label{justificaciuxf3n-teuxf3rica}}
+\hypertarget{sec-justificaciuxf3n-teuxf3rica}{%
+\subsection{Justificación
+teórica}\label{sec-justificaciuxf3n-teuxf3rica}}
 
 El presente trabajo busca analizar e interpretar de manera fundamentada
 los efectos de la influencia del crecimiento económico en la recaudación
@@ -310,8 +485,9 @@ económico. Los resultados obtenidos servirán como base para futuros
 estudios similares, generando un aporte significativo al entendimiento
 de estos fenómenos económicos.
 
-\hypertarget{justificaciuxf3n-pruxe1ctica}{%
-\subsection{Justificación práctica}\label{justificaciuxf3n-pruxe1ctica}}
+\hypertarget{sec-justificaciuxf3n-pruxe1ctica}{%
+\subsection{Justificación
+práctica}\label{sec-justificaciuxf3n-pruxe1ctica}}
 
 Los resultados de esta investigación ofrecerán información relevante
 para la toma de decisiones en el ámbito fiscal, lo cual puede traducirse
@@ -326,9 +502,9 @@ permitirá al Estado tomar acciones para abordar la elusión y evasión
 fiscal en los diferentes sectores económicos y promover el desarrollo
 del país.
 
-\hypertarget{justificaciuxf3n-metodoluxf3gica}{%
+\hypertarget{sec-justificaciuxf3n-metodoluxf3gica}{%
 \subsection{Justificación
-metodológica}\label{justificaciuxf3n-metodoluxf3gica}}
+metodológica}\label{sec-justificaciuxf3n-metodoluxf3gica}}
 
 Esta investigación se basa en un análisis estadístico aplicado,
 descriptivo y cuantitativo para determinar los efectos del crecimiento
@@ -340,11 +516,11 @@ relación entre el crecimiento económico, la recaudación de impuestos y
 otras variables relacionadas, en aras de obtener resultados más técnicos
 y robustos.
 
-\hypertarget{marco-teuxf3rico}{%
-\section{Marco teórico}\label{marco-teuxf3rico}}
+\hypertarget{sec-marco-teuxf3rico}{%
+\section{Marco teórico}\label{sec-marco-teuxf3rico}}
 
-\hypertarget{sistema-teuxf3rico}{%
-\subsection{Sistema teórico}\label{sistema-teuxf3rico}}
+\hypertarget{sec-sistema-teuxf3rico}{%
+\subsection{Sistema teórico}\label{sec-sistema-teuxf3rico}}
 
 Según \textcite{akanbi_impact_2020} en su artículo científico investigó
 ``The Impact of Tax Collection and Incentives on Economic Growth:
@@ -358,7 +534,7 @@ independientes) que cubre un período de ocho años entre 2011 y 2018
 obtenidos del Servicio Federal de Impuestos Internos y del Banco Central
 de Nigeria. Dada la siguiente ecuación de estimación:
 
-\(PIB = a + β_i TAXR + β_2 FDI + β_3 FDIC + e\)
+\(PIB = \alpha + \beta_{i}TAXR + \beta_{2}EID + \beta_{3}FDIC + \epsilon\)
 
 \(TAXR\): Impuesto recaudado
 
@@ -741,7 +917,7 @@ de 1990 a 2016 y utilizando una relación cuadrática, entre el
 crecimiento del PBI per cápita y las tasas de los impuestos a estudiar,
 estimando a través de efectos fijos.
 
-\(g_{i, t} = \alpha + \beta_{1}X_{i, t}^{´} + \beta_{2}X_{i, t}^{´2} + \beta_{3}Z_{i, t}^{´} + \delta_{i, t}^{´} + u_{i, t} + \epsilon_{i, t}\)
+\(g_{i, t} = \alpha + \beta_{1}X_{i, t}^{´} + \beta_{2}X_{i, t}^{´2} + \beta_{3}Z_{i, t}^{´} + \delta_{i, t}^{´} + \mu_{i, t} + \epsilon_{i, t}\)
 
 Donde los subíndices indican el país (i) y el periodo (t), la variable
 dependiente es el promedio de tres años de la tasa de crecimiento del
@@ -752,7 +928,7 @@ cuadrático de la medida anterior para controlar la no-linealidad de las
 tasas, el vector de las variables explicativas basadas en la literatura
 de crecimiento \(Z_{i, t}\), dummies de tiempo capturando shocks que
 afectan el crecimiento de la economía \(\delta_{i, t}^{´}\), el efecto
-fijo del país i \(u_{i}\) y finalmente el término del error del modelo
+fijo del país i \(\mu_{i}\) y finalmente el término del error del modelo
 \(\epsilon_{i, t}\).
 
 Encontrando que el aumento en la tasa de impuestos al ingreso personal y
@@ -825,7 +1001,7 @@ participación porcentual del PIB a partir de los datos oficiales del
 Fondo Monetario Internacional. Estableciendo el siguiente modelo de
 regresión:
 
-\(GDP_{i, t} = β_0 + β_{1}CIT_{i, t}+ β_{2}VAT_{i, t} + β_{3}SSC_{i, t} + β_{4}EXC_{i, t} + ε_{i, t}\)
+\(GDP_{i, t} = \beta_{0} + \beta_{1}CIT_{i, t}+ \beta_{2}VAT_{i, t} + \beta_{3}SSC_{i, t} + \beta_{4}EXC_{i, t} + \epsilon_{i, t}\)
 
 \(CIT\): Impuesto sobre la renta de sociedades
 
@@ -949,23 +1125,23 @@ un análisis de tipo correlacional, porque se busca una asociación y
 correlación entre las variables de estudio. El modelo econométrico
 aplicado es con logaritmos, siendo un modelo de regresión múltiple.
 
-\(𝑙𝑛𝑌_𝑖 = 𝛽_0 + 𝛽_{1}𝑙𝑛𝑋_1 + 𝛽_{2}𝑙𝑛𝑋_2 + 𝛽_{3}𝑙𝑛𝑋_3 + 𝛽_{4}𝑙𝑛𝑋_4 + 𝛽_{5}𝑙𝑛𝑋_5 + 𝑈_𝑖\)
+\(\ln(Y_i) = \beta_{0} + \beta_{1}\ln(X_1) + \beta_{2}\ln(X_2) + \beta_{3}\ln(X_3) + \beta_{4}\ln(X_4) + \beta_{5}\ln(X_5) + \mu_{i}\)
 
 Dónde:
 
-\(LnY_i\)= Logaritmo del Producto Interno Bruto (PIB)
+\(\ln(Y_i)\)= Logaritmo del Producto Interno Bruto (PIB)
 
-\(LnX_1\)= Logaritmo del Impuesto a la renta
+\(\ln(X_1)\)= Logaritmo del Impuesto a la renta
 
-\(LnX_2\)= Logaritmo del Impuesto al valor agregado (IVA)
+\(\ln(X_2)\)= Logaritmo del Impuesto al valor agregado (IVA)
 
-\(LnX_3\)= Logaritmo del Impuesto a los consumos especiales (ICE)
+\(\ln(X_3)\)= Logaritmo del Impuesto a los consumos especiales (ICE)
 
-\(LnX_4\)= Logaritmo del Impuestos agregados especiales
+\(\ln(X_4)\)= Logaritmo del Impuestos agregados especiales
 
-\(LnX_5\)= Logaritmo de Otros impuestos
+\(\ln(X_5)\)= Logaritmo de Otros impuestos
 
-\(U_i\)= Término de perturbación estocástica.
+\(\mu_{i}\)= Término de perturbación estocástica.
 
 Los resultados establecen una correlación significativa entre las
 políticas tributarias y el crecimiento económico de Ecuador, así mismo,
@@ -1061,7 +1237,7 @@ ello, utilizó un modelo econométrico de panel de datos con efectos
 fijos. Por lo cual, con el fin de seleccionar el más apropiado realizó
 la prueba de Haussman del siguiente modelo especificado:
 
-\(EG_{i, t} = β_{1}PG_{i, t-1} + β_{2}TaxRate_{i, t} + β_{3}TaxCutInd_{i, t-L} + γ_t + ε_{i, t}\)
+\(EG_{i, t} = \beta_{1}PG_{i, t-1} + \beta_{2}TaxRate_{i, t} + \beta_{3}TaxCutInd_{i, t-L} + \gamma_{t} + \epsilon_{i, t}\)
 
 \(EG_{i, t}\): Tasas de crecimiento anual del empleo
 
@@ -1163,7 +1339,7 @@ alumbrado público y limpieza.
 
 Modelo teórico
 
-\(Y_t=β_0+β_{1}INFL+β_{2}PBI+μ_t\)
+\(Y_t= \beta_{0} + \beta_{1}INFL + \beta_{2}PBI + \mu_{t}\)
 
 \(Y_t\)= Tasa de variación de la recaudación real
 
@@ -1272,8 +1448,8 @@ efecto positivo en la actividad económica; sin embargo, este impacto no
 es suficiente para recuperar los ingresos iniciales que serán
 sacrificados.
 
-\hypertarget{marco-conceptual}{%
-\subsection{Marco conceptual}\label{marco-conceptual}}
+\hypertarget{sec-marco-conceptual}{%
+\subsection{Marco conceptual}\label{sec-marco-conceptual}}
 
 \textbf{Crecimiento económico}
 
@@ -1419,17 +1595,18 @@ voluntaria. Esta actividad ilícita puede acarrear graves consecuencias
 legales, como multas, prohibiciones para realizar ciertas actividades e
 incluso penas de cárcel.
 
-\hypertarget{hipuxf3tesis}{%
-\section{Hipótesis}\label{hipuxf3tesis}}
+\hypertarget{sec-hipuxf3tesis}{%
+\section{Hipótesis}\label{sec-hipuxf3tesis}}
 
-\hypertarget{hipuxf3tesis-general}{%
-\subsection{Hipótesis General}\label{hipuxf3tesis-general}}
+\hypertarget{sec-hipuxf3tesis-general}{%
+\subsection{Hipótesis General}\label{sec-hipuxf3tesis-general}}
 
 La influencia del crecimiento económico en recaudación de impuestos por
 la SUNAT en el departamento de Ayacucho, periodo 2007-2019, es directa.
 
-\hypertarget{hipuxf3tesis-especuxedficas}{%
-\subsection{Hipótesis Específicas}\label{hipuxf3tesis-especuxedficas}}
+\hypertarget{sec-hipuxf3tesis-especuxedficas}{%
+\subsection{Hipótesis
+Específicas}\label{sec-hipuxf3tesis-especuxedficas}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1444,16 +1621,16 @@ la SUNAT en el departamento de Ayacucho, periodo 2007-2019, es directa.
   durante el periodo 2007-2019, es positiva.
 \end{enumerate}
 
-\hypertarget{variables-e-indicadores}{%
-\section{Variables e indicadores}\label{variables-e-indicadores}}
+\hypertarget{sec-variables-e-indicadores}{%
+\section{Variables e indicadores}\label{sec-variables-e-indicadores}}
 
 En el presente estudio se analizan diversas variables e indicadores para
 comprender la relación entre el crecimiento económico y la recaudación
 de impuestos. A continuación, se detallan las variables e indicadores
 utilizados:
 
-\hypertarget{variable-independiente}{%
-\subsection{Variable independiente}\label{variable-independiente}}
+\hypertarget{sec-variable-independiente}{%
+\subsection{Variable independiente}\label{sec-variable-independiente}}
 
 \begin{itemize}
 \tightlist
@@ -1475,8 +1652,8 @@ Indicador:
   evaluar el desempeño económico y el nivel de actividad productiva.
 \end{itemize}
 
-\hypertarget{variable-dependiente}{%
-\subsection{Variable dependiente}\label{variable-dependiente}}
+\hypertarget{sec-variable-dependiente}{%
+\subsection{Variable dependiente}\label{sec-variable-dependiente}}
 
 \begin{itemize}
 \tightlist
@@ -1516,8 +1693,8 @@ Indicadores:
   indicadores anteriores.
 \end{itemize}
 
-\hypertarget{metodologuxeda}{%
-\section{Metodología}\label{metodologuxeda}}
+\hypertarget{sec-metodologuxeda}{%
+\section{Metodología}\label{sec-metodologuxeda}}
 
 En esta sección se presenta la metodología utilizada en el estudio,
 abordando el tipo y nivel de investigación empleado.
@@ -1569,8 +1746,8 @@ El estudio se encuentra en los siguientes niveles:
   Valor Agregado Bruto y la recaudación de impuestos.
 \end{enumerate}
 
-\hypertarget{poblaciuxf3n-y-muestra}{%
-\subsection{Población y muestra}\label{poblaciuxf3n-y-muestra}}
+\hypertarget{sec-poblaciuxf3n-y-muestra}{%
+\subsection{Población y muestra}\label{sec-poblaciuxf3n-y-muestra}}
 
 \hypertarget{poblaciuxf3n}{%
 \subsubsection{Población}\label{poblaciuxf3n}}
@@ -1586,8 +1763,9 @@ La muestra seleccionada está compuesta por el crecimiento económico y la
 recaudación tributaria en el departamento de Ayacucho durante los años
 2007 a 2019.
 
-\hypertarget{fuentes-de-informaciuxf3n}{%
-\subsection{Fuentes de información}\label{fuentes-de-informaciuxf3n}}
+\hypertarget{sec-fuentes-de-informaciuxf3n}{%
+\subsection{Fuentes de
+información}\label{sec-fuentes-de-informaciuxf3n}}
 
 \hypertarget{tipo-de-informaciuxf3n}{%
 \subsubsection{Tipo de información}\label{tipo-de-informaciuxf3n}}
@@ -1656,8 +1834,8 @@ siguientes:
 
 \hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2917}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7083}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3472}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6528}}@{}}
 \caption{\label{tbl-1}Procedimiento econométrico utilizado para la
 investigación}\tabularnewline
 \toprule\noalign{}
@@ -1693,8 +1871,8 @@ Test de autocorrelación de orden múltiple de Breusch-Godfrey \\
 Nota: La tabla presenta las etapas del análisis econométrico y las
 correspondientes pruebas y técnicas empleadas en cada una de ellas.
 
-\hypertarget{resultados}{%
-\section{Resultados}\label{resultados}}
+\hypertarget{sec-resultados}{%
+\section{Resultados}\label{sec-resultados}}
 
 \hypertarget{anuxe1lisis-e-interpretaciuxf3n-de-nuestros-resultados}{%
 \subsection{Análisis e interpretación de nuestros
@@ -2065,10 +2243,7 @@ modelo de regresión lineal simple. El propósito de este enfoque es
 demostrar el efecto del crecimiento económico en la recaudación de
 impuestos. Los parámetros estimados en el modelo son los siguientes:
 
-\begin{description}
-\item[Modelo: \(R_i = β_1 + β_{2}*VAB + u_i\)]
-Resultados del modelo estimado inicial \{\#tbl-4\}
-\end{description}
+Modelo: \(R_i = \beta_{1} + \beta_{2}VAB + \mu_{i}\)
 
 Dependent Variable: RI
 
@@ -2080,12 +2255,29 @@ Sample: 2007-2019
 
 Included observations: 13
 
+\hypertarget{tbl-4}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\caption{\label{tbl-4}Resultados del modelo estimado
+inicial}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Coefficient
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Std. Error
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+t-Statistic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prob.
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Variable

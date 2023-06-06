@@ -1,26 +1,23 @@
   pdf:
-    documentclass: article
-    papersize: letter
-    language: es
+    documentclass: scrartcl  # Clase de documento para el PDF
+    papersize: letter  # Tamaño del papel
+    language: es  # Idioma del documento
     geometry: 
-      - top=2.54cm
-      - right=2.54cm
-      - bottom=2.54cm
-      - left=2.54cm
-    toc: true
-    toc-depth: 3
-    toc-title: Contenidos
-    number-sections: true
-    number-depth: 3
-    highlight-style: github
-    colorlinks: true
-    cite-method: biblatex
-    link-citation: true
-    link-bibliography: true
-    keep-tex: true
-    cap-location: top
-    fig-cap-location: top
-    tbl-cap-location: top
-    pdf-engine: pdflatex
+      - top=2.54cm  # Margen superior
+      - right=2.54cm  # Margen derecho
+      - bottom=2.54cm  # Margen inferior
+      - left=2.54cm  # Margen izquierdo
+    # toc: true  # Habilitar la tabla de contenido
+    # toc-depth: 3  # Profundidad de la tabla de contenido
+    # toc-title: Contenidos  # Título de la tabla de contenido
+    # number-sections: true  # Numerar secciones
+    # number-depth: 3  # Profundidad de numeración de secciones
+    highlight-style: github  # Estilo de resaltado de código
+    colorlinks: true  # Habilitar enlaces con colores
+    cite-method: biblatex  # Método de citación
+    link-citation: true  # Habilitar enlaces en las citas
+    link-bibliography: true  # Habilitar enlaces en la bibliografía
+    keep-tex: true  # Mantener archivos .tex generados
+    pdf-engine: pdflatex  # Motor de PDF
     include-in-header: 
-      - file: packages.tex
+      - file: packages.tex  # Archivo LaTeX a incluir en el encabezado

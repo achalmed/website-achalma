@@ -1,1 +1,177 @@
-\usepackage{amsmath}
+% Preámbulo
+\usepackage[utf8]{inputenc} % Codificación de entrada en UTF-8
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+\usepackage{float} % Permite controlar la ubicación de figuras y tablas
+\usepackage[normalem]{ulem} % Permite subrayar texto
+%\usepackage[spanish]{babel} % Configuración para escribir en español
+%\selectlanguage{spanish} % Selecciona el idioma español
+\useunder{\uline}{\ul}{} % Crea una nueva macro para subrayar
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+
+% Otros paquetes
+%\usepackage[natbibapa]{apacite} % Formato de citación APA
+\setcounter{secnumdepth}{3} % Numera las secciones
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{setspace} % Controla el espacio entre líneas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{multirow} % Permite crear tablas con varias filas
+\usepackage{array} % Da formato a las tablas
+\usepackage{subcaption} % Permite insertar subimágenes
+%\usetikzlibrary{calc,positioning,shapes.geometric,shapes.symbols,shapes.misc} % Biblioteca de TikZ
+
+% Cambiar titulo de bibliografía
+%\addto\captionsspanish{\renewcommand{\bibname}{\centering REFERENCIAS BIBLIOGRÁFICAS}}
+
+% Numeración de las secciones con números romanos mayúsculas
+\renewcommand{\thesection}{\Roman{section}} %Las secciones estaran con numeración romana MAYUSCULA
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+
+%---- DEDICATORIA -----------------------------------
+\newenvironment{dedicatoria}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+  \vspace*{\stretch{8}}% some space at the top 
+  \itshape             % Texto en cursiva (italica)
+  \raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+  \vspace{\stretch{0.6}} % space at bottom is three times that at the top
+  \clearpage           % Termina la página
+}
+
+%----------------------------------------------
+
+
+%---- PERMISOS -----------------------------------
+\newenvironment{permisos}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+  \vspace*{\fill}
+  \raggedright          % flush to the Left margin
+}
+{\par % end the paragraph
+  \clearpage           % Termina la página
+}
+
+%----------------------------------------------
+
+
+%---- AGRADECIMIENTOS -----------------------------------
+\newenvironment{agradecimientos}
+{\clearpage           % Nueva página
+  \thispagestyle{empty}% No encabezados ni pie de página
+
+}
+{\par % end the paragraph
+  \clearpage           % Termina la página
+}
+
+%-------------------------------------------------------
+
+
+%---------------- ENCABEZADOS Y PIE DE PÁGINA --------------------
+%\usepackage[left=3.81 cm,right=2.54 cm,top=2.54 cm,bottom=2.54 cm]{geometry}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+
+%\renewcommand{\headrulewidth}{0.5 pt}
+%\renewcommand{\footrulewidth}{0.5 pt}
+
+
+%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize{\@facultad}}}
+%\rhead[]{\textit{\scriptsize \leftmark}}
+
+%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
+%\rfoot[]{\small \thepage}
+%---------------------------------------
+
+%MODIFICACIONES  A ENCABEZADO Y PIE DE PÁGINA
+
+%\fancypagestyle{plain}{
+%\fancyhf{}
+
+%Líneas superiores e inferiores del encabezado y pie de página respectivamente.
+
+%\renewcommand{\headrulewidth}{0.5 pt}
+%\renewcommand{\footrulewidth}{0.5 pt}
+
+% Contenido del encabezado y pie de página 
+
+%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize {\@facultad}}}
+%\rhead[]{\textit{\scriptsize \leftmark}}
+
+
+%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
+%\rfoot[]{\small \thepage}
+%}
+%----------------------------------------------
+
+%RMARDOW%
+
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{rotating, graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+% new command for pretty oversets with \sim
+\newcommand\simcal[1]{\stackrel{\sim}{\smash{\mathcal{#1}}\rule{0pt}{0.5ex}}}
+
+\newcommand{\comma}{,\,}
+
+\floatplacement{figure}{H}
+
+\PassOptionsToPackage{table}{xcolor}
+
+\usepackage{tcolorbox}
+
+\definecolor{kcblue}{HTML}{D7DDEF}
+\definecolor{kcdarkblue}{HTML}{2B4E70}
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+% \makeatletter % undo the wrong changes made by mathspec
+% \let\RequirePackage\original@RequirePackage
+% \let\usepackage\RequirePackage
+% \makeatother
+
+\newenvironment{rmdknit}
+{\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline \\
+      }
+      {
+      \\\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newenvironment{rmdnote}
+{\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+      \hline \\
+      }
+      {
+      \\\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newtcolorbox[auto counter, number within=section]{keyconcepts}[2][]{%
+  colback=kcblue,colframe=kcdarkblue,fonttitle=\bfseries, title=Key Concept~#2, after title={\newline #1}, beforeafter skip=15pt}
+
+

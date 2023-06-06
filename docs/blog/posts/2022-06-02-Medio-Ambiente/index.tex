@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  a4paper,
+  letterpaper,
 ]{article}
 
 \usepackage{amsmath,amssymb}
@@ -39,7 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[lmargin=2.54cm,rmargin=2.54cm,tmargin=2.54cm,bmargin=2.54cm]{geometry}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{3}
 % Make \paragraph and \subparagraph free-standing
@@ -78,6 +78,7 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\usepackage{amsmath}
 \makeatletter
 \makeatother
 \makeatletter
@@ -86,36 +87,36 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Tabla de contenidos}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Listado de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Listado de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Listado de Tablas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Listado de Tablas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Tabla}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Tabla}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -132,6 +133,15 @@
 \makeatletter
 \makeatother
 \ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
@@ -140,8 +150,9 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y Desafíos},
-  pdfauthor={Achalma Mendoza Elmer Edison},
+  pdftitle={Abordando el cambio climático y otros desafíos ambientales Perspectivas y soluciones},
+  pdfauthor={Edison Achalma Mendoza},
+  pdflang={es},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -149,22 +160,23 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y
-Desafíos}
+\title{Abordando el cambio climático y otros desafíos ambientales
+Perspectivas y soluciones}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Una revisión detallada de los gobiernos y políticas económicas
-que marcaron la evolución del Perú.}
-\author{Achalma Mendoza Elmer Edison}
-\date{2023-06-03}
+\subtitle{Explorando el impacto, mitigación y adaptación al cambio
+climático, reformas inclusivas y análisis de productos tradicionales y
+recursos naturales}
+\author{Edison Achalma Mendoza}
+\date{2022-06-03}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Contenidos}
 {
@@ -172,8 +184,12 @@ que marcaron la evolución del Perú.}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
+\hypertarget{resuelva-las-siguientes-preguntas}{%
+\section{Resuelva las siguientes
+preguntas}\label{resuelva-las-siguientes-preguntas}}
+
 \hypertarget{quuxe9-es-el-cambio-climuxe1tico-y-cuxf3mo-afecta-a-nuestras-vidas}{%
-\section{¿Qué es el cambio climático y cómo afecta a nuestras
+\subsection{¿Qué es el cambio climático y cómo afecta a nuestras
 vidas?}\label{quuxe9-es-el-cambio-climuxe1tico-y-cuxf3mo-afecta-a-nuestras-vidas}}
 
 El cambio climático se refiere a la alteración del clima atribuida a
@@ -207,7 +223,7 @@ lo hacen particularmente vulnerable al cambio climático.
 Aquí está el texto mejorado:
 
 \hypertarget{cuxf3mo-mitigar-el-cambio-climuxe1tico}{%
-\section{¿Cómo mitigar el cambio
+\subsection{¿Cómo mitigar el cambio
 climático?}\label{cuxf3mo-mitigar-el-cambio-climuxe1tico}}
 
 La lucha contra el cambio climático es un desafío importante, pero con
@@ -242,7 +258,7 @@ de manera efectiva. Juntos, podemos marcar la diferencia en la
 mitigación del cambio climático y construir un futuro más sostenible.
 
 \hypertarget{cuxf3mo-adaptarnos-a-los-cambios}{%
-\section{¿Cómo adaptarnos a los
+\subsection{¿Cómo adaptarnos a los
 cambios?}\label{cuxf3mo-adaptarnos-a-los-cambios}}
 
 Cuando se trata de adaptarnos a las consecuencias del cambio climático,
@@ -250,6 +266,7 @@ existen diversas medidas que nos ayudan a reducir nuestra
 vulnerabilidad. A continuación, se presentan algunas acciones clave:
 
 \begin{itemize}
+\tightlist
 \item
   Construir edificaciones e infraestructuras más seguras y sostenibles,
   teniendo en cuenta los posibles impactos del cambio climático. Además,
@@ -296,6 +313,7 @@ acciones relacionadas con el cambio climático. Algunas acciones clave en
 este enfoque incluyen:
 
 \begin{itemize}
+\tightlist
 \item
   Promover programas educativos y de sensibilización sobre el cambio
   climático, dirigidos a diferentes grupos de la sociedad, desde
@@ -332,11 +350,11 @@ ambientales.}\label{otros-problemas-ambientales.}}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  El cambio climático no es el único factor que amenaza el desarrollo
-  sostenible. Existen otros componentes críticos del capital natural que
-  también están en peligro, como la pérdida de biodiversidad, la
-  contaminación del aire, el uso insostenible del agua, la erosión del
-  suelo y la deforestación.
+  \textbf{El cambio climático no es el único factor que amenaza el
+  desarrollo sostenible. Existen otros componentes críticos del capital
+  natural que también están en peligro, como la pérdida de
+  biodiversidad, la contaminación del aire, el uso insostenible del
+  agua, la erosión del suelo y la deforestación.}
 \end{enumerate}
 
 Utilizando la afirmación anterior, planteamos un modelo económico y un
@@ -378,14 +396,23 @@ el modelo económico circular y se definen sus respectivos indicadores:
 A continuación, se proporciona la definición conceptual, los indicadores
 y las unidades de medida de estas variables:
 
-\textbf{Tabla 1}
-
-\emph{Variables e indicadores del modelo de economía circular}
-
+\hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1321}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.7177}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1502}}@{}}
+\caption{\label{tbl-1}Variables e indicadores del modelo de economía
+circular}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definición Conceptual
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Indicador
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Variable
@@ -421,19 +448,21 @@ de superficie forestal medida en hectáreas \\
 
 En base a lo expuesto, planteamos el siguiente modelo econométrico:
 
-\[ PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu \]
+\begin{equation}\protect\hypertarget{eq-1}{}{
+PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
+}\label{eq-1}\end{equation}
 
 Donde:
 
-PBI\_\{V\}: Producto Bruto Interno Verde
+\(PBI_{V}\): Producto Bruto Interno Verde
 
-CA: Contaminación del aire
+\(CA\): Contaminación del aire
 
-BIO: Pérdida de biodiversidad
+\(BIO\): Pérdida de biodiversidad
 
-DEF: Deforestación
+\(DEF\): Deforestación
 
-μ: Término de perturbación
+\(μ\): Término de perturbación
 
 Con este modelo, buscamos analizar la relación entre el Producto Bruto
 Interno Verde y las variables exógenas de contaminación del aire,
@@ -447,12 +476,13 @@ crecimiento económico más sostenible y resiliente al cambio climático.
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Las prácticas agrícolas insostenibles tienen un impacto negativo en el
-  medio ambiente, erosionando el suelo, agotando las reservas de agua
-  dulce y reduciendo la superficie forestal. Estas acciones provocan la
-  disminución de la capacidad del planeta para absorber dióxido de
-  carbono y contribuyen a la pérdida de biodiversidad, la cual es
-  fundamental para adaptarse al cambio climático.
+  \textbf{Las prácticas agrícolas insostenibles tienen un impacto
+  negativo en el medio ambiente, erosionando el suelo, agotando las
+  reservas de agua dulce y reduciendo la superficie forestal. Estas
+  acciones provocan la disminución de la capacidad del planeta para
+  absorber dióxido de carbono y contribuyen a la pérdida de
+  biodiversidad, la cual es fundamental para adaptarse al cambio
+  climático.}
 \end{enumerate}
 
 Utilice la afirmación (b) y explique y grafique la relación entre las
@@ -460,13 +490,13 @@ prácticas agrícolas insostenibles y la pérdida de biodiversidad.
 
 Para comprender la relación entre las prácticas agrícolas insostenibles
 y la pérdida de biodiversidad, podemos analizarla tanto de manera
-explicativa como visual. En la figura 1, presentada a continuación, se
-grafica esta relación:
+explicativa como visual. En la Figura~\ref{fig-1}, presentada a
+continuación, se grafica esta relación:
 
 \begin{figure}
 
-\caption{Figura 1: Relación entre las prácticas agrícolas insostenibles
-y la pérdida de biodiversidad}
+\caption{\label{fig-1}Relación entre las prácticas agrícolas
+insostenibles y la pérdida de biodiversidad}
 
 {\centering \includegraphics{20230603001915.png}
 
@@ -486,12 +516,14 @@ diversidad.
 
 La ecuación que representa esta relación es:
 
+\$\$
+
 PD = b0 + b1 * PAI
 
-↑PAI → ↑PD:
+\$\$
 
-A mayor cantidad de prácticas agrícolas insostenibles, se genera una
-mayor pérdida de diversidad.
+\(↑PAI → ↑PD\): A mayor cantidad de prácticas agrícolas insostenibles,
+se genera una mayor pérdida de diversidad.
 
 Donde b1 es la sensibilidad y mide la variación de la pérdida de
 biodiversidad ante cambios en las prácticas agrícolas insostenibles.
@@ -504,9 +536,602 @@ niveles de diversidad biológica y los servicios ecosistémicos en áreas
 clave, socavando así la sostenibilidad a largo plazo de la producción
 agrícola en sí (p.~22).
 
-\hypertarget{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico}{%
-\subsection{El Perú es vulnerable al cambio
-climático}\label{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico}}
+\hypertarget{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico.}{%
+\section{El Perú es vulnerable al cambio
+climático.}\label{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico.}}
+
+\textbf{¿Qué sectores son más vulnerables y contribuyen más a las
+emisiones de gases de efecto invernadero?}
+
+El Perú se enfrenta a la vulnerabilidad provocada por el cambio
+climático, especialmente en sectores clave para el crecimiento
+inclusivo. La vulnerabilidad se refiere a la sensibilidad y falta de
+capacidad de respuesta y adaptación frente a los daños causados por el
+cambio climático. El país presenta zonas vulnerables debido a diversas
+condiciones, y aún tiene desafíos para superar la pobreza y la
+desigualdad.
+
+En 2014, las regiones más afectadas por emergencias de origen climático
+fueron Amazonas, Apurímac, Cusco, Huancavelica y Pasco, concentrando más
+del 63\% de las emergencias a nivel nacional. Estas situaciones exponen
+a la población al riesgo de caer o mantenerse en la pobreza debido a su
+vulnerabilidad frente al cambio climático.
+
+Los sectores agrícola y pesquero, esenciales para la seguridad
+alimentaria del país, dependen directamente del clima. Estos sectores
+contribuyen con el 5,7\% del Producto Bruto Interno (PBI) y emplean al
+25,8\% de la población económicamente activa ocupada a nivel nacional y
+al 74\% de la población económicamente activa rural. Dado que el 55\% de
+la población en situación de pobreza trabaja en estas actividades, queda
+en evidencia la sensibilidad de un gran número de personas al cambio
+climático. Además, el clima también afecta a sectores relevantes como la
+minería y la energía hidroeléctrica, que dependen de los recursos
+hídricos para su funcionamiento.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Agrícola}
+\end{itemize}
+
+La agricultura en el Perú es vulnerable a las variaciones climáticas,
+como inundaciones, granizadas, heladas y eventos del fenómeno El Niño
+(ENSO), que afectan el rendimiento de los cultivos. El 34\% de la
+superficie agrícola se riega y se concentra en la costa, donde hay mayor
+infraestructura. El 66\% de la agricultura se desarrolla bajo secano,
+dependiendo exclusivamente de las lluvias, y se encuentra principalmente
+en la sierra y la selva. La sierra enfrenta deficiencias en
+infraestructura de almacenamiento de agua y riego, a pesar de recibir
+mayores precipitaciones. Además, la topografía accidentada limita la
+disponibilidad de nuevas tierras para el cultivo. Las sequías tienen
+efectos negativos significativos en esta zona. Por otro lado, la selva
+experimenta altas precipitaciones durante seis meses al año, pero cuenta
+con áreas limitadas propicias para la agricultura debido a restricciones
+naturales.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Ganadero}
+\end{itemize}
+
+El cambio climático también generará cambios importantes en el sector
+ganadero, como la disminución de las áreas de pastoreo y la competencia
+espacial con la agricultura. Se espera una reducción de aproximadamente
+el 50\% en la extensión de los pajonales, bofedales y arbustales en la
+puna, que representan el 77,6\% de la extensión total de la región. Esta
+reducción afectará la capacidad de carga y la contribución relativa de
+la ganadería al PBI. Además, la disminución de los bofedales, una fuente
+importante de forraje durante los períodos de sequía, dificultará el
+desarrollo de la ganadería, especialmente en áreas áridas donde son la
+principal fuente de agua durante períodos críticos.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Pesquero}
+\end{itemize}
+
+La disponibilidad de la anchoveta, recurso pesquero clave, se verá
+afectada negativamente por el cambio climático, especialmente en los
+escenarios RCP 8.5 y RCP 4.5. Se esperan cambios en las condiciones de
+temperatura, oxígeno disuelto y productividad primaria. Esto resultará
+en una disminución importante de la contribución económica del sector
+pesquero a la economía nacional.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Minero}
+\end{itemize}
+
+En la mayoría de las cuencas mineras, los impactos del cambio climático
+en la disponibilidad hídrica no son significativos, excepto en las
+cuencas mineras de cobre y zinc. La eficiencia en el uso y consumo del
+agua contribuirá a reducir futuros conflictos por este recurso y
+garantizar su disponibilidad para la minería, considerando que el
+consumo humano y agrícola tienen prioridad legal.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector de Hidroenergía}
+\end{itemize}
+
+La producción eléctrica del sector de hidroenergía en el Perú está
+estrechamente relacionada con la disponibilidad de agua en las cuencas.
+Por lo tanto, el cambio climático puede afectar la actividad de este
+sector debido a las variaciones en las condiciones de precipitación.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector de Infraestructura}
+\end{itemize}
+
+La infraestructura se verá afectada por eventos climáticos extremos,
+especialmente relacionados con las precipitaciones. Se espera que el
+aumento de lluvias genere modificaciones en los caudales de agua cerca
+de las redes viales, lo que afectaría las estructuras de drenaje y
+aumentaría la probabilidad de daños en las carreteras. Esto se
+traduciría en un aumento en los costos de mantenimiento y reparación de
+infraestructuras viales.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Turismo}
+\end{itemize}
+
+El turismo es un sector importante para la economía peruana en términos
+de generación de empleo, divisas, comercio e inversión. El cambio
+climático afectará directamente los destinos turísticos debido a
+factores como temperatura, precipitación, viento, humedad y aumento del
+nivel del mar, así como eventos climáticos extremos. Estos cambios
+causarán daños a la infraestructura y requerirán medidas adicionales de
+emergencia, lo que aumentará los gastos en seguros, sistemas de reserva
+de agua, electricidad y evacuación, afectando la competitividad, la
+demanda turística, la estacionalidad y los gastos de adaptación y
+mitigación.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sector Salud}
+\end{itemize}
+
+El cambio climático representa una amenaza directa para el sector de la
+salud y la economía en general. Puede afectar directamente a la
+población al modificar la frecuencia y distribución de enfermedades
+transmitidas por vectores, como la malaria, y también puede tener
+efectos indirectos al empeorar la economía de los hogares.
+
+En cuanto a las emisiones de gases de efecto invernadero, no todos los
+sectores productivos contribuyen de la misma manera. Según el Panel
+Intergubernamental sobre el Cambio Climático, los principales emisores a
+nivel mundial son la generación de electricidad, las actividades
+agropecuarias y la industria.
+
+\begin{figure}
+
+\caption{\label{fig-2}Relación entre las prácticas agrícolas
+insostenibles y la pérdida de biodiversidad}
+
+{\centering \includegraphics{20230603083843.png}
+
+}
+
+\end{figure}
+
+Nota: Prevencionintegral\&ORP
+
+\textbf{Se manifiesta que la fijación de precios y la regulación son los
+principales instrumentos para promover el uso sostenible de los Recursos
+Naturales.}
+
+La fijación de precios y la regulación son herramientas fundamentales
+utilizadas para promover el uso sostenible de los recursos naturales.
+Estas políticas ambientales buscan reducir la degradación del medio
+ambiente al costo social más bajo posible. Un enfoque clave para lograr
+este objetivo es alinear los costos privados con los costos sociales, de
+manera que las externalidades sean consideradas en la toma de
+decisiones.
+
+En los últimos años, se ha acumulado evidencia que respalda la
+efectividad de los instrumentos económicos para mejorar la calidad
+ambiental y fomentar la sostenibilidad de los recursos naturales. Estos
+instrumentos económicos pueden generar beneficios significativos, como
+la reducción de los costos de cumplimiento para las industrias, la
+disminución de las cargas administrativas en el sector público, la
+mejora de las condiciones ambientales y la promoción de la salud humana.
+A su vez, esto contribuye a mejorar la productividad económica y reducir
+los gastos en atención médica.
+
+En el contexto legal, la legislación ambiental en el Perú se basa en la
+Constitución Política de 1993, que garantiza a todas las personas el
+derecho a disfrutar de un medio ambiente seguro y adecuado para su
+sustento. En este marco, se ha incorporado el principio del ``usuario
+pagador'' en la legislación, que establece que aquellos que utilizan los
+recursos naturales tienen la responsabilidad de pagar por su uso. Este
+principio se encuentra explícitamente incluido en la Ley Orgánica para
+el Aprovechamiento Sostenible de los Recursos Naturales.
+
+Sin embargo, en la práctica, la implementación del principio del
+``contaminador pagador'' en relación con el control y prevención de la
+contaminación en sectores industriales presenta desafíos y limitaciones.
+Aunque existen políticas de precios y regulaciones establecidas, su
+aplicación efectiva aún requiere mejoras para garantizar un cumplimiento
+adecuado y promover un mayor control de la contaminación en el sector
+industrial.
+
+\hypertarget{anuxe1lisis-de-las-exportaciones-de-productos-tradicionales-precios-del-petruxf3leo-crudo-y-derivados-y-precios-del-gas-natural-durante-el-periodo-enero-2012---mayo-2022}{%
+\section{Análisis de las exportaciones de productos tradicionales,
+precios del petróleo crudo y derivados, y precios del gas natural
+durante el periodo enero 2012 - mayo
+2022}\label{anuxe1lisis-de-las-exportaciones-de-productos-tradicionales-precios-del-petruxf3leo-crudo-y-derivados-y-precios-del-gas-natural-durante-el-periodo-enero-2012---mayo-2022}}
+
+En este análisis, examinaremos tanto las exportaciones de productos
+tradicionales como los precios del petróleo crudo y derivados, y los
+precios del gas natural de forma individual y conjunta durante el
+periodo comprendido entre enero de 2012 y mayo de 2022.
+
+\hypertarget{anuxe1lisis-individual-de-las-series}{%
+\subsection{Análisis individual de las
+series}\label{anuxe1lisis-individual-de-las-series}}
+
+\hypertarget{anuxe1lisis-de-los-gruxe1ficos}{%
+\subsubsection{Análisis de los
+gráficos}\label{anuxe1lisis-de-los-gruxe1ficos}}
+
+La Figura~\ref{fig-3} muestra las exportaciones de productos
+tradicionales en comparación con los precios del petróleo crudo y
+derivados (en dólares estadounidenses por barril).
+
+\begin{figure}
+
+\caption{\label{fig-3}Exportaciones de productos tradicionales y precios
+del petróleo crudo y derivados}
+
+{\centering \includegraphics{20230603085638.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.}
+
+\textbf{Interpretación:} La serie de precios del petróleo crudo y
+derivados muestra un comportamiento con cambios bruscos y repentinos
+durante casi todo el periodo analizado, con valores atípicos destacados
+en los años 2014, 2015, 2020 y 2022. Esto sugiere que la serie exhibe
+una variación aleatoria en su comportamiento.
+
+La caída de los precios del petróleo entre mediados de 2014 y principios
+de 2015 se debió principalmente a factores relacionados con la oferta,
+como el aumento de la producción de petróleo en Estados Unidos, la
+disminución de las tensiones geopolíticas y los cambios en las políticas
+de la OPEP. Esta caída del precio del petróleo también afectó
+negativamente las previsiones de demanda de petróleo durante mediados de
+2015 y principios de 2016.
+
+En el año 2017, se observó un aumento en el interés de las empresas
+internacionales por la exploración y explotación de petróleo en aguas
+profundas (offshore), debido al potencial de reservas de petróleo. Esto
+resultó en un incremento de los precios del petróleo entre 2017 y 2018.
+
+En 2022, se produjo un fuerte aumento en los precios del petróleo debido
+a la situación crítica que enfrentaba Europa y a las políticas
+establecidas para reducir la dependencia de los suministros rusos. Del
+25 de mayo al 1 de junio de 2022, el precio del petróleo aumentó un
+2,1\%, alcanzando los 115,3 dólares por barril. Este incremento reflejó
+la señal de una menor oferta y una creciente demanda antes de la
+temporada alta de conducción de verano en Estados Unidos y Europa. En
+mayo, el precio del petróleo subió un 9,4\%.
+
+La Figura~\ref{fig-4} muestra las exportaciones de productos
+tradicionales en relación con los precios del gas natural (en dólares
+estadounidenses por metro cúbico).
+
+\begin{figure}
+
+\caption{\label{fig-4}Exportaciones de productos tradicionales y precios
+del gas natural}
+
+{\centering \includegraphics{20230603090113.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.}
+
+\textbf{Interpretación:} La serie de precios del gas natural presenta
+valores atípicos en los años 2021 y 2022, con cambios bruscos más
+pronunciados durante esos mismos años. Además, se observa un patrón
+cíclico en el periodo comprendido entre 2012 y 2020, seguido de una
+variación aleatoria en los últimos años.
+
+A partir de 2019 y 2020, el precio del gas natural se redujo debido a la
+``revolución'' del gas de fracking en Estados Unidos. Sin embargo, en
+julio y agosto de 2020, los precios del gas se vieron afectados por la
+crisis del Covid-19.
+
+A finales de 2020, se reactivó la demanda de gas natural, pero la oferta
+no pudo mantenerse al ritmo necesario, lo que generó retrasos en la
+respuesta a la demanda, principalmente debido a problemas logísticos
+relacionados con el transporte de gas. Además, el invierno prolongado
+agotó las reservas en el hemisferio norte. Asia fue responsable del 70\%
+del consumo global de gas natural y pagó precios elevados. Europa
+también experimentó un déficit de suministro a finales de 2020,
+situación que se prolongó a lo largo de 2021.
+
+En septiembre de 2021, el precio del gas natural aumentó debido a que la
+producción mundial de gas no creció al mismo ritmo que la demanda, lo
+que provocó un incremento en el precio. Los niveles de almacenamiento en
+los 48 estados inferiores de EE. UU. se encontraban ligeramente por
+debajo de lo normal, según la Administración de Información Energética.
+Esta situación se vio agravada por el huracán Ida, que interrumpió la
+producción en Noruega y Rusia, así como en el Golfo de México, donde
+gran parte de la producción de petróleo y gas quedó fuera de servicio.
+
+En abril de 2022, la producción de hidrocarburos experimentó un
+crecimiento interanual del 26,2\%, impulsado por una mayor extracción de
+todos sus componentes (hidrocarburos líquidos y gas natural) desde 2021.
+En el periodo de enero a abril, el sector se expandió un 15,0\%.
+
+\hypertarget{anuxe1lisis-de-normalidad-de-las-series}{%
+\subsubsection{Análisis de normalidad de las
+series}\label{anuxe1lisis-de-normalidad-de-las-series}}
+
+La Figura~\ref{fig-5} muestra los resultados de la prueba de normalidad
+aplicada al precio del Petróleo crudo y derivados.
+
+\begin{figure}
+
+\caption{\label{fig-5}Prueba de normalidad del precio del Petróleo crudo
+y derivados}
+
+{\centering \includegraphics{20230603090708.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Elaboración propia.}
+
+\textbf{Interpretación:} En cuanto a la prueba de normalidad, se observa
+que la serie del precio del Petróleo crudo y derivados presenta una
+cercanía entre la media y la mediana. Además, el coeficiente de
+asimetría (skewness=0.217) tiende a cero y la kurtosis tiende débilmente
+a 3, lo cual sugiere que la distribución podría ser normal.
+
+Sin embargo, para realizar un análisis más riguroso, se utiliza el
+estadístico de Jarque-Bera bajo la hipótesis nula de que la serie sigue
+una distribución normal. En este caso, el valor de JB es 7.88, que es
+mayor que el valor crítico de 5.99, lo que nos lleva a rechazar la
+hipótesis nula de normalidad. Además, la probabilidad asociada al valor
+de JB es 0.019, que es menor al nivel de significancia del 5\%, lo que
+confirma que la serie no sigue una distribución normal.
+
+Para corregir la falta de normalidad, se aplica una transformación
+logarítmica a la serie del Petróleo crudo y derivados.
+
+La Figura~\ref{fig-6} muestra la serie del precio del Petróleo crudo y
+derivados después de aplicar la transformación logarítmica para corregir
+la falta de normalidad.
+
+\begin{figure}
+
+\caption{\label{fig-6}Corrección de normalidad del precio del Petróleo
+crudo y derivados}
+
+{\centering \includegraphics{20230603090807.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Elaboración propia.}
+
+\textbf{Interpretación:} Al aplicar la transformación logarítmica a la
+serie del Petróleo crudo y derivados, se observa que se corrige la falta
+de normalidad. El estadístico de Jarque-Bera es 3.73, que es menor que
+el valor crítico de 5.99, lo que nos lleva a aceptar la hipótesis nula
+de normalidad. Además, la probabilidad asociada al valor de JB es 0.155,
+que es mayor al nivel de significancia del 5\%, lo que confirma que la
+serie sigue una distribución normal después de la transformación
+logarítmica.
+
+La Figura~\ref{fig-7} muestra los resultados de la prueba de normalidad
+aplicada al precio del Gas natural.
+
+\begin{figure}
+
+\caption{\label{fig-7}Prueba de normalidad del precio del Gas natural}
+
+{\centering \includegraphics{20230603091227.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Elaboración propia.}
+
+\textbf{Interpretación:} Según la prueba de normalidad, la serie del
+precio del Gas natural presenta poca cercanía entre la media y la
+mediana. Además, el coeficiente de asimetría (skewness=2.809) no tiende
+a cero y la kurtosis es 12.36, lo cual indica que la distribución se
+aleja de una distribución normal. Para realizar un análisis más
+riguroso, se utiliza el estadístico de Jarque-Bera bajo la hipótesis
+nula de que la serie sigue una distribución normal. En este caso, el
+valor de JB es 620.619, que es mayor que el valor crítico de 5.99, lo
+que nos lleva a rechazar la hipótesis nula de normalidad. Además, la
+probabilidad asociada al valor de JB es 0.000, que es menor al nivel de
+significancia del 5\%, confirmando que la serie no sigue una
+distribución normal.
+
+La Figura~\ref{fig-8} muestra la serie del precio del Gas natural
+después de aplicar una transformación para corregir la falta de
+normalidad.
+
+\begin{figure}
+
+\caption{\label{fig-8}Corrección de normalidad del precio del Gas
+natural}
+
+{\centering \includegraphics{20230603091315.png}
+
+}
+
+\end{figure}
+
+\emph{Nota: Elaboración propia.}
+
+\textbf{Interpretación:} Al aplicar la transformación de datos, se logra
+una distribución normal en los precios del Gas natural. La
+transformación se realiza utilizando la media y la desviación estándar
+de la distribución, y se reemplazan los valores atípicos y extremos con
+valores nulos o perdidos en el sistema. Se observa que el estadístico de
+Jarque-Bera es 0.89, que es menor que el valor crítico de 5.99, lo que
+nos permite aceptar la hipótesis nula de presencia de una distribución
+normal. Además, la probabilidad asociada al valor de JB es 0.64, que es
+mayor al nivel de significancia del 5\%, lo que confirma que la serie de
+precios del Gas natural sigue una distribución normal después de la
+transformación.
+
+\hypertarget{anuxe1lisis-conjunta-de-las-series}{%
+\subsection{Análisis conjunta de las
+series}\label{anuxe1lisis-conjunta-de-las-series}}
+
+La Figura~\ref{fig-9} muestra la evolución del precio del petróleo y el
+gas en dólares.
+
+\begin{figure}
+
+\caption{\label{fig-9}Evolución del precio del petróleo y gas (en
+dólares)}
+
+{\centering \includegraphics{20230603091833.png}
+
+}
+
+\end{figure}
+
+\emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
+nosotros.}
+
+\textbf{Interpretación:} El incremento de los precios del petróleo y el
+gas en esta visualización se debe a la guerra en Ucrania y los temores
+sobre el suministro de materias primas provenientes de Rusia. El precio
+del petróleo alcanzó su máximo en casi diez años, mientras que el gas
+natural alcanzó récords históricos.
+
+Las tensiones geopolíticas internacionales y el encarecimiento del
+petróleo fueron factores clave para el aumento en los precios del gas.
+Sin embargo, este aumento también ha tenido un impacto negativo en los
+alimentos y el costo de vida de las familias más pobres, lo que plantea
+un desafío para el gobierno.
+
+La Figura~\ref{fig-10} muestra un análisis de caja y bigote del precio
+de gas y petróleo.
+
+\begin{figure}
+
+\caption{\label{fig-10}Análisis de caja y bigote del precio de gas y
+petróleo}\begin{minipage}[t]{0.50\linewidth}
+\subcaption{\label{fig-10.1}Surus}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{20230603091856.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+\subcaption{\label{fig-10.2}Hanno}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{20230603091845.png}
+
+}
+
+}
+
+\end{minipage}%
+
+\end{figure}
+
+\emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
+nosotros.}
+
+\textbf{Interpretación:} En el gráfico de la izquierda, se observa que
+tanto el precio del gas natural como el precio del petróleo tienen
+rangos normales, lo que indica que los datos están concentrados dentro
+de esos rangos. Además, el precio del gas natural muestra una
+distribución simétrica, ya que la línea de la mediana está cerca del
+centro de la caja. Sin embargo, se presentan algunos datos atípicos.
+
+En el gráfico de la derecha, utilizando una transformación de datos, se
+logra una distribución normal en los precios del gas. La distribución se
+crea utilizando la media y la desviación estándar de la distribución de
+gas. En esta distribución, las líneas de la mediana y la media se
+superponen, los rangos intercuartílicos (representados por los bigotes)
+y las cajas son de tamaño similar, y los datos atípicos son poco
+comunes.
+
+En cuanto al precio del petróleo, también muestra una distribución
+simétrica, ya que la mediana está cerca del centro de la caja. En esta
+distribución, la media es similar a la mediana, lo que indica una
+distribución normal.
+
+La Figura~\ref{fig-11} muestra un gráfico de dispersión que representa
+la relación entre el precio del gas y el precio del petróleo.
+
+\begin{figure}
+
+\caption{\label{fig-11}Gráfico de dispersión de las variables precio de
+gas y precio de petróleo}
+
+{\centering \includegraphics{20230603091904.png}
+
+}
+
+\end{figure}
+
+\emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
+nosotros.}
+
+\textbf{Interpretación:} En el gráfico, se puede observar una relación
+lineal positiva moderada entre el precio del petróleo y el precio del
+gas. A medida que el precio del petróleo aumenta, el precio del gas
+también tiende a aumentar.
+
+La Tabla 2 muestra los resultados de la regresión entre el precio del
+petróleo y el precio del gas.
+
+\begin{figure}
+
+\caption{Tabla 2: Regresión de precio de petróleo y precio del gas}
+
+{\centering \includegraphics{20230603100307.png}
+
+}
+
+\end{figure}
+
+\emph{\textbf{Nota:} Datos obtenidos del BCRP.}
+
+El valor P \textless{} 0.05 en el análisis de regresión indica que el
+precio del petróleo que estamos analizando es significativo y tiene una
+relación con el precio del gas.
+
+Además, el coeficiente R-Sq (adj) nos indica que el 51\% de la variación
+en el precio del gas se explica por el precio del petróleo.
+
+La ecuación de regresión muestra que, por cada aumento en el precio del
+petróleo, el precio del gas aumenta en 1.0527 dólares.
+
+\hypertarget{relaciuxf3n-entre-el-volumen-del-cobre-miles-de-toneladas-y-el-oro-miles-de-onzas-troy.}{%
+\section{Relación entre el volumen del cobre (miles de toneladas) y el
+oro (miles de onzas
+troy).}\label{relaciuxf3n-entre-el-volumen-del-cobre-miles-de-toneladas-y-el-oro-miles-de-onzas-troy.}}
+
+Para analizar la relación entre el volumen del cobre (medido en miles de
+toneladas) y el oro (medido en miles de onzas troy), consideramos las
+series mensuales de exportaciones de productos tradicionales del BCRP.
+Graficaremos y explicaremos su comportamiento, evaluando si existe una
+relación de largo plazo (cointegración) entre ambas variables en el
+Perú, utilizando el mismo período que en las preguntas anteriores
+(mencionar el período específico). \$\$
 
 
 \printbibliography

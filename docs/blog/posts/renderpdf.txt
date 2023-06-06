@@ -1,6 +1,6 @@
   pdf:
     documentclass: article
-    papersize: a4
+    papersize: letter
     language: es
     geometry: 
       - top=2.54cm
@@ -23,5 +23,4 @@
     tbl-cap-location: top
     pdf-engine: pdflatex
     include-in-header: 
-      - text: |
-          \usepackage{amsmath}
+      - file: packages.tex

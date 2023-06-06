@@ -1,0 +1,25 @@
+  html:
+    page-layout: article
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    toc-title: Contenidos
+    toc-location: left
+    css: index.css
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    code-copy: true
+    code-fold: true
+    code-summary: "Mostrar el código"
+    code-overflow: wrap
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+    include-after-body:
+      - ../signup.html

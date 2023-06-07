@@ -29,7 +29,7 @@ date: "01/11/2021"
 
 # Introducción {#sec-introducción .unnumbered}
 
-**En el Perú,** al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), "Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19".
+En el Perú, al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), "Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19".
 
 Es crucial comprender la relación entre estas dos variables para establecer políticas económicas contracíclicas, que nos ayuden a generar mayores ingresos en la recaudación tributaria durante períodos de menor crecimiento económico. En los últimos diez años (2010-2019), la economía peruana ha experimentado un crecimiento anual promedio del 4.5%, y en los últimos cinco años (2015-2019) se ha expandido a una tasa promedio anual del 3.2% INEI (2019).
 
@@ -56,7 +56,9 @@ El desarrollo de la investigación se dividió de la siguiente manera:
 ## Problemas específicos {#sec-problemas-específicos}
 
 1.  ¿Cuál ha sido la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019?
+
 2.  ¿Cuál ha sido la tendencia del crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019?
+
 3.  ¿Cuál es la relación entre la recaudación de impuestos por la SUNAT respecto al crecimiento económico durante el periodo 2007-2019?
 
 # Objetivos {#sec-objetivos}
@@ -68,7 +70,9 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 ## Objetivos específicos {#sec-objetivos-específicos}
 
 1.  Analizar la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019.
+
 2.  Analizar la tendencia de crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019.
+
 3.  Analizar la relación existente entre crecimiento económico y la recaudación de impuestos durante el periodo 2007-2019.
 
 # Justificación {#sec-justificación}
@@ -371,16 +375,6 @@ Se concluye que tanto los cambios en el nivel de ingresos como los cambios en la
 
 Empíricamente, Blanchard y Perotti, basándose en la evidencia internacional de que las reducciones de impuestos tienen un efecto positivo en la actividad económica, al hacerlo se determinará si el efecto es positivo o no. La estimación del efecto de los cambios impositivos exógenos sobre la actividad económica se realiza mediante la estimación de modelos econométricos estándar de series temporales.
 
-La estimación del efecto de cambios tributarios sobre el nivel de actividad real se basó en la estimación de tres modelos básicos:
-
-$\Delta Y_t = \beta_{1} + \sum_{i=0}^{L} a_i$
-
-\$ \$
-
-\$ \$
-
-\$ \$
-
 La certeza de los resultados obtenidos de las tres especificaciones (Modelos 1, 2 y 3) se analizó en dos dimensiones. Primero, los modelos base se vuelven a estimar utilizando tres índices sustitutos de cambio tributario: se observa el cambio en el impuesto establecido por la ley, el cambio en el impuesto ajustado al ciclo económico y el cambio en los ingresos recaudados. En segundo lugar, las extensiones del modelo VAR se estiman incluyendo variables como el gasto público real, los términos de intercambio (logarítmicos) y la carga tributaria.
 
 El principal resultado del estudio es que los aumentos de impuestos tienen un efecto negativo y estadísticamente significativo sobre el PBI real; Además, la dinámica del efecto estimado es relativamente fuerte para los diferentes modelos utilizados. En particular, encontramos que la elasticidad del PBI real a la presión fiscal es de aproximadamente -0.11 en el mismo trimestre en el que se produce el cambio fiscal y de -0.22 seis trimestres después. Además, frente a un aumento de impuestos equivalente a 1 µl del PBI, la carga tributaria disminuyó simultáneamente en 0.28 puntos porcentuales y alcanzó una reducción máxima de 0,9 puntos porcentuales después de siete trimestres.
@@ -450,7 +444,9 @@ La influencia del crecimiento económico en recaudación de impuestos por la SUN
 ## Hipótesis Específicas {#sec-hipótesis-específicas}
 
 1.  La tendencia de la recaudación de impuestos por la SUNAT es creciente.
+
 2.  La tendencia del crecimiento económico en el departamento de Ayacucho es creciente.
+
 3.  La relación entre crecimiento económico y la recaudación de impuestos durante el periodo 2007-2019, es positiva.
 
 # Variables e indicadores {#sec-variables-e-indicadores}
@@ -459,15 +455,15 @@ En el presente estudio se analizan diversas variables e indicadores para compren
 
 ## Variable independiente {#sec-variable-independiente}
 
--   Crecimiento económico: Esta variable representa la tasa de crecimiento económico de la región o país en estudio. Se utiliza como un indicador del desarrollo y la expansión de la actividad económica.
+Crecimiento económico: Esta variable representa la tasa de crecimiento económico de la región o país en estudio. Se utiliza como un indicador del desarrollo y la expansión de la actividad económica.
 
 Indicador:
 
--   Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007 (Miles de soles): Este indicador cuantifica el valor total de la producción económica de la región o país, ajustado a precios constantes de 2007. El VAB es una medida ampliamente utilizada para evaluar el desempeño económico y el nivel de actividad productiva.
+Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007 (Miles de soles): Este indicador cuantifica el valor total de la producción económica de la región o país, ajustado a precios constantes de 2007. El VAB es una medida ampliamente utilizada para evaluar el desempeño económico y el nivel de actividad productiva.
 
 ## Variable dependiente {#sec-variable-dependiente}
 
--   Recaudación de impuestos: Esta variable representa la cantidad total de impuestos recaudados por el gobierno o la entidad fiscalizadora en la región o país en estudio. Indica la capacidad de generar ingresos fiscales a partir de la imposición de tributos.
+Recaudación de impuestos: Esta variable representa la cantidad total de impuestos recaudados por el gobierno o la entidad fiscalizadora en la región o país en estudio. Indica la capacidad de generar ingresos fiscales a partir de la imposición de tributos.
 
 Indicadores:
 
@@ -520,6 +516,7 @@ La muestra seleccionada está compuesta por el crecimiento económico y la recau
 Esta investigación se basa en información secundaria obtenida de las siguientes fuentes:
 
 -   Banco Central de Reserva del Perú (BCRP)
+
 -   Superintendencia Nacional de Aduanas y de Administración Tributaria (SUNAT)
 
 ### Recopilación y procesamiento de información
@@ -547,7 +544,7 @@ Las técnicas e instrumentos utilizados en esta investigación son los siguiente
 ## Plan de análisis
 
 | Nombre de la Etapa                                                          | Tests o técnicas econométricas empleadas                                                                                                                                                                                |
-|-------------------------|-----------------------------------------------|
+|-------------------------|----------------------------------------------|
 | 1\. Análisis de estacionariedad de las series                               | Test de estacionariedad de Dickey -- Fuller aumentado (DFA) <br> Prueba de Phillips Perron                                                                                                                              |
 | 2\. Análisis de causalidad entre pares de series                            | Test de causalidad de Granger (GRG)                                                                                                                                                                                     |
 | 3\. Estimación del modelo econométrico de la investigación (modelo inicial) | Regresión lineal múltiple                                                                                                                                                                                               |
@@ -610,7 +607,7 @@ Aunque el impuesto selectivo al consumo (ISC) es uno de los sectores de menor re
 ### Crecimiento económico del departamento de Ayacucho en el periodo 2007 -- 2019
 
 | Actividades                                         | 2007  | 2008  | 2009 | 2010 | 2011  | 2012 | 2013 | 2014 | 2015 | 2016  | 2017 | 2018 | 2019  |
-|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|------|------|------|------|------|------|------|------|------|------|------|------|------|------|
 | Agricultura, Ganadería, Caza y Silvicultura         | 3.3   | 14.3  | 3.2  | -5.1 | -4.1  | 16.1 | -5.3 | -9.2 | 1.3  | -1.2  | 6.1  | 15.2 | -1.3  |
 | Pesca y Acuicultura                                 | -13.4 | -18.5 | 10.8 | -7.7 | 121.7 | 37.4 | 2.3  | 5.5  | 13.6 | 12.1  | 41.9 | 1.9  | -51.7 |
 | Extracción de Petróleo, Gas y Minerales             | 107.4 | 49.6  | 35.8 | 6.2  | 3.3   | 2.7  | 25.9 | -3.1 | 14.8 | -0.8  | 6.4  | 3.4  | 6.2   |
@@ -639,7 +636,6 @@ Nuestro objetivo es analizar la relación entre el crecimiento económico y la r
 
 Modelo: $R_i = \beta_{1} + \beta_{2}VAB + \mu_{i}$
 
-
 Dependent Variable: RI
 
 Method: Least Squares
@@ -649,8 +645,6 @@ Date: 12/27/21 Time: 19:06
 Sample: 2007-2019
 
 Included observations: 13
-
-: Resultados del modelo estimado inicial {#tbl-4}
 
 | Variable           | Coefficient | Std. Error            | t-Statistic | Prob.  |
 |---------------|---------------|---------------|---------------|---------------|
@@ -663,6 +657,8 @@ Included observations: 13
 | Log likelihood     | -139.7821   | Hannan-Quinn criter.  | 21.79477    |        |
 | F-statistic        | 148.3945    | Durbin-Watson stat    | 0.880483    |        |
 | Prob(F-statistic)  | 0.000000    |                       |             |        |
+
+: Resultados del modelo estimado inicial {#tbl-4}
 
 La variable independiente del PBI departamental explica el 93.1% de la variabilidad de los impuestos, con un total de 13 observaciones. Según la prueba de t de Student, los parámetros del modelo son estadísticamente significativos con un nivel de significancia del 5%. Además, de acuerdo a la prueba F, el modelo es estadísticamente significativo.
 

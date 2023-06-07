@@ -40,7 +40,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
@@ -84,177 +83,19 @@
 \usepackage{comment} % Permite comentar secciones del código
 \usepackage{marvosym} % Agrega símbolos adicionales
 \usepackage{graphicx} % Permite insertar imágenes
-\usepackage{float} % Permite controlar la ubicación de figuras y tablas
-\usepackage[normalem]{ulem} % Permite subrayar texto
 %\usepackage[spanish]{babel} % Configuración para escribir en español
 %\selectlanguage{spanish} % Selecciona el idioma español
-\useunder{\uline}{\ul}{} % Crea una nueva macro para subrayar
-\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
-
-
-% Otros paquetes
-%\usepackage[natbibapa]{apacite} % Formato de citación APA
-\setcounter{secnumdepth}{3} % Numera las secciones
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
 \usepackage{mathptmx} % Fuente de texto matemática
 \usepackage{amssymb} % Símbolos adicionales de matemáticas
-\usepackage{setspace} % Controla el espacio entre líneas
 \usepackage{lipsum} % Crea texto aleatorio
-\usepackage{multirow} % Permite crear tablas con varias filas
-\usepackage{array} % Da formato a las tablas
-\usepackage{subcaption} % Permite insertar subimágenes
-%\usetikzlibrary{calc,positioning,shapes.geometric,shapes.symbols,shapes.misc} % Biblioteca de TikZ
-
-% Cambiar titulo de bibliografía
-%\addto\captionsspanish{\renewcommand{\bibname}{\centering REFERENCIAS BIBLIOGRÁFICAS}}
-
-% Numeración de las secciones con números romanos mayúsculas
-\renewcommand{\thesection}{\Roman{section}} %Las secciones estaran con numeración romana MAYUSCULA
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
-\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
-
-
-%---- DEDICATORIA -----------------------------------
-\newenvironment{dedicatoria}
-{\clearpage           % Nueva página
-  \thispagestyle{empty}% No encabezados ni pie de página
-  \vspace*{\stretch{8}}% some space at the top 
-  \itshape             % Texto en cursiva (italica)
-  \raggedleft          % flush to the right margin
-}
-{\par % end the paragraph
-  \vspace{\stretch{0.6}} % space at bottom is three times that at the top
-  \clearpage           % Termina la página
-}
-
-%----------------------------------------------
-
-
-%---- PERMISOS -----------------------------------
-\newenvironment{permisos}
-{\clearpage           % Nueva página
-  \thispagestyle{empty}% No encabezados ni pie de página
-  \vspace*{\fill}
-  \raggedright          % flush to the Left margin
-}
-{\par % end the paragraph
-  \clearpage           % Termina la página
-}
-
-%----------------------------------------------
-
-
-%---- AGRADECIMIENTOS -----------------------------------
-\newenvironment{agradecimientos}
-{\clearpage           % Nueva página
-  \thispagestyle{empty}% No encabezados ni pie de página
-
-}
-{\par % end the paragraph
-  \clearpage           % Termina la página
-}
-
-%-------------------------------------------------------
-
-
-%---------------- ENCABEZADOS Y PIE DE PÁGINA --------------------
-%\usepackage[left=3.81 cm,right=2.54 cm,top=2.54 cm,bottom=2.54 cm]{geometry}
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\fancyhf{}
-
-%\renewcommand{\headrulewidth}{0.5 pt}
-%\renewcommand{\footrulewidth}{0.5 pt}
-
-
-%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize{\@facultad}}}
-%\rhead[]{\textit{\scriptsize \leftmark}}
-
-%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
-%\rfoot[]{\small \thepage}
-%---------------------------------------
-
-%MODIFICACIONES  A ENCABEZADO Y PIE DE PÁGINA
-
-%\fancypagestyle{plain}{
-%\fancyhf{}
-
-%Líneas superiores e inferiores del encabezado y pie de página respectivamente.
-
-%\renewcommand{\headrulewidth}{0.5 pt}
-%\renewcommand{\footrulewidth}{0.5 pt}
-
-% Contenido del encabezado y pie de página 
-
-%\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL SAN CRISTÓBAL DE HUAMANGA \\ \scriptsize {\@facultad}}}
-%\rhead[]{\textit{\scriptsize \leftmark}}
-
-
-%\lfoot[]{\textit{\scriptsize {\@title} \\ Bach. {\@author}}}
-%\rfoot[]{\small \thepage}
-%}
-%----------------------------------------------
-
-%RMARDOW%
-
 \usepackage{amsthm}
 \usepackage{float}
 \usepackage{rotating, graphicx}
 \usepackage{multirow}
 \usepackage{tabularx}
-
-% new command for pretty oversets with \sim
-\newcommand\simcal[1]{\stackrel{\sim}{\smash{\mathcal{#1}}\rule{0pt}{0.5ex}}}
-
-\newcommand{\comma}{,\,}
-
-\floatplacement{figure}{H}
-
-\PassOptionsToPackage{table}{xcolor}
-
 \usepackage{tcolorbox}
-
-\definecolor{kcblue}{HTML}{D7DDEF}
-\definecolor{kcdarkblue}{HTML}{2B4E70}
-
-\makeatletter
-\def\thm@space@setup{%
-  \thm@preskip=8pt plus 2pt minus 4pt
-  \thm@postskip=\thm@preskip
-}
-\makeatother
-
-% \makeatletter % undo the wrong changes made by mathspec
-% \let\RequirePackage\original@RequirePackage
-% \let\usepackage\RequirePackage
-% \makeatother
-
-\newenvironment{rmdknit}
-{\begin{center}
-    \begin{tabular}{|p{0.9\textwidth}|}
-      \hline \\
-      }
-      {
-      \\\\\hline
-    \end{tabular}
-  \end{center}
-}
-
-\newenvironment{rmdnote}
-{\begin{center}
-    \begin{tabular}{|p{0.9\textwidth}|}
-      \hline \\
-      }
-      {
-      \\\\\hline
-    \end{tabular}
-  \end{center}
-}
-
-\newtcolorbox[auto counter, number within=section]{keyconcepts}[2][]{%
-  colback=kcblue,colframe=kcdarkblue,fonttitle=\bfseries, title=Key Concept~#2, after title={\newline #1}, beforeafter skip=15pt}
-
 
 \KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
@@ -353,7 +194,7 @@ los ingresos fiscales en el periodo 2007-2019}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, interior hidden, enhanced, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{sec-introducciuxf3n}{%
 \section*{Introducción}\label{sec-introducciuxf3n}}
@@ -430,7 +271,6 @@ impuestos por la SUNAT en el departamento de Ayacucho, periodo
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   ¿Cuál ha sido la tendencia de la recaudación de impuestos por la SUNAT
   en Ayacucho durante el periodo 2007-2019?
@@ -457,7 +297,6 @@ impuestos por la SUNAT en el departamento de Ayacucho, periodo
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Analizar la tendencia de la recaudación de impuestos por la SUNAT en
   Ayacucho durante el periodo 2007-2019.
@@ -1610,7 +1449,6 @@ Específicas}\label{sec-hipuxf3tesis-especuxedficas}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   La tendencia de la recaudación de impuestos por la SUNAT es creciente.
 \item
@@ -1632,37 +1470,25 @@ utilizados:
 \hypertarget{sec-variable-independiente}{%
 \subsection{Variable independiente}\label{sec-variable-independiente}}
 
-\begin{itemize}
-\tightlist
-\item
-  Crecimiento económico: Esta variable representa la tasa de crecimiento
-  económico de la región o país en estudio. Se utiliza como un indicador
-  del desarrollo y la expansión de la actividad económica.
-\end{itemize}
+Crecimiento económico: Esta variable representa la tasa de crecimiento
+económico de la región o país en estudio. Se utiliza como un indicador
+del desarrollo y la expansión de la actividad económica.
 
 Indicador:
 
-\begin{itemize}
-\tightlist
-\item
-  Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007
-  (Miles de soles): Este indicador cuantifica el valor total de la
-  producción económica de la región o país, ajustado a precios
-  constantes de 2007. El VAB es una medida ampliamente utilizada para
-  evaluar el desempeño económico y el nivel de actividad productiva.
-\end{itemize}
+Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007 (Miles
+de soles): Este indicador cuantifica el valor total de la producción
+económica de la región o país, ajustado a precios constantes de 2007. El
+VAB es una medida ampliamente utilizada para evaluar el desempeño
+económico y el nivel de actividad productiva.
 
 \hypertarget{sec-variable-dependiente}{%
 \subsection{Variable dependiente}\label{sec-variable-dependiente}}
 
-\begin{itemize}
-\tightlist
-\item
-  Recaudación de impuestos: Esta variable representa la cantidad total
-  de impuestos recaudados por el gobierno o la entidad fiscalizadora en
-  la región o país en estudio. Indica la capacidad de generar ingresos
-  fiscales a partir de la imposición de tributos.
-\end{itemize}
+Recaudación de impuestos: Esta variable representa la cantidad total de
+impuestos recaudados por el gobierno o la entidad fiscalizadora en la
+región o país en estudio. Indica la capacidad de generar ingresos
+fiscales a partir de la imposición de tributos.
 
 Indicadores:
 
@@ -1774,7 +1600,6 @@ Esta investigación se basa en información secundaria obtenida de las
 siguientes fuentes:
 
 \begin{itemize}
-\tightlist
 \item
   Banco Central de Reserva del Perú (BCRP)
 \item
@@ -1834,8 +1659,8 @@ siguientes:
 
 \hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3472}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6528}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3521}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6479}}@{}}
 \caption{\label{tbl-1}Procedimiento econométrico utilizado para la
 investigación}\tabularnewline
 \toprule\noalign{}

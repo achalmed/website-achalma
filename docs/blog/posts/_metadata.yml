@@ -21,30 +21,30 @@ date-modified: "today"  # Fecha de modificación del documento
 draft: false  # Modo de borrador (false = final, true = borrador)
 format:
   html:
-    page-layout: article
-    toc: true
-    toc-depth: 3
-    toc-expand: 2
-    toc-title: Contenidos
-    toc-location: left
-    css: index.css
-    number-sections: true
-    number-depth: 3
-    smooth-scroll: true
-    link-external-icon: true
-    link-external-newwindow: true
-    citations-hover: true
-    footnotes-hover: true
-    code-copy: true
-    code-fold: true
-    code-summary: "Mostrar el código"
-    code-overflow: wrap
+    page-layout: article  # Diseño de página para el formato HTML (por ejemplo, artículo, libro, etc.)
+    toc: true  # Mostrar tabla de contenidos
+    toc-depth: 3  # Profundidad de la tabla de contenidos
+    toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
+    toc-title: Contenidos  # Título de la tabla de contenidos
+    toc-location: left  # Ubicación de la tabla de contenidos (izquierda, derecha, superior, inferior)
+    css: index.css  # Archivo CSS personalizado para el formato HTML
+    # number-sections: true  # Numerar las secciones del documento
+    # number-depth: 3  # Profundidad de numeración de secciones
+    smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
+    link-external-icon: true  # Mostrar icono para enlaces externos
+    link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
+    citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
+    footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
+    code-copy: true  # Habilitar la funcionalidad de copiar código
+    code-fold: true  # Habilitar el plegado de código
+    code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
+    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     code-tools:
-      source: true
-      toggle: false
-      caption: none
+      source: true  # Mostrar el código fuente en las herramientas de código
+      toggle: false  # Habilitar la funcionalidad de alternar código
+      caption: none  # Opción para la leyenda del código
     include-after-body:
-      - ../signup.html
+      - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
 execute:
   keep-md: true  # Mantener archivos .md generados
 search: false  # Habilitar búsqueda en el documento

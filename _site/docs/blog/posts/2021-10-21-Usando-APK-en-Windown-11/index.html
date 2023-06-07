@@ -316,12 +316,12 @@ cookieconsent.run({
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" id="toc-windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="nav-link active" data-scroll-target="#windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb"><span class="header-section-number">1</span> Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</a>
+  <li><a href="#windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" id="toc-windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="nav-link active" data-scroll-target="#windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb">Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</a>
   <ul class="collapse">
-  <li><a href="#paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" id="toc-paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="nav-link" data-scroll-target="#paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows"><span class="header-section-number">1.1</span> Paso 1: habilite el modo de desarrollador en el subsistema de Windows</a></li>
-  <li><a href="#paso-2-instale-las-herramientas-de-la-plataforma-sdk" id="toc-paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="nav-link" data-scroll-target="#paso-2-instale-las-herramientas-de-la-plataforma-sdk"><span class="header-section-number">1.2</span> Paso 2: Instale las herramientas de la plataforma SDK</a></li>
-  <li><a href="#paso-3-instale-la-aplicación-de-android" id="toc-paso-3-instale-la-aplicación-de-android" class="nav-link" data-scroll-target="#paso-3-instale-la-aplicación-de-android"><span class="header-section-number">1.3</span> Paso 3: Instale la aplicación de Android</a></li>
-  <li><a href="#cargar-apk-automáticamente-con-un-doble-clic" id="toc-cargar-apk-automáticamente-con-un-doble-clic" class="nav-link" data-scroll-target="#cargar-apk-automáticamente-con-un-doble-clic"><span class="header-section-number">1.4</span> Cargar APK automáticamente con un doble clic</a></li>
+  <li><a href="#paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" id="toc-paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="nav-link" data-scroll-target="#paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows">Paso 1: habilite el modo de desarrollador en el subsistema de Windows</a></li>
+  <li><a href="#paso-2-instale-las-herramientas-de-la-plataforma-sdk" id="toc-paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="nav-link" data-scroll-target="#paso-2-instale-las-herramientas-de-la-plataforma-sdk">Paso 2: Instale las herramientas de la plataforma SDK</a></li>
+  <li><a href="#paso-3-instale-la-aplicación-de-android" id="toc-paso-3-instale-la-aplicación-de-android" class="nav-link" data-scroll-target="#paso-3-instale-la-aplicación-de-android">Paso 3: Instale la aplicación de Android</a></li>
+  <li><a href="#cargar-apk-automáticamente-con-un-doble-clic" id="toc-cargar-apk-automáticamente-con-un-doble-clic" class="nav-link" data-scroll-target="#cargar-apk-automáticamente-con-un-doble-clic">Cargar APK automáticamente con un doble clic</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div></nav>
@@ -336,13 +336,13 @@ cookieconsent.run({
 
 
 
-<section id="windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</h1>
+<section id="windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="level1">
+<h1>Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</h1>
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/install-logo-759x427.png?width=600" class="img-fluid"></p>
 <p>Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android.&nbsp;Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">guía aquí</a>&nbsp;.</p>
 <p><a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#">Mostrar</a>&nbsp;<strong>CONTENIDO</strong>&nbsp;<a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#"></a></p>
-<section id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows"><span class="header-section-number">1.1</span> Paso 1: habilite el modo de desarrollador en el subsistema de Windows</h2>
+<section id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows">Paso 1: habilite el modo de desarrollador en el subsistema de Windows</h2>
 <p>Instale&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">el Subsistema de Windows para Android</a>&nbsp;primero.&nbsp;Cuando haya terminado, abra la aplicación ‘Subsistema de Windows para Android’ en su PC.&nbsp;Para esto, presione la tecla de Windows y busque Subsistema de Windows para Android.</p>
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-09.png?width=800" class="img-fluid"></p>
 <p>Haga clic en Subsistema de Windows para Android.&nbsp;O haga clic en Abrir.</p>
@@ -350,8 +350,8 @@ cookieconsent.run({
 <p>En el Subsistema de Windows para Android, active el modo Desarrollador.</p>
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-10-2.png?width=800" class="img-fluid"></p>
 </section>
-<section id="paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="paso-2-instale-las-herramientas-de-la-plataforma-sdk"><span class="header-section-number">1.2</span> Paso 2: Instale las herramientas de la plataforma SDK</h2>
+<section id="paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-instale-las-herramientas-de-la-plataforma-sdk">Paso 2: Instale las herramientas de la plataforma SDK</h2>
 <p>Visite la página de herramientas de la plataforma SDK de Google&nbsp;<a href="https://developer.android.com/studio/releases/platform-tools.html">aquí</a>&nbsp;.</p>
 <p>Haga clic en Descargar SDK Platform-Tools para Windows.</p>
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-11.png?width=800" class="img-fluid"></p>
@@ -369,8 +369,8 @@ cookieconsent.run({
 <p>Tendrá adb.exe y algunos otros archivos aquí.</p>
 <p><strong>Relacionado:</strong>&nbsp;<a href="https://nerdschalk.com/how-to-restart-windows-explorer-on-windows-11-and-what-happens-when-you-do-it/">Cómo reiniciar el Explorador de Windows en Windows 11 y qué sucede cuando lo hace</a></p>
 </section>
-<section id="paso-3-instale-la-aplicación-de-android" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="paso-3-instale-la-aplicación-de-android"><span class="header-section-number">1.3</span> Paso 3: Instale la aplicación de Android</h2>
+<section id="paso-3-instale-la-aplicación-de-android" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-instale-la-aplicación-de-android">Paso 3: Instale la aplicación de Android</h2>
 <p>Haga doble clic en la carpeta de herramientas de la plataforma para abrirla.</p>
 <p>Aquí, haga clic en la barra de direcciones y escriba&nbsp;<strong>cmd,</strong>&nbsp;y luego presione la tecla Intro.</p>
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-20.png?width=500" class="img-fluid"></p>
@@ -403,8 +403,8 @@ cookieconsent.run({
 <p><img src="https://cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-26.jpg?width=800" class="img-fluid"></p>
 <p>Eso es todo.</p>
 </section>
-<section id="cargar-apk-automáticamente-con-un-doble-clic" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="cargar-apk-automáticamente-con-un-doble-clic"><span class="header-section-number">1.4</span> Cargar APK automáticamente con un doble clic</h2>
+<section id="cargar-apk-automáticamente-con-un-doble-clic" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-apk-automáticamente-con-un-doble-clic">Cargar APK automáticamente con un doble clic</h2>
 <p>Sabemos que usar un comando adb no es la forma más fácil de instalar una aplicación de Android en su PC.&nbsp;Afortunadamente, ahora puede hacer doble clic en un archivo APK para instalarlo.&nbsp;Consulta el siguiente enlace para saber cómo configurarlo.</p>
 <p><strong>Leer:</strong>&nbsp;<a href="https://nerdschalk.com/how-to-sideload-apk-on-windows-11-automatically-with-a-double-click/">Cómo descargar APK en Windows 11 automáticamente con un doble clic</a></p>
 <p>Háganos saber cuál es su método favorito para cargar archivos APK en la PC.</p>

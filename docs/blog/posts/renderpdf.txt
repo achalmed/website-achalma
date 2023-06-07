@@ -1,12 +1,12 @@
   pdf:
     documentclass: scrartcl  # Clase de documento para el PDF
-    papersize: letter  # Tamaño del papel
+    # papersize: letter  # Tamaño del papel
     language: es  # Idioma del documento
-    geometry: 
-      - top=2.54cm  # Margen superior
-      - right=2.54cm  # Margen derecho
-      - bottom=2.54cm  # Margen inferior
-      - left=2.54cm  # Margen izquierdo
+    # geometry: 
+    #   - top=2.54cm  # Margen superior
+    #   - right=2.54cm  # Margen derecho
+    #   - bottom=2.54cm  # Margen inferior
+    #   - left=2.54cm  # Margen izquierdo
     # toc: true  # Habilitar la tabla de contenido
     # toc-depth: 3  # Profundidad de la tabla de contenido
     # toc-title: Contenidos  # Título de la tabla de contenido

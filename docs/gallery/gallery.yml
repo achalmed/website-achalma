@@ -13,31 +13,11 @@
       href: https://nmfs-opensci.github.io/quarto_titlepages/titlepages/bg-image/article.pdf
       code: https://github.com/nmfs-opensci/quarto_titlepages/blob/main/example_1.qmd
       thumbnail: articles/articles-pdf.png
-    - title: MS Word
-      subtitle: for Office workflows
-      href: https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx
-      code:  https://github.com/quarto-dev/quarto-gallery/blob/main/articles/msword/msword.qmd
-      thumbnail: articles/articles-msword.png
-    - title: HTML
-      subtitle: with advanced layout
-      href: https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html
-      code: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
-      thumbnail: articles/advanced-layout-html.png
-    - title: PDF
-      subtitle: with advanced layout
-      href: https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.pdf
-      code: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
-      thumbnail: articles/advanced-layout-pdf.png
 
 - category: Presentaciones
   description: |
     Descubre nuevas perspectivas en filosofía, economía, estadística política, informática y matemáticas a través de nuestras presentaciones.
   tiles:
-    - title: RevealJS 
-      subtitle: HTML presentations
-      href: https://quarto.org/docs/presentations/revealjs/demo/
-      code: https://github.com/quarto-dev/quarto-web/blob/main/docs/presentations/revealjs/demo/index.qmd
-      thumbnail: presentations/presentations-revealjs.png
     - title: Beamer 
       subtitle: PDF presentations
       href: https://quarto-dev.github.io/quarto-gallery/presentations/beamer/beamer.pdf
@@ -52,28 +32,6 @@
       href: https://meghan.rbind.io/slides/neair/neair.html
       code: https://github.com/meghall06/personal-website/blob/master/static/slides/NEAIR/NEAIR.qmd
       thumbnail: presentations/presentations-streamlining-with-r.png
-    - title: An educator's perspective of the tidyverse
-      href: https://mine-cetinkaya-rundel.github.io/tidyperspective/talks/dagstat-2022.html
-      code: https://github.com/mine-cetinkaya-rundel/tidyperspective/blob/main/talks/dagstat-2022.qmd
-      thumbnail: presentations/presentations-educators-perspective-tidyverse.png
-    - title: An anthology of experimental designs
-      href: https://emitanaka.org/slides/toronto2022/
-      code: https://github.com/emitanaka/talks/tree/master/Toronto2022
-      thumbnail: presentations/presentations-anthology-experimental-designs.png
-    - title: The untold story of palmerpenguins
-      href: https://apreshill.github.io/palmerpenguins-useR-2022/
-      code: https://github.com/apreshill/palmerpenguins-useR-2022
-      thumbnail: presentations/presentations-penguins-story.png
-    - title: Outrageously efficient EDA
-      href: https://jthomasmock.github.io/arrow-dplyr/
-      code: https://github.com/jthomasmock/arrow-dplyr
-      thumbnail: presentations/presentations-arrow-dplyr.png
-    - title: Improvements in textrecipes
-      href: https://emilhvitfeldt.github.io/useR2022-textrecipes/
-      code: https://github.com/emilhvitfeldt/useR2022-textrecipes/
-      thumbnail: presentations/presentations-textrecipes.png
-      
-
 
 - category: Documentos Interactivos
   description: |
@@ -96,7 +54,6 @@
       thumbnail: interactive/interactive-jupyter.png
   
 
-
 - category: Libros
   description: |
     Descubre un mundo de conocimiento con nuestro libro. Explora la filosofía, economía, estadística política, informática y matemáticas. ¡No te lo pierdas!
@@ -105,10 +62,6 @@
       href: https://io-achalmaedison.netlify.app/
       code: https://github.com/achalmed/Investigacion-operativa
       thumbnail: books/Screenshot_20230502_200355.png
-    - title: Modern Polars
-      href: https://kevinheavey.github.io/modern-polars/
-      code: https://github.com/kevinheavey/modern-polars
-      thumbnail: books/modern-polars.png
     - title: Python for Data Analysis, 3E
       href: https://wesmckinney.com/book/
       thumbnail: books/books-python-for-data.png
@@ -116,30 +69,10 @@
       href: https://r4ds.hadley.nz/
       code: https://github.com/hadley/r4ds/
       thumbnail: books/books-r4ds.png      
-    - title: R Packages
-      href: https://r-pkgs.org/
-      code: https://github.com/hadley/r-pkgs/
-      thumbnail: books/books-r-pkgs.png  
-    - title: mlr3book
-      href: https://mlr3book.mlr-org.com/
-      code: https://github.com/mlr-org/mlr3book/tree/main/book/
-      thumbnail: books/books-mlr3book.png
-    - title: Telling Stories with Data
-      href: https://tellingstorieswithdata.com/
-      code: https://github.com/RohanAlexander/telling_stories
-      thumbnail: books/books-telling-stories.png
     - title: Geocomputation with Python
       href: https://py.geocompx.org/
       code: https://github.com/geocompx/py
-      thumbnail: books/geocompy.png      
-    - title: utilitR documentation (French)
-      href: https://www.book.utilitr.org/
-      code: https://github.com/InseeFrLab/utilitR
-      thumbnail: books/utilitr.png      
-    - title: Analyse et conception de logiciels (French)
-      href: https://fuhrmanator.github.io/log210-ndc-quarto/
-      code: https://github.com/fuhrmanator/log210-ndc-quarto/
-      thumbnail: books/book-analyse-conceptions-french.png
+      thumbnail: books/geocompy.png       
     - title: Time Series Analysis
       href: https://vlyubchich.github.io/tsar/
       code: https://github.com/vlyubchich/tsar/

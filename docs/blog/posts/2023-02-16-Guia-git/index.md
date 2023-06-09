@@ -1,8 +1,8 @@
 ---
-title: Guía de Git Cómo trabajar en equipo en proyectos de desarrollo de software
-subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.guia completa
+title: Guía de Git Cómo trabajar en equipo en proyectos
+subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.
 description: |
-  Esta guía detallada de Git te enseñará todo lo que necesitas saber para empezar a trabajar en equipo en proyectos de desarrollo de software. Desde la instalación hasta la colaboración con otros desarrolladores, esta guía te proporcionará las herramientas necesarias para mantener tu código organizado y siempre actualizado.
+  Esta guía detallada de Git te enseñará todo lo que necesitas saber para empezar a trabajar en equipo en proyectos. Desde la instalación hasta la colaboración con otros desarrolladores, esta guía te proporcionará las herramientas necesarias para mantener tu código organizado y siempre actualizado.
 categories:
   - Git
   - GitHub
@@ -16,1013 +16,1027 @@ date: "02/16/2023"
 
 
 
-¿Necesitas aprender algunos comandos de [GIT](https://git-scm.com/) básicos? Has venido al lugar correcto. Sigue leyendo para descubrir nuestra práctica hoja de trucos que puedes utilizar como referencia diaria.
-
-¡Empecemos!
-
 # Introducción
 
-Los sistemas de control de versiones como Git son imprescindibles para las prácticas recomendadas del desarrollo de software moderno. El control de versiones le permite realizar un seguimiento de su software a nivel de fuente. Puede rastrear cambios, volver a etapas anteriores y producir ramificaciones para crear versiones alternativas de archivos y directorios.
+**¿Estás interesado en aprender los fundamentos de Git y GitHub?** ¡Has llegado al lugar perfecto! En este blog, te presentaremos una guía completa que podrás utilizar como referencia diaria.
 
-Los archivos de muchos proyectos de software se mantienen en repositorios de Git y las plataformas como GitHub, GitLab y Bitbucket facilitan el intercambio y la colaboración en proyectos de desarrollo de software.
+Tanto si estás comenzando tu viaje en el control de versiones como si deseas mejorar tus habilidades en Git y aprovechar al máximo GitHub, encontrarás aquí una guía clara y concisa para dar tus primeros pasos.
 
-En esta guía, mostraremos cómo instalar y configurar Git en un servidor de Ubuntu 20.04. Abordaremos la instalación del software de dos formas diferentes: a través del [administrador de paquetes integrado](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04#installing-git-with-default-packages) y a través de la [fuente](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04#installing-git-from-source). Cada uno de estos enfoques ofrece sus propios beneficios, dependiendo de sus necesidades específicas.
+Los sistemas de control de versiones, como Git, son imprescindibles en las prácticas recomendadas del desarrollo de software moderno. Estos sistemas te permiten realizar un seguimiento de los cambios en tu código fuente, revertir a versiones anteriores y crear ramas para experimentar con nuevas ideas o funcionalidades.
 
-# Entendiendo cómo funciona GIT
+Hoy en día, los repositorios de Git albergan muchos proyectos de software, y plataformas como GitHub, GitLab y Bitbucket facilitan la colaboración y el intercambio de código entre desarrolladores.
 
-GIT es el SCV (sistema de control de versiones) de código abierto [más utilizado](https://www.g2.com/categories/version-control-systems?utf8=%E2%9C%93&order=g2_score) que te permite rastrear los cambios realizados en los archivos. Las empresas y los programadores suelen utilizar el GIT para colaborar en el desarrollo de software y aplicaciones.
+En esta guía, te mostraremos cómo instalar y configurar Git en un servidor con Ubuntu 20.04. Exploraremos dos métodos diferentes de instalación, cada uno con sus propios beneficios, para que puedas elegir el que mejor se adapte a tus necesidades específicas.
 
-Un proyecto GIT consta de tres secciones principales: **el directorio de trabajo, el área de preparación y el directorio git.**
+> Recuerda que es esencial tener un buen dominio de Git y GitHub para colaborar eficientemente en proyectos y aprovechar todas sus funcionalidades. ¡Vamos a sumergirnos en el fascinante mundo de Git y GitHub!
 
-El directorio de trabajo es donde se agregan, borran y editan los archivos. Luego, los cambios son preparados (indexados) en el área de preparación. Después de que confirmes tus cambios, la instantánea de los cambios se guardará en el directorio git.
+# Entendiendo cómo funciona Git
 
-Todo el mundo puede usar GIT ya que está disponible para [Linux](https://git-scm.com/book/es/v2), [Windows](https://gitforwindows.org/), [Mac](https://git-scm.com/download/mac) y [Solaris](https://www.opencsw.org/packages/git/). El software puede tener una fuerte curva de aprendizaje, pero hay muchos [tutoriales](https://www.hostinger.es/tutoriales/instalar-git-en-distintos-sistemas-operativos) disponibles para ayudarte.
+Git es el sistema de control de versiones (SCV) de código abierto más utilizado, diseñado para rastrear los cambios realizados en los archivos. Tanto empresas como programadores confían en Git para colaborar en el desarrollo de software y aplicaciones.
 
-# Comandos de GIT básicos
+Un proyecto en Git se compone de tres elementos principales: el directorio de trabajo, el área de preparación y el directorio Git.
 
-Aquí hay algunos comandos básicos de GIT que debes conocer:
+El directorio de trabajo es donde agregas, borras y editas tus archivos. Luego, los cambios se preparan (indexan) en el área de preparación. Una vez que confirmas tus cambios, se guarda una instantánea de los mismos en el directorio Git.
 
-1. `git init`: Inicializa un nuevo repositorio de Git en la carpeta actual.
-2. `git clone [url]`: Clona un repositorio existente a la carpeta actual.
-3. `git add [file]`: Agrega un archivo al área de stage (preparación) para ser incluido en el próximo commit.
-4. `git commit -m "[message]"`: Realiza un commit (guarda un punto de referencia) con un mensaje describiendo los cambios realizados.
-5. `git status`: Muestra el estado actual del repositorio, incluyendo los archivos modificados y los que están pendientes de commit.
-6. `git log`: Muestra un historial de todos los commits realizados en el repositorio.
-7. `git diff`: Muestra las diferencias entre los cambios realizados y el último commit.
-8. `git branch`: Muestra una lista de todas las ramas existentes en el repositorio.
-9. `git checkout [branch]`: Cambia a una rama específica.
+Git está disponible para múltiples plataformas, incluyendo Linux, Windows, Mac y Solaris. Esto hace que Git sea accesible para todos. Aunque el software puede tener una curva de aprendizaje pronunciada, existen numerosos tutoriales disponibles para ayudarte a dominarlo.
+
+Así que, independientemente de tu sistema operativo, puedes aprovechar los beneficios de Git y aprovechar su poderoso conjunto de características. Con el tiempo y la práctica, te convertirás en un experto en el uso de Git para gestionar tus proyectos de manera eficiente y colaborar de forma efectiva con otros desarrolladores.
+
+# Comandos básicos de Git
+
+Aquí te presentamos algunos comandos básicos de Git que es importante que conozcas:
+
+1.  `git init`: Inicializa un nuevo repositorio de Git en la carpeta actual.
+2.  `git clone [url]`: Clona un repositorio existente en la carpeta actual.
+3.  `git add [file]`: Agrega un archivo al área de preparación (stage) para ser incluido en el próximo commit.
+4.  `git commit -m "[message]"`: Realiza un commit (guarda un punto de referencia) con un mensaje que describe los cambios realizados.
+5.  `git status`: Muestra el estado actual del repositorio, incluyendo los archivos modificados y los que están pendientes de commit.
+6.  `git log`: Muestra un historial de todos los commits realizados en el repositorio.
+7.  `git diff`: Muestra las diferencias entre los cambios realizados y el último commit.
+8.  `git branch`: Muestra una lista de todas las ramas existentes en el repositorio.
+9.  `git checkout [branch]`: Cambia a una rama específica.
 10. `git merge [branch]`: Combina los cambios de una rama específica con la rama actual.
-11. `git config --global user.email "achalmaedison@outlook.com"`
-12. `git config --global user.name "achalmed"`
+11. `git config --global user.email "tu-email@example.com"`
+12. `git config --global user.name "pepito"`
 
-Estos son solo algunos de los comandos básicos de Git, hay muchos otros comandos avanzados disponibles para realizar tareas más complejas como trabajar con ramas remotas y manejar conflictos.
+Estos son solo algunos de los comandos básicos de Git. También existen muchos otros comandos avanzados disponibles para realizar tareas más complejas, como trabajar con ramas remotas y manejar conflictos.
 
-# Instalar y Configurar Git en Ubuntu 20.04
+Dominar estos comandos te permitirá comenzar a utilizar Git de manera efectiva y aprovechar al máximo sus capacidades. ¡No dudes en explorar más a fondo la documentación oficial de Git para descubrir todas las funcionalidades que ofrece!
 
-- [Git](https://www.digitalocean.com/community/tags/git)
-- [Open Source](https://www.digitalocean.com/community/tags/open-source)
-- [Ubuntu](https://www.digitalocean.com/community/tags/ubuntu)
+# Instalación y Configuración de Git
+
+**Git** es una herramienta fundamental para el control de versiones y colaboración en proyectos de desarrollo de software. Aquí te explicaremos cómo instalar y configurar Git en Ubuntu.
 
 ## Instalación de Git con paquetes predeterminados
 
-La opción de instalar con paquetes predeterminados es recomendable si quiere activar y ejecutar con Git rápidamente, si prefiere una versión estable ampliamente utilizada o si no busca las funciones más recientes disponibles. Si busca la versión más reciente, debería ir directamente a la sección sobre la instalación desde la fuente.
+Si deseas una instalación rápida y estable de Git, puedes utilizar los paquetes predeterminados. Si buscas la versión más reciente o necesitas funciones específicas, puedes optar por la instalación desde la fuente.
 
-Es probable que Git ya esté instalado en el servidor Ubuntu 20.04. Puede confirmar que ese es el caso de su servidor con el siguiente comando:
+En primer lugar, verifica si Git ya está instalado en tu Ubuntu ejecutando el siguiente comando en la terminal:
 
-`git --version`
+```shell         
+git --version
+```
 
-Si obtiene un resultado similar al siguiente, significa que Git ya está instalado.
+Si obtienes una salida similar a la siguiente, significa que Git ya está instalado:
 
-Output
-git version 2.25.1  
+```shell        
+git version 2.25.1
+```
 
-De ser así, puede pasar a la configuración de Git, o bien si necesita una versión más actualizada, puede leer la siguiente sección sobre cómo instalar desde la fuente.
+Si Git no está instalado, puedes utilizar el administrador de paquetes APT de Ubuntu para instalarlo:
 
-Sin embargo, si no obtuvo como resultado un número de versión de Git, puede instalarlo con el administrador de paquetes predeterminado APT de Ubuntu.
+1.  Abre una terminal.
+2.  Actualiza la lista de paquetes disponibles con el siguiente comando: `sudo apt update`
+3.  Instala Git utilizando el siguiente comando: `sudo apt install git`
+4.  Verifica la instalación ejecutando el comando `git --version`
 
-1. Abre una terminal.
-2. Ejecuta el siguiente comando para actualizar la lista de paquetes disponibles: `sudo apt update`
-3. Instala Git usando el siguiente comando: `sudo apt install git`
-4. Verifica la instalación de Git ejecutando el comando `git --version`
+Una vez que Git esté instalado, es recomendable configurarlo según tus necesidades. Sigue estos pasos para configurar Git en Ubuntu:
 
-Una vez que Git esté instalado, puedes configurarlo para que se adapte a tus necesidades. Para configurar Git en Ubuntu, sigue estos pasos:
+1.  Establece tu nombre de usuario en Git con el comando: `git config --global user.name "Tu Nombre"`
+2.  Establece tu dirección de correo electrónico en Git con el comando: `git config --global user.email "tu.correo@example.com"`
+3.  Para verificar la configuración actual de Git, utiliza el comando: `git config --list`
 
-1. Establece tu nombre de usuario en Git utilizando el comando `git config --global user.name "Your Name"`
-2. Establece tu dirección de correo electrónico en Git utilizando el comando `git config --global user.email "your.email@example.com"`
-3. Para verificar la configuración actual de Git, utiliza el comando `git config --list`
+También es recomendable configurar un editor de texto para escribir los mensajes de commit. Puedes hacerlo con el siguiente comando, reemplazando "nano" o "vi" por el editor de texto de tu preferencia:
 
-Es recomendable usar un editor de texto para escribir los mensajes de commit, para esto se puede configurar con el siguiente comando `git config --global core.editor "nano"` o `git config --global core.editor "vi"` o el editor de tu preferencia.
+```shell         
+git config --global core.editor "nano"
+```
+
+Con estos pasos, habrás instalado y configurado Git en tu sistema Ubuntu. Ahora estás listo para aprovechar todas las ventajas que ofrece esta poderosa herramienta de control de versiones en tus proyectos de desarrollo.
 
 ## Instalación de Git desde la fuente
 
-Si busca un método más flexible para instalar Git, puede optar por compilar el software desde la fuente, lo cual explicaremos en esta sección. Esto toma más tiempo y no se mantendrá en su administrador de paquetes, pero le permitirá descargar la versión más reciente y le brindará mayor control sobre las opciones que incluya si quiere personalizarlo.
+Si estás buscando una forma más flexible de instalar Git y quieres tener la versión más reciente, puedes compilar el software desde la fuente. Aunque este método requiere más tiempo y no se integrará con el administrador de paquetes, te permitirá personalizar las opciones de instalación.
 
-Verifique la versión de Git que está instalada actualmente en el servidor:
-`git --version`
+Antes de comenzar, verifica la versión actualmente instalada de Git ejecutando el siguiente comando: `git --version`. Si Git ya está instalado, obtendrás un resultado similar a este: `git version 2.25.1`.
 
-Si Git está instalado, obtendrá un resultado similar al siguiente:
+Asegúrate de tener instalado el software necesario para compilar Git. Puedes hacerlo actualizando el índice de paquetes locales y luego instalando las dependencias relevantes. Ejecuta los siguientes comandos:
 
-Output
-git version 2.25.1
+```shell
+sudo apt update
+sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc
+```
 
-Antes de comenzar, debe instalar el software necesario para Git. Todo se encuentra disponible en los repositorios predeterminados, de modo que podemos actualizar nuestro índice local de paquetes y luego instalar los paquetes pertinentes.
-`sudo apt update`  
+Una vez instaladas las dependencias, crea un directorio temporal y accede a él. Aquí es donde descargarás el archivo tarball de Git. Ejecuta los siguientes comandos:
 
-`sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc`  
+```shell
+mkdir tmp
+cd /tmp
+```
 
-Tras haber instalado las dependencias necesarias, cree un directorio temporal y vaya a él. Aquí es donde descargaremos nuestro tarball de Git.
-`mkdir tmp`
+Desde el sitio web oficial de Git, navega hasta la lista de tarballs disponibles en `https://mirrors.edge.kernel.org/pub/software/scm/git/` y descarga la versión que desees utilizar. Por ejemplo, si quieres descargar la versión 2.26.2, puedes ejecutar el siguiente comando:
 
-`cd /tmp`
+```shell
+curl -o git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz
+```
 
-Desde el [sitio web del proyecto Git](https://git-scm.com/), podemos navegar a la lista de tarball disponible en [https://mirrors.edge.kernel.org/pub/software/scm/git/](https://mirrors.edge.kernel.org/pub/software/scm/git/) y descargar la versión que quiera utilizar. En el momento de escribir este artículo, la versión más reciente es 2.26.2, así que descargaremos esa versión para nuestra demostración. Utilizaremos curl y enviaremos el archivo que descarguemos a git.tar.gz.
-`curl -o git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz`  
+Descomprime el archivo tarball ejecutando el siguiente comando:
 
-Descomprima el archivo tarball:
+```shell
+tar -zxf git.tar.gz
+```
 
-`tar -zxf git.tar.gz`
+A continuación, accede al nuevo directorio de Git con el siguiente comando:
 
-A continuación, vaya al nuevo directorio de Git:
-`cd git-*`  
+```shell
+cd git-*
+```
 
-Ahora, podrá crear el paquete e instalarlo escribiendo estos dos comandos:
-`make prefix=/usr/local all`
+Ahora, puedes crear el paquete e instalarlo ejecutando los siguientes comandos:
 
-`sudo make prefix=/usr/local install`  
+```shell
+make prefix=/usr/local all
+sudo make prefix=/usr/local install
+```
 
-Ahora, sustituya el proceso de shell para que se utilice la versión de Git que acabamos de instalar:
-`exec bash`  
+Una vez completado el proceso, sustituye la shell actual para utilizar la versión de Git recién instalada ejecutando el siguiente comando:
 
-Una vez completado esto, puede estar seguro de que su instalación se realizó correctamente comprobando la versión.
-`git --version`
+```shell
+exec bash
+```
 
-Output
+Para verificar que la instalación se haya realizado correctamente, comprueba la versión de Git nuevamente ejecutando el comando `git --version`. Deberías obtener un resultado similar a este: `git version 2.26.2`.
 
-git version 2.26.2
+¡Con Git instalado correctamente, ahora puedes continuar con la configuración y aprovechar todas las funcionalidades que ofrece esta poderosa herramienta de control de versiones en tus proyectos!
 
-Con Git instalado correctamente, ahora puede finalizar su configuración.
 
 ## Configuración de Git
 
-Una vez que esté satisfecho con la versión de Git, debería configurar Git de modo que los mensajes de confirmación que genere contengan la información correcta y lo respalden a medida que compile su proyecto de software.
+Una vez que hayas elegido la versión de Git con la que estás satisfecho, es importante configurar Git para que los mensajes de confirmación que generes contengan la información correcta y te respalden a medida que desarrollas tu proyecto de software.
 
-Esta configuración es posible si aplicamos el comando git config. Específicamente, debemos proporcionar nuestro nombre y nuestra dirección de correo electrónico debido a que Git inserta esta información en cada confirmación que hacemos. Podemos añadir esta información escribiendo lo siguiente:
-`git config --global user.name "Your Name"`
+La configuración de Git se realiza a través del comando `git config`. Específicamente, debemos proporcionar nuestro nombre y dirección de correo electrónico, ya que Git inserta esta información en cada confirmación que realizamos. Podemos agregar esta información ejecutando los siguientes comandos:
 
-For example: `git config --global user.name "achalmed"`
+```shell
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 
-`git config --global user.email "youremail@domain.com"`
+Por ejemplo:
 
-`git config --global user.email "achalmaedison@outlook.com"`
+```shell
+git config --global user.name "achalmed"
+git config --global user.email "achalma_pingüino@gmail.com"
+```
 
-Podemos ver todos los elementos de configuración creados escribiendo lo siguiente:
-`git config --list`
+Para verificar los elementos de configuración que hemos creado, podemos ejecutar el siguiente comando:
 
-Output
+```shell
+git config --list
+```
 
-user.name=Your Name
-user.email=youremail@domain.com
-...
+La información que ingreses se almacenará en el archivo de configuración de Git. Si deseas editarlo manualmente con el editor de texto de tu elección (en este tutorial utilizaremos nano), puedes ejecutar el siguiente comando:
 
-La información que ingresa se almacena en el archivo de configuración de Git. Tendrá la opción de editarlo manualmente con el editor de texto que prefiera (en este tutorial utilizaremos nano) como se muestra a continuación:
-`nano ~/.gitconfig`  
+```shell
+nano ~/.gitconfig
+```
 
-~/.gitconfig contents
+En el archivo `~/.gitconfig`, encontrarás los siguientes contenidos:
 
+```shell
 [user]
-name = Your Name
-email = youremail@domain.com
+    name = Your Name
+    email = your.email@example.com
+```
 
-Para salir del editor de texto pulse CTRL y X, luego Y y, a continuación, ENTER.
+Para salir del editor de texto, presiona CTRL + X, luego Y y finalmente ENTER.
 
-Existen muchas otras opciones que puede configurar, pero estas son las dos esenciales que se necesitan. Si omite este paso, probablemente verá mensajes de advertencia cuando realice una confirmación con Git. Esto implica un mayor trabajo para usted, pues tendrá que revisar las confirmaciones que haya realizado con la información corregida.
+Existen muchas otras opciones de configuración que puedes ajustar, pero estas dos son esenciales. Si omites este paso, es probable que veas mensajes de advertencia al realizar una confirmación con Git. Esto implica más trabajo para ti, ya que tendrás que revisar las confirmaciones anteriores y corregir la información.
 
-## Conclusión
-
-De esta manera, deberá tener Git instalado y listo para utilizarlo en su sistema.
+Al configurar Git correctamente, aseguras que tus confirmaciones tengan la información adecuada y facilitas el seguimiento y control de los cambios en tu proyecto de software.
 
 # Cómo Obtener y Configurar tus Claves SSH para Git y GitHub
 
-Si usas GitHub sin configurar una clave SSH, realmente te estás perdiendo de algo genial. Piensa en todo el tiempo que pasaste introduciendo tu correo electrónico y tu contraseña en la consola cada vez que haces un commit podrías haberlo pasado programando.
+Si estás utilizando GitHub sin configurar una clave SSH, te estás perdiendo de una gran comodidad. Piensa en todo el tiempo que has gastado ingresando tu correo electrónico y contraseña en la consola cada vez que haces un commit, podrías haberlo utilizado para programar.
 
-Bueno, ya no más. Aquí hay una guía rápida para generar y configurar una clave SSH con GitHub para que nunca más tengas que autentificarte a la antigua.
+Pero ya no más. Aquí tienes una guía rápida para generar y configurar una clave SSH con GitHub, para que nunca más tengas que autenticarte de forma convencional.
 
-## Comprobar si existe una clave SSH
+## Verificar la existencia de una clave SSH
 
-Primero, comprueba si ya has generado las claves SSH para tu máquina. Abre una terminal e introduce el siguiente comando:
+En primer lugar, verifica si ya has generado claves SSH para tu máquina. Abre una terminal y ejecuta el siguiente comando:
 
-`ls -al ~/.ssh`
+```shell
+ls -al ~/.ssh
+```
 
 Si ya has generado las claves SSH, deberías ver una salida similar a esta:
 
--rw-------  1 usuario usuario  1766 Jul  7  2018 id_rsa
--rw-r--r--  1 usuario usuario   414 Jul  7  2018 id_rsa.pub
--rw-------  1 usuario usuario 12892 Feb  5 18:39 known_hosts
+```shell
+-rw-------  1 usuario usuario  1766 Jul  7  2018 id_rsa
+-rw-r--r--  1 usuario usuario   414 Jul  7  2018 id_rsa.pub
+-rw-------  1 usuario usuario 12892 Feb  5 18:39 known_hosts
+```
 
-Si tus claves ya existen, pasa a la sección **Copia tu clave pública de SSH** abajo.
+Si tus claves ya existen, continúa con la sección **Copia tu clave pública de SSH** a continuación.
 
-Si no ves ninguna salida o ese directorio no existe (obtienes un mensaje de No such file or directory), entonces ejecuta:
+Si no ves ninguna salida o si el directorio no existe (recibes un mensaje de "No such file or directory"), entonces ejecuta el siguiente comando:
 
-`mkdir $HOME/.ssh`
+```shell
+mkdir $HOME/.ssh
+```
 
-Luego genera un nuevo conjunto de claves con:
+A continuación, genera un nuevo par de claves con el siguiente comando:
 
-`ssh-keygen -t rsa -b 4096 -C achalmaedison@outlook.com`
+```shell
+ssh-keygen -t rsa -b 4096 -C achalma_pinguino@gmail.com
+```
 
-**Enter para crear el archivo con código con el nombre default, luego pide poner una clave para el uso del archivo for example 345320
+Presiona Enter para crear el archivo con el nombre predeterminado y luego ingresa una clave para proteger el archivo (por ejemplo, "pepito69").
 
-*Ahora comprueba que tus claves existen con el comando ls -al ~/.ssh y asegúrate de que la salida es similar a la anterior.*
+Ahora verifica que tus claves existan con el comando `ls -al ~/.ssh` y asegúrate de que la salida sea similar a la mencionada anteriormente.
 
-**Nota:** Las claves SSH siempre se generan como un par de claves públicas (id_rsa.pub) y privadas (id_rsa). Es extremadamente importante que **nunca reveles tu clave privada,** y que **sólo uses tu clave pública** para cosas como la autenticación de GitHub. Puedes leer más sobre cómo funcionan los pares de claves SSH / RSA [aquí](https://www.freecodecamp.org/news/a-top-down-introduction-to-ssh-965f4fadd32e/).
+**Nota:** Las claves SSH siempre se generan como un par de claves públicas (id_rsa.pub) y privadas (id_rsa). Es extremadamente importante que **nunca reveles tu clave privada** y que **solo uses tu clave pública** para autenticarte en servicios como GitHub.
 
 ## Agrega tu clave SSH a ssh-agent
 
-ssh-agent es un programa que se inicia cuando te conectas y almacena tus claves privadas. Para que funciones correctamente, debe estar ejecutándose y tener una copia de tu clave privada.
+**ssh-agent** es un programa que se inicia cuando te conectas y almacena tus claves privadas. Para que funcione correctamente, debe estar en ejecución y tener una copia de tu clave privada.
 
-Primero, asegúrate de que ssh-agent se está ejecutando con:
+Primero, asegúrate de que **ssh-agent** se está ejecutando ejecutando el siguiente comando:
 
-`eval "$(ssh-agent -s)"` # para Mac y Linux
+```shell
+eval "$(ssh-agent -s)" # para Mac y Linux
+```
 
 o:
 
-`eval ssh-agent -s`
+```shell
+eval ssh-agent -s
+```
 
-`ssh-agent -s` # para Windows
+```shell
+ssh-agent -s # para Windows
+```
 
-Entonces, agrega tu clave privada a ssh-agent con:
+A continuación, agrega tu clave privada a **ssh-agent** con el siguiente comando:
 
-`ssh-add ~/.ssh/id_rsa`
+```shell
+ssh-add ~/.ssh/id_rsa
+```
 
 ## Copia tu clave pública de SSH
 
-A continuación, tienes que copiar tu clave pública de SSH en el portapapeles.
+Después, necesitarás copiar tu clave pública de SSH al portapapeles.
 
-Para Linux o Mac, imprime el contenido de tu clave pública en la consola con:
+Para Linux o Mac, puedes imprimir el contenido de tu clave pública en la consola con el siguiente comando:
 
-`cat ~/.ssh/id_rsa.pub` # Linux
+```shell
+cat ~/.ssh/id_rsa.pub # Linux
+```
 
-Sale un conjunto números y letras, si al final está el correo que registro antes debe borrar para pegar en GitHub
+Aparecerá una cadena de números y letras. Si al final está el correo que registraste antes, debes borrarlo antes de pegarlo en GitHub.
 
-Luego resalta y copia la salida.
+Luego, resalta y copia el resultado.
 
-O para Windows, simplemente ejecuta:
+Para Windows, simplemente ejecuta el siguiente comando:
 
-`clip < ~/.ssh/id_rsa.pub` # Windows
+```shell
+clip < ~/.ssh/id_rsa.pub # Windows
+```
 
 ## Agrega tu clave SSH pública a GitHub
 
-Ve a la página de [configuración](https://github.com/settings/keys) de tu GitHub y haz clic en el botón "New SSH key":
+Accede a la página de **configuración** de tu cuenta de GitHub [aquí](https://github.com/settings/keys) y haz clic en el botón "New SSH key".
 
-Luego dale a tu clave un título reconocible y pégala en tu clave pública (id_rsa.pub):
+A continuación, asigna un título descriptivo a tu clave y pégala en el campo correspondiente a tu clave pública (id_rsa.pub).
 
+Por último, prueba la autenticación con el siguiente comando:
 
-Finalmente, prueba la autenticación con:
+```shell
+ssh -T git@github.com
+```
 
-`ssh -T git@github.com`
+Si has seguido correctamente todos estos pasos, deberías ver el siguiente mensaje:
 
-Si has seguido todos estos pasos correctamente, deberías ver este mensaje:
+```shell
+Hi tu_usuario! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
-Hi tu_usuario! You've successfully authenticated, but GitHub does not provide shell access.  
+o
 
-or
-
+```shell
 Warning: Permanently added the ECDSA host key for IP address '140.82.114.3' to the list of known hosts.
-
 Hi achalmed! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
-## Más información sobre SSH
+Para obtener más información sobre SSH, puedes consultar la [documentación](https://cli.github.com/).
 
-VER DCUMENTACIÓN [https://cli.github.com/](https://cli.github.com/)  
+## CLI de GitHub
 
-## CLI de github
+En este tutorial, te mostraré cómo instalar y configurar la CLI de GitHub en Linux para facilitar tus operaciones en GitHub directamente desde la terminal.
 
-PRIMERO INSTALAR Installing gh on Linux  
+**Paso 1: Instalación de la CLI de GitHub en Linux**
 
-`gh auth login`
+Para comenzar, debemos instalar la CLI de GitHub en Linux. Ejecuta los siguientes comandos en tu terminal:
 
-`sudo apt  install gh  # version 2.12.1+dfsg1-1`
+```shell
+sudo apt install gh # versión 2.12.1+dfsg1-1
+```
 
-`gh auth login`
+**Paso 2: Autenticación con GitHub**
 
-Eligir estas opciones
+Una vez que hayas instalado la CLI de GitHub, puedes autenticarte con tu cuenta de GitHub. Ejecuta el siguiente comando:
 
-? What account do you want to log into? GitHub.com
-? What is your preferred protocol for Git operations? SSH
-? Generate a new SSH key to add to your GitHub account? Yes
-? Enter a passphrase for your new SSH key (Optional) ****** es 345320
-? Title for your SSH key: achalmagit
-? How would you like to authenticate GitHub CLI? Login with a web browser
+```shell
+gh auth login
+```
 
-Luego copiar el codifo en el navegador para conectar con github
+Aparecerán varias opciones. A continuación, elige las siguientes opciones:
 
-! First copy your one-time code: 5DCA-FB42
+- ¿En qué cuenta quieres iniciar sesión? GitHub.com
+- ¿Cuál es tu protocolo preferido para las operaciones de Git? SSH
+- ¿Deseas generar una nueva clave SSH para agregar a tu cuenta de GitHub? Sí
+- Ingresa una frase de contraseña para tu nueva clave SSH (opcional) \*\*\*\*\*\* (usa tu propia frase de contraseña)
+- Título para tu clave SSH: achalmagit
+- ¿Cómo te gustaría autenticar la CLI de GitHub? Iniciar sesión con un navegador web
 
-Enter
+Luego, copia el código proporcionado y pégalo en tu navegador para completar la conexión con GitHub.
 
-Press Enter to open github.com in your browser...  
+¡Listo! Ahora estás autenticado con éxito y puedes usar la CLI de GitHub para trabajar con tus repositorios en la terminal.
 
-Listo usa el coigo 345320 para trabajar con repostios de github en terminal
+**Paso 3: Utilizar la CLI de GitHub**
 
-LISTO
+Una vez que hayas completado la autenticación, puedes comenzar a utilizar la CLI de GitHub en la terminal. Simplemente ingresa el código de contraseña (\*\*\*\*\*\*) cuando se te solicite para realizar operaciones en tus repositorios de GitHub.
 
-VER DOCUMETACION DE GIT HUB
+Para obtener más información sobre la CLI de GitHub y todas sus capacidades, puedes consultar la [documentación oficial](https://cli.github.com/).
 
-[https://cli.github.com/](https://cli.github.com/)
+> ¡Disfruta utilizando la CLI de GitHub para simplificar tus interacciones con GitHub desde la terminal!
 
-# Create a Repository
+# Crear un Repositorio
 
-## git init [project name]
+En este tutorial, te mostraré cómo crear un nuevo repositorio GIT local utilizando el comando `git init`. Este proceso te permitirá iniciar un repositorio para tu proyecto y realizar un seguimiento de los cambios a lo largo del tiempo.
 
-`git init` creará un nuevo repositorio local GIT. Inicializa un nuevo repositorio.
+**Paso 1: Inicializar un nuevo repositorio**
 
-`git init [project name]`
+Para iniciar un nuevo repositorio GIT, simplemente ejecuta el siguiente comando en tu terminal:
 
-> Se hace solo una vez. Como alternativa, puedes crear un repositorio dentro de un nuevo directorio especificando el nombre del proyecto:  `git init [nombre del proyecto]`
+```shell
+git init
+```
 
-> **Comandos en visual code.** Los archivos con U indican que no tiene seguimiento. Los archivos con A ya estan en seguimiento con git. Cuando no hay A ni U entonces los archivos ya estan en linea. La M indica Modificaciones pendientes
+Esto creará un nuevo repositorio GIT vacío en tu directorio actual.
 
-### Git en Visual Code
+Si deseas especificar un nombre para tu proyecto al crear el repositorio, puedes utilizar el siguiente comando:
 
-Primero configurar git – paso anterior, usar cod ssh o instalar gh y usar git hub cli
+```shell
+git init [nombre del proyecto]
+```
 
-Primero creamos espacio de trabajo en la carpeta del proyecto (el nombre puede ser distinto o igual a la carpeta)
+Recuerda que este paso solo se realiza una vez al inicio del proyecto.
 
-**…or create a new repository on the command line**
+**Comandos en Visual Studio Code**
 
-echo "# achalmaedison.web" >> README.md  
+En Visual Studio Code, puedes interactuar con GIT directamente desde la interfaz de usuario. Aquí hay algunos comandos clave que puedes utilizar:
 
-1. Abrir el terminar integrado de la carpeta del proyecto en VCODE
-2. `git init`
-3. `git add README.md`
-4. `git add .`
-5. `git commit -m "comienzo del proyecto"` (enviamos al repostio en línea)
-6. `git branch -M main`
-Una vez haya modificaciones  
+1. Abre el terminal integrado en Visual Studio Code desde la carpeta de tu proyecto.
+2. Ejecuta `git init` para inicializar el repositorio.
+3. Utiliza `git add` seguido del nombre de archivo para agregar archivos individuales al repositorio `git add index.html`.
+4. Si deseas agregar todos los archivos modificados y no rastreados, puedes ejecutar `git add .`.
+5. Haz un commit de los cambios utilizando el comando `git commit -m "mensaje del commit"`.
+6. Si aún no tienes una rama principal (main), puedes crearla con el comando `git branch -M main`.
+7. Para vincular tu repositorio local a un repositorio remoto en GitHub, utiliza el comando `git remote add origin [URL del repositorio]`.
+8. Finalmente, puedes enviar tus cambios al repositorio remoto utilizando `git push -u origin main`. Asegúrate de ingresar tu nombre de usuario y contraseña correctamente.
 
-Podemos agregar los archivos mod con en el comando  
+También puedes importar código desde otro repositorio o iniciar un repositorio con código de proyectos Subversion, Mercurial o TFS.
 
-7. `git add index.html` (agregar archivos individuales)
-8. `git commit - m "comienzo b"`
-9. `git remote add origin https://github.com/achalmed/achalmaedison.web.git`
-10. `git push -u origin main` Aqui se agrega el nombre del usuario "achalmed" y la contraseña 8920[ACHAL09med]2397 se debe escribir, no copy
+Recuerda que es importante configurar GIT previamente y configurar la autenticación utilizando claves SSH o GitHub CLI, según tus preferencias.
 
-**…or push an existing repository from the command line**
+> ¡Ahora estás listo para crear y gestionar repositorios con GIT en Visual Studio Code!
 
-1. `git remote add origin https://github.com/achalmed/achalmaedison.web.git`  
-2. `git branch -M main`
-3. `git push -u origin main`
+## Clonar un Repositorio con Git
 
-**…or import code from another repository**
+> El comando `git clone` se utiliza para copiar un repositorio, ya sea desde un servidor remoto o desde una ubicación local. Si el repositorio está en un servidor remoto, se utiliza la siguiente sintaxis: `git clone nombredeusuario@host:/ruta/al/repositorio`. En cambio, si el repositorio se encuentra en una ubicación local, se utiliza: `git clone /ruta/al/repositorio`.
 
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+### ¿Qué es `git clone`?
 
-## git clone my_url
+El comando `git clone` se utiliza para apuntar a un repositorio existente y hacer una copia del mismo en otra ubicación. Este comando creará un nuevo directorio, lo configurará para utilizar Git y copiará los archivos del repositorio en él. Sin clonar un repositorio Git, no podrás realizar cambios en él ni contribuir con tu trabajo.
 
-`git clone my_url`: se usa para copiar un repositorio. Si el repositorio está en un servidor remoto, usa: `git clone nombredeusuario@host:/path/to/repository`  
+### Cómo Clonar un Repositorio Git
 
-A la inversa, ejecuta el siguiente comando básico para copiar un repositorio local: `git clone /path/to/repository`
+Git es un sistema de control de versiones ampliamente utilizado en el mundo empresarial. Antes de poder comenzar a trabajar en un repositorio, es necesario clonarlo en tu computadora local. En este artículo, te mostraré cómo clonar un repositorio Git en Ubuntu. Estos pasos son aplicables para clonar repositorios desde plataformas populares como GitHub, Bitbucket, GitLab y otras basadas en Git.
 
-### Cómo clonar el repositorio git
+### Clonar un Repositorio Remoto
 
-Git es un popular sistema de control de versiones utilizado por muchas empresas de todo el mundo. Sin embargo, requiere que tenga una copia del repositorio git antes de poder comenzar a trabajar en él. Debe clonar un repositorio de git en su computadora de escritorio o portátil local, antes de poder comenzar a realizar cambios en él. En este artículo, veremos cómo clonar un repositorio git en Ubuntu. Puede usar estos pasos para clonar un repositorio en github, bitbucket, gitlab y otras plataformas de desarrollo populares basadas en git.
+Supongamos que deseas clonar un repositorio remoto desde GitHub, Bitbucket u otra plataforma en la nube hacia tu máquina local.
 
-### ¿Qué es git clone?
+1. Abre la terminal y navega hasta la ubicación donde deseas que se copie el repositorio, por ejemplo:
 
-Git clone es básicamente un comando para apuntar a un repositorio existente y hacer una copia de él, en otra ubicación. En este caso, el comando git creará un nuevo directorio, lo configurará para su uso con git y copiará archivos en él. A menos que clone un repositorio git, no podrá contribuir con cambios a él.
+```shell
+cd /home/ubuntu/
+```
 
-### Clonar un repositorio remoto
+2. Cada repositorio remoto de Git tiene una URL única. Inicia sesión en tu plataforma de desarrollo preferida, como GitHub, y copia la URL de tu repositorio.
 
-Supongamos que desea clonar un repositorio remoto desde Github, Bitbucket o cualquier otra plataforma en la nube a su máquina local.
+3. Utiliza el siguiente comando `git clone` seguido de la URL del repositorio para clonarlo en tu máquina local. Por ejemplo:
 
-Abra el terminal y navegue hasta la ubicación (por ejemplo, /home/ubuntu) donde desea que se copie el repositorio.
+```shell
+sudo git clone https://github.com/usuario/repositorio
+```
 
-`cd /home/ubuntu/`
+Asegúrate de reemplazar "usuario" con tu nombre de usuario de GitHub y "repositorio" con el nombre de tu repositorio.
 
-Cada repositorio remoto de git tendrá una URL. Inicie sesión en su plataforma de desarrollo, como Github, y anote su URL. Será del formato.
+4. Se te pedirá la contraseña para la autenticación, después de lo cual Git descargará automáticamente una copia de tu repositorio en el directorio de trabajo actual.
 
-[https://git-website.com/username/repository-name](https://git-website.com/username/repository-name)
+### Clonar en una Carpeta Específica
 
-Por ejemplo, su repositorio de git (por ejemplo, demostración) tendrá las siguientes URL, dependiendo de la plataforma.
+Si deseas clonar el repositorio en una carpeta específica, puedes utilizar el siguiente comando:
 
-Github
+```shell
+sudo git clone <repositorio> <directorio>
+```
 
-[https://github.com/username/demo.git](https://github.com/username/demo.git)
+Por ejemplo, supongamos que deseas clonar tu repositorio en la carpeta `/home/desarrollador`:
 
-Bitbucket
+```shell
+sudo git clone https://github.com/usuario/repositorio /home/desarrollador
+```
 
-[https://bitbucket.com/username/demo.git](https://bitbucket.com/username/demo.git)
+> Ahora has aprendido cómo clonar un repositorio Git en tu máquina local utilizando el comando `git clone`. ¡Comienza a trabajar en tu repositorio clonado y realiza cambios en él!
 
-A veces, la URL también puede ser de la forma
+### Clonar un Repositorio Superficialmente
 
-ssh://username@example.com/path/to/my-project.git  
+Si necesitas clonar un repositorio grande con un historial extenso de confirmaciones, el proceso puede llevar mucho tiempo. Sin embargo, en esos casos, existe la opción de realizar un clon superficial en el cual puedes especificar las últimas "n" confirmaciones que deseas clonar. Esto resultará en un proceso mucho más rápido y ocupará menos espacio en tu sistema.
 
+Aquí tienes la sintaxis para realizar un clon superficial, donde "n" representa el número de confirmaciones más recientes que deseas clonar:
 
-Anote la URL de su repositorio y utilícela en el comando git clone como se muestra a continuación.
+```shell
+sudo git clone --depth=n <repo>
+```
 
-`sudo git clone https://github.com/username/repository-name`
+Por ejemplo, si deseas clonar solamente la última confirmación de tu repositorio, puedes utilizar el siguiente comando:
 
-Reemplace el nombre de usuario con su nombre de usuario de Github y el nombre del repositorio con el nombre de su repositorio. Por ejemplo
+```shell
+sudo git clone --depth=1 https://github.com/test_user/demo.git
+```
 
-`sudo git clone https://github.com/test_user/demo.git`
+De manera similar, si deseas clonar las últimas 10 confirmaciones de tu repositorio, puedes ejecutar este comando:
 
-Se le pedirá su contraseña para la autenticación, después de lo cual Git descargará automáticamente la copia de su repositorio a su directorio de trabajo actual.
+```shell
+sudo git clone --depth=10 https://github.com/test_user/demo.git
+```
 
+Clonar una Rama Específica de Git
 
-### Clonación a una carpeta específica
+Si únicamente deseas clonar una rama específica (por ejemplo, "working") en lugar de todo el repositorio, puedes utilizar la opción `-branch` en el comando `git clone`:
 
-Este es el comando para clonar el repositorio en una carpeta específica.
+```shell
+git clone --branch=working https://github.com/test_user/demo.git
+```
 
-`sudo git clone <repo> <directory>`
+> ¡Y eso es todo! Como puedes ver, clonar un repositorio Git en Ubuntu es bastante sencillo. Ahora puedes utilizar estas técnicas para realizar clones superficiales o clonar ramas específicas según tus necesidades.
 
-Por ejemplo, supongamos que desea clonar su repositorio a la carpeta /home/developer
+### Utilizar Git y GitHub para subir proyectos
 
-`sudo git clone https://github.com/test_user/demo.git /home/developer`
-
-### Clonar superficialmente un repositorio
-
-Si necesita clonar un repositorio grande con un gran historial de confirmaciones, puede llevar mucho tiempo. En tales casos, puede hacer un clon superficial donde puede especificar las últimas n confirmaciones que desea clonar. Será mucho más rápido y ocupará muy poco espacio en su sistema.
-
-Aquí está la sintaxis para el clon superficial, donde n es el número de confirmaciones más recientes que desea clonar.
-
-`sudo git clone -depth=n <repo>`
-
-
-Aquí está el comando para clonar la última confirmación de 1 de su repositorio.
-
-`sudo git clone -depth=1 https://github.com/test_user/demo.git`
-
-Del mismo modo, aquí está el comando para clonar las últimas 10 confirmaciones de su repositorio.
-
-`sudo git clone -depth=10 https://github.com/test_user/demo.git`
-
-Clonar una rama de Git
-
-Si solo desea clonar una rama específica (por ejemplo, trabajar) y no todo el repositorio, use la opción -branch en git clone.
-
-`git clone -branch working https://github.com/test_user/demo.git`
-
-Eso es todo. Como puede ver, es muy fácil clonar un repositorio git en Ubuntu.
-
-
-### Utilizar Git y Github para subir proyectos
-
-`git clone https://github.com/achalmed/P-1-Thesis-economic-growth-poverty.git`
-
-
-**os hemos hecho una pequeña introducción a Git y GitHub en Ubuntu. Os hemos enseñado cómo instalarlo, identificarnos y a la vez identificarnos en GitHub.**
-
-En ese artículo vamos a enseñar cómo podemos subir un proyecto desde el PC a GitHub para comenzar a gestionarlo desde allí. También os enseñaremos a utilizar los principales comandos para utilizarlo a través del terminal de Linux.
+Para comenzar a gestionar tus proyectos utilizando Git y GitHub, es necesario realizar algunos pasos. En este artículo, te mostraremos cómo subir un proyecto desde tu computadora a GitHub y también te enseñaremos a utilizar los principales comandos a través de la terminal de Linux.
 
 **Crear un nuevo repositorio**
 
-En primer lugar debemos crear un nuevo repositorio desde la web de GitHub. Creamos un nuevo desde la página **«New Project«.*
-
-Introduciremos el nombre del repositorio, una descripción y seleccionaremos si queremos que el repositorio sea público o privado (como privado habrá que pagar una suscripción). Una vez rellenado pulsamos sobre «Create Repository» y ya tenemos creado nuestro repositorio.
+En primer lugar, debes crear un nuevo repositorio en la página web de GitHub. Dirígete a la página "New Project" y proporciona un nombre para tu repositorio, una descripción y selecciona si deseas que el repositorio sea público o privado (recuerda que los repositorios privados requieren una suscripción). Una vez que hayas completado todos los campos, haz clic en "Create Repository" y tu repositorio estará listo.
 
 **Subir un proyecto**
 
-Para subir un proyecto en primer lugar debemos crear nuestro proyecto Git de forma local en nuestro PC. Para ello debemos situarnos sobre la ruta del proyecto desde un terminal mediante el siguiente comando.
+Para subir un proyecto, primero debes crear un proyecto Git localmente en tu computadora. Para ello, ve al directorio raíz de tu proyecto a través de la terminal utilizando el siguiente comando:
 
-`cd ruta/al/archivo`  
+```shell
+cd ruta/al/archivo
+```
 
-Una vez situados allí debemos teclear el comando para crear un proyecto Git.
+Una vez que estés en el directorio del proyecto, inicializa Git ejecutando el siguiente comando:
 
-`git init`  
+```shell
+git init
+```
 
-Veremos que el programa nos devuelve una línea de confirmación.
+Verás una confirmación de que el proyecto Git ha sido creado.
 
-Ahora debemos añadir los archivos correspondientes a Git. Para ello debemos teclear una de las siguientes funciones dependiendo si queremos añadir únicamente un archivo o añadir todos los existentes en el proyecto.
+Ahora debes agregar los archivos al repositorio Git. Puedes hacerlo utilizando una de las siguientes opciones, según si deseas agregar un archivo específico o todos los archivos existentes en el proyecto:
 
-`git add .` (añade todos los archivos existentes en la carpeta al proyecto Git)  
+```shell
+git add .  # Añade todos los archivos existentes en la carpeta al proyecto Git
+git add nombredelarchivo.extension  # Añade únicamente el archivo especificado al proyecto
+```
 
-`git add nombredelarchivo.extension` (solo añade al proyecto el archivo especificado)  
+Es importante que identifiques todos los cambios que realices en tu proyecto con un comentario. Puedes hacerlo utilizando el siguiente comando:
 
-Todos los cambios que se vayan realizando en nuestro proyecto deben ser identificados por un comentario. Añadimos el comentario mediante:
+```shell
+git commit -m 'comentario'
+```
 
-`git commit -m 'comentario'`  
+Ahora estás listo para subir el proyecto a GitHub. Para hacerlo, debes agregar el repositorio remoto ejecutando el siguiente comando en la terminal:
 
-Y ya podemos proceder a subir el proyecto a GitHub. Para ello debemos teclear en el terminal:
+```shell
+git remote add origin git@github.com:achalmed/achalmaedison.web.git
+```
 
-`git remote add origin git@github.com:achalmed/achalmaedison.web.git`
+Asegúrate de reemplazar "achalmed" con tu nombre de usuario en GitHub y "achalmaedison.web.git" con el nombre de tu repositorio previamente creado. Una vez que hayas ingresado los datos correctos, presiona Enter y podrás subir el proyecto ejecutando el siguiente comando:
 
-Debemos cambiar nick por nuestro nombre de usuario en GitHub y repositorio.git por el nombre del repositorio que hemos creado anteriormente. Pulsamos enter y ya podemos subir el proyecto mediante:
+```shell
+git push -u origin master
+```
 
-`git push -u origin master`  
+Ahora tu proyecto estará cargado en tu cuenta de GitHub. Puedes verificarlo accediendo a la página del proyecto.
 
-Ya tenemos el proyecto subido en nuestra cuenta de GitHub. Podemos comprobarlo accediendo a la página del proyecto.
+En caso de que encuentres un error llamado "fatal: remote origin already exists" durante el paso anterior, debes ejecutar el siguiente comando:
 
+```shell
+git remote rm origin
+```
 
-En caso de que en el paso anterior ocurra un error denominado: «fatal: remote origin already exists» debemos teclear:
+Luego, repite el proceso desde el principio para agregar el repositorio remoto correctamente.
 
-`git remote rm origin`  
+> Con estos pasos, has aprendido cómo utilizar Git y GitHub para subir tus proyectos y comenzar a gestionarlos desde allí. ¡Aprovecha al máximo estas herramientas para colaborar y controlar las versiones de tus proyectos de manera efectiva!
 
-Y a continuación volver a realizar el proceso anterior.
-
-# Observe your Repository
+# Observa tu Repositorio
 
 ## git status
 
-`git status` muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados.
+El comando `git status` muestra una lista de los archivos que han sido modificados junto con los archivos que están pendientes de ser preparados o confirmados.
 
-`git status -s` lista archivos sin sincronizar.
+Para listar los archivos no sincronizados, puedes utilizar `git status -s`.
 
-> Checa el estatus del repositorio actual.  List new or modified files not yet committed: `git status`
+> Verifica el estado actual del repositorio. Lista los archivos nuevos o modificados que aún no han sido confirmados: `git status`
 
 ## git diff
 
-- `git diff`  Show the changes to files not yet staged, se usa para hacer una lista de todos los conflictos.
+- `git diff`: Muestra los cambios en archivos que aún no han sido preparados. Se utiliza para hacer una lista de todos los conflictos.
 
-- `git diff --base <file-name>` Para poder ver conflictos con respecto al archivo base
+- `git diff --base <nombre-archivo>`: Permite ver los conflictos en relación al archivo base.
 
-- `git diff <source-branch> <target-branch>`  se usa para ver los conflictos que hay entre ramas antes de fusionarlas:
+- `git diff <rama-origen> <rama-destino>`: Se utiliza para ver los conflictos entre ramas antes de fusionarlas.
 
-- `git diff --cached`  Show the changes to staged files
+- `git diff --cached`: Muestra los cambios en los archivos preparados (staged).
 
-- `git diff HEAD` Show all staged and unstaged file changes
+- `git diff HEAD`: Muestra todos los cambios en archivos, tanto preparados como no preparados.
 
-- `git diff commit1 commit2` Show the changes between two commit ids
+- `git diff commit1 commit2`: Muestra los cambios entre dos identificadores de confirmación.
 
-> Muestra las diferencias de los cambios hechos y que no han sido añadidos a un commit
+> Muestra las diferencias de los cambios realizados y que no han sido agregados a un commit.
 
-## git blame [file]
+## git blame \[archivo\]
 
-`git blame [file]` List the change dates and authors for a file.
+`git blame [archivo]` lista las fechas y autores de los cambios realizados en un archivo.
 
 ## git show
 
-- `git show` se usa para mostrar información sobre cualquier objeto git.
+- `git show`: Se utiliza para mostrar información sobre cualquier objeto de Git.
 
-- `git show [commit]:[file]` Show the file changes for a commit id and/or file.
+- `git show [confirmación]:[archivo]`: Muestra los cambios de un archivo para un identificador de confirmación y/o archivo específico.
 
 ## git log
 
-`git log` : Muestra la lista de cambios hechos (commits), cuántas copias hay en respostorio, número de commits, show full change history.
+`git log`: Muestra una lista de los cambios realizados (commits), cuántas copias hay en el repositorio y el número de commits. Muestra el historial completo de cambios.
 
-`git log -p [file/directory]` : Show change history for file/directory including diffs.
+`git log -p [archivo/directorio]`: Muestra el historial de cambios para un archivo o directorio, incluyendo las diferencias.
 
 `git log --oneline`
 
 `git log --oneline --decorate --all --graph --since=2018-12-04`
 
-> - git log se usa para ver el historial del repositorio listando ciertos detalles de la confirmación. Al ejecutar el comando se obtiene una salida como ésta:  commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw Author: Alex Hunter [<alexh@gmail.com](mailto:%3Calexh@gmail.com)> Date:   Mon Oct 1 12:56:29 2016 -0600
+> `git log` se utiliza para ver el historial del repositorio, mostrando detalles específicos de cada confirmación. Al ejecutar el comando, obtendrás una salida similar a esta: 
+
+```shell
+achalmaubuntu\@hp-pavilion:\~/Documents/GitHub/achalmed\$ git log commit
+
+8668f30bf15bb2b60d7a56ac0b41fc1d66f43afe (HEAD -> main) Author: achalmed [achalma\@gmail.com](mailto:achalma@gmail.com){.email} 
+
+Date:   Sat Apr 16 22:41:20 2022 -0500
+```
+
+# Trabajando con Ramas
+
+En este artículo, exploraremos las diferentes operaciones relacionadas con las ramas en Git. Resaltaré los puntos clave de cada comando:
+
+## Listar y crear ramas
+
+- **Listar ramas locales**: El comando `git branch` muestra todas las ramas locales presentes en el repositorio. Puedes utilizarlo para obtener una lista de las ramas existentes.
+
+- **Listar todas las ramas**: Para ver tanto las ramas locales como las remotas, puedes usar `git branch -av`. Esto proporcionará una lista completa de todas las ramas del repositorio.
+
+- **Cambiar a una rama**: Si deseas cambiar a una rama específica y actualizar tu directorio de trabajo, utiliza `git checkout [mi_rama]`.
+
+- **Crear una nueva rama**: Utiliza `git branch [nuevo_nombre_rama]` para crear una nueva rama con el nombre especificado.
+
+- **Eliminar una rama**: Si deseas eliminar una rama, utiliza `git branch -d [nombre_rama]`. Esto eliminará la rama especificada.
+
+- **Ver todas las ramas**: Para obtener una lista de todas las ramas creadas en el proyecto, puedes utilizar `git branch -a`.
+
+## Crear ramas para pruebas de versión
+
+Si necesitas crear una rama para realizar pruebas de versión u otras modificaciones, sigue estos pasos:
+
+1. **Crear una nueva rama**: Utiliza `git branch [Rama2]` para crear una nueva rama basada en la rama actual.
+
+2. **Ver los commits**: Utiliza `git log --oneline` para mostrar todos los commits realizados en la rama.
+
+3. **Indicar las ramas**: Puedes utilizar `git branch` para ver las ramas del proyecto y determinar en qué rama te encuentras actualmente.
+
+4. **Cambiar a otra rama**: Utiliza `git checkout Rama2` para cambiar al flujo de trabajo de otra rama, por ejemplo, una rama de prueba.
+
+Una vez que hayas realizado las modificaciones de prueba, sigue estos pasos:
+
+5. **Agregar los cambios**: Utiliza `git add .` para agregar los archivos modificados, incluyendo los cambios realizados en la rama de prueba.
+
+6. **Realizar el commit**: Utiliza `git commit -m "Saludos, agregado a la rama de prueba"` para realizar el commit de los cambios.
+
+7. **Ver los commits**: Utiliza `git log --oneline` para mostrar todos los commits realizados en la nueva rama.
+
+Para regresar a la rama principal (Master o main), sigue estos pasos:
+
+1. **Cambiar a la rama principal**: Utiliza `git checkout [master]` para cambiar nuevamente al flujo de trabajo de la rama principal. Ten en cuenta que los cambios realizados en la rama de prueba no estarán presentes aquí.
+
+Si deseas ver los cambios en los archivos, minimiza la consola de Git.
+
+Para enviar finalmente los archivos al repositorio en línea, escribe el siguiente comando:
+
+1. **Enviar los cambios**: Utiliza `git push origin [Rama2]` para enviar los cambios al repositorio en línea. También puedes reemplazar `[Rama2]` con `main` si esa es la rama principal en tu repositorio en línea, como GitHub.
+
+> ¡Recuerda que trabajar con ramas te permite experimentar y realizar pruebas sin afectar la rama principal del proyecto!
+
+
+## Fusionando ramas con `git checkout [archivo]`
+
+El comando `git checkout [archivo]` es muy útil para crear y navegar entre ramas en Git. Aquí están los puntos clave que debes tener en cuenta:
+
+- **Crear una nueva rama y cambiar automáticamente a ella**: Utiliza `git checkout -b [nombre-rama]` para crear una nueva rama y cambiar inmediatamente a ella.
+
+- **Cambiar entre ramas**: Para cambiar de una rama a otra, simplemente utiliza `git checkout [nombre-rama]`.
+
+Cuando se trata de fusionar ramas, sigue estos pasos:
+
+1. **Cambiar a la rama de destino**: Antes de fusionar las ramas, asegúrate de estar en la rama de destino (por ejemplo, la rama `master`). Utiliza `git checkout [branch_b]` para cambiar a esa rama.
+
+2. **Fusionar la rama**: Utiliza `git merge [branch_a]` para fusionar la rama `branch_a` en la rama actual (`branch_b`). Esto combinará los cambios realizados en `branch_a` con la rama actual.
+
+Es importante destacar que al fusionar ramas, podrían surgir conflictos. Sin embargo, si estás utilizando Visual Code, resolver los conflictos será más sencillo gracias a sus herramientas de resolución de conflictos integradas.
+
+Para realizar la fusión de ramas correctamente, sigue estos pasos:
+
+1. **Cambiar a la rama principal**: Asegúrate de estar en la rama principal (por ejemplo, `master`) antes de realizar la fusión. Utiliza `git checkout [master]` para cambiar a la rama principal.
+
+2. **Realizar la fusión**: Utiliza `git merge [Rama2]` para fusionar la rama `Rama2` en la rama principal.
+
+Recuerda que fusionar ramas te permite combinar los cambios realizados en diferentes ramas, lo que facilita el trabajo colaborativo y la incorporación de nuevas características a tu proyecto.
+
+> ¡Experimenta con diferentes ramas y disfruta de la flexibilidad y el poder de Git!
+
+## Incorporando cambios con `git rebase [nombre_rama]`
+
+El comando `git rebase [nombre_rama]` es una herramienta poderosa que nos permite incorporar los cambios de una rama en otra. Aquí están los puntos clave que debes conocer:
+
+- **Incorporar cambios de una rama**: Utiliza `git rebase [nombre_rama]` para traer los cambios de la rama especificada y aplicarlos en la rama actual. Esto puede ser útil para mantener un historial de cambios más limpio y lineal.
+
+## Etiquetando commits con `git tag [nombre_tag]`
+
+Las etiquetas en Git nos permiten marcar puntos específicos en la historia de nuestro proyecto. Aquí están los puntos clave que debes tener en cuenta:
+
+- **Etiquetar el commit actual**: Utiliza `git tag [nombre_tag]` para crear una etiqueta en el commit actual. Por ejemplo, puedes usar `git tag v0.0.1` para marcar la versión v0.0.1.
+
+- **Etiquetar un commit específico**: Si deseas etiquetar un commit específico, puedes usar `git tag [nombre_tag]/commit_SHA1`, donde `commit_SHA1` es el identificador único del commit.
+
+Para acceder al commit donde se encuentra una etiqueta, utiliza el siguiente comando:
+
+```shell
+git checkout [nombre_tag]
+```
+
+Las etiquetas son útiles para marcar puntos de lanzamiento o versiones importantes en tu proyecto. Los desarrolladores las utilizan para indicar hitos significativos, como v1.0 o v2.0. Por ejemplo, puedes crear una etiqueta v1.1.0 en el commit específico utilizando el siguiente comando:
+
+```shell
+git tag 1.1.0 [insertar-ID-commit-aquí]
+```
 
 ### Ejemplos
 
-achalmaubuntu@DESKTOP-ACHI23E:~/Documents/GitHub/achalmed$ git log
-commit 8668f30bf15bb2b60d7a56ac0b41fc1d66f43afe (HEAD -> main)
-Author: achalmed <achalmaedison@outlook.com>
-Date:   Sat Apr 16 22:41:20 2022 -0500
-    actualizando pefil
+1. Creación de una etiqueta de versión: Utiliza el comando `git tag [26-03-2022v1] -m "Versión 1 del proyecto"` para crear una etiqueta que represente una versión específica de tu proyecto.
 
-# Working with Branches
+2. Subir etiquetas en línea: Utiliza el comando `git push --tags` para enviar las etiquetas al repositorio remoto y compartirlas con otros colaboradores.
 
-## git branch
+> Las etiquetas son una forma conveniente de marcar y acceder a puntos importantes en tu historial de cambios. ¡Aprovecha su potencial y mantén un seguimiento claro de las versiones de tu proyecto!
 
-- `git branch` List all local branches, se usa para listar, crear o borrar ramas. si quieres listar todas las ramas presentes en el repositorio.
+## Personalizando la configuración con `git config`
 
-- `git branch -av` List all branches, local and remote
+El comando `git config` te permite personalizar la configuración de Git según tus necesidades. Aquí tienes algunos puntos clave:
 
-- `git checkout [my_branch]` Switch to a branch, my_branch, and update working directory  
+- **Agregar un alias**: Puedes utilizar el comando `git config --global alias.lodag 'log --oneline --decorate --all --graph'` para crear un alias. Los alias son atajos que te permiten ejecutar comandos largos y complejos de una manera más sencilla.
 
-- `git branch [new_branch_name]` Create a new branch called new_branch  
+- **Ver la lista de alias**: Si deseas ver la lista de alias creados, utiliza el comando `git config --global --get-regexp alias`. Esto te mostrará todos los alias definidos en la configuración global de Git.
 
-- `git branch -d [branch_name]` Delete the branch called my_branch,  Si quieres borrar una rama
+- **Eliminar un alias**: Si ya no necesitas un alias, puedes eliminarlo utilizando el comando `git config --global --unset alias.trololo`, donde "trololo" es el nombre del alias que deseas eliminar.
 
-- `git branch –a`
+Además de los alias, `git config` también te permite establecer otras configuraciones específicas del usuario, como el correo electrónico y el nombre de usuario. Aquí tienes algunos ejemplos:
 
-> Muestra la lista de las ramas creadas
+- **Establecer el correo electrónico**: Utiliza el comando `git config --global user.email tuemail@ejemplo.com` para configurar tu dirección de correo electrónico. El uso de la opción `--global` indica que esta configuración se aplicará a todos los repositorios locales.
 
-### Creando ramas (sirven para pruebas de version, etc)
+- **Configuración local**: Si deseas utilizar diferentes direcciones de correo electrónico para diferentes repositorios, puedes usar el comando `git config --local user.email tuemail@ejemplo.com`. Esto establecerá la configuración solo para el repositorio actual.
 
-1. `git branch [Rama2]` (Creación de una nueva rama basada en la rama actual)
-2. `git log --oneline` (me indica todos los commit de la rama)
-3. `git branch` (indica las ramas del proyecto e indica en que rama me encuentro)
+Personalizar la configuración de Git según tus preferencias te permite trabajar de manera más eficiente y adaptar Git a tus necesidades específicas. ¡Aprovecha las opciones de `git config` para optimizar tu flujo de trabajo!
 
-*movernos a otra rama para hacer las modificaciones
+# Realiza cambios en Git
 
-4. `git checkout Rama2` (se movió mi flujo de trabajo a otra rama) por ejemplo esta rama puede ser rama de prueba
+Cuando trabajas con Git, es importante saber cómo hacer cambios y preparar tus archivos correctamente. Aquí tienes algunos puntos clave:
 
-Una vez hecho las modificaciones de prueba  
+## `git add [archivo]`
 
-5. `git add .` (agregamos los archivos modificados) AGREGANDO CAMBIOS
-6. `git commit - m "saludos agrado a la rama de prueba"`
-7. `git log --oneline` (me indica todos los commit de la rama nueva)
+- **Preparar un archivo específico**: Utiliza el comando `git add [archivo]` para preparar un archivo en particular y agregarlo al área de preparación. Por ejemplo, si deseas indexar el archivo `temp.txt`, ejecuta el siguiente comando:
 
-*Regresando a la rama Master o main
+   ```shell
+   git add temp.txt
+   ```
 
-8. `git checkout [master]` (OJO LAS MODIFICACIONES HECHAS NO ESTAN AQUI)
+- **Preparar todos los archivos modificados**: Si has realizado cambios en varios archivos y deseas prepararlos todos, utiliza el comando `git add .`. Esto sincronizará y preparará todos los archivos modificados para el siguiente commit.
 
-OJO PARA NOTAR LOS CAMBIOS EN LOS ARCHIVOS MINIMIZAR EL CONSALA DE GIT
-
-Para enviar finalmente los archivos al repositorio online se debe tipear:
-
-9. `git push origin [Rama2]` : también puede ser main (es la rama, Enviar al GitHub)
-
-## git checkout [file]
-
-- `git checkout [file]` crea ramas y te ayuda a navegar entre ellas. Por ejemplo, el siguiente comando crea una nueva y automáticamente se cambia a ella:
-
-command `git checkout -b [branch-name]`  
-
-- Para cambiar de una rama a otra, sólo usa:
-
-`git checkout [branch-name]`  
-
-Merge branch_a into branch_b
-
-- `git checkout [branch_b]`
-- `git merge [branch_a]`
-
-> Creación de una nueva rama y ubicación dentro de esa rama. Solucionar conflictos de … con Visual Code es más sencillo
-
-### Fusionando ramas
-
-PRIMERO debemos estar en la rama MASTER antes de hacer la fusión
-
-1. `git checkout [master]`
-2. `git merge [Rama2]`
-
-## git rebase branch_name
-
-`git rebase branch_name`: Alcanzar los cambios de un branch
-
-## git tag [nombre_tag]  
-
-- `git checkout [nombre_tag]`
-
-- `git tag [nombre_tag]` Tag the current commit, creación de una etiqueta con el texto v0.0.1 (indica la version v0.0.1)
-
-- `git tag [nombre_tag]/commit_SHA1` Creación de un tag a un commit en especifico  
-
-Se puede acceder al commit donde se encuentra un tag mediante este comando
-
-> `git tag` TAGS (INDICAN LAS VERSIONES DE UN PROYECTO). marca commits específicos. Los desarrolladores lo usan para marcar puntos de lanzamiento como v1.0 y v2.0.  `git tag 1.1.0 [instert-commitID-here]`
+- **Actualizar los cambios**: Si ya has preparado algunos archivos y deseas actualizar los cambios realizados, puedes utilizar el comando `git add -u`. Esto agregará al área de preparación todos los archivos que hayan sido modificados o eliminados.
 
 ### Ejemplos
 
-1. `git tag [26-03-2022v1] -m "Version 1 del proyecto"` (creando una version), por ejemplo sirve para descargar.
+- **Agregar un archivo específico**: Si deseas agregar el archivo `index.html` al área de preparación, ejecuta el siguiente comando:
 
-2. `git push --tags` (subimos las versiones a línea)
+   ```shell
+   git add index.html
+   ```
 
-## git config
+- **Actualizar todos los cambios**: Si has realizado modificaciones en varios archivos y deseas prepararlos todos, utiliza el siguiente comando:
 
-`git config --global alias.lodag‘log --oneline --decorate --all --graph’`  Agregar un alias  
+   ```shell
+   git add .
+   ```
 
-`git config --global --get-regexp alias`  Ver la lista de alias creados  
+Cuando hayas realizado tus cambios y preparado los archivos, sigue los siguientes pasos para confirmarlos y enviarlos al repositorio en línea:
 
-`git config --global --unset alias.trololo`  Quitar un alias
+1. Verifica la rama actual utilizando el comando `git branch`.
+2. Utiliza `git add .` para agregar todos los archivos modificados al repositorio local. También puedes usar `git add [nombreDelArchivo]` para agregar un archivo específico.
+3. Genera un commit para confirmar los cambios utilizando el comando `git commit -m "Aquí va el mensaje"`. Asegúrate de proporcionar un mensaje descriptivo que explique los cambios realizados.
+4. Finalmente, envía los archivos al repositorio en línea utilizando el comando `git push origin [rama]`. La rama puede ser `master` o `main`, dependiendo de tu configuración.
 
-- `git config` puede ser usado para establecer una configuración específica de usuario, como el email, nombre de usuario y tipo de formato, etc. Por ejemplo, el siguiente comando se usa para establecer un email:
+Si deseas verificar el estado de la transacción después de cada instrucción, puedes utilizar el comando `git status`. Esto te mostrará información sobre los archivos preparados, los cambios pendientes y el estado actual del repositorio.
 
-`git config --global user.email tuemail@ejemplo.com`
+> ¡Recuerda que hacer cambios y preparar correctamente tus archivos es fundamental para mantener un flujo de trabajo eficiente con Git!
 
-- La opción -global le dice a GIT que vas a usar ese correo electrónico para todos los repositorios locales. Si quieres utilizar diferentes correos electrónicos para diferentes repositorios, usa el siguiente comando:
 
-`git config --local user.email tuemail@ejemplo.com`
+# Realizar commits en Git y fusionar ramas
 
-# Make a change
+Cuando trabajas con Git, es esencial entender cómo realizar commits y fusionar ramas. Aquí tienes algunos puntos clave:
 
-## git add [file]
+## `git commit`
 
-- `git add -u`
+- El comando `git commit` crea una instantánea de los cambios realizados y los guarda en el directorio Git.
 
-- `git add [file]` Stages the file, ready for commit, se usa para agregar archivos al área de preparación. Por ejemplo, el siguiente comando de Git básico indexará el archivo temp.txt:
+- Utiliza `git commit -m "El mensaje que acompaña al commit va aquí"` para agregar un mensaje descriptivo que explique los cambios realizados en el commit.
 
-`git add <temp.txt>`  
+Recuerda que los cambios confirmados no se envían automáticamente al repositorio remoto.
 
-- `git add .`  Stage all changed files, ready for commit,
-
-> Con el nombre del archivo se registra dicho cambio en el caso de alguna creación, con el punto (.) se preparan todos los cambios realizados en el proyecto actual.  Lista de cambios preparados para subir en el siguiente commit.  (sincroniza todos los archivos)
-
-### Ejemplos
-
-`git add [index.html]` (agregamos unos de los archivos por ejemplo el index.html)
-
-`git add` -actualiza todos tus cambios
-
-1) Al modificar un/unos archivo/s:
-
-`git branch` : para saber el rama actual
-
-`git add .` Esto añade todos los archivos al repositorio local (no al web)
-
-o sino también
-
-`git add nombreDelArchivo` Esto añade solamente el archivo indicado al repositorio local.
-
-2) Luego... se genera un commit para confirmar todos los archivos modificados agregando un mensaje que brinde una idea de lo que se modificó en el/los dichos archivo/s
-
-`git commit -m "aquí el mensaje"`
-
-3) Para enviar finalmente los archivos al repositorio online se debe tipear:
-
-`git push origin [master]` : también puede ser main (es la rama)
-
-Apendice A)
-
-Si se quiere ir verificando el estado de la transacción luego de cada instrucción, puede tipear el siguiente comando:
-
-`git status`
-
-## git commit
-
-- `git commit` creará una instantánea de los cambios y la guardará en el directorio git.
-
-- `git commit –m “El mensaje que acompaña al commit va aquí”`  
-
-Ten en cuenta que los cambios confirmados no llegarán al repositorio remoto.
-
-- `git commit -am “commit message”`  Commit all your tracked files to versioned history, agrega y envía
-
-> Genera un archivo de los cambios realizados en el proyecto, en el archivo que se mostrará se agrega una descripción del cambio realizado. (toma una captura o crea una version)
+- Si deseas agregar y hacer commit de todos los archivos rastreados en el historial versionado al mismo tiempo, utiliza `git commit -am "mensaje del commit"`.
 
 ### Ejemplos
 
-`git commit -m "Comienzo del proyecto"`
+- Ejecuta `git commit -m "Comienzo del proyecto"` para crear un commit con el mensaje "Comienzo del proyecto".
 
-`git commit -am "párrafo y tamaño fuente"` (agrega y envía )
+- Si deseas agregar y hacer commit de todos los archivos modificados, utiliza `git commit -am "Párrafo y tamaño de fuente"`.
 
-## git add . && git commit -m "Cambionumeros"
+## `git add . && git commit -m "Cambionumeros"`
 
-`git add . && git commit -m "Cambionumeros"`
+- Para agregar y hacer commit de los cambios en una sola línea, utiliza el comando `git add . && git commit -m "Cambionumeros"`.
 
-### Descripción
+## `git merge [nombre_rama]`
 
-`git add . && git commit -m "Cambionumeros"` Add y commit en una sola línea
-
-## git merge branch_name
-
-`git merge branch_name`
+- El comando `git merge [nombre_rama]` fusiona una rama con otra rama activa.
 
 ### Descripción
 
-Para este paso suponemos un ejemplo Tenemos el branchdevelop y feature, y queremos integrar la rama feature a develop por lo que debemos hacer los siguientes pasos:  
+Supongamos que tenemos las ramas "develop" y "feature", y queremos integrar la rama "feature" en "develop". Sigue estos pasos:
 
-1. Ubicarse en la rama develop mediante el comando:
+1. Cambia a la rama "develop" utilizando `git checkout develop`.
+2. Ejecuta `git merge feature` para fusionar la rama "feature" en la rama "develop".
 
-`gitcheckoutdevelop`  
+## `git revert --m 1 SHA1_merge`
 
-2. Ingresar el comando  
+- `git revert -m 1 SHA1_merge` revierte un merge específico especificando el SHA1 del merge que deseas revertir.
 
-`gitmergefeature`
+## `git revert HEAD`
 
-> `git merge` se usa para fusionar una rama con otra rama activa: `git merge [branch-name]`
-
-## git revert –m 1 SHA1_merge
-
-`git revert –m 1 SHA1_merge`
-
-### Descripción
-
-Revierte un merge, especificando el SHA1 del merge que se quiere revertir
-
-## git revert HEAD
-
-`git revert HEAD`  
-
-`git revert --no-commit HEAD`  
-
-`git revert --no-commit HEAD~1`  
-
-`git revert --continue`
+- `git revert HEAD`
+- `git revert --no-commit HEAD`
+- `git revert --no-commit HEAD~1`
+- `git revert --continue`
 
 ### Descripción
 
-Revierte un commit hecho sobre la rama actual  
+El comando `git revert` revierte un commit en la rama actual. Puedes revertir dos o más commits juntos utilizando el mismo comando de revert para que se tomen como uno solo.
 
-Revertir dos o más commit junto al mismo comando de revert para ser tomados en cuenta como uno solo
+Recuerda que realizar commits y fusionar ramas correctamente es fundamental para mantener un historial versionado limpio y una colaboración efectiva en Git.
 
-## git reset
+# Retrocediendo en el tiempo con Git: `git reset`
 
-`git reset SHA_1_commit/[branch_name]`  
+Cuando trabajamos en un proyecto de Git, es posible que necesitemos retroceder en el tiempo y regresar a un commit anterior. Para ello, el comando `git reset` es muy útil. Veamos cómo se utiliza:
 
-`git reset --soft SHA_1_commit/[branch_name]`  
+- `git reset SHA1_commit/[nombre_rama]`
 
-`git reset --hard SHA_1_commit/[branch_nam]`
+- `git reset --soft SHA1_commit/[nombre_rama]`
+
+- `git reset --hard SHA1_commit/[nombre_rama]`
 
 ### Descripción
 
-Regresar a una rama anterior, quita los cambios y los deja fuera del área de preparación  
+El comando `git reset` nos permite regresar a un commit anterior y deshacer cambios en nuestro proyecto. Dependiendo de las opciones que utilicemos, los cambios se manejan de diferentes formas:
 
-Regresa a un commit o rama anterior, y deja los cambios hechos en el commit que se va a quitar listos en el área de preparación  
+- `git reset SHA1_commit/[nombre_rama]`: Regresa a un commit o rama anterior y deja los cambios fuera del área de preparación.
 
-Regresa a un commit o rama anterior, y deja en blanco el área de preparación y el directorio de trabajo  
+- `git reset --soft SHA1_commit/[nombre_rama]`: Regresa a un commit o rama anterior y deja los cambios hechos en el commit que se va a quitar listos en el área de preparación.
 
-`766abcd`, es el identificador del commit al que deseamos regresar. Esta operación, si lo hacemos desde  una rama, no afectará a otras, de modo que puedes hacer diferentes commit a partir de ese punto, sin que se modifiquen otras ramas  del proyecto.
+- `git reset --hard SHA1_commit/[nombre_rama]`: Regresa a un commit o rama anterior y elimina por completo los cambios, dejando en blanco el área de preparación y el directorio de trabajo.
 
-> `git reset` sirve para resetear el index y el directorio de trabajo al último estado de confirmación.
+Es importante tener en cuenta que esta operación no afectará a otras ramas, por lo que puedes realizar nuevos commits a partir de ese punto sin modificar otras ramas del proyecto.
 
-`git reset - -hard HEAD`  
+Adicionalmente, el comando `git reset --hard HEAD` nos permite resetear el índice y el directorio de trabajo al último estado de confirmación.
 
-> El conocimiento y el uso de log con sus diferente posibilidades, nos permitirá manejar acertadamente, la creación de ramas, los movimientos entre ellas y los avances y retrocesos entre commits.
+Conocer y utilizar `git log` con sus diferentes opciones nos permitirá manejar correctamente la creación de ramas, los movimientos entre ellas y los avances y retrocesos entre commits.
 
-### Regresar a un commit anterior en Git
+### Regresando a un commit anterior en Git
 
+A veces, necesitamos retroceder en el tiempo a un punto anterior en nuestro proyecto. Para ello, podemos utilizar el comando `git checkout` de la siguiente manera:
 
-Muchas veces, nos damos cuenta de que necesitamos regresar en el tiempo  a un punto de nuestro proyecto, para ello el comando checkout nos permite  regresar a un commit anterior en Git,  de esta manera:
+1. Utiliza el comando `git log --oneline` para ver la estructura de los últimos commits.
+2. Ejecuta `git checkout [766abcd]` para regresar a un commit previo.
 
-Primero ver la estructura de los últimos commit con este comando
+Existen diferentes formas de retroceder en el tiempo a commits anteriores. Además de `checkout`, también podemos utilizar `reset` con los atributos `soft` o `hard`.
 
-`git log --oneline`  
+- `git reset --soft [568abcj]`: Retrocede a un commit previo manteniendo los cambios.
+- `git reset --soft HEAD~`: Deshace solo el último commit.
+- `git reset --hard [789abcd]`: Elimina permanentemente los cambios realizados después de un commit específico.
 
-Su salida, será algo como esto
+Si deseamos eliminar los cambios después del último commit, podemos utilizar `git reset --hard HEAD~`. También es posible utilizar el comando `stash` para descartar los cambios antes de retornar a un commit.
 
-8674e5f commit  test3
-jº44568 commit segunda parte  
-55df4c2 commit de inicio.
+> Recuerda tener precaución al utilizar estos comandos, ya que pueden modificar el historial del proyecto y afectar a otros colaboradores. Siempre es recomendable crear una copia de seguridad o consultar con tu equipo antes de realizar cambios significativos en el repositorio.
 
-`git checkout [766abcd]`  
-
-Existen diferentes formas de retroceder en el tiempo a commits previos, **checkout** es una de ellas, pero también se utiliza **reset** con sus atributos **soft** o **hard**
-
-Con una sintaxis como:
-
-`git reset --soft` referencia del commit  
-
-Esto nos permitirá retroceder a un commit previo, manteniendo los cambios:  
-
-`git reset --soft [568abcj]`  
-
-Si queremos deshacer solo el ultimo:  
-
-`git reset --soft HEAD~`  
-
-Si lo que se desea es eliminar permanentemente los cambios realizado después de un commit  específico, el comando a usar es:  
-
-`git reset --hard [789abcd]` (regresar a una version, el codigo es el ultimo commit que queremos mantener)
-
-Si queremos eliminar los cambios después del último commit lo que hacemos es usar el atributo hard del comando reset, pero dirigiéndolo al apuntador especial HEAD.
-
-`git reset --hard HEAD~`  
-
-para descartar los cambios antes de retornar a un commit, se utiliza el comando stash
-
-`git commit stash`
 
 # Synchronize
 
-##
+El proceso de sincronización en Git es fundamental para mantener actualizado el repositorio local con los cambios realizados en el repositorio remoto. A continuación, se presentan algunos comandos clave para sincronizar el repositorio local con el remoto.
 
-`git fetch` le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no se encuentran en el directorio de trabajo local.
+## `git fetch`
 
-`git fetch origin`
+El comando `git fetch` permite al usuario obtener todos los objetos de un repositorio remoto que no se encuentran actualmente en el directorio de trabajo local. Esto no fusiona automáticamente los cambios con el repositorio local, solo los descarga y los hace accesibles para su revisión.
 
-## git pull
+### Ejemplo
 
-`git pull` fusiona todos los cambios que se han hecho en el repositorio remoto con el directorio de trabajo local (actualizar las ediciones de línea en el repostorio local).
-`git pull`
+Para obtener los cambios desde el repositorio en GitHub, puedes ejecutar:
 
-### Ejemplos
+```shell
+git fetch origin
+```
 
-1) Para obtener los cambios desde el repositorio github.com debe tipear:
+## `git pull`
 
-`git pull --rebase`
+El comando `git pull` combina los cambios realizados en el repositorio remoto con el directorio de trabajo local. Básicamente, actualiza las ediciones de línea en el repositorio local. Es una combinación de los comandos `git fetch` y `git merge`.
 
-o tambien
+### Ejemplo
 
-`git pull origin [master]`
+Para obtener los cambios y fusionarlos en el repositorio local, puedes utilizar:
 
-## git remote add NAME_REPO URL
+```shell
+git pull origin [rama]
+```
 
-`git remote add NAME_REPO URL`  
+o simplemente:
 
-`git remote`  
+```shell
+git pull --rebase
+```
 
-`git remote –v`
+## `git remote`
 
-### Descripción
+El comando `git remote` se utiliza para administrar las conexiones a repositorios remotos.
 
-- `git remote` te permite ver todos los repositorios remotos. El siguiente comando listará todas las conexiones junto con sus URLs: `git remote -v`  
+- `git remote`: Muestra todos los repositorios remotos conectados.
+- `git remote -v`: Lista las conexiones junto con sus URLs.
 
-- Para conectar el repositorio local a un servidor remoto, usa este comando: `git remote add origin [host-or-remoteURL]`  
+### Ejemplo
 
-- Por otro lado, el siguiente comando borrará una conexión a un repositorio remoto especificado: `git remote [nombre-del-repositorio]`
+- Para agregar un repositorio remoto, utiliza el siguiente comando:
 
-### Ejemplos
+```shell
+git remote add [nombre_repo] [URL]
+```
 
-Adición de un repositorio  
+- Para eliminar una conexión a un repositorio remoto específico, utiliza:
 
-Listado de los repositorios
+```shell
+git remote remove [nombre_repo]
+```
 
-## git push --set-upstream NAME_REPO master
+## `git push`
 
-`git push --set-upstream NAME_REPO master`  
+El comando `git push` se utiliza para enviar los cambios locales a la rama principal del repositorio remoto. Permite sincronizar los commits locales con el repositorio remoto.
 
-`git push NAME_REPO BRANCH_NAME`  
+### Ejemplo 
 
-`git push REMOTE --all git push REMOTE --tags`
+Para enviar los cambios al repositorio en línea, puedes utilizar el siguiente comando:
 
-### Descripción
+```shell
+git push origin [rama]
+```
 
-- `git push` se usa para enviar confirmaciones locales a la rama maestra del repositorio remoto. Aquí está la estructura básica del código: `git push  origin [master]`  
+En caso de que no desees enviar los cambios a la rama principal, reemplaza `[rama]` por el nombre de la rama deseada.
 
-- Reemplaza [master] con la rama en la que quieres enviar los cambios cuando no quieras enviarlos a la rama maestra.
-
-### Ejemplos
-
-Subir cambios de un Proyecto a gitLab  
-
-3) Para enviar finalmente los archivos al repositorio online se debe tipear:
-
-`git push origin [master]` : también puede ser main (es la rama)
+> Recuerda que al redactar tu propio contenido, es fundamental utilizar tus propias palabras y expresiones únicas para evitar cualquier problema de plagio. Las sugerencias proporcionadas son solo ejemplos de cómo puedes mejorar la redacción del texto original.
 
 # Finally
 
-## git command --help
+En esta sección, exploraremos algunos comandos adicionales de Git que pueden resultar útiles en tu flujo de trabajo. A continuación, destacaré los puntos clave de cada comando:
 
-`git command --help`
+## `git command --help`
 
-`git command --help` When in doubt, use git help
+El comando `git command --help` te proporciona información detallada sobre el uso y las opciones disponibles para un comando específico de Git. Si tienes dudas, siempre puedes recurrir a `git help` para obtener ayuda.
 
-## git stash
+## `git stash`
 
-`git stash` guardará momentáneamente los cambios que no están listos para ser confirmados. De esta manera, pudes volver al proyecto más tarde.
+El comando `git stash` te permite guardar temporalmente los cambios que aún no están listos para ser confirmados. Esto te permite cambiar de tarea o rama sin perder tus modificaciones actuales.
 
-## git ls-tree
+## `git ls-tree`
 
-`git ls-tree`
+El comando `git ls-tree` muestra información sobre un objeto de árbol en el repositorio. Muestra los nombres y modos de cada ítem, así como el valor blob de SHA-1. Puedes utilizar `git ls-tree HEAD` para ver el árbol actual (HEAD) del repositorio.
 
-`git ls-tree HEAD`
+## `git cat-file`
 
-### Descripción
+El comando `git cat-file` se utiliza para ver información sobre un objeto específico en el repositorio. Puedes usar la opción `-p` junto con el valor SHA-1 del objeto para ver su información detallada.
 
-- `git ls-tree` te permite ver un objeto de árbol junto con el nombre y modo de cada ítem, y el valor blob de SHA-1. Si quieres ver el HEAD, usa:
+## `git grep`
 
-`git ls-tree HEAD`
+El comando `git grep` te permite buscar frases o palabras específicas en los árboles de confirmación, el directorio de trabajo y el área de preparación. Por ejemplo, para buscar la frase "www.hostinger.com" en todos los archivos, puedes ejecutar `git grep "www.hostinger.com"`.
 
-## git cat-file
+## `gitk`
 
-`git cat-file`: se usa para ver la información de tipo y tamaño de un objeto del repositorio. Usa la opción -p junto con el valor SHA-1 del objeto para ver la información de un objeto específico.
+El comando `gitk` muestra una interfaz gráfica para el repositorio local. Puedes utilizarlo para visualizar la historia del repositorio, las ramas y los commits de una manera más visual e interactiva.
 
-### Ejemplos
+## `git instaweb`
 
-`git cat-file –p d670460b4b4aece5915caf5c68d12f560a9fe3e4`
+El comando `git instaweb` te permite explorar tu repositorio local utilizando la interfaz GitWeb. Puedes configurar diferentes opciones, como el servidor HTTP, para acceder a la interfaz.
 
-## git grep
+## `git gc`
 
-`git grep`: le permite al usuario buscar frases y palabras específicas en los árboles de confirmación, el directorio de trabajo y en el área de preparación. Para buscar por [www.hostinger.com](http://www.hostinger.com/) en todos los archivos, usa:
+El comando `git gc` realiza la limpieza y optimización del repositorio local. Elimina archivos innecesarios y optimiza el almacenamiento para mejorar el rendimiento.
 
-`git grep “www.hostinger.com”`
+## `git archive`
 
-## gitk
+El comando `git archive` te permite crear archivos zip o tar que contienen los archivos de un árbol de repositorio específico. Puedes especificar el formato y el árbol que deseas archivar.
 
-`gitk`: muestra la interfaz gráfica para un repositorio local.
+## `git prune`
 
-## git instaweb
+El comando `git prune` elimina los objetos del repositorio que no tienen apuntadores entrantes. Esto ayuda a limpiar el repositorio y eliminar objetos no utilizados.
 
-`git instaweb`: te permite explorar tu repositorio local en la interfaz GitWeb. Por ejemplo:
+## `git fsck`
 
-`git instaweb –http=webrick`
+El comando `git fsck` realiza una comprobación de integridad del sistema de archivos git y busca objetos corruptos en el repositorio. Es útil para detectar posibles problemas de integridad.
 
-## git gc
+## `git rebase`
 
-`git gc`:  limpiará archivos innecesarios y optimizará el repositorio local.
+El comando `git rebase` se utiliza para aplicar cambios de una rama a otra. Permite mover, modificar o combinar commits para mantener una historia de confirmaciones más limpia y estructurada.
 
-## git archive
+## `git rm`
 
-`git archive`: le permite al usuario crear archivos zip o tar que contengan los constituyentes de un solo árbol de repositorio.
-
-### Ejemplos
-
-`git archive - -format=tar master`
-
-## git prune
-
-`git prune`: elimina los objetos que no tengan ningún apuntador entrante.
-
-## git fsck
-
-`git fsck`: realiza una comprobación de integridad del sistema de archivos git e identifica cualquier objeto corrupto
-
-## git rebase
-
-`git rebase`: se usa para aplicar ciertos cambios de una rama en otra.
-
-### Ejemplos
-
-`git rebase master`
-
-## git rm
-
-`git rm`
+El comando `git rm` se utiliza para eliminar archivos del repositorio de Git. Puedes especificar los archivos que deseas eliminar y luego confirmar los cambios.
 
 ### Borrar archivos/carpetas del repositorio
 
-Para borrar archivos o carpetas también «arriba» en nuestro respositorio (bitbucket, github…) se usa el comando «rm» de git siguiendo los siguientes pasos.
+En este apartado, exploraremos cómo eliminar archivos o carpetas en un repositorio utilizando los comandos de Git. A continuación, resaltaré los puntos clave de cada paso:
 
-`git add -u` : actualiza todos los cambios
+1. **Actualizar los cambios:** Antes de borrar archivos o carpetas, es importante asegurarse de que todos los cambios estén actualizados en el repositorio. Puedes hacerlo utilizando el siguiente comando:
 
-`git commit -m "elimino archivos innecesarios"`
+   ```shell
+   git add -u
+   ```
+   Este comando actualizará todos los cambios realizados en el repositorio.
 
-3) Para enviar finalmente los archivos al repositorio online se debe tipear:
+2. **Realizar un commit:** Después de asegurarte de que los cambios están actualizados, debes crear un commit para registrar la eliminación de los archivos o carpetas innecesarios. Puedes utilizar el siguiente comando:
 
-`git push origin master` : también puede ser main (es la rama)
+   ```shell
+   git commit -m "Elimino archivos innecesarios"
+   ```
+   Recuerda proporcionar un mensaje descriptivo para el commit.
 
-1.A Si quieres eliminar un archivo:
+3. **Subir los cambios:** Finalmente, debes enviar los cambios al repositorio en línea. Utiliza el siguiente comando para realizarlo:
 
-`git rm miarchivo.php`
+   ```shell
+   git push origin master
+   ```
+   Ten en cuenta que "master" puede ser reemplazado por "main" si esa es la rama principal en tu repositorio.
 
-1.B. Si quieres eliminar una carpeta:
+Si deseas eliminar un archivo específico, utiliza el siguiente comando:
 
-`git rm -r micarpeta`
+```shell
+git rm miarchivo.php
+```
 
-2. Creamos el commit
+En caso de querer eliminar una carpeta completa, puedes utilizar el siguiente comando:
 
-`git commit -m "elimino archivos innecesarios"`
+```shell
+git rm -r micarpeta
+```
 
-3. Subimos los cambios al repositorio
-
-`git push`
-
-# Hoja de trucos de los comandos de GIT en .pdf
-
-Si estás empezando con GIT, puede ser difícil recordar incluso los comandos básicos. Por eso, hemos preparado una hoja de trucos de GIT para ayudarte a dominar el software. Guarda el archivo en tus dispositivos o imprímelo para tenerlo siempre listo cuando tengas que recordar los comandos de GIT.
+Recuerda que después de ejecutar el comando `git rm`, debes realizar un commit y luego enviar los cambios al repositorio utilizando `git push`.
 
 # Conclusión
 
-Aprender los comandos básicos de GIT será de gran ayuda para los desarrolladores, ya que pueden controlar fácilmente el código fuente de los proyectos. Puede que te lleve algo de tiempo recordarlos todos, por eso nuestra hoja de trucos de GIT podría resultarte útil.
+Aprender los comandos básicos de Git es fundamental para los desarrolladores, ya que les permite gestionar fácilmente el código fuente de sus proyectos. Aunque pueda llevar algo de tiempo recordarlos todos, nuestra hoja de trucos de Git puede ser de gran utilidad.
 
-¡Practica estos comandos de GIT y aprovecha al máximo tus habilidades en desarrollo! ¡Buena suerte!
+¡Practica estos comandos de Git y aprovecha al máximo tus habilidades de desarrollo! ¡Te deseamos mucho éxito!
 
-El autor  
-
+*Edison Achalma*

@@ -2589,11 +2589,16 @@ era? Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/
 
 <section id="introducción" class="level1">
 <h1>Introducción</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://es.wikipedia.org/wiki/Archivo:Git-logo.svg"><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-Guia-git/https:/upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/200px-Git-logo.svg.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p><strong>¿Estás interesado en aprender los fundamentos de Git y GitHub?</strong> ¡Has llegado al lugar perfecto! En este blog, te presentaremos una guía completa que podrás utilizar como referencia diaria.</p>
 <p>Tanto si estás comenzando tu viaje en el control de versiones como si deseas mejorar tus habilidades en Git y aprovechar al máximo GitHub, encontrarás aquí una guía clara y concisa para dar tus primeros pasos.</p>
-<p>Los sistemas de control de versiones, como Git, son imprescindibles en las prácticas recomendadas del desarrollo de software moderno. Estos sistemas te permiten realizar un seguimiento de los cambios en tu código fuente, revertir a versiones anteriores y crear ramas para experimentar con nuevas ideas o funcionalidades.</p>
+<p>Los sistemas de control de versiones, como Git, son imprescindibles en las prácticas. Estos sistemas te permiten realizar un seguimiento de los cambios en tu código fuente, revertir a versiones anteriores y crear ramas para experimentar con nuevas ideas o funcionalidades.</p>
 <p>Hoy en día, los repositorios de Git albergan muchos proyectos de software, y plataformas como GitHub, GitLab y Bitbucket facilitan la colaboración y el intercambio de código entre desarrolladores.</p>
-<p>En esta guía, te mostraremos cómo instalar y configurar Git en un servidor con Ubuntu 20.04. Exploraremos dos métodos diferentes de instalación, cada uno con sus propios beneficios, para que puedas elegir el que mejor se adapte a tus necesidades específicas.</p>
+<p>En esta guía, te mostraremos cómo instalar y configurar Git en GNU Linux (Ubuntu). Exploraremos dos métodos diferentes de instalación, cada uno con sus propios beneficios, para que puedas elegir el que mejor se adapte a tus necesidades específicas.</p>
 <blockquote class="blockquote">
 <p>Recuerda que es esencial tener un buen dominio de Git y GitHub para colaborar eficientemente en proyectos y aprovechar todas sus funcionalidades. ¡Vamos a sumergirnos en el fascinante mundo de Git y GitHub!</p>
 </blockquote>
@@ -2601,9 +2606,9 @@ era? Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/
 <section id="entendiendo-cómo-funciona-git" class="level1">
 <h1>Entendiendo cómo funciona Git</h1>
 <p>Git es el sistema de control de versiones (SCV) de código abierto más utilizado, diseñado para rastrear los cambios realizados en los archivos. Tanto empresas como programadores confían en Git para colaborar en el desarrollo de software y aplicaciones.</p>
-<p>Un proyecto en Git se compone de tres elementos principales: el directorio de trabajo, el área de preparación y el directorio Git.</p>
+<p>Un proyecto en Git se compone de tres elementos principales: <strong>el directorio de trabajo, el área de preparación y el directorio Git.</strong></p>
 <p>El directorio de trabajo es donde agregas, borras y editas tus archivos. Luego, los cambios se preparan (indexan) en el área de preparación. Una vez que confirmas tus cambios, se guarda una instantánea de los mismos en el directorio Git.</p>
-<p>Git está disponible para múltiples plataformas, incluyendo Linux, Windows, Mac y Solaris. Esto hace que Git sea accesible para todos. Aunque el software puede tener una curva de aprendizaje pronunciada, existen numerosos tutoriales disponibles para ayudarte a dominarlo.</p>
+<p>Git está disponible para múltiples plataformas, incluyendo Linux, Windows y Mac. Esto hace que Git sea accesible para todos. Aunque el software puede tener una curva de aprendizaje pronunciada, existen numerosos tutoriales disponibles para ayudarte a dominarlo.</p>
 <p>Así que, independientemente de tu sistema operativo, puedes aprovechar los beneficios de Git y aprovechar su poderoso conjunto de características. Con el tiempo y la práctica, te convertirás en un experto en el uso de Git para gestionar tus proyectos de manera eficiente y colaborar de forma efectiva con otros desarrolladores.</p>
 </section>
 <section id="comandos-básicos-de-git" class="level1">
@@ -2621,10 +2626,9 @@ era? Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/
 <li><code>git checkout [branch]</code>: Cambia a una rama específica.</li>
 <li><code>git merge [branch]</code>: Combina los cambios de una rama específica con la rama actual.</li>
 <li><code>git config --global user.email "tu-email@example.com"</code></li>
-<li><code>git config --global user.name "pepito"</code></li>
+<li><code>git config --global user.name "tu-usuario-GitHub"</code></li>
 </ol>
 <p>Estos son solo algunos de los comandos básicos de Git. También existen muchos otros comandos avanzados disponibles para realizar tareas más complejas, como trabajar con ramas remotas y manejar conflictos.</p>
-<p>Dominar estos comandos te permitirá comenzar a utilizar Git de manera efectiva y aprovechar al máximo sus capacidades. ¡No dudes en explorar más a fondo la documentación oficial de Git para descubrir todas las funcionalidades que ofrece!</p>
 </section>
 <section id="instalación-y-configuración-de-git" class="level1">
 <h1>Instalación y Configuración de Git</h1>
@@ -2641,22 +2645,52 @@ font-style: inherit;">--version</span></span></code></pre></div>
 <p>Si obtienes una salida similar a la siguiente, significa que Git ya está instalado:</p>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">git</span> version 2.25.1</span></code></pre></div>
+font-style: inherit;">git</span> version 2.34.1</span></code></pre></div>
 <p>Si Git no está instalado, puedes utilizar el administrador de paquetes APT de Ubuntu para instalarlo:</p>
 <ol type="1">
-<li>Abre una terminal.</li>
-<li>Actualiza la lista de paquetes disponibles con el siguiente comando: <code>sudo apt update</code></li>
-<li>Instala Git utilizando el siguiente comando: <code>sudo apt install git</code></li>
-<li>Verifica la instalación ejecutando el comando <code>git --version</code></li>
+<li><p>Abre una terminal.</p></li>
+<li><p>Actualiza la lista de paquetes disponibles con el siguiente comando:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update</span></code></pre></div></li>
+<li><p>Instala Git utilizando el siguiente comando:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install git</span></code></pre></div></li>
+<li><p>Verifica la instalación ejecutando el comando</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--version</span></span></code></pre></div></li>
 </ol>
 <p>Una vez que Git esté instalado, es recomendable configurarlo según tus necesidades. Sigue estos pasos para configurar Git en Ubuntu:</p>
 <ol type="1">
-<li>Establece tu nombre de usuario en Git con el comando: <code>git config --global user.name "Tu Nombre"</code></li>
-<li>Establece tu dirección de correo electrónico en Git con el comando: <code>git config --global user.email "tu.correo@example.com"</code></li>
-<li>Para verificar la configuración actual de Git, utiliza el comando: <code>git config --list</code></li>
+<li><p>Establece tu nombre de usuario en Git con el comando:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> config <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--global</span> user.name <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Tu Nombre"</span></span></code></pre></div></li>
+<li><p>Establece tu dirección de correo electrónico en Git con el comando:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> config <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--global</span> user.email <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tu.correo@example.com"</span></span></code></pre></div></li>
+<li><p>Para verificar la configuración actual de Git, utiliza el comando:</p>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> config <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--list</span></span></code></pre></div></li>
 </ol>
-<p>También es recomendable configurar un editor de texto para escribir los mensajes de commit. Puedes hacerlo con el siguiente comando, reemplazando “nano” o “vi” por el editor de texto de tu preferencia:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<p>También es recomendable configurar un editor de texto para escribir los mensajes de commit. Puedes hacerlo con el siguiente comando, reemplazando <strong>“nano”</strong> o <strong>“vim”</strong> por el editor de texto de tu preferencia:</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> config <span class="at" style="color: #657422;
 background-color: null;
@@ -2668,104 +2702,91 @@ font-style: inherit;">"nano"</span></span></code></pre></div>
 <section id="instalación-de-git-desde-la-fuente" class="level2">
 <h2 class="anchored" data-anchor-id="instalación-de-git-desde-la-fuente">Instalación de Git desde la fuente</h2>
 <p>Si estás buscando una forma más flexible de instalar Git y quieres tener la versión más reciente, puedes compilar el software desde la fuente. Aunque este método requiere más tiempo y no se integrará con el administrador de paquetes, te permitirá personalizar las opciones de instalación.</p>
-<p>Antes de comenzar, verifica la versión actualmente instalada de Git ejecutando el siguiente comando: <code>git --version</code>. Si Git ya está instalado, obtendrás un resultado similar a este: <code>git version 2.25.1</code>.</p>
+<p>Antes de comenzar, verifica la versión actualmente instalada de Git ejecutando el siguiente comando: <code>git --version</code>. Si Git ya está instalado, obtendrás un resultado similar a este: <code>git version 2.34.1</code>.</p>
 <p>Asegúrate de tener instalado el software necesario para compilar Git. Puedes hacerlo actualizando el índice de paquetes locales y luego instalando las dependencias relevantes. Ejecuta los siguientes comandos:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> apt update</span>
-<span id="cb4-2"><span class="fu" style="color: #4758AB;
+<span id="cb10-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc</span></code></pre></div>
 <p>Una vez instaladas las dependencias, crea un directorio temporal y accede a él. Aquí es donde descargarás el archivo tarball de Git. Ejecuta los siguientes comandos:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mkdir</span> tmp</span>
-<span id="cb5-2"><span class="bu" style="color: null;
+<span id="cb11-2"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">cd</span> /tmp</span></code></pre></div>
-<p>Desde el sitio web oficial de Git, navega hasta la lista de tarballs disponibles en <code>https://mirrors.edge.kernel.org/pub/software/scm/git/</code> y descarga la versión que desees utilizar. Por ejemplo, si quieres descargar la versión 2.26.2, puedes ejecutar el siguiente comando:</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+<p>Desde el sitio web oficial de Git, navega hasta la lista de tarballs disponibles en <code>https://mirrors.edge.kernel.org/pub/software/scm/git/</code> y descarga la versión que desees utilizar. Por ejemplo, si quieres descargar la versión 2.34.1, puedes ejecutar el siguiente comando:</p>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">curl</span> <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-o</span> git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz</span></code></pre></div>
+font-style: inherit;">-o</span> git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.34.1.tar.gz</span></code></pre></div>
 <p>Descomprime el archivo tarball ejecutando el siguiente comando:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tar</span> <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-zxf</span> git.tar.gz</span></code></pre></div>
 <p>A continuación, accede al nuevo directorio de Git con el siguiente comando:</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="bu" style="color: null;
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">cd</span> git-<span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">*</span></span></code></pre></div>
 <p>Ahora, puedes crear el paquete e instalarlo ejecutando los siguientes comandos:</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">make</span> prefix=/usr/local all</span>
-<span id="cb9-2"><span class="fu" style="color: #4758AB;
+<span id="cb15-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> make prefix=/usr/local install</span></code></pre></div>
 <p>Una vez completado el proceso, sustituye la shell actual para utilizar la versión de Git recién instalada ejecutando el siguiente comando:</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><span class="bu" style="color: null;
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">exec</span> bash</span></code></pre></div>
-<p>Para verificar que la instalación se haya realizado correctamente, comprueba la versión de Git nuevamente ejecutando el comando <code>git --version</code>. Deberías obtener un resultado similar a este: <code>git version 2.26.2</code>.</p>
+<p>Para verificar que la instalación se haya realizado correctamente, comprueba la versión de Git nuevamente ejecutando el comando <code>git --version</code>. Deberías obtener un resultado similar a este: <code>git version 2.34.1</code>.</p>
+<blockquote class="blockquote">
 <p>¡Con Git instalado correctamente, ahora puedes continuar con la configuración y aprovechar todas las funcionalidades que ofrece esta poderosa herramienta de control de versiones en tus proyectos!</p>
+</blockquote>
 </section>
 <section id="configuración-de-git" class="level2">
 <h2 class="anchored" data-anchor-id="configuración-de-git">Configuración de Git</h2>
 <p>Una vez que hayas elegido la versión de Git con la que estás satisfecho, es importante configurar Git para que los mensajes de confirmación que generes contengan la información correcta y te respalden a medida que desarrollas tu proyecto de software.</p>
 <p>La configuración de Git se realiza a través del comando <code>git config</code>. Específicamente, debemos proporcionar nuestro nombre y dirección de correo electrónico, ya que Git inserta esta información en cada confirmación que realizamos. Podemos agregar esta información ejecutando los siguientes comandos:</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> config <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">--global</span> user.name <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Your Name"</span></span>
-<span id="cb11-2"><span class="fu" style="color: #4758AB;
+<span id="cb17-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> config <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">--global</span> user.email <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"your.email@example.com"</span></span></code></pre></div>
-<p>Por ejemplo:</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> config <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--global</span> user.name <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"achalmed"</span></span>
-<span id="cb12-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">git</span> config <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--global</span> user.email <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"achalma_pingüino@gmail.com"</span></span></code></pre></div>
 <p>Para verificar los elementos de configuración que hemos creado, podemos ejecutar el siguiente comando:</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> config <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">--list</span></span></code></pre></div>
 <p>La información que ingreses se almacenará en el archivo de configuración de Git. Si deseas editarlo manualmente con el editor de texto de tu elección (en este tutorial utilizaremos nano), puedes ejecutar el siguiente comando:</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nano</span> ~/.gitconfig</span></code></pre></div>
 <p>En el archivo <code>~/.gitconfig</code>, encontrarás los siguientes contenidos:</p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">[user]</span></span>
-<span id="cb15-2">    <span class="ex" style="color: null;
+<span id="cb20-2">    <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">name</span> = Your Name</span>
-<span id="cb15-3">    <span class="ex" style="color: null;
+<span id="cb20-3">    <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">email</span> = your.email@example.com</span></code></pre></div>
 <p>Para salir del editor de texto, presiona CTRL + X, luego Y y finalmente ENTER.</p>
@@ -2780,30 +2801,30 @@ font-style: inherit;">email</span> = your.email@example.com</span></code></pre><
 <section id="verificar-la-existencia-de-una-clave-ssh" class="level2">
 <h2 class="anchored" data-anchor-id="verificar-la-existencia-de-una-clave-ssh">Verificar la existencia de una clave SSH</h2>
 <p>En primer lugar, verifica si ya has generado claves SSH para tu máquina. Abre una terminal y ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ls</span> <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-al</span> ~/.ssh</span></code></pre></div>
 <p>Si ya has generado las claves SSH, deberías ver una salida similar a esta:</p>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">-rw-------</span>  1 usuario usuario  1766 Jul  7  2018 id_rsa</span>
-<span id="cb17-2"><span class="ex" style="color: null;
+<span id="cb22-2"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">-rw-r--r--</span>  1 usuario usuario   414 Jul  7  2018 id_rsa.pub</span>
-<span id="cb17-3"><span class="ex" style="color: null;
+<span id="cb22-3"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">-rw-------</span>  1 usuario usuario 12892 Feb  5 18:39 known_hosts</span></code></pre></div>
 <p>Si tus claves ya existen, continúa con la sección <strong>Copia tu clave pública de SSH</strong> a continuación.</p>
 <p>Si no ves ninguna salida o si el directorio no existe (recibes un mensaje de “No such file or directory”), entonces ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mkdir</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$HOME</span>/.ssh</span></code></pre></div>
 <p>A continuación, genera un nuevo par de claves con el siguiente comando:</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ssh-keygen</span> <span class="at" style="color: #657422;
 background-color: null;
@@ -2820,7 +2841,7 @@ font-style: inherit;">-C</span> achalma_pinguino@gmail.com</span></code></pre></
 <h2 class="anchored" data-anchor-id="agrega-tu-clave-ssh-a-ssh-agent">Agrega tu clave SSH a ssh-agent</h2>
 <p><strong>ssh-agent</strong> es un programa que se inicia cuando te conectas y almacena tus claves privadas. Para que funcione correctamente, debe estar en ejecución y tener una copia de tu clave privada.</p>
 <p>Primero, asegúrate de que <strong>ssh-agent</strong> se está ejecutando ejecutando el siguiente comando:</p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="bu" style="color: null;
+<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">eval</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -2838,12 +2859,12 @@ font-style: inherit;">"</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># para Mac y Linux</span></span></code></pre></div>
 <p>o:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><span class="bu" style="color: null;
+<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">eval</span> ssh-agent <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-s</span></span></code></pre></div>
-<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ssh-agent</span> <span class="at" style="color: #657422;
 background-color: null;
@@ -2851,7 +2872,7 @@ font-style: inherit;">-s</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># para Windows</span></span></code></pre></div>
 <p>A continuación, agrega tu clave privada a <strong>ssh-agent</strong> con el siguiente comando:</p>
-<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ssh-add</span> ~/.ssh/id_rsa</span></code></pre></div>
 </section>
@@ -2859,7 +2880,7 @@ font-style: inherit;">ssh-add</span> ~/.ssh/id_rsa</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="copia-tu-clave-pública-de-ssh">Copia tu clave pública de SSH</h2>
 <p>Después, necesitarás copiar tu clave pública de SSH al portapapeles.</p>
 <p>Para Linux o Mac, puedes imprimir el contenido de tu clave pública en la consola con el siguiente comando:</p>
-<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cat</span> ~/.ssh/id_rsa.pub <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -2867,7 +2888,7 @@ font-style: inherit;"># Linux</span></span></code></pre></div>
 <p>Aparecerá una cadena de números y letras. Si al final está el correo que registraste antes, debes borrarlo antes de pegarlo en GitHub.</p>
 <p>Luego, resalta y copia el resultado.</p>
 <p>Para Windows, simplemente ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">clip</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -2880,24 +2901,24 @@ font-style: inherit;"># Windows</span></span></code></pre></div>
 <p>Accede a la página de <strong>configuración</strong> de tu cuenta de GitHub <a href="https://github.com/settings/keys">aquí</a> y haz clic en el botón “New SSH key”.</p>
 <p>A continuación, asigna un título descriptivo a tu clave y pégala en el campo correspondiente a tu clave pública (id_rsa.pub).</p>
 <p>Por último, prueba la autenticación con el siguiente comando:</p>
-<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ssh</span> <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-T</span> git@github.com</span></code></pre></div>
 <p>Si has seguido correctamente todos estos pasos, deberías ver el siguiente mensaje:</p>
-<div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">Hi</span> tu_usuario! You<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'ve successfully authenticated, but GitHub does not provide shell access.</span></span></code></pre></div>
 <p>o</p>
-<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">Warning:</span> Permanently added the ECDSA host key for IP address <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'140.82.114.3'</span> to the list of known hosts.</span>
-<span id="cb28-2"><span class="ex" style="color: null;
+<span id="cb33-2"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">Hi</span> achalmed! You<span class="st" style="color: #20794D;
 background-color: null;
@@ -2909,14 +2930,14 @@ font-style: inherit;">'ve successfully authenticated, but GitHub does not provid
 <p>En este tutorial, te mostraré cómo instalar y configurar la CLI de GitHub en Linux para facilitar tus operaciones en GitHub directamente desde la terminal.</p>
 <p><strong>Paso 1: Instalación de la CLI de GitHub en Linux</strong></p>
 <p>Para comenzar, debemos instalar la CLI de GitHub en Linux. Ejecuta los siguientes comandos en tu terminal:</p>
-<div class="sourceCode" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> apt install gh <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># versión 2.12.1+dfsg1-1</span></span></code></pre></div>
 <p><strong>Paso 2: Autenticación con GitHub</strong></p>
 <p>Una vez que hayas instalado la CLI de GitHub, puedes autenticarte con tu cuenta de GitHub. Ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">gh</span> auth login</span></code></pre></div>
 <p>Aparecerán varias opciones. A continuación, elige las siguientes opciones:</p>
@@ -2929,7 +2950,9 @@ font-style: inherit;">gh</span> auth login</span></code></pre></div>
 <li>¿Cómo te gustaría autenticar la CLI de GitHub? Iniciar sesión con un navegador web</li>
 </ul>
 <p>Luego, copia el código proporcionado y pégalo en tu navegador para completar la conexión con GitHub.</p>
+<blockquote class="blockquote">
 <p>¡Listo! Ahora estás autenticado con éxito y puedes usar la CLI de GitHub para trabajar con tus repositorios en la terminal.</p>
+</blockquote>
 <p><strong>Paso 3: Utilizar la CLI de GitHub</strong></p>
 <p>Una vez que hayas completado la autenticación, puedes comenzar a utilizar la CLI de GitHub en la terminal. Simplemente ingresa el código de contraseña (******) cuando se te solicite para realizar operaciones en tus repositorios de GitHub.</p>
 <p>Para obtener más información sobre la CLI de GitHub y todas sus capacidades, puedes consultar la <a href="https://cli.github.com/">documentación oficial</a>.</p>
@@ -2943,15 +2966,17 @@ font-style: inherit;">gh</span> auth login</span></code></pre></div>
 <p>En este tutorial, te mostraré cómo crear un nuevo repositorio GIT local utilizando el comando <code>git init</code>. Este proceso te permitirá iniciar un repositorio para tu proyecto y realizar un seguimiento de los cambios a lo largo del tiempo.</p>
 <p><strong>Paso 1: Inicializar un nuevo repositorio</strong></p>
 <p>Para iniciar un nuevo repositorio GIT, simplemente ejecuta el siguiente comando en tu terminal:</p>
-<div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> init</span></code></pre></div>
 <p>Esto creará un nuevo repositorio GIT vacío en tu directorio actual.</p>
 <p>Si deseas especificar un nombre para tu proyecto al crear el repositorio, puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> init [nombre del proyecto]</span></code></pre></div>
+<blockquote class="blockquote">
 <p>Recuerda que este paso solo se realiza una vez al inicio del proyecto.</p>
+</blockquote>
 <p><strong>Comandos en Visual Studio Code</strong></p>
 <p>En Visual Studio Code, puedes interactuar con GIT directamente desde la interfaz de usuario. Aquí hay algunos comandos clave que puedes utilizar:</p>
 <ol type="1">
@@ -2975,7 +3000,7 @@ font-style: inherit;">git</span> init [nombre del proyecto]</span></code></pre><
 <p>El comando <code>git clone</code> se utiliza para copiar un repositorio, ya sea desde un servidor remoto o desde una ubicación local. Si el repositorio está en un servidor remoto, se utiliza la siguiente sintaxis: <code>git clone nombredeusuario@host:/ruta/al/repositorio</code>. En cambio, si el repositorio se encuentra en una ubicación local, se utiliza: <code>git clone /ruta/al/repositorio</code>.</p>
 </blockquote>
 <section id="qué-es-git-clone" class="level3">
-<h3 class="anchored" data-anchor-id="qué-es-git-clone">¿Qué es <code>git clone</code>?</h3>
+<h3 class="anchored" data-anchor-id="qué-es-git-clone">¿Qué es git clone?</h3>
 <p>El comando <code>git clone</code> se utiliza para apuntar a un repositorio existente y hacer una copia del mismo en otra ubicación. Este comando creará un nuevo directorio, lo configurará para utilizar Git y copiará los archivos del repositorio en él. Sin clonar un repositorio Git, no podrás realizar cambios en él ni contribuir con tu trabajo.</p>
 </section>
 <section id="cómo-clonar-un-repositorio-git" class="level3">
@@ -2986,18 +3011,16 @@ font-style: inherit;">git</span> init [nombre del proyecto]</span></code></pre><
 <h3 class="anchored" data-anchor-id="clonar-un-repositorio-remoto">Clonar un Repositorio Remoto</h3>
 <p>Supongamos que deseas clonar un repositorio remoto desde GitHub, Bitbucket u otra plataforma en la nube hacia tu máquina local.</p>
 <ol type="1">
-<li>Abre la terminal y navega hasta la ubicación donde deseas que se copie el repositorio, por ejemplo:</li>
-</ol>
-<div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><span class="bu" style="color: null;
+<li><p>Abre la terminal y navega hasta la ubicación donde deseas que se copie el repositorio, por ejemplo:</p>
+<div class="sourceCode" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">cd</span> /home/ubuntu/</span></code></pre></div>
-<ol start="2" type="1">
+font-style: inherit;">cd</span> /home/ubuntu/</span></code></pre></div></li>
 <li><p>Cada repositorio remoto de Git tiene una URL única. Inicia sesión en tu plataforma de desarrollo preferida, como GitHub, y copia la URL de tu repositorio.</p></li>
-<li><p>Utiliza el siguiente comando <code>git clone</code> seguido de la URL del repositorio para clonarlo en tu máquina local. Por ejemplo:</p></li>
-</ol>
-<div class="sourceCode" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><span class="fu" style="color: #4758AB;
+<li><p>Utiliza el siguiente comando <code>git clone</code> seguido de la URL del repositorio para clonarlo en tu máquina local. Por ejemplo:</p>
+<div class="sourceCode" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sudo</span> git clone https://github.com/usuario/repositorio</span></code></pre></div>
+font-style: inherit;">sudo</span> git clone https://github.com/usuario/repositorio</span></code></pre></div></li>
+</ol>
 <p>Asegúrate de reemplazar “usuario” con tu nombre de usuario de GitHub y “repositorio” con el nombre de tu repositorio.</p>
 <ol start="4" type="1">
 <li>Se te pedirá la contraseña para la autenticación, después de lo cual Git descargará automáticamente una copia de tu repositorio en el directorio de trabajo actual.</li>
@@ -3006,7 +3029,7 @@ font-style: inherit;">sudo</span> git clone https://github.com/usuario/repositor
 <section id="clonar-en-una-carpeta-específica" class="level3">
 <h3 class="anchored" data-anchor-id="clonar-en-una-carpeta-específica">Clonar en una Carpeta Específica</h3>
 <p>Si deseas clonar el repositorio en una carpeta específica, puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> git clone <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -3018,7 +3041,7 @@ font-style: inherit;">&lt;</span>directorio<span class="op" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 <p>Por ejemplo, supongamos que deseas clonar tu repositorio en la carpeta <code>/home/desarrollador</code>:</p>
-<div class="sourceCode" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> git clone https://github.com/usuario/repositorio /home/desarrollador</span></code></pre></div>
 <blockquote class="blockquote">
@@ -3029,7 +3052,7 @@ font-style: inherit;">sudo</span> git clone https://github.com/usuario/repositor
 <h3 class="anchored" data-anchor-id="clonar-un-repositorio-superficialmente">Clonar un Repositorio Superficialmente</h3>
 <p>Si necesitas clonar un repositorio grande con un historial extenso de confirmaciones, el proceso puede llevar mucho tiempo. Sin embargo, en esos casos, existe la opción de realizar un clon superficial en el cual puedes especificar las últimas “n” confirmaciones que deseas clonar. Esto resultará en un proceso mucho más rápido y ocupará menos espacio en tu sistema.</p>
 <p>Aquí tienes la sintaxis para realizar un clon superficial, donde “n” representa el número de confirmaciones más recientes que deseas clonar:</p>
-<div class="sourceCode" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> git clone <span class="at" style="color: #657422;
 background-color: null;
@@ -3041,7 +3064,7 @@ font-style: inherit;">&lt;</span>repo<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 <p>Por ejemplo, si deseas clonar solamente la última confirmación de tu repositorio, puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> git clone <span class="at" style="color: #657422;
 background-color: null;
@@ -3049,7 +3072,7 @@ font-style: inherit;">--depth</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span>1 https://github.com/test_user/demo.git</span></code></pre></div>
 <p>De manera similar, si deseas clonar las últimas 10 confirmaciones de tu repositorio, puedes ejecutar este comando:</p>
-<div class="sourceCode" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> git clone <span class="at" style="color: #657422;
 background-color: null;
@@ -3058,7 +3081,7 @@ background-color: null;
 font-style: inherit;">=</span>10 https://github.com/test_user/demo.git</span></code></pre></div>
 <p>Clonar una Rama Específica de Git</p>
 <p>Si únicamente deseas clonar una rama específica (por ejemplo, “working”) en lugar de todo el repositorio, puedes utilizar la opción <code>-branch</code> en el comando <code>git clone</code>:</p>
-<div class="sourceCode" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> clone <span class="at" style="color: #657422;
 background-color: null;
@@ -3076,27 +3099,27 @@ font-style: inherit;">=</span>working https://github.com/test_user/demo.git</spa
 <p>En primer lugar, debes crear un nuevo repositorio en la página web de GitHub. Dirígete a la página “New Project” y proporciona un nombre para tu repositorio, una descripción y selecciona si deseas que el repositorio sea público o privado (recuerda que los repositorios privados requieren una suscripción). Una vez que hayas completado todos los campos, haz clic en “Create Repository” y tu repositorio estará listo.</p>
 <p><strong>Subir un proyecto</strong></p>
 <p>Para subir un proyecto, primero debes crear un proyecto Git localmente en tu computadora. Para ello, ve al directorio raíz de tu proyecto a través de la terminal utilizando el siguiente comando:</p>
-<div class="sourceCode" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><span class="bu" style="color: null;
+<div class="sourceCode" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">cd</span> ruta/al/archivo</span></code></pre></div>
 <p>Una vez que estés en el directorio del proyecto, inicializa Git ejecutando el siguiente comando:</p>
-<div class="sourceCode" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> init</span></code></pre></div>
 <p>Verás una confirmación de que el proyecto Git ha sido creado.</p>
 <p>Ahora debes agregar los archivos al repositorio Git. Puedes hacerlo utilizando una de las siguientes opciones, según si deseas agregar un archivo específico o todos los archivos existentes en el proyecto:</p>
-<div class="sourceCode" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add .  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Añade todos los archivos existentes en la carpeta al proyecto Git</span></span>
-<span id="cb43-2"><span class="fu" style="color: #4758AB;
+<span id="cb48-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add nombredelarchivo.extension  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Añade únicamente el archivo especificado al proyecto</span></span></code></pre></div>
 <p>Es importante que identifiques todos los cambios que realices en tu proyecto con un comentario. Puedes hacerlo utilizando el siguiente comando:</p>
-<div class="sourceCode" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
 background-color: null;
@@ -3104,18 +3127,18 @@ font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'comentario'</span></span></code></pre></div>
 <p>Ahora estás listo para subir el proyecto a GitHub. Para hacerlo, debes agregar el repositorio remoto ejecutando el siguiente comando en la terminal:</p>
-<div class="sourceCode" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> remote add origin git@github.com:achalmed/achalmaedison.web.git</span></code></pre></div>
 <p>Asegúrate de reemplazar “achalmed” con tu nombre de usuario en GitHub y “achalmaedison.web.git” con el nombre de tu repositorio previamente creado. Una vez que hayas ingresado los datos correctos, presiona Enter y podrás subir el proyecto ejecutando el siguiente comando:</p>
-<div class="sourceCode" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> push <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-u</span> origin master</span></code></pre></div>
 <p>Ahora tu proyecto estará cargado en tu cuenta de GitHub. Puedes verificarlo accediendo a la página del proyecto.</p>
 <p>En caso de que encuentres un error llamado “fatal: remote origin already exists” durante el paso anterior, debes ejecutar el siguiente comando:</p>
-<div class="sourceCode" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> remote rm origin</span></code></pre></div>
 <p>Luego, repite el proceso desde el principio para agregar el repositorio remoto correctamente.</p>
@@ -3169,11 +3192,11 @@ font-style: inherit;">git</span> remote rm origin</span></code></pre></div>
 <blockquote class="blockquote">
 <p><code>git log</code> se utiliza para ver el historial del repositorio, mostrando detalles específicos de cada confirmación. Al ejecutar el comando, obtendrás una salida similar a esta:</p>
 </blockquote>
-<div class="sourceCode" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">achalmaubuntu\@hp-pavilion:\~/Documents/GitHub/achalmed\$</span> git log</span>
-<span id="cb48-2"></span>
-<span id="cb48-3"><span class="ex" style="color: null;
+<span id="cb53-2"></span>
+<span id="cb53-3"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">commit</span> 7e320e8bc6939626195a83def24f91308683a87e <span class="er" style="color: #AD0000;
 background-color: null;
@@ -3186,20 +3209,20 @@ background-color: null;
 font-style: inherit;">&gt;</span> main, origin/main, origin/HEAD<span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">)</span></span>
-<span id="cb48-4"><span class="ex" style="color: null;
+<span id="cb53-4"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">Author:</span> achalmed <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span>achalmaedison@outlook.com<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb48-5"><span class="ex" style="color: null;
+<span id="cb53-5"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">Date:</span>   Sun Jun 4 14:02:57 2023 <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-0500</span></span>
-<span id="cb48-6"></span>
-<span id="cb48-7">    <span class="ex" style="color: null;
+<span id="cb53-6"></span>
+<span id="cb53-7">    <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">update</span></span></code></pre></div>
 </section>
@@ -3284,7 +3307,7 @@ font-style: inherit;">update</span></span></code></pre></div>
 <li><p><strong>Etiquetar un commit específico</strong>: Si deseas etiquetar un commit específico, puedes usar <code>git tag [nombre_tag]/commit_SHA1</code>, donde <code>commit_SHA1</code> es el identificador único del commit.</p></li>
 </ul>
 <p>Para acceder al commit donde se encuentra una etiqueta, utiliza el siguiente comando:</p>
-<div class="sourceCode" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> checkout <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3294,7 +3317,7 @@ font-style: inherit;">nombre_tag</span><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div>
 <p>Las etiquetas son útiles para marcar puntos de lanzamiento o versiones importantes en tu proyecto. Los desarrolladores las utilizan para indicar hitos significativos, como v1.0 o v2.0. Por ejemplo, puedes crear una etiqueta v1.1.0 en el commit específico utilizando el siguiente comando:</p>
-<div class="sourceCode" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> tag 1.1.0 <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3349,7 +3372,7 @@ font-style: inherit;">]</span></span></code></pre></div>
 <h2 class="anchored" data-anchor-id="git-add-archivo"><code>git add [archivo]</code></h2>
 <ul>
 <li><p><strong>Preparar un archivo específico</strong>: Utiliza el comando <code>git add [archivo]</code> para preparar un archivo en particular y agregarlo al área de preparación. Por ejemplo, si deseas indexar el archivo <code>temp.txt</code>, ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add temp.txt</span></code></pre></div></li>
 <li><p><strong>Preparar todos los archivos modificados</strong>: Si has realizado cambios en varios archivos y deseas prepararlos todos, utiliza el comando <code>git add .</code>. Esto sincronizará y preparará todos los archivos modificados para el siguiente commit.</p></li>
@@ -3359,11 +3382,11 @@ font-style: inherit;">git</span> add temp.txt</span></code></pre></div></li>
 <h3 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h3>
 <ul>
 <li><p><strong>Agregar un archivo específico</strong>: Si deseas agregar el archivo <code>index.html</code> al área de preparación, ejecuta el siguiente comando:</p>
-<div class="sourceCode" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add index.html</span></code></pre></div></li>
 <li><p><strong>Actualizar todos los cambios</strong>: Si has realizado modificaciones en varios archivos y deseas prepararlos todos, utiliza el siguiente comando:</p>
-<div class="sourceCode" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add .</span></code></pre></div></li>
 </ul>
@@ -3491,7 +3514,7 @@ font-style: inherit;">git</span> add .</span></code></pre></div></li>
 <section id="ejemplo" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
 <p>Para obtener los cambios desde el repositorio en GitHub, puedes ejecutar:</p>
-<div class="sourceCode" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> fetch origin</span></code></pre></div>
 </section>
@@ -3502,7 +3525,7 @@ font-style: inherit;">git</span> fetch origin</span></code></pre></div>
 <section id="ejemplo-1" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h3>
 <p>Para obtener los cambios y fusionarlos en el repositorio local, puedes utilizar:</p>
-<div class="sourceCode" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> pull origin <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3512,7 +3535,7 @@ font-style: inherit;">rama</span><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div>
 <p>o simplemente:</p>
-<div class="sourceCode" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> pull <span class="at" style="color: #657422;
 background-color: null;
@@ -3531,7 +3554,7 @@ font-style: inherit;">--rebase</span></span></code></pre></div>
 <ul>
 <li>Para agregar un repositorio remoto, utiliza el siguiente comando:</li>
 </ul>
-<div class="sourceCode" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> remote add <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3549,7 +3572,7 @@ font-style: inherit;">]</span></span></code></pre></div>
 <ul>
 <li>Para eliminar una conexión a un repositorio remoto específico, utiliza:</li>
 </ul>
-<div class="sourceCode" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> remote remove <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3566,7 +3589,7 @@ font-style: inherit;">]</span></span></code></pre></div>
 <section id="ejemplo-3" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-3">Ejemplo</h3>
 <p>Para enviar los cambios al repositorio en línea, puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> push origin <span class="pp" style="color: #AD0000;
 background-color: null;
@@ -3641,14 +3664,14 @@ font-style: inherit;">]</span></span></code></pre></div>
 <p>En este apartado, exploraremos cómo eliminar archivos o carpetas en un repositorio utilizando los comandos de Git. A continuación, resaltaré los puntos clave de cada paso:</p>
 <ol type="1">
 <li><p><strong>Actualizar los cambios:</strong> Antes de borrar archivos o carpetas, es importante asegurarse de que todos los cambios estén actualizados en el repositorio. Puedes hacerlo utilizando el siguiente comando:</p>
-<div class="sourceCode" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> add <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-u</span></span></code></pre></div>
 <p>Este comando actualizará todos los cambios realizados en el repositorio.</p></li>
 <li><p><strong>Realizar un commit:</strong> Después de asegurarte de que los cambios están actualizados, debes crear un commit para registrar la eliminación de los archivos o carpetas innecesarios. Puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
 background-color: null;
@@ -3657,17 +3680,17 @@ background-color: null;
 font-style: inherit;">"Elimino archivos innecesarios"</span></span></code></pre></div>
 <p>Recuerda proporcionar un mensaje descriptivo para el commit.</p></li>
 <li><p><strong>Subir los cambios:</strong> Finalmente, debes enviar los cambios al repositorio en línea. Utiliza el siguiente comando para realizarlo:</p>
-<div class="sourceCode" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb62-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> push origin master</span></code></pre></div>
 <p>Ten en cuenta que “master” puede ser reemplazado por “main” si esa es la rama principal en tu repositorio.</p></li>
 </ol>
 <p>Si deseas eliminar un archivo específico, utiliza el siguiente comando:</p>
-<div class="sourceCode" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> rm miarchivo.php</span></code></pre></div>
 <p>En caso de querer eliminar una carpeta completa, puedes utilizar el siguiente comando:</p>
-<div class="sourceCode" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> rm <span class="at" style="color: #657422;
 background-color: null;

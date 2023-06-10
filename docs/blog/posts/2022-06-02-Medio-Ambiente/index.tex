@@ -5,7 +5,8 @@
 %
 \documentclass[
   letterpaper,
-]{article}
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -39,9 +40,8 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
@@ -78,7 +78,26 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\usepackage{amsmath}
+% Preámbulo
+\usepackage[utf8]{inputenc} % Codificación de entrada en UTF-8
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+%\usepackage[spanish]{babel} % Configuración para escribir en español
+%\selectlanguage{spanish} % Selecciona el idioma español
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{rotating, graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+
+\KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
 \makeatletter
@@ -176,14 +195,8 @@ recursos naturales}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, boxrule=0pt, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
 
-\renewcommand*\contentsname{Contenidos}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
-\tableofcontents
-}
 \hypertarget{resuelva-las-siguientes-preguntas}{%
 \section{Resuelva las siguientes
 preguntas}\label{resuelva-las-siguientes-preguntas}}

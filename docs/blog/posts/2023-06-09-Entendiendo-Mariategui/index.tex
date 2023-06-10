@@ -1,0 +1,493 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+% Preámbulo
+\usepackage[utf8]{inputenc} % Codificación de entrada en UTF-8
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+%\usepackage[spanish]{babel} % Configuración para escribir en español
+%\selectlanguage{spanish} % Selecciona el idioma español
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{rotating, graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+
+\KOMAoption{captions}{tableheading,figureheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Naturaleza Humana y su impacto político, sesgos científicos. Más allá de los Límites Impuestos},
+  pdfauthor={Edison Achalma Mendoza},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Naturaleza Humana y su impacto político, sesgos científicos. Más
+allá de los Límites Impuestos}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Explorando las implicaciones políticas de nuestras
+concepciones sobre la naturaleza humana.}
+\author{Edison Achalma Mendoza}
+\date{2023-06-09}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+
+\hypertarget{entendiendo-a-mariuxe1tegui-una-perspectiva-profunda}{%
+\section{Entendiendo a Mariátegui: una perspectiva
+profunda}\label{entendiendo-a-mariuxe1tegui-una-perspectiva-profunda}}
+
+Para comprender a Mariátegui, es esencial acercarse a su figura con
+respeto y desde una posición de clase clara y precisa. De lo contrario,
+resultará imposible apreciar la riqueza y vigencia de su pensamiento.
+Aunque Mariátegui falleció hace años, su legado intelectual sigue vivo y
+pujante, en contraste con otros pensamientos que, aunque pertenecientes
+a personas aún vivas, carecen de vitalidad.
+
+\hypertarget{el-mariuxe1tegui-proletario}{%
+\subsection{El Mariátegui
+proletario}\label{el-mariuxe1tegui-proletario}}
+
+Un aspecto fundamental para entender a Mariátegui es reconocerlo como un
+intelectual proletario. A pesar de las interpretaciones erróneas que se
+han difundido, Mariátegui afirmó ser un marxista convicto y confeso, sin
+temor ni ambigüedades. Esto implica que Mariátegui adoptó una posición
+clara del lado de los explotados, una postura que se tradujo en acción y
+escritos comprometidos. Además, Mariátegui desarrolló una concepción del
+mundo basada en el marxismo-leninismo, que consideraba la forma más
+avanzada de su tiempo. Su filiación con Marx y Lenin era evidente, y
+esto se reflejaba en su pensamiento.
+
+\hypertarget{el-muxe9todo-de-mariuxe1tegui-el-materialismo-dialuxe9ctico}{%
+\subsection{El método de Mariátegui: el materialismo
+dialéctico}\label{el-muxe9todo-de-mariuxe1tegui-el-materialismo-dialuxe9ctico}}
+
+Mariátegui también se destacaba por su método de análisis, basado en el
+materialismo dialéctico. Sus trabajos son testimonio fehaciente de esta
+influencia. Es fundamental comprender que la posición proletaria de
+Mariátegui, su ideología marxista-leninista y su enfoque basado en el
+materialismo dialéctico son los pilares para entender su figura. Quienes
+no tomen en cuenta estos tres puntos fundamentales no podrán comprender
+su pensamiento y, en muchos casos, lo tergiversarán con intenciones
+deshonestas.
+
+\hypertarget{el-legado-de-mariuxe1tegui}{%
+\subsection{El legado de Mariátegui}\label{el-legado-de-mariuxe1tegui}}
+
+José Carlos Mariátegui fue un destacado marxista-leninista
+latinoamericano, una figura en la que debemos sentirnos orgullosos. Su
+influencia trasciende nuestras fronteras, aunque lamentablemente en
+nuestro país no se le reconoce y valora lo suficiente. Mariátegui no es
+un simple repetidor de fórmulas, sino alguien que fusionó el
+marxismo-leninismo con la realidad peruana, iluminando nuestro
+pensamiento con una vigencia que perdura. Sus ``Siete Ensayos de
+Interpretación de la Realidad Peruana'' son un documento inquebrantable
+y fundamental.
+
+\hypertarget{enfrentando-las-cruxedticas}{%
+\subsection{Enfrentando las
+críticas}\label{enfrentando-las-cruxedticas}}
+
+A pesar de los esfuerzos por silenciar, mistificar y tergiversar la
+figura de Mariátegui, su influencia se mantiene intacta. Críticos
+reaccionarios, como Víctor Andrés Belaúnde, han intentado desacreditarlo
+sin éxito. Mariátegui poseía una garra marxista y genial que le permitió
+fusionar el marxismo-leninismo con la realidad peruana, algo que pocos
+pueden lograr. Aquellos que temen a Mariátegui tienen razones para
+hacerlo, ya que su figura representa un criterio fundamental para
+distinguir entre auténticos revolucionarios y otros.
+
+\hypertarget{un-libro-inmortal-los-fundamentos-de-mariuxe1tegui}{%
+\section{Un libro inmortal: Los fundamentos de
+Mariátegui}\label{un-libro-inmortal-los-fundamentos-de-mariuxe1tegui}}
+
+El legado de José Carlos Mariátegui perdura a través de su libro
+inmortal. Mientras el trabajo del señor Víctor Andrés Belaúnde ha caído
+en el olvido, el librito de Mariátegui sigue vivo, siendo una obra que
+merece ser leída tanto por su relevancia histórica como por su visión
+popular en nuestra patria. En este texto, exploraremos los puntos clave
+y conceptos importantes presentes en la obra de Mariátegui.
+
+\hypertarget{la-visiuxf3n-econuxf3mica-y-estructura-social}{%
+\subsection{La visión económica y estructura
+social}\label{la-visiuxf3n-econuxf3mica-y-estructura-social}}
+
+Mariátegui nos brinda un análisis fundamental de la economía peruana en
+su libro. Comprender la estructura económica de una sociedad y las
+relaciones de explotación que existen en ella es vital para comprenderla
+en su totalidad. Mariátegui nos muestra que el Perú es un país
+semifeudal y semicolonial, y lo respalda con su esquema del proceso
+económico nacional. Estas ideas siguen siendo desarrolladas en el
+pensamiento marxista peruano actual, bajo la influencia del pensamiento
+de Mao.
+
+\hypertarget{la-evoluciuxf3n-de-las-ideas-y-la-literatura-peruana}{%
+\subsection{La evolución de las ideas y la literatura
+peruana}\label{la-evoluciuxf3n-de-las-ideas-y-la-literatura-peruana}}
+
+Además de analizar las relaciones de explotación en nuestra patria,
+Mariátegui también aborda la evolución de las ideas y la literatura en
+el Perú. En particular, destaca el problema literario y su carácter
+netamente clasista. Estudiar cómo ha evolucionado la literatura peruana
+es crucial para comprender su desarrollo histórico. Mariátegui logra
+fusionar el marxismo-leninismo con la realidad concreta de nuestra
+patria, generando un análisis profundo y realista de la realidad
+peruana.
+
+\hypertarget{refutando-las-cruxedticas}{%
+\subsection{Refutando las críticas}\label{refutando-las-cruxedticas}}
+
+A lo largo del tiempo, se han hecho intentos de refutar los fundamentos
+de Mariátegui, pero ninguno ha tenido éxito. Aquellos que lo critican
+suelen hacer esquemas elementales que no pueden igualar el edificio
+teórico que él construyó en tan corta edad. Es importante destacar que
+las críticas que menosprecian su figura, como las del sujeto Ravines,
+carecen de comprensión y reflejan una falta de entendimiento de
+Mariátegui y su obra.
+
+\hypertarget{la-importancia-de-la-posiciuxf3n-de-clase-la-ideologuxeda-y-el-muxe9todo}{%
+\subsection{La importancia de la posición de clase, la ideología y el
+método}\label{la-importancia-de-la-posiciuxf3n-de-clase-la-ideologuxeda-y-el-muxe9todo}}
+
+El problema central no radica en aspectos superficiales o externos, sino
+en tres elementos fundamentales en la obra de Mariátegui: su posición de
+clase, su ideología y su método. Aquellos que adoptan una posición en
+favor del proletariado, el campesinado y las clases explotadas en
+nuestro país son quienes tienen la capacidad de comprender a Mariátegui
+en su totalidad. Por otro lado, aquellos que se sitúan a medio camino
+entre los explotadores y los explotados no podrán entender su
+pensamiento. Es por ello que se generan críticas vacías y desinformadas,
+que no logran alcanzar la altura de Mariátegui, quien hace más de 30
+años dejó una huella imborrable en nuestra historia.
+
+\hypertarget{mariuxe1tegui-un-combatiente-proletario-y-organizador-extraordinario}{%
+\section{Mariátegui: Un combatiente proletario y organizador
+extraordinario}\label{mariuxe1tegui-un-combatiente-proletario-y-organizador-extraordinario}}
+
+\hypertarget{la-misiuxf3n-de-mariuxe1tegui-y-su-compromiso}{%
+\subsection{La misión de Mariátegui y su
+compromiso}\label{la-misiuxf3n-de-mariuxe1tegui-y-su-compromiso}}
+
+Mariátegui llegó a nuestra patria desde Europa con una misión clara:
+trabajar por la formación del socialismo en el Perú. Él vivió, trabajó y
+se desvivió por esta causa, siendo un ferviente defensor de los ideales
+proletarios. Su compromiso fue inquebrantable y su columna vertebral
+siempre se mantuvo recta, sin ceder a acomodamientos. Mariátegui fue un
+combatiente marxista ejemplar y el primer militante de esta ideología en
+nuestra patria.
+
+\hypertarget{el-sindicalismo-clasista-y-la-cgtp}{%
+\subsection{El sindicalismo clasista y la
+CGTP}\label{el-sindicalismo-clasista-y-la-cgtp}}
+
+Mariátegui dejó un legado en la organización del proletariado en nuestro
+país. Realizó un trabajo de preparación en el ámbito sindical y sentó
+las bases del sindicalismo clasista. Aunque ya existían disputas
+sindicales previas en el país, Mariátegui fue el creador de la
+Confederación General de Trabajadores del Perú (CGTP) y su principal
+ideólogo y mentor. La CGTP fue una institución fundamental para el
+movimiento obrero, y Mariátegui fue quien la constituyó orgánicamente y
+estableció sus fundamentos y documentos constitutivos.
+
+\hypertarget{la-labor-preparatoria-y-la-estructuraciuxf3n-de-la-cgtp}{%
+\subsection{La labor preparatoria y la estructuración de la
+CGTP}\label{la-labor-preparatoria-y-la-estructuraciuxf3n-de-la-cgtp}}
+
+Mariátegui comprendió la importancia de la estructuración de una central
+sindical para el proletariado. No solo lo comprendió intelectualmente,
+sino que también sintió la necesidad de cumplir con la tarea que esta
+comprensión le exigía. Llevó a cabo una labor preparatoria para la
+formación de la CGTP, siguiendo un enfoque marxista. Cualquier
+institución o organismo consta de dos elementos constitutivos: una parte
+ideológica, que implica la movilización del pensamiento, la formulación
+de un programa y la valoración de un estatuto, y una parte orgánica, que
+implica la creación de aparatos organizativos. Mariátegui entendió
+profundamente esta dinámica y, siguiendo su enfoque marxista, fue quien
+dio vida a la CGTP en nuestra patria.
+
+\hypertarget{la-cgtp-bases-organizativas-y-lucha-proletaria}{%
+\section{La CGTP: Bases organizativas y lucha
+proletaria}\label{la-cgtp-bases-organizativas-y-lucha-proletaria}}
+
+\hypertarget{la-orientaciuxf3n-clasista-y-proletaria-de-los-estatutos-de-la-cgtp}{%
+\subsection{La orientación clasista y proletaria de los estatutos de la
+CGTP}\label{la-orientaciuxf3n-clasista-y-proletaria-de-los-estatutos-de-la-cgtp}}
+
+Mariátegui, al redactar los estatutos de la CGTP, creó un documento
+sindical que reflejaba una orientación clasista y proletaria. Estos
+estatutos, aún vigentes, esperan ver su plena realización. Sin embargo,
+es irónico que ciertos elementos posteriores a Mariátegui hayan impuesto
+desorientación en el movimiento sindical de nuestro país. Al analizar
+los estatutos de la CGTP, encontramos un prólogo u orientación redactada
+por Mariátegui, que explica cómo el proletariado ve el mundo y reconoce
+la lucha ineludible entre la burguesía y el proletariado. Además,
+plantea la importancia de seguir una ideología de clase para la
+formación de un organismo sindical.
+
+\hypertarget{bases-generales-de-organizaciuxf3n-y-desarrollo}{%
+\subsection{Bases generales de organización y
+desarrollo}\label{bases-generales-de-organizaciuxf3n-y-desarrollo}}
+
+Mariátegui estableció bases generales para la constitución orgánica de
+la CGTP. No buscaba la rigidez que limita y estanca, sino que
+proporcionó lineamientos básicos que permitieran el desarrollo y la
+iniciativa del pueblo. Reconoció la importancia de dejar espacio para la
+iniciativa individual, fomentando que las personas piensen por sí
+mismas, comprendan y aprendan, sin ser perpetuos menores. Su enfoque se
+centró en el pueblo, entendiendo que no necesitaba una guía constante,
+ya que el pueblo no es ciego. Mariátegui abogaba por bases generales de
+organización que dieran autonomía y empoderamiento al pueblo trabajador.
+
+\hypertarget{las-formas-de-lucha-y-la-importancia-de-la-huelga}{%
+\subsection{Las formas de lucha y la importancia de la
+huelga}\label{las-formas-de-lucha-y-la-importancia-de-la-huelga}}
+
+Mariátegui abordó las formas de lucha en los estatutos de la CGTP,
+destacando la importancia de la huelga. Esta elección no fue casual, ya
+que consideraba fundamental informar a los trabajadores sobre las
+diferentes formas de lucha y su relación con los objetivos que se desean
+alcanzar. Es relevante resaltar esto, ya que algunos medios de
+comunicación, como La Prensa, han intentado desacreditar la huelga como
+un método inadecuado o extremista. Mariátegui entendía que la
+movilización de las masas a través de la huelga era esencial para que el
+pueblo abriera los ojos, comprendiera la realidad y se liberara de las
+ataduras del pasado. La movilización masiva es una herramienta valiosa
+que permite al pueblo generar líderes y tomar conciencia de sus
+derechos.
+
+\hypertarget{la-propaganda-y-la-agitaciuxf3n-la-voz-propia-del-pueblo}{%
+\subsection{La propaganda y la agitación: La voz propia del
+pueblo}\label{la-propaganda-y-la-agitaciuxf3n-la-voz-propia-del-pueblo}}
+
+Mariátegui también abordó el tema de la propaganda y la agitación en los
+estatutos de la CGTP. Reconoció la necesidad de que el pueblo tenga su
+propia voz y exprese sus propias palabras, sin depender de otros para
+hacero por él. Mariátegui comprendía que el lenguaje del pueblo no sería
+necesariamente sofisticado ni refinado, y que pueden existir errores,
+pero lo fundamental es que puedan expresar sus sentimientos, necesidades
+y luchar consecuentemente por lo que desean, incluso en caso de derrotas
+temporales. Mariátegui planteó la importancia de una prensa proletaria
+en el Perú, que aún no se ha logrado en toda su magnitud, y cómo la
+propaganda y la agitación son herramientas vitales para el pueblo.
+
+\hypertarget{la-organizaciuxf3n-del-campesinado-seguxfan-josuxe9-carlos-mariuxe1tegui}{%
+\section{La organización del campesinado según José Carlos
+Mariátegui}\label{la-organizaciuxf3n-del-campesinado-seguxfan-josuxe9-carlos-mariuxe1tegui}}
+
+\hypertarget{la-situaciuxf3n-del-campesinado-peruano-y-la-lucha-contra-la-feudalidad}{%
+\subsection{La situación del campesinado peruano y la lucha contra la
+feudalidad}\label{la-situaciuxf3n-del-campesinado-peruano-y-la-lucha-contra-la-feudalidad}}
+
+Mariátegui reconoció que en el Perú existían campesinos que sufrían la
+opresión de la feudalidad. Identificó al latifundio y la servidumbre
+como las expresiones de esta opresión, en la que los campesinos eran
+aplastados y explotados. Mariátegui afirmó que el problema fundamental
+del campesino peruano era el problema de la tierra y su conquista. Para
+ello, era necesario comprender la causa histórica del problema: la
+semifeudalidad arraigada en el país.
+
+\hypertarget{formas-organizativas-propuestas-por-mariuxe1tegui}{%
+\subsection{Formas organizativas propuestas por
+Mariátegui}\label{formas-organizativas-propuestas-por-mariuxe1tegui}}
+
+Mariátegui planteó la importancia de la organización del campesinado
+como un paso fundamental para su liberación. Propuso la formación de
+sindicatos campesinos y ligas campesinas como formas de organización.
+**Reconoció que sin organización, el pueblo es frágil y no puede luchar
+efectivamente. Además, Mariátegui destacó la necesidad de construir una
+alianza obrero-campesina, entendiendo que esta alianza era fundamental
+en cualquier proceso revolucionario.
+
+\textbf{El poder y el papel del campesinado armado}
+
+Mariátegui, siguiendo los principios revolucionarios, comprendió la
+importancia del poder en el proceso de cambio. En este sentido, planteó
+que el problema de la revolución era el problema del poder. Mariátegui
+fue más allá y propuso una medida sorprendente para la organización del
+campesinado: el armamento. Consideró necesario organizar la fuerza
+armada del campesinado como una forma organizativa esencial. Además,
+Mariátegui abogó por la formación de soviets, una estructura de poder
+popular que permitiría la participación directa del campesinado en la
+toma de decisiones.
+
+\textbf{Conclusión}
+
+José Carlos Mariátegui, en su análisis sobre el campesinado peruano,
+planteó la necesidad de su organización para enfrentar la feudalidad y
+conquistar la tierra. Propuso la formación de sindicatos y ligas
+campesinas, así como la construcción de una alianza obrero-campesina.
+Mariátegui también resaltó la importancia del poder y propuso la
+organización del campesinado armado, junto con la formación de soviets.
+Estas ideas, aunque a menudo ignoradas o tergiversadas, son
+fundamentales para comprender el pensamiento revolucionario de
+Mariátegui y su visión de la organización del campesinado en la lucha
+por la justicia social y la transformación radical.
+
+
+\printbibliography
+
+
+\end{document}

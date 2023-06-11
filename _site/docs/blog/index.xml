@@ -37,7 +37,7 @@
 <blockquote class="blockquote">
 <p>R es un lenguaje de programación ampliamente utilizado en la comunidad estadística y de análisis de datos, y es especialmente popular entre los científicos de datos y los investigadores.</p>
 </blockquote>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_222900.png" id="fig-" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_222900.png" id="fig-" class="img-fluid"></p>
 </section>
 <section id="paso-2.-instalar-r-en-ubuntu-linux" class="level2">
 <h2 class="anchored" data-anchor-id="paso-2.-instalar-r-en-ubuntu-linux">Paso 2. Instalar R en Ubuntu Linux</h2>
@@ -126,7 +126,7 @@ font-style: inherit;">sudo</span> add-apt-repository ppa:c2d4u.team/c2d4u4.0+</s
 <blockquote class="blockquote">
 <p>RStudio RStudio es un entorno de desarrollo integrado (IDE) muy popular para trabajar con R. Proporciona una interfaz gráfica intuitiva y muchas herramientas útiles para la programación en R.</p>
 </blockquote>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_224818.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_224818.png" class="img-fluid"></p>
 </section>
 <section id="paso-4.-instalar-rstudio-en-ubuntu-linux" class="level2">
 <h2 class="anchored" data-anchor-id="paso-4.-instalar-rstudio-en-ubuntu-linux">Paso 4. Instalar RStudio en Ubuntu Linux</h2>
@@ -162,7 +162,7 @@ font-style: inherit;">&gt;</span>.deb</span></code></pre></div>
 background-color: null;
 font-style: inherit;">rstudio</span></span></code></pre></div>
 <p>RStudio se abrirá en una ventana separada, lo que te permitirá comenzar a trabajar con R y aprovechar todas las funciones y características que ofrece el IDE.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_231407.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_231407.png" class="img-fluid"></p>
 </section>
 </section>
 <section id="qúe-nos-ofrece-rstudio" class="level1">
@@ -180,7 +180,7 @@ font-style: inherit;">rstudio</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Interfaz de RStudio: Una poderosa herramienta para el desarrollo en R</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_233058.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_233058.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -202,13 +202,13 @@ font-style: inherit;">rstudio</span></span></code></pre></div>
 <section id="paso-1-crear-un-nuevo-archivo-de-script" class="level3">
 <h3 class="anchored" data-anchor-id="paso-1-crear-un-nuevo-archivo-de-script">Paso 1: Crear un nuevo archivo de script</h3>
 <p>En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hacer esto, seleccionamos “Archivo” en la barra de menú, luego “Nuevo archivo” y finalmente “Script R”. Esto abrirá un nuevo editor de texto donde podemos escribir nuestro código.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_001234.png" class="img-fluid"></p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_001615.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_001234.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_001615.png" class="img-fluid"></p>
 </section>
 <section id="paso-2-escribir-el-código-en-el-script" class="level3">
 <h3 class="anchored" data-anchor-id="paso-2-escribir-el-código-en-el-script">Paso 2: Escribir el código en el script</h3>
 <p>Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_004241.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_004241.png" class="img-fluid"></p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_b2491314c73ed2c02b4477827870869f">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -405,17 +405,17 @@ font-style: inherit;">"</span>)</span>
 <section id="paso-3-ejecutar-el-script" class="level3">
 <h3 class="anchored" data-anchor-id="paso-3-ejecutar-el-script">Paso 3: Ejecutar el script</h3>
 <p>Una vez que hemos escrito nuestro código en el archivo de script, podemos ejecutarlo para obtener los resultados deseados. Para hacer esto, podemos utilizar el atajo de teclado “Ctrl + Enter” o simplemente hacer clic en el botón “Ejecutar” en la parte superior del editor de texto.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_005354.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_005354.png" class="img-fluid"></p>
 <p>RStudio ejecutará el código línea por línea y mostrará los resultados en la consola.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_010256.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_010256.png" class="img-fluid"></p>
 </section>
 <section id="paso-4-guardar-el-script" class="level3">
 <h3 class="anchored" data-anchor-id="paso-4-guardar-el-script">Paso 4: Guardar el script</h3>
 <p>Es importante guardar regularmente nuestro script para evitar perder nuestro trabajo. Para guardar el archivo de script, seleccionamos “Archivo” en la barra de menú y luego “Guardar” o “Guardar como”.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_010854.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_010854.png" class="img-fluid"></p>
 <p>Podemos elegir una ubicación y un nombre de archivo apropiados para guardar nuestro script.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_012736.png" class="img-fluid"></p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_013135.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_012736.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_013135.png" class="img-fluid"></p>
 </section>
 <section id="paso-5-continuar-escribiendo-y-ejecutando-el-código" class="level3">
 <h3 class="anchored" data-anchor-id="paso-5-continuar-escribiendo-y-ejecutando-el-código">Paso 5: Continuar escribiendo y ejecutando el código</h3>
@@ -518,7 +518,7 @@ font-style: inherit;">"</span>)</span>
 </tr>
 <tr class="odd">
 <td>Colapsar/expandir bloque de código</td>
-<td>Ctrl + Shift + [</td>
+<td>Ctrl + Shift +</td>
 </tr>
 <tr class="even">
 <td>Aumentar tamaño de fuente</td>
@@ -580,9 +580,765 @@ font-style: inherit;">"</span>)</span>
 </table>
 <p>Estos atajos de teclado te ayudarán a agilizar tu flujo de trabajo en RStudio en Ubuntu Linux. Recuerda que también puedes personalizar los atajos de teclado según tus preferencias en la sección de configuración de RStudio.</p>
 </section>
+<section id="espacio-de-trabajo-.rdata" class="level2">
+<h2 class="anchored" data-anchor-id="espacio-de-trabajo-.rdata">Espacio de trabajo (.Rdata)</h2>
+<p>El espacio de trabajo en R consiste en todos los objetos que se crean o cargan durante una sesión de R. En este tutorial, aprenderemos cómo trabajar con el espacio de trabajo en RStudio.</p>
+<section id="creación-de-objetos-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="creación-de-objetos-de-datos">Creación de objetos de datos</h3>
+<ol type="1">
+<li>Utiliza el operador de asignación (<code>&lt;-</code>) para crear un objeto de datos. Por ejemplo: <code>mi_objeto &lt;- c(1, 2, 3, 4, 5)</code>.</li>
+</ol>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_092644.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Selecciona todo el código que contiene los objetos de datos y ejecútalo en la consola de RStudio.</li>
+</ol>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_093536.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>El código se evaluará y los objetos de datos se crearán en el espacio de trabajo. Sin embargo, no verás ningún resultado en la consola.</li>
+</ol>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_094001.png" class="img-fluid"></p>
+<p>Los objetos de datos creados se almacenan en el entorno global, que es parte del espacio de trabajo de R.</p>
+</section>
+<section id="inspección-de-objetos-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="inspección-de-objetos-de-datos">Inspección de objetos de datos</h3>
+<p>Puedes inspeccionar los objetos de datos haciendo clic sobre ellos en el panel de entorno o en el panel de objetos. Esto abrirá una vista previa del objeto en un nuevo archivo. Ten en cuenta que esta vista previa no afecta los objetos en el espacio de trabajo y se puede cerrar sin perder ninguna información.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_094530.png" class="img-fluid"></p>
+</section>
+<section id="guardado-del-espacio-de-trabajo" class="level3">
+<h3 class="anchored" data-anchor-id="guardado-del-espacio-de-trabajo">Guardado del espacio de trabajo</h3>
+<p>En RStudio, puedes guardar todos los objetos en tu espacio de trabajo en un archivo llamado <code>.Rdata</code>. Esta función te permite almacenar y cargar el espacio de trabajo completo en futuras sesiones de RStudio.</p>
+<p><strong>Para guardar el espacio de trabajo, simplemente ve al menú “Session” y selecciona “Save Workspace As…”. A continuación, elige la ubicación y el nombre de archivo deseados para guardar el archivo <code>.Rdata</code>.</strong></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_095350.png" class="img-fluid"></p>
+<p>Esta función es especialmente útil cuando trabajas en proyectos largos o cuando deseas retomar tu trabajo en otro momento sin tener que volver a crear o cargar manualmente todos los objetos y configuraciones.</p>
+<blockquote class="blockquote">
+<p>Recuerda que al guardar y cargar el espacio de trabajo, asegúrate de mantener un respaldo de tus archivos en caso de cualquier eventualidad. ¡Disfruta de la conveniencia de mantener tus objetos y configuraciones en tu espacio de trabajo guardado!</p>
+</blockquote>
+</section>
+<section id="carga-del-espacio-de-trabajo" class="level3">
+<h3 class="anchored" data-anchor-id="carga-del-espacio-de-trabajo">Carga del espacio de trabajo</h3>
+<p>Para cargar el espacio de trabajo previamente guardado, sigue estos pasos:</p>
+<ol type="1">
+<li>Abre RStudio y ve al menú “Session” en la barra de herramientas superior.</li>
+<li>Selecciona la opción “Cargar” del menú desplegable.</li>
+<li>Aparecerá una ventana emergente que te permite buscar el archivo <code>.Rdata</code> que contiene tu espacio de trabajo guardado. Navega hasta la ubicación donde guardaste el archivo.</li>
+<li>Selecciona el archivo <code>.Rdata</code> y haz clic en el botón “Abrir”.</li>
+<li>RStudio cargará automáticamente el archivo y restaurará todos los objetos y sus valores en tu entorno de trabajo actual.</li>
+</ol>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_100949.png" class="img-fluid"></p>
+<p>Una vez completados estos pasos, podrás acceder a todos los objetos y continuar trabajando con ellos como lo hiciste en la sesión en la que guardaste el espacio de trabajo.</p>
+<p>Recuerda que al cargar un espacio de trabajo previamente guardado, es importante asegurarte de que el archivo <code>.Rdata</code> sea el correcto y contenga los objetos y los valores deseados. También ten en cuenta que cualquier objeto o configuración existente en tu entorno de trabajo actual se reemplazará por los objetos y los valores del archivo <code>.Rdata</code> cargado.</p>
+<blockquote class="blockquote">
+<p>¡Con esta opción de carga, podrás retomar fácilmente tus proyectos anteriores y continuar donde lo dejaste sin tener que volver a crear los objetos desde cero!</p>
+</blockquote>
+</section>
+</section>
+<section id="historial-.rhistory" class="level2">
+<h2 class="anchored" data-anchor-id="historial-.rhistory">Historial (.Rhistory)</h2>
+<p>El archivo de historial es un archivo de texto que registra todos los comandos ejecutados durante una sesión de RStudio.</p>
+<section id="inspección-del-historial-de-comandos" class="level3">
+<h3 class="anchored" data-anchor-id="inspección-del-historial-de-comandos">Inspección del historial de comandos</h3>
+<p>Puedes ver el historial de comandos ejecutados durante tu sesión de trabajo haciendo clic en la pestaña “History” en la parte superior derecha de la ventana de RStudio. Aquí encontrarás una lista de todos los comandos ejecutados, lo que te permite revisarlos y volver a utilizarlos según sea necesario.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_101644.png" class="img-fluid"></p>
+</section>
+<section id="guardado-del-historial-de-comandos" class="level3">
+<h3 class="anchored" data-anchor-id="guardado-del-historial-de-comandos">Guardado del historial de comandos</h3>
+<p>Si deseas guardar tu historial de comandos, puedes hacerlo en cualquier momento durante tu sesión de trabajo. Esto te permitirá acceder a tus comandos previos en futuras sesiones.</p>
+<p>Si deseas guardar tu historial de comandos en RStudio, sigue estos pasos:</p>
+<ol type="1">
+<li>En el panel de superior derecha selecciona la opción “Save History” (Guardar Historial).</li>
+<li>Aparecerá una ventana emergente que te permitirá seleccionar la ubicación y el nombre de archivo para guardar tu historial de comandos. El archivo tendrá una extensión <code>.Rhistory</code> por defecto.</li>
+<li>Elige la ubicación donde deseas guardar el archivo y asigna un nombre descriptivo para identificarlo fácilmente.</li>
+<li>Haz clic en el botón “Guardar” para guardar el historial de comandos en el archivo seleccionado.</li>
+</ol>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_102856.png" class="img-fluid"></p>
+</section>
+<section id="reutilización-del-historial-de-comandos" class="level3">
+<h3 class="anchored" data-anchor-id="reutilización-del-historial-de-comandos">Reutilización del historial de comandos</h3>
+<p>El historial se guarda en un archivo llamado <code>.Rhistory</code>. Puedes reutilizar todo el historial de comandos haciendo clic en el archivo <code>.Rhistory</code> o con el nombre asignado y seleccionando los comandos que deseas utilizar. Luego, puedes copiarlos y pegarlos en tu archivo de script actual.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_103319.png" class="img-fluid"></p>
+<p>Inserta un código de línea seleccionado en un archivo de script nuevo</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_103755.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>¡Explora y aprovecha al máximo el espacio de trabajo y el historial en RStudio para mejorar tu flujo de trabajo y aprovechar al máximo tus comandos y objetos de datos!</p>
+</blockquote>
+</section>
+</section>
 </section>
 <section id="lo-que-debemos-saber" class="level1">
 <h1>Lo que debemos saber</h1>
+<section id="tipos-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-datos">Tipos de datos</h2>
+<p>En R, es fundamental comprender los diferentes tipos de datos disponibles. A continuación, exploraremos los tres tipos básicos de datos en R y cómo se utilizan en la programación.</p>
+<section id="tipos-de-datos-numéricos" class="level3">
+<h3 class="anchored" data-anchor-id="tipos-de-datos-numéricos">1. Tipos de datos numéricos</h3>
+<p>Los datos numéricos en R se dividen en dos tipos principales:</p>
+<ol type="a">
+<li><p>Números reales (<code>double</code>): Estos son los números más comunes y se utilizan para representar valores decimales. Por ejemplo, 3.14 y 2.71828 son números reales en R. La precisión de los números reales en R depende de la máquina en la que se ejecuta el programa.</p></li>
+<li><p>Números enteros (<code>integer</code>): Estos son números que no contienen decimales y se utilizan para representar valores enteros. Por ejemplo, 1, 2, -5 son ejemplos de números enteros en R. Los números enteros se utilizan cuando no se requiere precisión decimal.</p></li>
+</ol>
+</section>
+<section id="tipo-de-datos-lógico" class="level3">
+<h3 class="anchored" data-anchor-id="tipo-de-datos-lógico">2. Tipo de datos lógico</h3>
+<p>El tipo de dato lógico en R se conoce como <code>booleano</code>. Este tipo de dato puede tener uno de dos valores: TRUE o FALSE. Los valores booleanos se utilizan principalmente para realizar operaciones de comparación y evaluación lógica en los programas. Por ejemplo, se puede usar una expresión lógica para verificar si una condición es verdadera o falsa.</p>
+</section>
+<section id="tipo-de-datos-carácter" class="level3">
+<h3 class="anchored" data-anchor-id="tipo-de-datos-carácter">3. Tipo de datos carácter</h3>
+<p>El tipo de dato carácter en R se utiliza para almacenar letras <code>text</code> y símbolos <code>strings</code>. Los datos de tipo carácter se definen utilizando comillas simples (’‘) o comillas dobles (““). Por ejemplo,”Hola” y ’RStudio’ son ejemplos de datos de tipo carácter en R. Los datos de tipo carácter se utilizan con frecuencia para almacenar texto legible por humanos, como nombres, descripciones o mensajes.</p>
+<blockquote class="blockquote">
+<p>Es importante comprender estos tipos de datos en R, ya que nos permiten manipular y realizar operaciones en los datos de manera adecuada. Cada tipo de dato tiene sus propias características y funciones asociadas que nos permiten realizar tareas específicas en la programación.</p>
+</blockquote>
+</section>
+</section>
+<section id="estructura-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-de-datos">Estructura de datos</h2>
+<p>Las estructuras de datos nos permiten organizar y manipular la información de manera eficiente. A continuación, exploraremos las principales estructuras de datos disponibles en R y cómo se utilizan en la programación.</p>
+<section id="escalar" class="level3">
+<h3 class="anchored" data-anchor-id="escalar">1. Escalar</h3>
+<p>Un escalar es un dato individual, como un número o una palabra, que no está agrupado con otros elementos. En R, los escalares pueden ser de diferentes tipos de datos, como numéricos, lógicos o caracteres. Estos datos se utilizan cuando solo necesitamos almacenar una única observación.</p>
+</section>
+<section id="vector" class="level3">
+<h3 class="anchored" data-anchor-id="vector">2. Vector</h3>
+<p>Un vector es una colección ordenada de elementos del mismo tipo de dato. Puede contener números, valores lógicos o caracteres. En R, los vectores son utilizados para almacenar conjuntos de datos relacionados. Por ejemplo, podemos tener un vector de edades o un vector de nombres. Los vectores son una de las estructuras de datos más utilizadas en R y nos permiten realizar operaciones y cálculos de manera eficiente.</p>
+<p><strong>Vectores</strong></p>
+<p>Concatenación de elementos con <strong><code>c()</code></strong>: Se utiliza la función <code>c()</code> para concatenar elementos y crear vectores en R.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-2_5e506a462df0b87b3bedc23cbc33de3c">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># números decimales (double)</span></span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(9L, 10L, 11L, 12L, 13L) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># números enteros (integer)</span></span>
+<span id="cb8-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">13</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># secuencia de números enteros (integer sequence)</span></span>
+<span id="cb8-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># valores lógicos (logical)</span></span>
+<span id="cb8-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> 0i, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> 4i) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># números complejos (complex)</span></span>
+<span id="cb8-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"c"</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># caracteres (character)</span></span></code></pre></div>
+</div>
+<p><strong>Acciones con vectores</strong></p>
+<ol type="1">
+<li><p>Asignar los vectores a nombres:</p>
+<p>Se crea un vector llamado “dbl” que contiene los números decimales 0.5, 0.6 y 0.25.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-3_6344e4ff67c0e743a9008c80db97d6b3">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">dbl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>)</span></code></pre></div>
+</div>
+<p>Se crea un vector llamado “chr” que contiene los caracteres “a”, “b” y “c”.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-4_35d791fafc7b6af8d92d09924db64ab5">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">chr <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"c"</span>)</span></code></pre></div>
+</div></li>
+<li><p>Imprimir los vectores “dbl” y “chr” en la consola:</p>
+<p>Se muestra en la consola el contenido del vector “dbl”, que son los números decimales 0.5, 0.6 y 0.25.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-5_9ac39384865a482e07491daffd7c9083">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">dbl</span></code></pre></div>
+</div>
+<p>Se muestra en la consola el contenido del vector “chr”, que son los caracteres “a”, “b” y “c”.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-6_7585e9020112158851518e65db16d7f8">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">chr</span></code></pre></div>
+</div></li>
+<li><p>Verificar el número de elementos en “dbl” y “chr”:</p>
+<p>Se calcula y muestra en la consola la longitud del vector “dbl”, que es 3.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-7_734174bb92e5edbc519fe53240de520f">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(dbl)</span></code></pre></div>
+</div>
+<p>Se calcula y muestra en la consola la longitud del vector “chr”, que es 3.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-8_6ffc18602041f72974f279fb9a46852a">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(chr)</span></code></pre></div>
+</div></li>
+<li><p>Verificar el tipo de dato de “dbl” y “chr”:</p>
+<p>Se muestra en la consola el tipo de dato del vector “dbl”, que es “double” (números decimales).</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-9_82a4c67304a4827b3ef5ac077b32dc66">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">typeof</span>(dbl)</span></code></pre></div>
+</div>
+<p>Se muestra en la consola el tipo de dato del vector “chr”, que es “character” (caracteres).</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-10_19810e117dcf72f9a95dd779c41dfb1c">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">typeof</span>(chr)</span></code></pre></div>
+</div></li>
+<li><p>Combinar dos vectores:</p>
+<p>Se combina el vector “dbl” consigo mismo utilizando la función “c()”, creando un nuevo vector que contiene los elementos duplicados del vector original.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-11_5f55dfb65673f4b4e2da9d408aa7ba2e">
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(dbl, dbl)</span></code></pre></div>
+</div>
+<p>Se combina el vector “dbl” con el vector “chr” utilizando la función “c()”, creando un nuevo vector que contiene los elementos de ambos vectores concatenados.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-12_96b112d5d441319359e7e3d32d4d3a3f">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(dbl, chr)</span></code></pre></div>
+</div></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El cambio automático del tipo de datos del vector resultante se denomina coerción. La coerción garantiza que se mantiene el mismo tipo de datos para cada elemento del vector.</p>
+</div>
+</div>
+<p><strong>Operaciones aritméticas con vectores</strong></p>
+<ol type="1">
+<li><p>Definir dos nuevos vectores numéricos llamados <code>a</code> y <code>b</code> con 4 elementos cada uno:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-13_2ba6aaafc90e5a384e0b10e0bcc9829d">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb19-2">b <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>)</span></code></pre></div>
+</div></li>
+<li><p>Realizar una multiplicación escalar de <code>a</code> por 5, lo que significa que cada elemento en <code>a</code> se multiplica por 5:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-14_a1f8122c3a08ae1cddae98331adfd953">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+</div></li>
+<li><p>Realizar una multiplicación de vectores entre <code>a</code> y <code>b</code>, lo que implica multiplicar cada elemento en <code>a</code> por el elemento correspondiente en <code>b</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-15_9da1df88828b10421dbda91e8c84a1fc">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1">a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> b</span></code></pre></div>
+</div></li>
+<li><p>Crear un nuevo vector numérico llamado <code>v</code> con longitud 5.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-16_49190ef0d89c6f8fd3b9283107aecbb6">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1">v <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.3</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.4</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>)</span>
+<span id="cb22-2">a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> v</span></code></pre></div>
+</div></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las operaciones aritméticas de los vectores se realizan por elementos. si dos vectores no tienen la misma longitud, el vector más corto se reciclará para que coincida con el más largo (en este caso, se vuelve a utilizar el primer elemento de a).</p>
+</div>
+</div>
+</section>
+<section id="matriz" class="level3">
+<h3 class="anchored" data-anchor-id="matriz">3. Matriz</h3>
+<p>Una matriz es una estructura bidimensional que contiene elementos organizados en filas y columnas. Todos los elementos de una matriz deben ser del mismo tipo de dato. Las matrices son útiles para almacenar datos tabulares, como una tabla de datos con variables en filas y observaciones en columnas. En R, podemos realizar operaciones matriciales y manipular los datos de manera eficiente utilizando esta estructura.</p>
+<p><strong>Matrices</strong></p>
+<ol type="1">
+<li><p>Combinar dos vectores por columnas utilizando la función <code>cbind()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-17_6b85a10b17bd16f16973921031d46ac1">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1">A <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cbind</span>(a, b)</span>
+<span id="cb23-2">A</span></code></pre></div>
+</div>
+<p>Esta opción combina los vectores <code>a</code> y <code>b</code> por columnas, creando una matriz <code>A</code> donde los elementos de <code>a</code> forman la primera columna y los elementos de <code>b</code> forman la segunda columna.</p></li>
+<li><p>Combinar dos vectores por filas utilizando la función <code>rbind()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-18_f5b41d8859e448a166240b7758b599d6">
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1">B <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rbind</span>(a, b)</span>
+<span id="cb24-2">B</span></code></pre></div>
+</div>
+<p>En esta opción, los vectores <code>a</code> y <code>b</code> se combinan por filas para crear una matriz <code>B</code>. Los elementos de <code>a</code> forman la primera fila y los elementos de <code>b</code> forman la segunda fila.</p></li>
+<li><p>Crear una matriz a partir de los elementos de un vector utilizando la función <code>matrix()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-19_1598460fa0413879a2af0d992dea751a">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1">A <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(a, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb25-2">A</span></code></pre></div>
+</div>
+<p>Aquí se utiliza la función <code>matrix()</code> para crear una matriz <code>A</code> a partir de los elementos del vector <code>a</code>. Se especifica que la matriz tendrá 2 columnas y 2 filas.</p>
+<p>Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.</p>
+<p>Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-20_9dab0416a9b5ab50ec910667164bb5f6">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1">A <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(a, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb26-2">A</span></code></pre></div>
+</div>
+<p>En esta variante, se crea una matriz <code>A</code> con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector <code>a</code>.</p>
+<p>Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento byrow = TRUE</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-21_1654fe86e30ddc371e238e747eb102d8">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1">B <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(a, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">byrow =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb27-2">B</span></code></pre></div>
+</div>
+<p>En esta opción, se crea una matriz <code>B</code> con 2 columnas y se especifica que los elementos del vector <code>a</code> se distribuirán por filas (<code>byrow = TRUE</code>), es decir, los primeros elementos de <code>a</code> formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.</p></li>
+</ol>
+<p><strong>Acciones con matrices</strong></p>
+<ol type="1">
+<li><p>Verificar el número de filas de la matriz <code>A</code> utilizando la función <code>nrow()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-22_6622573861cf9517fe94ee415880560a">
+<div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(A)</span></code></pre></div>
+</div>
+<p>Esta línea de código devuelve el número de filas de la matriz <code>A</code>.</p></li>
+<li><p>Verificar el número de columnas de la matriz <code>A</code> utilizando la función <code>ncol()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-23_bc3b467b6bb20c1a43238c7ed60368f6">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ncol</span>(A)</span></code></pre></div>
+</div>
+<p>Aquí se obtiene el número de columnas de la matriz <code>A</code>.</p></li>
+<li><p>Verificar la dimensión (número de filas y columnas) de la matriz <code>A</code> utilizando la función <code>dim()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-24_f276946a11f9168555a017c592aa4212">
+<div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dim</span>(A)</span></code></pre></div>
+</div>
+<p>Esta línea de código devuelve la dimensión de la matriz <code>A</code> en formato <code>[nrow, ncol]</code>.</p></li>
+<li><p>Combinar dos matrices <code>A</code> por columnas utilizando la función <code>cbind()</code> y almacenar el resultado en <code>D.wide</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-25_9961651e8b63138312a2ce40bbb1dfee">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1">D.wide <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cbind</span>(A, A)</span>
+<span id="cb31-2">D.wide</span></code></pre></div>
+</div>
+<p>En esta línea se crea una nueva matriz <code>D.wide</code> que combina las matrices <code>A</code> y <code>A</code> por columnas.</p></li>
+<li><p>Combinar dos matrices <code>A</code> por filas utilizando la función <code>rbind()</code> y almacenar el resultado en <code>D.long</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-26_7471b513ff91bb19f81c6cf30ff4847c">
+<div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1">D.long <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rbind</span>(A, A)</span>
+<span id="cb32-2">D.long</span></code></pre></div>
+</div>
+<p>Aquí se crea una nueva matriz <code>D.long</code> que combina las matrices <code>A</code> y <code>A</code> por filas.</p></li>
+<li><p>Combinar las matrices <code>D.wide</code> y <code>D.long</code> por columnas utilizando la función <code>cbind()</code> y almacenar el resultado en <code>D</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-27_2ab9f1095c23479ab757986eccfb8770">
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1">D <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cbind</span>(D.wide, D.long)</span></code></pre></div>
+</div>
+<p>En esta línea se crea una nueva matriz <code>D</code> que combina las matrices <code>D.wide</code> y <code>D.long</code> por columnas.</p></li>
+</ol>
+<p><strong>Operaciones aritméticas con matrices</strong></p>
+<ol type="1">
+<li><p>Suma de la matriz <code>B</code> consigo misma utilizando el operador <code>+</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-28_d8d778379f760a94f159853213cee4de">
+<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1">B <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> B</span></code></pre></div>
+</div>
+<p>Esta línea de código realiza la suma de la matriz <code>B</code> con ella misma.</p></li>
+<li><p>Multiplicación escalar de la matriz <code>B</code> por 2 utilizando el operador <code>*</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-29_3b34811f662b80fabc8006756debf5bc">
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1">B <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+</div>
+<p>Aquí se realiza la multiplicación de cada elemento de la matriz <code>B</code> por 2.</p></li>
+<li><p>Multiplicación elemento a elemento de la matriz <code>B</code> consigo misma y almacenar el resultado en <code>a</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-30_4c00f864cd9538aa828d3c1fdc634720">
+<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1">a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> B <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> B</span>
+<span id="cb36-2">a</span></code></pre></div>
+</div>
+<p>En esta línea se realiza la multiplicación elemento a elemento de la matriz <code>B</code> con ella misma, y el resultado se almacena en la matriz <code>a</code>.</p></li>
+<li><p>Multiplicación de matrices utilizando el operador <code>%*%</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-31_25ef6689841b4c47925c20488f10a253">
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1">C <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> B <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> B</span>
+<span id="cb37-2">C</span></code></pre></div>
+</div>
+<p>Aquí se realiza la multiplicación de matrices entre la matriz <code>B</code> y ella misma, y el resultado se almacena en la matriz <code>C</code>.</p></li>
+</ol>
+<p><strong>Otras operaciones con matrices:</strong></p>
+<ol type="1">
+<li><p>Transposición de la matriz <code>D.wide</code> utilizando la función <code>t()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-32_3d524d6a92b16a522904a538654f07dd">
+<div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span>(D.wide)</span></code></pre></div>
+</div>
+<p>Esta línea de código transpone la matriz <code>D.wide</code>, es decir, intercambia las filas por columnas y viceversa.</p></li>
+<li><p>Cálculo del determinante de la matriz <code>B</code> utilizando la función <code>det()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-33_5e6f794c000feb9c021aeab58c404ff3">
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">det</span>(B)</span></code></pre></div>
+</div>
+<p>Aquí se calcula el determinante de la matriz <code>B</code>.</p></li>
+<li><p>Cálculo de la inversa de la matriz <code>B</code> utilizando la función <code>solve()</code> (solo si el determinante es diferente de 0):</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-34_3b5e55538a8ac1cad6c7370a4929c74d">
+<div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">solve</span>(B)</span></code></pre></div>
+</div>
+<p>En esta línea se calcula la inversa de la matriz <code>B</code>, siempre y cuando el determinante sea diferente de 0.</p></li>
+<li><p>Cálculo de los valores propios (eigenvalues) de una matriz cuadrada y simétrica utilizando la función <code>eigen()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-35_144b44b7945e05068034527a62c796d0">
+<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">eigen</span>(B)</span></code></pre></div>
+</div>
+<p>Aquí se calculan los valores propios de la matriz <code>B</code>. Esta operación solo es aplicable a matrices cuadradas y simétricas.</p></li>
+</ol>
+</section>
+<section id="data-frame" class="level3">
+<h3 class="anchored" data-anchor-id="data-frame">4. Data frame</h3>
+<p>Un data frame es una estructura similar a una matriz, pero más flexible. Puede contener columnas con diferentes tipos de datos, lo que lo hace ideal para almacenar conjuntos de datos heterogéneos. Los data frames son muy utilizados en el análisis de datos, ya que nos permiten manipular y explorar datos de manera eficiente. Podemos realizar operaciones de filtrado, selección y transformación en los data frames para obtener información significativa.</p>
+<p><strong>Creación del data frame:</strong></p>
+<ol type="1">
+<li><p>Crear vectores con diferentes tipos de datos, como números decimales (<code>dbl</code>), números enteros (<code>int</code>), valores lógicos (<code>lgl</code>) y caracteres (<code>chr</code>):</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-36_e33c569875e10f7b7addf4f58304c95b">
+<div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1">dbl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.333</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># números decimales (double)</span></span>
+<span id="cb42-2">int <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(9L, 10L, 11L, 12L, 13L) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># números enteros (integer)</span></span>
+<span id="cb42-3">lgl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># valores lógicos (logical)</span></span>
+<span id="cb42-4">chr <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"c"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"d"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"e"</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># caracteres (character)</span></span></code></pre></div>
+</div>
+<p>Cada vector tiene elementos que representan valores de su respectivo tipo de dato.</p></li>
+<li><p>Utilizar la función <code>data.frame()</code> para combinar los vectores en un data frame llamado <code>df</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-37_2987bd9d0ff2e4ae036238524ca505da">
+<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1">df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(dbl, int, lgl, chr)</span></code></pre></div>
+</div>
+<p>El data frame <code>df</code> se crea utilizando los vectores <code>dbl</code>, <code>int</code>, <code>lgl</code> y <code>chr</code> como columnas.</p></li>
+<li><p>Mostar el contenido del data frame en la consola:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-38_c84c5a766c354c5778842b3a97c1e099">
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1">df</span></code></pre></div>
+</div>
+<p>Esto imprime el contenido del data frame <code>df</code>.</p></li>
+</ol>
+<p><strong>Acciones con data frames:</strong></p>
+<ol type="1">
+<li><p>Verificar el número de filas del data frame utilizando la función <code>nrow()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-39_b893bda70e63e78af552ea0a1a9097f9">
+<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(df)</span></code></pre></div>
+</div>
+<p>Esta línea de código devuelve el número de filas en el data frame <code>df</code>.</p></li>
+<li><p>Verificar el número de columnas del data frame utilizando la función <code>ncol()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-40_3ae07260d4c4d988017d177ba71f23c5">
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ncol</span>(df)</span></code></pre></div>
+</div>
+<p>Aquí se obtiene el número de columnas en el data frame <code>df</code>.</p></li>
+<li><p>Verificar la dimensión (número de filas y columnas) del data frame utilizando la función <code>dim()</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-41_edaa0eca1dce7c4fc5c73e37e8dbd452">
+<div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dim</span>(df)</span></code></pre></div>
+</div>
+<p>Esta línea de código devuelve la dimensión del data frame <code>df</code> en formato <code>[nrow, ncol]</code>, es decir, el número de filas y columnas que tiene el data frame.</p></li>
+</ol>
+</section>
+<section id="lista" class="level3">
+<h3 class="anchored" data-anchor-id="lista">5. Lista</h3>
+<p>Una lista es una estructura de datos genérica que puede contener diferentes objetos, como vectores, matrices, data frames o incluso otras listas. A diferencia de las otras estructuras, las listas no tienen restricciones en cuanto a los tipos de datos o la longitud de los componentes individuales. Las listas son muy flexibles y se utilizan cuando necesitamos almacenar objetos de diferentes tipos o estructuras complejas.</p>
+<p><strong>Creación de la lista</strong></p>
+<ol type="1">
+<li><p>Se crea una variable <code>a</code> que contiene un <strong>escalar</strong> de tipo entero (<code>1L</code>):</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-42_7aa51b912c0e4231629e67631501443d">
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1">a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> 1L</span></code></pre></div>
+</div></li>
+<li><p>Se crea un <strong>vector numérico</strong> <code>dbl</code> con 5 elementos:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-43_bfa6988e75eb3e01baf7da9c893da852">
+<div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1">dbl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.333</span>)</span></code></pre></div>
+</div></li>
+<li><p>Se crea un <strong>vector de caracteres</strong> <code>chr</code> con 3 elementos:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-44_dac08601f2bc5beedbd97a403cc7f6f7">
+<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1">chr <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"c"</span>)</span></code></pre></div>
+</div></li>
+<li><p>Se crea un vector <code>v</code> con 4 elementos de tipo numérico:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-45_38b6de2108486024704e92bbc30cd162">
+<div class="sourceCode cell-code" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1">v <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.3</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.4</span>)</span></code></pre></div>
+</div></li>
+<li><p>Se crea una matriz <code>mat</code> de tamaño 2x2 a partir del vector <code>v</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-46_affecc7596194be503acfe4ea72dea68">
+<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1">mat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(v, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span></code></pre></div>
+</div>
+<p>La matriz <code>mat</code> tiene 2 columnas y los elementos del vector <code>v</code> se llenan por columnas.</p></li>
+<li><p>Se crea una lista <code>l</code> que contiene los elementos <code>a</code>, <code>dbl</code>, <code>chr</code> y <code>mat</code>:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-47_73b27dedd7a31abe6b5e50dc2ad174e0">
+<div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1">l <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(a, dbl, chr, mat)</span></code></pre></div>
+</div>
+<p>La lista <code>l</code> contiene estos elementos en ese orden.</p></li>
+<li><p>Se muestra el contenido de la lista en la consola:</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-48_9a4d4e4e54f2165a010dd535c3f6c025">
+<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1">l</span></code></pre></div>
+</div>
+<p>Esto imprime el contenido de la lista <code>l</code>.</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Es importante comprender estas estructuras de datos en R, ya que nos permiten organizar y manipular la información de manera efectiva. Cada estructura tiene sus propias características y funciones asociadas que nos facilitan el trabajo con los datos en la programación.</p>
+</blockquote>
+</section>
+</section>
 </section>
 <section id="manipulación-de-datos" class="level1">
 <h1>Manipulación de datos</h1>

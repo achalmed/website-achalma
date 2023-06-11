@@ -46,13 +46,13 @@ format:
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
 execute:
-  keep-ipynb: true
+  # keep-ipynb: true
   keep-md: true  # Mantener archivos .md generados
-  echo: true
-  output: true
-  warning: false
-  error: false
-  cache: true
-  enabled: false
+  echo: true  # Mostrar comandos ejecutados
+  output: true  # Mostrar resultados de la ejecución
+  warning: false  # Ocultar advertencias
+  error: false  # Ocultar errores
+  cache: true  # Habilitar el almacenamiento en caché
+  enabled: false  # Deshabilitar la ejecución
 search: false  # Habilitar búsqueda en el documento
 

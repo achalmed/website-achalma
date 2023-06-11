@@ -32,7 +32,7 @@ Para comenzar, necesitarás descargar el paquete de instalación de R desde el s
 
 > R es un lenguaje de programación ampliamente utilizado en la comunidad estadística y de análisis de datos, y es especialmente popular entre los científicos de datos y los investigadores.
 
-![](Screenshot_20230610_222900.png){#fig-}
+![](images/Screenshot_20230610_222900.png){#fig-}
 
 ## Paso 2. Instalar R en Ubuntu Linux
 
@@ -83,7 +83,7 @@ Puedes descargar la última versión de RStudio desde su sitio web oficial: [Enl
 
 > RStudio RStudio es un entorno de desarrollo integrado (IDE) muy popular para trabajar con R. Proporciona una interfaz gráfica intuitiva y muchas herramientas útiles para la programación en R.
 
-![](Screenshot_20230610_224818.png)
+![](images/Screenshot_20230610_224818.png)
 
 ## Paso 4. Instalar RStudio en Ubuntu Linux
 
@@ -120,7 +120,7 @@ rstudio
 
 RStudio se abrirá en una ventana separada, lo que te permitirá comenzar a trabajar con R y aprovechar todas las funciones y características que ofrece el IDE.
 
-![](Screenshot_20230610_231407.png)
+![](images/Screenshot_20230610_231407.png)
 
 # ¿Qúe nos ofrece RStudio?
 
@@ -138,7 +138,7 @@ RStudio es una herramienta poderosa que brinda numerosas ventajas para los usuar
 
 5.  **Interoperabilidad con otros software y plataformas:** RStudio es compatible con una amplia gama de herramientas y plataformas. Puedes integrar fácilmente tus análisis en flujos de trabajo existentes, colaborar con otros profesionales y compartir tus resultados en diferentes formatos, como informes, gráficos interactivos o aplicaciones web.
 
-![Interfaz de RStudio: Una poderosa herramienta para el desarrollo en R](Screenshot_20230610_233058.png)
+![Interfaz de RStudio: Una poderosa herramienta para el desarrollo en R](images/Screenshot_20230610_233058.png)
 
 ## Archivos de Script en R (.R)
 
@@ -160,15 +160,15 @@ Los scripts nos permiten escribir y ejecutar una serie de comandos de manera sec
 
 En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hacer esto, seleccionamos "Archivo" en la barra de menú, luego "Nuevo archivo" y finalmente "Script R". Esto abrirá un nuevo editor de texto donde podemos escribir nuestro código.
 
-![](Screenshot_20230611_001234.png)
+![](images/Screenshot_20230611_001234.png)
 
-![](Screenshot_20230611_001615.png)
+![](images/Screenshot_20230611_001615.png)
 
 ### Paso 2: Escribir el código en el script
 
 Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.
 
-![](Screenshot_20230611_004241.png)
+![](images/Screenshot_20230611_004241.png)
 
 
 ::: {.cell hash='index_cache/html/unnamed-chunk-1_b2491314c73ed2c02b4477827870869f'}
@@ -216,23 +216,23 @@ for (i in 1:5) {
 
 Una vez que hemos escrito nuestro código en el archivo de script, podemos ejecutarlo para obtener los resultados deseados. Para hacer esto, podemos utilizar el atajo de teclado "Ctrl + Enter" o simplemente hacer clic en el botón "Ejecutar" en la parte superior del editor de texto.
 
-![](Screenshot_20230611_005354.png)
+![](images/Screenshot_20230611_005354.png)
 
 RStudio ejecutará el código línea por línea y mostrará los resultados en la consola.
 
-![](Screenshot_20230611_010256.png)
+![](images/Screenshot_20230611_010256.png)
 
 ### Paso 4: Guardar el script
 
 Es importante guardar regularmente nuestro script para evitar perder nuestro trabajo. Para guardar el archivo de script, seleccionamos "Archivo" en la barra de menú y luego "Guardar" o "Guardar como".
 
-![](Screenshot_20230611_010854.png)
+![](images/Screenshot_20230611_010854.png)
 
 Podemos elegir una ubicación y un nombre de archivo apropiados para guardar nuestro script.
 
-![](Screenshot_20230611_012736.png)
+![](images/Screenshot_20230611_012736.png)
 
-![](Screenshot_20230611_013135.png)
+![](images/Screenshot_20230611_013135.png)
 
 ### Paso 5: Continuar escribiendo y ejecutando el código
 
@@ -268,7 +268,7 @@ Aquí tienes una tabla con algunos atajos de teclado útiles en RStudio para usu
 | Abrir consola de R                                                           | Ctrl + Shift + Enter |
 | Buscar en el archivo                                                         | Ctrl + F             |
 | Buscar y reemplazar en el archivo                                            | Ctrl + Shift + F     |
-| Colapsar/expandir bloque de código                                           | Ctrl + Shift + [     |
+| Colapsar/expandir bloque de código                                           | Ctrl + Shift +       |
 | Aumentar tamaño de fuente                                                    | Ctrl + +             |
 | Disminuir tamaño de fuente                                                   | Ctrl + -             |
 | Nuevo archivo Script R                                                       | Shift + Ctrl + N     |
@@ -286,6 +286,779 @@ Aquí tienes una tabla con algunos atajos de teclado útiles en RStudio para usu
 
 Estos atajos de teclado te ayudarán a agilizar tu flujo de trabajo en RStudio en Ubuntu Linux. Recuerda que también puedes personalizar los atajos de teclado según tus preferencias en la sección de configuración de RStudio.
 
+## Espacio de trabajo (.Rdata)
+
+El espacio de trabajo en R consiste en todos los objetos que se crean o cargan durante una sesión de R. En este tutorial, aprenderemos cómo trabajar con el espacio de trabajo en RStudio.
+
+### Creación de objetos de datos
+
+1.  Utiliza el operador de asignación (`<-`) para crear un objeto de datos. Por ejemplo: `mi_objeto <- c(1, 2, 3, 4, 5)`.
+
+![](images/Screenshot_20230611_092644.png)
+
+2.  Selecciona todo el código que contiene los objetos de datos y ejecútalo en la consola de RStudio.
+
+![](images/Screenshot_20230611_093536.png)
+
+3.  El código se evaluará y los objetos de datos se crearán en el espacio de trabajo. Sin embargo, no verás ningún resultado en la consola.
+
+![](images/Screenshot_20230611_094001.png)
+
+Los objetos de datos creados se almacenan en el entorno global, que es parte del espacio de trabajo de R.
+
+### Inspección de objetos de datos
+
+Puedes inspeccionar los objetos de datos haciendo clic sobre ellos en el panel de entorno o en el panel de objetos. Esto abrirá una vista previa del objeto en un nuevo archivo. Ten en cuenta que esta vista previa no afecta los objetos en el espacio de trabajo y se puede cerrar sin perder ninguna información.
+
+![](images/Screenshot_20230611_094530.png)
+
+### Guardado del espacio de trabajo
+
+En RStudio, puedes guardar todos los objetos en tu espacio de trabajo en un archivo llamado `.Rdata`. Esta función te permite almacenar y cargar el espacio de trabajo completo en futuras sesiones de RStudio.
+
+**Para guardar el espacio de trabajo, simplemente ve al menú "Session" y selecciona "Save Workspace As...". A continuación, elige la ubicación y el nombre de archivo deseados para guardar el archivo `.Rdata`.**
+
+![](images/Screenshot_20230611_095350.png)
+
+Esta función es especialmente útil cuando trabajas en proyectos largos o cuando deseas retomar tu trabajo en otro momento sin tener que volver a crear o cargar manualmente todos los objetos y configuraciones.
+
+> Recuerda que al guardar y cargar el espacio de trabajo, asegúrate de mantener un respaldo de tus archivos en caso de cualquier eventualidad. ¡Disfruta de la conveniencia de mantener tus objetos y configuraciones en tu espacio de trabajo guardado!
+
+### Carga del espacio de trabajo
+
+Para cargar el espacio de trabajo previamente guardado, sigue estos pasos:
+
+1.  Abre RStudio y ve al menú "Session" en la barra de herramientas superior.
+2.  Selecciona la opción "Cargar" del menú desplegable.
+3.  Aparecerá una ventana emergente que te permite buscar el archivo `.Rdata` que contiene tu espacio de trabajo guardado. Navega hasta la ubicación donde guardaste el archivo.
+4.  Selecciona el archivo `.Rdata` y haz clic en el botón "Abrir".
+5.  RStudio cargará automáticamente el archivo y restaurará todos los objetos y sus valores en tu entorno de trabajo actual.
+
+![](images/Screenshot_20230611_100949.png)
+
+Una vez completados estos pasos, podrás acceder a todos los objetos y continuar trabajando con ellos como lo hiciste en la sesión en la que guardaste el espacio de trabajo.
+
+Recuerda que al cargar un espacio de trabajo previamente guardado, es importante asegurarte de que el archivo `.Rdata` sea el correcto y contenga los objetos y los valores deseados. También ten en cuenta que cualquier objeto o configuración existente en tu entorno de trabajo actual se reemplazará por los objetos y los valores del archivo `.Rdata` cargado.
+
+> ¡Con esta opción de carga, podrás retomar fácilmente tus proyectos anteriores y continuar donde lo dejaste sin tener que volver a crear los objetos desde cero!
+
+## Historial (.Rhistory)
+
+El archivo de historial es un archivo de texto que registra todos los comandos ejecutados durante una sesión de RStudio.
+
+### Inspección del historial de comandos
+
+Puedes ver el historial de comandos ejecutados durante tu sesión de trabajo haciendo clic en la pestaña "History" en la parte superior derecha de la ventana de RStudio. Aquí encontrarás una lista de todos los comandos ejecutados, lo que te permite revisarlos y volver a utilizarlos según sea necesario.
+
+![](images/Screenshot_20230611_101644.png)
+
+### Guardado del historial de comandos
+
+Si deseas guardar tu historial de comandos, puedes hacerlo en cualquier momento durante tu sesión de trabajo. Esto te permitirá acceder a tus comandos previos en futuras sesiones.
+
+Si deseas guardar tu historial de comandos en RStudio, sigue estos pasos:
+
+1.  En el panel de superior derecha selecciona la opción "Save History" (Guardar Historial).
+2.  Aparecerá una ventana emergente que te permitirá seleccionar la ubicación y el nombre de archivo para guardar tu historial de comandos. El archivo tendrá una extensión `.Rhistory` por defecto.
+3.  Elige la ubicación donde deseas guardar el archivo y asigna un nombre descriptivo para identificarlo fácilmente.
+4.  Haz clic en el botón "Guardar" para guardar el historial de comandos en el archivo seleccionado.
+
+![](images/Screenshot_20230611_102856.png)
+
+### Reutilización del historial de comandos
+
+El historial se guarda en un archivo llamado `.Rhistory`. Puedes reutilizar todo el historial de comandos haciendo clic en el archivo `.Rhistory` o con el nombre asignado y seleccionando los comandos que deseas utilizar. Luego, puedes copiarlos y pegarlos en tu archivo de script actual.
+
+![](images/Screenshot_20230611_103319.png)
+
+Inserta un código de línea seleccionado en un archivo de script nuevo
+
+![](images/Screenshot_20230611_103755.png)
+
+> ¡Explora y aprovecha al máximo el espacio de trabajo y el historial en RStudio para mejorar tu flujo de trabajo y aprovechar al máximo tus comandos y objetos de datos!
+
 # Lo que debemos saber
+
+## Tipos de datos
+
+En R, es fundamental comprender los diferentes tipos de datos disponibles. A continuación, exploraremos los tres tipos básicos de datos en R y cómo se utilizan en la programación.
+
+### 1. Tipos de datos numéricos
+
+Los datos numéricos en R se dividen en dos tipos principales:
+
+a. Números reales (`double`): Estos son los números más comunes y se utilizan para representar valores decimales. Por ejemplo, 3.14 y 2.71828 son números reales en R. La precisión de los números reales en R depende de la máquina en la que se ejecuta el programa.
+
+b. Números enteros (`integer`): Estos son números que no contienen decimales y se utilizan para representar valores enteros. Por ejemplo, 1, 2, -5 son ejemplos de números enteros en R. Los números enteros se utilizan cuando no se requiere precisión decimal.
+
+### 2. Tipo de datos lógico
+
+El tipo de dato lógico en R se conoce como `booleano`. Este tipo de dato puede tener uno de dos valores: TRUE o FALSE. Los valores booleanos se utilizan principalmente para realizar operaciones de comparación y evaluación lógica en los programas. Por ejemplo, se puede usar una expresión lógica para verificar si una condición es verdadera o falsa.
+
+### 3. Tipo de datos carácter
+
+El tipo de dato carácter en R se utiliza para almacenar letras `text` y símbolos `strings`. Los datos de tipo carácter se definen utilizando comillas simples ('') o comillas dobles (""). Por ejemplo,"Hola" y 'RStudio' son ejemplos de datos de tipo carácter en R. Los datos de tipo carácter se utilizan con frecuencia para almacenar texto legible por humanos, como nombres, descripciones o mensajes.
+
+> Es importante comprender estos tipos de datos en R, ya que nos permiten manipular y realizar operaciones en los datos de manera adecuada. Cada tipo de dato tiene sus propias características y funciones asociadas que nos permiten realizar tareas específicas en la programación.
+
+## Estructura de datos
+
+Las estructuras de datos nos permiten organizar y manipular la información de manera eficiente. A continuación, exploraremos las principales estructuras de datos disponibles en R y cómo se utilizan en la programación.
+
+### 1. Escalar
+
+Un escalar es un dato individual, como un número o una palabra, que no está agrupado con otros elementos. En R, los escalares pueden ser de diferentes tipos de datos, como numéricos, lógicos o caracteres. Estos datos se utilizan cuando solo necesitamos almacenar una única observación.
+
+### 2. Vector
+
+Un vector es una colección ordenada de elementos del mismo tipo de dato. Puede contener números, valores lógicos o caracteres. En R, los vectores son utilizados para almacenar conjuntos de datos relacionados. Por ejemplo, podemos tener un vector de edades o un vector de nombres. Los vectores son una de las estructuras de datos más utilizadas en R y nos permiten realizar operaciones y cálculos de manera eficiente.
+
+**Vectores**
+
+Concatenación de elementos con **`c()`**: Se utiliza la función `c()` para concatenar elementos y crear vectores en R.
+
+
+::: {.cell hash='index_cache/html/unnamed-chunk-2_5e506a462df0b87b3bedc23cbc33de3c'}
+
+```{.r .cell-code}
+c(0.5, 0.6, 0.25) # números decimales (double)
+c(9L, 10L, 11L, 12L, 13L) # números enteros (integer)
+c(9:13) # secuencia de números enteros (integer sequence)
+c(TRUE, FALSE, FALSE) # valores lógicos (logical)
+c(1 + 0i, 2 + 4i) # números complejos (complex)
+c("a", "b", "c") # caracteres (character)
+```
+:::
+
+
+**Acciones con vectores**
+
+1.  Asignar los vectores a nombres:
+
+    Se crea un vector llamado "dbl" que contiene los números decimales 0.5, 0.6 y 0.25.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-3_6344e4ff67c0e743a9008c80db97d6b3'}
+    
+    ```{.r .cell-code}
+    dbl <- c(0.5, 0.6, 0.25)
+    ```
+    :::
+
+
+    Se crea un vector llamado "chr" que contiene los caracteres "a", "b" y "c".
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-4_35d791fafc7b6af8d92d09924db64ab5'}
+    
+    ```{.r .cell-code}
+    chr <- c("a", "b", "c")
+    ```
+    :::
+
+
+2.  Imprimir los vectores "dbl" y "chr" en la consola:
+
+    Se muestra en la consola el contenido del vector "dbl", que son los números decimales 0.5, 0.6 y 0.25.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-5_9ac39384865a482e07491daffd7c9083'}
+    
+    ```{.r .cell-code}
+    dbl
+    ```
+    :::
+
+
+    Se muestra en la consola el contenido del vector "chr", que son los caracteres "a", "b" y "c".
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-6_7585e9020112158851518e65db16d7f8'}
+    
+    ```{.r .cell-code}
+    chr
+    ```
+    :::
+
+
+3.  Verificar el número de elementos en "dbl" y "chr":
+
+    Se calcula y muestra en la consola la longitud del vector "dbl", que es 3.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-7_734174bb92e5edbc519fe53240de520f'}
+    
+    ```{.r .cell-code}
+    length(dbl)
+    ```
+    :::
+
+
+    Se calcula y muestra en la consola la longitud del vector "chr", que es 3.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-8_6ffc18602041f72974f279fb9a46852a'}
+    
+    ```{.r .cell-code}
+    length(chr)
+    ```
+    :::
+
+
+4.  Verificar el tipo de dato de "dbl" y "chr":
+
+    Se muestra en la consola el tipo de dato del vector "dbl", que es "double" (números decimales).
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-9_82a4c67304a4827b3ef5ac077b32dc66'}
+    
+    ```{.r .cell-code}
+    typeof(dbl)
+    ```
+    :::
+
+
+    Se muestra en la consola el tipo de dato del vector "chr", que es "character" (caracteres).
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-10_19810e117dcf72f9a95dd779c41dfb1c'}
+    
+    ```{.r .cell-code}
+    typeof(chr)
+    ```
+    :::
+
+
+5.  Combinar dos vectores:
+
+    Se combina el vector "dbl" consigo mismo utilizando la función "c()", creando un nuevo vector que contiene los elementos duplicados del vector original.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-11_5f55dfb65673f4b4e2da9d408aa7ba2e'}
+    
+    ```{.r .cell-code}
+    c(dbl, dbl)
+    ```
+    :::
+
+
+    Se combina el vector "dbl" con el vector "chr" utilizando la función "c()", creando un nuevo vector que contiene los elementos de ambos vectores concatenados.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-12_96b112d5d441319359e7e3d32d4d3a3f'}
+    
+    ```{.r .cell-code}
+    c(dbl, chr)
+    ```
+    :::
+
+
+::: callout-note
+El cambio automático del tipo de datos del vector resultante se denomina coerción. La coerción garantiza que se mantiene el mismo tipo de datos para cada elemento del vector.
+:::
+
+**Operaciones aritméticas con vectores**
+
+1.  Definir dos nuevos vectores numéricos llamados `a` y `b` con 4 elementos cada uno:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-13_2ba6aaafc90e5a384e0b10e0bcc9829d'}
+    
+    ```{.r .cell-code}
+    a <- c(1, 2, 3, 4)
+    b <- c(10, 20, 30, 40)
+    ```
+    :::
+
+
+2.  Realizar una multiplicación escalar de `a` por 5, lo que significa que cada elemento en `a` se multiplica por 5:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-14_a1f8122c3a08ae1cddae98331adfd953'}
+    
+    ```{.r .cell-code}
+    a * 5
+    ```
+    :::
+
+
+3.  Realizar una multiplicación de vectores entre `a` y `b`, lo que implica multiplicar cada elemento en `a` por el elemento correspondiente en `b`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-15_9da1df88828b10421dbda91e8c84a1fc'}
+    
+    ```{.r .cell-code}
+    a * b
+    ```
+    :::
+
+
+4.  Crear un nuevo vector numérico llamado `v` con longitud 5.
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-16_49190ef0d89c6f8fd3b9283107aecbb6'}
+    
+    ```{.r .cell-code}
+    v <- c(1.1, 1.2, 1.3, 1.4, 1.5)
+    a * v
+    ```
+    :::
+
+
+::: callout-note
+Las operaciones aritméticas de los vectores se realizan por elementos. si dos vectores no tienen la misma longitud, el vector más corto se reciclará para que coincida con el más largo (en este caso, se vuelve a utilizar el primer elemento de a).
+:::
+
+### 3. Matriz
+
+Una matriz es una estructura bidimensional que contiene elementos organizados en filas y columnas. Todos los elementos de una matriz deben ser del mismo tipo de dato. Las matrices son útiles para almacenar datos tabulares, como una tabla de datos con variables en filas y observaciones en columnas. En R, podemos realizar operaciones matriciales y manipular los datos de manera eficiente utilizando esta estructura.
+
+**Matrices**
+
+1.  Combinar dos vectores por columnas utilizando la función `cbind()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-17_6b85a10b17bd16f16973921031d46ac1'}
+    
+    ```{.r .cell-code}
+    A <- cbind(a, b)
+    A
+    ```
+    :::
+
+
+    Esta opción combina los vectores `a` y `b` por columnas, creando una matriz `A` donde los elementos de `a` forman la primera columna y los elementos de `b` forman la segunda columna.
+
+2.  Combinar dos vectores por filas utilizando la función `rbind()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-18_f5b41d8859e448a166240b7758b599d6'}
+    
+    ```{.r .cell-code}
+    B <- rbind(a, b)
+    B
+    ```
+    :::
+
+
+    En esta opción, los vectores `a` y `b` se combinan por filas para crear una matriz `B`. Los elementos de `a` forman la primera fila y los elementos de `b` forman la segunda fila.
+
+3.  Crear una matriz a partir de los elementos de un vector utilizando la función `matrix()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-19_1598460fa0413879a2af0d992dea751a'}
+    
+    ```{.r .cell-code}
+    A <- matrix(a, ncol = 2, nrow = 2)
+    A
+    ```
+    :::
+
+
+    Aquí se utiliza la función `matrix()` para crear una matriz `A` a partir de los elementos del vector `a`. Se especifica que la matriz tendrá 2 columnas y 2 filas.
+
+    Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.
+
+    Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-20_9dab0416a9b5ab50ec910667164bb5f6'}
+    
+    ```{.r .cell-code}
+    A <- matrix(a, ncol = 2)
+    A
+    ```
+    :::
+
+
+    En esta variante, se crea una matriz `A` con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector `a`.
+
+    Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento byrow = TRUE
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-21_1654fe86e30ddc371e238e747eb102d8'}
+    
+    ```{.r .cell-code}
+    B <- matrix(a, ncol = 2, byrow = TRUE)
+    B
+    ```
+    :::
+
+
+    En esta opción, se crea una matriz `B` con 2 columnas y se especifica que los elementos del vector `a` se distribuirán por filas (`byrow = TRUE`), es decir, los primeros elementos de `a` formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.
+
+**Acciones con matrices**
+
+1.  Verificar el número de filas de la matriz `A` utilizando la función `nrow()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-22_6622573861cf9517fe94ee415880560a'}
+    
+    ```{.r .cell-code}
+    nrow(A)
+    ```
+    :::
+
+
+    Esta línea de código devuelve el número de filas de la matriz `A`.
+
+2.  Verificar el número de columnas de la matriz `A` utilizando la función `ncol()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-23_bc3b467b6bb20c1a43238c7ed60368f6'}
+    
+    ```{.r .cell-code}
+    ncol(A)
+    ```
+    :::
+
+
+    Aquí se obtiene el número de columnas de la matriz `A`.
+
+3.  Verificar la dimensión (número de filas y columnas) de la matriz `A` utilizando la función `dim()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-24_f276946a11f9168555a017c592aa4212'}
+    
+    ```{.r .cell-code}
+    dim(A)
+    ```
+    :::
+
+
+    Esta línea de código devuelve la dimensión de la matriz `A` en formato `[nrow, ncol]`.
+
+4.  Combinar dos matrices `A` por columnas utilizando la función `cbind()` y almacenar el resultado en `D.wide`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-25_9961651e8b63138312a2ce40bbb1dfee'}
+    
+    ```{.r .cell-code}
+    D.wide <- cbind(A, A)
+    D.wide
+    ```
+    :::
+
+
+    En esta línea se crea una nueva matriz `D.wide` que combina las matrices `A` y `A` por columnas.
+
+5.  Combinar dos matrices `A` por filas utilizando la función `rbind()` y almacenar el resultado en `D.long`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-26_7471b513ff91bb19f81c6cf30ff4847c'}
+    
+    ```{.r .cell-code}
+    D.long <- rbind(A, A)
+    D.long
+    ```
+    :::
+
+
+    Aquí se crea una nueva matriz `D.long` que combina las matrices `A` y `A` por filas.
+
+6.  Combinar las matrices `D.wide` y `D.long` por columnas utilizando la función `cbind()` y almacenar el resultado en `D`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-27_2ab9f1095c23479ab757986eccfb8770'}
+    
+    ```{.r .cell-code}
+    D <- cbind(D.wide, D.long)
+    ```
+    :::
+
+
+    En esta línea se crea una nueva matriz `D` que combina las matrices `D.wide` y `D.long` por columnas.
+
+**Operaciones aritméticas con matrices**
+
+1.  Suma de la matriz `B` consigo misma utilizando el operador `+`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-28_d8d778379f760a94f159853213cee4de'}
+    
+    ```{.r .cell-code}
+    B + B
+    ```
+    :::
+
+
+    Esta línea de código realiza la suma de la matriz `B` con ella misma.
+
+2.  Multiplicación escalar de la matriz `B` por 2 utilizando el operador `*`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-29_3b34811f662b80fabc8006756debf5bc'}
+    
+    ```{.r .cell-code}
+    B * 2
+    ```
+    :::
+
+
+    Aquí se realiza la multiplicación de cada elemento de la matriz `B` por 2.
+
+3.  Multiplicación elemento a elemento de la matriz `B` consigo misma y almacenar el resultado en `a`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-30_4c00f864cd9538aa828d3c1fdc634720'}
+    
+    ```{.r .cell-code}
+    a <- B * B
+    a
+    ```
+    :::
+
+
+    En esta línea se realiza la multiplicación elemento a elemento de la matriz `B` con ella misma, y el resultado se almacena en la matriz `a`.
+
+4.  Multiplicación de matrices utilizando el operador `%*%`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-31_25ef6689841b4c47925c20488f10a253'}
+    
+    ```{.r .cell-code}
+    C <- B %*% B
+    C
+    ```
+    :::
+
+
+    Aquí se realiza la multiplicación de matrices entre la matriz `B` y ella misma, y el resultado se almacena en la matriz `C`.
+
+**Otras operaciones con matrices:**
+
+1.  Transposición de la matriz `D.wide` utilizando la función `t()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-32_3d524d6a92b16a522904a538654f07dd'}
+    
+    ```{.r .cell-code}
+    t(D.wide)
+    ```
+    :::
+
+
+    Esta línea de código transpone la matriz `D.wide`, es decir, intercambia las filas por columnas y viceversa.
+
+2.  Cálculo del determinante de la matriz `B` utilizando la función `det()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-33_5e6f794c000feb9c021aeab58c404ff3'}
+    
+    ```{.r .cell-code}
+    det(B)
+    ```
+    :::
+
+
+    Aquí se calcula el determinante de la matriz `B`.
+
+3.  Cálculo de la inversa de la matriz `B` utilizando la función `solve()` (solo si el determinante es diferente de 0):
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-34_3b5e55538a8ac1cad6c7370a4929c74d'}
+    
+    ```{.r .cell-code}
+    solve(B)
+    ```
+    :::
+
+
+    En esta línea se calcula la inversa de la matriz `B`, siempre y cuando el determinante sea diferente de 0.
+
+4.  Cálculo de los valores propios (eigenvalues) de una matriz cuadrada y simétrica utilizando la función `eigen()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-35_144b44b7945e05068034527a62c796d0'}
+    
+    ```{.r .cell-code}
+    eigen(B)
+    ```
+    :::
+
+
+    Aquí se calculan los valores propios de la matriz `B`. Esta operación solo es aplicable a matrices cuadradas y simétricas.
+
+### 4. Data frame
+
+Un data frame es una estructura similar a una matriz, pero más flexible. Puede contener columnas con diferentes tipos de datos, lo que lo hace ideal para almacenar conjuntos de datos heterogéneos. Los data frames son muy utilizados en el análisis de datos, ya que nos permiten manipular y explorar datos de manera eficiente. Podemos realizar operaciones de filtrado, selección y transformación en los data frames para obtener información significativa.
+
+**Creación del data frame:**
+
+1.  Crear vectores con diferentes tipos de datos, como números decimales (`dbl`), números enteros (`int`), valores lógicos (`lgl`) y caracteres (`chr`):
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-36_e33c569875e10f7b7addf4f58304c95b'}
+    
+    ```{.r .cell-code}
+    dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333) # números decimales (double)
+    int <- c(9L, 10L, 11L, 12L, 13L) # números enteros (integer)
+    lgl <- c(TRUE, FALSE, FALSE, TRUE, TRUE) # valores lógicos (logical)
+    chr <- c("a", "b", "c", "d", "e") # caracteres (character)
+    ```
+    :::
+
+
+    Cada vector tiene elementos que representan valores de su respectivo tipo de dato.
+
+2.  Utilizar la función `data.frame()` para combinar los vectores en un data frame llamado `df`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-37_2987bd9d0ff2e4ae036238524ca505da'}
+    
+    ```{.r .cell-code}
+    df <- data.frame(dbl, int, lgl, chr)
+    ```
+    :::
+
+
+    El data frame `df` se crea utilizando los vectores `dbl`, `int`, `lgl` y `chr` como columnas.
+
+3.  Mostar el contenido del data frame en la consola:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-38_c84c5a766c354c5778842b3a97c1e099'}
+    
+    ```{.r .cell-code}
+    df
+    ```
+    :::
+
+
+    Esto imprime el contenido del data frame `df`.
+
+**Acciones con data frames:**
+
+1. Verificar el número de filas del data frame utilizando la función `nrow()`:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-39_b893bda70e63e78af552ea0a1a9097f9'}
+   
+   ```{.r .cell-code}
+   nrow(df)
+   ```
+   :::
+
+
+   Esta línea de código devuelve el número de filas en el data frame `df`.
+
+2. Verificar el número de columnas del data frame utilizando la función `ncol()`:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-40_3ae07260d4c4d988017d177ba71f23c5'}
+   
+   ```{.r .cell-code}
+   ncol(df)
+   ```
+   :::
+
+
+   Aquí se obtiene el número de columnas en el data frame `df`.
+
+3. Verificar la dimensión (número de filas y columnas) del data frame utilizando la función `dim()`:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-41_edaa0eca1dce7c4fc5c73e37e8dbd452'}
+   
+   ```{.r .cell-code}
+   dim(df)
+   ```
+   :::
+
+
+   Esta línea de código devuelve la dimensión del data frame `df` en formato `[nrow, ncol]`, es decir, el número de filas y columnas que tiene el data frame.
+
+### 5. Lista
+
+Una lista es una estructura de datos genérica que puede contener diferentes objetos, como vectores, matrices, data frames o incluso otras listas. A diferencia de las otras estructuras, las listas no tienen restricciones en cuanto a los tipos de datos o la longitud de los componentes individuales. Las listas son muy flexibles y se utilizan cuando necesitamos almacenar objetos de diferentes tipos o estructuras complejas.
+
+**Creación de la lista**
+
+1. Se crea una variable `a` que contiene un **escalar** de tipo entero (`1L`):
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-42_7aa51b912c0e4231629e67631501443d'}
+   
+   ```{.r .cell-code}
+   a <- 1L
+   ```
+   :::
+
+
+2. Se crea un **vector numérico** `dbl` con 5 elementos:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-43_bfa6988e75eb3e01baf7da9c893da852'}
+   
+   ```{.r .cell-code}
+   dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333)
+   ```
+   :::
+
+
+3. Se crea un **vector de caracteres** `chr` con 3 elementos:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-44_dac08601f2bc5beedbd97a403cc7f6f7'}
+   
+   ```{.r .cell-code}
+   chr <- c("a", "b", "c")
+   ```
+   :::
+
+
+4. Se crea un vector `v` con 4 elementos de tipo numérico:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-45_38b6de2108486024704e92bbc30cd162'}
+   
+   ```{.r .cell-code}
+   v <- c(1.1, 1.2, 1.3, 1.4)
+   ```
+   :::
+
+
+5. Se crea una matriz `mat` de tamaño 2x2 a partir del vector `v`:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-46_affecc7596194be503acfe4ea72dea68'}
+   
+   ```{.r .cell-code}
+   mat <- matrix(v, ncol = 2)
+   ```
+   :::
+
+
+   La matriz `mat` tiene 2 columnas y los elementos del vector `v` se llenan por columnas.
+
+6. Se crea una lista `l` que contiene los elementos `a`, `dbl`, `chr` y `mat`:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-47_73b27dedd7a31abe6b5e50dc2ad174e0'}
+   
+   ```{.r .cell-code}
+   l <- list(a, dbl, chr, mat)
+   ```
+   :::
+
+
+   La lista `l` contiene estos elementos en ese orden.
+
+7. Se muestra el contenido de la lista en la consola:
+
+
+   ::: {.cell hash='index_cache/html/unnamed-chunk-48_9a4d4e4e54f2165a010dd535c3f6c025'}
+   
+   ```{.r .cell-code}
+   l
+   ```
+   :::
+
+
+   Esto imprime el contenido de la lista `l`.
+
+> Es importante comprender estas estructuras de datos en R, ya que nos permiten organizar y manipular la información de manera efectiva. Cada estructura tiene sus propias características y funciones asociadas que nos facilitan el trabajo con los datos en la programación.
+
+
 
 # Manipulación de datos

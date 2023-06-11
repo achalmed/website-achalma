@@ -5,9 +5,9 @@ description: |
   Descubre 
 thanks: Dedicamos este trabajo de investigación a nuestros padres, quienes han sido nuestros incondicionales compañeros en esta travesía universitaria.
 categories:
-  - Estadistica
+  - Estadística
 tags:
-  - Estadistica
+  - Estadística
 citation:
   author:
     - Edison Achalma Mendoza

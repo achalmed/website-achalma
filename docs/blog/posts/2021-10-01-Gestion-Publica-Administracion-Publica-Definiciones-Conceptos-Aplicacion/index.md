@@ -4,10 +4,9 @@ subtitle: Comprendiendo la diferencia y la importancia de estas categorías en e
 description: |
   Explora las definiciones, conceptos y aplicaciones de la gestión pública y la administración pública en este artículo informativo. Aprende cómo estas categorías están estrechamente relacionadas con el buen manejo de los recursos públicos y el logro de metas colectivas. Descubre las diferencias clave entre gestión pública y administración pública, así como su importancia en la gestión gubernamental.
 categories:
-  - Planeamiento y presupuesto público
+  - Planeamiento y Presupuesto Público
   - Administración Pública
   - Gestión Pública
-  - Diferencias y Sinonimia
 tags:
   - Planeamiento y presupuesto público
   - Administración Pública

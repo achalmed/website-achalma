@@ -4,9 +4,8 @@ subtitle: Una guía completa para comenzar a utilizar Blogdown en RStudio
 description: |
   Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.
 categories:
-  - Herramientas de programación
-  - Desarrollo web
-  - Análisis de datos.
+  - RStudio
+  - Blogdown
 tags:
   - RStudio
   - Blogdown

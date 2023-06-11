@@ -6,7 +6,6 @@ description: |
 thanks: gracias
 categories:
   - Economía Regional
-  - Desarrollo económico regional
 tags:
   - Economía Regional
   - Economía Peruana

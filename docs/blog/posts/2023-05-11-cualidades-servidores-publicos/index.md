@@ -4,7 +4,7 @@ subtitle: Cualidades de los servidores públicos.
 description: |
   Este artículo explora las cualidades esenciales que deben tener los servidores públicos. Desde la amabilidad hasta la serenidad, cada una de estas características desempeña un papel fundamental en el desempeño efectivo de los servidores públicos.
 categories:
-  - Gestión pública
+  - Gestión Pública
 tags:
   - Amabilidad
   - Juicio astuto

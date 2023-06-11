@@ -4,12 +4,9 @@ subtitle: Hacia una gestión eficiente y transparente en beneficio de la socieda
 description: |
   Este ensayo explora la importancia de reformar y modernizar la gestión pública en Perú, abordando aspectos clave como la eficiencia, transparencia y mejora en la prestación de servicios.
 categories:
-  - Planeamiento y presupuesto público
-  - Reforma de la Gestión Pública
-  - Reforma del Estado
-  - Modernización de la Gestión Pública
+  - Planeamiento y Presupuesto Público
 tags:
-  - Planeamiento y presupuesto público
+  - Planeamiento y Presupuesto Público
   - Gestión pública
   - Reformas estatales
   - Modernización administrativa

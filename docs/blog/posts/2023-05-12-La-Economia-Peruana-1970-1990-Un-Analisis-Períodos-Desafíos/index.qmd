@@ -5,9 +5,6 @@ description: |
   Descubre cómo la economía peruana enfrentó importantes cambios y desafíos desde 1970 hasta 1990. A través de este análisis exhaustivo, exploraremos los períodos clave y las políticas económicas implementadas. Desde la reforma agraria hasta las crisis económicas y las políticas heterodoxas, este estudio revela los altibajos y las decisiones cruciales que influyeron en el desarrollo económico del Perú en ese período.
 categories:
   - Economía Política
-  - Reforma Agraria y Control Estatal
-  - Ajuste Económico y Crisis
-  - Políticas Heterodoxas y Desafíos Socioeconómicos
 tags:
   - Economía Política
   - Economía Peruana

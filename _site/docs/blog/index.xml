@@ -17,7 +17,597 @@
 <width>144</width>
 </image>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Fri, 09 Jun 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 10 Jun 2023 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introducción a R en Linux</title>
+  <dc:creator>Edison Achalma Mendoza</dc:creator>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="descargando-e-instalando-r-y-rstudio" class="level1">
+<h1>Descargando e instalando R y RStudio</h1>
+<p>En este artículo, te guiaré a través de los pasos para descargar e instalar R y RStudio en un sistema operativo Ubuntu Linux.</p>
+<p>Pasos para la descarga e instalación de R y Rstudio:</p>
+<section id="paso-1.-descargar-r-en-ubuntu-linux" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1.-descargar-r-en-ubuntu-linux">Paso 1. Descargar R en Ubuntu Linux</h2>
+<p>Para comenzar, necesitarás descargar el paquete de instalación de R desde el sitio web oficial de R. Abre tu navegador web y sigue este enlace: <a href="https://cloud.r-project.org/">Enlace de descarga de R</a></p>
+<blockquote class="blockquote">
+<p>R es un lenguaje de programación ampliamente utilizado en la comunidad estadística y de análisis de datos, y es especialmente popular entre los científicos de datos y los investigadores.</p>
+</blockquote>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_222900.png" id="fig-" class="img-fluid"></p>
+</section>
+<section id="paso-2.-instalar-r-en-ubuntu-linux" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2.-instalar-r-en-ubuntu-linux">Paso 2. Instalar R en Ubuntu Linux</h2>
+<p>Los paquetes para la versión actual de R 4.2 están disponibles para la mayoría de las versiones estables de Ubuntu Desktop hasta su fecha oficial de fin de vida. Sin embargo, solo la última versión de Soporte a Largo Plazo (LTS) cuenta con soporte completo. A partir del 2 de mayo de 2022, las versiones compatibles son:</p>
+<ul>
+<li>Jammy Jellyfish (22.04, solo amd64)</li>
+<li>Impish Indri (21.10, solo amd64)</li>
+<li>Focal Fossa (20.04; LTS y solo amd64)</li>
+<li>Bionic Beaver (18.04; LTS)</li>
+<li>Xenial Xerus (16.04; LTS)</li>
+</ul>
+<p>Ejecuta estas líneas (si eres <code>root</code>, omite <code>sudo</code>) para informar a Ubuntu sobre los binarios de R en CRAN.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Actualizar índices</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-qq</span></span>
+<span id="cb1-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Instalar dos paquetes auxiliares necesarios</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-install-recommends</span> software-properties-common dirmngr</span>
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Agregar la clave de firma (de Michael Rutter) para estos repositorios</span></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Para verificar la clave, ejecuta: gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</span></span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Huella digital: E298A3A825C0D65DFD57CBB651716619E084DAB9</span></span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wget</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-qO-</span> https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-a</span> /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</span>
+<span id="cb1-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Agregar el repositorio de R 4.0 de CRAN -- ajustar 'focal' a 'groovy' o 'bionic' según sea necesario</span></span>
+<span id="cb1-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> add-apt-repository <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"deb https://cloud.r-project.org/bin/linux/ubuntu </span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">lsb_release</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-cs</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">)</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">-cran40/"</span></span></code></pre></div>
+<p>Aquí utilizamos <code>lsb_release -cs</code> para acceder a la versión de Ubuntu que estás utilizando: “jammy”, “impish”, “focal”, “bionic”, …</p>
+<p>Luego, ejecuta</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-install-recommends</span> r-base</span></code></pre></div>
+</section>
+<section id="obtén-más-de-5000-paquetes-de-cran" class="level2">
+<h2 class="anchored" data-anchor-id="obtén-más-de-5000-paquetes-de-cran">Obtén más de 5000 paquetes de CRAN</h2>
+<p>Ejecuta este comando (como <code>root</code> o agregando <code>sudo</code> como prefijo) para agregar el repositorio actual de R 4.0 o posterior ‘c2d4u’:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> add-apt-repository ppa:c2d4u.team/c2d4u4.0+</span></code></pre></div>
+<p>para agregar el ID de clave de este repositorio, agregar el repositorio y actualizar el índice. Ahora puedes hacer <code>apt install --no-install-recommends r-cran-rstan</code> o <code>apt install --no-install-recommends r-cran-tidyverse</code> (nuevamente como usuario <code>root</code> o a través de <code>sudo</code>).</p>
+</section>
+<section id="paso-3.-descargar-rstudio-en-ubuntu-linux" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3.-descargar-rstudio-en-ubuntu-linux">Paso 3. Descargar RStudio en Ubuntu Linux</h2>
+<p>Puedes descargar la última versión de RStudio desde su sitio web oficial: <a href="https://www.rstudio.com/products/rstudio/download/">Enlace de descarga de RStudio</a></p>
+<blockquote class="blockquote">
+<p>RStudio RStudio es un entorno de desarrollo integrado (IDE) muy popular para trabajar con R. Proporciona una interfaz gráfica intuitiva y muchas herramientas útiles para la programación en R.</p>
+</blockquote>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_224818.png" class="img-fluid"></p>
+</section>
+<section id="paso-4.-instalar-rstudio-en-ubuntu-linux" class="level2">
+<h2 class="anchored" data-anchor-id="paso-4.-instalar-rstudio-en-ubuntu-linux">Paso 4. Instalar RStudio en Ubuntu Linux</h2>
+<section id="instalar-dependencias" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-dependencias">Instalar dependencias</h3>
+<p>Antes de instalar RStudio, es posible que debas instalar algunas dependencias en tu sistema. Abre la terminal y ejecuta los siguientes comandos para instalar las dependencias requeridas:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update</span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install gdebi-core</span></code></pre></div>
+<p>Estos comandos actualizarán los repositorios de paquetes y luego instalarán <code>gdebi-core</code>, una utilidad necesaria para instalar paquetes <code>.deb</code> de forma sencilla y resolver dependencias automáticamente.</p>
+</section>
+<section id="instalar-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-rstudio">Instalar RStudio</h3>
+<p>Una vez que hayas descargado el archivo de instalación de RStudio y hayas instalado las dependencias necesarias, puedes proceder con la instalación. Ve al directorio donde descargaste el archivo de instalación y ejecuta el siguiente comando en la terminal:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> gdebi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>nombre_del_archivo_de_instalación<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>.deb</span></code></pre></div>
+<p>Reemplaza <code>&lt;nombre_del_archivo_de_instalación&gt;</code> con el nombre real del archivo de instalación descargado.</p>
+<p>El comando <code>gdebi</code> instalará RStudio y resolverá automáticamente las dependencias necesarias.</p>
+</section>
+</section>
+<section id="paso-5.-iniciar-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="paso-5.-iniciar-rstudio">Paso 5. Iniciar RStudio</h2>
+<p>Una vez completada la instalación, puedes iniciar RStudio desde el menú de aplicaciones de Ubuntu o ejecutando el siguiente comando en la terminal:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">rstudio</span></span></code></pre></div>
+<p>RStudio se abrirá en una ventana separada, lo que te permitirá comenzar a trabajar con R y aprovechar todas las funciones y características que ofrece el IDE.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_231407.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="qúe-nos-ofrece-rstudio" class="level1">
+<h1>¿Qúe nos ofrece RStudio?</h1>
+<section id="beneficios-del-software-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="beneficios-del-software-rstudio">Beneficios del software RStudio</h2>
+<p>RStudio es una herramienta poderosa que brinda numerosas ventajas para los usuarios. A continuación, destacamos algunas de las funcionalidades que ofrece:</p>
+<ol type="1">
+<li><p><strong>Potente editor de código:</strong> RStudio proporciona un entorno de desarrollo integrado (IDE) que cuenta con un editor de código robusto. Este editor permite escribir, editar y ejecutar código de manera eficiente, lo que facilita el trabajo con el lenguaje de programación R.</p></li>
+<li><p><strong>Gestión del espacio de trabajo:</strong> RStudio ofrece características avanzadas para el manejo del espacio de trabajo. Puedes explorar y administrar fácilmente los objetos, variables y funciones utilizados en tu sesión de R, lo que facilita el seguimiento y la organización de tus datos y resultados.</p></li>
+<li><p><strong>Depuración y resaltado de sintaxis:</strong> La función de depuración de RStudio te permite identificar y corregir errores en tu código de manera eficiente. Además, el resaltado de sintaxis te ayuda a visualizar y comprender mejor la estructura de tu código, lo que facilita su lectura y mantenimiento.</p></li>
+<li><p><strong>Autocompletado inteligente:</strong> RStudio ofrece una función de autocompletado inteligente, que te sugiere opciones de código a medida que escribes. Esto acelera el proceso de codificación al proporcionar sugerencias contextuales y facilitar la escritura correcta de las funciones y objetos de R.</p></li>
+<li><p><strong>Interoperabilidad con otros software y plataformas:</strong> RStudio es compatible con una amplia gama de herramientas y plataformas. Puedes integrar fácilmente tus análisis en flujos de trabajo existentes, colaborar con otros profesionales y compartir tus resultados en diferentes formatos, como informes, gráficos interactivos o aplicaciones web.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption class="figure-caption">Interfaz de RStudio: Una poderosa herramienta para el desarrollo en R</figcaption>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230610_233058.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="archivos-de-script-en-r-.r" class="level2">
+<h2 class="anchored" data-anchor-id="archivos-de-script-en-r-.r">Archivos de Script en R (.R)</h2>
+<p>En el mundo del análisis de datos y programación en R, los archivos de script (.R) desempeñan un papel fundamental. Estos archivos contienen la secuencia de comandos necesaria para realizar análisis y manipulación de datos de manera sistemática y reproducible.</p>
+<section id="ventajas-de-utilizar-archivos-de-script-en-r" class="level3">
+<h3 class="anchored" data-anchor-id="ventajas-de-utilizar-archivos-de-script-en-r">Ventajas de utilizar archivos de script en R:</h3>
+<ol type="1">
+<li><p><strong>Documentación de tareas</strong>: Al escribir nuestros comandos en un archivo de script, estamos creando una documentación detallada de los pasos y procesos utilizados en nuestro análisis. Esto facilita la comprensión y revisión de nuestro trabajo, tanto para nosotros mismos como para otros colaboradores.</p></li>
+<li><p><strong>Automatización de tareas repetitivas</strong>: Los archivos de script permiten automatizar tareas que se repiten con frecuencia. Podemos definir una serie de comandos en el archivo y ejecutarlos de forma rápida y eficiente cada vez que sea necesario. Esto ahorra tiempo y reduce la posibilidad de errores humanos.</p></li>
+<li><p><strong>Evaluación de cambios</strong>: Al tener nuestros comandos en un archivo de script, podemos realizar modificaciones y ajustes en el análisis de manera más ágil. Podemos realizar pruebas y evaluaciones de los cambios sin necesidad de volver a escribir todo el código desde cero. Esto nos brinda flexibilidad y nos permite iterar y mejorar nuestro análisis de manera más eficiente.</p></li>
+</ol>
+</section>
+<section id="creando-y-ejecutando-un-script-en-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="creando-y-ejecutando-un-script-en-rstudio">Creando y Ejecutando un Script en RStudio</h3>
+<p>Los scripts nos permiten escribir y ejecutar una serie de comandos de manera secuencial, lo que facilita la automatización y reproducción de tareas en nuestros análisis de datos.</p>
+</section>
+<section id="paso-1-crear-un-nuevo-archivo-de-script" class="level3">
+<h3 class="anchored" data-anchor-id="paso-1-crear-un-nuevo-archivo-de-script">Paso 1: Crear un nuevo archivo de script</h3>
+<p>En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hacer esto, seleccionamos “Archivo” en la barra de menú, luego “Nuevo archivo” y finalmente “Script R”. Esto abrirá un nuevo editor de texto donde podemos escribir nuestro código.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_001234.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_001615.png" class="img-fluid"></p>
+</section>
+<section id="paso-2-escribir-el-código-en-el-script" class="level3">
+<h3 class="anchored" data-anchor-id="paso-2-escribir-el-código-en-el-script">Paso 2: Escribir el código en el script</h3>
+<p>Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_004241.png" class="img-fluid"></p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_b2491314c73ed2c02b4477827870869f">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Este es un ejemplo de un script básico en R</span></span>
+<span id="cb7-2"></span>
+<span id="cb7-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Comentario de una línea: los comentarios se utilizan para agregar notas o explicaciones al código</span></span>
+<span id="cb7-4"></span>
+<span id="cb7-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Variables</span></span>
+<span id="cb7-6">nombre <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Juan"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Variable de tipo texto (cadena de caracteres)</span></span>
+<span id="cb7-7">edad <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Variable numérica</span></span>
+<span id="cb7-8"></span>
+<span id="cb7-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Imprimir en la consola</span></span>
+<span id="cb7-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hola,"</span>, nombre, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tienes"</span>, edad, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"años.</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-11"></span>
+<span id="cb7-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Operaciones aritméticas</span></span>
+<span id="cb7-13">suma <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb7-14">resta <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb7-15">multiplicacion <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb7-16">division <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb7-17"></span>
+<span id="cb7-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Imprimir los resultados</span></span>
+<span id="cb7-19"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"La suma es:"</span>, suma, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-20"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"La resta es:"</span>, resta, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-21"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"La multiplicación es:"</span>, multiplicacion, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-22"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"La división es:"</span>, division, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-23"></span>
+<span id="cb7-24"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Estructuras de control</span></span>
+<span id="cb7-25"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (edad <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>) {</span>
+<span id="cb7-26">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Eres mayor de edad.</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-27">} <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb7-28">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Eres menor de edad.</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-29">}</span>
+<span id="cb7-30"></span>
+<span id="cb7-31"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Bucle for</span></span>
+<span id="cb7-32"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>) {</span>
+<span id="cb7-33">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Iteración:"</span>, i, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-34">}</span></code></pre></div>
+</div>
+</section>
+<section id="paso-3-ejecutar-el-script" class="level3">
+<h3 class="anchored" data-anchor-id="paso-3-ejecutar-el-script">Paso 3: Ejecutar el script</h3>
+<p>Una vez que hemos escrito nuestro código en el archivo de script, podemos ejecutarlo para obtener los resultados deseados. Para hacer esto, podemos utilizar el atajo de teclado “Ctrl + Enter” o simplemente hacer clic en el botón “Ejecutar” en la parte superior del editor de texto.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_005354.png" class="img-fluid"></p>
+<p>RStudio ejecutará el código línea por línea y mostrará los resultados en la consola.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_010256.png" class="img-fluid"></p>
+</section>
+<section id="paso-4-guardar-el-script" class="level3">
+<h3 class="anchored" data-anchor-id="paso-4-guardar-el-script">Paso 4: Guardar el script</h3>
+<p>Es importante guardar regularmente nuestro script para evitar perder nuestro trabajo. Para guardar el archivo de script, seleccionamos “Archivo” en la barra de menú y luego “Guardar” o “Guardar como”.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_010854.png" class="img-fluid"></p>
+<p>Podemos elegir una ubicación y un nombre de archivo apropiados para guardar nuestro script.</p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_012736.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/Screenshot_20230611_013135.png" class="img-fluid"></p>
+</section>
+<section id="paso-5-continuar-escribiendo-y-ejecutando-el-código" class="level3">
+<h3 class="anchored" data-anchor-id="paso-5-continuar-escribiendo-y-ejecutando-el-código">Paso 5: Continuar escribiendo y ejecutando el código</h3>
+<p>Podemos continuar escribiendo y ejecutando más código en nuestro script según nuestras necesidades. Podemos agregar nuevas líneas de código, modificar las existentes o eliminar las que ya no necesitamos. Es recomendable guardar el script regularmente a medida que realizamos cambios.</p>
+</section>
+<section id="paso-6-exportar-los-resultados-opcional" class="level3">
+<h3 class="anchored" data-anchor-id="paso-6-exportar-los-resultados-opcional">Paso 6: Exportar los resultados (opcional)</h3>
+<p>Si deseamos guardar los resultados de nuestro análisis, podemos exportarlos a archivos o formatos específicos. Por ejemplo, podemos guardar tablas de datos en archivos CSV, gráficos en imágenes o informes en formatos de texto. Esto nos permite compartir y utilizar los resultados fuera de RStudio.</p>
+<blockquote class="blockquote">
+<p>Recuerda que practicar y experimentar con diferentes comandos y funciones en RStudio te ayudará a familiarizarte con el entorno y mejorar tus habilidades de programación en R. ¡Diviértete explorando el mundo del análisis de datos con RStudio y sus potentes scripts!</p>
+</blockquote>
+</section>
+</section>
+<section id="shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="shortcuts">Shortcuts</h2>
+<p>Aquí tienes una tabla con algunos atajos de teclado útiles en RStudio para usuarios de Ubuntu Linux:</p>
+<table class="table">
+<colgroup>
+<col style="width: 79%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Acción</th>
+<th>Atajo de teclado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ejecutar el código / selección actual y saltar a la línea siguiente</td>
+<td>Ctrl + Enter</td>
+</tr>
+<tr class="even">
+<td>Ejecutar el código / selección actual y no saltar a la línea siguiente</td>
+<td>Alt + Enter</td>
+</tr>
+<tr class="odd">
+<td>Ejecutar línea de código</td>
+<td>Shift + Enter</td>
+</tr>
+<tr class="even">
+<td>Comentar/descomentar línea de código</td>
+<td>Ctrl + Shift + C</td>
+</tr>
+<tr class="odd">
+<td>Copiar línea de código</td>
+<td>Ctrl + Shift + D</td>
+</tr>
+<tr class="even">
+<td>Pegar línea de código</td>
+<td>Ctrl + Shift + V</td>
+</tr>
+<tr class="odd">
+<td>Ir a la línea</td>
+<td>Ctrl + G</td>
+</tr>
+<tr class="even">
+<td>Ir al inicio del documento</td>
+<td>Ctrl + Home</td>
+</tr>
+<tr class="odd">
+<td>Ir al final del documento</td>
+<td>Ctrl + End</td>
+</tr>
+<tr class="even">
+<td>Completar código</td>
+<td>Tab</td>
+</tr>
+<tr class="odd">
+<td>Abrir ayuda</td>
+<td>F1</td>
+</tr>
+<tr class="even">
+<td>Guardar el archivo actual</td>
+<td>Ctrl + S</td>
+</tr>
+<tr class="odd">
+<td>Cerrar archivo</td>
+<td>Ctrl + W</td>
+</tr>
+<tr class="even">
+<td>Deshacer</td>
+<td>Ctrl + Z</td>
+</tr>
+<tr class="odd">
+<td>Rehacer</td>
+<td>Ctrl + Y</td>
+</tr>
+<tr class="even">
+<td>Abrir consola de R</td>
+<td>Ctrl + Shift + Enter</td>
+</tr>
+<tr class="odd">
+<td>Buscar en el archivo</td>
+<td>Ctrl + F</td>
+</tr>
+<tr class="even">
+<td>Buscar y reemplazar en el archivo</td>
+<td>Ctrl + Shift + F</td>
+</tr>
+<tr class="odd">
+<td>Colapsar/expandir bloque de código</td>
+<td>Ctrl + Shift + [</td>
+</tr>
+<tr class="even">
+<td>Aumentar tamaño de fuente</td>
+<td>Ctrl + +</td>
+</tr>
+<tr class="odd">
+<td>Disminuir tamaño de fuente</td>
+<td>Ctrl + -</td>
+</tr>
+<tr class="even">
+<td>Nuevo archivo Script R</td>
+<td>Shift + Ctrl + N</td>
+</tr>
+<tr class="odd">
+<td>Abrir archivo</td>
+<td>Ctrl + O</td>
+</tr>
+<tr class="even">
+<td>Ejecutar todo el script</td>
+<td>Ctrl + Alt + R</td>
+</tr>
+<tr class="odd">
+<td>Ejecutar el código desde el principio hasta la línea actual</td>
+<td>Ctrl + Alt + B</td>
+</tr>
+<tr class="even">
+<td>Ejecutar el código desde la línea actual hasta el final</td>
+<td>Ctrl + Alt + E</td>
+</tr>
+<tr class="odd">
+<td>Mover el cursor al editor de código fuente</td>
+<td>Ctrl + 1</td>
+</tr>
+<tr class="even">
+<td>Mover el cursor a la consola</td>
+<td>Ctrl + 2</td>
+</tr>
+<tr class="odd">
+<td>Eliminar selección actual</td>
+<td>Ctrl + D</td>
+</tr>
+<tr class="even">
+<td>Limpiar consola</td>
+<td>Ctrl + L</td>
+</tr>
+<tr class="odd">
+<td>Navegar por el historial de la consola</td>
+<td>arriba/abajo</td>
+</tr>
+<tr class="even">
+<td>Mover la línea de código arriba y abajo (evita el trabajo de copiar y pegar)</td>
+<td>Alt + arriba/abajo</td>
+</tr>
+<tr class="odd">
+<td>Interrumpir el comando en ejecución</td>
+<td>Esc</td>
+</tr>
+</tbody>
+</table>
+<p>Estos atajos de teclado te ayudarán a agilizar tu flujo de trabajo en RStudio en Ubuntu Linux. Recuerda que también puedes personalizar los atajos de teclado según tus preferencias en la sección de configuración de RStudio.</p>
+</section>
+</section>
+<section id="lo-que-debemos-saber" class="level1">
+<h1>Lo que debemos saber</h1>
+</section>
+<section id="manipulación-de-datos" class="level1">
+<h1>Manipulación de datos</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma mendoza2023,
+  author = {Achalma Mendoza, Edison},
+  title = {Introducción a R en Linux},
+  date = {2023-06-10},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
+Achalma Mendoza, E. (2023, June 10). Introducción a R en Linux.
+Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R</a>
+</div></div></section></div> ]]></description>
+  <category>R</category>
+  <category>RStudio</category>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/index.html</guid>
+  <pubDate>Sat, 10 Jun 2023 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>El legado revolucionario de Mariátegui. Siguiendo su camino hacia un futuro transformado</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
@@ -6505,1197 +7095,6 @@ crear sitios web con R. Retrieved from <a href="https://achalmaedison.netlify.ap
   <category>Análisis de datos.</category>
   <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</guid>
   <pubDate>Wed, 14 Jul 2021 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho</title>
-  <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="sec-introducción" class="level1 unnumbered">
-<h1 class="unnumbered">Introducción</h1>
-<p>En el Perú, al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), “Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19”.</p>
-<p>Es crucial comprender la relación entre estas dos variables para establecer políticas económicas contracíclicas, que nos ayuden a generar mayores ingresos en la recaudación tributaria durante períodos de menor crecimiento económico. En los últimos diez años (2010-2019), la economía peruana ha experimentado un crecimiento anual promedio del 4.5%, y en los últimos cinco años (2015-2019) se ha expandido a una tasa promedio anual del 3.2% INEI (2019).</p>
-<p>Aunque existen investigaciones previas sobre este tema, el objetivo de este estudio es aclarar y mejorar algunas afirmaciones, relacionando y explicando de manera más precisa la influencia y correlación entre el crecimiento económico y la recaudación tributaria en el Departamento de Ayacucho durante el período 2007-2019.</p>
-<p>Esperamos que un mayor crecimiento económico se traduzca en una mayor recaudación tributaria, y que esta última tenga un impacto positivo en la inversión estatal en obras públicas, beneficiando así a la población y mejorando la calidad de los servicios de salud, infraestructura y educación, que son áreas prioritarias en Perú. Esta mejora en los sectores más necesitados a su vez influye en el crecimiento económico y, por lo tanto, en la recaudación tributaria.</p>
-<p>Para abordar esta problemática, hemos llevado a cabo una exhaustiva búsqueda de información, desde artículos científicos hasta fuentes proporcionadas por entidades como SUNAT, BCRP e INEI.</p>
-<p>El desarrollo de la investigación se dividió de la siguiente manera:</p>
-<ol type="1">
-<li><p>En la primera parte, se explicó el planteamiento del problema principal y sus problemas específicos, se establecieron los objetivos y se justificó teórica, práctica y metodológicamente la investigación. Luego, se presentaron investigaciones científicas relevantes relacionadas con nuestro tema de investigación.</p></li>
-<li><p>A continuación, se detalló el marco conceptual de los principales términos, se plantearon las hipótesis, variables e indicadores, y se estableció la metodología a utilizar en el presente trabajo.</p></li>
-<li><p>Finalmente, se llevaron a cabo diversos análisis estadísticos para obtener los resultados y presentar las conclusiones de nuestro estudio.</p></li>
-</ol>
-</section>
-<section id="sec-planteamiento-del-problema" class="level1">
-<h1>Planteamiento del problema</h1>
-<section id="sec-problema-general" class="level2">
-<h2 class="anchored" data-anchor-id="sec-problema-general">Problema General</h2>
-<p>¿En qué medida influye el crecimiento económico en la recaudación de impuestos por la SUNAT en el departamento de Ayacucho, periodo 2007-2019?</p>
-</section>
-<section id="sec-problemas-específicos" class="level2">
-<h2 class="anchored" data-anchor-id="sec-problemas-específicos">Problemas específicos</h2>
-<ol type="1">
-<li><p>¿Cuál ha sido la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019?</p></li>
-<li><p>¿Cuál ha sido la tendencia del crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019?</p></li>
-<li><p>¿Cuál es la relación entre la recaudación de impuestos por la SUNAT respecto al crecimiento económico durante el periodo 2007-2019?</p></li>
-</ol>
-</section>
-</section>
-<section id="sec-objetivos" class="level1">
-<h1>Objetivos</h1>
-<section id="sec-objetivos-generales" class="level2">
-<h2 class="anchored" data-anchor-id="sec-objetivos-generales">Objetivos generales</h2>
-<p>Determinar la influencia del crecimiento económico en la recaudación de impuestos por la SUNAT en el departamento de Ayacucho, periodo 2007-2019.</p>
-</section>
-<section id="sec-objetivos-específicos" class="level2">
-<h2 class="anchored" data-anchor-id="sec-objetivos-específicos">Objetivos específicos</h2>
-<ol type="1">
-<li><p>Analizar la tendencia de la recaudación de impuestos por la SUNAT en Ayacucho durante el periodo 2007-2019.</p></li>
-<li><p>Analizar la tendencia de crecimiento económico en el departamento de Ayacucho durante el periodo 2007-2019.</p></li>
-<li><p>Analizar la relación existente entre crecimiento económico y la recaudación de impuestos durante el periodo 2007-2019.</p></li>
-</ol>
-</section>
-</section>
-<section id="sec-justificación" class="level1">
-<h1>Justificación</h1>
-<!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
-
-¿Cuáles son los beneficios que se obtienen con su realización?
-
-¿Por qué es necesaria esta investigación?
-
-¿A quién o a quiénes beneficia?
-
-¿Quién o quiénes serán los usuarios? -->
-<section id="sec-justificación-teórica" class="level2">
-<h2 class="anchored" data-anchor-id="sec-justificación-teórica">Justificación teórica</h2>
-<p>El presente trabajo busca analizar e interpretar de manera fundamentada los efectos de la influencia del crecimiento económico en la recaudación de impuestos en la región de Ayacucho. A través de esta investigación, se espera contribuir teóricamente al conocimiento de los patrones de los diferentes sectores económicos que son importantes para el crecimiento económico. Los resultados obtenidos servirán como base para futuros estudios similares, generando un aporte significativo al entendimiento de estos fenómenos económicos.</p>
-</section>
-<section id="sec-justificación-práctica" class="level2">
-<h2 class="anchored" data-anchor-id="sec-justificación-práctica">Justificación práctica</h2>
-<p>Los resultados de esta investigación ofrecerán información relevante para la toma de decisiones en el ámbito fiscal, lo cual puede traducirse en mejores resultados económicos tanto en la región de Ayacucho como en otras partes de Perú. Las autoridades regionales y municipales podrán utilizar estos resultados para anticipar posibles ineficiencias en la recaudación de impuestos, permitiendo un mejor manejo de los recursos fiscales en beneficio de la población. Asimismo, esta investigación ayudará a evaluar si las reformas implementadas en la política tributaria contribuyen al crecimiento económico, lo que a su vez permitirá al Estado tomar acciones para abordar la elusión y evasión fiscal en los diferentes sectores económicos y promover el desarrollo del país.</p>
-</section>
-<section id="sec-justificación-metodológica" class="level2">
-<h2 class="anchored" data-anchor-id="sec-justificación-metodológica">Justificación metodológica</h2>
-<p>Esta investigación se basa en un análisis estadístico aplicado, descriptivo y cuantitativo para determinar los efectos del crecimiento económico en la recaudación de impuestos por la SUNAT. Se emplearán técnicas de análisis de datos que permitirán obtener resultados más precisos y confiables. Además, se generarán nuevas fuentes de información que podrían utilizarse en futuros estudios para explorar la relación entre el crecimiento económico, la recaudación de impuestos y otras variables relacionadas, en aras de obtener resultados más técnicos y robustos.</p>
-</section>
-</section>
-<section id="sec-marco-teórico" class="level1">
-<h1>Marco teórico</h1>
-<section id="sec-sistema-teórico" class="level2">
-<h2 class="anchored" data-anchor-id="sec-sistema-teórico">Sistema teórico</h2>
-<p>Según <span class="citation" data-cites="akanbi_impact_2020">Akanbi (2020)</span> en su artículo científico investigó “The Impact of Tax Collection and Incentives on Economic Growth: Evidence from Nigeria”. Para ello se utilizó el modelo econométrico de análisis de regresión múltiple entre el producto bruto interno real (variable dependiente) y las variables de recaudación de impuestos e incentivos que afectan al crecimiento económico, como los ingresos fiscales, la inversión extranjera directa de capital, la inversión extranjera directa de otro capital que mide los incentivos (variables independientes) que cubre un período de ocho años entre 2011 y 2018 obtenidos del Servicio Federal de Impuestos Internos y del Banco Central de Nigeria. Dada la siguiente ecuación de estimación:</p>
-<p><img src="https://latex.codecogs.com/png.latex?PIB%20=%20%5Calpha%20+%20%5Cbeta_%7Bi%7DTAXR%20+%20%5Cbeta_%7B2%7DEID%20+%20%5Cbeta_%7B3%7DFDIC%20+%20%5Cepsilon"></p>
-<p><img src="https://latex.codecogs.com/png.latex?TAXR">: Impuesto recaudado</p>
-<p><img src="https://latex.codecogs.com/png.latex?IED">: Inversión Extranjera Directa - Capital</p>
-<p><img src="https://latex.codecogs.com/png.latex?FDIC">: Inversión Extranjera Directa - Otros capitales Coeficientes sustituidos</p>
-<p>Señala que los ingresos fiscales dependen del nivel de cumplimiento del pago de impuestos por parte de los contribuyentes y de la recaudación por parte del gobierno. Además, teniendo en cuenta la teoría de los impuestos de Ibn Jaldún, que un tipo impositivo elevado no garantiza que se vaya a maximizar los ingresos y la recaudación de impuestos, ya que al contrario desalientan al esfuerzo laboral y que se dé la evasión fiscal. Basado en la teoría de la curva de Laffer, el aumento de los ingresos fiscales totales se da por la reducción de los tipos impositivos ya que mejora la recaudación y el cumplimiento de los impuestos.</p>
-<p>La teoría del beneficio fiscal menciona que una persona que obtenga mayores beneficios debería pagar más impuestos de acuerdo con su capacidad contributiva, su capacidad de pago y beneficio obtenido.</p>
-<p>Los resultados revelaron que existe una relación negativa pero no significativa entre los ingresos fiscales y el crecimiento económico en Nigeria, lo que quiere decir que los ingresos fiscales no han repercutido en el PBI real. Por lo cual recomienda que las autoridades debieran realizar exoneraciones al pago de impuestos en los sectores productivos para reducir sus costes de producción y de esta manera, ayudar al aumento de la productividad en estos sectores que tendría efectos positivos sobre el crecimiento económico de Nigeria.</p>
-<p><span class="citation" data-cites="ronquillo_recaudaciones_2017">Ronquillo &amp; Ronquillo (2017)</span> en su artículo sobre “Las recaudaciones tributarias y el crecimiento económico, un análisis a través del PBI de Ecuador” en la cual muestran una relación empírica y teórica entre las variables tomadas. Por ello se tomaron datos históricos anuales entre el periodo 2008 al 2016, tomando el corte longitudinal con un enfoque cuantitativo y deductivo en el cual se aplicó un análisis de crecimiento porcentual, al final se realizó una regresión para saber la relación que existe entre estas variables que es el Producto Bruto Interno (variable independiente) y el Impuesto a la renta (variable dependiente).</p>
-<p>En conclusión, en el análisis descriptivo de las variables menciona que los cambios en el PBI y el impuesto tuvieron un comportamiento parecido. Es decir, ambas variables presentan cambios positivos, que nos dice que existe un aumento en las recaudaciones tributarias y el PBI.</p>
-<p>Además, la variable independiente (PBI) y la variable dependiente (Impuesto a la renta) indican que en el periodo estudiado tendrán un crecimiento del 6% y del 7.4% respectivamente.</p>
-<p>Por otra parte, mediante un análisis de correlación, el PBI explica en un 93% con los resultados económicos del impuesto, por lo que existe un alto nivel de correlación entre las variables que es del 96%.</p>
-<p><span class="citation" data-cites="cacay_cacay_efecto_2021">Cacay Cacay et&nbsp;al. (2021)</span> en su artículo “Efecto del crecimiento y la presión fiscal sobre el impuesto al valor agregado”, habla sobre el impuesto al valor agregado como primera fuente de ingreso de la economía ecuatoriana, y cómo esta variable se relaciona con el crecimiento económico y la presión fiscal.</p>
-<p>El objetivo de este artículo es identificar la incidencia del crecimiento económico y la presión fiscal en la recaudación del impuesto del valor agregado para el periodo 2000 al 2019, para ello se utilizó un modelo de Mínimos cuadrados ordinarios (MCO), y ver qué tipo de relación existe entre las variables mencionadas.</p>
-<p>La investigación de este artículo es de tipo explicativa con alcance correlacional, porque se analiza y mide el efecto y grado de relación entre las variables; para ello se hizo una estimación y algunos ajustes algebraicos. Para la estimación se utilizó cifras anuales y luego fueron transformadas a logaritmos para ser analizados como elasticidades. Se corrigieron problemas de heterocedasticidad, autocorrelación y multicolinealidad.</p>
-<p>Finalmente se llegó a las siguientes conclusiones, el financiamiento público y la recaudación tributaria es un tema significativo, por lo tanto, la incidencia del crecimiento económico y la presión fiscal en la recaudación tributaria del impuesto al valor agregado son estadísticamente significativas; entonces a mayor crecimiento económico mayor recaudación del impuesto al valor agregado, es decir, existe una relación directa.</p>
-<p>Kagan, J. (2021), investigó sobre la relación de los impuestos y el PBI con el objetivo de conocer si las tasas impositivas generan un crecimiento o una contracción económica, con la idea de comprender si pudiera existir más puestos de trabajo. La metodología de investigación es cualitativa, porque considera información del banco mundial donde encuentra datos respectivos entre los años 1972 – 2019, y muestra la relación que existe entre los impuestos y PBI, confirmando un crecimiento económico y una reducción de la pobreza a largo plazo. Además, toma en cuenta que, si bien tienen una relación directa a la recaudación de impuesto con el PBI, existen otros factores que contribuyen al crecimiento de la economía.</p>
-<p>Por consiguiente, la relación que existe entre impuestos y PBI depende de los ingresos fiscales de una nación en relación con el tamaño de su economía, además, que los países con mayor desarrollo tienen una relación más alta entre el impuesto y PBI.</p>
-<p>Paymaster, F. (2020) en su artículo científico investigó “Problems of Tax Collection and Its Effect on Gross Domestic Product in Nigeria”. Para ello utilizó el modelo de mínimos cuadrados ordinarios dinámicos desde el primer trimestre del año 2011 hasta el segundo trimestre de 2018 para estimar una relación dinámica entre los conjuntos de datos, teniendo como variable dependiente el producto interior bruto (PIB), el cual un indicador del crecimiento económico y también una medida de contabilidad de la renta nacional.</p>
-<p>Debido a que el gobierno pierde ingresos fiscales a través de la evasión fiscal, se espera que los cambios en los indicadores de evasión fiscal predigan los cambios en el producto interior bruto, ya que ambas contribuyen enormemente a la caída de los ingresos.</p>
-<p>Como resultado se obtuvo una causalidad unidireccional entre la evasión fiscal de la plusvalía y el PIB. Por lo tanto, se confirma que el PIB (valor p 0,0119 &lt; 0,9369) evidentemente causa la evasión del impuesto de sociedades. Coincidiendo así con las teorías y algunos resultados empíricos en el que la evasión fiscal estanca el crecimiento económico.</p>
-<p><span class="citation" data-cites="neog_tax_2020">Neog &amp; Gaur (2020)</span> En el presente estudio sobre “Tax structure and economic growth: a study of selected Indian states”, examina la relación largo y corto plazo entre la estructura tributaria y el desempeño del crecimiento a nivel estatal en la India para el período 1991-2016. La metodología empleada para el estudio es cuantitativa, dado que se basa en un análisis del modelo Acosta-Ormaechea y Yoo (2012), y para verificar la relación entre la tributación y el crecimiento económico se utiliza el método de regresión de panel, considerando 14 estados de la India.</p>
-<p>Con base en el análisis se encontró que los impuestos a la propiedad son buenos para el crecimiento dado que se tiene un incremento, en cambio los impuestos sobre productos básicos y servicios lo reducen teniendo consecuencias negativas. Además, los impuestos de la renta no tienen un impacto significativo en el crecimiento.</p>
-<p><span class="citation" data-cites="rivero_impuestos_2008">Rivero &amp; Jiménez (2008)</span> en su artículo “Impuestos y crecimiento económico: una panorámica” hace un estudio del crecimiento económico y su dependencia de los efectos de los impuestos.</p>
-<p>Para ello hace uso de las teorías neoclásicas y el modelo de crecimiento endógeno de Romer, donde la tasa de crecimiento a largo plazo depende de factores exógenos como el crecimiento de la población y el progreso tecnológico, por lo que la política fiscal y el tamaño del sector público no explicarían diferenciales permanentes de tasas de crecimiento, aunque sí discrepancias a corto o medio plazo.</p>
-<p>En conclusión, los modelos neoclásicos de crecimiento sostienen que los impuestos no son determinantes del crecimiento a largo plazo de las economías. Por otro lado, las teorías de crecimiento endógeno sí avalan dicha relación en la medida en que pueden afectar a la acumulación de capital humano y a la productividad del factor trabajo.</p>
-<p><span class="citation" data-cites="fergusson_impuestos_2003">Fergusson (2003)</span> investigó sobre los Impuestos, Crecimiento Económico Y Bienestar En Colombia (1970-1999). Utilizó tasas que sirvieron para cuantificar los costos en bienestar y crecimiento de la tributación con base en un modelo sencillo de equilibrio general dinámico y previsión perfecta.</p>
-<p>En el cual calculan las tasas efectivas promedio de tributación sobre el consumo y sobre el ingreso de los factores de producción en Colombia, en el período 1970-1999.</p>
-<p>Menciona que la teoría económica sugiere que los impuestos, al distorsionar la toma de decisiones individuales, pueden reducir el bienestar y el crecimiento económicos. En conclusión, los resultados indican que desde 1970, más en la segunda mitad de la década del noventa, la política tributaria ha impuesto sobre la economía colombiana costos crecientes de eficiencia. También sugieren que se ha sacrificado el crecimiento, la magnitud de ese sacrificio es cuantitativamente despreciable en la mayoría de los casos, con la excepción de la segunda mitad de la década del noventa.</p>
-<p><span class="citation" data-cites="carrera_ciclo_1999">Carrera, Pérez, &amp; Saller (1999)</span> Investigaron la relación entre el ciclo económico y la recaudación fiscal en la economía argentina, con cambios desde un contexto estable a uno inestable, tuvieron la finalidad de saber la intensidad de esta relación y las regularidades empíricas. Usaron la metodología general realizando un enfoque secuencial, eligiendo las variables más representativas del ciclo económico y la recaudación federal, analizando las características del comportamiento de la serie, luego estudiando las variables y sus características intrínsecas (tendencia, volatilidad, persistencia y simetría), después analizando las correlaciones y, por último, estudiando la causalidad a través de la prueba de Granger. Teniendo en cuenta lo anterior, realizaron el análisis de regresión para determinar la sensibilidad de la asociación entre los ciclos comparando los resultados para el período completo 1985-97 y también para 1991-97. Siendo las variables estudiadas el PBI y la recaudación total, inflación, DGI, IVA y ganancias. En sus estudios, encontraron correlaciones significativas respecto a la relación de la recaudación con el ciclo económico. Así mismo, según el estudio, el PBI causa en sentido de Granger de todas las variables, menos del IVA (impuesto al valor agregado).</p>
-<p>Según <span class="citation" data-cites="tello_determinantes_2018">Tello &amp; Arévalos (2018)</span> en su artículo científico investigó “Determinantes de la recaudación estatal de impuestos en México”. Para ello utilizó un modelo de un panel de datos con efectos fijos por Mínimos Cuadrados Generalizados desde 2010 a 2014 que le permitió combinar tanto una dimensión temporal como una estructural.</p>
-<p>Detalla previamente que existe una mayor recaudación estatal donde los contribuyentes tengan una alta capacidad contributiva y las instituciones sean suficientemente sólidas, confiables, eficientes y capaces de cumplir con sus funciones, así como de cobrar y fiscalizar los tributos.</p>
-<p>En base a cinco determinantes sometidos a prueba, concluye que estas muestran significancia estadística, teniendo así al PIB per cápita (con un coeficiente asociado de 0.99) con el mayor peso explicativo, seguido de la presión fiscal (con un coeficiente de 0.55), la tasa del ISN (con un coeficiente de 0.28) y la importancia de las exportaciones (con un coeficiente de 0.05). Aunque la importancia de la industria en la economía como determinante de la recaudación, tiene significancia estadística, ésta debería tener un sentido negativo.</p>
-<p>Con lo cual concluye que la recaudación se ve favorecida de manera directa con el PBI per cápita ya que a medida que la población tenga un nivel de ingreso más elevado se podrán obtener mayores impuestos per cápita, adicional al control que los gobiernos estatales realizan en los países.</p>
-<p><span class="citation" data-cites="ordonez_crecimiento_2014">Ordoñez (2014)</span> investigó sobre el “crecimiento económico e ingresos tributarios del Perú”. Para ello, se establecieron los indicadores en el cual se utilizó el método de Mínimos Cuadrados Ordinarios (MCO) para la estimación del efecto de la variable explicativa (el crecimiento económico) sobre la variable explicada (los ingresos tributarios), entre los años 1990 y 2010.</p>
-<p>El propósito de la investigación ha sido determinar la relación entre el crecimiento económico y los ingresos tributarios del Perú en los años 1990 y 2010.</p>
-<p>Para la estimación del efecto de la variable explicativa sobre la variable explicada, se recopiló y ordenó la información existente que permitió describir la estructura y evolución de cada una de las variables y establecer la relación que había entre ellas.</p>
-<p>En conclusión, esta investigación ha permitido establecer de qué manera se han comportado los indicadores del crecimiento y de los impuestos en el Perú, tanto en términos absolutos como relativos, y de qué manera están relacionados dichos indicadores. Adicionalmente, podemos apreciar que, la tendencia creciente de la economía peruana, expresada en el aumento de la producción y los impuestos como la presión tributaria sigue siendo aún ineficiente.</p>
-<p><span class="citation" data-cites="jaimovich_nonlinear_2017">Jaimovich &amp; Rebelo (2017)</span> en su artículo “Nonlinear effects of taxation on grow” proponen un modelo consistente con dos observaciones. Primero, las tasas impositivas adoptadas por diferentes países generalmente no están correlacionadas con su desempeño de crecimiento. En segundo lugar, los países que reducen drásticamente los incentivos privados para invertir perjudican gravemente su crecimiento.</p>
-<p>El objetivo es identificar el efecto de los impuestos sobre la renta de capital en la tasa de crecimiento de la economía.</p>
-<p>Para tal efecto se considera el modelo de Romer lo cual consiste en que el crecimiento es impulsado por la innovación que expande la variedad de insumos intermedios. Donde se observa la no linealidad entre el impuesto y el crecimiento generada por la heterogeneidad en la capacidad emprendedora.</p>
-<p>En una economía donde existen impuestos bajos, la capacidad del empresario marginal es relativamente baja. Entonces, aumentar la tasa impositiva conduce a la salida de empresarios de baja capacidad y a una pequeña disminución en la tasa de crecimiento. En una economía con existencia de impuestos altos, la capacidad del empresario marginal es relativamente elevada. Por lo tanto, el aumento de la tasa impositiva conduce a la salida de empresarios de alta capacidad y a una gran disminución en la tasa de crecimiento.</p>
-<p>En conclusión, los impuestos tienen un pequeño impacto a largo plazo del crecimiento cuando las tasas impositivas y otros desincentivos a la inversión son bajos o moderados. Pero a medida que aumentan las tasas impositivas, el impacto marginal de los impuestos sobre el crecimiento también aumenta.</p>
-<p><span class="citation" data-cites="campos_sistema_2018">Campos, Radwan, &amp; Melo (2018)</span> investigaron sobre El sistema tributario y su impacto en la Economía Popular y Solidaria en el Ecuador. lo cual buscaban desarrollar un nuevo modelo tributario que impulsará el desarrollo económico del país, a través de una recaudación tributaria eficiente y una distribución justa de la riqueza generada, inversión, crecimiento, productividad y empleo. En un análisis de series de tiempo, se encontró que, en Ecuador, las contribuciones tributarias aumentaron en más de 7 puntos porcentuales debido al lento desarrollo del sistema tributario ecuatoriano; en los últimos años, aumentó de 5,20% en 1997 a 12,80% en 2016.</p>
-<p>Las principales causas del fraude son la falta de conocimiento tributario, contribución demasiado alta, estructura complicada del sistema tributario, no hay agencias administrativas que promulgan regulaciones tributarias. , bajo riesgo de detección, resistencia al pago de impuestos, falta de liquidez en las empresas, son los factores más importantes.</p>
-<p>Con este estudio, es posible identificar las bases teóricas a fin de establecer políticas fiscales que promuevan el crecimiento de este sector económico, en el cual la clave es equilibrar los ingresos entre ingresos directos y Los impuestos indirectos y el Estado no deben crear más impuestos, sino aumentar el número de contribuyentes, con incentivos de cultura tributaria. Por lo tanto, el Estado de Ecuador debe establecer una política fiscal que incentive la inversión y el empleo mediante la implementación de una tasa de IVA discriminatoria y reducida para este sector, ya que actualmente existe una tasa impositiva única del 12% para todos los socios sociales. sectores económicos del país. , sin discriminar su capacidad económica.</p>
-<p>Bejarano, H. (2013), en su artículo de investigación Tributación En Colombia: La Tasa Óptima Que Maximiza El Recaudo Tributario. En el que realizó un estudio con un objetivo general propuesto que es el de encontrar para la economía colombiana, la tasa impositiva adecuada de manera que se genere los máximos recaudos tributarios para el gobierno central.</p>
-<p>La metodología empleada es la de una investigación cuantitativa, referida a la investigación empírica sistemática, a través del uso de técnicas estadísticas y matemáticas. La variable dependiente es el recaudo tributario real per cápita medido en pesos del año 2000 en el período t; y las variables independientes son: la tasa impositiva en el periodo t, e índice de producción industrial en el periodo t. Y respecto al modelo econométrico empleado, se utiliza una metodología de regresión lineal múltiple para el período 1980-2010.</p>
-<p>En todas las regresiones ajustadas se llevó a cabo el proceso de verificación de supuestos mediante las pruebas Breusch-Pagan (heterocedasticidad), Breusch-Godfrey (auto correlación), y Kolmogorov-Smirnov (normalidad), llegando a la conclusión que los residuales estimados en todas las regresiones son normales, homocedásticos y auto correlacionados, por lo cual se aplica el método de corrección de mínimos cuadrados generalizados.<br>
-Finalmente, la conclusión que arrojó la investigación es: para el caso colombiano se puede observar que aplicar una tasa tributaria sostenida del 26% en promedio debe conducir a alcanzar un óptimo de recaudo para el gobierno central, para lo cual se sugiere la aplicación de esta.</p>
-<p><span class="citation" data-cites="gashi_effect_2018">Gashi, Asllani, &amp; Boqolli (2018)</span> En su artículo, “The Effect of Tax Structure in Economic Growth” analiza el efecto de la estructura fiscal en el crecimiento económico de Kosovo, el objetivo del artículo es evaluar el impacto de los impuestos sobre el crecimiento económico, La Administración Tributaria de Kosovo desde el comienzo de su funcionamiento logró importantes resultados en la recaudación de ingresos de manera eficaz, se refiere a la provisión de servicios de ayuda voluntaria, la igualdad de trato de todos los contribuyentes y la implementación exitosa de la planificación de la recaudación de ingresos. El éxito alcanzado se refiere a la prestación de servicios profesionales, transparentes y efectivos y a través de la implementación justa y uniforme de las leyes tributarias</p>
-<p>Para el desarrollo de este trabajo se adoptó la metodología de análisis comparativo, utilizando data anual del 2007 al 2015, Usamos el modelo econométrico recolectando datos y transformando en logaritmos naturales usando el modelo LOG-LOG. ¿la política fiscal tendrá un impacto en el desarrollo y el crecimiento económicos o tendrá un impacto negativo en el PIB? Al plantear las hipótesis de investigación, examinamos el efecto positivo o negativo de la estructura de los impuestos en el crecimiento económico.</p>
-<p>Esta investigación contribuye a la política fiscal para crear una estructura tributaria que sea compatible con el nivel de desarrollo económico, teniendo efectos positivos sobre los ingresos, las inversiones, el empleo y el crecimiento económico. Los resultados de este estudio muestran que no todos los impuestos tienen un impacto positivo en su crecimiento económico. se concluye que el impuesto a las utilidades, el impuesto a las empresas individuales, el impuesto al valor agregado, la tributación de los estados mensuales, la recaudación de recursos y el pago de impuestos sobre intereses, dividendos, derechos de propiedad, Los alquileres, las ganancias de loterías y juegos de azar y el impuesto de sociedades son importantes y tienen un impacto positivo en el PIB de Kosovo, a diferencia de los impuestos personales y las retenciones en origen, que no son significativos y tienen un impacto negativo en el crecimiento económico.</p>
-<p><span class="citation" data-cites="chiappelo_crecimiento_2018">Chiappelo &amp; Svetliza (2018)</span> investigaron el “Crecimiento económico y el rol de los impuestos: evidencia para América” analizando la relación entre el crecimiento económico y los impuestos al ingreso personal y corporativo para las economías más considerables de América, buscando evidencia empírica de la existencia de una curva de crecimiento de Laffer. Para ello trabajaron con 20 países de América en el periodo de 1990 a 2016 y utilizando una relación cuadrática, entre el crecimiento del PBI per cápita y las tasas de los impuestos a estudiar, estimando a través de efectos fijos.</p>
-<p><img src="https://latex.codecogs.com/png.latex?g_%7Bi,%20t%7D%20=%20%5Calpha%20+%20%5Cbeta_%7B1%7DX_%7Bi,%20t%7D%5E%7B%C2%B4%7D%20+%20%5Cbeta_%7B2%7DX_%7Bi,%20t%7D%5E%7B%C2%B42%7D%20+%20%5Cbeta_%7B3%7DZ_%7Bi,%20t%7D%5E%7B%C2%B4%7D%20+%20%5Cdelta_%7Bi,%20t%7D%5E%7B%C2%B4%7D%20+%20%5Cmu_%7Bi,%20t%7D%20+%20%5Cepsilon_%7Bi,%20t%7D"></p>
-<p>Donde los subíndices indican el país (i) y el periodo (t), la variable dependiente es el promedio de tres años de la tasa de crecimiento del PBI per cápita <img src="https://latex.codecogs.com/png.latex?g_%7Bi,%20t%7D">, y las variables dependientes son: el vector de las tasas máximas marginales de los impuestos al ingreso personal y corporativo en el año inicial de cada subperiodo <img src="https://latex.codecogs.com/png.latex?X_%7Bi,%20t%7D">, el factor cuadrático de la medida anterior para controlar la no-linealidad de las tasas, el vector de las variables explicativas basadas en la literatura de crecimiento <img src="https://latex.codecogs.com/png.latex?Z_%7Bi,%20t%7D">, dummies de tiempo capturando shocks que afectan el crecimiento de la economía <img src="https://latex.codecogs.com/png.latex?%5Cdelta_%7Bi,%20t%7D%5E%7B%C2%B4%7D">, el efecto fijo del país i <img src="https://latex.codecogs.com/png.latex?%5Cmu_%7Bi%7D"> y finalmente el término del error del modelo <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_%7Bi,%20t%7D">.</p>
-<p>Encontrando que el aumento en la tasa de impuestos al ingreso personal y corporativo, causan un incremento en el crecimiento, hasta que en un punto los resultados se revierten y se vuelve negativo. Así mismo, estimando el modelo con diversas especificaciones de la literatura, se confirma la existencia de una curva de crecimiento de Laffer (growth Laffer curve).</p>
-<p><span class="citation" data-cites="beltran-ayala_impuestos_2020">Beltrán-Ayala, Gómez-Dunkley, &amp; Pico-Aguilar (2020)</span> Investigaron sobre” Los impuestos directos e indirectos y su incidencia en el crecimiento económico en el Ecuador”. Por el cual se determinó mediante un modelo econométrico de regresión múltiple, con datos de series de tiempo. Se utilizaron datos trimestrales del periodo comprendido entre el primer trimestre 2008 y el segundo trimestre 2020, así como los datos proyectados para el tercer trimestre 2020, para lo cual el modelo planteado tuvo como variable dependiente al PIB, y como variables independientes a los impuestos directos (ID) e impuestos indirectos (IID).</p>
-<p>Este trabajo tuvo como objetivo analizar la relación de la recaudación tributaria con el crecimiento económico además se optó por introducir al consumo del gobierno (G) como variable de control debido a su mayor grado de explicación sobre PIB. inclusive se incluyó la variable consumo de los hogares (C); con el fin de darle mayor robustez al modelo por lo que no es necesario explicar su comportamiento.</p>
-<p>Los resultados obtenidos muestran que los impuestos indirectos guardan una relación directa con el crecimiento económico, sin embargo, la correlación entre impuestos directos y crecimiento económico no es significativa para el modelo.</p>
-<p><span class="citation" data-cites="banda-ortiz_impacto_2018">Banda-Ortiz &amp; Tovar-García (2018)</span> en su artículo “Impacto de la estructura tributaria sobre el crecimiento económico: el caso de México” analiza el impacto de la estructura tributaria sobre el crecimiento económico mexicano en los periodos de 2005 a 2006, donde desarrolló un modelo econométrico, donde las variables independientes son los impuestos a la renta, impuesto al valor agregado, impuesto sobre la producción, e impuestos sobre las importaciones y la variable dependiente es el PBI.</p>
-<p>El objetivo de este artículo es establecer una relación entre las variables, además de estudiar cómo es su influencia y su correlación entre ellas, por ello el objetivo es establecer un modelo que explique una relación entre las variables ya mencionadas.</p>
-<p>La metodología que se sigue en este artículo es un enfoque cualitativo, porque se utiliza la data trimestral de los periodos 2005/01 al 2016/02, primero se desarrollaron los elementos teóricos del crecimiento económico y de la tributación para establecer una relación entre las variables establecidas.</p>
-<p>Finalmente, llegó a la conclusión de que los impuestos tienen un impacto negativo, porque reducen el ingreso disponible, pero también son la fuente principal de gasto público, si recauda bien tendría un impacto negativo en la economía, pero esto solo se da en economías muy desarrolladas. Por ello se debe estudiar qué tipo de impuesto tiene un impacto positivo y que impuesto tiene impactos negativos.</p>
-<p>En los hallazgos previos, se comprueba que los impuestos al ingreso impactan negativamente sobre el nivel y la tasa de crecimiento del PBI, por el contrario, los impuestos al consumo tienen un impacto positivo.</p>
-<p>Kalas,B.; Mirovic V. &amp; Milenković, N. (2018) en su artículo científico investigó “The Relationship Between Taxes And Economic Growth: Evidence From Serbia And Croatia”. Para ello utilizó el modelo de una regresión de panel para estudiar la relación entre las variables. Tomando como período desde el 2007 hasta el 2016 en Serbia y Croacia, utilizando la participación porcentual del PIB a partir de los datos oficiales del Fondo Monetario Internacional. Estableciendo el siguiente modelo de regresión:</p>
-<p><img src="https://latex.codecogs.com/png.latex?GDP_%7Bi,%20t%7D%20=%20%5Cbeta_%7B0%7D%20+%20%5Cbeta_%7B1%7DCIT_%7Bi,%20t%7D+%20%5Cbeta_%7B2%7DVAT_%7Bi,%20t%7D%20+%20%5Cbeta_%7B3%7DSSC_%7Bi,%20t%7D%20+%20%5Cbeta_%7B4%7DEXC_%7Bi,%20t%7D%20+%20%5Cepsilon_%7Bi,%20t%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?CIT">: Impuesto sobre la renta de sociedades</p>
-<p><img src="https://latex.codecogs.com/png.latex?VAT">: Impuesto al valor agregado</p>
-<p><img src="https://latex.codecogs.com/png.latex?SSC">: Contribuciones de seguridad</p>
-<p><img src="https://latex.codecogs.com/png.latex?EXC">: Impuestos especiales</p>
-<p>Previamente en su análisis teórico señala que el sistema fiscal de Serbia desde el año 2000 ha tenido un crecimiento en el PBI gracias a las contribuciones a la seguridad social que son fuente principal de sus ingresos tributarios. Mientras que en Croacia la participación de los ingresos fiscales no tiene una participación muy pronunciada en cuanto al efecto que pueda causar en su PBI, teniendo así una diferencia de al menos 10% de aporte PBI con respecto al otro país.</p>
-<p>Los resultados del análisis mostraron que el impuesto sobre la renta de las sociedades, el impuesto al valor agregado y las contribuciones a la seguridad social tiene un impacto positivo en el PBI, mientras que los impuestos especiales lo afectan de manera negativa. Además, quien impacta en mayor medida es el VAT en comparación con los otros, lo que en base a los resultados se puede decir que ante un aumento del 1% del impuesto al valor agregado el PIB aumenta en un 3.09%.</p>
-<p><span class="citation" data-cites="taha_effect_2011">Taha, Nanthakumar, &amp; Colombage (2011)</span> En su artículo, “El efecto del crecimiento económico en los ingresos fiscales: El caso de un país recientemente industrializado”, investigaron los ingresos fiscales del gobierno de Malasia durante el período 1970-2009.</p>
-<p>Utilizaron la técnica de identificación de la raíz unitaria con el objetivo determinar las características de la serie individual, también se considera la cointegración a largo plazo con el enfoque de Johansen con el objetivo de determinar si alguna combinación de las variables está cointegrada. Por ello se usó crecimiento del PIB como un proxy del crecimiento económico (EG) y el valor del PIB (Año base 2000 = 100). Para medir los ingresos fiscales del gobierno (TR), los ingresos fiscales totales incluyen la recaudación de los ingresos por impuestos directos e indirectos.</p>
-<p>Con base a los resultados muestran que los cambios en la tributación no tienen algún impacto en el crecimiento económico, también los resultados muestran que el fuerte crecimiento económico ayuda a impulsar el aumento de la recaudación de impuesto y la estabilidad económica a largo plazo y a corto plazo provocando resultados positivos. Por lo tanto, considerando la descomposición de ingresos tributarios directos, indirectos y no tributarios pueden proporcionar resultados significativos.</p>
-<p><span class="citation" data-cites="velepucha_ecuador_2021">Velepucha, Gutiérrez, Aguirre, &amp; Pereira (2021)</span> en su artículo científico “Ecuador: Recaudación de tributos comparado con principales indicadores macroeconómicos, 2010-2019”, hizo un estudio con la finalidad de encontrar una relación de las reformas tributarias con el crecimiento económico del país. Por ello utilizó el método cuantitativo con un análisis estadístico donde se analiza primeramente las tendencias del impuesto al valor agregado (IVA) y el impuesto a la renta (IR), así mismo las tendencias de los principales indicadores económicos tales como desempleo, inflación y PIB, por medio de las series de tiempo. Además, analiza una correlación cruzada entre los indicadores y los recaudos para determinar el comportamiento entre las variables seleccionadas. Se concluye que existe una relación directa entre la recaudación de impuestos y el PBI, dado que durante el periodo de estudio 2010-2019 se encontró que los gobiernos ecuatorianos han llevado a cabo diferentes reformas tributarias, con el fin de obtener mayores ingresos fiscales para poder cubrir los diferentes gastos.</p>
-<p><span class="citation" data-cites="narvaez_cumbicos_impacto_2019">Narvaez Cumbicos, Mite Albán, &amp; Lovato Torres (2019)</span> en su artículo científico analizó sobre el “Impacto entre la actividad económica y el efecto del incremento de la recaudación tributaria en Ecuador: periodo 2010-2017”. Para dicho estudio llevó a cabo un análisis descriptivo, bibliográfico y se utilizó una metodología de investigación correlacional integral, aplicando la regresión lineal, considerando el modelo de regresión de mínimo cuadrados ordinarios teniendo como variable dependiente Recaudación Tributaria y la variable independiente a actividad económica en la provincia de Santa Elena.</p>
-<p>Con los resultados de la regresión obteniendo un valor de R2=0.76, llegaron a la conclusión de que un aumento de la actividad económica en la provincia de Santa Elena afectó de manera positiva en el incremento de la Recaudación Tributaria Nacional periodo 2010-2017, teniendo un aumento de la recaudación tributaria nacional a través de tiempo paralelo con la recaudación tributaria de la provincia de Santa Elena de manera proporcional. También realizó la prueba de correlación, y se obtuvo un valor de 0.871 de asociación y su nivel de significancia aceptable.</p>
-<p><span class="citation" data-cites="benitez_impacto_2019">Benítez (2019)</span> En su investigación “Impacto del PIB sobre los ingresos tributarios del Ecuador durante el periodo 2000-2018”. Realizó el estudio con la finalidad de medir el impacto del Producto Interno Bruto del Ecuador, en la recaudación tributaria del Impuesto al Valor Agregado, Impuesto sobre la Renta y Derechos Arancelarios frente a las Importaciones, desde el año 2000 hasta junio del 2018 con una perspectiva para corto y largo plazo. En el cual lo realizó mediante Mínimos Cuadrados Ordinarios, y los de corto plazo con el Modelo de Corrección de Errores con datos trimestrales equivalentes a 74 observaciones desde el I trimestre del año 2000 hasta el II trimestre del 2018.Como resultado menciona que las recaudaciones tributarias efectivas, según la serie de tiempo analizada (2000 – 2018) del ISR, IVA y DA, no han sido suficientes para el presupuesto general del Estado.</p>
-<p>En cambio, para el modelo de elasticidad estimados en el largo plazo indican que, por cada punto porcentual de aumento en el PIB, la recaudación de largo plazo del ISR se incrementará en 2,32%, del IVA en 1,50%, y los DA en 0,97% cuando las importaciones se incrementan en 1%. De acuerdo con los datos, se tiene que el ISR es la principal fuente de ingresos tributarios para el Fisco, debido a que este impuesto se grava directamente sobre los salarios y sobre la renta de capital, lo cual afecta a la renta de los trabajadores, a las utilidades de los inversionistas, y, a las decisiones relacionadas con el ahorro y la inversión.</p>
-<p><span class="citation" data-cites="nina_politicas_2017">Nina, Bermeo, &amp; Cuesta (2017)</span> investigaron “Las políticas tributarias en el crecimiento económico de Ecuador, 2000-2015” para determinar la incidencia de las políticas tributarias en el crecimiento económico en la economía ecuatoriana en dicho periodo. Para ello trabajaron con datos de serie de tiempo de recaudación tributaria desde el año 2000, debido a que en ese año toma mayor importancia las políticas tributarias; la investigación se basa en un enfoque cuantitativo y deductivo empleando un análisis de tipo correlacional, porque se busca una asociación y correlación entre las variables de estudio. El modelo econométrico aplicado es con logaritmos, siendo un modelo de regresión múltiple.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(Y_i)%20=%20%5Cbeta_%7B0%7D%20+%20%5Cbeta_%7B1%7D%5Cln(X_1)%20+%20%5Cbeta_%7B2%7D%5Cln(X_2)%20+%20%5Cbeta_%7B3%7D%5Cln(X_3)%20+%20%5Cbeta_%7B4%7D%5Cln(X_4)%20+%20%5Cbeta_%7B5%7D%5Cln(X_5)%20+%20%5Cmu_%7Bi%7D"></p>
-<p>Dónde:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(Y_i)">= Logaritmo del Producto Interno Bruto (PIB)</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(X_1)">= Logaritmo del Impuesto a la renta</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(X_2)">= Logaritmo del Impuesto al valor agregado (IVA)</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(X_3)">= Logaritmo del Impuesto a los consumos especiales (ICE)</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(X_4)">= Logaritmo del Impuestos agregados especiales</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(X_5)">= Logaritmo de Otros impuestos</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cmu_%7Bi%7D">= Término de perturbación estocástica.</p>
-<p>Los resultados establecen una correlación significativa entre las políticas tributarias y el crecimiento económico de Ecuador, así mismo, existe una dependencia de las variables, por lo tanto, la variable dependiente (crecimiento económico) está explicada por la variable independiente (políticas tributarias). Concluyendo que existe una relación positiva entre los ingresos por concepto de tributación y el crecimiento económico y que los ingresos tributarios constituyen una fuente importante de ingresos para la economía de Ecuador, siendo los principales y más representativos en la recaudación: el impuesto a la renta, al valor agregado y a los consumos especiales, las cuales tuvieron un comportamiento creciente a lo largo del periodo de estudio.</p>
-<p><span class="citation" data-cites="henriquez_impuesto_2014">Henríquez (2014)</span> estudió el impuesto sobre el valor agregado (IVA) analizando su eficiencia y relación con el crecimiento económico en la economía de Chile. Para el estudio llevó a cabo un análisis descriptivo, debido a que está basado en teorías, siendo un estudio no experimental.</p>
-<p>Según el estudio, el IVA es una forma de tributación al gasto en consumo caracterizado por ser más eficiente que otras alternativas para gravar el gasto, ya que no genera el efecto piramidación y cascada, siendo el principal impuesto recaudador del sistema tributario chileno. El IVA no distorsiona el precio relativo entre consumo presente y el consumo futuro, por lo tanto, no incentiva ni desincentiva el ahorro y la inversión, debido a ello tiene una ventaja con respecto al impuesto a la renta, que es otro impuesto recaudador muy importante en la economía chilena. Concluyendo que el IVA es un impuesto “amigable” con el crecimiento económico, ya que no grava el ahorro y la inversión.</p>
-<p><span class="citation" data-cites="cid_pedraza_espacio_2018">Cid Pedraza, Matus-López, &amp; Báscolo (2018)</span> en su investigación sobre Espacio Fiscal Para Salud En Las Américas: ¿Es Suficiente El Crecimiento Económico? Realizó un estudio con la finalidad de determinar para cada uno de los países de la Región, si pueden alcanzar la meta de 6% en el PBI con solo el crecimiento económico. Por lo cual realizó un estudio de tipo cuantitativo, exploratorio y longitudinal, también se utilizó datos del Banco Mundial y de la Organización Mundial de Salud con los cuales se llegaron a estimar las elasticidades del gasto público en salud con respecto al PIB para cada país. Con base en el crecimiento económico real y el proyectado por el Fondo Monetario Internacional 2016–2021.</p>
-<p>Respecto a los estudios realizados llegaron a la conclusión que los estudios específicos para países han mostrado que el crecimiento económico es una fuente con potencial técnico y factibilidad política para aumentar el gasto público en salud (GPS) en la región. No obstante, su evolución y la relación entre ambas variables establecen limitaciones. Por lo cual los resultados son contundentes mostrando que pocos países pueden alcanzar la meta de GPS igual a 6% del PIB con base en los recursos que genere el crecimiento económico.</p>
-<p><span class="citation" data-cites="de_la_fuente_relacion_2021">La Fuente (2021)</span> En su artículo sobre La relación entre el crecimiento de los ingresos tributarios autonómicos y el crecimiento del PBI. Estudió la relación que existe entre la evolución del PBI regional y la de los ingresos tributarios homogéneos tras eliminar los efectos de los principales cambios normativos que afectan a la recaudación de los impuestos relevantes. Por lo que vio conveniente estimar la relación entre el crecimiento del PBI regional y el de los ingresos tributarios homogéneos de las comunidades autónomas. Los datos que usó fueron los impuestos cedidos tradicionales y el crecimiento del PBI durante los años 2002-2018. Respecto a los resultados obtenidos de las múltiples regresiones que se hizo muestran la relación directa, entre el crecimiento de cada una de estas partidas de recaudación y el del PBI nominal.</p>
-<p><span class="citation" data-cites="fernandez_producto_2019">Fernández &amp; Domínguez (2019)</span> en su artículo científico investigó “El Producto Bruto Interno (PBI) y su relación con los ingresos tributarios en el Perú 2007-2018”. Para ello, primero realizó una prueba de normalidad para demostrar si los datos se distribuyen normalmente y debido a la normalidad encontrada utilizó el análisis de correlación de Pearson. Utilizó la información documental de la SUNAT del Producto Bruto Interno (PBI) y los Ingresos Tributarios desde el 2007 hasta el 2018.</p>
-<p>El gasto público es uno de los cuatro componentes más importantes dentro de los cuales también encontramos al consumo privado, la inversión privada y las exportaciones; es necesario que el estado asegure el cumplimiento de la recaudación tributaria a través de los impuestos justos que posteriormente tendrá resultados positivos en la calidad de los ciudadanos.</p>
-<p>Con los resultados obtenidos del análisis se mostró que existe una relación significativa entre los ingresos tributarios que recauda el gobierno central con el PBI, además debido a la correlación alta entre ambas variables se puede afirmar que existe una relación directa. Concluyendo que si la actividad económica tiende a crecer esto se verá reflejado en la recaudación de los ingresos tributarios y a su vez en el mayor aumento de la demanda interna y externa, los cuales son elementos muy importantes para la reactivación de la economía del Perú.</p>
-<p><span class="citation" data-cites="shuai_effect_2013">Shuai &amp; Chmura (2013)</span> en su artículo científico investigó “The Effect of State Corporate Income Tax Rate Cuts on Job Creation”. Para ello, utilizó un modelo econométrico de panel de datos con efectos fijos. Por lo cual, con el fin de seleccionar el más apropiado realizó la prueba de Haussman del siguiente modelo especificado:</p>
-<p><img src="https://latex.codecogs.com/png.latex?EG_%7Bi,%20t%7D%20=%20%5Cbeta_%7B1%7DPG_%7Bi,%20t-1%7D%20+%20%5Cbeta_%7B2%7DTaxRate_%7Bi,%20t%7D%20+%20%5Cbeta_%7B3%7DTaxCutInd_%7Bi,%20t-L%7D%20+%20%5Cgamma_%7Bt%7D%20+%20%5Cepsilon_%7Bi,%20t%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?EG_%7Bi,%20t%7D">: Tasas de crecimiento anual del empleo</p>
-<p><img src="https://latex.codecogs.com/png.latex?PG_%7Bi,%20t-1%7D">: Tasa de crecimiento demográfico rezagada</p>
-<p><img src="https://latex.codecogs.com/png.latex?TaxRate_%7Bi,%20t%7D">: Tasas del impuesto sobre la renta de las empresas estatales.</p>
-<p><img src="https://latex.codecogs.com/png.latex?TaxCutInd_%7Bi,%20t-L%7D">: Acción de un recorte de impuestos (L, desfase de tiempo en los años 0 a 5)</p>
-<p>Utilizó la información de series de tiempo de 50 estados y el distrito de Columbia desde 1990 hasta el 2012.</p>
-<p>Con el fin de acelerar la recuperación económica se han planteado diversas acciones a favor del crecimiento económico a través de los recortes de impuestos, generalmente para incentivar a las empresas a contratar a más trabajadores y no tener una alta tasa de desempleados. Por lo cual, los gobiernos encargados de establecer estos impuestos deben tomar en cuenta los diversos efectos que estos tendrán en las actividades económicas antes de llevarlos a cabo.</p>
-<p>Con los resultados obtenidos se tiene que el crecimiento demográfico tiene un efecto positivo y significativo sobre la tasa de crecimiento anual del empleo; las tasas del impuesto sobre la renta de las empresas estatales tienen un efecto negativo y significativo; y la acción de reducción de impuestos tiene un efecto positivo y significativo cuando L=0, lo cual permite beneficios inmediatos para impulsar el empleo, pero a medida que se utiliza los rezagos posteriores, el coeficiente se convierte insignificante y positivo.</p>
-<p>En conclusión, la recaudación de impuestos de parte de las autoridades estatales sobre la renta de las empresas estatales no permite el crecimiento anual del empleo, y aunque se realice un recorte de impuestos para influir positivamente en el empleo esta solo se mantiene de forma temporal.</p>
-<p><span class="citation" data-cites="macek_impact_2014">Macek (2014)</span> en su artículo “The Impact of Taxation on Economic Growth: Case Study of OECD Countries” Nos menciona que el objetivo es evaluar el impacto de los tipos de impuestos sobre el crecimiento económico utilizando análisis de regresión en los países de la OCDE para el período 2000 - 2011. Para ver la relación entre las variables tributación y crecimiento económico se utiliza el método de regresión de panel.</p>
-<p>Si los ingresos provenientes de los impuestos se utilizan solo para la acumulación de capital humano, entonces existe una dependencia positiva entre el crecimiento económico y la tributación. Diferentes enfoques de la creación y características del sistema tributario en relación con los problemas presupuestarios de las economías desarrolladas enfatizan la importancia del tema de la interacción mutua entre impuestos (carga tributaria) y crecimiento económico (como objetivo básico de los responsables de la política económica). Al evaluar el impacto de la tributación en la dinámica económica, es imposible trabajar con tasas impositivas legales porque tienen un poder explicativo muy bajo cuando se trata de la representación de la carga tributaria real.</p>
-<p>Se confirmó una relación negativa con el crecimiento económico en el caso de los impuestos corporativos y los impuestos sobre la renta de las personas.</p>
-<p><span class="citation" data-cites="husak_relationship_2021">Husak (2021)</span> en su artículo “The relationship between taxation and U.S. economic growth” analiza la relación entre los distintos tipos de impuestos y el crecimiento económico de Estados Unidos, además, menciona que restringir la economía de libre mercado por medio de políticas, como es el caso del aumento de impuestos, es muy perjudicial para la economía de Estados unidos, por lo cual busca saber qué tipos de impuestos afectan positivamente y qué tipo de impuestos afectan negativamente. La metodología de este artículo es netamente cualitativa, por lo tanto, se utilizó data anual desde 1990 hasta el 2010.</p>
-<p>La reducción de impuestos para los propietarios de empresas y otras formas de capital, rara vez tuvo efectos perceptibles sobre la inversión o el crecimiento económico, pero aun así estos recortes aún tienen efectos económicos. Debido a que los ingresos del capital se distribuyen de manera tan desigual, la reducción de las tasas impositivas sobre las empresas y las inversiones crea una redistribución ascendente de los ingresos, enriqueciendo a los de mayores ingresos.</p>
-<p>En conclusión, muestra que los cambios impositivos pueden tener grandes efectos en la economía de los EE. UU. Pero estos cambios no han afectado de manera significativa al crecimiento económico general o a la inversión corporativa en las últimas décadas. En cambio, la investigación y los datos establecen firmemente que los principales efectos de los cambios tributarios se dan en la desigualdad y en los ingresos del gobierno.</p>
-<p><span class="citation" data-cites="mingo_recaudacion_2003">Mingo (2003)</span> en su artículo científico” Recaudación de las tasas municipales y los efectos del ciclo económico. Caso aplicado al municipio de General Pueyrredón”, busca medir empíricamente la influencia del PBI en las tasas de variación de la recaudación de tributos, para lo cual tomó como periodo de análisis los comprendidos entre 1985 - 2003.</p>
-<p>Se aplica un análisis de regresión lineal a las series de recaudación de tasas municipales: y se toma como variables dependientes la tasa de alumbrado público y limpieza.</p>
-<p>Modelo teórico</p>
-<p><img src="https://latex.codecogs.com/png.latex?Y_t=%20%5Cbeta_%7B0%7D%20+%20%5Cbeta_%7B1%7DINFL%20+%20%5Cbeta_%7B2%7DPBI%20+%20%5Cmu_%7Bt%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Y_t">= Tasa de variación de la recaudación real</p>
-<p><img src="https://latex.codecogs.com/png.latex?INFL">= Tasa de variación de la inflación</p>
-<p><img src="https://latex.codecogs.com/png.latex?PBI">= Tasa de variación del PBI real</p>
-<p>Se observa que existe una relación positiva entre la tasa de variación del PBI real y la tasa de variación de la recaudación de los ingresos corrientes; esto significa que, si la tasa de variación del PBI real aumenta en 1%, se produce un aumento de 2.08% en promedio en IC.</p>
-<p>Por lo tanto, se puede concluir que, existe prociclicidad en las tasas respecto de las variaciones del PBI.</p>
-<p><span class="citation" data-cites="engen_taxation_1996">Engen &amp; Skinner (1996)</span> en su artículo “Taxation and Economic Growth” examina la relación entre el crecimiento económico y la tributación a la luz de la acumulada evidencia económica.</p>
-<p>Para ello, se utilizaron tres enfoques, el primero consiste en examinar el historial de la economía estadounidense para evaluar si los recortes de impuestos se han asociado con el crecimiento económico. El segundo, es considerar la evidencia sobre impuestos y crecimiento para una gran muestra de países. Y finalmente, utilizamos evidencia de estudios a nivel micro sobre la oferta laboral, la demanda de inversión y el crecimiento de la productividad.</p>
-<p>Concluyendo de que los impuestos afectan positivamente el crecimiento económico ya que hay suficiente evidencia que vincula impuestos y crecimiento económico para hacer la inferencia razonable que los cambios beneficiosos en los impuestos pueden tener efectos modestos en el crecimiento de la producción.</p>
-<p><span class="citation" data-cites="gale_effects_2014">Gale &amp; Samwick (2014)</span> en su documento “Effects of Income Tax Changes on Economic Growth”, estudia cómo los cambios en el impuesto afectan el crecimiento económico a largo plazo.</p>
-<p>Para este estudio utilizaron un modelo econométrico desarrollado en la Reserva Federal y encontraron que una reducción en los impuestos que es algo similar a los recortes del impuesto sobre la renta de las personas físicas, reduce la producción a largo plazo y solo tiene un ligero efecto positivo en la producción en los primeros 10 años.</p>
-<p>Además, se enfocan en dos tipos de cambios impositivos: reducciones en las tasas del impuesto sobre la renta de las personas físicas y la “reforma del impuesto sobre la renta”. Define este último como cambios que amplían la base del impuesto sobre la renta y reducen el impuesto sobre la renta legal de tarifas, sin embargo, mantienen los niveles generales de ingresos y la distribución de cargas fiscales implícito por los ingresos corrientes del sistema.</p>
-<p>Se concluye que tanto los cambios en el nivel de ingresos como los cambios en la estructura del sistema tributario puede influir en la actividad económica, pero no todos los cambios impositivos tienen equivalentes, o incluso efectos positivos sobre el crecimiento a largo plazo.</p>
-<p><span class="citation" data-cites="lahura_efecto_2018">Lahura &amp; Castillo (2018)</span> en su trabajo “El efecto de los cambios tributarios en la actividad económica en el Perú: una aplicación del enfoque narrativo”, buscó estimar el efecto de los cambios tributarios en la actividad económica en el Perú; para ello, utilizaron el enfoque narrativo para construir una serie temporal de cambios tributarios exógenos. Los datos utilizados cubren los años 1991-2015 y se revisan trimestralmente.</p>
-<p>Empíricamente, Blanchard y Perotti, basándose en la evidencia internacional de que las reducciones de impuestos tienen un efecto positivo en la actividad económica, al hacerlo se determinará si el efecto es positivo o no. La estimación del efecto de los cambios impositivos exógenos sobre la actividad económica se realiza mediante la estimación de modelos econométricos estándar de series temporales.</p>
-<p>La certeza de los resultados obtenidos de las tres especificaciones (Modelos 1, 2 y 3) se analizó en dos dimensiones. Primero, los modelos base se vuelven a estimar utilizando tres índices sustitutos de cambio tributario: se observa el cambio en el impuesto establecido por la ley, el cambio en el impuesto ajustado al ciclo económico y el cambio en los ingresos recaudados. En segundo lugar, las extensiones del modelo VAR se estiman incluyendo variables como el gasto público real, los términos de intercambio (logarítmicos) y la carga tributaria.</p>
-<p>El principal resultado del estudio es que los aumentos de impuestos tienen un efecto negativo y estadísticamente significativo sobre el PBI real; Además, la dinámica del efecto estimado es relativamente fuerte para los diferentes modelos utilizados. En particular, encontramos que la elasticidad del PBI real a la presión fiscal es de aproximadamente -0.11 en el mismo trimestre en el que se produce el cambio fiscal y de -0.22 seis trimestres después. Además, frente a un aumento de impuestos equivalente a 1 µl del PBI, la carga tributaria disminuyó simultáneamente en 0.28 puntos porcentuales y alcanzó una reducción máxima de 0,9 puntos porcentuales después de siete trimestres.</p>
-<p>Estos resultados implican que la reducción de impuestos puede tener un efecto positivo en la actividad económica; sin embargo, este impacto no es suficiente para recuperar los ingresos iniciales que serán sacrificados.</p>
-</section>
-<section id="sec-marco-conceptual" class="level2">
-<h2 class="anchored" data-anchor-id="sec-marco-conceptual">Marco conceptual</h2>
-<p><strong>Crecimiento económico</strong></p>
-<p>El crecimiento económico se refiere a la mejora en los estándares de vida de la población en un territorio, generalmente en países, y se mide mediante el aumento de la capacidad productiva, es decir, la producción de bienes y servicios finales y el aumento de la renta en un período determinado en comparación con el mismo período del año anterior. Algunos indicadores que muestran el crecimiento económico incluyen una balanza comercial favorable, aumento del ahorro, inversión y consumo per cápita, entre otros. Los factores que influyen en el crecimiento económico son diversos e incluyen recursos naturales, recursos humanos, cambio tecnológico, acumulación de capital, estabilidad socio-política, innovación e inversión.</p>
-<p><strong>Recaudación de impuestos</strong></p>
-<p>La recaudación de impuestos se refiere al proceso de recolectar fondos a través de funciones administrativas por parte del gobierno central, regional o local, con el fin de llevar a cabo actividades administrativas, como obras públicas y mantenimiento, en beneficio de los ciudadanos. Existen políticas y períodos de aplazamiento para el pago de impuestos, y se aplican leyes para garantizar el cumplimiento de la recaudación, como el embargo de bienes.</p>
-<p><strong>Valor agregado bruto</strong></p>
-<p>El valor agregado bruto (VAB) o valor añadido bruto es una medida macroeconómica que mide el valor agregado o generado en las distintas etapas del proceso productivo de bienes y servicios. A partir del VAB se calcula el producto bruto interno (PBI) al agregar al valor agregado los impuestos indirectos. El VAB permite calcular la producción total de bienes y servicios durante un período de tiempo en un territorio, sector, país o región, sin incluir los impuestos indirectos y descontando los insumos necesarios para la producción.</p>
-<p><strong>Impuesto General a las Ventas (IGV)</strong></p>
-<p>El Impuesto General a las Ventas (IGV) es un tipo de tributo que recae en el consumidor final y se incluye generalmente en el precio de compra de bienes y servicios. El IGV se aplica a todas las transacciones comerciales de venta de bienes y servicios en Perú, y es pagado tanto por personas jurídicas como naturales. La tasa de este impuesto en Perú es del 18%. Existen diferentes tipos de IGV, como el IGV por cobrar, por pagar, por acreditar y por trasladar.</p>
-<p><strong>Impuesto a la renta</strong></p>
-<p>El impuesto a la renta es un tributo que se determina anualmente y grava los ingresos provenientes del trabajo o la explotación de un capital por parte de personas, empresas y otras entidades legales. Estos ingresos pueden ser generados por alquileres, cesiones de bienes muebles e inmuebles, acciones, valores mobiliarios y trabajo independiente o dependiente, según la categoría a la que pertenezcan. El impuesto a la renta se aplica mediante tarifas específicas y se recauda a través de retenciones o directamente por el contribuyente. Este impuesto es importante en el sistema tributario, ya que vincula el ahorro con la inversión y afecta los incentivos en el mercado laboral y empresarial.</p>
-<p><strong>Ingresos fiscales</strong></p>
-<p>Los ingresos fiscales son los recursos monetarios recaudados por el Estado para financiar las actividades del sector público a través de tributos, tasas y otras contribuciones. Estos ingresos se dividen en ingresos tributarios, relacionados con los impuestos, y no tributarios, asociados a las cotizaciones a la seguridad social. Los ingresos fiscales son fundamentales para el Estado, ya que representan una parte importante de sus ingresos y permiten la creación de presupuestos y la planificación del gasto público.</p>
-<p><strong>Beneficio fiscal</strong></p>
-<p>El beneficio fiscal se refiere al ahorro de impuestos o tributos que se obtiene a través de exenciones o reducciones fiscales. Es una forma de obtener ingresos fiscales y se aplica cuando una persona o entidad realiza prácticas consideradas positivas, lo cual se premia con un menor pago de impuestos. Los beneficios fiscales se rigen por la normativa vigente y pueden incluir exenciones, deducciones, reducciones, bonificaciones y subvenciones.</p>
-<p><strong>Presión fiscal</strong></p>
-<p>La presión fiscal, también conocida como presión tributaria o presión impositiva, es un término que representa la cantidad de dinero que los individuos, familias y empresas contribuyen efectivamente al Estado a través de impuestos, tasas y otros tributos. La presión fiscal se calcula como la relación porcentual entre el Producto Bruto Interno (PBI) y la recaudación tributaria del Estado. Los impuestos son la principal fuente de ingresos públicos. Una alta presión fiscal indica que se destina un mayor porcentaje del PBI al pago de impuestos, mientras que una baja presión fiscal no implica necesariamente impuestos bajos, ya que puede estar influenciada por la evasión fiscal y la informalidad económica. En economías desarrolladas, generalmente se observa una presión tributaria mayor en comparación con las economías en desarrollo.</p>
-<p><strong>Gasto público</strong></p>
-<p>El gasto público es el desembolso total realizado por el sector público y representa la cantidad de dinero que el Estado destina a sus actividades. Este gasto se utiliza para satisfacer las necesidades colectivas y puede incluir la adquisición de bienes y servicios. El gasto público está destinado a cubrir deficiencias del mercado y mejorar aspectos como el empleo y la educación. Se clasifica en diferentes tipos, como gasto corriente, gasto de capital, gasto de transferencia y gasto de inversión.</p>
-<p><strong>PBI</strong></p>
-<p>El Producto Bruto Interno (PBI) es un indicador económico que muestra el valor monetario de todos los bienes y servicios finales producidos en un territorio durante un período de tiempo determinado. Se utiliza para medir la riqueza generada por un país. El cálculo del PBI implica conocer el valor de todos los bienes y servicios finales producidos y sumarlos. Es un indicador complejo debido a la variedad de actividades económicas y su medición precisa.</p>
-<p><strong>Sistema tributario</strong></p>
-<p>El sistema tributario es el conjunto de normas, principios e instituciones que regulan la aplicación de los tributos en un país. Incluye los diferentes impuestos y su forma de aplicación en un determinado momento y territorio. El sistema tributario se rige por la legislación vigente y tiene como objetivo establecer las bases para la recaudación equitativa y eficiente de impuestos.</p>
-<p><strong>Impuesto selectivo al consumo</strong></p>
-<p>El impuesto selectivo al consumo grava aquellos productos que no son considerados de primera necesidad y cuyo consumo se desea desalentar. Ejemplos de estos productos son perfumes, armas, cigarrillos, bebidas alcohólicas, joyas, relojes, entre otros. También se aplican a bienes que causan impacto ambiental negativo, como los combustibles. El objetivo de este impuesto es reducir el consumo de dichos productos debido a sus consecuencias individuales, sociales o ambientales.</p>
-<p><strong>Evasión fiscal</strong></p>
-<p>La evasión fiscal es una actividad ilegal que consiste en ocultar bienes o ingresos con el fin de pagar menos impuestos de los que corresponden. Los contribuyentes que evaden impuestos lo hacen de manera consciente y voluntaria. Esta actividad ilícita puede acarrear graves consecuencias legales, como multas, prohibiciones para realizar ciertas actividades e incluso penas de cárcel.</p>
-</section>
-</section>
-<section id="sec-hipótesis" class="level1">
-<h1>Hipótesis</h1>
-<section id="sec-hipótesis-general" class="level2">
-<h2 class="anchored" data-anchor-id="sec-hipótesis-general">Hipótesis General</h2>
-<p>La influencia del crecimiento económico en recaudación de impuestos por la SUNAT en el departamento de Ayacucho, periodo 2007-2019, es directa.</p>
-</section>
-<section id="sec-hipótesis-específicas" class="level2">
-<h2 class="anchored" data-anchor-id="sec-hipótesis-específicas">Hipótesis Específicas</h2>
-<ol type="1">
-<li><p>La tendencia de la recaudación de impuestos por la SUNAT es creciente.</p></li>
-<li><p>La tendencia del crecimiento económico en el departamento de Ayacucho es creciente.</p></li>
-<li><p>La relación entre crecimiento económico y la recaudación de impuestos durante el periodo 2007-2019, es positiva.</p></li>
-</ol>
-</section>
-</section>
-<section id="sec-variables-e-indicadores" class="level1">
-<h1>Variables e indicadores</h1>
-<p>En el presente estudio se analizan diversas variables e indicadores para comprender la relación entre el crecimiento económico y la recaudación de impuestos. A continuación, se detallan las variables e indicadores utilizados:</p>
-<section id="sec-variable-independiente" class="level2">
-<h2 class="anchored" data-anchor-id="sec-variable-independiente">Variable independiente</h2>
-<p>Crecimiento económico: Esta variable representa la tasa de crecimiento económico de la región o país en estudio. Se utiliza como un indicador del desarrollo y la expansión de la actividad económica.</p>
-<p>Indicador:</p>
-<p>Valor agregado bruto (VAB) - Valores a Precios Constantes de 2007 (Miles de soles): Este indicador cuantifica el valor total de la producción económica de la región o país, ajustado a precios constantes de 2007. El VAB es una medida ampliamente utilizada para evaluar el desempeño económico y el nivel de actividad productiva.</p>
-</section>
-<section id="sec-variable-dependiente" class="level2">
-<h2 class="anchored" data-anchor-id="sec-variable-dependiente">Variable dependiente</h2>
-<p>Recaudación de impuestos: Esta variable representa la cantidad total de impuestos recaudados por el gobierno o la entidad fiscalizadora en la región o país en estudio. Indica la capacidad de generar ingresos fiscales a partir de la imposición de tributos.</p>
-<p>Indicadores:</p>
-<ul>
-<li><p>Impuesto General a las Ventas interno según departamento - Ayacucho (Miles de soles): Este indicador especifica la cantidad de impuestos generados a través del Impuesto General a las Ventas (IGV) en el departamento de Ayacucho, expresado en miles de soles. El IGV es un impuesto al consumo aplicado en la venta de bienes y servicios.</p></li>
-<li><p>Impuesto a la renta según departamento - Ayacucho (Miles de soles): Este indicador muestra la cantidad de impuestos recaudados a través del Impuesto a la Renta en el departamento de Ayacucho, expresado en miles de soles. El Impuesto a la Renta grava los ingresos y ganancias obtenidos por personas y empresas.</p></li>
-<li><p>Impuesto a la producción y consumo según departamento - Ayacucho (Miles de soles): Este indicador indica la cantidad de impuestos generados a través del Impuesto a la Producción y Consumo en el departamento de Ayacucho, expresado en miles de soles. Este impuesto se aplica a la producción y venta de bienes específicos.</p></li>
-<li><p>Otros gastos según departamento - Ayacucho (Miles de soles): Este indicador refleja los otros gastos relacionados con impuestos y contribuciones en el departamento de Ayacucho, expresados en miles de soles. Incluye gastos adicionales que no están cubiertos por los indicadores anteriores.</p></li>
-</ul>
-</section>
-</section>
-<section id="sec-metodología" class="level1">
-<h1>Metodología</h1>
-<p>En esta sección se presenta la metodología utilizada en el estudio, abordando el tipo y nivel de investigación empleado.</p>
-<section id="tipo-y-nivel-de-investigación" class="level2">
-<h2 class="anchored" data-anchor-id="tipo-y-nivel-de-investigación">Tipo y nivel de investigación</h2>
-<section id="tipo" class="level3">
-<h3 class="anchored" data-anchor-id="tipo">Tipo</h3>
-<p>La investigación realizada se clasifica en los siguientes tipos:</p>
-<ol type="a">
-<li><p>Investigación aplicada: Esta investigación se enfoca en la explicación y resolución de fenómenos económicos concretos. En este caso, se analiza la relación entre el Valor Agregado Bruto y la recaudación de impuestos en la vida real, tanto a nivel gubernamental como empresarial.</p></li>
-<li><p>Investigación descriptiva: Se lleva a cabo un análisis detallado de la realidad a través de una serie de indicadores. En este estudio, se describen y analizan los indicadores relacionados con el Valor Agregado Bruto y los impuestos.</p></li>
-<li><p>Investigación cuantitativa: Se emplea un enfoque numérico para examinar la información. En este caso, se recopilaron datos cronológicos del Valor Agregado Bruto en relación con los impuestos, y se utilizaron herramientas estadísticas para su análisis.</p></li>
-</ol>
-</section>
-<section id="nivel" class="level3">
-<h3 class="anchored" data-anchor-id="nivel">Nivel</h3>
-<p>El estudio se encuentra en los siguientes niveles:</p>
-<ol type="a">
-<li><p>Nivel descriptivo: El objetivo es describir las situaciones, fenómenos o contextos relacionados con el Valor Agregado Bruto y la recaudación de impuestos.</p></li>
-<li><p>Nivel correlacional: Se busca establecer la asociación o grado de relación existente entre las variables de estudio en un periodo y espacio determinado. En este caso, se analiza la relación entre el Valor Agregado Bruto y la recaudación de impuestos.</p></li>
-</ol>
-</section>
-</section>
-<section id="sec-población-y-muestra" class="level2">
-<h2 class="anchored" data-anchor-id="sec-población-y-muestra">Población y muestra</h2>
-<section id="población" class="level3">
-<h3 class="anchored" data-anchor-id="población">Población</h3>
-<p>La población de estudio comprende el crecimiento económico y la recaudación tributaria en Ayacucho a lo largo de los años desde la creación de la República del Perú.</p>
-</section>
-<section id="muestra" class="level3">
-<h3 class="anchored" data-anchor-id="muestra">Muestra</h3>
-<p>La muestra seleccionada está compuesta por el crecimiento económico y la recaudación tributaria en el departamento de Ayacucho durante los años 2007 a 2019.</p>
-</section>
-</section>
-<section id="sec-fuentes-de-información" class="level2">
-<h2 class="anchored" data-anchor-id="sec-fuentes-de-información">Fuentes de información</h2>
-<section id="tipo-de-información" class="level3">
-<h3 class="anchored" data-anchor-id="tipo-de-información">Tipo de información</h3>
-<p>Esta investigación se basa en información secundaria obtenida de las siguientes fuentes:</p>
-<ul>
-<li><p>Banco Central de Reserva del Perú (BCRP)</p></li>
-<li><p>Superintendencia Nacional de Aduanas y de Administración Tributaria (SUNAT)</p></li>
-</ul>
-</section>
-<section id="recopilación-y-procesamiento-de-información" class="level3">
-<h3 class="anchored" data-anchor-id="recopilación-y-procesamiento-de-información">Recopilación y procesamiento de información</h3>
-<p>El procesamiento y análisis de datos en este estudio se llevó a cabo siguiendo el siguiente procedimiento:</p>
-<ul>
-<li>Recopilación de información</li>
-<li>Consolidación de datos</li>
-<li>Generación de cuadros y gráficos utilizando Excel para el análisis descriptivo</li>
-<li>Aplicación de técnicas econométricas utilizando EViews para el análisis explicativo</li>
-</ul>
-</section>
-</section>
-<section id="diseño-de-investigación" class="level2">
-<h2 class="anchored" data-anchor-id="diseño-de-investigación">Diseño de investigación</h2>
-<p>Este estudio se basa en un diseño de investigación <strong>no experimental</strong>, en el cual se observan e interpretan las variables para llegar a conclusiones.</p>
-</section>
-<section id="técnicas-e-instrumentos" class="level2">
-<h2 class="anchored" data-anchor-id="técnicas-e-instrumentos">Técnicas e instrumentos</h2>
-<p>Las técnicas e instrumentos utilizados en esta investigación son los siguientes:</p>
-<ul>
-<li>Histogramas</li>
-<li>Análisis de series históricas obtenidas del BCRP y SUNAT</li>
-<li>Técnicas de correlación</li>
-<li>Mediciones estadísticas</li>
-</ul>
-</section>
-<section id="plan-de-análisis" class="level2">
-<h2 class="anchored" data-anchor-id="plan-de-análisis">Plan de análisis</h2>
-<div id="tbl-1" class="anchored">
-<table class="table">
-<caption>Tabla&nbsp;1: Procedimiento econométrico utilizado para la investigación</caption>
-<colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Nombre de la Etapa</th>
-<th>Tests o técnicas econométricas empleadas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1. Análisis de estacionariedad de las series</td>
-<td>Test de estacionariedad de Dickey – Fuller aumentado (DFA) <br> Prueba de Phillips Perron</td>
-</tr>
-<tr class="even">
-<td>2. Análisis de causalidad entre pares de series</td>
-<td>Test de causalidad de Granger (GRG)</td>
-</tr>
-<tr class="odd">
-<td>3. Estimación del modelo econométrico de la investigación (modelo inicial)</td>
-<td>Regresión lineal múltiple</td>
-</tr>
-<tr class="even">
-<td>4. Evaluación de robustez estadística del modelo</td>
-<td>Test de heteroscedasticidad de White <br> Test de heteroscedasticidad de Koenker-Basset <br> Test de autocorrelación de primer orden de Durbin-Watson <br> Test de autocorrelación de orden múltiple de Breusch-Godfrey</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Nota: La tabla presenta las etapas del análisis econométrico y las correspondientes pruebas y técnicas empleadas en cada una de ellas.</p>
-</section>
-</section>
-<section id="sec-resultados" class="level1">
-<h1>Resultados</h1>
-<section id="análisis-e-interpretación-de-nuestros-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="análisis-e-interpretación-de-nuestros-resultados">Análisis e interpretación de nuestros resultados</h2>
-<section id="la-recaudación-de-impuestos-en-la-sunat-departamento-de-ayacucho-en-el-periodo-2007-2019-miles-de-soles" class="level3">
-<h3 class="anchored" data-anchor-id="la-recaudación-de-impuestos-en-la-sunat-departamento-de-ayacucho-en-el-periodo-2007-2019-miles-de-soles">La recaudación de impuestos en la SUNAT, departamento de Ayacucho en el periodo 2007 – 2019 (miles de soles)</h3>
-<div id="tbl-2" class="anchored">
-<table class="table">
-<caption>Tabla&nbsp;2: Ayacucho Ingresos tributarios recaudados por la SUNAT - Tributos internos, 2007-2019 (miles de soles)</caption>
-<colgroup>
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>AÑOS</th>
-<th>Impuesto a la Renta</th>
-<th>Primera Categoría</th>
-<th>Segunda Categoría</th>
-<th>Tercera Categoría</th>
-<th>Cuarta Categoría</th>
-<th>Quinta Categoría</th>
-<th>No domiciliados</th>
-<th>Regularización</th>
-<th>Régimen Especial IR</th>
-<th>Régimen Mype Tributario</th>
-<th>Otras Rentas 2/</th>
-<th>Impuesto General a las Ventas</th>
-<th>Impuesto Selectivo al Consumo</th>
-<th>Otros Ingresos</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2007</td>
-<td>11,313.4</td>
-<td>786.2</td>
-<td>24.5</td>
-<td>6,869.1</td>
-<td>858.6</td>
-<td>1,781.0</td>
-<td>3.5</td>
-<td>627.9</td>
-<td>277.5</td>
-<td>-</td>
-<td>85.1</td>
-<td>10,686.1</td>
-<td>10.3</td>
-<td>3,010.6</td>
-</tr>
-<tr class="even">
-<td>2008</td>
-<td>15,564.1</td>
-<td>945.5</td>
-<td>80.4</td>
-<td>9,653.0</td>
-<td>966.3</td>
-<td>2,275.2</td>
-<td>11.6</td>
-<td>1,177.2</td>
-<td>394.6</td>
-<td>-</td>
-<td>67.5</td>
-<td>10,022.1</td>
-<td>12.8</td>
-<td>3,514.7</td>
-</tr>
-<tr class="odd">
-<td>2009</td>
-<td>16,804.3</td>
-<td>606.2</td>
-<td>260.3</td>
-<td>10,368.7</td>
-<td>1,062.1</td>
-<td>2,574.1</td>
-<td>13.7</td>
-<td>1,284.3</td>
-<td>474.4</td>
-<td>-</td>
-<td>160.4</td>
-<td>10,447.8</td>
-<td>16.8</td>
-<td>5,569.9</td>
-</tr>
-<tr class="even">
-<td>2010</td>
-<td>19,394.1</td>
-<td>620.7</td>
-<td>478.2</td>
-<td>12,278.4</td>
-<td>1,052.6</td>
-<td>2,862.0</td>
-<td>6.3</td>
-<td>1,278.4</td>
-<td>572.3</td>
-<td>-</td>
-<td>245.4</td>
-<td>12,311.6</td>
-<td>20.5</td>
-<td>6,016.7</td>
-</tr>
-<tr class="odd">
-<td>2011</td>
-<td>22,410.3</td>
-<td>772.0</td>
-<td>911.0</td>
-<td>13,109.1</td>
-<td>989.8</td>
-<td>4,141.4</td>
-<td>75.5</td>
-<td>1,313.2</td>
-<td>752.6</td>
-<td>-</td>
-<td>345.8</td>
-<td>11,550.1</td>
-<td>18.3</td>
-<td>7,744.0</td>
-</tr>
-<tr class="even">
-<td>2012</td>
-<td>29,425.3</td>
-<td>961.9</td>
-<td>964.5</td>
-<td>17,557.5</td>
-<td>1,722.7</td>
-<td>5,140.7</td>
-<td>77.0</td>
-<td>1,854.1</td>
-<td>1,001.8</td>
-<td>-</td>
-<td>145.1</td>
-<td>18,027.0</td>
-<td>22.4</td>
-<td>16,524.2</td>
-</tr>
-<tr class="odd">
-<td>2013</td>
-<td>38,204.6</td>
-<td>1,213.9</td>
-<td>1,395.6</td>
-<td>22,946.3</td>
-<td>2,298.0</td>
-<td>6,654.5</td>
-<td>57.7</td>
-<td>2,307.8</td>
-<td>1,201.0</td>
-<td>-</td>
-<td>129.7</td>
-<td>23,915.0</td>
-<td>203.9</td>
-<td>18,398.9</td>
-</tr>
-<tr class="even">
-<td>2014</td>
-<td>52,753.6</td>
-<td>1,569.5</td>
-<td>1,387.3</td>
-<td>30,192.5</td>
-<td>2,685.3</td>
-<td>10,817.8</td>
-<td>9.1</td>
-<td>4,289.0</td>
-<td>1,665.6</td>
-<td>-</td>
-<td>137.5</td>
-<td>32,525.2</td>
-<td>35.7</td>
-<td>20,848.4</td>
-</tr>
-<tr class="odd">
-<td>2015</td>
-<td>53,684.9</td>
-<td>2,135.5</td>
-<td>2,032.8</td>
-<td>30,063.3</td>
-<td>2,533.8</td>
-<td>8,691.4</td>
-<td>121.3</td>
-<td>5,969.9</td>
-<td>2,034.7</td>
-<td>-</td>
-<td>102.1</td>
-<td>39,272.5</td>
-<td>42.2</td>
-<td>21,587.9</td>
-</tr>
-<tr class="even">
-<td>2016</td>
-<td>58,538.2</td>
-<td>2,548.5</td>
-<td>1,787.0</td>
-<td>33,142.4</td>
-<td>3,089.1</td>
-<td>9,937.2</td>
-<td>15.6</td>
-<td>5,472.7</td>
-<td>2,393.0</td>
-<td>-</td>
-<td>152.7</td>
-<td>44,115.9</td>
-<td>15.3</td>
-<td>20,231.6</td>
-</tr>
-<tr class="odd">
-<td>2017</td>
-<td>55,934.3</td>
-<td>2,635.2</td>
-<td>1,689.6</td>
-<td>19,570.8</td>
-<td>3,431.8</td>
-<td>10,301.9</td>
-<td>21.5</td>
-<td>5,468.6</td>
-<td>2,267.6</td>
-<td>10,435.1</td>
-<td>112.2</td>
-<td>46,339.9</td>
-<td>12.0</td>
-<td>19,843.5</td>
-</tr>
-<tr class="even">
-<td>2018</td>
-<td>65,930.3</td>
-<td>3,076.9</td>
-<td>1,890.4</td>
-<td>17,379.3</td>
-<td>3,896.8</td>
-<td>15,696.3</td>
-<td>30.3</td>
-<td>6,731.3</td>
-<td>2,497.8</td>
-<td>14,486.5</td>
-<td>244.8</td>
-<td>50,144.8</td>
-<td>19.6</td>
-<td>21,064.1</td>
-</tr>
-<tr class="odd">
-<td>2019</td>
-<td>68,365.1</td>
-<td>3,194.0</td>
-<td>2,126.9</td>
-<td>15,942.7</td>
-<td>3,903.0</td>
-<td>19,251.2</td>
-<td>47.7</td>
-<td>5,270.6</td>
-<td>2,567.3</td>
-<td>15,867.1</td>
-<td>194.5</td>
-<td>52,868.9</td>
-<td>50.1</td>
-<td>22,092.7</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Nota: Elaboración propia (datos SUNAT)</p>
-<p>En Ayacucho, las principales fuentes de recaudación de impuestos provienen del impuesto a la renta, que representa una de las mayores contribuciones en la región, así como del impuesto general a las ventas (IGV), el impuesto selectivo al consumo (ISC) y otros ingresos que incluyen impuestos a las transferencias financieras, impuesto al activo, impuesto especial a la minería, entre otros. A continuación, se detallan estas fuentes de recaudación:</p>
-<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;1: Ayacucho: Impuesto a la renta 2007 - 2019(Miles de s/).</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/20230603225440.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Interpretación:</p>
-<p>La figura muestra la recaudación interna de impuestos a la renta por parte de la SUNAT en el departamento de Ayacucho. Se observa un claro crecimiento a lo largo de los años, pasando de 11,313 miles de soles en 2007 a 68,365 miles de soles en 2019. Sin embargo, en 2017 se registró una disminución en la recaudación de impuestos a la renta en comparación con el año anterior. Esta caída se debe principalmente a las menores recaudaciones en los impuestos de segunda categoría, tercera categoría y cuarta categoría.</p>
-<div id="fig-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;2: Ayacucho: Impuesto General a las ventas (IGV) 2007 - 2019 (Milesde S/).</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/20230603225447.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Nota: Incluye el Impuesto General a las Ventas por Cuenta Propia, No Domiciliados y liquidaciones de compra-retenciones, operaciones internas arroz, Impuesto Especial a las Ventas, Decreto de Urgencia N° 089-97(DCTP Fertilizantes) e Impuesto Promoción Municipal.</p>
-<p>Interpretación:</p>
-<p>El impuesto general a las ventas es una de las principales fuentes de recaudación en el departamento de Ayacucho. Durante el período estudiado, se observó un importante crecimiento en esta recaudación, como se muestra en la figura. Pasó de 10,686.1 miles de soles en 2007 a 52,868.9 miles de soles en 2019, alcanzando su punto máximo de recaudación en este último año. Aunque se registraron algunas caídas leves en los años 2019 y 2011, en general, el impuesto general a las ventas mostró un crecimiento significativo hasta 2019.</p>
-<div id="fig-3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;3: Ayacucho: Impuesto Selectivo al consumo (ISC) 2007 - 2019 (Miles de s/).</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/20230603225455.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Nota: Incluye combustibles, gaseosas, cervezas, cigarrillos, tragamonedas, licores, agua mineral, vehículos, pagos de I.S.C. en formularios 151 y 185, Casinos de juego, Juegos de azar y apuestas, Loterías, Bingos, Rifas y Eventos hípicos.</p>
-<p>Interpretación:</p>
-<p>Aunque el impuesto selectivo al consumo (ISC) es uno de los sectores de menor recaudación en el departamento de Ayacucho, la tabla muestra un crecimiento significativo a lo largo de los años. En 2007, la recaudación por este concepto fue de solo 10.3 mil soles, pero en 2017 superó los 203.9 mil soles, siendo la cifra más alta entre los periodos mencionados. A pesar de su posición relativamente baja en comparación con otros impuestos, el ISC experimentó un notorio incremento a lo largo del tiempo en el departamento de Ayacucho.</p>
-</section>
-<section id="crecimiento-económico-del-departamento-de-ayacucho-en-el-periodo-2007-2019" class="level3">
-<h3 class="anchored" data-anchor-id="crecimiento-económico-del-departamento-de-ayacucho-en-el-periodo-2007-2019">Crecimiento económico del departamento de Ayacucho en el periodo 2007 – 2019</h3>
-<div id="tbl-3" class="anchored">
-<table class="table">
-<caption>Tabla&nbsp;3: Valor Agregado Bruto (VAB) según actividad económica en Ayacucho (2007-2019, Tasa de crecimiento %)</caption>
-<colgroup>
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Actividades</th>
-<th>2007</th>
-<th>2008</th>
-<th>2009</th>
-<th>2010</th>
-<th>2011</th>
-<th>2012</th>
-<th>2013</th>
-<th>2014</th>
-<th>2015</th>
-<th>2016</th>
-<th>2017</th>
-<th>2018</th>
-<th>2019</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Agricultura, Ganadería, Caza y Silvicultura</td>
-<td>3.3</td>
-<td>14.3</td>
-<td>3.2</td>
-<td>-5.1</td>
-<td>-4.1</td>
-<td>16.1</td>
-<td>-5.3</td>
-<td>-9.2</td>
-<td>1.3</td>
-<td>-1.2</td>
-<td>6.1</td>
-<td>15.2</td>
-<td>-1.3</td>
-</tr>
-<tr class="even">
-<td>Pesca y Acuicultura</td>
-<td>-13.4</td>
-<td>-18.5</td>
-<td>10.8</td>
-<td>-7.7</td>
-<td>121.7</td>
-<td>37.4</td>
-<td>2.3</td>
-<td>5.5</td>
-<td>13.6</td>
-<td>12.1</td>
-<td>41.9</td>
-<td>1.9</td>
-<td>-51.7</td>
-</tr>
-<tr class="odd">
-<td>Extracción de Petróleo, Gas y Minerales</td>
-<td>107.4</td>
-<td>49.6</td>
-<td>35.8</td>
-<td>6.2</td>
-<td>3.3</td>
-<td>2.7</td>
-<td>25.9</td>
-<td>-3.1</td>
-<td>14.8</td>
-<td>-0.8</td>
-<td>6.4</td>
-<td>3.4</td>
-<td>6.2</td>
-</tr>
-<tr class="even">
-<td>Manufactura</td>
-<td>6.7</td>
-<td>6.0</td>
-<td>0.2</td>
-<td>7.4</td>
-<td>4.4</td>
-<td>2.0</td>
-<td>-0.3</td>
-<td>-7.9</td>
-<td>-2.4</td>
-<td>3.7</td>
-<td>2.1</td>
-<td>5.6</td>
-<td>0.1</td>
-</tr>
-<tr class="odd">
-<td>Electricidad, Gas y Agua</td>
-<td>2.1</td>
-<td>7.4</td>
-<td>-1.6</td>
-<td>8.1</td>
-<td>5.6</td>
-<td>10.8</td>
-<td>6.1</td>
-<td>15.2</td>
-<td>7.0</td>
-<td>-18.2</td>
-<td>4.9</td>
-<td>6.3</td>
-<td>0.5</td>
-</tr>
-<tr class="even">
-<td>Construcción</td>
-<td>36.6</td>
-<td>10.9</td>
-<td>14.2</td>
-<td>12.3</td>
-<td>21.8</td>
-<td>23.9</td>
-<td>26.4</td>
-<td>0.3</td>
-<td>2.2</td>
-<td>-15.5</td>
-<td>11.0</td>
-<td>7.7</td>
-<td>-1.1</td>
-</tr>
-<tr class="odd">
-<td>Comercio</td>
-<td>6.7</td>
-<td>12.6</td>
-<td>2.3</td>
-<td>10.1</td>
-<td>6.8</td>
-<td>13.2</td>
-<td>6.1</td>
-<td>1.0</td>
-<td>1.9</td>
-<td>1.6</td>
-<td>1.1</td>
-<td>1.4</td>
-<td>2.4</td>
-</tr>
-<tr class="even">
-<td>Transporte, Almacenamiento, Correo y Mensajería</td>
-<td>10.7</td>
-<td>8.2</td>
-<td>2.5</td>
-<td>8.2</td>
-<td>8.5</td>
-<td>7.0</td>
-<td>6.0</td>
-<td>3.7</td>
-<td>3.5</td>
-<td>3.3</td>
-<td>2.9</td>
-<td>2.6</td>
-<td>2.2</td>
-</tr>
-<tr class="odd">
-<td>Alojamiento y Restaurantes</td>
-<td>8.5</td>
-<td>9.9</td>
-<td>0.6</td>
-<td>5.6</td>
-<td>8.5</td>
-<td>9.0</td>
-<td>6.9</td>
-<td>4.2</td>
-<td>2.8</td>
-<td>3.2</td>
-<td>2.0</td>
-<td>4.0</td>
-<td>4.8</td>
-</tr>
-<tr class="even">
-<td>Telecomunicaciones y Otros Servicios de Información</td>
-<td>0</td>
-<td>24.5</td>
-<td>14.3</td>
-<td>15.9</td>
-<td>15.0</td>
-<td>17.9</td>
-<td>14.1</td>
-<td>11.0</td>
-<td>10.1</td>
-<td>13.8</td>
-<td>12.4</td>
-<td>9.8</td>
-<td>7.8</td>
-</tr>
-<tr class="odd">
-<td>Administración Pública y Defensa</td>
-<td>4.7</td>
-<td>7.5</td>
-<td>13.2</td>
-<td>2.9</td>
-<td>3.8</td>
-<td>4.0</td>
-<td>4.0</td>
-<td>4.6</td>
-<td>6.6</td>
-<td>7.6</td>
-<td>5.4</td>
-<td>5.7</td>
-<td>6.0</td>
-</tr>
-<tr class="even">
-<td>Otros Servicios</td>
-<td>6.9</td>
-<td>3.9</td>
-<td>5.2</td>
-<td>3.7</td>
-<td>5.0</td>
-<td>6.7</td>
-<td>5.8</td>
-<td>5.7</td>
-<td>6.0</td>
-<td>4.6</td>
-<td>3.7</td>
-<td>3.6</td>
-<td>2.9</td>
-</tr>
-<tr class="odd">
-<td>Valor Agregado Bruto</td>
-<td>12.3</td>
-<td>14.3</td>
-<td>10.3</td>
-<td>4.6</td>
-<td>4.8</td>
-<td>9.0</td>
-<td>9.4</td>
-<td>-0.5</td>
-<td>5.8</td>
-<td>0.3</td>
-<td>5.3</td>
-<td>5.6</td>
-<td>2.9</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Fuente: Elaboración propia (datos: INEI, BCRP)</p>
-<div id="fig-4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;4: Ayacucho: Valor agregado Bruto (VAB) según actividad económica 2007-2019 (Tasa de crecimiento, %)</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/20230603230848.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>La evolución del Valor Agregado Bruto (VAB) en la región de Ayacucho se muestra en el gráfico, revelando variaciones significativas a lo largo de los últimos años. Aunque no se observa un crecimiento continuo, se destaca que en algunos períodos el VAB ha experimentado un crecimiento negativo, como en el año 2014 con una disminución del 0.5%. Es importante mencionar que el año más destacado en términos de crecimiento fue el 2008, cuando alcanzó un impresionante incremento del 14.3%.</p>
-</section>
-<section id="relación-entre-el-crecimiento-económico-y-la-recaudación-de-impuestos-en-la-sunat-departamento-de-lambayeque-en-el-periodo-2007-2019" class="level3">
-<h3 class="anchored" data-anchor-id="relación-entre-el-crecimiento-económico-y-la-recaudación-de-impuestos-en-la-sunat-departamento-de-lambayeque-en-el-periodo-2007-2019">Relación entre el crecimiento económico y la recaudación de impuestos en la SUNAT, departamento de Lambayeque en el periodo 2007 – 2019</h3>
-<p>Nuestro objetivo es analizar la relación entre el crecimiento económico y la recaudación de impuestos en el departamento de Ayacucho. Utilizamos como indicador de crecimiento económico la actividad económica de la región y la recaudación de impuestos por parte de la SUNAT. Para lograrlo, aplicamos estimaciones econométricas lineales mediante un modelo de regresión lineal simple. El propósito de este enfoque es demostrar el efecto del crecimiento económico en la recaudación de impuestos. Los parámetros estimados en el modelo son los siguientes:</p>
-<p>Modelo: <img src="https://latex.codecogs.com/png.latex?R_i%20=%20%5Cbeta_%7B1%7D%20+%20%5Cbeta_%7B2%7DVAB%20+%20%5Cmu_%7Bi%7D"></p>
-<p>Dependent Variable: RI</p>
-<p>Method: Least Squares</p>
-<p>Date: 12/27/21 Time: 19:06</p>
-<p>Sample: 2007-2019</p>
-<p>Included observations: 13</p>
-<div id="tbl-4" class="anchored">
-<table class="table">
-<caption>Tabla&nbsp;4: Resultados del modelo estimado inicial</caption>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Coefficient</th>
-<th>Std. Error</th>
-<th>t-Statistic</th>
-<th>Prob.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>C</td>
-<td>-135238.1</td>
-<td>18103.46</td>
-<td>-7.470290</td>
-<td>0.0000</td>
-</tr>
-<tr class="even">
-<td>VAB</td>
-<td>0.046999</td>
-<td>0.003858</td>
-<td>12.18173</td>
-<td>0.0000</td>
-</tr>
-<tr class="odd">
-<td>R-squared</td>
-<td>0.930989</td>
-<td>Mean dependent var</td>
-<td>81344.83</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Adjusted R-squared</td>
-<td>0.924715</td>
-<td>S.D. dependent var</td>
-<td>44814.89</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>S.E. of regression</td>
-<td>12296.35</td>
-<td>Akaike info criterion</td>
-<td>21.81263</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Sum squared resid</td>
-<td>1.66E+09</td>
-<td>Schwarz criterion</td>
-<td>21.89955</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Log likelihood</td>
-<td>-139.7821</td>
-<td>Hannan-Quinn criter.</td>
-<td>21.79477</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>F-statistic</td>
-<td>148.3945</td>
-<td>Durbin-Watson stat</td>
-<td>0.880483</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Prob(F-statistic)</td>
-<td>0.000000</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>La variable independiente del PBI departamental explica el 93.1% de la variabilidad de los impuestos, con un total de 13 observaciones. Según la prueba de t de Student, los parámetros del modelo son estadísticamente significativos con un nivel de significancia del 5%. Además, de acuerdo a la prueba F, el modelo es estadísticamente significativo.</p>
-<p>Para analizar la estacionariedad de las variables, se utilizó el <strong>test de Dickey-Fuller aumentado</strong>, el cual es ampliamente empleado en la literatura. Se aplicó este test a la serie de logaritmo de la variable VAB con su diferencia, utilizando el criterio de información de Akaike. El valor crítico obtenido fue de -1.91, el cual es menor que -2.86 con un nivel de significancia del 5%. Por lo tanto, se acepta la hipótesis nula, lo que implica la existencia de raíz unitaria y no estacionariedad (Anexo-Figura 5).</p>
-<p>Se realizó el mismo análisis de estacionariedad utilizando el test de Dickey-Fuller aumentado para la variable RI. Se obtuvo un valor crítico de -0.057, el cual es menor que -2.86 con un nivel de significancia del 5%. Por lo tanto, se acepta la hipótesis nula, indicando la existencia de raíz unitaria y no estacionalidad (Anexo-Figura 6).</p>
-<p>Se aplicó la <strong>prueba de Phillips Perron</strong> a nuestra variable independiente, obteniendo un p-valor de -1.75 con un nivel de significancia del 5%. Se acepta la hipótesis nula, lo que indica la existencia de raíz unitaria y no estacionariedad (Anexo-Figura 7). También se realizó la prueba de Phillips Perron para la variable dependiente, obteniendo un p-valor de 0.056 con un nivel de significancia del 5%. Se acepta la hipótesis nula, lo que sugiere la existencia de raíz unitaria y no estacionariedad (Anexo-Figura 8).</p>
-<p>Para detectar la presencia de <strong>heterocedasticidad</strong> en los errores, se llevaron a cabo dos pruebas: la prueba de White y la prueba Koenker-Bassett. En ambos casos, se concluyó que no hay evidencia de heterocedasticidad en nuestra regresión (Anexo-Figuras 11 y 12).</p>
-<p>Se realizó una <strong>prueba de autocorrelación</strong> utilizando el estadístico Durbin-Watson. Un valor de d menor que 1.01 o mayor que 2.99 indica un problema potencialmente grave de autocorrelación. En nuestro caso, el estadístico Durbin-Watson es 0.8880485, que es menor que 1.5, lo que indica la presencia de problemas de autocorrelación (Anexo-Figuras 13 y 14).</p>
-<p>Se llevó a cabo un análisis de causalidad utilizando la <strong>prueba de Granger</strong> para examinar las combinaciones de las variables de recaudación de impuestos y Valor Agregado Bruto (VAB). El resultado de la prueba de causalidad de Granger muestra un p-valor menor que 0.05, lo cual nos lleva a rechazar la hipótesis nula de que el VAB causa cambios en la recaudación de impuestos. Para determinar el rezago óptimo, se utilizó el criterio de información de Akaike, y se encontró que el primer rezago era el más adecuado (Anexo-Figura 9).</p>
-</section>
-</section>
-</section>
-<section id="discusión-de-los-resultados" class="level1">
-<h1>Discusión de los Resultados</h1>
-<p>El crecimiento económico, representado por el Valor Agregado Bruto (VAB), es fundamental para los gobiernos, ya que el gobierno busca alcanzar un crecimiento óptimo y estable en la producción. En esta investigación, se evaluó el crecimiento económico del departamento de Ayacucho durante el periodo 2007-2019, centrándose en los sectores productivos como indicadores de dicho crecimiento. Los resultados mostraron que el crecimiento económico del departamento de Ayacucho tuvo un impacto positivo en los ingresos generados por los impuestos, destacando la contribución más significativa del Impuesto General a la Renta. Además, se identificó que la evasión tributaria influye en la recaudación de impuestos.</p>
-<p>El crecimiento económico puede influir en una mayor recaudación tributaria, por lo que el objetivo de esta investigación fue analizar la relación entre ambas variables. Los resultados revelaron una relación casi perfecta entre el crecimiento económico y la recaudación de impuestos. Mediante el uso de una regresión lineal y un análisis estadístico, se obtuvo un coeficiente de determinación del 93.1%, lo que indica que la variable independiente del PBI departamental explica de manera significativa la variable dependiente de la recaudación de impuestos. Además, se verificó la significancia estadística de los parámetros del modelo mediante la prueba de t de Student con un nivel de significancia del 5%. Asimismo, la prueba F confirmó que el modelo es estadísticamente significativo.</p>
-</section>
-<section id="conclusiones" class="level1">
-<h1>Conclusiones</h1>
-<p>En conclusión, el análisis estadístico de causalidad de las variables demuestra que el Valor Agregado Bruto (VAB) es un factor determinante en la recaudación de impuestos en el departamento de Ayacucho durante el periodo 2007-2019.</p>
-<p>En cuanto a la recaudación de impuestos en Ayacucho, se observa un notable crecimiento del 4.02% en 2012, impulsado por un crecimiento económico del 0.53%. Sin embargo, se registró una brusca caída del 0.05% en la recaudación de impuestos en 2017, debido a una disminución del Valor Agregado Bruto por debajo de su línea de tendencia, algo que no había ocurrido desde 2007.</p>
-<p>El Valor Agregado Bruto experimentó un crecimiento acelerado desde 2008 hasta 2015, pero a partir de ese año su crecimiento se situó por debajo de la línea de tendencia. A pesar de ello, se observó un incremento en la recaudación fiscal.</p>
-<p>Por otro lado, mediante una regresión lineal simple se estableció el grado de asociación o relación entre las variables. Se encontró que la recaudación de impuestos muestra un coeficiente de 0.046, lo que significa que un aumento del 1% en el Valor Agregado Bruto se traduce en un incremento del 4.6% en la recaudación de impuestos en el departamento de Ayacucho. Esto demuestra que la recaudación de impuestos es sensible al crecimiento económico.</p>
-</section>
-<section id="referencias" class="level1">
-<h1>Referencias</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
-<div id="ref-akanbi_impact_2020" class="csl-entry">
-Akanbi, A. (2020). The Impact of Tax Collection and Incentives on Economic Growth: Evidence from Nigeria. <em>International Journal of Business and Economics Research</em>, <em>9</em>(4), 170. <a href="https://doi.org/10.11648/j.ijber.20200904.12">https://doi.org/10.11648/j.ijber.20200904.12</a>
-</div>
-<div id="ref-banda-ortiz_impacto_2018" class="csl-entry">
-Banda-Ortiz, H., &amp; Tovar-García, E. D. (2018). Impacto de la estructura tributaria sobre el crecimiento económico: el caso de México. <em>Revista mexicana de economía y finanzas</em>, <em>13</em>(4), 585-601.
-</div>
-<div id="ref-beltran-ayala_impuestos_2020" class="csl-entry">
-Beltrán-Ayala, P., Gómez-Dunkley, J. C., &amp; Pico-Aguilar, A. L. (2020). <span>LOS</span> <span>IMPUESTOS</span> <span>DIRECTOS</span> E <span>INDIRECTOS</span> Y <span>SU</span> <span>INCIDENCIA</span> <span>EN</span> <span>EL</span> <span>CRECIMIENTO</span> <span>ECONÓMICO</span> <span>EN</span> <span>EL</span> <span>ECUADOR</span>. <em>Identidad Bolivariana</em>, <em>4</em>(2), 103-128. <a href="https://doi.org/10.37611/IB4ol2103-128">https://doi.org/10.37611/IB4ol2103-128</a>
-</div>
-<div id="ref-benitez_impacto_2019" class="csl-entry">
-Benítez, M. J. (2019). Impacto del <span>PIB</span> sobre los Ingresos Tributarios del Ecuador durante el periodo 2000-2018. <em>Bolentín de Coyuntura</em>, (22), 4-7.
-</div>
-<div id="ref-cacay_cacay_efecto_2021" class="csl-entry">
-Cacay Cacay, J. C., Ramírez Chávez, G. D. R., Campuzano Vásquez, J. A., Cacay Cacay, J. C., Ramírez Chávez, G. D. R., &amp; Campuzano Vásquez, J. A. (2021). Efecto del Crecimiento Económico y la Presión Fiscal sobre el Impuesto al Valor Agregado. <em>Revista San Gregorio</em>, <em>1</em>(47), 111-125. <a href="https://doi.org/10.36097/rsan.v1i47.1750">https://doi.org/10.36097/rsan.v1i47.1750</a>
-</div>
-<div id="ref-campos_sistema_2018" class="csl-entry">
-Campos, M. A. G., Radwan, A. R. A., &amp; Melo, J. P. (2018). El sistema tributario y su impacto en la Economía Popular y Solidaria en el Ecuador. <em>Revista <span>UNIANDES</span> Episteme</em>, <em>5</em>(1), 38-53.
-</div>
-<div id="ref-carrera_ciclo_1999" class="csl-entry">
-Carrera, J. E., Pérez, P. E., &amp; Saller, G. (1999). <em>El ciclo económico y la recaudación</em>. Presentado en <span>IV</span> Seminario Internacional de Federalismo Fiscal y Economías Regionales (La Plata, 1999). Recuperado de <a href="http://sedici.unlp.edu.ar/handle/10915/3737">http://sedici.unlp.edu.ar/handle/10915/3737</a>
-</div>
-<div id="ref-chiappelo_crecimiento_2018" class="csl-entry">
-Chiappelo, A., &amp; Svetliza, L. (2018). Crecimiento económico y el rol de los impuestos: evidencia para América. <em>Disoonible en: https://aaep. org. ar/anales/works/works2018/chiappelo. pdf (Consultado: 20/02/2020)</em>.
-</div>
-<div id="ref-cid_pedraza_espacio_2018" class="csl-entry">
-Cid Pedraza, C., Matus-López, M., &amp; Báscolo, E. (2018). Espacio fiscal para salud en las Américas:?‘ es suficiente el crecimiento económico? <em>Rev Panam Salud Publica; 42, ago. 2018</em>.
-</div>
-<div id="ref-engen_taxation_1996" class="csl-entry">
-Engen, E., &amp; Skinner, J. (1996). Taxation and economic growth. <em>National tax journal</em>, <em>49</em>(4), 617-642.
-</div>
-<div id="ref-fergusson_impuestos_2003" class="csl-entry">
-Fergusson, L. (2003). Impuestos, crecimiento económico y bienestar en Colombia (1970-1999). <em>Revista Desarrollo y Sociedad</em>, (52), 143-202.
-</div>
-<div id="ref-fernandez_producto_2019" class="csl-entry">
-Fernández, J. R., &amp; Domínguez, L. A. V. (2019). El Producto Bruto Interno (<span>PBI</span>) y su relación con los ingresos tributarios en el Perú 2007-2018. <em>Quipukamayoc</em>, <em>27</em>(55), 17-23.
-</div>
-<div id="ref-gale_effects_2014" class="csl-entry">
-Gale, W. G., &amp; Samwick, A. A. (2014). <em>Effects of income tax changes on economic growth, economic studies at brookings</em>. The Brookingings institution; tax policy center.
-</div>
-<div id="ref-gashi_effect_2018" class="csl-entry">
-Gashi, B., Asllani, G., &amp; Boqolli, L. (2018). <em>The effect of tax structure in economic growth</em>.
-</div>
-<div id="ref-henriquez_impuesto_2014" class="csl-entry">
-Henríquez, J. Y. (2014). Impuesto al valor agregado: eficiencia y crecimiento. <em>Revista de Estudios Tributarios</em>, (9), ág-221.
-</div>
-<div id="ref-husak_relationship_2021" class="csl-entry">
-Husak, C. (2021). The relationship between taxation and <span>US</span> economic growth. <em>Issue brief of Washington Center for Equitable Growth. Accessed July</em>, <em>27</em>, 2022.
-</div>
-<div id="ref-jaimovich_nonlinear_2017" class="csl-entry">
-Jaimovich, N., &amp; Rebelo, S. (2017). Nonlinear effects of taxation on growth. <em>Journal of Political Economy</em>, <em>125</em>(1), 265-291.
-</div>
-<div id="ref-de_la_fuente_relacion_2021" class="csl-entry">
-La Fuente, A. de. (2021). <em>La relación entre el crecimiento de los ingresos tributarios autonómicos y el crecimiento del <span>PIB</span></em>. <span>FEDEA</span>.
-</div>
-<div id="ref-lahura_efecto_2018" class="csl-entry">
-Lahura, E., &amp; Castillo, G. (2018). El efecto de cambios tributarios sobre la actividad económica en Perú: Una aplicación del enfoque narrativo. <em>Revista estudios económicos</em>, <em>36</em>(1), 31-53.
-</div>
-<div id="ref-macek_impact_2014" class="csl-entry">
-Macek, R. (2014). The impact of taxation on economic growth: Case study of <span>OECD</span> countries. <em>Review of economic perspectives</em>, <em>14</em>(4), 309-328.
-</div>
-<div id="ref-mingo_recaudacion_2003" class="csl-entry">
-Mingo, M. (2003). Recaudación de tasas municipales y los efectos del ciclo económico. Caso aplicado al municipio de General Pueyrredon. <em><span>FACES</span></em>, <em>9</em>(18), 17-28.
-</div>
-<div id="ref-narvaez_cumbicos_impacto_2019" class="csl-entry">
-Narvaez Cumbicos, J. G., Mite Albán, M. T., &amp; Lovato Torres, S. G. (2019). Impacto entre la actividad económica y el efecto del incremento de la recaudación tributaria en Ecuador: periodo 2010-2017. <em>Revista Universidad y Sociedad</em>, <em>11</em>(5), 278-286.
-</div>
-<div id="ref-neog_tax_2020" class="csl-entry">
-Neog, Y., &amp; Gaur, A. K. (2020). <em>Tax structure and economic growth: a study of selected Indian states, Economic Structures, 9 (38)</em>.
-</div>
-<div id="ref-nina_politicas_2017" class="csl-entry">
-Nina, V. D. A., Bermeo, E. P., &amp; Cuesta, P. S. (2017). Las políticas tributarias en el crecimiento económico de Ecuador, 2000-2015. <em><span>INNOVA</span> Research Journal</em>, <em>2</em>(8), 10-29. <a href="https://doi.org/10.33890/innova.v2.n8.2017.245">https://doi.org/10.33890/innova.v2.n8.2017.245</a>
-</div>
-<div id="ref-ordonez_crecimiento_2014" class="csl-entry">
-Ordoñez, A. (2014). Crecimiento económico e ingresos tributarios del Perú. <em>Logos</em>, <em>4</em>(1), 1-8.
-</div>
-<div id="ref-rivero_impuestos_2008" class="csl-entry">
-Rivero, F. J. D., &amp; Jiménez, J. S. (2008). Impuestos y crecimiento económico: Una panorámica. <em><span>RAE</span>: Revista Asturiana de Economía</em>, (42), 9-30.
-</div>
-<div id="ref-ronquillo_recaudaciones_2017" class="csl-entry">
-Ronquillo, S. C. S., &amp; Ronquillo, E. A. S. (2017). Las recaudaciones tributarias y el crecimiento económico. Un análisis a través del <span>PIB</span> de Ecuador. <em>Empresarial</em>, <em>11</em>(44), 33-39.
-</div>
-<div id="ref-shuai_effect_2013" class="csl-entry">
-Shuai, X., &amp; Chmura, C. (2013). The effect of state corporate income tax rate cuts on job creation. <em>Business Economics</em>, <em>48</em>(3), 183-193.
-</div>
-<div id="ref-taha_effect_2011" class="csl-entry">
-Taha, R., Nanthakumar, L., &amp; Colombage, S. R. (2011). The effect of economic growth on taxation revenue: The case of a newly industrialized country. <em>International Review of Business Research Papers</em>, <em>7</em>(1), 319-329.
-</div>
-<div id="ref-tello_determinantes_2018" class="csl-entry">
-Tello, A. F., &amp; Arévalos, E. A. (2018). Determinantes de la recaudación estatal de impuestos en México. <em>Paradigma económico. Revista de economía regional y sectorial</em>, <em>10</em>(1), 155-174.
-</div>
-<div id="ref-velepucha_ecuador_2021" class="csl-entry">
-Velepucha, S. A. E., Gutiérrez, M. J. R., Aguirre, P. A. U., &amp; Pereira, J. G. S. (2021). Ecuador: Recaudación de tributos comparado con principales indicadores macroeconómicos, 2010-2019. <em>Revista Mapa</em>, <em>5</em>(22).
-</div>
-</div>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma mendoza2021,
-  author = {Achalma Mendoza, Edison and Bañico Espinoza, Nataly and
-    Berrocal Quispe, Nikole and Carbajal López, Elvis and Castillo
-    López, Kattya and Castro Vilca, Hans and Cuba Palomino, Luz},
-  title = {Análisis del Impacto del Crecimiento Económico en la
-    Recaudación de Impuestos en Ayacucho},
-  date = {2021-01-11},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019},
-  langid = {es}
-}
-</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2021" class="csl-entry quarto-appendix-citeas">
-Achalma Mendoza, E., Bañico Espinoza, N., Berrocal Quispe, N., Carbajal
-López, E., Castillo López, K., Castro Vilca, H., &amp; Cuba Palomino, L.
-(2021, January 11). Análisis del Impacto del Crecimiento Económico en la
-Recaudación de Impuestos en Ayacucho. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019">https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019</a>
-</div></div></section></div> ]]></description>
-  <category>Econometría</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-V1-Recaudacion-Impuestos-Gob-Nac-Crecimiento-Economico-2017-2019/index.html</guid>
-  <pubDate>Mon, 11 Jan 2021 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

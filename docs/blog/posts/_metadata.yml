@@ -36,7 +36,7 @@ format:
     citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
     footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
     code-copy: true  # Habilitar la funcionalidad de copiar código
-    code-fold: true  # Habilitar el plegado de código
+    code-fold: false  # Habilitar el plegado de código
     code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
     code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     code-tools:
@@ -46,6 +46,13 @@ format:
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
 execute:
+  keep-ipynb: true
   keep-md: true  # Mantener archivos .md generados
+  echo: true
+  output: true
+  warning: false
+  error: false
+  cache: true
+  enabled: false
 search: false  # Habilitar búsqueda en el documento
 

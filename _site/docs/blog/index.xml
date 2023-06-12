@@ -21,7 +21,7 @@
 <item>
   <title>Introducción a R en Linux</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/index.html</link>
   <description><![CDATA[ 
 
 
@@ -36,7 +36,7 @@
 <blockquote class="blockquote">
 <p>R es un lenguaje de programación ampliamente utilizado en la comunidad estadística y de análisis de datos, y es especialmente popular entre los científicos de datos y los investigadores.</p>
 </blockquote>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_222900.png" id="fig-" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230610_222900.png" id="fig-" class="img-fluid"></p>
 </section>
 <section id="paso-2.-instalar-r-en-ubuntu-linux" class="level2">
 <h2 class="anchored" data-anchor-id="paso-2.-instalar-r-en-ubuntu-linux">Paso 2. Instalar R en Ubuntu Linux</h2>
@@ -125,7 +125,7 @@ font-style: inherit;">sudo</span> add-apt-repository ppa:c2d4u.team/c2d4u4.0+</s
 <blockquote class="blockquote">
 <p>RStudio RStudio es un entorno de desarrollo integrado (IDE) muy popular para trabajar con R. Proporciona una interfaz gráfica intuitiva y muchas herramientas útiles para la programación en R.</p>
 </blockquote>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_224818.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230610_224818.png" class="img-fluid"></p>
 </section>
 <section id="paso-4.-instalar-rstudio-en-ubuntu-linux" class="level2">
 <h2 class="anchored" data-anchor-id="paso-4.-instalar-rstudio-en-ubuntu-linux">Paso 4. Instalar RStudio en Ubuntu Linux</h2>
@@ -161,7 +161,7 @@ font-style: inherit;">&gt;</span>.deb</span></code></pre></div>
 background-color: null;
 font-style: inherit;">rstudio</span></span></code></pre></div>
 <p>RStudio se abrirá en una ventana separada, lo que te permitirá comenzar a trabajar con R y aprovechar todas las funciones y características que ofrece el IDE.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_231407.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230610_231407.png" class="img-fluid"></p>
 </section>
 </section>
 <section id="qúe-nos-ofrece-rstudio" class="level1">
@@ -179,7 +179,7 @@ font-style: inherit;">rstudio</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Interfaz de RStudio: Una poderosa herramienta para el desarrollo en R</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230610_233058.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230610_233058.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -199,11 +199,11 @@ font-style: inherit;">rstudio</span></span></code></pre></div>
 <p>Los scripts nos permiten escribir y ejecutar una serie de comandos de manera secuencial, lo que facilita la automatización y reproducción de tareas en nuestros análisis de datos.</p>
 <p><strong>Paso 1: Crear un nuevo archivo de script</strong></p>
 <p>En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hacer esto, seleccionamos “Archivo” en la barra de menú, luego “Nuevo archivo” y finalmente “Script R”. Esto abrirá un nuevo editor de texto donde podemos escribir nuestro código.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_001234.png" class="img-fluid"></p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_001615.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_001234.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_001615.png" class="img-fluid"></p>
 <p><strong>Paso 2: Escribir el código en el script</strong></p>
 <p>Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_004241.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_004241.png" class="img-fluid"></p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_10d074d27497c4e5407872d19a5fce58">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -338,15 +338,15 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 </div>
 <p><strong>Paso 3: Ejecutar el script</strong></p>
 <p>Una vez que hemos escrito nuestro código en el archivo de script, podemos ejecutarlo para obtener los resultados deseados. Para hacer esto, podemos utilizar el atajo de teclado “Ctrl + Enter” o simplemente hacer clic en el botón “Ejecutar” en la parte superior del editor de texto.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_005354.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_005354.png" class="img-fluid"></p>
 <p>RStudio ejecutará el código línea por línea y mostrará los resultados en la consola.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_010256.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_010256.png" class="img-fluid"></p>
 <p><strong>Paso 4: Guardar el script</strong></p>
 <p>Es importante guardar regularmente nuestro script para evitar perder nuestro trabajo. Para guardar el archivo de script, seleccionamos “Archivo” en la barra de menú y luego “Guardar” o “Guardar como”.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_010854.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_010854.png" class="img-fluid"></p>
 <p>Podemos elegir una ubicación y un nombre de archivo apropiados para guardar nuestro script.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_012736.png" class="img-fluid"></p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_013135.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_012736.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_013135.png" class="img-fluid"></p>
 <p><strong>Paso 5: Continuar escribiendo y ejecutando el código</strong></p>
 <p>Podemos continuar escribiendo y ejecutando más código en nuestro script según nuestras necesidades. Podemos agregar nuevas líneas de código, modificar las existentes o eliminar las que ya no necesitamos. Es recomendable guardar el script regularmente a medida que realizamos cambios.</p>
 <p><strong>Paso 6: Exportar los resultados (opcional)</strong></p>
@@ -515,27 +515,27 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <ol type="1">
 <li>Utiliza el operador de asignación (<code>&lt;-</code>) para crear un objeto de datos. Por ejemplo: <code>mi_objeto &lt;- c(1, 2, 3, 4, 5)</code>.</li>
 </ol>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_092644.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_092644.png" class="img-fluid"></p>
 <ol start="2" type="1">
 <li>Selecciona todo el código que contiene los objetos de datos y ejecútalo en la consola de RStudio.</li>
 </ol>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_093536.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_093536.png" class="img-fluid"></p>
 <ol start="3" type="1">
 <li>El código se evaluará y los objetos de datos se crearán en el espacio de trabajo. Sin embargo, no verás ningún resultado en la consola.</li>
 </ol>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_094001.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_094001.png" class="img-fluid"></p>
 <p>Los objetos de datos creados se almacenan en el entorno global, que es parte del espacio de trabajo de R.</p>
 </section>
 <section id="inspección-de-objetos-de-datos" class="level3">
 <h3 class="anchored" data-anchor-id="inspección-de-objetos-de-datos">Inspección de objetos de datos</h3>
 <p>Puedes inspeccionar los objetos de datos haciendo clic sobre ellos en el panel de entorno o en el panel de objetos. Esto abrirá una vista previa del objeto en un nuevo archivo. Ten en cuenta que esta vista previa no afecta los objetos en el espacio de trabajo y se puede cerrar sin perder ninguna información.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_094530.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_094530.png" class="img-fluid"></p>
 </section>
 <section id="guardado-del-espacio-de-trabajo" class="level3">
 <h3 class="anchored" data-anchor-id="guardado-del-espacio-de-trabajo">Guardado del espacio de trabajo</h3>
 <p>En RStudio, puedes guardar todos los objetos en tu espacio de trabajo en un archivo llamado <code>.Rdata</code>. Esta función te permite almacenar y cargar el espacio de trabajo completo en futuras sesiones de RStudio.</p>
 <p>Para guardar el espacio de trabajo, simplemente ve al menú “Session” y selecciona “Save Workspace As…”. A continuación, elige la ubicación y el nombre de archivo deseados para guardar el archivo <code>.Rdata</code>.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_095350.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_095350.png" class="img-fluid"></p>
 <p>Esta función es especialmente útil cuando trabajas en proyectos largos o cuando deseas retomar tu trabajo en otro momento sin tener que volver a crear o cargar manualmente todos los objetos y configuraciones.</p>
 <blockquote class="blockquote">
 <p>Recuerda que al guardar y cargar el espacio de trabajo, asegúrate de mantener un respaldo de tus archivos en caso de cualquier eventualidad. ¡Disfruta de la conveniencia de mantener tus objetos y configuraciones en tu espacio de trabajo guardado!</p>
@@ -551,7 +551,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <li>Selecciona el archivo <code>.Rdata</code> y haz clic en el botón “Abrir”.</li>
 <li>RStudio cargará automáticamente el archivo y restaurará todos los objetos y sus valores en tu entorno de trabajo actual.</li>
 </ol>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_100949.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_100949.png" class="img-fluid"></p>
 <p>Una vez completados estos pasos, podrás acceder a todos los objetos y continuar trabajando con ellos como lo hiciste en la sesión en la que guardaste el espacio de trabajo.</p>
 <blockquote class="blockquote">
 <p>¡Con esta opción de carga, podrás retomar fácilmente tus proyectos anteriores y continuar donde lo dejaste sin tener que volver a crear los objetos desde cero!</p>
@@ -564,7 +564,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <section id="inspección-del-historial-de-comandos" class="level3">
 <h3 class="anchored" data-anchor-id="inspección-del-historial-de-comandos">Inspección del historial de comandos</h3>
 <p>Puedes ver el historial de comandos ejecutados durante tu sesión de trabajo haciendo clic en la pestaña “History” en la parte superior derecha de la ventana de RStudio. Aquí encontrarás una lista de todos los comandos ejecutados, lo que te permite revisarlos y volver a utilizarlos según sea necesario.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_101644.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_101644.png" class="img-fluid"></p>
 </section>
 <section id="guardado-del-historial-de-comandos" class="level3">
 <h3 class="anchored" data-anchor-id="guardado-del-historial-de-comandos">Guardado del historial de comandos</h3>
@@ -576,14 +576,14 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <li>Elige la ubicación donde deseas guardar el archivo y asigna un nombre descriptivo para identificarlo fácilmente.</li>
 <li>Haz clic en el botón “Guardar” para guardar el historial de comandos en el archivo seleccionado.</li>
 </ol>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_102856.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_102856.png" class="img-fluid"></p>
 </section>
 <section id="reutilización-del-historial-de-comandos" class="level3">
 <h3 class="anchored" data-anchor-id="reutilización-del-historial-de-comandos">Reutilización del historial de comandos</h3>
 <p>El historial se guarda en un archivo llamado <code>.Rhistory</code>. Puedes reutilizar todo el historial de comandos haciendo clic en el archivo <code>.Rhistory</code> o con el nombre asignado. Luego, puedes copiarlos y pegarlos en tu archivo de script actual.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_103319.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_103319.png" class="img-fluid"></p>
 <p>Inserta un código de línea seleccionado de <code>.Rhistory</code> en un archivo de script nuevo.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/images/Screenshot_20230611_103755.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/images/Screenshot_20230611_103755.png" class="img-fluid"></p>
 <blockquote class="blockquote">
 <p>¡Explora y aprovecha al máximo el espacio de trabajo y el historial en RStudio para mejorar tu flujo de trabajo y aprovechar al máximo tus comandos y objetos de datos!</p>
 </blockquote>
@@ -1277,22 +1277,22 @@ font-style: inherit;">list</span>(a, dbl, chr, mat)</span></code></pre></div>
   author = {Achalma Mendoza, Edison},
   title = {Introducción a R en Linux},
   date = {2023-06-10},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-introduccion-r},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, June 10). Introducción a R en Linux.
-Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-Introduccion-R</a>
+Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-introduccion-r">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-introduccion-r</a>
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>RStudio</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-Introduccion-R/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-introduccion-r/index.html</guid>
   <pubDate>Sat, 10 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>El legado revolucionario de Mariátegui. Siguiendo su camino hacia un futuro transformado</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-Entendiendo-Mariategui/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html</link>
   <description><![CDATA[ 
 
 
@@ -1519,23 +1519,23 @@ Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-
   title = {El legado revolucionario de Mariátegui. Siguiendo su camino
     hacia un futuro transformado},
   date = {2023-06-09},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Entendiendo-Mariategui},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-entendiendo-mariategui},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, June 9). El legado revolucionario de
 Mariátegui. Siguiendo su camino hacia un futuro transformado. Retrieved
-from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Entendiendo-Mariategui">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Entendiendo-Mariategui</a>
+from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-entendiendo-mariategui">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-entendiendo-mariategui</a>
 </div></div></section></div> ]]></description>
   <category>Filosofía</category>
   <category>Política</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-Entendiendo-Mariategui/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html</guid>
   <pubDate>Fri, 09 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Naturaleza Humana y su impacto político, sesgos científicos. Más allá de los Límites Impuestos</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-Naturaleza-Humana/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.html</link>
   <description><![CDATA[ 
 
 
@@ -1653,22 +1653,22 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Ente
   title = {Naturaleza Humana y su impacto político, sesgos científicos.
     Más allá de los Límites Impuestos},
   date = {2023-06-09},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Naturaleza-Humana},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-naturaleza-humana},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, June 9). Naturaleza Humana y su impacto
 político, sesgos científicos. Más allá de los Límites Impuestos.
-Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Naturaleza-Humana">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-Naturaleza-Humana</a>
+Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-naturaleza-humana">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-naturaleza-humana</a>
 </div></div></section></div> ]]></description>
   <category>Filosofía</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-Naturaleza-Humana/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.html</guid>
   <pubDate>Fri, 09 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Ideas de investigación en Econometría Análisis de variables y relaciones económicas</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-Ideas-Investigacion/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-ideas-investigacion/index.html</link>
   <description><![CDATA[ 
 
 
@@ -2075,24 +2075,24 @@ Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-
   title = {Ideas de investigación en Econometría Análisis de variables y
     relaciones económicas},
   date = {2023-06-03},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Ideas-Investigacion},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-ideas-investigacion},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, June 3). Ideas de investigación en
 Econometría Análisis de variables y relaciones económicas. Retrieved
-from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Ideas-Investigacion">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Ideas-Investigacion</a>
+from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-ideas-investigacion">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-ideas-investigacion</a>
 </div></div></section></div> ]]></description>
   <category>Econometría</category>
   <category>Economía</category>
   <category>Invetigación económica</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-Ideas-Investigacion/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-ideas-investigacion/index.html</guid>
   <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Pautas para la presentación del informe de investigación en economía enfoque, estructura y elementos clave</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html</link>
   <description><![CDATA[ 
 
 
@@ -2112,7 +2112,7 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Idea
 <div id="fig-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;1: Imagen 1</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion/20230603152205.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/20230603152205.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>En esta sección, el estudiante, después de revisar la bibliografía relevante y los datos estadísticos relacionados con el problema económico a estudiar, llevará a cabo:</p>
@@ -2179,24 +2179,24 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Idea
   title = {Pautas para la presentación del informe de investigación en
     economía enfoque, estructura y elementos clave},
   date = {2023-06-03},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, June 3). Pautas para la presentación del
 informe de investigación en economía enfoque, estructura y elementos
-clave. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion</a>
+clave. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion</a>
 </div></div></section></div> ]]></description>
   <category>Econometría</category>
   <category>Economía</category>
   <category>Invetigación económica</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-Pautas-Presentacion-Informe-Investigacion/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html</guid>
   <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Seminario de filosofía</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-Seminario-filosofia-marxista/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-seminario-filosofia-marxista/index.html</link>
   <description><![CDATA[ 
 
 
@@ -2318,23 +2318,23 @@ clave. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/post
   author = {Achalma Mendoza, Edison},
   title = {Seminario de filosofía},
   date = {2023-05-19},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-Seminario-filosofia-marxista},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-seminario-filosofia-marxista},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, May 19). Seminario de filosofía. Retrieved
-from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-Seminario-filosofia-marxista">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-Seminario-filosofia-marxista</a>
+from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-seminario-filosofia-marxista">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-seminario-filosofia-marxista</a>
 </div></div></section></div> ]]></description>
   <category>Política</category>
   <category>Filosofía</category>
   <category>Marxismo</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-Seminario-filosofia-marxista/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-seminario-filosofia-marxista/index.html</guid>
   <pubDate>Fri, 19 May 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Impulsando el Desarrollo Económico Regional Claves para un Futuro Próspero</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-Economia-Regional/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-economia-regional/index.html</link>
   <description><![CDATA[ 
 
 
@@ -3328,21 +3328,21 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-Semi
   title = {Impulsando el Desarrollo Económico Regional Claves para un
     Futuro Próspero},
   date = {2023-05-16},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-Economia-Regional},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-economia-regional},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, May 16). Impulsando el Desarrollo Económico
-Regional Claves para un Futuro Próspero. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-Economia-Regional">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-Economia-Regional</a>
+Regional Claves para un Futuro Próspero. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-economia-regional">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-economia-regional</a>
 </div></div></section></div> ]]></description>
   <category>Economía Regional</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-Economia-Regional/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-economia-regional/index.html</guid>
   <pubDate>Tue, 16 May 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y Desafíos</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.html</link>
   <description><![CDATA[ 
 
 
@@ -3474,15 +3474,15 @@ Regional Claves para un Futuro Próspero. Retrieved from <a href="https://achalm
   title = {La Economía Peruana de 1970 a 1990 Un Análisis de sus
     Períodos y Desafíos},
   date = {2023-05-12},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, May 12). La Economía Peruana de 1970 a 1990
-Un Análisis de sus Períodos y Desafíos. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos</a>
+Un Análisis de sus Períodos y Desafíos. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios</a>
 </div></div></section></div> ]]></description>
   <category>Economía Política</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-12-La-Economia-Peruana-1970-1990-Un-Analisis-Períodos-Desafíos/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.html</guid>
   <pubDate>Fri, 12 May 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
@@ -3572,7 +3572,7 @@ servidores públicos? Retrieved from <a href="https://achalmaedison.netlify.app/
 <item>
   <title>Linux Primeros Pasos</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-linux-primeros-pasos/index.html</link>
   <description><![CDATA[ 
 
 
@@ -3748,7 +3748,7 @@ servidores públicos? Retrieved from <a href="https://achalmaedison.netlify.app/
 <p><strong>ESTRUCTURA DEL SISTEMA DE FICHEROS</strong></p>
 <p>El sistema de archivos es, más o menos, “la forma de organizar la información almacenada en el disco duro”. La mayoría de los sistemas operativos posee su propio sistema de archivos. El sistema de archivos nativo de Linux es el&nbsp;<strong>EXT2</strong>. Normalmente, los sistemas operativos proveen los mecanismos para crear, mover, renombrar y eliminar tanto archivos como directorios.</p>
 <p>La estructura de directorios suele ser jerárquica, ramificada o “en árbol”:</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/https:/personal.us.es/echevarria/Curso/images/FilesAndFolders.png" class="img-fluid" alt="Organización jeráquica de archivos"><br>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-linux-primeros-pasos/https:/personal.us.es/echevarria/Curso/images/FilesAndFolders.png" class="img-fluid" alt="Organización jeráquica de archivos"><br>
 <a href="http://es.wikipedia.org/wiki/Archivo:FilesAndFolders.png">Origen de la imagen</a></p>
 <p>La estructura de directorios que sigue Linux es similar a la de cualquier sistema UNIX. La estructura del sistema de archivos NO está ligada de forma directa a la estructura de hardware. A diferencia de Windows, es independiente del número de discos duros, disqueteras o CDROMs. No hay una “unidad” para cada unidad física de disco o partición como en Windows (<strong>A:**,&nbsp;</strong>C:**, etc.), sino que todos los discos duros o de red se montan bajo un sistema de directorios en árbol, y algunos de esos directorios enlazan con estas unidades físicas de disco. IMPORTANTE: Las barras en Linux al igual que en cualquier UNIX son inclinadas hacia la derecha, como se puede ver más abajo (ese es el motivo de que en internet sean inclinadas hacia la derecha, ya que nació bajo UNIX).</p>
 <ul>
@@ -3971,16 +3971,16 @@ Por ejemplo, la&nbsp;<strong>disquetera</strong>&nbsp;suele ser&nbsp;&nbsp;<stro
   author = {Achalma Mendoza, Edison},
   title = {Linux Primeros Pasos},
   date = {2023-05-02},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-Linux-primeros-pasos},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-linux-primeros-pasos},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, May 2). Linux Primeros Pasos. Retrieved from
-<a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-Linux-primeros-pasos">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-Linux-primeros-pasos</a>
+<a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-linux-primeros-pasos">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-linux-primeros-pasos</a>
 </div></div></section></div> ]]></description>
   <category>Informática</category>
   <category>Sistemas Operativos</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-Linux-primeros-pasos/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-linux-primeros-pasos/index.html</guid>
   <pubDate>Tue, 02 May 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
@@ -4089,7 +4089,7 @@ era? Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/
 <item>
   <title>Guía de Git Cómo trabajar en equipo en proyectos</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-guia-git/index.html</link>
   <description><![CDATA[ 
 
 
@@ -4099,7 +4099,7 @@ era? Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/
 <h1>Introducción</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://es.wikipedia.org/wiki/Archivo:Git-logo.svg"><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-Guia-git/https:/upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/200px-Git-logo.svg.png" class="img-fluid figure-img"></a></p>
+<p><a href="https://es.wikipedia.org/wiki/Archivo:Git-logo.svg"><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-guia-git/https:/upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/200px-Git-logo.svg.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p><strong>¿Estás interesado en aprender los fundamentos de Git y GitHub?</strong> ¡Has llegado al lugar perfecto! En este blog, te presentaremos una guía completa que podrás utilizar como referencia diaria.</p>
@@ -5222,22 +5222,22 @@ font-style: inherit;">-r</span> micarpeta</span></code></pre></div>
   author = {Achalma Mendoza, Edison},
   title = {Guía de Git Cómo trabajar en equipo en proyectos},
   date = {2023-02-16},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-Guia-git},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-guia-git},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2023, February 16). Guía de Git Cómo trabajar en
-equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-Guia-git">https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-Guia-git</a>
+equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-guia-git">https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-guia-git</a>
 </div></div></section></div> ]]></description>
   <category>Git</category>
   <category>GitHub</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-Guia-git/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-guia-git/index.html</guid>
   <pubDate>Thu, 16 Feb 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Cómo usar APK en Windows 11 una guía paso a paso</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.html</link>
   <description><![CDATA[ 
 
 
@@ -5245,34 +5245,34 @@ equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//
 
 <section id="windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="level1">
 <h1>Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</h1>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/install-logo-759x427.png?width=600" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/install-logo-759x427.png?width=600" class="img-fluid"></p>
 <p>Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android.&nbsp;Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">guía aquí</a>&nbsp;.</p>
 <p><a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#">Mostrar</a>&nbsp;<strong>CONTENIDO</strong>&nbsp;<a href="https://nerdschalk.com/windows-11-how-to-sideload-apk-using-windows-subsystem-for-android-and-adb/#"></a></p>
 <section id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="level2">
 <h2 class="anchored" data-anchor-id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows">Paso 1: habilite el modo de desarrollador en el subsistema de Windows</h2>
 <p>Instale&nbsp;<a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">el Subsistema de Windows para Android</a>&nbsp;primero.&nbsp;Cuando haya terminado, abra la aplicación ‘Subsistema de Windows para Android’ en su PC.&nbsp;Para esto, presione la tecla de Windows y busque Subsistema de Windows para Android.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-09.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-09.png?width=800" class="img-fluid"></p>
 <p>Haga clic en Subsistema de Windows para Android.&nbsp;O haga clic en Abrir.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-08.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-08.png?width=800" class="img-fluid"></p>
 <p>En el Subsistema de Windows para Android, active el modo Desarrollador.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-10-2.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-10-2.png?width=800" class="img-fluid"></p>
 </section>
 <section id="paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="level2">
 <h2 class="anchored" data-anchor-id="paso-2-instale-las-herramientas-de-la-plataforma-sdk">Paso 2: Instale las herramientas de la plataforma SDK</h2>
 <p>Visite la página de herramientas de la plataforma SDK de Google&nbsp;<a href="https://developer.android.com/studio/releases/platform-tools.html">aquí</a>&nbsp;.</p>
 <p>Haga clic en Descargar SDK Platform-Tools para Windows.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-11.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-11.png?width=800" class="img-fluid"></p>
 <p>Desplácese hacia abajo hasta el final y seleccione la casilla de verificación para aceptar los términos y condiciones.&nbsp;Luego haga clic en el botón verde para descargar las herramientas de la plataforma.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-12.png?width=700" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-12.png?width=700" class="img-fluid"></p>
 <p>Se descargará en su PC un archivo zip llamado platform-tools_r31.0.3-windows (la versión puede cambiar).</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-13.png?width=700" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-13.png?width=700" class="img-fluid"></p>
 <p>Para su comodidad, cree una nueva carpeta separada llamada carpeta para aplicaciones en el Explorador de Windows.&nbsp;Ahora, transfiera el archivo de herramientas de la plataforma a esta carpeta.</p>
 <p>Haga clic con el botón derecho en el archivo de herramientas de la plataforma y seleccione Extraer todo.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-14.png?width=500" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-14.png?width=500" class="img-fluid"></p>
 <p>Haga clic en Extraer.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-15-2.png?width=700" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-15-2.png?width=700" class="img-fluid"></p>
 <p>El archivo será extraído.&nbsp;Abra la carpeta llamada herramientas de la plataforma.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-16.png?width=500" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-16.png?width=500" class="img-fluid"></p>
 <p>Tendrá adb.exe y algunos otros archivos aquí.</p>
 <p><strong>Relacionado:</strong>&nbsp;<a href="https://nerdschalk.com/how-to-restart-windows-explorer-on-windows-11-and-what-happens-when-you-do-it/">Cómo reiniciar el Explorador de Windows en Windows 11 y qué sucede cuando lo hace</a></p>
 </section>
@@ -5280,34 +5280,34 @@ equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//
 <h2 class="anchored" data-anchor-id="paso-3-instale-la-aplicación-de-android">Paso 3: Instale la aplicación de Android</h2>
 <p>Haga doble clic en la carpeta de herramientas de la plataforma para abrirla.</p>
 <p>Aquí, haga clic en la barra de direcciones y escriba&nbsp;<strong>cmd,</strong>&nbsp;y luego presione la tecla Intro.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-20.png?width=500" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-20.png?width=500" class="img-fluid"></p>
 <p>Se abrirá una ventana de comando con su ubicación establecida en la carpeta de herramientas de la plataforma.&nbsp;Esto es importante.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-21.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-21.png?width=800" class="img-fluid"></p>
 <p>Ahora, tenemos la ventana del símbolo del sistema en la carpeta donde tenemos el archivo adb.exe.&nbsp;Es decir, nuestra carpeta de herramientas de plataforma.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-17.png?width=700" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-17.png?width=700" class="img-fluid"></p>
 <p>Ahora, descargue el archivo APK de la aplicación de Android que desea instalar.&nbsp;Por ejemplo, si desea instalar Snapchat, busque&nbsp;<strong>Snapchat APK</strong>&nbsp;en Google y descargue su archivo APK desde cualquier sitio web confiable en el que confíe.&nbsp;Luego, cambie el nombre del archivo a algo más simple como snapchat.apk.&nbsp;Ahora, transfiera snapchat.apk a la carpeta de herramientas de la plataforma.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-18.png?width=700" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-18.png?width=700" class="img-fluid"></p>
 <p>Ahora podemos instalar la aplicación Snapchat para Android usando snapchat.apk y adb en su PC.</p>
 <p>Abra el Subsistema de Windows para Android y busque la IP donde se puede conectar con ADB en la opción de modo Desarrollador.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-19.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-19.png?width=800" class="img-fluid"></p>
 <p>En la ventana del símbolo del sistema, escriba el siguiente comando y presione Entrar:</p>
 <p>adb.exe connect (dirección IP-aquí)</p>
 <p>Ejemplo: adb.exe conectar 127.0.0.1:12345</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-22.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-22.png?width=800" class="img-fluid"></p>
 <p>Ahora, escriba el comando de instalación que se proporciona a continuación y luego presione Enter:</p>
 <p>adb.exe install (apk-file-name-here.apk)</p>
 <p>Ejemplo: adb.exe instalar Snapchat.apk</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-23.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-23.png?width=800" class="img-fluid"></p>
 <p>La aplicación de Android ahora se instalará en su PC usando ADB y el archivo APK que proporcionó.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-24.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-24.png?width=800" class="img-fluid"></p>
 <p>Cuando haya terminado, verá el mensaje de Éxito.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-25.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-25.png?width=800" class="img-fluid"></p>
 <p>Puede cerrar la ventana CMD ahora.</p>
 <p>Ahora puede abrir la aplicación de Android en su PC.</p>
 <p>Presione la tecla de Windows y luego escriba el nombre de su aplicación.&nbsp;En nuestro caso, es Snapchat.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-27.png?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-27.png?width=800" class="img-fluid"></p>
 <p>Así es como se ve Snapchat en Windows 11.</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-26.jpg?width=800" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/cdn.nerdschalk.com/wp-content/uploads/2021/10/get-android-apps-on-windows-11-dev-channel-26.jpg?width=800" class="img-fluid"></p>
 <p>Eso es todo.</p>
 </section>
 <section id="cargar-apk-automáticamente-con-un-doble-clic" class="level2">
@@ -5327,7 +5327,7 @@ equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//
 </ul>
 <p><a href="https://nerdschalk.com/tag/how-to/">cómo</a><a href="https://nerdschalk.com/tag/windows-11/">ventanas 11</a></p>
 <p>[</p>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/https:/secure.gravatar.com/avatar/8ddaa30f5018c02bbfc30545a9a2b72a?s=96&amp;d=retro&amp;r=g.png" class="img-fluid"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/https:/secure.gravatar.com/avatar/8ddaa30f5018c02bbfc30545a9a2b72a?s=96&amp;d=retro&amp;r=g.png" class="img-fluid"></p>
 <p>](https://nerdschalk.com/author/ka1385/)</p>
 <p>[publicado por</p>
 <section id="kapil-malani" class="level6">
@@ -5346,23 +5346,23 @@ equipo en proyectos. Retrieved from <a href="https://achalmaedison.netlify.app//
   author = {Achalma Mendoza, Edison},
   title = {Cómo usar APK en Windows 11 una guía paso a paso},
   date = {2022-10-21},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2022" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2022, October 21). Cómo usar APK en Windows 11 una
-guía paso a paso. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11</a>
+guía paso a paso. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11</a>
 </div></div></section></div> ]]></description>
   <category>Tecnología</category>
   <category>Informática</category>
   <category>Android</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-Usando-APK-en-Windown-11/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.html</guid>
   <pubDate>Fri, 21 Oct 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Comandos básicos de Vim para mejorar tu flujo de trabajo</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-09-27-Comandos-VIM/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-09-27-comandos-vim/index.html</link>
   <description><![CDATA[ 
 
 
@@ -5424,21 +5424,21 @@ guía paso a paso. Retrieved from <a href="https://achalmaedison.netlify.app//do
   author = {Achalma Mendoza, Edison},
   title = {Comandos básicos de Vim para mejorar tu flujo de trabajo},
   date = {2022-09-27},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-Comandos-VIM},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-comandos-vim},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2022" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2022, September 27). Comandos básicos de Vim para
-mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-Comandos-VIM">https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-Comandos-VIM</a>
+mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-comandos-vim">https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-comandos-vim</a>
 </div></div></section></div> ]]></description>
   <category>Programación</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-09-27-Comandos-VIM/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-09-27-comandos-vim/index.html</guid>
   <pubDate>Tue, 27 Sep 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Abordando el cambio climático y otros desafíos ambientales Perspectivas y soluciones</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/index.html</link>
   <description><![CDATA[ 
 
 
@@ -5565,7 +5565,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;1: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603001915.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603001915.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>En la gráfica, se observa una relación positiva entre las prácticas agrícolas insostenibles (PAI) y la pérdida de diversidad (PD). A medida que las prácticas agrícolas insostenibles aumentan, la pérdida de biodiversidad también se incrementa. Sin embargo, la magnitud del impacto de las prácticas agrícolas insostenibles en la pérdida de biodiversidad se mide mediante la sensibilidad o elasticidad, que se calcula como el cambio porcentual de las prácticas agrícolas insostenibles dividido por el cambio porcentual en la pérdida de diversidad.</p>
@@ -5619,7 +5619,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;2: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603083843.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603083843.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Nota: Prevencionintegral&amp;ORP</p>
@@ -5640,7 +5640,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;3: Exportaciones de productos tradicionales y precios del petróleo crudo y derivados</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603085638.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603085638.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.</em></p>
@@ -5652,7 +5652,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;4: Exportaciones de productos tradicionales y precios del gas natural</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603090113.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603090113.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.</em></p>
@@ -5668,7 +5668,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-5" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;5: Prueba de normalidad del precio del Petróleo crudo y derivados</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603090708.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603090708.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Elaboración propia.</em></p>
@@ -5679,7 +5679,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-6" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;6: Corrección de normalidad del precio del Petróleo crudo y derivados</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603090807.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603090807.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Elaboración propia.</em></p>
@@ -5688,7 +5688,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-7" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;7: Prueba de normalidad del precio del Gas natural</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091227.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091227.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Elaboración propia.</em></p>
@@ -5697,7 +5697,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-8" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;8: Corrección de normalidad del precio del Gas natural</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091315.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091315.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em>Nota: Elaboración propia.</em></p>
@@ -5710,7 +5710,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-9" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;9: Evolución del precio del petróleo y gas (en dólares)</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091833.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091833.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP y gráfico elaborado por nosotros.</em></p>
@@ -5725,7 +5725,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-10.1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">(a) Surus</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091856.png" class="img-fluid figure-img" data-ref-parent="fig-10"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091856.png" class="img-fluid figure-img" data-ref-parent="fig-10"></p>
 </figure>
 </div>
 </div>
@@ -5733,7 +5733,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-10.2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">(b) Hanno</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091845.png" class="img-fluid figure-img" data-ref-parent="fig-10"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091845.png" class="img-fluid figure-img" data-ref-parent="fig-10"></p>
 </figure>
 </div>
 </div>
@@ -5748,7 +5748,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div id="fig-11" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;11: Gráfico de dispersión de las variables precio de gas y precio de petróleo</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603091904.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603091904.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP y gráfico elaborado por nosotros.</em></p>
@@ -5757,7 +5757,7 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption class="figure-caption">Tabla 2: Regresión de precio de petróleo y precio del gas</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/20230603100307.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/20230603100307.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP.</em></p>
@@ -5782,23 +5782,23 @@ mejorar tu flujo de trabajo. Retrieved from <a href="https://achalmaedison.netli
   title = {Abordando el cambio climático y otros desafíos ambientales
     Perspectivas y soluciones},
   date = {2022-06-03},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-Medio-Ambiente},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-medio-ambiente},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2022" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E., Añanca Mitma, Z., Fernández Pujaico, A., Gamboa
 Rua, B., &amp; Gómez Ayala, M. (2022, June 3). Abordando el cambio
 climático y otros desafíos ambientales Perspectivas y soluciones.
-Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-Medio-Ambiente">https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-Medio-Ambiente</a>
+Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-medio-ambiente">https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-medio-ambiente</a>
 </div></div></section></div> ]]></description>
   <category>Economía de los Recursos y del Medio Ambiente</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-Medio-Ambiente/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/index.html</guid>
   <pubDate>Fri, 03 Jun 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>La Economía Agraria</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-Economia-agraria/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/index.html</link>
   <description><![CDATA[ 
 
 
@@ -6456,7 +6456,7 @@ Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-
 <div id="fig-figura1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figura&nbsp;1: Tabla para cálculo de plussvalía</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-Economia-agraria/Figura1.png" class="img-fluid figure-img"></p>
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/Figura1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Vamos a ver cómo es lo que se genera la plusvalía y como se puede hacer el cálculo inicial del beneficio</p>
@@ -7499,22 +7499,22 @@ Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-
   author = {Achalma Mendoza, Edison},
   title = {La Economía Agraria},
   date = {2022-04-22},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-Economia-agraria},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-economia-agraria},
   langid = {es},
   abstract = {hola}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2022" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2022, April 22). La Economía Agraria. Retrieved
-from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-Economia-agraria">https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-Economia-agraria</a>
+from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-economia-agraria">https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-economia-agraria</a>
 </div></div></section></div> ]]></description>
   <category>Economía Agraria</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-Economia-agraria/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/index.html</guid>
   <pubDate>Fri, 22 Apr 2022 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.html</link>
   <description><![CDATA[ 
 
 
@@ -7590,25 +7590,25 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-Econ
   title = {Gestión Pública y Administración Pública Definiciones,
     Conceptos y Aplicación},
   date = {2021-10-01},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2021" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E., Bermudo Heredia, F., Borda Torres, N., Castillo
 Lopez, K., &amp; Fernandez Núñez, Y. (2021, October 1). Gestión Pública
 y Administración Pública Definiciones, Conceptos y Aplicación. Retrieved
-from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion</a>
+from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion</a>
 </div></div></section></div> ]]></description>
   <category>Planeamiento y Presupuesto Público</category>
   <category>Administración Pública</category>
   <category>Gestión Pública</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-Gestion-Publica-Administracion-Publica-Definiciones-Conceptos-Aplicacion/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.html</guid>
   <pubDate>Fri, 01 Oct 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Reformas y Modernización de la Gestión Pública en Perú.</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html</link>
   <description><![CDATA[ 
 
 
@@ -7708,22 +7708,22 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Gest
     Torres, Noe and Castillo Lopez, Kattya and Fernandez Núñez, Yuri},
   title = {Reformas y Modernización de la Gestión Pública en Perú.},
   date = {2021-10-01},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2021" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E., Bermudo Heredia, F., Borda Torres, N., Castillo
 Lopez, K., &amp; Fernandez Núñez, Y. (2021, October 1). Reformas y
-Modernización de la Gestión Pública en Perú. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru</a>
+Modernización de la Gestión Pública en Perú. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru</a>
 </div></div></section></div> ]]></description>
   <category>Planeamiento y Presupuesto Público</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-Reformas-Modernizacion-Gestion-Pública-Peru/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html</guid>
   <pubDate>Fri, 01 Oct 2021 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Comandos útiles de Blogdown para crear sitios web con R</title>
   <dc:creator>Edison Achalma Mendoza</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</link>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.html</link>
   <description><![CDATA[ 
 
 
@@ -7756,16 +7756,16 @@ Modernización de la Gestión Pública en Perú. Retrieved from <a href="https:/
   author = {Achalma Mendoza, Edison},
   title = {Comandos útiles de Blogdown para crear sitios web con R},
   date = {2021-07-14},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-Comandos-Blogdown},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-comandos-blogdown},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma mendoza2021" class="csl-entry quarto-appendix-citeas">
 Achalma Mendoza, E. (2021, July 14). Comandos útiles de Blogdown para
-crear sitios web con R. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-Comandos-Blogdown">https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-Comandos-Blogdown</a>
+crear sitios web con R. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-comandos-blogdown">https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-comandos-blogdown</a>
 </div></div></section></div> ]]></description>
   <category>RStudio</category>
   <category>Blogdown</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-Comandos-Blogdown/index.html</guid>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.html</guid>
   <pubDate>Wed, 14 Jul 2021 05:00:00 GMT</pubDate>
 </item>
 </channel>

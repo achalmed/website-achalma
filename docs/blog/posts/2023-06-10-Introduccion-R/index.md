@@ -22,9 +22,7 @@ date: "06/10/2023"
 
 # Descargando e instalando R y RStudio
 
-En este artículo, te guiaré a través de los pasos para descargar e instalar R y RStudio en un sistema operativo Ubuntu Linux.
-
-Pasos para la descarga e instalación de R y Rstudio:
+En este artículo, te guiaré para descargar e instalar R y RStudio en sistema operativo Ubuntu Linux.
 
 ## Paso 1. Descargar R en Ubuntu Linux
 
@@ -36,17 +34,17 @@ Para comenzar, necesitarás descargar el paquete de instalación de R desde el s
 
 ## Paso 2. Instalar R en Ubuntu Linux
 
-Los paquetes para la versión actual de R 4.2 están disponibles para la mayoría de las versiones estables de Ubuntu Desktop hasta su fecha oficial de fin de vida. Sin embargo, solo la última versión de Soporte a Largo Plazo (LTS) cuenta con soporte completo. A partir del 2 de mayo de 2022, las versiones compatibles son:
+Los paquetes para la versión actual de R 4.2 están disponibles para la mayoría de las versiones estables de Ubuntu Desktop. Sin embargo, solo la última versión de Soporte a Largo Plazo (LTS) cuenta con soporte completo. A partir del 2 de mayo de 2022, las versiones compatibles son:
 
-- Jammy Jellyfish (22.04, solo amd64)
-- Impish Indri (21.10, solo amd64)
-- Focal Fossa (20.04; LTS y solo amd64)
-- Bionic Beaver (18.04; LTS)
-- Xenial Xerus (16.04; LTS)
+-   Jammy Jellyfish (22.04, solo amd64)
+-   Impish Indri (21.10, solo amd64)
+-   Focal Fossa (20.04; LTS y solo amd64)
+-   Bionic Beaver (18.04; LTS)
+-   Xenial Xerus (16.04; LTS)
 
 Ejecuta estas líneas (si eres `root`, omite `sudo`) para informar a Ubuntu sobre los binarios de R en CRAN.
 
-```bash
+``` bash
 # Actualizar índices
 sudo apt update -qq
 # Instalar dos paquetes auxiliares necesarios
@@ -63,7 +61,7 @@ Aquí utilizamos `lsb_release -cs` para acceder a la versión de Ubuntu que est�
 
 Luego, ejecuta
 
-```bash
+``` bash
 sudo apt install --no-install-recommends r-base
 ```
 
@@ -71,7 +69,7 @@ sudo apt install --no-install-recommends r-base
 
 Ejecuta este comando (como `root` o agregando `sudo` como prefijo) para agregar el repositorio actual de R 4.0 o posterior 'c2d4u':
 
-```bash
+``` bash
 sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 ```
 
@@ -91,18 +89,18 @@ Puedes descargar la última versión de RStudio desde su sitio web oficial: [Enl
 
 Antes de instalar RStudio, es posible que debas instalar algunas dependencias en tu sistema. Abre la terminal y ejecuta los siguientes comandos para instalar las dependencias requeridas:
 
-```bash
+``` bash
 sudo apt update
 sudo apt install gdebi-core
 ```
 
-Estos comandos actualizarán los repositorios de paquetes y luego instalarán `gdebi-core`, una utilidad necesaria para instalar paquetes `.deb` de forma sencilla y resolver dependencias automáticamente.
+Estos comandos actualizarán los repositorios de paquetes y luego instalarán `gdebi-core`, una utilidad necesaria para instalar paquetes `.deb` de forma sencilla y para resolver dependencias automáticamente.
 
 ### Instalar RStudio
 
 Una vez que hayas descargado el archivo de instalación de RStudio y hayas instalado las dependencias necesarias, puedes proceder con la instalación. Ve al directorio donde descargaste el archivo de instalación y ejecuta el siguiente comando en la terminal:
 
-```bash
+``` bash
 sudo gdebi <nombre_del_archivo_de_instalación>.deb
 ```
 
@@ -114,7 +112,7 @@ El comando `gdebi` instalará RStudio y resolverá automáticamente las dependen
 
 Una vez completada la instalación, puedes iniciar RStudio desde el menú de aplicaciones de Ubuntu o ejecutando el siguiente comando en la terminal:
 
-```bash
+``` bash
 rstudio
 ```
 
@@ -148,7 +146,7 @@ En el mundo del análisis de datos y programación en R, los archivos de script 
 
 1.  **Documentación de tareas**: Al escribir nuestros comandos en un archivo de script, estamos creando una documentación detallada de los pasos y procesos utilizados en nuestro análisis. Esto facilita la comprensión y revisión de nuestro trabajo, tanto para nosotros mismos como para otros colaboradores.
 
-2.  **Automatización de tareas repetitivas**: Los archivos de script permiten automatizar tareas que se repiten con frecuencia. Podemos definir una serie de comandos en el archivo y ejecutarlos de forma rápida y eficiente cada vez que sea necesario. Esto ahorra tiempo y reduce la posibilidad de errores humanos.
+2.  **Automatización de tareas repetitivas**: Los archivos de script permiten automatizar tareas que se repiten con frecuencia. Podemos definir una serie de comandos en el archivo y ejecutarlos de forma rápida y eficiente cada vez que sea necesario. Esto ahorra tiempo y reduce la posibilidad de errores.
 
 3.  **Evaluación de cambios**: Al tener nuestros comandos en un archivo de script, podemos realizar modificaciones y ajustes en el análisis de manera más ágil. Podemos realizar pruebas y evaluaciones de los cambios sin necesidad de volver a escribir todo el código desde cero. Esto nos brinda flexibilidad y nos permite iterar y mejorar nuestro análisis de manera más eficiente.
 
@@ -156,7 +154,7 @@ En el mundo del análisis de datos y programación en R, los archivos de script 
 
 Los scripts nos permiten escribir y ejecutar una serie de comandos de manera secuencial, lo que facilita la automatización y reproducción de tareas en nuestros análisis de datos.
 
-### Paso 1: Crear un nuevo archivo de script
+**Paso 1: Crear un nuevo archivo de script**
 
 En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hacer esto, seleccionamos "Archivo" en la barra de menú, luego "Nuevo archivo" y finalmente "Script R". Esto abrirá un nuevo editor de texto donde podemos escribir nuestro código.
 
@@ -164,14 +162,14 @@ En primer lugar, abrimos RStudio y creamos un nuevo archivo de script. Para hace
 
 ![](images/Screenshot_20230611_001615.png)
 
-### Paso 2: Escribir el código en el script
+**Paso 2: Escribir el código en el script**
 
 Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.
 
 ![](images/Screenshot_20230611_004241.png)
 
 
-::: {.cell hash='index_cache/html/unnamed-chunk-1_b2491314c73ed2c02b4477827870869f'}
+::: {.cell hash='index_cache/html/unnamed-chunk-1_10d074d27497c4e5407872d19a5fce58'}
 
 ```{.r .cell-code}
 # Este es un ejemplo de un script básico en R
@@ -196,23 +194,11 @@ cat("La suma es:", suma, "\n")
 cat("La resta es:", resta, "\n")
 cat("La multiplicación es:", multiplicacion, "\n")
 cat("La división es:", division, "\n")
-
-# Estructuras de control
-if (edad >= 18) {
-    cat("Eres mayor de edad.\n")
-} else {
-    cat("Eres menor de edad.\n")
-}
-
-# Bucle for
-for (i in 1:5) {
-    cat("Iteración:", i, "\n")
-}
 ```
 :::
 
 
-### Paso 3: Ejecutar el script
+**Paso 3: Ejecutar el script**
 
 Una vez que hemos escrito nuestro código en el archivo de script, podemos ejecutarlo para obtener los resultados deseados. Para hacer esto, podemos utilizar el atajo de teclado "Ctrl + Enter" o simplemente hacer clic en el botón "Ejecutar" en la parte superior del editor de texto.
 
@@ -222,7 +208,7 @@ RStudio ejecutará el código línea por línea y mostrará los resultados en la
 
 ![](images/Screenshot_20230611_010256.png)
 
-### Paso 4: Guardar el script
+**Paso 4: Guardar el script**
 
 Es importante guardar regularmente nuestro script para evitar perder nuestro trabajo. Para guardar el archivo de script, seleccionamos "Archivo" en la barra de menú y luego "Guardar" o "Guardar como".
 
@@ -234,22 +220,22 @@ Podemos elegir una ubicación y un nombre de archivo apropiados para guardar nue
 
 ![](images/Screenshot_20230611_013135.png)
 
-### Paso 5: Continuar escribiendo y ejecutando el código
+**Paso 5: Continuar escribiendo y ejecutando el código**
 
 Podemos continuar escribiendo y ejecutando más código en nuestro script según nuestras necesidades. Podemos agregar nuevas líneas de código, modificar las existentes o eliminar las que ya no necesitamos. Es recomendable guardar el script regularmente a medida que realizamos cambios.
 
-### Paso 6: Exportar los resultados (opcional)
+**Paso 6: Exportar los resultados (opcional)**
 
 Si deseamos guardar los resultados de nuestro análisis, podemos exportarlos a archivos o formatos específicos. Por ejemplo, podemos guardar tablas de datos en archivos CSV, gráficos en imágenes o informes en formatos de texto. Esto nos permite compartir y utilizar los resultados fuera de RStudio.
 
-> Recuerda que practicar y experimentar con diferentes comandos y funciones en RStudio te ayudará a familiarizarte con el entorno y mejorar tus habilidades de programación en R. ¡Diviértete explorando el mundo del análisis de datos con RStudio y sus potentes scripts!
+> Recuerda que practicar y experimentar con diferentes comandos y funciones en RStudio te ayudará a familiarizarte con el entorno y mejorar tus habilidades de programación en R. ¡Diviértete explorando el mundo del análisis de datos con RStudio!
 
 ## Shortcuts
 
 Aquí tienes una tabla con algunos atajos de teclado útiles en RStudio para usuarios de Ubuntu Linux:
 
 | Acción                                                                       | Atajo de teclado     |
-| ---------------------------------------------------------------------------- | -------------------- |
+|-------------------------------------------------------|-----------------|
 | Ejecutar el código / selección actual y saltar a la línea siguiente          | Ctrl + Enter         |
 | Ejecutar el código / selección actual y no saltar a la línea siguiente       | Alt + Enter          |
 | Ejecutar línea de código                                                     | Shift + Enter        |
@@ -288,7 +274,7 @@ Estos atajos de teclado te ayudarán a agilizar tu flujo de trabajo en RStudio e
 
 ## Espacio de trabajo (.Rdata)
 
-El espacio de trabajo en R consiste en todos los objetos que se crean o cargan durante una sesión de R. En este tutorial, aprenderemos cómo trabajar con el espacio de trabajo en RStudio.
+El espacio de trabajo en R consiste en todos los objetos que se crean o cargan durante una sesión de R.
 
 ### Creación de objetos de datos
 
@@ -316,7 +302,7 @@ Puedes inspeccionar los objetos de datos haciendo clic sobre ellos en el panel d
 
 En RStudio, puedes guardar todos los objetos en tu espacio de trabajo en un archivo llamado `.Rdata`. Esta función te permite almacenar y cargar el espacio de trabajo completo en futuras sesiones de RStudio.
 
-**Para guardar el espacio de trabajo, simplemente ve al menú "Session" y selecciona "Save Workspace As...". A continuación, elige la ubicación y el nombre de archivo deseados para guardar el archivo `.Rdata`.**
+Para guardar el espacio de trabajo, simplemente ve al menú "Session" y selecciona "Save Workspace As...". A continuación, elige la ubicación y el nombre de archivo deseados para guardar el archivo `.Rdata`.
 
 ![](images/Screenshot_20230611_095350.png)
 
@@ -337,8 +323,6 @@ Para cargar el espacio de trabajo previamente guardado, sigue estos pasos:
 ![](images/Screenshot_20230611_100949.png)
 
 Una vez completados estos pasos, podrás acceder a todos los objetos y continuar trabajando con ellos como lo hiciste en la sesión en la que guardaste el espacio de trabajo.
-
-Recuerda que al cargar un espacio de trabajo previamente guardado, es importante asegurarte de que el archivo `.Rdata` sea el correcto y contenga los objetos y los valores deseados. También ten en cuenta que cualquier objeto o configuración existente en tu entorno de trabajo actual se reemplazará por los objetos y los valores del archivo `.Rdata` cargado.
 
 > ¡Con esta opción de carga, podrás retomar fácilmente tus proyectos anteriores y continuar donde lo dejaste sin tener que volver a crear los objetos desde cero!
 
@@ -367,11 +351,11 @@ Si deseas guardar tu historial de comandos en RStudio, sigue estos pasos:
 
 ### Reutilización del historial de comandos
 
-El historial se guarda en un archivo llamado `.Rhistory`. Puedes reutilizar todo el historial de comandos haciendo clic en el archivo `.Rhistory` o con el nombre asignado y seleccionando los comandos que deseas utilizar. Luego, puedes copiarlos y pegarlos en tu archivo de script actual.
+El historial se guarda en un archivo llamado `.Rhistory`. Puedes reutilizar todo el historial de comandos haciendo clic en el archivo `.Rhistory` o con el nombre asignado. Luego, puedes copiarlos y pegarlos en tu archivo de script actual.
 
 ![](images/Screenshot_20230611_103319.png)
 
-Inserta un código de línea seleccionado en un archivo de script nuevo
+Inserta un código de línea seleccionado de `.Rhistory` en un archivo de script nuevo.
 
 ![](images/Screenshot_20230611_103755.png)
 
@@ -387,9 +371,9 @@ En R, es fundamental comprender los diferentes tipos de datos disponibles. A con
 
 Los datos numéricos en R se dividen en dos tipos principales:
 
-a. Números reales (`double`): Estos son los números más comunes y se utilizan para representar valores decimales. Por ejemplo, 3.14 y 2.71828 son números reales en R. La precisión de los números reales en R depende de la máquina en la que se ejecuta el programa.
+a.  Números reales, se conoce como `double`. Estos son los números más comunes y se utilizan para representar valores decimales. Por ejemplo, 3.14 y 2.71828 son números reales en R. La precisión de los números reales en R depende de la máquina en la que se ejecuta el programa.
 
-b. Números enteros (`integer`): Estos son números que no contienen decimales y se utilizan para representar valores enteros. Por ejemplo, 1, 2, -5 son ejemplos de números enteros en R. Los números enteros se utilizan cuando no se requiere precisión decimal.
+b.  Números enteros, se conoce como `integer`. Estos son números que no contienen decimales y se utilizan para representar valores enteros. Por ejemplo, 1, 2, -5 son ejemplos de números enteros en R. Los números enteros se utilizan cuando no se requiere precisión decimal.
 
 ### 2. Tipo de datos lógico
 
@@ -435,7 +419,7 @@ c("a", "b", "c") # caracteres (character)
 
 1.  Asignar los vectores a nombres:
 
-    Se crea un vector llamado "dbl" que contiene los números decimales 0.5, 0.6 y 0.25.
+    Creamos un vector llamado "dbl" que contiene los números decimales 0.5, 0.6 y 0.25.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-3_6344e4ff67c0e743a9008c80db97d6b3'}
@@ -446,7 +430,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-    Se crea un vector llamado "chr" que contiene los caracteres "a", "b" y "c".
+    Creamos un vector llamado "chr" que contiene los caracteres "a", "b" y "c".
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-4_35d791fafc7b6af8d92d09924db64ab5'}
@@ -459,7 +443,7 @@ c("a", "b", "c") # caracteres (character)
 
 2.  Imprimir los vectores "dbl" y "chr" en la consola:
 
-    Se muestra en la consola el contenido del vector "dbl", que son los números decimales 0.5, 0.6 y 0.25.
+    Visualizamos en la consola el contenido del vector "dbl", que son los números decimales 0.5, 0.6 y 0.25.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-5_9ac39384865a482e07491daffd7c9083'}
@@ -470,7 +454,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-    Se muestra en la consola el contenido del vector "chr", que son los caracteres "a", "b" y "c".
+    Visualizamos en la consola el contenido del vector "chr", que son los caracteres "a", "b" y "c".
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-6_7585e9020112158851518e65db16d7f8'}
@@ -483,7 +467,7 @@ c("a", "b", "c") # caracteres (character)
 
 3.  Verificar el número de elementos en "dbl" y "chr":
 
-    Se calcula y muestra en la consola la longitud del vector "dbl", que es 3.
+    Calculamos y mostramos en la consola la longitud del vector "dbl", que es 3.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-7_734174bb92e5edbc519fe53240de520f'}
@@ -494,7 +478,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-    Se calcula y muestra en la consola la longitud del vector "chr", que es 3.
+    Calculamos y mostramos en la consola la longitud del vector "chr", que es 3.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-8_6ffc18602041f72974f279fb9a46852a'}
@@ -507,7 +491,7 @@ c("a", "b", "c") # caracteres (character)
 
 4.  Verificar el tipo de dato de "dbl" y "chr":
 
-    Se muestra en la consola el tipo de dato del vector "dbl", que es "double" (números decimales).
+    Visualizamos en la consola el tipo de dato del vector "dbl", que es "double" (números decimales).
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-9_82a4c67304a4827b3ef5ac077b32dc66'}
@@ -518,7 +502,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-    Se muestra en la consola el tipo de dato del vector "chr", que es "character" (caracteres).
+    Visualizamos en la consola el tipo de dato del vector "chr", que es "character" (caracteres).
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-10_19810e117dcf72f9a95dd779c41dfb1c'}
@@ -531,7 +515,7 @@ c("a", "b", "c") # caracteres (character)
 
 5.  Combinar dos vectores:
 
-    Se combina el vector "dbl" consigo mismo utilizando la función "c()", creando un nuevo vector que contiene los elementos duplicados del vector original.
+    Se puede combinar el vector "dbl" consigo mismo utilizando la función "c()", creando un nuevo vector que contiene los elementos duplicados del vector original.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-11_5f55dfb65673f4b4e2da9d408aa7ba2e'}
@@ -542,7 +526,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-    Se combina el vector "dbl" con el vector "chr" utilizando la función "c()", creando un nuevo vector que contiene los elementos de ambos vectores concatenados.
+    Tambien se puede combina el vector "dbl" con el vector "chr" utilizando la función "c()", creando un nuevo vector que contiene los elementos de ambos vectores concatenados.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-12_96b112d5d441319359e7e3d32d4d3a3f'}
@@ -559,7 +543,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 
 **Operaciones aritméticas con vectores**
 
-1.  Definir dos nuevos vectores numéricos llamados `a` y `b` con 4 elementos cada uno:
+1.  Definamos dos nuevos vectores numéricos llamados `a` y `b` con 4 elementos cada uno:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-13_2ba6aaafc90e5a384e0b10e0bcc9829d'}
@@ -571,7 +555,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-2.  Realizar una multiplicación escalar de `a` por 5, lo que significa que cada elemento en `a` se multiplica por 5:
+2.  Realizamos una multiplicación escalar de `a` por 5, lo que significa que cada elemento en `a` se multiplica por 5:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-14_a1f8122c3a08ae1cddae98331adfd953'}
@@ -582,7 +566,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-3.  Realizar una multiplicación de vectores entre `a` y `b`, lo que implica multiplicar cada elemento en `a` por el elemento correspondiente en `b`:
+3.  Realizamos una multiplicación de vectores entre `a` y `b`, lo que implica multiplicar cada elemento en `a` por el elemento correspondiente en `b`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-15_9da1df88828b10421dbda91e8c84a1fc'}
@@ -593,7 +577,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-4.  Crear un nuevo vector numérico llamado `v` con longitud 5.
+4.  Creamos un nuevo vector numérico llamado `v` con longitud 5.
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-16_49190ef0d89c6f8fd3b9283107aecbb6'}
@@ -615,7 +599,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 **Matrices**
 
-1.  Combinar dos vectores por columnas utilizando la función `cbind()`:
+1.  Combinamos los vectores `a` y `b`, definidas anteriormente, por columnas utilizando la función `cbind()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-17_6b85a10b17bd16f16973921031d46ac1'}
@@ -629,7 +613,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     Esta opción combina los vectores `a` y `b` por columnas, creando una matriz `A` donde los elementos de `a` forman la primera columna y los elementos de `b` forman la segunda columna.
 
-2.  Combinar dos vectores por filas utilizando la función `rbind()`:
+2.  Combinamos los vectores `a` y `b` por filas utilizando la función `rbind()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-18_f5b41d8859e448a166240b7758b599d6'}
@@ -643,7 +627,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     En esta opción, los vectores `a` y `b` se combinan por filas para crear una matriz `B`. Los elementos de `a` forman la primera fila y los elementos de `b` forman la segunda fila.
 
-3.  Crear una matriz a partir de los elementos de un vector utilizando la función `matrix()`:
+3.  Creamos una matriz a partir de los elementos de vector `a` utilizando la función `matrix()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-19_1598460fa0413879a2af0d992dea751a'}
@@ -655,11 +639,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-    Aquí se utiliza la función `matrix()` para crear una matriz `A` a partir de los elementos del vector `a`. Se especifica que la matriz tendrá 2 columnas y 2 filas.
+    Aquí se utiliza la función `matrix()` para crear una matriz `A` a partir de los elementos del vector `a`. Se especifica que la matriz tendrá 2 columnas y 2 filas. Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.
 
-    Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.
-
-    Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos
+4. Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-20_9dab0416a9b5ab50ec910667164bb5f6'}
@@ -673,7 +655,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     En esta variante, se crea una matriz `A` con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector `a`.
 
-    Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento byrow = TRUE
+5. Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento `byrow = TRUE`
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-21_1654fe86e30ddc371e238e747eb102d8'}
@@ -685,11 +667,11 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-    En esta opción, se crea una matriz `B` con 2 columnas y se especifica que los elementos del vector `a` se distribuirán por filas (`byrow = TRUE`), es decir, los primeros elementos de `a` formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.
+    En esta opción, se crea una matriz `B` con 2 columnas y se especifica que los elementos del vector `a` se distribuirán por filas `byrow = TRUE`, es decir, los primeros elementos de `a` formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.
 
 **Acciones con matrices**
 
-1.  Verificar el número de filas de la matriz `A` utilizando la función `nrow()`:
+1.  Verificamos el número de filas de la matriz `A` utilizando la función `nrow()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-22_6622573861cf9517fe94ee415880560a'}
@@ -702,7 +684,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     Esta línea de código devuelve el número de filas de la matriz `A`.
 
-2.  Verificar el número de columnas de la matriz `A` utilizando la función `ncol()`:
+2.  Verificamos el número de columnas de la matriz `A` utilizando la función `ncol()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-23_bc3b467b6bb20c1a43238c7ed60368f6'}
@@ -715,7 +697,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     Aquí se obtiene el número de columnas de la matriz `A`.
 
-3.  Verificar la dimensión (número de filas y columnas) de la matriz `A` utilizando la función `dim()`:
+3.  Verificamos la dimensión (número de filas y columnas) de la matriz `A` utilizando la función `dim()`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-24_f276946a11f9168555a017c592aa4212'}
@@ -728,7 +710,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     Esta línea de código devuelve la dimensión de la matriz `A` en formato `[nrow, ncol]`.
 
-4.  Combinar dos matrices `A` por columnas utilizando la función `cbind()` y almacenar el resultado en `D.wide`:
+4.  Combinamos dos matrices `A` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D.wide`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-25_9961651e8b63138312a2ce40bbb1dfee'}
@@ -742,7 +724,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     En esta línea se crea una nueva matriz `D.wide` que combina las matrices `A` y `A` por columnas.
 
-5.  Combinar dos matrices `A` por filas utilizando la función `rbind()` y almacenar el resultado en `D.long`:
+5.  Combinamos dos matrices `A` por filas utilizando la función `rbind()` y almacenamos el resultado en `D.long`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-26_7471b513ff91bb19f81c6cf30ff4847c'}
@@ -756,7 +738,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
     Aquí se crea una nueva matriz `D.long` que combina las matrices `A` y `A` por filas.
 
-6.  Combinar las matrices `D.wide` y `D.long` por columnas utilizando la función `cbind()` y almacenar el resultado en `D`:
+6.  Combinamos las matrices `D.wide` y `D.long` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-27_2ab9f1095c23479ab757986eccfb8770'}
@@ -885,7 +867,7 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 **Creación del data frame:**
 
-1.  Crear vectores con diferentes tipos de datos, como números decimales (`dbl`), números enteros (`int`), valores lógicos (`lgl`) y caracteres (`chr`):
+1.  Creamos vectores con diferentes tipos de datos, como números decimales (`dbl`), números enteros (`int`), valores lógicos (`lgl`) y caracteres (`chr`):
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-36_e33c569875e10f7b7addf4f58304c95b'}
@@ -901,7 +883,7 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
     Cada vector tiene elementos que representan valores de su respectivo tipo de dato.
 
-2.  Utilizar la función `data.frame()` para combinar los vectores en un data frame llamado `df`:
+2.  Utilizamos la función `data.frame()` para combinar los vectores en un data frame llamado `df`:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-37_2987bd9d0ff2e4ae036238524ca505da'}
@@ -914,7 +896,7 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
     El data frame `df` se crea utilizando los vectores `dbl`, `int`, `lgl` y `chr` como columnas.
 
-3.  Mostar el contenido del data frame en la consola:
+3.  Mostamos el contenido del data frame en la consola:
 
 
     ::: {.cell hash='index_cache/html/unnamed-chunk-38_c84c5a766c354c5778842b3a97c1e099'}
@@ -929,44 +911,44 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 **Acciones con data frames:**
 
-1. Verificar el número de filas del data frame utilizando la función `nrow()`:
+1.  Verificamos el número de filas del data frame utilizando la función `nrow()`:
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-39_b893bda70e63e78af552ea0a1a9097f9'}
-   
-   ```{.r .cell-code}
-   nrow(df)
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-39_c3347733a4a84b64b600fc6dc8ce0c90'}
+    
+    ```{.r .cell-code}
+    nrow(df)
+    ```
+    :::
 
 
-   Esta línea de código devuelve el número de filas en el data frame `df`.
+    Esta línea de código devuelve el número de filas en el data frame `df`.
 
-2. Verificar el número de columnas del data frame utilizando la función `ncol()`:
-
-
-   ::: {.cell hash='index_cache/html/unnamed-chunk-40_3ae07260d4c4d988017d177ba71f23c5'}
-   
-   ```{.r .cell-code}
-   ncol(df)
-   ```
-   :::
+2.  Verificamos el número de columnas del data frame utilizando la función `ncol()`:
 
 
-   Aquí se obtiene el número de columnas en el data frame `df`.
-
-3. Verificar la dimensión (número de filas y columnas) del data frame utilizando la función `dim()`:
-
-
-   ::: {.cell hash='index_cache/html/unnamed-chunk-41_edaa0eca1dce7c4fc5c73e37e8dbd452'}
-   
-   ```{.r .cell-code}
-   dim(df)
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-40_3f370a8206b2255ca2c88ddc2df83d5c'}
+    
+    ```{.r .cell-code}
+    ncol(df)
+    ```
+    :::
 
 
-   Esta línea de código devuelve la dimensión del data frame `df` en formato `[nrow, ncol]`, es decir, el número de filas y columnas que tiene el data frame.
+    Aquí se obtiene el número de columnas en el data frame `df`.
+
+3.  Verificamos la dimensión (número de filas y columnas) del data frame utilizando la función `dim()`:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-41_ff14f4c5ec393eb4a0c2e78a8f9539ea'}
+    
+    ```{.r .cell-code}
+    dim(df)
+    ```
+    :::
+
+
+    Esta línea de código devuelve la dimensión del data frame `df` en formato `[nrow, ncol]`, es decir, el número de filas y columnas que tiene el data frame.
 
 ### 5. Lista
 
@@ -974,91 +956,89 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 **Creación de la lista**
 
-1. Se crea una variable `a` que contiene un **escalar** de tipo entero (`1L`):
+1.  Creamos una variable `a` que contiene un **escalar** de tipo entero (`1L`):
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-42_7aa51b912c0e4231629e67631501443d'}
-   
-   ```{.r .cell-code}
-   a <- 1L
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-42_8f2fc9671da6fe003c7329572ea433e5'}
+    
+    ```{.r .cell-code}
+    a <- 1L
+    ```
+    :::
 
 
-2. Se crea un **vector numérico** `dbl` con 5 elementos:
+2.  Creamos un **vector numérico** `dbl` con 5 elementos:
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-43_bfa6988e75eb3e01baf7da9c893da852'}
-   
-   ```{.r .cell-code}
-   dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333)
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-43_a3db28807719a4a9a0487ceb3d2e69ea'}
+    
+    ```{.r .cell-code}
+    dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333)
+    ```
+    :::
 
 
-3. Se crea un **vector de caracteres** `chr` con 3 elementos:
+3.  Creamos un **vector de caracteres** `chr` con 3 elementos:
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-44_dac08601f2bc5beedbd97a403cc7f6f7'}
-   
-   ```{.r .cell-code}
-   chr <- c("a", "b", "c")
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-44_f148bb290846cecfa0512a2dccd2b4a2'}
+    
+    ```{.r .cell-code}
+    chr <- c("a", "b", "c")
+    ```
+    :::
 
 
-4. Se crea un vector `v` con 4 elementos de tipo numérico:
+4.  Creamos un vector `v` con 4 elementos de tipo numérico:
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-45_38b6de2108486024704e92bbc30cd162'}
-   
-   ```{.r .cell-code}
-   v <- c(1.1, 1.2, 1.3, 1.4)
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-45_27708a3512e845867d933a07c3db4474'}
+    
+    ```{.r .cell-code}
+    v <- c(1.1, 1.2, 1.3, 1.4)
+    ```
+    :::
 
 
-5. Se crea una matriz `mat` de tamaño 2x2 a partir del vector `v`:
+5.  Creamos una matriz `mat` de tamaño 2x2 a partir del vector `v`:
 
 
-   ::: {.cell hash='index_cache/html/unnamed-chunk-46_affecc7596194be503acfe4ea72dea68'}
-   
-   ```{.r .cell-code}
-   mat <- matrix(v, ncol = 2)
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-46_248fd5801aef53664010a138311b7e14'}
+    
+    ```{.r .cell-code}
+    mat <- matrix(v, ncol = 2)
+    ```
+    :::
 
 
-   La matriz `mat` tiene 2 columnas y los elementos del vector `v` se llenan por columnas.
+    La matriz `mat` tiene 2 columnas y los elementos del vector `v` se llenan por columnas.
 
-6. Se crea una lista `l` que contiene los elementos `a`, `dbl`, `chr` y `mat`:
-
-
-   ::: {.cell hash='index_cache/html/unnamed-chunk-47_73b27dedd7a31abe6b5e50dc2ad174e0'}
-   
-   ```{.r .cell-code}
-   l <- list(a, dbl, chr, mat)
-   ```
-   :::
+6.  Creamos una lista `l` que contiene los elementos `a`, `dbl`, `chr` y `mat`:
 
 
-   La lista `l` contiene estos elementos en ese orden.
-
-7. Se muestra el contenido de la lista en la consola:
-
-
-   ::: {.cell hash='index_cache/html/unnamed-chunk-48_9a4d4e4e54f2165a010dd535c3f6c025'}
-   
-   ```{.r .cell-code}
-   l
-   ```
-   :::
+    ::: {.cell hash='index_cache/html/unnamed-chunk-47_7a277ed0f44997b5fcbb71b1e36428bd'}
+    
+    ```{.r .cell-code}
+    l <- list(a, dbl, chr, mat)
+    ```
+    :::
 
 
-   Esto imprime el contenido de la lista `l`.
+    La lista `l` contiene estos elementos en ese orden.
+
+7.  Finalmente, visualizamos el contenido de la lista en la consola:
+
+
+    ::: {.cell hash='index_cache/html/unnamed-chunk-48_d3fea819c649fe45e63a52a995497cca'}
+    
+    ```{.r .cell-code}
+    l
+    ```
+    :::
+
+
+    Esto imprime el contenido de la lista `l`.
 
 > Es importante comprender estas estructuras de datos en R, ya que nos permiten organizar y manipular la información de manera efectiva. Cada estructura tiene sus propias características y funciones asociadas que nos facilitan el trabajo con los datos en la programación.
-
-
 
 # Manipulación de datos

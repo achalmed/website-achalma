@@ -2,23 +2,41 @@ title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
 title-block-banner-color: body  # Color del texto en el banner del bloque de título
 fig-cap-location: top  # Ubicación de las leyendas de las figuras
 tbl-cap-location: top  # Ubicación de las leyendas de las tablas
-csl: apa-6th-edition.csl  # Estilo de citas
+
 author:
   - name: Edison Achalma Mendoza  # Nombre del autor
     url: https://achalmaedison.netlify.app  # URL del autor
     affiliation: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
     affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
     orcid: 0000-0001-6996-3364  # ORCID del autor
+date-modified: "today"  # Fecha de modificación del documento
+search: false  # Habilitar búsqueda en el documento
+
 citation: true  # Habilitar citas bibliográficas
 google-scholar: true  # Habilitar enlaces a Google Scholar
+csl: apa-6th-edition.csl  # Estilo de citas
+cite-method: biblatex  # Método de citación
+
 crossref:
   fig-title: Figura  # Título de las figuras en las referencias
   fig-prefix: Figura  # Prefijo para las leyendas de las figuras
   tbl-title: Tabla  # Título de las tablas en las referencias
   tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
   ref-hyperlink: true  # Habilitar enlaces en las referencias
-date-modified: "today"  # Fecha de modificación del documento
+execute:
+  # keep-ipynb: true
+  keep-md: true  # Mantener archivos .md generados
+  echo: true  # Mostrar comandos ejecutados
+  output: true  # Mostrar resultados de la ejecución
+  warning: false  # Ocultar advertencias
+  error: false  # Ocultar errores
+  cache: true  # Habilitar el almacenamiento en caché
+  enabled: false  # Deshabilitar la ejecución
+
 draft: false  # Modo de borrador (false = final, true = borrador)
+
+highlight-style: github
+
 format:
   html:
     page-layout: article  # Diseño de página para el formato HTML (por ejemplo, artículo, libro, etc.)
@@ -26,12 +44,12 @@ format:
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos
-    toc-location: left  # Ubicación de la tabla de contenidos (izquierda, derecha, superior, inferior)
+    toc-location: left  # Ubicación de la tabla de contenidos (left, right)
     css: index.css  # Archivo CSS personalizado para el formato HTML
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
     smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
-    link-external-icon: true  # Mostrar icono para enlaces externos
+    # link-external-icon: true  # Mostrar icono para enlaces externos
     link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
     citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
     footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
@@ -45,14 +63,5 @@ format:
       caption: none  # Opción para la leyenda del código
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
-execute:
-  # keep-ipynb: true
-  keep-md: true  # Mantener archivos .md generados
-  echo: true  # Mostrar comandos ejecutados
-  output: true  # Mostrar resultados de la ejecución
-  warning: false  # Ocultar advertencias
-  error: false  # Ocultar errores
-  cache: true  # Habilitar el almacenamiento en caché
-  enabled: false  # Deshabilitar la ejecución
-search: false  # Habilitar búsqueda en el documento
 
+editor: visual

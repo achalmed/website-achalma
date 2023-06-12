@@ -14,7 +14,7 @@ website:
   repo-url: https://github.com/achalmed/website-achalma
   repo-actions: [edit, issue]
   page-navigation: true
-  reader-mode: true
+  # reader-mode: true
   search:
     type: overlay
     algolia:
@@ -23,6 +23,7 @@ website:
       search-only-api-key: 41be6c1e0a7fea4a51b107810facf577
       analytics-events: true
       show-logo: true
+
   page-footer:
     left: |
       © 2023 Edison Achalma, Ayacucho
@@ -41,7 +42,8 @@ website:
         aria-label: Quarto Twitter
       - icon: github
         href: https://github.com/achalmed/website-achalma
-        aria-label: Quarto GitHub       
+        aria-label: Quarto GitHub  
+
   navbar:
     background: light
     logo: Aukihack.png
@@ -53,6 +55,8 @@ website:
         href: index.qmd
       - text: "Sobre mi"
         href: docs/get-started/index.qmd
+      - text: "Publicaciones"
+        href: docs/Publicaciones/index.qmd
       - text: "Galería"
         href: docs/gallery/index.qmd
       - text: "Blogs"
@@ -74,10 +78,12 @@ website:
         text: Quarto Twitter
       - icon: github
         href: https://github.com/achalmed
-        text: Quarto GitHub       
+        text: Quarto GitHub    
 
 bibliography: references.bib
+
 lang: es
+
 format:
   html:
     page-layout: full

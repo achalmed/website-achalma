@@ -35,10 +35,7 @@ En un sistema económico de mercado, los precios se determinan a través de la o
 
 Es importante destacar que existen diversos tipos de sistemas económicos, y la economía de mercado es solo uno de ellos. Otros sistemas económicos, como el socialismo o el capitalismo de Estado, presentan diferentes características y formas de organización de la actividad económica.
 
-
-
 ## LAS DIFERENCIAS ENTRE SISTEMAS ECONOMICOS
-
 
 +++++++ tabla
 
@@ -146,8 +143,13 @@ En ambos casos, la presencia de un bien sustituto en el mercado restringe la cap
 La elasticidad cruzada de la demanda se calcula mediante la fórmula:
 
 $$
-\eta_{XP_{y}} = \frac{\partial X}{\partial P_{y}} \frac{P_{y}}{X} = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_{y}}{P_{y}}}
+\eta_{XP_{y}} = \frac{\partial X}{\partial P_{y}} \frac{P_{y}}{X}
 $$ {#eq-1}
+
+$$
+\eta_{XP_{y}} = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_{y}}{P_{y}}}
+$$ {#eq-2}
+
 
 Donde $\eta_{XP_y}$ representa la elasticidad cruzada de la demanda entre los bienes X e Y. 
 
@@ -165,11 +167,11 @@ Para determinar la posición de poder de un monopolista en el mercado, es necesa
 
 El análisis de la posición de poder de un monopolista es fundamental para evaluar la competencia y el funcionamiento eficiente del mercado. Los lineamientos de fusiones (Merger Guidelines) se utilizan para evaluar fusiones y adquisiciones empresariales, asegurándose de que no se genere una concentración excesiva de poder en el mercado y que no se perjudique la competencia y el bienestar del consumidor.
 
-## Cómo determinar la posición de poder de un monopolista en el mercado (Merger Guidelines)
+### Cómo determinar la posición de poder de un monopolista en el mercado (Merger Guidelines)
 
 Para evaluar la posición de poder de un monopolista en el mercado, se siguen los siguientes pasos de razonamiento.
 
-### Primer Paso: Evaluación del Bien A
+**Primer Paso: Evaluación del Bien A**
 
 Se plantea la siguiente pregunta: ¿Puede una empresa monopolista incrementar el precio del bien A en un rango del 5% al 10% de manera rentable?
 
@@ -177,7 +179,7 @@ Se plantea la siguiente pregunta: ¿Puede una empresa monopolista incrementar el
 
 - Si la respuesta es no: Esto implica que existe otro producto, B, que es más competitivo. Por lo tanto, ambos productos pertenecen al mismo mercado.
 
-### Segundo Paso: Evaluación de los Bienes A y B
+**Segundo Paso: Evaluación de los Bienes A y B**
 
 Se plantea la siguiente pregunta: ¿Puede un monopolista incrementar el precio de los bienes A y B en un rango del 5% al 10% de manera rentable?
 
@@ -185,7 +187,7 @@ Se plantea la siguiente pregunta: ¿Puede un monopolista incrementar el precio d
 
 - Si la respuesta es no: Esto implica que existe otro producto, C, que es más competitivo que los bienes A y B. Por lo tanto, los tres productos pertenecen al mismo mercado.
 
-### Tercer Paso: Repetición del Proceso
+**Tercer Paso: Repetición del Proceso**
 
 El proceso se repite hasta que no existan productos sustitutos adicionales. Se evalúa cada vez si el monopolista puede incrementar el precio de los bienes de manera rentable y se determina si pertenecen al mismo mercado relevante.
 
@@ -204,7 +206,7 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 SE REPITE EL PROCESO HASTA CONOCER QUE YA NO HAY PRODUCTOS SUSTITUTOS
 
 
-## Ejemplo de determinación del mercado relevante para un monopolista
+### Ejemplo de determinación del mercado relevante para un monopolista
 
 En este ejemplo, analizaremos la situación de una empresa monopolista, llamada A, y evaluaremos si el mercado en el que opera es relevante. Utilizaremos datos específicos para ilustrar el proceso.
 
@@ -252,51 +254,107 @@ Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un m
 
 
 
-1. LA ELASTICIDAD PRECIO DE LA DEMANDA RESIDUAL DE LA EMPRESA CON DEMANDA RELEVANTE
+## Elasticidad Precio de la Demanda Residual de una Empresa con Demanda Relevante
 
+La elasticidad precio de la demanda residual es un concepto importante en el análisis económico que permite medir la sensibilidad de la demanda de un producto específico de una empresa ante cambios en su precio, teniendo en cuenta los efectos de la demanda de otros productos relacionados.
+
+Para comprender este concepto, consideremos las siguientes ecuaciones:
+
+La demanda total del mercado $D_T$ se puede expresar como la demanda del producto específico $X_T^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-3:
 
 $$
-D_t = X_{t}^{d} = X_{t}^{d} P_{x}
-$$ {#eq-2}
-
-
-$$
-D_R = X_R^d = X_R^d P_x
+D_T = X_{T}^{d} = X_{T}^{d} P_{x}
 $$ {#eq-3}
 
-
+La demanda residual $D_R$ es la demanda que queda para el producto específico después de tener en cuenta las demandas de otros productos relacionados. Se puede expresar como la demanda del producto residual $X_R^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-4:
 $$
-S_t = X_C^S = X_C^S P_x
+D_R = X_R^d = X_R^d P_x
 $$ {#eq-4}
 
-
+La oferta de los competidores $S_C$ es la cantidad ofrecida por otras empresas en el mercado, que se puede expresar como la oferta del producto complementario $X_C^S$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-5:
 $$
-D_t = D_R + S_t \equiv X_t^d = X_R^d + S_t \equiv X_t^d P_x = X_R^d P_x + X_C^S P_x
+S_C = X_C^S = X_C^S P_x
 $$ {#eq-5}
 
-Resolviendo la  @eq-5 para la demanda residual tenemos:
-
-
+La demanda total $D_T$ es igual a la suma de la demanda residual $D_R$ y la oferta de los competidores $S_C$. Esta relación se muestra en la @eq-6:
 $$
-X_R^d P_x = X_t^d P_x - X_C^S P_x
+D_T = D_R + S_C \equiv X_t^d = X_R^d + X_C^S \equiv X_t^d P_x = X_R^d P_x + X_C^S P_x
 $$ {#eq-6}
 
+Donde:
 
+- $D_T$ es la demanda total del producto.
+- $D_R$ es la demanda residual del producto.
+- $S_C$ es la demanda de productos complementarios o sustitutos
+
+A partir de la @eq-6, podemos despejar la demanda residual $D_R$ y obtener el siguiente:
 $$
-\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_t^d P_x}{\partial P_x} \frac{P_x}{X_t^d} - \frac{\partial X_t^S P_x}{\partial P_x} \frac{P_x}{X_t^S}
+X_R^d P_x = X_T^d P_x - X_C^S P_x
 $$ {#eq-7}
 
-Multiplicando a los elementos de la igualdad hacia la derecha por $\frac{X_t^d}{X_R^d}$
+Aplicando la @eq-1 a la @eq-7, obtenemos:
+$$
+\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S}
+$$ {#eq-8}
 
+Multiplicando los elementos de la @eq-8 por $\frac{X_T^d}{X_R^d}$ y $\frac{X_C^S}{X_R^d}$, hacia la derecha, obtenemos:
+$$
+\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{X_T^d}{X_R^d} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_C^S}{X_R^d}
+$$ {#eq-9}
 
+Dividiendo el primer elemento de la @eq-9 tanto en el numerador como en el denominador por $X_T^d$, obtenemos:
+$$
+\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_C^S}{X_R^d}
+$$ {#eq-10}
 
-En esta estrategia de la empresa lo más importante es saber si la elasticidad relevante es la elasticidad del mercado o la elasticidad residual de la empresa. Ambas elasticidades pueden ser relevantes, lo cual dependerá de la conducta de otros oferentes del producto (o conducta de sus competidores), por ejemplo: 
+Considerando que $X_C^S = X_T^d - X_R^d$, podemos reemplazarlo en la @eq-10, obteniendo :
+$$
+\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_T^d - X_R^d}{X_R^d}
+$$ {#eq-11}
 
-Si el precio del producto de la empresa aumenta y no es seguido por las otras empresas oferentes, entonces la elasticidad precio de la demanda de la empresa es más relevante. Por el contrario, sí el precio del producto de la empresa aumenta y es seguido por aumentos similares de precios por parte de los otros oferentes la elasticidad más relevante para la empresa estará más cerca de la elasticidad precio de la demanda de mercado. 
+En esta @eq-11, tienen la forma de la elasticidad precio de la demanda, por lo que podemos reescribir la ecuación como:
+$$
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{\frac{X_R^d}{X_T^d}} - \eta_{P_{x}X_C^S}^S \frac{X_T^d - X_R^d}{X_R^d} 
+$$ {#eq-12}
 
-En este sentido, el análisis de la elasticidad relevante nos permite identificar y evaluar las posibles respuestas de los competidores ante determinadas estrategias. 
+Ordenando y considerando que $\frac{X_R^d}{X_T^d} = S_R$, tenemos:
+$$
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{X_T^d}{X_R^d} - 1)
+$$ {#eq-13}
 
+Dividiendo el segundo elemento de la @eq-13 dentro del paréntesis tanto en el numerador como en el denominador por $X_T^d$, tenemos:
 
+$$
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - 1)
+$$ {#eq-14}
+
+La @eq-14 puede ser simplificada aún más considerando que $\frac{X_R^d}{X_T^d} = S_R$, obtenemos:
+$$
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{1}{S_R} - 1)
+$$ {#eq-15}
+
+La @eq-15 nos permite calcular la elasticidad precio de la demanda residual de una empresa considerando las elasticidades de la demanda del mercado y la oferta de las demás empresas. Esta medida es importante para determinar si la elasticidad más relevante para la empresa es la elasticidad de su demanda o la elasticidad del mercado en general. Dependiendo de la conducta de los competidores, una u otra elasticidad puede ser más relevante. por ejemplo: 
+
+- Si el precio del producto de la empresa aumenta y no es seguido por las otras empresas oferentes, entonces la elasticidad precio de la demanda de la empresa es más relevante.
+- Por el contrario, si el precio del producto de la empresa aumenta y es seguido por aumentos similares de precios por parte de los otros oferentes, la elasticidad más relevante para la empresa estará más cerca de la elasticidad precio de la demanda de mercado.. 
+
+En este sentido, el análisis de la elasticidad relevante nos permite identificar y evaluar las posibles respuestas de los competidores ante determinadas estrategias.s. 
+
+Ordenamos la @eq-15 obtenemos:
+
+$$
+\eta_{P_{x}X_R^d}^d = \frac{\eta_{P_{x}X_T^d}^d -  \eta_{P_{x}X_C^S}^{S} (1-S_R)}{S_R}  
+$$ {#eq-16}
+
+En esta @eq-16 
+
+- $\eta_{P_{x}X_R^d}^d$ es la elasticidad precio de la demanda residual de la empresa.
+
+- $\eta_{P_{x}X_T^d}^d$ es la elasticidad precio de la demanda del mercado con componente residual.
+
+- $\eta_{P_{x}X_C^S}^S$ es la elasticidad precio de la oferta de las demás empresas que compiten en el mercado.
+
+- $S_R$ es la participación de ventas de la empresa con mercado relevante.
 
 
 2.4. IMPLICANCIAS DE LA ELASTICIDAD PRECIO DE LA DEMANDA RESIDUAL 

@@ -1,0 +1,413 @@
+---
+title: Mercado relevante
+subtitle: Explorando los pilares fundamentales para comprender el funcionamiento y éxito de la industria moderna
+description: |
+  Descubre los conceptos fundamentales de la Organización Industrial, los diferente enfoques y su relación con la economía. Exploraremos las estrategias empresariales, decisiones estratégicas y aportes históricos que han moldeado esta disciplina.
+categories:
+  - Organización industrial
+  - Economía y Negocios
+tags:
+  - Organización Industrial
+  - Estrategias Empresariales
+  - Economía de Mercado
+  - Toma de Decisiones
+  - Análisis Industrial
+citation: true
+date: "06/15/2023"
+draft: true
+---
+
+
+
+# Sistema económio y mercado
+
+## Sistema económico
+
+El sistema económico se refiere a la forma en que se organiza y dirige la actividad económica de un país, abarcando aspectos sociales, políticos, económicos y jurídicos. Define cómo se producirán y distribuirán los bienes y servicios, así como la asignación de los recursos escasos para su producción. Además, incluye la organización política, la regulación e intervención del estado, y el marco jurídico que rige las transacciones económicas.
+
+## Sistema económico imperante en la economía
+
+El sistema económico imperante en la economía mundial puede manifestarse en diferentes formas, y una de ellas es la economía de mercado.
+
+En una economía de mercado, se establece un lugar, ya sea físico o virtual, donde se crean las condiciones necesarias para que los individuos y las empresas puedan intercambiar bienes y servicios. Este lugar puede ser un mercado físico tradicional, como una plaza o una feria, o un mercado virtual, como una plataforma de comercio electrónico.
+
+El mercado no solo es un espacio físico o virtual, sino también una organización o entidad que facilita el vínculo entre los oferentes (vendedores) y los demandantes (compradores). En este sentido, el mercado proporciona el marco para que se realicen transacciones comerciales, acuerdos e intercambios. Permite que los compradores encuentren los bienes y servicios que desean adquirir y que los vendedores encuentren potenciales compradores para sus productos.
+
+En un sistema económico de mercado, los precios se determinan a través de la oferta y la demanda, y los participantes toman decisiones basadas en sus propios intereses individuales. Este sistema fomenta la competencia entre los diferentes actores económicos, lo que a su vez puede llevar a la eficiencia en la asignación de recursos y a una mayor variedad de productos y servicios disponibles para los consumidores.
+
+Es importante destacar que existen diversos tipos de sistemas económicos, y la economía de mercado es solo uno de ellos. Otros sistemas económicos, como el socialismo o el capitalismo de Estado, presentan diferentes características y formas de organización de la actividad económica.
+
+
+
+## LAS DIFERENCIAS ENTRE SISTEMAS ECONOMICOS
+
+
++++++++ tabla
+
+# Mercados y Precios
+
+## Mercado: Estructura y Determinación
+
+El mercado es el espacio donde se llevan a cabo las transacciones comerciales de bienes y servicios. Su estructura puede variar según la competencia presente en el mercado. En el caso de un mercado perfectamente competitivo, existen numerosos compradores y vendedores, y ninguno de ellos tiene el poder de influir en los precios. En cambio, en un mercado imperfecto, la estructura puede ser monopolística, oligopólica o de otro tipo, lo que implica que algunos participantes tienen cierto grado de poder para influir en los precios.
+
+## Precios: El Lenguaje de los Mercados
+
+Los precios desempeñan un papel crucial en los mercados, ya que actúan como un lenguaje que comunica información sobre la oferta y la demanda de bienes y servicios. Son determinados por la interacción de los compradores y vendedores en el mercado, teniendo en cuenta factores como la oferta, la demanda, los costos de producción y la competencia. En un mercado perfectamente competitivo, los precios se establecen en equilibrio, donde la oferta y la demanda se igualan. Por otro lado, en un mercado imperfecto, como un monopolio, el precio lo determina el productor o la empresa dominante.
+
+## Competencia: Motor del Sistema Económico de Mercado
+
+La competencia desempeña un papel fundamental en el buen funcionamiento del sistema económico de mercado. Cuando existe competencia, los productores se ven obligados a mejorar la calidad de sus productos, reducir los precios y buscar la eficiencia en la producción. Esto beneficia a los consumidores, ya que tienen acceso a una mayor variedad de bienes y servicios a precios competitivos. Además, la competencia estimula la innovación y el progreso económico en general.
+
+# Derecho de la Competencia: Promoviendo la Competencia y Protegiendo el Interés Público.
+
+El Derecho de la Competencia es un conjunto de normas jurídicas que tiene como objetivo regular el poder actual o potencial de las empresas en un mercado específico, en beneficio del interés público. Su propósito es prevenir prácticas restrictivas de la competencia y regular la adquisición de posiciones de dominio en el mercado.
+
+## Objetivos del Derecho de Competencia
+
+El Derecho de la Competencia persigue varios objetivos para promover la competencia y proteger la eficiencia económica. Estos incluyen:
+
+1. Proteger y reforzar el proceso de competencia en los mercados donde sea parcial.
+2. Prevenir el abuso de la concentración y el poder de las empresas, ya que estos pueden promover comportamientos anticompetitivos.
+3. Prohibir acuerdos que permitan a los competidores actuales o potenciales asumir conductas anticompetitivas.
+4. Incrementar la eficiencia económica en los mercados.
+
+La Ley Federal de Competencia Económica en EE.UU., en su artículo 2, establece el objetivo de promover, proteger y garantizar la libre concurrencia y la competencia económica, así como prevenir y eliminar prácticas monopólicas, concentraciones ilícitas y restricciones al funcionamiento eficiente de los mercados.
+
+## Beneficios de la Competencia
+
+La competencia tiene múltiples beneficios para la sociedad y la economía:
+
+1. Mejora de las condiciones de precio y calidad de los productos y servicios, ya que los competidores buscan atraer a los consumidores ofreciendo mejores ofertas.
+2. Aumento de la productividad, ya que la competencia impulsa a las empresas a mejorar constantemente sus procesos y aumentar su eficiencia.
+3. Estímulo a la innovación, ya que las empresas compiten por desarrollar nuevos productos y servicios para destacarse en el mercado.
+4. Sistema descentralizado de precios, que dirige la actividad económica hacia un mayor bienestar de la sociedad al reflejar la oferta y la demanda.
+
+# Definición y Características del Mercado Relevante
+
+## Definición de Mercado Relevante
+
+El mercado relevante se refiere a aquel mercado en el cual los bienes y servicios, considerando su estructura de mercado, son sustitutos o razonablemente intercambiables en función de los fines para los cuales fueron creados. Tanto desde la perspectiva del consumidor como del productor, se considera que estos bienes y servicios son intercambiables. Es decir, los consumidores los ven como productos sustitutos y los productores los consideran intercambiables.
+
+## Características del Mercado Relevante
+
+1. Áreas geográficas de interacción: El mercado relevante se define por las áreas geográficas en las que los oferentes y demandantes interactúan para intercambiar bienes y servicios.
+
+2. Sustitutos: Los productos y servicios dentro del mercado relevante son sustitutos entre sí, lo que significa que pueden satisfacer las mismas necesidades del consumidor.
+
+3. Elasticidad de precios y demanda: Las demandas en el mercado relevante son elásticas, lo que implica que los cambios en los precios tienen un impacto significativo en la cantidad demandada.
+
+4. Elasticidad cruzada: La elasticidad cruzada de los bienes dentro del mercado relevante es positiva y baja, lo que indica que los cambios en el precio de un bien tienen un efecto limitado en la demanda de otros bienes.
+
+5. Elasticidad de ingreso: La elasticidad de ingreso de la demanda en el mercado relevante generalmente es mayor a cero y menor a 1. Esto significa que un aumento en los ingresos de los consumidores resulta en un aumento proporcionalmente menor en la demanda de los bienes y servicios del mercado relevante. $0 < \eta_{p_{X}} X^d \leq 1$
+
+
+## Pasos para Definir un Mercado Relevante
+
+1. Descripción de la estructura de los mercados: Se analiza la organización y dinámica de los mercados en términos de competencia y poder de mercado.
+
+2. Sustituibilidad o intercambiabilidad de los bienes: Se evalúa si los bienes y servicios pueden satisfacer la misma necesidad del consumidor en las mismas circunstancias y en el mismo período de tiempo.
+
+3. Oferta diferenciada y diversificada: Se considera la variedad y diferenciación de los productos ofrecidos en el mercado.
+
+4. Accesibilidad para los demandantes: Se verifica si los bienes y servicios del mercado relevante están disponibles y accesibles para los consumidores.
+
+5. Objetividad de la oferta: Se evalúa la disponibilidad geográfica de los productos, la posibilidad de adquirirlos en el tiempo necesario para satisfacer una necesidad y su accesibilidad para los demandantes.
+
+# Mercado de Producto y Mercado Geográfico Relevante
+
+### Mercado de Producto o Servicio Relevante
+
+Desde la perspectiva del consumidor, el mercado de producto o servicio relevante se refiere al conjunto de bienes y servicios que son sustitutos entre sí en términos de características, precios y usos. Estos bienes y servicios satisfacen las mismas necesidades del consumidor en condiciones similares. En otras palabras, son productos o servicios que pueden cumplir la misma función o propósito para el consumidor.
+
+La determinación del mercado de producto o servicio relevante es esencial para comprender la competencia y la dinámica del mercado. Al identificar los sustitutos cercanos, tanto los consumidores como las empresas pueden tomar decisiones estratégicas en relación con la oferta y la demanda de esos productos o servicios.
+
+### Mercado Geográfico Relevante
+
+El mercado geográfico relevante se define como el área geográfica en la cual se encuentran las fuentes de proveedores alternativos que ofrecen el conjunto de bienes sustitutos. En este mercado, los demandantes o clientes tienen acceso a diferentes proveedores que ofrecen productos o servicios similares en condiciones comparables a las del mercado principal.
+
+El mercado geográfico relevante es importante para comprender la competencia a nivel local o regional. Permite evaluar la disponibilidad de alternativas para los consumidores y la capacidad de los proveedores para competir en esa área geográfica específica. Además, tener en cuenta el mercado geográfico relevante es fundamental para analizar la distribución geográfica de la oferta y la demanda, así como los factores económicos y logísticos que influyen en el comercio y la competencia en una región determinada.
+
+### Mercado Relevante (Dimensión Temporal)
+
+El concepto de mercado relevante también puede abarcar la dimensión temporal. En este caso, se refiere a las combinaciones de los mercados de producto y geográfico en un determinado período de tiempo. Esta perspectiva temporal es relevante para comprender la evolución de la competencia y las estrategias de mercado a lo largo del tiempo.
+
+## Definición del Mercado de Producto Relevante
+
+El mercado de producto relevante incluye todos aquellos bienes y servicios que son sustitutos cercanos tanto desde la perspectiva de la demanda como de la oferta. La sustituibilidad de la demanda se refiere a la capacidad de los consumidores para cambiar de un producto a otro en respuesta a cambios en el precio. Si un incremento en el precio de un producto A provoca que los consumidores opten por comprar el producto B en su lugar, se considera que A y B son sustitutos.
+
+Por otro lado, la sustituibilidad de la oferta se refiere a la capacidad de las empresas para ajustar su producción de un producto a otro en respuesta a cambios en el precio. Si las empresas que producen el producto B pueden fácilmente cambiar su producción hacia el producto A cuando el precio de A aumenta, se considera que B es un sustituto de A desde la perspectiva de la oferta.
+
+En ambos casos, la presencia de un bien sustituto en el mercado restringe la capacidad de la empresa que ofrece el bien original para aumentar los precios, ya que los consumidores y las empresas tienen opciones alternativas disponibles.
+
+# Elasticidades y Definición del Mercado Relevante
+
+## Elasticidad Precio de la Demanda
+
+## Elasticida cruzada de la demanda
+
+La elasticidad cruzada de la demanda se calcula mediante la fórmula:
+
+$$
+\eta_{XP_{y}} = \frac{\partial X}{\partial P_{y}} \frac{P_{y}}{X} = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_{y}}{P_{y}}}
+$$ {#eq-1}
+
+Donde $\eta_{XP_y}$ representa la elasticidad cruzada de la demanda entre los bienes X e Y. 
+
+Si $\eta_{XP_y}$ es mayor que 0, significa que los bienes son sustitutos entre sí. 
+
+Si $\eta_{XP_y}$ es menor que 0, indica que los bienes son complementarios. 
+
+Si $\eta_{XP_y}$ es igual a 0, significa que los bienes no tienen una relación significativa entre ellos.
+
+La elasticidad precio de la demanda nos ayuda a comprender cómo los consumidores reaccionan a los cambios en los precios y cómo se relacionan los diferentes bienes en el mercado. Esto es crucial para identificar sustitutos cercanos y definir un mercado relevante.
+
+## Posición de Poder de un Monopolista en el Mercado (Merger Guidelines)
+
+Para determinar la posición de poder de un monopolista en el mercado, es necesario evaluar la respuesta de los consumidores frente a un aumento en el precio del bien. Se busca determinar si la empresa puede seguir operando de manera rentable en el mercado a pesar del aumento de precio. Esto implica analizar si la empresa continúa siendo viable en un conjunto de bienes sustitutos cuando incrementa el precio de su producto respectivo.
+
+El análisis de la posición de poder de un monopolista es fundamental para evaluar la competencia y el funcionamiento eficiente del mercado. Los lineamientos de fusiones (Merger Guidelines) se utilizan para evaluar fusiones y adquisiciones empresariales, asegurándose de que no se genere una concentración excesiva de poder en el mercado y que no se perjudique la competencia y el bienestar del consumidor.
+
+## Cómo determinar la posición de poder de un monopolista en el mercado (Merger Guidelines)
+
+Para evaluar la posición de poder de un monopolista en el mercado, se siguen los siguientes pasos de razonamiento.
+
+### Primer Paso: Evaluación del Bien A
+
+Se plantea la siguiente pregunta: ¿Puede una empresa monopolista incrementar el precio del bien A en un rango del 5% al 10% de manera rentable?
+
+- Si la respuesta es sí: Esto indica que el mercado es separado. Significa que no existen otros productos suficientemente sustitutos que reduzcan la demanda del bien A ante un incremento de precio del 10%. En este caso, se considera que el mercado es relevante.
+
+- Si la respuesta es no: Esto implica que existe otro producto, B, que es más competitivo. Por lo tanto, ambos productos pertenecen al mismo mercado.
+
+### Segundo Paso: Evaluación de los Bienes A y B
+
+Se plantea la siguiente pregunta: ¿Puede un monopolista incrementar el precio de los bienes A y B en un rango del 5% al 10% de manera rentable?
+
+- Si la respuesta es sí: Esto indica que los bienes A y B pertenecen al mismo mercado. El monopolista tiene la capacidad de aumentar los precios de ambos bienes de manera rentable. En este caso, se considera que el mercado es relevante.
+
+- Si la respuesta es no: Esto implica que existe otro producto, C, que es más competitivo que los bienes A y B. Por lo tanto, los tres productos pertenecen al mismo mercado.
+
+### Tercer Paso: Repetición del Proceso
+
+El proceso se repite hasta que no existan productos sustitutos adicionales. Se evalúa cada vez si el monopolista puede incrementar el precio de los bienes de manera rentable y se determina si pertenecen al mismo mercado relevante.
+
+------------------------------------------------------------------------
+
+### \*\*\*\*\*\*\*\*\*\*\*\* GRAFICO PGI17
+
+### ESQUEMA DE PIVOT PARA CONOCER EL PODER DE MERCADO DE UN MONOPOLISTA
+
+1.  ¿PUEDE UNA EMPRESA MONOPÓLICA INCREMENTAR EL PRECIO DE SU PRODUCTO ENTRE 5% a 10%, .... RENTABLEMENTE?
+
+2.  ¿PUEDE UNA EMPRESA MONOPÓLICA QUE PRODUCE Y VENDE LOS BIENES A Y B, INCREMENTAR EL PRECIO DE A Y B ENTRE 5% Y 10%. .....RENTABLEMENTE?
+
+3.  ¿PUEDE UNA EMPRESA MONOPÓLICA QUE PRODUCE Y VENDE LOS BIENES A, B y C INCREMENTAR EL PRECIO DE A, B y C ENTRE 5% Y 10%. .....RENTABLEMENTE?
+
+SE REPITE EL PROCESO HASTA CONOCER QUE YA NO HAY PRODUCTOS SUSTITUTOS
+
+
+## Ejemplo de determinación del mercado relevante para un monopolista
+
+En este ejemplo, analizaremos la situación de una empresa monopolista, llamada A, y evaluaremos si el mercado en el que opera es relevante. Utilizaremos datos específicos para ilustrar el proceso.
+
+**Datos de la empresa A**
+
+Supongamos que la empresa A produce el bien A, con un precio inicial de $P_A = 10$, una cantidad producida de $Q_A = 1000$, un costo marginal de producción de $CMeT_A = 5$ y una ganancia bruta de $B_A = 5000$.
+
+**Incremento de precio de la empresa A**
+
+Si la empresa A decide aumentar el precio entre un 5% y un 10%, obtenemos los siguientes resultados: el precio se convierte en $P_A = 11$, la cantidad producida disminuye a $Q_A = 800$, el costo marginal de producción sigue siendo $CMeT_A = 5$ y la ganancia bruta se reduce a $B_A = 4800$.
+
+**Análisis del mercado relevante**
+
+En este caso, al observar el efecto del incremento de precio en la demanda de los consumidores ($Q_A$), podemos concluir que el mercado no es relevante. El aumento en el precio ($\Delta P_A$) provoca una sustitución de $Q_A$ por parte de los consumidores, lo que indica que existen otros productos que son parte del mercado relevante y son considerados como sustitutos.
+
+**Competidores de la empresa A**
+
+Supongamos que la empresa A considera que sus competidores son las empresas B y C. Sus datos son los siguientes:
+
+- Empresa B: $P_B = 13$, $Q_B = 800$, $CMeT_B = 4$ y $B_B = 7200$.
+- Empresa C: $P_C = 9$, $Q_C = 1100$, $CMeT_C = 4$ y $B_C = 5500$.
+
+La ganancia total en el mercado, considerando las tres empresas, es $B_T = 17,700$.
+
+**Incremento de precio por parte de la empresa A**
+
+Si el monopolista A decide aumentar el precio de su producto en un rango del 5% al 10%, mientras que las otras empresas mantienen constantes sus precios, los resultados son los siguientes:
+
+- Empresa A: $P_A = 11$, $Q_A = 800$, $CMeT_A = 5$ y $B_A = 4800$.
+- Empresa B: $P_B = 13$, $Q_B = 900$, $CMeT_B = 4$ y $B_B = 8100$.
+- Empresa C: $P_C = 9$, $Q_C = 1200$, $CMeT_C = 4$ y $B_C = 6000$.
+
+La ganancia total en el mercado, considerando las tres empresas, aumenta a $B_T = 18,900$.
+
+**Por lo tanto:**
+
+En este ejemplo, el monopolista A encuentra beneficioso incrementar el precio de su producto A en un 10%. Los consumidores sustituyen el consumo de los otros bienes (B y C), lo que conduce a un incremento en las ganancias totales de $5000 a $5400. Por lo tanto, podemos concluir que el mercado es relevante para el producto A.
+
+Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un monopolista, considerando los efectos de los cambios en el precio y la demanda. Este análisis es crucial para comprender la posición de poder de un monopolista y evaluar la competencia en el mercado.
+
+
+******************Los textos anteriores ya fueron revisadas*********************
+
+********************** GRFICO PAGINA 18
+
+
+
+1. LA ELASTICIDAD PRECIO DE LA DEMANDA RESIDUAL DE LA EMPRESA CON DEMANDA RELEVANTE
+
+
+$$
+D_t = X_{t}^{d} = X_{t}^{d} P_{x}
+$$ {#eq-2}
+
+
+$$
+D_R = X_R^d = X_R^d P_x
+$$ {#eq-3}
+
+
+$$
+S_t = X_C^S = X_C^S P_x
+$$ {#eq-4}
+
+
+$$
+D_t = D_R + S_t \equiv X_t^d = X_R^d + S_t \equiv X_t^d P_x = X_R^d P_x + X_C^S P_x
+$$ {#eq-5}
+
+Resolviendo la  @eq-5 para la demanda residual tenemos:
+
+
+$$
+X_R^d P_x = X_t^d P_x - X_C^S P_x
+$$ {#eq-6}
+
+
+$$
+\frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_t^d P_x}{\partial P_x} \frac{P_x}{X_t^d} - \frac{\partial X_t^S P_x}{\partial P_x} \frac{P_x}{X_t^S}
+$$ {#eq-7}
+
+Multiplicando a los elementos de la igualdad hacia la derecha por $\frac{X_t^d}{X_R^d}$
+
+
+
+En esta estrategia de la empresa lo más importante es saber si la elasticidad relevante es la elasticidad del mercado o la elasticidad residual de la empresa. Ambas elasticidades pueden ser relevantes, lo cual dependerá de la conducta de otros oferentes del producto (o conducta de sus competidores), por ejemplo: 
+
+Si el precio del producto de la empresa aumenta y no es seguido por las otras empresas oferentes, entonces la elasticidad precio de la demanda de la empresa es más relevante. Por el contrario, sí el precio del producto de la empresa aumenta y es seguido por aumentos similares de precios por parte de los otros oferentes la elasticidad más relevante para la empresa estará más cerca de la elasticidad precio de la demanda de mercado. 
+
+En este sentido, el análisis de la elasticidad relevante nos permite identificar y evaluar las posibles respuestas de los competidores ante determinadas estrategias. 
+
+
+
+
+2.4. IMPLICANCIAS DE LA ELASTICIDAD PRECIO DE LA DEMANDA RESIDUAL 
+
+1.- Una demanda de mercado inelástico (Baja Elasticidad precio de la demanda de mercado) puede ser consistente con una demanda residual elástica (Alta elasticidad precio de la demanda residual), dada la elasticidad precio de la oferta de las otras empresa que compiten en el mercado 
+
+2.- Para el tipo de empresa monopólica con demanda residual que estamos trabajando: Si la empresa no puede incrementar el precio del bien que vende entre 5% y 10% de manera significativa y definitiva y permanecer rentablemente en el mercado. Entonces la empresa enfrenta una función de demanda residual elástica (Alta Ƞd d ). Por el P x X R contrario si la demanda total o de mercado es inelástico (baja Ƞd d ), entonces la P x X T Soferta de las otras empresas competidoras es elástica ( Alta Ƞ S ), por lo que las P x X C llamadas otras empresas son las que determinan el mercado relevante. 
+
+Ejemplo de un mercado relevante. 
+
+P R = 28 
+Q R = 25,000 
+CMeT = 11 
+B = (28 -11)25000 
+B = 425,000 
+
+P co = 35 
+Q co = 20,000 
+CMeT = 15 
+B = (35 -15)20000 
+B = 420,000 
+
+P c = 5 
+Q C = 70,000 
+CMeT = 2 
+B = (5 - 2)70000 
+B = 210,o00 
+
+¿QUE PASA SI LAS EMPRESAS DE PISCOS SUBEN EL PRECIO EN 10%?: SE MODIFICAN EL BENEFICIOS DE L PISCO? 
+
+P R = 28 
+Q R = 25,000 
+CMeT = 11 
+B = (28 -11)25000 
+B = 425,000 
+
+PR = 31.00 
+QR = 21,250 
+CMeT = 11 
+B = (31.8 -11)21,250 
+B = 420,750 
+
+
+P co = 38.5 
+Q co = 20,000 
+CMeT = 15 
+B = (38.5 -15)18,000 
+B = 423,000 
+
+Pco = 38.5 
+Qco = 20,000 
+CMeT = 15 
+B = (38.5 -15)18,000 
+B = 423,000 
+
+P C = 5 
+Q C = 70,000 
+CMeT = 2 
+B = (5 - 2)70000 
+B = 210,o00 
+
+PC = 5 
+QC = 70,000 
+CMeT = 2 
+B = (5 - 2)70000 
+B = 210,o00 
+
+LA FALACIA DEL CELOFÁN O PICÓN La falacia del celofan es un tipo de razonamiento incorrecto utilizado en los mercados relevantes. Pues consiste en que una empresa que vende un producto con pocos sustitutos, y dado que aparentemente el producto es único en el mercado, la situación existente le permite aumentar y aumentar el precio del producto en 5%, 10% etc, y, a medida que aumenta los precios, llega a un punto a partir del cual las ventas disminuyen, y ello sucede por que, al aumentar los precios han entrado otras empresas produciendo bienes similares y sustitutos, por tanto, el bien del Celofán termina teniendo una demanda menor ante la aparición de bienes sustitutos. Esto, también se debe a que la Elasticidad cruzada de la demanda de los bienes sustitutos es baja. 
+
+una de las preocupaciones de los monopolistas en la competencia , es que sus productos no sean sustituidas por los consumidores, por otros productos similares. por tanto, la sustituibilidad debe ser bien calculada y asumiendo un precio competitivo del bien analizado. por lo que es necesario, conocer y analizar bien la curva de demanda a partir de sus elasticidades. así por ejemplo: si se opera en parte elástica de una curva de demanda inelástica, mientras más se eleva el precio del producto, más elástica será la demanda y por consiguiente la cantidad demanda se reduce. En efecto, la estrategia de aumentar precios y ampliar demanda, siguiendo la estrategia de un monopolista no es una buena política de ampliar demanda. 
+
+OTRAS FORMAS DE COMPETIR Y PERMANECER EN EL MERCADO RELEVANTE 
+
+1.- Diseño y comparación de productos. 
+
+2.- Identificar gustos y preferencias y patrones de consumo en los consumidores. 
+
+3.- Prácticas de regresión y correlación, entre productos sustitutos. 
+
+4.- Competencia minimizando costos, tecnología, inversión e investigación. 
+
+Hay competencia en muchos otros productos: 
+
+MERCADO DEL PRODUCTO RELEVANTE POR EL LADO DE LA OFERTA 
+
+Un mercado de producto es relevante por el lado de la oferta, si y solo sí, la elasticidad precio de la oferta es alta, es decir, si la oferta es elástica. 
+
+Sin embargo, si el mercado en el largo plazo tiene la posibilidad de admitir la entrada de nuevas empresas que, producen bienes sustitutos, a bajos costos, entonces esto implica ampliar el mercado relevante, para el grupo de empresas que han de entrar en el futuro mercado. 
+
+∂Xs PX ∆Xs ൗ X ȠXPy = X = ∆Px ൗ ∂Px Px 
+
+MERCADO RELEVANTE DESDE EL LADO DE LA OFERTA 
+
+El mercado relevante, desde el lado de la oferta se define como el área geográfica donde se encuentran las fuentes alternativas de aprovisionamiento del conjunto de bienes sustitutos a los cuales el consumidor o cliente acudiría en las mismas condiciones del mercado principal relevante. O sea, en que mercados encontraría el producto sustituto en el supuesto caso que los productores del bien sustituto les suben el precio con el objeto de ahorrar al menos el 5% del gasto u obtener el producto en las mismas condiciones. 
+
+FACTORES QUE LIMITAN EL MERCADO GEOGRAFICO RELEVANTE: 
+
+❑ Es necesario evaluar las posibilidades o limitaciones que enfrentan los proveedores alternativos para atender clientes. 
+
+❑ Capacidad que tiene el cliente de abastecerse de distintos proveedores 
+
+Cómo por ejemplo. ¿Qué de seguridad tengo de encontrar el producto? ¿Cuál es el costo de acudir a este mercado?¿ cual es el tiempo de demora? ¿tengo todavía la posibilidad de satisfacer mi necesidad?. 
+
+DEFINICIÓN DE MERCADO GEOGRAFICO RELEVANTE EN EL PERÚ 
+
+«...DETERMINAR LA FUENTES ALTERNATIVAS DE APROVISIONAMIENTO A LAS QUE PUEDE ACUDIR EL CONSUMIDOR O USUARUIO EN EL CORTO PLAZO SI EL PRECIO DEL PRODUCTO O SERVICIO SE INCREMENTA EN UN MONTO SIGNIFICATIVO». 
+
+Resolución: N\| 0078-1999/DTC -- INDECOPI del 5 de marzo de 1999. «... 
+
+Para determinar el mercado relevante debe examinarse, las fuentes de aprovisionamiento a las que un comprador puede acudir, teniendo en cuenta cuales son las alternativas reales según el nivel de sustitución entre productos y considerando los costos de las alternativas que tiene el proveedor 
+
+Resolución: N° 117-97-TDC de 5 de mayo de 1997. 

@@ -61,6 +61,8 @@ format:
       source: true  # Mostrar el código fuente en las herramientas de código
       toggle: false  # Habilitar la funcionalidad de alternar código
       caption: none  # Opción para la leyenda del código
+    mermaid: 
+      theme: neutral
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
 

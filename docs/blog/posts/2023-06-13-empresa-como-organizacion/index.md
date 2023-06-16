@@ -39,9 +39,9 @@ Las características distintivas de la empresa incluyen:
 
 # La Empresa como Sistema: Coordinación y Complejidad
 
-La empresa se puede entender como un sistema, que se compone de elementos interrelacionados y coordinados, con el objetivo común de lograr resultados específicos. Esta perspectiva sistémica resalta la importancia de una coordinación consciente en el funcionamiento de la empresa.
+Un sistema se define como un conjunto de elementos que están discretos e interrelacionados entre sí, y que trabajan de manera coordinada para alcanzar un objetivo común.
 
-Un sistema se define como un conjunto de elementos que están discretos e interrelacionados entre sí, y que trabajan de manera coordinada para alcanzar un objetivo común. En el caso de la empresa, se pueden identificar los siguientes rasgos:
+La empresa se puede entender como un sistema, que se compone de elementos interrelacionados y coordinados, con el objetivo común de lograr resultados específicos. Esta perspectiva sistémica resalta la importancia de una coordinación consciente en el funcionamiento de la empresa.
 
 1. **Conjunto de elementos:** La empresa está compuesta por diversos elementos, como personas, recursos, procesos y estructuras organizativas, que interactúan entre sí.
 
@@ -67,8 +67,6 @@ Al comprender a la empresa como un sistema, se puede tener una visión holístic
 | Capitalismo Financiero        | Empresa de Organización Financiera       | Unidad compleja, organizada, multisocietaria, divisional y multinacional |
 | Capitalismo de la Información | Empresa de Organización del Conocimiento | Unidad compleja evolucionada, organizada, multisocietaria y global       |
 
-Explicación de los conceptos:
-
 1. **Sistema Feudal - Empresa Primitiva**: En el sistema feudal, se caracterizaba por la existencia de unidades económicas y productivas básicas llamadas empresas primitivas. Estas empresas eran unidades simples y de base familiar, donde las actividades económicas se centraban en la subsistencia y estaban vinculadas a la tierra y a la agricultura.
 
 2. **Capitalismo Mercantilista - Empresa Comercial**: Durante el periodo del capitalismo mercantilista, surgieron las empresas comerciales. Estas empresas eran unidades técnicas-económicas que se dedicaban al comercio, tanto a nivel local como internacional. Eran organizaciones simples, pero más estructuradas que las empresas primitivas, y su objetivo principal era obtener beneficios a través de las actividades comerciales.
@@ -82,6 +80,40 @@ Explicación de los conceptos:
 # Elementos constitutivos de la empresa
 
 La empresa está compuesta por diversos elementos que desempeñan un papel fundamental en su funcionamiento y desarrollo. A continuación, se detallan los elementos constitutivos de la empresa:
+
+
+
+:::{.cell}
+
+:::{.cell-output-display}
+
+:::{}
+
+:::{}
+
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Elementos activos] 
+    A --&gt; E(Empleados)
+    A --&gt; B[Empresario]
+    B --&gt; C(Propietaios)
+    B --&gt; D(Directivos)
+
+    F[Elementos pasivos]
+    F --&gt; G(Elementos tangibles)
+    G --&gt; I(No duraderos) 
+    G --&gt; J(Duraderos)
+    F --&gt; H(Elementos intangibles)
+    H --&gt; K(Capital intelectual)
+    K --&gt; L(Capital humano) 
+    K --&gt; M(Capital estructural)
+    K --&gt; N(Capital relacional)
+</pre>
+:::
+:::
+:::
+:::
+
+
 
 ## Elementos activos
 

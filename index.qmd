@@ -108,39 +108,11 @@ La filosofía es una disciplina que busca comprender y cuestionar aspectos funda
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
-```` markdown
----
-title: "ggplot2"
-author: "Edison Achalma"
-date: "5/22/2021"
-format: 
-  html:
-    fig-width: 8
-    fig-height: 4
-    code-fold: true
----
-
-## Air Quality
-
-@fig-airquality further explores the impact of temperature on ozone level.
-
-```{{r}}
-#| label: fig-airquality
-#| fig-cap: "Temperature and ozone level."
-#| warning: false
-
-library(ggplot2)
-
-ggplot(airquality, aes(Temp, Ozone)) + 
-  geom_point() + 
-  geom_smooth(method = "loess"
-)
-```
-````
+![](images/philosophy1.jpg){.hello-output fig-alt="."}
 :::
 
 ::: {.g-col-lg-6 .g-col-12}
-![](images/hello-knitr.png){.hello-output fig-alt="Example output with title (ggplot2 demo), author (Norah Jones), and date (5/22/2021). Below is a header reading Air Quality followed by body text (Figure 1 further explores the impact of temperature on ozone level.) with a toggleable code field, and figure with caption Figure 1 Temperature and ozone level."}
+![](images/philosophy2.jpg){.hello-output fig-alt="."}
 :::
 :::
 :::
@@ -193,40 +165,32 @@ La informática es una disciplina que se ocupa del estudio y desarrollo de siste
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
-```` markdown
----
-title: "observable plot"
-author: "Edison Achalma"
-format: 
-  html: 
-    code-fold: true
----
+``` bash
+❯ neofetch
 
-## Seattle Precipitation by Day (2012 to 2016)
-
-```{{ojs}}
-data = FileAttachment("seattle-weather.csv")
-  .csv({typed: true})
-  
-Plot.plot({
-  width: 800, height: 500, padding: 0,
-  color: { scheme: "blues", type: "sqrt"},
-  y: { tickFormat: i => "JFMAMJJASOND"[i] },
-  marks: [
-    Plot.cell(data, Plot.group({fill: "mean"}, {
-      x: d => d.date.getUTCDate(),
-      y: d => d.date.getUTCMonth(),
-      fill: "precipitation", 
-      inset: 0.5
-    }))
-  ]
-})
+achalmaedison@HP-Pavilion 
+------------------------- 
+OS: Kubuntu 22.04.2 LTS x86_64 
+Host: HP Pavilion x360 Convertible 14-dw0xxx 
+Kernel: 5.19.0-43-generic 
+Uptime: 1 hour, 11 mins 
+Packages: 3679 (dpkg), 25 (flatpak), 7 (snap) 
+Shell: zsh 5.8.1 
+Resolution: 1920x1080, 1920x1080 
+DE: Plasma 5.24.7 
+WM: KWin 
+Theme: [Plasma], Breeze [GTK2/3] 
+Icons: [Plasma], breeze-dark [GTK2/3] 
+Terminal: konsole 
+Terminal Font: Hack Nerd Font Mono 10 
+CPU: Intel i5-1035G1 (8) @ 3.600GHz 
+GPU: Intel Iris Plus Graphics G1 
+Memory: 5738MiB / 7635MiB 
 ```
-````
 :::
 
 ::: {.g-col-lg-6 .g-col-12}
-![](images/hello-observable.png){style="background-color: white; border: 1px solid #dee2e6; height: 625px;" fig-alt="Example output with title, author, and date. Below, the main section reads Seattle Precipitation by Day (2012 to 2016) with a toggleable section to show code and a heatmap of the precipitation by day."}
+![](images/informatica.jpg){style="background-color: white; border: 1px solid #dee2e6; height: 625px;" fig-alt="."}
 :::
 :::
 :::

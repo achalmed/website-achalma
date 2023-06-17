@@ -18,12 +18,31 @@ draft: true
 ---
 
 
-CAPITULO IV LAS ESTRUCTURAS DE MERCADO 4.1. COMPETENCIA PERFECTA Y MONOPOLIO 4.2. COMPETENCIA MONOPOLISTICA Y COMPETENCIA PERFECTA 4.3. EL OLIGOPOLIO Y MODELOS DE OLIGOPOLIO 4.3.1. DUOPOLIO Y MONOPLIO DE COURNOT 4.3.2. DUOPOLIO DE STAKELBERG. 4.3.3. DUOPOLIO DE BERTRAAND 4.3.4. LA COMPETENCIA MONOPLISTICA DE CHAMBERLIN CAPITULO IV. 4.1. COMPETENCIA PERFECTA Y MONOPOLIO 4.1.1. definición de competencia perfecta y características
 
-    <!-- -->
+LAS ESTRUCTURAS DE MERCADO
 
-    A)  Definición
-    B)  Característica
+4.1. COMPETENCIA PERFECTA Y MONOPOLIO
+
+4.2. COMPETENCIA MONOPOLISTICA Y COMPETENCIA PERFECTA
+
+4.3. EL OLIGOPOLIO Y MODELOS DE OLIGOPOLIO
+
+4.3.1. DUOPOLIO Y MONOPLIO DE COURNOT
+
+4.3.2. DUOPOLIO DE STAKELBERG.
+
+4.3.3. DUOPOLIO DE BERTRAAND
+
+4.3.4. LA COMPETENCIA MONOPLISTICA DE CHAMBERLIN.
+
+4.1. COMPETENCIA PERFECTA Y MONOPOLIO
+
+4.1.1. definición de competencia perfecta y características
+
+A)  Definición
+B)  Característica
+
+<!-- -->
 
 1.  Atomicidad • Homogeneidad
 2.  Perfecta información
@@ -55,4 +74,3 @@ CAPITULO IV LAS ESTRUCTURAS DE MERCADO 4.1. COMPETENCIA PERFECTA Y MONOPOLIO 4.2
 22. Competencia imperfecta
 23. Fijan Pecios y
 24. Competencia a través de la publicidad y marketing. MODELOS DE OLIGOPOLIO: 7.5.1. El Duopolio de Cournot. 7.5.2. La Competencia Monopolística en el modelo de Cournot. 7.5.3. El Duopolio de Stackelberg 7.5.4. El Duopolio de Chamberlin 7.5.5. El Duopolio de Bertrand. 7.5.6. El Duopolio de Egdeworth 7.5.7. El Duopolio de Paul SWEZZY
-$$

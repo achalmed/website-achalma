@@ -153,7 +153,7 @@ $$
 $$ {#eq-1}
 
 $$
-\eta*{XP*{y}} = \frac{\frac{\Delta X}{X}}{\frac{\Delta P*{y}}{P*{y}}}
+\eta_{XP_{y}} = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_{y}}{P_{y}}}
 $$ {#eq-2}
 
 Donde $\eta_{XP_y}$ representa la elasticidad cruzada de la demanda entre los bienes X e Y.
@@ -325,11 +325,12 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 
 
 
-I. ¿Puede una empresa monopólica incrementar el precio de su producto entre 5% a 10% de manera rentable?
 
-II. ¿Puede una empresa monopólica que produce y vende los bienes A y B incrementar el precio de A y B entre 5% y 10% de manera rentable?
+1. ¿Puede una empresa monopólica incrementar el precio de su producto entre 5% a 10% de manera rentable?
 
-III. ¿Puede una empresa monopólica que produce y vende los bienes A, B y C incrementar el precio de A, B y C entre 5% y 10% de manera rentable?
+2. ¿Puede una empresa monopólica que produce y vende los bienes A y B incrementar el precio de A y B entre 5% y 10% de manera rentable?
+
+3. ¿Puede una empresa monopólica que produce y vende los bienes A, B y C incrementar el precio de A, B y C entre 5% y 10% de manera rentable?
 
 Se repite el proceso hasta conocer que ya no hay productos sustitutos.
 
@@ -473,7 +474,7 @@ Para comprender este concepto, consideremos las siguientes ecuaciones:
 La demanda total del mercado $D_T$ se puede expresar como la demanda del producto específico $X_T^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-3:
 
 $$
-D*T = X*{T}^{d} = X*{T}^{d} P*{x}
+D_T = X_{T}^{d} = X_{T}^{d} P_{x}
 $$ {#eq-3}
 
 La demanda residual $D_R$ es la demanda que queda para el producto específico después de tener en cuenta las demandas de otros productos relacionados. Se puede expresar como la demanda del producto residual $X_R^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-4: 
@@ -531,25 +532,25 @@ $$ {#eq-11}
 En esta @eq-11, tienen la forma de la elasticidad precio de la demanda, por lo que podemos reescribir la ecuación como: 
 
 $$
-\eta*{P*{x}X*R^d}^d = \eta*{P*{x}X_T^d}^d \frac{1}{\frac{X_R^d}{X_T^d}} - \eta*{P\_{x}X_C^S}^S \frac{X_T^d - X_R^d}{X_R^d}
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{\frac{X_R^d}{X_T^d}} - \eta_{P_{x}X_C^S}^S \frac{X_T^d - X_R^d}{X_R^d}
 $$ {#eq-12}
 
 Ordenando y considerando que $\frac{X_R^d}{X_T^d} = S_R$, tenemos: 
 
 $$
-\eta*{P*{x}X*R^d}^d = \eta*{P*{x}X_T^d}^d \frac{1}{S_R} - \eta*{P\_{x}X_C^S}^S (\frac{X_T^d}{X_R^d} - 1)
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{X_T^d}{X_R^d} - 1)
 $$ {#eq-13}
 
 Dividiendo el segundo elemento de la @eq-13 dentro del paréntesis tanto en el numerador como en el denominador por $X_T^d$, tenemos:
 
 $$
-\eta*{P*{x}X*R^d}^d = \eta*{P*{x}X_T^d}^d \frac{1}{S_R} - \eta*{P\_{x}X_C^S}^S (\frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - 1)
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - 1)
 $$ {#eq-14}
 
 La @eq-14 puede ser simplificada aún más considerando que $\frac{X_R^d}{X_T^d} = S_R$, obtenemos: 
 
 $$
-\eta*{P*{x}X*R^d}^d = \eta*{P*{x}X_T^d}^d \frac{1}{S_R} - \eta*{P\_{x}X_C^S}^S (\frac{1}{S_R} - 1)
+\eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{1}{S_R} - 1)
 $$ {#eq-15}
 
 La @eq-15 nos permite calcular la elasticidad precio de la demanda residual de una empresa considerando las elasticidades de la demanda del mercado y la oferta de las demás empresas. Esta medida es importante para determinar si la elasticidad más relevante para la empresa es la elasticidad de su demanda o la elasticidad del mercado en general. Dependiendo de la conducta de los competidores, una u otra elasticidad puede ser más relevante. por ejemplo:
@@ -562,7 +563,7 @@ En este sentido, el análisis de la elasticidad relevante nos permite identifica
 Ordenamos la @eq-15 obtenemos:
 
 $$
-\eta*{P*{x}X*R^d}^d = \frac{\eta*{P*{x}X_T^d}^d - \eta*{P\_{x}X_C^S}^{S} (1-S_R)}{S_R}
+\eta_{P_{x}X_R^d}^d = \frac{\eta_{P_{x}X_T^d}^d - \eta_{P_{x}X_C^S}^{S} (1-S_R)}{S_R}
 $$ {#eq-16}
 
 En esta @eq-16
@@ -738,11 +739,11 @@ La optimización de los costos operativos, la implementación de tecnologías av
 Un mercado de producto es considerado relevante por el lado de la oferta si la elasticidad precio de la oferta es alta, lo que implica que la oferta es elástica. La elasticidad precio de la oferta se define como la medida de la sensibilidad de la cantidad ofrecida de un bien ante cambios en su precio. Si la elasticidad precio de la oferta es alta, significa que la cantidad ofrecida cambia significativamente en respuesta a cambios en el precio. 
 
 $$
-\eta*{XP*{y}} = \frac{\partial X^s}{\partial P*{x}} \frac{P*{x}}{X}
+\eta_{XP_{y}} = \frac{\partial X^s}{\partial P_{x}} \frac{P_{x}}{X}
 $$ {#eq-17}
 
 $$
-\eta*{XP*{y}} = \frac{\frac{\Delta X^s}{X}}{\frac{\Delta P*{x}}{P*{x}}}
+\eta_{XP_{y}} = \frac{\frac{\Delta X^s}{X}}{\frac{\Delta P_{x}}{P_{x}}}
 $$ {#eq-18}
 
 Las ecuaciones presentadas nos permiten calcular la elasticidad precio de la oferta. La @eq-17 muestra la fórmula general, donde $X^s$ representa la cantidad ofrecida del bien, $P_x$ es el precio del bien y $X$ es la cantidad total del bien. La @eq-18 muestra una forma simplificada de calcular la elasticidad precio de la oferta utilizando cambios porcentuales.

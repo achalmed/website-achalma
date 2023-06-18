@@ -57,7 +57,7 @@ ul.task-list li input[type="checkbox"] {
     "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
     "index-name": "prod_QUARTO",
     "analytics-events": true,
-    "show-logo": true,
+    "show-logo": false,
     "libDir": "site_libs"
   },
   "language": {
@@ -97,7 +97,7 @@ i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
@@ -156,12 +156,14 @@ cookieconsent.run({
 <link rel="alternate" type="application/rss+xml" title="achalmaedison" href="index.xml"><meta property="og:title" content="achalmaedison - Blogs">
 <meta property="og:description" content="Blog personal con reflexiones, experiencias y pensamientos variados.">
 <meta property="og:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-04-29-primero-de-mayo/DALL·E 2023-04-29 23.15.46.png">
-<meta property="og:site-name" content="achalmaedison">
+<meta property="og:site-name" content="AchalmaEdison">
+<meta property="og:locale" content="es_ES">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="achalmaedison - Blogs">
 <meta name="twitter:description" content="Blog personal con reflexiones, experiencias y pensamientos variados.">
 <meta name="twitter:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-04-29-primero-de-mayo/DALL·E 2023-04-29 23.15.46.png">
+<meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -174,8 +176,8 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../Aukihack.png" alt="Aukihack logo." class="navbar-logo">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Achalma Edison</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -183,28 +185,32 @@ cookieconsent.run({
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Inicio</span></a>
+ <span class="menu-text">INICIO</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../docs/get-started/index.html" rel="" target="">
- <span class="menu-text">Sobre mi</span></a>
+ <span class="menu-text">SOBRE MI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/gallery/index.html" rel="" target="">
- <span class="menu-text">Galería</span></a>
+    <a class="nav-link" href="../../docs/publicaciones/index.html" rel="" target="">
+ <span class="menu-text">PUBLICACIONES</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/presentaciones" rel="" target="">
+ <span class="menu-text">PRESENTACIONES</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../docs/blog/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blogs</span></a>
+ <span class="menu-text">BLOG</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Ayuda</span>
+ <span class="menu-text">AYUDA</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-ayuda">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ayuda">    
         <li>
     <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
 </i> 
@@ -218,9 +224,7 @@ cookieconsent.run({
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-    <a href="https://twitter.com/achalmaedison" title="Quarto Twitter" class="quarto-navigation-tool px-1" aria-label="Quarto Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/achalmed" title="Quarto GitHub" class="quarto-navigation-tool px-1" aria-label="Quarto GitHub"><i class="bi bi-github"></i></a>
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -261,6 +265,28 @@ cookieconsent.run({
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Por defecto</option>
+         <option value="listing-title" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Fecha - Menos reciente
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Fecha - Más reciente
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="Finanzas Internacionales" data-listing-date-sort="1686978000000" data-listing-file-modified-sort="1687028658428" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="27">
 <div class="thumbnail">
@@ -598,45 +624,7 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Filosofía,Política" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1686377081972" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="18">
-<div class="thumbnail">
-<p><a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
-<h3 class="no-anchor listing-title">
-El legado revolucionario de Mariátegui. Siguiendo su camino hacia un futuro transformado
-</h3>
-<div class="listing-subtitle">
-Explorando el pensamiento y la acción de José Carlos Mariátegui para inspirar el cambio social
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Filosofía'); return false;">
-Filosofía
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Política'); return false;">
-Política
-</div>
-</div>
-<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
-<div class="listing-description">
-<p>Descubre el legado revolucionario de José Carlos Mariátegui y cómo seguir su camino puede impulsar un futuro transformador. Exploraremos su teoría marxista-leninista, la importancia de la fusión con las masas y la necesidad de una acción consecuente. ¡Únete a la revolución!</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
-<div class="listing-date">
-9 jun 2023
-</div>
-<div class="listing-author">
-Edison Achalma Mendoza
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="Filosofía" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1686340824936" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="17">
+<div class="quarto-post image-right" data-index="9" data-categories="Filosofía" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1686340824936" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="17">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2023-06-09-naturaleza-humana/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -671,7 +659,7 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="R,RStudio" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1687060122435" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="10" data-categories="R,RStudio" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1687060122435" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2023-06-10-1-instalacion-r/index.html"> <p class="card-img-top"><img src="posts/2023-06-10-1-instalacion-r/images/Screenshot_20230610_222900.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -709,40 +697,37 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Econometría,Economía,Invetigación económica" data-listing-date-sort="1685768400000" data-listing-file-modified-sort="1685892331918" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="63">
+<div class="quarto-post image-right" data-index="11" data-categories="Filosofía,Política" data-listing-date-sort="1686286800000" data-listing-file-modified-sort="1686377081972" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="18">
 <div class="thumbnail">
-<p><a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
-<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
+<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
 <h3 class="no-anchor listing-title">
-Ideas de investigación en Econometría Análisis de variables y relaciones económicas
+El legado revolucionario de Mariátegui. Siguiendo su camino hacia un futuro transformado
 </h3>
 <div class="listing-subtitle">
-Explora diferentes enfoques para investigar la economía y sus interacciones a través de la Econometría
+Explorando el pensamiento y la acción de José Carlos Mariátegui para inspirar el cambio social
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
-Econometría
+<div class="listing-category" onclick="window.quartoListingCategory('Filosofía'); return false;">
+Filosofía
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Economía'); return false;">
-Economía
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Invetigación económica'); return false;">
-Invetigación económica
+<div class="listing-category" onclick="window.quartoListingCategory('Política'); return false;">
+Política
 </div>
 </div>
-<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
+<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
 <div class="listing-description">
-<p>En este blog, presentamos una serie de ideas de investigación en el campo de la Econometría. Estas ideas abarcan diversos temas, desde el análisis del comportamiento de variables económicas hasta la evaluación de la influencia de factores externos e internos en la economía. Descubre cómo la Econometría puede ayudarte a comprender y modelar fenómenos económicos complejos.</p>
+<p>Descubre el legado revolucionario de José Carlos Mariátegui y cómo seguir su camino puede impulsar un futuro transformador. Exploraremos su teoría marxista-leninista, la importancia de la fusión con las masas y la necesidad de una acción consecuente. ¡Únete a la revolución!</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
+<a href="../../docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html">
 <div class="listing-date">
-3 jun 2023
+9 jun 2023
 </div>
 <div class="listing-author">
 Edison Achalma Mendoza
@@ -750,7 +735,7 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Econometría,Economía,Invetigación económica" data-listing-date-sort="1685768400000" data-listing-file-modified-sort="1685890356155" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="12" data-categories="Econometría,Economía,Invetigación económica" data-listing-date-sort="1685768400000" data-listing-file-modified-sort="1685890356155" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="4">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html"> <p class="card-img-top"><img src="posts/2023-06-03-pautas-presentacion-informe-investigacion/20230603152205.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -782,6 +767,47 @@ Invetigación económica
 </div>
 <div class="metadata">
 <a href="../../docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html">
+<div class="listing-date">
+3 jun 2023
+</div>
+<div class="listing-author">
+Edison Achalma Mendoza
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="Econometría,Economía,Invetigación económica" data-listing-date-sort="1685768400000" data-listing-file-modified-sort="1685892331918" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="63">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
+<h3 class="no-anchor listing-title">
+Ideas de investigación en Econometría Análisis de variables y relaciones económicas
+</h3>
+<div class="listing-subtitle">
+Explora diferentes enfoques para investigar la economía y sus interacciones a través de la Econometría
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
+Econometría
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Economía'); return false;">
+Economía
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Invetigación económica'); return false;">
+Invetigación económica
+</div>
+</div>
+<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
+<div class="listing-description">
+<p>En este blog, presentamos una serie de ideas de investigación en el campo de la Econometría. Estas ideas abarcan diversos temas, desde el análisis del comportamiento de variables económicas hasta la evaluación de la influencia de factores externos e internos en la economía. Descubre cómo la Econometría puede ayudarte a comprender y modelar fenómenos económicos complejos.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../docs/blog/posts/2023-06-03-ideas-investigacion/index.html">
 <div class="listing-date">
 3 jun 2023
 </div>
@@ -1232,7 +1258,42 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="Planeamiento y Presupuesto Público,Administración Pública,Gestión Pública" data-listing-date-sort="1633064400000" data-listing-file-modified-sort="1686892509237" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="26" data-categories="Planeamiento y Presupuesto Público" data-listing-date-sort="1633064400000" data-listing-file-modified-sort="1686471045855" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="9">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
+<h3 class="no-anchor listing-title">
+Reformas y Modernización de la Gestión Pública en Perú.
+</h3>
+<div class="listing-subtitle">
+Hacia una gestión eficiente y transparente en beneficio de la sociedad.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Planeamiento y Presupuesto Público'); return false;">
+Planeamiento y Presupuesto Público
+</div>
+</div>
+<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
+<div class="listing-description">
+<p>Este ensayo explora la importancia de reformar y modernizar la gestión pública en Perú, abordando aspectos clave como la eficiencia, transparencia y mejora en la prestación de servicios.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
+<div class="listing-date">
+1 oct 2021
+</div>
+<div class="listing-author">
+Edison Achalma Mendoza
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="27" data-categories="Planeamiento y Presupuesto Público,Administración Pública,Gestión Pública" data-listing-date-sort="1633064400000" data-listing-file-modified-sort="1686892509237" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="6">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -1264,41 +1325,6 @@ Gestión Pública
 </div>
 <div class="metadata">
 <a href="../../docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.html">
-<div class="listing-date">
-1 oct 2021
-</div>
-<div class="listing-author">
-Edison Achalma Mendoza
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="27" data-categories="Planeamiento y Presupuesto Público" data-listing-date-sort="1633064400000" data-listing-file-modified-sort="1686471045855" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="9">
-<div class="thumbnail">
-<p><a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
-<h3 class="no-anchor listing-title">
-Reformas y Modernización de la Gestión Pública en Perú.
-</h3>
-<div class="listing-subtitle">
-Hacia una gestión eficiente y transparente en beneficio de la sociedad.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Planeamiento y Presupuesto Público'); return false;">
-Planeamiento y Presupuesto Público
-</div>
-</div>
-<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
-<div class="listing-description">
-<p>Este ensayo explora la importancia de reformar y modernizar la gestión pública en Perú, abordando aspectos clave como la eficiencia, transparencia y mejora en la prestación de servicios.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.html">
 <div class="listing-date">
 1 oct 2021
 </div>
@@ -1346,42 +1372,7 @@ Edison Achalma Mendoza
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="Econometría" data-listing-date-sort="1610341200000" data-listing-file-modified-sort="1686100787878" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="85">
-<div class="thumbnail">
-<p><a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html"> <p class="card-img-top"><img data-src="posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/20230603225440.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
-<h3 class="no-anchor listing-title">
-Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho
-</h3>
-<div class="listing-subtitle">
-Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
-Econometría
-</div>
-</div>
-<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
-<div class="listing-description">
-<p>Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
-<div class="listing-date">
-11 ene 2021
-</div>
-<div class="listing-author">
-Edison Achalma Mendoza
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="30" data-categories="Econometría" data-listing-date-sort="1610341200000" data-listing-file-modified-sort="1685865627878" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="29" data-categories="Econometría" data-listing-date-sort="1610341200000" data-listing-file-modified-sort="1685865627878" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="../../docs/blog/posts/2022-01-11-v2-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
@@ -1407,6 +1398,41 @@ Econometría
 </div>
 <div class="metadata">
 <a href="../../docs/blog/posts/2022-01-11-v2-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
+<div class="listing-date">
+11 ene 2021
+</div>
+<div class="listing-author">
+Edison Achalma Mendoza
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="30" data-categories="Econometría" data-listing-date-sort="1610341200000" data-listing-file-modified-sort="1686100787878" data-listing-date-modified-sort="1687064400000" data-listing-reading-time-sort="85">
+<div class="thumbnail">
+<p><a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html"> <p class="card-img-top"><img data-src="posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/20230603225440.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
+<h3 class="no-anchor listing-title">
+Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho
+</h3>
+<div class="listing-subtitle">
+Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
+Econometría
+</div>
+</div>
+<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
+<div class="listing-description">
+<p>Descubre cómo el crecimiento económico de Ayacucho ha influido en la recaudación de impuestos durante más de una década. Este análisis examina la relación entre el Valor Agregado Bruto y los ingresos fiscales, destacando los momentos clave y las implicaciones para la economía regional.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.html">
 <div class="listing-date">
 11 ene 2021
 </div>
@@ -1604,7 +1630,7 @@ No hay resultados
 <nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
-</div></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script type="text/javascript">
 
 // replace cmd keyboard shortcut w/ control on non-Mac platforms
@@ -1853,7 +1879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© 2023 Edison Achalma, Ayacucho</div>   
+    <div class="nav-footer-left">© Copyright 2023 Edison Achalma, Ayacucho</div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1868,13 +1894,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/achalmaedison">
-      <i class="bi bi-twitter" role="img" aria-label="Quarto Twitter">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/achalmed/website-achalma">
-      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
     </a>
   </li>  

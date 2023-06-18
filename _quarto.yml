@@ -1,20 +1,32 @@
 project:
   type: website
   output-dir: _site
+  resources: 
+    - resume.pdf
+    - cv.pdf
 
 website:
   title: "achalmaedison"
-  image: "Aukihack.png"
+  #image: "Aukihack.png"
   favicon: "favicon.png"
-  google-analytics: "G-XGH6TP6RB3"
-  open-graph: true
-  twitter-card: true
+  google-analytics: 
+    tracking-id: "G-XGH6TP6RB3"
+    anonymize-ip: true
+  open-graph:
+    locale: es_ES
+    site-name: AchalmaEdison
+  twitter-card:
+    creator: "@achalmaedison"
+  comments: 
+    utterances: 
+      repo: achalmed/website-achalma
   cookie-consent: true
   site-url: https://achalmaedison.netlify.app/
   repo-url: https://github.com/achalmed/website-achalma
   repo-actions: [edit, issue]
   page-navigation: true
-  # reader-mode: true
+  back-to-top-navigation: true
+  #reader-mode: true
   search:
     type: overlay
     algolia:
@@ -22,11 +34,11 @@ website:
       application-id: ZPJB5I1QN7
       search-only-api-key: 41be6c1e0a7fea4a51b107810facf577
       analytics-events: true
-      show-logo: true
+      show-logo: false
 
   page-footer:
     left: |
-      © 2023 Edison Achalma, Ayacucho
+      © Copyright 2023 Edison Achalma, Ayacucho
     center:
       - text: "Acerca de"
         href: about.qmd
@@ -35,27 +47,30 @@ website:
     right:
       - icon: twitter
         href: https://twitter.com/achalmaedison
-        aria-label: Quarto Twitter
+        aria-label: Twitter
       - icon: github
         href: https://github.com/achalmed/website-achalma
-        aria-label: Quarto GitHub  
+        aria-label: GitHub  
 
   navbar:
     background: light
-    logo: Aukihack.png
-    logo-alt: "Aukihack logo."
-    title: false
-    collapse-below: lg
-    left:
-      - text: "Inicio"
+    search: false
+    #logo: Aukihack.png
+    #logo-alt: "Aukihack logo"
+    title: Achalma Edison
+    collapse-below: lg # (sm, md, lg (default), xl, xxl).
+    right:
+      - text: "INICIO"
         href: index.qmd
-      - text: "Sobre mi"
+      - text: "SOBRE MI"
         href: docs/get-started/index.qmd
-      - text: "Galería"
-        href: docs/gallery/index.qmd
-      - text: "Blogs"
+      - text: "PUBLICACIONES"
+        href: docs/publicaciones/index.qmd
+      - text: "PRESENTACIONES"
+        href: docs/presentaciones
+      - text: "BLOG"
         href: docs/blog/index.qmd
-      - text: "Ayuda"
+      - text: "AYUDA"
         menu:
           - text: "Reportar un error"
             icon: "bug"
@@ -63,13 +78,6 @@ website:
           - text: "Hacer una pregunta"
             icon: "chat-right-text"
             href: "https://github.com/achalmed/website-achalma/discussions"
-    tools:
-      - icon: twitter
-        href: https://twitter.com/achalmaedison
-        text: Quarto Twitter
-      - icon: github
-        href: https://github.com/achalmed
-        text: Quarto GitHub    
 
 bibliography: references.bib
 

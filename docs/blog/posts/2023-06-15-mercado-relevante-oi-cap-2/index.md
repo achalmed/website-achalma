@@ -16,6 +16,7 @@ date: "06/15/2023"
 
 
 
+
 # Sistema económio y mercado
 
 ## Sistema económico
@@ -200,6 +201,7 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 
 
 
+
 :::{.cell}
 
 :::{.cell-output-display}
@@ -207,121 +209,13 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 :::{}
 
 :::{}
-<svg width="672" height="480" viewbox="0.00 0.00 570.46 218.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
-<title>grafico</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-214 566.46,-214 566.46,4 -4,4"></polygon>
-<!-- node1 -->
-<g id="node1" class="node">
-<title>node1</title>
-<path fill="lightgray" stroke="black" d="M117.76,-210C117.76,-210 30.54,-210 30.54,-210 24.54,-210 18.54,-204 18.54,-198 18.54,-198 18.54,-164 18.54,-164 18.54,-158 24.54,-152 30.54,-152 30.54,-152 117.76,-152 117.76,-152 123.76,-152 129.76,-158 129.76,-164 129.76,-164 129.76,-198 129.76,-198 129.76,-204 123.76,-210 117.76,-210"></path>
-<text text-anchor="middle" x="74.15" y="-178" font-family="Arial" font-size="10.00">Mercado de partida A</text>
-</g>
-<!-- node4 -->
-<g id="node4" class="node">
-<title>node4</title>
-<path fill="lightgray" stroke="black" d="M285.12,-189.78C285.12,-189.78 274.47,-201.22 274.47,-201.22 270.38,-205.61 260.29,-210 254.29,-210 254.29,-210 224.29,-210 224.29,-210 218.29,-210 208.21,-205.61 204.12,-201.22 204.12,-201.22 193.47,-189.78 193.47,-189.78 189.38,-185.39 189.38,-176.61 193.47,-172.22 193.47,-172.22 204.12,-160.78 204.12,-160.78 208.21,-156.39 218.29,-152 224.29,-152 224.29,-152 254.29,-152 254.29,-152 260.29,-152 270.38,-156.39 274.47,-160.78 274.47,-160.78 285.12,-172.22 285.12,-172.22 289.21,-176.61 289.21,-185.39 285.12,-189.78"></path>
-<text text-anchor="middle" x="239.29" y="-178" font-family="Arial" font-size="10.00">Rentable</text>
-</g>
-<!-- node1&#45;&gt;node4 -->
-<g id="edge1" class="edge">
-<title>node1-&gt;node4</title>
-<path fill="none" stroke="black" d="M129.93,-181C144.37,-181 160.07,-181 174.92,-181"></path>
-<polygon fill="black" stroke="black" points="175.04,-184.5 185.04,-181 175.04,-177.5 175.04,-184.5"></polygon>
-</g>
-<!-- node2 -->
-<g id="node2" class="node">
-<title>node2</title>
-<path fill="lightgray" stroke="black" d="M116.15,-134C116.15,-134 32.15,-134 32.15,-134 26.15,-134 20.15,-128 20.15,-122 20.15,-122 20.15,-88 20.15,-88 20.15,-82 26.15,-76 32.15,-76 32.15,-76 116.15,-76 116.15,-76 122.15,-76 128.15,-82 128.15,-88 128.15,-88 128.15,-122 128.15,-122 128.15,-128 122.15,-134 116.15,-134"></path>
-<text text-anchor="middle" x="74.15" y="-102" font-family="Arial" font-size="10.00">Mercado de prtida B</text>
-</g>
-<!-- node5 -->
-<g id="node5" class="node">
-<title>node5</title>
-<path fill="lightgray" stroke="black" d="M285.12,-113.78C285.12,-113.78 274.47,-125.22 274.47,-125.22 270.38,-129.61 260.29,-134 254.29,-134 254.29,-134 224.29,-134 224.29,-134 218.29,-134 208.21,-129.61 204.12,-125.22 204.12,-125.22 193.47,-113.78 193.47,-113.78 189.38,-109.39 189.38,-100.61 193.47,-96.22 193.47,-96.22 204.12,-84.78 204.12,-84.78 208.21,-80.39 218.29,-76 224.29,-76 224.29,-76 254.29,-76 254.29,-76 260.29,-76 270.38,-80.39 274.47,-84.78 274.47,-84.78 285.12,-96.22 285.12,-96.22 289.21,-100.61 289.21,-109.39 285.12,-113.78"></path>
-<text text-anchor="middle" x="239.29" y="-102" font-family="Arial" font-size="10.00">Rentable</text>
-</g>
-<!-- node2&#45;&gt;node5 -->
-<g id="edge3" class="edge">
-<title>node2-&gt;node5</title>
-<path fill="none" stroke="black" d="M128.57,-105C143.29,-105 159.41,-105 174.65,-105"></path>
-<polygon fill="black" stroke="black" points="175.03,-108.5 185.03,-105 175.03,-101.5 175.03,-108.5"></polygon>
-</g>
-<!-- node3 -->
-<g id="node3" class="node">
-<title>node3</title>
-<path fill="lightgray" stroke="black" d="M136.44,-58C136.44,-58 11.85,-58 11.85,-58 5.85,-58 -0.15,-52 -0.15,-46 -0.15,-46 -0.15,-12 -0.15,-12 -0.15,-6 5.85,0 11.85,0 11.85,0 136.44,0 136.44,0 142.44,0 148.44,-6 148.44,-12 148.44,-12 148.44,-46 148.44,-46 148.44,-52 142.44,-58 136.44,-58"></path>
-<text text-anchor="middle" x="74.15" y="-26" font-family="Arial" font-size="10.00">Mercado de partida A + B + C</text>
-</g>
-<!-- node6 -->
-<g id="node6" class="node">
-<title>node6</title>
-<path fill="lightgray" stroke="black" d="M285.12,-37.78C285.12,-37.78 274.47,-49.22 274.47,-49.22 270.38,-53.61 260.29,-58 254.29,-58 254.29,-58 224.29,-58 224.29,-58 218.29,-58 208.21,-53.61 204.12,-49.22 204.12,-49.22 193.47,-37.78 193.47,-37.78 189.38,-33.39 189.38,-24.61 193.47,-20.22 193.47,-20.22 204.12,-8.78 204.12,-8.78 208.21,-4.39 218.29,0 224.29,0 224.29,0 254.29,0 254.29,0 260.29,0 270.38,-4.39 274.47,-8.78 274.47,-8.78 285.12,-20.22 285.12,-20.22 289.21,-24.61 289.21,-33.39 285.12,-37.78"></path>
-<text text-anchor="middle" x="239.29" y="-26" font-family="Arial" font-size="10.00">Rentable</text>
-</g>
-<!-- node3&#45;&gt;node6 -->
-<g id="edge5" class="edge">
-<title>node3-&gt;node6</title>
-<path fill="none" stroke="black" d="M148.61,-29C157.48,-29 166.49,-29 175.2,-29"></path>
-<polygon fill="black" stroke="black" points="175.26,-32.5 185.26,-29 175.26,-25.5 175.26,-32.5"></polygon>
-</g>
-<!-- node4&#45;&gt;node2 -->
-<g id="edge2" class="edge">
-<title>node4-&gt;node2</title>
-<path fill="none" stroke="black" d="M201.27,-163.75C182.48,-155 159.12,-144.12 137.64,-134.11"></path>
-<polygon fill="black" stroke="black" points="139.11,-130.94 128.57,-129.89 136.15,-137.28 139.11,-130.94"></polygon>
-</g>
-<!-- node7 -->
-<g id="node7" class="node">
-<title>node7</title>
-<path fill="white" stroke="black" d="M550.46,-210C550.46,-210 466.46,-210 466.46,-210 460.46,-210 454.46,-204 454.46,-198 454.46,-198 454.46,-164 454.46,-164 454.46,-158 460.46,-152 466.46,-152 466.46,-152 550.46,-152 550.46,-152 556.46,-152 562.46,-158 562.46,-164 562.46,-164 562.46,-198 562.46,-198 562.46,-204 556.46,-210 550.46,-210"></path>
-<text text-anchor="middle" x="508.46" y="-178" font-family="Arial" font-size="10.00">I</text>
-</g>
-<!-- node4&#45;&gt;node7 -->
-<g id="edge6" class="edge">
-<title>node4-&gt;node7</title>
-<path fill="none" stroke="gray" d="M293.4,-181C336.83,-181 398.36,-181 444.31,-181"></path>
-<polygon fill="gray" stroke="gray" points="444.46,-184.5 454.46,-181 444.46,-177.5 444.46,-184.5"></polygon>
-<text text-anchor="middle" x="373.88" y="-185.2" font-family="Times,serif" font-size="14.00">Sí: mercado relevante</text>
-</g>
-<!-- node5&#45;&gt;node3 -->
-<g id="edge4" class="edge">
-<title>node5-&gt;node3</title>
-<path fill="none" stroke="black" d="M201.11,-87.68C185.01,-80.18 165.59,-71.13 146.87,-62.41"></path>
-<polygon fill="black" stroke="black" points="148.3,-59.22 137.76,-58.17 145.34,-65.56 148.3,-59.22"></polygon>
-</g>
-<!-- node8 -->
-<g id="node8" class="node">
-<title>node8</title>
-<path fill="white" stroke="black" d="M550.46,-134C550.46,-134 466.46,-134 466.46,-134 460.46,-134 454.46,-128 454.46,-122 454.46,-122 454.46,-88 454.46,-88 454.46,-82 460.46,-76 466.46,-76 466.46,-76 550.46,-76 550.46,-76 556.46,-76 562.46,-82 562.46,-88 562.46,-88 562.46,-122 562.46,-122 562.46,-128 556.46,-134 550.46,-134"></path>
-<text text-anchor="middle" x="508.46" y="-102" font-family="Arial" font-size="10.00">II</text>
-</g>
-<!-- node5&#45;&gt;node8 -->
-<g id="edge7" class="edge">
-<title>node5-&gt;node8</title>
-<path fill="none" stroke="gray" d="M293.4,-105C336.83,-105 398.36,-105 444.31,-105"></path>
-<polygon fill="gray" stroke="gray" points="444.46,-108.5 454.46,-105 444.46,-101.5 444.46,-108.5"></polygon>
-<text text-anchor="middle" x="373.88" y="-109.2" font-family="Times,serif" font-size="14.00">Sí: mercado relevante</text>
-</g>
-<!-- node9 -->
-<g id="node9" class="node">
-<title>node9</title>
-<path fill="white" stroke="black" d="M550.46,-58C550.46,-58 466.46,-58 466.46,-58 460.46,-58 454.46,-52 454.46,-46 454.46,-46 454.46,-12 454.46,-12 454.46,-6 460.46,0 466.46,0 466.46,0 550.46,0 550.46,0 556.46,0 562.46,-6 562.46,-12 562.46,-12 562.46,-46 562.46,-46 562.46,-52 556.46,-58 550.46,-58"></path>
-<text text-anchor="middle" x="508.46" y="-26" font-family="Arial" font-size="10.00">III</text>
-</g>
-<!-- node6&#45;&gt;node9 -->
-<g id="edge8" class="edge">
-<title>node6-&gt;node9</title>
-<path fill="none" stroke="gray" d="M293.4,-29C336.83,-29 398.36,-29 444.31,-29"></path>
-<polygon fill="gray" stroke="gray" points="444.46,-32.5 454.46,-29 444.46,-25.5 444.46,-32.5"></polygon>
-<text text-anchor="middle" x="373.88" y="-33.2" font-family="Times,serif" font-size="14.00">Sí: mercado relevante</text>
-</g>
-</g>
-</svg>
+
+![](index_files/figure-latex/dot-figure-1.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
 :::
 :::
 :::
 :::
+
 
 
 
@@ -377,6 +271,7 @@ Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un m
 
 
 
+
 :::{.cell}
 
 :::{.cell-output-display}
@@ -384,84 +279,13 @@ Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un m
 :::{}
 
 :::{}
-<svg width="672" height="480" viewbox="0.00 0.00 578.18 142.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 138)">
-<title>grafico</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-138 574.18,-138 574.18,4 -4,4"></polygon>
-<!-- node1 -->
-<g id="node1" class="node">
-<title>node1</title>
-<path fill="lightgray" stroke="black" d="M99.42,-134C99.42,-134 12.19,-134 12.19,-134 6.19,-134 0.19,-128 0.19,-122 0.19,-122 0.19,-88 0.19,-88 0.19,-82 6.19,-76 12.19,-76 12.19,-76 99.42,-76 99.42,-76 105.42,-76 111.42,-82 111.42,-88 111.42,-88 111.42,-122 111.42,-122 111.42,-128 105.42,-134 99.42,-134"></path>
-<text text-anchor="middle" x="55.81" y="-102" font-family="Arial" font-size="10.00">Mercado de partida A</text>
-</g>
-<!-- node3 -->
-<g id="node3" class="node">
-<title>node3</title>
-<path fill="lightgray" stroke="black" d="M292.01,-112.77C292.01,-112.77 276.16,-126.23 276.16,-126.23 271.58,-130.12 261.01,-134 255.01,-134 255.01,-134 210.72,-134 210.72,-134 204.72,-134 194.15,-130.12 189.57,-126.23 189.57,-126.23 173.72,-112.77 173.72,-112.77 169.15,-108.88 169.15,-101.12 173.72,-97.23 173.72,-97.23 189.57,-83.77 189.57,-83.77 194.15,-79.88 204.72,-76 210.72,-76 210.72,-76 255.01,-76 255.01,-76 261.01,-76 271.58,-79.88 276.16,-83.77 276.16,-83.77 292.01,-97.23 292.01,-97.23 296.58,-101.12 296.58,-108.88 292.01,-112.77"></path>
-<text text-anchor="middle" x="232.86" y="-102" font-family="Arial" font-size="10.00">B = 4800 No rentable</text>
-</g>
-<!-- node1&#45;&gt;node3 -->
-<g id="edge1" class="edge">
-<title>node1-&gt;node3</title>
-<path fill="none" stroke="black" d="M111.71,-105C125.19,-105 139.87,-105 154.19,-105"></path>
-<polygon fill="black" stroke="black" points="154.53,-108.5 164.53,-105 154.53,-101.5 154.53,-108.5"></polygon>
-</g>
-<!-- node2 -->
-<g id="node2" class="node">
-<title>node2</title>
-<path fill="lightgray" stroke="black" d="M99.42,-58C99.42,-58 12.19,-58 12.19,-58 6.19,-58 0.19,-52 0.19,-46 0.19,-46 0.19,-12 0.19,-12 0.19,-6 6.19,0 12.19,0 12.19,0 99.42,0 99.42,0 105.42,0 111.42,-6 111.42,-12 111.42,-12 111.42,-46 111.42,-46 111.42,-52 105.42,-58 99.42,-58"></path>
-<text text-anchor="middle" x="55.81" y="-26" font-family="Arial" font-size="10.00">Mercado de partida B</text>
-</g>
-<!-- node4 -->
-<g id="node4" class="node">
-<title>node4</title>
-<path fill="lightgray" stroke="black" d="M285.11,-37.27C285.11,-37.27 272.02,-49.73 272.02,-49.73 267.68,-53.86 257.33,-58 251.33,-58 251.33,-58 214.4,-58 214.4,-58 208.4,-58 198.05,-53.86 193.71,-49.73 193.71,-49.73 180.62,-37.27 180.62,-37.27 176.28,-33.14 176.28,-24.86 180.62,-20.73 180.62,-20.73 193.71,-8.27 193.71,-8.27 198.05,-4.14 208.4,0 214.4,0 214.4,0 251.33,0 251.33,0 257.33,0 267.68,-4.14 272.02,-8.27 272.02,-8.27 285.11,-20.73 285.11,-20.73 289.45,-24.86 289.45,-33.14 285.11,-37.27"></path>
-<text text-anchor="middle" x="232.86" y="-26" font-family="Arial" font-size="10.00">B = 5400 Rentable</text>
-</g>
-<!-- node2&#45;&gt;node4 -->
-<g id="edge3" class="edge">
-<title>node2-&gt;node4</title>
-<path fill="none" stroke="black" d="M111.71,-29C127.49,-29 144.92,-29 161.49,-29"></path>
-<polygon fill="black" stroke="black" points="161.68,-32.5 171.68,-29 161.68,-25.5 161.68,-32.5"></polygon>
-</g>
-<!-- node3&#45;&gt;node2 -->
-<g id="edge2" class="edge">
-<title>node3-&gt;node2</title>
-<path fill="none" stroke="black" d="M187.11,-85.57C167.02,-76.85 142.94,-66.4 120.98,-56.86"></path>
-<polygon fill="black" stroke="black" points="122.28,-53.61 111.71,-52.84 119.49,-60.03 122.28,-53.61"></polygon>
-<text text-anchor="middle" x="138.17" y="-71.2" font-family="Times,serif" font-size="14.00">No</text>
-</g>
-<!-- node5 -->
-<g id="node5" class="node">
-<title>node5</title>
-<path fill="white" stroke="black" d="M558.18,-134C558.18,-134 474.18,-134 474.18,-134 468.18,-134 462.18,-128 462.18,-122 462.18,-122 462.18,-88 462.18,-88 462.18,-82 468.18,-76 474.18,-76 474.18,-76 558.18,-76 558.18,-76 564.18,-76 570.18,-82 570.18,-88 570.18,-88 570.18,-122 570.18,-122 570.18,-128 564.18,-134 558.18,-134"></path>
-<text text-anchor="middle" x="516.18" y="-102" font-family="Arial" font-size="10.00">I</text>
-</g>
-<!-- node3&#45;&gt;node5 -->
-<g id="edge4" class="edge">
-<title>node3-&gt;node5</title>
-<path fill="none" stroke="gray" d="M301.25,-105C346.94,-105 406.94,-105 451.77,-105"></path>
-<polygon fill="gray" stroke="gray" points="451.96,-108.5 461.96,-105 451.96,-101.5 451.96,-108.5"></polygon>
-</g>
-<!-- node6 -->
-<g id="node6" class="node">
-<title>node6</title>
-<path fill="white" stroke="black" d="M558.18,-58C558.18,-58 474.18,-58 474.18,-58 468.18,-58 462.18,-52 462.18,-46 462.18,-46 462.18,-12 462.18,-12 462.18,-6 468.18,0 474.18,0 474.18,0 558.18,0 558.18,0 564.18,0 570.18,-6 570.18,-12 570.18,-12 570.18,-46 570.18,-46 570.18,-52 564.18,-58 558.18,-58"></path>
-<text text-anchor="middle" x="516.18" y="-26" font-family="Arial" font-size="10.00">II</text>
-</g>
-<!-- node4&#45;&gt;node6 -->
-<g id="edge5" class="edge">
-<title>node4-&gt;node6</title>
-<path fill="none" stroke="gray" d="M293.87,-29C340.32,-29 404.5,-29 451.79,-29"></path>
-<polygon fill="gray" stroke="gray" points="451.91,-32.5 461.91,-29 451.91,-25.5 451.91,-32.5"></polygon>
-<text text-anchor="middle" x="381.59" y="-33.2" font-family="Times,serif" font-size="14.00">Sí: mercado relevante</text>
-</g>
-</g>
-</svg>
+
+![](index_files/figure-latex/dot-figure-2.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
 :::
 :::
 :::
 :::
+
 
 
 

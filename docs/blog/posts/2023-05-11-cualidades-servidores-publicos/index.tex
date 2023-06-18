@@ -5,10 +5,10 @@
 %
 \documentclass[
   letterpaper,
-]{article}
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
 
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -18,6 +18,10 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -37,7 +41,7 @@
 \makeatother
 \usepackage{xcolor}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
@@ -74,6 +78,7 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
 \makeatletter
@@ -82,49 +87,60 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Tabla de contenidos}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Listado de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Listado de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Listado de Tablas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Listado de Tablas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Tabla}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Tabla}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
 \makeatother
 \makeatletter
 \@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
 \makeatother
 \makeatletter
 \makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -136,6 +152,7 @@
 \hypersetup{
   pdftitle={¿Cuáles son las cualidades de los servidores públicos?},
   pdfauthor={Edison Achalma Mendoza},
+  pdflang={es},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -152,18 +169,12 @@
 \makeatother
 \subtitle{Cualidades de los servidores públicos.}
 \author{Edison Achalma Mendoza}
-\date{5/11/23}
+\date{2023-05-11}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
-\renewcommand*\contentsname{Contenidos}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
-\tableofcontents
-}
 \hypertarget{cuuxe1les-son-las-cualidades-de-los-servidores-puxfablicos}{%
 \section{¿Cuáles son las cualidades de los servidores
 públicos?}\label{cuuxe1les-son-las-cualidades-de-los-servidores-puxfablicos}}
@@ -175,7 +186,7 @@ Con demasiada frecuencia, equiparamos la amabilidad con no ser asertivo
 o incluso ser agresivo. Hay tantas personas llenas de ideas brillantes.
 Pero aquellos con la amabilidad de crear formas inclusivas y poderosas
 de diseñar, dar forma, entregar y evaluar esas ideas brillantes son las
-que siempre quiero conectar y aprender.~
+que siempre quiero conectar y aprender.
 
 \hypertarget{juicio-astuto}{%
 \subsection{Juicio astuto}\label{juicio-astuto}}
@@ -187,7 +198,7 @@ través de los velos, ya que hay muchas máscaras que usan las personas.
 Para un servidor público, esto es muy importante: que entiendan a qué
 máscara le están hablando. Si se entiende eso, se resuelve muchos
 misterios y desamores. Los siguientes pasos son imaginación, trabajo
-duro, trabajo en equipo y una mente abierta.~
+duro, trabajo en equipo y una mente abierta.
 
 \hypertarget{habilidades-a-prueba-de-futuro}{%
 \subsection{Habilidades a prueba de

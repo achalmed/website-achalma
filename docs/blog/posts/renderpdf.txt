@@ -14,10 +14,11 @@
     # number-depth: 3  # Profundidad de numeración de secciones
     highlight-style: github  # Estilo de resaltado de código
     colorlinks: true  # Habilitar enlaces con colores
-    cite-method: biblatex  # Método de citación
+    cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
     link-citation: true  # Habilitar enlaces en las citas
     link-bibliography: true  # Habilitar enlaces en la bibliografía
     keep-tex: true  # Mantener archivos .tex generados
-    pdf-engine: pdflatex  # Motor de PDF
+    pdf-engine: xelatex   # Motor de PDF (pdflatex, lualatex, tectonic, latexmk)
     include-in-header: 
       - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
+    output-file: index.pdf

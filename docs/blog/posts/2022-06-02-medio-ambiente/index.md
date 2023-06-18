@@ -24,6 +24,7 @@ date: "06/03/2022"
 
 
 
+
 # Resuelva las siguientes preguntas
 
 ## ¿Qué es el cambio climático y cómo afecta a nuestras vidas?

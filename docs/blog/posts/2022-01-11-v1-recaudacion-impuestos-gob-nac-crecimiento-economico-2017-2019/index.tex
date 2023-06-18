@@ -78,25 +78,6 @@
 \def\fps@figure{htbp}
 \makeatother
 
-% Preámbulo
-\usepackage[utf8]{inputenc} % Codificación de entrada en UTF-8
-\usepackage{comment} % Permite comentar secciones del código
-\usepackage{marvosym} % Agrega símbolos adicionales
-\usepackage{graphicx} % Permite insertar imágenes
-%\usepackage[spanish]{babel} % Configuración para escribir en español
-%\selectlanguage{spanish} % Selecciona el idioma español
-\usepackage{csquotes}
-\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
-\usepackage{mathptmx} % Fuente de texto matemática
-\usepackage{amssymb} % Símbolos adicionales de matemáticas
-\usepackage{lipsum} % Crea texto aleatorio
-\usepackage{amsthm}
-\usepackage{float}
-\usepackage{rotating, graphicx}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage{tcolorbox}
-
 \KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
@@ -194,13 +175,13 @@ los ingresos fiscales en el periodo 2007-2019}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, interior hidden, enhanced, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \hypertarget{sec-introducciuxf3n}{%
 \section*{Introducción}\label{sec-introducciuxf3n}}
 \addcontentsline{toc}{section}{Introducción}
 
-\textbf{En el Perú,} al igual que en otros países de Latinoamérica, el
+En el Perú, al igual que en otros países de Latinoamérica, el
 crecimiento económico juega un papel fundamental en la recaudación de
 impuestos. Sin embargo, eventos externos y factores negativos pueden
 afectar el crecimiento económico y, por ende, el crecimiento tributario.
@@ -1250,17 +1231,6 @@ positivo en la actividad económica, al hacerlo se determinará si el
 efecto es positivo o no. La estimación del efecto de los cambios
 impositivos exógenos sobre la actividad económica se realiza mediante la
 estimación de modelos econométricos estándar de series temporales.
-
-La estimación del efecto de cambios tributarios sobre el nivel de
-actividad real se basó en la estimación de tres modelos básicos:
-
-\(\Delta Y_t = \beta_{1} + \sum_{i=0}^{L} a_i\)
-
-\$ \$
-
-\$ \$
-
-\$ \$
 
 La certeza de los resultados obtenidos de las tres especificaciones
 (Modelos 1, 2 y 3) se analizó en dos dimensiones. Primero, los modelos

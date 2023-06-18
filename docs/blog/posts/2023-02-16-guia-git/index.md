@@ -16,9 +16,8 @@ date: "02/16/2023"
 
 
 
-# Introducción
 
-[![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/200px-Git-logo.svg.png)](https://es.wikipedia.org/wiki/Archivo:Git-logo.svg)
+# Introducción
 
 **¿Estás interesado en aprender los fundamentos de Git y GitHub?** ¡Has llegado al lugar perfecto! En este blog, te presentaremos una guía completa que podrás utilizar como referencia diaria.
 

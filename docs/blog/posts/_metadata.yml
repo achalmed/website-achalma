@@ -39,7 +39,7 @@ highlight-style: github
 
 format:
   html:
-    page-layout: article  # Diseño de página para el formato HTML (por ejemplo, artículo, libro, etc.)
+    page-layout: article  # Diseño de página para el formato HTML (por ejemplo, article, full, o custom)
     toc: true  # Mostrar tabla de contenidos
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
@@ -58,12 +58,37 @@ format:
     code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
     code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     code-tools:
-      source: true  # Mostrar el código fuente en las herramientas de código
+      source: repo  # Mostrar el código fuente en las herramientas de código (repo, true)
       toggle: false  # Habilitar la funcionalidad de alternar código
       caption: none  # Opción para la leyenda del código
     mermaid: 
       theme: neutral
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
+  pdf:
+    documentclass: scrartcl  # Clase de documento para el PDF
+    # papersize: letter  # Tamaño del papel
+    language: es  # Idioma del documento
+    # geometry: 
+    #   - top=2.54cm  # Margen superior
+    #   - right=2.54cm  # Margen derecho
+    #   - bottom=2.54cm  # Margen inferior
+    #   - left=2.54cm  # Margen izquierdo
+    # toc: true  # Habilitar la tabla de contenido
+    # toc-depth: 3  # Profundidad de la tabla de contenido
+    # toc-title: Contenidos  # Título de la tabla de contenido
+    # number-sections: true  # Numerar secciones
+    # number-depth: 3  # Profundidad de numeración de secciones
+    highlight-style: github  # Estilo de resaltado de código
+    colorlinks: true  # Habilitar enlaces con colores
+    cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
+    link-citation: true  # Habilitar enlaces en las citas
+    link-bibliography: true  # Habilitar enlaces en la bibliografía
+    keep-tex: true  # Mantener archivos .tex generados
+    pdf-engine: xelatex   # Motor de PDF (pdflatex, lualatex, tectonic, latexmk)
+    #include-in-header: 
+    #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
+    output-file: index.pdf
+format-links: [pdf] # (false)
 
 editor: visual

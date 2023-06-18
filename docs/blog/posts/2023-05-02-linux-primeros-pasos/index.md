@@ -16,6 +16,7 @@ date: "05/02/2023"
 
 
 
+
 # LINUX primeros pasos como usuario
 
 SISTEMAS OPERATIVOS
@@ -115,7 +116,7 @@ Ejemplos:
 
 (somos 90 por ciento pura agua)
 
-**V(aLy$l**
+**VaLy$l**
 
 (Vente conmigo a Lepe y serás lepera)
 
@@ -151,13 +152,12 @@ SISTEMA MULTIUSUARIO
 - Cada usuario tiene una **cuota de disco** duro, una cantidad máxima de disco que puede usar.
 - Hay un superusuario llamado  **root**  que actua como administrador del sistema y que dispone de permisos PARA TODO. Son funciones exclusivas del  **root**:
 
-> - Habilitar y deshabilitar usuarios.
-> - Cambiar contraseñas de otros usuarios.
-> - Asignar o modificar las cuotas de disco.
-> - Decidir qué aplicaciones y utilidades puede usar cada usuario.
-> - Organizar a los usuarios por grupos.
-> - Instalar o desinstalar programas.
-> - ...
+- Habilitar y deshabilitar usuarios.
+- Cambiar contraseñas de otros usuarios.
+- Asignar o modificar las cuotas de disco.
+- Decidir qué aplicaciones y utilidades puede usar cada usuario.
+- Organizar a los usuarios por grupos.
+- Instalar o desinstalar programas.
 
 **Nota:** Es muy importante reservar el usuario **root** exclusivamente para labores de administración del sistema, incluso cuando se instale un sistema LINUX particular, es decir, que vaya a ser utilizado por un único usuario. Debe tenerse en cuenta que, debido a que el **root** dispone de TODOS LOS PERMISOS, un error puede resultar catastrófico. Por ello se debe dar de alta, al menos, un usuario "corriente" y trabajar habitualmente con esa cuenta. Utilizar la cuenta del **root** sólo para administración, instalación de nuevo software, etc.
 
@@ -168,9 +168,9 @@ MODOS DE TRABAJO
 - **Modo de comandos**: El usuario se comunica con el ordenador mediante la **Linea de Comandos** de un terminal o de un emulador de terminal. Estos comandos o instrucciones pueden ser interpretados por el sistema usando diferentes programas denominados **Shell**. (Lo usaremos sólo esporádicamente).
 
 - **Modo gráfico**: El usuario se comunica con el ordenador  mediante un **Interfaz Gráfico de Usuario** (**GUI**) que se encarga de interpretar las diferentes acciones realizadas con el teclado o con el ratón sobre diferentes objetos gráficos como **iconos**, **botones**, **ventanas**,  **menús**, **barras de desplazamiento** (**scroll**), **lineas separadoras**, etc.
-  - En UNIX, el GUI habitual es el sistema **X Window** que está formado fundamentalmente por dos programas:
-    - **Servidor X** (**X Server**): programa que dibuja en la pantalla los objetos gráficos
-    - **Gestor de Ventanas** (**Window Manager**): los más usados son  **GNOME**  y  **KDE**.
+- En UNIX, el GUI habitual es el sistema **X Window** que está formado fundamentalmente por dos programas:
+- **Servidor X** (**X Server**): programa que dibuja en la pantalla los objetos gráficos
+- **Gestor de Ventanas** (**Window Manager**): los más usados son  **GNOME** y  **KDE**.
 
 SISTEMA DE ARCHIVOS Y CARPETAS
 
@@ -204,9 +204,6 @@ SISTEMA DE ARCHIVOS Y CARPETAS
 El sistema de archivos es, más o menos, "la forma de organizar la información almacenada en el disco duro". La mayoría de los sistemas operativos posee su propio sistema de archivos. El sistema de archivos nativo de Linux es el **EXT2**. Normalmente, los sistemas operativos proveen los mecanismos para crear, mover, renombrar y eliminar tanto archivos como directorios.
 
 La estructura de directorios suele ser jerárquica, ramificada o "en árbol":
-
-![Organización jeráquica de archivos](https://personal.us.es/echevarria/Curso/images/FilesAndFolders.png)  
-[Origen de la imagen](http://es.wikipedia.org/wiki/Archivo:FilesAndFolders.png)
 
 La estructura de directorios que sigue Linux es similar a la de cualquier sistema UNIX. La estructura del sistema de archivos NO está ligada de forma directa a la estructura de hardware. A diferencia de Windows, es independiente del número de discos duros, disqueteras o CDROMs. No hay una "unidad" para cada unidad física de disco o partición como en Windows (**A:\*\*, **C:\*\*, etc.), sino que todos los discos duros o de red se montan bajo un sistema de directorios en árbol, y algunos de esos directorios enlazan con estas unidades físicas de disco. IMPORTANTE: Las barras en Linux al igual que en cualquier UNIX son inclinadas hacia la derecha, como se puede ver más abajo (ese es el motivo de que en internet sean inclinadas hacia la derecha, ya que nació bajo UNIX).
 
@@ -339,193 +336,192 @@ EL GESTOR DE VENTANAS KDE
 
 **PANTALLA KDE:**
 
-> **Panel de KDE:**
->
-> - Menú de inicio de aplicaciones
-> - Escritorios virtuales
-> - Directorio Personal
-> - Lista de ventanas abiertas
-> - Emulador de Terminal
-> - Editores sencillos: Kedit, Kwrite
+**Panel de KDE:**
 
-> **Ventanas:**
->
-> - Barra de títulos:
->
-> - Icono de aplicación (Manipulación de ventanas)
-> - Fijación de ventana
-> - Minimizar, maximizar y cerrar
-> - Barra de menús
->
-> - Barra de herramientas
+- Menú de inicio de aplicaciones
+- Escritorios virtuales
+- Directorio Personal
+- Lista de ventanas abiertas
+- Emulador de Terminal
+- Editores sencillos: Kedit, Kwrite
 
-> **Konqueror: Gestor gráfico de archivos (File Manager):**
->
-> - Navegar por la estructura de directorios
-> - Crear y borrar carpetas
-> - Copiar y mover carpetas
-> - Cambiar nombre a ficheros y carpetas
-> - Abrir y borrar ficheros
-> - Ver y modificar las propiedades de ficheros y carpetas
+**Ventanas:**
 
-> **Konsole: Emulador de terminal**
->
-> Se usa para trabajar con el Sistema Operativo en modo de comandos, es decir para introducir directamente instrucciones UNIX al sistema. Las instrucciones se escriben en la Línea de Comandos, después del **prompt** del usuario.
+- Barra de títulos:
+
+- Icono de aplicación (Manipulación de ventanas)
+- Fijación de ventana
+- Minimizar, maximizar y cerrar
+- Barra de menús
+- Barra de herramientas
+
+**Konqueror: Gestor gráfico de archivos (File Manager):**
+
+- Navegar por la estructura de directorios
+- Crear y borrar carpetas
+- Copiar y mover carpetas
+- Cambiar nombre a ficheros y carpetas
+- Abrir y borrar ficheros
+- Ver y modificar las propiedades de ficheros y carpetas
+
+**Konsole: Emulador de terminal**
+
+Se usa para trabajar con el Sistema Operativo en modo de comandos, es decir para introducir directamente instrucciones UNIX al sistema. Las instrucciones se escriben en la Línea de Comandos, después del **prompt** del usuario.
 
 **ALGUNOS COMANDOS:**
 
-> **clear**
->
-> limpia la pantalla
->
-> **date**
->
-> devuelve la fecha y hora actuales
->
-> **cal**
->
-> muestra el calendario
->
-> **history**
->
-> muestra la historia de los últimos comandos usados
->
-> **man comando**
->
-> Muestra la página del manual correspondiente al comando
->
-> **more file**
->
-> Si **file** es un fichero de texto, lo muestra de página en página. Se pasa página con la barra espaciadora. Se termina con **q**
->
-> **ls**
->
-> muestra el contenido del directorio de trabajo
->
-> **ls -l**
->
-> muestra el contenido del directorio de trabajo en forma de lista, incluyendo información extra
->
-> **ls -a**
->
-> muestra el contenido del directorio de trabajo incluídos los ficheros ocultos
->
-> **ls dir**
->
-> ejecuta **ls** sobre el directorio **dir** - se pueden usar opciones: **ls -la dir**
->
-> **pwd**
->
-> muestra el nombre del directorio de trabajo (print working directory)
->
-> **df**
->
-> muestra el espacio libre y usado en los discos
->
-> **du -sk dir**
->
-> muestra la cantidad de espacio de disco usada por el directorio **dir** (y todo lo que hay dentro)
->
-> **du -Sk dir**
->
-> lo mismo, pero especificando por subdirectorios
->
-> **mkdir name**
->
-> crea un directorio de nombre **name** (make directory) - si **name** no incluye un **path**, el directorio se crea en el directorio de trabajo
->
-> **rm fich**
->
-> borra el fichero **fich** (remove)
->
-> **rmdir direc**
->
-> borra el directorio  **dir** (tiene que estar vacío)
->
-> **rm -i fich**
->
-> antes de borrar el fichero **fich**, pide confirmación (modo interactivo)
->
-> **cp fich dir**
->
-> crea una copia del fichero **fich** en el directorio **dir**
->
-> **cp fich1 fich2**
->
-> crea una copia del fichero **fich1** y le pone el nombre **fich2**
->
-> **mv fich dir**
->
-> "mueve" el fichero **fich**  al directorio **dir**
->
-> **mv fich1 fich2**
->
-> "mueve" el fichero **fich1**  al fichero **fich2** (es decir, lo cambia de nombre) (**fich2** puede también incluir un **path**; en ese caso también lo cambia de sitio)
->
-> **cd**
->
-> cambia el directorio de trabajo al directorio personal (home)
->
-> **cd dir**
->
-> cambia el directorio de trabajo al directorio **dir**
->
-> **cd ..**
->
-> cambia el directorio de trabajo al "padre" del actual
->
-> **ps**
->
-> proporciona información sobre los procesos activos del usuario
->
-> **ps aux**
->
-> proporciona información sobre todos los procesos activos en el sistema
->
-> **kill -9 PID**
->
-> elimina el proceso con número de identificación PID
->
-> **gzip fich**
->
-> crea un fichero de nombre **fich.gz**, comprimido de **fich**
->
-> **gunzip fich.gz**
->
-> descomprime el fichero **fich.gz**
->
-> **tar**
->
-> condensa directorios en un sólo fichero y viceversa
->
-> **tar -cf file.tar direc**
->
-> crea el fichero **file.tar** con el contenido del directorio **direc**
->
-> **tar -cvf file.tar direc**
->
-> lo mismo, pero con explicaciones (v==verbose)
->
-> **tar -xf file.tar**
->
-> extrae los ficheros de **file.tar**
->
-> **tar -xvf file.tar**
->
-> los mismo, pero con explicaciones
->
-> **exit**
->
-> finaliza la sesión de trabajo; en un terminal, cierra el terminal.
+**clear**
+
+limpia la pantalla
+
+**date**
+
+devuelve la fecha y hora actuales
+
+**cal**
+
+muestra el calendario
+
+**history**
+
+muestra la historia de los últimos comandos usados
+
+**man comando**
+
+Muestra la página del manual correspondiente al comando
+
+**more file**
+
+Si **file** es un fichero de texto, lo muestra de página en página. Se pasa página con la barra espaciadora. Se termina con **q**
+
+**ls**
+
+muestra el contenido del directorio de trabajo
+
+**ls -l**
+
+muestra el contenido del directorio de trabajo en forma de lista, incluyendo información extra
+
+**ls -a**
+
+muestra el contenido del directorio de trabajo incluídos los ficheros ocultos
+
+**ls dir**
+
+ejecuta **ls** sobre el directorio **dir** - se pueden usar opciones: **ls -la dir**
+
+**pwd**
+
+muestra el nombre del directorio de trabajo (print working directory)
+
+**df**
+
+muestra el espacio libre y usado en los discos
+
+**du -sk dir**
+
+muestra la cantidad de espacio de disco usada por el directorio **dir** (y todo lo que hay dentro)
+
+**du -Sk dir**
+
+lo mismo, pero especificando por subdirectorios
+
+**mkdir name**
+
+crea un directorio de nombre **name** (make directory) - si **name** no incluye un **path**, el directorio se crea en el directorio de trabajo
+
+**rm fich**
+
+borra el fichero **fich** (remove)
+
+**rmdir direc**
+
+borra el directorio  **dir** (tiene que estar vacío)
+
+**rm -i fich**
+
+antes de borrar el fichero **fich**, pide confirmación (modo interactivo)
+
+**cp fich dir**
+
+crea una copia del fichero **fich** en el directorio **dir**
+
+**cp fich1 fich2**
+
+crea una copia del fichero **fich1** y le pone el nombre **fich2**
+
+**mv fich dir**
+
+"mueve" el fichero **fich**  al directorio **dir**
+
+**mv fich1 fich2**
+
+"mueve" el fichero **fich1**  al fichero **fich2** (es decir, lo cambia de nombre) (**fich2** puede también incluir un **path**; en ese caso también lo cambia de sitio)
+
+**cd**
+
+cambia el directorio de trabajo al directorio personal (home)
+
+**cd dir**
+
+cambia el directorio de trabajo al directorio **dir**
+
+**cd ..**
+
+cambia el directorio de trabajo al "padre" del actual
+
+**ps**
+
+proporciona información sobre los procesos activos del usuario
+
+**ps aux**
+
+proporciona información sobre todos los procesos activos en el sistema
+
+**kill -9 PID**
+
+elimina el proceso con número de identificación PID
+
+**gzip fich**
+
+crea un fichero de nombre **fich.gz**, comprimido de **fich**
+
+**gunzip fich.gz**
+
+descomprime el fichero **fich.gz**
+
+**tar**
+
+condensa directorios en un sólo fichero y viceversa
+
+**tar -cf file.tar direc**
+
+crea el fichero **file.tar** con el contenido del directorio **direc**
+
+**tar -cvf file.tar direc**
+
+lo mismo, pero con explicaciones (v==verbose)
+
+**tar -xf file.tar**
+
+extrae los ficheros de **file.tar**
+
+**tar -xvf file.tar**
+
+los mismo, pero con explicaciones
+
+**exit**
+
+finaliza la sesión de trabajo; en un terminal, cierra el terminal.
 
 **PERSONALIZACIÓN DE LAS CUENTAS:**
 
-> - el fichero de configuración **.bashrc**
-> - definición o modificación de comandos: **alias**
-> - variable de entorno **PATH**: definición de los caminos de búsqueda
-> - ejecución de un fichero de configuración: **source**
+- el fichero de configuración **.bashrc**
+- definición o modificación de comandos: **alias**
+- variable de entorno **PATH**: definición de los caminos de búsqueda
+- ejecución de un fichero de configuración: **source**
 
 **MODIFICACIÓN DEL FICHERO DE CONFIGURACIÓN .bahsrc PARA EL ACENTO ^ EN MATLAB:**
 
-> - En el directorio personal, editar el fichero oculto **.bashrc**
-> - Añadir, al final, la orden: **setxkbmap -variant nodeadkeys**
+- En el directorio personal, editar el fichero oculto **.bashrc**
+- Añadir, al final, la orden: **setxkbmap -variant nodeadkeys**

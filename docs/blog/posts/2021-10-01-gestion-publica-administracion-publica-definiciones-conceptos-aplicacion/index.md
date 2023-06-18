@@ -26,6 +26,7 @@ date: "10/01/2021"
 
 
 
+
 # Indagar definiciones, conceptos y aplicación de gestión pública y administración pública.
 
 ## Administración pública

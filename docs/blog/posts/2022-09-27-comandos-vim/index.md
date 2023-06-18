@@ -15,6 +15,7 @@ date: "09/27/2022"
 
 
 
+
 Vim es un editor de texto muy poderoso utilizado en sistemas Linux y Unix. A continuación, se presentan algunos de los comandos y combinaciones de teclas más utilizados en Vim:
 
 1. Modos de Vim:

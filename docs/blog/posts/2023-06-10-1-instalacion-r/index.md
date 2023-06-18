@@ -20,6 +20,7 @@ date: "06/09/2023"
 
 
 
+
 # Instalación
 
 En este artículo, te guiaré para descargar e instalar R y RStudio en sistema operativo Ubuntu Linux.
@@ -30,7 +31,7 @@ Para comenzar, necesitarás descargar el paquete de instalación de R desde el s
 
 > R es un lenguaje de programación ampliamente utilizado en la comunidad estadística y de análisis de datos, y es especialmente popular entre los científicos de datos y los investigadores.
 
-![](images/Screenshot_20230610_222900.png){#fig-}
+![](images/Screenshot_20230610_222900.png){#fig-1}
 
 ## Paso 2. Instalar R en Ubuntu Linux
 

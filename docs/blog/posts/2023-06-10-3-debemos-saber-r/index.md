@@ -20,6 +20,7 @@ date: "06/11/2023"
 
 
 
+
 # Lo que debemos saber
 
 ## Tipos de datos
@@ -61,7 +62,8 @@ Un vector es una colección ordenada de elementos del mismo tipo de dato. Puede 
 Concatenación de elementos con **`c()`**: Se utiliza la función `c()` para concatenar elementos y crear vectores en R.
 
 
-::: {.cell hash='index_cache/html/unnamed-chunk-1_5c7e952c7fc845cd96839c275665ffed'}
+
+::: {.cell hash='index_cache/pdf/unnamed-chunk-1_67cbc2be760bfd13677d3709c2226bf7'}
 
 ```{.r .cell-code}
 c(0.5, 0.6, 0.25) # números decimales (double)
@@ -74,6 +76,7 @@ c("a", "b", "c") # caracteres (character)
 :::
 
 
+
 **Acciones con vectores**
 
 1.  Asignar los vectores a nombres:
@@ -81,7 +84,8 @@ c("a", "b", "c") # caracteres (character)
     Creamos un vector llamado "dbl" que contiene los números decimales 0.5, 0.6 y 0.25.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-2_8ad1fc4ebf09be44f0bd5930ed4bb51f'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-2_596a48aa3ed78a702817322cb4dee413'}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25)
@@ -89,10 +93,12 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
     Creamos un vector llamado "chr" que contiene los caracteres "a", "b" y "c".
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-3_17550ccb5d6fcdc5c1a037d447e2e208'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-3_3ec49d0a4203f37bc68ba90626f1742d'}
     
     ```{.r .cell-code}
     chr <- c("a", "b", "c")
@@ -100,12 +106,14 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
 2.  Imprimir los vectores "dbl" y "chr" en la consola:
 
     Visualizamos en la consola el contenido del vector "dbl", que son los números decimales 0.5, 0.6 y 0.25.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-4_3ef592c943aa6846720e7d64dd0e4e53'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-4_ce411da7dce59791fb1feeed228dc01c'}
     
     ```{.r .cell-code}
     dbl
@@ -113,10 +121,12 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
     Visualizamos en la consola el contenido del vector "chr", que son los caracteres "a", "b" y "c".
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-5_590dfb821dd2121f1dab4521ae370c1a'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-5_a0e825e6a882d5ac495929d13ea71e4d'}
     
     ```{.r .cell-code}
     chr
@@ -124,12 +134,14 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
 3.  Verificar el número de elementos en "dbl" y "chr":
 
     Calculamos y mostramos en la consola la longitud del vector "dbl", que es 3.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-6_bd91d75702fa006add836f54b9192c49'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-6_f90466b568201c6f0a47b2788a99e2fc'}
     
     ```{.r .cell-code}
     length(dbl)
@@ -137,10 +149,12 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
     Calculamos y mostramos en la consola la longitud del vector "chr", que es 3.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-7_245e124e30f6e9b6ef9c3a75e046b682'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-7_1434f6db1907c725addb23273904f918'}
     
     ```{.r .cell-code}
     length(chr)
@@ -148,12 +162,14 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
 4.  Verificar el tipo de dato de "dbl" y "chr":
 
     Visualizamos en la consola el tipo de dato del vector "dbl", que es "double" (números decimales).
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-8_ef0d1053ccfd8cda23de0bd43929f38f'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-8_d2ee571c303a54c548d896f9bc99a154'}
     
     ```{.r .cell-code}
     typeof(dbl)
@@ -161,10 +177,12 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
     Visualizamos en la consola el tipo de dato del vector "chr", que es "character" (caracteres).
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-9_7cbd4826469718461449c7bd4c5a6f6f'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-9_eee21acfda2d0a335407e7e3ab598924'}
     
     ```{.r .cell-code}
     typeof(chr)
@@ -172,12 +190,14 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
 5.  Combinar dos vectores:
 
     Se puede combinar el vector "dbl" consigo mismo utilizando la función "c()", creando un nuevo vector que contiene los elementos duplicados del vector original.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-10_e1759d9f65fc1495ddac4babddc93cd4'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-10_b68003ba5c18e56d2cbb46ff41dcb1f3'}
     
     ```{.r .cell-code}
     c(dbl, dbl)
@@ -185,15 +205,18 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
+
     Tambien se puede combina el vector "dbl" con el vector "chr" utilizando la función "c()", creando un nuevo vector que contiene los elementos de ambos vectores concatenados.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-11_3d4a3956b2d8f5d370c7f4319e321391'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-11_46835486cadc0b664b8c29c77e250d2c'}
     
     ```{.r .cell-code}
     c(dbl, chr)
     ```
     :::
+
 
 
 ::: callout-note
@@ -205,7 +228,8 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 1.  Definamos dos nuevos vectores numéricos llamados `a` y `b` con 4 elementos cada uno:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-12_b51f44b542c8b0ad7d5e2ac2aeb436e5'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-12_5b69639fdd37d8c35357d7a34fca0cbb'}
     
     ```{.r .cell-code}
     a <- c(1, 2, 3, 4)
@@ -214,10 +238,12 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
+
 2.  Realizamos una multiplicación escalar de `a` por 5, lo que significa que cada elemento en `a` se multiplica por 5:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-13_9e1047c9baa4cfb2cc87965fe93c4ba4'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-13_ab27fd4a43b8253efdc6813d78aa7bce'}
     
     ```{.r .cell-code}
     a * 5
@@ -225,10 +251,12 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
+
 3.  Realizamos una multiplicación de vectores entre `a` y `b`, lo que implica multiplicar cada elemento en `a` por el elemento correspondiente en `b`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-14_2d26b21e2567d0b066dd7fa1537a0e9b'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-14_c096aae91f0feced6cb651e0c409cdbf'}
     
     ```{.r .cell-code}
     a * b
@@ -236,16 +264,19 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
+
 4.  Creamos un nuevo vector numérico llamado `v` con longitud 5.
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-15_1e7ad19eb51ca62f202bf0e2919f14a3'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-15_f4789d3198700338e413995b7ddd5aa3'}
     
     ```{.r .cell-code}
     v <- c(1.1, 1.2, 1.3, 1.4, 1.5)
     a * v
     ```
     :::
+
 
 
 ::: callout-note
@@ -261,7 +292,8 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 1.  Combinamos los vectores `a` y `b`, definidas anteriormente, por columnas utilizando la función `cbind()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-16_31ec95e2f4f9422f52d61c2155007f72'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-16_0573e07eefe01df7dbd1251db287f01a'}
     
     ```{.r .cell-code}
     A <- cbind(a, b)
@@ -270,12 +302,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Esta opción combina los vectores `a` y `b` por columnas, creando una matriz `A` donde los elementos de `a` forman la primera columna y los elementos de `b` forman la segunda columna.
 
 2.  Combinamos los vectores `a` y `b` por filas utilizando la función `rbind()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-17_6298a5964847da2e3a7379b361416de7'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-17_6434c09b7516746837a7df467f91ab18'}
     
     ```{.r .cell-code}
     B <- rbind(a, b)
@@ -284,12 +318,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     En esta opción, los vectores `a` y `b` se combinan por filas para crear una matriz `B`. Los elementos de `a` forman la primera fila y los elementos de `b` forman la segunda fila.
 
 3.  Creamos una matriz a partir de los elementos de vector `a` utilizando la función `matrix()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-18_a17f7c379b05c7a6c288273f81c362c2'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-18_b2840e1b43c8c19523fdd21c3c96b66e'}
     
     ```{.r .cell-code}
     A <- matrix(a, ncol = 2, nrow = 2)
@@ -298,12 +334,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Aquí se utiliza la función `matrix()` para crear una matriz `A` a partir de los elementos del vector `a`. Se especifica que la matriz tendrá 2 columnas y 2 filas. Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.
 
 4.  Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-19_34884f8b179312b2dcf9e0778df393b7'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-19_2cafe0d6d014e676eb73cda832e64c39'}
     
     ```{.r .cell-code}
     A <- matrix(a, ncol = 2)
@@ -312,18 +350,21 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     En esta variante, se crea una matriz `A` con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector `a`.
 
 5.  Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento `byrow = TRUE`
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-20_de797fdd9d68fdb9dac6a18bd97bc7dd'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-20_a4900d0ac914718e52dd7a95dd53f623'}
     
     ```{.r .cell-code}
     B <- matrix(a, ncol = 2, byrow = TRUE)
     B
     ```
     :::
+
 
 
     En esta opción, se crea una matriz `B` con 2 columnas y se especifica que los elementos del vector `a` se distribuirán por filas `byrow = TRUE`, es decir, los primeros elementos de `a` formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.
@@ -333,7 +374,8 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 1.  Verificamos el número de filas de la matriz `A` utilizando la función `nrow()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-21_6155e5d78c528d9c782ba70eea1305f3'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-21_0b160dbb3e557609bf3c2856f916ecb4'}
     
     ```{.r .cell-code}
     nrow(A)
@@ -341,12 +383,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Esta línea de código devuelve el número de filas de la matriz `A`.
 
 2.  Verificamos el número de columnas de la matriz `A` utilizando la función `ncol()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-22_c810594d64f612e944ba33e6484ed782'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-22_99dbfe38745d99a9a2597f429a91e10c'}
     
     ```{.r .cell-code}
     ncol(A)
@@ -354,12 +398,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Aquí se obtiene el número de columnas de la matriz `A`.
 
 3.  Verificamos la dimensión (número de filas y columnas) de la matriz `A` utilizando la función `dim()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-23_499a014c6bae6a21c3432e323fae4335'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-23_d7a82385053ad7d50a8ccc4dec6ff6db'}
     
     ```{.r .cell-code}
     dim(A)
@@ -367,12 +413,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Esta línea de código devuelve la dimensión de la matriz `A` en formato `[nrow, ncol]`.
 
 4.  Combinamos dos matrices `A` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D.wide`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-24_3e9151b020265c703d2bb70838956266'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-24_1bf40aa117ef50d77fb3ac170d3be1f1'}
     
     ```{.r .cell-code}
     D.wide <- cbind(A, A)
@@ -381,12 +429,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     En esta línea se crea una nueva matriz `D.wide` que combina las matrices `A` y `A` por columnas.
 
 5.  Combinamos dos matrices `A` por filas utilizando la función `rbind()` y almacenamos el resultado en `D.long`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-25_e9d9d00fa3133fd656c60a0d90529712'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-25_36b942bc9163658776f67670ba19a1d2'}
     
     ```{.r .cell-code}
     D.long <- rbind(A, A)
@@ -395,17 +445,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Aquí se crea una nueva matriz `D.long` que combina las matrices `A` y `A` por filas.
 
 6.  Combinamos las matrices `D.wide` y `D.long` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-26_28591abe429923062337a2fd51e5a41e'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-26_a5bcacf951fdf501b7b09a60c1c7d867'}
     
     ```{.r .cell-code}
     # D <- cbind(D.wide, D.long)
     ```
     :::
+
 
 
     En esta línea se crea una nueva matriz `D` que combina las matrices `D.wide` y `D.long` por columnas.
@@ -415,7 +468,8 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 1.  Suma de la matriz `B` consigo misma utilizando el operador `+`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-27_52028b987938864c263f75a91f01a49e'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-27_31c8b4d575bf1395f1343cd5867571c2'}
     
     ```{.r .cell-code}
     B + B
@@ -423,12 +477,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Esta línea de código realiza la suma de la matriz `B` con ella misma.
 
 2.  Multiplicación escalar de la matriz `B` por 2 utilizando el operador `*`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-28_e528576164f680ec78974a3e569ef0e2'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-28_d4bbadb2eefa3037ac710ade0150b77d'}
     
     ```{.r .cell-code}
     B * 2
@@ -436,12 +492,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Aquí se realiza la multiplicación de cada elemento de la matriz `B` por 2.
 
 3.  Multiplicación elemento a elemento de la matriz `B` consigo misma y almacenar el resultado en `a`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-29_d13a0ead9ef4bb1424ab48ee5dc03323'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-29_346e0bf991db225659c6b6a2cf65d0fd'}
     
     ```{.r .cell-code}
     a <- B * B
@@ -450,18 +508,21 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     En esta línea se realiza la multiplicación elemento a elemento de la matriz `B` con ella misma, y el resultado se almacena en la matriz `a`.
 
 4.  Multiplicación de matrices utilizando el operador `%*%`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-30_3726407c23145eef49df0d7af55a8311'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-30_64f2588a8b95fc7e78472df9375b289d'}
     
     ```{.r .cell-code}
     C <- B %*% B
     C
     ```
     :::
+
 
 
     Aquí se realiza la multiplicación de matrices entre la matriz `B` y ella misma, y el resultado se almacena en la matriz `C`.
@@ -471,7 +532,8 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 1.  Transposición de la matriz `D.wide` utilizando la función `t()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-31_364f50c3b5c41b1128f3468a2d7e0ff1'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-31_262ff495713ecd15e9425967c6b6fe60'}
     
     ```{.r .cell-code}
     t(D.wide)
@@ -479,12 +541,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Esta línea de código transpone la matriz `D.wide`, es decir, intercambia las filas por columnas y viceversa.
 
 2.  Cálculo del determinante de la matriz `B` utilizando la función `det()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-32_f1238257ae20022b83c2cd401655d0a5'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-32_9843836078ef74c6a33decb361f4e045'}
     
     ```{.r .cell-code}
     det(B)
@@ -492,12 +556,14 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     Aquí se calcula el determinante de la matriz `B`.
 
 3.  Cálculo de la inversa de la matriz `B` utilizando la función `solve()` (solo si el determinante es diferente de 0):
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-33_c77a4dbb65611dd177fc1afeead5b564'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-33_edca7fcf882e0fae570b9ef85f84a3cd'}
     
     ```{.r .cell-code}
     solve(B)
@@ -505,17 +571,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
+
     En esta línea se calcula la inversa de la matriz `B`, siempre y cuando el determinante sea diferente de 0.
 
 4.  Cálculo de los valores propios (eigenvalues) de una matriz cuadrada y simétrica utilizando la función `eigen()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-34_b14d7d0c4e15e198bd1d2646666e8395'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-34_19a90baec43973578038f9f2c35012b6'}
     
     ```{.r .cell-code}
     eigen(B)
     ```
     :::
+
 
 
     Aquí se calculan los valores propios de la matriz `B`. Esta operación solo es aplicable a matrices cuadradas y simétricas.
@@ -529,7 +598,8 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 1.  Creamos vectores con diferentes tipos de datos, como números decimales (`dbl`), números enteros (`int`), valores lógicos (`lgl`) y caracteres (`chr`):
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-35_1ff0ea8f8e41d260dd0490f3bea84250'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-35_e92e4800e5034b0b5f3e816d89ffd6a8'}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333) # números decimales (double)
@@ -540,12 +610,14 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
+
     Cada vector tiene elementos que representan valores de su respectivo tipo de dato.
 
 2.  Utilizamos la función `data.frame()` para combinar los vectores en un data frame llamado `df`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-36_d99dd9ed3e4562e8aa127659b5fd9fd8'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-36_e3c623fb12aa0dae8a316eaa111bbde8'}
     
     ```{.r .cell-code}
     df <- data.frame(dbl, int, lgl, chr)
@@ -553,17 +625,20 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
+
     El data frame `df` se crea utilizando los vectores `dbl`, `int`, `lgl` y `chr` como columnas.
 
 3.  Mostamos el contenido del data frame en la consola:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-37_31788adddd3a0c34e3e404ff701785e2'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-37_d42c63f8a5875493961ce6a25a468798'}
     
     ```{.r .cell-code}
     df
     ```
     :::
+
 
 
     Esto imprime el contenido del data frame `df`.
@@ -573,7 +648,8 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 1.  Verificamos el número de filas del data frame utilizando la función `nrow()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-38_a7ec40452b7b0e2908e706cd50398c23'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-38_abb6992cced97339def5aabdb071f1e6'}
     
     ```{.r .cell-code}
     nrow(df)
@@ -581,12 +657,14 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
+
     Esta línea de código devuelve el número de filas en el data frame `df`.
 
 2.  Verificamos el número de columnas del data frame utilizando la función `ncol()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-39_9eab490cf93d09b213bc4a8b03ad6ed4'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-39_5fcba0fad38a3366f3c0fb4a16b28306'}
     
     ```{.r .cell-code}
     ncol(df)
@@ -594,17 +672,20 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
+
     Aquí se obtiene el número de columnas en el data frame `df`.
 
 3.  Verificamos la dimensión (número de filas y columnas) del data frame utilizando la función `dim()`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-40_bd9e62c21be3ee236e64a3c69b447921'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-40_621e82a7f33edc0737765e79ac41693c'}
     
     ```{.r .cell-code}
     dim(df)
     ```
     :::
+
 
 
     Esta línea de código devuelve la dimensión del data frame `df` en formato `[nrow, ncol]`, es decir, el número de filas y columnas que tiene el data frame.
@@ -618,7 +699,8 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 1.  Creamos una variable `a` que contiene un **escalar** de tipo entero (`1L`):
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-41_e75b993d6b76f6f6578dfa9ca1a482b9'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-41_349da934741a2662bffe4bec2174360c'}
     
     ```{.r .cell-code}
     a <- 1L
@@ -626,10 +708,12 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
 2.  Creamos un **vector numérico** `dbl` con 5 elementos:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-42_bb5d77945f483c370f8e0319f554277f'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-42_b66d52c246f3c77b566d7ffbc388c55f'}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333)
@@ -637,10 +721,12 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
 3.  Creamos un **vector de caracteres** `chr` con 3 elementos:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-43_b1eaac2da83e4da638ec8c2ad7d3e3a4'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-43_165f4570893b5c2c07643ac9873a981d'}
     
     ```{.r .cell-code}
     chr <- c("a", "b", "c")
@@ -648,10 +734,12 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
 4.  Creamos un vector `v` con 4 elementos de tipo numérico:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-44_43207ba72f773ef6aa0f702117935c82'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-44_b1bc2bcf94471da78760646a923b91f0'}
     
     ```{.r .cell-code}
     v <- c(1.1, 1.2, 1.3, 1.4)
@@ -659,10 +747,12 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
 5.  Creamos una matriz `mat` de tamaño 2x2 a partir del vector `v`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-45_649793853aaeff9b5b7d16398646f0bb'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-45_eb345f12fdcf6e5b39e619b3831ee3df'}
     
     ```{.r .cell-code}
     mat <- matrix(v, ncol = 2)
@@ -670,12 +760,14 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
     La matriz `mat` tiene 2 columnas y los elementos del vector `v` se llenan por columnas.
 
 6.  Creamos una lista `l` que contiene los elementos `a`, `dbl`, `chr` y `mat`:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-46_66c0262ab51a3a4325f373368d2c1869'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-46_f3b87f59610c04362564c29d698a85b8'}
     
     ```{.r .cell-code}
     l <- list(a, dbl, chr, mat)
@@ -683,17 +775,20 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
+
     La lista `l` contiene estos elementos en ese orden.
 
 7.  Finalmente, visualizamos el contenido de la lista en la consola:
 
 
-    ::: {.cell hash='index_cache/html/unnamed-chunk-47_68d77ba9339af5131ad89365abd0083d'}
+
+    ::: {.cell hash='index_cache/pdf/unnamed-chunk-47_5f8bb300937c4624ab6065663fae9621'}
     
     ```{.r .cell-code}
     l
     ```
     :::
+
 
 
     Esto imprime el contenido de la lista `l`.

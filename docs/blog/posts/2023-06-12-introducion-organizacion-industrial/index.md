@@ -18,6 +18,7 @@ date: "06/12/2023"
 
 
 
+
 # ¿Qué estudiaremos en organización industrial?
 
 Exploraremos una serie de temas fundamentales que nos ayudarán a comprender la dinámica empresarial y los mercados en los que operan. A través de un análisis detallado, profundizaremos en los siguientes aspectos:
@@ -251,6 +252,7 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 
 
+
 :::{.cell}
 
 :::{.cell-output-display}
@@ -259,16 +261,12 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 :::{}
 
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Organización industrial]
-    A --&gt; D[Estructura]
-    A --&gt; E[Conducta]
-    A --&gt; F[Resultados]
-</pre>
+![](index_files/figure-latex/mermaid-figure-1.png){width="3.94in" height="1.4in" fig-pos='H' fig-env='figure'}
 :::
 :::
 :::
 :::
+
 
 
 

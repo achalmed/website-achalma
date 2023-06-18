@@ -4,11 +4,11 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  a4paper,
-]{article}
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
 
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -18,6 +18,10 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -36,9 +40,8 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[lmargin=2.54cm,rmargin=2.54cm,tmargin=2.54cm,bmargin=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
@@ -75,6 +78,7 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
 \makeatletter
@@ -83,49 +87,60 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Tabla de contenidos}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Listado de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Listado de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Listado de Tablas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Listado de Tablas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Tabla}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Tabla}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
 \makeatother
 \makeatletter
 \@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
 \makeatother
 \makeatletter
 \makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -136,7 +151,8 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={La Economía Agraria},
-  pdfauthor={Achalma Mendoza Elmer Edison},
+  pdfauthor={Edison Achalma Mendoza},
+  pdflang={es},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -152,24 +168,16 @@
 }
 \makeatother
 \subtitle{Una leccion detallada de economia agraria}
-\author{Achalma Mendoza Elmer Edison}
-\date{4/22/22}
+\author{Edison Achalma Mendoza}
+\date{2022-04-22}
 
 \begin{document}
 \maketitle
 \begin{abstract}
 hola
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, boxrule=0pt, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
-\renewcommand*\contentsname{Contenidos}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
-\tableofcontents
-}
-\listoffigures
-\listoftables
 \hypertarget{econompia-agraria-y-rural}{%
 \section{Econompia agraria y rural}\label{econompia-agraria-y-rural}}
 
@@ -2464,16 +2472,16 @@ tipos de terreno con diferentes niveles de fertilidad son propias de la
 naturaleza)
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1207}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0920}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1379}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1264}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0632}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1034}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1149}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1092}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1322}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1218}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0897}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1410}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0577}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1026}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1154}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1090}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1346}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Tipo de terreno}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2493,11 +2501,12 @@ naturaleza)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Renta territorial}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 450 & 3200 & 25\% & 4000 & 8.89 & 4500 & 10 & 500 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -2512,7 +2521,7 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
   La tasa de ganancia se obtiene del porcentaje del beneficio el 25\%
   del cuadro del beneficio
 \item
-  El valor total sale con el 25\% del capital anticipado: 25\% (3200)
+  El valor total sale con el 25\% del capital anticipado: 25\        (3200)
   =800→3200+800=400 y de terreno B es: 25\% (3200) =800→3200+800=4000.
 \item
   Lo que quiere decir el precio por tonelada métrica vendría a ser en el
@@ -2538,16 +2547,16 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
 \end{itemize}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1207}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0920}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1379}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1264}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0632}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1034}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1149}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1092}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1322}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1218}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0897}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1410}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0577}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1026}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1154}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1090}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1346}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Tipo de terreno}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2567,12 +2576,13 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Renta territorial}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 450 & 3200 & 25\% & 4000 & 8.89 & 5625 & 12.5 & 1625 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 5000 & 12.5 & 1000 \\
 C & 320 & 3200 & 25\% & 4000 & 12.5 & 4000 & 12.5 & 0 \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -2604,16 +2614,16 @@ C & 320 & 3200 & 25\% & 4000 & 12.5 & 4000 & 12.5 & 0 \\
 \end{itemize}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1207}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0920}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1379}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1264}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0632}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1034}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1149}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1092}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1322}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1218}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0897}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1410}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0577}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1026}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1154}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1090}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1346}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Tipo de terreno}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2633,12 +2643,13 @@ C & 320 & 3200 & 25\% & 4000 & 12.5 & 4000 & 12.5 & 0 \\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Renta territorial}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 X & 500 & 3200 & 25\% & 4000 & 8.00 & 5000 & 12.5 & 1000 \\
 A & 450 & 3200 & 25\% & 4000 & 8.89 & 4500 & 12.5 & 500 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 12.5 & 0 \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -2655,14 +2666,14 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 12.5 & 0 \\
 \textbf{Renta diferencial por distancia del mercado}
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0529}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1587}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1217}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1852}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1323}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1217}}
-  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2275}}@{}}
-\toprule()
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0457}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1600}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1200}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1886}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1314}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1200}}
+  >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2343}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \textbf{Lote}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2678,12 +2689,13 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 12.5 & 0 \\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \textbf{Renta territorial (Renta diferencial)}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 5 & 400 & 4000 & 20 & 4400 & 380 \\
 B & 50 & 400 & 4000 & 200 & 4400 & 200 \\
 C & 100 & 400 & 4000 & 400 & 4400 & 0 \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -2755,15 +2767,15 @@ mayor inversión de k, sea en salarios, abonos, instrumentos, etc.}
 \end{itemize}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0678}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1017}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0508}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1525}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1864}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1186}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1610}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1610}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0588}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0392}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1569}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1961}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 L de K
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2781,13 +2793,14 @@ Precio de mercado
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Renta territorial
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A1 & 450 & 3200 & 25\% & 4000 & 10 & 4500 & 500 \\
 A2 & 420 & 3200 & 25\% & 4000 & 10 & 4200 & 200 \\
 Total & 870 & 6400 & 25\% & 8000 & 10 & 8700 & 700 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 0 \\
-\bottomrule()
 \end{longtable}
 
 \begin{itemize}
@@ -2863,13 +2876,13 @@ precios a costo de factores de modo que este precio.
 Producción con una sola rotación por año
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1171}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1982}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2072}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1712}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1351}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1712}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2020}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2121}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1717}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1313}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1717}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Empresa}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2883,12 +2896,13 @@ Producción con una sola rotación por año
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Relación P-KT}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 100 & 100 & 200 & 100 & 1/2 \\
 B & 300 & 100 & 400 & 100 & 1/4 \\
 C & 500 & 100 & 600 & 100 & 1/6 \\
-\bottomrule()
 \end{longtable}
 
 También se presentaría renta diferencial si hacemos varias rotaciones
@@ -2917,11 +2931,11 @@ cultivo que viene a ser la renta absoluta.
 Por rotación
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1912}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2059}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2206}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3824}}@{}}
-\toprule()
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1833}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2000}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2167}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4000}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \textbf{Empresa}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2931,24 +2945,25 @@ Por rotación
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \textbf{Relación Plusvalía K}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 200 & 100 & 0.5 \\
 B & 200 & 100 & 0.5 \\
 C & 150 & 100 & 0.67 \\
-\bottomrule()
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1373}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0915}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0980}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1307}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1503}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1503}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1307}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1387}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0876}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0949}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1314}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1533}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1533}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1314}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1095}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Tipo de terreno}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2966,12 +2981,13 @@ C & 150 & 100 & 0.67 \\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Renta Total}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 A & 450 & 8.88 & 12.5 & 15 & 1650 & 1125 & 27750 \\
 B & 400 & 10 & 12.5 & 15 & 1000 & 1000 & 2000 \\
 C & 320 & 12.5 & 12.5 & 15 & 0 & 800 & 800 \\
-\bottomrule()
 \end{longtable}
 
 en este cuadro tenemos 3 terrenos, el producto es 450, 400 y 320, el
@@ -3038,21 +3054,22 @@ es hacer un comparativo de la explotación de la pequeña y la grande.
 Un comparativo
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4545}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5455}}@{}}
-\toprule()
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4521}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5479}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{01 gran explotación (20 ha)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{50 pequeñas explotaciones (media ha)}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 01 cocina, 05 cocineros, 05 focos & 50 cocinas 50 cocineros 50 focos \\
 01 establo con 100 reses & 50 establos \\
 01 pozo de agua & 50 pozos \\
 10 herramientas & 100 herramientas \\
-\bottomrule()
 \end{longtable}
 
 Tenemos dos propiedades una grande y una pequeña, una explotación de 20
@@ -4198,8 +4215,8 @@ causales:
   que previamente habían sido calificados.
 \end{itemize}
 
-\hypertarget{a}{%
-\subsubsection{A}\label{a}}
+\hypertarget{adjudicaciuxf3n}{%
+\subsubsection{Adjudicación}\label{adjudicaciuxf3n}}
 
 \begin{itemize}
 \tightlist
@@ -4302,7 +4319,7 @@ asociación, es decir, las malas experiencias no nos permiten implementar
 políticas de apoyo efectivo a los trabajadores.
 
 \hypertarget{consecuencias-positivas-de-la-reforma-agraria}{%
-\subsubsection{Consecuencias positivas de la reforma
+\subsection{Consecuencias positivas de la reforma
 agraria}\label{consecuencias-positivas-de-la-reforma-agraria}}
 
 \begin{enumerate}
@@ -4469,7 +4486,7 @@ En las comunidades campesinas no hay incentivo a la inversión Por qué es
 propiedad comunal por eso no hay competitividad
 
 \hypertarget{retos-o-acciones-estratuxe9gicos-para-el-desarrollo-del-peruxfa-partiendo-del-derecho-de-propiedad-y-tenencia-de-la-tierra}{%
-\subsection{Retos o acciones estratégicos para el desarrollo del Perú
+\section{Retos o acciones estratégicos para el desarrollo del Perú
 partiendo del derecho de Propiedad y tenencia de la
 Tierra}\label{retos-o-acciones-estratuxe9gicos-para-el-desarrollo-del-peruxfa-partiendo-del-derecho-de-propiedad-y-tenencia-de-la-tierra}}
 
@@ -4519,7 +4536,7 @@ rendimientos se van a reducir, la productividad la competitividad se va
 a reducir. Este es el gran problema del agro.
 
 \hypertarget{las-oportunidades-de-inversiuxf3n}{%
-\subsection{Las oportunidades de
+\section{Las oportunidades de
 inversión}\label{las-oportunidades-de-inversiuxf3n}}
 
 nos referimos A qué debemos tener en consideración que la economía que

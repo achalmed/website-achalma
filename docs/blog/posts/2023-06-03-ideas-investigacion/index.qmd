@@ -14,6 +14,8 @@ tags:
   - Influencia de factores externos
   - Crisis políticas y economía
   - Relaciones económicas y financieras
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-ideas-investigacion/index.pdf
 date: "06/03/2023"
 ---
 

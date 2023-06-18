@@ -21,6 +21,7 @@ citation:
     - Kattya Castillo López
     - Hans Castro Vilca
     - Luz Cuba Palomino
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
 bibliography: references.bib
 date: "01/11/2021"
 ---

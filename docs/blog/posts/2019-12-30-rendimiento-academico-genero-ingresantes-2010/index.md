@@ -19,6 +19,7 @@ citation:
     - Juan Alfaro Calderón
     - Luis De La Cruz Palomino
     - David Pérez Oré
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf
 date: "12/30/2019"
 ---
 

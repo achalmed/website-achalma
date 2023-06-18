@@ -12,7 +12,8 @@ tags:
   - Tipos de Cambio
   - FMI
   - Economía Global
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf
 date: "06/17/2023"
 ---
 

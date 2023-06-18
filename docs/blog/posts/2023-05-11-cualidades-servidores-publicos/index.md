@@ -18,6 +18,8 @@ tags:
   - Serenidad
   - Enfocado en resultados
   - Sabe delegar
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf
 date: "05/11/2023"
 ---
 

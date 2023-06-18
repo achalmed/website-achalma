@@ -10,6 +10,8 @@ tags:
   - Economía Peruana
   - Políticas Económicas
   - Desafíos Socioeconómicos
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf
 date: "05/12/2023"
 ---
 

@@ -11,6 +11,8 @@ tags:
   - Principiantes
   - Código Abierto
   - Comandos
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-linux-primeros-pasos/index.pdf
 date: "05/02/2023"
 ---
 

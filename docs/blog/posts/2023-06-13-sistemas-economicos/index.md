@@ -14,7 +14,8 @@ tags:
   - Economía de Mercado
   - Economía Planificada
   - Economía Mixta
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-13-sistemas-economicos/index.pdf
 date: "06/13/2023"
 ---
 

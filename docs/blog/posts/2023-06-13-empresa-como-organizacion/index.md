@@ -13,7 +13,8 @@ tags:
   - Cooperación
   - Valores humanos
   - Impacto social
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-13-empresa-como-organizacion/index.pdf
 date: "06/13/2023"
 ---
 

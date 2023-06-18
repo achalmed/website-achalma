@@ -10,6 +10,8 @@ tags:
   - Editor de texto
   - Comandos
   - Programación
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-09-27-comandos-vim/index.pdf
 date: "09/27/2022"
 ---
 

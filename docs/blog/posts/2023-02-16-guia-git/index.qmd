@@ -11,6 +11,8 @@ tags:
   - GitHub
   - colaboración
   - desarrollo de software
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-guia-git/index.pdf
 date: "02/16/2023"
 ---
 

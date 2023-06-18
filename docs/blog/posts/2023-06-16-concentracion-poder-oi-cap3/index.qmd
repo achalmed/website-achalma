@@ -12,7 +12,8 @@ tags:
   - Economía de Mercado
   - Toma de Decisiones
   - Análisis Industrial
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-16-concentracion-poder-oi-cap3/index.pdf
 date: "06/16/2023"
 draft: true
 ---

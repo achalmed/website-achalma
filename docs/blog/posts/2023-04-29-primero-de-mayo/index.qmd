@@ -10,6 +10,8 @@ tags:
   - Revolución
   - Día del proletariado
 author: Comité Central Partido Comunista del Perú
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-04-29-primero-de-mayo/index.pdf
 date: "05/01/2023"
 image: DALL·E 2023-04-29 23.15.46.png
 image-alt: "¡En este primero de mayo: seguir sembrando revolución!"

@@ -10,6 +10,8 @@ categories:
   - Marxismo
 tags:
   - Filosofía
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-seminario-filosofia-marxista/index.pdf
 date: "05/19/2023"
 ---
 

@@ -15,6 +15,7 @@ citation:
     - Bermudo Heredia Felix
     - Gómez Ayala Margoth
     - Guitierrez Arancibia Luz
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academico/index.pdf
 date: "12/26/2018"
 ---
 

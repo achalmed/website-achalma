@@ -10,6 +10,8 @@ tags:
   - Capitalismo
   - Desigualdad
   - Pobreza
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-03-03-el-capitalismo/index.pdf
 date: "04/29/2023"
 ---
 

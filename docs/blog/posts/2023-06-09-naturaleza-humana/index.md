@@ -12,8 +12,8 @@ tags:
   - Sesgos científicos
   - Libertad personal
   - Igualdad de género.
-
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.pdf
 date: "06/09/2023"
 ---
 

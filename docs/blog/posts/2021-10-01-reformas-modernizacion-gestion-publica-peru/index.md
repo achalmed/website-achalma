@@ -17,6 +17,7 @@ citation:
     - Noe Borda Torres
     - Kattya Castillo Lopez
     - Yuri Fernandez Núñez
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf
 date: "10/01/2021"
 ---
 

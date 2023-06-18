@@ -12,6 +12,8 @@ tags:
   - Economía Peruana
   - Políticas Económicas
   - Desafíos Socioeconómicos
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/index.pdf
 date: "04/22/2022"
 ---
 

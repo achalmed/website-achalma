@@ -19,6 +19,7 @@ citation:
     - Anais Fernández Pujaico
     - Brenda Gamboa Rua
     - Margoth Gómez Ayala
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/index.pdf
 date: "06/03/2022"
 ---
 

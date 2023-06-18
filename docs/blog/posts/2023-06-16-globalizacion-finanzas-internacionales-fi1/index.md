@@ -11,7 +11,8 @@ tags:
   - Riesgo Cambiario
   - Mercados Financieros
   - Globalización
-citation: true
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1/index.pdf
 date: "06/16/2023"
 ---
 

@@ -12,11 +12,11 @@ tags:
   - Modernización administrativa
 citation:
   author:
-    - Edison Achalma Mendoza
-    - Felix Bermudo Heredia
-    - Noe Borda Torres
-    - Kattya Castillo Lopez
-    - Yuri Fernandez Núñez
+    - Edison Achalma
+    - Felix Bermudo
+    - Noe Borda
+    - Kattya Castillo
+    - Yuri Fernandez
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf
 date: "10/01/2021"
 ---

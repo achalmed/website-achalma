@@ -14,13 +14,13 @@ tags:
   - Análisis estadístico
 citation:
   author:
-  - Edison Achalma Mendoza
-  - Nataly Bañico Espinoza 
-  - Nikole Berrocal Quispe 
-  - Elvis Carbajal López 
-  - Kattya Castillo López 
-  - Hans Castro Vilca 
-  - Luz Cuba Palomino 
+  - Edison Achalma
+  - Nataly Bañico
+  - Nikole Berrocal
+  - Elvis Carbajal
+  - Kattya Castillo
+  - Hans Castro
+  - Luz Cuba
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-v2-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
 date: "01/11/2021"
 ---

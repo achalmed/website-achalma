@@ -14,11 +14,11 @@ tags:
   - Análisis sociodemográfico
 citation: 
   author:
-  - Edison Achalma Mendoza 
-  - Angie Ayala Soto
-  - Eliana Ccallocunto Rejas 
-  - Annie Lope Contreras
-  - Yuditza Mendivil Castro
+  - Edison Achalma
+  - Angie Ayala
+  - Eliana Ccallocunto 
+  - Annie Lope
+  - Yuditza Mendivil
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2018-05-16-estadigrafos/index.pdf
 date: "04/16/2018"
 ---

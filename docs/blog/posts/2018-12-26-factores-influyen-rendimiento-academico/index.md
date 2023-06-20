@@ -10,11 +10,11 @@ tags:
   - Estadística
 citation:
   author:
-    - Edison Achalma Mendoza
-    - Argumedo Prado Marilin
-    - Bermudo Heredia Felix
-    - Gómez Ayala Margoth
-    - Guitierrez Arancibia Luz
+    - Edison Achalma
+    - Marilin Argumedo 
+    - Felix Bermudo
+    - Margoth Gómez
+    - Luz Guitierrez 
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academico/index.pdf
 date: "12/26/2018"
 ---

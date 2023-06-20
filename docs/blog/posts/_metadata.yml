@@ -4,11 +4,21 @@ fig-cap-location: top  # Ubicación de las leyendas de las figuras
 tbl-cap-location: top  # Ubicación de las leyendas de las tablas
 
 author:
-  - name: Achalma Mendoza Edison # Nombre del autor
+  - name: Edison Achalma # Nombre del autor
     url: https://achalmaedison.netlify.app  # URL del autor
-    affiliation: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+    affiliation: 
+        - name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+          departament: Economía
+          address: Portla Independencia N 57
+          city: Huamanga
+          region: Ayacucho
     affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
     orcid: 0000-0001-6996-3364  # ORCID del autor
+    email: achalmed.18@gmail.com
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
 date-modified: "today"  # Fecha de modificación del documento
 search: true  # Habilitar búsqueda en el documento
 

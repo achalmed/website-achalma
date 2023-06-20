@@ -14,11 +14,11 @@ tags:
   - Influencia del género en la educación
 citation:
   author:
-    - Edison Achalma Mendoza
-    - Geancarlos Alcarraz Ortega
-    - Juan Alfaro Calderón
-    - Luis De La Cruz Palomino
-    - David Pérez Oré
+    - Edison Achalma
+    - Geancarlos Alcarraz
+    - Juan Alfaro
+    - Luis De La Cruz 
+    - David Pérez
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf
 date: "12/30/2019"
 ---

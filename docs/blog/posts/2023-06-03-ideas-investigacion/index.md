@@ -21,6 +21,7 @@ date: "06/03/2023"
 
 
 
+
 # Propuesta de investigación: Determinantes microeconómicos de la pobreza en el departamento de Ayacucho durante el periodo 2000-2020.
 
 **Justificación:** La pobreza es un fenómeno social de gran impacto que afecta a nivel personal, familiar y nacional. Está presente en nuestra vida diaria, en las noticias de los medios de comunicación y en el discurso político. Además, es una realidad que afecta de manera significativa a aquellos que se encuentran en situación de pobreza.

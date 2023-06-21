@@ -19,6 +19,7 @@ date: "06/10/2023"
 
 
 
+
 # ¿Qúe nos ofrece RStudio?
 
 ## Beneficios del software RStudio
@@ -68,7 +69,8 @@ Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escrib
 ![](images/Screenshot_20230611_004241.png)
 
 
-::: {.cell hash='index_cache/html/unnamed-chunk-1_10d074d27497c4e5407872d19a5fce58'}
+
+::: {.cell hash='index_cache/pdf/unnamed-chunk-1_b03ad6258aa611a0379023283b393a96'}
 
 ```{.r .cell-code}
 # Este es un ejemplo de un script básico en R
@@ -95,6 +97,7 @@ cat("La multiplicación es:", multiplicacion, "\n")
 cat("La división es:", division, "\n")
 ```
 :::
+
 
 
 **Paso 3: Ejecutar el script**

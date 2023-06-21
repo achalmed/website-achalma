@@ -19,6 +19,7 @@ date: "06/09/2023"
 
 
 
+
 # Instalación
 
 En este artículo, te guiaré para descargar e instalar R y RStudio en sistema operativo Ubuntu Linux.

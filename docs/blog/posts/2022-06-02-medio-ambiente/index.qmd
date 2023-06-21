@@ -6,12 +6,12 @@ description: |
 categories:
   - Economía de los Recursos y del Medio Ambiente
 tags:
-  - Economía de los Recursos y del Medio Ambiente
-  - Cambio climático
-  - Medio ambiente
+  - Economía-de-los-Recursos-y-del-Medio-Ambiente
+  - Cambio-Climático
+  - Medio-Ambiente
   - Sostenibilidad
   - Economía
-  - Recursos naturales
+  - Recursos-Naturales
 citation:
   author:
     - Edison Achalma

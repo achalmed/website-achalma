@@ -9,16 +9,13 @@ categories:
 tags:
   - R
   - RStudio
-  - R en Linux
-  - Instalación de R
-  - Manipulación de Datos
-  - Análisis de Datos
-  - Programación en R
+  - Linux
+  - Manipulación-de-Datos
+  - Análisis-de-Datos
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-2-que-ofrece-r/index.pdf
 date: "06/10/2023"
 ---
-
 
 
 
@@ -71,8 +68,7 @@ Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escrib
 ![](images/Screenshot_20230611_004241.png)
 
 
-
-::: {.cell hash='index_cache/pdf/unnamed-chunk-1_b03ad6258aa611a0379023283b393a96'}
+::: {.cell hash='index_cache/html/unnamed-chunk-1_10d074d27497c4e5407872d19a5fce58'}
 
 ```{.r .cell-code}
 # Este es un ejemplo de un script básico en R
@@ -99,7 +95,6 @@ cat("La multiplicación es:", multiplicacion, "\n")
 cat("La división es:", division, "\n")
 ```
 :::
-
 
 
 **Paso 3: Ejecutar el script**

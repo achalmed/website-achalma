@@ -7,11 +7,10 @@ categories:
   - Econometría
 tags:
   - Econometría
-  - Ayacucho
-  - Crecimiento económico
-  - Recaudación de impuestos
-  - Valor Agregado Bruto (VAB)
-  - Análisis estadístico
+  - Crecimiento-Económico
+  - Recaudación-de-Impuestos
+  - Valor-Agregado-Bruto-(VAB)
+  - Análisis-Estadístico
 citation:
   author:
     - Edison Achalma 
@@ -25,7 +24,6 @@ citation:
 bibliography: references.bib
 date: "01/11/2021"
 ---
-
 
 
 
@@ -81,7 +79,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 
 
-
 ```{=html}
 <!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
 
@@ -93,7 +90,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 ¿Quién o quiénes serán los usuarios? -->
 ```
-
 
 
 ## Justificación teórica {#sec-justificación-teórica}

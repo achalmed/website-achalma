@@ -6,10 +6,10 @@ description: |
 categories:
   - Planeamiento y Presupuesto Público
 tags:
-  - Planeamiento y Presupuesto Público
-  - Gestión pública
-  - Reformas estatales
-  - Modernización administrativa
+  - Planeamiento-y-Presupuesto-Público
+  - Gestión-Pública
+  - Reformas-Estatales
+  - Modernización-Administrativa
 citation:
   author:
     - Edison Achalma

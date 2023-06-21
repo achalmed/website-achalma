@@ -7,12 +7,12 @@ categories:
   - Organización industrial
   - Economía y Negocios
 tags:
-  - Organización Industrial
+  - Organización-Industrial
   - Empresa
   - Organización
   - Cooperación
-  - Valores humanos
-  - Impacto social
+  - Valores-Humanos
+  - Impacto-social
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-13-empresa-como-organizacion/index.pdf
 date: "06/13/2023"

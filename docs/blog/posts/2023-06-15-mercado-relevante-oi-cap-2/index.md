@@ -7,9 +7,9 @@ categories:
   - Organización industrial
   - Economía y Negocios
 tags:
-  - Organización Industrial
-  - Mercado relevante industrial
-  - Mercado geográfico relevante
+  - Organización-Industrial
+  - Mercado-Relevante-Industrial
+  - Mercado-Geográfico-Relevante
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-15-mercado-relevante-oi-cap-2/index.pdf
 date: "06/15/2023"

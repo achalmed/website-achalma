@@ -8,12 +8,12 @@ categories:
   - Administración Pública
   - Gestión Pública
 tags:
-  - Planeamiento y presupuesto público
-  - Administración Pública
-  - Gestión Pública
-  - Recursos Públicos
+  - Planeamiento-y-Presupuesto-Público
+  - Administración-Pública
+  - Gestión-Pública
+  - Recursos-Públicos
   - Gobierno
-  - Servicios Públicos
+  - Servicios-Públicos
 citation:
   author:
     - Edison Achalma 

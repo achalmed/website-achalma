@@ -7,7 +7,7 @@ categories:
   - Programación
 tags:
   - Vim
-  - Editor de texto
+  - Editor-de-Texto
   - Comandos
   - Programación
 citation:

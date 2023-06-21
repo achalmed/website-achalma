@@ -6,10 +6,10 @@ description: |
 categories:
   - Finanzas Internacionales
 tags:
-  - Finanzas Internacionales
-  - Economía Global
-  - Riesgo Cambiario
-  - Mercados Financieros
+  - Finanzas-Internacionales
+  - Economía-Global
+  - Riesgo-Cambiario
+  - Mercados-Financieros
   - Globalización
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1/index.pdf

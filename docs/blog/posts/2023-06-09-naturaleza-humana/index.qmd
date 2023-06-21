@@ -7,11 +7,11 @@ categories:
   - Filosofía
 tags:
   - Filosofía
-  - Naturaleza humana
+  - Naturaleza-Humana
   - Política
-  - Sesgos científicos
-  - Libertad personal
-  - Igualdad de género.
+  - Sesgos-Científicos
+  - Libertad-Personal
+  - Igualdad-de-Género.
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.pdf
 date: "06/09/2023"

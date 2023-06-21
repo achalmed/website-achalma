@@ -9,7 +9,7 @@ categories:
 tags:
   - Linux
   - Principiantes
-  - Código Abierto
+  - Código-Abierto
   - Comandos
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-02-linux-primeros-pasos/index.pdf

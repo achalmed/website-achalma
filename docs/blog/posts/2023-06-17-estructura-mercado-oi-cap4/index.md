@@ -7,11 +7,10 @@ categories:
   - Organización industrial
   - Economía y Negocios
 tags:
-  - Organización Industrial
-  - Estrategias Empresariales
-  - Economía de Mercado
-  - Toma de Decisiones
-  - Análisis Industrial
+  - Organización-Industrial
+  - Estrategias-Empresariales
+  - Economía-de-Mercado
+  - Análisis-Industrial
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-estructura-mercado-oi-cap4/index.pdf
 date: "06/17/2023"

@@ -7,17 +7,11 @@ categories:
   - Gestión Pública
 tags:
   - Amabilidad
-  - Juicio astuto
-  - Habilidades a prueba de futuro
+  - Juicio-Astuto
   - Justicia
   - Tenacidad
-  - Un sentido del deber
-  - Un toque de rebelión
   - Motivador
-  - Promueve el diálogo
   - Serenidad
-  - Enfocado en resultados
-  - Sabe delegar
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf
 date: "05/11/2023"

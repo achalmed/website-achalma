@@ -6,12 +6,11 @@ description: |
 categories:
   - Economía Política
 tags:
-  - Economía Política
+  - Economía-Política
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf
 date: "04/23/2018"
 ---
-
 
 
 

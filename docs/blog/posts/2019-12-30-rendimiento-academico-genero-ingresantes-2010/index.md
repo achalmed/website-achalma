@@ -6,12 +6,11 @@ description: |
 categories:
   - Estadística para Economistas
 tags:
-  - Estadística para Economistas
-  - Género y educación
-  - Rendimiento académico
-  - Universidad Nacional de San Cristóbal de Huamanga
-  - Diferencias de género
-  - Influencia del género en la educación
+  - Estadística-para-Economistas
+  - Género-y-Educación
+  - Rendimiento-Académico
+  - Diferencias-de-Género
+  - Influencia-del-Género-en-la-Educación
 citation:
   author:
     - Edison Achalma
@@ -22,7 +21,6 @@ citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf
 date: "12/30/2019"
 ---
-
 
 
 

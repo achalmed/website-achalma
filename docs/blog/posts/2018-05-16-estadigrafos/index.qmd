@@ -7,11 +7,11 @@ categories:
   - Estadística
 tags:
   - Estadística
-  - Estadísticas de estudiantes
-  - Serie 200 Economía 2018-I
-  - Características demográficas
-  - Nivel de instrucción
-  - Análisis sociodemográfico
+  - Estadísticas-de-Estudiantes
+  - Serie-200-Economía-2018-I
+  - Características-Demográficas
+  - Nivel-de-Instrucción
+  - Análisis-Sociodemográfico
 citation: 
   author:
   - Edison Achalma

@@ -6,12 +6,12 @@ description: |
 categories:
   - Finanzas Internacionales
 tags:
-  - Finanzas Internacionales
-  - Sistema Monetario Internacional
-  - Regímenes Cambiarios
-  - Tipos de Cambio
+  - Finanzas-Internacionales
+  - Sistema-Monetario-Internacional
+  - Regímenes-Cambiarios
+  - Tipos-de-Cambio
   - FMI
-  - Economía Global
+  - Economía-Global
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf
 date: "06/17/2023"

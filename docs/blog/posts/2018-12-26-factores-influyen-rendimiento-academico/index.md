@@ -94,7 +94,3 @@ A partir de la muestra de 30 datos, se realizaron las siguientes estimaciones:
 - Estimación de la desviación estándar poblacional: $\hat{\sigma} = 2.325168861$
 
 Estas estimaciones proporcionan información sobre los valores promedio y la variabilidad de la población a partir de la muestra seleccionada.
-
-
-
-

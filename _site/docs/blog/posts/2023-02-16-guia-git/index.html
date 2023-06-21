@@ -353,7 +353,7 @@ cookieconsent.run({
   <li><a href="#crear-ramas-para-pruebas-de-versión" id="toc-crear-ramas-para-pruebas-de-versión" class="nav-link" data-scroll-target="#crear-ramas-para-pruebas-de-versión">Crear ramas para pruebas de versión</a></li>
   <li><a href="#fusionando-ramas-con-git-checkout-archivo" id="toc-fusionando-ramas-con-git-checkout-archivo" class="nav-link" data-scroll-target="#fusionando-ramas-con-git-checkout-archivo">Fusionando ramas con <code>git checkout [archivo]</code></a></li>
   <li><a href="#incorporando-cambios-con-git-rebase-nombre_rama" id="toc-incorporando-cambios-con-git-rebase-nombre_rama" class="nav-link" data-scroll-target="#incorporando-cambios-con-git-rebase-nombre_rama">Incorporando cambios con <code>git rebase [nombre_rama]</code></a></li>
-  <li><a href="#etiquetando-commits-con-git-tag-nombre_tag" id="toc-etiquetando-commits-con-git-tag-nombre_tag" class="nav-link" data-scroll-target="#etiquetando-commits-con-git-tag-nombre_tag">Etiquetando commits con <code>git tag [nombre_tag]</code></a>
+  <li><a href="#etiquetando-commits-con-git-tag-versiones" id="toc-etiquetando-commits-con-git-tag-versiones" class="nav-link" data-scroll-target="#etiquetando-commits-con-git-tag-versiones">Etiquetando commits con <code>git tag [versiones]</code></a>
   <ul class="collapse">
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
   </ul></li>
@@ -879,8 +879,8 @@ cookieconsent.run({
 <li><strong>Incorporar cambios de una rama</strong>: Utiliza <code>git rebase [nombre_rama]</code> para traer los cambios de la rama especificada y aplicarlos en la rama actual. Esto puede ser útil para mantener un historial de cambios más limpio y lineal.</li>
 </ul>
 </section>
-<section id="etiquetando-commits-con-git-tag-nombre_tag" class="level2">
-<h2 class="anchored" data-anchor-id="etiquetando-commits-con-git-tag-nombre_tag">Etiquetando commits con <code>git tag [nombre_tag]</code></h2>
+<section id="etiquetando-commits-con-git-tag-versiones" class="level2">
+<h2 class="anchored" data-anchor-id="etiquetando-commits-con-git-tag-versiones">Etiquetando commits con <code>git tag [versiones]</code></h2>
 <p>Las etiquetas en Git nos permiten marcar puntos específicos en la historia de nuestro proyecto. Aquí están los puntos clave que debes tener en cuenta:</p>
 <ul>
 <li><p><strong>Etiquetar el commit actual</strong>: Utiliza <code>git tag [nombre_tag]</code> para crear una etiqueta en el commit actual. Por ejemplo, puedes usar <code>git tag v0.0.1</code> para marcar la versión v0.0.1.</p></li>
@@ -889,12 +889,12 @@ cookieconsent.run({
 <p>Para acceder al commit donde se encuentra una etiqueta, utiliza el siguiente comando:</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="pp">[</span><span class="ss">nombre_tag</span><span class="pp">]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Las etiquetas son útiles para marcar puntos de lanzamiento o versiones importantes en tu proyecto. Los desarrolladores las utilizan para indicar hitos significativos, como v1.0 o v2.0. Por ejemplo, puedes crear una etiqueta v1.1.0 en el commit específico utilizando el siguiente comando:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag 1.1.0 <span class="pp">[</span><span class="ss">insertar</span><span class="pp">-</span><span class="ss">ID</span><span class="pp">-</span><span class="ss">commit</span><span class="pp">-</span><span class="ss">aquí</span><span class="pp">]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag v1.1.0 <span class="pp">[</span><span class="ss">insertar</span><span class="pp">-</span><span class="ss">ID</span><span class="pp">-</span><span class="ss">commit</span><span class="pp">-</span><span class="ss">aquí</span><span class="pp">]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="ejemplos" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
 <ol type="1">
-<li><p>Creación de una etiqueta de versión: Utiliza el comando <code>git tag [26-03-2022v1] -m "Versión 1 del proyecto"</code> para crear una etiqueta que represente una versión específica de tu proyecto.</p></li>
-<li><p>Subir etiquetas en línea: Utiliza el comando <code>git push --tags</code> para enviar las etiquetas al repositorio remoto y compartirlas con otros colaboradores.</p></li>
+<li><p><strong>Creación de una etiqueta de versión:</strong> Utiliza el comando <code>git tag 20-06-2023v1.0.0 -m "Versión 1 del proyecto"</code> para crear una etiqueta que represente una versión específica de tu proyecto.</p></li>
+<li><p><strong>Subir etiquetas en línea:</strong> Utiliza el comando <code>git push origin master --tags</code> para enviar las etiquetas al repositorio remoto y compartirlas con otros colaboradores.</p></li>
 </ol>
 <blockquote class="blockquote">
 <p>Las etiquetas son una forma conveniente de marcar y acceder a puntos importantes en tu historial de cambios. ¡Aprovecha su potencial y mantén un seguimiento claro de las versiones de tu proyecto!</p>

@@ -212,7 +212,7 @@ otros desarrolladores y mantener tu código organizado.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, interior hidden, breakable, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, boxrule=0pt, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 \hypertarget{introducciuxf3n}{%
 \section{Introducción}\label{introducciuxf3n}}
@@ -1500,9 +1500,9 @@ Aquí están los puntos clave que debes conocer:
   para mantener un historial de cambios más limpio y lineal.
 \end{itemize}
 
-\hypertarget{etiquetando-commits-con-git-tag-nombre_tag}{%
+\hypertarget{etiquetando-commits-con-git-tag-versiones}{%
 \subsection{\texorpdfstring{Etiquetando commits con
-\texttt{git\ tag\ {[}nombre\_tag{]}}}{Etiquetando commits con git tag {[}nombre\_tag{]}}}\label{etiquetando-commits-con-git-tag-nombre_tag}}
+\texttt{git\ tag\ {[}versiones{]}}}{Etiquetando commits con git tag {[}versiones{]}}}\label{etiquetando-commits-con-git-tag-versiones}}
 
 Las etiquetas en Git nos permiten marcar puntos específicos en la
 historia de nuestro proyecto. Aquí están los puntos clave que debes
@@ -1538,7 +1538,7 @@ siguiente comando:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{git}\NormalTok{ tag 1.1.0 }\PreprocessorTok{[}\SpecialStringTok{insertar}\PreprocessorTok{{-}}\SpecialStringTok{ID}\PreprocessorTok{{-}}\SpecialStringTok{commit}\PreprocessorTok{{-}}\SpecialStringTok{aquí}\PreprocessorTok{]}
+\FunctionTok{git}\NormalTok{ tag v1.1.0 }\PreprocessorTok{[}\SpecialStringTok{insertar}\PreprocessorTok{{-}}\SpecialStringTok{ID}\PreprocessorTok{{-}}\SpecialStringTok{commit}\PreprocessorTok{{-}}\SpecialStringTok{aquí}\PreprocessorTok{]}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1548,14 +1548,14 @@ siguiente comando:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Creación de una etiqueta de versión: Utiliza el comando
-  \texttt{git\ tag\ {[}26-03-2022v1{]}\ -m\ "Versión\ 1\ del\ proyecto"}
+  \textbf{Creación de una etiqueta de versión:} Utiliza el comando
+  \texttt{git\ tag\ 20-06-2023v1.0.0\ -m\ "Versión\ 1\ del\ proyecto"}
   para crear una etiqueta que represente una versión específica de tu
   proyecto.
 \item
-  Subir etiquetas en línea: Utiliza el comando
-  \texttt{git\ push\ -\/-tags} para enviar las etiquetas al repositorio
-  remoto y compartirlas con otros colaboradores.
+  \textbf{Subir etiquetas en línea:} Utiliza el comando
+  \texttt{git\ push\ origin\ master\ -\/-tags} para enviar las etiquetas
+  al repositorio remoto y compartirlas con otros colaboradores.
 \end{enumerate}
 
 \begin{quote}

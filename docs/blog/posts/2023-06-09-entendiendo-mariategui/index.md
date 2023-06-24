@@ -10,7 +10,7 @@ tags:
   -  Filosofía
   -  Mariátegui
   -  Revolución
-  -  Intelectuales-Revolucionarios
+  -  IntelectualeRevolucionarios
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-entendiendo-mariategui/index.pdf
 date: "06/09/2023"

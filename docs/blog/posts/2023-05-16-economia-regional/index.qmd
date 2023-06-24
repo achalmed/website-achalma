@@ -7,16 +7,15 @@ thanks: gracias
 categories:
   - Economía Regional
 tags:
-  - Economía-Regional
-  - Economía-Peruana
-  - Desarrollo-Regional
-  - Crecimiento-Económico
-  - Políticas-Públicas
+  - EconomíaRegional
+  - EconomíaPeruana
+  - DesarrolloRegional
+  - CrecimientoEconómico
+  - PolíticasPúblicas
   - Inversiones
   - Innovación
-  - Tendencias-Económicas
   - Sostenibilidad
-  - Clima-Empresarial
+  - ClimaEmpresarial
   - Emprendimiento
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-economia-regional/index.pdf

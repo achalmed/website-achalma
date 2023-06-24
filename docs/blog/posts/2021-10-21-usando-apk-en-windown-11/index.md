@@ -8,10 +8,10 @@ categories:
   - Informática
   - Android
 tags:
-  - Windows-11
+  - Windows11
   - APK
-  - Instalación-de-Aplicaciones
-  - Emulador-de-Android
+  - InstalaciónDeAplicaciones
+  - EmuladorDeAndroid
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.pdf
 date: "10/21/2022"

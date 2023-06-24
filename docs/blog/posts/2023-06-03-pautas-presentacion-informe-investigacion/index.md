@@ -9,11 +9,7 @@ categories:
   - Invetigación económica
 tags:
   - Econometría
-  - Metodología-de-Investigación
-  - Planteamiento-del-Problema
-  - Objetivos-de-Investigación
-  - Hipótesis-Económicas
-  - Metodología-y-Datos-Estadísticos
+  - MetodologíaDeInvestigación
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf
 date: "06/03/2023"

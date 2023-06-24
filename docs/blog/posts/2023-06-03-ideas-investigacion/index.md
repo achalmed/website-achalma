@@ -9,11 +9,9 @@ categories:
   - Invetigación económica
 tags:
   - Econometría
-  - Análisis-Económico
-  - Variables-Macroeconómicas
-  - Influencia-de-Factores-Externos
-  - Crisis-Políticas-y-Economía
-  - Relaciones-Económicas-y-Financieras
+  - AnálisisEconómico
+  - VariablesMacroeconómicas
+  - Crisis
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-ideas-investigacion/index.pdf
 date: "06/03/2023"

@@ -10,8 +10,8 @@ tags:
   - R
   - RStudio
   - Linux
-  - Manipulación-de-Datos
-  - Análisis-de-Datos
+  - ManipulaciónDeDatos
+  - AnálisisDeDatos
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-3-debemos-saber-r/index.pdf
 date: "06/11/2023"

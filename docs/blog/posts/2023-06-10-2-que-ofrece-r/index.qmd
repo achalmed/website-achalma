@@ -10,8 +10,8 @@ tags:
   - R
   - RStudio
   - Linux
-  - Manipulación-de-Datos
-  - Análisis-de-Datos
+  - ManipulaciónDeDatos
+  - AnálisisDeDatos
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-2-que-ofrece-r/index.pdf
 date: "06/10/2023"

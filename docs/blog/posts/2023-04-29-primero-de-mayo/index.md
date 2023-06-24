@@ -6,9 +6,9 @@ description: |
 categories:
   - Política
 tags:
-  - Partido-Comunista-del-Perú
+  - PartidoComunistaDelPerú
   - Revolución
-  - Día-del-Proletariado
+  - DíaDelProletariado
 author: Comité Central Partido Comunista del Perú
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-04-29-primero-de-mayo/index.pdf

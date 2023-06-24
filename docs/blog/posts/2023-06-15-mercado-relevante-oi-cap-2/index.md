@@ -7,9 +7,9 @@ categories:
   - Organización industrial
   - Economía y Negocios
 tags:
-  - Organización-Industrial
-  - Mercado-Relevante-Industrial
-  - Mercado-Geográfico-Relevante
+  - OrganizaciónIndustrial
+  - MercadoRelevanteIndustrial
+  - MercadoGeográficoRelevante
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-15-mercado-relevante-oi-cap-2/index.pdf
 date: "06/15/2023"
@@ -606,3 +606,22 @@ La definición de mercado geográfico relevante se centra en identificar las fue
 La noción de sustitución entre productos es crucial para comprender el mercado relevante. Se refiere a la capacidad de los consumidores para satisfacer una misma necesidad o deseo utilizando diferentes productos o servicios. Cuanto mayor sea el nivel de sustitución entre productos, es decir, cuanto más similares y competitivos sean los productos entre sí, mayor será el alcance del mercado relevante.
 
 Además, al determinar el mercado relevante, es fundamental considerar los costos asociados con las alternativas disponibles para los proveedores. Esto implica evaluar los costos de producción, distribución y otros factores que puedan influir en la viabilidad de las fuentes alternativas de aprovisionamiento.
+
+# Publicaciones Similares
+
+Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+
+-   [1. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+-   [2. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+-   [3. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+-   [4. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+-   [5. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+-   [6. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

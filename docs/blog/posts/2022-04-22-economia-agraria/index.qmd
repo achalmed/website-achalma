@@ -8,10 +8,9 @@ thanks: gracias
 categories:
   - Economía Agraria
 tags:
-  - Economía-Agraria
-  - Economía-Peruana
-  - Políticas-Económicas
-  - Desafíos-Socioeconómicos
+  - EconomíaAgraria
+  - EconomíaPeruana
+  - PolíticasEconómicas
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/index.pdf
 date: "04/22/2022"

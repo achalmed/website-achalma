@@ -7,10 +7,10 @@ categories:
   - Econometría
 tags:
   - Econometría
-  - Crecimiento-Económico
-  - Recaudación-de-Impuestos
-  - Valor-Agregado-Bruto-(VAB)
-  - Análisis-Estadístico
+  - CrecimientoEconómico
+  - RecaudaciónDeImpuestos
+  - ValorAgregadoBruto(VAB)
+  - AnálisisEstadístico
 citation:
   author:
   - Edison Achalma

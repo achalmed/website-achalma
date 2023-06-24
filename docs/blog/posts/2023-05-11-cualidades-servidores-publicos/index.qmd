@@ -7,7 +7,7 @@ categories:
   - Gestión Pública
 tags:
   - Amabilidad
-  - Juicio-Astuto
+  - Astuto
   - Justicia
   - Tenacidad
   - Motivador

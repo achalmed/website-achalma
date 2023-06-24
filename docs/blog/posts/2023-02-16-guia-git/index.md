@@ -10,11 +10,11 @@ tags:
   - Git
   - GitHub
   - Colaboración
-  - Desarrollo-de-Software
-  - Git-Basics
-  - Git-Advanced
-  - Git-Tips
-  - Open-Source
+  - DesarrolloDeSoftware
+  - GitBasics
+  - GitAdvanced
+  - GitTips
+  - OpenSource
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-02-16-guia-git/index.pdf
 date: "02/16/2023"

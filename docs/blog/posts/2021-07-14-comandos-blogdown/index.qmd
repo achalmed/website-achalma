@@ -10,7 +10,7 @@ tags:
   - RStudio
   - Blogdown
   - Comandos
-  - Sitios-Web
+  - SitiosWeb
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.pdf
 date: "07/14/2021"

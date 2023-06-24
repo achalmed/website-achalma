@@ -6,11 +6,9 @@ description: |
 categories:
   - Estadística para Economistas
 tags:
-  - Estadística-para-Economistas
-  - Género-y-Educación
-  - Rendimiento-Académico
-  - Diferencias-de-Género
-  - Influencia-del-Género-en-la-Educación
+  - EstadísticaParaEconomistas
+  - GéneroYEducación
+  - RendimientoAcadémico
 citation:
   author:
     - Edison Achalma

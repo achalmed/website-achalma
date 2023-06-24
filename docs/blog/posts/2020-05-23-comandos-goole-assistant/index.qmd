@@ -8,9 +8,8 @@ categories:
   - Productividad
   - Asistentes Virtuales
 tags:
-  - Google-Assistant
-  - Comandos-de-Voz
-  - Trucos-de-Productividad
+  - GoogleAssistant
+  - ComandosDeVoz
   - Automatización
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2020-05-23-comandos-goole-assistant/index.pdf

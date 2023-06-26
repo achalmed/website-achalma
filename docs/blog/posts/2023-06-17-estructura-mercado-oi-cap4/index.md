@@ -76,10 +76,6 @@ B)  Característica
 23. Fijan Pecios y
 24. Competencia a través de la publicidad y marketing. MODELOS DE OLIGOPOLIO: 7.5.1. El Duopolio de Cournot. 7.5.2. La Competencia Monopolística en el modelo de Cournot. 7.5.3. El Duopolio de Stackelberg 7.5.4. El Duopolio de Chamberlin 7.5.5. El Duopolio de Bertrand. 7.5.6. El Duopolio de Egdeworth 7.5.7. El Duopolio de Paul SWEZZY
 
-# Publicaciones Similares
-
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
-
 -   [1. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
 
 -   [2. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
@@ -91,6 +87,4 @@ Aquí te recomendamos algunas publicaciones similares que podrían ser de tu int
 -   [5. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
 -   [6. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
-
-Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

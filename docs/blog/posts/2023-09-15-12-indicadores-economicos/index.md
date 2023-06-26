@@ -1,3 +1,21 @@
+---
+title: Economia básica
+subtitle: Exp
+description: |
+  Descubre ...
+categories:
+  - Economía Básica
+tags:
+  - EconomíaBásica
+  - Economía
+date: "06/21/2023"
+draft: true
+---
+
+# Publicaciones Similares
+
+Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+
 -   [01. Conceptos básicos de economía](../2023-06-30-01-conceptos-basicos-de-economia/index.qmd)
 
 -   [02. Necesidades bienes](../2023-07-07-02-necesidades-bienes/index.qmd)
@@ -25,3 +43,6 @@
 -   [13. El desempleo](../2023-09-22-13-desempleo/index.qmd)
 
 -   [14. Comercio internacional](../2023-09-29-14-comercio-internacional/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

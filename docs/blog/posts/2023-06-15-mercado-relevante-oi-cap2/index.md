@@ -611,17 +611,17 @@ Además, al determinar el mercado relevante, es fundamental considerar los costo
 
 Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
 
--   [1. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+-   [01. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 
--   [2. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+-   [02. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
 
--   [3. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+-   [03. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
 
--   [4. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+-   [04. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
 
--   [5. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+-   [05. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
--   [6. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+-   [06. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

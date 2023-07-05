@@ -43,7 +43,7 @@ execute:
   cache: true  # Habilitar el almacenamiento en caché
   enabled: false  # Deshabilitar la ejecución
 
-draft: false  # Modo de borrador (false = final, true = borrador)
+#draft: false  # Modo de borrador (false = final, true = borrador)
 
 highlight-style: github
 
@@ -76,14 +76,14 @@ format:
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
   pdf:
-    documentclass: scrartcl  # Clase de documento para el PDF
-    # papersize: letter  # Tamaño del papel
+    documentclass: article  # Clase de documento para el PDF scrartcl, article
+    papersize: a4  # Tamaño del papel (letter, A4)
     language: es  # Idioma del documento
-    # geometry: 
-    #   - top=2.54cm  # Margen superior
-    #   - right=2.54cm  # Margen derecho
-    #   - bottom=2.54cm  # Margen inferior
-    #   - left=2.54cm  # Margen izquierdo
+    geometry: 
+      - top=2.54cm  # Margen superior
+      - right=2.54cm  # Margen derecho
+      - bottom=2.54cm  # Margen inferior
+      - left=2.54cm  # Margen izquierdo
     # toc: true  # Habilitar la tabla de contenido
     # toc-depth: 3  # Profundidad de la tabla de contenido
     # toc-title: Contenidos  # Título de la tabla de contenido
@@ -95,8 +95,9 @@ format:
     link-citation: true  # Habilitar enlaces en las citas
     link-bibliography: true  # Habilitar enlaces en la bibliografía
     keep-tex: true  # Mantener archivos .tex generados
-    pdf-engine: xelatex   # Motor de PDF (pdflatex, lualatex, tectonic, latexmk)
+    pdf-engine: pdflatex    # Motor de PDF (xelatex, pdflatex, lualatex, tectonic, latexmk)
     #include-in-header: 
+    #  text: |
     #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
     output-file: index.pdf
 format-links: [pdf] # (false)

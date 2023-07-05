@@ -123,7 +123,7 @@ $BIO$: Pérdida de biodiversidad
 
 $DEF$: Deforestación
 
-$μ$: Término de perturbación
+$\mu$: Término de perturbación
 
 Con este modelo, buscamos analizar la relación entre el Producto Bruto Interno Verde y las variables exógenas de contaminación del aire, pérdida de biodiversidad y deforestación. Estos datos nos permitirán comprender cómo influyen estos factores en el desarrollo sostenible y orientar las políticas y acciones necesarias para promover un crecimiento económico más sostenible y resiliente al cambio climático.
 

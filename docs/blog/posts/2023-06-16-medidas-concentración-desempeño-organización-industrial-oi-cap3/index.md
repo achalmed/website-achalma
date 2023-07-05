@@ -20,7 +20,7 @@ draft: true
 
 
 
-MEDICION DE LA ESTRUCTURA Y DESEMPEÑO DE LA ORGANIZACIÓN INDUSTRIAL
+<!--# MEDICION DE LA ESTRUCTURA Y DESEMPEÑO DE LA ORGANIZACIÓN INDUSTRIAL
 
 En este capitulo aprenderemos:
 
@@ -76,15 +76,15 @@ La Competencia perfecta es el "estado natural" al que tienden los mercados, dond
 
 Este índice nos indica de una manera sencilla cuál es la estructura del mercado dada la cantidad de empresas en cada instante del tiempo.
 
-La forma más simple de medir la concentración industrial es usar el recíproco del número de empresas (1/n):
+La forma más simple de medir la concentración industrial es usar el recíproco del número de empresas ($\frac{1}{n}$):
 
--   Sí 1/n→0 ..... El mercado tiene una estructura de "competencia perfecta"
+-   Sí $\frac{1}{n}$→0 ..... El mercado tiene una estructura de "competencia perfecta"
 
--   1/n = 1 ..... El mercado tiene una estructura de "monopolio"
+-   $\frac{1}{n}$ = 1 ..... El mercado tiene una estructura de "monopolio"
 
--   Sí 0 \< 1/n \< 0,5 .... Puede ser competencia monopolística
+-   Sí 0 \< $\frac{1}{n}$ \< 0,5 .... Puede ser competencia monopolística
 
--   Sí 0.50 ≤ 1/n \< 1, ... Entonces tiene la estructura de oligopolio
+-   Sí 0.50 ≤ $\frac{1}{n}$ \< 1, ... Entonces tiene la estructura de oligopolio
 
 ## PRODUCCIÓN TOTAL INTERCAMBIADA O TRANSADA EN EL MERCADO
 
@@ -144,7 +144,7 @@ El IH ha obtenido una gran difusión y respaldo como resultado de su utilizació
 
 -   Sí el IH es igual a 10.000, entonces la empresa es un monopolio perfecto.
 
-Por esta razón, dado un número de empresas n, el índice toma un valor mayor cuanto más asimétricas sean las empresas. El valor mínimo lo toma cuando todas las empresas tienen la misma cuota y el valor máximo toma cuando toda la producción se concentra en una empresa. En el primer caso vale (1/n) y en el segundo vale 1.
+Por esta razón, dado un número de empresas n, el índice toma un valor mayor cuanto más asimétricas sean las empresas. El valor mínimo lo toma cuando todas las empresas tienen la misma cuota y el valor máximo toma cuando toda la producción se concentra en una empresa. En el primer caso vale $\frac{1}{n}$ y en el segundo vale 1.
 
 Una forma alternativa de hallar el índice de Hirfindahl, es calculando la varianza que existe entre las cuotas de mercado
 
@@ -208,7 +208,7 @@ Donde:
 
 -   N, es el número de empresas en el mercado.
 
-El índice de Rosembluth varía entre: (1/N) ≤ RHT ≤ 1.
+El índice de Rosembluth varía entre: ($\frac{1}{n}$) ≤ RHT ≤ 1.
 
 Sí RHT es igual a uno (1) es Monopolio. Si RHT tiende a uno (1) sin serlo, entonces existe una alta concentración con baja competencia. Sí RHT tiende a cero, entonces hay una baja concentración industrial y una alta competencia en el mercado, finalmente, sí RHT = 0, entonces la concentración es nula y el mercado es de competencia es perfecta.
 
@@ -238,7 +238,7 @@ El índice de Gini varía entre 0 ≤ G ≤ 1.
 
 -   Sí G tiende a uno (1), entonces existe una alta concentración industrial y una baja competencia en el mercado.
 
-También se puede decir que el valor del índice de Gini fluctúa entre (1/n) ≤ G ≤ 1.
+También se puede decir que el valor del índice de Gini fluctúa entre ($\frac{1}{n}$) ≤ G ≤ 1.
 
 Otra manera de calcular el coeficiente de Gini es a través de la siguiente expresión matemática:
 
@@ -250,11 +250,11 @@ En un índice que se calcula sobre la totalidad de empresas que operan en la ind
 
 1 IHK = σ N i=1\[si ∝ \] ∝−1
 
-Donde ∝\>0, es la ponderación que otorga a la diferentes empresas de acuerdo con su cuota de participación relativa en el mercado. En este sentido, cuanto mayor sea ∝, la concentración será más alta. Por el contrario si ∝ tiende a cero (0) entonces el IHK = (1/N), en este caso todas las empresas son iguales. En cambio, si IHK tiende al infinito, entonces el grado de concentración es igual a su cuota de participación (si).
+Donde ∝\>0, es la ponderación que otorga a la diferentes empresas de acuerdo con su cuota de participación relativa en el mercado. En este sentido, cuanto mayor sea ∝, la concentración será más alta. Por el contrario si ∝ tiende a cero (0) entonces el IHK = ($\frac{1}{n}$), en este caso todas las empresas son iguales. En cambio, si IHK tiende al infinito, entonces el grado de concentración es igual a su cuota de participación (si).
 
 En condiciones adecuadas el índice de Hannah Kay varía entre:
 
-1 (1/N) ≤ σN i=1\[si ∝ \] ∝−1 ≤ 1.
+1 ($\frac{1}{n}$) ≤ σN i=1\[si ∝ \] ∝−1 ≤ 1.
 
 ## INDICE DE DOMINACIÓN
 
@@ -658,21 +658,5 @@ Es un índice que mide la rentabilidad con respecto al patrimonio que posee la e
 
 Es un índice que mide la rentabilidad con respecto a las ventas totales de la empresa. Y, nos indica contablemente, que tan eficiente es una empresa en sus ventas para generar sus utilidades, por periodo de tiempo determinado. Se expresa en términos porcentuales.
 
-# Publicaciones Similares
-
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
-
--   [1. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
-
--   [2. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
-
--   [3. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
-
--   [4. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
-
--   [5. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
-
--   [6. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
-
-Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+{{< include ../_contenido_organizacion-industrial.qmd >}}  -->
 

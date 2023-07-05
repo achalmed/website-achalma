@@ -186,21 +186,15 @@ El oligopolio es una estructura de mercado en la que solo unas pocas empresas do
 
 El monopolio ocurre cuando una sola empresa tiene el control exclusivo sobre la oferta de un producto o servicio en un mercado determinado. En esta situación, la empresa puede establecer los precios y las condiciones de venta sin enfrentar competencia directa. Los monopolios pueden surgir debido a barreras legales, tecnológicas o económicas que dificultan o impiden la entrada de nuevas empresas al mercado. Para evitar abusos de poder, los monopolios suelen estar sujetos a regulaciones gubernamentales.
 
-# Publicaciones Similares
+-   [01. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+-   [02. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
 
--   [1. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+-   [03. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
 
--   [2. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+-   [04. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
 
--   [3. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+-   [05. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
--   [4. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
-
--   [5. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
-
--   [6. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
-
-Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+-   [06. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
 

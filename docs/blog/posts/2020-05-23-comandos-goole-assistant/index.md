@@ -23,16 +23,16 @@ Basic
 
 Stop playing
 
-- OK Google, stop. / stäp
+- OK Google, stop. 
 
 Pause
 
-- OK Google, pause. / pôz
-- OK Google, resume.  /  rəˈzo͞om
+- OK Google, pause. 
+- OK Google, resume.  
 
 Control the volume
 
-- OK Google, increase volume.  /ɪnˈkris/  /ˈvɑl·jum, ˈvɑl·jəm/
+- OK Google, increase volume.  
 - OK Google, volume up.
 - OK Google, decrease volume.
 - OK Google, volume down.
@@ -602,6 +602,7 @@ League position
 - OK Google, how are the Lakers doing?
 
 - OK Google, what are the Pittsburgh Penguins standings?
+
 
 Next match time
 

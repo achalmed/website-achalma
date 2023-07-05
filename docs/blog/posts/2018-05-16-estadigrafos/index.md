@@ -23,6 +23,7 @@ date: "04/16/2018"
 
 
 
+
 | Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |
 | :-----: | :--------: | :--------: | :---------------: | :------------------: |
 |   10    |     1      |    0,9     |        0,9        |         0,9          |

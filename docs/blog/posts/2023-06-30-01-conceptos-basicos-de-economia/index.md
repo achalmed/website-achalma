@@ -8,15 +8,16 @@ categories:
 tags:
   - EconomíaBásica
   - Economía
-date: "06/21/2023"
+date: "06/30/2023"
 draft: true
 ---
 
 
 
+
 # Economía
 
-La palabra "economía" proviene del griego antiguo "oikonomia" (οἰκονομία), que se compone de dos términos: "oikos" (οἶκος), que significa "casa" o "hogar", y "nomos" (νόμος), que se traduce como "ley" o "norma".
+La palabra "economía" proviene del griego antiguo "oikonomia", que se compone de dos términos: "oikos", que significa "casa" o "hogar", y "nomos", que se traduce como "ley" o "norma".
 
 En su origen, el concepto de "oikonomia" se refería a la administración y gestión de un hogar o familia. Tenía un enfoque más estrecho y se centraba en la gestión de los recursos y las finanzas domésticas. Se ocupaba de temas como la producción, distribución y consumo de bienes y servicios dentro de la unidad familiar.
 
@@ -182,7 +183,9 @@ Estos actores económicos interactúan entre sí en el sistema económico, parti
 
 # Publicaciones Similares
 
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
 
 -   [01. Conceptos básicos de economía](../2023-06-30-01-conceptos-basicos-de-economia/index.qmd)
 

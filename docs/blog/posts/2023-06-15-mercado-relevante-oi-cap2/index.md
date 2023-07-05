@@ -609,7 +609,9 @@ Además, al determinar el mercado relevante, es fundamental considerar los costo
 
 # Publicaciones Similares
 
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
 
 -   [01. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 

@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -280,10 +246,10 @@ cookieconsent.run({
 <p>La economía es una disciplina que estudia la producción, distribución y consumo de bienes y servicios. Analiza cómo las personas, empresas e instituciones toman decisiones sobre cómo utilizar los recursos limitados para satisfacer sus necesidades y deseos. También examina los fenómenos económicos a nivel macroeconómico, como el crecimiento económico, la inflación y el desempleo.</p>
 <div class="grid">
 <div class="g-col-lg-6 g-col-12">
-<p><img src="images/demo-jupyter-plain.png" class="hello-output img-fluid" style="height: 605px;"></p>
+<p><img src="images/economia1.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
-<div class="g-col-lg-6 g-col-12" style="background-color: white; border: 1px solid #dee2e6; height: 605px;">
-<p><img src="images/demo-jupyter-output.png" class="img-fluid"></p>
+<div class="g-col-lg-6 g-col-12">
+<p><img src="images/economia2.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
 </div>
 </div>
@@ -302,37 +268,10 @@ cookieconsent.run({
 <p>Las matemáticas son una disciplina que se dedica al estudio de las propiedades y relaciones de los números, las estructuras abstractas y los patrones. Se utiliza para describir y analizar fenómenos cuantitativos en una amplia gama de campos, desde las ciencias naturales y la ingeniería hasta las ciencias sociales y la economía. Las matemáticas proporcionan herramientas y métodos para el razonamiento lógico, la resolución de problemas y el modelado de situaciones complejas.</p>
 <div class="grid">
 <div class="g-col-lg-6 g-col-12">
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Plots"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Edison Achalma"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "5/22/2021"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> julia-1.8</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Parametric Plots</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Plot function pair (x(u), y(u)). </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>See @fig-parametric for an example.</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-parametric</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Parametric Plots"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>using Plots</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plot(<span class="fu">sin</span>, </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>     x-&gt;<span class="fu">sin</span>(<span class="dv">2</span>x), </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>     <span class="dv">0</span>, </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2</span>π, </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>     leg=false, </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>     fill=(<span class="dv">0</span>,:lavender))</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="images/mate1.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
 <div class="g-col-lg-6 g-col-12">
-<p><img src="images/hello-julia.png" class="hello-output img-fluid" alt="Example Plots Demo output with title, author, date published and main section on Parametric plots which contains text, a toggleable code field, and the output of the plot, with the caption Figure 1 Parametric Plots."></p>
+<p><img src="images/mate2.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
 </div>
 </div>
@@ -340,29 +279,10 @@ cookieconsent.run({
 <p>La informática es una disciplina que se ocupa del estudio y desarrollo de sistemas de información y computación. Comprende el diseño, la programación, la gestión y el uso de sistemas y software para procesar, almacenar y transmitir información de manera eficiente. La informática abarca áreas como la programación, las bases de datos, la inteligencia artificial, la seguridad informática y el desarrollo de aplicaciones y sistemas. Su objetivo principal es aprovechar la tecnología de la información para resolver problemas y mejorar la eficiencia en diversos ámbitos de la sociedad.</p>
 <div class="grid">
 <div class="g-col-lg-6 g-col-12">
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> neofetch</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">achalmaedison@HP-Pavilion</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-------------------------</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">OS:</span> Kubuntu 22.04.2 LTS x86_64 </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Host:</span> HP Pavilion x360 Convertible 14-dw0xxx </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Kernel:</span> 5.19.0-43-generic </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Uptime:</span> 1 hour, 11 mins </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Packages:</span> 3679 <span class="er">(</span><span class="ex">dpkg</span><span class="kw">)</span><span class="ex">,</span> 25 <span class="er">(</span><span class="ex">flatpak</span><span class="kw">)</span><span class="ex">,</span> 7 <span class="er">(</span><span class="ex">snap</span><span class="kw">)</span> </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Shell:</span> zsh 5.8.1 </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Resolution:</span> 1920x1080, 1920x1080 </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">DE:</span> Plasma 5.24.7 </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">WM:</span> KWin </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">Theme:</span> <span class="pp">[</span><span class="ss">Plasma</span><span class="pp">]</span>, Breeze <span class="pp">[</span><span class="ss">GTK2/3</span><span class="pp">]</span> </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">Icons:</span> <span class="pp">[</span><span class="ss">Plasma</span><span class="pp">]</span>, breeze-dark <span class="pp">[</span><span class="ss">GTK2/3</span><span class="pp">]</span> </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ex">Terminal:</span> konsole </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ex">Terminal</span> Font: Hack Nerd Font Mono 10 </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ex">CPU:</span> Intel i5-1035G1 <span class="er">(</span><span class="ex">8</span><span class="kw">)</span> <span class="ex">@</span> 3.600GHz </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ex">GPU:</span> Intel Iris Plus Graphics G1 </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ex">Memory:</span> 5738MiB / 7635MiB </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="images/informatica1.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
 <div class="g-col-lg-6 g-col-12">
-<p><img src="images/informatica.jpg" class="img-fluid" style="background-color: white; border: 1px solid #dee2e6; height: 625px;" alt="."></p>
+<p><img src="images/informatica2.jpg" class="hello-output img-fluid" alt="."></p>
 </div>
 </div>
 </div>

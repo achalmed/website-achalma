@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Edison Achalma">
+<meta name="description" content="Descubre cómo instalar y configurar Anaconda en Ubuntu Linux para mejorar tu experiencia de desarrollo en Python. Con una amplia selección de paquetes precompilados y herramientas para la gestión de entornos virtuales, Anaconda simplifica el proceso de configuración y administración de tu entorno de desarrollo.">
+
+<title>achalmaedison - Instalación de Anaconda en Ubuntu Linux</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": false,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/plain" cookie-consent="tracking">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/plain" cookie-consent="tracking" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XGH6TP6RB3"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #EDF3F9;
+      }
+</style>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+<link rel="stylesheet" href="../index.css">
+<meta property="og:title" content="achalmaedison - Instalación de Anaconda en Ubuntu Linux">
+<meta property="og:description" content="Descubre cómo instalar y configurar Anaconda en Ubuntu Linux para mejorar tu experiencia de desarrollo en Python. Con una amplia selección de paquetes precompilados y herramientas para la gestión de entornos virtuales, Anaconda simplifica el proceso de configuración y administración de tu entorno de desarrollo.">
+<meta property="og:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-19-01-instalacion-de-anaconda/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:site-name" content="AchalmaEdison">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:title" content="achalmaedison - Instalación de Anaconda en Ubuntu Linux">
+<meta name="twitter:description" content="Descubre cómo instalar y configurar Anaconda en Ubuntu Linux para mejorar tu experiencia de desarrollo en Python. Con una amplia selección de paquetes precompilados y herramientas para la gestión de entornos virtuales, Anaconda simplifica el proceso de configuración y administración de tu entorno de desarrollo.">
+<meta name="twitter:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-19-01-instalacion-de-anaconda/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:creator" content="@achalmaedison">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Instalación de Anaconda en Ubuntu Linux">
+<meta name="citation_author" content="Edison Achalma">
+<meta name="citation_publication_date" content="2023-06-19">
+<meta name="citation_cover_date" content="2023-06-19">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-06-19">
+<meta name="citation_fulltext_html_url" content="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-19-01-instalacion-de-anaconda">
+<meta name="citation_language" content="es">
+<meta name="citation_reference" content="citation_title=Dynamic Documents with R and knitr;,citation_author=Yihui Xie;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://yihui.name/knitr/;">
+<meta name="citation_reference" content="citation_title=bookdown: Authoring Books and Technical Documents with R Markdown;,citation_author=Yihui Xie;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://github.com/rstudio/bookdown;">
+<meta name="citation_reference" content="citation_title=blogdown: Creating Websites with R Markdown;,citation_author=Yihui Xie;,citation_author=Alison Presmanes Hill;,citation_author=Amber Thomas;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://github.com/rstudio/blogdown;">
+<meta name="citation_reference" content="citation_title=R Markdown: The Definitive Guide;,citation_author=Yihui Xie;,citation_author=J. J. Allaire;,citation_author=Garrett Grolemund;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://bookdown.org/yihui/rmarkdown;">
+<meta name="citation_reference" content="citation_title=R Packages;,citation_author=Hadley Wickham;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=1491910593, 9781491910597;">
+<meta name="citation_reference" content="citation_title=How R Helps Airbnb Make the Most of its Data;,citation_author=Ricardo Bion;,citation_author=Robert Chang;,citation_author=Jason Goodman;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://doi.org/10.1080/00031305.2017.1392362;,citation_issue=1;,citation_doi=10.1080/00031305.2017.1392362;,citation_volume=72;,citation_journal_title=The American Statistician;,citation_publisher=Taylor &amp;amp;amp; Francis;">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_issue=2;,citation_volume=27;,citation_journal_title=The Computer Journal;,citation_publisher=British Computer Society;">
+<meta name="citation_reference" content="citation_title=Too good to be false: Nonsignificant results revisited;,citation_author=Chris HJ Hartgerink;,citation_author=Jelte M Wicherts;,citation_author=Marcel ALM Assen;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=1;,citation_volume=3;,citation_journal_title=Collabra: Psychology;,citation_publisher=The Regents of the University of California;">
+<meta name="citation_reference" content="citation_title=Our path to better science in less time using open data science tools;,citation_author=Julia S Stewart Lowndes;,citation_author=Benjamin D Best;,citation_author=Courtney Scarborough;,citation_author=Jamie C Afflerbach;,citation_author=Melanie R Frazier;,citation_author=Casey C O’Hara;,citation_author=Ning Jiang;,citation_author=Benjamin S Halpern;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_issue=6;,citation_volume=1;,citation_journal_title=Nature ecology &amp;amp;amp; evolution;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=Inversión extranjera directa y crecimiento económico;,citation_author=S. Rivas Aceves;,citation_author=AD Puebla Ménez-Revista y;,citation_author=undefined 2016;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=http://www.scielo.org.mx/scielo.php?pid=S1665-53462016000200051&amp;amp;amp;script=sci_abstract&amp;tlng=pt;,citation_issue=2;,citation_volume=11;,citation_journal_title=scielo.org.mx;">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Achalma Edison</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html" rel="" target="">
+ <span class="menu-text">INICIO</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../docs/get-started/index.html" rel="" target="">
+ <span class="menu-text">SOBRE MI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../docs/publicaciones/index.html" rel="" target="">
+ <span class="menu-text">PUBLICACIONES</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../docs/presentaciones" rel="" target="">
+ <span class="menu-text">PRESENTACIONES</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../docs/blog/index.html" rel="" target="">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ayuda" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">AYUDA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ayuda">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Reportar un error</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
+</i> 
+ <span class="dropdown-text">Hacer una pregunta</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Instalación de Anaconda en Ubuntu Linux</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/docs/blog/posts/2023-06-19-01-instalacion-de-anaconda/index.qmd"><i class="bi"></i></button></div></div>
+            <p class="subtitle lead">Una guía paso a paso para instalar y configurar Anaconda en Ubuntu Linux y aprovechar al máximo su plataforma de gestión de paquetes y entornos virtuales.</p>
+                  <div>
+        <div class="description">
+          <p>Descubre cómo instalar y configurar Anaconda en Ubuntu Linux para mejorar tu experiencia de desarrollo en Python. Con una amplia selección de paquetes precompilados y herramientas para la gestión de entornos virtuales, Anaconda simplifica el proceso de configuración y administración de tu entorno de desarrollo.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Informática</div>
+                <div class="quarto-category">Tecnología</div>
+                <div class="quarto-category">Desarrollo de software</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-heading">Afiliación</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://www.gob.pe/unsch">
+              Universidad Nacional de San Cristóbal de Huamanga
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">19 de junio de 2023</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de modificación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">4 de julio de 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#qué-es-anaconda" id="toc-qué-es-anaconda" class="nav-link" data-scroll-target="#qué-es-anaconda">¿Qué es Anaconda?</a></li>
+  <li><a href="#pasos-para-la-instalación-de-anaconda-en-ubuntu-linux" id="toc-pasos-para-la-instalación-de-anaconda-en-ubuntu-linux" class="nav-link" data-scroll-target="#pasos-para-la-instalación-de-anaconda-en-ubuntu-linux">Pasos para la instalación de Anaconda en Ubuntu Linux</a>
+  <ul class="collapse">
+  <li><a href="#descargar-el-instalador-de-anaconda" id="toc-descargar-el-instalador-de-anaconda" class="nav-link" data-scroll-target="#descargar-el-instalador-de-anaconda">Descargar el instalador de Anaconda</a></li>
+  </ul></li>
+  <li><a href="#verificación-de-la-instalación-de-anaconda" id="toc-verificación-de-la-instalación-de-anaconda" class="nav-link" data-scroll-target="#verificación-de-la-instalación-de-anaconda">Verificación de la instalación de Anaconda</a></li>
+  <li><a href="#actualización-de-anaconda-en-ubuntu-linux" id="toc-actualización-de-anaconda-en-ubuntu-linux" class="nav-link" data-scroll-target="#actualización-de-anaconda-en-ubuntu-linux">Actualización de Anaconda en Ubuntu Linux</a></li>
+  <li><a href="#desinstalación-de-anaconda-en-ubuntu-linux" id="toc-desinstalación-de-anaconda-en-ubuntu-linux" class="nav-link" data-scroll-target="#desinstalación-de-anaconda-en-ubuntu-linux">Desinstalación de Anaconda en Ubuntu Linux</a></li>
+  <li><a href="#comandos-básicos" id="toc-comandos-básicos" class="nav-link" data-scroll-target="#comandos-básicos">Comandos básicos</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2023-06-19-01-instalacion-de-anaconda/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>La instalación de Anaconda en Ubuntu Linux es un paso crucial para aquellos que desean aprovechar al máximo el desarrollo en Python en este sistema operativo. Anaconda, una plataforma de gestión de paquetes y entornos virtuales, ofrece una amplia gama de herramientas y bibliotecas que facilitan el trabajo con Python, así como con otros lenguajes de programación populares. Al instalar Anaconda en Ubuntu Linux, los desarrolladores obtienen una solución integral que simplifica el proceso de configuración y administración de su entorno de desarrollo.</p>
+<p>La importancia de la instalación de Anaconda en Ubuntu Linux radica en su capacidad para proporcionar un flujo de trabajo fluido y eficiente. Al ofrecer una amplia selección de paquetes precompilados, Anaconda elimina la necesidad de buscar e instalar manualmente cada biblioteca requerida. Esto ahorra tiempo y evita posibles conflictos de dependencia, permitiendo a los desarrolladores centrarse en la programación en lugar de la configuración del entorno.</p>
+<p>Además de su conveniencia, Anaconda también ofrece beneficios significativos en términos de gestión de entornos virtuales. Con la ayuda de la herramienta “conda”, los desarrolladores pueden crear y administrar fácilmente entornos aislados para proyectos específicos. Esto permite mantener diferentes versiones de paquetes y bibliotecas para cada proyecto, evitando conflictos y facilitando la replicación del entorno de desarrollo en diferentes sistemas.</p>
+<p>¡Sumérgete en el mundo de Anaconda y descubre cómo simplificar y mejorar tu experiencia de desarrollo en Python en Ubuntu Linux!</p>
+</section>
+<section id="qué-es-anaconda" class="level1">
+<h1>¿Qué es Anaconda?</h1>
+<p>Anaconda es una plataforma de gestión de paquetes y entornos virtuales diseñada para facilitar el desarrollo en Python y otros lenguajes de programación populares. Imagina que tienes una caja de herramientas repleta de todo lo que necesitas para construir aplicaciones, analizar datos o desarrollar proyectos de aprendizaje automático. Esa es Anaconda: una caja de herramientas poderosa y completa que te brinda todo lo que necesitas para trabajar con Python de manera eficiente.</p>
+<p>Una de las principales ventajas de Anaconda es su capacidad para gestionar paquetes. En lugar de buscar y descargar manualmente cada biblioteca que necesitas, Anaconda te ofrece una amplia selección de paquetes precompilados y listos para usar. Esto significa que no tienes que preocuparte por las dependencias o por perder tiempo en configuraciones complicadas. Con Anaconda, puedes comenzar a trabajar en tu proyecto de inmediato.</p>
+<p>Otra gran ventaja de Anaconda es su capacidad para crear entornos virtuales. ¿Qué significa esto? Básicamente, puedes aislar tus proyectos en entornos separados, cada uno con su propia configuración de paquetes y versiones. Esto es especialmente útil cuando trabajas en varios proyectos al mismo tiempo o cuando necesitas mantener diferentes versiones de bibliotecas para distintas aplicaciones. Anaconda hace que la gestión de entornos sea sencilla y te permite alternar entre ellos con facilidad.</p>
+</section>
+<section id="pasos-para-la-instalación-de-anaconda-en-ubuntu-linux" class="level1">
+<h1>Pasos para la instalación de Anaconda en Ubuntu Linux</h1>
+<section id="descargar-el-instalador-de-anaconda" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-el-instalador-de-anaconda">Descargar el instalador de Anaconda</h2>
+<p><strong>Paso 1:</strong> Accede al sitio web oficial de Anaconda. Puedes hacerlo abriendo tu navegador web favorito y dirigiéndote a <a href="https://www.anaconda.com/">Anaconda.com</a>. Una vez allí, busca la sección de descargas.</p>
+<p><strong>Paso 2:</strong> En la sección de descargas, encontrarás diferentes opciones de Anaconda según tu sistema operativo. Como estamos trabajando en Ubuntu Linux, asegúrate de seleccionar la versión adecuada para Linux.</p>
+<p><strong>Paso 3:</strong> Una vez que hayas seleccionado la versión de Linux, verás dos opciones: Anaconda Individual Edition y Anaconda Enterprise. Para la mayoría de los casos, Anaconda Individual Edition es la opción recomendada, ya que es una versión gratuita y completa de Anaconda. Haz clic en el botón de descarga correspondiente a la edición que deseas instalar.</p>
+<p><strong>Paso 4:</strong> La descarga comenzará y, dependiendo de la velocidad de tu conexión a Internet, podría llevar algunos minutos. Asegúrate de esperar hasta que la descarga se complete antes de pasar al siguiente paso.</p>
+<p>Ahora que has descargado el instalador de Anaconda en tu sistema Ubuntu Linux, es hora de abrir la terminal y ejecutar algunos comandos para continuar con el proceso de instalación. ¡No te preocupes, te guiaré paso a paso!</p>
+<p><strong>Paso 5:</strong> Abre la terminal. Puedes hacerlo de diferentes maneras, pero una forma común es presionar las teclas Ctrl + Alt + T al mismo tiempo. Esto abrirá una nueva ventana de terminal en tu pantalla.</p>
+<p><strong>Paso 6:</strong> Una vez que tengas la terminal abierta, es importante asegurarte de que estás ubicado en el directorio correcto. Para hacerlo, ejecuta el comando “pwd” y presiona Enter. Esto te mostrará la ruta actual en la que te encuentras. Asegúrate de estar en el lugar adecuado antes de continuar.</p>
+<p><strong>Paso 7:</strong> Ahora, necesitamos navegar a la ubicación donde se encuentra el instalador de Anaconda que descargaste. Por lo general, se guarda en la carpeta “Downloads” (Descargas). Para acceder a esta carpeta, ejecuta el siguiente comando:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Downloads/</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Presiona Enter después de escribir el comando y verás que la ruta de la terminal cambia al directorio “Downloads”.</p>
+<p><strong>Paso 8:</strong> ¡Estamos casi listos para ejecutar el instalador de Anaconda! Ahora, debes ejecutar el archivo de instalación. Asegúrate de que el nombre del archivo coincida con el que descargaste. Para ejecutarlo, utiliza el siguiente comando:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> nombre-del-archivo.sh</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Reemplaza “nombre-del-archivo” con el nombre exacto del archivo de instalación que descargaste. Por ejemplo, si el archivo se llama “Anaconda3-2021.05-Linux-x86_64.sh”, el comando sería:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Anaconda3-2021.05-Linux-x86_64.sh</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Presiona Enter y comenzará el proceso de instalación de Anaconda. Sigue las instrucciones que aparecerán en la terminal y asegúrate de leer y aceptar los términos de licencia.</p>
+<p><strong>Paso 9:</strong> ¡Genial! Ahora que has ejecutado el instalador de Anaconda en Ubuntu Linux, solo te queda seguir las instrucciones de instalación que aparecerán en la terminal. No te preocupes, te guiaré a través de este paso.</p>
+<p>Después de ejecutar el comando para iniciar la instalación, verás que aparecerá una serie de instrucciones en la terminal. Lee cuidadosamente cada paso y asegúrate de seguirlos correctamente.</p>
+<p>Por lo general, las instrucciones te pedirán que revises y aceptes los términos de licencia. Para hacerlo, simplemente lee los términos y condiciones que se muestran en la terminal y, cuando se te solicite, presiona Enter para avanzar y aceptar los términos.</p>
+<p>A continuación, se te pedirá que especifiques la ubicación de la instalación de Anaconda. Por defecto, suele ser en tu directorio de inicio, pero puedes elegir una ubicación diferente si lo deseas. Si no estás seguro, te recomendaría que aceptes la ubicación predeterminada presionando Enter.</p>
+<p>Luego, la instalación te preguntará si deseas agregar Anaconda a tu variable de entorno PATH. Esto es útil para que puedas acceder a los comandos de Anaconda desde cualquier ubicación en tu sistema. Te sugeriría que respondas “yes” (sí) y presiones Enter.</p>
+<p>Cuando la carpeta de anaconda ya existe, actualizamos programas existente.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Anaconda3-2021.11-Linux-x86_64.sh <span class="at">-u</span> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Después de eso, la instalación continuará y verás una barra de progreso que indica el avance del proceso. Puede llevar algún tiempo, así que ten paciencia.</p>
+<p>Una vez que la instalación se complete con éxito, verás un mensaje indicando que Anaconda se ha instalado correctamente. ¡Felicidades! Has instalado Anaconda en tu sistema Ubuntu Linux.</p>
+<p>Ahora puedes cerrar la terminal y comenzar a disfrutar de las ventajas de utilizar Anaconda en tu sistema. Recuerda que Anaconda te ofrece un entorno de gestión de paquetes y entornos virtuales que te facilitará el trabajo con Python y otras herramientas de ciencia de datos.</p>
+<p><strong>Paso 10:</strong> Una vez que hayas instalado Anaconda en tu sistema Ubuntu Linux, es importante añadirlo al PATH del sistema para que puedas acceder a los comandos de Anaconda desde cualquier ubicación en tu sistema. Te guiaré a través de este paso.</p>
+<ol type="1">
+<li><p>Abre la terminal en tu sistema Ubuntu Linux. Puedes hacerlo buscando “Terminal” en el menú de aplicaciones o usando el atajo de teclado Ctrl+Alt+T.</p></li>
+<li><p>En la terminal, escribe el siguiente comando para abrir el archivo de configuración de inicio de sesión:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> ~/.bashrc</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Esto abrirá el archivo <code>.bashrc</code> en el editor de texto <code>nano</code>. Ahora, desplázate hasta el final del archivo.</p></li>
+<li><p>En la última línea del archivo, añade el siguiente comando para agregar Anaconda al PATH:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"/ruta/donde/instalaste/anaconda/bin:</span><span class="va">$PATH</span><span class="st">"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Recuerda reemplazar “/ruta/donde/instalaste/anaconda” con la ubicación real donde instalaste Anaconda. Si elegiste la ubicación predeterminada, el comando será:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/anaconda/bin:</span><span class="va">$PATH</span><span class="st">"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Después de añadir el comando, guarda los cambios en el archivo <code>~/.bashrc</code>. En <code>nano</code>, puedes hacerlo presionando Ctrl+O, luego presiona Enter para confirmar y finalmente presiona Ctrl+X para salir del editor <code>nano</code>.</p></li>
+<li><p>Ahora, para que los cambios tengan efecto, actualiza el archivo de configuración de inicio de sesión con el siguiente comando:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p>¡Y eso es todo! Has añadido correctamente Anaconda al PATH del sistema en Ubuntu Linux. Ahora podrás acceder a los comandos de Anaconda desde cualquier ubicación en tu sistema.</p>
+<p><strong>Algunos problemas:</strong> A veces, durante la instalación de Anaconda, puede ocurrir que no se pueda responder con “yes” al prompt de inicialización de Anaconda en el archivo <code>.bashrc</code>. Aquí te proporcionaré una solución detallada para abordar este problema:</p>
+<ol type="1">
+<li><p>Después de que la instalación de Anaconda se complete y se muestre el prompt para inicializar Anaconda en el archivo <code>.bashrc</code>, si no puedes responder con “yes” y el proceso se cierra, no te preocupes.</p></li>
+<li><p>Abre la terminal en tu sistema Ubuntu Linux. Puedes hacerlo buscando “Terminal” en el menú de aplicaciones o usando el atajo de teclado Ctrl+Alt+T.</p></li>
+<li><p>En la terminal, ejecuta el siguiente comando para abrir el archivo <code>.bashrc</code> en un editor de texto:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gedit ~/.bashrc</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto abrirá el archivo <code>.bashrc</code> con privilegios de administrador para poder editarlo.</p></li>
+<li><p>Desplázate hasta el final del archivo <code>.bashrc</code> y agrega el siguiente bloque de código:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">!!</span> Contents within this block are managed by <span class="st">'conda init'</span> !!</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="va">__conda_setup</span><span class="op">=</span><span class="st">"</span><span class="va">$(</span><span class="st">'/home/achalmaubuntu/anaconda3/bin/conda'</span> <span class="st">'shell.bash'</span> <span class="st">'hook'</span> <span class="dv">2</span><span class="op">&gt;</span> /dev/null<span class="va">)</span><span class="st">"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="va">$?</span> <span class="ot">-eq</span> 0 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">eval</span> <span class="st">"</span><span class="va">$__conda_setup</span><span class="st">"</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="st">"/home/achalmaubuntu/anaconda3/etc/profile.d/conda.sh"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">.</span> <span class="st">"/home/achalmaubuntu/anaconda3/etc/profile.d/conda.sh"</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"/home/achalmaubuntu/anaconda3/bin:</span><span class="va">$PATH</span><span class="st">"</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="bu">unset</span> <span class="va">__conda_setup</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Recuerda cambiar el achalmaubuntu con su usuario</p></li>
+<li><p>Guarda los cambios en el archivo <code>.bashrc</code>.</p></li>
+<li><p>Luego, en la terminal, ejecuta el siguiente comando para actualizar las variables de entorno con los cambios realizados en el archivo <code>.bashrc</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p>Recuerda reiniciar la terminal o abrir una nueva ventana de terminal para que los cambios surtan efecto.</p>
+<p>¡Y eso es todo! Has solucionado el problema de inicialización de Anaconda en el archivo <code>.bashrc</code> y ahora puedes utilizar Anaconda y sus comandos sin problemas en tu sistema Ubuntu Linux.</p>
+</section>
+</section>
+<section id="verificación-de-la-instalación-de-anaconda" class="level1">
+<h1>Verificación de la instalación de Anaconda</h1>
+<p>Una vez que hayas completado la instalación de Anaconda en tu sistema Ubuntu Linux, es importante verificar que todo haya sido instalado correctamente. Aquí te mostraré cómo comprobarlo y también cómo verificar la versión de Anaconda y los paquetes instalados.</p>
+<p><strong>Comprobar la instalación de Anaconda:</strong></p>
+<ol type="1">
+<li><p>Abre la terminal en tu sistema Ubuntu Linux.</p></li>
+<li><p>En la terminal, ingresa el siguiente comando:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto mostrará la versión de Anaconda instalada en tu sistema. Si se muestra la versión correctamente, significa que Anaconda está instalado correctamente.</p></li>
+</ol>
+<p><strong>Verificar la versión de Anaconda:</strong></p>
+<ol type="1">
+<li><p>En la terminal, ingresa el siguiente comando:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list anaconda$</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto mostrará una lista de los paquetes instalados con el nombre “anaconda” en su versión. Si se muestra la lista de paquetes correctamente, significa que la instalación de Anaconda incluyendo los paquetes se ha realizado correctamente.</p></li>
+<li><p>Para verificar la versión de un paquete específico, puedes ingresar el siguiente comando en la terminal, reemplazando <code>&lt;nombre_paquete&gt;</code> con el nombre del paquete que deseas verificar:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list <span class="op">&lt;</span>nombre_paquete<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto mostrará la versión del paquete específico instalado en tu sistema.</p></li>
+</ol>
+<p>¡Listo! Ahora puedes asegurarte de que Anaconda esté correctamente instalado y verificar las versiones de Anaconda y los paquetes instalados en tu sistema Ubuntu Linux. Esto te ayudará a garantizar un funcionamiento adecuado de Anaconda y sus herramientas para el desarrollo de proyectos.</p>
+</section>
+<section id="actualización-de-anaconda-en-ubuntu-linux" class="level1">
+<h1>Actualización de Anaconda en Ubuntu Linux</h1>
+<p>Mantener tu instalación de Anaconda actualizada es crucial para aprovechar las últimas mejoras, características y correcciones de errores. Afortunadamente, actualizar Anaconda en Ubuntu Linux es un proceso sencillo. A continuación, te mostraré los pasos para actualizar Anaconda a la última versión utilizando los comandos de actualización de Conda y paquetes.</p>
+<p><strong>Pasos para actualizar Anaconda:</strong></p>
+<ol type="1">
+<li><p>Abre la terminal en tu sistema Ubuntu Linux.</p></li>
+<li><p>En la terminal, ingresa el siguiente comando para actualizar Conda, el administrador de paquetes de Anaconda:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update conda</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando actualizará Conda a la última versión disponible.</p></li>
+<li><p>A continuación, puedes utilizar el siguiente comando para actualizar todos los paquetes instalados en tu entorno de Anaconda:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update <span class="at">--all</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando buscará actualizaciones para todos los paquetes instalados y los actualizará a las últimas versiones disponibles.</p></li>
+<li><p>Si deseas actualizar un paquete específico, puedes utilizar el siguiente comando, reemplazando <code>&lt;nombre_paquete&gt;</code> con el nombre del paquete que deseas actualizar:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update <span class="op">&lt;</span>nombre_paquete<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto actualizará el paquete especificado a la última versión disponible.</p></li>
+</ol>
+<p>Recuerda que antes de realizar la actualización, es recomendable crear un entorno virtual y respaldar tus proyectos para evitar cualquier conflicto o pérdida de datos.</p>
+<p>¡Y eso es todo! Con estos pasos, podrás mantener tu instalación de Anaconda actualizada y disfrutar de las últimas mejoras en Ubuntu Linux. Asegúrate de realizar actualizaciones periódicas para aprovechar al máximo las capacidades de Anaconda y sus paquetes.</p>
+</section>
+<section id="desinstalación-de-anaconda-en-ubuntu-linux" class="level1">
+<h1>Desinstalación de Anaconda en Ubuntu Linux</h1>
+<p>Si en algún momento deseas eliminar completamente Anaconda de tu sistema Ubuntu Linux, ya sea para realizar una nueva instalación o por cualquier otro motivo, puedes seguir estos pasos para desinstalarlo por completo.</p>
+<p><strong>Proceso para eliminar completamente Anaconda:</strong></p>
+<ol type="1">
+<li><p>Abre la terminal en tu sistema Ubuntu Linux.</p></li>
+<li><p>En la terminal, ingresa el siguiente comando para desactivar cualquier configuración de Anaconda que esté activa en tu entorno actual:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Esto asegurará que no haya entornos virtuales activos relacionados con Anaconda.</p></li>
+<li><p>A continuación, puedes utilizar el siguiente comando para desinstalar Anaconda y eliminar todos los archivos relacionados:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">anaconda-clean</span> <span class="at">--yes</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando eliminará Anaconda de tu sistema y eliminará los archivos y directorios asociados.</p></li>
+<li><p>Una vez completado el proceso de desinstalación, puedes verificar que Anaconda se haya eliminado por completo. Puedes utilizar el siguiente comando para verificar si el directorio de Anaconda ya no existe:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ~/anaconda3</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si el directorio no se encuentra, significa que Anaconda ha sido eliminado correctamente.</p></li>
+</ol>
+<p>Recuerda que este proceso eliminará permanentemente Anaconda de tu sistema, incluyendo todos los paquetes y entornos virtuales asociados. Asegúrate de realizar una copia de seguridad de tus proyectos y datos importantes antes de proceder con la desinstalación.</p>
+<p>¡Y eso es todo! Siguiendo estos pasos, podrás eliminar completamente Anaconda de tu sistema Ubuntu Linux. Si en el futuro decides volver a instalarlo, podrás seguir los pasos que hemos cubierto anteriormente en este blog.</p>
+</section>
+<section id="comandos-básicos" class="level1">
+<h1>Comandos básicos</h1>
+<ol type="1">
+<li><p><code>conda deactivate</code>: Este comando se utiliza para desactivar el entorno activo de Conda. Cuando trabajas con entornos virtuales en Anaconda, puedes utilizar este comando para volver al entorno base o desactivar cualquier entorno virtual activo.</p></li>
+<li><p><code>conda activate</code>: Con este comando, puedes activar un entorno virtual específico en Anaconda. Puedes crear entornos virtuales personalizados con diferentes versiones de Python y paquetes instalados. Al utilizar este comando, podrás activar uno de esos entornos y trabajar en él.</p></li>
+<li><p><code>jupyter notebook</code>: Este comando se utiliza para abrir el entorno de Jupyter Notebook. Jupyter Notebook es una aplicación web que te permite crear y compartir documentos interactivos que contienen código, visualizaciones y texto explicativo. Al ejecutar este comando, se abrirá una nueva pestaña del navegador con el entorno de Jupyter Notebook.</p></li>
+<li><p><code>spyder</code>: Al ejecutar este comando, se abrirá el entorno de desarrollo integrado (IDE) de Spyder. Spyder es un entorno de desarrollo muy utilizado en Python que ofrece características como edición de código, depuración y ejecución de programas.</p></li>
+<li><p><code>python</code>: Al ejecutar este comando, se iniciará el intérprete de Python en la línea de comandos. Podrás ejecutar comandos y scripts de Python directamente en la terminal.</p></li>
+<li><p><code>anaconda-navigator</code>: Con este comando, se abrirá la interfaz gráfica de Anaconda Navigator. Anaconda Navigator es una aplicación que te permite administrar tus entornos virtuales, instalar paquetes y lanzar aplicaciones como Jupyter Notebook y Spyder de manera visual.</p></li>
+<li><p><code>conda info</code>: Este comando proporciona información detallada sobre la instalación de Conda, como la versión de Conda, la ubicación de los archivos y la configuración actual.</p></li>
+<li><p><code>conda update conda</code>: Utilizando este comando, puedes actualizar la versión de Conda en tu sistema. Conda es el administrador de paquetes y entornos virtuales de Anaconda, y mantenerlo actualizado te permitirá acceder a las últimas funciones y mejoras.</p></li>
+<li><p><code>rm -rf ~/anaconda3</code>: Este comando se utiliza para desinstalar completamente Anaconda de tu sistema. Ten en cuenta que este comando eliminará permanentemente Anaconda y todos los archivos relacionados, incluyendo tus entornos virtuales y paquetes instalados. Asegúrate de hacer una copia de seguridad de tus datos importantes antes de ejecutar este comando.</p></li>
+</ol>
+<p>Si tienes alguna pregunta o necesitas más ayuda, no dudes en dejar un comentario.</p>
+<p><strong>¡Hasta la próxima!</strong></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {Instalación de Anaconda en Ubuntu Linux},
+  date = {2023-06-19},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-19-01-instalacion-de-anaconda},
+  langid = {es}
+}
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Achalma, E. (2023, June 19). Instalación de Anaconda en Ubuntu Linux.
+Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-19-01-instalacion-de-anaconda">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-19-01-instalacion-de-anaconda</a>
+</div></div></section></div></main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://app.us9.list-manage.com/subscribe/post?u=3d7a7c10dd35f3596cc198c22&amp;id=0cd7446f7b&amp;f_id=00df1ae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <p style="font-weight: 600; margin-bottom: 0;">Suscríbete</p>
+        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">¿Te gusta este blog? Reciba notificaciones de nuevas entradas por correo electrónico:  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+	<div id="mce-responses" class="clear foot">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3d7a7c10dd35f3596cc198c22_0cd7446f7b" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023 Edison Achalma, Ayacucho</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html">Acerca de</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../../license.html">Licencia</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed/website-achalma">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

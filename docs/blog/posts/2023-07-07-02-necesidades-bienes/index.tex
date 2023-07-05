@@ -4,9 +4,8 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  letterpaper,
-  DIV=11,
-  numbers=noendperiod]{scrartcl}
+  a4paper,
+]{article}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -40,6 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
@@ -78,7 +78,6 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\KOMAoption{captions}{tableheading,figureheading}
 \makeatletter
 \makeatother
 \makeatletter
@@ -169,13 +168,60 @@
 \makeatother
 \subtitle{Exp}
 \author{Edison Achalma}
-\date{2023-06-21}
+\date{2023-07-07}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, enhanced, breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable]}{\end{tcolorbox}}\fi
 
+\hypertarget{publicaciones-similares}{%
+\section{Publicaciones Similares}\label{publicaciones-similares}}
 
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{itemize}
+\item
+  \href{../2023-06-30-01-conceptos-basicos-de-economia/index.qmd}{01.
+  Conceptos básicos de economía}
+\item
+  \href{../2023-07-07-02-necesidades-bienes/index.qmd}{02. Necesidades
+  bienes}
+\item
+  \href{../2023-07-14-03-teoria-produccion/index.qmd}{03. Teoría de
+  producción}
+\item
+  \href{../2023-07-21-04-teoria-costos/index.qmd}{04. Teoría de costos}
+\item
+  \href{../2023-07-28-05-teoria-oferta-demanda/index.qmd}{05. Teoría de
+  oferta y demanda}
+\item
+  \href{../2023-08-04-06-mercados/index.qmd}{06. Los mercados}
+\item
+  \href{../2023-08-11-07-empresas/index.qmd}{07. Las empresas}
+\item
+  \href{../2023-08-18-08-sistema-financiero/index.qmd}{08. Sistema
+  financiero}
+\item
+  \href{../2023-08-25-09-macroeconomia-basica/index.qmd}{09.
+  Macroeconomía básica}
+\item
+  \href{../2023-09-01-10-inflacion/index.qmd}{10. La inflación}
+\item
+  \href{../2023-09-08-11-sector-publico/index.qmd}{11. Sector público}
+\item
+  \href{../2023-09-15-12-indicadores-economicos/index.qmd}{12.
+  Indicadores económicos}
+\item
+  \href{../2023-09-22-13-desempleo/index.qmd}{13. El desempleo}
+\item
+  \href{../2023-09-29-14-comercio-internacional/index.qmd}{14. Comercio
+  internacional}
+\end{itemize}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
 
 
 \printbibliography

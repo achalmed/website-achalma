@@ -95,11 +95,11 @@ La economía es una disciplina que estudia la producción, distribución y consu
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
-![](images/demo-jupyter-plain.png){.hello-output style="height: 605px;"}
+![](images/economia1.jpg){.hello-output fig-alt="."}
 :::
 
-::: {.g-col-lg-6 .g-col-12 style="background-color: white; border: 1px solid #dee2e6; height: 605px;"}
-![](images/demo-jupyter-output.png)
+::: {.g-col-lg-6 .g-col-12}
+![](images/economia2.jpg){.hello-output fig-alt="."}
 :::
 :::
 :::
@@ -123,40 +123,11 @@ Las matemáticas son una disciplina que se dedica al estudio de las propiedades 
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
-```` markdown
----
-title: "Plots"
-author: "Edison Achalma"
-date: "5/22/2021"
-format:
-  html:
-    code-fold: true
-jupyter: julia-1.8
----
-
-## Parametric Plots
-
-Plot function pair (x(u), y(u)). 
-See @fig-parametric for an example.
-
-```{{julia}}
-#| label: fig-parametric
-#| fig-cap: "Parametric Plots"
-
-using Plots
-
-plot(sin, 
-     x->sin(2x), 
-     0, 
-     2π, 
-     leg=false, 
-     fill=(0,:lavender))
-```
-````
+![](images/mate1.jpg){.hello-output fig-alt="."}
 :::
 
 ::: {.g-col-lg-6 .g-col-12}
-![](images/hello-julia.png){.hello-output fig-alt="Example Plots Demo output with title, author, date published and main section on Parametric plots which contains text, a toggleable code field, and the output of the plot, with the caption Figure 1 Parametric Plots."}
+![](images/mate2.jpg){.hello-output fig-alt="."}
 :::
 :::
 :::
@@ -166,32 +137,11 @@ La informática es una disciplina que se ocupa del estudio y desarrollo de siste
 
 ::: grid
 ::: {.g-col-lg-6 .g-col-12}
-``` bash
-❯ neofetch
-
-achalmaedison@HP-Pavilion 
-------------------------- 
-OS: Kubuntu 22.04.2 LTS x86_64 
-Host: HP Pavilion x360 Convertible 14-dw0xxx 
-Kernel: 5.19.0-43-generic 
-Uptime: 1 hour, 11 mins 
-Packages: 3679 (dpkg), 25 (flatpak), 7 (snap) 
-Shell: zsh 5.8.1 
-Resolution: 1920x1080, 1920x1080 
-DE: Plasma 5.24.7 
-WM: KWin 
-Theme: [Plasma], Breeze [GTK2/3] 
-Icons: [Plasma], breeze-dark [GTK2/3] 
-Terminal: konsole 
-Terminal Font: Hack Nerd Font Mono 10 
-CPU: Intel i5-1035G1 (8) @ 3.600GHz 
-GPU: Intel Iris Plus Graphics G1 
-Memory: 5738MiB / 7635MiB 
-```
+![](images/informatica1.jpg){.hello-output fig-alt="."}
 :::
 
 ::: {.g-col-lg-6 .g-col-12}
-![](images/informatica.jpg){style="background-color: white; border: 1px solid #dee2e6; height: 625px;" fig-alt="."}
+![](images/informatica2.jpg){.hello-output fig-alt="."}
 :::
 :::
 :::

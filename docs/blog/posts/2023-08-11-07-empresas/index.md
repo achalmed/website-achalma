@@ -8,13 +8,16 @@ categories:
 tags:
   - EconomíaBásica
   - Economía
-date: "06/21/2023"
+date: "08/11/2023"
 draft: true
 ---
 
+
 # Publicaciones Similares
 
-Aquí te recomendamos algunas publicaciones similares que podrían ser de tu interés:
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
 
 -   [01. Conceptos básicos de economía](../2023-06-30-01-conceptos-basicos-de-economia/index.qmd)
 

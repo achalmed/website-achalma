@@ -54,19 +54,21 @@ En los próximos fragmentos, exploraremos cada tipo de elasticidad en más detal
 
 La elasticidad precio de la demanda es una medida importante en economía que nos permite entender cómo cambia la cantidad demandada de un bien o servicio ante variaciones en su precio. Esta medida nos ayuda a comprender la sensibilidad de los consumidores frente a los cambios de precio.
 
-La fórmula de la elasticidad precio de la demanda es la siguiente:
-
-$$
-Elasticidad precio de la demanda = (% cambio en la cantidad demandada) / (% cambio en el precio)
-$$ {#eq-1}
-
 ::: {.cell execution_count=1}
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-2-output-1.pdf){}
+![](index_files/figure-html/cell-2-output-1.png){width=581 height=432}
 :::
 :::
 
+
+Las diferentes fórmulas de la elasticidad precio de la demanda son las siguientes:
+
+$$
+Elasticidad precio de la demanda =\frac{\% cambio en la cantidad demandada}{\% cambio en el precio}
+$$ {#eq-1}
+
+la @eq-1 nos muestra cómo medir la elasticidad. Simplemente dividimos el porcentaje de cambio en la cantidad demandada entre el porcentaje de cambio en el precio.
 
 $$
 \eta _{XP_y} = \frac{\frac {X_f^d - X_i^d}{X_i}}{\frac {P_f^d - P_i^d}{P_i^d}}
@@ -77,33 +79,36 @@ $$
 $$
 
 $$
-\frac{\Delta X^d P_i^d}{\Delta P_x^d X_i^d}
+= \frac{\Delta X^d P_i^d}{\Delta P_x^d X_i^d}
 $$ {#eq-2}
 
-  
+La @eq-2 nos permite calcular la elasticidad precio de la demanda utilizando los cambios absolutos en la cantidad demandada y el precio inicial. Dividimos la diferencia entre la cantidad final y la cantidad inicial por la cantidad inicial, y hacemos lo mismo con la diferencia entre el precio final y el precio inicial, dividiéndola por el precio inicial.
 
 $$
 \eta _{PX^d} = \frac{\partial X^d P_x}{\partial P_x X^d}
 $$ {#eq-3}
 
-  
+La @eq-3 se basa en el cálculo de derivadas parciales. Nos permite medir la elasticidad precio de la demanda considerando los cambios infinitesimales en la cantidad demandada y el precio.
 
 $$
 \eta _{PX^d} = \frac{\partial \ln(\mathrm X)}{\partial  \ln(\mathrm P_x)}
 $$ {#eq-4}
 
- 
+La @eq-4 utiliza logaritmos naturales para calcular la elasticidad. Tomamos las derivadas parciales de los logaritmos de la cantidad demandada y el precio para obtener la elasticidad.
 $$
 \eta _{PX^d} = \frac{\Delta \% X^d}{\Delta \% P_x}
 $$ {#eq-5}
 
-  
+La @eq-5 nos muestra cómo medir la elasticidad utilizando los cambios porcentuales en la cantidad demandada y el precio.
 
 $$
 \eta_{PX^d} = m_{ip} \frac{P_i^d}{X^d}
 $$ {#eq-6}
 
-Estas fórmulas nos permite calcular la magnitud de la respuesta de la demanda ante cambios en el precio. Si la elasticidad es mayor a 1, se considera que la demanda es elástica, lo que implica que los consumidores son sensibles al cambio de precio y una variación en el precio provocará un cambio proporcionalmente mayor en la cantidad demandada. Por otro lado, si la elasticidad es menor a 1, se considera que la demanda es inelástica, lo que indica que los consumidores son menos sensibles al cambio de precio y una variación en el precio tendrá un impacto proporcionalmente menor en la cantidad demandada.
+La @eq-6 introduce el concepto de pendiente de la curva de demanda. Multiplicamos la pendiente de la curva por el precio inicial dividido por la cantidad demandada para obtener la elasticidad.
+
+Estas fórmulas nos brindan diferentes enfoques para calcular la elasticidad precio de la demanda, y cada una tiene su utilidad en diferentes contextos. Es importante comprender cómo aplicarlas y qué información nos brindan para tomar decisiones estratégicas en el ámbito económico.
+
 
 ## Interpretación de la elasticidad precio de la demanda
 

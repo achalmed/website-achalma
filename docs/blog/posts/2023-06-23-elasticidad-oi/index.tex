@@ -172,7 +172,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{introducciuxf3n-a-la-elasticidad}{%
 \section{Introducción a la
@@ -290,13 +290,18 @@ servicio ante variaciones en su precio. Esta medida nos ayuda a
 comprender la sensibilidad de los consumidores frente a los cambios de
 precio.
 
-La fórmula de la elasticidad precio de la demanda es la siguiente:
+\includegraphics{index_files/figure-pdf/cell-2-output-1.pdf}
+
+Las diferentes fórmulas de la elasticidad precio de la demanda son las
+siguientes:
 
 \begin{equation}\protect\hypertarget{eq-1}{}{
-Elasticidad precio de la demanda = (% cambio en la cantidad demandada) / (% cambio en el precio)
+Elasticidad precio de la demanda =\frac{\% cambio en la cantidad demandada}{\% cambio en el precio}
 }\label{eq-1}\end{equation}
 
-\includegraphics{index_files/figure-pdf/cell-2-output-1.pdf}
+la Ecuación~\ref{eq-1} nos muestra cómo medir la elasticidad.
+Simplemente dividimos el porcentaje de cambio en la cantidad demandada
+entre el porcentaje de cambio en el precio.
 
 \[
 \eta _{XP_y} = \frac{\frac {X_f^d - X_i^d}{X_i}}{\frac {P_f^d - P_i^d}{P_i^d}}
@@ -310,31 +315,48 @@ Elasticidad precio de la demanda = (% cambio en la cantidad demandada) / (% camb
 \frac{\Delta X^d P_i^d}{\Delta P_x^d X_i^d}
 }\label{eq-2}\end{equation}
 
+La Ecuación~\ref{eq-2} nos permite calcular la elasticidad precio de la
+demanda utilizando los cambios absolutos en la cantidad demandada y el
+precio inicial. Dividimos la diferencia entre la cantidad final y la
+cantidad inicial por la cantidad inicial, y hacemos lo mismo con la
+diferencia entre el precio final y el precio inicial, dividiéndola por
+el precio inicial.
+
 \begin{equation}\protect\hypertarget{eq-3}{}{
 \eta _{PX^d} = \frac{\partial X^d P_x}{\partial P_x X^d}
 }\label{eq-3}\end{equation}
+
+La Ecuación~\ref{eq-3} se basa en el cálculo de derivadas parciales. Nos
+permite medir la elasticidad precio de la demanda considerando los
+cambios infinitesimales en la cantidad demandada y el precio.
 
 \begin{equation}\protect\hypertarget{eq-4}{}{
 \eta _{PX^d} = \frac{\partial \ln(\mathrm X)}{\partial  \ln(\mathrm P_x)}
 }\label{eq-4}\end{equation}
 
+La Ecuación~\ref{eq-4} utiliza logaritmos naturales para calcular la
+elasticidad. Tomamos las derivadas parciales de los logaritmos de la
+cantidad demandada y el precio para obtener la elasticidad.
 \begin{equation}\protect\hypertarget{eq-5}{}{
 \eta _{PX^d} = \frac{\Delta \% X^d}{\Delta \% P_x}
 }\label{eq-5}\end{equation}
+
+La Ecuación~\ref{eq-5} nos muestra cómo medir la elasticidad utilizando
+los cambios porcentuales en la cantidad demandada y el precio.
 
 \begin{equation}\protect\hypertarget{eq-6}{}{
 \eta_{PX^d} = m_{ip} \frac{P_i^d}{X^d}
 }\label{eq-6}\end{equation}
 
-Estas fórmulas nos permite calcular la magnitud de la respuesta de la
-demanda ante cambios en el precio. Si la elasticidad es mayor a 1, se
-considera que la demanda es elástica, lo que implica que los
-consumidores son sensibles al cambio de precio y una variación en el
-precio provocará un cambio proporcionalmente mayor en la cantidad
-demandada. Por otro lado, si la elasticidad es menor a 1, se considera
-que la demanda es inelástica, lo que indica que los consumidores son
-menos sensibles al cambio de precio y una variación en el precio tendrá
-un impacto proporcionalmente menor en la cantidad demandada.
+La Ecuación~\ref{eq-6} introduce el concepto de pendiente de la curva de
+demanda. Multiplicamos la pendiente de la curva por el precio inicial
+dividido por la cantidad demandada para obtener la elasticidad.
+
+Estas fórmulas nos brindan diferentes enfoques para calcular la
+elasticidad precio de la demanda, y cada una tiene su utilidad en
+diferentes contextos. Es importante comprender cómo aplicarlas y qué
+información nos brindan para tomar decisiones estratégicas en el ámbito
+económico.
 
 \hypertarget{interpretaciuxf3n-de-la-elasticidad-precio-de-la-demanda}{%
 \subsection{Interpretación de la elasticidad precio de la

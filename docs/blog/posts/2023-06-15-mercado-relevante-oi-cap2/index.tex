@@ -116,6 +116,13 @@
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
 \floatname{codelisting}{Listado}
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\theoremstyle{remark}
+\AtBeginDocument{\renewcommand*{\proofname}{Prueba}}
+\newtheorem*{remark}{Observación}
+\newtheorem*{solution}{Solución}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -174,7 +181,7 @@ Relevante en la Industria de Bienes. Perspectivas y Desafíos}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, sharp corners, breakable, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \hypertarget{sistema-econuxf3mio-y-mercado}{%
 \section{Sistema económio y
@@ -305,7 +312,7 @@ un mercado imperfecto, como un monopolio, el precio lo determina el
 productor o la empresa dominante.
 
 \hypertarget{competencia-motor-del-sistema-econuxf3mico-de-mercado}{%
-\subsection{Competencia: Motor del Sistema Económico de
+\section{Competencia: Motor del Sistema Económico de
 Mercado}\label{competencia-motor-del-sistema-econuxf3mico-de-mercado}}
 
 La competencia desempeña un papel fundamental en el buen funcionamiento
@@ -316,10 +323,8 @@ beneficia a los consumidores, ya que tienen acceso a una mayor variedad
 de bienes y servicios a precios competitivos. Además, la competencia
 estimula la innovación y el progreso económico en general.
 
-\hypertarget{derecho-de-la-competencia-promoviendo-la-competencia-y-protegiendo-el-interuxe9s-puxfablico.}{%
-\subsection{Derecho de la Competencia: Promoviendo la Competencia y
-Protegiendo el Interés
-Público.}\label{derecho-de-la-competencia-promoviendo-la-competencia-y-protegiendo-el-interuxe9s-puxfablico.}}
+\hypertarget{derecho-de-la-competencia}{%
+\subsection{Derecho de la Competencia}\label{derecho-de-la-competencia}}
 
 El Derecho de la Competencia es un conjunto de normas jurídicas que
 tiene como objetivo regular el poder actual o potencial de las empresas
@@ -328,7 +333,7 @@ es prevenir prácticas restrictivas de la competencia y regular la
 adquisición de posiciones de dominio en el mercado.
 
 \hypertarget{objetivos-del-derecho-de-competencia}{%
-\subsubsection{Objetivos del Derecho de
+\subsection{Objetivos del Derecho de
 Competencia}\label{objetivos-del-derecho-de-competencia}}
 
 El Derecho de la Competencia persigue varios objetivos para promover la
@@ -357,7 +362,7 @@ prácticas monopólicas, concentraciones ilícitas y restricciones al
 funcionamiento eficiente de los mercados.
 
 \hypertarget{beneficios-de-la-competencia}{%
-\subsubsection{Beneficios de la
+\subsection{Beneficios de la
 Competencia}\label{beneficios-de-la-competencia}}
 
 La competencia tiene múltiples beneficios para la sociedad y la
@@ -387,9 +392,8 @@ economía:
 \section{Definición y Características del Mercado
 Relevante}\label{definiciuxf3n-y-caracteruxedsticas-del-mercado-relevante}}
 
-\hypertarget{definiciuxf3n-de-mercado-relevante}{%
-\subsection{Definición de Mercado
-Relevante}\label{definiciuxf3n-de-mercado-relevante}}
+\begin{definition}[Mercado
+Relevante]\protect\hypertarget{def-mercado-relevante}{}\label{def-mercado-relevante}
 
 El mercado relevante se refiere a aquel mercado en el cual los bienes y
 servicios, considerando su estructura de mercado, son sustitutos o
@@ -399,6 +403,8 @@ productor, se considera que estos bienes y servicios son
 intercambiables. Es decir, los consumidores los ven como productos
 sustitutos y los productores los consideran intercambiables.
 
+\end{definition}
+
 \hypertarget{caracteruxedsticas-del-mercado-relevante}{%
 \subsection{Características del Mercado
 Relevante}\label{caracteruxedsticas-del-mercado-relevante}}
@@ -406,28 +412,29 @@ Relevante}\label{caracteruxedsticas-del-mercado-relevante}}
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Áreas geográficas de interacción: El mercado relevante se define por
-  las áreas geográficas en las que los oferentes y demandantes
-  interactúan para intercambiar bienes y servicios.
+  \textbf{Áreas geográficas de interacción:} El mercado relevante se
+  define por las áreas geográficas en las que los oferentes y
+  demandantes interactúan para intercambiar bienes y servicios.
 \item
-  Sustitutos: Los productos y servicios dentro del mercado relevante son
-  sustitutos entre sí, lo que significa que pueden satisfacer las mismas
-  necesidades del consumidor.
+  \textbf{Sustitutos:} Los productos y servicios dentro del mercado
+  relevante son sustitutos entre sí, lo que significa que pueden
+  satisfacer las mismas necesidades del consumidor.
 \item
-  Elasticidad de precios y demanda: Las demandas en el mercado relevante
-  son elásticas, lo que implica que los cambios en los precios tienen un
-  impacto significativo en la cantidad demandada.
+  \textbf{Elasticidad de precios y demanda son altas:} Las demandas en
+  el mercado relevante son elásticas, lo que implica que los cambios en
+  los precios tienen un impacto significativo en la cantidad demandada.
 \item
-  Elasticidad cruzada: La elasticidad cruzada de los bienes dentro del
-  mercado relevante es positiva y baja, lo que indica que los cambios en
-  el precio de un bien tienen un efecto limitado en la demanda de otros
-  bienes.
+  \textbf{Elasticidad cruzada positiva y baja:} La elasticidad cruzada
+  de los bienes dentro del mercado relevante es positiva y baja, lo que
+  indica que los cambios en el precio de un bien tienen un efecto
+  limitado en la demanda de otros bienes.
 \item
-  Elasticidad de ingreso: La elasticidad de ingreso de la demanda en el
-  mercado relevante generalmente es mayor a cero y menor a 1. Esto
-  significa que un aumento en los ingresos de los consumidores resulta
-  en un aumento proporcionalmente menor en la demanda de los bienes y
-  servicios del mercado relevante. \(0 < \eta_{p_{X}} X^d \leq 1\)
+  \textbf{Elasticidad de ingreso mayor a cero:} La elasticidad de
+  ingreso de la demanda en el mercado relevante generalmente es mayor a
+  cero y menor a 1. Esto significa que un aumento en los ingresos de los
+  consumidores resulta en un aumento proporcionalmente menor en la
+  demanda de los bienes y servicios del mercado relevante.
+  \(0 < \eta_{p_{X}} X^d \leq 1\)
 \end{enumerate}
 
 \hypertarget{pasos-para-definir-un-mercado-relevante}{%
@@ -437,80 +444,34 @@ Relevante}\label{pasos-para-definir-un-mercado-relevante}}
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Descripción de la estructura de los mercados: Se analiza la
+  \textbf{Descripción de la estructura de los mercados:} Se analiza la
   organización y dinámica de los mercados en términos de competencia y
   poder de mercado.
 \item
-  Sustituibilidad o intercambiabilidad de los bienes: Se evalúa si los
-  bienes y servicios pueden satisfacer la misma necesidad del consumidor
-  en las mismas circunstancias y en el mismo período de tiempo.
+  \textbf{Sustituibilidad o intercambiabilidad de los bienes:} Se evalúa
+  si los bienes y servicios pueden satisfacer la misma necesidad del
+  consumidor en las mismas circunstancias y en el mismo período de
+  tiempo.
 \item
-  Oferta diferenciada y diversificada: Se considera la variedad y
-  diferenciación de los productos ofrecidos en el mercado.
+  \textbf{Oferta diferenciada y diversificada:} Se considera la variedad
+  y diferenciación de los productos ofrecidos en el mercado.
 \item
-  Accesibilidad para los demandantes: Se verifica si los bienes y
-  servicios del mercado relevante están disponibles y accesibles para
+  \textbf{Accesibilidad para los demandantes:} Se verifica si los bienes
+  y servicios del mercado relevante están disponibles y accesibles para
   los consumidores.
 \item
-  Objetividad de la oferta: Se evalúa la disponibilidad geográfica de
-  los productos, la posibilidad de adquirirlos en el tiempo necesario
-  para satisfacer una necesidad y su accesibilidad para los demandantes.
+  \textbf{Objetividad de la oferta:} Se evalúa la disponibilidad
+  geográfica de los productos, la posibilidad de adquirirlos en el
+  tiempo necesario para satisfacer una necesidad y su accesibilidad para
+  los demandantes.
 \end{enumerate}
 
 \hypertarget{mercado-de-producto-y-mercado-geogruxe1fico-relevante}{%
 \section{Mercado de Producto y Mercado Geográfico
 Relevante}\label{mercado-de-producto-y-mercado-geogruxe1fico-relevante}}
 
-\hypertarget{mercado-de-producto-o-servicio-relevante}{%
-\subsection{Mercado de Producto o Servicio
-Relevante}\label{mercado-de-producto-o-servicio-relevante}}
-
-Desde la perspectiva del consumidor, el mercado de producto o servicio
-relevante se refiere al conjunto de bienes y servicios que son
-sustitutos entre sí en términos de características, precios y usos.
-Estos bienes y servicios satisfacen las mismas necesidades del
-consumidor en condiciones similares. En otras palabras, son productos o
-servicios que pueden cumplir la misma función o propósito para el
-consumidor.
-
-La determinación del mercado de producto o servicio relevante es
-esencial para comprender la competencia y la dinámica del mercado. Al
-identificar los sustitutos cercanos, tanto los consumidores como las
-empresas pueden tomar decisiones estratégicas en relación con la oferta
-y la demanda de esos productos o servicios.
-
-\hypertarget{mercado-geogruxe1fico-relevante}{%
-\subsection{Mercado Geográfico
-Relevante}\label{mercado-geogruxe1fico-relevante}}
-
-El mercado geográfico relevante se define como el área geográfica en la
-cual se encuentran las fuentes de proveedores alternativos que ofrecen
-el conjunto de bienes sustitutos. En este mercado, los demandantes o
-clientes tienen acceso a diferentes proveedores que ofrecen productos o
-servicios similares en condiciones comparables a las del mercado
-principal.
-
-El mercado geográfico relevante es importante para comprender la
-competencia a nivel local o regional. Permite evaluar la disponibilidad
-de alternativas para los consumidores y la capacidad de los proveedores
-para competir en esa área geográfica específica. Además, tener en cuenta
-el mercado geográfico relevante es fundamental para analizar la
-distribución geográfica de la oferta y la demanda, así como los factores
-económicos y logísticos que influyen en el comercio y la competencia en
-una región determinada.
-
-\hypertarget{mercado-relevante}{%
-\subsection{Mercado Relevante}\label{mercado-relevante}}
-
-El concepto de mercado relevante también puede abarcar la dimensión
-temporal. En este caso, se refiere a las combinaciones de los mercados
-de producto y geográfico en un determinado período de tiempo. Esta
-perspectiva temporal es relevante para comprender la evolución de la
-competencia y las estrategias de mercado a lo largo del tiempo.
-
-\hypertarget{definiciuxf3n-del-mercado-de-producto-relevante}{%
-\section{Definición del Mercado de Producto
-Relevante}\label{definiciuxf3n-del-mercado-de-producto-relevante}}
+\begin{definition}[Mercado de Producto
+Relevante]\protect\hypertarget{def-mercado-producto-relevante}{}\label{def-mercado-producto-relevante}
 
 El mercado de producto relevante incluye todos aquellos bienes y
 servicios que son sustitutos cercanos tanto desde la perspectiva de la
@@ -532,13 +493,16 @@ restringe la capacidad de la empresa que ofrece el bien original para
 aumentar los precios, ya que los consumidores y las empresas tienen
 opciones alternativas disponibles.
 
-\hypertarget{elasticidades-y-definiciuxf3n-del-mercado-relevante}{%
-\subsection{Elasticidades y Definición del Mercado
-Relevante}\label{elasticidades-y-definiciuxf3n-del-mercado-relevante}}
+\end{definition}
+
+\hypertarget{elasticidades}{%
+\subsection{Elasticidades}\label{elasticidades}}
 
 \hypertarget{elasticidad-precio-de-la-demanda}{%
 \subsubsection{Elasticidad Precio de la
 Demanda}\label{elasticidad-precio-de-la-demanda}}
+
+Para concocer un mercado relevante
 
 \hypertarget{elasticida-cruzada-de-la-demanda}{%
 \subsubsection{Elasticida cruzada de la
@@ -1397,6 +1361,52 @@ los costos asociados con las alternativas disponibles para los
 proveedores. Esto implica evaluar los costos de producción, distribución
 y otros factores que puedan influir en la viabilidad de las fuentes
 alternativas de aprovisionamiento.
+
+\hypertarget{recapitulaciuxf3n-de-los-conceptos-clave}{%
+\section{Recapitulación de los conceptos
+clave}\label{recapitulaciuxf3n-de-los-conceptos-clave}}
+
+\textbf{Mercado de Producto o Servicio Relevante}
+
+Desde la perspectiva del consumidor, el mercado de producto o servicio
+relevante se refiere al conjunto de bienes y servicios que son
+sustitutos entre sí en términos de características, precios y usos.
+Estos bienes y servicios satisfacen las mismas necesidades del
+consumidor en condiciones similares. En otras palabras, son productos o
+servicios que pueden cumplir la misma función o propósito para el
+consumidor.
+
+La determinación del mercado de producto o servicio relevante es
+esencial para comprender la competencia y la dinámica del mercado. Al
+identificar los sustitutos cercanos, tanto los consumidores como las
+empresas pueden tomar decisiones estratégicas en relación con la oferta
+y la demanda de esos productos o servicios.
+
+\textbf{Mercado Geográfico Relevante}
+
+El mercado geográfico relevante se define como el área geográfica en la
+cual se encuentran las fuentes de proveedores alternativos que ofrecen
+el conjunto de bienes sustitutos. En este mercado, los demandantes o
+clientes tienen acceso a diferentes proveedores que ofrecen productos o
+servicios similares en condiciones comparables a las del mercado
+principal.
+
+El mercado geográfico relevante es importante para comprender la
+competencia a nivel local o regional. Permite evaluar la disponibilidad
+de alternativas para los consumidores y la capacidad de los proveedores
+para competir en esa área geográfica específica. Además, tener en cuenta
+el mercado geográfico relevante es fundamental para analizar la
+distribución geográfica de la oferta y la demanda, así como los factores
+económicos y logísticos que influyen en el comercio y la competencia en
+una región determinada.
+
+\textbf{Mercado Relevante}
+
+El concepto de mercado relevante también puede abarcar la dimensión
+temporal. En este caso, se refiere a las combinaciones de los mercados
+de producto y geográfico en un determinado período de tiempo. Esta
+perspectiva temporal es relevante para comprender la evolución de la
+competencia y las estrategias de mercado a lo largo del tiempo.
 
 \hypertarget{publicaciones-similares}{%
 \section{Publicaciones Similares}\label{publicaciones-similares}}

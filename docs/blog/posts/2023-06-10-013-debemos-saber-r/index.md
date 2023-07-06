@@ -62,16 +62,67 @@ Concatenación de elementos con **`c()`**: Se utiliza la función `c()` para con
 
 
 
-::: {.cell hash='index_cache/pdf/unnamed-chunk-1_67cbc2be760bfd13677d3709c2226bf7'}
+::: {.cell}
 
 ```{.r .cell-code}
 c(0.5, 0.6, 0.25) # números decimales (double)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] 0.50 0.60 0.25
+```
+:::
+
+```{.r .cell-code}
 c(9L, 10L, 11L, 12L, 13L) # números enteros (integer)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1]  9 10 11 12 13
+```
+:::
+
+```{.r .cell-code}
 c(9:13) # secuencia de números enteros (integer sequence)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1]  9 10 11 12 13
+```
+:::
+
+```{.r .cell-code}
 c(TRUE, FALSE, FALSE) # valores lógicos (logical)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1]  TRUE FALSE FALSE
+```
+:::
+
+```{.r .cell-code}
 c(1 + 0i, 2 + 4i) # números complejos (complex)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] 1+0i 2+4i
+```
+:::
+
+```{.r .cell-code}
 c("a", "b", "c") # caracteres (character)
 ```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] "a" "b" "c"
+```
+:::
 :::
 
 
@@ -84,7 +135,7 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-2_596a48aa3ed78a702817322cb4dee413'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25)
@@ -97,7 +148,7 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-3_3ec49d0a4203f37bc68ba90626f1742d'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     chr <- c("a", "b", "c")
@@ -112,11 +163,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-4_ce411da7dce59791fb1feeed228dc01c'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dbl
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 0.50 0.60 0.25
+    ```
+    :::
     :::
 
 
@@ -125,11 +182,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-5_a0e825e6a882d5ac495929d13ea71e4d'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     chr
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] "a" "b" "c"
+    ```
+    :::
     :::
 
 
@@ -140,11 +203,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-6_f90466b568201c6f0a47b2788a99e2fc'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     length(dbl)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 3
+    ```
+    :::
     :::
 
 
@@ -153,11 +222,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-7_1434f6db1907c725addb23273904f918'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     length(chr)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 3
+    ```
+    :::
     :::
 
 
@@ -168,11 +243,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-8_d2ee571c303a54c548d896f9bc99a154'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     typeof(dbl)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] "double"
+    ```
+    :::
     :::
 
 
@@ -181,11 +262,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-9_eee21acfda2d0a335407e7e3ab598924'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     typeof(chr)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] "character"
+    ```
+    :::
     :::
 
 
@@ -196,11 +283,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-10_b68003ba5c18e56d2cbb46ff41dcb1f3'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     c(dbl, dbl)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 0.50 0.60 0.25 0.50 0.60 0.25
+    ```
+    :::
     :::
 
 
@@ -209,11 +302,17 @@ c("a", "b", "c") # caracteres (character)
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-11_46835486cadc0b664b8c29c77e250d2c'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     c(dbl, chr)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] "0.5"  "0.6"  "0.25" "a"    "b"    "c"   
+    ```
+    :::
     :::
 
 
@@ -228,7 +327,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-12_5b69639fdd37d8c35357d7a34fca0cbb'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     a <- c(1, 2, 3, 4)
@@ -242,11 +341,17 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-13_ab27fd4a43b8253efdc6813d78aa7bce'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     a * 5
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1]  5 10 15 20
+    ```
+    :::
     :::
 
 
@@ -255,11 +360,17 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-14_c096aae91f0feced6cb651e0c409cdbf'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     a * b
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1]  10  40  90 160
+    ```
+    :::
     :::
 
 
@@ -268,12 +379,18 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-15_f4789d3198700338e413995b7ddd5aa3'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     v <- c(1.1, 1.2, 1.3, 1.4, 1.5)
     a * v
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 1.1 2.4 3.9 5.6 1.5
+    ```
+    :::
     :::
 
 
@@ -292,12 +409,22 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-16_0573e07eefe01df7dbd1251db287f01a'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     A <- cbind(a, b)
     A
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         a  b
+    [1,] 1 10
+    [2,] 2 20
+    [3,] 3 30
+    [4,] 4 40
+    ```
+    :::
     :::
 
 
@@ -308,12 +435,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-17_6434c09b7516746837a7df467f91ab18'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     B <- rbind(a, b)
     B
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+      [,1] [,2] [,3] [,4]
+    a    1    2    3    4
+    b   10   20   30   40
+    ```
+    :::
     :::
 
 
@@ -324,12 +459,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-18_b2840e1b43c8c19523fdd21c3c96b66e'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     A <- matrix(a, ncol = 2, nrow = 2)
     A
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    3
+    [2,]    2    4
+    ```
+    :::
     :::
 
 
@@ -340,12 +483,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-19_2cafe0d6d014e676eb73cda832e64c39'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     A <- matrix(a, ncol = 2)
     A
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    3
+    [2,]    2    4
+    ```
+    :::
     :::
 
 
@@ -356,12 +507,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-20_a4900d0ac914718e52dd7a95dd53f623'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     B <- matrix(a, ncol = 2, byrow = TRUE)
     B
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    2
+    [2,]    3    4
+    ```
+    :::
     :::
 
 
@@ -374,11 +533,17 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-21_0b160dbb3e557609bf3c2856f916ecb4'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     nrow(A)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 2
+    ```
+    :::
     :::
 
 
@@ -389,11 +554,17 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-22_99dbfe38745d99a9a2597f429a91e10c'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     ncol(A)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 2
+    ```
+    :::
     :::
 
 
@@ -404,11 +575,17 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-23_d7a82385053ad7d50a8ccc4dec6ff6db'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dim(A)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 2 2
+    ```
+    :::
     :::
 
 
@@ -419,12 +596,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-24_1bf40aa117ef50d77fb3ac170d3be1f1'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     D.wide <- cbind(A, A)
     D.wide
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2] [,3] [,4]
+    [1,]    1    3    1    3
+    [2,]    2    4    2    4
+    ```
+    :::
     :::
 
 
@@ -435,12 +620,22 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-25_36b942bc9163658776f67670ba19a1d2'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     D.long <- rbind(A, A)
     D.long
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    3
+    [2,]    2    4
+    [3,]    1    3
+    [4,]    2    4
+    ```
+    :::
     :::
 
 
@@ -451,7 +646,7 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-26_a5bcacf951fdf501b7b09a60c1c7d867'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     # D <- cbind(D.wide, D.long)
@@ -468,11 +663,19 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-27_31c8b4d575bf1395f1343cd5867571c2'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     B + B
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    2    4
+    [2,]    6    8
+    ```
+    :::
     :::
 
 
@@ -483,11 +686,19 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-28_d4bbadb2eefa3037ac710ade0150b77d'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     B * 2
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    2    4
+    [2,]    6    8
+    ```
+    :::
     :::
 
 
@@ -498,12 +709,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-29_346e0bf991db225659c6b6a2cf65d0fd'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     a <- B * B
     a
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    4
+    [2,]    9   16
+    ```
+    :::
     :::
 
 
@@ -514,12 +733,20 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-30_64f2588a8b95fc7e78472df9375b289d'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     C <- B %*% B
     C
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    7   10
+    [2,]   15   22
+    ```
+    :::
     :::
 
 
@@ -532,11 +759,21 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-31_262ff495713ecd15e9425967c6b6fe60'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     t(D.wide)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,]    1    2
+    [2,]    3    4
+    [3,]    1    2
+    [4,]    3    4
+    ```
+    :::
     :::
 
 
@@ -547,11 +784,17 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-32_9843836078ef74c6a33decb361f4e045'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     det(B)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] -2
+    ```
+    :::
     :::
 
 
@@ -562,11 +805,19 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-33_edca7fcf882e0fae570b9ef85f84a3cd'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     solve(B)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+         [,1] [,2]
+    [1,] -2.0  1.0
+    [2,]  1.5 -0.5
+    ```
+    :::
     :::
 
 
@@ -577,11 +828,24 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-34_19a90baec43973578038f9f2c35012b6'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     eigen(B)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    eigen() decomposition
+    $values
+    [1]  5.3722813 -0.3722813
+    
+    $vectors
+               [,1]       [,2]
+    [1,] -0.4159736 -0.8245648
+    [2,] -0.9093767  0.5657675
+    ```
+    :::
     :::
 
 
@@ -598,7 +862,7 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-35_e92e4800e5034b0b5f3e816d89ffd6a8'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333) # números decimales (double)
@@ -616,7 +880,7 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-36_e3c623fb12aa0dae8a316eaa111bbde8'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     df <- data.frame(dbl, int, lgl, chr)
@@ -631,11 +895,22 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-37_d42c63f8a5875493961ce6a25a468798'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     df
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+        dbl int   lgl chr
+    1 0.500   9  TRUE   a
+    2 0.600  10 FALSE   b
+    3 0.250  11 FALSE   c
+    4 1.200  12  TRUE   d
+    5 0.333  13  TRUE   e
+    ```
+    :::
     :::
 
 
@@ -648,11 +923,17 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-38_abb6992cced97339def5aabdb071f1e6'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     nrow(df)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 5
+    ```
+    :::
     :::
 
 
@@ -663,11 +944,17 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-39_5fcba0fad38a3366f3c0fb4a16b28306'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     ncol(df)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 4
+    ```
+    :::
     :::
 
 
@@ -678,11 +965,17 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-40_621e82a7f33edc0737765e79ac41693c'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dim(df)
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [1] 5 4
+    ```
+    :::
     :::
 
 
@@ -699,7 +992,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-41_349da934741a2662bffe4bec2174360c'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     a <- 1L
@@ -712,7 +1005,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-42_b66d52c246f3c77b566d7ffbc388c55f'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     dbl <- c(0.5, 0.6, 0.25, 1.2, 0.333)
@@ -725,7 +1018,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-43_165f4570893b5c2c07643ac9873a981d'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     chr <- c("a", "b", "c")
@@ -738,7 +1031,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-44_b1bc2bcf94471da78760646a923b91f0'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     v <- c(1.1, 1.2, 1.3, 1.4)
@@ -751,7 +1044,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-45_eb345f12fdcf6e5b39e619b3831ee3df'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     mat <- matrix(v, ncol = 2)
@@ -766,7 +1059,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-46_f3b87f59610c04362564c29d698a85b8'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     l <- list(a, dbl, chr, mat)
@@ -781,11 +1074,29 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 
 
 
-    ::: {.cell hash='index_cache/pdf/unnamed-chunk-47_5f8bb300937c4624ab6065663fae9621'}
+    ::: {.cell}
     
     ```{.r .cell-code}
     l
     ```
+    
+    ::: {.cell-output .cell-output-stdout}
+    ```
+    [[1]]
+    [1] 1
+    
+    [[2]]
+    [1] 0.500 0.600 0.250 1.200 0.333
+    
+    [[3]]
+    [1] "a" "b" "c"
+    
+    [[4]]
+         [,1] [,2]
+    [1,]  1.1  1.3
+    [2,]  1.2  1.4
+    ```
+    :::
     :::
 
 

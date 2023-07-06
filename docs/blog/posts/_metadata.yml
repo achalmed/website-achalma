@@ -1,5 +1,6 @@
 title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
 title-block-banner-color: body  # Color del texto en el banner del bloque de título
+
 fig-cap-location: top  # Ubicación de las leyendas de las figuras
 tbl-cap-location: top  # Ubicación de las leyendas de las tablas
 
@@ -36,12 +37,13 @@ crossref:
 execute:
   # keep-ipynb: true
   keep-md: true  # Mantener archivos .md generados
+  keep-ipynb: true
   echo: true  # Mostrar comandos ejecutados
   output: true  # Mostrar resultados de la ejecución
   warning: false  # Ocultar advertencias
   error: false  # Ocultar errores
-  cache: true  # Habilitar el almacenamiento en caché
-  enabled: false  # Deshabilitar la ejecución
+  cache: false  # Habilitar el almacenamiento en caché
+  enabled: true  # Habilitar la ejecución
 
 #draft: false  # Modo de borrador (false = final, true = borrador)
 
@@ -101,5 +103,7 @@ format:
     #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
     output-file: index.pdf
 format-links: [pdf] # (false)
+
+jupyter: python3
 
 editor: visual

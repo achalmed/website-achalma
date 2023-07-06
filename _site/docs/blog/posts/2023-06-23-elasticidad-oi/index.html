@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Edison Achalma">
-<meta name="description" content="Descub">
+<meta name="description" content="En este blog, exploraremos el concepto fundamental de la elasticidad y su impacto en el funcionamiento del mercado. Descubre cómo la demanda y la oferta reaccionan ante cambios en los precios, y cómo las empresas pueden utilizar esta información para tomar decisiones estratégicas. Exploraremos diferentes tipos de elasticidad, como la elasticidad precio de la demanda y la elasticidad precio de la oferta, y analizaremos casos prácticos para comprender su aplicación en el mundo real.">
 
-<title>achalmaedison - Elasticidad</title>
+<title>achalmaedison - Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -159,17 +125,17 @@ cookieconsent.run({
 
 <link rel="stylesheet" href="../../../../styles.css">
 <link rel="stylesheet" href="../index.css">
-<meta property="og:title" content="achalmaedison - Elasticidad">
-<meta property="og:description" content="Descub">
+<meta property="og:title" content="achalmaedison - Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado">
+<meta property="og:description" content="En este blog, exploraremos el concepto fundamental de la elasticidad y su impacto en el funcionamiento del mercado. Descubre cómo la demanda y la oferta reaccionan ante cambios en los precios, y cómo las empresas pueden utilizar esta información para tomar decisiones estratégicas. Exploraremos diferentes tipos de elasticidad, como la elasticidad precio de la demanda y la elasticidad precio de la oferta, y analizaremos casos prácticos para comprender su aplicación en el mundo real.">
 <meta property="og:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-23-elasticidad-oi/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site-name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="achalmaedison - Elasticidad">
-<meta name="twitter:description" content="Descub">
+<meta name="twitter:title" content="achalmaedison - Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado">
+<meta name="twitter:description" content="En este blog, exploraremos el concepto fundamental de la elasticidad y su impacto en el funcionamiento del mercado. Descubre cómo la demanda y la oferta reaccionan ante cambios en los precios, y cómo las empresas pueden utilizar esta información para tomar decisiones estratégicas. Exploraremos diferentes tipos de elasticidad, como la elasticidad precio de la demanda y la elasticidad precio de la oferta, y analizaremos casos prácticos para comprender su aplicación en el mundo real.">
 <meta name="twitter:image" content="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-23-elasticidad-oi/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Elasticidad">
+<meta name="citation_title" content="Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado">
 <meta name="citation_author" content="Edison Achalma">
 <meta name="citation_publication_date" content="2023-06-23">
 <meta name="citation_cover_date" content="2023-06-23">
@@ -254,11 +220,11 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Elasticidad</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/docs/blog/posts/2023-06-23-elasticidad-oi/index.qmd"><i class="bi"></i></button></div></div>
-            <p class="subtitle lead">Expl</p>
+      <div class="quarto-title-block"><div><h1 class="title">Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/docs/blog/posts/2023-06-23-elasticidad-oi/index.qmd"><i class="bi"></i></button></div></div>
+            <p class="subtitle lead">Elasticidad</p>
                   <div>
         <div class="description">
-          <p>Descub</p>
+          <p>En este blog, exploraremos el concepto fundamental de la elasticidad y su impacto en el funcionamiento del mercado. Descubre cómo la demanda y la oferta reaccionan ante cambios en los precios, y cómo las empresas pueden utilizar esta información para tomar decisiones estratégicas. Exploraremos diferentes tipos de elasticidad, como la elasticidad precio de la demanda y la elasticidad precio de la oferta, y analizaremos casos prácticos para comprender su aplicación en el mundo real.</p>
         </div>
       </div>
                           <div class="quarto-categories">
@@ -297,7 +263,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Fecha de modificación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">4 de julio de 2023</p>
+        <p class="date-modified">6 de julio de 2023</p>
       </div>
     </div>
       
@@ -307,103 +273,137 @@ cookieconsent.run({
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción-a-la-elasticidad" id="toc-introducción-a-la-elasticidad" class="nav-link active" data-scroll-target="#introducción-a-la-elasticidad">Introducción a la Elasticidad</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-la-elasticidad" id="toc-qué-es-la-elasticidad" class="nav-link" data-scroll-target="#qué-es-la-elasticidad">¿Qué es la elasticidad?</a></li>
+  <li><a href="#importancia-de-la-elasticidad-en-la-economía" id="toc-importancia-de-la-elasticidad-en-la-economía" class="nav-link" data-scroll-target="#importancia-de-la-elasticidad-en-la-economía">Importancia de la elasticidad en la economía</a></li>
+  <li><a href="#tipos-de-elasticidad" id="toc-tipos-de-elasticidad" class="nav-link" data-scroll-target="#tipos-de-elasticidad">Tipos de elasticidad</a></li>
+  </ul></li>
+  <li><a href="#elasticidad-precio-de-la-demanda" id="toc-elasticidad-precio-de-la-demanda" class="nav-link" data-scroll-target="#elasticidad-precio-de-la-demanda">Elasticidad Precio de la Demanda</a>
+  <ul class="collapse">
+  <li><a href="#concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda" id="toc-concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda" class="nav-link" data-scroll-target="#concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda">Concepto y fórmula de la elasticidad precio de la demanda</a></li>
+  <li><a href="#interpretación-de-la-elasticidad-precio-de-la-demanda" id="toc-interpretación-de-la-elasticidad-precio-de-la-demanda" class="nav-link" data-scroll-target="#interpretación-de-la-elasticidad-precio-de-la-demanda">Interpretación de la elasticidad precio de la demanda</a></li>
+  <li><a href="#factores-que-influyen-en-la-elasticidad-precio-de-la-demanda" id="toc-factores-que-influyen-en-la-elasticidad-precio-de-la-demanda" class="nav-link" data-scroll-target="#factores-que-influyen-en-la-elasticidad-precio-de-la-demanda">Factores que influyen en la elasticidad precio de la demanda</a></li>
+  </ul></li>
+  <li><a href="#elasticidad-precio-de-la-oferta" id="toc-elasticidad-precio-de-la-oferta" class="nav-link" data-scroll-target="#elasticidad-precio-de-la-oferta">Elasticidad Precio de la Oferta</a>
+  <ul class="collapse">
+  <li><a href="#significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta" id="toc-significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta" class="nav-link" data-scroll-target="#significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta">Significado y cálculo de la elasticidad precio de la oferta</a></li>
+  <li><a href="#análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias" id="toc-análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias" class="nav-link" data-scroll-target="#análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias">Análisis de la elasticidad precio de la oferta en diferentes industrias</a></li>
+  <li><a href="#determinantes-de-la-elasticidad-precio-de-la-oferta" id="toc-determinantes-de-la-elasticidad-precio-de-la-oferta" class="nav-link" data-scroll-target="#determinantes-de-la-elasticidad-precio-de-la-oferta">Determinantes de la elasticidad precio de la oferta</a></li>
+  </ul></li>
+  <li><a href="#elasticidad-cruzada" id="toc-elasticidad-cruzada" class="nav-link" data-scroll-target="#elasticidad-cruzada">Elasticidad Cruzada</a>
+  <ul class="collapse">
+  <li><a href="#definición-y-fórmula-de-la-elasticidad-cruzada" id="toc-definición-y-fórmula-de-la-elasticidad-cruzada" class="nav-link" data-scroll-target="#definición-y-fórmula-de-la-elasticidad-cruzada">Definición y fórmula de la elasticidad cruzada</a></li>
+  <li><a href="#interpretación-de-la-elasticidad-cruzada" id="toc-interpretación-de-la-elasticidad-cruzada" class="nav-link" data-scroll-target="#interpretación-de-la-elasticidad-cruzada">Interpretación de la elasticidad cruzada</a></li>
+  <li><a href="#aplicaciones-prácticas-de-la-elasticidad-cruzada" id="toc-aplicaciones-prácticas-de-la-elasticidad-cruzada" class="nav-link" data-scroll-target="#aplicaciones-prácticas-de-la-elasticidad-cruzada">Aplicaciones prácticas de la elasticidad cruzada</a></li>
+  </ul></li>
+  <li><a href="#elasticidad-ingreso-de-la-demanda" id="toc-elasticidad-ingreso-de-la-demanda" class="nav-link" data-scroll-target="#elasticidad-ingreso-de-la-demanda">Elasticidad Ingreso de la Demanda</a>
+  <ul class="collapse">
+  <li><a href="#explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda" id="toc-explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda" class="nav-link" data-scroll-target="#explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda">Explicación y cálculo de la elasticidad ingreso de la demanda</a></li>
+  <li><a href="#impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo" id="toc-impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo" class="nav-link" data-scroll-target="#impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo">Impacto de la elasticidad ingreso en los patrones de consumo</a></li>
+  <li><a href="#factores-que-afectan-la-elasticidad-ingreso-de-la-demanda" id="toc-factores-que-afectan-la-elasticidad-ingreso-de-la-demanda" class="nav-link" data-scroll-target="#factores-que-afectan-la-elasticidad-ingreso-de-la-demanda">Factores que afectan la elasticidad ingreso de la demanda</a></li>
+  </ul></li>
+  <li><a href="#aplicaciones-de-la-elasticidad-en-la-toma-de-decisiones-empresariales" id="toc-aplicaciones-de-la-elasticidad-en-la-toma-de-decisiones-empresariales" class="nav-link" data-scroll-target="#aplicaciones-de-la-elasticidad-en-la-toma-de-decisiones-empresariales">Aplicaciones de la Elasticidad en la Toma de Decisiones Empresariales</a>
+  <ul class="collapse">
+  <li><a href="#uso-de-la-elasticidad-en-la-fijación-de-precios" id="toc-uso-de-la-elasticidad-en-la-fijación-de-precios" class="nav-link" data-scroll-target="#uso-de-la-elasticidad-en-la-fijación-de-precios">Uso de la elasticidad en la fijación de precios</a></li>
+  <li><a href="#estrategias-de-marketing-basadas-en-la-elasticidad" id="toc-estrategias-de-marketing-basadas-en-la-elasticidad" class="nav-link" data-scroll-target="#estrategias-de-marketing-basadas-en-la-elasticidad">Estrategias de marketing basadas en la elasticidad</a></li>
+  <li><a href="#estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas" id="toc-estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas" class="nav-link" data-scroll-target="#estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas">Estudio de casos: Ejemplos reales de la aplicación de la elasticidad en empresas</a></li>
+  </ul></li>
+  <li><a href="#conclusiones-y-reflexiones-finales" id="toc-conclusiones-y-reflexiones-finales" class="nav-link" data-scroll-target="#conclusiones-y-reflexiones-finales">Conclusiones y Reflexiones Finales</a>
+  <ul class="collapse">
+  <li><a href="#recapitulación-de-los-conceptos-clave" id="toc-recapitulación-de-los-conceptos-clave" class="nav-link" data-scroll-target="#recapitulación-de-los-conceptos-clave">Recapitulación de los conceptos clave</a></li>
+  <li><a href="#importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones" id="toc-importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones" class="nav-link" data-scroll-target="#importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones">Importancia de comprender la elasticidad para la toma de decisiones</a></li>
+  <li><a href="#reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual" id="toc-reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual" class="nav-link" data-scroll-target="#reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual">Reflexiones sobre la aplicabilidad y relevancia de la elasticidad en el mundo actual</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2023-06-23-elasticidad-oi/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>Elasticidad precio de la demanda</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.collections <span class="im">import</span> EventCollection</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fijar el estado aleatorio para reproducibilidad</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">19680801</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear datos aleatorios</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>xdata <span class="op">=</span> np.random.random([<span class="dv">2</span>, <span class="dv">10</span>])</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Dividir los datos en dos partes</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>xdata1 <span class="op">=</span> xdata[<span class="dv">0</span>, :]</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>xdata2 <span class="op">=</span> xdata[<span class="dv">1</span>, :]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Ordenar los datos para obtener curvas limpias</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>xdata1.sort()</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>xdata2.sort()</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear algunos puntos de datos y</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ydata1 <span class="op">=</span> xdata1 <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ydata2 <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> xdata2 <span class="op">**</span> <span class="dv">3</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Graficar los datos</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ax.plot(xdata1, ydata1, color<span class="op">=</span><span class="st">'tab:blue'</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax.plot(xdata2, ydata2, color<span class="op">=</span><span class="st">'tab:orange'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear los eventos que marcan los puntos de datos en el eje x</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>xevents1 <span class="op">=</span> EventCollection(xdata1, color<span class="op">=</span><span class="st">'tab:blue'</span>, linelength<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>xevents2 <span class="op">=</span> EventCollection(xdata2, color<span class="op">=</span><span class="st">'tab:orange'</span>, linelength<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear los eventos que marcan los puntos de datos en el eje y</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>yevents1 <span class="op">=</span> EventCollection(ydata1, color<span class="op">=</span><span class="st">'tab:blue'</span>, linelength<span class="op">=</span><span class="fl">0.05</span>, orientation<span class="op">=</span><span class="st">'vertical'</span>)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>yevents2 <span class="op">=</span> EventCollection(ydata2, color<span class="op">=</span><span class="st">'tab:orange'</span>, linelength<span class="op">=</span><span class="fl">0.05</span>, orientation<span class="op">=</span><span class="st">'vertical'</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Agregar los eventos al eje</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.add_collection(xevents1)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax.add_collection(xevents2)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>ax.add_collection(yevents1)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.add_collection(yevents2)</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecer los límites</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Gráfico de línea con puntos de datos'</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar la gráfica</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="introducción-a-la-elasticidad" class="level1">
+<h1>Introducción a la Elasticidad</h1>
+<section id="qué-es-la-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-la-elasticidad">¿Qué es la elasticidad?</h2>
+<p>La elasticidad es un concepto fundamental en economía que nos ayuda a comprender cómo responden la demanda y la oferta ante cambios en los precios y otros factores. En pocas palabras, nos permite medir la sensibilidad de la cantidad demandada o ofrecida ante variaciones en determinadas variables.</p>
+<p>Imagina que el precio de un producto aumenta. ¿Qué sucederá con la cantidad que las personas están dispuestas a comprar? La elasticidad nos proporciona una medida para responder a esta pregunta. Si la demanda es elástica, significa que los consumidores son sensibles a los cambios en el precio y reducirán su consumo en gran medida. Por otro lado, si la demanda es inelástica, significa que los consumidores son menos sensibles y continuarán comprando a pesar del aumento de precio.</p>
+<p>La elasticidad es una herramienta poderosa que nos ayuda a entender cómo funciona el mercado y cómo los cambios en variables clave pueden afectar las decisiones de los consumidores y las empresas. En los siguientes fragmentos, exploraremos diferentes tipos de elasticidad y su aplicación práctica en el mundo empresarial. ¡Vamos a sumergirnos en el fascinante mundo de la elasticidad económica!</p>
+</section>
+<section id="importancia-de-la-elasticidad-en-la-economía" class="level2">
+<h2 class="anchored" data-anchor-id="importancia-de-la-elasticidad-en-la-economía">Importancia de la elasticidad en la economía</h2>
+<p>La elasticidad es un concepto clave en la economía porque nos permite comprender cómo cambian las decisiones y el comportamiento de los consumidores y las empresas frente a los cambios en los precios y otros factores económicos.</p>
+<p>Imagina que eres propietario de un negocio y estás considerando aumentar el precio de tus productos. Antes de tomar esa decisión, es fundamental comprender cómo reaccionarán los consumidores. Aquí es donde entra en juego la elasticidad. Si la demanda es elástica, un aumento en el precio podría resultar en una disminución significativa de las ventas, lo que podría afectar negativamente tus ingresos. Por otro lado, si la demanda es inelástica, un aumento en el precio podría tener un impacto menor en las ventas, lo que te brinda una mayor flexibilidad para ajustar tus precios.</p>
+<p>Además, la elasticidad también nos ayuda a comprender los efectos de los impuestos, las políticas gubernamentales y otros factores en la economía. Por ejemplo, si se impone un impuesto a un producto, la elasticidad nos permite predecir cómo afectará la demanda y cuánto ingreso generará el impuesto.</p>
+</section>
+<section id="tipos-de-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-elasticidad">Tipos de elasticidad</h2>
+<p>Existen varios tipos de elasticidad que nos ayudan a comprender diferentes aspectos del comportamiento de la demanda y la oferta. Cada tipo de elasticidad se centra en una variable específica y nos proporciona información única sobre cómo responden los agentes económicos a los cambios en esa variable.</p>
 <ol type="1">
-<li><span class="math display">\[
-\eta _{XP_y} = \frac{\frac {X_f^d - X_i^d}{X_i}}{\frac {P_f^d - P_i^d}{P_i^d}}
-\]</span></li>
+<li><p><strong>Elasticidad precio de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio a cambios en su precio. Si la demanda es elástica, significa que los consumidores son sensibles a las variaciones de precio y una pequeña alteración en el precio puede tener un gran impacto en la cantidad demandada. Por otro lado, si la demanda es inelástica, significa que los consumidores son menos sensibles al cambio de precio.</p></li>
+<li><p><strong>Elasticidad ingreso de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio a cambios en el ingreso de los consumidores. Si la demanda es elástica con respecto al ingreso, significa que la cantidad demandada aumentará en proporción mayor al incremento del ingreso. Por el contrario, si la demanda es inelástica, significa que la cantidad demandada no aumentará significativamente ante un incremento en el ingreso.</p></li>
+<li><p><strong>Elasticidad cruzada de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio ante cambios en el precio de otro bien o servicio relacionado. Si la elasticidad cruzada de la demanda es positiva, significa que los bienes son sustitutos y un aumento en el precio de uno de ellos conducirá a un aumento en la demanda del otro. Si la elasticidad cruzada es negativa, significa que los bienes son complementarios y un aumento en el precio de uno de ellos reducirá la demanda del otro.</p></li>
+<li><p><strong>Elasticidad precio de la oferta:</strong> Esta medida nos indica cómo responde la cantidad ofrecida de un bien o servicio a cambios en su precio. Si la oferta es elástica, significa que los productores pueden aumentar la cantidad ofrecida en respuesta a un aumento en el precio. Si la oferta es inelástica, significa que los productores no pueden aumentar significativamente la cantidad ofrecida incluso ante un aumento en el precio.</p></li>
 </ol>
+<p>En los próximos fragmentos, exploraremos cada tipo de elasticidad en más detalle y veremos cómo se aplican en situaciones reales.</p>
+</section>
+</section>
+<section id="elasticidad-precio-de-la-demanda" class="level1">
+<h1>Elasticidad Precio de la Demanda</h1>
+<section id="concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda">Concepto y fórmula de la elasticidad precio de la demanda</h2>
+<p>La elasticidad precio de la demanda es una medida importante en economía que nos permite entender cómo cambia la cantidad demandada de un bien o servicio ante variaciones en su precio. Esta medida nos ayuda a comprender la sensibilidad de los consumidores frente a los cambios de precio.</p>
+<p>La fórmula de la elasticidad precio de la demanda es la siguiente:</p>
+<p><span id="eq-1"><span class="math display">\[
+Elasticidad precio de la demanda = (% cambio en la cantidad demandada) / (% cambio en el precio)
+\tag{1}\]</span></span></p>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="581" height="432"></p>
+</div>
+</div>
+<p><span class="math display">\[
+\eta _{XP_y} = \frac{\frac {X_f^d - X_i^d}{X_i}}{\frac {P_f^d - P_i^d}{P_i^d}}
+\]</span></p>
 <p><span class="math display">\[
 = \frac{\frac{\Delta X^d}{X_i^d}}{\frac{\Delta P_x^d}{P_i^d}}
 \]</span></p>
-<p><span id="eq-1"><span class="math display">\[
-\frac{\Delta X^d P_i^d}{\Delta P_x^d X_i^d}
-\tag{1}\]</span></span></p>
-<ol start="2" type="1">
-<li></li>
-</ol>
 <p><span id="eq-2"><span class="math display">\[
-\eta _{PX^d} = \frac{\partial X^d P_x}{\partial P_x X^d}
+\frac{\Delta X^d P_i^d}{\Delta P_x^d X_i^d}
 \tag{2}\]</span></span></p>
-<ol start="3" type="1">
-<li></li>
-</ol>
 <p><span id="eq-3"><span class="math display">\[
-\eta _{PX^d} = \frac{\partial \ln(\mathrm X)}{\partial  \ln(\mathrm P_x)}
+\eta _{PX^d} = \frac{\partial X^d P_x}{\partial P_x X^d}
 \tag{3}\]</span></span></p>
-<ol start="4" type="1">
-<li><p><span id="eq-4"><span class="math display">\[
-\eta _{PX^d} = \frac{\Delta \% X^d}{\Delta \% P_x}
-\tag{4}\]</span></span></p></li>
-<li></li>
-</ol>
+<p><span id="eq-4"><span class="math display">\[
+\eta _{PX^d} = \frac{\partial \ln(\mathrm X)}{\partial  \ln(\mathrm P_x)}
+\tag{4}\]</span></span></p>
 <p><span id="eq-5"><span class="math display">\[
-\eta_{PX^d} = m_{ip} \frac{P_i^d}{X^d}
+\eta _{PX^d} = \frac{\Delta \% X^d}{\Delta \% P_x}
 \tag{5}\]</span></span></p>
+<p><span id="eq-6"><span class="math display">\[
+\eta_{PX^d} = m_{ip} \frac{P_i^d}{X^d}
+\tag{6}\]</span></span></p>
+<p>Estas fórmulas nos permite calcular la magnitud de la respuesta de la demanda ante cambios en el precio. Si la elasticidad es mayor a 1, se considera que la demanda es elástica, lo que implica que los consumidores son sensibles al cambio de precio y una variación en el precio provocará un cambio proporcionalmente mayor en la cantidad demandada. Por otro lado, si la elasticidad es menor a 1, se considera que la demanda es inelástica, lo que indica que los consumidores son menos sensibles al cambio de precio y una variación en el precio tendrá un impacto proporcionalmente menor en la cantidad demandada.</p>
+</section>
+<section id="interpretación-de-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-de-la-elasticidad-precio-de-la-demanda">Interpretación de la elasticidad precio de la demanda</h2>
+<p>Una vez que comprendemos qué es la elasticidad precio de la demanda y cómo se calcula, es importante poder interpretar los resultados obtenidos. La elasticidad nos brinda información valiosa sobre la sensibilidad de los consumidores ante cambios en el precio de un producto. Veamos cómo interpretar los distintos valores de la elasticidad:</p>
+<ul>
+<li><p>Elasticidad mayor a 1: Si la elasticidad es mayor a 1, se dice que la demanda es elástica. Esto significa que los consumidores son muy sensibles al cambio de precio. Un pequeño aumento en el precio puede resultar en una disminución significativa en la cantidad demandada, y viceversa. En este caso, es crucial para las empresas considerar cuidadosamente los ajustes de precios, ya que podrían tener un impacto considerable en la demanda.</p></li>
+<li><p>Elasticidad igual a 1: Si la elasticidad es igual a 1, se dice que la demanda es unitaria. Esto implica que los cambios en el precio tienen un impacto proporcional en la cantidad demandada. Por ejemplo, si el precio aumenta en un 10%, la cantidad demandada disminuirá en un 10%. En este caso, las empresas deben tener en cuenta que cualquier cambio en el precio tendrá un efecto equivalente en la demanda.</p></li>
+<li><p>Elasticidad menor a 1: Si la elasticidad es menor a 1, se dice que la demanda es inelástica. Esto indica que los consumidores son menos sensibles a los cambios en el precio. Incluso si el precio aumenta, la cantidad demandada disminuirá en una proporción menor. Aquí, las empresas pueden tener más flexibilidad para ajustar los precios sin experimentar una caída drástica en la demanda.</p></li>
+</ul>
+<p>Es importante destacar que la elasticidad precio de la demanda puede variar según el producto, el mercado y el momento. Por lo tanto, es esencial realizar análisis específicos para comprender cómo los cambios en el precio afectarán la demanda en situaciones particulares.</p>
 <p>Ejemplo</p>
 <p><span class="math display">\[
 X^d = \frac{P_y P_z I^{0.2} N}{2 P_x}
@@ -424,18 +424,85 @@ X^d = \frac{P_y P_z I^{0.2} N}{2 P_x}
 \]</span></p>
 <p>interpretación</p>
 <p>Si el <span class="math inline">\(P_x\)</span> aumenta en 1% entonces <span class="math inline">\(X^d\)</span> disminuye en 1%.</p>
+</section>
+<section id="factores-que-influyen-en-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="factores-que-influyen-en-la-elasticidad-precio-de-la-demanda">Factores que influyen en la elasticidad precio de la demanda</h2>
+</section>
+</section>
+<section id="elasticidad-precio-de-la-oferta" class="level1">
+<h1>Elasticidad Precio de la Oferta</h1>
+<section id="significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta" class="level2">
+<h2 class="anchored" data-anchor-id="significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta">Significado y cálculo de la elasticidad precio de la oferta</h2>
+</section>
+<section id="análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias">Análisis de la elasticidad precio de la oferta en diferentes industrias</h2>
+</section>
+<section id="determinantes-de-la-elasticidad-precio-de-la-oferta" class="level2">
+<h2 class="anchored" data-anchor-id="determinantes-de-la-elasticidad-precio-de-la-oferta">Determinantes de la elasticidad precio de la oferta</h2>
+</section>
+</section>
+<section id="elasticidad-cruzada" class="level1">
+<h1>Elasticidad Cruzada</h1>
+<section id="definición-y-fórmula-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="definición-y-fórmula-de-la-elasticidad-cruzada">Definición y fórmula de la elasticidad cruzada</h2>
+</section>
+<section id="interpretación-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-de-la-elasticidad-cruzada">Interpretación de la elasticidad cruzada</h2>
+</section>
+<section id="aplicaciones-prácticas-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="aplicaciones-prácticas-de-la-elasticidad-cruzada">Aplicaciones prácticas de la elasticidad cruzada</h2>
+</section>
+</section>
+<section id="elasticidad-ingreso-de-la-demanda" class="level1">
+<h1>Elasticidad Ingreso de la Demanda</h1>
+<section id="explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda">Explicación y cálculo de la elasticidad ingreso de la demanda</h2>
+</section>
+<section id="impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo" class="level2">
+<h2 class="anchored" data-anchor-id="impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo">Impacto de la elasticidad ingreso en los patrones de consumo</h2>
+</section>
+<section id="factores-que-afectan-la-elasticidad-ingreso-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="factores-que-afectan-la-elasticidad-ingreso-de-la-demanda">Factores que afectan la elasticidad ingreso de la demanda</h2>
+</section>
+</section>
+<section id="aplicaciones-de-la-elasticidad-en-la-toma-de-decisiones-empresariales" class="level1">
+<h1>Aplicaciones de la Elasticidad en la Toma de Decisiones Empresariales</h1>
+<section id="uso-de-la-elasticidad-en-la-fijación-de-precios" class="level2">
+<h2 class="anchored" data-anchor-id="uso-de-la-elasticidad-en-la-fijación-de-precios">Uso de la elasticidad en la fijación de precios</h2>
+</section>
+<section id="estrategias-de-marketing-basadas-en-la-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="estrategias-de-marketing-basadas-en-la-elasticidad">Estrategias de marketing basadas en la elasticidad</h2>
+</section>
+<section id="estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas" class="level2">
+<h2 class="anchored" data-anchor-id="estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas">Estudio de casos: Ejemplos reales de la aplicación de la elasticidad en empresas</h2>
+</section>
+</section>
+<section id="conclusiones-y-reflexiones-finales" class="level1">
+<h1>Conclusiones y Reflexiones Finales</h1>
+<section id="recapitulación-de-los-conceptos-clave" class="level2">
+<h2 class="anchored" data-anchor-id="recapitulación-de-los-conceptos-clave">Recapitulación de los conceptos clave</h2>
+</section>
+<section id="importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones" class="level2">
+<h2 class="anchored" data-anchor-id="importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones">Importancia de comprender la elasticidad para la toma de decisiones</h2>
+</section>
+<section id="reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual" class="level2">
+<h2 class="anchored" data-anchor-id="reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual">Reflexiones sobre la aplicabilidad y relevancia de la elasticidad en el mundo actual</h2>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
   author = {Achalma, Edison},
-  title = {Elasticidad},
+  title = {Explorando la Elasticidad. Entendiendo las Dinámicas del
+    Mercado},
   date = {2023-06-23},
   url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi},
   langid = {es}
 }
 </code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Achalma, E. (2023, June 23). Elasticidad. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi</a>
+Achalma, E. (2023, June 23). Explorando la Elasticidad. Entendiendo las
+Dinámicas del Mercado. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi</a>
 </div></div></section></div></main> <!-- /main -->
 <script type="text/javascript">
 
@@ -797,7 +864,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="../../../../license.html">Licencia</a>
   </li>  
 </ul>
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/blog/posts/2023-06-23-elasticidad-oi/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

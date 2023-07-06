@@ -70,7 +70,7 @@ Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escrib
 
 
 
-::: {.cell hash='index_cache/pdf/unnamed-chunk-1_b03ad6258aa611a0379023283b393a96'}
+::: {.cell}
 
 ```{.r .cell-code}
 # Este es un ejemplo de un script básico en R

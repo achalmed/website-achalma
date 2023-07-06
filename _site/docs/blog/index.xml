@@ -2343,6 +2343,166 @@ from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-07-01-ataj
   <pubDate>Sat, 01 Jul 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-23-elasticidad-oi/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introducción-a-la-elasticidad" class="level1">
+<h1>Introducción a la Elasticidad</h1>
+<section id="qué-es-la-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-la-elasticidad">¿Qué es la elasticidad?</h2>
+<p>La elasticidad es un concepto fundamental en economía que nos ayuda a comprender cómo responden la demanda y la oferta ante cambios en los precios y otros factores. En pocas palabras, nos permite medir la sensibilidad de la cantidad demandada o ofrecida ante variaciones en determinadas variables.</p>
+<p>Imagina que el precio de un producto aumenta. ¿Qué sucederá con la cantidad que las personas están dispuestas a comprar? La elasticidad nos proporciona una medida para responder a esta pregunta. Si la demanda es elástica, significa que los consumidores son sensibles a los cambios en el precio y reducirán su consumo en gran medida. Por otro lado, si la demanda es inelástica, significa que los consumidores son menos sensibles y continuarán comprando a pesar del aumento de precio.</p>
+<p>La elasticidad es una herramienta poderosa que nos ayuda a entender cómo funciona el mercado y cómo los cambios en variables clave pueden afectar las decisiones de los consumidores y las empresas. En los siguientes fragmentos, exploraremos diferentes tipos de elasticidad y su aplicación práctica en el mundo empresarial. ¡Vamos a sumergirnos en el fascinante mundo de la elasticidad económica!</p>
+</section>
+<section id="importancia-de-la-elasticidad-en-la-economía" class="level2">
+<h2 class="anchored" data-anchor-id="importancia-de-la-elasticidad-en-la-economía">Importancia de la elasticidad en la economía</h2>
+<p>La elasticidad es un concepto clave en la economía porque nos permite comprender cómo cambian las decisiones y el comportamiento de los consumidores y las empresas frente a los cambios en los precios y otros factores económicos.</p>
+<p>Imagina que eres propietario de un negocio y estás considerando aumentar el precio de tus productos. Antes de tomar esa decisión, es fundamental comprender cómo reaccionarán los consumidores. Aquí es donde entra en juego la elasticidad. Si la demanda es elástica, un aumento en el precio podría resultar en una disminución significativa de las ventas, lo que podría afectar negativamente tus ingresos. Por otro lado, si la demanda es inelástica, un aumento en el precio podría tener un impacto menor en las ventas, lo que te brinda una mayor flexibilidad para ajustar tus precios.</p>
+<p>Además, la elasticidad también nos ayuda a comprender los efectos de los impuestos, las políticas gubernamentales y otros factores en la economía. Por ejemplo, si se impone un impuesto a un producto, la elasticidad nos permite predecir cómo afectará la demanda y cuánto ingreso generará el impuesto.</p>
+</section>
+<section id="tipos-de-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-elasticidad">Tipos de elasticidad</h2>
+<p>Existen varios tipos de elasticidad que nos ayudan a comprender diferentes aspectos del comportamiento de la demanda y la oferta. Cada tipo de elasticidad se centra en una variable específica y nos proporciona información única sobre cómo responden los agentes económicos a los cambios en esa variable.</p>
+<ol type="1">
+<li><p><strong>Elasticidad precio de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio a cambios en su precio. Si la demanda es elástica, significa que los consumidores son sensibles a las variaciones de precio y una pequeña alteración en el precio puede tener un gran impacto en la cantidad demandada. Por otro lado, si la demanda es inelástica, significa que los consumidores son menos sensibles al cambio de precio.</p></li>
+<li><p><strong>Elasticidad ingreso de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio a cambios en el ingreso de los consumidores. Si la demanda es elástica con respecto al ingreso, significa que la cantidad demandada aumentará en proporción mayor al incremento del ingreso. Por el contrario, si la demanda es inelástica, significa que la cantidad demandada no aumentará significativamente ante un incremento en el ingreso.</p></li>
+<li><p><strong>Elasticidad cruzada de la demanda:</strong> Esta medida nos indica cómo responde la cantidad demandada de un bien o servicio ante cambios en el precio de otro bien o servicio relacionado. Si la elasticidad cruzada de la demanda es positiva, significa que los bienes son sustitutos y un aumento en el precio de uno de ellos conducirá a un aumento en la demanda del otro. Si la elasticidad cruzada es negativa, significa que los bienes son complementarios y un aumento en el precio de uno de ellos reducirá la demanda del otro.</p></li>
+<li><p><strong>Elasticidad precio de la oferta:</strong> Esta medida nos indica cómo responde la cantidad ofrecida de un bien o servicio a cambios en su precio. Si la oferta es elástica, significa que los productores pueden aumentar la cantidad ofrecida en respuesta a un aumento en el precio. Si la oferta es inelástica, significa que los productores no pueden aumentar significativamente la cantidad ofrecida incluso ante un aumento en el precio.</p></li>
+</ol>
+<p>En los próximos fragmentos, exploraremos cada tipo de elasticidad en más detalle y veremos cómo se aplican en situaciones reales.</p>
+</section>
+</section>
+<section id="elasticidad-precio-de-la-demanda" class="level1">
+<h1>Elasticidad Precio de la Demanda</h1>
+<section id="concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="concepto-y-fórmula-de-la-elasticidad-precio-de-la-demanda">Concepto y fórmula de la elasticidad precio de la demanda</h2>
+<p>La elasticidad precio de la demanda es una medida importante en economía que nos permite entender cómo cambia la cantidad demandada de un bien o servicio ante variaciones en su precio. Esta medida nos ayuda a comprender la sensibilidad de los consumidores frente a los cambios de precio.</p>
+<p>La fórmula de la elasticidad precio de la demanda es la siguiente:</p>
+<p><span id="eq-1"><img src="https://latex.codecogs.com/png.latex?%0AElasticidad%20precio%20de%20la%20demanda%20=%20(%25%20cambio%20en%20la%20cantidad%20demandada)%20/%20(%25%20cambio%20en%20el%20precio)%0A%5Ctag%7B1%7D"></span></p>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-23-elasticidad-oi/index_files/figure-html/cell-2-output-1.png" width="581" height="432"></p>
+</div>
+</div>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta%20_%7BXP_y%7D%20=%20%5Cfrac%7B%5Cfrac%20%7BX_f%5Ed%20-%20X_i%5Ed%7D%7BX_i%7D%7D%7B%5Cfrac%20%7BP_f%5Ed%20-%20P_i%5Ed%7D%7BP_i%5Ed%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A=%20%5Cfrac%7B%5Cfrac%7B%5CDelta%20X%5Ed%7D%7BX_i%5Ed%7D%7D%7B%5Cfrac%7B%5CDelta%20P_x%5Ed%7D%7BP_i%5Ed%7D%7D%0A"></p>
+<p><span id="eq-2"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5CDelta%20X%5Ed%20P_i%5Ed%7D%7B%5CDelta%20P_x%5Ed%20X_i%5Ed%7D%0A%5Ctag%7B2%7D"></span></p>
+<p><span id="eq-3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta%20_%7BPX%5Ed%7D%20=%20%5Cfrac%7B%5Cpartial%20X%5Ed%20P_x%7D%7B%5Cpartial%20P_x%20X%5Ed%7D%0A%5Ctag%7B3%7D"></span></p>
+<p><span id="eq-4"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta%20_%7BPX%5Ed%7D%20=%20%5Cfrac%7B%5Cpartial%20%5Cln(%5Cmathrm%20X)%7D%7B%5Cpartial%20%20%5Cln(%5Cmathrm%20P_x)%7D%0A%5Ctag%7B4%7D"></span></p>
+<p><span id="eq-5"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta%20_%7BPX%5Ed%7D%20=%20%5Cfrac%7B%5CDelta%20%5C%25%20X%5Ed%7D%7B%5CDelta%20%5C%25%20P_x%7D%0A%5Ctag%7B5%7D"></span></p>
+<p><span id="eq-6"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_%7BPX%5Ed%7D%20=%20m_%7Bip%7D%20%5Cfrac%7BP_i%5Ed%7D%7BX%5Ed%7D%0A%5Ctag%7B6%7D"></span></p>
+<p>Estas fórmulas nos permite calcular la magnitud de la respuesta de la demanda ante cambios en el precio. Si la elasticidad es mayor a 1, se considera que la demanda es elástica, lo que implica que los consumidores son sensibles al cambio de precio y una variación en el precio provocará un cambio proporcionalmente mayor en la cantidad demandada. Por otro lado, si la elasticidad es menor a 1, se considera que la demanda es inelástica, lo que indica que los consumidores son menos sensibles al cambio de precio y una variación en el precio tendrá un impacto proporcionalmente menor en la cantidad demandada.</p>
+</section>
+<section id="interpretación-de-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-de-la-elasticidad-precio-de-la-demanda">Interpretación de la elasticidad precio de la demanda</h2>
+<p>Una vez que comprendemos qué es la elasticidad precio de la demanda y cómo se calcula, es importante poder interpretar los resultados obtenidos. La elasticidad nos brinda información valiosa sobre la sensibilidad de los consumidores ante cambios en el precio de un producto. Veamos cómo interpretar los distintos valores de la elasticidad:</p>
+<ul>
+<li><p>Elasticidad mayor a 1: Si la elasticidad es mayor a 1, se dice que la demanda es elástica. Esto significa que los consumidores son muy sensibles al cambio de precio. Un pequeño aumento en el precio puede resultar en una disminución significativa en la cantidad demandada, y viceversa. En este caso, es crucial para las empresas considerar cuidadosamente los ajustes de precios, ya que podrían tener un impacto considerable en la demanda.</p></li>
+<li><p>Elasticidad igual a 1: Si la elasticidad es igual a 1, se dice que la demanda es unitaria. Esto implica que los cambios en el precio tienen un impacto proporcional en la cantidad demandada. Por ejemplo, si el precio aumenta en un 10%, la cantidad demandada disminuirá en un 10%. En este caso, las empresas deben tener en cuenta que cualquier cambio en el precio tendrá un efecto equivalente en la demanda.</p></li>
+<li><p>Elasticidad menor a 1: Si la elasticidad es menor a 1, se dice que la demanda es inelástica. Esto indica que los consumidores son menos sensibles a los cambios en el precio. Incluso si el precio aumenta, la cantidad demandada disminuirá en una proporción menor. Aquí, las empresas pueden tener más flexibilidad para ajustar los precios sin experimentar una caída drástica en la demanda.</p></li>
+</ul>
+<p>Es importante destacar que la elasticidad precio de la demanda puede variar según el producto, el mercado y el momento. Por lo tanto, es esencial realizar análisis específicos para comprender cómo los cambios en el precio afectarán la demanda en situaciones particulares.</p>
+<p>Ejemplo</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AX%5Ed%20=%20%5Cfrac%7BP_y%20P_z%20I%5E%7B0.2%7D%20N%7D%7B2%20P_x%7D%0A"></p>
+<p>Aplicando la fórmula Ecuación&nbsp;2</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta%20_%7BPX%5Ed%7D%20=%20%5Cfrac%7B%5Cpartial%20%5Cmathrm%7BX%7D%7D%7B%5Cpartial%20%5Cmathrm%7BP_x%7D%7D%20%5Cfrac%7B%5Cmathrm%7BP_x%7D%7D%7B%5Cmathrm%7BX%5Ed%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A=%20-%20%5Cfrac%7BP_y%20P_z%20I%5E%7B0.2%7D%20N%7D%7B2%20(P_x)%5E2%7D%20%5Cfrac%7B%5Cmathrm%7BP_x%7D%7D%7B%5Cmathrm%7BX%5Ed%7D%20%7D%0A"></p>
+<p>reemplazamos <img src="https://latex.codecogs.com/png.latex?x%5Ed"> con su valor <img src="https://latex.codecogs.com/png.latex?%0A=%20-%20%5Cfrac%7BP_y%20P_z%20I%5E%7B0.2%7D%20N%7D%7B2%20(P_x)%5E2%7D%20%5Cfrac%7B%5Cmathrm%7BP_x%7D%7D%7B%5Cfrac%7BP_y%20P_z%20I%5E%7B0.2%7D%20N%7D%7B2%20P_x%7D%20%7D%0A"></p>
+<p>ordenando y resolviendo</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A=%20-%20%5Cfrac%7B2%20P_y%20P_z%20(P_x)%5E2%20I%5E%7B0.2%7D%20N%7D%7B2%20P_y%20P_z%20(P_x)%5E2%20I%5E%7B0.2%7D%20N%7D%20=%20-1%0A"></p>
+<p>interpretación</p>
+<p>Si el <img src="https://latex.codecogs.com/png.latex?P_x"> aumenta en 1% entonces <img src="https://latex.codecogs.com/png.latex?X%5Ed"> disminuye en 1%.</p>
+</section>
+<section id="factores-que-influyen-en-la-elasticidad-precio-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="factores-que-influyen-en-la-elasticidad-precio-de-la-demanda">Factores que influyen en la elasticidad precio de la demanda</h2>
+</section>
+</section>
+<section id="elasticidad-precio-de-la-oferta" class="level1">
+<h1>Elasticidad Precio de la Oferta</h1>
+<section id="significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta" class="level2">
+<h2 class="anchored" data-anchor-id="significado-y-cálculo-de-la-elasticidad-precio-de-la-oferta">Significado y cálculo de la elasticidad precio de la oferta</h2>
+</section>
+<section id="análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-la-elasticidad-precio-de-la-oferta-en-diferentes-industrias">Análisis de la elasticidad precio de la oferta en diferentes industrias</h2>
+</section>
+<section id="determinantes-de-la-elasticidad-precio-de-la-oferta" class="level2">
+<h2 class="anchored" data-anchor-id="determinantes-de-la-elasticidad-precio-de-la-oferta">Determinantes de la elasticidad precio de la oferta</h2>
+</section>
+</section>
+<section id="elasticidad-cruzada" class="level1">
+<h1>Elasticidad Cruzada</h1>
+<section id="definición-y-fórmula-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="definición-y-fórmula-de-la-elasticidad-cruzada">Definición y fórmula de la elasticidad cruzada</h2>
+</section>
+<section id="interpretación-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-de-la-elasticidad-cruzada">Interpretación de la elasticidad cruzada</h2>
+</section>
+<section id="aplicaciones-prácticas-de-la-elasticidad-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="aplicaciones-prácticas-de-la-elasticidad-cruzada">Aplicaciones prácticas de la elasticidad cruzada</h2>
+</section>
+</section>
+<section id="elasticidad-ingreso-de-la-demanda" class="level1">
+<h1>Elasticidad Ingreso de la Demanda</h1>
+<section id="explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="explicación-y-cálculo-de-la-elasticidad-ingreso-de-la-demanda">Explicación y cálculo de la elasticidad ingreso de la demanda</h2>
+</section>
+<section id="impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo" class="level2">
+<h2 class="anchored" data-anchor-id="impacto-de-la-elasticidad-ingreso-en-los-patrones-de-consumo">Impacto de la elasticidad ingreso en los patrones de consumo</h2>
+</section>
+<section id="factores-que-afectan-la-elasticidad-ingreso-de-la-demanda" class="level2">
+<h2 class="anchored" data-anchor-id="factores-que-afectan-la-elasticidad-ingreso-de-la-demanda">Factores que afectan la elasticidad ingreso de la demanda</h2>
+</section>
+</section>
+<section id="aplicaciones-de-la-elasticidad-en-la-toma-de-decisiones-empresariales" class="level1">
+<h1>Aplicaciones de la Elasticidad en la Toma de Decisiones Empresariales</h1>
+<section id="uso-de-la-elasticidad-en-la-fijación-de-precios" class="level2">
+<h2 class="anchored" data-anchor-id="uso-de-la-elasticidad-en-la-fijación-de-precios">Uso de la elasticidad en la fijación de precios</h2>
+</section>
+<section id="estrategias-de-marketing-basadas-en-la-elasticidad" class="level2">
+<h2 class="anchored" data-anchor-id="estrategias-de-marketing-basadas-en-la-elasticidad">Estrategias de marketing basadas en la elasticidad</h2>
+</section>
+<section id="estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas" class="level2">
+<h2 class="anchored" data-anchor-id="estudio-de-casos-ejemplos-reales-de-la-aplicación-de-la-elasticidad-en-empresas">Estudio de casos: Ejemplos reales de la aplicación de la elasticidad en empresas</h2>
+</section>
+</section>
+<section id="conclusiones-y-reflexiones-finales" class="level1">
+<h1>Conclusiones y Reflexiones Finales</h1>
+<section id="recapitulación-de-los-conceptos-clave" class="level2">
+<h2 class="anchored" data-anchor-id="recapitulación-de-los-conceptos-clave">Recapitulación de los conceptos clave</h2>
+</section>
+<section id="importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones" class="level2">
+<h2 class="anchored" data-anchor-id="importancia-de-comprender-la-elasticidad-para-la-toma-de-decisiones">Importancia de comprender la elasticidad para la toma de decisiones</h2>
+</section>
+<section id="reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual" class="level2">
+<h2 class="anchored" data-anchor-id="reflexiones-sobre-la-aplicabilidad-y-relevancia-de-la-elasticidad-en-el-mundo-actual">Reflexiones sobre la aplicabilidad y relevancia de la elasticidad en el mundo actual</h2>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {Explorando la Elasticidad. Entendiendo las Dinámicas del
+    Mercado},
+  date = {2023-06-23},
+  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 23). Explorando la Elasticidad. Entendiendo las
+Dinámicas del Mercado. Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-23-elasticidad-oi</a>
+</div></div></section></div> ]]></description>
+  <category>Organización industrial</category>
+  <category>Economía y Negocios</category>
+  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-23-elasticidad-oi/index.html</guid>
+  <pubDate>Fri, 23 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Configuración de entornos virtuales con Anaconda</title>
   <dc:creator>Edison Achalma</dc:creator>
   <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-20-02-configurar-entorno-virtual-python-anaconda/index.html</link>
@@ -4152,15 +4312,16 @@ Fundamentos y Alcances de las Finanzas Internacionales. Retrieved from
 <h2 class="anchored" data-anchor-id="precios-el-lenguaje-de-los-mercados">Precios: El Lenguaje de los Mercados</h2>
 <p>Los precios desempeñan un papel crucial en los mercados, ya que actúan como un lenguaje que comunica información sobre la oferta y la demanda de bienes y servicios. Son determinados por la interacción de los compradores y vendedores en el mercado, teniendo en cuenta factores como la oferta, la demanda, los costos de producción y la competencia. En un mercado perfectamente competitivo, los precios se establecen en equilibrio, donde la oferta y la demanda se igualan. Por otro lado, en un mercado imperfecto, como un monopolio, el precio lo determina el productor o la empresa dominante.</p>
 </section>
-<section id="competencia-motor-del-sistema-económico-de-mercado" class="level2">
-<h2 class="anchored" data-anchor-id="competencia-motor-del-sistema-económico-de-mercado">Competencia: Motor del Sistema Económico de Mercado</h2>
-<p>La competencia desempeña un papel fundamental en el buen funcionamiento del sistema económico de mercado. Cuando existe competencia, los productores se ven obligados a mejorar la calidad de sus productos, reducir los precios y buscar la eficiencia en la producción. Esto beneficia a los consumidores, ya que tienen acceso a una mayor variedad de bienes y servicios a precios competitivos. Además, la competencia estimula la innovación y el progreso económico en general.</p>
 </section>
-<section id="derecho-de-la-competencia-promoviendo-la-competencia-y-protegiendo-el-interés-público." class="level2">
-<h2 class="anchored" data-anchor-id="derecho-de-la-competencia-promoviendo-la-competencia-y-protegiendo-el-interés-público.">Derecho de la Competencia: Promoviendo la Competencia y Protegiendo el Interés Público.</h2>
+<section id="competencia-motor-del-sistema-económico-de-mercado" class="level1">
+<h1>Competencia: Motor del Sistema Económico de Mercado</h1>
+<p>La competencia desempeña un papel fundamental en el buen funcionamiento del sistema económico de mercado. Cuando existe competencia, los productores se ven obligados a mejorar la calidad de sus productos, reducir los precios y buscar la eficiencia en la producción. Esto beneficia a los consumidores, ya que tienen acceso a una mayor variedad de bienes y servicios a precios competitivos. Además, la competencia estimula la innovación y el progreso económico en general.</p>
+<section id="derecho-de-la-competencia" class="level2">
+<h2 class="anchored" data-anchor-id="derecho-de-la-competencia">Derecho de la Competencia</h2>
 <p>El Derecho de la Competencia es un conjunto de normas jurídicas que tiene como objetivo regular el poder actual o potencial de las empresas en un mercado específico, en beneficio del interés público. Su propósito es prevenir prácticas restrictivas de la competencia y regular la adquisición de posiciones de dominio en el mercado.</p>
-<section id="objetivos-del-derecho-de-competencia" class="level3">
-<h3 class="anchored" data-anchor-id="objetivos-del-derecho-de-competencia">Objetivos del Derecho de Competencia</h3>
+</section>
+<section id="objetivos-del-derecho-de-competencia" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-del-derecho-de-competencia">Objetivos del Derecho de Competencia</h2>
 <p>El Derecho de la Competencia persigue varios objetivos para promover la competencia y proteger la eficiencia económica. Estos incluyen:</p>
 <ol type="1">
 <li>Proteger y reforzar el proceso de competencia en los mercados donde sea parcial.</li>
@@ -4170,8 +4331,8 @@ Fundamentos y Alcances de las Finanzas Internacionales. Retrieved from
 </ol>
 <p>La Ley Federal de Competencia Económica en EE.UU., en su artículo 2, establece el objetivo de promover, proteger y garantizar la libre concurrencia y la competencia económica, así como prevenir y eliminar prácticas monopólicas, concentraciones ilícitas y restricciones al funcionamiento eficiente de los mercados.</p>
 </section>
-<section id="beneficios-de-la-competencia" class="level3">
-<h3 class="anchored" data-anchor-id="beneficios-de-la-competencia">Beneficios de la Competencia</h3>
+<section id="beneficios-de-la-competencia" class="level2">
+<h2 class="anchored" data-anchor-id="beneficios-de-la-competencia">Beneficios de la Competencia</h2>
 <p>La competencia tiene múltiples beneficios para la sociedad y la economía:</p>
 <ol type="1">
 <li>Mejora de las condiciones de precio y calidad de los productos y servicios, ya que los competidores buscan atraer a los consumidores ofreciendo mejores ofertas.</li>
@@ -4181,60 +4342,44 @@ Fundamentos y Alcances de las Finanzas Internacionales. Retrieved from
 </ol>
 </section>
 </section>
-</section>
 <section id="definición-y-características-del-mercado-relevante" class="level1">
 <h1>Definición y Características del Mercado Relevante</h1>
-<section id="definición-de-mercado-relevante" class="level2">
-<h2 class="anchored" data-anchor-id="definición-de-mercado-relevante">Definición de Mercado Relevante</h2>
-<p>El mercado relevante se refiere a aquel mercado en el cual los bienes y servicios, considerando su estructura de mercado, son sustitutos o razonablemente intercambiables en función de los fines para los cuales fueron creados. Tanto desde la perspectiva del consumidor como del productor, se considera que estos bienes y servicios son intercambiables. Es decir, los consumidores los ven como productos sustitutos y los productores los consideran intercambiables.</p>
-</section>
+<div id="def-mercado-relevante" class="theorem definition">
+<p><span class="theorem-title"><strong>Definición 1 (Mercado Relevante) </strong></span>El mercado relevante se refiere a aquel mercado en el cual los bienes y servicios, considerando su estructura de mercado, son sustitutos o razonablemente intercambiables en función de los fines para los cuales fueron creados. Tanto desde la perspectiva del consumidor como del productor, se considera que estos bienes y servicios son intercambiables. Es decir, los consumidores los ven como productos sustitutos y los productores los consideran intercambiables.</p>
+</div>
 <section id="características-del-mercado-relevante" class="level2">
 <h2 class="anchored" data-anchor-id="características-del-mercado-relevante">Características del Mercado Relevante</h2>
 <ol type="1">
-<li><p>Áreas geográficas de interacción: El mercado relevante se define por las áreas geográficas en las que los oferentes y demandantes interactúan para intercambiar bienes y servicios.</p></li>
-<li><p>Sustitutos: Los productos y servicios dentro del mercado relevante son sustitutos entre sí, lo que significa que pueden satisfacer las mismas necesidades del consumidor.</p></li>
-<li><p>Elasticidad de precios y demanda: Las demandas en el mercado relevante son elásticas, lo que implica que los cambios en los precios tienen un impacto significativo en la cantidad demandada.</p></li>
-<li><p>Elasticidad cruzada: La elasticidad cruzada de los bienes dentro del mercado relevante es positiva y baja, lo que indica que los cambios en el precio de un bien tienen un efecto limitado en la demanda de otros bienes.</p></li>
-<li><p>Elasticidad de ingreso: La elasticidad de ingreso de la demanda en el mercado relevante generalmente es mayor a cero y menor a 1. Esto significa que un aumento en los ingresos de los consumidores resulta en un aumento proporcionalmente menor en la demanda de los bienes y servicios del mercado relevante. <img src="https://latex.codecogs.com/png.latex?0%20%3C%20%5Ceta_%7Bp_%7BX%7D%7D%20X%5Ed%20%5Cleq%201"></p></li>
+<li><p><strong>Áreas geográficas de interacción:</strong> El mercado relevante se define por las áreas geográficas en las que los oferentes y demandantes interactúan para intercambiar bienes y servicios.</p></li>
+<li><p><strong>Sustitutos:</strong> Los productos y servicios dentro del mercado relevante son sustitutos entre sí, lo que significa que pueden satisfacer las mismas necesidades del consumidor.</p></li>
+<li><p><strong>Elasticidad de precios y demanda son altas:</strong> Las demandas en el mercado relevante son elásticas, lo que implica que los cambios en los precios tienen un impacto significativo en la cantidad demandada.</p></li>
+<li><p><strong>Elasticidad cruzada positiva y baja:</strong> La elasticidad cruzada de los bienes dentro del mercado relevante es positiva y baja, lo que indica que los cambios en el precio de un bien tienen un efecto limitado en la demanda de otros bienes.</p></li>
+<li><p><strong>Elasticidad de ingreso mayor a cero:</strong> La elasticidad de ingreso de la demanda en el mercado relevante generalmente es mayor a cero y menor a 1. Esto significa que un aumento en los ingresos de los consumidores resulta en un aumento proporcionalmente menor en la demanda de los bienes y servicios del mercado relevante. <img src="https://latex.codecogs.com/png.latex?0%20%3C%20%5Ceta_%7Bp_%7BX%7D%7D%20X%5Ed%20%5Cleq%201"></p></li>
 </ol>
 </section>
 <section id="pasos-para-definir-un-mercado-relevante" class="level2">
 <h2 class="anchored" data-anchor-id="pasos-para-definir-un-mercado-relevante">Pasos para Definir un Mercado Relevante</h2>
 <ol type="1">
-<li><p>Descripción de la estructura de los mercados: Se analiza la organización y dinámica de los mercados en términos de competencia y poder de mercado.</p></li>
-<li><p>Sustituibilidad o intercambiabilidad de los bienes: Se evalúa si los bienes y servicios pueden satisfacer la misma necesidad del consumidor en las mismas circunstancias y en el mismo período de tiempo.</p></li>
-<li><p>Oferta diferenciada y diversificada: Se considera la variedad y diferenciación de los productos ofrecidos en el mercado.</p></li>
-<li><p>Accesibilidad para los demandantes: Se verifica si los bienes y servicios del mercado relevante están disponibles y accesibles para los consumidores.</p></li>
-<li><p>Objetividad de la oferta: Se evalúa la disponibilidad geográfica de los productos, la posibilidad de adquirirlos en el tiempo necesario para satisfacer una necesidad y su accesibilidad para los demandantes.</p></li>
+<li><p><strong>Descripción de la estructura de los mercados:</strong> Se analiza la organización y dinámica de los mercados en términos de competencia y poder de mercado.</p></li>
+<li><p><strong>Sustituibilidad o intercambiabilidad de los bienes:</strong> Se evalúa si los bienes y servicios pueden satisfacer la misma necesidad del consumidor en las mismas circunstancias y en el mismo período de tiempo.</p></li>
+<li><p><strong>Oferta diferenciada y diversificada:</strong> Se considera la variedad y diferenciación de los productos ofrecidos en el mercado.</p></li>
+<li><p><strong>Accesibilidad para los demandantes:</strong> Se verifica si los bienes y servicios del mercado relevante están disponibles y accesibles para los consumidores.</p></li>
+<li><p><strong>Objetividad de la oferta:</strong> Se evalúa la disponibilidad geográfica de los productos, la posibilidad de adquirirlos en el tiempo necesario para satisfacer una necesidad y su accesibilidad para los demandantes.</p></li>
 </ol>
 </section>
 </section>
 <section id="mercado-de-producto-y-mercado-geográfico-relevante" class="level1">
 <h1>Mercado de Producto y Mercado Geográfico Relevante</h1>
-<section id="mercado-de-producto-o-servicio-relevante" class="level2">
-<h2 class="anchored" data-anchor-id="mercado-de-producto-o-servicio-relevante">Mercado de Producto o Servicio Relevante</h2>
-<p>Desde la perspectiva del consumidor, el mercado de producto o servicio relevante se refiere al conjunto de bienes y servicios que son sustitutos entre sí en términos de características, precios y usos. Estos bienes y servicios satisfacen las mismas necesidades del consumidor en condiciones similares. En otras palabras, son productos o servicios que pueden cumplir la misma función o propósito para el consumidor.</p>
-<p>La determinación del mercado de producto o servicio relevante es esencial para comprender la competencia y la dinámica del mercado. Al identificar los sustitutos cercanos, tanto los consumidores como las empresas pueden tomar decisiones estratégicas en relación con la oferta y la demanda de esos productos o servicios.</p>
-</section>
-<section id="mercado-geográfico-relevante" class="level2">
-<h2 class="anchored" data-anchor-id="mercado-geográfico-relevante">Mercado Geográfico Relevante</h2>
-<p>El mercado geográfico relevante se define como el área geográfica en la cual se encuentran las fuentes de proveedores alternativos que ofrecen el conjunto de bienes sustitutos. En este mercado, los demandantes o clientes tienen acceso a diferentes proveedores que ofrecen productos o servicios similares en condiciones comparables a las del mercado principal.</p>
-<p>El mercado geográfico relevante es importante para comprender la competencia a nivel local o regional. Permite evaluar la disponibilidad de alternativas para los consumidores y la capacidad de los proveedores para competir en esa área geográfica específica. Además, tener en cuenta el mercado geográfico relevante es fundamental para analizar la distribución geográfica de la oferta y la demanda, así como los factores económicos y logísticos que influyen en el comercio y la competencia en una región determinada.</p>
-</section>
-<section id="mercado-relevante" class="level2">
-<h2 class="anchored" data-anchor-id="mercado-relevante">Mercado Relevante</h2>
-<p>El concepto de mercado relevante también puede abarcar la dimensión temporal. En este caso, se refiere a las combinaciones de los mercados de producto y geográfico en un determinado período de tiempo. Esta perspectiva temporal es relevante para comprender la evolución de la competencia y las estrategias de mercado a lo largo del tiempo.</p>
-</section>
-</section>
-<section id="definición-del-mercado-de-producto-relevante" class="level1">
-<h1>Definición del Mercado de Producto Relevante</h1>
-<p>El mercado de producto relevante incluye todos aquellos bienes y servicios que son sustitutos cercanos tanto desde la perspectiva de la demanda como de la oferta. La sustituibilidad de la demanda se refiere a la capacidad de los consumidores para cambiar de un producto a otro en respuesta a cambios en el precio. Si un incremento en el precio de un producto A provoca que los consumidores opten por comprar el producto B en su lugar, se considera que A y B son sustitutos.</p>
+<div id="def-mercado-producto-relevante" class="theorem definition">
+<p><span class="theorem-title"><strong>Definición 2 (Mercado de Producto Relevante) </strong></span>El mercado de producto relevante incluye todos aquellos bienes y servicios que son sustitutos cercanos tanto desde la perspectiva de la demanda como de la oferta. La sustituibilidad de la demanda se refiere a la capacidad de los consumidores para cambiar de un producto a otro en respuesta a cambios en el precio. Si un incremento en el precio de un producto A provoca que los consumidores opten por comprar el producto B en su lugar, se considera que A y B son sustitutos.</p>
 <p>Por otro lado, la sustituibilidad de la oferta se refiere a la capacidad de las empresas para ajustar su producción de un producto a otro en respuesta a cambios en el precio. Si las empresas que producen el producto B pueden fácilmente cambiar su producción hacia el producto A cuando el precio de A aumenta, se considera que B es un sustituto de A desde la perspectiva de la oferta.</p>
 <p>En ambos casos, la presencia de un bien sustituto en el mercado restringe la capacidad de la empresa que ofrece el bien original para aumentar los precios, ya que los consumidores y las empresas tienen opciones alternativas disponibles.</p>
-<section id="elasticidades-y-definición-del-mercado-relevante" class="level2">
-<h2 class="anchored" data-anchor-id="elasticidades-y-definición-del-mercado-relevante">Elasticidades y Definición del Mercado Relevante</h2>
+</div>
+<section id="elasticidades" class="level2">
+<h2 class="anchored" data-anchor-id="elasticidades">Elasticidades</h2>
 <section id="elasticidad-precio-de-la-demanda" class="level3">
 <h3 class="anchored" data-anchor-id="elasticidad-precio-de-la-demanda">Elasticidad Precio de la Demanda</h3>
+<p>Para concocer un mercado relevante</p>
 </section>
 <section id="elasticida-cruzada-de-la-demanda" class="level3">
 <h3 class="anchored" data-anchor-id="elasticida-cruzada-de-la-demanda">Elasticida cruzada de la demanda</h3>
@@ -4674,6 +4819,17 @@ node4-&gt;node6
 <p>La noción de sustitución entre productos es crucial para comprender el mercado relevante. Se refiere a la capacidad de los consumidores para satisfacer una misma necesidad o deseo utilizando diferentes productos o servicios. Cuanto mayor sea el nivel de sustitución entre productos, es decir, cuanto más similares y competitivos sean los productos entre sí, mayor será el alcance del mercado relevante.</p>
 <p>Además, al determinar el mercado relevante, es fundamental considerar los costos asociados con las alternativas disponibles para los proveedores. Esto implica evaluar los costos de producción, distribución y otros factores que puedan influir en la viabilidad de las fuentes alternativas de aprovisionamiento.</p>
 </section>
+</section>
+<section id="recapitulación-de-los-conceptos-clave" class="level1">
+<h1>Recapitulación de los conceptos clave</h1>
+<p><strong>Mercado de Producto o Servicio Relevante</strong></p>
+<p>Desde la perspectiva del consumidor, el mercado de producto o servicio relevante se refiere al conjunto de bienes y servicios que son sustitutos entre sí en términos de características, precios y usos. Estos bienes y servicios satisfacen las mismas necesidades del consumidor en condiciones similares. En otras palabras, son productos o servicios que pueden cumplir la misma función o propósito para el consumidor.</p>
+<p>La determinación del mercado de producto o servicio relevante es esencial para comprender la competencia y la dinámica del mercado. Al identificar los sustitutos cercanos, tanto los consumidores como las empresas pueden tomar decisiones estratégicas en relación con la oferta y la demanda de esos productos o servicios.</p>
+<p><strong>Mercado Geográfico Relevante</strong></p>
+<p>El mercado geográfico relevante se define como el área geográfica en la cual se encuentran las fuentes de proveedores alternativos que ofrecen el conjunto de bienes sustitutos. En este mercado, los demandantes o clientes tienen acceso a diferentes proveedores que ofrecen productos o servicios similares en condiciones comparables a las del mercado principal.</p>
+<p>El mercado geográfico relevante es importante para comprender la competencia a nivel local o regional. Permite evaluar la disponibilidad de alternativas para los consumidores y la capacidad de los proveedores para competir en esa área geográfica específica. Además, tener en cuenta el mercado geográfico relevante es fundamental para analizar la distribución geográfica de la oferta y la demanda, así como los factores económicos y logísticos que influyen en el comercio y la competencia en una región determinada.</p>
+<p><strong>Mercado Relevante</strong></p>
+<p>El concepto de mercado relevante también puede abarcar la dimensión temporal. En este caso, se refiere a las combinaciones de los mercados de producto y geográfico en un determinado período de tiempo. Esta perspectiva temporal es relevante para comprender la evolución de la competencia y las estrategias de mercado a lo largo del tiempo.</p>
 </section>
 <section id="publicaciones-similares" class="level1">
 <h1>Publicaciones Similares</h1>
@@ -5622,7 +5778,7 @@ Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-
 <p>Un vector es una colección ordenada de elementos del mismo tipo de dato. Puede contener números, valores lógicos o caracteres. En R, los vectores son utilizados para almacenar conjuntos de datos relacionados. Por ejemplo, podemos tener un vector de edades o un vector de nombres. Los vectores son una de las estructuras de datos más utilizadas en R y nos permiten realizar operaciones y cálculos de manera eficiente.</p>
 <p><strong>Vectores</strong></p>
 <p>Concatenación de elementos con <strong><code>c()</code></strong>: Se utiliza la función <code>c()</code> para concatenar elementos y crear vectores en R.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_5c7e952c7fc845cd96839c275665ffed">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
@@ -5633,13 +5789,19 @@ font-style: inherit;">0.6</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.25</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># números decimales (double)</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># números decimales (double)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.50 0.60 0.25</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(9L, 10L, 11L, 12L, 13L) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># números enteros (integer)</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># números enteros (integer)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  9 10 11 12 13</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -5649,8 +5811,11 @@ font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># secuencia de números enteros (integer sequence)</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># secuencia de números enteros (integer sequence)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  9 10 11 12 13</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="cn" style="color: #8f5902;
 background-color: null;
@@ -5660,8 +5825,11 @@ font-style: inherit;">FALSE</span>, <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># valores lógicos (logical)</span></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># valores lógicos (logical)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -5673,8 +5841,11 @@ font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> 4i) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># números complejos (complex)</span></span>
-<span id="cb1-6"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># números complejos (complex)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1+0i 2+4i</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -5685,13 +5856,16 @@ background-color: null;
 font-style: inherit;">"c"</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># caracteres (character)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "b" "c"</code></pre>
+</div>
 </div>
 <p><strong>Acciones con vectores</strong></p>
 <ol type="1">
 <li><p>Asignar los vectores a nombres:</p>
 <p>Creamos un vector llamado “dbl” que contiene los números decimales 0.5, 0.6 y 0.25.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-2_8ad1fc4ebf09be44f0bd5930ed4bb51f">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">dbl <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">dbl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5704,8 +5878,8 @@ background-color: null;
 font-style: inherit;">0.25</span>)</span></code></pre></div>
 </div>
 <p>Creamos un vector llamado “chr” que contiene los caracteres “a”, “b” y “c”.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-3_17550ccb5d6fcdc5c1a037d447e2e208">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">chr <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">chr <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5719,51 +5893,75 @@ font-style: inherit;">"c"</span>)</span></code></pre></div>
 </div></li>
 <li><p>Imprimir los vectores “dbl” y “chr” en la consola:</p>
 <p>Visualizamos en la consola el contenido del vector “dbl”, que son los números decimales 0.5, 0.6 y 0.25.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-4_3ef592c943aa6846720e7d64dd0e4e53">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">dbl</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">dbl</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.50 0.60 0.25</code></pre>
+</div>
 </div>
 <p>Visualizamos en la consola el contenido del vector “chr”, que son los caracteres “a”, “b” y “c”.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-5_590dfb821dd2121f1dab4521ae370c1a">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">chr</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">chr</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "b" "c"</code></pre>
+</div>
 </div></li>
 <li><p>Verificar el número de elementos en “dbl” y “chr”:</p>
 <p>Calculamos y mostramos en la consola la longitud del vector “dbl”, que es 3.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-6_bd91d75702fa006add836f54b9192c49">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(dbl)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
 </div>
 <p>Calculamos y mostramos en la consola la longitud del vector “chr”, que es 3.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-7_245e124e30f6e9b6ef9c3a75e046b682">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(chr)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
 </div></li>
 <li><p>Verificar el tipo de dato de “dbl” y “chr”:</p>
 <p>Visualizamos en la consola el tipo de dato del vector “dbl”, que es “double” (números decimales).</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-8_ef0d1053ccfd8cda23de0bd43929f38f">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">typeof</span>(dbl)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
 </div>
 <p>Visualizamos en la consola el tipo de dato del vector “chr”, que es “character” (caracteres).</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-9_7cbd4826469718461449c7bd4c5a6f6f">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">typeof</span>(chr)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
 </div></li>
 <li><p>Combinar dos vectores:</p>
 <p>Se puede combinar el vector “dbl” consigo mismo utilizando la función “c()”, creando un nuevo vector que contiene los elementos duplicados del vector original.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-10_e1759d9f65fc1495ddac4babddc93cd4">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(dbl, dbl)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.50 0.60 0.25 0.50 0.60 0.25</code></pre>
+</div>
 </div>
 <p>Tambien se puede combina el vector “dbl” con el vector “chr” utilizando la función “c()”, creando un nuevo vector que contiene los elementos de ambos vectores concatenados.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-11_3d4a3956b2d8f5d370c7f4319e321391">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(dbl, chr)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "0.5"  "0.6"  "0.25" "a"    "b"    "c"   </code></pre>
+</div>
 </div></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -5782,8 +5980,8 @@ Nota
 <p><strong>Operaciones aritméticas con vectores</strong></p>
 <ol type="1">
 <li><p>Definamos dos nuevos vectores numéricos llamados <code>a</code> y <code>b</code> con 4 elementos cada uno:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-12_b51f44b542c8b0ad7d5e2ac2aeb436e5">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">a <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1">a <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5796,7 +5994,7 @@ background-color: null;
 font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb12-2">b <span class="ot" style="color: #003B4F;
+<span id="cb31-2">b <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5811,22 +6009,28 @@ background-color: null;
 font-style: inherit;">40</span>)</span></code></pre></div>
 </div></li>
 <li><p>Realizamos una multiplicación escalar de <code>a</code> por 5, lo que significa que cada elemento en <code>a</code> se multiplica por 5:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-13_9e1047c9baa4cfb2cc87965fe93c4ba4">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">a <span class="sc" style="color: #5E5E5E;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1">a <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  5 10 15 20</code></pre>
+</div>
 </div></li>
 <li><p>Realizamos una multiplicación de vectores entre <code>a</code> y <code>b</code>, lo que implica multiplicar cada elemento en <code>a</code> por el elemento correspondiente en <code>b</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-14_2d26b21e2567d0b066dd7fa1537a0e9b">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">a <span class="sc" style="color: #5E5E5E;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1">a <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> b</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  10  40  90 160</code></pre>
+</div>
 </div></li>
 <li><p>Creamos un nuevo vector numérico llamado <code>v</code> con longitud 5.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-15_1e7ad19eb51ca62f202bf0e2919f14a3">
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">v <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1">v <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5841,9 +6045,12 @@ background-color: null;
 font-style: inherit;">1.4</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.5</span>)</span>
-<span id="cb15-2">a <span class="sc" style="color: #5E5E5E;
+<span id="cb36-2">a <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> v</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.1 2.4 3.9 5.6 1.5</code></pre>
+</div>
 </div></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -5866,28 +6073,40 @@ Nota
 <p><strong>Matrices</strong></p>
 <ol type="1">
 <li><p>Combinamos los vectores <code>a</code> y <code>b</code>, definidas anteriormente, por columnas utilizando la función <code>cbind()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-16_31ec95e2f4f9422f52d61c2155007f72">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1">A <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1">A <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cbind</span>(a, b)</span>
-<span id="cb16-2">A</span></code></pre></div>
+<span id="cb38-2">A</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     a  b
+[1,] 1 10
+[2,] 2 20
+[3,] 3 30
+[4,] 4 40</code></pre>
+</div>
 </div>
 <p>Esta opción combina los vectores <code>a</code> y <code>b</code> por columnas, creando una matriz <code>A</code> donde los elementos de <code>a</code> forman la primera columna y los elementos de <code>b</code> forman la segunda columna.</p></li>
 <li><p>Combinamos los vectores <code>a</code> y <code>b</code> por filas utilizando la función <code>rbind()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-17_6298a5964847da2e3a7379b361416de7">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">B <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1">B <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rbind</span>(a, b)</span>
-<span id="cb17-2">B</span></code></pre></div>
+<span id="cb40-2">B</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [,1] [,2] [,3] [,4]
+a    1    2    3    4
+b   10   20   30   40</code></pre>
+</div>
 </div>
 <p>En esta opción, los vectores <code>a</code> y <code>b</code> se combinan por filas para crear una matriz <code>B</code>. Los elementos de <code>a</code> forman la primera fila y los elementos de <code>b</code> forman la segunda fila.</p></li>
 <li><p>Creamos una matriz a partir de los elementos de vector <code>a</code> utilizando la función <code>matrix()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-18_a17f7c379b05c7a6c288273f81c362c2">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1">A <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1">A <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5900,12 +6119,17 @@ background-color: null;
 font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb18-2">A</span></code></pre></div>
+<span id="cb42-2">A</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4</code></pre>
+</div>
 </div>
 <p>Aquí se utiliza la función <code>matrix()</code> para crear una matriz <code>A</code> a partir de los elementos del vector <code>a</code>. Se especifica que la matriz tendrá 2 columnas y 2 filas. Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.</p></li>
 <li><p>Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-19_34884f8b179312b2dcf9e0778df393b7">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">A <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1">A <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5914,12 +6138,17 @@ background-color: null;
 font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span>
-<span id="cb19-2">A</span></code></pre></div>
+<span id="cb44-2">A</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4</code></pre>
+</div>
 </div>
 <p>En esta variante, se crea una matriz <code>A</code> con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector <code>a</code>.</p></li>
 <li><p>Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento <code>byrow = TRUE</code></p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-20_de797fdd9d68fdb9dac6a18bd97bc7dd">
-<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">B <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1">B <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5932,56 +6161,82 @@ background-color: null;
 font-style: inherit;">byrow =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>)</span>
-<span id="cb20-2">B</span></code></pre></div>
+<span id="cb46-2">B</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    2
+[2,]    3    4</code></pre>
+</div>
 </div>
 <p>En esta opción, se crea una matriz <code>B</code> con 2 columnas y se especifica que los elementos del vector <code>a</code> se distribuirán por filas <code>byrow = TRUE</code>, es decir, los primeros elementos de <code>a</code> formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.</p></li>
 </ol>
 <p><strong>Acciones con matrices</strong></p>
 <ol type="1">
 <li><p>Verificamos el número de filas de la matriz <code>A</code> utilizando la función <code>nrow()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-21_6155e5d78c528d9c782ba70eea1305f3">
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nrow</span>(A)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
 </div>
 <p>Esta línea de código devuelve el número de filas de la matriz <code>A</code>.</p></li>
 <li><p>Verificamos el número de columnas de la matriz <code>A</code> utilizando la función <code>ncol()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-22_c810594d64f612e944ba33e6484ed782">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ncol</span>(A)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
 </div>
 <p>Aquí se obtiene el número de columnas de la matriz <code>A</code>.</p></li>
 <li><p>Verificamos la dimensión (número de filas y columnas) de la matriz <code>A</code> utilizando la función <code>dim()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-23_499a014c6bae6a21c3432e323fae4335">
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dim</span>(A)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 2</code></pre>
+</div>
 </div>
 <p>Esta línea de código devuelve la dimensión de la matriz <code>A</code> en formato <code>[nrow, ncol]</code>.</p></li>
 <li><p>Combinamos dos matrices <code>A</code> por columnas utilizando la función <code>cbind()</code> y almacenamos el resultado en <code>D.wide</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-24_3e9151b020265c703d2bb70838956266">
-<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1">D.wide <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1">D.wide <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cbind</span>(A, A)</span>
-<span id="cb24-2">D.wide</span></code></pre></div>
+<span id="cb54-2">D.wide</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4]
+[1,]    1    3    1    3
+[2,]    2    4    2    4</code></pre>
+</div>
 </div>
 <p>En esta línea se crea una nueva matriz <code>D.wide</code> que combina las matrices <code>A</code> y <code>A</code> por columnas.</p></li>
 <li><p>Combinamos dos matrices <code>A</code> por filas utilizando la función <code>rbind()</code> y almacenamos el resultado en <code>D.long</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-25_e9d9d00fa3133fd656c60a0d90529712">
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1">D.long <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1">D.long <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rbind</span>(A, A)</span>
-<span id="cb25-2">D.long</span></code></pre></div>
+<span id="cb56-2">D.long</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+[3,]    1    3
+[4,]    2    4</code></pre>
+</div>
 </div>
 <p>Aquí se crea una nueva matriz <code>D.long</code> que combina las matrices <code>A</code> y <code>A</code> por filas.</p></li>
 <li><p>Combinamos las matrices <code>D.wide</code> y <code>D.long</code> por columnas utilizando la función <code>cbind()</code> y almacenamos el resultado en <code>D</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-26_28591abe429923062337a2fd51e5a41e">
-<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><span class="co" style="color: #5E5E5E;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># D &lt;- cbind(D.wide, D.long)</span></span></code></pre></div>
 </div>
@@ -5990,70 +6245,115 @@ font-style: inherit;"># D &lt;- cbind(D.wide, D.long)</span></span></code></pre>
 <p><strong>Operaciones aritméticas con matrices</strong></p>
 <ol type="1">
 <li><p>Suma de la matriz <code>B</code> consigo misma utilizando el operador <code>+</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-27_52028b987938864c263f75a91f01a49e">
-<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1">B <span class="sc" style="color: #5E5E5E;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1">B <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> B</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    2    4
+[2,]    6    8</code></pre>
+</div>
 </div>
 <p>Esta línea de código realiza la suma de la matriz <code>B</code> con ella misma.</p></li>
 <li><p>Multiplicación escalar de la matriz <code>B</code> por 2 utilizando el operador <code>*</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-28_e528576164f680ec78974a3e569ef0e2">
-<div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1">B <span class="sc" style="color: #5E5E5E;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1">B <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    2    4
+[2,]    6    8</code></pre>
+</div>
 </div>
 <p>Aquí se realiza la multiplicación de cada elemento de la matriz <code>B</code> por 2.</p></li>
 <li><p>Multiplicación elemento a elemento de la matriz <code>B</code> consigo misma y almacenar el resultado en <code>a</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-29_d13a0ead9ef4bb1424ab48ee5dc03323">
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">a <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1">a <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> B <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> B</span>
-<span id="cb29-2">a</span></code></pre></div>
+<span id="cb63-2">a</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    4
+[2,]    9   16</code></pre>
+</div>
 </div>
 <p>En esta línea se realiza la multiplicación elemento a elemento de la matriz <code>B</code> con ella misma, y el resultado se almacena en la matriz <code>a</code>.</p></li>
 <li><p>Multiplicación de matrices utilizando el operador <code>%*%</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-30_3726407c23145eef49df0d7af55a8311">
-<div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1">C <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1">C <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> B <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%*%</span> B</span>
-<span id="cb30-2">C</span></code></pre></div>
+<span id="cb65-2">C</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    7   10
+[2,]   15   22</code></pre>
+</div>
 </div>
 <p>Aquí se realiza la multiplicación de matrices entre la matriz <code>B</code> y ella misma, y el resultado se almacena en la matriz <code>C</code>.</p></li>
 </ol>
 <p><strong>Otras operaciones con matrices:</strong></p>
 <ol type="1">
 <li><p>Transposición de la matriz <code>D.wide</code> utilizando la función <code>t()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-31_364f50c3b5c41b1128f3468a2d7e0ff1">
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">t</span>(D.wide)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    2
+[2,]    3    4
+[3,]    1    2
+[4,]    3    4</code></pre>
+</div>
 </div>
 <p>Esta línea de código transpone la matriz <code>D.wide</code>, es decir, intercambia las filas por columnas y viceversa.</p></li>
 <li><p>Cálculo del determinante de la matriz <code>B</code> utilizando la función <code>det()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-32_f1238257ae20022b83c2cd401655d0a5">
-<div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">det</span>(B)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -2</code></pre>
+</div>
 </div>
 <p>Aquí se calcula el determinante de la matriz <code>B</code>.</p></li>
 <li><p>Cálculo de la inversa de la matriz <code>B</code> utilizando la función <code>solve()</code> (solo si el determinante es diferente de 0):</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-33_c77a4dbb65611dd177fc1afeead5b564">
-<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">solve</span>(B)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] -2.0  1.0
+[2,]  1.5 -0.5</code></pre>
+</div>
 </div>
 <p>En esta línea se calcula la inversa de la matriz <code>B</code>, siempre y cuando el determinante sea diferente de 0.</p></li>
 <li><p>Cálculo de los valores propios (eigenvalues) de una matriz cuadrada y simétrica utilizando la función <code>eigen()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-34_b14d7d0c4e15e198bd1d2646666e8395">
-<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">eigen</span>(B)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>eigen() decomposition
+$values
+[1]  5.3722813 -0.3722813
+
+$vectors
+           [,1]       [,2]
+[1,] -0.4159736 -0.8245648
+[2,] -0.9093767  0.5657675</code></pre>
+</div>
 </div>
 <p>Aquí se calculan los valores propios de la matriz <code>B</code>. Esta operación solo es aplicable a matrices cuadradas y simétricas.</p></li>
 </ol>
@@ -6064,8 +6364,8 @@ font-style: inherit;">eigen</span>(B)</span></code></pre></div>
 <p><strong>Creación del data frame:</strong></p>
 <ol type="1">
 <li><p>Creamos vectores con diferentes tipos de datos, como números decimales (<code>dbl</code>), números enteros (<code>int</code>), valores lógicos (<code>lgl</code>) y caracteres (<code>chr</code>):</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-35_1ff0ea8f8e41d260dd0490f3bea84250">
-<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1">dbl <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1">dbl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6082,14 +6382,14 @@ background-color: null;
 font-style: inherit;">0.333</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># números decimales (double)</span></span>
-<span id="cb35-2">int <span class="ot" style="color: #003B4F;
+<span id="cb75-2">int <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(9L, 10L, 11L, 12L, 13L) <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># números enteros (integer)</span></span>
-<span id="cb35-3">lgl <span class="ot" style="color: #003B4F;
+<span id="cb75-3">lgl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6106,7 +6406,7 @@ background-color: null;
 font-style: inherit;">TRUE</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># valores lógicos (logical)</span></span>
-<span id="cb35-4">chr <span class="ot" style="color: #003B4F;
+<span id="cb75-4">chr <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6126,8 +6426,8 @@ font-style: inherit;"># caracteres (character)</span></span></code></pre></div>
 </div>
 <p>Cada vector tiene elementos que representan valores de su respectivo tipo de dato.</p></li>
 <li><p>Utilizamos la función <code>data.frame()</code> para combinar los vectores en un data frame llamado <code>df</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-36_d99dd9ed3e4562e8aa127659b5fd9fd8">
-<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1">df <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1">df <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6135,32 +6435,49 @@ font-style: inherit;">data.frame</span>(dbl, int, lgl, chr)</span></code></pre><
 </div>
 <p>El data frame <code>df</code> se crea utilizando los vectores <code>dbl</code>, <code>int</code>, <code>lgl</code> y <code>chr</code> como columnas.</p></li>
 <li><p>Mostamos el contenido del data frame en la consola:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-37_31788adddd3a0c34e3e404ff701785e2">
-<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1">df</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1">df</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    dbl int   lgl chr
+1 0.500   9  TRUE   a
+2 0.600  10 FALSE   b
+3 0.250  11 FALSE   c
+4 1.200  12  TRUE   d
+5 0.333  13  TRUE   e</code></pre>
+</div>
 </div>
 <p>Esto imprime el contenido del data frame <code>df</code>.</p></li>
 </ol>
 <p><strong>Acciones con data frames:</strong></p>
 <ol type="1">
 <li><p>Verificamos el número de filas del data frame utilizando la función <code>nrow()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-38_a7ec40452b7b0e2908e706cd50398c23">
-<div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nrow</span>(df)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
 </div>
 <p>Esta línea de código devuelve el número de filas en el data frame <code>df</code>.</p></li>
 <li><p>Verificamos el número de columnas del data frame utilizando la función <code>ncol()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-39_9eab490cf93d09b213bc4a8b03ad6ed4">
-<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ncol</span>(df)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
 </div>
 <p>Aquí se obtiene el número de columnas en el data frame <code>df</code>.</p></li>
 <li><p>Verificamos la dimensión (número de filas y columnas) del data frame utilizando la función <code>dim()</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-40_bd9e62c21be3ee236e64a3c69b447921">
-<div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><span class="fu" style="color: #4758AB;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dim</span>(df)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 4</code></pre>
+</div>
 </div>
 <p>Esta línea de código devuelve la dimensión del data frame <code>df</code> en formato <code>[nrow, ncol]</code>, es decir, el número de filas y columnas que tiene el data frame.</p></li>
 </ol>
@@ -6171,14 +6488,14 @@ font-style: inherit;">dim</span>(df)</span></code></pre></div>
 <p><strong>Creación de la lista</strong></p>
 <ol type="1">
 <li><p>Creamos una variable <code>a</code> que contiene un <strong>escalar</strong> de tipo entero (<code>1L</code>):</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-41_e75b993d6b76f6f6578dfa9ca1a482b9">
-<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1">a <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1">a <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> 1L</span></code></pre></div>
 </div></li>
 <li><p>Creamos un <strong>vector numérico</strong> <code>dbl</code> con 5 elementos:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-42_bb5d77945f483c370f8e0319f554277f">
-<div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1">dbl <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1">dbl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6195,8 +6512,8 @@ background-color: null;
 font-style: inherit;">0.333</span>)</span></code></pre></div>
 </div></li>
 <li><p>Creamos un <strong>vector de caracteres</strong> <code>chr</code> con 3 elementos:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-43_b1eaac2da83e4da638ec8c2ad7d3e3a4">
-<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1">chr <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1">chr <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6209,8 +6526,8 @@ background-color: null;
 font-style: inherit;">"c"</span>)</span></code></pre></div>
 </div></li>
 <li><p>Creamos un vector <code>v</code> con 4 elementos de tipo numérico:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-44_43207ba72f773ef6aa0f702117935c82">
-<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1">v <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1">v <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6225,8 +6542,8 @@ background-color: null;
 font-style: inherit;">1.4</span>)</span></code></pre></div>
 </div></li>
 <li><p>Creamos una matriz <code>mat</code> de tamaño 2x2 a partir del vector <code>v</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-45_649793853aaeff9b5b7d16398646f0bb">
-<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1">mat <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb89" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1">mat <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6238,8 +6555,8 @@ font-style: inherit;">2</span>)</span></code></pre></div>
 </div>
 <p>La matriz <code>mat</code> tiene 2 columnas y los elementos del vector <code>v</code> se llenan por columnas.</p></li>
 <li><p>Creamos una lista <code>l</code> que contiene los elementos <code>a</code>, <code>dbl</code>, <code>chr</code> y <code>mat</code>:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-46_66c0262ab51a3a4325f373368d2c1869">
-<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1">l <span class="ot" style="color: #003B4F;
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1">l <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -6247,8 +6564,23 @@ font-style: inherit;">list</span>(a, dbl, chr, mat)</span></code></pre></div>
 </div>
 <p>La lista <code>l</code> contiene estos elementos en ese orden.</p></li>
 <li><p>Finalmente, visualizamos el contenido de la lista en la consola:</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-47_68d77ba9339af5131ad89365abd0083d">
-<div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1">l</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb91" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1">l</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 0.500 0.600 0.250 1.200 0.333
+
+[[3]]
+[1] "a" "b" "c"
+
+[[4]]
+     [,1] [,2]
+[1,]  1.1  1.3
+[2,]  1.2  1.4</code></pre>
+</div>
 </div>
 <p>Esto imprime el contenido de la lista <code>l</code>.</p></li>
 </ol>
@@ -6326,7 +6658,7 @@ Achalma, E. (2023, June 11). Lo que debemos saber de R. Retrieved from
 <p><strong>Paso 2: Escribir el código en el script</strong></p>
 <p>Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escribir nuestro código en R. Podemos utilizar cualquier comando o función de R en el script para realizar análisis de datos, manipulación de variables, visualización, entre otros. Es importante asegurarse de que el código esté escrito correctamente y tenga una sintaxis válida.</p>
 <p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-012-que-ofrece-r/images/Screenshot_20230611_004241.png" class="img-fluid"></p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_10d074d27497c4e5407872d19a5fce58">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Este es un ejemplo de un script básico en R</span></span>
@@ -7263,108 +7595,6 @@ Siguiendo su camino hacia un futuro transformado. Retrieved from <a href="https:
   <category>Política</category>
   <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-entendiendo-mariategui/index.html</guid>
   <pubDate>Fri, 09 Jun 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Pautas para la presentación del informe de investigación en economía enfoque, estructura y elementos clave</title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="introducción" class="level1">
-<h1>Introducción</h1>
-<p>Al iniciar el semestre académico, es fundamental que los alumnos definan de manera precisa el objetivo de su trabajo de investigación y evalúen su relevancia, factibilidad y valor agregado. Se recomienda tomar estas decisiones después de revisar la literatura básica y explorar la disponibilidad de información estadística sobre el tema de investigación.</p>
-<p>La investigación económica abarca una amplia diversidad y depende de la formación, capacidad y motivación del investigador. Algunos ejemplos de tipos de investigación incluyen:</p>
-<ol type="1">
-<li><p>Comprobación de hipótesis: En esta modalidad, el alumno presenta una hipótesis acerca de un fenómeno económico y busca comprobarla en su trabajo de investigación. Por ejemplo: “En la economía peruana, el mecanismo de transmisión de la política monetaria no es el canal de la tasa de interés, sino el canal del crédito”.</p></li>
-<li><p>Estudio de relaciones: Aquí, el alumno plantea el problema y se enfoca en determinar las relaciones entre variables económicas. Por ejemplo: ¿Cuál es la relación entre las exportaciones y el crecimiento económico en el Perú? ¿Cuáles son los determinantes del tipo de cambio real en el Perú?</p></li>
-<li><p>Formulación de modelos: En esta modalidad, el alumno formula o reformula modelos para la economía peruana con el objetivo de explicar el comportamiento de variables económicas. Por ejemplo: Formulación de un modelo macroeconómico que explique la determinación de salarios, precios y empleo en el corto plazo.</p></li>
-</ol>
-<p>A continuación, se presenta una estructura sugerida para la presentación del informe de investigación.</p>
-<p><strong>I. Planteamiento del problema</strong></p>
-<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;1: Imagen 1</figcaption>
-<p><img src="https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/20230603152205.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>En esta sección, el estudiante, después de revisar la bibliografía relevante y los datos estadísticos relacionados con el problema económico a estudiar, llevará a cabo:</p>
-<p>Análisis cuantitativo y/o cualitativo del comportamiento de la variable endógena (diagnóstico) - en este caso, el Producto Bruto Interno (PBI) nacional, Impuesto Selectivo al Consumo (ISC), Impuesto General a las Ventas (IGV), Impuesto a la Renta (IR) y otros impuestos.</p>
-<p>Identificación de las causas del comportamiento de la variable endógena, basado en la relación existente entre la variable endógena y la variable exógena (explicación) - se puede emplear el método de Granger-MCO para esto.</p>
-<p>Exposición de propuestas de política económica basadas en la explicación anterior (recomendación).</p>
-<p>Formulación de preguntas que motiven respuestas en función del diagnóstico, explicación y recomendación.</p>
-<p><strong>II. Objetivos</strong></p>
-<p>En esta sección, el estudiante debe presentar de manera clara sus propósitos, tanto objetivos generales como específicos. Estos objetivos deben formularse después de responder las siguientes preguntas:</p>
-<ol type="1">
-<li>¿Qué se desea lograr con la investigación?</li>
-<li>¿Qué conocimientos se busca adquirir?</li>
-<li>¿Qué se pretende demostrar?</li>
-</ol>
-<p>Es importante destacar que las respuestas a estas preguntas deben contribuir a responder las interrogantes planteadas al final del planteamiento del problema.</p>
-<p><strong>III. Importancia y justificación</strong></p>
-<p>En esta sección, el alumno expone las razones por las cuales plantea la investigación. Estas motivaciones pueden tener un carácter teórico, metodológico o práctico. Además, se pueden abordar las siguientes interrogantes: <sup>1</sup></p>
-<ul>
-<li>¿Cuáles son los beneficios obtenidos al realizar esta investigación?</li>
-<li>¿Por qué resulta necesaria esta investigación?</li>
-<li>¿A quiénes beneficiará?</li>
-<li>¿Quiénes serán los potenciales usuarios?</li>
-</ul>
-<p><strong>IV. Antecedentes</strong></p>
-<p>En esta parte, el alumno debe revisar y presentar los trabajos de investigación empírica relacionados con el tema. En general, es esencial presentar una síntesis de dichos estudios, haciendo énfasis en los objetivos, la metodología utilizada, las conclusiones y las recomendaciones.</p>
-<p><strong>V. Consideraciones teóricas</strong></p>
-<p>En esta sección, el alumno debe presentar la literatura teórica relevante al problema seleccionado.</p>
-<p><strong>VI. Hipótesis</strong></p>
-<p>En esta parte, el alumno, basándose en los elementos teóricos expuestos anteriormente, plantea una proposición de causa (variable exógena) y efecto (variable endógena). Cabe recordar que una hipótesis en modelos estáticos se traduce en palabras a partir de los resultados de los ejercicios de estática comparativa.</p>
-<p><strong>VII. Metodología y datos</strong></p>
-<p>En esta sección, el alumno:</p>
-<ol type="1">
-<li>Identifica el método a utilizar.</li>
-<li>Identifica el tipo de investigación a realizar.</li>
-<li>Presenta las variables económicas identificadas empíricamente.</li>
-<li>Señala las fuentes de información y/o la forma de recopilación de los datos.</li>
-<li>Describe el proceso de procesamiento de la información.</li>
-</ol>
-<p><strong>VIII. Esquema</strong></p>
-<p>En esta parte, el alumno presentará el esquema de la estructura del trabajo de investigación por capítulos. En cada capítulo, es necesario identificar los objetivos específicos correspondientes.</p>
-<p><strong>IX. Desarrollo del esquema de investigación</strong></p>
-<p>En esta sección, los alumnos, basándose en gráficos, tablas, técnicas estadísticas y econométricas, obtienen conclusiones y plantean recomendaciones en cada capítulo del esquema planteado.</p>
-<p><strong>X. Bibliografía</strong></p>
-<p>Aquí el alumno presenta la lista de obras consultadas que han servido para fundamentar el planteamiento del problema, los antecedentes, el marco teórico y las hipótesis.</p>
-</section>
-<section id="bibliografía" class="level1">
-<h1>Bibliografía</h1>
-<p>Méndez Álvarez, C. E. (1995). Metodología: guía para elaborar diseños de investigación en ciencias económicas, contables y administrativas. Buenos Aires, Argentina: McGraw-Hill.</p>
-<p>Mendoza Bellido, W. E. (2007). Cómo investigan los economistas: Guía para elaborar y desarrollar un proyecto de investigación. Fondo Editorial, PUCP.</p>
-
-
-</section>
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas</h2>
-
-<ol>
-<li id="fn1"><p>Para esta sección, resulta útil revisar Mendez (1995), páginas 92-97.↩︎</p></li>
-</ol>
-</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
-  author = {Achalma, Edison},
-  title = {Pautas para la presentación del informe de investigación en
-    economía enfoque, estructura y elementos clave},
-  date = {2023-06-03},
-  url = {https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion},
-  langid = {es}
-}
-</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
-Achalma, E. (2023, June 3). Pautas para la presentación del informe de
-investigación en economía enfoque, estructura y elementos clave.
-Retrieved from <a href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion</a>
-</div></div></section></div> ]]></description>
-  <category>Econometría</category>
-  <category>Economía</category>
-  <category>Invetigación económica</category>
-  <guid>https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.html</guid>
-  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

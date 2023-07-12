@@ -1,0 +1,426 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Mejores prácticas y consejos de visualización de datos con python},
+  pdfauthor={Edison Achalma},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Mejores prácticas y consejos de visualización de datos con
+python}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Descubre consejos y técnicas para mejorar la efectividad y
+estética de tus visualizaciones de datos.}
+\author{Edison Achalma}
+\date{2023-07-07}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, frame hidden, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+\hypertarget{introducciuxf3n-a-la-visualizaciuxf3n-efectiva-de-datos}{%
+\section{Introducción a la visualización efectiva de
+datos}\label{introducciuxf3n-a-la-visualizaciuxf3n-efectiva-de-datos}}
+
+\hypertarget{importancia-de-la-visualizaciuxf3n-de-datos-en-la-comunicaciuxf3n-efectiva-de-informaciuxf3n}{%
+\subsection{Importancia de la visualización de datos en la comunicación
+efectiva de
+información}\label{importancia-de-la-visualizaciuxf3n-de-datos-en-la-comunicaciuxf3n-efectiva-de-informaciuxf3n}}
+
+\hypertarget{beneficios-de-seguir-mejores-pruxe1cticas-y-consejos-en-la-visualizaciuxf3n-de-datos}{%
+\subsection{Beneficios de seguir mejores prácticas y consejos en la
+visualización de
+datos}\label{beneficios-de-seguir-mejores-pruxe1cticas-y-consejos-en-la-visualizaciuxf3n-de-datos}}
+
+\hypertarget{selecciuxf3n-adecuada-de-gruxe1ficos}{%
+\section{Selección adecuada de
+gráficos}\label{selecciuxf3n-adecuada-de-gruxe1ficos}}
+
+\hypertarget{consideraciones-para-elegir-el-tipo-de-gruxe1fico-muxe1s-apropiado-seguxfan-los-datos-y-el-objetivo-de-visualizaciuxf3n}{%
+\subsection{Consideraciones para elegir el tipo de gráfico más apropiado
+según los datos y el objetivo de
+visualización}\label{consideraciones-para-elegir-el-tipo-de-gruxe1fico-muxe1s-apropiado-seguxfan-los-datos-y-el-objetivo-de-visualizaciuxf3n}}
+
+\hypertarget{comparaciuxf3n-de-diferentes-tipos-de-gruxe1ficos-y-sus-aplicaciones-especuxedficas}{%
+\subsection{Comparación de diferentes tipos de gráficos y sus
+aplicaciones
+específicas}\label{comparaciuxf3n-de-diferentes-tipos-de-gruxe1ficos-y-sus-aplicaciones-especuxedficas}}
+
+\hypertarget{diseuxf1o-y-presentaciuxf3n-visual}{%
+\section{Diseño y presentación
+visual}\label{diseuxf1o-y-presentaciuxf3n-visual}}
+
+\hypertarget{uso-de-colores-fuentes-y-espaciado-para-mejorar-la-legibilidad-y-claridad-de-los-gruxe1ficos}{%
+\subsection{Uso de colores, fuentes y espaciado para mejorar la
+legibilidad y claridad de los
+gráficos}\label{uso-de-colores-fuentes-y-espaciado-para-mejorar-la-legibilidad-y-claridad-de-los-gruxe1ficos}}
+
+\hypertarget{aplicaciuxf3n-de-principios-de-diseuxf1o-como-la-simplicidad-coherencia-y-equilibrio-en-la-visualizaciuxf3n-de-datos}{%
+\subsection{Aplicación de principios de diseño como la simplicidad,
+coherencia y equilibrio en la visualización de
+datos}\label{aplicaciuxf3n-de-principios-de-diseuxf1o-como-la-simplicidad-coherencia-y-equilibrio-en-la-visualizaciuxf3n-de-datos}}
+
+\hypertarget{optimizaciuxf3n-de-la-legibilidad}{%
+\section{Optimización de la
+legibilidad}\label{optimizaciuxf3n-de-la-legibilidad}}
+
+\hypertarget{estrategias-para-mejorar-la-legibilidad-de-los-gruxe1ficos-como-el-uso-adecuado-de-etiquetas-tuxedtulos-y-leyendas}{%
+\subsection{Estrategias para mejorar la legibilidad de los gráficos,
+como el uso adecuado de etiquetas, títulos y
+leyendas}\label{estrategias-para-mejorar-la-legibilidad-de-los-gruxe1ficos-como-el-uso-adecuado-de-etiquetas-tuxedtulos-y-leyendas}}
+
+\hypertarget{tuxe9cnicas-para-evitar-la-sobrecarga-de-informaciuxf3n-y-el-desorden-en-los-gruxe1ficos}{%
+\subsection{Técnicas para evitar la sobrecarga de información y el
+desorden en los
+gráficos}\label{tuxe9cnicas-para-evitar-la-sobrecarga-de-informaciuxf3n-y-el-desorden-en-los-gruxe1ficos}}
+
+\hypertarget{paletas-de-colores-y-escalas}{%
+\section{Paletas de colores y
+escalas}\label{paletas-de-colores-y-escalas}}
+
+\hypertarget{selecciuxf3n-de-paletas-de-colores-adecuadas-para-resaltar-y-distinguir-diferentes-categoruxedas-o-valores-en-los-gruxe1ficos}{%
+\subsection{Selección de paletas de colores adecuadas para resaltar y
+distinguir diferentes categorías o valores en los
+gráficos}\label{selecciuxf3n-de-paletas-de-colores-adecuadas-para-resaltar-y-distinguir-diferentes-categoruxedas-o-valores-en-los-gruxe1ficos}}
+
+\hypertarget{uso-de-escalas-adecuadas-para-representar-correctamente-la-magnitud-de-los-datos}{%
+\subsection{Uso de escalas adecuadas para representar correctamente la
+magnitud de los
+datos}\label{uso-de-escalas-adecuadas-para-representar-correctamente-la-magnitud-de-los-datos}}
+
+\hypertarget{uso-de-visualizaciones-interactivas}{%
+\section{Uso de visualizaciones
+interactivas}\label{uso-de-visualizaciones-interactivas}}
+
+\hypertarget{exploraciuxf3n-de-herramientas-y-bibliotecas-que-permiten-la-interactividad-en-los-gruxe1ficos-como-plotly-y-bokeh}{%
+\subsection{Exploración de herramientas y bibliotecas que permiten la
+interactividad en los gráficos, como Plotly y
+Bokeh}\label{exploraciuxf3n-de-herramientas-y-bibliotecas-que-permiten-la-interactividad-en-los-gruxe1ficos-como-plotly-y-bokeh}}
+
+\hypertarget{ejemplos-de-visualizaciones-interactivas-y-cuxf3mo-pueden-mejorar-la-experiencia-del-usuario}{%
+\subsection{Ejemplos de visualizaciones interactivas y cómo pueden
+mejorar la experiencia del
+usuario}\label{ejemplos-de-visualizaciones-interactivas-y-cuxf3mo-pueden-mejorar-la-experiencia-del-usuario}}
+
+\hypertarget{visualizaciuxf3n-de-datos-para-contar-historias}{%
+\section{Visualización de datos para contar
+historias}\label{visualizaciuxf3n-de-datos-para-contar-historias}}
+
+\hypertarget{aplicaciuxf3n-de-tuxe9cnicas-narrativas-en-la-visualizaciuxf3n-de-datos-para-transmitir-mensajes-claros-y-persuasivos}{%
+\subsection{Aplicación de técnicas narrativas en la visualización de
+datos para transmitir mensajes claros y
+persuasivos}\label{aplicaciuxf3n-de-tuxe9cnicas-narrativas-en-la-visualizaciuxf3n-de-datos-para-transmitir-mensajes-claros-y-persuasivos}}
+
+\hypertarget{uso-de-la-estructura-de-la-historia-y-elementos-visuales-para-guiar-al-espectador-a-travuxe9s-de-la-informaciuxf3n-presentada}{%
+\subsection{Uso de la estructura de la historia y elementos visuales
+para guiar al espectador a través de la información
+presentada}\label{uso-de-la-estructura-de-la-historia-y-elementos-visuales-para-guiar-al-espectador-a-travuxe9s-de-la-informaciuxf3n-presentada}}
+
+\hypertarget{pruebas-y-retroalimentaciuxf3n}{%
+\section{Pruebas y
+retroalimentación}\label{pruebas-y-retroalimentaciuxf3n}}
+
+\hypertarget{importancia-de-probar-y-recibir-retroalimentaciuxf3n-sobre-los-gruxe1ficos-antes-de-su-presentaciuxf3n-final}{%
+\subsection{Importancia de probar y recibir retroalimentación sobre los
+gráficos antes de su presentación
+final}\label{importancia-de-probar-y-recibir-retroalimentaciuxf3n-sobre-los-gruxe1ficos-antes-de-su-presentaciuxf3n-final}}
+
+\hypertarget{incorporaciuxf3n-de-comentarios-y-ajustes-para-mejorar-la-efectividad-de-la-visualizaciuxf3n-de-datos}{%
+\subsection{Incorporación de comentarios y ajustes para mejorar la
+efectividad de la visualización de
+datos}\label{incorporaciuxf3n-de-comentarios-y-ajustes-para-mejorar-la-efectividad-de-la-visualizaciuxf3n-de-datos}}
+
+\hypertarget{recursos-y-herramientas-adicionales}{%
+\section{Recursos y herramientas
+adicionales}\label{recursos-y-herramientas-adicionales}}
+
+\hypertarget{referencias-a-libros-cursos-en-luxednea-y-otras-fuentes-de-informaciuxf3n-para-ampliar-el-conocimiento-sobre-visualizaciuxf3n-de-datos}{%
+\subsection{Referencias a libros, cursos en línea y otras fuentes de
+información para ampliar el conocimiento sobre visualización de
+datos}\label{referencias-a-libros-cursos-en-luxednea-y-otras-fuentes-de-informaciuxf3n-para-ampliar-el-conocimiento-sobre-visualizaciuxf3n-de-datos}}
+
+\hypertarget{recomendaciuxf3n-de-herramientas-y-software-uxfatiles-para-crear-visualizaciones-de-datos-de-alta-calidad}{%
+\subsection{Recomendación de herramientas y software útiles para crear
+visualizaciones de datos de alta
+calidad}\label{recomendaciuxf3n-de-herramientas-y-software-uxfatiles-para-crear-visualizaciones-de-datos-de-alta-calidad}}
+
+\hypertarget{mejores-pruxe1cticas-y-consejos}{%
+\section{Mejores prácticas y
+consejos}\label{mejores-pruxe1cticas-y-consejos}}
+
+Cuando se trata de crear gráficos efectivos en Python, es importante
+seguir algunas mejores prácticas que aseguren la organización, claridad
+y legibilidad de tus visualizaciones. Aquí te presentamos algunos
+consejos útiles:
+
+\hypertarget{organizaciuxf3n-y-estructura-de-los-gruxe1ficos}{%
+\subsection{Organización y estructura de los
+gráficos}\label{organizaciuxf3n-y-estructura-de-los-gruxe1ficos}}
+
+\begin{itemize}
+\item
+  Utiliza títulos claros y descriptivos para tus gráficos.
+\item
+  Etiqueta correctamente los ejes x e y para indicar qué representan.
+\item
+  Agrega leyendas y anotaciones para proporcionar información adicional
+  sobre los elementos del gráfico.
+\item
+  Considera la inclusión de una clave de color si tienes múltiples
+  categorías o variables.
+\end{itemize}
+
+\hypertarget{selecciuxf3n-adecuada-de-gruxe1ficos-seguxfan-los-datos}{%
+\subsection{Selección adecuada de gráficos según los
+datos}\label{selecciuxf3n-adecuada-de-gruxe1ficos-seguxfan-los-datos}}
+
+\begin{itemize}
+\item
+  Elige el tipo de gráfico adecuado para representar tus datos. Algunos
+  ejemplos comunes incluyen gráficos de línea, barras, dispersión y
+  pastel.
+\item
+  Considera las características y propiedades de tus datos, como el tipo
+  de variable (categórica o numérica) y la distribución, al seleccionar
+  el gráfico más apropiado.
+\end{itemize}
+
+\hypertarget{optimizaciuxf3n-de-la-legibilidad-y-claridad}{%
+\subsection{Optimización de la legibilidad y
+claridad}\label{optimizaciuxf3n-de-la-legibilidad-y-claridad}}
+
+\begin{itemize}
+\item
+  Asegúrate de que el tamaño del gráfico sea adecuado para su
+  visualización, evitando que los elementos se superpongan o se vuelvan
+  ilegibles.
+\item
+  Utiliza colores y estilos que sean fáciles de distinguir y que
+  resalten la información importante.
+\item
+  Evita el exceso de elementos decorativos que puedan distraer la
+  atención del mensaje principal del gráfico.
+\end{itemize}
+
+\hypertarget{casos-de-estudio-y-ejemplos-pruxe1cticos}{%
+\section{Casos de estudio y ejemplos
+prácticos}\label{casos-de-estudio-y-ejemplos-pruxe1cticos}}
+
+La visualización de datos con Python no solo es útil en teoría, sino que
+también puede aplicarse en diversos casos de estudio y ejemplos
+prácticos. Veamos algunos ejemplos interesantes:
+
+\hypertarget{visualizaciuxf3n-de-datos-de-ventas}{%
+\subsection{Visualización de datos de
+ventas}\label{visualizaciuxf3n-de-datos-de-ventas}}
+
+Imagina que eres el gerente de ventas de una empresa y quieres analizar
+el rendimiento de tus productos en diferentes regiones. Utilizando
+gráficos de barras y gráficos de dispersión, puedes representar
+visualmente las ventas por región, identificar patrones de crecimiento y
+comparar el desempeño de productos específicos. Estos gráficos te
+ayudarán a tomar decisiones informadas para mejorar tus estrategias de
+ventas.
+
+\hypertarget{anuxe1lisis-de-sentimientos-en-redes-sociales}{%
+\subsection{Análisis de sentimientos en redes
+sociales}\label{anuxe1lisis-de-sentimientos-en-redes-sociales}}
+
+Las redes sociales son una fuente inagotable de datos. Si estás
+interesado en analizar el sentimiento de los usuarios hacia una marca o
+un evento específico, puedes utilizar técnicas de procesamiento de
+lenguaje natural y visualización de datos para mostrar la distribución
+de sentimientos en forma de gráficos de barras, gráficos de tarta o
+gráficos de líneas. Esto te permitirá comprender mejor la percepción de
+los usuarios y tomar medidas adecuadas en función de los resultados
+obtenidos.
+
+\hypertarget{gruxe1ficos-interactivos-para-anuxe1lisis-financiero}{%
+\subsection{Gráficos interactivos para análisis
+financiero}\label{gruxe1ficos-interactivos-para-anuxe1lisis-financiero}}
+
+En el ámbito financiero, es crucial comprender y analizar datos
+complejos de manera interactiva. Puedes utilizar bibliotecas como Plotly
+o Bokeh para crear gráficos interactivos que te permitan explorar datos
+financieros en tiempo real, aplicar filtros, realizar zoom y obtener
+detalles específicos sobre puntos de datos. Estos gráficos interactivos
+facilitan el análisis financiero y te ayudan a tomar decisiones más
+fundamentadas en tus inversiones.
+
+Estos casos de estudio y ejemplos prácticos son solo algunas de las
+muchas aplicaciones de la visualización de datos con Python. Desde el
+análisis de ventas hasta el monitoreo de sentimientos en redes sociales
+y el análisis financiero, las posibilidades son infinitas. ¡Explora,
+experimenta y descubre cómo la visualización de datos puede potenciar tu
+análisis y comprensión de la información!
+
+\hypertarget{publicaciones-similares}{%
+\section{Publicaciones Similares}\label{publicaciones-similares}}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+
+\printbibliography
+
+
+\end{document}

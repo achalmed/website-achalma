@@ -1,5 +1,6 @@
-title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
-title-block-banner-color: body  # Color del texto en el banner del bloque de título
+#title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
+#title-block-banner: images/philosophy2.jpg
+#title-block-banner-color: body  # Color del texto en el banner del bloque de título
 
 fig-cap-location: top  # Ubicación de las leyendas de las figuras
 tbl-cap-location: top  # Ubicación de las leyendas de las tablas
@@ -35,7 +36,6 @@ crossref:
   tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
   ref-hyperlink: true  # Habilitar enlaces en las referencias
 execute:
-  # keep-ipynb: true
   keep-md: true  # Mantener archivos .md generados
   keep-ipynb: true
   echo: true  # Mostrar comandos ejecutados
@@ -45,14 +45,14 @@ execute:
   cache: false  # Habilitar el almacenamiento en caché
   enabled: true  # Habilitar la ejecución
 
-#draft: false  # Modo de borrador (false = final, true = borrador)
+draft: false  # Modo de borrador (false = final, true = borrador)
 
 highlight-style: github
 
 format:
   html:
     page-layout: article  # Diseño de página para el formato HTML (por ejemplo, article, full, o custom)
-    toc: true  # Mostrar tabla de contenidos
+    toc: true  # Mostrar tabla de contenidos (false, true)
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos

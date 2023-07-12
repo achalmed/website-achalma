@@ -180,15 +180,15 @@ Los recursos financieros, también conocidos como capital, se refieren a los fon
 
 La producción de bienes y servicios es el resultado de combinar los recursos naturales, recursos humanos y recursos financieros. En este proceso, los recursos naturales se utilizan como insumos, los recursos humanos aportan su trabajo y conocimiento, y los recursos financieros permiten adquirir y utilizar eficientemente los otros recursos. La producción de bienes y servicios es el objetivo principal de las empresas, donde se busca transformar los insumos en productos finales que satisfagan las necesidades y demandas de los consumidores.
 
--   [01. Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 
--   [02. La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
 
--   [03. Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
 
--   [04. El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
 
--   [05. Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
--   [06. Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
 

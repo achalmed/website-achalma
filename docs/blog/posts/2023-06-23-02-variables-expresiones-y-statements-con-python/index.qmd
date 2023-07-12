@@ -1,0 +1,19 @@
+---
+title: hola
+subtitle: as
+description: |
+  saf
+categories:
+  - Python
+tags:
+  - Python
+date: "06/23/2023"
+---
+
+
+hola
+{{< include ../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_python.qmd >}}
+
+{{< include ../_contenido-final.qmd >}}

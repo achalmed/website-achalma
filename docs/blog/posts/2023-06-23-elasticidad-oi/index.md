@@ -57,7 +57,7 @@ La elasticidad precio de la demanda es una medida importante en economía que no
 ::: {.cell execution_count=1}
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-html/cell-2-output-1.png){width=581 height=432}
+![](index_files/figure-pdf/cell-2-output-1.pdf){}
 :::
 :::
 
@@ -180,4 +180,27 @@ Si el $P_x$ aumenta en 1% entonces $X^d$ disminuye en 1%.
 ## Recapitulación de los conceptos clave
 ## Importancia de comprender la elasticidad para la toma de decisiones
 ## Reflexiones sobre la aplicabilidad y relevancia de la elasticidad en el mundo actual
+
+
+
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

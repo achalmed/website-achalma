@@ -1,29 +1,27 @@
+/* Estilos para pantallas con un ancho mínimo de 1020px */
 @media (min-width: 1020px) {
+  /* Estilo del contenedor de la marca de la barra de navegación */
   .navbar-brand-container {
     margin-right: 1em;
   }
 }
 
-
-
 @media (max-width: 1060px) and (min-width: 991.98px) {
-
   #navbarCollapse ul:last-of-type a.nav-link {
-    padding-left: .25em;
-    padding-right: .25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
   }
 
   .navbar #quarto-search {
-    margin-left: .1em;
+    margin-left: 0.1em;
   }
 
   .navbar .bi-twitter,
   .navbar .bi-github,
   .navbar .bi-rss {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
-
 
 @media (min-width: 991.98px) {
   #quarto-header {
@@ -31,20 +29,18 @@
   }
 }
 
-.navbar-brand>img {
+.navbar-brand > img {
   max-height: 36px;
 }
-
 
 .platform-table td {
   vertical-align: middle;
 }
 
-.platform-table td>div.sourceCode {
+.platform-table td > div.sourceCode {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-
 
 .document-example {
   opacity: 0.9;
@@ -56,7 +52,6 @@
 .document-example div {
   padding: 5px;
 }
-
 
 .document-example .citation {
   color: blue;
@@ -88,7 +83,7 @@
 
 .download-table .checksum {
   color: var(--bs-primary);
-  font-size: .775em;
+  font-size: 0.775em;
   cursor: pointer;
   padding-top: 4px;
 }
@@ -100,7 +95,7 @@
 }
 
 .download-button .secondary {
-  font-size: .775em;
+  font-size: 0.775em;
   margin-bottom: 0;
 }
 
@@ -122,7 +117,6 @@ iframe.reveal-demo {
   outline: none;
 }
 
-
 .slide-deck {
   border: 3px solid #dee2e6;
   width: 100%;
@@ -135,14 +129,11 @@ iframe.reveal-demo {
   }
 }
 
-
 @media (max-width: 575px) {
-
   .link-cards .card {
     margin-bottom: 20px;
     margin-right: 35px;
   }
-
 }
 
 @media (min-width: 576px) {
@@ -156,10 +147,7 @@ iframe.reveal-demo {
     width: 190px;
     margin: 0 20px 12px 0;
   }
-
-
 }
-
 
 .link-cards .card {
   border: none;
@@ -197,7 +185,6 @@ iframe.reveal-demo {
   padding-bottom: 0.2rem;
 }
 
-
 .card .source-code {
   margin-top: 3px;
 }
@@ -220,7 +207,6 @@ iframe.reveal-demo {
 .carousel .carousel-control-next-icon {
   margin-bottom: 110px;
 }
-
 
 .gallery-category {
   column-gap: 10px;
@@ -314,14 +300,13 @@ iframe.reveal-demo {
 }
 */
 
-
 .download-text {
   font-size: 1.1em;
   font-weight: 500;
 }
 
 .preview-image-grid {
-  gap: .75em;
+  gap: 0.75em;
 }
 
 .preview-image-grid p {
@@ -330,7 +315,7 @@ iframe.reveal-demo {
 
 .preview-image-label {
   text-align: center;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 600;
 }
 

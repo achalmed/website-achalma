@@ -1,0 +1,389 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Visualización de datos en finanzas con python},
+  pdfauthor={Edison Achalma},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Visualización de datos en finanzas con python}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Explora cómo la visualización de datos puede ayudarte a
+comprender y analizar el mundo financiero}
+\author{Edison Achalma}
+\date{2023-07-02}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, breakable, enhanced]}{\end{tcolorbox}}\fi
+
+\hypertarget{introducciuxf3n-a-la-visualizaciuxf3n-de-datos-en-finanzas}{%
+\section{Introducción a la visualización de datos en
+finanzas}\label{introducciuxf3n-a-la-visualizaciuxf3n-de-datos-en-finanzas}}
+
+\hypertarget{importancia-de-la-visualizaciuxf3n-de-datos-en-el-anuxe1lisis-financiero}{%
+\subsection{Importancia de la visualización de datos en el análisis
+financiero}\label{importancia-de-la-visualizaciuxf3n-de-datos-en-el-anuxe1lisis-financiero}}
+
+\hypertarget{beneficios-de-utilizar-gruxe1ficos-en-la-interpretaciuxf3n-de-datos-financieros}{%
+\subsection{Beneficios de utilizar gráficos en la interpretación de
+datos
+financieros}\label{beneficios-de-utilizar-gruxe1ficos-en-la-interpretaciuxf3n-de-datos-financieros}}
+
+\hypertarget{introducciuxf3n-a-las-bibliotecas-y-herramientas-utilizadas-en-la-visualizaciuxf3n-de-datos-en-finanzas}{%
+\subsection{Introducción a las bibliotecas y herramientas utilizadas en
+la visualización de datos en
+finanzas}\label{introducciuxf3n-a-las-bibliotecas-y-herramientas-utilizadas-en-la-visualizaciuxf3n-de-datos-en-finanzas}}
+
+\hypertarget{gruxe1ficos-de-series-de-tiempo}{%
+\section{Gráficos de series de
+tiempo}\label{gruxe1ficos-de-series-de-tiempo}}
+
+\hypertarget{visualizaciuxf3n-de-datos-financieros-a-lo-largo-del-tiempo}{%
+\subsection{Visualización de datos financieros a lo largo del
+tiempo}\label{visualizaciuxf3n-de-datos-financieros-a-lo-largo-del-tiempo}}
+
+\hypertarget{utilizaciuxf3n-de-gruxe1ficos-de-luxedneas-gruxe1ficos-de-velas-y-gruxe1ficos-de-uxe1reas-para-representar-series-de-tiempo}{%
+\subsection{Utilización de gráficos de líneas, gráficos de velas y
+gráficos de áreas para representar series de
+tiempo}\label{utilizaciuxf3n-de-gruxe1ficos-de-luxedneas-gruxe1ficos-de-velas-y-gruxe1ficos-de-uxe1reas-para-representar-series-de-tiempo}}
+
+\hypertarget{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-precios-de-acciones-fluctuaciones-del-mercado-etc.}{%
+\subsection{Ejemplos prácticos de visualización de precios de acciones,
+fluctuaciones del mercado,
+etc.}\label{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-precios-de-acciones-fluctuaciones-del-mercado-etc.}}
+
+\hypertarget{heatmaps-y-mapas-de-calor}{%
+\section{Heatmaps y mapas de calor}\label{heatmaps-y-mapas-de-calor}}
+
+\hypertarget{anuxe1lisis-de-correlaciones-y-patrones-en-datos-financieros-utilizando-heatmaps}{%
+\subsection{Análisis de correlaciones y patrones en datos financieros
+utilizando
+heatmaps}\label{anuxe1lisis-de-correlaciones-y-patrones-en-datos-financieros-utilizando-heatmaps}}
+
+\hypertarget{utilizaciuxf3n-de-mapas-de-calor-para-visualizar-el-rendimiento-de-carteras-riesgos-financieros-etc.}{%
+\subsection{Utilización de mapas de calor para visualizar el rendimiento
+de carteras, riesgos financieros,
+etc.}\label{utilizaciuxf3n-de-mapas-de-calor-para-visualizar-el-rendimiento-de-carteras-riesgos-financieros-etc.}}
+
+\hypertarget{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-heatmaps-y-mapas-de-calor}{%
+\subsection{Ejemplos prácticos de visualización de datos financieros
+utilizando heatmaps y mapas de
+calor}\label{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-heatmaps-y-mapas-de-calor}}
+
+\hypertarget{gruxe1ficos-de-dispersiuxf3n-y-correlaciuxf3n}{%
+\section{Gráficos de dispersión y
+correlación}\label{gruxe1ficos-de-dispersiuxf3n-y-correlaciuxf3n}}
+
+\hypertarget{anuxe1lisis-de-la-relaciuxf3n-entre-variables-financieras-utilizando-gruxe1ficos-de-dispersiuxf3n}{%
+\subsection{Análisis de la relación entre variables financieras
+utilizando gráficos de
+dispersión}\label{anuxe1lisis-de-la-relaciuxf3n-entre-variables-financieras-utilizando-gruxe1ficos-de-dispersiuxf3n}}
+
+\hypertarget{interpretaciuxf3n-de-la-correlaciuxf3n-entre-diferentes-activos-financieros}{%
+\subsection{Interpretación de la correlación entre diferentes activos
+financieros}\label{interpretaciuxf3n-de-la-correlaciuxf3n-entre-diferentes-activos-financieros}}
+
+\hypertarget{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-gruxe1ficos-de-dispersiuxf3n-y-correlaciuxf3n}{%
+\subsection{Ejemplos prácticos de visualización de datos financieros
+utilizando gráficos de dispersión y
+correlación}\label{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-gruxe1ficos-de-dispersiuxf3n-y-correlaciuxf3n}}
+
+\hypertarget{gruxe1ficos-de-barras-y-gruxe1ficos-circulares}{%
+\section{Gráficos de barras y gráficos
+circulares}\label{gruxe1ficos-de-barras-y-gruxe1ficos-circulares}}
+
+\hypertarget{representaciuxf3n-visual-de-datos-financieros-utilizando-gruxe1ficos-de-barras-y-gruxe1ficos-circulares}{%
+\subsection{Representación visual de datos financieros utilizando
+gráficos de barras y gráficos
+circulares}\label{representaciuxf3n-visual-de-datos-financieros-utilizando-gruxe1ficos-de-barras-y-gruxe1ficos-circulares}}
+
+\hypertarget{visualizaciuxf3n-de-datos-financieros-categorizados-como-ingresos-y-gastos-distribuciuxf3n-de-activos-etc.}{%
+\subsection{Visualización de datos financieros categorizados, como
+ingresos y gastos, distribución de activos,
+etc.}\label{visualizaciuxf3n-de-datos-financieros-categorizados-como-ingresos-y-gastos-distribuciuxf3n-de-activos-etc.}}
+
+\hypertarget{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-gruxe1ficos-de-barras-y-gruxe1ficos-circulares}{%
+\subsection{Ejemplos prácticos de visualización de datos financieros
+utilizando gráficos de barras y gráficos
+circulares}\label{ejemplos-pruxe1cticos-de-visualizaciuxf3n-de-datos-financieros-utilizando-gruxe1ficos-de-barras-y-gruxe1ficos-circulares}}
+
+\hypertarget{visualizaciuxf3n-interactiva-de-datos-financieros}{%
+\section{Visualización interactiva de datos
+financieros}\label{visualizaciuxf3n-interactiva-de-datos-financieros}}
+
+\hypertarget{utilizaciuxf3n-de-bibliotecas-como-plotly-y-bokeh-para-crear-gruxe1ficos-interactivos-en-el-anuxe1lisis-financiero}{%
+\subsection{Utilización de bibliotecas como Plotly y Bokeh para crear
+gráficos interactivos en el análisis
+financiero}\label{utilizaciuxf3n-de-bibliotecas-como-plotly-y-bokeh-para-crear-gruxe1ficos-interactivos-en-el-anuxe1lisis-financiero}}
+
+\hypertarget{incorporaciuxf3n-de-herramientas-interactivas-como-zoom-selecciuxf3n-y-filtros-en-gruxe1ficos-financieros}{%
+\subsection{Incorporación de herramientas interactivas como zoom,
+selección y filtros en gráficos
+financieros}\label{incorporaciuxf3n-de-herramientas-interactivas-como-zoom-selecciuxf3n-y-filtros-en-gruxe1ficos-financieros}}
+
+\hypertarget{ejemplos-pruxe1cticos-de-visualizaciuxf3n-interactiva-de-datos-financieros}{%
+\subsection{Ejemplos prácticos de visualización interactiva de datos
+financieros}\label{ejemplos-pruxe1cticos-de-visualizaciuxf3n-interactiva-de-datos-financieros}}
+
+\hypertarget{casos-de-estudio-y-ejemplos-pruxe1cticos}{%
+\section{Casos de estudio y ejemplos
+prácticos}\label{casos-de-estudio-y-ejemplos-pruxe1cticos}}
+
+\hypertarget{aplicaciuxf3n-de-la-visualizaciuxf3n-de-datos-en-finanzas-en-diferentes-escenarios-como-anuxe1lisis-de-carteras-seguimiento-de-rendimiento-predicciuxf3n-de-precios-etc.}{%
+\subsection{Aplicación de la visualización de datos en finanzas en
+diferentes escenarios, como análisis de carteras, seguimiento de
+rendimiento, predicción de precios,
+etc.}\label{aplicaciuxf3n-de-la-visualizaciuxf3n-de-datos-en-finanzas-en-diferentes-escenarios-como-anuxe1lisis-de-carteras-seguimiento-de-rendimiento-predicciuxf3n-de-precios-etc.}}
+
+\hypertarget{ejemplos-de-visualizaciuxf3n-de-datos-financieros-en-situaciones-reales}{%
+\subsection{Ejemplos de visualización de datos financieros en
+situaciones
+reales}\label{ejemplos-de-visualizaciuxf3n-de-datos-financieros-en-situaciones-reales}}
+
+\hypertarget{conclusiones-y-recursos-adicionales}{%
+\section{Conclusiones y recursos
+adicionales}\label{conclusiones-y-recursos-adicionales}}
+
+\hypertarget{resumen-de-las-tuxe9cnicas-y-mejores-pruxe1cticas-en-la-visualizaciuxf3n-de-datos-en-finanzas}{%
+\subsection{Resumen de las técnicas y mejores prácticas en la
+visualización de datos en
+finanzas}\label{resumen-de-las-tuxe9cnicas-y-mejores-pruxe1cticas-en-la-visualizaciuxf3n-de-datos-en-finanzas}}
+
+\hypertarget{recursos-adicionales-para-aprender-muxe1s-sobre-la-visualizaciuxf3n-de-datos-financieros-con-python}{%
+\subsection{Recursos adicionales para aprender más sobre la
+visualización de datos financieros con
+Python}\label{recursos-adicionales-para-aprender-muxe1s-sobre-la-visualizaciuxf3n-de-datos-financieros-con-python}}
+
+\hypertarget{publicaciones-similares}{%
+\section{Publicaciones Similares}\label{publicaciones-similares}}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{../2023-06-22-01-introduccion-a-python/index.qmd}{Introducción}
+\item
+  \href{../2023-06-23-02-variables-expresiones-y-statements-con-python/index.qmd}{Variables,
+  expresiones y statements}
+\item
+  \href{../2023-06-24-03-objetos-de-python/index.qmd}{Objetos de Python}
+\item
+  \href{../2023-06-25-04-ejecucion-condicional-con-python/index.qmd}{Ejecución
+  condicional}
+\item
+  \href{../2023-06-26-05-iteraciones-con-python/index.qmd}{Iteraciones}
+\item
+  \href{../2023-06-27-06-funciones-con-python/index.qmd}{Funciones}
+\item
+  \href{../2023-06-28-07-dataframes-con-python/index.qmd}{Dataframes}
+\item
+  \href{../2023-06-29-introduccion-a-la-visualizacion-de-datos-con-python/index.qmd}{Introducción
+  a la visualización de datos}
+\item
+  \href{../2023-06-30-graficos-avanzados-con-python/index.qmd}{Gráficos
+  avanzados}
+\item
+  \href{../2023-07-01-visualizacion-de-datos-en-tiempo-real-con-python/index.qmd}{Visualización
+  de datos en tiempo real}
+\item
+  \href{../2023-07-02-visualizacion-de-datos-en-finanzas-con-python/index.qmd}{Visualización
+  de datos en finanzas}
+\item
+  \href{../2023-07-03-visualizacion-de-datos-en-microeconomia-con-python/index.qmd}{Visualización
+  de datos en microeconomía}
+\item
+  \href{../2023-07-04-visualizacion-de-datos-en-macroeconomia-con-python/index.qmd}{Visualización
+  de datos en macroeconomía}
+\item
+  \href{../2023-07-05-visualizacion-de-datos-en-estadistica-con-python/index.qmd}{Visualización
+  de datos en estadística}
+\item
+  \href{../2023-07-06-visualizacion-de-datos-en-econometria-con-python/index.qmd}{Visualización
+  de datos en econometría}
+\item
+  \href{../2023-07-07-mejores-practicas-y-consejos-de-visualizacion-de-datos-con-python/index.qmd}{Mejores
+  prácticas y consejos de visualización de datos}
+\item
+  \href{../2023-07-08-08-prediccion-y-metrica-de-performance-con-python/index.qmd}{Predicción
+  y métrica de performance}
+\item
+  \href{../2023-07-09-09-metodos-de-machine-learning-para-clasificacion-con-python/index.qmd}{Métodos
+  de machine learning para clasificación}
+\item
+  \href{../2023-07-10-10-metodos-de-machine-learning-para-regresion-con-python/index.qmd}{Métodos
+  de machine learning para regresión}
+\item
+  \href{../2023-07-11-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.qmd}{Validación
+  cruzada y composición del modelo}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+\printbibliography
+
+
+\end{document}

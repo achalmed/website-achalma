@@ -66,15 +66,20 @@ format:
     citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
     footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
     code-copy: true  # Habilitar la funcionalidad de copiar código
-    code-fold: false  # Habilitar el plegado de código
+    code-fold: true  # Habilitar el plegado de código
     code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
-    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
+    code-overflow: scroll  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     code-tools:
       source: repo  # Mostrar el código fuente en las herramientas de código (repo, true)
       toggle: false  # Habilitar la funcionalidad de alternar código
       caption: none  # Opción para la leyenda del código
     mermaid: 
       theme: neutral
+    grid: 
+      sidebar-width: 400px # en rem: 400px / 16 = 25rem
+      body-width: 1000px # en rem: 1000px / 16 = 62.5rem
+      margin-width: 200px #  en rem: 200px / 16 = 12.5rem
+      gutter-width: 1.5rem
     include-after-body:
       - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
   pdf:
@@ -92,6 +97,7 @@ format:
     # number-sections: true  # Numerar secciones
     # number-depth: 3  # Profundidad de numeración de secciones
     highlight-style: github  # Estilo de resaltado de código
+    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     colorlinks: true  # Habilitar enlaces con colores
     cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
     link-citation: true  # Habilitar enlaces en las citas
@@ -102,7 +108,9 @@ format:
     #  text: |
     #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
     output-file: index.pdf
-format-links: [pdf] # (false)
+format-links: # (false)
+  - pdf
+  - ipynb
 
 jupyter: python3
 

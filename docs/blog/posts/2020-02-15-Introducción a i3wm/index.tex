@@ -1,0 +1,256 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdfauthor={Edison Achalma},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{Edison Achalma}
+\date{}
+
+\begin{document}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+
+\hypertarget{quuxe9-es-i3wm}{%
+\section{¿Qué es i3wm?}\label{quuxe9-es-i3wm}}
+
+\hypertarget{definiciuxf3n-de-i3wm}{%
+\subsection{Definición de i3wm}\label{definiciuxf3n-de-i3wm}}
+
+\hypertarget{caracteruxedsticas-principales-de-i3wm}{%
+\subsection{Características principales de
+i3wm}\label{caracteruxedsticas-principales-de-i3wm}}
+
+\hypertarget{ventajas-de-utilizar-i3wm}{%
+\section{Ventajas de utilizar i3wm}\label{ventajas-de-utilizar-i3wm}}
+
+\hypertarget{eficiencia-y-rendimiento}{%
+\subsection{Eficiencia y rendimiento}\label{eficiencia-y-rendimiento}}
+
+\hypertarget{enfoque-minimalista}{%
+\subsection{Enfoque minimalista}\label{enfoque-minimalista}}
+
+\hypertarget{personalizaciuxf3n-y-flexibilidad}{%
+\subsection{Personalización y
+flexibilidad}\label{personalizaciuxf3n-y-flexibilidad}}
+
+\hypertarget{uso-eficiente-del-espacio-en-el-escritorio}{%
+\subsection{Uso eficiente del espacio en el
+escritorio}\label{uso-eficiente-del-espacio-en-el-escritorio}}
+
+\hypertarget{conceptos-fundamentales-de-i3wm}{%
+\section{Conceptos fundamentales de
+i3wm}\label{conceptos-fundamentales-de-i3wm}}
+
+\hypertarget{gestiuxf3n-de-ventanas-en-mosaico-tiling-window-management}{%
+\subsection{Gestión de ventanas en mosaico (tiling window
+management)}\label{gestiuxf3n-de-ventanas-en-mosaico-tiling-window-management}}
+
+\hypertarget{espacios-de-trabajo-workspaces-3.3.-modos-y-barras-de-estado-modes-and-status-bars}{%
+\subsection{Espacios de trabajo (workspaces) 3.3. Modos y barras de
+estado (modes and status
+bars)}\label{espacios-de-trabajo-workspaces-3.3.-modos-y-barras-de-estado-modes-and-status-bars}}
+
+\hypertarget{atajos-de-teclado-y-comandos-buxe1sicos}{%
+\subsection{Atajos de teclado y comandos
+básicos}\label{atajos-de-teclado-y-comandos-buxe1sicos}}
+
+\hypertarget{instalaciuxf3n-de-i3wm}{%
+\section{Instalación de i3wm}\label{instalaciuxf3n-de-i3wm}}
+
+\hypertarget{requisitos-del-sistema}{%
+\subsection{Requisitos del sistema}\label{requisitos-del-sistema}}
+
+\hypertarget{instalaciuxf3n-en-distribuciones-populares-ejemplo-ubuntu-arch-linux}{%
+\subsection{Instalación en distribuciones populares (ejemplo: Ubuntu,
+Arch
+Linux)}\label{instalaciuxf3n-en-distribuciones-populares-ejemplo-ubuntu-arch-linux}}
+
+\hypertarget{primeros-pasos-con-i3wm}{%
+\section{Primeros pasos con i3wm}\label{primeros-pasos-con-i3wm}}
+
+\hypertarget{iniciar-sesiuxf3n-en-i3wm}{%
+\subsection{Iniciar sesión en i3wm}\label{iniciar-sesiuxf3n-en-i3wm}}
+
+\hypertarget{orientaciuxf3n-buxe1sica-en-el-entorno-de-i3wm}{%
+\subsection{Orientación básica en el entorno de
+i3wm}\label{orientaciuxf3n-buxe1sica-en-el-entorno-de-i3wm}}
+
+\hypertarget{navegaciuxf3n-entre-ventanas-y-workspaces}{%
+\subsection{Navegación entre ventanas y
+workspaces}\label{navegaciuxf3n-entre-ventanas-y-workspaces}}
+
+\hypertarget{recursos-adicionales-y-comunidad}{%
+\section{Recursos adicionales y
+comunidad}\label{recursos-adicionales-y-comunidad}}
+
+\hypertarget{documentaciuxf3n-oficial-y-guuxedas-de-referencia}{%
+\subsection{Documentación oficial y guías de
+referencia}\label{documentaciuxf3n-oficial-y-guuxedas-de-referencia}}
+
+\hypertarget{comunidades-en-luxednea-y-foros-de-discusiuxf3n}{%
+\subsection{Comunidades en línea y foros de
+discusión}\label{comunidades-en-luxednea-y-foros-de-discusiuxf3n}}
+
+\hypertarget{sitios-web-y-blogs-recomendados-para-aprender-muxe1s-sobre-i3wm}{%
+\subsection{Sitios web y blogs recomendados para aprender más sobre
+i3wm}\label{sitios-web-y-blogs-recomendados-para-aprender-muxe1s-sobre-i3wm}}
+
+
+\printbibliography
+
+
+\end{document}

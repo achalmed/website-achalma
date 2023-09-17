@@ -38,13 +38,13 @@ Es importante destacar que existen diversos tipos de sistemas económicos, y la 
 
 ## Las Diferencias entre Sistemas Económicos
 
-| Características                                 | Economía de Mercado                                                | Economía Planificada                                             |
-|-------------------------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------|
-| Propiedad de los Medios de Producción y Empresa | Los medios de producción y empresas son de propiedad privada.      | Los medios de producción y empresas son de propiedad estatal.    |
-| Elección de Bienes y Materiales                 | Los individuos y familias tienen libertad de elección.             | El Estado determina y impone las elecciones de bienes y materiales. |
+| Características                                 | Economía de Mercado                                                | Economía Planificada                                                   |
+|-------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------------------|
+| Propiedad de los Medios de Producción y Empresa | Los medios de producción y empresas son de propiedad privada.      | Los medios de producción y empresas son de propiedad estatal.          |
+| Elección de Bienes y Materiales                 | Los individuos y familias tienen libertad de elección.             | El Estado determina y impone las elecciones de bienes y materiales.    |
 | Competencia, Oportunidades y Utilidades         | Existe competencia libre en el mercado.                            | No hay competencia, el Estado controla las oportunidades y utilidades. |
-| Disponibilidad y Precio de los Bienes           | La producción y precios son determinados por el mercado.           | El Estado determina la producción y distribución de bienes.      |
-| Especialización y Opciones de Empleo           | Los individuos eligen su especialización y hay variedad de empleo. | El Estado determina la especialización y asignación de empleo.   |
+| Disponibilidad y Precio de los Bienes           | La producción y precios son determinados por el mercado.           | El Estado determina la producción y distribución de bienes.            |
+| Especialización y Opciones de Empleo            | Los individuos eligen su especialización y hay variedad de empleo. | El Estado determina la especialización y asignación de empleo.         |
 
 Esta tabla compara las características de la economía de mercado y la economía planificada. La economía de mercado se basa en la propiedad privada de los medios de producción y empresas, la libertad de elección de bienes y materiales, la competencia en el mercado, la determinación del precio por oferta y demanda, y la especialización y opciones de empleo determinadas por los individuos. En contraste, en una economía planificada, los medios de producción y empresas son propiedad del Estado, el Estado impone las elecciones de bienes y materiales, no hay competencia, el Estado controla la producción y distribución, y la especialización y empleo son determinados por el Estado.
 
@@ -89,11 +89,9 @@ La competencia tiene múltiples beneficios para la sociedad y la economía:
 # Definición y Características del Mercado Relevante
 
 ::: {#def-mercado-relevante}
-
 ## Mercado Relevante
 
 El mercado relevante se refiere a aquel mercado en el cual los bienes y servicios, considerando su estructura de mercado, son sustitutos o razonablemente intercambiables en función de los fines para los cuales fueron creados. Tanto desde la perspectiva del consumidor como del productor, se considera que estos bienes y servicios son intercambiables. Es decir, los consumidores los ven como productos sustitutos y los productores los consideran intercambiables.
-
 :::
 
 ## Características del Mercado Relevante
@@ -123,7 +121,6 @@ El mercado relevante se refiere a aquel mercado en el cual los bienes y servicio
 # Mercado de Producto y Mercado Geográfico Relevante
 
 ::: {#def-mercado-producto-relevante}
-
 ## Mercado de Producto Relevante
 
 El mercado de producto relevante incluye todos aquellos bienes y servicios que son sustitutos cercanos tanto desde la perspectiva de la demanda como de la oferta. La sustituibilidad de la demanda se refiere a la capacidad de los consumidores para cambiar de un producto a otro en respuesta a cambios en el precio. Si un incremento en el precio de un producto A provoca que los consumidores opten por comprar el producto B en su lugar, se considera que A y B son sustitutos.
@@ -131,7 +128,6 @@ El mercado de producto relevante incluye todos aquellos bienes y servicios que s
 Por otro lado, la sustituibilidad de la oferta se refiere a la capacidad de las empresas para ajustar su producción de un producto a otro en respuesta a cambios en el precio. Si las empresas que producen el producto B pueden fácilmente cambiar su producción hacia el producto A cuando el precio de A aumenta, se considera que B es un sustituto de A desde la perspectiva de la oferta.
 
 En ambos casos, la presencia de un bien sustituto en el mercado restringe la capacidad de la empresa que ofrece el bien original para aumentar los precios, ya que los consumidores y las empresas tienen opciones alternativas disponibles.
-
 :::
 
 ## Elasticidades
@@ -214,12 +210,11 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 
 
 
+1.  ¿Puede una empresa monopólica incrementar el precio de su producto entre 5% a 10% de manera rentable?
 
-1. ¿Puede una empresa monopólica incrementar el precio de su producto entre 5% a 10% de manera rentable?
+2.  ¿Puede una empresa monopólica que produce y vende los bienes A y B incrementar el precio de A y B entre 5% y 10% de manera rentable?
 
-2. ¿Puede una empresa monopólica que produce y vende los bienes A y B incrementar el precio de A y B entre 5% y 10% de manera rentable?
-
-3. ¿Puede una empresa monopólica que produce y vende los bienes A, B y C incrementar el precio de A, B y C entre 5% y 10% de manera rentable?
+3.  ¿Puede una empresa monopólica que produce y vende los bienes A, B y C incrementar el precio de A, B y C entre 5% y 10% de manera rentable?
 
 Se repite el proceso hasta conocer que ya no hay productos sustitutos.
 
@@ -296,20 +291,19 @@ $$
 D_T = X_{T}^{d} = X_{T}^{d} P_{x}
 $$ {#eq-3}
 
-La demanda residual $D_R$ es la demanda que queda para el producto específico después de tener en cuenta las demandas de otros productos relacionados. Se puede expresar como la demanda del producto residual $X_R^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-4: 
+La demanda residual $D_R$ es la demanda que queda para el producto específico después de tener en cuenta las demandas de otros productos relacionados. Se puede expresar como la demanda del producto residual $X_R^d$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-4:
 
 $$
 D_R = X_R^d = X_R^d P_x
 $$ {#eq-4}
 
-La oferta de los competidores $S_C$ es la cantidad ofrecida por otras empresas en el mercado, que se puede expresar como la oferta del producto complementario $X_C^S$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-5: 
+La oferta de los competidores $S_C$ es la cantidad ofrecida por otras empresas en el mercado, que se puede expresar como la oferta del producto complementario $X_C^S$ multiplicada por el precio del producto $P_x$. Esta relación se muestra en la @eq-5:
 
 $$
 S_C = X_C^S = X_C^S P_x
 $$ {#eq-5}
 
-La demanda total $D_T$ es igual a la suma de la demanda residual $D_R$ y la oferta de los competidores $S_C$. Esta relación se muestra en la @eq-6: 
-$$
+La demanda total $D_T$ es igual a la suma de la demanda residual $D_R$ y la oferta de los competidores $S_C$. Esta relación se muestra en la @eq-6: $$
 D_T = D_R + S_C \equiv X_t^d = X_R^d + X_C^S \equiv X_t^d P_x = X_R^d P_x + X_C^S P_x
 $$ {#eq-6}
 
@@ -319,42 +313,41 @@ Donde:
 -   $D_R$ es la demanda residual del producto.
 -   $S_C$ es la demanda de productos complementarios o sustitutos
 
-A partir de la @eq-6, podemos despejar la demanda residual $D_R$ y obtener el siguiente: 
-$$
+A partir de la @eq-6, podemos despejar la demanda residual $D_R$ y obtener el siguiente: $$
 X_R^d P_x = X_T^d P_x - X_C^S P_x
 $$ {#eq-7}
 
-Aplicando la @eq-1 a la @eq-7, obtenemos: 
+Aplicando la @eq-1 a la @eq-7, obtenemos:
 
 $$
 \frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S}
 $$ {#eq-8}
 
-Multiplicando los elementos de la @eq-8 por $\frac{X_T^d}{X_R^d}$ y $\frac{X_C^S}{X_R^d}$, hacia la derecha, obtenemos: 
+Multiplicando los elementos de la @eq-8 por $\frac{X_T^d}{X_R^d}$ y $\frac{X_C^S}{X_R^d}$, hacia la derecha, obtenemos:
 
 $$
 \frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{X_T^d}{X_R^d} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_C^S}{X_R^d}
 $$ {#eq-9}
 
-Dividiendo el primer elemento de la @eq-9 tanto en el numerador como en el denominador por $X_T^d$, obtenemos: 
+Dividiendo el primer elemento de la @eq-9 tanto en el numerador como en el denominador por $X_T^d$, obtenemos:
 
 $$
 \frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_C^S}{X_R^d}
 $$ {#eq-10}
 
-Considerando que $X_C^S = X_T^d - X_R^d$, podemos reemplazarlo en la @eq-10, obteniendo : 
+Considerando que $X_C^S = X_T^d - X_R^d$, podemos reemplazarlo en la @eq-10, obteniendo :
 
 $$
 \frac{\partial X_R^d P_x}{\partial P_x} \frac{P_x}{X_R^d} = \frac{\partial X_T^d P_x}{\partial P_x} \frac{P_x}{X_T^d} \frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - \frac{\partial X_C^S P_x}{\partial P_x} \frac{P_x}{X_C^S} \frac{X_T^d - X_R^d}{X_R^d}
 $$ {#eq-11}
 
-En esta @eq-11, tienen la forma de la elasticidad precio de la demanda, por lo que podemos reescribir la ecuación como: 
+En esta @eq-11, tienen la forma de la elasticidad precio de la demanda, por lo que podemos reescribir la ecuación como:
 
 $$
 \eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{\frac{X_R^d}{X_T^d}} - \eta_{P_{x}X_C^S}^S \frac{X_T^d - X_R^d}{X_R^d}
 $$ {#eq-12}
 
-Ordenando y considerando que $\frac{X_R^d}{X_T^d} = S_R$, tenemos: 
+Ordenando y considerando que $\frac{X_R^d}{X_T^d} = S_R$, tenemos:
 
 $$
 \eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{X_T^d}{X_R^d} - 1)
@@ -366,7 +359,7 @@ $$
 \eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{\frac{X_T^d}{X_T^d}}{\frac{X_R^d}{X_T^d}} - 1)
 $$ {#eq-14}
 
-La @eq-14 puede ser simplificada aún más considerando que $\frac{X_R^d}{X_T^d} = S_R$, obtenemos: 
+La @eq-14 puede ser simplificada aún más considerando que $\frac{X_R^d}{X_T^d} = S_R$, obtenemos:
 
 $$
 \eta_{P_{x}X_R^d}^d = \eta_{P_{x}X_T^d}^d \frac{1}{S_R} - \eta_{P_{x}X_C^S}^S (\frac{1}{S_R} - 1)
@@ -555,7 +548,7 @@ La optimización de los costos operativos, la implementación de tecnologías av
 
 ## Elasticidad Precio de la Oferta
 
-Un mercado de producto es considerado relevante por el lado de la oferta si la elasticidad precio de la oferta es alta, lo que implica que la oferta es elástica. La elasticidad precio de la oferta se define como la medida de la sensibilidad de la cantidad ofrecida de un bien ante cambios en su precio. Si la elasticidad precio de la oferta es alta, significa que la cantidad ofrecida cambia significativamente en respuesta a cambios en el precio. 
+Un mercado de producto es considerado relevante por el lado de la oferta si la elasticidad precio de la oferta es alta, lo que implica que la oferta es elástica. La elasticidad precio de la oferta se define como la medida de la sensibilidad de la cantidad ofrecida de un bien ante cambios en su precio. Si la elasticidad precio de la oferta es alta, significa que la cantidad ofrecida cambia significativamente en respuesta a cambios en el precio.
 
 $$
 \eta_{XP_{y}} = \frac{\partial X^s}{\partial P_{x}} \frac{P_{x}}{X}
@@ -609,7 +602,6 @@ Desde la perspectiva del consumidor, el mercado de producto o servicio relevante
 
 La determinación del mercado de producto o servicio relevante es esencial para comprender la competencia y la dinámica del mercado. Al identificar los sustitutos cercanos, tanto los consumidores como las empresas pueden tomar decisiones estratégicas en relación con la oferta y la demanda de esos productos o servicios.
 
-
 **Mercado Geográfico Relevante**
 
 El mercado geográfico relevante se define como el área geográfica en la cual se encuentran las fuentes de proveedores alternativos que ofrecen el conjunto de bienes sustitutos. En este mercado, los demandantes o clientes tienen acceso a diferentes proveedores que ofrecen productos o servicios similares en condiciones comparables a las del mercado principal.
@@ -623,20 +615,4 @@ El concepto de mercado relevante también puede abarcar la dimensión temporal. 
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
-
-
-1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
-
-2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion-oi-cap1/index.qmd)
-
-3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos-oi.cap1/index.qmd)
-
-4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap2/index.qmd)
-
-5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
-
-6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
-
-Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

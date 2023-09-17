@@ -1,0 +1,274 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.54cm,right=2.54cm,bottom=2.54cm,left=2.54cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{biblatex}
+\addbibresource{../../../../references.bib}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Notas de Clase Series de Tiempo},
+  pdfauthor={Edison Achalma},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Notas de Clase Series de Tiempo}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Descubre cómo seleccionar hardware, descargar la imagen ISO y
+preparar los medios de instalación. Exploraremos opciones para probar o
+instalar Linux en tu equipo.}
+\author{Edison Achalma}
+\date{2023-08-27}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, enhanced, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+
+\hypertarget{modelos-de-datos-panel}{%
+\section{Modelos de Datos Panel}\label{modelos-de-datos-panel}}
+
+\hypertarget{motivaciuxf3n}{%
+\subsection{Motivación}\label{motivaciuxf3n}}
+
+Denotemos con \(Y_{it}\) el componente o individuo \(i\),
+\(i = 1, 2, \ldots, N\) en el tiempo \(t\), \(t = 1, 2, \ldots, T\).
+Típicamente las series de tiempo en forma de panel se caracterizan por
+ser de dimensión de individuos corta y de dimensión temporar larga.
+
+En general, escribiremos: \[
+    Y_{it} = \alpha_i + \beta_i X_{it} + U_{it}
+\]
+
+Donde \(\alpha_i\) es un efecto fijo especificado como: \[
+    \alpha_i = \beta_0 + \gamma_i Z_i
+\]
+
+\hypertarget{pruebas-de-rauxedces-unitarias-en-panel}{%
+\subsection{Pruebas de Raíces Unitarias en
+Panel}\label{pruebas-de-rauxedces-unitarias-en-panel}}
+
+Las pruebas de raíces unitarias para panel suelen ser usadas
+principalmente en casos macroeconómicos. De forma similar al caso de
+series univariadas, asumiremos una forma de AR(1) para una serie en
+panel: \[
+    \Delta Y_{it} = \mu_i + \rho_i Y_{i t-1} + \sum_{i = 1}^{k_i} \varphi_{ij} \Delta Y_{i t-j} + \varepsilon_{it}
+    \label{eq_AR_Panel}
+\]
+
+Donde \(i = 1, \ldots, N\), \(t = 1, \ldots, T\) y \(\varepsilon_{it}\)
+es una v.a. iid que cumple con: \begin{eqnarray*}
+    \mathbb{E}[\varepsilon_{it}] & = & 0 \\
+    \mathbb{E}[\varepsilon_{it}^2] & = & \sigma^2_i < \infty \\
+    \mathbb{E}[\varepsilon_{it}^4] & < & \infty 
+\end{eqnarray*}
+
+Al igual que en el caso univariado, en este tipo de pruebas buscamos
+identificar cuando las series son I(1) y cuando I(0). Pasra tal efecto,
+la prueba de raíz unitaria que utilizaremos está basada en una prueba
+Dickey-Fuller Aumentada en la cual la hipótesis nula (\(H_0\)) es que
+todas las series en el panel son no estacionarias, es decir, son I(1).
+Es decir, \[
+    H_0 : \rho_i = 0
+\]
+
+Por su parte, en el caso de la hipótesis nula tenndremos dos:
+
+\begin{itemize}
+    \item $H_1^A :$ Todas las series son I(0) -- caso homogéneo, o
+    
+    \item $H_1^B :$ Al menos una de las series es I(0) -- caso heterogéneo
+\end{itemize}
+
+\hypertarget{panel-var}{%
+\subsection{Panel VAR}\label{panel-var}}
+
+En esta sección extenderemos el caso del modelo VAR(p) a uno en forma
+panel. En este caso asumimos que las viables exogenas son los \(p\)
+rezagos de las \(k\) variables endogenas. Consideremos el siguiente caso
+de un modelo panel VAR con efectos fijos --ciertamente es posible hacer
+estimaciones con efectos aleatorios, no obstante requiere de supuestos
+adicionales que no contemplamos en estas notas --, el cual es la forma
+más común de estimación: \[
+    \mathbf{Y}_{it} = \mu_i + \sum_{l = 1}^p \mathbf{A}_l \mathbf{Y}_{i t - l} + \mathbf{B} \mathbf{X}_{it} + \varepsilon_{it}
+    \label{eq_PVAR}
+\]
+
+Donde \(\mathbf{Y}_{it}\) es un vector de variables endogenas
+estacionarias para la unidad de corte transversal \(i\) en el tiempo
+\(t\), \(\mathbf{X}_{it}\) es una matriz que contiene varaibles
+exógenas, y \(\varepsilon_{it}\) es un término de error que cumple con:
+\begin{eqnarray*}
+    \mathbb{E}[\varepsilon_{it}] & = & 0 \\
+    Var[\varepsilon_{it}] & = & \Sigma_\varepsilon
+\end{eqnarray*}
+
+Donde \(\Sigma_\varepsilon\) es una matriz definida positiva.
+
+Para el porceso de estimación la ecuación (\ref{eq_PVAR}) se modifica en
+su versión en diferencias para quedar como: \[
+    \Delta \mathbf{Y}_{it} = \sum_{l = 1}^p \mathbf{A}_l \Delta \mathbf{Y}_{i t - l} + \mathbf{B} \Delta \mathbf{X}_{it} + \Delta \varepsilon_{it}
+    \label{eq_Dinamic_PVAR}
+\]
+
+La ecuación (\ref{eq_Dinamic_PVAR}) se estima por un GMM.
+
+\hypertarget{cointegraciuxf3n}{%
+\subsection{Cointegración}\label{cointegraciuxf3n}}
+
+
+\printbibliography
+
+
+\end{document}

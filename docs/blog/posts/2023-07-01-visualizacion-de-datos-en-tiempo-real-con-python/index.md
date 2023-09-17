@@ -12,19 +12,6 @@ date: "07/01/2023"
 ---
 
 
-# ola
-
-hola mundo...
-
-hdfdhgkjdf
-dfg
-dfh
-
-dfh qu tal update sudo apt upgarde 
-
-hmmhm
-
-
 # Introducción a la visualización de datos en tiempo real
 
 La visualización de datos en tiempo real se refiere a la representación gráfica de datos que se actualizan constantemente y en tiempo real. Es una técnica poderosa que permite analizar y comprender la información en tiempo real, lo que resulta fundamental en entornos donde la velocidad del cambio es crítica.
@@ -43,13 +30,13 @@ En resumen, la visualización de datos en tiempo real te ayuda a estar al tanto 
 
 La visualización de datos en tiempo real encuentra aplicaciones en diversos campos. Algunos casos de uso comunes incluyen:
 
-- Monitoreo de sistemas y redes: permite visualizar el rendimiento, la disponibilidad y los eventos en tiempo real de sistemas informáticos, redes de comunicación y otros sistemas complejos.
+-   Monitoreo de sistemas y redes: permite visualizar el rendimiento, la disponibilidad y los eventos en tiempo real de sistemas informáticos, redes de comunicación y otros sistemas complejos.
 
-- Análisis de datos financieros: proporciona una visión en tiempo real de los cambios en los precios de acciones, divisas, materias primas y otros activos financieros.
+-   Análisis de datos financieros: proporciona una visión en tiempo real de los cambios en los precios de acciones, divisas, materias primas y otros activos financieros.
 
-- Seguimiento de redes sociales: permite visualizar y analizar en tiempo real los datos generados en las redes sociales, como menciones de marca, tendencias y sentimiento del público.
+-   Seguimiento de redes sociales: permite visualizar y analizar en tiempo real los datos generados en las redes sociales, como menciones de marca, tendencias y sentimiento del público.
 
-- Monitoreo de sensores y dispositivos IoT: facilita la visualización de datos generados por sensores en tiempo real, como temperatura, humedad, presión, etc.
+-   Monitoreo de sensores y dispositivos IoT: facilita la visualización de datos generados por sensores en tiempo real, como temperatura, humedad, presión, etc.
 
 Estos son solo algunos ejemplos, pero la visualización de datos en tiempo real es una técnica versátil que se puede aplicar en una amplia gama de escenarios para mejorar la comprensión y la toma de decisiones.
 
@@ -57,11 +44,11 @@ Estos son solo algunos ejemplos, pero la visualización de datos en tiempo real 
 
 En la visualización de datos en tiempo real, existen varias bibliotecas y herramientas populares que facilitan la creación de gráficos y visualizaciones interactivas. Algunas de las principales bibliotecas utilizadas en Python son:
 
-- Matplotlib: una biblioteca ampliamente utilizada que ofrece una gran flexibilidad para crear visualizaciones estáticas y animadas.
+-   Matplotlib: una biblioteca ampliamente utilizada que ofrece una gran flexibilidad para crear visualizaciones estáticas y animadas.
 
-- Plotly: una biblioteca de visualización interactiva que permite crear gráficos interactivos y actualizables en tiempo real.
+-   Plotly: una biblioteca de visualización interactiva que permite crear gráficos interactivos y actualizables en tiempo real.
 
-- Bokeh: otra biblioteca de visualización interactiva que se enfoca en la creación de visualizaciones interactivas basadas en la web.
+-   Bokeh: otra biblioteca de visualización interactiva que se enfoca en la creación de visualizaciones interactivas basadas en la web.
 
 Estas bibliotecas proporcionan una amplia gama de opciones para crear gráficos en tiempo real, desde gráficos de líneas y gráficos de barras hasta mapas de calor y gráficos de dispersión interactivos.
 
@@ -73,21 +60,21 @@ Los gráficos en streaming son una forma efectiva de visualizar datos que se act
 
 La visualización de datos en tiempo real requiere una estrategia para capturar y procesar los datos en tiempo real, así como una forma de representarlos gráficamente. Para visualizar datos que se actualizan constantemente, puedes seguir estos pasos:
 
-1. Obtener los datos: primero, debes establecer una fuente de datos en tiempo real, como un flujo de datos de sensores, una API de terceros o una base de datos en continuo crecimiento. Es importante contar con un mecanismo para recibir los datos a medida que se generan o se actualizan.
+1.  Obtener los datos: primero, debes establecer una fuente de datos en tiempo real, como un flujo de datos de sensores, una API de terceros o una base de datos en continuo crecimiento. Es importante contar con un mecanismo para recibir los datos a medida que se generan o se actualizan.
 
-2. Procesar los datos: una vez que recibes los datos, es necesario procesarlos y estructurarlos adecuadamente para su visualización. Esto puede implicar filtrar, transformar o agregar los datos según tus necesidades.
+2.  Procesar los datos: una vez que recibes los datos, es necesario procesarlos y estructurarlos adecuadamente para su visualización. Esto puede implicar filtrar, transformar o agregar los datos según tus necesidades.
 
-3. Actualizar la visualización: una vez que tienes los datos preparados, debes actualizar la visualización en tiempo real. Esto implica refrescar el gráfico con los nuevos datos a medida que llegan. Dependiendo de la biblioteca que estés utilizando, puede haber métodos específicos para actualizar los gráficos en streaming.
+3.  Actualizar la visualización: una vez que tienes los datos preparados, debes actualizar la visualización en tiempo real. Esto implica refrescar el gráfico con los nuevos datos a medida que llegan. Dependiendo de la biblioteca que estés utilizando, puede haber métodos específicos para actualizar los gráficos en streaming.
 
 ## Utilización de bibliotecas como Matplotlib, Plotly y Bokeh para crear gráficos en streaming
 
 Las bibliotecas de visualización como Matplotlib, Plotly y Bokeh ofrecen herramientas y funcionalidades para crear gráficos en streaming en Python. Estas bibliotecas te permiten representar los datos en tiempo real de forma interactiva y dinámica.
 
-1. Matplotlib: Matplotlib proporciona funcionalidades para crear gráficos en streaming mediante el uso de la función `FuncAnimation`. Puedes actualizar los datos del gráfico en tiempo real a través de un bucle y llamar a la función `FuncAnimation` para refrescar la visualización.
+1.  Matplotlib: Matplotlib proporciona funcionalidades para crear gráficos en streaming mediante el uso de la función `FuncAnimation`. Puedes actualizar los datos del gráfico en tiempo real a través de un bucle y llamar a la función `FuncAnimation` para refrescar la visualización.
 
-2. Plotly: Plotly es una biblioteca que se destaca en la creación de gráficos interactivos en tiempo real. Puedes utilizar la función `update_traces` para actualizar los datos en un gráfico existente. También ofrece la posibilidad de crear visualizaciones en streaming utilizando la función `stream`.
+2.  Plotly: Plotly es una biblioteca que se destaca en la creación de gráficos interactivos en tiempo real. Puedes utilizar la función `update_traces` para actualizar los datos en un gráfico existente. También ofrece la posibilidad de crear visualizaciones en streaming utilizando la función `stream`.
 
-3. Bokeh: Bokeh permite crear gráficos interactivos en streaming mediante su modelo de actualización de datos. Puedes utilizar la función `ColumnDataSource` para almacenar los datos y actualizarlos en tiempo real. Luego, puedes enlazar los datos actualizados al gráfico y visualizarlos en streaming.
+3.  Bokeh: Bokeh permite crear gráficos interactivos en streaming mediante su modelo de actualización de datos. Puedes utilizar la función `ColumnDataSource` para almacenar los datos y actualizarlos en tiempo real. Luego, puedes enlazar los datos actualizados al gráfico y visualizarlos en streaming.
 
 ## Uso de bibliotecas para datos en continuo
 
@@ -118,7 +105,7 @@ plt.show()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-2-output-1.pdf){fig-pos='H'}
+![](index_files/figure-html/cell-2-output-1.png){width=590 height=411}
 :::
 :::
 
@@ -201,7 +188,7 @@ plt.show()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-4-output-1.pdf){fig-pos='H'}
+![](index_files/figure-html/cell-4-output-1.png){width=590 height=411}
 :::
 :::
 
@@ -226,7 +213,7 @@ plt.show()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-5-output-1.pdf){fig-pos='H'}
+![](index_files/figure-html/cell-5-output-1.png){width=590 height=411}
 :::
 :::
 
@@ -235,7 +222,7 @@ En este ejemplo, creamos un gráfico de línea que se actualiza en tiempo real. 
 
 ### Gráfico de barras en streaming con Plotly
 
-```python
+``` python
 import plotly.graph_objects as go
 import numpy as np
 
@@ -263,7 +250,6 @@ def update():
 
 # Iniciar la actualización en tiempo real
 update()
-
 ```
 
 Estos ejemplos te brindan una idea de cómo crear gráficos en streaming con Matplotlib y Plotly.
@@ -276,23 +262,23 @@ Los gráficos interactivos actualizados automáticamente son una forma poderosa 
 
 Para crear gráficos que se actualicen automáticamente a medida que llegan nuevos datos, puedes seguir estos pasos:
 
-1. Establecer una fuente de datos en tiempo real: debes tener una fuente de datos en tiempo real que proporcione los nuevos datos a medida que se generan o se actualizan. Esto puede ser un flujo de datos en continuo, una API en tiempo real o una base de datos que se actualiza constantemente.
+1.  Establecer una fuente de datos en tiempo real: debes tener una fuente de datos en tiempo real que proporcione los nuevos datos a medida que se generan o se actualizan. Esto puede ser un flujo de datos en continuo, una API en tiempo real o una base de datos que se actualiza constantemente.
 
-2. Configurar la visualización inicial: antes de que lleguen los nuevos datos, configura la visualización inicial del gráfico. Puedes establecer el tipo de gráfico, los ejes, los colores y cualquier otro elemento visual que desees mostrar.
+2.  Configurar la visualización inicial: antes de que lleguen los nuevos datos, configura la visualización inicial del gráfico. Puedes establecer el tipo de gráfico, los ejes, los colores y cualquier otro elemento visual que desees mostrar.
 
-3. Preparar la estructura de datos: para recibir y almacenar los nuevos datos, debes preparar una estructura adecuada. Puede ser una lista, un array o una estructura de datos más compleja dependiendo de las necesidades de tu aplicación.
+3.  Preparar la estructura de datos: para recibir y almacenar los nuevos datos, debes preparar una estructura adecuada. Puede ser una lista, un array o una estructura de datos más compleja dependiendo de las necesidades de tu aplicación.
 
-4. Actualizar los datos y la visualización: a medida que llegan los nuevos datos, debes agregarlos a la estructura de datos existente. Luego, actualiza la visualización del gráfico con los nuevos datos. Esto puede implicar la actualización de las series de datos, la adición de nuevos puntos en un gráfico de dispersión o el ajuste de las áreas en un gráfico de áreas.
+4.  Actualizar los datos y la visualización: a medida que llegan los nuevos datos, debes agregarlos a la estructura de datos existente. Luego, actualiza la visualización del gráfico con los nuevos datos. Esto puede implicar la actualización de las series de datos, la adición de nuevos puntos en un gráfico de dispersión o el ajuste de las áreas en un gráfico de áreas.
 
-5. Actualizar automáticamente la visualización: para lograr que la visualización se actualice automáticamente, debes utilizar las funcionalidades de las bibliotecas de visualización adecuadas, como Plotly y Bokeh. Estas bibliotecas ofrecen métodos específicos para actualizar los gráficos en tiempo real, como `update_traces` en Plotly y `stream` en Bokeh.
+5.  Actualizar automáticamente la visualización: para lograr que la visualización se actualice automáticamente, debes utilizar las funcionalidades de las bibliotecas de visualización adecuadas, como Plotly y Bokeh. Estas bibliotecas ofrecen métodos específicos para actualizar los gráficos en tiempo real, como `update_traces` en Plotly y `stream` en Bokeh.
 
 ## Utilización de bibliotecas como Plotly y Bokeh para crear gráficos interactivos actualizados en tiempo real
 
 Las bibliotecas Plotly y Bokeh son excelentes opciones para crear gráficos interactivos actualizados en tiempo real en Python.
 
-1. Plotly: Plotly es una biblioteca de visualización que proporciona una amplia gama de tipos de gráficos interactivos y dinámicos. Ofrece funcionalidades específicas para la visualización en tiempo real, como `update_traces`, que te permite actualizar los datos de las trazas en un gráfico existente. También puedes utilizar la función `stream` para recibir datos en tiempo real y agregarlos al gráfico en streaming.
+1.  Plotly: Plotly es una biblioteca de visualización que proporciona una amplia gama de tipos de gráficos interactivos y dinámicos. Ofrece funcionalidades específicas para la visualización en tiempo real, como `update_traces`, que te permite actualizar los datos de las trazas en un gráfico existente. También puedes utilizar la función `stream` para recibir datos en tiempo real y agregarlos al gráfico en streaming.
 
-2. Bokeh: Bokeh es otra biblioteca de visualización que se centra en la creación de gráficos interactivos y dinámicos. Ofrece funcionalidades para la visualización en tiempo real, como `ColumnDataSource`, que te permite enlazar los datos actualizados al gráfico y actualizarlo automáticamente. También puedes utilizar la función `stream` para recibir datos en tiempo real y agregarlos al gráfico.
+2.  Bokeh: Bokeh es otra biblioteca de visualización que se centra en la creación de gráficos interactivos y dinámicos. Ofrece funcionalidades para la visualización en tiempo real, como `ColumnDataSource`, que te permite enlazar los datos actualizados al gráfico y actualizarlo automáticamente. También puedes utilizar la función `stream` para recibir datos en tiempo real y agregarlos al gráfico.
 
 ## Ejemplos prácticos de gráficos de dispersión y gráficos de áreas actualizados en tiempo real
 
@@ -300,7 +286,7 @@ A continuación, te presento ejemplos prácticos de cómo crear gráficos de dis
 
 ### Gráfico de dispersión actualizado en tiempo real con Plotly
 
-```python
+``` python
 import plotly.graph_objects as go
 import random
 
@@ -333,7 +319,7 @@ while True:
 
 ### Gráfico de áreas actualizado en tiempo real con Bokeh
 
-```python
+``` python
 from bokeh.plotting import figure, curdoc
 from random import randint
 from bokeh.models import ColumnDataSource
@@ -392,7 +378,6 @@ curdoc().add_root(p)
 
 En este ejemplo de Bokeh, utilizamos la función `ColumnDataSource` para almacenar nuestros datos y el método `stream()` para actualizarlos en tiempo real. La función `update()` genera nuevos datos y los agrega a la fuente de datos utilizando `source.stream()`. Utilizamos `curdoc().add_periodic_callback()` para llamar a la función `update()` periódicamente y actualizar los datos en tiempo real.
 
-
 # Visualización de datos en tiempo real en aplicaciones web
 
 La visualización de datos en tiempo real también se puede integrar en aplicaciones web, lo que permite mostrar gráficos actualizados automáticamente y en tiempo real directamente en un navegador web. Esto brinda una experiencia interactiva a los usuarios y les permite obtener información en tiempo real de manera conveniente.
@@ -401,15 +386,15 @@ La visualización de datos en tiempo real también se puede integrar en aplicaci
 
 Existen varias bibliotecas de Python que facilitan la integración de gráficos en tiempo real en aplicaciones web. Algunas de las bibliotecas más populares son Flask y Dash.
 
-- Flask: Flask es un framework web ligero y flexible que permite construir aplicaciones web de manera sencilla. Puedes utilizar Flask para crear un servidor web y enviar los datos actualizados desde el servidor al navegador. Con la ayuda de bibliotecas de visualización como Plotly o Bokeh, puedes generar gráficos en tiempo real y enviarlos al navegador para su visualización.
+-   Flask: Flask es un framework web ligero y flexible que permite construir aplicaciones web de manera sencilla. Puedes utilizar Flask para crear un servidor web y enviar los datos actualizados desde el servidor al navegador. Con la ayuda de bibliotecas de visualización como Plotly o Bokeh, puedes generar gráficos en tiempo real y enviarlos al navegador para su visualización.
 
-- Dash: Dash es un framework de Python diseñado específicamente para la construcción de aplicaciones web interactivas. Dash combina la facilidad de uso de Flask con las capacidades de visualización de Plotly. Puedes utilizar Dash para crear una aplicación web en la que los gráficos se actualicen automáticamente a medida que llegan nuevos datos.
+-   Dash: Dash es un framework de Python diseñado específicamente para la construcción de aplicaciones web interactivas. Dash combina la facilidad de uso de Flask con las capacidades de visualización de Plotly. Puedes utilizar Dash para crear una aplicación web en la que los gráficos se actualicen automáticamente a medida que llegan nuevos datos.
 
 ## Ejemplos prácticos de visualización de datos en tiempo real en aplicaciones web interactivas
 
 A continuación, te presento un ejemplo práctico utilizando Dash para crear una aplicación web interactiva con gráficos en tiempo real:
 
-```python
+``` python
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -483,7 +468,7 @@ plt.show()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-7-output-1.pdf){fig-pos='H'}
+![](index_files/figure-html/cell-7-output-1.png){width=578 height=293}
 :::
 :::
 
@@ -521,7 +506,7 @@ plt.show()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-8-output-1.pdf){fig-pos='H'}
+![](index_files/figure-html/cell-8-output-1.png){width=533 height=411}
 :::
 :::
 
@@ -548,11 +533,11 @@ Redes sociales: Las redes sociales generan grandes cantidades de datos en tiempo
 
 A continuación, presentaremos algunos ejemplos prácticos de visualización de datos en tiempo real en escenarios reales:
 
-- Monitoreo de tráfico en tiempo real: Mediante el uso de sensores y cámaras, es posible recopilar datos sobre el tráfico vehicular en tiempo real. Estos datos pueden visualizarse en mapas interactivos y gráficos en tiempo real para proporcionar información sobre el flujo de tráfico, los patrones de congestión y las rutas más eficientes.
+-   Monitoreo de tráfico en tiempo real: Mediante el uso de sensores y cámaras, es posible recopilar datos sobre el tráfico vehicular en tiempo real. Estos datos pueden visualizarse en mapas interactivos y gráficos en tiempo real para proporcionar información sobre el flujo de tráfico, los patrones de congestión y las rutas más eficientes.
 
-- Seguimiento de redes sociales: Las empresas pueden utilizar herramientas de visualización en tiempo real para monitorear las redes sociales y obtener información sobre la opinión de los usuarios, las tendencias emergentes y las campañas de marketing. Esto permite adaptar rápidamente las estrategias y tomar decisiones informadas basadas en los datos en tiempo real.
+-   Seguimiento de redes sociales: Las empresas pueden utilizar herramientas de visualización en tiempo real para monitorear las redes sociales y obtener información sobre la opinión de los usuarios, las tendencias emergentes y las campañas de marketing. Esto permite adaptar rápidamente las estrategias y tomar decisiones informadas basadas en los datos en tiempo real.
 
-- Monitoreo de sistemas de energía: En la industria energética, la visualización de datos en tiempo real es esencial para monitorear y gestionar los sistemas de generación y distribución de energía. Los gráficos en tiempo real pueden mostrar datos como la demanda de energía, la producción, los precios y otros factores relevantes para optimizar la eficiencia y la calidad del suministro de energía.
+-   Monitoreo de sistemas de energía: En la industria energética, la visualización de datos en tiempo real es esencial para monitorear y gestionar los sistemas de generación y distribución de energía. Los gráficos en tiempo real pueden mostrar datos como la demanda de energía, la producción, los precios y otros factores relevantes para optimizar la eficiencia y la calidad del suministro de energía.
 
 # Consideraciones de rendimiento y escalabilidad
 
@@ -560,23 +545,23 @@ Cuando trabajamos con grandes volúmenes de datos en tiempo real, es importante 
 
 ## Factores a tener en cuenta al trabajar con grandes volúmenes de datos en tiempo real
 
-1. **Velocidad de procesamiento**: Los datos en tiempo real se generan y actualizan rápidamente, por lo que es fundamental contar con una infraestructura que permita procesarlos a alta velocidad. Esto implica utilizar técnicas de procesamiento paralelo, optimización de consultas y sistemas distribuidos para manejar la carga de trabajo.
+1.  **Velocidad de procesamiento**: Los datos en tiempo real se generan y actualizan rápidamente, por lo que es fundamental contar con una infraestructura que permita procesarlos a alta velocidad. Esto implica utilizar técnicas de procesamiento paralelo, optimización de consultas y sistemas distribuidos para manejar la carga de trabajo.
 
-2. **Latencia**: La latencia es el tiempo transcurrido entre la generación de los datos y su visualización. Para garantizar una experiencia en tiempo real, es esencial minimizar la latencia. Esto implica utilizar sistemas de transmisión de datos eficientes, minimizar las operaciones de lectura/escritura y optimizar el rendimiento de las consultas.
+2.  **Latencia**: La latencia es el tiempo transcurrido entre la generación de los datos y su visualización. Para garantizar una experiencia en tiempo real, es esencial minimizar la latencia. Esto implica utilizar sistemas de transmisión de datos eficientes, minimizar las operaciones de lectura/escritura y optimizar el rendimiento de las consultas.
 
-3. **Escalabilidad**: A medida que aumenta el volumen de datos y la cantidad de usuarios que acceden a la visualización en tiempo real, es necesario que el sistema sea escalable. Esto implica utilizar arquitecturas distribuidas, sistemas de procesamiento en paralelo y técnicas de particionamiento de datos para garantizar que el sistema pueda manejar la carga sin degradar el rendimiento.
+3.  **Escalabilidad**: A medida que aumenta el volumen de datos y la cantidad de usuarios que acceden a la visualización en tiempo real, es necesario que el sistema sea escalable. Esto implica utilizar arquitecturas distribuidas, sistemas de procesamiento en paralelo y técnicas de particionamiento de datos para garantizar que el sistema pueda manejar la carga sin degradar el rendimiento.
 
-4. **Optimización de consultas**: Para garantizar un rendimiento eficiente, es importante optimizar las consultas de datos. Esto implica utilizar índices adecuados, estructuras de datos optimizadas y técnicas de filtrado y agregación para reducir el tiempo de respuesta y minimizar el procesamiento innecesario.
+4.  **Optimización de consultas**: Para garantizar un rendimiento eficiente, es importante optimizar las consultas de datos. Esto implica utilizar índices adecuados, estructuras de datos optimizadas y técnicas de filtrado y agregación para reducir el tiempo de respuesta y minimizar el procesamiento innecesario.
 
 ## Estrategias para optimizar el rendimiento y la escalabilidad de la visualización de datos en tiempo real
 
-1. **Caché de datos**: Utilizar técnicas de caché puede mejorar significativamente el rendimiento al reducir la necesidad de acceder a la fuente de datos en cada consulta. Almacenar en caché los resultados de consultas anteriores y mantenerlos actualizados puede acelerar la generación de visualizaciones en tiempo real.
+1.  **Caché de datos**: Utilizar técnicas de caché puede mejorar significativamente el rendimiento al reducir la necesidad de acceder a la fuente de datos en cada consulta. Almacenar en caché los resultados de consultas anteriores y mantenerlos actualizados puede acelerar la generación de visualizaciones en tiempo real.
 
-2. **Procesamiento en tiempo real**: En lugar de procesar todos los datos en tiempo real, es posible aplicar técnicas de procesamiento en tiempo real para filtrar, resumir o agregar los datos antes de visualizarlos. Esto permite reducir la carga de trabajo en el momento de la visualización y mejorar el rendimiento general del sistema.
+2.  **Procesamiento en tiempo real**: En lugar de procesar todos los datos en tiempo real, es posible aplicar técnicas de procesamiento en tiempo real para filtrar, resumir o agregar los datos antes de visualizarlos. Esto permite reducir la carga de trabajo en el momento de la visualización y mejorar el rendimiento general del sistema.
 
-3. **Distribución de carga**: Distribuir la carga de trabajo en varios nodos o servidores puede mejorar la escalabilidad del sistema. Esto implica utilizar técnicas de particionamiento de datos, balanceo de carga y paralelismo para distribuir eficientemente el procesamiento de datos entre diferentes recursos.
+3.  **Distribución de carga**: Distribuir la carga de trabajo en varios nodos o servidores puede mejorar la escalabilidad del sistema. Esto implica utilizar técnicas de particionamiento de datos, balanceo de carga y paralelismo para distribuir eficientemente el procesamiento de datos entre diferentes recursos.
 
-4. **Compresión de datos**: La compresión de datos puede reducir el espacio de almacenamiento y el ancho de banda necesario para transmitir los datos. Utilizar algoritmos de compresión adecuados puede mejorar la eficiencia del sistema y reducir los costos asociados con el almacenamiento y la transmisión de datos.
+4.  **Compresión de datos**: La compresión de datos puede reducir el espacio de almacenamiento y el ancho de banda necesario para transmitir los datos. Utilizar algoritmos de compresión adecuados puede mejorar la eficiencia del sistema y reducir los costos asociados con el almacenamiento y la transmisión de datos.
 
 # Conclusiones y recursos adicionales
 
@@ -584,28 +569,25 @@ En conclusión, la visualización de datos en tiempo real es una poderosa herram
 
 Algunos conceptos clave y mejores prácticas a tener en cuenta son:
 
-
-- Comprender el dominio y los requisitos específicos del problema antes de diseñar visualizaciones en tiempo real.
-- Utilizar bibliotecas adecuadas como Matplotlib, Plotly y Bokeh para crear gráficos en streaming e interactivos.
-- Considerar la escalabilidad y el rendimiento al trabajar con grandes volúmenes de datos en tiempo real.
-- Implementar estrategias de optimización como el caché de datos, el procesamiento en tiempo real y la distribución de carga.
-- Mantenerse actualizado con los avances en las bibliotecas y herramientas de visualización de datos en tiempo real.
+-   Comprender el dominio y los requisitos específicos del problema antes de diseñar visualizaciones en tiempo real.
+-   Utilizar bibliotecas adecuadas como Matplotlib, Plotly y Bokeh para crear gráficos en streaming e interactivos.
+-   Considerar la escalabilidad y el rendimiento al trabajar con grandes volúmenes de datos en tiempo real.
+-   Implementar estrategias de optimización como el caché de datos, el procesamiento en tiempo real y la distribución de carga.
+-   Mantenerse actualizado con los avances en las bibliotecas y herramientas de visualización de datos en tiempo real.
 
 Recursos adicionales para aprender más sobre la visualización de datos en tiempo real con Python:
 
-- [Documentación oficial de Matplotlib](https://matplotlib.org/stable/contents.html)
-- [Documentación oficial de Plotly](https://plotly.com/python/)
-- [Documentación oficial de Bokeh](https://docs.bokeh.org/en/latest/index.html)
-- [Documentación oficial de Flask](https://flask.palletsprojects.com/)
-- [Documentación oficial de Dash](https://dash.plotly.com/)
+-   [Documentación oficial de Matplotlib](https://matplotlib.org/stable/contents.html)
+-   [Documentación oficial de Plotly](https://plotly.com/python/)
+-   [Documentación oficial de Bokeh](https://docs.bokeh.org/en/latest/index.html)
+-   [Documentación oficial de Flask](https://flask.palletsprojects.com/)
+-   [Documentación oficial de Dash](https://dash.plotly.com/)
 
 Estos recursos proporcionan información detallada, ejemplos prácticos y tutoriales que te ayudarán a explorar y dominar la visualización de datos en tiempo real con Python.
 
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
-
 
 1.  [Introducción](../2023-06-22-01-introduccion-a-python/index.qmd)
 

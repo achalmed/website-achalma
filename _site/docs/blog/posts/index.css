@@ -6,7 +6,6 @@
 /* Establece el estilo del cuerpo del documento */
 body {
     /* Muestra los elementos flexibles en el centro horizontalmente */
-    /*display: flex;*/
     justify-content: center;
     /* Establece el ancho al 100% del contenedor principal */
     width: 100%;
@@ -28,7 +27,7 @@ header#title-block-header {
 }
 
 /* Estilo del encabezado del artículo */
-header#title-block-header {
+.quarto-title {
     /* Muestra los elementos flexibles en una columna con espacio entre ellos */
     display: flex;
     flex-direction: column;
@@ -43,21 +42,38 @@ header#title-block-header {
     border-radius: 16px;
     /* Establece el color del texto a blanco */
     color: #ffffff;
+    /* Establece la imagen de fondo y el color de fondo */
     background-image: url("banner.jpeg");
     background-color: #EDF3F9;
     /* Establece la posición del fondo en el centro */
-    background-position: center;
+    background-position: center top;
     /* No repite el fondo */
     background-repeat: no-repeat;
     /* Ajusta el tamaño del fondo para cubrir el contenedor */
     background-size: cover;
 }
 
+/* Estilo del título */
+.title {
+    /* Agrega margen superior de 20px y margen inferior de 20px */
+    margin: 20px 0;
+    /* Establece el tamaño de fuente en 3rem */
+    font-size: 3rem;
+    /* Establece el peso de fuente en negrita */
+    font-weight: bold;
+    /* Establece la opacidad en 0.9 */
+    opacity: 0.9;
+}
 
-/* Estilo del encabezado inferior */
-.quarto-title {
-    /* Agrega espacio superior de 50px */
-    padding-top: 50px;
+/* Estilo del subtítulo y el texto de introducción */
+.subtitle,
+.lead {
+    /* Agrega margen superior de 10px */
+    margin-top: 10px;
+    /* Establece la opacidad en 0.75 */
+    opacity: 0.75;
+    /* Establece la altura de línea en 1.75 */
+    line-height: 1.75;
 }
 
 /* Estilo del contenedor de etiquetas */
@@ -69,51 +85,19 @@ header#title-block-header {
     opacity: 0.75;
     /* Agrega margen inferior de 12px */
     margin-bottom: 12px;
+}
 
-    /* Estilo de los elementos "span" excepto el segundo */
-    &>span:not(:nth-child(2))::before {
-        /* Agrega una coma antes de cada elemento */
-        content: ", ";
-    }
-
-    /* Estilo del icono SVG */
-    .quarto-categories svg {
-        /* Establece el ancho en 20px */
-        width: 20px;
-        /* Agrega margen derecho de 10px */
-        margin-right: 10px;
-    }
-
-    /* Estilo del texto de la etiqueta */
-    .quarto-categories span {
-        /* Establece el tamaño de fuente en 0.875rem */
-        font-size: 0.875rem;
-    }
-
-
-    /* Estilo del título */
-    .title {
-        /* Agrega margen superior de 20px y margen inferior de 20px */
-        margin: 20px 0;
-        /* Establece el tamaño de fuente en 3rem */
-        font-size: 3rem;
-        /* Establece el peso de fuente en negrita */
-        font-weight: bold;
-        /* Establece la opacidad en 0.9 */
-        opacity: 0.9;
-    }
-
-    /* Estilo del subtítulo */
-    .subtitle.lead {
-        /* Establece el ancho en 50% */
-        width: 50%;
-        /* Agrega margen superior de 10px */
-        margin-top: 10px;
-        /* Establece la opacidad en 0.75 */
-        opacity: 0.75;
-        /* Establece la altura de línea en 1.75 */
-        line-height: 1.75;
-    }
+.description {
+    /* Establece el ancho al 100% */
+    width: 100%;
+    /* Agrega margen superior de 10px */
+    margin-top: 10px;
+    /* Establece la opacidad en 0.75 */
+    opacity: 0.75;
+    /* Establece la altura de línea en 1.75 */
+    line-height: 1.75;
+    /* Agrega espacio interno en la parte superior e inferior */
+    padding: 50px 0;
 }
 
 /* Estilo del resumen */
@@ -124,35 +108,54 @@ header#title-block-header {
     display: flex;
     justify-content: space-between;
     /* Agrega margen superior de 50px */
-    margin-top: 50px;
-    /* Agrega espacio interno de 30px en la parte superior e inferior y 50px en los lados */
-    padding: 30px 50px;
+    margin-top: 0;
+    /* Agrega espacio interno en la parte superior, inferior y los lados */
+    padding: 30px 50px 7.5px 50px;
     /* Agrega bordes redondeados */
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
     /* Agrega una sombra alrededor del contenedor */
-    box-shadow: 0 0 0 1px #f2f2f2;
+    box-shadow: 0 1px 1px #ffffff, 0 -1px 1px #f2f2f2;
+}
 
-    /* Estilo de cada elemento del resumen */
-    .summary-item {
-        /* Establece el ancho al 100% */
-        width: 100%;
-        /* Agrega espacio derecho de 20px */
-        padding-right: 20px;
+.quarto-title-meta {
+    /* Establece el ancho al 100% */
+    width: 100%;
+    /* Muestra los elementos flexibles con espacio entre ellos */
+    display: flex;
+    justify-content: space-between;
+    /* Agrega margen superior de 50px */
+    margin-top: 0;
+    /* Agrega espacio interno en la parte superior, inferior y los lados */
+    padding: 7.5px 50px 30px 50px;
+    /* Agrega bordes redondeados */
+    border-radius: 0 0 16px 16px;
+    /* Agrega una sombra alrededor del contenedor */
+    box-shadow: 0 -1px 1px #ffffff, 0 1px 1px #f2f2f2;
+}
 
-        /* Estilo del título del elemento */
-        .item-title {
-            /* Establece el color del texto a #999 */
-            color: #999;
-        }
+/* Estilo del encabezado del resumen */
+.quarto-title-meta-heading {
+    /* Establece el ancho al 100% */
+    width: 100%;
+    /* Agrega espacio derecho de 20px */
+    padding-right: 20px;
+}
 
-        /* Estilo del texto del elemento */
-        .item-text {
-            /* Agrega margen superior de 12px */
-            margin-top: 12px;
-            /* Establece el tamaño de fuente en 1.5rem */
-            font-size: 1.5rem;
-        }
-    }
+/* Estilo del título del resumen */
+.quarto-title-meta-heading {
+    /* Establece el color del texto a #999 */
+    color: #999;
+}
+
+/* Estilo del texto del resumen */
+.author,
+.affiliation,
+.date,
+.date-modified {
+    /* Agrega margen superior de 12px */
+    margin-top: 12px;
+    /* Establece el tamaño de fuente en 1.5rem */
+    font-size: 1.5rem;
 }
 
 .level1 {
@@ -171,11 +174,10 @@ header#title-block-header {
     margin-top: 60px;
     margin-bottom: 20px;
     font-size: 2em;
-    /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    /* Establece el peso de fuente en negrita */
     font-weight: bold;
-    /* Agrega negrita al encabezado */
-    color: #333333;
     /* Cambia el color del texto según tus preferencias */
+    color: #333333;
 }
 
 /* Estilo de los encabezados de nivel 2 */
@@ -183,14 +185,13 @@ header#title-block-header {
     margin-top: 60px;
     margin-bottom: 20px;
     font-size: 1.75em;
-    /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    /* Establece el peso de fuente en negrita */
     font-weight: bold;
-    /* Agrega negrita al encabezado */
-    color: #333333;
     /* Cambia el color del texto según tus preferencias */
+    color: #333333;
 }
 
-/* Estilo de los encabezados de nivel 4 */
+/* Estilo de los encabezados de nivel 3 */
 .level1 h3 {
     /* Agrega margen superior de 60px y margen inferior de 20px */
     margin-top: 60px;
@@ -267,124 +268,116 @@ blockquote {
     min-height: 400px;
     /* Agrega margen superior de 40px */
     margin-top: 40px;
+}
 
-    /* Estilo de cada elemento de imagen */
-    .image-item {
-        /* Establece la altura mínima a 200px */
-        min-height: 200px;
-        /* Establece el color de fondo a #eee */
-        background-color: #eee;
-        /* Establece la posición del fondo en el centro */
-        background-position: center;
-        /* No repite el fondo */
-        background-repeat: no-repeat;
-        /* Ajusta el tamaño del fondo para cubrir el contenedor */
-        background-size: cover;
-        /* Agrega bordes redondeados */
-        border-radius: 8px;
-        /* Establece una transición de 250ms */
-        transition: 250ms;
+/* Estilo de cada elemento de imagen */
+.gallery .image-item {
+    /* Establece la altura mínima a 200px */
+    min-height: 200px;
+    /* Establece el color de fondo a #eee */
+    background-color: #eee;
+    /* Establece la posición del fondo en el centro */
+    background-position: center;
+    /* No repite el fondo */
+    background-repeat: no-repeat;
+    /* Ajusta el tamaño del fondo para cubrir el contenedor */
+    background-size: cover;
+    /* Agrega bordes redondeados */
+    border-radius: 8px;
+    /* Establece una transición de 250ms */
+    transition: 250ms;
 
-        /* Estilo al pasar el cursor sobre el elemento */
-        &:hover {
-            /* Establece la opacidad en 0.9 */
-            opacity: 0.9;
-            /* Cambia el cursor a "pointer" */
-            cursor: pointer;
-        }
-    }
-
-    /* Estilo de la imagen 1 */
-    .image-1 {
-        /* Establece el área de la cuadrícula */
-        grid-area: img1;
-    }
-
-    /* Estilo de la imagen 2 */
-    .image-2 {
-        /* Establece el área de la cuadrícula */
-        grid-area: img2;
-    }
-
-    /* Estilo de la imagen 3 */
-    .image-3 {
-        /* Establece el área de la cuadrícula */
-        grid-area: img3;
-    }
-
-    /* Estilo de la imagen 4 */
-    .image-4 {
-        /* Establece el área de la cuadrícula */
-        grid-area: img4;
-    }
-
-    /* Estilo de la imagen 5 */
-    .image-5 {
-        /* Establece el área de la cuadrícula */
-        grid-area: img5;
-    }
-
-    /* Estilo de la máscara de la galería */
-    .gallery-mask {
-        /* Establece la posición fija */
-        position: fixed;
-        /* Establece en la parte superior izquierda */
-        top: 0;
-        left: 0;
-        /* Establece el índice z en 1 */
-        z-index: 1;
-        /* Establece el ancho al 100% de la ventana */
-        width: 100vw;
-        /* Establece la altura al 100% de la ventana */
-        height: 100vh;
-        /* Agrega espacio interno de 40px en todas las direcciones */
-        padding: 40px;
-        /* Establece el color de fondo a #22222288 */
-        background-color: #22222288;
-        /* Establece una transición de 500ms */
-        transition: 500ms;
-
-        /* Estilo de la imagen dentro de la máscara */
-        img {
-            /* Establece el ancho al 100% */
-            width: 100%;
-            /* Establece la altura al 100% */
-            height: 100%;
-            /* Ajusta el tamaño de la imagen para que quepa dentro del contenedor */
-            object-fit: contain;
-            /* Establece una transición de 500ms */
-            transition: 500ms;
-        }
-    }
-
-    /* Estilo cuando la máscara está desactivada */
-    .mask-off {
-        /* Establece la visibilidad en oculta */
-        visibility: hidden;
-        /* Establece el color de fondo a #22222200 */
-        background-color: #22222200;
-
-        /* Oculta la imagen dentro de la máscara */
-        img {
-            visibility: hidden;
-            /* Establece la opacidad en 0 */
-            opacity: 0;
-        }
+    /* Estilo al pasar el cursor sobre el elemento */
+    &:hover {
+        /* Establece la opacidad en 0.9 */
+        opacity: 0.9;
+        /* Cambia el cursor a "pointer" */
+        cursor: pointer;
     }
 }
 
+/* Estilo de la imagen 1 */
+.gallery .image-1 {
+    /* Establece el área de la cuadrícula */
+    grid-area: img1;
+}
+
+/* Estilo de la imagen 2 */
+.gallery .image-2 {
+    /* Establece el área de la cuadrícula */
+    grid-area: img2;
+}
+
+/* Estilo de la imagen 3 */
+.gallery .image-3 {
+    /* Establece el área de la cuadrícula */
+    grid-area: img3;
+}
+
+/* Estilo de la imagen 4 */
+.gallery .image-4 {
+    /* Establece el área de la cuadrícula */
+    grid-area: img4;
+}
+
+/* Estilo de la imagen 5 */
+.gallery .image-5 {
+    /* Establece el área de la cuadrícula */
+    grid-area: img5;
+}
+
+/* Estilo de la máscara de la galería */
+.gallery-mask {
+    /* Establece la posición fija */
+    position: fixed;
+    /* Establece en la parte superior izquierda */
+    top: 0;
+    left: 0;
+    /* Establece el índice z en 1 */
+    z-index: 1;
+    /* Establece el ancho al 100% de la ventana */
+    width: 100vw;
+    /* Establece la altura al 100% de la ventana */
+    height: 100vh;
+    /* Agrega espacio interno de 40px en todas las direcciones */
+    padding: 40px;
+    /* Establece el color de fondo a #22222288 */
+    background-color: #22222288;
+    /* Establece una transición de 500ms */
+    transition: 500ms;
+}
+
+/* Estilo de la imagen dentro de la máscara */
+.gallery-mask img {
+    /* Establece el ancho al 100% */
+    width: 100%;
+    /* Establece la altura al 100% */
+    height: 100%;
+    /* Ajusta el tamaño de la imagen para que quepa dentro del contenedor */
+    object-fit: contain;
+    /* Establece una transición de 500ms */
+    transition: 500ms;
+}
+
+/* Estilo cuando la máscara está desactivada */
+.mask-off {
+    /* Establece la visibilidad en oculta */
+    visibility: hidden;
+    /* Establece el color de fondo a #22222200 */
+    background-color: #22222200;
+}
 
 /* Estilo para pantallas con un ancho máximo de 1024px */
 @media screen and (max-width: 1024px) {
     body {
         /* Agrega espacio interno de 50px en todas las direcciones */
         padding: 50px;
+    }
 
-        /* Estilo del encabezado inferior en el artículo */
-        article header .lower-header .subtitle {
-            /* Establece el ancho al 100% */
-            width: 100%;
-        }
+    /* Estilo del encabezado inferior en el artículo */
+    article header .lower-header .subtitle {
+        /* Establece el ancho al 100% */
+        width: 100%;
     }
 }
 
@@ -402,12 +395,12 @@ blockquote {
         .summary {
             /* Cambia la dirección de los elementos a una columna */
             flex-direction: column;
+        }
 
-            /* Estilo de cada elemento del resumen, excepto el último */
-            .summary-item:not(:last-child) {
-                /* Agrega espacio inferior de 30px */
-                padding-bottom: 30px;
-            }
+        /* Estilo de cada elemento del resumen, excepto el último */
+        .summary .summary-item:not(:last-child) {
+            /* Agrega espacio inferior de 30px */
+            padding-bottom: 30px;
         }
 
         /* Estilo del artículo principal */
@@ -437,4 +430,26 @@ blockquote {
     body article header .upper-header .date-since {
         display: none;
     }
+}
+
+.toc-active {
+    /* Cambia el color del texto */
+    color: #333;
+    /* Establece un fondo transparente */
+    background: transparent;
+    /* Agrega una línea inferior como resaltado */
+    border-bottom: 2px solid #333;
+    /* Añade un relleno interno */
+    padding: 8px;
+    /* Añade espacio entre los elementos */
+    margin-bottom: 8px;
+    /* Establece transiciones suaves */
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.toc-active:hover {
+    /* Cambia el color del texto al pasar el cursor sobre el elemento */
+    color: #fff;
+    /* Cambia el fondo al pasar el cursor sobre el elemento */
+    background: #333;
 }

@@ -318,5 +318,45 @@ nav.page-navigation {
 
 
 /*======================
-    contenido
+   redes sociales
 =======================*/
+
+/* Estilos para el bloque de redes sociales */
+.social {
+  position: absolute;
+  /* Establece la posición absoluta */
+  z-index: 10;
+  /* Establece el índice z en 10 para superponerlo a otros elementos */
+  bottom: 20px;
+  /* Establece la distancia desde la parte inferior a 20px */
+  display: flex;
+  /* Muestra los elementos como una fila */
+  justify-content: center;
+  /* Centra horizontalmente los elementos */
+  align-items: center;
+  /* Centra verticalmente los elementos */
+}
+
+.social li {
+  list-style: none;
+  /* Elimina los puntos de lista */
+}
+
+.social li a {
+  display: inline-block;
+  /* Muestra los enlaces en línea */
+  margin-right: 20px;
+  /* Establece un margen derecho de 20px entre los enlaces */
+  /*filter: invert(1);*/
+  /* Invierte los colores de los enlaces */
+  filter: brightness(1.5);
+  transform: scale(0.5);
+  /* Escala los enlaces al 50% */
+  transition: 0.5s;
+  /* Establece una transición de 0.5s para suavizar los cambios */
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+  /* Escala los enlaces al 50% y los desplaza hacia arriba 15px al pasar el cursor sobre ellos */
+}

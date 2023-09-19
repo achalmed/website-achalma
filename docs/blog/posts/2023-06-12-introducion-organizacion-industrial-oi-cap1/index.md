@@ -14,8 +14,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-12-introducion-organizacion-industrial/index.pdf
 date: "06/12/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 
@@ -252,7 +252,6 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 
 
-
 :::{.cell}
 
 :::{.cell-output-display}
@@ -261,12 +260,16 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 :::{}
 
-![](index_files/figure-latex/mermaid-figure-1.png){width="3.94in" height="1.4in" fig-pos='H' fig-env='figure'}
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Organización industrial]
+    A --&gt; D[Estructura]
+    A --&gt; E[Conducta]
+    A --&gt; F[Resultados]
+</pre>
 :::
 :::
 :::
 :::
-
 
 
 
@@ -360,8 +363,6 @@ En este sentido, las distorsiones se resuelven a través de la acción directa d
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
-
 
 1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 

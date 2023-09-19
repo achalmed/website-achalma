@@ -15,8 +15,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.pdf
 date: "10/21/2022"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 

@@ -15,8 +15,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf
 date: "06/17/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 
@@ -74,7 +74,6 @@ En este régimen, el tipo de cambio se determina mediante el juego de oferta y d
 
 
 
-
 :::{.cell}
 
 :::{.cell-output-display}
@@ -82,8 +81,66 @@ En este régimen, el tipo de cambio se determina mediante el juego de oferta y d
 :::{#fig-1}
 
 :::{}
-
-![](index_files/figure-latex/dot-figure-1.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
+<svg width="672" height="480" viewbox="0.00 0.00 420.80 98.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
+<title>RegimenCambiario</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-94 416.8,-94 416.8,4 -4,4"></polygon>
+<!-- RegimenCambiario -->
+<g id="node1" class="node">
+<title>RegimenCambiario</title>
+<path fill="#efefef" stroke="black" d="M110.06,-63C110.06,-63 11.98,-63 11.98,-63 5.98,-63 -0.02,-57 -0.02,-51 -0.02,-51 -0.02,-39 -0.02,-39 -0.02,-33 5.98,-27 11.98,-27 11.98,-27 110.06,-27 110.06,-27 116.06,-27 122.06,-33 122.06,-39 122.06,-39 122.06,-51 122.06,-51 122.06,-57 116.06,-63 110.06,-63"></path>
+<text text-anchor="middle" x="61.02" y="-41.4" font-family="Arial" font-size="12.00">Regimen Cambiario</text>
+</g>
+<!-- Fijo -->
+<g id="node2" class="node">
+<title>Fijo</title>
+<path fill="#efefef" stroke="black" d="M201.72,-90C201.72,-90 171.72,-90 171.72,-90 165.72,-90 159.72,-84 159.72,-78 159.72,-78 159.72,-66 159.72,-66 159.72,-60 165.72,-54 171.72,-54 171.72,-54 201.72,-54 201.72,-54 207.72,-54 213.72,-60 213.72,-66 213.72,-66 213.72,-78 213.72,-78 213.72,-84 207.72,-90 201.72,-90"></path>
+<text text-anchor="middle" x="186.72" y="-68.4" font-family="Arial" font-size="12.00">Fijo</text>
+</g>
+<!-- RegimenCambiario&#45;&gt;Fijo -->
+<g id="edge1" class="edge">
+<title>RegimenCambiario-&gt;Fijo</title>
+<path fill="none" stroke="#333333" d="M122.06,-58.1C131.42,-60.15 140.84,-62.2 149.46,-64.09"></path>
+<polygon fill="#333333" stroke="#333333" points="159.51,-66.28 148.78,-68.54 154.63,-65.21 149.74,-64.15 149.74,-64.15 149.74,-64.15 154.63,-65.21 150.7,-59.75 159.51,-66.28 159.51,-66.28"></polygon>
+</g>
+<!-- Flexible -->
+<g id="node3" class="node">
+<title>Flexible</title>
+<path fill="#efefef" stroke="black" d="M203.57,-36C203.57,-36 169.87,-36 169.87,-36 163.87,-36 157.87,-30 157.87,-24 157.87,-24 157.87,-12 157.87,-12 157.87,-6 163.87,0 169.87,0 169.87,0 203.57,0 203.57,0 209.57,0 215.57,-6 215.57,-12 215.57,-12 215.57,-24 215.57,-24 215.57,-30 209.57,-36 203.57,-36"></path>
+<text text-anchor="middle" x="186.72" y="-14.4" font-family="Arial" font-size="12.00">Flexible</text>
+</g>
+<!-- RegimenCambiario&#45;&gt;Flexible -->
+<g id="edge2" class="edge">
+<title>RegimenCambiario-&gt;Flexible</title>
+<path fill="none" stroke="#333333" d="M122.06,-31.9C130.89,-29.97 139.77,-28.03 147.97,-26.24"></path>
+<polygon fill="#333333" stroke="#333333" points="157.96,-24.06 149.15,-30.59 153.07,-25.13 148.19,-26.19 148.19,-26.19 148.19,-26.19 153.07,-25.13 147.23,-21.8 157.96,-24.06 157.96,-24.06"></polygon>
+</g>
+<!-- DevaluacionRevaluacion -->
+<g id="node4" class="node">
+<title>DevaluacionRevaluacion</title>
+<path fill="#efefef" stroke="black" d="M400.35,-90C400.35,-90 263.85,-90 263.85,-90 257.85,-90 251.85,-84 251.85,-78 251.85,-78 251.85,-66 251.85,-66 251.85,-60 257.85,-54 263.85,-54 263.85,-54 400.35,-54 400.35,-54 406.35,-54 412.35,-60 412.35,-66 412.35,-66 412.35,-78 412.35,-78 412.35,-84 406.35,-90 400.35,-90"></path>
+<text text-anchor="middle" x="332.1" y="-68.4" font-family="Arial" font-size="12.00">Devaluacion y Revaluacion</text>
+</g>
+<!-- Fijo&#45;&gt;DevaluacionRevaluacion -->
+<g id="edge3" class="edge">
+<title>Fijo-&gt;DevaluacionRevaluacion</title>
+<path fill="none" stroke="#333333" d="M214.02,-72C222.14,-72 231.59,-72 241.52,-72"></path>
+<polygon fill="#333333" stroke="#333333" points="251.59,-72 241.59,-76.5 246.59,-72 241.59,-72 241.59,-72 241.59,-72 246.59,-72 241.59,-67.5 251.59,-72 251.59,-72"></polygon>
+</g>
+<!-- DepreciacionApreciacion -->
+<g id="node5" class="node">
+<title>DepreciacionApreciacion</title>
+<path fill="#efefef" stroke="black" d="M401,-36C401,-36 263.19,-36 263.19,-36 257.19,-36 251.19,-30 251.19,-24 251.19,-24 251.19,-12 251.19,-12 251.19,-6 257.19,0 263.19,0 263.19,0 401,0 401,0 407,0 413,-6 413,-12 413,-12 413,-24 413,-24 413,-30 407,-36 401,-36"></path>
+<text text-anchor="middle" x="332.1" y="-14.4" font-family="Arial" font-size="12.00">Depreciacion y Apreciacion</text>
+</g>
+<!-- Flexible&#45;&gt;DepreciacionApreciacion -->
+<g id="edge4" class="edge">
+<title>Flexible-&gt;DepreciacionApreciacion</title>
+<path fill="none" stroke="#333333" d="M215.7,-18C223.36,-18 232.1,-18 241.26,-18"></path>
+<polygon fill="#333333" stroke="#333333" points="251.34,-18 241.34,-22.5 246.34,-18 241.34,-18 241.34,-18 241.34,-18 246.34,-18 241.34,-13.5 251.34,-18 251.34,-18"></polygon>
+</g>
+</g>
+</svg>
 :::
 
 
@@ -91,7 +148,6 @@ Regímenes cambiarios
 :::
 :::
 :::
-
 
 
 
@@ -105,7 +161,6 @@ Es importante tener en cuenta que ningún régimen cambiario puede funcionar efi
 
 
 
-
 :::{.cell}
 
 :::{.cell-output-display}
@@ -113,8 +168,178 @@ Es importante tener en cuenta que ningún régimen cambiario puede funcionar efi
 :::{#fig-2}
 
 :::{}
-
-![](index_files/figure-latex/dot-figure-2.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
+<svg width="672" height="480" viewbox="0.00 0.00 512.00 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>matriz</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 508,-256 508,4 -4,4"></polygon>
+<!-- B -->
+<g id="node1" class="node">
+<title>B</title>
+<path fill="#efefef" stroke="black" d="M132,-252C132,-252 12,-252 12,-252 6,-252 0,-246 0,-240 0,-240 0,-192 0,-192 0,-186 6,-180 12,-180 12,-180 132,-180 132,-180 138,-180 144,-186 144,-192 144,-192 144,-240 144,-240 144,-246 138,-252 132,-252"></path>
+<text text-anchor="middle" x="72" y="-212.4" font-family="Arial" font-size="12.00">Balanza de pagos</text>
+</g>
+<!-- E -->
+<g id="node2" class="node">
+<title>E</title>
+<path fill="#efefef" stroke="black" d="M132,-162C132,-162 12,-162 12,-162 6,-162 0,-156 0,-150 0,-150 0,-102 0,-102 0,-96 6,-90 12,-90 12,-90 132,-90 132,-90 138,-90 144,-96 144,-102 144,-102 144,-150 144,-150 144,-156 138,-162 132,-162"></path>
+<text text-anchor="middle" x="72" y="-122.4" font-family="Arial" font-size="12.00">Empleo</text>
+</g>
+<!-- B&#45;&gt;E -->
+<g id="edge1" class="edge">
+<title>B-&gt;E</title>
+<path fill="none" stroke="#333333" d="M72,-172.88C72,-172.72 72,-172.57 72,-172.41"></path>
+<polygon fill="#333333" stroke="#333333" points="68.5,-169.86 72,-179.86 75.5,-169.86 68.5,-169.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="72,-162.21 76.5,-172.21 72,-167.21 72,-172.21 72,-172.21 72,-172.21 72,-167.21 67.5,-172.21 72,-162.21 72,-162.21"></polygon>
+</g>
+<!-- F -->
+<g id="node4" class="node">
+<title>F</title>
+<path fill="#efefef" stroke="black" d="M312,-252C312,-252 192,-252 192,-252 186,-252 180,-246 180,-240 180,-240 180,-192 180,-192 180,-186 186,-180 192,-180 192,-180 312,-180 312,-180 318,-180 324,-186 324,-192 324,-192 324,-240 324,-240 324,-246 318,-252 312,-252"></path>
+<text text-anchor="middle" x="252" y="-212.4" font-family="Arial" font-size="12.00">Finanzas públicas</text>
+</g>
+<!-- B&#45;&gt;F -->
+<g id="edge7" class="edge">
+<title>B-&gt;F</title>
+<path fill="none" stroke="#333333" d="M154.17,-216C159.42,-216 164.71,-216 169.96,-216"></path>
+<polygon fill="#333333" stroke="#333333" points="154.12,-212.5 144.12,-216 154.12,-219.5 154.12,-212.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="180,-216 170,-220.5 175,-216 170,-216 170,-216 170,-216 175,-216 170,-211.5 180,-216 180,-216"></polygon>
+</g>
+<!-- T -->
+<g id="node5" class="node">
+<title>T</title>
+<path fill="#efefef" stroke="black" d="M312,-162C312,-162 192,-162 192,-162 186,-162 180,-156 180,-150 180,-150 180,-102 180,-102 180,-96 186,-90 192,-90 192,-90 312,-90 312,-90 318,-90 324,-96 324,-102 324,-102 324,-150 324,-150 324,-156 318,-162 312,-162"></path>
+<text text-anchor="middle" x="252" y="-122.4" font-family="Arial" font-size="12.00">Tipo de cambio</text>
+</g>
+<!-- B&#45;&gt;T -->
+<g id="edge13" class="edge">
+<title>B-&gt;T</title>
+<path fill="none" stroke="#333333" d="M153.05,-175.53C158.94,-172.55 164.89,-169.54 170.79,-166.56"></path>
+<polygon fill="#333333" stroke="#333333" points="151.46,-172.41 144.12,-180.04 154.62,-178.65 151.46,-172.41"></polygon>
+<polygon fill="#333333" stroke="#333333" points="180,-161.9 173.1,-170.43 175.53,-164.16 171.07,-166.41 171.07,-166.41 171.07,-166.41 175.53,-164.16 169.04,-162.4 180,-161.9 180,-161.9"></polygon>
+</g>
+<!-- I -->
+<g id="node3" class="node">
+<title>I</title>
+<path fill="#efefef" stroke="black" d="M132,-72C132,-72 12,-72 12,-72 6,-72 0,-66 0,-60 0,-60 0,-12 0,-12 0,-6 6,0 12,0 12,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-60 144,-60 144,-66 138,-72 132,-72"></path>
+<text text-anchor="middle" x="72" y="-32.4" font-family="Arial" font-size="12.00">Inversión</text>
+</g>
+<!-- E&#45;&gt;I -->
+<g id="edge2" class="edge">
+<title>E-&gt;I</title>
+<path fill="none" stroke="#333333" d="M72,-82.88C72,-82.72 72,-82.57 72,-82.41"></path>
+<polygon fill="#333333" stroke="#333333" points="68.5,-79.86 72,-89.86 75.5,-79.86 68.5,-79.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="72,-72.21 76.5,-82.21 72,-77.21 72,-82.21 72,-82.21 72,-82.21 72,-77.21 67.5,-82.21 72,-72.21 72,-72.21"></polygon>
+</g>
+<!-- E&#45;&gt;T -->
+<g id="edge9" class="edge">
+<title>E-&gt;T</title>
+<path fill="none" stroke="#333333" d="M154.17,-126C159.42,-126 164.71,-126 169.96,-126"></path>
+<polygon fill="#333333" stroke="#333333" points="154.12,-122.5 144.12,-126 154.12,-129.5 154.12,-122.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="180,-126 170,-130.5 175,-126 170,-126 170,-126 170,-126 175,-126 170,-121.5 180,-126 180,-126"></polygon>
+</g>
+<!-- I&#45;&gt;T -->
+<g id="edge15" class="edge">
+<title>I-&gt;T</title>
+<path fill="none" stroke="#333333" d="M153.05,-76.47C158.94,-79.45 164.89,-82.46 170.79,-85.44"></path>
+<polygon fill="#333333" stroke="#333333" points="154.62,-73.35 144.12,-71.96 151.46,-79.59 154.62,-73.35"></polygon>
+<polygon fill="#333333" stroke="#333333" points="180,-90.1 169.04,-89.6 175.53,-87.84 171.07,-85.59 171.07,-85.59 171.07,-85.59 175.53,-87.84 173.1,-81.57 180,-90.1 180,-90.1"></polygon>
+</g>
+<!-- A -->
+<g id="node6" class="node">
+<title>A</title>
+<path fill="#efefef" stroke="black" d="M312,-72C312,-72 192,-72 192,-72 186,-72 180,-66 180,-60 180,-60 180,-12 180,-12 180,-6 186,0 192,0 192,0 312,0 312,0 318,0 324,-6 324,-12 324,-12 324,-60 324,-60 324,-66 318,-72 312,-72"></path>
+<text text-anchor="middle" x="252" y="-32.4" font-family="Arial" font-size="12.00">Ahorro</text>
+</g>
+<!-- I&#45;&gt;A -->
+<g id="edge11" class="edge">
+<title>I-&gt;A</title>
+<path fill="none" stroke="#333333" d="M154.17,-36C159.42,-36 164.71,-36 169.96,-36"></path>
+<polygon fill="#333333" stroke="#333333" points="154.12,-32.5 144.12,-36 154.12,-39.5 154.12,-32.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="180,-36 170,-40.5 175,-36 170,-36 170,-36 170,-36 175,-36 170,-31.5 180,-36 180,-36"></polygon>
+</g>
+<!-- F&#45;&gt;T -->
+<g id="edge3" class="edge">
+<title>F-&gt;T</title>
+<path fill="none" stroke="#333333" d="M252,-172.88C252,-172.72 252,-172.57 252,-172.41"></path>
+<polygon fill="#333333" stroke="#333333" points="248.5,-169.86 252,-179.86 255.5,-169.86 248.5,-169.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="252,-162.21 256.5,-172.21 252,-167.21 252,-172.21 252,-172.21 252,-172.21 252,-167.21 247.5,-172.21 252,-162.21 252,-162.21"></polygon>
+</g>
+<!-- N -->
+<g id="node7" class="node">
+<title>N</title>
+<path fill="#efefef" stroke="black" d="M492,-252C492,-252 372,-252 372,-252 366,-252 360,-246 360,-240 360,-240 360,-192 360,-192 360,-186 366,-180 372,-180 372,-180 492,-180 492,-180 498,-180 504,-186 504,-192 504,-192 504,-240 504,-240 504,-246 498,-252 492,-252"></path>
+<text text-anchor="middle" x="432" y="-212.4" font-family="Arial" font-size="12.00">Inflación</text>
+</g>
+<!-- F&#45;&gt;N -->
+<g id="edge8" class="edge">
+<title>F-&gt;N</title>
+<path fill="none" stroke="#333333" d="M334.17,-216C339.42,-216 344.71,-216 349.96,-216"></path>
+<polygon fill="#333333" stroke="#333333" points="334.12,-212.5 324.12,-216 334.12,-219.5 334.12,-212.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="360,-216 350,-220.5 355,-216 350,-216 350,-216 350,-216 355,-216 350,-211.5 360,-216 360,-216"></polygon>
+</g>
+<!-- T&#45;&gt;A -->
+<g id="edge4" class="edge">
+<title>T-&gt;A</title>
+<path fill="none" stroke="#333333" d="M252,-82.88C252,-82.72 252,-82.57 252,-82.41"></path>
+<polygon fill="#333333" stroke="#333333" points="248.5,-79.86 252,-89.86 255.5,-79.86 248.5,-79.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="252,-72.21 256.5,-82.21 252,-77.21 252,-82.21 252,-82.21 252,-82.21 252,-77.21 247.5,-82.21 252,-72.21 252,-72.21"></polygon>
+</g>
+<!-- T&#45;&gt;N -->
+<g id="edge16" class="edge">
+<title>T-&gt;N</title>
+<path fill="none" stroke="#333333" d="M333.05,-166.47C338.94,-169.45 344.89,-172.46 350.79,-175.44"></path>
+<polygon fill="#333333" stroke="#333333" points="334.62,-163.35 324.12,-161.96 331.46,-169.59 334.62,-163.35"></polygon>
+<polygon fill="#333333" stroke="#333333" points="360,-180.1 349.04,-179.6 355.53,-177.84 351.07,-175.59 351.07,-175.59 351.07,-175.59 355.53,-177.84 353.1,-171.57 360,-180.1 360,-180.1"></polygon>
+</g>
+<!-- M -->
+<g id="node8" class="node">
+<title>M</title>
+<path fill="#efefef" stroke="black" d="M492,-162C492,-162 372,-162 372,-162 366,-162 360,-156 360,-150 360,-150 360,-102 360,-102 360,-96 366,-90 372,-90 372,-90 492,-90 492,-90 498,-90 504,-96 504,-102 504,-102 504,-150 504,-150 504,-156 498,-162 492,-162"></path>
+<text text-anchor="middle" x="432" y="-122.4" font-family="Arial" font-size="12.00">Política monetaria</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge10" class="edge">
+<title>T-&gt;M</title>
+<path fill="none" stroke="#333333" d="M334.17,-126C339.42,-126 344.71,-126 349.96,-126"></path>
+<polygon fill="#333333" stroke="#333333" points="334.12,-122.5 324.12,-126 334.12,-129.5 334.12,-122.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="360,-126 350,-130.5 355,-126 350,-126 350,-126 350,-126 355,-126 350,-121.5 360,-126 360,-126"></polygon>
+</g>
+<!-- R -->
+<g id="node9" class="node">
+<title>R</title>
+<path fill="#efefef" stroke="black" d="M492,-72C492,-72 372,-72 372,-72 366,-72 360,-66 360,-60 360,-60 360,-12 360,-12 360,-6 366,0 372,0 372,0 492,0 492,0 498,0 504,-6 504,-12 504,-12 504,-60 504,-60 504,-66 498,-72 492,-72"></path>
+<text text-anchor="middle" x="432" y="-32.4" font-family="Arial" font-size="12.00">Tasa de interés</text>
+</g>
+<!-- T&#45;&gt;R -->
+<g id="edge14" class="edge">
+<title>T-&gt;R</title>
+<path fill="none" stroke="#333333" d="M333.05,-85.53C338.94,-82.55 344.89,-79.54 350.79,-76.56"></path>
+<polygon fill="#333333" stroke="#333333" points="331.46,-82.41 324.12,-90.04 334.62,-88.65 331.46,-82.41"></polygon>
+<polygon fill="#333333" stroke="#333333" points="360,-71.9 353.1,-80.43 355.53,-74.16 351.07,-76.41 351.07,-76.41 351.07,-76.41 355.53,-74.16 349.04,-72.4 360,-71.9 360,-71.9"></polygon>
+</g>
+<!-- A&#45;&gt;R -->
+<g id="edge12" class="edge">
+<title>A-&gt;R</title>
+<path fill="none" stroke="#333333" d="M334.17,-36C339.42,-36 344.71,-36 349.96,-36"></path>
+<polygon fill="#333333" stroke="#333333" points="334.12,-32.5 324.12,-36 334.12,-39.5 334.12,-32.5"></polygon>
+<polygon fill="#333333" stroke="#333333" points="360,-36 350,-40.5 355,-36 350,-36 350,-36 350,-36 355,-36 350,-31.5 360,-36 360,-36"></polygon>
+</g>
+<!-- N&#45;&gt;M -->
+<g id="edge5" class="edge">
+<title>N-&gt;M</title>
+<path fill="none" stroke="#333333" d="M432,-172.88C432,-172.72 432,-172.57 432,-172.41"></path>
+<polygon fill="#333333" stroke="#333333" points="428.5,-169.86 432,-179.86 435.5,-169.86 428.5,-169.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="432,-162.21 436.5,-172.21 432,-167.21 432,-172.21 432,-172.21 432,-172.21 432,-167.21 427.5,-172.21 432,-162.21 432,-162.21"></polygon>
+</g>
+<!-- M&#45;&gt;R -->
+<g id="edge6" class="edge">
+<title>M-&gt;R</title>
+<path fill="none" stroke="#333333" d="M432,-82.88C432,-82.72 432,-82.57 432,-82.41"></path>
+<polygon fill="#333333" stroke="#333333" points="428.5,-79.86 432,-89.86 435.5,-79.86 428.5,-79.86"></polygon>
+<polygon fill="#333333" stroke="#333333" points="432,-72.21 436.5,-82.21 432,-77.21 432,-82.21 432,-82.21 432,-82.21 432,-77.21 427.5,-82.21 432,-72.21 432,-72.21"></polygon>
+</g>
+</g>
+</svg>
 :::
 
 
@@ -122,7 +347,6 @@ Interrelaciones entre tipo de cambio, variables y políticas económicas
 :::
 :::
 :::
-
 
 
 

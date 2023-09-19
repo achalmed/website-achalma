@@ -14,6 +14,7 @@ tags:
   - Oferta
   - Mercado
 date: "06/23/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
 
 
@@ -57,7 +58,7 @@ La elasticidad precio de la demanda es una medida importante en economía que no
 ::: {.cell execution_count=1}
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-pdf/cell-2-output-1.pdf){}
+![](index_files/figure-html/cell-2-output-1.png){width=581 height=432}
 :::
 :::
 
@@ -187,8 +188,6 @@ Si el $P_x$ aumenta en 1% entonces $X^d$ disminuye en 1%.
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
-
 
 1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 

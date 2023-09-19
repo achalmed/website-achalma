@@ -22,4 +22,5 @@ citation:
   - Luz Cuba
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-v2-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
 date: "01/11/2021"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---

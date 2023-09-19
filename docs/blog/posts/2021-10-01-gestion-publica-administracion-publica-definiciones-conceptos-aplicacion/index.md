@@ -23,8 +23,8 @@ citation:
     - Yuri Fernandez
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf
 date: "10/01/2021"
----
 
+---
 
 
 

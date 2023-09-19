@@ -12,8 +12,8 @@ tags:
   - Productividad
   - Comandos
 date: "07/01/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 

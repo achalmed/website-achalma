@@ -15,8 +15,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-3-debemos-saber-r/index.pdf
 date: "06/11/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 
@@ -59,7 +59,6 @@ Un vector es una colección ordenada de elementos del mismo tipo de dato. Puede 
 **Vectores**
 
 Concatenación de elementos con **`c()`**: Se utiliza la función `c()` para concatenar elementos y crear vectores en R.
-
 
 
 ::: {.cell}
@@ -126,13 +125,11 @@ c("a", "b", "c") # caracteres (character)
 :::
 
 
-
 **Acciones con vectores**
 
 1.  Asignar los vectores a nombres:
 
     Creamos un vector llamado "dbl" que contiene los números decimales 0.5, 0.6 y 0.25.
-
 
 
     ::: {.cell}
@@ -143,9 +140,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
     Creamos un vector llamado "chr" que contiene los caracteres "a", "b" y "c".
-
 
 
     ::: {.cell}
@@ -156,11 +151,9 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
 2.  Imprimir los vectores "dbl" y "chr" en la consola:
 
     Visualizamos en la consola el contenido del vector "dbl", que son los números decimales 0.5, 0.6 y 0.25.
-
 
 
     ::: {.cell}
@@ -177,9 +170,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
     Visualizamos en la consola el contenido del vector "chr", que son los caracteres "a", "b" y "c".
-
 
 
     ::: {.cell}
@@ -196,11 +187,9 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
 3.  Verificar el número de elementos en "dbl" y "chr":
 
     Calculamos y mostramos en la consola la longitud del vector "dbl", que es 3.
-
 
 
     ::: {.cell}
@@ -217,9 +206,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
     Calculamos y mostramos en la consola la longitud del vector "chr", que es 3.
-
 
 
     ::: {.cell}
@@ -236,11 +223,9 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
 4.  Verificar el tipo de dato de "dbl" y "chr":
 
     Visualizamos en la consola el tipo de dato del vector "dbl", que es "double" (números decimales).
-
 
 
     ::: {.cell}
@@ -257,9 +242,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
     Visualizamos en la consola el tipo de dato del vector "chr", que es "character" (caracteres).
-
 
 
     ::: {.cell}
@@ -276,11 +259,9 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
 5.  Combinar dos vectores:
 
     Se puede combinar el vector "dbl" consigo mismo utilizando la función "c()", creando un nuevo vector que contiene los elementos duplicados del vector original.
-
 
 
     ::: {.cell}
@@ -297,9 +278,7 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
     Tambien se puede combina el vector "dbl" con el vector "chr" utilizando la función "c()", creando un nuevo vector que contiene los elementos de ambos vectores concatenados.
-
 
 
     ::: {.cell}
@@ -316,7 +295,6 @@ c("a", "b", "c") # caracteres (character)
     :::
 
 
-
 ::: callout-note
 El cambio automático del tipo de datos del vector resultante se denomina coerción. La coerción garantiza que se mantiene el mismo tipo de datos para cada elemento del vector.
 :::
@@ -324,7 +302,6 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
 **Operaciones aritméticas con vectores**
 
 1.  Definamos dos nuevos vectores numéricos llamados `a` y `b` con 4 elementos cada uno:
-
 
 
     ::: {.cell}
@@ -336,9 +313,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-
 2.  Realizamos una multiplicación escalar de `a` por 5, lo que significa que cada elemento en `a` se multiplica por 5:
-
 
 
     ::: {.cell}
@@ -355,9 +330,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-
 3.  Realizamos una multiplicación de vectores entre `a` y `b`, lo que implica multiplicar cada elemento en `a` por el elemento correspondiente en `b`:
-
 
 
     ::: {.cell}
@@ -374,9 +347,7 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-
 4.  Creamos un nuevo vector numérico llamado `v` con longitud 5.
-
 
 
     ::: {.cell}
@@ -394,7 +365,6 @@ El cambio automático del tipo de datos del vector resultante se denomina coerci
     :::
 
 
-
 ::: callout-note
 Las operaciones aritméticas de los vectores se realizan por elementos. si dos vectores no tienen la misma longitud, el vector más corto se reciclará para que coincida con el más largo (en este caso, se vuelve a utilizar el primer elemento de a).
 :::
@@ -406,7 +376,6 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
 **Matrices**
 
 1.  Combinamos los vectores `a` y `b`, definidas anteriormente, por columnas utilizando la función `cbind()`:
-
 
 
     ::: {.cell}
@@ -428,11 +397,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Esta opción combina los vectores `a` y `b` por columnas, creando una matriz `A` donde los elementos de `a` forman la primera columna y los elementos de `b` forman la segunda columna.
 
 2.  Combinamos los vectores `a` y `b` por filas utilizando la función `rbind()`:
-
 
 
     ::: {.cell}
@@ -452,11 +419,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta opción, los vectores `a` y `b` se combinan por filas para crear una matriz `B`. Los elementos de `a` forman la primera fila y los elementos de `b` forman la segunda fila.
 
 3.  Creamos una matriz a partir de los elementos de vector `a` utilizando la función `matrix()`:
-
 
 
     ::: {.cell}
@@ -476,11 +441,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se utiliza la función `matrix()` para crear una matriz `A` a partir de los elementos del vector `a`. Se especifica que la matriz tendrá 2 columnas y 2 filas. Los argumentos nrow y ncol indican el número de filas y el número de columnas de que consta la matriz resultante.
 
 4.  Para 4 elementos y ncol =2 la matriz sólo puede tener 2 filas. Por lo tanto no es necesario especificar ambos argumentos
-
 
 
     ::: {.cell}
@@ -500,11 +463,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta variante, se crea una matriz `A` con 2 columnas y se ajusta automáticamente el número de filas según la longitud del vector `a`.
 
 5.  Por defecto la matriz se rellena columna a columna (R trata internamente un objeto matriz como vector columna). si la matriz debe rellenarse fila a fila se requiere el argumento `byrow = TRUE`
-
 
 
     ::: {.cell}
@@ -524,13 +485,11 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta opción, se crea una matriz `B` con 2 columnas y se especifica que los elementos del vector `a` se distribuirán por filas `byrow = TRUE`, es decir, los primeros elementos de `a` formarán la primera fila, los siguientes elementos formarán la segunda fila, y así sucesivamente.
 
 **Acciones con matrices**
 
 1.  Verificamos el número de filas de la matriz `A` utilizando la función `nrow()`:
-
 
 
     ::: {.cell}
@@ -547,11 +506,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Esta línea de código devuelve el número de filas de la matriz `A`.
 
 2.  Verificamos el número de columnas de la matriz `A` utilizando la función `ncol()`:
-
 
 
     ::: {.cell}
@@ -568,11 +525,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se obtiene el número de columnas de la matriz `A`.
 
 3.  Verificamos la dimensión (número de filas y columnas) de la matriz `A` utilizando la función `dim()`:
-
 
 
     ::: {.cell}
@@ -589,11 +544,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Esta línea de código devuelve la dimensión de la matriz `A` en formato `[nrow, ncol]`.
 
 4.  Combinamos dos matrices `A` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D.wide`:
-
 
 
     ::: {.cell}
@@ -613,11 +566,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta línea se crea una nueva matriz `D.wide` que combina las matrices `A` y `A` por columnas.
 
 5.  Combinamos dos matrices `A` por filas utilizando la función `rbind()` y almacenamos el resultado en `D.long`:
-
 
 
     ::: {.cell}
@@ -639,11 +590,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se crea una nueva matriz `D.long` que combina las matrices `A` y `A` por filas.
 
 6.  Combinamos las matrices `D.wide` y `D.long` por columnas utilizando la función `cbind()` y almacenamos el resultado en `D`:
-
 
 
     ::: {.cell}
@@ -654,13 +603,11 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta línea se crea una nueva matriz `D` que combina las matrices `D.wide` y `D.long` por columnas.
 
 **Operaciones aritméticas con matrices**
 
 1.  Suma de la matriz `B` consigo misma utilizando el operador `+`:
-
 
 
     ::: {.cell}
@@ -679,11 +626,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Esta línea de código realiza la suma de la matriz `B` con ella misma.
 
 2.  Multiplicación escalar de la matriz `B` por 2 utilizando el operador `*`:
-
 
 
     ::: {.cell}
@@ -702,11 +647,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se realiza la multiplicación de cada elemento de la matriz `B` por 2.
 
 3.  Multiplicación elemento a elemento de la matriz `B` consigo misma y almacenar el resultado en `a`:
-
 
 
     ::: {.cell}
@@ -726,11 +669,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta línea se realiza la multiplicación elemento a elemento de la matriz `B` con ella misma, y el resultado se almacena en la matriz `a`.
 
 4.  Multiplicación de matrices utilizando el operador `%*%`:
-
 
 
     ::: {.cell}
@@ -750,13 +691,11 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se realiza la multiplicación de matrices entre la matriz `B` y ella misma, y el resultado se almacena en la matriz `C`.
 
 **Otras operaciones con matrices:**
 
 1.  Transposición de la matriz `D.wide` utilizando la función `t()`:
-
 
 
     ::: {.cell}
@@ -777,11 +716,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Esta línea de código transpone la matriz `D.wide`, es decir, intercambia las filas por columnas y viceversa.
 
 2.  Cálculo del determinante de la matriz `B` utilizando la función `det()`:
-
 
 
     ::: {.cell}
@@ -798,11 +735,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se calcula el determinante de la matriz `B`.
 
 3.  Cálculo de la inversa de la matriz `B` utilizando la función `solve()` (solo si el determinante es diferente de 0):
-
 
 
     ::: {.cell}
@@ -821,11 +756,9 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     En esta línea se calcula la inversa de la matriz `B`, siempre y cuando el determinante sea diferente de 0.
 
 4.  Cálculo de los valores propios (eigenvalues) de una matriz cuadrada y simétrica utilizando la función `eigen()`:
-
 
 
     ::: {.cell}
@@ -849,7 +782,6 @@ Una matriz es una estructura bidimensional que contiene elementos organizados en
     :::
 
 
-
     Aquí se calculan los valores propios de la matriz `B`. Esta operación solo es aplicable a matrices cuadradas y simétricas.
 
 ### 4. Data frame
@@ -859,7 +791,6 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
 **Creación del data frame:**
 
 1.  Creamos vectores con diferentes tipos de datos, como números decimales (`dbl`), números enteros (`int`), valores lógicos (`lgl`) y caracteres (`chr`):
-
 
 
     ::: {.cell}
@@ -873,11 +804,9 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     Cada vector tiene elementos que representan valores de su respectivo tipo de dato.
 
 2.  Utilizamos la función `data.frame()` para combinar los vectores en un data frame llamado `df`:
-
 
 
     ::: {.cell}
@@ -888,11 +817,9 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     El data frame `df` se crea utilizando los vectores `dbl`, `int`, `lgl` y `chr` como columnas.
 
 3.  Mostamos el contenido del data frame en la consola:
-
 
 
     ::: {.cell}
@@ -914,13 +841,11 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     Esto imprime el contenido del data frame `df`.
 
 **Acciones con data frames:**
 
 1.  Verificamos el número de filas del data frame utilizando la función `nrow()`:
-
 
 
     ::: {.cell}
@@ -937,11 +862,9 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     Esta línea de código devuelve el número de filas en el data frame `df`.
 
 2.  Verificamos el número de columnas del data frame utilizando la función `ncol()`:
-
 
 
     ::: {.cell}
@@ -958,11 +881,9 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     Aquí se obtiene el número de columnas en el data frame `df`.
 
 3.  Verificamos la dimensión (número de filas y columnas) del data frame utilizando la función `dim()`:
-
 
 
     ::: {.cell}
@@ -979,7 +900,6 @@ Un data frame es una estructura similar a una matriz, pero más flexible. Puede 
     :::
 
 
-
     Esta línea de código devuelve la dimensión del data frame `df` en formato `[nrow, ncol]`, es decir, el número de filas y columnas que tiene el data frame.
 
 ### 5. Lista
@@ -991,7 +911,6 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
 1.  Creamos una variable `a` que contiene un **escalar** de tipo entero (`1L`):
 
 
-
     ::: {.cell}
     
     ```{.r .cell-code}
@@ -1000,9 +919,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
 2.  Creamos un **vector numérico** `dbl` con 5 elementos:
-
 
 
     ::: {.cell}
@@ -1013,9 +930,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
 3.  Creamos un **vector de caracteres** `chr` con 3 elementos:
-
 
 
     ::: {.cell}
@@ -1026,9 +941,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
 4.  Creamos un vector `v` con 4 elementos de tipo numérico:
-
 
 
     ::: {.cell}
@@ -1039,9 +952,7 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
 5.  Creamos una matriz `mat` de tamaño 2x2 a partir del vector `v`:
-
 
 
     ::: {.cell}
@@ -1052,11 +963,9 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
     La matriz `mat` tiene 2 columnas y los elementos del vector `v` se llenan por columnas.
 
 6.  Creamos una lista `l` que contiene los elementos `a`, `dbl`, `chr` y `mat`:
-
 
 
     ::: {.cell}
@@ -1067,11 +976,9 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     :::
 
 
-
     La lista `l` contiene estos elementos en ese orden.
 
 7.  Finalmente, visualizamos el contenido de la lista en la consola:
-
 
 
     ::: {.cell}
@@ -1098,7 +1005,6 @@ Una lista es una estructura de datos genérica que puede contener diferentes obj
     ```
     :::
     :::
-
 
 
     Esto imprime el contenido de la lista `l`.

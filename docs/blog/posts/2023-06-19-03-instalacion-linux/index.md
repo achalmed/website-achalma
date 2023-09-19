@@ -19,8 +19,8 @@ tags:
   - Hardware
   - ImagenISO
 date: "06/19/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 

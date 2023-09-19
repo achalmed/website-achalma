@@ -21,8 +21,8 @@ citation:
     - Margoth Gómez
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/index.pdf
 date: "06/03/2022"
----
 
+---
 
 
 

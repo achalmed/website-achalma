@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -284,7 +318,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">16 de septiembre de 2023</p>
+      <p class="date-modified">18 de septiembre de 2023</p>
     </div>
   </div>
     
@@ -297,612 +331,680 @@ cookieconsent.run({
 <h1>Elementos de Ecuaciones en Diferencia</h1>
 <section id="a-ecuaciones-en-diferencia-para-procesos-deterministas" class="level2">
 <h2 class="anchored" data-anchor-id="a-ecuaciones-en-diferencia-para-procesos-deterministas">a) Ecuaciones en Diferencia para procesos deterministas</h2>
-<p>En el capítulo previo se hizó una introducción al concepto de series de tiempo. En este Capítulo se pretende desarrollar la construcción de los procesos generadores de datos de las series de tiempo. En un sentido más formal, se expondrá que las series de tiempo se pueden considerar como una secuencia de variables aleatorias.</p>
+<p>En el capítulo previo se hizo una introducción al concepto de series de tiempo. En este Capítulo se pretende desarrollar la construcción de los procesos generadores de datos de las series de tiempo. En un sentido más formal, se expondrá que las series de tiempo se pueden considerar como una secuencia de variables aleatorias.</p>
 <p>Para tales efectos, se desarrollará una introducción al concepto de ecuaciones en diferencia. Así, las preguntas que se pretende responder son:</p>
 <ol type="a">
-<li>¿Cuál es la solución de la ecuación en diferencia que se estudia?</li>
+<li><p>¿Cuál es la solución de la ecuación en diferencia que se estudia?</p></li>
+<li><p>¿Cuáles son las condiciones para que un proceso estocástico, representado mediante una ecuación en diferencia, llegue a alcanzar un punto de equilibrio en el largo plazo?</p></li>
 </ol>
-<p>b)¿Cuáles son las condiciones para que un proceso estocástico, representado mediante una ecuación en diferencia, llegue a alcanzar un punto de equilibrio en el largo plazo?</p>
 <p>El término de <em>ecuación en diferencia</em> sirve para denominar un proceso similar o equivalente dentro de las ecuaciones diferenciales, dentro del cual se consideran a un conjunto de variables que están en función del tiempo. Así, si consideramos al tiempo como una variable continua, es decir, consideramos una variable <span class="math inline">\(Z(t)\)</span>, podemos expresar las siguientes expresiones para la ecuación diferencial:</p>
 <p><span id="eq-eqDiff"><span class="math display">\[
-    \frac{dZ(t)}{dt}; \frac{d^2Z(t)}{dt^2}; \ldots; \frac{d^kZ(t)}{dt^k}
+\frac{dZ(t)}{dt}; \frac{d^2Z(t)}{dt^2}; \ldots; \frac{d^kZ(t)}{dt^k}
 \tag{1}\]</span></span></p>
 <p>Por otro lado, suponiendo el caso del tiempo en forma discreta, es decir, con <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>, entonces el comportamiento de la serie de variables dadas por <span class="math inline">\(Z_t\)</span>, la cual se puede expresar como:</p>
 <p><span id="eq-Diff1"><span class="math display">\[
-    \Delta Z_t; \Delta^2 Z_t; \ldots; \Delta^k Z_t
+\Delta Z_t; \Delta^2 Z_t; \ldots; \Delta^k Z_t
 \tag{2}\]</span></span></p>
 <p>Observemos que una forma técnicamente más correcta es escribir las expresiones anteriores como:</p>
 <p><span id="eq-Diff2"><span class="math display">\[
-    \frac{\Delta Z_t}{\Delta t}; \frac{\Delta^2 Z_t}{\Delta t^2}; \ldots; \frac{\Delta^k Z_t}{\Delta t^k}
+\frac{\Delta Z_t}{\Delta t}; \frac{\Delta^2 Z_t}{\Delta t^2}; \ldots; \frac{\Delta^k Z_t}{\Delta t^k}
 \tag{3}\]</span></span></p>
-<p>No obstante, no pasa desapercibido que <span class="math inline">\(\Delta t = 1\)</span>, por lo que resultan equivalentes ambos conjuntos de expresiones @ref(eq:Diff1) y @ref(eq:Diff2).</p>
+<p>No obstante, no pasa desapercibido que <span class="math inline">\(\Delta t = 1\)</span>, por lo que resultan equivalentes ambos conjuntos de expresiones (<a href="#eq-Diff1">Ecuación&nbsp;2</a>) y (<a href="#eq-Diff2">Ecuación&nbsp;3</a>).</p>
 <section id="ecuaciones-en-diferencia-lineales-de-primer-orden" class="level3">
 <h3 class="anchored" data-anchor-id="ecuaciones-en-diferencia-lineales-de-primer-orden">Ecuaciones en Diferencia Lineales de Primer Orden</h3>
 <p>El primer caso que se suele estudiar en relación a Ecuaciones en Diferencia es el de las Ecuaciones en Diferencia Lineales de Primer Orden. Al respecto, al igual que en el caso continúo, las variaciones de la variable <span class="math inline">\(Z_t\)</span> se pueden expresar como se ilustra en el siguiente ejemplo. Consideremos la siguiente ecuación:</p>
 <p><span id="eq-EDPO"><span class="math display">\[
-    Z_t = a_0 + a_1 Z_{t-1}
+Z_t = a_0 + a_1 Z_{t-1}
 \tag{4}\]</span></span></p>
-<p>Donde, <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>, y <span class="math inline">\(a_0\)</span> y <span class="math inline">\(a_1 \neq 0\)</span> son números reales constantes. De (@ref(eq:EDPO) podememos despejar la variable <span class="math inline">\(Z_{t-1}\)</span> y obtener una forma de ecuación en diferencia:</p>
+<p>Donde, <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>, y <span class="math inline">\(a_0\)</span> y <span class="math inline">\(a_1 \neq 0\)</span> son números reales constantes. De (<a href="#eq-EDPO">Ecuación&nbsp;4</a>) podememos despejar la variable <span class="math inline">\(Z_{t-1}\)</span> y obtener una forma de ecuación en diferencia:</p>
 <p><span id="eq-EDPO2"><span class="math display">\[
-    Z_t - a_1 Z_{t-1} = a_0
+Z_t - a_1 Z_{t-1} = a_0
 \tag{5}\]</span></span></p>
 <p>Ahora denotemos a <span class="math inline">\(L Z_t = Z_{t-1}\)</span>, es decir, mediante el operador <span class="math inline">\(L\)</span> se puede rezagar una variable dada. En general, podemos decir que el operador tiene dos propiedades, la primera es que es lineal en el sentido de que abre sumas y saca escalares como se muestra en la siguiente expresión para el caso de un (1) rezago:</p>
 <p><span id="eq-E1Lag"><span class="math display">\[
-    L(\alpha Z_{t} + \beta) = \alpha Z_{t-1} + \beta
+L(\alpha Z_{t} + \beta) = \alpha Z_{t-1} + \beta
 \tag{6}\]</span></span></p>
 <p>Donde <span class="math inline">\(\alpha, \beta \in \mathbb{R}\)</span> y <span class="math inline">\(\alpha, \beta \neq 0\)</span>. Otro reesultado implícito en esta primera propiedad es que el operador rezago aplicado a cualquier escalar dará como resultado el escalar, puesto que este es una constante sin importa el momento <span class="math inline">\(t\)</span> en el cual se encuentre la variable <span class="math inline">\(Z\)</span>.</p>
 <p>La segunda propiedad del operador es que se puede aplicar de forma consecutiva a una misma variable. Es decir, <span class="math inline">\(L ( Z_{t-1}) = L L Z_{t} = L^2 Z_{t}\)</span>, por lo que en general tendremos: <span class="math inline">\(L^p Z_t = Z_{t-p}\)</span> (con <span class="math inline">\(p \in \mathbb{Z}\)</span>). Así, en el caso de p rezagos la propiedad de linealidad del operador rezago será:</p>
 <p><span id="eq-LinProp"><span class="math display">\[
-    L^p (\alpha Z_{t} + \beta) = \alpha Z_{t-p} + \beta
+L^p (\alpha Z_{t} + \beta) = \alpha Z_{t-p} + \beta
 \tag{7}\]</span></span></p>
-<p>Dicho lo anterio podemos escribir la solución general de @ref(eq:EDPO2) como:</p>
-<span class="math display">\[\begin{eqnarray}
-    Z_t - a_1 L Z_t &amp; = &amp; a_0 \nonumber \\
-    (1 - a_1 L)Z_t &amp; = &amp; a_0 \nonumber \\
-    Z_t &amp; = &amp; a_0 \frac{1}{1 - a_1 L} + s a^t_1 \nonumber \\
-    Z_t &amp; = &amp; a_0 \frac{1}{1 - a_1} + s a^t_1
-    {#eq-PROC01)
-\end{eqnarray}\]</span>
-<p>Donde <span class="math inline">\(a_1 \neq 1\)</span> y <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Notése que la aplicación del operador rezago <span class="math inline">\(L\)</span> a la constante <span class="math inline">\(a_1\)</span> dará como resultado el valor de la misma constante, ya que ésta no depende del momento <span class="math inline">\(t\)</span> en el cuál observemos a la variable <span class="math inline">\(Z_t\)</span>. En la ecuación @ref(eq:PROC01) se adiciona un término <span class="math inline">\(s a^t_1\)</span> que permite ubicar la trayectoria inicial de la solución de la ecuación. El componente no significa un cambio respecto de la ecuación @ref(eq:EDPO2) original, ya que si buscaramos reconstruir a ésta ecuación tendríamos: <span class="math display">\[\begin{eqnarray}
-    (1 - a_1 L) s a^t_1 &amp; = &amp; s a^t_1 - a_1 s L a^{t}_1 \nonumber \\
-    &amp; = &amp; s a^t_1 - a_1 s a^{t - 1}_1 \nonumber \\
-    &amp; = &amp; s a^t_1 - s a^t_1 \nonumber \\
-    &amp; = &amp; 0 \nonumber
-\end{eqnarray}\]</span></p>
-<p>La ecuación @ref(eq:PROC01) se suele interpretar como la solución de largo plazo. Ahora demostraremos por qué es cierta la ecuación y discutiremos algunas condiciones que se deben observar en esta solución para que sea una solución convergente. No obstante, primero discutiremos un método indirecto e incompleto para demostrar el resultado, dicho método es conocido como el método iterativo. Plantearemos las siguientes ecuaciones partículares donde suponemos la existencia del valor inicial <span class="math inline">\(Z_0\)</span> del proceso:</p>
-<span class="math display">\[\begin{equation*}
-    Z_1 = a_0 + a_1 Z_0
-\end{equation*}\]</span>
-<span class="math display">\[\begin{eqnarray*}
-Z_2 &amp; = &amp; a_0 + a_1 Z_1 \\
-    &amp; = &amp; a_0 + a_1 (a_0 + a_1 Z_0) \\
-    &amp; = &amp; a_0 +  a_0 a_1 + a^2_1 Z_0 \\
-    &amp; = &amp; a_0 (1 + a_1) + a^2_1 Z_0
-\end{eqnarray*}\]</span>
-<span class="math display">\[\begin{eqnarray*}
-Z_3 &amp; = &amp; a_0 + a_1 Z_2 \\
-    &amp; = &amp; a_0 + a_1 (a_0 +  a_0 a_1 + a^2_1 Z_0) \\
-    &amp; = &amp; a_0 +  a_0 a_1 + a_0 a^2_1 + a^3_1 Z_0 \\
-    &amp; = &amp; a_0 (1 + a_1 + a^2_1) + a^3_1 Z_0
-\end{eqnarray*}\]</span>
+<p>Dicho lo anterior podemos escribir la solución general de (<a href="#eq-EDPO2">Ecuación&nbsp;5</a>) como:</p>
+<p><span class="math display">\[\begin{align}
+Z_t - a_1 L Z_t &amp; = a_0 \nonumber \\
+(1 - a_1 L)Z_t &amp; = a_0 \nonumber \\
+Z_t &amp; = a_0 \frac{1}{1 - a_1 L} + s a^t_1 \nonumber \\
+Z_t &amp; = a_0 \frac{1}{1 - a_1} + s a^t_1
+\end{align}\]</span> {#eq-PROC01}</p>
+<p>Donde <span class="math inline">\(a_1 \neq 1\)</span> y <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Notése que la aplicación del operador rezago <span class="math inline">\(L\)</span> a la constante <span class="math inline">\(a_1\)</span> dará como resultado el valor de la misma constante, ya que ésta no depende del momento <span class="math inline">\(t\)</span> en el cuál observemos a la variable <span class="math inline">\(Z_t\)</span>. En la (<strong>?@eq-PROC01</strong>) se adiciona un término <span class="math inline">\(s a^t_1\)</span> que permite ubicar la trayectoria inicial de la solución de la ecuación. El componente no significa un cambio respecto de la (<a href="#eq-EDPO2">Ecuación&nbsp;5</a>) original, ya que si buscaramos reconstruir a ésta ecuación tendríamos:</p>
+<span class="math display">\[\begin{align}
+(1 - a_1 L) s a^t_1 &amp; = s a^t_1 - a_1 s L a^{t}\_1 \nonumber \\
+&amp; = s a^t_1 - a_1 s a^{t - 1}\_1 \nonumber \\
+&amp; = s a^t_1 - s a^t_1 \nonumber \\
+&amp; = 0 \nonumber
+\end{align}\]</span>
+<p>La (<strong>?@eq-PROC01</strong>) se suele interpretar como la solución de largo plazo. Ahora demostraremos por qué es cierta la ecuación y discutiremos algunas condiciones que se deben observar en esta solución para que sea una solución convergente. No obstante, primero discutiremos un método indirecto e incompleto para demostrar el resultado, dicho método es conocido como el método iterativo. Plantearemos las siguientes ecuaciones partículares donde suponemos la existencia del valor inicial <span class="math inline">\(Z_0\)</span> del proceso:</p>
+<p><span class="math display">\[
+Z_1 = a_0 + a_1 Z_0
+\]</span></p>
+<span class="math display">\[\begin{align*}
+Z_2 &amp; = a_0 + a_1 Z_1 \\
+&amp; = a_0 + a_1 (a_0 + a_1 Z_0) \\
+&amp; = a_0 + a_0 a_1 + a^2_1 Z_0 \\
+&amp; = a_0 (1 + a_1) + a^2_1 Z_0
+\end{align*}\]</span>
+<span class="math display">\[\begin{align*}
+Z_3 &amp; = a_0 + a_1 Z_2 \\
+&amp; = a_0 + a_1 (a_0 + a_0 a_1 + a^2_1 Z_0) \\
+&amp; = a_0 + a_0 a_1 + a_0 a^2_1 + a^3_1 Z_0 \\
+&amp; = a_0 (1 + a_1 + a^2_1) + a^3_1 Z_0
+\end{align*}\]</span>
 <p>De lo anterior se puede inferir que el método iterativo convergerá hacia una expresión como la siguiente en el momento <span class="math inline">\(t\)</span>:</p>
-<span class="math display">\[\begin{eqnarray}
-Z_t &amp; = &amp; a_0 + a_1 Z_{t-1} \nonumber \\
-    &amp; = &amp; a_0 (1 + a_1 + a^2_1 + \ldots + a^{t-1}_1) + a^t_1 Z_0 \nonumber \\
-    &amp; = &amp; a_0 \sum^{t-1}_{i = 0}{a^i_1} + a^t_1 Z_0
-    {#eq-SUM)
-\end{eqnarray}\]</span>
-<p>Donde, es necesario que en la ecuación @ref(eq:SUM) se cumpla que <span class="math inline">\(\lvert{a_1}\lvert &lt; 1\)</span> para que la suma sea convergente –más adelante detallaremos esta afirmación–. A este tipo de ecuaciones se les puede denominar como lineales. Esto en razón de que ningún término de la variable <span class="math inline">\(Z\)</span> aparce elevado a ninguna potencia distinta a 1. También, son de primer orden, ya que el rezago de la variable <span class="math inline">\(Z\)</span> es sólo de un período.</p>
+<p><span class="math display">\[\begin{align}
+Z*t &amp; = a_0 + a_1 Z*{t-1} \nonumber \\
+&amp; = a*0 (1 + a_1 + a^2_1 + \ldots + a^{t-1}\_1) + a^t_1 Z_0 \nonumber \\
+&amp; = a_0 \sum^{t-1}*{i = 0}{a^i_1} + a^t_1 Z_0
+\end{align}\]</span> {#eq-SUM}</p>
+<p>Donde, es necesario que en la (<strong>?@eq-SUM</strong>) se cumpla que <span class="math inline">\(\lvert{a_1}\lvert &lt; 1\)</span> para que la suma sea convergente –más adelante detallaremos esta afirmación–. A este tipo de ecuaciones se les puede denominar como lineales. Esto en razón de que ningún término de la variable <span class="math inline">\(Z\)</span> aparce elevado a ninguna potencia distinta a 1. También, son de primer orden, ya que el rezago de la variable <span class="math inline">\(Z\)</span> es sólo de un período.</p>
 <p>En adelante trabajaremos con ecuaciones en las que la variable <span class="math inline">\(Z\)</span> se encuentra rezagada en cualquiera de los siguientes casos:</p>
 <p><span id="eq-SUM0"><span class="math display">\[
-    Z_t, Z_{t-1}, Z_{t-2}, Z_{t-3}, \ldots, Z_{t-p}, \ldots
+Z_t, Z_{t-1}, Z_{t-2}, Z_{t-3}, \ldots, Z_{t-p}, \ldots
 \tag{8}\]</span></span></p>
 <p>Por lo que diremos que en adelante el curso versará sobre ecuaciones en diferencia lineales y de cualquier orden <span class="math inline">\(p\)</span>.</p>
-<p>Retomando la ecuación (<span class="math inline">\(\ref{SUM}\)</span>) y considerando la parte de la suma de los términos de <span class="math inline">\(a^i_1\)</span>, de tal forma que buscaremos dar una expresión más compresible a dicho término. Definamos la siguiente expresión como:</p>
+<p>Retomando la (<strong>?@eq-SUM</strong>) y considerando la parte de la suma de los términos de <span class="math inline">\(a^i_1\)</span>, de tal forma que buscaremos dar una expresión más compresible a dicho término. Definamos la siguiente expresión como:</p>
 <p><span id="eq-St1"><span class="math display">\[
-    S_{t-1} = \sum^{t-1}_{i = 0}{a^i_1}
+S_{t-1} = \sum^{t-1}_{i = 0}{a^i_1}
 \tag{9}\]</span></span></p>
-<p>Por lo tanto, <span class="math inline">\(S_t\)</span> estaría dado por la siguiente expresión: <span class="math display">\[\begin{eqnarray}
-S_{t} &amp; = &amp; a_1 \sum^{t-1}_{i = 0}{a^i_1} \nonumber \\
-      &amp; = &amp; a_1 (1 + a_1 + a^2_1 + \ldots + a^{t-1}_1) \nonumber \\
-      &amp; = &amp; a_1 + a^2_1 + a^3_1 + \ldots + a^{t}_1 \nonumber \\
-      &amp; = &amp; a_1 S_{t-1}
-      {#eq-St)
-\end{eqnarray}\]</span></p>
-<p>Tomando los dos resultados de las ecuaciones @ref(eq:St1) y @ref(eq:St) anteriores, podemos expresar que si a <span class="math inline">\(S_{t-1}\)</span> le restamos <span class="math inline">\(S_t\)</span>, y desarrollando ambos lados de la ecuación anterior podemos obtener:</p>
-<span class="math display">\[\begin{eqnarray}
-    S_{t-1} - a_1 S_{t-1} &amp; = &amp; S_{t-1} - S_{t} \nonumber \\
-    (1 - a_1) S_{t-1} &amp; = &amp; (1 + a_1 + a^2_1 + \ldots + a^{t-1}_1) - (a_1 + a^2_1 + a^3_1 + \ldots + a^{t}_1) \nonumber \\
-    (1 - a_1) S_{t-1} &amp; = &amp; 1 - a^{t}_1 \nonumber
-\end{eqnarray}\]</span>
+<p>Por lo tanto, <span class="math inline">\(S_t\)</span> estaría dado por la siguiente expresión:</p>
+<p><span class="math display">\[\begin{align}
+S*{t} &amp; = a_1 \sum^{t-1}*{i = 0}{a^i*1} \nonumber \\
+&amp; = a_1 (1 + a_1 + a^2_1 + \ldots + a^{t-1}\_1) \nonumber \\
+&amp; = a_1 + a^2_1 + a^3_1 + \ldots + a^{t}\_1 \nonumber \\
+&amp; = a_1 S*{t-1}
+\end{align}\]</span> {#eq-St}</p>
+<p>Tomando los dos resultados de la (<a href="#eq-St1">Ecuación&nbsp;9</a>) y (<strong>?@eq-St</strong>), podemos expresar que si a <span class="math inline">\(S_{t-1}\)</span> le restamos <span class="math inline">\(S_t\)</span>, y desarrollando ambos lados de la ecuación anterior podemos obtener:</p>
+<span class="math display">\[\begin{align}
+S*{t-1} - a_1 S*{t-1} &amp; = S*{t-1} - S*{t} \nonumber \\
+(1 - a*1) S*{t-1} &amp; = (1 + a*1 + a^2_1 + \ldots + a^{t-1}\_1) - (a_1 + a^2_1 + a^3_1 + \ldots + a^{t}\_1) \nonumber \\
+(1 - a_1) S*{t-1} &amp; = 1 - a^{t}\_1 \nonumber
+\end{align}\]</span>
 <p>Así, podemos concluir que:</p>
 <p><span id="eq-SUM2"><span class="math display">\[
-    S_{t-1} = \frac{1 - a^{t}_1}{1 - a_1}
+S_{t-1} = \frac{1 - a^{t}_1}{1 - a_1}
 \tag{10}\]</span></span></p>
-<p>Conjuntando éste último resultado de la ecuación @ref(eq:SUM2) con la ecuación @ref(eq:SUM) tenemos la siguiente solución por el método de iteración:</p>
+<p>Conjuntando éste último resultado de la ecuación (<a href="#eq-SUM2">Ecuación&nbsp;10</a>) con la ecuación (<strong>?@eq-SUM</strong>) tenemos la siguiente solución por el método de iteración:</p>
 <p><span id="eq-SOLITER"><span class="math display">\[
-    Z_t = a_0 \left( \frac{1 - a^{t}_1}{1 - a_1} \right) + a^t_1 Z_0
+Z_t = a_0 \left( \frac{1 - a^{t}_1}{1 - a_1} \right) + a^t_1 Z_0
 \tag{11}\]</span></span></p>
-<p>De esta forma la ecuación @ref(eq:SOLITER) es una solición para la ecuación @ref(eq:SUM), que es una ecuación de un proceso de una Ecuación en Diferencia plantenado en la ecuación @ref(eq:EDPO). Está solución aún no es general, en el sentido de que sea válida para cualquiel tipo de proceso: convergente o divergente. Dicha convergencia o divengencia estará determinada por el paramétro <span class="math inline">\(a_1\)</span>. No debe pasar desapercibido que cuando <span class="math inline">\(t \rightarrow \infty\)</span> o cuando la muestra es muy grande (lo que es equivalente), podemos decir que la solución solo puede converger a la siguiente expresión cuando se considera que <span class="math inline">\(|a_1| &lt; 1\)</span>:</p>
+<p>De esta forma la (<a href="#eq-SOLITER">Ecuación&nbsp;11</a>) es una solición para la (<strong>?@eq-SUM</strong>), que es una ecuación de un proceso de una Ecuación en Diferencia plantenado en la (<a href="#eq-EDPO">Ecuación&nbsp;4</a>). Está solución aún no es general, en el sentido de que sea válida para cualquiel tipo de proceso: convergente o divergente. Dicha convergencia o divengencia estará determinada por el paramétro <span class="math inline">\(a_1\)</span>. No debe pasar desapercibido que cuando <span class="math inline">\(t \rightarrow \infty\)</span> o cuando la muestra es muy grande (lo que es equivalente), podemos decir que la solución solo puede converger a la siguiente expresión cuando se considera que <span class="math inline">\(|a_1| &lt; 1\)</span>:</p>
 <p><span id="eq-trayec"><span class="math display">\[
-    Z_t = a_0 \left( \frac{1}{1 - a_1} \right)
+Z_t = a_0 \left( \frac{1}{1 - a_1} \right)
 \tag{12}\]</span></span></p>
-<p>Retomemos ahora el caso general descrito en la ecuación @ref(eq:PROC01) y determinemos una solución general en la cual <span class="math inline">\(a_1 \neq 1\)</span> y <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Para ello observemos que el siguiente componente en la ecuación mencionada se puede interpretar como la suma infinita de términos descritos como: <span class="math display">\[\begin{eqnarray}
-    \frac{1}{1 - a_1} &amp; = &amp; 1 + a_1 + a_1^2 + \ldots + a_1^t + \ldots \nonumber \\
-    &amp; = &amp; \sum_{i = 0}^{\infty} a_1^{i}
-    {#eq-SUMINF)
-\end{eqnarray}\]</span></p>
-<p>Donde claramente es necesario que <span class="math inline">\(|a_1| &lt; 1\)</span>. Por lo tanto, sólo faltaría determinar el valor de la constante <span class="math inline">\(s\)</span> en la ecuación (<span class="math inline">\(\ref{PROC01}\)</span>) de la siguiente forma, supongamos que observamos el proceso en el momento inicial, por lo que es posible determinar el valor de la constante conociendo el valor inicial del proceso como sigue:</p>
+<p>Retomemos ahora el caso general descrito en la (<strong>?@eq-PROC01</strong>) y determinemos una solución general en la cual <span class="math inline">\(a_1 \neq 1\)</span> y <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Para ello observemos que el siguiente componente en la ecuación mencionada se puede interpretar como la suma infinita de términos descritos como:</p>
+<p><span class="math display">\[\begin{align}
+\frac{1}{1 - a*1} &amp; = 1 + a_1 + a_1^2 + \ldots + a_1^t + \ldots \nonumber \\
+&amp; = \sum*{i = 0}^{\infty} a_1^{i}
+\end{align}\]</span> {#eq-SUMINF}</p>
+<p>Donde claramente es necesario que <span class="math inline">\(|a_1| &lt; 1\)</span>. Por lo tanto, sólo faltaría determinar el valor de la constante <span class="math inline">\(s\)</span> en la (<strong>?@eq-PROC01</strong>) de la siguiente forma, supongamos que observamos el proceso en el momento inicial, por lo que es posible determinar el valor de la constante conociendo el valor inicial del proceso como sigue:</p>
 <p><span id="eq-Z0"><span class="math display">\[
-    Z_0 = a_0 \frac{1}{1 - a_1} + s
+Z_0 = a_0 \frac{1}{1 - a_1} + s
 \tag{13}\]</span></span></p>
-<p>De la ecuación @ref(eq:Z0) tenemos que:</p>
+<p>De la (<a href="#eq-Z0">Ecuación&nbsp;13</a>) tenemos que:</p>
 <p><span id="eq-eqs"><span class="math display">\[
-    s = Z_0 - a_0 \frac{1}{1 - a_1}
+s = Z_0 - a_0 \frac{1}{1 - a_1}
 \tag{14}\]</span></span></p>
-<p>Así, juntando la ecuación @ref(eq:PROC01) y ecuación @ref(eq:eqs) tenemos la expresión:</p>
+<p>Así, juntando la (<strong>?@eq-PROC01</strong>) y (<a href="#eq-eqs">Ecuación&nbsp;14</a>) tenemos la expresión:</p>
 <p><span id="eq-SOLGEN"><span class="math display">\[
-    Z_t = a_0 \frac{1 - a^t_1}{1 - a_1} + a^t_1 Z_0
+Z_t = a_0 \frac{1 - a^t_1}{1 - a_1} + a^t_1 Z_0
 \tag{15}\]</span></span></p>
-<p>No debe pasar desapercibido que está solución es la misma que la mostrada en la ecuación (@ref(eq:SOLITER), por lo que en realidad ambas ecuaciones son una solución general indistintamente entre las ecuaciones @ref(eq:SOLITER) y @ref(eq:SOL_GEN). Ambas convergen a la expresión como la ecuación @ref(eq:trayec), con la misma condición de convergencia <span class="math inline">\(|a_1| &lt; 1\)</span>. Para ilustrar estas ecuaciones veámos algunos ejemplos al respecto.</p>
+<p>No debe pasar desapercibido que está solución es la misma que la mostrada en la (<a href="#eq-SOLITER">Ecuación&nbsp;11</a>), por lo que en realidad ambas ecuaciones son una solución general indistintamente entre la (<a href="#eq-SOLITER">Ecuación&nbsp;11</a>) y (<a href="#eq-SOLGEN">Ecuación&nbsp;15</a>). Ambas convergen a la expresión como la (<a href="#eq-trayec">Ecuación&nbsp;12</a>), con la misma condición de convergencia <span class="math inline">\(|a_1| &lt; 1\)</span>. Para ilustrar estas ecuaciones veámos algunos ejemplos al respecto.</p>
 <p>Consideremos que tenemos un proceso <span class="math inline">\(Z_t\)</span> que es descrito por una ecuación en diferencia lineal de primer orden dada por:</p>
 <p><span id="eq-ex1"><span class="math display">\[
-    Z_t = 2 + 0.9 Z_{t-1}
+Z_t = 2 + 0.9 Z_{t-1}
 \tag{16}\]</span></span></p>
-<p>Siguiendo la expresión mostrada en la ecuación @ref(eq:SOLGEN), obtenemos la expresión:</p>
+<p>Siguiendo la expresión mostrada en la (<a href="#eq-SOLGEN">Ecuación&nbsp;15</a>), obtenemos la expresión:</p>
 <p><span id="eq-ex2"><span class="math display">\[
-    Z_t = 2 \left( \frac{1 - 0.9^{t}}{1 - 0.9} \right) + 0.9^t Z_0
+Z_t = 2 \left( \frac{1 - 0.9^{t}}{1 - 0.9} \right) + 0.9^t Z_0
 \tag{17}\]</span></span></p>
 <p>Donde asumiremos que el valor inicial es <span class="math inline">\(Z_0 = 10\)</span> y que la expresión debe converger al valor de 20, cuando <span class="math inline">\(t\)</span> es muy grande o tiende a infinito. De forma similar tomemos otro ejemplo, en el cual asumimos la siguiente expresión:</p>
 <p><span id="eq-ex3"><span class="math display">\[
-    Z_t = 2 - 0.5 Z_{t-1}
+Z_t = 2 - 0.5 Z_{t-1}
 \tag{18}\]</span></span></p>
-<p>Siguiendo la expresión mostrada en la ecuación (<span class="math inline">\(\ref{SOL_GEN}\)</span>), obtenemos:</p>
+<p>Siguiendo la expresión mostrada en la (<a href="#eq-SOLGEN">Ecuación&nbsp;15</a>), obtenemos:</p>
 <p><span id="eq-ex4"><span class="math display">\[
-    Z_t = 2 \left( \frac{1 - (-0.5)^{t}}{1 + 0.5} \right) + (-0.5)^t Z_0
+Z_t = 2 \left( \frac{1 - (-0.5)^{t}}{1 + 0.5} \right) + (-0.5)^t Z_0
 \tag{19}\]</span></span></p>
-<p>Donde asumiremos que el valor inicial es <span class="math inline">\(Z_0 = 10\)</span> y que la ecuación converge al valor de <span class="math inline">\(1.3333333 \ldots\)</span>, cuando <span class="math inline">\(t\)</span> es muy grande o tiende a infinito. Ahora simulemos el comportamiento de ambos procesos y estableceremos los resultados del Cuadro <span class="math inline">\(\ref{eq_diff_01}\)</span>. Notemos que el segundo proceso converge de una forma más rapida que el primero. El Cuadro @ref(tab:table1) se ilustra en las siguientes dos Figura @ref(fig:fig21) y Figura @ref(fig:fig22).</p>
+<p>Donde asumiremos que el valor inicial es <span class="math inline">\(Z_0 = 10\)</span> y que la ecuación converge al valor de <span class="math inline">\(1.3333333 \ldots\)</span>, cuando <span class="math inline">\(t\)</span> es muy grande o tiende a infinito. Ahora simulemos el comportamiento de ambos procesos y estableceremos los resultados del <a href="#tbl-table1">Tabla&nbsp;1</a>. Notemos que el segundo proceso converge de una forma más rapida que el primero. El <a href="#tbl-table1">Tabla&nbsp;1</a> se ilustra en la <a href="#fig-fig21">Figura&nbsp;1</a> y <a href="#fig-fig22">Figura&nbsp;2</a>.</p>
+<div class="cell">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Tiempo <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Zt <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">101</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Zt2 <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>,<span class="dv">101</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Zt[<span class="dv">1</span>] <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Zt2[<span class="dv">1</span>] <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">101</span>)){</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  Zt[i] <span class="ot">=</span> <span class="dv">2</span><span class="fl">+0.9</span><span class="sc">*</span>Zt[i<span class="dv">-1</span>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  Zt2[i] <span class="ot">=</span> <span class="dv">2</span> <span class="sc">-</span> <span class="fl">0.5</span><span class="sc">*</span>Zt2[i<span class="dv">-1</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="dv">97</span><span class="sc">:</span><span class="dv">101</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Tiempo1 <span class="ot">=</span> Tiempo[lista]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Zt1<span class="ot">=</span>Zt[lista]</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Zt21<span class="ot">=</span>Zt2[lista]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>tabla1 <span class="ot">=</span> <span class="fu">data.frame</span>(Tiempo1, Zt1, Zt21)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Tiempo"</span>, <span class="st">"$Z_t =2+0.9Z_{t-1}$"</span>, <span class="st">"$Z_t = 2-0.5Z_{t-1}$"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tabla1, <span class="at">format =</span> <span class="st">"pandoc"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<table class="table">
-<caption>Dos ejemplos de Procesos de Ecuaciones Lineales de Primer Orden Convergentes</caption>
+<div id="tbl-table1" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabla&nbsp;1: Dos ejemplos de Procesos de Ecuaciones Lineales de Primer Orden Convergentes</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Tiempo</th>
-<th style="text-align: right;"><span class="math inline">\(Z_t =2+0.9Z_{t-1}\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(Z_t = 2-0.5Z_{t-1}\)</span></th>
+<th style="text-align: left;">Tiempo</th>
+<th style="text-align: left;"><span class="math inline">\(Z_t =2+0.9Z_{t-1}\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(Z_t = 2-0.5Z_{t-1}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">10.00000</td>
-<td style="text-align: right;">10.000000</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">10.00000</td>
+<td style="text-align: left;">10.000000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">11.00000</td>
-<td style="text-align: right;">-3.000000</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">11.00000</td>
+<td style="text-align: left;">-3.000000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">11.90000</td>
-<td style="text-align: right;">3.500000</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">11.90000</td>
+<td style="text-align: left;">3.500000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">12.71000</td>
-<td style="text-align: right;">0.250000</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">12.71000</td>
+<td style="text-align: left;">0.250000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">13.43900</td>
-<td style="text-align: right;">1.875000</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">13.43900</td>
+<td style="text-align: left;">1.875000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">14.09510</td>
-<td style="text-align: right;">1.062500</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">14.09510</td>
+<td style="text-align: left;">1.062500</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">14.68559</td>
-<td style="text-align: right;">1.468750</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">14.68559</td>
+<td style="text-align: left;">1.468750</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">15.21703</td>
-<td style="text-align: right;">1.265625</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">15.21703</td>
+<td style="text-align: left;">1.265625</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">15.69533</td>
-<td style="text-align: right;">1.367188</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">15.69533</td>
+<td style="text-align: left;">1.367188</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">16.12580</td>
-<td style="text-align: right;">1.316406</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">16.12580</td>
+<td style="text-align: left;">1.316406</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">16.51322</td>
-<td style="text-align: right;">1.341797</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">16.51322</td>
+<td style="text-align: left;">1.341797</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">16.86189</td>
-<td style="text-align: right;">1.329102</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">16.86189</td>
+<td style="text-align: left;">1.329102</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">17.17570</td>
-<td style="text-align: right;">1.335449</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">17.17570</td>
+<td style="text-align: left;">1.335449</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">17.45813</td>
-<td style="text-align: right;">1.332275</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">17.45813</td>
+<td style="text-align: left;">1.332275</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">17.71232</td>
-<td style="text-align: right;">1.333862</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">17.71232</td>
+<td style="text-align: left;">1.333862</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">17.94109</td>
-<td style="text-align: right;">1.333069</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">17.94109</td>
+<td style="text-align: left;">1.333069</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">96</td>
-<td style="text-align: right;">19.99960</td>
-<td style="text-align: right;">1.333333</td>
+<td style="text-align: left;">96</td>
+<td style="text-align: left;">19.99960</td>
+<td style="text-align: left;">1.333333</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">19.99964</td>
-<td style="text-align: right;">1.333333</td>
+<td style="text-align: left;">97</td>
+<td style="text-align: left;">19.99964</td>
+<td style="text-align: left;">1.333333</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">98</td>
-<td style="text-align: right;">19.99967</td>
-<td style="text-align: right;">1.333333</td>
+<td style="text-align: left;">98</td>
+<td style="text-align: left;">19.99967</td>
+<td style="text-align: left;">1.333333</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">99</td>
-<td style="text-align: right;">19.99970</td>
-<td style="text-align: right;">1.333333</td>
+<td style="text-align: left;">99</td>
+<td style="text-align: left;">19.99970</td>
+<td style="text-align: left;">1.333333</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">19.99973</td>
-<td style="text-align: right;">1.333333</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">19.99973</td>
+<td style="text-align: left;">1.333333</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="cell" data-layout-align="center">
-<div class="quarto-figure quarto-figure-center">
+</div>
+</div>
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(,<span class="fu">aes</span>(<span class="at">x =</span> Tiempo, <span class="at">y=</span>Zt))<span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">col=</span><span class="st">"blue4"</span>)<span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">col=</span> <span class="st">"blue4"</span>)<span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="fu">expression</span>(Z[t]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-fig21" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Evolución del proceso dado por <span class="math inline">\(Z_t =2+0.9Z_{t-1}\)</span></figcaption>
-<p><img src="index_files/figure-html/fig21-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Evolución del proceso dado por <span class="math inline">\(Z_t =2+0.9Z_{t-1}\)</span></figcaption>
+<p><img src="index_files/figure-html/fig-fig21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="quarto-figure quarto-figure-center">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(,<span class="fu">aes</span>(<span class="at">x =</span> Tiempo, <span class="at">y=</span>Zt2))<span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">col=</span><span class="st">"red4"</span>)<span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">col=</span> <span class="st">"red4"</span>)<span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="fu">expression</span>(Z[t]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-fig22" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Evolución del proceso dado por <span class="math inline">\(Z_t =2-0.5Z_{t-1}\)</span></figcaption>
-<p><img src="index_files/figure-html/fig22-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figura&nbsp;2: Evolución del proceso dado por <span class="math inline">\(Z_t =2-0.5Z_{t-1}\)</span></figcaption>
+<p><img src="index_files/figure-html/fig-fig22-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
-</div>
 </div>
 </section>
 <section id="ecuaciones-en-diferencia-lineales-de-segundo-orden-y-de-orden-superior" class="level3">
 <h3 class="anchored" data-anchor-id="ecuaciones-en-diferencia-lineales-de-segundo-orden-y-de-orden-superior">Ecuaciones en Diferencia Lineales de Segundo Orden y de orden superior</h3>
 <p>Como un segundo caso a estudiar se ubica el caso de las Ecuaciones en Diferencia Lineales de Segundo Orden y de orden superior. Primero, sea una ecuación como la siguiente, la cual es lineal y de segundo orden, ya que tiene asociado un término de <span class="math inline">\(Z_t\)</span> rezagado dos periódos:</p>
 <p><span id="eq-EDSO"><span class="math display">\[
-    Z_t = a_0 + a_1 Z_{t-1} + a_2 Z_{t-2}
+Z_t = a_0 + a_1 Z_{t-1} + a_2 Z_{t-2}
 \tag{20}\]</span></span></p>
-<p>Donde <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span> y <span class="math inline">\(a_1, a_2 \neq 0\)</span>. Reordenando la ecuación @ref(eq:EDSO) podemos escribir: <span class="math display">\[\begin{eqnarray}
-    Z_t - a_1 Z_{t-1} - a_2 Z_{t-2} &amp; = &amp; a_0 \nonumber \\
-    Z_t - a_1 L Z_{t} - a_2 L^2 Z_{t} &amp; = &amp; a_0 \nonumber \\
-    (1 - a_1 L - a_2 L^2)Z_t &amp; = &amp; a_0
-    {#eq-EDSOSOL)
-\end{eqnarray}\]</span></p>
-<p>Así, la solución general propuesta para la ecuación @ref(eq:EDSOSOL) es la siguiente, la cual es una forma analóga a una Ecuación Lineal en Diferencia de Primer Orden:</p>
+<p>Donde <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span> y <span class="math inline">\(a_1, a_2 \neq 0\)</span>. Reordenando la (<a href="#eq-EDSO">Ecuación&nbsp;20</a>) podemos escribir:</p>
+<p><span class="math display">\[\begin{align}
+Z*t - a_1 Z*{t-1} - a*2 Z*{t-2} &amp; = a*0 \nonumber \\
+Z_t - a_1 L Z*{t} - a*2 L^2 Z*{t} &amp; = a_0 \nonumber \\
+(1 - a_1 L - a_2 L^2)Z_t &amp; = a_0
+\end{align}\]</span> {#eq-EDSOSOL}</p>
+<p>Así, la solución general propuesta para la (<strong>?@eq-EDSOSOL</strong>) es la siguiente, la cual es una forma analóga a una Ecuación Lineal en Diferencia de Primer Orden:</p>
 <p><span id="eq-SOLGEN2"><span class="math display">\[
-    Z_t = \frac{a_0}{1 - a_1 - a_2} + s_1 g^t_1 + s_2 g^t_2
+Z_t = \frac{a_0}{1 - a_1 - a_2} + s_1 g^t_1 + s_2 g^t_2
 \tag{21}\]</span></span></p>
 <p>En donde <span class="math inline">\(s_1\)</span> y <span class="math inline">\(s_2\)</span> son constantes que se determinan mediante dos condiciones iniciales –por lo que para resolver este tipo de ecuaciones requerimos conocer dos condiciones iniciales–. Los valores de <span class="math inline">\(g_1\)</span> y <span class="math inline">\(g_2\)</span> están relacionados con los coeficientes <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span>, de esta forma:</p>
 <p><span id="eq-a1"><span class="math display">\[
-  a_1  =  g_1 + g_2
+a_1 = g_1 + g_2
 \tag{22}\]</span></span></p>
 <p><span id="eq-a2"><span class="math display">\[
-    a_2  =  - g_1 g_2
+a_2  =  - g_1 g_2
 \tag{23}\]</span></span></p>
 <p>Lo anterior surge del siguiente procedimiento y recordando que siempre es posible descomponer una ecuación cuadrática en expresiones como las siguientes:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    (1 - a_1 L - a_2 L^2) &amp; = &amp; (1 - g_1 L)(1 - g_2 L) \nonumber \\
-    &amp; = &amp; 1 - g_1 L - g_2 L + g_1 g_2 L^2 \nonumber \\
-    &amp; = &amp; 1 - (g_1 + g_2) L + g_1 g_2 L^2
-    {#eq-eqcaracteristica)
-\end{eqnarray}\]</span></p>
-<p>Donde se observa la equivalencia mostrada en las ecuaciones @ref(eq:a1) y @ref(eq:a2). Así, considerando la ecuación @ref(eq:SOLGEN2) tenemos que:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    (1 - a_1 L - a_2 L^2) Z_t &amp; = &amp; (1 - g_1 L)(1 - g_2 L) Z_t \nonumber \\
-    &amp; = &amp; a_0 + (1 - g_1 L)(1 - g_2 L) s_1 g^t_1 \nonumber \\
-    &amp;  &amp; + (1 - g_1 L)(1 - g_2 L) s_2 g^t_2
-\end{eqnarray}\]</span></p>
-<p>Por lo tanto, buscamos que para que el proceso sea equivalente y podamos interpretar que la ecuación @ref(eq:SOLGEN2) sea una solución general deberá pasar lo siguiente:</p>
+<p><span class="math display">\[\begin{align}
+(1 - a_1 L - a_2 L^2) &amp; = (1 - g_1 L)(1 - g_2 L) \nonumber \\
+&amp; = 1 - g_1 L - g_2 L + g_1 g_2 L^2 \nonumber \\
+&amp; = 1 - (g_1 + g_2) L + g_1 g_2 L^2
+\end{align}\]</span> {#eq-eqcaracteristica}</p>
+<p>Donde se observa la equivalencia mostrada en (<a href="#eq-a1">Ecuación&nbsp;22</a>) y (<a href="#eq-a2">Ecuación&nbsp;23</a>). Así, considerando la (<a href="#eq-SOLGEN2">Ecuación&nbsp;21</a>) tenemos que:</p>
+<span class="math display">\[\begin{align}
+(1 - a_1 L - a_2 L^2) Z_t &amp; = (1 - g_1 L)(1 - g_2 L) Z_t \nonumber \\
+&amp; = a_0 + (1 - g_1 L)(1 - g_2 L) s_1 g^t_1 \nonumber \\
+&amp; = + (1 - g_1 L)(1 - g_2 L) s_2 g^t_2
+\end{align}\]</span>
+<p>Por lo tanto, buscamos que para que el proceso sea equivalente y podamos interpretar que la (<a href="#eq-SOLGEN2">Ecuación&nbsp;21</a>) sea una solución general deberá pasar lo siguiente:</p>
 <p><span class="math display">\[
-    (1 - g_1 L) (1 - g_2 L) s_1 g^t_1 + (1 - g_1 L) (1 - g_2 L) s_2 g^t_2 = 0
+(1 - g_1 L) (1 - g_2 L) s_1 g^t_1 + (1 - g_1 L) (1 - g_2 L) s_2 g^t_2 = 0
 \]</span></p>
 <p>O, escrito de otra forma:</p>
 <p><span class="math display">\[
-    (1 - g_1 L) s_1 g^t_1 = (1 - g_2 L) s_2 g^t_2 = 0
+(1 - g_1 L) s_1 g^t_1 = (1 - g_2 L) s_2 g^t_2 = 0
 \]</span></p>
-<p>Ahora determinemos cuáles son los valores <span class="math inline">\(g_1\)</span> y <span class="math inline">\(g_2\)</span> dados los valores <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> que nos permitan determinar si el proceso será convergente. Para ello debemos resolver la siguiente ecuación que se deriva de la ecuación @ref(eq:eqcaracteristica):</p>
+<p>Ahora determinemos cuáles son los valores <span class="math inline">\(g_1\)</span> y <span class="math inline">\(g_2\)</span> dados los valores <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> que nos permitan determinar si el proceso será convergente. Para ello debemos resolver la siguiente ecuación que se deriva de la (<strong>?@eq-eqcaracteristica</strong>):</p>
 <p><span class="math display">\[
-    1 - a_1 x - a_2 x^2 = (1 - g_1 x)(1 - g_2 x) = 0
+1 - a_1 x - a_2 x^2 = (1 - g_1 x)(1 - g_2 x) = 0
 \]</span></p>
 <p>Donde, claramente existen dos raíces: <span class="math inline">\(x_1 = g^{-1}_1\)</span> y <span class="math inline">\(x_2 = g^{-1}_2\)</span>. Así, la solución estará dada por las raíces de la ecuación característica:</p>
-<span class="math display">\[\begin{eqnarray}
-    1 - a_1 x - a_2 x^2 = 0 \nonumber \\
-    a_2 x^2 + a_1 x - 1 = 0
-    {#eq-POL2)
-\end{eqnarray}\]</span>
+<p><span class="math display">\[\begin{align}
+1 - a_1 x - a_2 x^2 &amp; = 0 \nonumber \\
+a_2 x^2 + a_1 x - 1 &amp; = 0
+\end{align}\]</span> {#eq-POL2}</p>
 <p>Cuya solución es:</p>
 <p><span class="math display">\[
-    x = \frac{- a_1 \pm \sqrt{a^2_1 + 4 a_2}}{2 a_2}
+x = \frac{- a_1 \pm \sqrt{a^2_1 + 4 a_2}}{2 a_2}
 \]</span></p>
-<p>Es importante distinguir tres diferentes casos en relación con las raíces que surgen como solución de la ecuación @ref(eq:POL2), estos son:</p>
-<p><strong>Caso I</strong>. Si <span class="math inline">\(a^2_1 + 4 a_2 &gt; 0\)</span>, la ecuación @ref(eq:POL2) proporcionará dos valores de raíces reales y distintos, eso es <span class="math inline">\(x_1 = g^{-1}_1 \neq x_2 = g^{-1}_2\)</span>. Si por ahora suponemos que <span class="math inline">\(|{g_1} &lt; 1|\)</span> y que <span class="math inline">\(|{g_2} &lt; 1|\)</span>, entonces tendremos que: <span class="math display">\[\begin{eqnarray}
-    (1 - g_1 L)^{-1} (1 - g_2 L)^{-1} a_0 &amp; =&amp;  \left( \sum^{\infty}_{j = 0}{g^j_1 L^j} \right) \left( \sum^{\infty}_{j = 0}{g^j_2 L^j} \right) a_0 \nonumber \\
-    &amp; = &amp; \left( \sum^{\infty}_{j = 0}{g^j_1} \right) \left( \sum^{\infty}_{j = 0}{g^j_2} \right) a_0 \nonumber \\
-    &amp; = &amp; \frac{a_0}{(1 - g_1)(1 - g_2)} \nonumber \\
-    &amp; = &amp; \frac{a_0}{1 - a_1 - a_2}
-\end{eqnarray}\]</span></p>
-<p>Esto último es el punto de equilibrio de la ecuación @ref(eq:SOLGEN2); considerando que <span class="math inline">\(|{g_1} &lt; 1|\)</span> y que <span class="math inline">\(|{g_2} &lt; 1|\)</span> –notemos que los demás casos son divergentes, ya que la suma anterior nno connvergería–. De esta forma la solución de la ecuación estará dada por:</p>
+<p>Es importante distinguir tres diferentes casos en relación con las raíces que surgen como solución de la (<strong>?@eq-POL2</strong>), estos son:</p>
+<p><strong>Caso I</strong>. Si <span class="math inline">\(a^2_1 + 4 a_2 &gt; 0\)</span>, la (<strong>?@eq-POL2</strong>) proporcionará dos valores de raíces reales y distintos, eso es <span class="math inline">\(x_1 = g^{-1}_1 \neq x_2 = g^{-1}_2\)</span>. Si por ahora suponemos que <span class="math inline">\(|{g_1} &lt; 1|\)</span> y que <span class="math inline">\(|{g_2} &lt; 1|\)</span>, entonces tendremos que:</p>
+<span class="math display">\[\begin{align}
+(1 - g*1 L)^{-1} (1 - g_2 L)^{-1} a_0 &amp; = \left( \sum^{\infty}*{j = 0}{g^j*1 L^j} \right) \left( \sum^{\infty}*{j = 0}{g^j*2 L^j} \right) a_0 \nonumber \\
+&amp; = \left( \sum^{\infty}*{j = 0}{g^j*1} \right) \left( \sum^{\infty}*{j = 0}{g^j_2} \right) a_0 \nonumber \\
+&amp; = \frac{a_0}{(1 - g_1)(1 - g_2)} \nonumber \\
+&amp; = \frac{a_0}{1 - a_1 - a_2}
+\end{align}\]</span>
+<p>Esto último es el punto de equilibrio de la (<a href="#eq-SOLGEN2">Ecuación&nbsp;21</a>); considerando que <span class="math inline">\(|{g_1} &lt; 1|\)</span> y que <span class="math inline">\(|{g_2} &lt; 1|\)</span> –notemos que los demás casos son divergentes, ya que la suma anterior nno connvergería–. De esta forma la solución de la ecuación estará dada por:</p>
 <p><span id="eq-Conver"><span class="math display">\[
-    \lim_{t \to \infty} Z_t = \frac{a_0}{1 - a_1 - a_2}
+\lim_{t \to \infty} Z_t = \frac{a_0}{1 - a_1 - a_2}
 \tag{24}\]</span></span></p>
-<p><strong>Caso II</strong>. Si <span class="math inline">\(a_1^2 + 4a_2 &lt; 0\)</span> en la ecuación @ref(eq:POL2), entonces las raíces serán números complejos conjugados, es decir:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    g_i^{-1} &amp; = &amp; a \pm ib \\
-    g_i &amp; = &amp; u \pm iv
-\end{eqnarray}\]</span></p>
+<p><strong>Caso II</strong>. Si <span class="math inline">\(a_1^2 + 4a_2 &lt; 0\)</span> en la (<strong>?@eq-POL2</strong>), entonces las raíces serán números complejos conjugados, es decir:</p>
+<span class="math display">\[\begin{align}
+g_i^{-1} &amp; = a \pm ib \\
+g_i &amp; = u \pm iv
+\end{align}\]</span>
 <p>Dichas raíces las podemos escribir en coordenadas polares como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    g_1^{-1} &amp; = &amp; r e^{i \theta} = r (cos(\theta) + i sen(\theta)) \\
-    g_2^{-1} &amp; = &amp; r e^{-i \theta} = r (cos(\theta) - i sen(\theta))
-\end{eqnarray}\]</span> Donde: <span class="math inline">\(r = \sqrt{u^2 + v^2}\)</span>, a esta expresión también se le conoce como modulo. Alternativamente, podemos escribir que <span class="math inline">\(r = \sqrt{g_1 g_2}\)</span>. La única condición es que <span class="math inline">\(r &lt; 1\)</span> para que el proceso descrito en la ecuación @ref(eq:SOLGEN2) sea convergente.</p>
-<p>Al igual que en el <strong>Caso I</strong>, el punto de equilibrio de la ecuación se debería ubicar al rededor @ref(eq:Conver), siempre que <span class="math inline">\(r &lt; 1\)</span>, por lo que el factor que determina la convergencia es el modulo, ya que si el modulo es mayor a 1, el proceso será divergente, pero si es menor a 1 convergerá a @ref(eq:Conver). Para ilustrar, el caso contrario es divergente puesto que representa trayentorias senoidales (oscilatorias) que sólo pueden converger si a medida que pasa el tiempo, las ondas son menos amplias.</p>
+<span class="math display">\[\begin{align}
+g_1^{-1} &amp; = r e^{i \theta} = r (cos(\theta) + i sen(\theta)) \\
+g_2^{-1} &amp; = r e^{-i \theta} = r (cos(\theta) - i sen(\theta))
+\end{align}\]</span>
+<p>Donde: <span class="math inline">\(r = \sqrt{u^2 + v^2}\)</span>, a esta expresión también se le conoce como modulo. Alternativamente, podemos escribir que <span class="math inline">\(r = \sqrt{g_1 g_2}\)</span>. La única condición es que <span class="math inline">\(r &lt; 1\)</span> para que el proceso descrito en la (<a href="#eq-SOLGEN2">Ecuación&nbsp;21</a>) sea convergente.</p>
+<p>Al igual que en el <strong>Caso I</strong>, el punto de equilibrio de la ecuación se debería ubicar al rededor (<a href="#eq-Conver">Ecuación&nbsp;24</a>), siempre que <span class="math inline">\(r &lt; 1\)</span>, por lo que el factor que determina la convergencia es el modulo, ya que si el modulo es mayor a 1, el proceso será divergente, pero si es menor a 1 convergerá a (<a href="#eq-Conver">Ecuación&nbsp;24</a>). Para ilustrar, el caso contrario es divergente puesto que representa trayentorias senoidales (oscilatorias) que sólo pueden converger si a medida que pasa el tiempo, las ondas son menos amplias.</p>
 <p><strong>Caso III</strong>. Ahora revisemos el caso en el que <span class="math inline">\(a_1^2 + 4a_2 = 0\)</span>, de esta forma las raíces serán identicas:</p>
 <p><span class="math display">\[
-    g = g_1^{-1} = g_2^{-1} = \frac{-a_1}{2 a_2}
+g = g_1^{-1} = g_2^{-1} = \frac{-a_1}{2 a_2}
 \]</span></p>
 <p>Así, el punto de equilibrio será dado por la solución descrita como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    (1 - g L)^2 Z_t &amp; = &amp; a_0 \nonumber \\
-    Z_t &amp; = &amp; \frac{a_0}{(1 - g L)^2} + s_1 g^t + s_2 t g^t \nonumber \\
-    &amp; = &amp; a_0 \sum_{i = 0}^{\infty} (1 + i) g^j + s_1 g^t + s_2 t g^t
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+(1 - g L)^2 Z*t &amp; = a_0 \nonumber \\
+Z_t &amp; = \frac{a_0}{(1 - g L)^2} + s_1 g^t + s_2 t g^t \nonumber \\
+&amp; = a_0 \sum*{i = 0}^{\infty} (1 + i) g^j + s_1 g^t + s_2 t g^t
+\end{align}\]</span>
 <p>Donde la expresión amnterior es resultado de considerar el siguiente procedimiento. Sea:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    f(g) &amp; = &amp; \frac{1}{(1 - g)} = \sum_{j = 0}^{\infty} g^j \nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+f(g) &amp; = \frac{1}{(1 - g)} \\
+&amp; = \sum\_{j = 0}^{\infty} g^j \nonumber
+\end{align}\]</span>
 <p>Por lo que si hacemos la primer derivada del la expresión anterior tenemos que:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    f'(g) &amp; = &amp; \frac{1}{(1 - g)^2} \nonumber \\
-    &amp; = &amp; \sum_{j = 0}^{\infty} j g^{j-1} \nonumber \\
-    &amp; = &amp; 0 + g^0 + 2 g^1 + 3 g^2 + \ldots \nonumber \\
-    &amp; = &amp; \sum_{j = 0}^{\infty} (1 + j) g^j \nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+f'(g) &amp; = \frac{1}{(1 - g)^2} \nonumber \\
+&amp; = \sum*{j = 0}^{\infty} j g^{j-1} \nonumber \\
+&amp; = 0 + g^0 + 2 g^1 + 3 g^2 + \ldots \nonumber \\
+&amp; = \sum*{j = 0}^{\infty} (1 + j) g^j \nonumber
+\end{align}\]</span>
 <p>Ahora veámos un ejemplo de una Ecuación Lineal en Diferencia de Segundo Orden. Supongamos la ecuación y el desarrollo siguientes:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    Z_t &amp; = &amp; 3 + 0.9 Z_{t-1} - 0.2 Z_{t-2} \nonumber \\
-    (1 - 0.9 L + 0.2 L^2) Z_t &amp; = &amp; 3 \nonumber
-\end{eqnarray}\]</span></p>
-<p>La solución dada por una ecuación similar a la expresión @ref(eq:POL2), obtendríamos la solución dada por las ecuaciones equivalentes a:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    1 - 0.9 x + 0.2 x^2 = 0 \nonumber \\
-    - 0.2 x^2 + 0.9 x - 1 = 0 \nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+Z*t &amp; = 3 + 0.9 Z*{t-1} - 0.2 Z\_{t-2} \nonumber \\
+(1 - 0.9 L + 0.2 L^2) Z_t &amp; = 3 \nonumber
+\end{align}\]</span>
+<p>La solución dada por una ecuación similar a la (<strong>?@eq-POL2</strong>), obtendríamos la solución dada por las ecuaciones equivalentes a:</p>
+<span class="math display">\[\begin{align}
+1 - 0.9 x + 0.2 x^2 &amp; = 0 \nonumber \\ - 0.2 x^2 + 0.9 x - 1 &amp; = 0 \nonumber
+\end{align}\]</span>
 <p>De donde las raíces del polinomio característico <span class="math inline">\(x_1 = g_1^{-1}\)</span> y <span class="math inline">\(x_2 = g_2^{-1}\)</span> se obtienen de la expresión dada por:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    x &amp; = &amp;\frac{-0.9 \pm \sqrt{0.81 + (4)(-0.2)}}{(2)(-0.2)} \nonumber \\
-    &amp; = &amp; \frac{0.9 \pm 0.1}{0.4} \nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+x &amp; = \frac{-0.9 \pm \sqrt{0.81 + (4)(-0.2)}}{(2)(-0.2)} \nonumber \\
+&amp; = \frac{0.9 \pm 0.1}{0.4} \nonumber
+\end{align}\]</span>
 <p>Dado que el componente <span class="math inline">\(a^2_1 + 4 a_2\)</span> es positivo, obtendremos dos raíces reales. Las raíces estarán dadas por <span class="math inline">\(x_1 = 2.5\)</span> y <span class="math inline">\(x_2 = 2.0\)</span>, de lo cual podemos determinar que <span class="math inline">\(g_1 = 0.4\)</span> y <span class="math inline">\(g_2 = 0.5\)</span>. De esta forma tenemos que <span class="math inline">\(|g_1| &lt; 1\)</span> y <span class="math inline">\(|g_2| &lt; 1\)</span>, así la ecuación converge a la expresión dada por las siguientes expresiones:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    Z_t &amp; = &amp; \frac{3}{1 - 0.9 L + 0.2 L^2} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber \\
-    &amp; = &amp; \frac{3}{1 - 0.9 + 0.2} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber \\
-    &amp; = &amp; \frac{3}{(1 - 0.4)(1 - 0.5)} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display">\[\begin{align}
+Z_t &amp; = \frac{3}{1 - 0.9 L + 0.2 L^2} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber \\
+&amp; = \frac{3}{1 - 0.9 + 0.2} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber \\
+&amp; = \frac{3}{(1 - 0.4)(1 - 0.5)} + s_1 (0.4)^t + s_2 (0.5)^t \nonumber
+\end{align}\]</span>
 <p>Al final, la ecuación que describe la solución general será:</p>
 <p><span class="math display">\[
-    z_t = 10 + s_1 (0.4)^t + s_2 (0.5)^t
+z_t = 10 + s_1 (0.4)^t + s_2 (0.5)^t
 \]</span></p>
 <p>Para determinar los valores de <span class="math inline">\(s_1\)</span> y <span class="math inline">\(s_2\)</span> necesitamos obtener dos valores iniciales de la ecuación para lo cual iniciaremos como <span class="math inline">\(t = 0\)</span> y luego obtenemos el valor de <span class="math inline">\(t = 1\)</span>, consideremos el valor de <span class="math inline">\(Z_0 = 0\)</span> y <span class="math inline">\(Z_1 = 50\)</span>:</p>
-<p><span class="math display">\[\begin{eqnarray*}
-    Z_0 &amp; = &amp; 10 + s_1(0.4)^0  + s_2(0.5)^0 \\
-    0 &amp; = &amp; 10 + s_1 + s_2 \\
-    Z_1 &amp; = &amp; 10 + s_1(0.4)^1  + s_2(0.5)^1 \\
-    50 &amp; = &amp; 10 + 0.4 s_1 + 0.5 s_2
-\end{eqnarray*}\]</span></p>
+<span class="math display">\[\begin{align*}
+Z_0 &amp; = 10 + s_1(0.4)^0 + s_2(0.5)^0 \\
+0 &amp; = 10 + s_1 + s_2 \\
+Z_1 &amp; = 10 + s_1(0.4)^1 + s_2(0.5)^1 \\
+50 &amp; = 10 + 0.4 s_1 + 0.5 s_2
+\end{align*}\]</span>
 <p>Por lo que la solución es: <span class="math inline">\(s_1 = -450\)</span> y <span class="math inline">\(s_2 = 440\)</span>, de donde podemos expresar la ecuación como:</p>
 <p><span id="eq-Ejem01"><span class="math display">\[
-    Z_t = 10 - 450(0.4)^t + 440(0.5)^t
+Z_t = 10 - 450(0.4)^t + 440(0.5)^t
 \tag{25}\]</span></span></p>
-<p>La ecuación @ref(eq:Ejem01) anterior convergerá al valor de 10 cuando <span class="math inline">\(t \rightarrow \infty\)</span>. Para ilustrar la trayectoria de esta ecuación tomemos un cuadro similar al de los ejemplos anteriores. En el Cuadro @ref(tab:table2) y la Figura @ref(fig:fig23) mostramos los resultados de la trayectorua para 100 periodos.</p>
+<p>La (<a href="#eq-Ejem01">Ecuación&nbsp;25</a>) anterior convergerá al valor de 10 cuando <span class="math inline">\(t \rightarrow \infty\)</span>. Para ilustrar la trayectoria de esta ecuación tomemos un cuadro similar al de los ejemplos anteriores. En la <a href="#tbl-table2">Tabla&nbsp;2</a> y la <a href="#fig-fig23">Figura&nbsp;3</a> mostramos los resultados de la trayectorua para 100 periodos.</p>
+<div class="cell">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">ts</span>(<span class="fu">c</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Zt<span class="ot">=</span><span class="dv">10-450</span><span class="sc">*</span>(<span class="fl">0.4</span><span class="sc">^</span>t)<span class="sc">+</span><span class="dv">440</span><span class="sc">*</span>(<span class="fl">0.5</span><span class="sc">^</span>t)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="dv">97</span><span class="sc">:</span><span class="dv">101</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>t1 <span class="ot">=</span> t[lista]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Zt1<span class="ot">=</span>Zt[lista]</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>tabla1 <span class="ot">=</span> <span class="fu">data.frame</span>(Tiempo1, Zt1)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Tiempo"</span>, <span class="st">"$Z_t =10-450(0.4)^t+440(0.5)^t$"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tabla1, <span class="at">format =</span> <span class="st">"pandoc"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<table class="table">
-<caption>Un ejemplo de proceso de Ecuación de Segundo Orden convengente</caption>
+<div id="tbl-table2" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Tabla&nbsp;2: Un ejemplo de proceso de Ecuación de Segundo Orden convengente</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Tiempo</th>
-<th style="text-align: right;"><span class="math inline">\(Z_t =10-450(0.4)^t+440(0.5)^t\)</span></th>
+<th style="text-align: left;">Tiempo</th>
+<th style="text-align: left;"><span class="math inline">\(Z_t =10-450(0.4)^t+440(0.5)^t\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">50.00000</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">50.00000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">48.00000</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">48.00000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">36.20000</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">36.20000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">25.98000</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">25.98000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">19.14200</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">19.14200</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">15.03180</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">15.03180</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">12.70022</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">12.70022</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">11.42384</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">11.42384</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">10.74141</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">10.74141</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10.38250</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10.38250</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">10.19597</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">10.19597</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">10.09987</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">10.09987</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">10.05069</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">10.05069</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">10.02565</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">10.02565</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">10.01294</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">10.01294</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">96</td>
-<td style="text-align: right;">10.00000</td>
+<td style="text-align: left;">96</td>
+<td style="text-align: left;">10.00000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">10.00000</td>
+<td style="text-align: left;">97</td>
+<td style="text-align: left;">10.00000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">98</td>
-<td style="text-align: right;">10.00000</td>
+<td style="text-align: left;">98</td>
+<td style="text-align: left;">10.00000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">99</td>
-<td style="text-align: right;">10.00000</td>
+<td style="text-align: left;">99</td>
+<td style="text-align: left;">10.00000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">10.00000</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">10.00000</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="cell" data-layout-align="center">
-<div class="quarto-figure quarto-figure-center">
+</div>
+</div>
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(,<span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y=</span>Zt))<span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">col=</span><span class="st">"green4"</span>)<span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">col=</span> <span class="st">"green4"</span>)<span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="fu">expression</span>(Z[t]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-fig23" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Evolución del proceso dado por <span class="math inline">\(Z_t =3+0.9Z_{t-1}-0.2Z_{t-2}\)</span></figcaption>
-<p><img src="index_files/figure-html/fig23-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figura&nbsp;3: Evolución del proceso dado por <span class="math inline">\(Z_t =3+0.9Z_{t-1}-0.2Z_{t-2}\)</span></figcaption>
+<p><img src="index_files/figure-html/fig-fig23-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
 <p>Finalmente, discutiremos la solución para las Ecuaciones Lineales en Diferencia de Orden <span class="math inline">\(p\)</span>, donde <span class="math inline">\(p \geq 2\)</span>. En general una ecuación de este tipo se puede escribir como:</p>
-<p><span class="math display">\[
-    Z_t = a_0 + a_1 Z_{t-1} + a_2 Z_{t-2} + \ldots + a_p Z_{t-p}
-\]</span> {#eq-EDOP)</p>
-<p>Donde <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span> y <span class="math inline">\(a_p \neq 0\)</span>. La ecuación @ref(eq:EDOP) se puede escribir como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    Z_t - a_1 Z_{t-1} - a_2 Z_{t-2} - \ldots - a_p Z_{t-p} &amp; = &amp; a_0 \nonumber \\
-    Z_t - a_1 L Z_t - a_2 L^2 Z_t - \ldots - a_p L^p Z_t &amp; = &amp; a_0 \nonumber \\
-    (1 - a_1 L - a_2 L^2 - \ldots - a_p L^p) Z_t &amp; = &amp; a_0
-    {#eq-EDOP2)
-\end{eqnarray}\]</span></p>
-<p>Por el Teorema Fundamental del Álgebra es posible escribir a la ecuación @ref(eq:EDOP2) como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    (1 - g_1 L)(1 - g_1 L) \ldots (1 - g_p L) Z_t &amp; = &amp; a_0
-    {#eq-EDOP3)
-\end{eqnarray}\]</span></p>
-<p>Utilizando la ecuación @ref(eq:EDOP2) y la ecuación @ref(eq:EDOP3) tenemos que la solución general de una ecuación como la descrita en @ref(eq:EDOP) se puede escribir como:</p>
-<p><span id="eq-EDOPGEN"><span class="math display">\[
-    Z_t  =  \frac{a_0}{1 - a_1 - a_2 - \ldots - a_p} + s_1 g^t_1 + s_2 g^t_2 + \ldots + s_p g^t_p \\
+<p><span id="eq-EDOP"><span class="math display">\[
+Z_t = a_0 + a_1 Z_{t-1} + a_2 Z_{t-2} + \ldots + a_p Z_{t-p}
 \tag{26}\]</span></span></p>
-<p><span class="math display">\[\begin{eqnarray}
-    Z_t &amp; = &amp; \frac{a_0}{(1 - g_1)(1 - g_1) \ldots (1 - g_p)} + s_1 g^t_1 + s_2 g^t_2 + \ldots + s_p g^t_p
-    {#eq-EDOPGEN2)
-\end{eqnarray}\]</span></p>
-<p>Donde <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span>, …, <span class="math inline">\(s_p\)</span> son cosntantes que se determinan utilizando <span class="math inline">\(p\)</span> valores partículares de <span class="math inline">\(Z_t\)</span>, y la solución general descrita en las ecuaciones @ref(eq:EDOPGEN) y @ref(eq:EDOPGEN2) implica encontrar <span class="math inline">\(p\)</span> raíces: <span class="math inline">\(x_1 = g^{-1}_1\)</span>, <span class="math inline">\(x_2 = g^{-1}_2\)</span>, …, <span class="math inline">\(x_p = g^{-1}_p\)</span> de los siguientes polinomios equivalentes:</p>
-<span class="math display">\[\begin{eqnarray}
-    (1 - g_1)(1 - g_1) \ldots (1 - g_p) = 0 \\
-    1 - a_1 x - a_2 x^2 - \ldots - a_p x^p = 0 \\
-    {#eq-POLGEN)
-    a_p x^p + \ldots + a_2 x^2 + a_1 x - 1 = 0
-\end{eqnarray}\]</span>
-<p>Antes de plantear la solución general, analicemos una solución patícular cuando un conjunto de las <span class="math inline">\(p\)</span> raíces, digamos un total de <span class="math inline">\(m\)</span>, son iguales, es decir, cuando sucede que <span class="math inline">\(g_1 = g_2 = \ldots = g_m = g\)</span> (con <span class="math inline">\(1 &lt; m \leq p\)</span>). En este caso la solución general en la ecuación @ref(eq:EDOPGEN2) se escribe como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    Z_t &amp; = &amp; \frac{a_0}{(1 - g)^m(1 - g_{m+1}) \ldots (1 - g_p)} \nonumber \\
-    &amp; &amp; + s_1 g^t + s_2 t g^t + \ldots + s_m t^{m-1} g^t + s_{m+1} g^t_{m+1} + \ldots + s_{p} g^t_{p}
-    {#eq-EDOPGEN3)
-\end{eqnarray}\]</span></p>
+<p>Donde <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span> y <span class="math inline">\(a_p \neq 0\)</span>. La (<a href="#eq-EDOP">Ecuación&nbsp;26</a>) se puede escribir como:</p>
+<p><span class="math display">\[\begin{align}
+Z*t - a_1 Z*{t-1} - a*2 Z*{t-2} - \ldots - a*p Z*{t-p} &amp; = a_0 \nonumber \\
+Z_t - a_1 L Z_t - a_2 L^2 Z_t - \ldots - a_p L^p Z_t &amp; = a_0 \nonumber \\
+(1 - a_1 L - a_2 L^2 - \ldots - a_p L^p) Z_t &amp; = a_0
+\end{align}\]</span> {#eq-EDOP2}</p>
+<p>Por el Teorema Fundamental del Álgebra es posible escribir a la (<strong>?@eq-EDOP2</strong>) como:</p>
+<p><span class="math display">\[\begin{align}
+(1 - g_1 L)(1 - g_1 L) \ldots (1 - g_p L) Z_t &amp; = a_0
+\end{align}\]</span> {#eq-EDOP3}</p>
+<p>Utilizando la (<strong>?@eq-EDOP2</strong>) y la (<strong>?@eq-EDOP3</strong>) tenemos que la solución general de una ecuación como la descrita en (<a href="#eq-EDOP">Ecuación&nbsp;26</a>) se puede escribir como:</p>
+<p><span id="eq-EDOPGEN"><span class="math display">\[
+Z_t  =  \frac{a_0}{1 - a_1 - a_2 - \ldots - a_p} + s_1 g^t_1 + s_2 g^t_2 + \ldots + s_p g^t_p \\
+\tag{27}\]</span></span></p>
+<p><span class="math display">\[\begin{align}
+Z_t &amp; = \frac{a_0}{(1 - g_1)(1 - g_1) \ldots (1 - g_p)} + s_1 g^t_1 + s_2 g^t_2 + \ldots + s_p g^t_p
+\end{align}\]</span> {#eq-EDOPGEN2}</p>
+<p>Donde <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span>, …, <span class="math inline">\(s_p\)</span> son cosntantes que se determinan utilizando <span class="math inline">\(p\)</span> valores partículares de <span class="math inline">\(Z_t\)</span>, y la solución general descrita en (<a href="#eq-EDOPGEN">Ecuación&nbsp;27</a>) y (<strong>?@eq-EDOPGEN2</strong>) implica encontrar <span class="math inline">\(p\)</span> raíces: <span class="math inline">\(x_1 = g^{-1}_1\)</span>, <span class="math inline">\(x_2 = g^{-1}_2\)</span>, …, <span class="math inline">\(x_p = g^{-1}_p\)</span> de los siguientes polinomios equivalentes:</p>
+<p><span class="math display">\[\begin{align}
+(1 - g_1)(1 - g_1) \ldots (1 - g_p) &amp; = 0 \\
+1 - a_1 x - a_2 x^2 - \ldots - a_p x^p &amp; = 0 \\
+a_p x^p + \ldots + a_2 x^2 + a_1 x - 1 &amp; = 0
+\end{align}\]</span> {#eq-POLGEN}</p>
+<p>Antes de plantear la solución general, analicemos una solución patícular cuando un conjunto de las <span class="math inline">\(p\)</span> raíces, digamos un total de <span class="math inline">\(m\)</span>, son iguales, es decir, cuando sucede que <span class="math inline">\(g_1 = g_2 = \ldots = g_m = g\)</span> (con <span class="math inline">\(1 &lt; m \leq p\)</span>). En este caso la solución general en la (<strong>?@eq-EDOPGEN2</strong>) se escribe como:</p>
+<p><span class="math display">\[\begin{align}
+Z*t &amp; = \frac{a_0}{(1 - g)^m(1 - g*{m+1}) \ldots (1 - g*p)} + s_1 g^t + s_2 t g^t + \ldots + s_m t^{m-1} g^t + s*{m+1} g^t*{m+1} + \ldots + s*{p} g^t\_{p}
+\end{align}\]</span> {#eq-EDOPGEN3}</p>
 <p>Definamos:</p>
 <p><span class="math display">\[
-    f(g) = \frac{1}{1 - g} = \sum_{j = 0}^{\infty} g^j
+f(g) = \frac{1}{1 - g} = \sum_{j = 0}^{\infty} g^j
 \]</span></p>
 <p>Si retomamos el método descrito parráfos arriba tenemos las siguientes expresiones. Cuando <span class="math inline">\(m = 2\)</span>:</p>
 <p><span class="math display">\[
-    f'(g) = \frac{1}{(1 - g)^2} = \sum_{j = 0}^{\infty} j g^{j-1} = \sum_{j = 0}^{\infty} (1 + j) g^j \nonumber
+f'(g) = \frac{1}{(1 - g)^2} = \sum_{j = 0}^{\infty} j g^{j-1} = \sum_{j = 0}^{\infty} (1 + j) g^j \nonumber
 \]</span></p>
 <p>En el otro extremo, cuando <span class="math inline">\(m = p\)</span>:</p>
 <p><span class="math display">\[
-    f^{(p-1)}(g) = \frac{p-1}{(1 - g)^p} = \sum_{j = 0}^{\infty} \frac{(p-1+j)(p-2+j) \ldots (2+j)(1+j)}{(p-1)!} g^j
+f^{(p-1)}(g) = \frac{p-1}{(1 - g)^p} = \sum_{j = 0}^{\infty} \frac{(p-1+j)(p-2+j) \ldots (2+j)(1+j)}{(p-1)!} g^j
 \]</span></p>
-<p>Así, en el extremo cuando <span class="math inline">\(m = p\)</span> la solución general podría estar dada por: <span class="math display">\[\begin{eqnarray}
-    Z_t &amp; = &amp; a_0 \sum_{j = 0}^{\infty} \frac{(p-1+j)(p-2+j) \ldots (2+j)(1+j)}{(p-1)!} g^j \nonumber
-    &amp; &amp; + g^t \sum_{i = 0}^p s_i t^{i-1}
-    {#eq-EDOPGEN4)
-\end{eqnarray}\]</span></p>
-<p>Donde <span class="math inline">\(|{g} &lt; 1|\)</span>, <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Para finalizar esta sección, plantearemos la expresión de polinomio característico que nos permitirá hacer el análisis de convergencia de los procesos. Partamos de que la ecuación @ref(eq:POLGEN) se puede escribir como:</p>
+<p>Así, en el extremo cuando <span class="math inline">\(m = p\)</span> la solución general podría estar dada por:</p>
+<p><span class="math display">\[\begin{align}
+Z*t &amp; = a_0 \sum*{j = 0}^{\infty} \frac{(p-1+j)(p-2+j) \ldots (2+j)(1+j)}{(p-1)!} g^j + g^t \sum\_{i = 0}^p s_i t^{i-1}
+\end{align}\]</span> {#eq-EDOPGEN4}</p>
+<p>Donde <span class="math inline">\(|{g} &lt; 1|\)</span>, <span class="math inline">\(t = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Para finalizar esta sección, plantearemos la expresión de polinomio característico que nos permitirá hacer el análisis de convergencia de los procesos. Partamos de que la (<strong>?@eq-POLGEN</strong>) se puede escribir como:</p>
 <p><span id="eq-POLGEN2"><span class="math display">\[
-    (x^{-1})^p - a_1 (x^{-1})^{p-1} - a_2 (x^{-1})^{p-1} - \ldots - a_p = 0
-\tag{27}\]</span></span></p>
-<p>La ecuación @ref(eq:POLGEN2) permite interpretar las raíces del polinomio característico de forma directa ya que <span class="math inline">\(x^{-1}_1 = g_1\)</span>, <span class="math inline">\(x^{-1}_2 = g_2\)</span>, …, <span class="math inline">\(x^{-1}_p = g_p\)</span>. Así, siempre que <span class="math inline">\(p \geq 1\)</span> en la ecuación @ref(eq:EDOP), diremos que el proceso descrito en esa ecuación dará como resultado un proceso convergente si se cumplen las dos condiciones @ref(eq:COND1) y @ref(eq:COND2):</p>
-<p><span class="math display">\[
-    |a_p| &lt; 1  
-\]</span> {#eq-COND1)</p>
-<p><span class="math display">\[
-    a_1 + a_2 + \ldots + a_p &lt; 1
-\]</span> {#eq-COND2)</p>
-<p>Alternativamente, cuando las raíces son reales lo anterior es equivalente a la expresión @ref(eq:COND3):</p>
-<span class="math display">\[\begin{eqnarray}
-    |g_i| &lt; 1
-    {#eq-COND3)
-\end{eqnarray}\]</span>
-<p>Para <span class="math inline">\(\forall i = 1, 2, \ldots, p\)</span>. Cuando la raíces son imaginarias, las dos condiciones @ref(eq:COND1) y @ref(eq:COND2) son equivalentes a la expresión @ref(eq:COND4):</p>
-<span class="math display">\[\begin{eqnarray}
-    \sqrt{g_i g_j} = \sqrt{u^2 + v^2} &lt; 1
-    {#eq-COND4)
-\end{eqnarray}\]</span>
-<p>Para <span class="math inline">\(\forall i \neq j\)</span> y <span class="math inline">\(i, j = 1, 2, \ldots, p\)</span>. Cuando <span class="math inline">\(g_1 = g_2 = \ldots = g_p = g\)</span>, la condición de la ecuación @ref(eq:COND3) se resume a que <span class="math inline">\(|g| &lt; 1\)</span>. En resumen, las condiciones descritas en las ecuaciones @ref(eq:COND3) y @ref(eq:COND4) se puden ilustrar con un circulo unitario como el de la Figura @ref(fig:fig24) en que sí las raíces se ubican dentro de éste, podemos decir que el proceso es convergente en el largo plazo.</p>
-<div class="cell" data-layout-align="center">
+(x^{-1})^p - a_1 (x^{-1})^{p-1} - a_2 (x^{-1})^{p-1} - \ldots - a_p = 0
+\tag{28}\]</span></span></p>
+<p>La (<a href="#eq-POLGEN2">Ecuación&nbsp;28</a>) permite interpretar las raíces del polinomio característico de forma directa ya que <span class="math inline">\(x^{-1}_1 = g_1\)</span>, <span class="math inline">\(x^{-1}_2 = g_2\)</span>, …, <span class="math inline">\(x^{-1}_p = g_p\)</span>. Así, siempre que <span class="math inline">\(p \geq 1\)</span> en la (<a href="#eq-EDOP">Ecuación&nbsp;26</a>), diremos que el proceso descrito en esa ecuación dará como resultado un proceso convergente si se cumplen las dos condiciones (<a href="#eq-COND1">Ecuación&nbsp;29</a>) y (<a href="#eq-COND2">Ecuación&nbsp;30</a>):</p>
+<p><span id="eq-COND1"><span class="math display">\[
+|a_p| &lt; 1
+\tag{29}\]</span></span></p>
+<p><span id="eq-COND2"><span class="math display">\[
+a_1 + a_2 + \ldots + a_p &lt; 1
+\tag{30}\]</span></span></p>
+<p>Alternativamente, cuando las raíces son reales lo anterior es equivalente a la (<strong>?@eq-COND3</strong>):</p>
+<p><span class="math display">\[\begin{align}
+|g_i| &lt; 1
+\end{align}\]</span> {#eq-COND3}</p>
+<p>Para <span class="math inline">\(\forall i = 1, 2, \ldots, p\)</span>. Cuando la raíces son imaginarias, las dos condiciones (<a href="#eq-COND1">Ecuación&nbsp;29</a>) y (<a href="#eq-COND2">Ecuación&nbsp;30</a>) son equivalentes a la expresión (<strong>?@eq-COND4</strong>):</p>
+<p><span class="math display">\[\begin{align}
+\sqrt{g_i g_j} = \sqrt{u^2 + v^2} &lt; 1
+\end{align}\]</span> {#eq-COND4}</p>
+<p>Para <span class="math inline">\(\forall i \neq j\)</span> y <span class="math inline">\(i, j = 1, 2, \ldots, p\)</span>. Cuando <span class="math inline">\(g_1 = g_2 = \ldots = g_p = g\)</span>, la condición de la (<strong>?@eq-COND3</strong>) se resume a que <span class="math inline">\(|g| &lt; 1\)</span>. En resumen, las condiciones descritas en (<strong>?@eq-COND3</strong>) y (<strong>?@eq-COND4</strong>) se puden ilustrar con un circulo unitario como el de la <a href="#fig-fig24">Figura&nbsp;4</a> en que sí las raíces se ubican dentro de éste, podemos decir que el proceso es convergente en el largo plazo.</p>
+<div class="cell">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="fl">0.001</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">new =</span> T)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">type =</span> <span class="st">"line"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">col=</span><span class="st">"red4"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">new =</span> T)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,<span class="sc">-</span>y, <span class="at">type =</span> <span class="st">"line"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">col=</span><span class="st">"red4"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-fig24" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Circulo unitario en el que se cumple que <span class="math inline">\(|g_i|&lt;1\)</span> y <span class="math inline">\((g_i g_j)^{1/2} = (u^2 + v^2)^{1/2} &lt; 1\)</span></figcaption>
-<p><img src="index_files/figure-html/fig24-1.png" class="img-fluid figure-img" width="384"></p>
+<figcaption class="figure-caption">Figura&nbsp;4: Circulo unitario en el que se cumple que <span class="math inline">\(|g_i|&lt;1\)</span> y <span class="math inline">\((g_i g_j)^{1/2} = (u^2 + v^2)^{1/2} &lt; 1\)</span></figcaption>
+<p><img src="index_files/figure-html/fig-fig24-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -913,60 +1015,59 @@ S_{t} &amp; = &amp; a_1 \sum^{t-1}_{i = 0}{a^i_1} \nonumber \\
 <h2 class="anchored" data-anchor-id="operador-de-rezago-l">Operador de rezago L</h2>
 <p>Denotemos, como se ha mencionado con anterioridad, con <span class="math inline">\(L\)</span> al operador de rezago, el cual nos permitirá construir una relación entre diferencias y medias móviles como se verá más adelante en los procesos univariados <span class="math inline">\(AR(p)\)</span>, <span class="math inline">\(MA(q)\)</span> y, en general, <span class="math inline">\(ARIMA(p, d, q)\)</span>. Sean <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> o <span class="math inline">\(Z\)</span> variables con las que denotaremos a una serie de tiempo (note que hasta el momento no hemos definido qué es una serie de tiempo, no obstante no es necesario definirla para hacer uso del operador).</p>
 <p>En esta sección resumiremos algunas propiedades usadas en el capítulo y en capítulos más adelante. Así, si a dicha serie le aplicamos el operador rezago antes definido, el resultado deberá ser que cada uno de los valores de la serie es retardado o regresado un período. Es decir:</p>
+<p><span id="eq-Lag1"><span class="math display">\[
+L Z_t = Z_{t-1}
+\tag{31}\]</span></span></p>
+<p>De esta forma, si aplicamos el operador rezago <span class="math inline">\(L\)</span> a la nueva serie de tiempo dada por <span class="math inline">\(Z_{t-1}\)</span> podemos obtener <span class="math inline">\(Z_{t-2}\)</span>, haciendo uso de la (<a href="#eq-Lag1">Ecuación&nbsp;31</a>) podemos obtener:</p>
 <p><span class="math display">\[
-    L Z_t = Z_{t-1}
-\]</span> {#eq-Lag1)</p>
-<p>De esta forma, si aplicamos el operador rezago <span class="math inline">\(L\)</span> a la nueva serie de tiempo dada por <span class="math inline">\(Z_{t-1}\)</span> podemos obtener <span class="math inline">\(Z_{t-2}\)</span>, haciendo uso de la ecuación @ref(eq:Lag1) podemos obtener:</p>
-<p><span class="math display">\[
-    L Z_{t-1} = L(L Z_t) = L^2 Z_t = Z_{t-2}
+L Z_{t-1} = L(L Z_t) = L^2 Z_t = Z_{t-2}
 \]</span></p>
 <p>Mediante una generalización podemos obtener:</p>
 <p><span class="math display">\[
-    L^k Z_t = Z_{t-k}
+L^k Z_t = Z_{t-k}
 \]</span></p>
 <p>Para <span class="math inline">\(k = \ldots, -2, -1, 0, 1, 2, \ldots\)</span>. Así, para <span class="math inline">\(k = 0\)</span> obtenemos la identidad dado que <span class="math inline">\(L^0 Z_t = Z_t\)</span>, de tal forma que siempre asumiremos que <span class="math inline">\(L^0 = 1\)</span>. En otro caso, cuando <span class="math inline">\(k &gt; 0\)</span> a la serie de tiempo a la cual se le aplique el operador rezago <span class="math inline">\(L\)</span> se le deberá aplicar un rezago de <span class="math inline">\(k\)</span> periodos a cada uno de los elementos de la serie. Por el contrario, cuando <span class="math inline">\(k &lt; 0\)</span> el operador rezago significa que se deberá adelantar <span class="math inline">\(|k|\)</span> veces a cada elemento de la serie. Por ejemplo, <span class="math inline">\(L^{-3} Z_t = Z_{t+3}\)</span>.</p>
 <p>Las reglas descritas en lo subsecuente se mantienen indistintamene cuando aplican para el caso de rezagar como para cuando se adelanta una serie. Como primera propiedad tomemos a la siguiente propiedad:</p>
 <p><span class="math display">\[
-    L^{m} Z_{t-n} = L^{m} (L^{n} Z_{t}) = L^{m + n} Z_{t} = Z_{t-(n + m)}
+L^{m} Z_{t-n} = L^{m} (L^{n} Z_{t}) = L^{m + n} Z_{t} = Z_{t-(n + m)}
 \]</span></p>
 <p>De lo anterior podemos inferir el siguiente resultado:</p>
 <p><span class="math display">\[
-    \Delta Z_{t} = Z_{t} - Z_{t-1} = (1 - L) Z_{t}
+\Delta Z_{t} = Z_{t} - Z_{t-1} = (1 - L) Z_{t}
 \]</span></p>
 <p>En el caso de la diferencia de órden cuatro o cuarta diferencia se puede expresar como:</p>
 <p><span id="eq-Diff4"><span class="math display">\[
-    \Delta_{4} Z_{t} = Z_{t} - Z_{t-4} = (1 - L^4) Z_{t}
-\tag{28}\]</span></span></p>
-<p>Al respecto, vale la pena aclarar que en ocaciones se hará uso de una notación alternativa dada por: <span class="math inline">\(\Delta^k\)</span> o <span class="math inline">\(\Delta_k\)</span>, donde <span class="math inline">\(k = 1, 2, 3, \ldots\)</span>, indistintamente, ya que en ambos casos se referirá a una diferencia de orden <span class="math inline">\(k\)</span>. Esta notación resulta de gran utilidad cuando se quiere comparar periodos equivalentes como, por ejemplo, el mismo trimestre pero de un año anterior. De forma similar, para el caso de logarítmos podemos escribir a la ecuación @ref(eq:Diff4) como:</p>
+\Delta_{4} Z_{t} = Z_{t} - Z_{t-4} = (1 - L^4) Z_{t}
+\tag{32}\]</span></span></p>
+<p>Al respecto, vale la pena aclarar que en ocaciones se hará uso de una notación alternativa dada por: <span class="math inline">\(\Delta^k\)</span> o <span class="math inline">\(\Delta_k\)</span>, donde <span class="math inline">\(k = 1, 2, 3, \ldots\)</span>, indistintamente, ya que en ambos casos se referirá a una diferencia de orden <span class="math inline">\(k\)</span>. Esta notación resulta de gran utilidad cuando se quiere comparar periodos equivalentes como, por ejemplo, el mismo trimestre pero de un año anterior. De forma similar, para el caso de logarítmos podemos escribir a la (<a href="#eq-Diff4">Ecuación&nbsp;32</a>) como:</p>
 <p><span class="math display">\[
-    \Delta^{4} ln(Z_{t}) = \Delta_{4} ln(Z_{t}) = ln(Z_{t}) - ln(Z_{t-4}) = (1 - L^4) ln(Z_{t})
+\Delta^{4} ln(Z_{t}) = \Delta_{4} ln(Z_{t}) = ln(Z_{t}) - ln(Z_{t-4}) = (1 - L^4) ln(Z_{t})
 \]</span></p>
 <p>Para el caso de una serie de tiempo que se le ha transformado mediante medias móviles, digamos de <span class="math inline">\(4\)</span> periodos, podemos escribirla como:</p>
 <p><span class="math display">\[
-    Zs_{t} = \frac{1}{4}(Z_{t} + Z_{t-1} + Z_{t-2} + Z_{t-3}) = \frac{1}{4}(1 + L + L^2 + L^3)Z_{t}
+Zs_{t} = \frac{1}{4}(Z_{t} + Z_{t-1} + Z_{t-2} + Z_{t-3}) = \frac{1}{4}(1 + L + L^2 + L^3)Z_{t}
 \]</span></p>
 <p>Una generalización del anterior caso puede ser escrito como un polinomio de orden <span class="math inline">\(p\)</span> con el operador rezago <span class="math inline">\(L\)</span> dado como:</p>
-<p><span class="math display">\[\begin{eqnarray}
-    \alpha(L) Z_{t} &amp; = &amp; (1 - \alpha_1 L - \alpha_2 L^2 - \ldots - \alpha_p L^p) Z_{t} \nonumber \\
-    &amp; = &amp; Z_{t} - \alpha_1 Z_{t-1} - \alpha_2 Z_{t-2} - \ldots - \alpha_p Z_{t-p}
-(\#ec:Ecp1)
-\end{eqnarray}\]</span></p>
-<p>Donde <span class="math inline">\(\alpha_i\)</span> puede ser remplazada por cualquier constante <span class="math inline">\(a_i\)</span>, con <span class="math inline">\(i = 1, 2, 3, \ldots\)</span>, para escribir ecuaciones como las anteriores. Adicionalmente, podemos decir que la ecuación @ref(eq:Ecp) es una generalización del caso de medias móviles, el cual admite una poderación distinta para cada uno de los elementos rezagados.</p>
+<p><span class="math display">\[\begin{align}
+\alpha(L) Z*{t} &amp; = (1 - \alpha_1 L - \alpha_2 L^2 - \ldots - \alpha_p L^p) Z*{t} \nonumber \\
+&amp; = Z*{t} - \alpha_1 Z*{t-1} - \alpha*2 Z*{t-2} - \ldots - \alpha*p Z*{t-p}
+\end{align}\]</span> {#eq-Ecp1}</p>
+<p>Donde <span class="math inline">\(\alpha_i\)</span> puede ser remplazada por cualquier constante <span class="math inline">\(a_i\)</span>, con <span class="math inline">\(i = 1, 2, 3, \ldots\)</span>, para escribir ecuaciones como las anteriores. Adicionalmente, podemos decir que la (<strong>?@eq-Ecp1</strong>) es una generalización del caso de medias móviles, el cual admite una poderación distinta para cada uno de los elementos rezagados.</p>
 <p>Existe la posibilidad de operar más de un polinomio a la vez. Para múltiples polinomios (digamos, los polinomios <span class="math inline">\(\alpha(L)\)</span> y <span class="math inline">\(\beta(L)\)</span>) podemos escribir el siguiente resultado:</p>
 <p><span class="math display">\[
-    \alpha(L) \beta(L) = \beta(L) \alpha(L)
+\alpha(L) \beta(L) = \beta(L) \alpha(L)
 \]</span></p>
 <p>Tales polinomios del operador rezago también son llamados <em>filtros lineales</em>. A manera de ejemplo tomemos el siguiente caso de diferencias para una serie de <span class="math inline">\(Z_t\)</span>:</p>
 <p><span class="math display">\[
-    \Delta Z_{t} = (1 - L) Z_{t} = Z_{t} - Z_{t-1}  
+\Delta Z_{t} = (1 - L) Z_{t} = Z_{t} - Z_{t-1}
 \]</span></p>
 <p>y un proceso de medias móviles para la misma serie de <span class="math inline">\(Z_t\)</span>:</p>
 <p><span class="math display">\[
-    Zs_{t} = \frac{1}{4}(1 + L^1 + L^2 + L^3) Z_{t} = \frac{1}{4}(Z_{t} + Z_{t-1} + Z_{t-2} + Z_{t-3})  
+Zs_{t} = \frac{1}{4}(1 + L^1 + L^2 + L^3) Z_{t} = \frac{1}{4}(Z_{t} + Z_{t-1} + Z_{t-2} + Z_{t-3})
 \]</span></p>
 <p>De tal forma que el producto de ambos procesos se puede escribir como:</p>
 <p><span class="math display">\[
-(1 - L) \times \frac{1}{4}(1 + L^1 + L^2 + L^3) Z_{t} = \frac{1}{4}(1 - L^4) Z_{t}
+(1 - L) \times \frac{1}{4}(1 + L^1 + L^2 + L^3) Z*{t} = \frac{1}{4}(1 - L^4) Z*{t}
 \]</span></p>
 <p>Es decir, que el producto de dos polinomios, uno de diferencias y otro más de medias móviles, resulta en uno de diferencias pero de mayor grado, en este caso de grado 4.</p>
 

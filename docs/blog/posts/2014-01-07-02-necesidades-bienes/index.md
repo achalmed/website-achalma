@@ -11,12 +11,9 @@ tags:
 date: "01/07/2014"
 ---
 
-
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
-
 
 1.  [Conceptos básicos de economía](../2014-01-01-01-conceptos-basicos-de-economia/index.qmd)
 

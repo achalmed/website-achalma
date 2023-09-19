@@ -45,7 +45,7 @@ execute:
   cache: false  # Habilitar el almacenamiento en caché
   enabled: true  # Habilitar la ejecución
 
-draft: false  # Modo de borrador (false = final, true = borrador)
+draft: true  # Modo de borrador (false = final, true = borrador)
 
 highlight-style: github
 
@@ -104,11 +104,10 @@ format:
     link-bibliography: true  # Habilitar enlaces en la bibliografía
     keep-tex: true  # Mantener archivos .tex generados
     pdf-engine: pdflatex    # Motor de PDF (xelatex, pdflatex, lualatex, tectonic, latexmk)
-    #include-in-header: 
-    #  text: |
-    #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
+    include-in-header: 
+      - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
     output-file: index.pdf
-format-links: # (false)
+format-links: 
   - pdf
   - ipynb
 

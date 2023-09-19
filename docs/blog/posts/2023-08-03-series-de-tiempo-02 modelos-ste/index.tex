@@ -78,6 +78,25 @@
 \def\fps@figure{htbp}
 \makeatother
 
+% Preámbulo
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{float} % Control de posiciones de figuras y tablas
+\usepackage{rotating} % Rotación de elementos
+\usepackage{multirow} % Celdas combinadas en tablas
+\usepackage{tabularx} % Tablas con ancho de columna ajustable
+\usepackage{mdframed} % Marcos alrededor de elementos flotantes
+
+% Series de tiempo
+\usepackage{booktabs}
+
+
+% Configuración adicional
+
 \makeatletter
 \makeatother
 \makeatletter
@@ -174,7 +193,7 @@ instalar Linux en tu equipo.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \hypertarget{modelos-de-series-de-tiempo-estacionarias}{%
 \section{Modelos de Series de Tiempo
@@ -194,21 +213,24 @@ tiempo como un vector de variables aleatorias de dimensión \(T\), dado
 como:
 
 \[
-    X_1, X_2, X_3, \ldots ,X_T
+X_1, X_2, X_3, \ldots ,X_T
 \]
 
 Cada una de las \(X_t\) (\(t = 1, 2, \ldots, T\)) consideradas como una
 variable aleatoria. Así, también podemos denotar a la serie de tiempo
-como: \[
-    \{ X_t \}^T_{t = 1}
-    (\#eq:Serie)
-\]
+como:
+
+\begin{equation}\protect\hypertarget{eq-Serie}{}{
+\{ X_t \}^T_{t = 1}
+}\label{eq-Serie}\end{equation}
 
 Es decir, definiremos a una serie de tiempo como una realización de un
 proceso estocástico --o un Proceso Generador de Datos (PGD).
 Consideremos una muestra de los múlples posibles resultados de muestras
-de tamaño \(T\), la colección dada por: \[
-    \{X^{(1)}_1, X^{(1)}_2, \ldots, X^{(1)}_T\}
+de tamaño \(T\), la colección dada por:
+
+\[
+\{X^{(1)}_1, X^{(1)}_2, \ldots, X^{(1)}_T\}
 \]
 
 es una de las tantas posibles resultantes del proceso estocástico o PGD.
@@ -219,12 +241,14 @@ dejaría se ser sólo una de las tantas realizaciones o secuencias del
 proceso estocástico original.
 
 Tan solo para poner un ejemplo, podríamos observar las siguientes
-realizaciones del mismo PGD: \begin{eqnarray*}
-    & \{X^{(2)}_1, X^{(2)}_2, \ldots, X^{(2)}_T\} & \\
-    & \{X^{(3)}_1, X^{(3)}_2, \ldots, X^{(3)}_T\} & \\
-    & \{X^{(4)}_1, X^{(4)}_2, \ldots, X^{(4)}_T\} & \\
-    & \vdots & \\
-    & \{X^{(j)}_1, X^{(j)}_2, \ldots, X^{(j)}_T\} & 
+realizaciones del mismo PGD:
+
+\begin{eqnarray*}
+  & \{X^{(2)}_1, X^{(2)}_2, \ldots, X^{(2)}_T\} & \\
+  & \{X^{(3)}_1, X^{(3)}_2, \ldots, X^{(3)}_T\} & \\
+  & \{X^{(4)}_1, X^{(4)}_2, \ldots, X^{(4)}_T\} & \\
+  & \vdots & \\
+  & \{X^{(j)}_1, X^{(j)}_2, \ldots, X^{(j)}_T\} &
 \end{eqnarray*}
 
 Donde \(j \in \mathbb{Z}\). En lo subsecuente, diremos que una serie de
@@ -235,12 +259,17 @@ posibilidades de realización.
 Para hacer más sencilla la notación no distinguiremos entre el proceso
 en sí mismo y una de sus realizaciones, es decir, siempre escribiremos a
 una serie de tiempo como la secuencia mostrada en la ecuación
-@ref(eq:Serie), o más precisamente como la siguiente realización: \[
-    \{ X_1, X_2, \ldots, X_T \}
+(Ecuación~\ref{eq-Serie}), o más precisamente como la siguiente
+realización:
+
+\[
+\{ X_1, X_2, \ldots, X_T \}
 \]
 
-O simplemente: \[
-    X_1, X_2, \ldots, X_T
+O simplemente:
+
+\[
+X_1, X_2, \ldots, X_T
 \]
 
 El proceso estocástico de dimensión \(T\) puede ser completamente
@@ -248,11 +277,15 @@ descrito por su función de distribución multivaraida de dimensión \(T\).
 No obstante, esto no resulta ser práctico cuando se opere más adelante
 en el curso. Por ello, en el curso, y en general casi todos los textos
 lo hacen, sólo nos enfocaremos en sus primer y segundo momentos, es
-decir, en sus medias o valores esperados: \begin{equation*}
-    \mathbb{E}[X_t]
-\end{equation*}
+decir, en sus medias o valores esperados:
 
-Para \(t = 1, 2, \ldots, T\); o: \begin{equation*}
+\[
+\mathbb{E}[X_t]
+\]
+
+Para \(t = 1, 2, \ldots, T\); o:
+
+\[
 \left[
     \begin{array}{c}
     \mathbb{E}[X_1] \\
@@ -261,27 +294,34 @@ Para \(t = 1, 2, \ldots, T\); o: \begin{equation*}
     \mathbb{E}[X_T]
     \end{array}
 \right]
-\end{equation*}
+\]
 
-o, \begin{equation*}
+o,
+
+\[
 \left[
     \begin{array}{c}
     \mathbb{E}[X_1], \mathbb{E}[X_2], \ldots, \mathbb{E}[X_T]
     \end{array}
 \right]
-\end{equation*}
+\]
 
-De sus variazas: \begin{equation*}
-    Var[X_t] = \mathbb{E}[(X_t - \mathbb{E}[X_t])^2]
-\end{equation*}
+De sus variazas:
+
+\[
+Var[X_t] = \mathbb{E}[(X_t - \mathbb{E}[X_t])^2]
+\]
 
 Para \(t = 1, 2, \ldots, T\), y de sus \(T(T-1)/2\) covarianzas:
-\begin{equation*}
-    Cov[X_t,X_s] = \mathbb{E}[(X_t - \mathbb{E}[X_t])(X_s - \mathbb{E}[X_s])]
-\end{equation*}
+
+\[
+Cov[X_t,X_s] = \mathbb{E}[(X_t - \mathbb{E}[X_t])(X_s - \mathbb{E}[X_s])]
+\]
 
 Para \(t < s\). Por lo tanto, en la forma matricial podemos escribir lo
-siguiente: \begin{equation*}
+siguiente:
+
+\[
 \left[
     \begin{array}{c c c c}
     Var[X_1] & Cov[X_1,X_2] & \cdots & Cov[X_1,X_T] \\
@@ -290,9 +330,9 @@ siguiente: \begin{equation*}
     Cov[X_T,X_1] & Cov[X_T,X_2] & \cdots & Var[X_T] \\
     \end{array}
 \right]
-\end{equation*}
+\]
 
-\[
+\begin{equation}\protect\hypertarget{eq-MATCOV}{}{
 = \left[
     \begin{array}{c c c c}
     \sigma_1^2 & \rho_{12} & \cdots & \rho_{1T} \\
@@ -301,12 +341,11 @@ siguiente: \begin{equation*}
     \rho_{T1} & \rho_{T2} & \cdots & \sigma_T^2 \\
     \end{array}
 \right]
-    (\#eq:MATCOV)
-\]
+}\label{eq-MATCOV}\end{equation}
 
-Donde es claro que en la matriz de la ecuación @ref(eq:MATCOV) existen
-\(T(T-1)/2\) covarianzas distintas, ya que se cumple que
-\(Cov[X_t,X_s] = Cov[X_s,X_t]\), para \(t \neq s\).
+Donde es claro que en la matriz de la ecuación
+(Ecuación~\ref{eq-MATCOV}) existen \(T(T-1)/2\) covarianzas distintas,
+ya que se cumple que \(Cov[X_t,X_s] = Cov[X_s,X_t]\), para \(t \neq s\).
 
 A menudo, esas covarianzas son denominadas como autocovarianzas puesto
 que ellas son covarianzas entre variables aleatorias pertenecientes al
@@ -324,20 +363,25 @@ como \(\mu\), para la media, y \(\sigma^2_X\) para la varianza.
 
 Este concepto sólo es cierto si asumimos que, por ejemplo, el valor
 esperado y la varianza son como se dice a continuación para todo
-\(t = 1, 2, \ldots, T\): \begin{eqnarray}
+\(t = 1, 2, \ldots, T\):
+
+\begin{eqnarray}
     \mathbb{E}[X_t] = \mu_t = \mu \\
     \label{MEDIA}
     Var[X_t] = \sigma^2_X
-    (\#eq:VARIANZA)
-\end{eqnarray}
+\end{eqnarray} \{\#eq-VARIANZA\}
 
 Mas formalmente, se dice que el PGD o el proceso estocástico es ergódico
-en la media si: \[
-    \displaystyle\lim_{T \to \infty}{\mathbb{E} \left[ \left( \frac{1}{T} \sum^{T}_{t = 1} (X_t - \mu) \right) ^2 \right]} = 0
+en la media si:
+
+\[
+\displaystyle\lim_{T \to \infty}{\mathbb{E} \left[ \left( \frac{1}{T} \sum^{T}_{t = 1} (X_t - \mu) \right) ^2 \right]} = 0
 \]
 
-y ergódico en la varianza si: \[
-    \displaystyle\lim_{T \to \infty}{\mathbb{E} \left[ \left( \frac{1}{T} \sum^{T}_{t = 1} (X_t - \mu) ^2 - \sigma^2_X \right) ^2 \right]} = 0
+y ergódico en la varianza si:
+
+\[
+\displaystyle\lim_{T \to \infty}{\mathbb{E} \left[ \left( \frac{1}{T} \sum^{T}_{t = 1} (X_t - \mu) ^2 - \sigma^2_X \right) ^2 \right]} = 0
 \]
 
 Estas condiciones se les conoce como \emph{propiedades de consistencia}
@@ -358,7 +402,7 @@ Definiremos a la estacionariedad por sus momentos del correspondiente
 proceso estocástico dado por \(\{X_t\}\):
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \emph{Estacionariedad en media}: Un proceso estocástico es
   estacionario en media si \(E[X_t] = \mu_t = \mu\) es constante para
@@ -380,7 +424,6 @@ proceso estocástico dado por \(\{X_t\}\):
   resulta de forma inmediata de la estacionariedad en covarianza cuando
   se asume que \(s = t\), un proceso estocástico es débilmente
   estacionario cuando es estacionario en media y covarianza.
-  \textbackslash end\{enumerate\}
 \end{enumerate}
 
 Puesto que resulta poco factible asumir una estacionariedad diferente a
@@ -395,9 +438,15 @@ un \textit{proceso estocástico de ruido blanco o caminata aleatoria}, si
 éste tiene las siguientes propiedades:
 
 \begin{enumerate}
-    \item $\mathbb{E}[U_t] = 0$, $\forall t$
-    \item $Var[U_t] = \mathbb{E}[(U_t - \mu_t)^2] = \mathbb{E}[(U_t - \mu)^2] = \mathbb{E}[(U_t)^2] = \sigma^2$, $\forall t$
-    \item $Cov[U_t,U_s] = \mathbb{E}[(U_t - \mu_t)(U_s - \mu_s)] = \mathbb{E}[(U_t - \mu)(U_s - \mu)] = \mathbb{E}[U_t U_s] = 0$, $\forall t \neq s$.
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\mathbb{E}[U_t] = 0\), \(\forall t\)
+\item
+  \(Var[U_t] = \mathbb{E}[(U_t - \mu_t)^2] = \mathbb{E}[(U_t - \mu)^2] = \mathbb{E}[(U_t)^2] = \sigma^2\),
+  \(\forall t\)
+\item
+  \(Cov[U_t,U_s] = \mathbb{E}[(U_t - \mu_t)(U_s - \mu_s)] = \mathbb{E}[(U_t - \mu)(U_s - \mu)] = \mathbb{E}[U_t U_s] = 0\),
+  \(\forall t \neq s\).
 \end{enumerate}
 
 En palabras. Un proceso \(U_t\) es un ruido blanco si su valor promedio
@@ -412,14 +461,18 @@ aleatorias tienen una media de cero, una varianza \(\sigma^2\) y no
 existe correlación entre ellas.
 
 Ahora supongamos que definimos un nuevo proceso estocástico \(\{X_t\}\)
-como: \[
-    X_t = \left\{ \begin{array}{l} U_0  \mbox{ para } t = 0 \\ X_{t-1} + U_t \mbox{ para } t = 1, 2, 3, \ldots \end{array}\right.
+como:
+
+\[
+X_t = \left\{ \begin{array}{l} U_0  \mbox{ para } t = 0 \\ X_{t-1} + U_t \mbox{ para } t = 1, 2, 3, \ldots \end{array}\right.
 \]
 
 Donde \(\{ U_t \}\) es un proceso puramente aleatorio. Este proceso
 estocástico, o caminata aleatoria sin tendencia (ajuste - drift), puede
-ser reescrito como: \[
-    X_t = \sum^t_{j = 0} U_j
+ser reescrito como:
+
+\[
+X_t = \sum^t_{j = 0} U_j
 \]
 
 Tratemos de dar más claridad al ejemplo, para ello asumamos que
@@ -432,35 +485,47 @@ aleatoria \(U_t\) toma el valor de \(-1\).
 Este planteamiento cumple con las propiedas enunciadas ya que:
 
 \begin{enumerate}
-    \item $\mathbb{E}[U_t] = 0.5 \times -1 + 0.5 \times 1 = 0$, $\forall t$
-    \item $Var[U_t] = \mathbb{E}[(U_t - 0)^2] = \frac{1}{2}((-1)^2) + \frac{1}{2}((1)^2) = 1$, $\forall t$
-    \item $Cov[U_t,U_s] = \mathbb{E}[(U_t - 0)(U_s - 0)] = \mathbb{E}[U_t \cdot U_s] = 0$, $\forall t \neq s$.
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\mathbb{E}[U_t] = 0.5 \times -1 + 0.5 \times 1 = 0\), \(\forall t\)
+\item
+  \(Var[U_t] = \mathbb{E}[(U_t - 0)^2] = \frac{1}{2}((-1)^2) + \frac{1}{2}((1)^2) = 1\),
+  \(\forall t\)
+\item
+  \(Cov[U_t,U_s] = \mathbb{E}[(U_t - 0)(U_s - 0)] = \mathbb{E}[U_t \cdot U_s] = 0\),
+  \(\forall t \neq s\).
 \end{enumerate}
 
 Retomando a nuestro proceso \(X_t\), diremos que el caso de \(X_0 = 0\),
 para \(t = 0\). Si verificamos cúales son sus primeros y segundos
-momentos de \(\{X_t\}\) tenemos: \[
-    \mathbb{E}[X_t] = \mathbb{E}\left[ \sum^t_{j=1} U_j \right] = \sum^t_{j=1} \mathbb{E}[U_j] = 0
+momentos de \(\{X_t\}\) tenemos:
+
+\[
+\mathbb{E}[X_t] = \mathbb{E}\left[ \sum^t_{j=1} U_j \right] = \sum^t_{j=1} \mathbb{E}[U_j] = 0
 \]
 
-En cuanto a la varianza: \begin{eqnarray}
-    Var[X_t] & = & Var \left[ \sum^t_{j=1} U_j \right] \nonumber \\
-    & = & \sum^t_{j=1} Var[U_j] + 2 * \sum_{j \neq k} Cov[U_j,U_k] \nonumber \\
-    & = & \sum^t_{j=1} 1 \nonumber \\
-    & = & t    
+En cuanto a la varianza:
+
+\begin{eqnarray}
+  Var[X_t] & = & Var \left[ \sum^t_{j=1} U_j \right] \nonumber \\
+  & = & \sum^t_{j=1} Var[U_j] + 2 * \sum_{j \neq k} Cov[U_j,U_k] \nonumber \\
+  & = & \sum^t_{j=1} 1 \nonumber \\
+  & = & t    
 \end{eqnarray}
 
 Lo anterior, dado que hemos supuesto que en la caminata aleatoria todas
 la variables aleatorias son independientes, es decir,
 \(Cov[U_t,U_s] = E[U_t \cdot U_s] = 0\). Por su parte, la covarianza del
-proceso estocástico se puede ver como: \begin{eqnarray*}
-    Cov[X_t,X_s] & = & \mathbb{E} \left[ \left( \sum^t_{j=1} U_j - 0 \right) \left( \sum^s_{i=1} U_i - 0 \right) \right] \\
-    & = & \mathbb{E}[(U_1 + U_2 + \ldots + U_t)(U_1 + U_2 + \ldots + U_s)] \\
-    & = & \sum^t_{j=1} \sum^s_{i=1} \mathbb{E}[U_j U_i] \\
-    & = & \mathbb{E}[U^2_1] + \mathbb{E}[U^2_2] + \ldots + \mathbb{E}[U^2_k] \\
-    & = & \sigma^2 + \sigma^2 + \ldots + \sigma^2 \\
-    & = & 1 + 1 + 1 + 1 \\
-    & = & min(t,s)
+proceso estocástico se puede ver como:
+
+\begin{eqnarray*}
+  Cov[X_t,X_s] & = & \mathbb{E} \left[ \left( \sum^t_{j=1} U_j - 0 \right) \left( \sum^s_{i=1} U_i - 0 \right) \right] \\
+  & = & \mathbb{E}[(U_1 + U_2 + \ldots + U_t)(U_1 + U_2 + \ldots + U_s)] \\
+  & = & \sum^t_{j=1} \sum^s_{i=1} \mathbb{E}[U_j U_i] \\
+  & = & \mathbb{E}[U^2_1] + \mathbb{E}[U^2_2] + \ldots + \mathbb{E}[U^2_k] \\
+  & = & \sigma^2 + \sigma^2 + \ldots + \sigma^2 \\
+  & = & 1 + 1 + 1 + 1 \\
+  & = & min(t,s)
 \end{eqnarray*}
 
 Así, el proceso estocástico dado por la caminata alaeatoria sin un
@@ -495,25 +560,47 @@ término que es independiente de las unidad de medida aplicada, y se
 conoce como la \textit{función de autocorrelación}.
 
 Para procesos estacionarios, dicha función de autocorrelación esta dada
-por: \[
-    \rho(\tau) = \frac{\mathbb{E}[(X_t - \mu)(X_{t+\tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\gamma(\tau)}{\gamma(0)} 
+por:
+
+\[
+\rho(\tau) = \frac{\mathbb{E}[(X_t - \mu)(X_{t+\tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\gamma(\tau)}{\gamma(0)} 
 \]
 
 Donde \(\tau = \ldots, -2, -1, 0, 1, 2, \ldots\). Dicha función tiene
 las siguientes propiedades:
 
 \begin{enumerate}
-    \item $\rho(0) = 1$. Es fácil demostrar que la función $\rho(0)$ es:
-\begin{equation*}
-    \rho(0) = \frac{\mathbb{E}[(X_t - \mu)(X_{t + 0} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\mathbb{E}[(X_t - \mu)^2]}{\mathbb{E}[(X_t - \mu)^2]} = 1
-\end{equation*}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\rho(0) = 1\). Es fácil demostrar que la función \(\rho(0)\) es:
+\end{enumerate}
 
-    \item $\rho(\tau) = \rho(-\tau)$. Partiendo de la definción de $\rho(\tau)$ podemos ver que la distancia que existe entre $t$ y $t + \tau$ es $\tau$, de esta forma la autocorrelación de la variable $X$ entre los periodos antes señalados debería ser la misma para el caso en que $\rho(-\tau)$. Partamos de la ecuación para ver más claramente:
-\begin{equation*}
-    \rho(\tau) = \frac{\mathbb{E}[(X_t - \mu)(X_{t + \tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\mathbb{E}[(X_t - \mu)(X_{t - \tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \rho(-\tau)
-\end{equation*}
+\[
+\rho(0) = \frac{\mathbb{E}[(X_t - \mu)(X_{t + 0} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\mathbb{E}[(X_t - \mu)^2]}{\mathbb{E}[(X_t - \mu)^2]} = 1
+\]
 
-    \item $\abs{\rho(\tau)} \leq 1$, para todo $\tau$.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\rho(\tau) = \rho(-\tau)\). Partiendo de la definción de
+  \(\rho(\tau)\) podemos ver que la distancia que existe entre \(t\) y
+  \(t + \tau\) es \(\tau\), de esta forma la autocorrelación de la
+  variable \(X\) entre los periodos antes señalados debería ser la misma
+  para el caso en que \(\rho(-\tau)\). Partamos de la ecuación para ver
+  más claramente:
+\end{enumerate}
+
+\[
+\rho(\tau) = \frac{\mathbb{E}[(X_t - \mu)(X_{t + \tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \frac{\mathbb{E}[(X_t - \mu)(X_{t - \tau} - \mu)]}{\mathbb{E}[(X_t - \mu)^2]} = \rho(-\tau)
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\abs{\rho(\tau)} \leq 1\), para todo \(\tau\).
 \end{enumerate}
 
 Derivado de las propiedades 1 y 2 antes descritas se puede concluir que
@@ -525,27 +612,30 @@ valores de la función de autocorrelación complementarios de
 Partiendo de los supuestos de ergodicidad en relación a la media,
 varianza y covarianzas de un proceso estacionario, podemos estimar
 dichos paramétros con las siguientes formulaciones o propuestas de
-estimadores puntuales: \[
-    \hat{\mu} = \frac{1}{T} \sum^T_{t=1} X_t
+estimadores puntuales:
+
+\[
+\hat{\mu} = \frac{1}{T} \sum^T_{t=1} X_t
 \]
 
 \[
-    \hat{\gamma}(0) = \frac{1}{T} \sum^T_{t=1} (X_t - \hat{\mu})^2 = \hat{\sigma}^2
+\hat{\gamma}(0) = \frac{1}{T} \sum^T_{t=1} (X_t - \hat{\mu})^2 = \hat{\sigma}^2
 \]
 
 \[
-    \hat{\gamma}(\tau) = \frac{1}{T} \sum^{T - \tau}_{t=1} (X_t - \hat{\mu})(X_{t+\tau} - \hat{\mu}) \mbox{, para } \tau = 1, 2, \ldots, T-1
+\hat{\gamma}(\tau) = \frac{1}{T} \sum^{T - \tau}_{t=1} (X_t - \hat{\mu})(X_{t+\tau} - \hat{\mu}) \mbox{, para } \tau = 1, 2, \ldots, T-1
 \]
 
 No hacemos la demostración en estas notas --sería deseable que el alumno
 revisará la afimación-- pero estos últimos son estimadores consistentes
 de \(\mu\), \(\gamma(0)\) y \(\gamma(\tau)\). Por su parte, un estimador
-consistente de la función de autocorrelación estará dado por: \[
-    \hat{\rho}(\tau) = \frac{\sum^{T - \tau}_{t=1} (X_t - \hat{\mu})(X_{t+\tau} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(\tau)}{\hat{\gamma}(0)} \mbox{, para } \tau = 1, 2, \ldots, T-1
-    \label{Eq_AutoCorr}
-\]
+consistente de la función de autocorrelación estará dado por:
 
-El estimador de la ecuación (\ref{Eq_AutoCorr}) es asintóticamente
+\begin{equation}\protect\hypertarget{eq-Eq_AutoCorr}{}{
+\hat{\rho}(\tau) = \frac{\sum^{T - \tau}_{t=1} (X_t - \hat{\mu})(X_{t+\tau} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(\tau)}{\hat{\gamma}(0)} \mbox{, para } \tau = 1, 2, \ldots, T-1
+}\label{eq-Eq_AutoCorr}\end{equation}
+
+El estimador de la ecuación (\textbf{?@eq-AutoCorr}) es asintóticamente
 insesgado. Por ejemplo, para el caso de un proceso de ruido blanco o
 caminata aleatoria, su varianza puede ser aproximada por el valor dado
 \(1/T\). Ésta tiene, asintóticamente, una distribución normal. Dado
@@ -557,16 +647,20 @@ Ahora discutamos algunos ejemplos o aplicaciones. Cuando se realiza la
 evaluación de la estimación de un modelo de series de tiempo es
 importante saber si los residuales del modelo realmente tienen
 propiedades de un proceso puramente aleatorio, en partícular, si ellos
-no están correlacionados entre sí. Así, la hipotésis a probar será: \[
-    H_0 : \rho(\tau) = 0 \mbox{, para todo } \tau = 1, 2, \ldots, m \mbox{ y } m < T
+no están correlacionados entre sí. Así, la hipotésis a probar será:
+
+\[
+H_0 : \rho(\tau) = 0 \mbox{, para todo } \tau = 1, 2, \ldots, m \mbox{ y } m < T
 \]
 
 Esta expresión se puede interpretar como una prueba respecto de si la
 correlación entre la información de periodos atrás es cero con la
 información contemporánea. Para hacer una pruena global de la hipotésis
 de sí un número \(m\) de coeficientes de autocovarianzas son cero Box y
-Pierce (1970) desarrollarón la siguiente estadística: \[
-    Q^* = T \sum_{j = 1}^{m} \hat{\rho} (j)^2
+Pierce (1970) desarrollarón la siguiente estadística:
+
+\[
+Q^* = T \sum_{j = 1}^{m} \hat{\rho} (j)^2
 \]
 
 Bajo la hipotésis nula esta estadística se distribulle asintóticamente
@@ -576,8 +670,10 @@ como una chi cuadrado (\(\chi^2\)) con \(m-k\) grados de libertad y con
 Haciendo una aplicación estricta de la distribución de esta estadística,
 sabemos que esta se mantiene asintóticamente. Greta, Ljung y Box (1978)
 propusieron la siguiente modificación de la estadística para muestras
-pequeñas: \[
-    Q = T(T + 2) \sum_{j = 1}^{m} \frac{\hat{\rho} (j)^2}{T - j}
+pequeñas:
+
+\[
+Q = T(T + 2) \sum_{j = 1}^{m} \frac{\hat{\rho} (j)^2}{T - j}
 \]
 
 La cual también se distribulle asintóticamente como \(\chi^2\) con
@@ -595,18 +691,23 @@ Lagrange (o LM) desarrollada por Breusch (1978) y Godfrey (1978). La
 cual, al igual que las estadísticas \(Q\) y \(Q^*\), la hipotesis nula
 está dada por:
 
-\begin{center}
-    $H_0$: Los residuales no están autocorrelacionados. \\
-    $H_a$: Los residuales muestran alguna acutocorrelación de forma autoregresiva o de medias móviles.
-\end{center}
+\begin{itemize}
+\item
+  \(H_0\): Los residuales no están autocorrelacionados.
+\item
+  \(H_a\): Los residuales muestran alguna acutocorrelación de forma
+  autoregresiva o de medias móviles.
+\end{itemize}
 
 La prueba consiste en realizar una regresión auxiliar en la cual los
 residuales se estiman en función de las variables explicativas del
 modelo original y en los residuales mismos pero rezagados hasta el
 término \(m\) (regresión auxiliar). La prueba resulta en una estadìstica
 con una distribución \(\chi^2\) con \(m\) grados de libertad la cual
-está dada por la expresión: \[
-    LM = T \times R^2
+está dada por la expresión:
+
+\[
+LM = T \times R^2
 \]
 
 Donde \(R^2\) es el resultante de la regresión auxiliar y \(T\) es el
@@ -618,9 +719,17 @@ residuales, las estadísticas \(Q\), \(Q^*\) y \(LM\) tienen las
 siguientes ventajas:
 
 \begin{enumerate}
-    \item Permiten corroborar la existencia de autocorrelación para cualquier orden, y no solo para un primer orden (es decir, para cualquier valor de $\tau = 1, 2, 3, \ldots$);
-    \item Los resultados se mantienen aún y cuando exista una probable variable endógena en forma rezagada, y
-    \item No depende del orden o la forma en que se acomoden las observaciones, algo que es muy probalble que ocurra en la econometría tradicional.
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Permiten corroborar la existencia de autocorrelación para cualquier
+  orden, y no solo para un primer orden (es decir, para cualquier valor
+  de \(\tau = 1, 2, 3, \ldots\));
+\item
+  Los resultados se mantienen aún y cuando exista una probable variable
+  endógena en forma rezagada, y
+\item
+  No depende del orden o la forma en que se acomoden las observaciones,
+  algo que es muy probalble que ocurra en la econometría tradicional.
 \end{enumerate}
 
 El hecho de los residuales no estén autocorrelacionados no implica que
@@ -632,21 +741,27 @@ A menudo se asume que estos residuales están distribuidos normalmente,
 ya que la mayoría de las pruebas estadísticas tienen este supuesto
 detrás. No obstante, ello también depende de los otros momentos de la
 distribución, específicamente del tercer y cuarto momento. Los cuales
-expresan como: \begin{equation*}
-    \mathbb{E}[(X_t - \mathbb{E}[X_t])^i] \mbox{, } i = 3, 4
-\end{equation*}
+expresan como:
+
+\[
+\mathbb{E}[(X_t - \mathbb{E}[X_t])^i] \mbox{, } i = 3, 4
+\]
 
 El tercer momento es necesario para determinar el sesgo, el cual esta
-dado como: \[
-    \hat{S} = \frac{1}{T} \frac{\sum_{t = 1}^{T} (X_t - \hat{\mu})^3}{\sqrt{\hat{\gamma}(0)^3}}
+dado como:
+
+\[
+\hat{S} = \frac{1}{T} \frac{\sum_{t = 1}^{T} (X_t - \hat{\mu})^3}{\sqrt{\hat{\gamma}(0)^3}}
 \]
 
 Para distribuciones simetricas (como en el caso de la distribución
 normal) el valor teórico para el sesgo es cero.
 
 La curtosis, la cual esta dada en función del cuarto momento, se puede
-expresar como: \[
-    \hat{K} = \frac{1}{T} \frac{\sum_{t = 1}^{T} (X_t - \hat{\mu})^4}{\hat{\gamma}(0)^2}
+expresar como:
+
+\[
+\hat{K} = \frac{1}{T} \frac{\sum_{t = 1}^{T} (X_t - \hat{\mu})^4}{\hat{\gamma}(0)^2}
 \]
 
 Para el caso de una distribución normal, esta estadística toma el valor
@@ -657,8 +772,9 @@ Usando el valor de las estadísticas para medir el sesgo y la curtosis,
 \(S\) y \(K\), respectivamente, Jarque y Bera (1980) propusieron una
 prueba de normalidad, la cual puede ser aplicada a series de tiempo en
 niveles o en diferencias indistintamente. Dicha prueba se expresa como:
+
 \[
-    JB = \frac{T}{6} \left(\hat{S} + \frac{1}{4} (\hat{K} - 3)^2 \right) 
+JB = \frac{T}{6} \left(\hat{S} + \frac{1}{4} (\hat{K} - 3)^2 \right) 
 \]
 
 La cual tiene una distribución \(\chi^2\) con \(2\) grados de libertad y
@@ -681,7 +797,7 @@ septiembre de 2017.
 
 \begin{figure}
   \centering
-    \includegraphics[width=1.0\textwidth]{Pax_Metro}
+  \includegraphics[width=1.0\textwidth]{Pax_Metro}
   \caption{Evolución del número de pasajeros en el Metro de la CDMX, enero de 2000 a junio de 2019}
   \label{Pax_Metro}
 \end{figure}
@@ -695,31 +811,53 @@ las líneas azules son el intervalo de confianza desntro de las cuales no
 se puede rechazar la hipotésis nula de que \(H_0: \hat{\rho}(p) = 0\),
 para todo \(\tau = 1, 2, \ldots, T-1\).
 
-\begin{table}
-\centering
-\begin{tabular}{| c | r |}
-\hline
-Estadística & Valor \\
-\hline
-$\hat{\mu} = \frac{1}{T} \sum^T_{t=1} X_t$ & 124.3000 \\
-$\hat{\gamma}(0) = \frac{1}{T} \sum^T_{t=1} (X_t - \hat{\mu})^2$ & 103.6400 \\
-$\hat{\gamma}(1) = \frac{1}{T} \sum^{T - 1}_{t=1} (X_t - \hat{\mu})(X_{t+1} - \hat{\mu}) $ & 63.1100 \\
-$\hat{\gamma}(2) = \frac{1}{T} \sum^{T - 2}_{t=1} (X_t - \hat{\mu})(X_{t+2} - \hat{\mu}) $ & 72.9100 \\
-$\hat{\gamma}(3) = \frac{1}{T} \sum^{T - 3}_{t=1} (X_t - \hat{\mu})(X_{t+3} - \hat{\mu}) $ & 63.6900 \\
-$\hat{\rho}(1) = \frac{\sum^{T - 1}_{t=1} (X_t - \hat{\mu})(X_{t+1} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(1)}{\hat{\gamma}(0)}$ & 0.6089 \\
-$\hat{\rho}(2) = \frac{\sum^{T - 2}_{t=1} (X_t - \hat{\mu})(X_{t+2} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(2)}{\hat{\gamma}(0)}$ & 0.7035 \\
-$\hat{\rho}(3) = \frac{\sum^{T - 3}_{t=1} (X_t - \hat{\mu})(X_{t+3} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(3)}{\hat{\gamma}(0)}$ & 0.6145 \\
-$Q^* = T \sum_{j = 1}^{1} \hat{\rho} (j)^2$ & 86.7577 \\
-$Q^* = T \sum_{j = 1}^{2} \hat{\rho} (j)^2$ & 290.9279 \\
-\hline
-\end{tabular}
-\caption{Estadísticas descriptivas del número de pasajeros en el Metro de la CDMX, enero de 2000 a junio de 2019}
-\label{Est_Pax}
-\end{table}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7778}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2222}}@{}}
+\caption{Estadísticas descriptivas del número de pasajeros en el Metro
+de la CDMX, enero de 2000 a junio de 2019}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Estadística
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valor
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Estadística
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valor
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\hat{\mu} = \frac{1}{T} \sum^T_{t=1} X_t\) & 124.3000 \\
+\(\hat{\gamma}(0) = \frac{1}{T} \sum^T_{t=1} (X_t - \hat{\mu})^2\) &
+103.6400 \\
+\(\hat{\gamma}(1) = \frac{1}{T} \sum^{T - 1}_{t=1} (X_t - \hat{\mu})(X_{t+1} - \hat{\mu})\)
+& 63.1100 \\
+\(\hat{\gamma}(2) = \frac{1}{T} \sum^{T - 2}_{t=1} (X_t - \hat{\mu})(X_{t+2} - \hat{\mu})\)
+& 72.9100 \\
+\(\hat{\gamma}(3) = \frac{1}{T} \sum^{T - 3}_{t=1} (X_t - \hat{\mu})(X_{t+3} - \hat{\mu})\)
+& 63.6900 \\
+\(\hat{\rho}(1) = \frac{\sum^{T - 1}_{t=1} (X_t - \hat{\mu})(X_{t+1} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(1)}{\hat{\gamma}(0)}\)
+& 0.6089 \\
+\(\hat{\rho}(2) = \frac{\sum^{T - 2}_{t=1} (X_t - \hat{\mu})(X_{t+2} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(2)}{\hat{\gamma}(0)}\)
+& 0.7035 \\
+\(\hat{\rho}(3) = \frac{\sum^{T - 3}_{t=1} (X_t - \hat{\mu})(X_{t+3} - \hat{\mu})}{\sum^T_{t=1} (X_t - \hat{\mu})^2} = \frac{\hat{\gamma}(3)}{\hat{\gamma}(0)}\)
+& 0.6145 \\
+\(Q^* = T \sum_{j = 1}^{1} \hat{\rho} (j)^2\) & 86.7577 \\
+\(Q^* = T \sum_{j = 1}^{2} \hat{\rho} (j)^2\) & 290.9279 \\
+\end{longtable}
+
+label\{Est\_Pax\}
 
 \begin{figure}
   \centering
-    \includegraphics[width = 0.8\textwidth]{ACF_Metro}
+  \includegraphics[width = 0.8\textwidth]{ACF_Metro}
   \caption{Función de Autocorrelación: 150 rezagos del número de pasajeros en el Metro de la CDMX, enero de 2000 a junio de 2019}
   \label{Correlograma}
 \end{figure}

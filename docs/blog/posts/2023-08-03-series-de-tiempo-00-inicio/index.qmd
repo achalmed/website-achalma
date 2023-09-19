@@ -123,7 +123,7 @@ plot(IPC_BMV, type = "l", lwd = 1, col = "red", ylab = "Indice", xlab = "Tiempo"
 plot(TDC, type = "l", lwd = 1, col = "blue", ylab = "Pesos X Dolar", xlab = "Tiempo")
 ```
 
-Así, es probable que las dos series de tiempo exhiban un gran peso para los eventos pasados, pero a la vez, un componente -probablemente menor- del componente de frecuencia. Esto último en razón de que los consumidores suelen considerar en sus expectativas de consumo los periódos cíclicos de la economía: temporadas navideñaas, pagos de colegiaturas, etc. Este sengundo ejemplo tambien ilustra que la confianza del consumidor no necesariamente está directamente correlacionada con el desempeño de la economía.
+Así, es probable que las dos series de tiempo exhiban un gran peso para los eventos pasados, pero a la vez, un componente -probablemente menor- del componente de frecuencia. Esto último en razón de que los consumidores suelen considerar en sus expectativas de consumo los periodos cíclicos de la economía: temporadas navideñas, pagos de colegiaturas, etc. Este segundo ejemplo también ilustra que la confianza del consumidor no necesariamente está directamente correlacionada con el desempeño de la economía.
 
 Como tercer ejemplo se muestra la evolución de dos series. La Figura @fig-fig3 ilustra el comportamiento reciente de dos indicadores que son referencia para los inversionistas. Por un lado, se ubica el índice de Precios y Cotizaciones de la BMV (IPC), el cuál refleja el valor de las acciones de empresas que cotizan en la BMV y el volumen de acciones comercializadas, en conjunto. De esta forma, se ha interpretado que el IPC refleja el rendimiento del capital promedio invertido en las empresas que cotizan en la BMV.
 
@@ -148,7 +148,7 @@ par(new = F)
 
 En la perspectiva de la Figura @fig-fig4 se puede apreciar que el TDC no es tan rentable, ya que una inversión en la BMV mediante el IPC, en el largo plazo, muestra más redimientos. Asimismo, la Figura @fig-fig4) ilustra que en ambas series se observa un dominio de la condición de tiempo y no uno de frecuencia. Es decir, tanto el IPC como el TDC no responden a condiciones como ciclos o temporadas que si son observables en actividades económicas como las primarias.
 
-Finalmente, la Figura @fig-fig5 ilustra un característica que también resulta de gran interés en el analásis de series de tiempo: los datos de alta frecuencia y de comportamiento no regular. Como se puede observar, en la Figura @fig-fig5 se muestran las diferencias logarítmicas de las series de IGAE de la actividad total, el IPC y el TDC.
+Finalmente, la Figura @fig-fig5 ilustra un característica que también resulta de gran interés en el análisis de series de tiempo: los datos de alta frecuencia y de comportamiento no regular. Como se puede observar, en la Figura @fig-fig5 se muestran las diferencias logarítmicas de las series de IGAE de la actividad total, el IPC y el TDC.
 
 ```{r}
 #| label: fig-fig5
@@ -169,20 +169,17 @@ plot(diff(log(TDC), lag = 1), type = "l", lwd = 1, col = "blue", ylab = "Pesos X
 
 Dichas diferencia se pueden interpretar como una tasa de crecimiento de las series por las siguientes razones. Consideremos una serie de tiempo dada por $y_t$, cuya versión logarítmica es $ln(y_t)$. De esta forma, la diferencia logarítmica esta dada por la ecuación (@eq-difflog):
 
-
 $$
 \Delta ln(y*t) = ln(y_t) - ln(y*{t-1}) = ln \left( \frac{y*t}{y*{t-1}} \right)
 $$ {#eq-difflog}
 
 Ahora bien, si retomamos la definición de tasa de crecimiento (TC) de una serie de tiempo $y_t$ entre el periodo $t$ y $t-1$ podemos obtener que:
 
-
 $$
 TC = \frac{y*t - y*{t-1}}{y*{t-1}} = \frac{y_t}{y*{t-1}} - 1
 $$ {#eq-TC}
 
 De esta forma, si tomamos el logarítmo de la expresión de la ecuación (@eq-TC) obtenemos la siguiente aproximación:
-
 
 $$
 \frac{y*t}{y*{t-1}} -1 \approx ln \left( \frac{y*t}{y*{t-1}} \right) = ln(y*t) - ln(y*{t-1})
@@ -192,4 +189,4 @@ La ecuación (@eq-TCDiffLog) es cierta cuando los valores de $y_t$ y $y_{t-1}$ s
 
 En la Figura @fig-fig5 se reportan las diferencias logarítmicas del IGAE, IPC y TDC, todos, como una media de distitntos tipos de redimientos. Es decir, podemos decir que un capitalista promedio (suponiendo que solo puede invertir en la actividad económica, en la bolsa o en el dólar), puede observar que le es más redituable en función de sus preferencias.
 
-Notése que la dinámica de las variaciones de cada una de las series es significativamente diferente. Destaca que el TDC es una de las variables que, en general, no muestra grandes cambios a lo largo del tiempo. No obstante, se han observado cambios radicales, cuando menos en el año 2008. Lo anterior, son caracteristicas que se han observado para el IPC. En cambio, el IGAE muestra un comportamiento más estable o estacionario.
+Notése que la dinámica de las variaciones de cada una de las series es significativamente diferente. Destaca que el TDC es una de las variables que, en general, no muestra grandes cambios a lo largo del tiempo. No obstante, se han observado cambios radicales, cuando menos en el año 2008. Lo anterior, son características que se han observado para el IPC. En cambio, el IGAE muestra un comportamiento más estable o estacionario.

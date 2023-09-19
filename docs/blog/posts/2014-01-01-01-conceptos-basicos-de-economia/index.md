@@ -9,7 +9,9 @@ tags:
   - EconomíaBásica
   - Economía
 date: "01/01/2014"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
 
 
 

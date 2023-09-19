@@ -23,6 +23,7 @@ date: "08/27/2023"
 
 
 
+
 # Introducción
 
 Estas notas son un resumen, una síntesis comparativa y, en algunos casos, una interpretación propia de los libros de texto de Cowpertwait y Metcalfe (2009), Guerrero-Guzmán (2014), Enders (2015), Franses y van Dijk (2003), Kirchgassner, Wolters, y Hassler (2012), Lutkepohl (2005), Wei (2019), entre otros. En algunos casos se incorpora información adicional para efectos de dar contexto al tema analizado (ver sección de Bibliografía para mayores detalles).
@@ -48,9 +49,11 @@ En estas notas se estudian los temas que típicamente son incluidos como parte d
 8.  Modelos no lineales como los de cambios de régimen.
 
 
+
 ::: {.cell}
 
 :::
+
 
 
 ## a) La naturaleza de los datos de Series de Tiempo
@@ -58,6 +61,7 @@ En estas notas se estudian los temas que típicamente son incluidos como parte d
 El análisis de series de tiempo tiene muchas aplicaciones en diversos campos de la ciencia. Por ejemplo, en la economía continuamente se está expuesto a observaciones de los mercados financieros, indicadores de empleo, índices o indicadores del nivel de producción, índices de precios, etc. En otros campos de las ciencias sociales se emplea el análisis de series de tiempo para analizar la evolución de la población, los nacimientos, o el número de personas con matriculas escolares. Finalmente, en las ciencias exactas se pueden encontrar casos como los de un epidemiólogo que puede estar interesado en el número de casos de influenza observados en algún periodo de tiempo dado y si a estos se les puede asociar con algún tipo de estacionalidad o si se trata del inicio de un fenómeno atípico.
 
 La primera aproximación que se suele tener a las series de tiempo es mediante el exámen de datos puestos en una gráfica, en la cual uno de los ejes es el tiempo y el otro es el valor tomado por la variable. No obstante, en este tipo de exámenes existen dos enfoques. Por un lado, existe el efoque de la importancia del tiempo, el cual consiste en reconocer cómo lo que sucede hoy es afectado por lo que pasó ayer o, en general, en periodos pasados, o cómo lo que pasa hoy afectará los eventos futuros. Por otro lado, existe el enfoque del análisis frecuentista o de frecuencia, mediante el cual se busca reconocer la importancia que tiene para los investigadores los ciclos (estacionales, de crisis económicas, etc.)
+
 
 
 ::: {.cell}
@@ -82,9 +86,10 @@ par(new = F)
 ```
 
 ::: {.cell-output-display}
-![Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021](index_files/figure-html/fig-fig1-1.png){#fig-fig1 fig-alt='Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021' width=672}
+![Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021](index_files/figure-pdf/fig-fig1-1.pdf){#fig-fig1 fig-pos='H' fig-alt='Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021'}
 :::
 :::
+
 
 
 ## b) Ejemplos y aplicaciones de las Series de Tiempo
@@ -92,6 +97,7 @@ par(new = F)
 Un primer ejemplo que puede ilustrar la presencia de los dos tipos de enfoques antes mencionadas es la Figura @fig-fig1. En esta figura se muestra la evolución del Indicador Global de la Actividad Económica (IGAE) en su versión global o del total de la economía y en su versión únicamente para las actividades primarias entre enero de 2002 y mayo de 2021.
 
 Como se puede observar, el IGAE del total de la economía muestra, principalmente, que el enfoque del tiempo es más relevante. Es decir, que existe cierta persistencia en el indicador, lo que significa que la economía crece en razón del crecimiento reportado en periodos pasados. No obstante, lo que no podemos reconocer es que los eventos futuros tienen un efecto en el desempeño de la economía hoy día. Así, no es común observar cambios abruptos del indicador, salvo por la crisis global de 2008 y la reciente crisis causada por la Covid-19.
+
 
 
 ::: {.cell}
@@ -108,9 +114,10 @@ par(new = F)
 ```
 
 ::: {.cell-output-display}
-![índice de Confianza del Consumidor (ICC): General y resultado de ¿Cómo considera usted la situación economica del país hoy en día comparada con la de hace 12 meses? (puntos), Ene.2002-may.2021](index_files/figure-html/fig-fig2-1.png){#fig-fig2 width=672}
+![índice de Confianza del Consumidor (ICC): General y resultado de ¿Cómo considera usted la situación economica del país hoy en día comparada con la de hace 12 meses? (puntos), Ene.2002-may.2021](index_files/figure-pdf/fig-fig2-1.pdf){#fig-fig2 fig-pos='H'}
 :::
 :::
+
 
 
 Por el contrario, el IGAE de las actividades primarias muestra una presencia significativa de la importancia de la frecuencia. No pasa desapercibido que existen muchos ciclos en la evolución del indicador. Algo que suena común en las actividades primarias, cuya producción depende de eventos que son ciclícos agrícolas asociados con el clima u otros factores determinantes de la oferta de productos agrícolas. Otro factor que puede incluir en el indicador son elementos de demanda, más que los de oferta. Por ejemplo, el consumo de alimentos típicos de algunas temporadas del año.
@@ -118,6 +125,7 @@ Por el contrario, el IGAE de las actividades primarias muestra una presencia sig
 Como segundo ejemplo, en la Figura @fig-fig2 se ilustra la evolución reciente del índice de Confianza del Consumidor (ICC) en dos de sus versiones: i) el Índice global y ii) el Índice de confianza de los consumidores cuando estos consideran la situación actual en la economía en relación el año anterior.
 
 Destacamos que el ICC mide las expectativas de los consumidores en razón de la información pasada y de la esperada, segun dichos consumidores.
+
 
 
 ::: {#fig-fig3 .cell layout-ncol="2"}
@@ -130,22 +138,24 @@ plot(TDC, type = "l", lwd = 1, col = "blue", ylab = "Pesos X Dolar", xlab = "Tie
 ```
 
 ::: {.cell-output-display}
-![Indice de Precios y Cotizaciones BMV](index_files/figure-html/fig-fig3-1.png){#fig-fig3-1 width=672}
+![Indice de Precios y Cotizaciones BMV](index_files/figure-pdf/fig-fig3-1.pdf){#fig-fig3-1}
 :::
 
 ::: {.cell-output-display}
-![Tipo de Cambio](index_files/figure-html/fig-fig3-2.png){#fig-fig3-2 width=672}
+![Tipo de Cambio](index_files/figure-pdf/fig-fig3-2.pdf){#fig-fig3-2}
 :::
 
 índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) y Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera, pesos por dólar (Panel izquierdo), Ene.2002-May.2021
 :::
 
 
-Así, es probable que las dos series de tiempo exhiban un gran peso para los eventos pasados, pero a la vez, un componente -probablemente menor- del componente de frecuencia. Esto último en razón de que los consumidores suelen considerar en sus expectativas de consumo los periódos cíclicos de la economía: temporadas navideñaas, pagos de colegiaturas, etc. Este sengundo ejemplo tambien ilustra que la confianza del consumidor no necesariamente está directamente correlacionada con el desempeño de la economía.
+
+Así, es probable que las dos series de tiempo exhiban un gran peso para los eventos pasados, pero a la vez, un componente -probablemente menor- del componente de frecuencia. Esto último en razón de que los consumidores suelen considerar en sus expectativas de consumo los periodos cíclicos de la economía: temporadas navideñas, pagos de colegiaturas, etc. Este segundo ejemplo también ilustra que la confianza del consumidor no necesariamente está directamente correlacionada con el desempeño de la economía.
 
 Como tercer ejemplo se muestra la evolución de dos series. La Figura @fig-fig3 ilustra el comportamiento reciente de dos indicadores que son referencia para los inversionistas. Por un lado, se ubica el índice de Precios y Cotizaciones de la BMV (IPC), el cuál refleja el valor de las acciones de empresas que cotizan en la BMV y el volumen de acciones comercializadas, en conjunto. De esta forma, se ha interpretado que el IPC refleja el rendimiento del capital promedio invertido en las empresas que cotizan en la BMV.
 
 Por otro lado, en la Figura @fig-fig3 se presenta la evolución del Tipo de Cambio (TDC){indicador financiero que se suele utilizar como medio de reserva de valor. Esto, en razón de que el TDC es conocido como un instrumento que en momentos de crisis toma valores contraciclicos de la economía mexicana. No obstante, ambos indicadores no son comparables. Para hacerlos comparbles en la Figura @fig-fig4 se presentan en versión índice con una base en el primer mes de la muestra.
+
 
 
 ::: {.cell}
@@ -165,14 +175,16 @@ par(new = F)
 ```
 
 ::: {.cell-output-display}
-![Índice del índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) e Índice del Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera (ambos enero de 2002 = 100), pesos por dólar (Panel izquierdo), Ene.2002-May.2021](index_files/figure-html/fig-fig4-1.png){#fig-fig4 width=672}
+![Índice del índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) e Índice del Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera (ambos enero de 2002 = 100), pesos por dólar (Panel izquierdo), Ene.2002-May.2021](index_files/figure-pdf/fig-fig4-1.pdf){#fig-fig4 fig-pos='H'}
 :::
 :::
+
 
 
 En la perspectiva de la Figura @fig-fig4 se puede apreciar que el TDC no es tan rentable, ya que una inversión en la BMV mediante el IPC, en el largo plazo, muestra más redimientos. Asimismo, la Figura @fig-fig4) ilustra que en ambas series se observa un dominio de la condición de tiempo y no uno de frecuencia. Es decir, tanto el IPC como el TDC no responden a condiciones como ciclos o temporadas que si son observables en actividades económicas como las primarias.
 
-Finalmente, la Figura @fig-fig5 ilustra un característica que también resulta de gran interés en el analásis de series de tiempo: los datos de alta frecuencia y de comportamiento no regular. Como se puede observar, en la Figura @fig-fig5 se muestran las diferencias logarítmicas de las series de IGAE de la actividad total, el IPC y el TDC.
+Finalmente, la Figura @fig-fig5 ilustra un característica que también resulta de gran interés en el análisis de series de tiempo: los datos de alta frecuencia y de comportamiento no regular. Como se puede observar, en la Figura @fig-fig5 se muestran las diferencias logarítmicas de las series de IGAE de la actividad total, el IPC y el TDC.
+
 
 
 ::: {#fig-fig5 .cell layout-nrow="3"}
@@ -187,23 +199,23 @@ plot(diff(log(TDC), lag = 1), type = "l", lwd = 1, col = "blue", ylab = "Pesos X
 ```
 
 ::: {.cell-output-display}
-![Indicador Global de la Actividad Economica](index_files/figure-html/fig-fig5-1.png){#fig-fig5-1 width=672}
+![Indicador Global de la Actividad Economica](index_files/figure-pdf/fig-fig5-1.pdf){#fig-fig5-1}
 :::
 
 ::: {.cell-output-display}
-![Indice de Precios y Cotizaciones BMV](index_files/figure-html/fig-fig5-2.png){#fig-fig5-2 width=672}
+![Indice de Precios y Cotizaciones BMV](index_files/figure-pdf/fig-fig5-2.pdf){#fig-fig5-2}
 :::
 
 ::: {.cell-output-display}
-![Tipo de Cambio](index_files/figure-html/fig-fig5-3.png){#fig-fig5-3 width=672}
+![Tipo de Cambio](index_files/figure-pdf/fig-fig5-3.pdf){#fig-fig5-3}
 :::
 
 Tasas de Crecimiento mensuales (diferencias logarítmicas) de Indicador Global de la Actividad Económica, Índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) y Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera, Ene.2002-May.2021
 :::
 
 
-Dichas diferencia se pueden interpretar como una tasa de crecimiento de las series por las siguientes razones. Consideremos una serie de tiempo dada por $y_t$, cuya versión logarítmica es $ln(y_t)$. De esta forma, la diferencia logarítmica esta dada por la ecuación (@eq-difflog):
 
+Dichas diferencia se pueden interpretar como una tasa de crecimiento de las series por las siguientes razones. Consideremos una serie de tiempo dada por $y_t$, cuya versión logarítmica es $ln(y_t)$. De esta forma, la diferencia logarítmica esta dada por la ecuación (@eq-difflog):
 
 $$
 \Delta ln(y*t) = ln(y_t) - ln(y*{t-1}) = ln \left( \frac{y*t}{y*{t-1}} \right)
@@ -211,13 +223,11 @@ $$ {#eq-difflog}
 
 Ahora bien, si retomamos la definición de tasa de crecimiento (TC) de una serie de tiempo $y_t$ entre el periodo $t$ y $t-1$ podemos obtener que:
 
-
 $$
 TC = \frac{y*t - y*{t-1}}{y*{t-1}} = \frac{y_t}{y*{t-1}} - 1
 $$ {#eq-TC}
 
 De esta forma, si tomamos el logarítmo de la expresión de la ecuación (@eq-TC) obtenemos la siguiente aproximación:
-
 
 $$
 \frac{y*t}{y*{t-1}} -1 \approx ln \left( \frac{y*t}{y*{t-1}} \right) = ln(y*t) - ln(y*{t-1})
@@ -227,4 +237,4 @@ La ecuación (@eq-TCDiffLog) es cierta cuando los valores de $y_t$ y $y_{t-1}$ s
 
 En la Figura @fig-fig5 se reportan las diferencias logarítmicas del IGAE, IPC y TDC, todos, como una media de distitntos tipos de redimientos. Es decir, podemos decir que un capitalista promedio (suponiendo que solo puede invertir en la actividad económica, en la bolsa o en el dólar), puede observar que le es más redituable en función de sus preferencias.
 
-Notése que la dinámica de las variaciones de cada una de las series es significativamente diferente. Destaca que el TDC es una de las variables que, en general, no muestra grandes cambios a lo largo del tiempo. No obstante, se han observado cambios radicales, cuando menos en el año 2008. Lo anterior, son caracteristicas que se han observado para el IPC. En cambio, el IGAE muestra un comportamiento más estable o estacionario.
+Notése que la dinámica de las variaciones de cada una de las series es significativamente diferente. Destaca que el TDC es una de las variables que, en general, no muestra grandes cambios a lo largo del tiempo. No obstante, se han observado cambios radicales, cuando menos en el año 2008. Lo anterior, son características que se han observado para el IPC. En cambio, el IGAE muestra un comportamiento más estable o estacionario.

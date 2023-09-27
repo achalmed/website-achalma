@@ -17,6 +17,7 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
 # Introducción a Vim
 
 ¿Estás buscando mejorar tu fluidez y productividad al editar texto en Vim? ¿Quieres dominar los atajos de teclado y comandos que te permitirán aprovechar al máximo este potente editor de texto? ¡Has llegado al lugar indicado!

@@ -1,0 +1,19 @@
+---
+title: Indicadores economicos
+subtitle: Exp
+description: |
+  Descubre ...
+categories:
+  - Economía Básica
+tags:
+  - EconomíaBásica
+  - Economía
+date: "03/15/2014"
+---
+
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_economia-basica.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

@@ -2,15 +2,48 @@
 title: Blogs
 subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
 listing:
-  sort: 
-    - "date desc"
-    - "title desc"
-  contents: "posts/*/index.qmd"
-  type: default
-  sort-ui: [title, date]
-  filter-ui: true
-  categories: true
-  feed: true
+  - id: ultimas-entradas
+    contents: 
+      - "01-fundamentos-econometria/*/index.qmd"
+      - "02-macroeconometria/*/index.qmd"
+      - "03-microeconometria/*/index.qmd"
+      - "04-econometria-financiera/*/index.qmd"
+      - "05-econometria-bayesiana/*/index.qmd"
+      - "06-evaluacion-impacto/*/index.qmd"
+      - "07-econometria-y-topicos-economia-empirica/*/index.qmd"
+      - "bloomberg/*/index.qmd"
+      - "cpp/*/index.qmd"
+      - "econometria/*/index.qmd"
+      - "economia-basica/*/index.qmd"
+      - "estadistica/*/index.qmd"
+      - "estadistica-para-economistas/*/index.qmd"
+      - "eviews/*/index.qmd"
+      - "filosofia/*/index.qmd"
+      - "finanzas/*/index.qmd"
+      - "finanzas-internacionales/*/index.qmd"
+      - "fundamentos-programacion/*/index.qmd"
+      - "gestion-publica/*/index.qmd"
+      - "i3wm/*/index.qmd"
+      - "latex/*/index.qmd"
+      - "machine-learning-con-r/*/index.qmd"
+      - "macroeconomia/*/index.qmd"
+      - "matlab/*/index.qmd"
+      - "microeconomia/*/index.qmd"
+      - "ofimatica/*/index.qmd"
+      - "operating-system/*/index.qmd"
+      - "organizacion-industrial/*/index.qmd"
+      - "posts/*/index.qmd"
+      - "power-bi/*/index.qmd"
+      - "python/*/index.qmd"
+      - "stata/*/index.qmd"
+    type: default
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    filter-ui: true
+    categories: numbered
+    feed: true
 page-layout: full
 # margin-header: signup.html
 title-block-banner: "#EDF3F9"
@@ -19,5 +52,4 @@ css: index.css
 search: false
 comments: false
 ---
-
 

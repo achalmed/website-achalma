@@ -78,6 +78,26 @@
 \def\fps@figure{htbp}
 \makeatother
 
+% Preámbulo
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{amsthm} % Teoremas y entornos de demostración
+\usepackage{float} % Control de posiciones de figuras y tablas
+\usepackage{rotating} % Rotación de elementos
+\usepackage{multirow} % Celdas combinadas en tablas
+\usepackage{tabularx} % Tablas con ancho de columna ajustable
+\usepackage{mdframed} % Marcos alrededor de elementos flotantes
+
+% Series de tiempo
+\usepackage{booktabs}
+
+
+% Configuración adicional
+
 \makeatletter
 \makeatother
 \makeatletter
@@ -175,7 +195,7 @@ regional.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, interior hidden, breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{pauxedses-en-vuxedas-de-desarrollo}{%
 \section{Países en vías de

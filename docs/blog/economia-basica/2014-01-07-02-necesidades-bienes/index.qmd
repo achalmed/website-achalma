@@ -1,0 +1,18 @@
+---
+title: Las necesidades y bienes
+subtitle: Exp
+description: |
+  Descubre ...
+categories:
+  - Economía Básica
+tags:
+  - EconomíaBásica
+  - Economía
+date: "01/07/2014"
+---
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_economia-basica.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

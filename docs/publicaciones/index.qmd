@@ -1,17 +1,360 @@
 ---
 title: Publicaciones
 subtitle: Haga clic en el enlace para descargar cada documento en formato pdf.
+page-layout: full
 listing:
-  sort:
-    - "date desc"
-    - "title desc"
-  contents: "posts/*/index.qmd"
-  type: default
-  sort-ui: [title, date]
-  filter-ui: false
-  categories: false
-  feed: false
-page-layout: article
+  - id: 01-fundamentos-econometria
+    contents: "../blog/01-fundamentos-econometria/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 02-macroeconometria
+    contents: "../blog/02-macroeconometria/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 03-microeconometria
+    contents: "../blog/03-microeconometria/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 04-econometria-financiera
+    contents: "../blog/04-econometria-financiera/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 05-econometria-bayesiana
+    contents: "../blog/05-econometria-bayesiana/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 06-evaluacion-impacto
+    contents: "../blog/06-evaluacion-impacto/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: 07-econometria-y-topicos-economia-empirica
+    contents: "../blog/07-econometria-y-topicos-economia-empirica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: bloomberg
+    contents: "../blog/bloomberg/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: cpp
+    contents: "../blog/cpp/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: econometria
+    contents: "../blog/econometria/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: economia-basica
+    contents: "../blog/economia-basica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: estadistica
+    contents: "../blog/estadistica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: estadistica-para-economistas
+    contents: "../blog/estadistica-para-economistas/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table 
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: eviews
+    contents: "../blog/eviews/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: filosofia
+    contents: "../blog/filosofia/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: finanzas
+    contents: "../blog/finanzas/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: finanzas-internacionales
+    contents: "../blog/finanzas-internacionales/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: fundamentos-programacion
+    contents: "../blog/fundamentos-programacion/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: gestion-publica
+    contents: "../blog/gestion-publica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: i3wm
+    contents: "../blog/i3wm/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: latex
+    contents: "../blog/latex/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: machine-learning-con-r
+    contents: "../blog/machine-learning-con-r/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: macroeconomia
+    contents: "../blog/macroeconomia/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: matlab
+    contents: "../blog/matlab/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: microeconomia
+    contents: "../blog/microeconomia/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: ofimatica
+    contents: "../blog/ofimatica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: operating-system
+    contents: "../blog/operating-system/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: organizacion-industrial
+    contents: "../blog/organizacion-industrial/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: posts
+    contents: "../blog/posts/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: power-bi
+    contents: "../blog/power-bi/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: python
+    contents: "../blog/python/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+  - id: stata
+    contents: "../blog/stata/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
 # margin-header: signup.html
 title-block-banner: "#EDF3F9"
 title-block-banner-color: body
@@ -19,231 +362,163 @@ search: false
 comments: false
 ---
 
-<html>
 
-<body>
-    <h3>2023</h3>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 17). Perspectivas Monetarias Globales.
-        Análisis de Regímenes Cambiarios y el Futuro del FMI. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 16). Perspectivas Globales. Explorando los
-        Fundamentos y Alcances de las Finanzas Internacionales. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 15). El Mercado Relevante Industrial de
-        Bienes y el Mercado Geográfico. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-15-mercado-relevante-oi-cap-2/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-15-mercado-relevante-oi-cap-2</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 13). La Empresa como Organización.
-        Promoviendo Valores Cooperativos, Humanos y Sociales. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-13-empresa-como-organizacion/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-13-empresa-como-organizacion</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 13). Introducción a los Sistemas
-        Económicos. Cómo se distribuyen los recursos y se producen. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-13-sistemas-economicos/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-13-sistemas-economicos</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 12). Manipulación de datos en R. Retrieved
-        from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-4-manipulacion-datos-r/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-4-manipulacion-datos-r</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 12). Introducción a organización
-        industrial. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-12-introducion-organizacion-industrial/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-12-introducion-organizacion-industrial</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 11). Lo que debemos saber de R. Retrieved
-        from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-3-debemos-saber-r/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-3-debemos-saber-r</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 10). ¿Qué nos ofrece R? Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-2-que-ofrece-r/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-10-2-que-ofrece-r</a>
-    </p>
-    <p id="ref-achalma mendoza2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2023, June 9). El legado revolucionario de
-        Mariátegui. Siguiendo su camino hacia un futuro transformado. Retrieved
-        from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-entendiendo-mariategui/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-09-entendiendo-mariategui</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, June 3). Pautas para la presentación del informe de
-        investigación en economía enfoque, estructura y elementos clave. Retrieved
-        from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, June 3). Ideas de investigación en Econometría Análisis
-        de variables y relaciones económicas. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-ideas-investigacion/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-06-03-ideas-investigacion</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, May 19). Seminario de filosofía. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-seminario-filosofia-marxista/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-19-seminario-filosofia-marxista</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, May 16). Impulsando el Desarrollo Económico Regional
-        Claves para un Futuro Próspero. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-economia-regional/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-16-economia-regional</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, May 12). La Economía Peruana de 1970 a 1990 Un Análisis
-        de sus Períodos y Desafíos. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, May 11). ¿Cuáles son las cualidades de los servidores
-        públicos? Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-11-cualidades-servidores-publicos</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, May 2). Linux Primeros Pasos. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-linux-primeros-pasos/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-05-02-linux-primeros-pasos</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., &amp; Central Partido Comunista del Perú, C. (2023, May 1).
-        Día Internacional de los Trabajadores de mayo de 2023. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-04-29-primero-de-mayo/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-04-29-primero-de-mayo</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, April 29). El capitalismo ¿Cáncer de nuestra era?
-        Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-03-03-el-capitalismo/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-03-03-el-capitalismo</a>
-    </p>
-    <p id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2023, February 16). Guía de Git Cómo trabajar en equipo en
-        proyectos. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-guia-git/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2023-02-16-guia-git</a>
-    </p>
-    <h3>2022</h3>
-    <p id="ref-achalma2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2022, October 21). Cómo usar APK en Windows 11 una guía paso
-        a paso. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11</a>
-    </p>
-    <p id="ref-achalma2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2022, October 21). Cómo usar APK en Windows 11 una guía paso
-        a paso. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-21-usando-apk-en-windown-11</a>
-    </p>
-    <p id="ref-achalma2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2022, September 27). Comandos básicos de Vim para mejorar tu
-        flujo de trabajo. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-comandos-vim/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2022-09-27-comandos-vim</a>
-    </p>
-    <p id="ref-achalma2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., Añanca, Z., Fernández, A., Gamboa, B., &amp; Gómez, M. (2022,
-        June 3). Abordando el cambio climático y otros desafíos ambientales
-        Perspectivas y soluciones. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-medio-ambiente/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2022-06-02-medio-ambiente</a>
-    </p>
-    <p id="ref-achalma2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2022, April 22). La Economía Agraria. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-economia-agraria/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2022-04-22-economia-agraria</a>
-    </p>
-    <h3>2021</h3>
-    <p id="ref-achalma2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., Bermudo, F., Borda, N., Castillo, K., &amp; Fernandez, Y.
-        (2021, October 1). Reformas y Modernización de la Gestión Pública en Perú.
-        Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru</a>
-    </p>
-    <p id="ref-achalma2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., Bermudo, F., Borda, N., Castillo, K., &amp; Fernandez, Y.
-        (2021, October 1). Gestión Pública y Administración Pública Definiciones,
-        Conceptos y Aplicación. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion</a>
-    </p>
-    <p id="ref-achalma2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2021, July 14). Comandos útiles de Blogdown para crear sitios
-        web con R. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-comandos-blogdown/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2021-07-14-comandos-blogdown</a>
-    </p>
-    <p id="ref-achalma2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., Bañico, N., Berrocal, N., Carbajal, E., Castillo, K., Castro,
-        H., &amp; Cuba, L. (2021, January 11). Análisis del Impacto del
-        Crecimiento Económico en la Recaudación de Impuestos en Ayacucho.
-        Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019</a>
-    </p>
-    <h3>2020</h3>
-    <p id="ref-achalma2020" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E. (2020, May 23). Aprende a usar Google Assistant Comandos
-        útiles y trucos. Retrieved from <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2020-05-23-comandos-goole-assistant/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2020-05-23-comandos-goole-assistant</a>
-    </p>
-    <h3>2019</h3>
-    <p id="ref-achalma2019" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma, E., Alcarraz, G., Alfaro, J., De La Cruz, L., &amp; Pérez, D.
-        (2019, December 30). Rendimiento académico y genero de los ingresantes
-        2010 a la UNSCH. Retrieved from
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2019-12-30-rendimiento-academico-genero-ingresantes-2010</a>
-    </p>
-    <h3>2018</h3>
-    <p id="ref-achalma mendoza2018" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E., Prado Marilin, A., Heredia Felix, B., Ayala Margoth,
-        G., &amp; Arancibia Luz, G. (2018, December 26). Factores que influyen en
-        el rendimiento académico de la serie 100 y 200.
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academicoindex.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academico</a>
-    </p>
-    <p id="ref-achalma mendoza2018" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E., Prado Marilin, A., Heredia Felix, B., Ayala Margoth,
-        G., &amp; Arancibia Luz, G. (2018, December 26). Factores que influyen en
-        el rendimiento académico de la serie 100 y 200.
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academico/indx.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2018-12-26-factores-influyen-rendimiento-academico</a>
-    </p>
-    <p id="ref-achalma mendoza2018" class="csl-entry quarto-appendix-citeas" role="listitem">
-        Achalma Mendoza, E. (2018, April 23). Aparición del PensamientoSocialista.
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2018-04-23-aparicion-pensamiento-socialista</a>
-    </p>
-    <p id="ref-achalma mendoza2018" class="csl-entry quarto-appendix-citeas" role="listitem">
-        <strong>Achalma Mendoza, E.</strong>, Ayala Soto, A., Ccallocunto Rejas,
-        E., Lope Contreras, A., &amp; Mendivil Castro, Y. (2018, April 16).
-        Análisis estadístico de los alumnos de Estadística de la serie 200 de
-        Economía 2018-I.
-        <a
-            href="https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-estadigrafos/index.pdf">https://achalmaedison.netlify.app//docs/blog/posts/2018-05-16-estadigrafos</a>
-    </p>
-</body>
+## Fundamentos de econometria
 
-</html>
+::: {#01-fundamentos-econometria}
+:::
+
+## Macroeconometria
+
+::: {#02-macroeconometria}
+:::
+
+## Microeconometria
+
+::: {#03-microeconometria}
+:::
+
+## Econometria financiera
+
+::: {#04-econometria-financiera}
+:::
+
+## Econometria bayesiana
+
+::: {#05-econometria-bayesiana}
+:::
+
+## Evaluacion impacto
+
+::: {#06-evaluacion-impacto}
+:::
+
+## Econometria y topicos economia empirica
+
+::: {#07-econometria-y-topicos-economia-empirica}
+:::
+
+## Bloomberg
+
+::: {#bloomberg}
+:::
+
+## C ++
+
+::: {#cpp}
+:::
+
+## Econometría
+
+::: {#econometria}
+:::
+
+## Economia basica
+
+::: {#economia-basica}
+:::
+
+## Estadistica
+
+::: {#estadistica}
+:::
+
+## Estadistica para economistas
+
+::: {#estadistica-para-economistas}
+:::
+
+## Eviews
+
+::: {#eviews}
+:::
+
+## Filosofía
+
+::: {#filosofia}
+:::
+
+## Finanzas
+
+::: {#finanzas}
+:::
+
+## Finanzas internacionales
+
+::: {#finanzas-internacionales}
+:::
+
+## Fundamentos de programación
+
+::: {#fundamentos-programacion}
+:::
+
+## Gestión pública
+
+::: {#gestion-publica}
+:::
+
+## i3wm
+
+::: {#i3wm}
+:::
+
+## LaTex
+
+::: {#latex}
+:::
+
+## Machine learning con r
+
+::: {#machine-learning-con-r}
+:::
+
+## Macroeconomía
+
+::: {#macroeconomia}
+:::
+
+## MatLab
+
+::: {#matlab}
+:::
+
+## Microeconomía
+
+::: {#microeconomia}
+:::
+
+## Ofimática
+
+::: {#ofimatica}
+:::
+
+## Operating system
+
+::: {#operating-system}
+:::
+
+## Organización industrial
+
+::: {#organizacion-industrial}
+:::
+
+## Posts
+
+::: {#posts}
+:::
+
+## Power BI
+
+::: {#power-bi}
+:::
+
+## Python
+
+::: {#python}
+:::
+
+## Stata
+
+::: {#stata}
+:::

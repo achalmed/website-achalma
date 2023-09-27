@@ -15,8 +15,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-10-2-que-ofrece-r/index.pdf
 date: "06/10/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 
@@ -69,7 +69,6 @@ Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escrib
 ![](images/Screenshot_20230611_004241.png)
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
@@ -97,7 +96,6 @@ cat("La multiplicación es:", multiplicacion, "\n")
 cat("La división es:", division, "\n")
 ```
 :::
-
 
 
 **Paso 3: Ejecutar el script**

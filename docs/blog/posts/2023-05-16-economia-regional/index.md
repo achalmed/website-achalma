@@ -20,8 +20,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-16-economia-regional/index.pdf
 date: "05/16/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
 
 
 

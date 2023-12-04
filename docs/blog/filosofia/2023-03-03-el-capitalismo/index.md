@@ -18,7 +18,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
 En 1987 el mundo tenía 1.5 billones de pobres (con menos de 1 dólar al día) en 2015 son 1.9 billones. El índice internacional de pobreza se ha modificado varias veces en nombre de buenas campañas de relaciones públicas para el world bank.
 
 El índice actual es 1.25 $/día, ajustado a inflación es menor que en ajustes anteriores. Mas allá de los defensores del capitalismo sean las personas más ignorantes y ciegas de su privilegio de la modernidad, nadie puede realmente vivir con 1.25 /día.
@@ -34,3 +33,22 @@ Ese antagonismo asustador es para niños asustados con miedo al comunismo como s
 El primer paso para crear una alternativa es admitir que la que tenemos es un mierda que nos está destruyendo, física, mental y terrestremente. Y que no tenemos ninguna antigua a la cual volver. Ojalá y más gente abra los ojos antes que sea demasiado tarde.
 
 Antes que hables del libre mercado, pregúntate desde tu lógica libertaria por qué no sería legal la necrofilia o la expropiación de órganos por empresas. (El capitalismo se puede poner muuuuucho peor).
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

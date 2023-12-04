@@ -20,7 +20,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
 # ¡En este primero de mayo: seguir sembrando revolución!
 
 > ¡Proletarios de todos los países, uníos!
@@ -183,3 +182,22 @@ Mayo de 2023
 Comité Central Partido Comunista del Perú
 
 Ediciones Bandera Roja
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

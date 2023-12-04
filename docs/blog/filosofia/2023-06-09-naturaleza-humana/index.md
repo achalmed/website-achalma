@@ -20,7 +20,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
 # Introducción
 
 ## ¿El ser humano es inherentemente bueno o malo?
@@ -125,3 +124,22 @@ En la actualidad, podemos hablar del neurosexismo, un tipo de sesgo ideológico 
 A partir de los ejemplos que acabamos de mencionar, podemos observar que la definición de la naturaleza humana que adoptamos de manera personal, así como la definición que adopta nuestra sociedad y cultura, establecen los límites de lo que podemos ser y lo que nos permitimos ser. Nuestras creencias personales y las demandas y expectativas sociales influyen en nuestras acciones y en la forma en que nos desenvolvemos en la vida. Detrás de todos estos límites impuestos por la sociedad y por nosotros mismos se encuentra la concepción de la naturaleza humana.
 
 Por lo tanto, es de vital importancia revisar nuestras creencias, ya que moldean nuestra vida y la hacen posible. Es saludable asumir la responsabilidad de nuestras propias creencias, es decir, **comprender por qué creemos lo que creemos y cómo justificamos esas creencias.** Esto nos permitirá tomar un mayor control sobre nuestra propia vida y actuar de manera más consciente.
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

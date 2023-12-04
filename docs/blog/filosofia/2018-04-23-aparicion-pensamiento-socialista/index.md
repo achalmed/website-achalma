@@ -15,7 +15,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
 # Presentación
 
 El actual movimiento de resistencia global contra el capitalismo, bajo la consigna de "otro mundo es posible", ha resaltado el pensamiento socialista como una alternativa. En este contexto, resulta imperativo estudiar, comprender y debatir la teoría del surgimiento del pensamiento socialista.
@@ -204,3 +203,22 @@ La Biblia declara inmediatamente que aquel que no trabaje, no comerá. Y como la
 En otras partes de su obra, Kingsley escribió: "Dios solo reformará a la sociedad si nosotros nos reformamos a nosotros mismos. Mientras tanto, el demonio está ansioso por ayudarnos a cambiar las leyes, el parlamento, la tierra y el cielo, sin iniciar nunca esa petición tan impertinente y personal".
 
 La postura de Kingsley combinaba su fe cristiana con su compromiso con la justicia social y la preocupación por los menos privilegiados. Su trabajo y sus escritos reflejan su convicción de que el cambio social debe basarse en una transformación personal y una responsabilidad colectiva.
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

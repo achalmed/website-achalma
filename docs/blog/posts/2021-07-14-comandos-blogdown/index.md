@@ -19,6 +19,7 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
 Blogdown es un paquete de R que permite crear sitios web utilizando R Markdown y Hugo. Algunos de los comandos más comunes de Blogdown son:
 
 1. `blogdown::new_site()`: Crea un nuevo sitio web de Blogdown en el directorio actual.

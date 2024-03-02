@@ -327,8 +327,9 @@ nav.page-navigation {
   /* Establece la posición absoluta */
   z-index: 10;
   /* Establece el índice z en 10 para superponerlo a otros elementos */
-  bottom: 20px;
-  /* Establece la distancia desde la parte inferior a 20px */
+  bottom: -30px;
+  /* Establece la distancia desde la parte inferior a -30px */
+  left: 180px;
   display: flex;
   /* Muestra los elementos como una fila */
   justify-content: center;

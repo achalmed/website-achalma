@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.3.361" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="Edison Achalma" />
+<meta name="description" content="Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!" />
+
+<title>achalmaedison – Notas de Clase Series de Tiempo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "algolia": {
+    "application-id": "ZPJB5I1QN7",
+    "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
+    "index-name": "prod_QUARTO",
+    "analytics-events": true,
+    "show-logo": false,
+    "libDir": "site_libs"
+  },
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/plain" cookie-consent="tracking">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/plain" cookie-consent="tracking" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGH6TP6RB3"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../../../styles.css" />
+<link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="/index.html">
+    <span class="navbar-title">Achalma Edison</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca"
+  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-macroeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">MACROECONOMÍA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-macroeconomía">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/economia_basica.html" rel="" target="">
+ <span class="dropdown-text">Economía básica</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/gestion_publica.html" rel="" target="">
+ <span class="dropdown-text">Gestión pública</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/machine_learning_con_r.html" rel="" target="">
+ <span class="dropdown-text">Machine learning con r</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/macroeconomia.html" rel="" target="">
+ <span class="dropdown-text">Macroeconomía</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-microeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">MICROECONOMÍA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-microeconomía">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/microeconomia.html" rel="" target="">
+ <span class="dropdown-text">Microeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/organizacion_industrial.html" rel="" target="">
+ <span class="dropdown-text">Organización industrial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-econometría" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">ECONOMETRÍA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-econometría">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/estadistica.html" rel="" target="">
+ <span class="dropdown-text">Estadística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/estadistica_para_economistas.html" rel="" target="">
+ <span class="dropdown-text">Estadística para economistas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/fundamentos_de_econometria.html" rel="" target="">
+ <span class="dropdown-text">Fundamentos de econometría</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/macroeconometria.html" rel="" target="">
+ <span class="dropdown-text">Macroeconometría</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/microeconometria.html" rel="" target="">
+ <span class="dropdown-text">Microeconometría</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/econometria_financiera.html" rel="" target="">
+ <span class="dropdown-text">Econometría financiera</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/econometria_bayesiana.html" rel="" target="">
+ <span class="dropdown-text">Econometría bayesiana</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/evaluacion_impacto.html" rel="" target="">
+ <span class="dropdown-text">Evaluación impacto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/econometria_y_topicos_economia_empirica.html" rel="" target="">
+ <span class="dropdown-text">Econometría y tópicos economía empírica</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/econometria.html" rel="" target="">
+ <span class="dropdown-text">Econometría</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-finanzas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">FINANZAS</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-finanzas">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/finanzas.html" rel="" target="">
+ <span class="dropdown-text">Finanzas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/finanzas_internacionales.html" rel="" target="">
+ <span class="dropdown-text">Finanzas internacionales</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-filosofía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">FILOSOFÍA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-filosofía">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/filosofia.html" rel="" target="">
+ <span class="dropdown-text">Filosofía</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-informática" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">INFORMÁTICA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-informática">    
+        <li>
+    <a class="dropdown-item" href="/docs/materias/fundamentos_de_programacion.html" rel="" target="">
+ <span class="dropdown-text">Fundamentos de programación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/bloomberg.html" rel="" target="">
+ <span class="dropdown-text">Bloomberg</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/c_++.html" rel="" target="">
+ <span class="dropdown-text">C ++</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/eviews.html" rel="" target="">
+ <span class="dropdown-text">Eviews</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/i3wm.html" rel="" target="">
+ <span class="dropdown-text">i3wm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/latex.html" rel="" target="">
+ <span class="dropdown-text">LaTex</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/matlab.html" rel="" target="">
+ <span class="dropdown-text">MatLab</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/ofimatica.html" rel="" target="">
+ <span class="dropdown-text">Ofimática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/operating_system.html" rel="" target="">
+ <span class="dropdown-text">Operating system</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/power_bi.html" rel="" target="">
+ <span class="dropdown-text">Power BI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/python.html" rel="" target="">
+ <span class="dropdown-text">Python</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="/docs/materias/stata.html" rel="" target="">
+ <span class="dropdown-text">Stata</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-matemática" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">MATEMÁTICA</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-matemática">    
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/docs/blog/index.html" rel="" target="">
+ <span class="menu-text">BLOG</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-otros" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">OTROS</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-otros">    
+        <li>
+    <a class="dropdown-item" href="/docs/get-started/index.html" rel="" target="">
+ <span class="dropdown-text">Sobre mi</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i 
+  class="bi bi-bug" 
+  role="img" 
+>
+</i> 
+ <span class="dropdown-text">Reportar un error</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i 
+  class="bi bi-chat-right-text" 
+  role="img" 
+>
+</i> 
+ <span class="dropdown-text">Hacer una pregunta</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div id="quarto-toc-target"></div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" ></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Notas de Clase Series de Tiempo</h1>
+<p class="subtitle lead">Descubre cómo seleccionar hardware, descargar la imagen ISO y preparar los medios de instalación. Exploraremos opciones para probar o instalar Linux en tu equipo.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Informática</div>
+    <div class="quarto-category">Tecnología</div>
+    <div class="quarto-category">Sistemas Operativos</div>
+    <div class="quarto-category">Linux</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</p>
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autor/a</div>
+  <div class="quarto-title-meta-heading">Afiliación</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.gob.pe/unsch">
+            Universidad Nacional de San Cristóbal de Huamanga
+            </a>
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">27 de agosto de 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">18 de diciembre de 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#modelos-univariados-y-multivariados-de-volatilidad" id="toc-modelos-univariados-y-multivariados-de-volatilidad">Modelos Univariados y Multivariados de Volatilidad</a>
+  <ul>
+  <li><a href="#modelos-arch-y-garch-univariados" id="toc-modelos-arch-y-garch-univariados">Modelos ARCH y GARCH Univariados</a></li>
+  <li><a href="#modelos-arch-y-garch-multivariados" id="toc-modelos-arch-y-garch-multivariados">Modelos ARCH y GARCH Multivariados</a></li>
+  <li><a href="#pruebas-para-detectar-efectos-arch" id="toc-pruebas-para-detectar-efectos-arch">Pruebas para detectar efectos ARCH</a></li>
+  </ul></li>
+  </ul>
+</nav>
+<section id="modelos-univariados-y-multivariados-de-volatilidad" class="level1">
+<h1>Modelos Univariados y Multivariados de Volatilidad</h1>
+<section id="modelos-arch-y-garch-univariados" class="level2">
+<h2>Modelos ARCH y GARCH Univariados</h2>
+<p>Estos modelos de Heterocedásticidad Condicional Autoregresiva (ARCH, por sus siglas en inglés) y modelos Heterocedásticidad Condicional Autoregresiva Generalizados (GARCH, por sus siglas en inglés) tienen la característica de modelar situaciones como las que ilustra la Figutra <span class="math inline">\(\ref{G_ARCH_Return}\)</span>. Es decir: 1) existen zonas donde la variación de los datos es mayor y zonas donde la variación es más estable–a estas situaciones se les conoce como de variabilidad por clúster–, y 2) los datos corresponden a innformación de alta frecuencia.</p>
+<p>Para plantear el modelo supongamos –por simplicidad– que hemos construido y estimado un modelo AR(1). Es decir, asumamos que el proceso subyacente para la media condicional está dada por: <span class="math display">\[
+    X_t = a_0 + a_1 X_{t-1} + U_t
+\]</span></p>
+<p>Donde <span class="math inline">\(\abs{a_1} &lt; 1\)</span> para garantizar la convergencia del proceso en el largo plazo, en el cual: <span class="math display">\[\begin{eqnarray*}
+    \mathbb{E}[X_t] &amp; = &amp; \frac{a_0 }{1 - a_1} = \mu \\
+    Var[X_t] &amp; = &amp; \frac{\sigma^2}{1 - a_1^2}
+\end{eqnarray*}\]</span></p>
+<p>Ahora, supongamos que este tipo de modelos pueden ser extendidos y generalizados a un modelo ARMA(p, q), que incluya otras variables exogénas. Denotemos a como <span class="math inline">\(\mathbf{Z}_t\)</span> al conjunto que incluye los componentes AR, MA y variables exogénas que pueden explicar a <span class="math inline">\(X_t\)</span> de forma que el proceso estará dado por: <span class="math display">\[
+    X_t = \mathbf{Z}_t \boldsymbol{\beta} + U_t
+\]</span></p>
+<p>Donde <span class="math inline">\(U_t\)</span> es un proceso estacionario que representa el error asociado a un proceso ARMA(p, q) y donde siguen diendo válidos los supuestos: <span class="math display">\[\begin{eqnarray*}
+    \mathbb{E}[U_t] &amp; = &amp; 0 \\
+    Var[U_t^2] &amp; = &amp; \sigma^2
+\end{eqnarray*}\]</span></p>
+<p>No obstante, en este caso podemos suponer que existe autocorrelación en el término de error que puede ser capturada por un porceso similar a uno de medias móviles (MA) dado por: <span class="math display">\[
+    U_t^2 = \gamma_0 + \gamma_1 U_{t-1}^2 + \gamma_2 U_{t-2}^2 + \ldots + \gamma_q U_{t-q}^2 + \nu_t
+\]</span></p>
+<p>Donde <span class="math inline">\(\nu_t\)</span> es un ruido blanco y <span class="math inline">\(U_{t-i} = X_{t-i} - \mathbf{Z}_{t-i} \boldsymbol{\beta}\)</span>, $i = 1, 2 ,$. Si bien los procesos son estacionarios por los supuestos antes enunciados, la varianza condicional estará dada por: <span class="math display">\[\begin{eqnarray*}
+    \sigma^2_{t | t-1} &amp; = &amp; Var[ U_t | \Omega_{t-1} ] \\
+    &amp; = &amp; \mathbb{E}[ U^2_t | \Omega_{t-1} ]
+\end{eqnarray*}\]</span></p>
+<p>Donde <span class="math inline">\(\Omega_{t-1} = \{U_{t-1}, U_{t-2}, \ldots \}\)</span> es el conjunto de toda la información pasada de <span class="math inline">\(U_t\)</span> y observada hasta el momento <span class="math inline">\(t-1\)</span>, por lo que: <span class="math display">\[\begin{equation*}
+    U_t | \Omega_{t-1} \sim \mathbb{D}(0, \sigma^2_{t | t-1})
+\end{equation*}\]</span></p>
+<p>Así, de forma similar a un proceso MA(q) podemos decir que la varianza condicional tendrá efectos ARCH de orden <span class="math inline">\(q\)</span> (ARCH(q)) cuando:</p>
+<p><span class="math display">\[
+  \sigma^2_{t|t-1} = \gamma_0 + \gamma_1 U_{t-1}^2 + \gamma_2 U_{t-2}^2 + \ldots + \gamma_q U_{t-q}^2
+    \label{ARCH_Effect}
+\]</span></p>
+<p>Donde <span class="math inline">\(\mathbb{E}[\nu_t] = 0\)</span> y <span class="math inline">\(\gamma_0\)</span> y <span class="math inline">\(\gamma_i \geq 0\)</span>, para <span class="math inline">\(i = 1, 2, \ldots, q-1\)</span> y <span class="math inline">\(\gamma_q &gt; 0\)</span>. Estas condiciones son necesarias para garantizar que la varianza sea positiva. En general, la varianza condicional se expresa de la forma <span class="math inline">\(\sigma^2_{t | t-1}\)</span>, no obstante, para facilitar la notación, nos referiremos en cada caso a esta simplemente como <span class="math inline">\(\sigma^2_{t}\)</span>.</p>
+<p>Podemos generalizar está situación si asumimos a la varianza condicional como dependiente de lo valores de la varianza rezagados, es decir, como si fuera un proceso AR de orden <span class="math inline">\(p\)</span> para la varianza y juntandolo con la ecuación (<span class="math inline">\(\ref{ARCH_Effect}\)</span>). Bollerslev (1986) y Taylor (1986) generalizaron el problema de heterocedásticidad condicional. El modelo se conoce como GARCH(p, q), el cual se especifica como: <span class="math display">\[
+    \sigma^2_t = \gamma_0 + \gamma_1 U_{t-1}^2 + \gamma_2 U_{t-2}^2 + \ldots + \gamma_q U_{t-q}^2 + \beta_1 \sigma^2_{t-1} + \beta_2 \sigma^2_{t-2} + \ldots + \beta_p \sigma^2_{t-p}
+    \label{GARCH_Effect}
+\]</span></p>
+<p>Donde las condiciones de no negatividad son que <span class="math inline">\(\gamma_0 &gt; 0\)</span>, <span class="math inline">\(\gamma_i \geq 0\)</span>, <span class="math inline">\(i = 1, 2, \ldots, q-1\)</span>, <span class="math inline">\(\beta_j \geq 0\)</span>, <span class="math inline">\(j = 1, 2, \ldots, p-1\)</span>, <span class="math inline">\(\gamma_q &gt; 0\)</span> y <span class="math inline">\(\beta_p &gt; 0\)</span>. Además, otra condición de convergencia es que: <span class="math display">\[\begin{equation*}
+    \gamma_1 + \ldots + \gamma_q + \beta_1 + \ldots + \beta_p &lt; 1
+\end{equation*}\]</span></p>
+<p>Usando el operador rezago <span class="math inline">\(L\)</span> en la ecuación (<span class="math inline">\(\ref{GARCH_Effect}\)</span>) podemos obtener: <span class="math display">\[
+    \sigma^2_t = \gamma_0 + \alpha(L) U_t^2 + \beta(L) \sigma^2_t
+    \label{GARCH_Effect_L}
+\]</span></p>
+<p>De donde podemos establecer: <span class="math display">\[
+    \sigma^2_t = \frac{\gamma_0}{1 - \beta(L)} + \frac{\alpha(L)}{1 - \beta(L)} U_t^2
+\]</span></p>
+<p>Por lo que la ecuación (<span class="math inline">\(\ref{GARCH_Effect}\)</span>) del GARCH(p, q) representa un ARCH(<span class="math inline">\(\infty\)</span>): <span class="math display">\[
+    \sigma^2_t = \frac{a_0}{1 - b_1 - b_2 - \ldots - b_p} + \sum_{i = 1}^\infty U_{t-i}^2
+\]</span></p>
+</section>
+<section id="modelos-arch-y-garch-multivariados" class="level2">
+<h2>Modelos ARCH y GARCH Multivariados</h2>
+<p>De forma similar a los modelo univariados, los modelos multivariados de heterocedásticidad condicional asumen una estructura de la media condicional. En este caso, descrita por un VAR(p) cuyo proceso estocástico <span class="math inline">\(\mathbf{X}\)</span> es estacionario de dimensión <span class="math inline">\(k\)</span>. De esta forma la expresión reducida del modelo o el proceso VAR(p) estará dado por: <span class="math display">\[
+    \mathbf{X}_t = \mathbf{\delta} + A_1 \mathbf{X}_{t-1} + A_2 \mathbf{X}_{t-2} + \ldots + A_p \mathbf{X}_{t-p} + \mathbf{U}_{t}
+\]</span></p>
+<p>Donde cada uno de las <span class="math inline">\(A_i\)</span>, <span class="math inline">\(i = 1, 2, \ldots, p\)</span>, son matrices cuadradas de dimensión <span class="math inline">\(k\)</span> y <span class="math inline">\(\mathbf{U}_t\)</span> representa un vector de dimensión <span class="math inline">\(k \times 1\)</span> con los residuales en el momento del tiempo <span class="math inline">\(t\)</span> que son un proceso pueramente aleatorio. También se incorpora un vector de términos constantes denominado como <span class="math inline">\(\mathbf{\delta}\)</span>, el cual es de dimensión <span class="math inline">\(k \times 1\)</span> –es este caso también es posible incorporar procesos determinas adicionales–.</p>
+<p>Así, suponemos que el término de error tendra estructura de vector: <span class="math display">\[\begin{equation*}
+    \mathbf{U}_t =
+    \begin{bmatrix}
+    U_{1t} \\ U_{2t} \\ \vdots \\ U_{Kt}
+    \end{bmatrix}
+\end{equation*}\]</span></p>
+<p>De forma que diremos que: <span class="math display">\[\begin{equation*}
+    \mathbf{U}_t | \Omega_{t-1} \sim (0, \Sigma_{t | t-1})
+\end{equation*}\]</span></p>
+<p>Dicho lo anterior, entonces, el mode ARCH(q) multivariado será descrito por: <span class="math display">\[
+    Vech(\Sigma_{t | t-1}) = \boldsymbol{\gamma}_0 + \Gamma_1 Vech(\mathbf{U}_{t-1} \mathbf{U}_{t-1}&#39;) + \ldots + \Gamma_q Vech(\mathbf{U}_{t-q} \mathbf{U}_{t-q}&#39;)
+    \label{M_ARCH}
+\]</span></p>
+<p>Donde <span class="math inline">\(Vech\)</span> es un operador que apila en un vector la parte superior de la matriz a la cual se le aplique, <span class="math inline">\(\boldsymbol{\gamma}_0\)</span> es un vector de cosntantes, <span class="math inline">\(\Gamma_i\)</span>, <span class="math inline">\(i = 1, 2, \ldots\)</span> son matrices de coeficientes asociados a la estimación.</p>
+<p>Para ilustrar la ecuación (<span class="math inline">\(\ref{M_ARCH}\)</span>), tomemos un ejemplo de <span class="math inline">\(K = 2\)</span>, de esta forma tenemos que un M-ARCH(1) será: <span class="math display">\[\begin{equation*}
+    \Sigma_{t | t-1} =
+    \begin{bmatrix}
+    \sigma^2_{1, t | t-1} &amp; \sigma_{12, t | t-1} \\ \sigma_{21, t | t-1} &amp; \sigma^2_{2, t | t-1}
+    \end{bmatrix} =
+    \begin{bmatrix}
+    \sigma_{11, t} &amp; \sigma_{12, t} \\ \sigma_{21, t} &amp; \sigma_{22, t}
+    \end{bmatrix} =
+    \Sigma_{t}
+\end{equation*}\]</span></p>
+<p>Donde hemos simplificado la notación de la varianzas y la condición de que están en función de <span class="math inline">\(t-1\)</span>. Así, <span class="math display">\[\begin{equation*}
+    Vech(\Sigma_{t}) =
+    Vech \begin{bmatrix}
+    \sigma_{11, t} &amp; \sigma_{12, t} \\ \sigma_{21, t} &amp; \sigma_{22, t}
+    \end{bmatrix} =
+    \begin{bmatrix}
+    \sigma_{11, t} \\ \sigma_{12, t} \\ \sigma_{22, t}
+    \end{bmatrix}
+\end{equation*}\]</span></p>
+<p>De esta forma, podemos establecer el modelo M-ARCH(1) con <span class="math inline">\(K = 2\)</span> será de la forma: <span class="math display">\[\begin{equation*}
+    \begin{bmatrix}
+    \sigma_{11, t} \\ \sigma_{12, t} \\ \sigma_{22, t}
+    \end{bmatrix} =
+    \begin{bmatrix}
+    \gamma_{10} \\ \gamma_{20} \\ \gamma_{30}
+    \end{bmatrix} +
+    \begin{bmatrix}
+    \gamma_{11} &amp; \gamma_{12} &amp; \gamma_{13} \\ \gamma_{21} &amp; \gamma_{22} &amp; \gamma_{23} \\ \gamma_{31} &amp; \gamma_{32} &amp; \gamma_{33}
+    \end{bmatrix}
+    \begin{bmatrix}
+    U^2_{1, t-1} \\ U_{1, t-1} U_{2, t-1} \\ U^2_{2, t-1}
+    \end{bmatrix}
+\end{equation*}\]</span></p>
+<p>Como notarán este tipo de procedimientos implica la estimación de muchos paramétros. En este circunstacia, se suelen estimar modelos restringidos para reducir el número de coeficientes estimados. por ejemplo, podríamos querer estimar un caso como: <span class="math display">\[\begin{equation*}
+    \begin{bmatrix}
+    \sigma_{11, t} \\ \sigma_{12, t} \\ \sigma_{22, t}
+    \end{bmatrix} =
+    \begin{bmatrix}
+    \gamma_{10} \\ \gamma_{20} \\ \gamma_{30}
+    \end{bmatrix} +
+    \begin{bmatrix}
+    \gamma_{11} &amp; 0 &amp; 0 \\ 0 &amp; \gamma_{22} &amp; 0 \\ 0 &amp; 0 &amp; \gamma_{33}
+    \end{bmatrix}
+    \begin{bmatrix}
+    U^2_{1, t-1} \\ U_{1, t-1} U_{2, t-1} \\ U^2_{2, t-1}
+    \end{bmatrix}
+\end{equation*}\]</span></p>
+<p>Finalmente y de forma analóga al caso univariado, podemos plantear un modelo M-GARCH(p, q) como: <span class="math display">\[
+    Vech(\Sigma_{t | t-1}) = \boldsymbol{\gamma}_0 + \sum_{j = 1}^q \Gamma_j Vech(\mathbf{U}_{t-j} \mathbf{U}_{t-j}&#39;) + \sum_{m = 1}^p \mathbf{G}_m Vech(\Sigma_{t-m | t-m-1})
+    \label{M_GARCH}
+\]</span></p>
+<p>Donde cada una de las <span class="math inline">\(\mathbf{G}_m\)</span> es una matriz de coeficientes. Para ilustrar este caso retomemos el ejemplo anterior pera ahora para un modelo M-GARCH(1, 1) con <span class="math inline">\(K = 2\)</span> de formaque tendríamos: <span class="math display">\[\begin{equation*}
+    \begin{bmatrix}
+    \sigma_{11, t} \\ \sigma_{12, t} \\ \sigma_{22, t}
+    \end{bmatrix} =
+    \begin{bmatrix}
+    \gamma_{10} \\ \gamma_{20} \\ \gamma_{30}
+    \end{bmatrix} +
+    \begin{bmatrix}
+    \gamma_{11} &amp; \gamma_{12} &amp; \gamma_{13} \\ \gamma_{21} &amp; \gamma_{22} &amp; \gamma_{23} \\ \gamma_{31} &amp; \gamma_{32} &amp; \gamma_{33}
+    \end{bmatrix}
+    \begin{bmatrix}
+    U^2_{1, t-1} \\ U_{1, t-1} U_{2, t-1} \\ U^2_{2, t-1}
+    \end{bmatrix} +
+    \begin{bmatrix}
+    g_{11} &amp; g_{12} &amp; g_{13} \\ g_{21} &amp; g_{22} &amp; g_{23} \\ g_{31} &amp; g_{32} &amp; g_{33}
+    \end{bmatrix}
+    \begin{bmatrix}
+    \sigma_{11, t-1} \\ \sigma_{12, t-1} \\ \sigma_{22, t-1}
+    \end{bmatrix}
+\end{equation*}\]</span></p>
+</section>
+<section id="pruebas-para-detectar-efectos-arch" class="level2">
+<h2>Pruebas para detectar efectos ARCH</h2>
+<p>La prueba que mostraremos es conocida como una ARCH-LM, la cual está basada en una regresión de los residuales estimados de un modelo VAR(p) o cualquier otra estimación que deseemos probar, con el objeto de determinar si existen efectos ARCH –esta prueba se puede simplificar para el caso univariado–.</p>
+<p>Partamos de platear: <span class="math display">\[
+    Vech(\hat{\mathbf{U}}_t \hat{\mathbf{U}}_t&#39;) = \mathbf{B}_0 + \mathbf{B}_1 Vech(\hat{\mathbf{U}}_{t-1} \hat{\mathbf{U}}_{t-1}&#39;) + \ldots + \mathbf{B}_q Vech(\hat{\mathbf{U}}_{t-q} \hat{\mathbf{U}}_{t-q}&#39;) + \varepsilon_t
+    \label{ARCH-LM}
+\]</span></p>
+<p>Dada la estimación en la ecuación (<span class="math inline">\(\ref{ARCH-LM}\)</span>), plantemos la estructura de hipótesis dada por: <span class="math display">\[\begin{eqnarray*}
+    H_0 &amp; : &amp; \mathbf{B}_1 = \mathbf{B}_2 = \ldots = \mathbf{B}_q = 0 \\
+    H_a &amp; : &amp; No H_0    
+\end{eqnarray*}\]</span></p>
+<p>La estadística de prueba será determinada por: <span class="math display">\[
+    LM_{M-ARCH} = \frac{1}{2} T K (K + 1) - Traza \left( \hat{\Sigma}_{ARCH} \hat{\Sigma}^{-1}_{0} \right) \sim \chi^2_{[q K^2 (K + 1)^2 / 4]}
+\]</span></p>
+<p>Donde la matriz <span class="math inline">\(\hat{\Sigma}_{ARCH}\)</span> es calcula de acuerdo con la ecuación (<span class="math inline">\(\ref{ARCH-LM}\)</span>) y la matriz <span class="math inline">\(\hat{\Sigma}_{0}\)</span> sin considerar una estructura dada para los errores.</p>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden" data-render-id="quarto-int-sidebar-title">achalmaedison</span> <span class="hidden" data-render-id="quarto-int-navbar-title">Achalma Edison</span> <span class="hidden" data-render-id="quarto-int-navbar:MACROECONOMÍA">MACROECONOMÍA</span> <span class="hidden" data-render-id="quarto-int-navbar:Economía básica">Economía básica</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/economia_basica.html">/docs/materias/economia_basica.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Gestión pública">Gestión pública</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/gestion_publica.html">/docs/materias/gestion_publica.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Machine learning con r">Machine learning con r</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/machine_learning_con_r.html">/docs/materias/machine_learning_con_r.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Macroeconomía">Macroeconomía</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/macroeconomia.html">/docs/materias/macroeconomia.html</span> <span class="hidden" data-render-id="quarto-int-navbar:MICROECONOMÍA">MICROECONOMÍA</span> <span class="hidden" data-render-id="quarto-int-navbar:Microeconomía">Microeconomía</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/microeconomia.html">/docs/materias/microeconomia.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Organización industrial">Organización industrial</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/organizacion_industrial.html">/docs/materias/organizacion_industrial.html</span> <span class="hidden" data-render-id="quarto-int-navbar:ECONOMETRÍA">ECONOMETRÍA</span> <span class="hidden" data-render-id="quarto-int-navbar:Estadística">Estadística</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/estadistica.html">/docs/materias/estadistica.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Estadística para economistas">Estadística para economistas</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/estadistica_para_economistas.html">/docs/materias/estadistica_para_economistas.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Fundamentos de econometría">Fundamentos de econometría</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/fundamentos_de_econometria.html">/docs/materias/fundamentos_de_econometria.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Macroeconometría">Macroeconometría</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/macroeconometria.html">/docs/materias/macroeconometria.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Microeconometría">Microeconometría</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/microeconometria.html">/docs/materias/microeconometria.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Econometría financiera">Econometría financiera</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/econometria_financiera.html">/docs/materias/econometria_financiera.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Econometría bayesiana">Econometría bayesiana</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/econometria_bayesiana.html">/docs/materias/econometria_bayesiana.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Evaluación impacto">Evaluación impacto</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/evaluacion_impacto.html">/docs/materias/evaluacion_impacto.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Econometría y tópicos economía empírica">Econometría y tópicos economía empírica</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/econometria_y_topicos_economia_empirica.html">/docs/materias/econometria_y_topicos_economia_empirica.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Econometría">Econometría</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/econometria.html">/docs/materias/econometria.html</span> <span class="hidden" data-render-id="quarto-int-navbar:FINANZAS">FINANZAS</span> <span class="hidden" data-render-id="quarto-int-navbar:Finanzas">Finanzas</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/finanzas.html">/docs/materias/finanzas.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Finanzas internacionales">Finanzas internacionales</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/finanzas_internacionales.html">/docs/materias/finanzas_internacionales.html</span> <span class="hidden" data-render-id="quarto-int-navbar:FILOSOFÍA">FILOSOFÍA</span> <span class="hidden" data-render-id="quarto-int-navbar:Filosofía">Filosofía</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/filosofia.html">/docs/materias/filosofia.html</span> <span class="hidden" data-render-id="quarto-int-navbar:INFORMÁTICA">INFORMÁTICA</span> <span class="hidden" data-render-id="quarto-int-navbar:Fundamentos de programación">Fundamentos de programación</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/fundamentos_de_programacion.html">/docs/materias/fundamentos_de_programacion.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Bloomberg">Bloomberg</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/bloomberg.html">/docs/materias/bloomberg.html</span> <span class="hidden" data-render-id="quarto-int-navbar:C ++">C ++</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/c_++.html">/docs/materias/c_++.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Eviews">Eviews</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/eviews.html">/docs/materias/eviews.html</span> <span class="hidden" data-render-id="quarto-int-navbar:i3wm">i3wm</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/i3wm.html">/docs/materias/i3wm.html</span> <span class="hidden" data-render-id="quarto-int-navbar:LaTex">LaTex</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/latex.html">/docs/materias/latex.html</span> <span class="hidden" data-render-id="quarto-int-navbar:MatLab">MatLab</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/matlab.html">/docs/materias/matlab.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Ofimática">Ofimática</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/ofimatica.html">/docs/materias/ofimatica.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Operating system">Operating system</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/operating_system.html">/docs/materias/operating_system.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Power BI">Power BI</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/power_bi.html">/docs/materias/power_bi.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Python">Python</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/python.html">/docs/materias/python.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Stata">Stata</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/materias/stata.html">/docs/materias/stata.html</span> <span class="hidden" data-render-id="quarto-int-navbar:MATEMÁTICA">MATEMÁTICA</span> <span class="hidden" data-render-id="quarto-int-navbar:BLOG">BLOG</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/blog/index.html">/docs/blog/index.html</span> <span class="hidden" data-render-id="quarto-int-navbar:OTROS">OTROS</span> <span class="hidden" data-render-id="quarto-int-navbar:Sobre mi">Sobre mi</span> <span class="hidden" data-render-id="quarto-int-navbar:/docs/get-started/index.html">/docs/get-started/index.html</span> <span class="hidden" data-render-id="quarto-int-navbar:Reportar un error">Reportar un error</span> <span class="hidden" data-render-id="quarto-int-navbar:https://github.com/achalmed/website-achalma/issues">https://github.com/achalmed/website-achalma/issues</span> <span class="hidden" data-render-id="quarto-int-navbar:Hacer una pregunta">Hacer una pregunta</span> <span class="hidden" data-render-id="quarto-int-navbar:https://github.com/achalmed/website-achalma/discussions">https://github.com/achalmed/website-achalma/discussions</span> <span class="hidden" data-render-id="footer-left">© Copyright 2023 Edison Achalma, Ayacucho</span> <span class="hidden" data-render-id="footer-center-/about.html">Acerca de</span> <span class="hidden" data-render-id="footer-center-/license.html">Licencia</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden" data-render-id="quarto-metatitle">achalmaedison - Notas de Clase Series de Tiempo</span> <span class="hidden" data-render-id="quarto-twittercardtitle">achalmaedison - Notas de Clase Series de Tiempo</span> <span class="hidden" data-render-id="quarto-ogcardtitle">achalmaedison - Notas de Clase Series de Tiempo</span> <span class="hidden" data-render-id="quarto-metasitename">achalmaedison</span> <span class="hidden" data-render-id="quarto-twittercarddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span> <span class="hidden" data-render-id="quarto-ogcardddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span></p>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+</script>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://app.us9.list-manage.com/subscribe/post?u=3d7a7c10dd35f3596cc198c22&amp;id=0cd7446f7b&amp;f_id=00df1ae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        <p style="font-weight: 600; margin-bottom: 0;">Suscríbete</p>
+        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">¿Te gusta este blog? Reciba notificaciones de nuevas entradas por correo electrónico:  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+	<div id="mce-responses" class="clear foot">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3d7a7c10dd35f3596cc198c22_0cd7446f7b" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+
+<script id = "quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<script src="https://utteranc.es/client.js"
+  repo="achalmed/website-achalma"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <div class='footer-contents'>© Copyright 2023 Edison Achalma, Ayacucho
+</div>  
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="/about.html">
+ Acerca de
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="/license.html">
+ Licencia
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/achalmaedison">
+      <i 
+  class="bi bi-twitter" 
+  role="img" 
+  aria-label="Twitter" 
+>
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/achalmed/website-achalma">
+      <i 
+  class="bi bi-github" 
+  role="img" 
+  aria-label="GitHub" 
+>
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

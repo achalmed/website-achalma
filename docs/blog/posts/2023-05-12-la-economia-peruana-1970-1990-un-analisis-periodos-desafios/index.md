@@ -18,6 +18,7 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
 # LA ECONOMÍA PERUANA DESDE 1970 HASTA 1990
 
 ## PERÍODO DE 1970 – 1975

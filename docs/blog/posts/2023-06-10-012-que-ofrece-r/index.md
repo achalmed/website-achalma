@@ -20,6 +20,7 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
 # ¿Qúe nos ofrece RStudio?
 
 ## Beneficios del software RStudio
@@ -69,6 +70,7 @@ Una vez que tenemos nuestro archivo de script abierto, podemos comenzar a escrib
 ![](images/Screenshot_20230611_004241.png)
 
 
+
 ::: {.cell}
 
 ```{.r .cell-code}
@@ -96,6 +98,7 @@ cat("La multiplicación es:", multiplicacion, "\n")
 cat("La división es:", division, "\n")
 ```
 :::
+
 
 
 **Paso 3: Ejecutar el script**

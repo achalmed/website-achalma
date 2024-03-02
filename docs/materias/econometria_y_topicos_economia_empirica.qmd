@@ -1,0 +1,29 @@
+---
+title: Publicaciones
+subtitle: Haga clic en el enlace para descargar cada documento en formato pdf.
+page-layout: full
+listing:
+  - id: 07-econometria-y-topicos-economia-empirica
+    contents: "../econometria/07-econometria-y-topicos-economia-empirica/*/index.qmd"
+    fields: [date, title, author, reading-time]
+    sort: 
+      - "date desc"
+      - "title desc"
+    date-format: short
+    type: table
+    filter-ui: false
+    sort-ui: false
+    table-striped: true
+# margin-header: signup.html
+title-block-banner: "#EDF3F9"
+title-block-banner-color: body
+search: false
+comments: false
+---
+
+## Econometria y topicos economia empirica
+
+::: {#07-econometria-y-topicos-economia-empirica}
+:::
+
+## 

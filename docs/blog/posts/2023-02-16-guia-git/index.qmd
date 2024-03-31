@@ -352,7 +352,7 @@ En este tutorial, te mostraré cómo instalar y configurar la CLI de GitHub en L
 Para comenzar, debemos instalar la CLI de GitHub en Linux. Ejecuta los siguientes comandos en tu terminal:
 
 ``` bash
-sudo apt install gh # versión 2.12.1+dfsg1-1
+sudo apt install gh 
 ```
 
 **Paso 2: Autenticación con GitHub**

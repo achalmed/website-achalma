@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -51,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "algolia": {
     "application-id": "ZPJB5I1QN7",
     "search-only-api-key": "41be6c1e0a7fea4a51b107810facf577",
@@ -60,6 +60,11 @@ ul.task-list li input[type="checkbox"] {
     "show-logo": false,
     "libDir": "site_libs"
   },
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -68,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -108,6 +114,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"es"
   });
 });
 </script> 
@@ -120,7 +128,7 @@ cookieconsent.run({
 <meta property="og:title" content="achalmaedison - Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el Futuro del FMI">
 <meta property="og:description" content="Descubre los distintos regímenes cambiarios, desde los tipos de cambio fijos hasta los flexibles, y su impacto en la economía global. Explora el futuro del Fondo Monetario Internacional y su papel en la estabilidad financiera internacional.">
 <meta property="og:image" content="https://achalmaedison.netlify.app/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
-<meta property="og:site-name" content="AchalmaEdison">
+<meta property="og:site_name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:title" content="achalmaedison - Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el Futuro del FMI">
 <meta name="twitter:description" content="Descubre los distintos regímenes cambiarios, desde los tipos de cambio fijos hasta los flexibles, y su impacto en la economía global. Explora el futuro del Fondo Monetario Internacional y su papel en la estabilidad financiera internacional.">
@@ -152,9 +160,9 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Achalma Edison</span>
     </a>
@@ -166,214 +174,214 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-macroeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-macroeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">MACROECONOMÍA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-macroeconomía">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/economia_basica.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/economia_basica.html">
  <span class="dropdown-text">Economía básica</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/gestion_publica.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/gestion_publica.html">
  <span class="dropdown-text">Gestión pública</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/machine_learning_con_r.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/machine_learning_con_r.html">
  <span class="dropdown-text">Machine learning con r</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/macroeconomia.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/macroeconomia.html">
  <span class="dropdown-text">Macroeconomía</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-microeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-microeconomía" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">MICROECONOMÍA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-microeconomía">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/microeconomia.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/microeconomia.html">
  <span class="dropdown-text">Microeconomía</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/organizacion_industrial.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/organizacion_industrial.html">
  <span class="dropdown-text">Organización industrial</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-econometría" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-econometría" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">ECONOMETRÍA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-econometría">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/estadistica.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/estadistica.html">
  <span class="dropdown-text">Estadística</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/estadistica_para_economistas.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/estadistica_para_economistas.html">
  <span class="dropdown-text">Estadística para economistas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/fundamentos_de_econometria.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/fundamentos_de_econometria.html">
  <span class="dropdown-text">Fundamentos de econometría</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/macroeconometria.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/macroeconometria.html">
  <span class="dropdown-text">Macroeconometría</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/microeconometria.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/microeconometria.html">
  <span class="dropdown-text">Microeconometría</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/econometria_financiera.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/econometria_financiera.html">
  <span class="dropdown-text">Econometría financiera</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/econometria_bayesiana.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/econometria_bayesiana.html">
  <span class="dropdown-text">Econometría bayesiana</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/evaluacion_impacto.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/evaluacion_impacto.html">
  <span class="dropdown-text">Evaluación impacto</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/econometria_y_topicos_economia_empirica.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/econometria_y_topicos_economia_empirica.html">
  <span class="dropdown-text">Econometría y tópicos economía empírica</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/econometria.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/econometria.html">
  <span class="dropdown-text">Econometría</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-finanzas" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-finanzas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">FINANZAS</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-finanzas">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/finanzas.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/finanzas.html">
  <span class="dropdown-text">Finanzas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/finanzas_internacionales.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/finanzas_internacionales.html">
  <span class="dropdown-text">Finanzas internacionales</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-filosofía" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-filosofía" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">FILOSOFÍA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-filosofía">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/filosofia.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/filosofia.html">
  <span class="dropdown-text">Filosofía</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-informática" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-informática" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">INFORMÁTICA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-informática">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/fundamentos_de_programacion.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/fundamentos_de_programacion.html">
  <span class="dropdown-text">Fundamentos de programación</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/bloomberg.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/bloomberg.html">
  <span class="dropdown-text">Bloomberg</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/c_++.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/c_++.html">
  <span class="dropdown-text">C ++</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/eviews.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/eviews.html">
  <span class="dropdown-text">Eviews</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/i3wm.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/i3wm.html">
  <span class="dropdown-text">i3wm</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/latex.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/latex.html">
  <span class="dropdown-text">LaTex</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/matlab.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/matlab.html">
  <span class="dropdown-text">MatLab</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/ofimatica.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/ofimatica.html">
  <span class="dropdown-text">Ofimática</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/operating_system.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/operating_system.html">
  <span class="dropdown-text">Operating system</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/power_bi.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/power_bi.html">
  <span class="dropdown-text">Power BI</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/python.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/python.html">
  <span class="dropdown-text">Python</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../docs/materias/stata.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/materias/stata.html">
  <span class="dropdown-text">Stata</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-matemática" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-matemática" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">MATEMÁTICA</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-matemática">    
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../docs/blog/index.html" rel="" target="">
- <span class="menu-text">BLOG</span></a>
+    <a class="nav-link" href="../../../../docs/blog/index.html"> 
+<span class="menu-text">BLOG</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-otros" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-otros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">OTROS</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-otros">    
         <li>
-    <a class="dropdown-item" href="../../../../docs/get-started/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../../docs/get-started/index.html">
  <span class="dropdown-text">Sobre mi</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues" rel="" target=""><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Reportar un error</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/achalmed/website-achalma/discussions"><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Hacer una pregunta</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">Contenidos</h2>
    
@@ -406,9 +414,9 @@ cookieconsent.run({
   <li><a href="#tipos-de-cambio-flexibles" id="toc-tipos-de-cambio-flexibles" class="nav-link" data-scroll-target="#tipos-de-cambio-flexibles">Tipos de cambio flexibles</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/achalmed/website-achalma/edit/main/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/index.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action">Informar de un problema</a></p></div></div><div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/achalmed/website-achalma/edit/main/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/index.md" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li></ul></div><div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -417,7 +425,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el Futuro del FMI</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/index.qmd"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el Futuro del FMI</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/index.md"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Explorando los sistemas monetarios internacionales, tipos de cambio fijos y flexibles, y el papel en evolución del FMI en la economía mundial.</p>
   <div class="quarto-categories">
     <div class="quarto-category">Finanzas Internacionales</div>
@@ -435,16 +443,16 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Afiliación</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:achalmed.18@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://www.gob.pe/unsch">
             Universidad Nacional de San Cristóbal de Huamanga
             </a>
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -459,14 +467,16 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">18 de diciembre de 2023</p>
+      <p class="date-modified">27 de marzo de 2024</p>
     </div>
   </div>
     
   </div>
   
 
+
 </header>
+
 
 <section id="el-sistema-monetario-internacional" class="level1">
 <h1>El Sistema Monetario Internacional</h1>
@@ -505,53 +515,15 @@ cookieconsent.run({
 <p>En este régimen, el tipo de cambio se determina mediante el juego de oferta y demanda en el mercado. La intervención del Banco Central tiene como objetivo moderar la tasa de variación y evitar fluctuaciones excesivas, pero no se establece un nivel específico del tipo de cambio. En este régimen, la política monetaria es independiente de la política cambiaria. Ejemplos de países que siguen este régimen son Argentina, Australia, Brasil, Canadá, Estados Unidos, Japón, México y Reino Unido.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;1: Regímenes cambiarios</figcaption>
+<div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Regímenes cambiarios
+</figcaption>
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<svg width="672" height="480" viewbox="0.00 0.00 420.80 98.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
-<title>
-RegimenCambiario
-</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-94 416.8,-94 416.8,4 -4,4"></polygon> <!-- RegimenCambiario --> <g id="node1" class="node">
-<title>
-RegimenCambiario
-</title>
-<path fill="#efefef" stroke="black" d="M110.06,-63C110.06,-63 11.98,-63 11.98,-63 5.98,-63 -0.02,-57 -0.02,-51 -0.02,-51 -0.02,-39 -0.02,-39 -0.02,-33 5.98,-27 11.98,-27 11.98,-27 110.06,-27 110.06,-27 116.06,-27 122.06,-33 122.06,-39 122.06,-39 122.06,-51 122.06,-51 122.06,-57 116.06,-63 110.06,-63"></path> <text text-anchor="middle" x="61.02" y="-41.4" font-family="Arial" font-size="12.00">Regimen Cambiario</text> </g> <!-- Fijo --> <g id="node2" class="node">
-<title>
-Fijo
-</title>
-<path fill="#efefef" stroke="black" d="M201.72,-90C201.72,-90 171.72,-90 171.72,-90 165.72,-90 159.72,-84 159.72,-78 159.72,-78 159.72,-66 159.72,-66 159.72,-60 165.72,-54 171.72,-54 171.72,-54 201.72,-54 201.72,-54 207.72,-54 213.72,-60 213.72,-66 213.72,-66 213.72,-78 213.72,-78 213.72,-84 207.72,-90 201.72,-90"></path> <text text-anchor="middle" x="186.72" y="-68.4" font-family="Arial" font-size="12.00">Fijo</text> </g> <!-- RegimenCambiario&#45;&gt;Fijo --> <g id="edge1" class="edge">
-<title>
-RegimenCambiario-&gt;Fijo
-</title>
-<path fill="none" stroke="#333333" d="M122.06,-58.1C131.42,-60.15 140.84,-62.2 149.46,-64.09"></path> <polygon fill="#333333" stroke="#333333" points="159.51,-66.28 148.78,-68.54 154.63,-65.21 149.74,-64.15 149.74,-64.15 149.74,-64.15 154.63,-65.21 150.7,-59.75 159.51,-66.28 159.51,-66.28"></polygon> </g> <!-- Flexible --> <g id="node3" class="node">
-<title>
-Flexible
-</title>
-<path fill="#efefef" stroke="black" d="M203.57,-36C203.57,-36 169.87,-36 169.87,-36 163.87,-36 157.87,-30 157.87,-24 157.87,-24 157.87,-12 157.87,-12 157.87,-6 163.87,0 169.87,0 169.87,0 203.57,0 203.57,0 209.57,0 215.57,-6 215.57,-12 215.57,-12 215.57,-24 215.57,-24 215.57,-30 209.57,-36 203.57,-36"></path> <text text-anchor="middle" x="186.72" y="-14.4" font-family="Arial" font-size="12.00">Flexible</text> </g> <!-- RegimenCambiario&#45;&gt;Flexible --> <g id="edge2" class="edge">
-<title>
-RegimenCambiario-&gt;Flexible
-</title>
-<path fill="none" stroke="#333333" d="M122.06,-31.9C130.89,-29.97 139.77,-28.03 147.97,-26.24"></path> <polygon fill="#333333" stroke="#333333" points="157.96,-24.06 149.15,-30.59 153.07,-25.13 148.19,-26.19 148.19,-26.19 148.19,-26.19 153.07,-25.13 147.23,-21.8 157.96,-24.06 157.96,-24.06"></polygon> </g> <!-- DevaluacionRevaluacion --> <g id="node4" class="node">
-<title>
-DevaluacionRevaluacion
-</title>
-<path fill="#efefef" stroke="black" d="M400.35,-90C400.35,-90 263.85,-90 263.85,-90 257.85,-90 251.85,-84 251.85,-78 251.85,-78 251.85,-66 251.85,-66 251.85,-60 257.85,-54 263.85,-54 263.85,-54 400.35,-54 400.35,-54 406.35,-54 412.35,-60 412.35,-66 412.35,-66 412.35,-78 412.35,-78 412.35,-84 406.35,-90 400.35,-90"></path> <text text-anchor="middle" x="332.1" y="-68.4" font-family="Arial" font-size="12.00">Devaluacion y Revaluacion</text> </g> <!-- Fijo&#45;&gt;DevaluacionRevaluacion --> <g id="edge3" class="edge">
-<title>
-Fijo-&gt;DevaluacionRevaluacion
-</title>
-<path fill="none" stroke="#333333" d="M214.02,-72C222.14,-72 231.59,-72 241.52,-72"></path> <polygon fill="#333333" stroke="#333333" points="251.59,-72 241.59,-76.5 246.59,-72 241.59,-72 241.59,-72 241.59,-72 246.59,-72 241.59,-67.5 251.59,-72 251.59,-72"></polygon> </g> <!-- DepreciacionApreciacion --> <g id="node5" class="node">
-<title>
-DepreciacionApreciacion
-</title>
-<path fill="#efefef" stroke="black" d="M401,-36C401,-36 263.19,-36 263.19,-36 257.19,-36 251.19,-30 251.19,-24 251.19,-24 251.19,-12 251.19,-12 251.19,-6 257.19,0 263.19,0 263.19,0 401,0 401,0 407,0 413,-6 413,-12 413,-12 413,-24 413,-24 413,-30 407,-36 401,-36"></path> <text text-anchor="middle" x="332.1" y="-14.4" font-family="Arial" font-size="12.00">Depreciacion y Apreciacion</text> </g> <!-- Flexible&#45;&gt;DepreciacionApreciacion --> <g id="edge4" class="edge">
-<title>
-Flexible-&gt;DepreciacionApreciacion
-</title>
-<path fill="none" stroke="#333333" d="M215.7,-18C223.36,-18 232.1,-18 241.26,-18"></path> <polygon fill="#333333" stroke="#333333" points="251.34,-18 241.34,-22.5 246.34,-18 241.34,-18 241.34,-18 241.34,-18 246.34,-18 241.34,-13.5 251.34,-18 251.34,-18"></polygon> </g> </g>
-</svg>
+<p><img src="index_files/figure-latex/dot-figure-1.png" style="width:5.5in;height:3.5in" data-fig-pos="H" data-fig-env="figure" class="figure-img"></p>
+</div>
 </div>
 </figure>
 </div>
@@ -563,117 +535,15 @@ Flexible-&gt;DepreciacionApreciacion
 <p>Es importante tener en cuenta que ningún régimen cambiario puede funcionar eficientemente si no se complementa con políticas fiscales y monetarias responsables y prudentes. Estas políticas son fundamentales para respaldar y fortalecer el régimen cambiario elegido, garantizando así su efectividad y sostenibilidad a largo plazo.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figura&nbsp;2: Interrelaciones entre tipo de cambio, variables y políticas económicas</figcaption>
+<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Interrelaciones entre tipo de cambio, variables y políticas económicas
+</figcaption>
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<svg width="672" height="480" viewbox="0.00 0.00 512.00 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
-<title>
-matriz
-</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 508,-256 508,4 -4,4"></polygon> <!-- B --> <g id="node1" class="node">
-<title>
-B
-</title>
-<path fill="#efefef" stroke="black" d="M132,-252C132,-252 12,-252 12,-252 6,-252 0,-246 0,-240 0,-240 0,-192 0,-192 0,-186 6,-180 12,-180 12,-180 132,-180 132,-180 138,-180 144,-186 144,-192 144,-192 144,-240 144,-240 144,-246 138,-252 132,-252"></path> <text text-anchor="middle" x="72" y="-212.4" font-family="Arial" font-size="12.00">Balanza de pagos</text> </g> <!-- E --> <g id="node2" class="node">
-<title>
-E
-</title>
-<path fill="#efefef" stroke="black" d="M132,-162C132,-162 12,-162 12,-162 6,-162 0,-156 0,-150 0,-150 0,-102 0,-102 0,-96 6,-90 12,-90 12,-90 132,-90 132,-90 138,-90 144,-96 144,-102 144,-102 144,-150 144,-150 144,-156 138,-162 132,-162"></path> <text text-anchor="middle" x="72" y="-122.4" font-family="Arial" font-size="12.00">Empleo</text> </g> <!-- B&#45;&gt;E --> <g id="edge1" class="edge">
-<title>
-B-&gt;E
-</title>
-<path fill="none" stroke="#333333" d="M72,-172.88C72,-172.72 72,-172.57 72,-172.41"></path> <polygon fill="#333333" stroke="#333333" points="68.5,-169.86 72,-179.86 75.5,-169.86 68.5,-169.86"></polygon> <polygon fill="#333333" stroke="#333333" points="72,-162.21 76.5,-172.21 72,-167.21 72,-172.21 72,-172.21 72,-172.21 72,-167.21 67.5,-172.21 72,-162.21 72,-162.21"></polygon> </g> <!-- F --> <g id="node4" class="node">
-<title>
-F
-</title>
-<path fill="#efefef" stroke="black" d="M312,-252C312,-252 192,-252 192,-252 186,-252 180,-246 180,-240 180,-240 180,-192 180,-192 180,-186 186,-180 192,-180 192,-180 312,-180 312,-180 318,-180 324,-186 324,-192 324,-192 324,-240 324,-240 324,-246 318,-252 312,-252"></path> <text text-anchor="middle" x="252" y="-212.4" font-family="Arial" font-size="12.00">Finanzas públicas</text> </g> <!-- B&#45;&gt;F --> <g id="edge7" class="edge">
-<title>
-B-&gt;F
-</title>
-<path fill="none" stroke="#333333" d="M154.17,-216C159.42,-216 164.71,-216 169.96,-216"></path> <polygon fill="#333333" stroke="#333333" points="154.12,-212.5 144.12,-216 154.12,-219.5 154.12,-212.5"></polygon> <polygon fill="#333333" stroke="#333333" points="180,-216 170,-220.5 175,-216 170,-216 170,-216 170,-216 175,-216 170,-211.5 180,-216 180,-216"></polygon> </g> <!-- T --> <g id="node5" class="node">
-<title>
-T
-</title>
-<path fill="#efefef" stroke="black" d="M312,-162C312,-162 192,-162 192,-162 186,-162 180,-156 180,-150 180,-150 180,-102 180,-102 180,-96 186,-90 192,-90 192,-90 312,-90 312,-90 318,-90 324,-96 324,-102 324,-102 324,-150 324,-150 324,-156 318,-162 312,-162"></path> <text text-anchor="middle" x="252" y="-122.4" font-family="Arial" font-size="12.00">Tipo de cambio</text> </g> <!-- B&#45;&gt;T --> <g id="edge13" class="edge">
-<title>
-B-&gt;T
-</title>
-<path fill="none" stroke="#333333" d="M153.05,-175.53C158.94,-172.55 164.89,-169.54 170.79,-166.56"></path> <polygon fill="#333333" stroke="#333333" points="151.46,-172.41 144.12,-180.04 154.62,-178.65 151.46,-172.41"></polygon> <polygon fill="#333333" stroke="#333333" points="180,-161.9 173.1,-170.43 175.53,-164.16 171.07,-166.41 171.07,-166.41 171.07,-166.41 175.53,-164.16 169.04,-162.4 180,-161.9 180,-161.9"></polygon> </g> <!-- I --> <g id="node3" class="node">
-<title>
-I
-</title>
-<path fill="#efefef" stroke="black" d="M132,-72C132,-72 12,-72 12,-72 6,-72 0,-66 0,-60 0,-60 0,-12 0,-12 0,-6 6,0 12,0 12,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-60 144,-60 144,-66 138,-72 132,-72"></path> <text text-anchor="middle" x="72" y="-32.4" font-family="Arial" font-size="12.00">Inversión</text> </g> <!-- E&#45;&gt;I --> <g id="edge2" class="edge">
-<title>
-E-&gt;I
-</title>
-<path fill="none" stroke="#333333" d="M72,-82.88C72,-82.72 72,-82.57 72,-82.41"></path> <polygon fill="#333333" stroke="#333333" points="68.5,-79.86 72,-89.86 75.5,-79.86 68.5,-79.86"></polygon> <polygon fill="#333333" stroke="#333333" points="72,-72.21 76.5,-82.21 72,-77.21 72,-82.21 72,-82.21 72,-82.21 72,-77.21 67.5,-82.21 72,-72.21 72,-72.21"></polygon> </g> <!-- E&#45;&gt;T --> <g id="edge9" class="edge">
-<title>
-E-&gt;T
-</title>
-<path fill="none" stroke="#333333" d="M154.17,-126C159.42,-126 164.71,-126 169.96,-126"></path> <polygon fill="#333333" stroke="#333333" points="154.12,-122.5 144.12,-126 154.12,-129.5 154.12,-122.5"></polygon> <polygon fill="#333333" stroke="#333333" points="180,-126 170,-130.5 175,-126 170,-126 170,-126 170,-126 175,-126 170,-121.5 180,-126 180,-126"></polygon> </g> <!-- I&#45;&gt;T --> <g id="edge15" class="edge">
-<title>
-I-&gt;T
-</title>
-<path fill="none" stroke="#333333" d="M153.05,-76.47C158.94,-79.45 164.89,-82.46 170.79,-85.44"></path> <polygon fill="#333333" stroke="#333333" points="154.62,-73.35 144.12,-71.96 151.46,-79.59 154.62,-73.35"></polygon> <polygon fill="#333333" stroke="#333333" points="180,-90.1 169.04,-89.6 175.53,-87.84 171.07,-85.59 171.07,-85.59 171.07,-85.59 175.53,-87.84 173.1,-81.57 180,-90.1 180,-90.1"></polygon> </g> <!-- A --> <g id="node6" class="node">
-<title>
-A
-</title>
-<path fill="#efefef" stroke="black" d="M312,-72C312,-72 192,-72 192,-72 186,-72 180,-66 180,-60 180,-60 180,-12 180,-12 180,-6 186,0 192,0 192,0 312,0 312,0 318,0 324,-6 324,-12 324,-12 324,-60 324,-60 324,-66 318,-72 312,-72"></path> <text text-anchor="middle" x="252" y="-32.4" font-family="Arial" font-size="12.00">Ahorro</text> </g> <!-- I&#45;&gt;A --> <g id="edge11" class="edge">
-<title>
-I-&gt;A
-</title>
-<path fill="none" stroke="#333333" d="M154.17,-36C159.42,-36 164.71,-36 169.96,-36"></path> <polygon fill="#333333" stroke="#333333" points="154.12,-32.5 144.12,-36 154.12,-39.5 154.12,-32.5"></polygon> <polygon fill="#333333" stroke="#333333" points="180,-36 170,-40.5 175,-36 170,-36 170,-36 170,-36 175,-36 170,-31.5 180,-36 180,-36"></polygon> </g> <!-- F&#45;&gt;T --> <g id="edge3" class="edge">
-<title>
-F-&gt;T
-</title>
-<path fill="none" stroke="#333333" d="M252,-172.88C252,-172.72 252,-172.57 252,-172.41"></path> <polygon fill="#333333" stroke="#333333" points="248.5,-169.86 252,-179.86 255.5,-169.86 248.5,-169.86"></polygon> <polygon fill="#333333" stroke="#333333" points="252,-162.21 256.5,-172.21 252,-167.21 252,-172.21 252,-172.21 252,-172.21 252,-167.21 247.5,-172.21 252,-162.21 252,-162.21"></polygon> </g> <!-- N --> <g id="node7" class="node">
-<title>
-N
-</title>
-<path fill="#efefef" stroke="black" d="M492,-252C492,-252 372,-252 372,-252 366,-252 360,-246 360,-240 360,-240 360,-192 360,-192 360,-186 366,-180 372,-180 372,-180 492,-180 492,-180 498,-180 504,-186 504,-192 504,-192 504,-240 504,-240 504,-246 498,-252 492,-252"></path> <text text-anchor="middle" x="432" y="-212.4" font-family="Arial" font-size="12.00">Inflación</text> </g> <!-- F&#45;&gt;N --> <g id="edge8" class="edge">
-<title>
-F-&gt;N
-</title>
-<path fill="none" stroke="#333333" d="M334.17,-216C339.42,-216 344.71,-216 349.96,-216"></path> <polygon fill="#333333" stroke="#333333" points="334.12,-212.5 324.12,-216 334.12,-219.5 334.12,-212.5"></polygon> <polygon fill="#333333" stroke="#333333" points="360,-216 350,-220.5 355,-216 350,-216 350,-216 350,-216 355,-216 350,-211.5 360,-216 360,-216"></polygon> </g> <!-- T&#45;&gt;A --> <g id="edge4" class="edge">
-<title>
-T-&gt;A
-</title>
-<path fill="none" stroke="#333333" d="M252,-82.88C252,-82.72 252,-82.57 252,-82.41"></path> <polygon fill="#333333" stroke="#333333" points="248.5,-79.86 252,-89.86 255.5,-79.86 248.5,-79.86"></polygon> <polygon fill="#333333" stroke="#333333" points="252,-72.21 256.5,-82.21 252,-77.21 252,-82.21 252,-82.21 252,-82.21 252,-77.21 247.5,-82.21 252,-72.21 252,-72.21"></polygon> </g> <!-- T&#45;&gt;N --> <g id="edge16" class="edge">
-<title>
-T-&gt;N
-</title>
-<path fill="none" stroke="#333333" d="M333.05,-166.47C338.94,-169.45 344.89,-172.46 350.79,-175.44"></path> <polygon fill="#333333" stroke="#333333" points="334.62,-163.35 324.12,-161.96 331.46,-169.59 334.62,-163.35"></polygon> <polygon fill="#333333" stroke="#333333" points="360,-180.1 349.04,-179.6 355.53,-177.84 351.07,-175.59 351.07,-175.59 351.07,-175.59 355.53,-177.84 353.1,-171.57 360,-180.1 360,-180.1"></polygon> </g> <!-- M --> <g id="node8" class="node">
-<title>
-M
-</title>
-<path fill="#efefef" stroke="black" d="M492,-162C492,-162 372,-162 372,-162 366,-162 360,-156 360,-150 360,-150 360,-102 360,-102 360,-96 366,-90 372,-90 372,-90 492,-90 492,-90 498,-90 504,-96 504,-102 504,-102 504,-150 504,-150 504,-156 498,-162 492,-162"></path> <text text-anchor="middle" x="432" y="-122.4" font-family="Arial" font-size="12.00">Política monetaria</text> </g> <!-- T&#45;&gt;M --> <g id="edge10" class="edge">
-<title>
-T-&gt;M
-</title>
-<path fill="none" stroke="#333333" d="M334.17,-126C339.42,-126 344.71,-126 349.96,-126"></path> <polygon fill="#333333" stroke="#333333" points="334.12,-122.5 324.12,-126 334.12,-129.5 334.12,-122.5"></polygon> <polygon fill="#333333" stroke="#333333" points="360,-126 350,-130.5 355,-126 350,-126 350,-126 350,-126 355,-126 350,-121.5 360,-126 360,-126"></polygon> </g> <!-- R --> <g id="node9" class="node">
-<title>
-R
-</title>
-<path fill="#efefef" stroke="black" d="M492,-72C492,-72 372,-72 372,-72 366,-72 360,-66 360,-60 360,-60 360,-12 360,-12 360,-6 366,0 372,0 372,0 492,0 492,0 498,0 504,-6 504,-12 504,-12 504,-60 504,-60 504,-66 498,-72 492,-72"></path> <text text-anchor="middle" x="432" y="-32.4" font-family="Arial" font-size="12.00">Tasa de interés</text> </g> <!-- T&#45;&gt;R --> <g id="edge14" class="edge">
-<title>
-T-&gt;R
-</title>
-<path fill="none" stroke="#333333" d="M333.05,-85.53C338.94,-82.55 344.89,-79.54 350.79,-76.56"></path> <polygon fill="#333333" stroke="#333333" points="331.46,-82.41 324.12,-90.04 334.62,-88.65 331.46,-82.41"></polygon> <polygon fill="#333333" stroke="#333333" points="360,-71.9 353.1,-80.43 355.53,-74.16 351.07,-76.41 351.07,-76.41 351.07,-76.41 355.53,-74.16 349.04,-72.4 360,-71.9 360,-71.9"></polygon> </g> <!-- A&#45;&gt;R --> <g id="edge12" class="edge">
-<title>
-A-&gt;R
-</title>
-<path fill="none" stroke="#333333" d="M334.17,-36C339.42,-36 344.71,-36 349.96,-36"></path> <polygon fill="#333333" stroke="#333333" points="334.12,-32.5 324.12,-36 334.12,-39.5 334.12,-32.5"></polygon> <polygon fill="#333333" stroke="#333333" points="360,-36 350,-40.5 355,-36 350,-36 350,-36 350,-36 355,-36 350,-31.5 360,-36 360,-36"></polygon> </g> <!-- N&#45;&gt;M --> <g id="edge5" class="edge">
-<title>
-N-&gt;M
-</title>
-<path fill="none" stroke="#333333" d="M432,-172.88C432,-172.72 432,-172.57 432,-172.41"></path> <polygon fill="#333333" stroke="#333333" points="428.5,-169.86 432,-179.86 435.5,-169.86 428.5,-169.86"></polygon> <polygon fill="#333333" stroke="#333333" points="432,-162.21 436.5,-172.21 432,-167.21 432,-172.21 432,-172.21 432,-172.21 432,-167.21 427.5,-172.21 432,-162.21 432,-162.21"></polygon> </g> <!-- M&#45;&gt;R --> <g id="edge6" class="edge">
-<title>
-M-&gt;R
-</title>
-<path fill="none" stroke="#333333" d="M432,-82.88C432,-82.72 432,-82.57 432,-82.41"></path> <polygon fill="#333333" stroke="#333333" points="428.5,-79.86 432,-89.86 435.5,-79.86 428.5,-79.86"></polygon> <polygon fill="#333333" stroke="#333333" points="432,-72.21 436.5,-82.21 432,-77.21 432,-82.21 432,-82.21 432,-82.21 432,-77.21 427.5,-82.21 432,-72.21 432,-72.21"></polygon> </g> </g>
-</svg>
+<p><img src="index_files/figure-latex/dot-figure-2.png" style="width:5.5in;height:3.5in" data-fig-pos="H" data-fig-env="figure" class="figure-img"></p>
+</div>
 </div>
 </figure>
 </div>
@@ -851,7 +721,7 @@ M-&gt;R
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
   author = {Achalma, Edison},
   title = {Perspectivas Monetarias Globales. Análisis de Regímenes
     Cambiarios y el Futuro del FMI},
@@ -1040,10 +910,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1053,8 +945,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1066,7 +967,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1110,6 +1134,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1135,6 +1160,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1192,20 +1243,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 <script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
@@ -1213,17 +1250,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2023 Edison Achalma, Ayacucho</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2023 Edison Achalma, Ayacucho</p>
+</div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../../../about.html">Acerca de</a>
+    <a class="nav-link" href="../../../../about.html">
+<p>Acerca de</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../../../license.html">Licencia</a>
+    <a class="nav-link" href="../../../../license.html">
+<p>Licencia</p>
+</a>
   </li>  
 </ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/achalmed/website-achalma/edit/main/docs/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional-fi-intro2/index.md" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/achalmed/website-achalma/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1242,6 +1285,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

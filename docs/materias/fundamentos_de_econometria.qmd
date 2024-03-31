@@ -4,7 +4,7 @@ subtitle: Haga clic en el enlace para descargar cada documento en formato pdf.
 page-layout: full
 listing:
   - id: 01-fundamentos-econometria
-    contents: "../blog/01-fundamentos-econometria/*/index.qmd"
+    contents: "../econometria/01-fundamentos-econometria/*/index.qmd"
     fields: [date, title, author, reading-time]
     sort: 
       - "date desc"

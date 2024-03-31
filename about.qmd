@@ -3,10 +3,9 @@ title: "Acerca de mí"
 subtitle: "Open source tools for scientific and technical publishing"
 ---
 
-## Acerca de mí
-¡Hola! Mi nombre es Edison Achalma y te doy la bienvenida a mi página web personal. Permíteme compartir un poco sobre quién soy y qué me apasiona.
+¡Hola! Mi nombre es Edison Achalma (achalmaedison) y te doy la bienvenida a mi página web personal. Permíteme compartir un poco sobre quién soy y qué me apasiona.
 
-Soy achalmaedison, estudiante de economía. A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informtica. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.
+Soy economista. A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informtica. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.
 
 En este sitio web, encontrarás información sobre mis intereses, habilidades y proyectos en los que he trabajado. Además, estaré compartiendo contenido relacionado con la economía, la filosofía, la matemática y la informática.
 
@@ -17,38 +16,3 @@ Te invito a explorar las diferentes secciones de mi página para conocer más so
 ¡Espero que encuentres este sitio interesante y útil! ¡Gracias por visitar!
 
 Achalma Edison
-
-## Contribuir
-
-Puedes contribuir a Quarto de varias formas:
-
--   Abriendo problemas para brindar comentarios y compartir ideas.
--   Enviando solicitudes de extracción (PR) para solucionar problemas abiertos.
--   Enviando solicitudes de extracción (PR) para sugerir nuevas características (se considera una buena práctica abrir un problema para discusión antes de trabajar en una solicitud de extracción para una nueva característica).
-
-Por favor, ten en cuenta nuestro [código de conducta](https://github.com/quarto-dev/quarto-cli/blob/main/.github/CODE_OF_CONDUCT.md) mientras interactúas con otros miembros de la comunidad.
-
-### Solicitudes de extracción {.unlisted}
-
-¡Las solicitudes de extracción son muy bienvenidas! Aquí te explicamos cómo contribuir mediante una solicitud de extracción (PR):
-
-1.  [Haz un fork](https://github.com/quarto-dev/quarto-cli/fork) del repositorio, clónalo localmente y realiza tus cambios en una nueva rama específica para la solicitud de extracción. Por ejemplo:
-
-    ``` {.bash filename="Terminal"}
-    # clone your fork
-    $ git clone https://github.com/<username>/quarto-cli
-
-    # configure for your platform (./configure.sh or ./configure.cmd for windows)
-    $ cd quarto-cli
-    $ ./configure.sh
-
-    # checkout a new branch
-    $ git checkout -b feature/newthing
-    ```
-    
-2.  Para cambios significativos (por ejemplo, más que pequeñas correcciones de errores), asegúrate de haber firmado el acuerdo de contribución [individual](https://posit.co/wp-content/uploads/2023/04/2023-03-13_TC_Indiv_contrib_agreement.pdf) o [corporativo](https://posit.co/wp-content/uploads/2023/04/2023-03-13_TC_Corp_contrib_agreement.pdf) según corresponda. Puedes enviar una copia firmada a [jj@rstudio.com](mailto:jj@rstudio.com){.email}.
-    
-3.  Envía la [solicitud de extracción](https://help.github.com/articles/using-pull-requests). Puedes enviarla como borrador si aún estás trabajando en ella pero deseas recibir comentarios. Siempre es bueno compartir abiertamente que estás trabajando en ello.
-    
-
-Haremos todo lo posible para revisar y aceptar las solicitudes de extracción de manera oportuna.

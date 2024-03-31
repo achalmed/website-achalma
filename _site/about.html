@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -415,52 +381,15 @@ cookieconsent.run({
 </header>
 
 
-<section id="acerca-de-mí" class="level2">
-<h2 class="anchored" data-anchor-id="acerca-de-mí">Acerca de mí</h2>
-<p>¡Hola! Mi nombre es Edison Achalma y te doy la bienvenida a mi página web personal. Permíteme compartir un poco sobre quién soy y qué me apasiona.</p>
-<p>Soy achalmaedison, estudiante de economía. A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informtica. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.</p>
+<p>¡Hola! Mi nombre es Edison Achalma (achalmaedison) y te doy la bienvenida a mi página web personal. Permíteme compartir un poco sobre quién soy y qué me apasiona.</p>
+<p>Soy economista. A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informtica. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.</p>
 <p>En este sitio web, encontrarás información sobre mis intereses, habilidades y proyectos en los que he trabajado. Además, estaré compartiendo contenido relacionado con la economía, la filosofía, la matemática y la informática.</p>
 <p>Mi objetivo principal es brindar información relevante y de calidad sobre temas que me apasionan y en los cuales tengo conocimientos sólidos con el fin de inspirar, educar y generar discusiones constructivas. Me apasiona la economía y la informática y estoy emocionado de poder compartir mi conocimiento y experiencias contigo.</p>
 <p>Te invito a explorar las diferentes secciones de mi página para conocer más sobre mis proyectos, publicaciones y logros. Si tienes alguna pregunta o te gustaría colaborar en algún proyecto, no dudes en contactarme a través de la sección de contacto.</p>
 <p>¡Espero que encuentres este sitio interesante y útil! ¡Gracias por visitar!</p>
 <p>Achalma Edison</p>
-</section>
-<section id="contribuir" class="level2">
-<h2 class="anchored" data-anchor-id="contribuir">Contribuir</h2>
-<p>Puedes contribuir a Quarto de varias formas:</p>
-<ul>
-<li>Abriendo problemas para brindar comentarios y compartir ideas.</li>
-<li>Enviando solicitudes de extracción (PR) para solucionar problemas abiertos.</li>
-<li>Enviando solicitudes de extracción (PR) para sugerir nuevas características (se considera una buena práctica abrir un problema para discusión antes de trabajar en una solicitud de extracción para una nueva característica).</li>
-</ul>
-<p>Por favor, ten en cuenta nuestro <a href="https://github.com/quarto-dev/quarto-cli/blob/main/.github/CODE_OF_CONDUCT.md">código de conducta</a> mientras interactúas con otros miembros de la comunidad.</p>
-<section id="solicitudes-de-extracción" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="solicitudes-de-extracción">Solicitudes de extracción</h3>
-<p>¡Las solicitudes de extracción son muy bienvenidas! Aquí te explicamos cómo contribuir mediante una solicitud de extracción (PR):</p>
-<ol type="1">
-<li><p><a href="https://github.com/quarto-dev/quarto-cli/fork">Haz un fork</a> del repositorio, clónalo localmente y realiza tus cambios en una nueva rama específica para la solicitud de extracción. Por ejemplo:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># clone your fork</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone https://github.com/<span class="op">&lt;</span>username<span class="op">&gt;</span>/quarto-cli</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># configure for your platform (./configure.sh or ./configure.cmd for windows)</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd quarto-cli</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./configure.sh</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># checkout a new branch</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> feature/newthing</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-<li><p>Para cambios significativos (por ejemplo, más que pequeñas correcciones de errores), asegúrate de haber firmado el acuerdo de contribución <a href="https://posit.co/wp-content/uploads/2023/04/2023-03-13_TC_Indiv_contrib_agreement.pdf">individual</a> o <a href="https://posit.co/wp-content/uploads/2023/04/2023-03-13_TC_Corp_contrib_agreement.pdf">corporativo</a> según corresponda. Puedes enviar una copia firmada a <a href="mailto:jj@rstudio.com" class="email">jj@rstudio.com</a>.</p></li>
-<li><p>Envía la <a href="https://help.github.com/articles/using-pull-requests">solicitud de extracción</a>. Puedes enviarla como borrador si aún estás trabajando en ella pero deseas recibir comentarios. Siempre es bueno compartir abiertamente que estás trabajando en ello.</p></li>
-</ol>
-<p>Haremos todo lo posible para revisar y aceptar las solicitudes de extracción de manera oportuna.</p>
 
 
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script type="text/javascript">

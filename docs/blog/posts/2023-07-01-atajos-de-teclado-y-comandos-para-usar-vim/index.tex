@@ -99,10 +99,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +134,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -165,7 +153,8 @@
 \fi
 \usepackage[]{biblatex}
 \addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -194,10 +183,8 @@ de Vim para buscar, reemplazar y transformar texto de manera eficiente}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, breakable, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
 
-\hypertarget{introducciuxf3n-a-vim}{%
-\section{Introducción a Vim}\label{introducciuxf3n-a-vim}}
+\section{Introducción a Vim}\label{introducciuxf3n-a-vim}
 
 ¿Estás buscando mejorar tu fluidez y productividad al editar texto en
 Vim? ¿Quieres dominar los atajos de teclado y comandos que te permitirán
@@ -235,8 +222,7 @@ teclado y comandos indispensables.
 
 ¡La eficiencia está a solo unos atajos de distancia!
 
-\hypertarget{quuxe9-es-vim}{%
-\subsection{¿Qué es Vim?}\label{quuxe9-es-vim}}
+\subsection{¿Qué es Vim?}\label{quuxe9-es-vim}
 
 Antes de sumergirnos en los fantásticos atajos de teclado y comandos de
 Vim, es importante comprender qué es exactamente Vim y por qué es tan
@@ -247,9 +233,8 @@ altamente configurable y poderoso. Se basa en el antiguo editor de línea
 de comandos llamado Vi, que ha sido una herramienta estándar en los
 sistemas Unix durante décadas.
 
-\hypertarget{ventajas-de-utilizar-vim-como-editor-de-texto}{%
 \subsection{Ventajas de utilizar Vim como editor de
-texto}\label{ventajas-de-utilizar-vim-como-editor-de-texto}}
+texto}\label{ventajas-de-utilizar-vim-como-editor-de-texto}
 
 La principal ventaja de utilizar Vim es su enfoque en la eficiencia y la
 productividad. Con los atajos de teclado y comandos adecuados, puedes
@@ -286,9 +271,8 @@ Algunas de las ventajas más notables incluyen:
   rápidamente entre ellos y mantener tu flujo de trabajo organizado.
 \end{enumerate}
 
-\hypertarget{configuraciuxf3n-inicial-de-vim}{%
 \subsection{Configuración inicial de
-Vim}\label{configuraciuxf3n-inicial-de-vim}}
+Vim}\label{configuraciuxf3n-inicial-de-vim}
 
 Antes de sumergirnos en los atajos y comandos de Vim, es importante
 realizar una configuración inicial para adaptarlo a tus preferencias.
@@ -319,16 +303,14 @@ Aquí hay algunos pasos clave para empezar:
 apartados, te sumergirás en los atajos de teclado y comandos esenciales
 que te ayudarán a aprovechar al máximo este poderoso editor de texto.
 
-\hypertarget{modos-de-vim}{%
-\section{Modos de Vim}\label{modos-de-vim}}
+\section{Modos de Vim}\label{modos-de-vim}
 
 Cuando se trata de Vim, uno de los conceptos clave que necesitas
 entender son sus modos de funcionamiento. Estos modos determinan cómo
 interactúas con el texto y son fundamentales para utilizar Vim de manera
 eficiente.
 
-\hypertarget{modo-normal}{%
-\subsection{Modo normal}\label{modo-normal}}
+\subsection{Modo normal}\label{modo-normal}
 
 El modo normal es el modo principal de Vim. Aquí es donde puedes navegar
 por el archivo, realizar ediciones rápidas y ejecutar comandos. En este
@@ -336,16 +318,14 @@ modo, las teclas que presiones se interpretan como comandos, no como
 caracteres para ingresar. Es como convertir tu teclado en un control
 remoto para manipular el texto.
 
-\hypertarget{modo-de-inserciuxf3n}{%
-\subsection{Modo de inserción}\label{modo-de-inserciuxf3n}}
+\subsection{Modo de inserción}\label{modo-de-inserciuxf3n}
 
 El modo de inserción es donde puedes escribir y editar texto como en
 cualquier otro editor de texto convencional. Cuando estás en este modo,
 las teclas que presiones se insertan directamente en el archivo. Es el
 modo en el que puedes escribir tus palabras y expresarte libremente.
 
-\hypertarget{modo-de-comando}{%
-\subsection{Modo de comando}\label{modo-de-comando}}
+\subsection{Modo de comando}\label{modo-de-comando}
 
 El modo de comando es donde puedes ejecutar comandos más avanzados en
 Vim. Puedes utilizar estos comandos para buscar y reemplazar texto,
@@ -383,8 +363,7 @@ de comando. Aquí puedes ejecutar comandos avanzados en Vim. Desde buscar
 y reemplazar texto hasta personalizar la configuración. \\
 \end{longtable}
 
-\hypertarget{guardar-documentos-en-vim}{%
-\section{Guardar documentos en Vim}\label{guardar-documentos-en-vim}}
+\section{Guardar documentos en Vim}\label{guardar-documentos-en-vim}
 
 Cuando trabajas en Vim, es importante saber cómo guardar tus documentos
 para asegurarte de que tus cambios se guarden correctamente.
@@ -415,17 +394,15 @@ al mismo tiempo, puedes utilizar \texttt{:wq} o \texttt{:x}. Esto guarda
 los cambios y cierra Vim en un solo paso. \\
 \end{longtable}
 
-\hypertarget{atajos-de-navegaciuxf3n-y-movimiento}{%
 \section{Atajos de navegación y
-movimiento}\label{atajos-de-navegaciuxf3n-y-movimiento}}
+movimiento}\label{atajos-de-navegaciuxf3n-y-movimiento}
 
 En Vim, existen diversos atajos de teclado que te permiten una mejor
 navegaciòn y movimiento. A continuación, se muestran las diferentes
 categorías de atajos junto con sus respectivas funciones:
 
-\hypertarget{movimiento-buxe1sico-con-las-teclas-h-j-k-l}{%
 \subsection{Movimiento básico con las teclas h, j, k,
-l}\label{movimiento-buxe1sico-con-las-teclas-h-j-k-l}}
+l}\label{movimiento-buxe1sico-con-las-teclas-h-j-k-l}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2625}}
@@ -450,10 +427,9 @@ arriba. \\
 derecha. \\
 \end{longtable}
 
-\hypertarget{saltos-ruxe1pidos-en-el-archivo-con-gg-y-g}{%
 \subsection{\texorpdfstring{Saltos rápidos en el archivo con \texttt{gg}
 y
-\texttt{G}}{Saltos rápidos en el archivo con gg y G}}\label{saltos-ruxe1pidos-en-el-archivo-con-gg-y-g}}
+\texttt{G}}{Saltos rápidos en el archivo con gg y G}}\label{saltos-ruxe1pidos-en-el-archivo-con-gg-y-g}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3043}}
@@ -472,10 +448,9 @@ Función
 \texttt{G} & Presionar \texttt{G} te lleva al final del archivo. \\
 \end{longtable}
 
-\hypertarget{navegaciuxf3n-por-palabras-con-w-b-e}{%
 \subsection{\texorpdfstring{Navegación por palabras con \texttt{w},
 \texttt{b},
-\texttt{e}}{Navegación por palabras con w, b, e}}\label{navegaciuxf3n-por-palabras-con-w-b-e}}
+\texttt{e}}{Navegación por palabras con w, b, e}}\label{navegaciuxf3n-por-palabras-con-w-b-e}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2692}}
@@ -498,9 +473,8 @@ anterior. \\
 actual. \\
 \end{longtable}
 
-\hypertarget{desplazamiento-por-puxe1ginas-y-ventanas}{%
 \subsection{Desplazamiento por páginas y
-ventanas}\label{desplazamiento-por-puxe1ginas-y-ventanas}}
+ventanas}\label{desplazamiento-por-puxe1ginas-y-ventanas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1288}}
@@ -528,9 +502,8 @@ permite cambiar de ventana en Vim. Si tienes varias ventanas abiertas,
 este atajo te lleva a la siguiente ventana. \\
 \end{longtable}
 
-\hypertarget{otros-movimientos-del-cursor}{%
 \subsection{Otros movimientos del
-cursor}\label{otros-movimientos-del-cursor}}
+cursor}\label{otros-movimientos-del-cursor}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2100}}
@@ -563,9 +536,8 @@ y cambiar al modo insertar. \\
 paréntesis y viceversa. \\
 \end{longtable}
 
-\hypertarget{navegaciuxf3n-por-el-documento}{%
 \subsection{Navegación por el
-documento}\label{navegaciuxf3n-por-el-documento}}
+documento}\label{navegaciuxf3n-por-el-documento}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2360}}
@@ -598,18 +570,16 @@ posición. \\
 posición. \\
 \end{longtable}
 
-\hypertarget{atajos-de-ediciuxf3n-y-manipulaciuxf3n-de-texto}{%
 \section{Atajos de edición y manipulación de
-texto}\label{atajos-de-ediciuxf3n-y-manipulaciuxf3n-de-texto}}
+texto}\label{atajos-de-ediciuxf3n-y-manipulaciuxf3n-de-texto}
 
 En Vim, existen diversos atajos de teclado que te permiten realizar
 acciones de edición y manipulación de texto de forma eficiente. A
 continuación, se muestran las diferentes categorías de atajos junto con
 sus respectivas funciones explicadas:
 
-\hypertarget{inserciuxf3n-y-ediciuxf3n-de-texto}{%
 \subsection{Inserción y edición de
-texto}\label{inserciuxf3n-y-ediciuxf3n-de-texto}}
+texto}\label{inserciuxf3n-y-ediciuxf3n-de-texto}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1765}}
@@ -648,9 +618,8 @@ abiertas en Vim. \\
 \texttt{Ctrl+g} & Mostrar el número de líneas de un fichero. \\
 \end{longtable}
 
-\hypertarget{inserciuxf2n-de-texto-repetitivo-o-secuencial}{%
 \subsection{Inserciòn de texto repetitivo o
-secuencial}\label{inserciuxf2n-de-texto-repetitivo-o-secuencial}}
+secuencial}\label{inserciuxf2n-de-texto-repetitivo-o-secuencial}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5429}}
@@ -673,9 +642,8 @@ Escribe ``hola mundo'' 10 veces. \\
 \texttt{:put=range(1,10)} & Escribe los números del 1 al 10. \\
 \end{longtable}
 
-\hypertarget{eliminaciuxf3n-de-caracteres-palabras-y-luxedneas}{%
 \subsection{Eliminación de caracteres, palabras y
-líneas}\label{eliminaciuxf3n-de-caracteres-palabras-y-luxedneas}}
+líneas}\label{eliminaciuxf3n-de-caracteres-palabras-y-luxedneas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2143}}
@@ -698,8 +666,7 @@ el cursor hasta el final. \\
 actual. \\
 \end{longtable}
 
-\hypertarget{copiar-y-pegar-texto}{%
-\subsection{Copiar y pegar texto}\label{copiar-y-pegar-texto}}
+\subsection{Copiar y pegar texto}\label{copiar-y-pegar-texto}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1927}}
@@ -761,9 +728,8 @@ utilizando el modo visual! Sigue estos pasos sencillos:
   modo visual y vuelve al modo normal, y luego presiona la tecla `p'.
 \end{enumerate}
 
-\hypertarget{mover-una-luxednea-de-posiciuxf3n}{%
 \subsection{Mover una línea de
-posición}\label{mover-una-luxednea-de-posiciuxf3n}}
+posición}\label{mover-una-luxednea-de-posiciuxf3n}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1221}}
@@ -786,12 +752,10 @@ actual hasta 2 líneas antes de la actual, a una posición 8 líneas
 después de la posición actual del cursor. \\
 \end{longtable}
 
-\hypertarget{selecciuxf3n-de-texto-y-acciones-en-modo-visual}{%
 \section{Selección de texto y acciones en modo
-visual}\label{selecciuxf3n-de-texto-y-acciones-en-modo-visual}}
+visual}\label{selecciuxf3n-de-texto-y-acciones-en-modo-visual}
 
-\hypertarget{modo-visual}{%
-\subsection{Modo Visual}\label{modo-visual}}
+\subsection{Modo Visual}\label{modo-visual}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2917}}
@@ -811,8 +775,7 @@ Función
 \texttt{Ctrl\ +\ v} & Inicia el modo Bloque visual. \\
 \end{longtable}
 
-\hypertarget{selecciuxf3n-de-palabras}{%
-\subsection{Selección de Palabras}\label{selecciuxf3n-de-palabras}}
+\subsection{Selección de Palabras}\label{selecciuxf3n-de-palabras}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1909}}
@@ -832,8 +795,7 @@ Función
 incluyendo el espacio que la precede. \\
 \end{longtable}
 
-\hypertarget{selecciuxf3n-de-bloques}{%
-\subsection{Selección de Bloques}\label{selecciuxf3n-de-bloques}}
+\subsection{Selección de Bloques}\label{selecciuxf3n-de-bloques}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1750}}
@@ -864,8 +826,7 @@ etiquetas. \\
 etiquetas. \\
 \end{longtable}
 
-\hypertarget{otras-acciones}{%
-\subsection{Otras Acciones}\label{otras-acciones}}
+\subsection{Otras Acciones}\label{otras-acciones}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1892}}
@@ -905,11 +866,9 @@ la izquierda. (Aplica sangría al texto.) \\
 \texttt{Esc} & Sale del modo visual. \\
 \end{longtable}
 
-\hypertarget{crear-marcas-en-un-fichero}{%
-\section{Crear marcas en un fichero}\label{crear-marcas-en-un-fichero}}
+\section{Crear marcas en un fichero}\label{crear-marcas-en-un-fichero}
 
-\hypertarget{crear-marcas}{%
-\subsection{Crear Marcas}\label{crear-marcas}}
+\subsection{Crear Marcas}\label{crear-marcas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2143}}
@@ -928,8 +887,7 @@ Función
 especificado. Puedes usar letras de a a z. \\
 \end{longtable}
 
-\hypertarget{trabajar-con-marcas}{%
-\subsection{Trabajar con Marcas}\label{trabajar-con-marcas}}
+\subsection{Trabajar con Marcas}\label{trabajar-con-marcas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2100}}
@@ -954,8 +912,7 @@ marca. \\
 la marca a. \\
 \end{longtable}
 
-\hypertarget{eliminar-marcas}{%
-\subsection{Eliminar Marcas}\label{eliminar-marcas}}
+\subsection{Eliminar Marcas}\label{eliminar-marcas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2258}}
@@ -985,12 +942,10 @@ local y solo estará disponible mientras el fichero esté abierto. Si
 deseamos que la marca sea permanente, debemos asignarla con letras
 mayúsculas, creando así marcas globales.
 
-\hypertarget{aplicaciuxf3n-de-sangruxedas-a-un-texto}{%
 \section{Aplicación de sangrías a un
-texto}\label{aplicaciuxf3n-de-sangruxedas-a-un-texto}}
+texto}\label{aplicaciuxf3n-de-sangruxedas-a-un-texto}
 
-\hypertarget{aplicar-sangruxedas}{%
-\subsection{Aplicar Sangrías}\label{aplicar-sangruxedas}}
+\subsection{Aplicar Sangrías}\label{aplicar-sangruxedas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
@@ -1011,8 +966,7 @@ derecha. \\
 líneas a partir de la posición actual. \\
 \end{longtable}
 
-\hypertarget{deshacer-sangruxeda}{%
-\subsection{Deshacer Sangría}\label{deshacer-sangruxeda}}
+\subsection{Deshacer Sangría}\label{deshacer-sangruxeda}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2692}}
@@ -1031,9 +985,8 @@ Función
 hacia la izquierda. \\
 \end{longtable}
 
-\hypertarget{pegar-y-ajustar-a-la-sangruxeda-actual}{%
 \subsection{Pegar y Ajustar a la Sangría
-Actual}\label{pegar-y-ajustar-a-la-sangruxeda-actual}}
+Actual}\label{pegar-y-ajustar-a-la-sangruxeda-actual}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2386}}
@@ -1052,9 +1005,8 @@ Función
 sangría actual. \\
 \end{longtable}
 
-\hypertarget{aplicar-sangruxeda-en-modo-visual}{%
 \subsection{Aplicar Sangría en Modo
-Visual}\label{aplicar-sangruxeda-en-modo-visual}}
+Visual}\label{aplicar-sangruxeda-en-modo-visual}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2442}}
@@ -1073,9 +1025,8 @@ Función
 visual y la sangra hacia la derecha. \\
 \end{longtable}
 
-\hypertarget{aplicar-sangruxeda-en-modo-insertar}{%
 \subsection{Aplicar Sangría en Modo
-Insertar}\label{aplicar-sangruxeda-en-modo-insertar}}
+Insertar}\label{aplicar-sangruxeda-en-modo-insertar}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2165}}
@@ -1098,11 +1049,9 @@ en modo insertar. & X \\
 izquierda en modo insertar. & \\
 \end{longtable}
 
-\hypertarget{deshacer-y-rehacer-cambios}{%
-\section{Deshacer y rehacer cambios}\label{deshacer-y-rehacer-cambios}}
+\section{Deshacer y rehacer cambios}\label{deshacer-y-rehacer-cambios}
 
-\hypertarget{deshacer-cambios}{%
-\subsection{Deshacer Cambios}\label{deshacer-cambios}}
+\subsection{Deshacer Cambios}\label{deshacer-cambios}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4306}}
@@ -1121,8 +1070,7 @@ Función
 \texttt{2u} & Deshace los 2 últimos cambios realizados. \\
 \end{longtable}
 
-\hypertarget{restaurar-cambio}{%
-\subsection{Restaurar Cambio}\label{restaurar-cambio}}
+\subsection{Restaurar Cambio}\label{restaurar-cambio}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2562}}
@@ -1141,8 +1089,7 @@ Función
 cambio después de restaurarlo. \\
 \end{longtable}
 
-\hypertarget{rehacer-cambios}{%
-\subsection{Rehacer Cambios}\label{rehacer-cambios}}
+\subsection{Rehacer Cambios}\label{rehacer-cambios}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4429}}
@@ -1161,9 +1108,8 @@ Función
 \texttt{3\ +\ Ctrl\ +\ r} & Rehace los últimos 3 cambios deshechos. \\
 \end{longtable}
 
-\hypertarget{deshacer-y-rehacer-por-tiempo}{%
 \subsection{Deshacer y Rehacer por
-Tiempo}\label{deshacer-y-rehacer-por-tiempo}}
+Tiempo}\label{deshacer-y-rehacer-por-tiempo}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3605}}
@@ -1184,12 +1130,9 @@ Función
 hora. \\
 \end{longtable}
 
-\hypertarget{eliminar-carateres-y-lineas}{%
-\section{Eliminar carateres y
-lineas}\label{eliminar-carateres-y-lineas}}
+\section{Eliminar carateres y lineas}\label{eliminar-carateres-y-lineas}
 
-\hypertarget{eliminar-caracteres}{%
-\subsection{Eliminar Caracteres}\label{eliminar-caracteres}}
+\subsection{Eliminar Caracteres}\label{eliminar-caracteres}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3647}}
@@ -1211,8 +1154,7 @@ Función
 \texttt{s} & Elimina un carácter y cambia al modo insertar. \\
 \end{longtable}
 
-\hypertarget{eliminar-palabras}{%
-\subsection{Eliminar Palabras}\label{eliminar-palabras}}
+\subsection{Eliminar Palabras}\label{eliminar-palabras}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2952}}
@@ -1235,8 +1177,7 @@ al modo insertar. \\
 insertar. \\
 \end{longtable}
 
-\hypertarget{eliminar-luxedneas}{%
-\subsection{Eliminar Líneas}\label{eliminar-luxedneas}}
+\subsection{Eliminar Líneas}\label{eliminar-luxedneas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2793}}
@@ -1265,8 +1206,7 @@ al modo insertar. \\
 cambia al modo insertar. \\
 \end{longtable}
 
-\hypertarget{eliminar-por-patruxf3n}{%
-\subsection{Eliminar por Patrón}\label{eliminar-por-patruxf3n}}
+\subsection{Eliminar por Patrón}\label{eliminar-por-patruxf3n}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2719}}
@@ -1323,17 +1263,15 @@ consultar el apartado de ``Atajos de teclado para copiar y pegar texto
 en Vim''. ¡Es una forma rápida y eficiente de seleccionar y eliminar el
 texto que desees!
 
-\hypertarget{buxfasqueda-y-reemplazo}{%
-\section{Búsqueda y reemplazo}\label{buxfasqueda-y-reemplazo}}
+\section{Búsqueda y reemplazo}\label{buxfasqueda-y-reemplazo}
 
 En Vim, la capacidad de buscar y reemplazar texto de manera eficiente es
 fundamental. A continuación, se presentan las diferentes categorías de
 acciones de búsqueda y reemplazo, junto con sus respectivos atajos de
 teclado y comandos:
 
-\hypertarget{buxfasqueda-de-texto-o-frase}{%
 \subsection{Búsqueda de texto o
-frase}\label{buxfasqueda-de-texto-o-frase}}
+frase}\label{buxfasqueda-de-texto-o-frase}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1361}}
@@ -1368,9 +1306,8 @@ resultados de búsqueda. \\
 ``palabra\_a\_busca'' y colocará el cursor en la tercera ocurrencia. \\
 \end{longtable}
 
-\hypertarget{navegaciuxf3n-entre-coincidencias-de-buxfasqueda}{%
 \subsection{Navegación entre coincidencias de
-búsqueda}\label{navegaciuxf3n-entre-coincidencias-de-buxfasqueda}}
+búsqueda}\label{navegaciuxf3n-entre-coincidencias-de-buxfasqueda}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1810}}
@@ -1391,8 +1328,7 @@ la palabra en la que se encuentra el cursor. \\
 la palabra en la que se encuentra el cursor. \\
 \end{longtable}
 
-\hypertarget{reemplazo-de-texto}{%
-\subsection{Reemplazo de texto}\label{reemplazo-de-texto}}
+\subsection{Reemplazo de texto}\label{reemplazo-de-texto}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1603}}
@@ -1415,8 +1351,7 @@ apariciones de ``buscar'' por ``reemplazar'' en todo el archivo. \\
 aparición de ``buscar'' por ``reemplazar'' en la línea actual. \\
 \end{longtable}
 
-\hypertarget{reemplazo-de-caracteres}{%
-\subsection{Reemplazo de caracteres}\label{reemplazo-de-caracteres}}
+\subsection{Reemplazo de caracteres}\label{reemplazo-de-caracteres}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1902}}
@@ -1441,9 +1376,8 @@ ESC. \\
 del cursor por ``ó''. \\
 \end{longtable}
 
-\hypertarget{buxfasqueda-y-reemplazo-de-palabras}{%
 \subsection{Búsqueda y reemplazo de
-palabras}\label{buxfasqueda-y-reemplazo-de-palabras}}
+palabras}\label{buxfasqueda-y-reemplazo-de-palabras}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1739}}
@@ -1476,9 +1410,8 @@ delimitador ``!'' y sin distinguir entre mayúsculas y minúsculas. \\
 documento pidiendo confirmación. \\
 \end{longtable}
 
-\hypertarget{buxfasqueda-y-reemplazo-en-rangos-especuxedficos}{%
 \subsection{Búsqueda y reemplazo en rangos
-específicos}\label{buxfasqueda-y-reemplazo-en-rangos-especuxedficos}}
+específicos}\label{buxfasqueda-y-reemplazo-en-rangos-especuxedficos}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1925}}
@@ -1505,8 +1438,7 @@ contienen ``Achalma'' por ``Linux'' en la línea actual, distinguiendo
 entre mayúsculas y minúsculas. \\
 \end{longtable}
 
-\hypertarget{transformaciuxf3n-de-texto}{%
-\subsection{Transformación de texto}\label{transformaciuxf3n-de-texto}}
+\subsection{Transformación de texto}\label{transformaciuxf3n-de-texto}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
@@ -1519,12 +1451,10 @@ Shortcuts or commands & Función \\
 \texttt{g+U+U} & Transforma una frase completa a mayúsculas. \\
 \end{longtable}
 
-\hypertarget{especificando-rangos}{%
-\section{Especificando rangos}\label{especificando-rangos}}
+\section{Especificando rangos}\label{especificando-rangos}
 
-\hypertarget{suxedmbolos-para-especificar-rangos}{%
 \subsection{Símbolos para especificar
-rangos}\label{suxedmbolos-para-especificar-rangos}}
+rangos}\label{suxedmbolos-para-especificar-rangos}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1061}}
@@ -1545,9 +1475,8 @@ Significado
 cursor \\
 \end{longtable}
 
-\hypertarget{especificaciuxf3n-de-rangos-mediante-marcas-y-nuxfameros-de-luxednea}{%
 \subsection{Especificación de rangos mediante marcas y números de
-línea}\label{especificaciuxf3n-de-rangos-mediante-marcas-y-nuxfameros-de-luxednea}}
+línea}\label{especificaciuxf3n-de-rangos-mediante-marcas-y-nuxfameros-de-luxednea}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1507}}
@@ -1569,8 +1498,7 @@ entre las marcas `a' y `b' \\
 líneas debajo \\
 \end{longtable}
 
-\hypertarget{juntar-2-luxedneas}{%
-\section{Juntar 2 líneas}\label{juntar-2-luxedneas}}
+\section{Juntar 2 líneas}\label{juntar-2-luxedneas}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2952}}
@@ -1591,9 +1519,8 @@ espacio entre ellas \\
 \texttt{:join} & Fórmula a utilizar si se desean unir 2 líneas \\
 \end{longtable}
 
-\hypertarget{atajos-de-teclado-para-realizar-pliegues-manuales}{%
 \section{Atajos de teclado para realizar pliegues
-manuales}\label{atajos-de-teclado-para-realizar-pliegues-manuales}}
+manuales}\label{atajos-de-teclado-para-realizar-pliegues-manuales}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1789}}
@@ -1632,12 +1559,10 @@ cursor. \\
 siguiente línea al archivo de configuración
 \texttt{\textasciitilde{}/.vimrc}: \texttt{set\ foldmethod=manual}.
 
-\hypertarget{registros-o-portapapeles}{%
-\section{Registros o portapapeles}\label{registros-o-portapapeles}}
+\section{Registros o portapapeles}\label{registros-o-portapapeles}
 
-\hypertarget{mostrar-y-gestionar-los-registros}{%
 \subsection{Mostrar y gestionar los
-registros}\label{mostrar-y-gestionar-los-registros}}
+registros}\label{mostrar-y-gestionar-los-registros}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1208}}
@@ -1687,8 +1612,7 @@ necesario que el texto esté copiado en el portapapeles del sistema. \\
 
 \textbf{Nota:} Hay 26 registros nominales, desde ``a'' hasta ``z''.
 
-\hypertarget{registros-numuxe9ricos}{%
-\subsection{Registros numéricos}\label{registros-numuxe9ricos}}
+\subsection{Registros numéricos}\label{registros-numuxe9ricos}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3182}}
@@ -1712,8 +1636,7 @@ Shortcuts or commands
 \texttt{"9p} & Pega el contenido del registro numérico 9. \\
 \end{longtable}
 
-\hypertarget{registros-de-lectura}{%
-\subsection{Registros de lectura}\label{registros-de-lectura}}
+\subsection{Registros de lectura}\label{registros-de-lectura}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
@@ -1733,8 +1656,7 @@ como el último comando ejecutado, la ruta del archivo en edición y el
 último texto insertado. Puedes utilizar estos registros en tus flujos de
 trabajo de Vim para mejorar tu productividad.
 
-\hypertarget{registros-especiales}{%
-\subsection{Registros especiales}\label{registros-especiales}}
+\subsection{Registros especiales}\label{registros-especiales}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0777}}
@@ -1775,9 +1697,8 @@ el archivo \texttt{\textasciitilde{}/.viminfo}, lo que significa que no
 se borran al cerrar Vim. Esto te permite mantener tus registros
 guardados y acceder a ellos en sesiones posteriores.
 
-\hypertarget{cuxf3mo-usar-la-terminal-de-linux-dentro-de-vim}{%
 \section{¿Cómo usar la terminal de Linux dentro de
-Vim?}\label{cuxf3mo-usar-la-terminal-de-linux-dentro-de-vim}}
+Vim?}\label{cuxf3mo-usar-la-terminal-de-linux-dentro-de-vim}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1694}}
@@ -1801,8 +1722,7 @@ usar otros comandos, como \texttt{sudo\ apt\ update}, en su lugar. \\
 comando ejecutado dentro del archivo de Vim que estás editando. \\
 \end{longtable}
 
-\hypertarget{encadenar-comandos-en-vim}{%
-\section{Encadenar comandos en Vim**}\label{encadenar-comandos-en-vim}}
+\section{Encadenar comandos en Vim**}\label{encadenar-comandos-en-vim}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2692}}
@@ -1834,9 +1754,8 @@ introducir comandos por separado. Puedes aprovechar la potencia de Vim
 combinando múltiples acciones en una sola línea de comando utilizando la
 tubería \texttt{\textbar{}}.
 
-\hypertarget{trabajo-con-muxfaltiples-archivos-y-ventanas}{%
 \section{Trabajo con múltiples archivos y
-ventanas}\label{trabajo-con-muxfaltiples-archivos-y-ventanas}}
+ventanas}\label{trabajo-con-muxfaltiples-archivos-y-ventanas}
 
 En Vim, tienes la capacidad de trabajar con múltiples archivos y
 ventanas para organizar tu flujo de trabajo de manera eficiente. A
@@ -1844,8 +1763,7 @@ continuación, se presentan las diferentes acciones relacionadas con la
 apertura, cierre y navegación entre archivos y ventanas, junto con sus
 respectivos Combinación de teclas o comandos:
 
-\hypertarget{apertura-de-archivos}{%
-\subsection{Apertura de archivos}\label{apertura-de-archivos}}
+\subsection{Apertura de archivos}\label{apertura-de-archivos}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1950}}
@@ -1883,8 +1801,7 @@ archivo ``nombre\_archivo.py''. \\
 \texttt{:ba} & Mostrar todos los buffers en pantalla. \\
 \end{longtable}
 
-\hypertarget{cierre-de-archivos}{%
-\subsection{Cierre de archivos}\label{cierre-de-archivos}}
+\subsection{Cierre de archivos}\label{cierre-de-archivos}
 
 Llega el momento de decir adiós a Vim y cerrar el editor de texto. Pero,
 ¿cómo puedes hacerlo de manera rápida y sencilla? Vim también tiene
@@ -1920,8 +1837,7 @@ de los archivos abiertos, puedes utilizar \texttt{:qa!}. Esto cierra Vim
 de inmediato y descarta todos los cambios realizados. \\
 \end{longtable}
 
-\hypertarget{trabajar-con-pestauxf1as}{%
-\subsection{Trabajar con pestañas}\label{trabajar-con-pestauxf1as}}
+\subsection{Trabajar con pestañas}\label{trabajar-con-pestauxf1as}
 
 Las pestañas en Vim son una forma práctica de organizar y alternar entre
 múltiples archivos abiertos. Con las siguientes combinaciones de teclas,
@@ -1977,9 +1893,8 @@ múltiples archivos en pestañas separadas. Por ejemplo,
 archivo2.sh en pestañas separadas. \\
 \end{longtable}
 
-\hypertarget{divisiuxf3n-de-la-ventana-en-paneles-y-cambio-entre-ventanas-y-paneles}{%
 \subsection{División de la ventana en paneles y cambio entre ventanas y
-paneles}\label{divisiuxf3n-de-la-ventana-en-paneles-y-cambio-entre-ventanas-y-paneles}}
+paneles}\label{divisiuxf3n-de-la-ventana-en-paneles-y-cambio-entre-ventanas-y-paneles}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1683}}
@@ -2046,9 +1961,8 @@ archivos en ventanas separadas.
 ventanas separadas. \\
 \end{longtable}
 
-\hypertarget{personalizaciuxf3n-y-configuraciuxf3n-de-vim}{%
 \section{Personalización y configuración de
-Vim}\label{personalizaciuxf3n-y-configuraciuxf3n-de-vim}}
+Vim}\label{personalizaciuxf3n-y-configuraciuxf3n-de-vim}
 
 Una de las ventajas más destacadas de Vim es su alta capacidad de
 personalización y configuración. Puedes adaptar el editor según tus
@@ -2056,9 +1970,8 @@ preferencias y necesidades. A continuación, te presento las diferentes
 opciones para personalizar y configurar Vim, junto con sus respectivas
 características:
 
-\hypertarget{personalizaciuxf3n-del-archivo-.vimrc}{%
 \subsection{Personalización del archivo
-.vimrc}\label{personalizaciuxf3n-del-archivo-.vimrc}}
+.vimrc}\label{personalizaciuxf3n-del-archivo-.vimrc}
 
 El archivo \texttt{.vimrc} es donde puedes definir tus preferencias de
 Vim. Puedes personalizar aspectos como el color del fondo, el tamaño de
@@ -2066,9 +1979,8 @@ la fuente, las opciones de resaltado de sintaxis y mucho más. Edita este
 archivo para que Vim se ajuste a tu estilo y preferencias personales.
 ¡Haz de Vim tu editor único!
 
-\hypertarget{uso-de-plugins-y-extensiones}{%
 \subsection{Uso de plugins y
-extensiones}\label{uso-de-plugins-y-extensiones}}
+extensiones}\label{uso-de-plugins-y-extensiones}
 
 Vim cuenta con una amplia gama de plugins y extensiones que te permiten
 ampliar sus funcionalidades. Puedes agregar complementos para la
@@ -2077,9 +1989,8 @@ autocompletado y mucho más. Explora la comunidad de plugins de Vim y
 encuentra las herramientas que se adapten mejor a tus necesidades.
 ¡Potencia tus capacidades editoriales!
 
-\hypertarget{configuraciuxf3n-de-atajos-de-teclado-personalizados}{%
 \subsection{Configuración de atajos de teclado
-personalizados}\label{configuraciuxf3n-de-atajos-de-teclado-personalizados}}
+personalizados}\label{configuraciuxf3n-de-atajos-de-teclado-personalizados}
 
 Vim te permite personalizar los atajos de teclado según tus
 preferencias. Puedes asignar tus propias combinaciones de teclas para
@@ -2088,17 +1999,14 @@ reemplazar, o incluso para ejecutar comandos personalizados. Configura
 tus atajos de teclado para trabajar de manera más eficiente y adaptada a
 tu flujo de trabajo. ¡Crea tu propio mapa de atajos!
 
-\hypertarget{consejos-y-trucos-avanzados}{%
-\section{Consejos y trucos
-avanzados}\label{consejos-y-trucos-avanzados}}
+\section{Consejos y trucos avanzados}\label{consejos-y-trucos-avanzados}
 
 En esta sección, exploraremos algunos consejos y trucos avanzados para
 aprovechar al máximo Vim. Estos recursos te permitirán mejorar tu flujo
 de trabajo y aumentar tu productividad. ¡Descubre cómo darle un impulso
 a tu experiencia con Vim!
 
-\hypertarget{uso-de-marcadores}{%
-\subsection{Uso de marcadores}\label{uso-de-marcadores}}
+\subsection{Uso de marcadores}\label{uso-de-marcadores}
 
 Los marcadores son una herramienta útil para marcar y acceder
 rápidamente a ubicaciones específicas en un archivo. Puedes colocar
@@ -2108,9 +2016,8 @@ actual y \texttt{m{[}a-z{]}} para asignar un marcador a una letra
 específica. Luego, utiliza \texttt{\textquotesingle{}a} para saltar al
 marcador. ¡No pierdas nunca la pista de tus puntos clave!
 
-\hypertarget{autocompletado-y-omnicomplete}{%
 \subsection{Autocompletado y
-omnicomplete}\label{autocompletado-y-omnicomplete}}
+omnicomplete}\label{autocompletado-y-omnicomplete}
 
 Vim ofrece características avanzadas de autocompletado que te ayudarán a
 escribir código más rápido y eficientemente. Utiliza
@@ -2123,8 +2030,7 @@ palabras automáticamente presionando
 \texttt{\textless{}Ctrl\ +\ o\textgreater{}}. ¡Escribe código de forma
 más rápida y precisa!
 
-\hypertarget{trabajo-con-macros}{%
-\subsection{Trabajo con macros}\label{trabajo-con-macros}}
+\subsection{Trabajo con macros}\label{trabajo-con-macros}
 
 Las macros te permiten grabar y reproducir una serie de comandos en Vim.
 Esto es útil cuando tienes que realizar acciones repetitivas en varios
@@ -2132,9 +2038,8 @@ lugares del archivo. Graba una macro usando \texttt{q{[}a-z{]}} seguido
 de los comandos que deseas grabar y luego reproduce la macro usando
 \texttt{@{[}a-z{]}}. ¡Automatiza tareas tediosas y ahorra tiempo!
 
-\hypertarget{uso-de-scripts-y-automatizaciuxf3n}{%
 \subsection{Uso de scripts y
-automatización}\label{uso-de-scripts-y-automatizaciuxf3n}}
+automatización}\label{uso-de-scripts-y-automatizaciuxf3n}
 
 Vim ofrece la posibilidad de utilizar scripts para personalizar y
 automatizar tareas. Puedes crear tus propios scripts en lenguajes como
@@ -2143,16 +2048,14 @@ acciones complejas y personalizadas de manera más eficiente. Explora la
 documentación de Vim para aprender cómo escribir y ejecutar scripts.
 ¡Haz que Vim se adapte aún más a tus necesidades!
 
-\hypertarget{recursos-adicionales}{%
-\section{Recursos adicionales}\label{recursos-adicionales}}
+\section{Recursos adicionales}\label{recursos-adicionales}
 
 En esta sección, te proporcionaremos algunos recursos adicionales para
 que puedas profundizar en tus conocimientos sobre Vim y aprovechar al
 máximo este poderoso editor de texto.
 
-\hypertarget{referencias-y-documentaciuxf3n-oficial-de-vim}{%
 \subsection{Referencias y documentación oficial de
-Vim}\label{referencias-y-documentaciuxf3n-oficial-de-vim}}
+Vim}\label{referencias-y-documentaciuxf3n-oficial-de-vim}
 
 La documentación oficial de Vim es una fuente invaluable de información.
 Puedes acceder a ella a través del comando \texttt{:help} dentro de Vim.
@@ -2161,9 +2064,8 @@ explicaciones detalladas de los comandos, configuraciones y
 características. Consulta la documentación oficial para tener una
 referencia confiable y completa sobre Vim.
 
-\hypertarget{comunidades-y-foros-de-usuarios-de-vim}{%
 \subsection{Comunidades y foros de usuarios de
-Vim}\label{comunidades-y-foros-de-usuarios-de-vim}}
+Vim}\label{comunidades-y-foros-de-usuarios-de-vim}
 
 Existen diversas comunidades en línea donde puedes encontrar apoyo y
 compartir conocimientos con otros usuarios de Vim. Reddit cuenta con un
@@ -2174,9 +2076,8 @@ ofrecen desafíos y consejos prácticos para mejorar tus habilidades en
 Vim. Únete a estas comunidades para aprender de otros entusiastas de
 Vim.
 
-\hypertarget{libros-y-tutoriales-recomendados-sobre-vim}{%
 \subsection{Libros y tutoriales recomendados sobre
-Vim}\label{libros-y-tutoriales-recomendados-sobre-vim}}
+Vim}\label{libros-y-tutoriales-recomendados-sobre-vim}
 
 Si prefieres un enfoque más estructurado y detallado, hay varios libros
 y tutoriales disponibles para aprender Vim. Algunos títulos populares

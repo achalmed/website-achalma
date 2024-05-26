@@ -99,10 +99,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +134,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -165,7 +153,8 @@
 \fi
 \usepackage[]{biblatex}
 \addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -192,10 +181,8 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, sharp corners, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
-\hypertarget{economuxeda}{%
-\section{Economía}\label{economuxeda}}
+\section{Economía}\label{economuxeda}
 
 La palabra ``economía'' proviene del griego antiguo ``oikonomia'', que
 se compone de dos términos: ``oikos'', que significa ``casa'' o
@@ -213,8 +200,7 @@ comunidad o sociedad en general. La economía dejó de ser simplemente un
 asunto doméstico para convertirse en una disciplina que estudia los
 procesos de producción, intercambio y consumo a nivel social.
 
-\hypertarget{definiciones}{%
-\subsection{Definiciones:}\label{definiciones}}
+\subsection{Definiciones:}\label{definiciones}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -264,9 +250,8 @@ procesos de producción, intercambio y consumo a nivel social.
   comportamiento humano y los sistemas de precios en la economía.
 \end{enumerate}
 
-\hypertarget{objeto-de-estudio-de-la-economuxeda}{%
 \subsection{Objeto de estudio de la
-economía:}\label{objeto-de-estudio-de-la-economuxeda}}
+economía:}\label{objeto-de-estudio-de-la-economuxeda}
 
 El objeto de estudio de la economía son los fenómenos económicos. La
 economía se enfoca en analizar, comprender y explicar los procesos
@@ -321,9 +306,8 @@ constituyen el objeto de estudio de la economía:
   inflación y otros indicadores económicos.
 \end{enumerate}
 
-\hypertarget{caracteruxedsticas-de-un-fenuxf3meno-econuxf3mico}{%
 \subsection{Características de un fenómeno
-económico}\label{caracteruxedsticas-de-un-fenuxf3meno-econuxf3mico}}
+económico}\label{caracteruxedsticas-de-un-fenuxf3meno-econuxf3mico}
 
 Los fenómenos económicos comparten varias características comunes. A
 continuación, se presentan algunas de las características principales de
@@ -367,9 +351,8 @@ un fenómeno económico:
   económicos y sociales.
 \end{enumerate}
 
-\hypertarget{causas-de-un-fenuxf3meno-econuxf3mico}{%
 \subsection{Causas de un fenómeno
-económico}\label{causas-de-un-fenuxf3meno-econuxf3mico}}
+económico}\label{causas-de-un-fenuxf3meno-econuxf3mico}
 
 La causa fundamental de los fenómenos económicos es la escasez. La
 escasez se refiere a la disparidad entre las necesidades y deseos
@@ -425,8 +408,7 @@ fenómenos económicos:
   demanda de ciertos productos y servicios.
 \end{enumerate}
 
-\hypertarget{modelo-econuxf3mico}{%
-\subsection{Modelo económico}\label{modelo-econuxf3mico}}
+\subsection{Modelo económico}\label{modelo-econuxf3mico}
 
 Un modelo económico es una representación simplificada de la realidad
 económica que utiliza conceptos, supuestos y relaciones matemáticas o
@@ -477,16 +459,14 @@ Algunas características de los modelos económicos incluyen:
   limitaciones.
 \end{enumerate}
 
-\hypertarget{fines-de-la-economuxeda}{%
-\section{Fines de la economía}\label{fines-de-la-economuxeda}}
+\section{Fines de la economía}\label{fines-de-la-economuxeda}
 
 Los fines de la economía pueden entenderse tanto desde una perspectiva
 teórica como práctica. A continuación, se presentan los fines teóricos y
 prácticos de la economía:
 
-\hypertarget{fines-teuxf3ricos-de-la-economuxeda}{%
 \subsection{Fines teóricos de la
-economía:}\label{fines-teuxf3ricos-de-la-economuxeda}}
+economía:}\label{fines-teuxf3ricos-de-la-economuxeda}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -512,9 +492,8 @@ economía:}\label{fines-teuxf3ricos-de-la-economuxeda}}
   transacciones económicas.
 \end{enumerate}
 
-\hypertarget{fines-pruxe1cticos-de-la-economuxeda}{%
 \subsection{Fines prácticos de la
-economía:}\label{fines-pruxe1cticos-de-la-economuxeda}}
+economía:}\label{fines-pruxe1cticos-de-la-economuxeda}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -547,8 +526,7 @@ economía:}\label{fines-pruxe1cticos-de-la-economuxeda}}
   adecuadas para abordarlos.
 \end{enumerate}
 
-\hypertarget{muxe9todos-de-la-economuxeda}{%
-\section{Métodos de la economía}\label{muxe9todos-de-la-economuxeda}}
+\section{Métodos de la economía}\label{muxe9todos-de-la-economuxeda}
 
 La economía utiliza diferentes métodos para estudiar, analizar y
 comprender los fenómenos económicos. Estos métodos incluyen enfoques
@@ -642,9 +620,8 @@ Este enfoque permite capturar la dinámica y los cambios en la economía,
 así como comprender las implicaciones sociales y políticas de los
 procesos económicos.
 
-\hypertarget{componentes-del-sistema-econuxf3mico}{%
 \section{Componentes del sistema
-económico}\label{componentes-del-sistema-econuxf3mico}}
+económico}\label{componentes-del-sistema-econuxf3mico}
 
 Un sistema económico es una forma de organizar y gestionar los recursos
 económicos de una sociedad. Los componentes principales de un sistema
@@ -688,8 +665,7 @@ ctor tiene diferentes roles y funciones dentro del sistema, y sus
 decisiones y acciones influyen en el funcionamiento y los resultados
 económicos.
 
-\hypertarget{publicaciones-similares}{%
-\section{Publicaciones Similares}\label{publicaciones-similares}}
+\section{Publicaciones Similares}\label{publicaciones-similares}
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y
 recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo

@@ -1,0 +1,165 @@
+---
+title: Tres fuentes y tres partes del marxismo
+subtitle: según Lenin
+description: |
+  Sumérgete en el legado de Lenin y su análisis de las tres fuentes y tres partes del marxismo. Descubre cómo este enfoque trasciende el siglo XX y aborda la evolución del pensamiento revolucionario.
+categories:
+  - Filosofía
+tags:
+  - Filosofía
+  - Marxismo
+  - Política
+  - Lenin
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.pdf
+date: "06/09/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
+---
+
+
+
+
+
+
+
+
+# Explorando las Tres Fuentes y Tres Partes del Marxismo según Lenin
+
+Me complace compartir con ustedes uno de los textos más maravillosos de síntesis del marxismo. Este texto ha sido desarrollado por Lenin en un prodigio de cinco hojas, resumiendo toda la teoría marxista tal como se había desarrollado en su momento. El texto se llama "Tres Fuentes y Tres Partes Integrantes del Marxismo" y fue escrito por Lenin en 1913, cuando se encontraba en el exilio.
+
+En aquel momento, la Rusia zarista estaba acelerando la transformación del sistema semi-feudal al capitalismo en toda Rusia. El partido bolchevique venía de enfrentar el duro golpe de la contrarrevolución del 5, y los tambores de la Primera Guerra Mundial, que comenzaría en 1914, ya se hacían sentir. Además, en Rusia, había hambrunas como resultado de este rápido desarrollo capitalista con inversiones extranjeras. En este contexto, era crucial consolidar al partido bolchevique.
+
+"Tres Fuentes y Tres Partes Integrantes del Marxismo" es un artículo escrito para una revista llamada "obrazovaniye," que significa "educación." Esta revista surgió como continuación de otra revista llamada "mysl'" que el zarismo había cerrado. "mysl'" significa "pensamiento" en ruso. En este entorno, Lenin escribió "Tres Fuentes y Tres Partes Integrantes del Marxismo" un texto excelente para introducirse al marxismo y comprender los conceptos básicos. Para profundizar aún más en el marxismo, se puede consultar otro texto titulado "Karl Marx: Un Breve Esbozo Histórico," que Lenin escribió para un diccionario filosófico y que ofrece una visión más completa de la doctrina. El texto es un poco más extenso, con alrededor de 25 a 30 páginas, y es una excelente manera de comenzar a entender el marxismo. 
+
+Lenin comienza Tres Fuentes y Tres Partes Integrantes del Marxismo con una frase poderosa: "La doctrina de Marx es omnipotente porque es verdadera." Esta afirmación refleja la profunda comprensión que tenía Lenin del marxismo, que no consideraba una doctrina sectaria, sino que surgía de lo más avanzado del pensamiento de su época.
+
+Lenin también enfatiza que el marxismo sigue siendo atacado, incluso por aquellos que se proclaman marxistas pero que en realidad tienen una visión socio-reaccionaria. En resumen, el texto de Lenin de 1913 es un testimonio de la relevancia continua del marxismo y su capacidad para proporcionar una comprensión sólida de la sociedad y la lucha de clases.
+
+El marxismo es un proyecto de investigación que nunca ha terminado. Lamentablemente, en el siglo XX, debido a persecuciones, torturas, asesinatos y prohibiciones de libros, no pudimos profundizar tanto como quisiéramos. Sin embargo, en el siglo XXI, es esencial seguir investigando y desarrollando el marxismo para poder construir una ola revolucionaria que el planeta tanto necesita. Además, la ciencia se vuelve cada vez más dialéctica a medida que avanza.
+
+Entonces, como les decía, es importante destacar que la doctrina de Marx no surge de la nada, sino que es una continuación directa e inmediata de las doctrinas de las más grandes figuras de la filosofía, la economía política y el socialismo. Esto significa que se basa en el conocimiento más avanzado de su época.
+
+Refiriéndonos a las fuentes del marxismo, se puede decir que el marxismo es el heredero legítimo de la filosofía alemana, la economía política inglesa y el socialismo francés.
+
+La filosofía del marxismo es el materialismo, en contraposición al idealismo alemán. Marx tomó la dialéctica de Hegel y la aplicó al estudio de la sociedad, sugiendo el materialismo histórico. Esta aplicación llevó a que la historia dejara de ser simplemente una narrativa histórica o anécdota y pasara a convertirse en una ciencia. El materialismo histórico, como base de esta nueva ciencia, plantea la serie de cambios económicos en la historia.
+
+La economía Política. A lo largo de su vida, Marx se dedicó a profundizar en el tema económico, que fue su especialidad. Explicó cómo la base económica es la que sostiene toda la superestructura política, estatal, filosófica, ideológica y jurídica de la sociedad. Los conceptos clave en este contexto son el valor, la plusvalía y la lucha de clases.
+
+El socialismo. Partiendo del materialosmo histórico, descubre que la lucha de clases es el motor de la historia y el rol de la clase trabajadora como sepulturera del capitalismo
+
+Estas tres partes fundamentales del marxismo son la **filosofía, la economía política y el socialismo**. Lenin, en este texto, profundiza de manera magistral en estos conceptos.
+
+Entonces vamos con la primera parte.
+
+## La filosofía. 
+
+Lenin nos dirá que la filosofía del marxismo es el materialismo y explicará lo que significa ser materialista en filosofía.
+
+Básicamente, ser materialista en filosofía implica preguntarse *si existe una realidad fuera de nosotros. Y si esa realidad es cognosible*. Porque, si podemos decir que hay una realidad pero que no podemos conocerla, entonces caemos del lado del idealismo. Esto significa que estamos en el terreno de la filosofía especulativa en lugar de buscar un conocimiento realista, científico y objetivo de la realidad, que es lo que propone el marxismo.
+
+La filosofía marxista no utiliza otro método que no sea el científico y, como tal, en la filosofía materialista, se divide en campos que te plantean si estás del lado de la especulación, el delirio o las palabras bonitas, o del conocimiento objetivo para transformar la realidad. Esta es la gran disyuntiva.
+
+El materialismo, en términos filosóficos, significa que la materia existe y que hay una realidad objetiva. El idealismo, por otro lado, argumenta que o bien la realidad objetiva no existe (como en el extremo del solipsismo, donde solo existe uno mismo y todo lo demás es proyección) o que si existe, no puede ser conocida y es incognoscible.
+
+Podemos decir que el materialismo, en el marxismo, es heredero del materialismo del siglo XVIII, que fue profundamente revolucionario. El materialismo del siglo XVIII, representado por los enciclopedistas y los revolucionarios franceses, luchó contra el clericalismo medieval, los prejuicios medievales y el feudalismo. Sin embargo, este materialismo era mecanicista.
+
+El materialismo marxista se enriqueció con los logros de la filosofía clásica alemana, especialmente con el sistema de Hegel, el cual, creía que la sociedad ya había alcanzado su máximo nivel de racionalidad. Marx y Engels, por otro lado, creían que la sociedad seguiría desarrollándose. Fue Feuerbach quien influyó en Marx y Engels y los ayudó a destruir la jerigonza idealista de Hegel y a enfocarse en la realidad material. Así, el materialismo marxista se basa en la idea de examinar y entender la realidad material.
+
+El principal logro de Hegel, sin embargo, es la dialéctica, es decir, la doctrina del desarrollo en su forma más completa, profunda y libre de unilateralidad. Es la doctrina acerca de lo relativo del conocimiento humano, que nos brinda un reflejo de la materia en perpetuo desarrollo. Es decir, lo que Marx y Engels harán cuando se encuentren en 1844 en París, siendo muy jóvenes, es llegar a la misma conclusión: que era necesario poner la dialéctica hegeliana, que hablaba de una idea absoluta que impulsaba el mundo en un movimiento dialéctico. Ellos dicen: "No, hay que ponerla con los pies en la tierra". La dialéctica debe encontrarse en la realidad objetiva. La dialéctica es una forma de ver el desarrollo, la evolución de una manera muy plástica, dinámica y contradictoria. Es lo contrario de la visión metafísica que divide entre blanco y negro, entre sí y no, que no ve los saltos cualitativos ni las contradicciones. Todo eso lo hace el pensamiento metafísico. Lo que hacen Marx y Engels es desarrollar el materialismo dialéctico, es decir, ver la realidad en su desarrollo.
+
+Posteriormente, Marx y Engels aplican el materialismo al estudio de la sociedad humana, nace el materialismo histórico. Es decir, a partir de una visión materialista, lo que deben ver es que la historia tiene una base material, a saber, el desarrollo económico de las sociedades. Lo que van a mostrar es cómo, a partir del desarrollo de las fuerzas productivas, surge un sistema social superior. Por ejemplo, cómo del feudalismo nace el capitalismo. Descubren las relaciones entre la base y la superestructura, es decir, cómo la base económica influye en la superestructura política, ideológica, jurídica y artística. Todo eso depende de la base material o economómica de la sociedad, del mismo modo que el conocimiento del hombre refleja la naturaleza, es decir, la materia en desarrollo, que existe independientemente del hombre, su conocimiento social, es decir, las diversas opiniones y doctrinas filosóficas, religiosas, políticas, etc., reflejan el régimen económico de la sociedad.
+
+Según Marx, las instituciones políticas son la superestructura que se alza sobre la base económica. Con este descubrimiento, Marx y Engels transformaron la historia de un anecdotario, de revistas tipo "paparazzi" que se centraban en detalles como el matrimonio del rey o la reina, a una ciencia donde se debía analizar la base económica para entender los fenómenos políticos. Este enfoque ha sido duramente atacado, tachándolo de mecanicista o eurocentrista, entre otras críticas. Sin embargo, en realidad, el materialismo histórico sigue demostrando su vigencia.
+
+El gran descubrimiento del materialismo histórico es que la base económica permite entender lo que está sucediendo en la superestructura de la sociedad, no de un modo mecánico, sino de un modo dialéctico, muy dinámico. Es el avance económico el que nos permite comprender por qué existen determinadas visiones políticas o ideológicas.
+
+Dentro de esta división del trabajo, Marx se dedicó al estudio de la economía, mientras que Engels se centró más en la historia, temas militares y filosofía. 
+
+## Economía Politica
+
+La segunda fuente del marxismo proviene de la economía inglesa, donde Adam Smith y David Ricardo ya planteaban que el valor de una mercancía estaba relacionado con el trabajo. Inglaterra, como el primer país en desarrollar el capitalismo, fue el lugar donde se observaron claramente las leyes del capitalismo. Marx desarrolló las ideas de Smith y Ricardo, argumentando que el valor de las mercancías se basaba en el tiempo socialmente necesario para producirlas. Es decir, todos los que participan en la producción de una mercancía contribuyen con una parte del tiempo de trabajo necesario para crearla, y el promedio entre la maquinaria más rápida y la más lenta determina el tiempo de trabajo socialmente necesario para producir esa mercancía.
+
+
+
+{{{{{{{{{{{{{}}}}}}}}}}}}} min 14:48 https://www.youtube.com/watch?v=o_7l6VVMz5o
+
+
+
+Este párrafo es brillante, ya que resume de manera concisa y clara los primeros capítulos de "El Capital", una obra que no se puede resumir en unas pocas frases.
+
+Podríamos decir que aquí se hace alusión al fetichismo de la mercancía. Mientras los economistas burgueses veían relaciones entre objetos, Marx descubrió relaciones entre personas. En el intercambio de mercancías, se expresa el vínculo establecido a través del mercado entre los productores aislados, cuyos valores de cambio parecen ser algo natural en el capitalismo. En realidad, Marx descubrió que esto es producto de una etapa sociohistórica de la humanidad en la cual el metabolismo social une a los productores aislados.
+
+Con el tiempo, se fue generando el valor. Inicialmente, los productores aislados hacían intercambios esporádicos y desarrollaron el trueque. Pero con el desarrollo del mercado, las mercancías se convirtieron en el valor de cambio de todas las demás, y finalmente, el dinero cumplió esta función de manera máxima. El dinero unió indisolublemente en un todo único la vida económica completa de los productores aislados. El capital, por otro lado, representa un desarrollo posterior de este vínculo. La fuerza de trabajo del hombre se transforma en mercancía, pero no cualquier tipo de dinero, el dinero se convierte en capital cuando está destinado a explotar al ser humano, es decir, cuando el esfuerzo humano y su información se transforman en mercancía. Esto es algo que Marx plantea, aunque aún no tenía la categoría de "información" cuando describió el sistema en el que existe el trabajo simple, realizado con una pala, o el trabajo complejo, que implica trabajar con una computadora.
+
+En su desarrollo, el capital acumula plusvalía, lo que significa que se desarrolla a partir de extraer o robar al obrero. Este proceso es un robo organizado y legalizado, el robo del capital a través de la obtención de plusvalía.
+
+Lenin, en este texto, destaca que la plusvalía es la piedra angular del marxismo. Para explicar esto, compáralo con la piedra angular en arquitectura, que es aquella que da coherencia a todo el edificio. A partir de la plusvalía, se entiende la globalidad del sistema. Cuando el trabajo humano se transforma en mercancía y el obrero asalariado vende su fuerza de trabajo, el propietario de la tierra, la fábrica o las herramientas emplea una parte de la jornada para cubrir los gastos del sustento básico de su familia (el salario), mientras que la otra parte del tiempo trabaja gratis, creando para el capitalista la fuente de ganancia y riqueza de la clase capitalista. En el cuadro adjunto se muestra la tasa de plusvalía.
+
+Si usted es un burgués o tiene 20.000 de plusvalía y paga un salario o capital variable de 20.000, la tasa de plusvalía será del 100 por ciento. Esto es lo que define Marx de manera genial en "El Capital". Entonces, esto significa que el trabajador trabajará cuatro horas para su sustento y cuatro horas para que el patrón lo siga explotando. Esto hace que el capital se concentre cada vez en menos manos, lo que tiende a la concentración y centralización del capital en un número cada vez menor de manos.
+
+Uno de los impresionantes descubrimientos de Marx es la tendencia histórica del capitalismo: cada vez el capital se concentra en menos manos, tendiendo hacia el monopolio. En esta etapa, la humanidad ha experimentado la brutalidad de que un 1% posee el 50 por ciento de la riqueza. Tendrás otros datos por ahí que son simplemente impactantes en cuanto a lo que ha desarrollado el capitalismo. Esto ha sido posible gracias al golpe ideológico que nos han dado desde los años 80 hasta ahora. Han intentado hacer que reneguemos de nuestra teoría, impidiendo que se desarrolle y llegue a las nuevas generaciones.
+
+A pesar de todo esto, el marxismo sigue avanzando. La explotación continúa, al menos en Occidente, y el capitalismo sigue su curso. Aquí tenemos la tendencia histórica que desarrolla de manera brutal la contradicción fundamental del capitalismo: la producción es cada vez más social, pero la apropiación es cada vez más individual. Piensa en cuántas manos de trabajadores han intervenido en la fabricación de un simple objeto, como un plástico verde. Desde la extracción del petróleo hasta la producción del objeto, la producción se vuelve cada vez más social y globalizada, pero la apropiación de los frutos de ese trabajo es cada vez más individualista. Esta es la contradicción fundamental del capitalismo, una que no puede resolver sino a través de la guerra, la destrucción de la humanidad y del planeta. Y es precisamente esta contradicción la que solo puede resolverse a través del socialismo y la revolución socialista.
+
+Bien, ahora bien, al hacer a los obreros más dependientes aún del capital, el régimen capitalista crea una gran fuerza de trabajo asociada. El capitalismo ha triunfado en el mundo entero, pero esa victoria no es más que el preludio del triunfo del capital sobre el trabajo. Es decir, nos ponen a todos del mismo lado, y es a ese metabolismo mundial, es el capitalismo mundial, esa globalización mundial, cada vez va preparando la fuerza de lo que va a ser su futuro: la clase trabajadora. Por supuesto, de la mano de una teoría, de una doctrina revolucionaria para acabar con el poder del capital.
+
+Y ahí es donde surge la tercera fuente, la tercera parte integrante del marxismo, que es el socialismo. Es decir, la visión de que tiene que haber una fuerza social que destruya estas contradicciones, tomando el poder y construyendo el poder socialista, el poder de los trabajadores, el poder de las grandes mayorías.
+
+El marxismo aquí surge también de lo que se había elaborado en el socialismo francés, lo que llamó a los "patriarcas" del socialismo en su momento, que son Fourier, Saint-Simon y Robert Owen. Digo, en su momento, cuando Marx y Engels eran jóvenes y empezaban a armar la Liga de los Comunistas. Estos serán aquellos a quienes la militancia y el militante a Marx le llama la atención, cómo los militantes se juntaban para hablar de la humanidad. Esto lo puede verse en los manuscritos de 1844. Digo, abrevaban en estos personajes, en estas personalidades. Fourier, Charles Fourier, había muerto en 1837. En 1844, se encuentran Marx y Engels. Digo, Fourier planteaba los falansterios, es decir, predicaba la generación de una nueva humanidad a partir de generar grupos humanos que vivieran todos juntos en comunidad, de acuerdo a determinadas características psicosociales.
+
+Y Charles Fourier es uno de los precursores de la psicología social. Él planteó la idea de los "falansterios" como una manera de generar algún día una nueva humanidad. Aquí en Misiones, un "familisterio" a la manera de Fourier. Saint-Simon era un cóctel de ideas de Saint-Simon, el tipo que renunció a todas sus prerrogativas feudales y se dedicó a predicar una forma de socialismo que buscaba unir a las clases productivas en contra de las clases dominantes. Es decir, unir a los industriales, decía él, con los trabajadores o con las clases agropecuarias para acabar con todo el feudalismo.
+
+Saint-Simon fue un avanzado para su época. Él había visto que en la Revolución Francesa había una lucha de clases, lo cual era mucho para su época. También planteó cuestiones en relación al feminismo y participó en la lucha de independencia de EE. UU. Murió pobre, pero contento y digno, ya que fue un militante durante toda su vida.
+
+Robert Owen estuvo a punto de descubrir la teoría de la plusvalía. Él era un señor muy rico que tenía un gran fondo de producción de lana. Se dio cuenta de que, a pesar de que las maquinarias seguían avanzando y él obtenía cada vez más dinero, los obreros vivían igual que hace 50 años. Entonces, empezó a desarrollar una metodología cooperativa. En su tiempo, era muy respetado en las cortes europeas, como una especie de personaje muy divertido. Cuando comenzó la comunidad de New Lanark, pasó precisamente a ser visto como un tipo peligroso y fue irradiado. Fue el creador de los jardines de infantes y uno de los padres del cooperativismo. Sus obreros empezaron a dejar el alcohol en la comunidad de Miramar, donde desarrolló un montón de elementos de vida comunitaria.
+
+Robert Owen también perdió su fortuna, pero fundó las bases del pensamiento cooperativista. Estos son los patriarcas del socialismo. ¿Cuál era la dificultad de los patriarcas del socialismo? Bueno, ellos no podían descubrir las leyes del desarrollo capitalista ni señalar qué fuerza social estaba en condiciones de convertirse en creadora de una nueva sociedad. Ni la fuerza social que haría esto posible. Es decir, ellos creían que iban a cambiar el mundo para mejor y que los burgueses se unirían con los trabajadores para crear ese mundo mejor. Por eso son utópicos. Ojo, no hay nada peyorativo aquí, sino un gran respeto por el marxismo. Pueden profundizar sobre este tema en un texto de Engels que convirtió a muchos trabajadores en Europa y en el mundo al socialismo. Por supuesto, me refiero al "Socialismo: Utopía y Ciencia" o del "Socialismo Utópico al Científico", un gran texto donde se rinde un gran homenaje a los patriarcas del socialismo.
+
+Entonces, Marx, desde una visión materialista, va a decir que va a haber una fuerza material en las condiciones materiales de producción, y es ahí donde tenemos que encontrar la fuerza que barrerá con toda la miseria moral, espiritual y material en la que nos sumerge el capitalismo. Sí, y ahí es donde plantea la lucha de clases como motor de la historia, las revoluciones, las tempestuosas revoluciones. Va a decir que acompañaron en toda Europa, y especialmente en Francia, la caída del régimen feudal, del régimen de la servidumbre. Tenía que ver con mayor evidencia que la base de todo desarrollo y su fuerza motriz era la lucha de clases.
+
+"Los hombres han sido siempre, política y víctimas necias del engaño ajeno y propio, y lo seguirán siendo mientras no aprendan a descubrir detrás de todas las frases, declaraciones y promesas morales, religiosas, políticas y sociales, los intereses de una y otra clase". Esta frase es espectacular, por favor, grábenla, úsenla en Facebook, hagan una remera con esa frase.
+
+Y surge de este texto "Tres Fuentes y Tres Partes". Cada frase es una pelota enorme de sentido coagulado de años de investigación. Por eso, hay que leerlo una y otra vez, incluso aprenderlo de memoria. "Tres Fuentes y Tres Partes", señores y señoras, es un texto impresionante, lo más profundo que la cultura humana haya dado. El marxismo, por lo tanto, es un arma teórica para la liberación de la clase trabajadora. Solo el materialismo filosófico de Marx señaló al proletariado la salida de la esclavitud espiritual en la que se han consumido hasta hoy todas las clases oprimidas. Solo la teoría económica de Marx explicó la situación real del proletariado en el régimen general del capital. Y el proletariado, por supuesto, estamos hablando de todos los trabajadores, de todos los pueblos del mundo, en contra de los por qués. Si a eso se refiere con proletariado, se dice que el proletariado es el que no tiene más que sus propios recursos, y por eso somos proletarios. La única riqueza que tenemos. Y aquí, entonces, vamos a llegar a un cuadro comprensivo de lo que plantea "Tres Fuentes y Tres Partes", poniendo algunos agregados que lo hacen aún más contextual. Veamos, las tres fuentes son la filosofía clásica alemana. Van a ver en el centro las tres cajas que están en el centro: Hegel, Herbart. Y ahí surge el materialismo dialéctico y su aplicación a la historia, el materialismo dialéctico. En el centro está la economía política inglesa, David Ricardo y Adam Smith. Segunda fuente y segunda parte, la economía política. Y la tercera fuente es el socialismo utópico inglés y francés. Perdón, Saint-Simon, Fourier, Owen. Joven que era inglés, pero bueno, pero en una de las fuentes y de ahí viene el socialismo científico. Pero aparte, hay que ver un contexto de luchas obreras, de la lucha en la clase obrera después de que en 1789, la Revolución Francesa, la revolución burguesa, viniera con el ideal de libertad, igualdad y fraternidad. Prontamente, se vio que era una nueva forma de opresión la que ofrecía la burguesía. Está la lucha de los obreros de Lyon en 1831, la lucha donde se destruyen las máquinas de hilado y donde los obreros toman la ciudad de Lyon por breves días. Y en Inglaterra, el movimiento cartista, la Freedom Charter de 1838-1842, demostraba la fuerza del pueblo movilizado haciendo una serie de reclamos democráticos generales. Este era el movimiento cartista y esto también forma parte del fermento donde nacen las ideas marxistas.
+
+Por otra parte, los descubrimientos científicos que se habían desplegado por la época de Marx y Engels. Primero, la teoría celular, que demostraba que tanto los animales como los seres humanos teníamos en nuestro cuerpo la misma unidad funcional, que es la célula. Después, el primer principio de la termodinámica, que habla de que nada se pierde, todo se transforma. Estos serían dos duros golpes al creacionismo religioso que hablaban de la creación del mundo, y mostraba cómo, en realidad, no había creación del mundo, sino que había una dinámica propia que hacía evolucionar a las especies vivas. Por último, la evolución de las especies, que llegó tardíamente en 1859 cuando Charles Darwin publicó su obra "El Origen de las Especies", que estaba desarrollando esta visión de que lo que buscan es la evolución en el mundo real y no en el nuevo día absoluto, como decía Hegel. Fue un subidón de energía tremendo tanto para Marx como para Engels, haber llegado a esta teoría de Charles Darwin, la evolución de las especies. Mostraba que así como las sociedades humanas evolucionaban, primero habían evolucionado las especies. Digamos que todas las teorías avalaban el pensamiento marxista. Ahora bien, hasta aquí llegamos a un punto. Permítame cinco minutos para plantear la especie de que estamos haciendo. Una vez es el marxismo, su proyecto de investigación, como ya les dije, y ese proyecto de investigación está truncado desde el siglo 19 hasta ahora. Han habido cambios y avances que no se han incorporado en el marxismo. Fíjense ustedes que aquí dice "el primer principio de la termodinámica". Bueno, precisamente lo que nunca pudimos integrar es toda la derivación que viene a partir del segundo principio de la termodinámica, que dice que el universo está constantemente en degradación, entrando en entropía. El segundo principio de la termodinámica es ineluctable, todos vamos a morir. Pero en el planeta Tierra, hay una isla donde se crea orden y organización, donde las cosas van en contra del sentido del universo. ¿Por qué pasa esto? Bueno, todo eso nos lo fuimos perdiendo, toda esa evolución científica y toda esa evolución no entró en nuestras categorías científicas, pese a que Lenin nos lo había planteado.
+
+Entonces, si la entropía es una medida del desorden y la desorganización, lo contrario es la categoría de información. Sin embargo, esta categoría tampoco se incorporó en nuestro aparato conceptual, lo que nos llevó a perder un montón de evolución que ocurrió durante el capitalismo. Esto, finalmente, desarticuló nuestro pensamiento en el último cuarto del siglo XX.
+
+Y aquí, tengo que ir con ustedes a ver qué leen. Ya nos había advertido esto. Fíjense en el proyecto de investigación que planteó Lenin en los Cuadernos Filosóficos, que básicamente decía que debíamos estudiar la historia del conocimiento en general. Esto incluye la historia de la ciencia, el desarrollo mental de los niños, de los animales, del lenguaje, la psicología, porque sabía que por este lado nos iban a desarticular. Sin embargo, esto no se pudo hacer debido a los desafíos que conllevaba.
+
+Lenin estaba planteando que necesitábamos aprender cómo evoluciona el procesamiento de información. Por qué evoluciona desde la primera célula hasta la almeja, del almejero al rinoceronte, de ahí a la sociedad paleolítica, la sociedad feudal, y finalmente a la sociedad actual. La evolución se debe al procesamiento de información, y sobrevivir en este planeta significa incrementar la capacidad de procesar información.
+
+Cualquier sistema vivo que no procesa información es eliminado, ya sea por la selección natural o la selección cultural. En este mundo, para sobrevivir, debes aprender a procesar información mejor que tus rivales. La clase trabajadora debe aprender a procesar información, y todo esto representa un desarrollo que se perdió en el siglo XX.
+
+En 1947, Norbert Wiener desarrolla la teoría cibernética que explora cómo la información controla a animales, máquinas y seres humanos. Esta teoría puede integrarse en nuestro sistema de categorías. Ahora, permítanme plantearles lo que Che Guevara planteaba en 1965 cuando era apenas un infante de meses.
+
+Che decía que el escolasticismo había frenado el desarrollo de la filosofía marxista y proponía que debíamos estudiar al hombre nuevo y la mujer nueva, es decir, el ser humano nuevo. Pueden encontrar estas ideas en su texto "El Socialismo y el Hombre en Cuba". Es en este punto que quiero invitarlos a continuar, ya que las Tres Fuentes y Tres Partes representan una etapa histórica del marxismo. No son un conjunto de ideas escritas en piedra, sino una guía que nos dice: 'Hasta aquí hemos llegado, ahora les toca a ustedes'.
+
+A través de la Escuela Latinoamericana de Formación, los invito a seguir explorando. Imaginen que si la historia la escriben los seres humanos, debemos tener una concepción del ser humano. El marxismo la tiene, pero está poco difundida. En el lugar donde debería haberse construido una visión marxista del ser humano, entró el psicoanálisis. Por lo tanto, debemos llegar al corolario de la concepción marxista del ser humano, que es la visión del ser humano nuevo y la mujer nueva, tal como planteó Marx. Además, el Che Guevara también abordó este tema claramente.
+
+Por otro lado, al incorporar los últimos avances de la ciencia, debemos incluir la teoría del caos, como el efecto mariposa, donde un pequeño cambio puede generar un gran cambio, como ocurre en el clima, un sistema caótico. También, debemos considerar la teoría de la complejidad, que abarca la cibernética, la teoría del caos y va más allá. Esta teoría estudia sistemas dinámicos complejos y refuerza la idea de Marx y Engels de que todo en la Tierra se desarrolla de lo simple a lo complejo. Hay una relación profunda entre la evolución de las especies y la evolución de las sociedades humanas.
+
+Sí, con lo cual ya estamos describiendo y explicando por qué hay una evolución. Esta evolución se basa en el incremento del desarrollo de la capacidad de procesar información, algo que explica la teoría del caos sobre el mismo sistema que Marx y Engels describieron cuando planteaban esta unidad entre lo social y lo natural. Utilizando categorías como sistemas dinámicos complejos adaptativos, los complejos logos hablan de esto.
+
+Lo que quiero enfatizar a través de la Escuela Latinoamericana de Formación es que debemos llevar a cabo una gran campaña de formación y construcción de cuadros de pensamiento revolucionario que sitúe este pensamiento a la altura del siglo 21. Estamos en la era de la información y nuestras categorías filosóficas deben ser capaces de abordar todos estos conceptos.
+
+Todo esto se relaciona con las Tres Fuentes y Tres Partes. El marxismo no es simplemente una caja de herramientas, y no podemos permitir que se fragmente en el eurocentrismo o el cientificismo. El marxismo tiene una vocación que los últimos avances científicos demuestran. Debemos retomar esta vocación, reconstruyendo lo que los clásicos nos ofrecieron, uniendo el pensamiento científico revolucionario con los últimos avances científicos y respondiendo a las variantes del idealismo, incluso aquellas que se presentan como marxistas. Nuestra meta es actualizar el pensamiento marxista al siglo 21.
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial/index.qmd)
+
+2.  [La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos y Sociales](../2023-06-13-empresa-como-organizacion/index.qmd)
+
+3.  [Introducción a los Sistemas Económicos. Cómo se distribuyen los recursos y se producen](../2023-06-13-sistemas-economicos/index.qmd)
+
+4.  [El Mercado Relevante Industrial de Bienes y el Mercado Geográfico](../2023-06-15-mercado-relevante-oi-cap-2/index.qmd)
+
+5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
+
+6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

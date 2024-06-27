@@ -1,0 +1,114 @@
+#title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
+#title-block-banner: images/philosophy2.jpg
+#title-block-banner-color: body  # Color del texto en el banner del bloque de título
+
+fig-cap-location: top  # Ubicación de las leyendas de las figuras
+tbl-cap-location: top  # Ubicación de las leyendas de las tablas
+
+author:
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app  # URL del autor
+    affiliation: 
+        - name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+          departament: Economía
+          address: Portla Independencia N 57
+          city: Huamanga
+          region: Ayacucho
+    affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364  # ORCID del autor
+    email: achalmed.18@gmail.com
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+date-modified: "today"  # Fecha de modificación del documento
+search: true  # Habilitar búsqueda en el documento
+
+citation: true  # Habilitar citas bibliográficas
+google-scholar: true  # Habilitar enlaces a Google Scholar
+csl: apa-6th-edition.csl  # Estilo de citas
+cite-method: biblatex  # Método de citación
+
+crossref:
+  fig-title: Figura  # Título de las figuras en las referencias
+  fig-prefix: Figura  # Prefijo para las leyendas de las figuras
+  tbl-title: Tabla  # Título de las tablas en las referencias
+  tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
+  ref-hyperlink: true  # Habilitar enlaces en las referencias
+execute:
+  keep-md: true  # Mantener archivos .md generados
+  keep-ipynb: true
+  echo: true  # Mostrar comandos ejecutados
+  output: true  # Mostrar resultados de la ejecución
+  warning: false  # Ocultar advertencias
+  error: false  # Ocultar errores
+  cache: false  # Habilitar el almacenamiento en caché
+  enabled: true  # Habilitar la ejecución
+
+draft: true  # Modo de borrador (false = final, true = borrador)
+
+highlight-style: github
+
+format:
+  html:
+    page-layout: article  # Diseño de página para el formato HTML (por ejemplo, article, full, o custom)
+    toc: true  # Mostrar tabla de contenidos (false, true)
+    toc-depth: 3  # Profundidad de la tabla de contenidos
+    toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
+    toc-title: Contenidos  # Título de la tabla de contenidos
+    toc-location: left  # Ubicación de la tabla de contenidos (left, right)
+    css: index.css  # Archivo CSS personalizado para el formato HTML
+    # number-sections: true  # Numerar las secciones del documento
+    # number-depth: 3  # Profundidad de numeración de secciones
+    smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
+    # link-external-icon: true  # Mostrar icono para enlaces externos
+    link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
+    citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
+    footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
+    code-copy: true  # Habilitar la funcionalidad de copiar código
+    code-fold: true  # Habilitar el plegado de código
+    code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
+    code-overflow: scroll  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
+    code-tools:
+      source: repo  # Mostrar el código fuente en las herramientas de código (repo, true)
+      toggle: false  # Habilitar la funcionalidad de alternar código
+      caption: none  # Opción para la leyenda del código
+    mermaid: 
+      theme: neutral
+    grid: 
+      sidebar-width: 400px # en rem: 400px / 16 = 25rem
+      body-width: 1000px # en rem: 1000px / 16 = 62.5rem
+      margin-width: 200px #  en rem: 200px / 16 = 12.5rem
+      gutter-width: 1.5rem
+  pdf:
+    documentclass: article  # Clase de documento para el PDF scrartcl, article
+    papersize: a4  # Tamaño del papel (letter, A4)
+    language: es  # Idioma del documento
+    geometry: 
+      - top=2.54cm  # Margen superior
+      - right=2.54cm  # Margen derecho
+      - bottom=2.54cm  # Margen inferior
+      - left=2.54cm  # Margen izquierdo
+    # toc: true  # Habilitar la tabla de contenido
+    # toc-depth: 3  # Profundidad de la tabla de contenido
+    # toc-title: Contenidos  # Título de la tabla de contenido
+    # number-sections: true  # Numerar secciones
+    # number-depth: 3  # Profundidad de numeración de secciones
+    highlight-style: github  # Estilo de resaltado de código
+    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
+    colorlinks: true  # Habilitar enlaces con colores
+    cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
+    link-citation: true  # Habilitar enlaces en las citas
+    link-bibliography: true  # Habilitar enlaces en la bibliografía
+    keep-tex: true  # Mantener archivos .tex generados
+    pdf-engine: pdflatex    # Motor de PDF (xelatex, pdflatex, lualatex, tectonic, latexmk)
+    include-in-header: 
+      - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
+    output-file: index.pdf
+format-links: 
+  - pdf
+  - ipynb
+
+jupyter: python3
+
+editor: visual

@@ -6,7 +6,7 @@ project:
     - cv.pdf
 
 website:
-  title: "Dr Edison Achalma | Data-centric AI | Applied AI | Coaching & Mentoring | Masterclasses & Public Speaking"
+  title: "Dr Edison Achalma | Economía | Matemática | Informática | Filosofía"
   google-analytics: 
     tracking-id: "G-XGH6TP6RB3"
     anonymize-ip: true
@@ -30,7 +30,7 @@ website:
     type: overlay
   navbar:
     logo: /images/logo-dr-daniel-kapitan.png
-    title: false
+    title: EDISON ACHALMA
     pinned: false
     collapse-below: md
   sidebar:
@@ -100,10 +100,11 @@ website:
       __Chamber of Commerce (KvK):__ 51934179301<br>
       __RSIN:__ 850665851<br>
       __IBAN:__ NL47 KNAB 0259 5268 27<br>
-      __Terms & Conditions__ in [Dutch](/resources/230901-algemene-voorwaarden.pdf)<br>
-bibliography: references.bib
+      __Terms & Conditions__ in [Español](/resources/230901-algemene-voorwaarden.pdf)<br>
 
+bibliography: references.bib
 lang: es
+
 format:
   html:
     page-layout: full

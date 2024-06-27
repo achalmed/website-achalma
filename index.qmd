@@ -4,6 +4,7 @@ toc: false
 format:
   html:
     page-layout: article
+comments: false
 ---
 
 <!---
@@ -167,13 +168,11 @@ Cuando no estoy frente a mi computadora, disfruto de la fotografía y de viajar 
 
 A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informática. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa.
 
-En este sitio web, encontrarás información sobre mis intereses, habilidades y proyectos en los que he trabajado. Además, estaré compartiendo contenido relacionado con la economía, la filosofía, la matemática y la informática.
-
 Mi objetivo principal es brindar información relevante y de calidad sobre temas que me apasionan y en los cuales tengo conocimientos sólidos con el fin de inspirar, educar y generar discusiones constructivas. Me apasiona la economía y la informática y estoy emocionado de poder compartir mi conocimiento y experiencias contigo.
 
 Te invito a explorar las diferentes secciones de mi página para conocer más sobre mis proyectos, publicaciones y logros. Si tienes alguna pregunta o te gustaría colaborar en algún proyecto, no dudes en contactarme a través de la sección de contacto.
 
-### ¿Por qué tomó sus apuntes con una PC en lugar de usar un cuaderno?
+### ¿Por qué tomo mis apuntes con una PC en lugar de usar un cuaderno?
 
 En mi opinión, hay más razones para elegir la tecnología que desventajas. Claro, existe la posibilidad de que se corte la luz y me quede sin acceso a mis apuntes, pero hasta ahora eso no ha sucedido. Además, las ventajas son realmente geniales:
 
@@ -220,96 +219,48 @@ Quero contarles acerca del software que uso y que realmente recomiendo. ¡Echen 
 En su mayoría, el software que uso es libre y gratuito, y creo que en todos los casos es multiplataforma (Linux, Windows, OS X). En general, creo que apuntar a alternativas libres es una buena práctica, ¡aunque tengan algunos features menos!
 
 
-::: {.experiencias .bordes}
+
 ### Experiencias {.experiencias_titulo}
 
-::: {.experiencia .bloques}
-::: experiencia_date
 Abril 2022 - Julio 2022
-:::
 
-::: experiencia_titulo
 **Docente, UNIVERSIDAD AUTÓNOMA DE HUANTA, Huanta**
-:::
 
-::: experiencia_descripcion
 Enseñé el curso de Gestión de Proyectos a estudiantes de pregrado en la UNH, lo que me permitió desarrollar habilidades de enseñanza y comunicación efectiva.
-:::
-:::
 
-::: {.experiencia .bloques}
-::: experiencia_date
 Agosto 2021 - Abril 2022
-:::
 
-::: experiencia_titulo
 **Practicante, DIRECCIÓN DE INFORMACIÓN AGRARIA Y ESTUDIOS ECONÓMICOS, DRA-Ayacucho**
-:::
 
-::: experiencia_descripcion
 Contribuí en la formulación de estudios económicos y en la generación y procesamiento de información relevante para el sector agrario de la región. Adquirí habilidades en análisis de datos, investigación y trabajo en equipo en un entorno profesional.
-:::
-:::
 
-::: {.experiencia .bloques}
-::: experiencia_date
+
 Agosto 2021 - Julio 2020
-:::
 
-::: experiencia_titulo
 **Secretario, CENTRO DE ESTUDIANTES DE ECONOMÍA, Ayacucho**
-:::
 
-::: experiencia_descripcion
 Como Secretario de Prensa del Centro de Estudiantes de Economía, fui responsable de la difusión de las actividades y eventos del centro, así como de mantener una comunicación fluida y efectiva con los estudiantes y demás miembros del centro. Desarrollé habilidades en comunicación, trabajo en equipo y organización.
-:::
-:::
 
-::: {.experiencia .bloques}
-::: experiencia_date
 Abril 2019 - Enero 2019
-:::
 
-::: experiencia_titulo
 **Secretario de archivos, MUNICIPALIDAD PROVINCIAL DE CANGALLO., Cangallo**
-:::
 
-::: experiencia_descripcion
 Desempeñé el cargo de Secretario de Archivos en la Oficina de Archivos de la Municipalidad Provincial de Cangallo.
-:::
-:::
 
-::: {.experiencia .bloques}
-::: experiencia_date
 Diciembre 2018 - Enero 2018
-:::
 
-::: experiencia_titulo
 **Parlamentario Joven, CONGRESO DE LA REPÚBLICA, Ayacucho**
-:::
 
-::: experiencia_descripcion
 Auspiciado por la Fundación Hanns Seidel y la Oficina de Participación Ciudadana del Congreso de la República del Perú, fortalecí mis capacidades de liderazgo y aprendí sobre el funcionamiento del Congreso de la República, sus comisiones de trabajo y la valoración del trabajo en un espacio de participación y fomento de valores democráticos.
-:::
-:::
-:::
 
-
-::: {.idiomas .bordes}
 ### Idiomas {.idiomas}
 
-::: {.idiomas .bloques}
 -   Español:
 -   Quechua:
 -   Inglés:
-:::
-:::
 
-
-::: {.proyectos .bordes}
 ### Proyectos {.proyecto}
 
-::: {.proyecto .bloques}
 CHAT BOT
 
 2021 - 2022
@@ -318,25 +269,17 @@ CHAT BOT
 -   Descripción: Creación e implementación de un chatbot para la MDSJB-Ayacucho utilizando node.js y dialogflow.
 -   Tecnologías utilizadas: Node.js, Dialogflow.
 -   Herramientas utilizadas: Whatsapp.
-:::
-:::
 
-::: {.voluntariados .bordes}
 ### Voluntaridos {.voluntariado}
 
-::: {.voluntariado .bloques}
 **NATS de Movimiento de Adolescentes y Niños Trabajadores Hijos de Obreros Cristianos -- MANTHOC**
 
 -   Año: 2016
-:::
 
-::: {.voluntariado .bloques}
 **Corresponsal de No Apto Para Adultos -- NAPA**
 
 -   Año: 2014
 -   Descripción: Colaboración en la creación del magazine televisivo diario de media hora de duración con información y reportajes de actualidad para niños y adolescentes de 13 a 17 años. NAPA es difundido por 40 canales de Red TV en todo el Perú, y en Lima a través de la señal de JN19 UHF y en el canal 57 de Cable Mágico.
-:::
-:::
 
 ¡Espero que encuentres este sitio interesante y útil! ¡Gracias por visitar!
 
@@ -346,7 +289,3 @@ CHAT BOT
 
 __email:__ [achalmaedison@kapitan.net](mailto:achalmed.18@gmail.com) <br>
 
-#
-```{=html}
-<a href="/appointment" class="btn btn-primary btn-lg" type="button">Book an appointment</a>
-```

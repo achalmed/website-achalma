@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -192,11 +195,9 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
-\hypertarget{en-este-primero-de-mayo-seguir-sembrando-revoluciuxf3n}{%
 \section{¡En este primero de mayo: seguir sembrando
-revolución!}\label{en-este-primero-de-mayo-seguir-sembrando-revoluciuxf3n}}
+revolución!}\label{en-este-primero-de-mayo-seguir-sembrando-revoluciuxf3n}
 
 \begin{quote}
 ¡Proletarios de todos los países, uníos!
@@ -356,8 +357,7 @@ Comité Central Partido Comunista del Perú
 
 Ediciones Bandera Roja
 
-\hypertarget{publicaciones-similares}{%
-\section{Publicaciones Similares}\label{publicaciones-similares}}
+\section{Publicaciones Similares}\label{publicaciones-similares}
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y
 recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo

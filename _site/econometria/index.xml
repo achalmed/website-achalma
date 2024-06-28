@@ -194,1206 +194,759 @@ Achalma, E. (2024, January 1). por editar. Retrieved from <a href="https://kapit
   <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Notas de Clase Series de Tiempo</title>
+  <title>NO TITULO</title>
   <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-00-inicio/</link>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-18-01-modelo-clasico-de-regresion-lineal/</link>
   <description><![CDATA[ 
 
 
 
 
-<section id="introducción" class="level1">
-<h1>Introducción</h1>
-<p>Estas notas son un resumen, una síntesis comparativa y, en algunos casos, una interpretación propia de los libros de texto de Cowpertwait y Metcalfe (2009), Guerrero-Guzmán (2014), Enders (2015), Franses y van Dijk (2003), Kirchgassner, Wolters, y Hassler (2012), Lutkepohl (2005), Wei (2019), entre otros. En algunos casos se incorpora información adicional para efectos de dar contexto al tema analizado (ver sección de Bibliografía para mayores detalles).</p>
-<p>El objetivo de este documento es proporcionar un conjunto de apuntes que sirva de apoyo para la clase, por ello no deben considerarse como notas exhaustivas o como un sustituto de la clase y los laboratorios. Asimismo, es deseable que los alumnos puedan aportar sus observaciones y correcciones a estas notas, las observaciones a estas notas son esperadas y siempre serán bienvenidas y agradecidas.</p>
-<p>En estas notas se estudian los temas que típicamente son incluidos como parte de un curso estándar de análisis de series de tiempo y agrega otros tantos, los cuales son:</p>
-<ol type="1">
-<li><p>Modelos estacionarios univaraidos: AR(p), MA(q), ARMA(p, q) y ARIMA( p, d, q);</p></li>
-<li><p>Modelos no estacionarios univariados y Pruebas de raíz unitaria (o pruebas para determinar que una serie es estacionaria);</p></li>
-<li><p>Modelos multivariados, entre lo que se incluye a los Vectores Autoregresivos (VAR) y los procedimientos de Cointegración</p></li>
-<li><p>Modelación de series univariadas con errores con heterocedasticidad y autocorrelación: ARCH(r), GARCH(n), etc.;</p></li>
-<li><p>Modelos multivariados con errores con heterocedasticidad y autocorrelación: M-GARCH y M-GARCH-M;</p></li>
-<li><p>Casos particulares en los que las series incluidas en un modelo multivariado no son del mismo orden de integración, conocidos como modelos ADL.</p></li>
-<li><p>Modelos de Datos Panel en series de tiempo, y</p></li>
-<li><p>Modelos no lineales como los de cambios de régimen.</p></li>
-</ol>
-<section id="a-la-naturaleza-de-los-datos-de-series-de-tiempo" class="level2">
-<h2 class="anchored" data-anchor-id="a-la-naturaleza-de-los-datos-de-series-de-tiempo">a) La naturaleza de los datos de Series de Tiempo</h2>
-<p>El análisis de series de tiempo tiene muchas aplicaciones en diversos campos de la ciencia. Por ejemplo, en la economía continuamente se está expuesto a observaciones de los mercados financieros, indicadores de empleo, índices o indicadores del nivel de producción, índices de precios, etc. En otros campos de las ciencias sociales se emplea el análisis de series de tiempo para analizar la evolución de la población, los nacimientos, o el número de personas con matriculas escolares. Finalmente, en las ciencias exactas se pueden encontrar casos como los de un epidemiólogo que puede estar interesado en el número de casos de influenza observados en algún periodo de tiempo dado y si a estos se les puede asociar con algún tipo de estacionalidad o si se trata del inicio de un fenómeno atípico.</p>
-<p>La primera aproximación que se suele tener a las series de tiempo es mediante el exámen de datos puestos en una gráfica, en la cual uno de los ejes es el tiempo y el otro es el valor tomado por la variable. No obstante, en este tipo de exámenes existen dos enfoques. Por un lado, existe el efoque de la importancia del tiempo, el cual consiste en reconocer cómo lo que sucede hoy es afectado por lo que pasó ayer o, en general, en periodos pasados, o cómo lo que pasa hoy afectará los eventos futuros. Por otro lado, existe el enfoque del análisis frecuentista o de frecuencia, mediante el cual se busca reconocer la importancia que tiene para los investigadores los ciclos (estacionales, de crisis económicas, etc.)</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(readxl)</span>
-<span id="cb1-2">Base_1 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">read_excel</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"base 1 timeseries.xlsx"</span>)</span>
-<span id="cb1-3">IGAE_2013 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>IGAE_2013, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-4">IGAE_PRIM_2013 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>IGAE_PRIM_2013, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-5">ICC <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>ICC, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-6">ICC_LAG <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>ICC_LAG, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-7">IPC_BMV <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>IPC_BMV, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-8">TDC <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ts</span>(Base_1<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>TDC, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">start =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2002</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">freq =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-9"></span>
-<span id="cb1-10"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(IGAE_2013, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">60</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">160</span>))</span>
-<span id="cb1-11"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> T)</span>
-<span id="cb1-12"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indicador Global de la Actividad Econ?mica, Actividades Primarias, base 2008</span></span>
-<span id="cb1-13"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(IGAE_PRIM_2013, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">60</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">160</span>))</span>
-<span id="cb1-14"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Leyenda</span></span>
-<span id="cb1-15"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">legend</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"topleft"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"IGAE"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"IGAE Act. Prim."</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cex =</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.8</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lty =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>))</span>
-<span id="cb1-16"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> F)</span></code></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="fig-fig1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" alt="Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021
-</figcaption>
-<div aria-describedby="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig1-1.pdf" class="img-fluid" data-fig-pos="H" alt="Indicador Global de Actividad Económica (IGAE) Global y para las Actividades Primarias (2008=100), Ene.2002 - May.2021">
-</div>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="b-ejemplos-y-aplicaciones-de-las-series-de-tiempo" class="level2">
-<h2 class="anchored" data-anchor-id="b-ejemplos-y-aplicaciones-de-las-series-de-tiempo">b) Ejemplos y aplicaciones de las Series de Tiempo</h2>
-<p>Un primer ejemplo que puede ilustrar la presencia de los dos tipos de enfoques antes mencionadas es la Figura Figura&nbsp;1. En esta figura se muestra la evolución del Indicador Global de la Actividad Económica (IGAE) en su versión global o del total de la economía y en su versión únicamente para las actividades primarias entre enero de 2002 y mayo de 2021.</p>
-<p>Como se puede observar, el IGAE del total de la economía muestra, principalmente, que el enfoque del tiempo es más relevante. Es decir, que existe cierta persistencia en el indicador, lo que significa que la economía crece en razón del crecimiento reportado en periodos pasados. No obstante, lo que no podemos reconocer es que los eventos futuros tienen un efecto en el desempeño de la economía hoy día. Así, no es común observar cambios abruptos del indicador, salvo por la crisis global de 2008 y la reciente crisis causada por la Covid-19.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(ICC, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">29</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50</span>))</span>
-<span id="cb2-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Comando que indica a R que sin borrar la grafica anterior, grafique la siguiente.</span></span>
-<span id="cb2-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> T)</span>
-<span id="cb2-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indice ??Como considera usted la situacion economica del pais hoy en dia comparada con la de hace 12 meses?, base enero 2003</span></span>
-<span id="cb2-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(ICC_LAG, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">29</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50</span>))</span>
-<span id="cb2-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Leyenda</span></span>
-<span id="cb2-7"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">legend</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bottomleft"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ICC"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ICC lag"</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cex =</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.8</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lty =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>))</span>
-<span id="cb2-8"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> F)</span></code></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="fig-fig2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: índice de Confianza del Consumidor (ICC): General y resultado de ¿Cómo considera usted la situación economica del país hoy en día comparada con la de hace 12 meses? (puntos), Ene.2002-may.2021
-</figcaption>
-<div aria-describedby="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig2-1.pdf" class="img-fluid" data-fig-pos="H">
-</div>
-</figure>
-</div>
-</div>
-</div>
-<p>Por el contrario, el IGAE de las actividades primarias muestra una presencia significativa de la importancia de la frecuencia. No pasa desapercibido que existen muchos ciclos en la evolución del indicador. Algo que suena común en las actividades primarias, cuya producción depende de eventos que son ciclícos agrícolas asociados con el clima u otros factores determinantes de la oferta de productos agrícolas. Otro factor que puede incluir en el indicador son elementos de demanda, más que los de oferta. Por ejemplo, el consumo de alimentos típicos de algunas temporadas del año.</p>
-<p>Como segundo ejemplo, en la Figura Figura&nbsp;2 se ilustra la evolución reciente del índice de Confianza del Consumidor (ICC) en dos de sus versiones: i) el Índice global y ii) el Índice de confianza de los consumidores cuando estos consideran la situación actual en la economía en relación el año anterior.</p>
-<p>Destacamos que el ICC mide las expectativas de los consumidores en razón de la información pasada y de la esperada, segun dichos consumidores.</p>
-<details class="code-fold">
-<summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indice de Precios y Cotizaciones de la Bolsa Mexicana de Valores</span></span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(IPC_BMV, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>)</span>
-<span id="cb3-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera</span></span>
-<span id="cb3-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(TDC, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Pesos X Dolar"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>)</span></code></pre></div>
-</details>
-<div id="fig-fig3" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) y Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera, pesos por dólar (Panel izquierdo), Ene.2002-May.2021
-</figcaption>
-<div aria-describedby="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fig3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-fig3-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-fig3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Indice de Precios y Cotizaciones BMV
-</figcaption>
-<div aria-describedby="fig-fig3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig3-1.pdf" class="img-fluid" data-ref-parent="fig-fig3">
-</div>
-</figure>
-</div>
-</div>
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fig3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-fig3-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-fig3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Tipo de Cambio
-</figcaption>
-<div aria-describedby="fig-fig3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig3-2.pdf" class="img-fluid" data-ref-parent="fig-fig3">
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</div>
-<p>Así, es probable que las dos series de tiempo exhiban un gran peso para los eventos pasados, pero a la vez, un componente -probablemente menor- del componente de frecuencia. Esto último en razón de que los consumidores suelen considerar en sus expectativas de consumo los periodos cíclicos de la economía: temporadas navideñas, pagos de colegiaturas, etc. Este segundo ejemplo también ilustra que la confianza del consumidor no necesariamente está directamente correlacionada con el desempeño de la economía.</p>
-<p>Como tercer ejemplo se muestra la evolución de dos series. La Figura Figura&nbsp;3 ilustra el comportamiento reciente de dos indicadores que son referencia para los inversionistas. Por un lado, se ubica el índice de Precios y Cotizaciones de la BMV (IPC), el cuál refleja el valor de las acciones de empresas que cotizan en la BMV y el volumen de acciones comercializadas, en conjunto. De esta forma, se ha interpretado que el IPC refleja el rendimiento del capital promedio invertido en las empresas que cotizan en la BMV.</p>
-<p>Por otro lado, en la Figura Figura&nbsp;3 se presenta la evolución del Tipo de Cambio (TDC){indicador financiero que se suele utilizar como medio de reserva de valor. Esto, en razón de que el TDC es conocido como un instrumento que en momentos de crisis toma valores contraciclicos de la economía mexicana. No obstante, ambos indicadores no son comparables. Para hacerlos comparbles en la Figura Figura&nbsp;4 se presentan en versión índice con una base en el primer mes de la muestra.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">IPC_BMV_I <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>IPC_BMV<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span>IPC_BMV[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]</span>
-<span id="cb4-2">TDC_I <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>TDC<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span>TDC[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]</span>
-<span id="cb4-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indice del indice de Precios y Cotizaciones de la Bolsa Mexicana de Valores</span></span>
-<span id="cb4-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(IPC_BMV_I, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">80</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">740</span>))</span>
-<span id="cb4-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Comando que indica a R que sin borrar la grafica anterior, grafique la siguiente.</span></span>
-<span id="cb4-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> T)</span>
-<span id="cb4-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indice del Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera</span></span>
-<span id="cb4-8"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(TDC_I, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylim =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">80</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">740</span>))</span>
-<span id="cb4-9"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Leyenda</span></span>
-<span id="cb4-10"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">legend</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"topleft"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice del IPC"</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Indice del TDC"</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cex =</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.8</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lty =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>))</span>
-<span id="cb4-11"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">new =</span> F)</span></code></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="fig-fig4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4: Índice del índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) e Índice del Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera (ambos enero de 2002 = 100), pesos por dólar (Panel izquierdo), Ene.2002-May.2021
-</figcaption>
-<div aria-describedby="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig4-1.pdf" class="img-fluid" data-fig-pos="H">
-</div>
-</figure>
-</div>
-</div>
-</div>
-<p>En la perspectiva de la Figura Figura&nbsp;4 se puede apreciar que el TDC no es tan rentable, ya que una inversión en la BMV mediante el IPC, en el largo plazo, muestra más redimientos. Asimismo, la Figura Figura&nbsp;4) ilustra que en ambas series se observa un dominio de la condición de tiempo y no uno de frecuencia. Es decir, tanto el IPC como el TDC no responden a condiciones como ciclos o temporadas que si son observables en actividades económicas como las primarias.</p>
-<p>Finalmente, la Figura Figura&nbsp;5 ilustra un característica que también resulta de gran interés en el análisis de series de tiempo: los datos de alta frecuencia y de comportamiento no regular. Como se puede observar, en la Figura Figura&nbsp;5 se muestran las diferencias logarítmicas de las series de IGAE de la actividad total, el IPC y el TDC.</p>
-<div class="cell" data-layout-nrow="3">
-<details class="code-fold">
-<summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indicador Global de la Actividad Econimica, base 2008</span></span>
-<span id="cb5-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">diff</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(IGAE_2013), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lag =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Var. %"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>)</span>
-<span id="cb5-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Indice de Precios y Cotizaciones de la Bolsa Mexicana de Valores</span></span>
-<span id="cb5-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">diff</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(IPC_BMV), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lag =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Var. %"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>)</span>
-<span id="cb5-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera</span></span>
-<span id="cb5-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">diff</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(TDC), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lag =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">lwd =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">col =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Pesos X Dolar"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tiempo"</span>)</span></code></pre></div>
-</details>
-<div id="fig-fig5" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;5: Tasas de Crecimiento mensuales (diferencias logarítmicas) de Indicador Global de la Actividad Económica, Índice de Precios y Cotizaciones de la Bolsa Mexicana de Valores (Panel Derecho) y Tipo de Cambio para Solventar Obligaciones en Moneda Extranjera, Ene.2002-May.2021
-</figcaption>
-<div aria-describedby="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fig5" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div id="fig-fig5-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-fig5-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Indicador Global de la Actividad Economica
-</figcaption>
-<div aria-describedby="fig-fig5-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig5-1.pdf" class="img-fluid" data-ref-parent="fig-fig5">
-</div>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fig5" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div id="fig-fig5-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-fig5-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Indice de Precios y Cotizaciones BMV
-</figcaption>
-<div aria-describedby="fig-fig5-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig5-2.pdf" class="img-fluid" data-ref-parent="fig-fig5">
-</div>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-fig5" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div id="fig-fig5-3" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-fig5-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) Tipo de Cambio
-</figcaption>
-<div aria-describedby="fig-fig5-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<embed src="index_files/figure-pdf/fig-fig5-3.pdf" class="img-fluid" data-ref-parent="fig-fig5">
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</div>
-</div>
-<p>Dichas diferencia se pueden interpretar como una tasa de crecimiento de las series por las siguientes razones. Consideremos una serie de tiempo dada por <img src="https://latex.codecogs.com/png.latex?y_t">, cuya versión logarítmica es <img src="https://latex.codecogs.com/png.latex?ln(y_t)">. De esta forma, la diferencia logarítmica esta dada por la ecuación (Equation&nbsp;1):</p>
-<p><span id="eq-difflog"><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20ln(y*t)%20=%20ln(y_t)%20-%20ln(y*%7Bt-1%7D)%20=%20ln%20%5Cleft(%20%5Cfrac%7By*t%7D%7By*%7Bt-1%7D%7D%20%5Cright)%0A%5Ctag%7B1%7D"></span></p>
-<p>Ahora bien, si retomamos la definición de tasa de crecimiento (TC) de una serie de tiempo <img src="https://latex.codecogs.com/png.latex?y_t"> entre el periodo <img src="https://latex.codecogs.com/png.latex?t"> y <img src="https://latex.codecogs.com/png.latex?t-1"> podemos obtener que:</p>
-<p><span id="eq-TC"><img src="https://latex.codecogs.com/png.latex?%0ATC%20=%20%5Cfrac%7By*t%20-%20y*%7Bt-1%7D%7D%7By*%7Bt-1%7D%7D%20=%20%5Cfrac%7By_t%7D%7By*%7Bt-1%7D%7D%20-%201%0A%5Ctag%7B2%7D"></span></p>
-<p>De esta forma, si tomamos el logarítmo de la expresión de la ecuación (Equation&nbsp;2) obtenemos la siguiente aproximación:</p>
-<p><span id="eq-TCDiffLog"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7By*t%7D%7By*%7Bt-1%7D%7D%20-1%20%5Capprox%20ln%20%5Cleft(%20%5Cfrac%7By*t%7D%7By*%7Bt-1%7D%7D%20%5Cright)%20=%20ln(y*t)%20-%20ln(y*%7Bt-1%7D)%0A%5Ctag%7B3%7D"></span></p>
-<p>La ecuación (Equation&nbsp;3) es cierta cuando los valores de <img src="https://latex.codecogs.com/png.latex?y_t"> y <img src="https://latex.codecogs.com/png.latex?y_%7Bt-1%7D"> son muy parecidos, es decir, cuando las variaciones no son tan abruptas. Otra forma de interpretar la ecuación (Equation&nbsp;3) es que para tasas de crecimiento pequeñas, se puede utilizar como una buena aproximación a la diferencia logarítmica mostrada en la ecuación (Equation&nbsp;1).</p>
-<p>En la Figura Figura&nbsp;5 se reportan las diferencias logarítmicas del IGAE, IPC y TDC, todos, como una media de distitntos tipos de redimientos. Es decir, podemos decir que un capitalista promedio (suponiendo que solo puede invertir en la actividad económica, en la bolsa o en el dólar), puede observar que le es más redituable en función de sus preferencias.</p>
-<p>Notése que la dinámica de las variaciones de cada una de las series es significativamente diferente. Destaca que el TDC es una de las variables que, en general, no muestra grandes cambios a lo largo del tiempo. No obstante, se han observado cambios radicales, cuando menos en el año 2008. Lo anterior, son características que se han observado para el IPC. En cambio, el IGAE muestra un comportamiento más estable o estacionario.</p>
 
 
-</section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
   author = {Achalma, Edison},
-  title = {Notas de {Clase} {Series} de {Tiempo}},
-  date = {2023-08-27},
-  url = {https://kapitan.net/econometria/econometria/2023-08-03-series-de-tiempo-00-inicio},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-18-01-modelo-clasico-de-regresion-lineal},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
-Achalma, E. (2023, August 27). Notas de Clase Series de Tiempo.
-Retrieved from <a href="https://kapitan.net/econometria/econometria/2023-08-03-series-de-tiempo-00-inicio">https://kapitan.net/econometria/econometria/2023-08-03-series-de-tiempo-00-inicio</a>
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-18-01-modelo-clasico-de-regresion-lineal">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-18-01-modelo-clasico-de-regresion-lineal</a>
 </div></div></section></div> ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-00-inicio/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-18-01-modelo-clasico-de-regresion-lineal/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-19-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-19-02-el-estimador-de-minimos-cuadrados-ordinarios-mco},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-19-02-el-estimador-de-minimos-cuadrados-ordinarios-mco">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-19-02-el-estimador-de-minimos-cuadrados-ordinarios-mco</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-19-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-20-03-algebra-y-geometria-de-mco/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-20-03-algebra-y-geometria-de-mco},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-20-03-algebra-y-geometria-de-mco">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-20-03-algebra-y-geometria-de-mco</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-20-03-algebra-y-geometria-de-mco/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-21-04-propiedades-en-muestras-finitas-del-estimador-mco/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-21-04-propiedades-en-muestras-finitas-del-estimador-mco},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-21-04-propiedades-en-muestras-finitas-del-estimador-mco">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-21-04-propiedades-en-muestras-finitas-del-estimador-mco</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-21-04-propiedades-en-muestras-finitas-del-estimador-mco/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-22-05-propiedades-en-muestras-infinitas-del-estimador-mco/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-22-05-propiedades-en-muestras-infinitas-del-estimador-mco},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-22-05-propiedades-en-muestras-infinitas-del-estimador-mco">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-22-05-propiedades-en-muestras-infinitas-del-estimador-mco</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-22-05-propiedades-en-muestras-infinitas-del-estimador-mco/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-23-06-el-trade-off-sesgo-varianza/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-23-06-el-trade-off-sesgo-varianza},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-23-06-el-trade-off-sesgo-varianza">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-23-06-el-trade-off-sesgo-varianza</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-23-06-el-trade-off-sesgo-varianza/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title></title>
   <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-01-elementos-eq-diff/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-01-elementos-eq-diff/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-24-07-bondad-de-ajuste/</link>
+  <description><![CDATA[ <div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i></button></div></div>
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma,
+  author = {Achalma, Edison},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-24-07-bondad-de-ajuste},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (n.d.). Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-24-07-bondad-de-ajuste">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-24-07-bondad-de-ajuste</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-24-07-bondad-de-ajuste/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Notas de Clase Series de Tiempo</title>
+  <title>NO TITULO</title>
   <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-02 modelos-ste/</link>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-25-08-multicolinealidad/</link>
   <description><![CDATA[ 
 
 
 
 
-<section id="modelos-de-series-de-tiempo-estacionarias" class="level1">
-<h1>Modelos de Series de Tiempo Estacionarias</h1>
-<section id="definición-de-ergodicidad-y-estacionariedad" class="level2">
-<h2>Definición de ergodicidad y estacionariedad</h2>
-<p>A partir de esta sección introduciremos mayor formalidad matemática al análisis, por ello cambiaremos de notación y ocuparemos a <img src="https://latex.codecogs.com/png.latex?X_t"> en lugar de <img src="https://latex.codecogs.com/png.latex?Z_t">. Con <img src="https://latex.codecogs.com/png.latex?X_t"> denotaremos a una serie de tiempo, ya que con <img src="https://latex.codecogs.com/png.latex?Z_t"> denotareemos a una variable, sin que ella fuera necesariamente una serie de tiempo. Asimismo, iniciaremos por establecer una serie de definiciones. De esta forma, definiremos a una serie de tiempo como un vector de variables aleatorias de dimensión <img src="https://latex.codecogs.com/png.latex?T">, dado como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_1,%20X_2,%20X_3,%20%5Cldots%20,X_T%0A"></p>
-<p>Cada una de las <img src="https://latex.codecogs.com/png.latex?X_t"> (<img src="https://latex.codecogs.com/png.latex?t%20=%201,%202,%20%5Cldots,%20T">) consideradas como una variable aleatoria. Así, también podemos denotar a la serie de tiempo como:</p>
-<p><span id="eq-Serie"><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20X_t%20%5C%7D%5ET_%7Bt%20=%201%7D%0A%5Ctag%7B1%7D"></span></p>
-<p>Es decir, definiremos a una serie de tiempo como una realización de un proceso estocástico –o un Proceso Generador de Datos (PGD). Consideremos una muestra de los múlples posibles resultados de muestras de tamaño <img src="https://latex.codecogs.com/png.latex?T">, la colección dada por:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7BX%5E%7B(1)%7D_1,%20X%5E%7B(1)%7D_2,%20%5Cldots,%20X%5E%7B(1)%7D_T%5C%7D%0A"></p>
-<p>es una de las tantas posibles resultantes del proceso estocástico o PGD. Eventualmente podríamos estar dispuestos a observar este proceso indefinidamente, de forma tal que estemos interesados en observar a la secuencia dada por <img src="https://latex.codecogs.com/png.latex?%5C%7B%20X%5E%7B(1)%7D_t%20%5C%7D%5E%7B%5Cinfty%7D_%7Bt%20=%201%7D">, lo cual no dejaría se ser sólo una de las tantas realizaciones o secuencias del proceso estocástico original.</p>
-<p>Tan solo para poner un ejemplo, podríamos observar las siguientes realizaciones del mismo PGD:</p>
-<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Beqnarray*%7D%0A%20%20&amp;%20%5C%7BX%5E%7B(2)%7D_1,%20X%5E%7B(2)%7D_2,%20%5Cldots,%20X%5E%7B(2)%7D_T%5C%7D%20&amp;%20%5C%5C%0A%20%20&amp;%20%5C%7BX%5E%7B(3)%7D_1,%20X%5E%7B(3)%7D_2,%20%5Cldots,%20X%5E%7B(3)%7D_T%5C%7D%20&amp;%20%5C%5C%0A%20%20&amp;%20%5C%7BX%5E%7B(4)%7D_1,%20X%5E%7B(4)%7D_2,%20%5Cldots,%20X%5E%7B(4)%7D_T%5C%7D%20&amp;%20%5C%5C%0A%20%20&amp;%20%5Cvdots%20&amp;%20%5C%5C%0A%20%20&amp;%20%5C%7BX%5E%7B(j)%7D_1,%20X%5E%7B(j)%7D_2,%20%5Cldots,%20X%5E%7B(j)%7D_T%5C%7D%20&amp;%0A%5Cend%7Beqnarray*%7D">
-<p>Donde <img src="https://latex.codecogs.com/png.latex?j%20%5Cin%20%5Cmathbb%7BZ%7D">. En lo subsecuente, diremos que una serie de tiempo es una realización del proceso estocástico subyacente. Considerando, en consecuencia, al proceso estocástico con todas sus posibilidades de realización.</p>
-<p>Para hacer más sencilla la notación no distinguiremos entre el proceso en sí mismo y una de sus realizaciones, es decir, siempre escribiremos a una serie de tiempo como la secuencia mostrada en la ecuación (Equation&nbsp;1), o más precisamente como la siguiente realización:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20X_1,%20X_2,%20%5Cldots,%20X_T%20%5C%7D%0A"></p>
-<p>O simplemente:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_1,%20X_2,%20%5Cldots,%20X_T%0A"></p>
-<p>El proceso estocástico de dimensión <img src="https://latex.codecogs.com/png.latex?T"> puede ser completamente descrito por su función de distribución multivaraida de dimensión <img src="https://latex.codecogs.com/png.latex?T">. No obstante, esto no resulta ser práctico cuando se opere más adelante en el curso. Por ello, en el curso, y en general casi todos los textos lo hacen, sólo nos enfocaremos en sus primer y segundo momentos, es decir, en sus medias o valores esperados:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D%5BX_t%5D%0A"></p>
-<p>Para <img src="https://latex.codecogs.com/png.latex?t%20=%201,%202,%20%5Cldots,%20T">; o:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cleft%5B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bc%7D%0A%20%20%20%20%5Cmathbb%7BE%7D%5BX_1%5D%20%5C%5C%0A%20%20%20%20%5Cmathbb%7BE%7D%5BX_2%5D%20%5C%5C%0A%20%20%20%20%5Cvdots%20%5C%5C%0A%20%20%20%20%5Cmathbb%7BE%7D%5BX_T%5D%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright%5D%0A"></p>
-<p>o,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cleft%5B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bc%7D%0A%20%20%20%20%5Cmathbb%7BE%7D%5BX_1%5D,%20%5Cmathbb%7BE%7D%5BX_2%5D,%20%5Cldots,%20%5Cmathbb%7BE%7D%5BX_T%5D%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright%5D%0A"></p>
-<p>De sus variazas:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AVar%5BX_t%5D%20=%20%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmathbb%7BE%7D%5BX_t%5D)%5E2%5D%0A"></p>
-<p>Para <img src="https://latex.codecogs.com/png.latex?t%20=%201,%202,%20%5Cldots,%20T">, y de sus <img src="https://latex.codecogs.com/png.latex?T(T-1)/2"> covarianzas:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0ACov%5BX_t,X_s%5D%20=%20%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmathbb%7BE%7D%5BX_t%5D)(X_s%20-%20%5Cmathbb%7BE%7D%5BX_s%5D)%5D%0A"></p>
-<p>Para <img src="https://latex.codecogs.com/png.latex?t%20%3C%20s">. Por lo tanto, en la forma matricial podemos escribir lo siguiente:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cleft%5B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bc%20c%20c%20c%7D%0A%20%20%20%20Var%5BX_1%5D%20&amp;%20Cov%5BX_1,X_2%5D%20&amp;%20%5Ccdots%20&amp;%20Cov%5BX_1,X_T%5D%20%5C%5C%0A%20%20%20%20Cov%5BX_2,X_1%5D%20&amp;%20Var%5BX_2%5D%20&amp;%20%5Ccdots%20&amp;%20Cov%5BX_2,X_T%5D%20%5C%5C%0A%20%20%20%20%5Cvdots%20&amp;%20%5Cvdots%20&amp;%20%5Cddots%20&amp;%20%5Cvdots%20%5C%5C%0A%20%20%20%20Cov%5BX_T,X_1%5D%20&amp;%20Cov%5BX_T,X_2%5D%20&amp;%20%5Ccdots%20&amp;%20Var%5BX_T%5D%20%5C%5C%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright%5D%0A"></p>
-<p><span id="eq-MATCOV"><img src="https://latex.codecogs.com/png.latex?%0A=%20%5Cleft%5B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bc%20c%20c%20c%7D%0A%20%20%20%20%5Csigma_1%5E2%20&amp;%20%5Crho_%7B12%7D%20&amp;%20%5Ccdots%20&amp;%20%5Crho_%7B1T%7D%20%5C%5C%0A%20%20%20%20%5Crho_%7B21%7D%20&amp;%20%5Csigma_2%5E2%20&amp;%20%5Ccdots%20&amp;%20%5Crho_%7B2T%7D%20%5C%5C%0A%20%20%20%20%5Cvdots%20&amp;%20%5Cvdots%20&amp;%20%5Cddots%20&amp;%20%5Cvdots%20%5C%5C%0A%20%20%20%20%5Crho_%7BT1%7D%20&amp;%20%5Crho_%7BT2%7D%20&amp;%20%5Ccdots%20&amp;%20%5Csigma_T%5E2%20%5C%5C%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright%5D%0A%5Ctag%7B2%7D"></span></p>
-<p>Donde es claro que en la matriz de la ecuación (Equation&nbsp;2) existen <img src="https://latex.codecogs.com/png.latex?T(T-1)/2"> covarianzas distintas, ya que se cumple que <img src="https://latex.codecogs.com/png.latex?Cov%5BX_t,X_s%5D%20=%20Cov%5BX_s,X_t%5D">, para <img src="https://latex.codecogs.com/png.latex?t%20%5Cneq%20s">.</p>
-<p>A menudo, esas covarianzas son denominadas como autocovarianzas puesto que ellas son covarianzas entre variables aleatorias pertenecientes al mismo proceso estocástico pero en un momento <img src="https://latex.codecogs.com/png.latex?t"> diferente. Si el proceso estocástico tiene una distribución normal multivariada, su función de distribución estará totalmente descrita por sus momentos de primer y segundo orden.</p>
-<p>Ahora introduciremos el concepto de ergodicidad, el cual indica que los momentos muestrales, los cuales son calculados en la base de una serie de tiempo con un número finito de observaciones, en la medida que <img src="https://latex.codecogs.com/png.latex?T%20%5Crightarrow%20%5Cinfty"> sus correspondientes momentos muestrales, tienden a los verdaderos valores poblacionales, los cuales definiremos como <img src="https://latex.codecogs.com/png.latex?%5Cmu">, para la media, y <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E2_X"> para la varianza.</p>
-<p>Este concepto sólo es cierto si asumimos que, por ejemplo, el valor esperado y la varianza son como se dice a continuación para todo <img src="https://latex.codecogs.com/png.latex?t%20=%201,%202,%20%5Cldots,%20T">:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Beqnarray%7D%0A%20%20%20%20%5Cmathbb%7BE%7D%5BX_t%5D%20=%20%5Cmu_t%20=%20%5Cmu%20%5C%5C%0A%20%20%20%20%5Clabel%7BMEDIA%7D%0A%20%20%20%20Var%5BX_t%5D%20=%20%5Csigma%5E2_X%0A%5Cend%7Beqnarray%7D"> {#eq-VARIANZA}</p>
-<p>Mas formalmente, se dice que el PGD o el proceso estocástico es ergódico en la media si:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdisplaystyle%5Clim_%7BT%20%5Cto%20%5Cinfty%7D%7B%5Cmathbb%7BE%7D%20%5Cleft%5B%20%5Cleft(%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%7D_%7Bt%20=%201%7D%20(X_t%20-%20%5Cmu)%20%5Cright)%20%5E2%20%5Cright%5D%7D%20=%200%0A"></p>
-<p>y ergódico en la varianza si:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdisplaystyle%5Clim_%7BT%20%5Cto%20%5Cinfty%7D%7B%5Cmathbb%7BE%7D%20%5Cleft%5B%20%5Cleft(%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%7D_%7Bt%20=%201%7D%20(X_t%20-%20%5Cmu)%20%5E2%20-%20%5Csigma%5E2_X%20%5Cright)%20%5E2%20%5Cright%5D%7D%20=%200%0A"></p>
-<p>Estas condiciones se les conoce como <em>propiedades de consistencia</em> para las variables aleatorias. Sin embargo, éstas no pueden ser probadas. Por ello se les denomina como un supuesto que pueden cumplir algunas de las series. Más importante aún: <strong>un proceso estocástico que tiende a estar en equilibrio estadístico en un orden ergódico, es estacionario</strong>.</p>
-<p>Podemos distinguir dos tipos de estacionariedad. Si asumimos que la función común de distribución del proceso estocástico no cambia a lo largo del tiempo, se dice que el proceso es <em>estrictamente estacionario</em>. Como este concepto es dificil de aplicar en la práctica, solo consideraremos a la <em>estacionariedad débil</em> o estacionariedad en sus momentos.</p>
-<p>Definiremos a la estacionariedad por sus momentos del correspondiente proceso estocástico dado por <img src="https://latex.codecogs.com/png.latex?%5C%7BX_t%5C%7D">:</p>
-<ol type="1">
-<li><p><em>Estacionariedad en media</em>: Un proceso estocástico es estacionario en media si <img src="https://latex.codecogs.com/png.latex?E%5BX_t%5D%20=%20%5Cmu_t%20=%20%5Cmu"> es constante para todo <img src="https://latex.codecogs.com/png.latex?t">.</p></li>
-<li><p><em>Estacionariedad en varianza</em>: Un proceso estocástico es estacionario en varianza si <img src="https://latex.codecogs.com/png.latex?Var%5BX_t%5D%20=%20%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu_t)%5E2%5D%20=%20%5Csigma%5E2_X%20=%20%5Cgamma(0)"> es constante y finita para todo <img src="https://latex.codecogs.com/png.latex?t">.</p></li>
-<li><p><em>Estacionariedad en covarianza</em>: Un proceso estocástico es estacionario en covarianza si <img src="https://latex.codecogs.com/png.latex?Cov%5BX_t,X_s%5D%20=%20%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu_t)(X_s%20-%20%5Cmu_s)%5D%20=%20%5Cgamma(%7Cs-t%7C)"> es sólo una función del tiempo y de la distancia entre las dos variables aleatorias. Por lo que no depende del tiempo denotado por <img src="https://latex.codecogs.com/png.latex?t"> (no depende de la información contemporánea).</p></li>
-<li><p><em>Estacionariedad débil</em>: Como la estacionariedad en varianza resulta de forma inmediata de la estacionariedad en covarianza cuando se asume que <img src="https://latex.codecogs.com/png.latex?s%20=%20t">, un proceso estocástico es débilmente estacionario cuando es estacionario en media y covarianza.</p></li>
-</ol>
-<p>Puesto que resulta poco factible asumir una estacionariedad diferente a la débil, es adelante siempre que digamos que un proceso es estacionario se referirá al caso débil y sólo diremos que el proceso es estacionario, sin el apelativo de débil.</p>
-<p>Ahora veamos un ejemplo de lo anterior. Supongamos una serie de tiempo denotada por: <img src="https://latex.codecogs.com/png.latex?%5C%7BU_t%5C%7D%5ET_%7Bt%20=%200%7D">. Decimos que el proceso estocástico <img src="https://latex.codecogs.com/png.latex?%5C%7BU_t%5C%7D"> es un o es un , si éste tiene las siguientes propiedades:</p>
-<ol type="1">
-<li><p><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BE%7D%5BU_t%5D%20=%200">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?Var%5BU_t%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%20%5Cmu_t)%5E2%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%20%5Cmu)%5E2%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t)%5E2%5D%20=%20%5Csigma%5E2">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?Cov%5BU_t,U_s%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%20%5Cmu_t)(U_s%20-%20%5Cmu_s)%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%20%5Cmu)(U_s%20-%20%5Cmu)%5D%20=%20%5Cmathbb%7BE%7D%5BU_t%20U_s%5D%20=%200">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t%20%5Cneq%20s">.</p></li>
-</ol>
-<p>En palabras. Un proceso <img src="https://latex.codecogs.com/png.latex?U_t"> es un ruido blanco si su valor promedio es cero (0), tiene una varianza finita y constante, y además no le importa la historia pasada, así su valor presente no se ve influenciado por sus valores pasados no importando respecto de que periodo se tome referencia.</p>
-<p>En apariencia, por sus propiedades, este proceso es débilmente estacionario –o simplemente, estacionario–. Todas las variables aleatorias tienen una media de cero, una varianza <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E2"> y no existe correlación entre ellas.</p>
-<p>Ahora supongamos que definimos un nuevo proceso estocástico <img src="https://latex.codecogs.com/png.latex?%5C%7BX_t%5C%7D"> como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_t%20=%20%5Cleft%5C%7B%20%5Cbegin%7Barray%7D%7Bl%7D%20U_0%20%20%5Cmbox%7B%20para%20%7D%20t%20=%200%20%5C%5C%20X_%7Bt-1%7D%20+%20U_t%20%5Cmbox%7B%20para%20%7D%20t%20=%201,%202,%203,%20%5Cldots%20%5Cend%7Barray%7D%5Cright.%0A"></p>
-<p>Donde <img src="https://latex.codecogs.com/png.latex?%5C%7B%20U_t%20%5C%7D"> es un proceso puramente aleatorio. Este proceso estocástico, o caminata aleatoria sin tendencia (ajuste - drift), puede ser reescrito como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_t%20=%20%5Csum%5Et_%7Bj%20=%200%7D%20U_j%0A"></p>
-<p>Tratemos de dar más claridad al ejemplo, para ello asumamos que generamos a <img src="https://latex.codecogs.com/png.latex?%5C%7BU_t%5C%7D"> por medio del lanzamiento de una moneda. Donde obtenemos una cara con una probabilidad de <img src="https://latex.codecogs.com/png.latex?0.5">, en cuyo caso decimos que la variable aleatoria <img src="https://latex.codecogs.com/png.latex?U_t"> tomará el valor de <img src="https://latex.codecogs.com/png.latex?+1">, y una cruz con una probabilidad de <img src="https://latex.codecogs.com/png.latex?0.5">, en cuyo caso decimos que la variable aleatoria <img src="https://latex.codecogs.com/png.latex?U_t"> toma el valor de <img src="https://latex.codecogs.com/png.latex?-1">.</p>
-<p>Este planteamiento cumple con las propiedas enunciadas ya que:</p>
-<ol type="1">
-<li><p><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BE%7D%5BU_t%5D%20=%200.5%20%5Ctimes%20-1%20+%200.5%20%5Ctimes%201%20=%200">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?Var%5BU_t%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%200)%5E2%5D%20=%20%5Cfrac%7B1%7D%7B2%7D((-1)%5E2)%20+%20%5Cfrac%7B1%7D%7B2%7D((1)%5E2)%20=%201">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?Cov%5BU_t,U_s%5D%20=%20%5Cmathbb%7BE%7D%5B(U_t%20-%200)(U_s%20-%200)%5D%20=%20%5Cmathbb%7BE%7D%5BU_t%20%5Ccdot%20U_s%5D%20=%200">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20t%20%5Cneq%20s">.</p></li>
-</ol>
-<p>Retomando a nuestro proceso <img src="https://latex.codecogs.com/png.latex?X_t">, diremos que el caso de <img src="https://latex.codecogs.com/png.latex?X_0%20=%200">, para <img src="https://latex.codecogs.com/png.latex?t%20=%200">. Si verificamos cúales son sus primeros y segundos momentos de <img src="https://latex.codecogs.com/png.latex?%5C%7BX_t%5C%7D"> tenemos:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D%5BX_t%5D%20=%20%5Cmathbb%7BE%7D%5Cleft%5B%20%5Csum%5Et_%7Bj=1%7D%20U_j%20%5Cright%5D%20=%20%5Csum%5Et_%7Bj=1%7D%20%5Cmathbb%7BE%7D%5BU_j%5D%20=%200%0A"></p>
-<p>En cuanto a la varianza:</p>
-<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Beqnarray%7D%0A%20%20Var%5BX_t%5D%20&amp;%20=%20&amp;%20Var%20%5Cleft%5B%20%5Csum%5Et_%7Bj=1%7D%20U_j%20%5Cright%5D%20%5Cnonumber%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Csum%5Et_%7Bj=1%7D%20Var%5BU_j%5D%20+%202%20*%20%5Csum_%7Bj%20%5Cneq%20k%7D%20Cov%5BU_j,U_k%5D%20%5Cnonumber%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Csum%5Et_%7Bj=1%7D%201%20%5Cnonumber%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20t%20%20%20%20%0A%5Cend%7Beqnarray%7D">
-<p>Lo anterior, dado que hemos supuesto que en la caminata aleatoria todas la variables aleatorias son independientes, es decir, <img src="https://latex.codecogs.com/png.latex?Cov%5BU_t,U_s%5D%20=%20E%5BU_t%20%5Ccdot%20U_s%5D%20=%200">. Por su parte, la covarianza del proceso estocástico se puede ver como:</p>
-<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Beqnarray*%7D%0A%20%20Cov%5BX_t,X_s%5D%20&amp;%20=%20&amp;%20%5Cmathbb%7BE%7D%20%5Cleft%5B%20%5Cleft(%20%5Csum%5Et_%7Bj=1%7D%20U_j%20-%200%20%5Cright)%20%5Cleft(%20%5Csum%5Es_%7Bi=1%7D%20U_i%20-%200%20%5Cright)%20%5Cright%5D%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Cmathbb%7BE%7D%5B(U_1%20+%20U_2%20+%20%5Cldots%20+%20U_t)(U_1%20+%20U_2%20+%20%5Cldots%20+%20U_s)%5D%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Csum%5Et_%7Bj=1%7D%20%5Csum%5Es_%7Bi=1%7D%20%5Cmathbb%7BE%7D%5BU_j%20U_i%5D%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Cmathbb%7BE%7D%5BU%5E2_1%5D%20+%20%5Cmathbb%7BE%7D%5BU%5E2_2%5D%20+%20%5Cldots%20+%20%5Cmathbb%7BE%7D%5BU%5E2_k%5D%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20%5Csigma%5E2%20+%20%5Csigma%5E2%20+%20%5Cldots%20+%20%5Csigma%5E2%20%5C%5C%0A%20%20&amp;%20=%20&amp;%201%20+%201%20+%201%20+%201%20%5C%5C%0A%20%20&amp;%20=%20&amp;%20min(t,s)%0A%5Cend%7Beqnarray*%7D">
-<p>Así, el proceso estocástico dado por la caminata alaeatoria sin un término de ajuste es estacionario en media, pero no en varianza o en covarianza, y consecuentemente, en general no estacionario, condición que contraria al caso del proceso simple descrito en <img src="https://latex.codecogs.com/png.latex?U_t">.</p>
-<p>Es facil ver que muchas de las posibilidades de realización de este proceso estocástico (series de tiempo) pueden tomar cualquiera de las rutas consideradas en el Figura @ref(fig:fig31).</p>
-<div class="cell" data-layout-align="center">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Ejemplo de 10 trayectorias de la caminata aleatoria, cuando sólo es posible cambios de +1 y -1$</figcaption>
-<p><img src="https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-02 modelos-ste/index_files/figure-html/fig31-1.png" class="img-fluid" width="672"></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="función-de-autocorrelación" class="level2">
-<h2>Función de autocorrelación</h2>
-<p>Para ampliar la discusión, es posible calcular la fuerza o intensidad de la dependencia de las variables aleatorias dentro de un proceso estocástico, ello mediante el uso de las autocovarianzas. Cuando las covarianzas son normalizadas respecto de la varianza, el resultado es un término que es independiente de las unidad de medida aplicada, y se conoce como la .</p>
-<p>Para procesos estacionarios, dicha función de autocorrelación esta dada por:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Crho(%5Ctau)%20=%20%5Cfrac%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)(X_%7Bt+%5Ctau%7D%20-%20%5Cmu)%5D%7D%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%20=%20%5Cfrac%7B%5Cgamma(%5Ctau)%7D%7B%5Cgamma(0)%7D%0A"></p>
-<p>Donde <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cldots,%20-2,%20-1,%200,%201,%202,%20%5Cldots">. Dicha función tiene las siguientes propiedades:</p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Crho(0)%20=%201">. Es fácil demostrar que la función <img src="https://latex.codecogs.com/png.latex?%5Crho(0)"> es:</li>
-</ol>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Crho(0)%20=%20%5Cfrac%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)(X_%7Bt%20+%200%7D%20-%20%5Cmu)%5D%7D%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%20=%20%5Cfrac%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%20=%201%0A"></p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Crho(%5Ctau)%20=%20%5Crho(-%5Ctau)">. Partiendo de la definción de <img src="https://latex.codecogs.com/png.latex?%5Crho(%5Ctau)"> podemos ver que la distancia que existe entre <img src="https://latex.codecogs.com/png.latex?t"> y <img src="https://latex.codecogs.com/png.latex?t%20+%20%5Ctau"> es <img src="https://latex.codecogs.com/png.latex?%5Ctau">, de esta forma la autocorrelación de la variable <img src="https://latex.codecogs.com/png.latex?X"> entre los periodos antes señalados debería ser la misma para el caso en que <img src="https://latex.codecogs.com/png.latex?%5Crho(-%5Ctau)">. Partamos de la ecuación para ver más claramente:</li>
-</ol>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Crho(%5Ctau)%20=%20%5Cfrac%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)(X_%7Bt%20+%20%5Ctau%7D%20-%20%5Cmu)%5D%7D%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%20=%20%5Cfrac%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)(X_%7Bt%20-%20%5Ctau%7D%20-%20%5Cmu)%5D%7D%7B%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmu)%5E2%5D%7D%20=%20%5Crho(-%5Ctau)%0A"></p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Cabs%7B%5Crho(%5Ctau)%7D%20%5Cleq%201">, para todo <img src="https://latex.codecogs.com/png.latex?%5Ctau">.</li>
-</ol>
-<p>Derivado de las propiedades 1 y 2 antes descritas se puede concluir que sólo es necesario conocer la función de autocorrelación para el caso de <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%201,%202,%203,%20%5Cldots">, ya que de estos casos podemos derivar los valores de la función de autocorrelación complementarios de <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cldots,%20-3,%20-2,%20-1">.</p>
-<p>Partiendo de los supuestos de ergodicidad en relación a la media, varianza y covarianzas de un proceso estacionario, podemos estimar dichos paramétros con las siguientes formulaciones o propuestas de estimadores puntuales:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cmu%7D%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5ET_%7Bt=1%7D%20X_t%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cgamma%7D(0)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2%20=%20%5Chat%7B%5Csigma%7D%5E2%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cgamma%7D(%5Ctau)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%20-%20%5Ctau%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+%5Ctau%7D%20-%20%5Chat%7B%5Cmu%7D)%20%5Cmbox%7B,%20para%20%7D%20%5Ctau%20=%201,%202,%20%5Cldots,%20T-1%0A"></p>
-<p>No hacemos la demostración en estas notas –sería deseable que el alumno revisará la afimación– pero estos últimos son estimadores consistentes de <img src="https://latex.codecogs.com/png.latex?%5Cmu">, <img src="https://latex.codecogs.com/png.latex?%5Cgamma(0)"> y <img src="https://latex.codecogs.com/png.latex?%5Cgamma(%5Ctau)">. Por su parte, un estimador consistente de la función de autocorrelación estará dado por:</p>
-<p><span id="eq-Eq_AutoCorr"><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Crho%7D(%5Ctau)%20=%20%5Cfrac%7B%5Csum%5E%7BT%20-%20%5Ctau%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+%5Ctau%7D%20-%20%5Chat%7B%5Cmu%7D)%7D%7B%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2%7D%20=%20%5Cfrac%7B%5Chat%7B%5Cgamma%7D(%5Ctau)%7D%7B%5Chat%7B%5Cgamma%7D(0)%7D%20%5Cmbox%7B,%20para%20%7D%20%5Ctau%20=%201,%202,%20%5Cldots,%20T-1%0A%5Ctag%7B3%7D"></span></p>
-<p>El estimador de la ecuación (<strong>?@eq-AutoCorr</strong>) es asintóticamente insesgado. Por ejemplo, para el caso de un proceso de ruido blanco o caminata aleatoria, su varianza puede ser aproximada por el valor dado <img src="https://latex.codecogs.com/png.latex?1/T">. Ésta tiene, asintóticamente, una distribución normal. Dado esto, el intervalo de confianza al <img src="https://latex.codecogs.com/png.latex?95%5C%25"> será el dado por <img src="https://latex.codecogs.com/png.latex?%5Cpm%202/%5Csqrt%7BT%7D">, en el cual se encuentra la mayoría de los coeficientes de autocorrelación estimados.</p>
-<p>Ahora discutamos algunos ejemplos o aplicaciones. Cuando se realiza la evaluación de la estimación de un modelo de series de tiempo es importante saber si los residuales del modelo realmente tienen propiedades de un proceso puramente aleatorio, en partícular, si ellos no están correlacionados entre sí. Así, la hipotésis a probar será:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AH_0%20:%20%5Crho(%5Ctau)%20=%200%20%5Cmbox%7B,%20para%20todo%20%7D%20%5Ctau%20=%201,%202,%20%5Cldots,%20m%20%5Cmbox%7B%20y%20%7D%20m%20%3C%20T%0A"></p>
-<p>Esta expresión se puede interpretar como una prueba respecto de si la correlación entre la información de periodos atrás es cero con la información contemporánea. Para hacer una pruena global de la hipotésis de sí un número <img src="https://latex.codecogs.com/png.latex?m"> de coeficientes de autocovarianzas son cero Box y Pierce (1970) desarrollarón la siguiente estadística:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%5E*%20=%20T%20%5Csum_%7Bj%20=%201%7D%5E%7Bm%7D%20%5Chat%7B%5Crho%7D%20(j)%5E2%0A"></p>
-<p>Bajo la hipotésis nula esta estadística se distribulle asintóticamente como una chi cuadrado (<img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2">) con <img src="https://latex.codecogs.com/png.latex?m-k"> grados de libertad y con <img src="https://latex.codecogs.com/png.latex?k"> que representa al número de paramétros estimados.</p>
-<p>Haciendo una aplicación estricta de la distribución de esta estadística, sabemos que esta se mantiene asintóticamente. Greta, Ljung y Box (1978) propusieron la siguiente modificación de la estadística para muestras pequeñas:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20T(T%20+%202)%20%5Csum_%7Bj%20=%201%7D%5E%7Bm%7D%20%5Cfrac%7B%5Chat%7B%5Crho%7D%20(j)%5E2%7D%7BT%20-%20j%7D%0A"></p>
-<p>La cual también se distribulle asintóticamente como <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> con <img src="https://latex.codecogs.com/png.latex?m-k"> grados de libertad.</p>
-<p>También es intuitivamente claro que la hipótesis nula de no autocorrelación de residuales debería ser rechazada si alguno de los valores <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Crho%7D%20(j)"> es muy grande, es decir, si <img src="https://latex.codecogs.com/png.latex?Q"> o <img src="https://latex.codecogs.com/png.latex?Q%5E*"> es muy grande. O más precisamente, si estas estadísticas son más grandes que los correspondientes valores críticos de la distribución <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> con <img src="https://latex.codecogs.com/png.latex?m-k"> grados de libertad a algún grado dado de signficancia.</p>
-<p>Una alternativa para esta prueba es una del tipo Multiplicadores de Lagrange (o LM) desarrollada por Breusch (1978) y Godfrey (1978). La cual, al igual que las estadísticas <img src="https://latex.codecogs.com/png.latex?Q"> y <img src="https://latex.codecogs.com/png.latex?Q%5E*">, la hipotesis nula está dada por:</p>
-<ul>
-<li><p><img src="https://latex.codecogs.com/png.latex?H_0">: Los residuales no están autocorrelacionados.</p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?H_a">: Los residuales muestran alguna acutocorrelación de forma autoregresiva o de medias móviles.</p></li>
-</ul>
-<p>La prueba consiste en realizar una regresión auxiliar en la cual los residuales se estiman en función de las variables explicativas del modelo original y en los residuales mismos pero rezagados hasta el término <img src="https://latex.codecogs.com/png.latex?m"> (regresión auxiliar). La prueba resulta en una estadìstica con una distribución <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> con <img src="https://latex.codecogs.com/png.latex?m"> grados de libertad la cual está dada por la expresión:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0ALM%20=%20T%20%5Ctimes%20R%5E2%0A"></p>
-<p>Donde <img src="https://latex.codecogs.com/png.latex?R%5E2"> es el resultante de la regresión auxiliar y <img src="https://latex.codecogs.com/png.latex?T"> es el número de observaciones totales.</p>
-<p>En comparación con una prueba Durbin - Watson que es comúnmente usada en la econometría tradicional, para probar autocorrelación de los residuales, las estadísticas <img src="https://latex.codecogs.com/png.latex?Q">, <img src="https://latex.codecogs.com/png.latex?Q%5E*"> y <img src="https://latex.codecogs.com/png.latex?LM"> tienen las siguientes ventajas:</p>
-<ol type="1">
-<li><p>Permiten corroborar la existencia de autocorrelación para cualquier orden, y no solo para un primer orden (es decir, para cualquier valor de <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%201,%202,%203,%20%5Cldots">);</p></li>
-<li><p>Los resultados se mantienen aún y cuando exista una probable variable endógena en forma rezagada, y</p></li>
-<li><p>No depende del orden o la forma en que se acomoden las observaciones, algo que es muy probalble que ocurra en la econometría tradicional.</p></li>
-</ol>
-<p>El hecho de los residuales no estén autocorrelacionados no implica que estos sean independientes y normalmente distribuidos. La ausencia de autocorrelación no implica una independencia estocástica si las variables son normalmente distribuidas.</p>
-<p>A menudo se asume que estos residuales están distribuidos normalmente, ya que la mayoría de las pruebas estadísticas tienen este supuesto detrás. No obstante, ello también depende de los otros momentos de la distribución, específicamente del tercer y cuarto momento. Los cuales expresan como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BE%7D%5B(X_t%20-%20%5Cmathbb%7BE%7D%5BX_t%5D)%5Ei%5D%20%5Cmbox%7B,%20%7D%20i%20=%203,%204%0A"></p>
-<p>El tercer momento es necesario para determinar el sesgo, el cual esta dado como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7BS%7D%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Cfrac%7B%5Csum_%7Bt%20=%201%7D%5E%7BT%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E3%7D%7B%5Csqrt%7B%5Chat%7B%5Cgamma%7D(0)%5E3%7D%7D%0A"></p>
-<p>Para distribuciones simetricas (como en el caso de la distribución normal) el valor teórico para el sesgo es cero.</p>
-<p>La curtosis, la cual esta dada en función del cuarto momento, se puede expresar como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7BK%7D%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Cfrac%7B%5Csum_%7Bt%20=%201%7D%5E%7BT%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E4%7D%7B%5Chat%7B%5Cgamma%7D(0)%5E2%7D%0A"></p>
-<p>Para el caso de una distribución normal, esta estadística toma el valor de 3. Valores más grandes que 3 indican que la distribución tienen colas anchas. En tales casos se ubican a los datos financieros.</p>
-<p>Usando el valor de las estadísticas para medir el sesgo y la curtosis, <img src="https://latex.codecogs.com/png.latex?S"> y <img src="https://latex.codecogs.com/png.latex?K">, respectivamente, Jarque y Bera (1980) propusieron una prueba de normalidad, la cual puede ser aplicada a series de tiempo en niveles o en diferencias indistintamente. Dicha prueba se expresa como:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AJB%20=%20%5Cfrac%7BT%7D%7B6%7D%20%5Cleft(%5Chat%7BS%7D%20+%20%5Cfrac%7B1%7D%7B4%7D%20(%5Chat%7BK%7D%20-%203)%5E2%20%5Cright)%0A"></p>
-<p>La cual tiene una distribución <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> con <img src="https://latex.codecogs.com/png.latex?2"> grados de libertad y donde <img src="https://latex.codecogs.com/png.latex?T"> es el tamaño de la muestra. La hipótesis de que las observaciones están distribuidas de forma normal se rechaza si los valores de la estadística de prueba es más grande que los correspondientes valores criticos en tablas.</p>
-<p>Veamos un ejemplo para ilustrar el uso de la función de autocorrelación. Tomemos como variable al número de pasajeros transportados por el sistema de transporte del metro de la CDMX. Los datos empleados fueron tomados del INEGI y son una serie de tiempo en el periodo que va de enero de 2000 a junio de 2019, es decir, 234 observaciones. Como se puede apreciar en la Figura <img src="https://latex.codecogs.com/png.latex?%5Cref%7BPax_Metro%7D">, el número de pasajeros por mes ha oscilado significativamente a lo largo de tiempo. Incluso podemos observar un cambio estructural de la serie entre 2011 y 2012. Asimismo, podemos ubicar una caida atípica que ocurrió en septiembre de 2017.</p>
-<p>A esta serie de tiempo le calculamos los pincipales estadísticos hasta ahora estudiados y obtenemos el Cuadro <img src="https://latex.codecogs.com/png.latex?%5Cref%7BEst_Pax%7D">. En dicho cuadro se destaca que se muestra la función de autocirrelación para los tres primeros rezagos. Para mayor detalle, en la Figura <img src="https://latex.codecogs.com/png.latex?%5Cref%7BCorrelograma%7D"> se muestra la función de autocorrelación, en donde las bandas descritas por las líneas azules son el intervalo de confianza desntro de las cuales no se puede rechazar la hipotésis nula de que <img src="https://latex.codecogs.com/png.latex?H_0:%20%5Chat%7B%5Crho%7D(p)%20=%200">, para todo <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%201,%202,%20%5Cldots,%20T-1">.</p>
-<table class="caption-top">
-<caption>Estadísticas descriptivas del número de pasajeros en el Metro de la CDMX, enero de 2000 a junio de 2019</caption>
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-25-08-multicolinealidad},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-25-08-multicolinealidad">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-25-08-multicolinealidad</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-25-08-multicolinealidad/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-26-09-inferencia/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-26-09-inferencia},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-26-09-inferencia">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-26-09-inferencia</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-26-09-inferencia/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-27-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-27-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-27-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-27-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-27-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-28-11-problemas-de-endogeneidad/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-28-11-problemas-de-endogeneidad},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-28-11-problemas-de-endogeneidad">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-28-11-problemas-de-endogeneidad</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-28-11-problemas-de-endogeneidad/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>NO TITULO</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-29-12-perturbaciones-no-esfericas/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {NO {TITULO}},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-29-12-perturbaciones-no-esfericas},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). NO TITULO. Retrieved from <a href="https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-29-12-perturbaciones-no-esfericas">https://kapitan.net/econometria/01-fundamentos-econometria/2022-07-29-12-perturbaciones-no-esfericas</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2022-07-29-12-perturbaciones-no-esfericas/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Ideas de investigación en Econometría Análisis de variables y relaciones económicas</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-06-03-ideas-investigacion/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="propuesta-de-investigación-determinantes-microeconómicos-de-la-pobreza-en-el-departamento-de-ayacucho-durante-el-periodo-2000-2020." class="level1">
+<h1>Propuesta de investigación: Determinantes microeconómicos de la pobreza en el departamento de Ayacucho durante el periodo 2000-2020.</h1>
+<p><strong>Justificación:</strong> La pobreza es un fenómeno social de gran impacto que afecta a nivel personal, familiar y nacional. Está presente en nuestra vida diaria, en las noticias de los medios de comunicación y en el discurso político. Además, es una realidad que afecta de manera significativa a aquellos que se encuentran en situación de pobreza.</p>
+<p>Por esta razón, resulta fundamental llevar a cabo una investigación enfocada en los determinantes microeconómicos de la pobreza en el departamento de Ayacucho. Esto permitirá comprender las causas y factores que contribuyen a esta problemática en un ámbito específico y a lo largo de un periodo de tiempo extenso (2000-2020).</p>
+<table class="caption-top table">
 <colgroup>
-<col style="width: 77%">
-<col style="width: 22%">
+<col style="width: 2%">
+<col style="width: 97%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Estadística</th>
-<th>Valor</th>
+<th>Elemento</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmu%7D%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5ET_%7Bt=1%7D%20X_t"></td>
-<td>124.3000</td>
+<td><strong>Problema</strong></td>
+<td><strong>Problema general:</strong> ¿Cuáles son los determinantes microeconómicos de la probabilidad de ser pobre en el Perú según la encuesta de ENAHO 2020? <br> <strong>Problemas secundarios:</strong> <br> 1. ¿Cuál es la incidencia de las variables demográficas sobre la probabilidad de ser pobre en el departamento de Ayacucho? <br> 2. ¿Cuál es la incidencia de las variables de capital humano sobre la probabilidad de que el hogar sea pobre o no en el departamento de Ayacucho? <br> 3. ¿Cuál es la incidencia de la actividad económica sobre la probabilidad de que el hogar sea pobre o no en el departamento de Ayacucho?</td>
 </tr>
 <tr class="even">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cgamma%7D(0)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2"></td>
-<td>103.6400</td>
+<td><strong>Objetivos</strong></td>
+<td><strong>Objetivo general:</strong> Plantear un modelo de probabilidad que permite identificar los determinantes de la pobreza de los hogares en el departamento de Ayacucho según la encuesta de ENAHO 2020 <br> <strong>Objetivos específicos:</strong> <br> 1. Determinar cuál es la incidencia de las variables demográficas sobre la probabilidad de que el hogar sea pobre o no en el departamento de Ayacucho. <br> 2. Precisar cuál es la incidencia de las variables del capital humano sobre la probabilidad de que el hogar sea pobre en el departamento de Ayacucho. <br> 3. Mostrar cuál es la incidencia de las variables del hogar sobre la probabilidad de que el hogar sea pobre o no en el departamento.</td>
 </tr>
 <tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cgamma%7D(1)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%20-%201%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+1%7D%20-%20%5Chat%7B%5Cmu%7D)"></td>
-<td>63.1100</td>
+<td><strong>Hipótesis</strong></td>
+<td>La edad del jefe del hogar tiene incidencia en la probabilidad de que el hogar sea pobre o no. A menor edad, mayor probabilidad de ser pobre. <br> La escolaridad del jefe de hogar tiene incidencia en la probabilidad de que el hogar sea pobre o no. A mayor escolaridad, menor probabilidad de ser pobre. <br> La rama de actividad al que se dedica el jefe del hogar tiene una fuerte incidencia en la probabilidad de que el hogar sea pobre o no. <br> El número de miembros del hogar que trabajan tiene una fuerte incidencia en la prueba de que el hogar sea pobre o no. A mayor número de miembros del hogar que trabajan, menor probabilidad de ser pobre.</td>
 </tr>
 <tr class="even">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cgamma%7D(2)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%20-%202%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+2%7D%20-%20%5Chat%7B%5Cmu%7D)"></td>
-<td>72.9100</td>
+<td><strong>Variables</strong></td>
+<td><strong>Endógenas:</strong> Probabilidad de ser pobre <br> <strong>Indicador:</strong> Variable dummy que denota presencia/ausencia de pobreza <br> <strong>Exógenas:</strong> Demográficas, capital humano, actividad económica, variables de localización <br> <strong>Indicadores:</strong> Edad, sexo, estado civil, número de miembros del hogar, posición de negocio, informalidad, empleo, localización (costa, sierra y selva)</td>
 </tr>
 <tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cgamma%7D(3)%20=%20%5Cfrac%7B1%7D%7BT%7D%20%5Csum%5E%7BT%20-%203%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+3%7D%20-%20%5Chat%7B%5Cmu%7D)"></td>
-<td>63.6900</td>
-</tr>
-<tr class="even">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Crho%7D(1)%20=%20%5Cfrac%7B%5Csum%5E%7BT%20-%201%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+1%7D%20-%20%5Chat%7B%5Cmu%7D)%7D%7B%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2%7D%20=%20%5Cfrac%7B%5Chat%7B%5Cgamma%7D(1)%7D%7B%5Chat%7B%5Cgamma%7D(0)%7D"></td>
-<td>0.6089</td>
-</tr>
-<tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Crho%7D(2)%20=%20%5Cfrac%7B%5Csum%5E%7BT%20-%202%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+2%7D%20-%20%5Chat%7B%5Cmu%7D)%7D%7B%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2%7D%20=%20%5Cfrac%7B%5Chat%7B%5Cgamma%7D(2)%7D%7B%5Chat%7B%5Cgamma%7D(0)%7D"></td>
-<td>0.7035</td>
-</tr>
-<tr class="even">
-<td><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Crho%7D(3)%20=%20%5Cfrac%7B%5Csum%5E%7BT%20-%203%7D_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)(X_%7Bt+3%7D%20-%20%5Chat%7B%5Cmu%7D)%7D%7B%5Csum%5ET_%7Bt=1%7D%20(X_t%20-%20%5Chat%7B%5Cmu%7D)%5E2%7D%20=%20%5Cfrac%7B%5Chat%7B%5Cgamma%7D(3)%7D%7B%5Chat%7B%5Cgamma%7D(0)%7D"></td>
-<td>0.6145</td>
-</tr>
-<tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?Q%5E*%20=%20T%20%5Csum_%7Bj%20=%201%7D%5E%7B1%7D%20%5Chat%7B%5Crho%7D%20(j)%5E2"></td>
-<td>86.7577</td>
-</tr>
-<tr class="even">
-<td><img src="https://latex.codecogs.com/png.latex?Q%5E*%20=%20T%20%5Csum_%7Bj%20=%201%7D%5E%7B2%7D%20%5Chat%7B%5Crho%7D%20(j)%5E2"></td>
-<td>290.9279</td>
+<td><strong>Metodología</strong></td>
+<td><strong>Tipo de investigación:</strong> Aplicada <br> <strong>Nivel de investigación:</strong> Descriptivo, analítico <br> <strong>Método:</strong> Inductivo <br> <strong>Diseño:</strong> Investigación por objetivo</td>
 </tr>
 </tbody>
 </table>
-<p>label{Est_Pax}</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:quarto-sidebar-section-1">Projects</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/pharmaccess.qmdPharmAccess">PharmAccess</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/mytomorrows.qmdMyTomorrows">MyTomorrows</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/roetz-life.qmdRoetz-Life">Roetz Life</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/blue-radix.qmdBlue-Radix">Blue Radix</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/amphia.qmdAmphia-Sensium">Amphia Sensium</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/has.qmdHAS-Green-Academy">HAS Green Academy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/sensire.qmdSensire">Sensire</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/blog/index.htmlBlog">Blog</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/econometria/index.htmlEconometria">Econometria</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/filosofia/index.htmlFilosofía">Filosofía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/finanzas/index.htmlFinanzas">Finanzas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/informatica/index.htmlInformatica">Informatica</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/macroeconomia/index.htmlMacroeconomía">Macroeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/matematica/index.qmdMatemáticas">Matemáticas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/microeconomia/index.htmlMicroeconomía">Microeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:https://anthology-of-data.scienceAnthology-of-Data-Science">Anthology of Data Science</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/appointment/index.htmlBook-an-appointment">Book an appointment</span></p>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-left">
-<p><br> Copyright © 2023 Daniel Kapitan<br> This website was created with <a href="https://quarto.org"><img src="https://achalmaedison.netlify.app/images/quarto.png" class="img-fluid" alt="Quarto" width="65"></a></p>
-</div>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-center">
-<p><br> <strong>Postal address:</strong><br> DWMM Holding B.V.<br> Marie Baronstraat 15<br> 3056 AA ROTTERDAM</p>
-</div>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-right">
-<p><br> <strong>Chamber of Commerce (KvK):</strong> 52920259<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../../../resources/230901-algemene-voorwaarden.pdf">Dutch</a><br></p>
-</div>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span></p>
-</div>
 </section>
+<section id="propuesta-de-investigación-gasto-social-y-nivel-de-pobreza-en-el-departamento-de-ayacucho-periodo-2000-2019." class="level1">
+<h1>Propuesta de investigación: Gasto social y nivel de pobreza en el departamento de Ayacucho: periodo 2000-2019.</h1>
+<p>Variable causa: Gasto social. Variable efecto: Nivel de pobreza.</p>
+<p><strong>Justificación:</strong></p>
+<p>En el contexto de países de Medio Oriente y África, se observan conflictos sociales, guerras civiles y alta inflación, lo que resulta en una extrema pobreza que afecta a una gran parte de su población.</p>
+<p>A pesar de que Perú cuenta con mejores condiciones geográficas, estabilidad política y económica, presenta un porcentaje similar o incluso mayor de extrema pobreza y desigualdad en su población, especialmente en las zonas rurales. Estas áreas aún enfrentan problemas estructurales en cuanto a servicios básicos como agua potable, energía eléctrica, educación, salud y alimentación. Esto se debe, en parte, a una deficiente distribución del gasto social en departamentos como Ayacucho.</p>
+<p>Por lo tanto, es necesario identificar las variables que explican los niveles de pobreza y comprender por qué existe una brecha significativa entre las zonas rurales y urbanas. Para lograrlo, se llevará a cabo un análisis estadístico descriptivo y se aplicará un modelo econométrico utilizando la base de datos de la Encuesta Nacional de Hogares (ENAHO) del INEI.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 44%">
+<col style="width: 4%">
+<col style="width: 12%">
+<col style="width: 3%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Definición conceptual</th>
+<th>Definición operacional</th>
+<th>Indicadores</th>
+<th>Unidad de medida</th>
+<th>Valor final</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X = Gasto social</td>
+<td>Es la búsqueda de logros en materia de equidad social, a través del desarrollo del capital físico y humano, promoviendo el aseguramiento de necesidades básicas.</td>
+<td></td>
+<td>- Gasto en educación<br>- Gasto en salud<br>- Programas sociales</td>
+<td>Números</td>
+<td>R-Squared Es la búsqueda de logros en materia de equidad social, a través del desarrollo del capital físico y humano, promoviendo el aseguramiento de necesidades básicas.</td>
+</tr>
+<tr class="even">
+<td>Y = Nivel de pobreza</td>
+<td>Según el INEI (2007), se define la pobreza como aquel conjunto de personas que no alcanzan a tener un nivel de satisfacción mínimo respecto a un conjunto de necesidades básicas relacionadas con la salud, nutrición, educación, vivienda, etc.</td>
+<td></td>
+<td>- Índice de Desarrollo Humano<br>- Índice de Gini</td>
+<td>Números</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="propuesta-de-investigación-factores-asociados-a-la-desnutrición-en-niños-menores-de-5-años-en-el-perú" class="level1">
+<h1>Propuesta de investigación: Factores asociados a la desnutrición en niños menores de 5 años en el Perú</h1>
+<p><strong>Justificación:</strong></p>
+<p>La desnutrición infantil representa uno de los mayores desafíos en términos de Salud Pública en el Perú.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Título</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Problema de investigación</td>
+<td>¿De qué manera la pobreza y el analfabetismo influyen en la desnutrición de los niños menores de 5 años en los departamentos de Perú de 2009 a 2019?</td>
+</tr>
+<tr class="even">
+<td>Problemas específicos</td>
+<td>¿De qué manera se relaciona la desnutrición en menores de 5 años con la pobreza en los departamentos de Perú? <br> ¿De qué manera se relaciona la desnutrición en menores de 5 años con el analfabetismo en los departamentos de Perú?</td>
+</tr>
+<tr class="odd">
+<td>Objetivo general</td>
+<td>Determinar la influencia de la pobreza y el analfabetismo en la desnutrición de los niños menores de 5 años en los departamentos de Perú de 2009 a 2019.</td>
+</tr>
+<tr class="even">
+<td>Objetivos específicos</td>
+<td>Explicar la relación de la desnutrición en menores de 5 años con la pobreza en los departamentos de Perú. <br> Explicar la relación de la desnutrición en menores de 5 años con el analfabetismo en los departamentos de Perú.</td>
+</tr>
+<tr class="odd">
+<td>Hipótesis general</td>
+<td>La pobreza y el analfabetismo influyen significativamente en la desnutrición de los niños menores de 5 años en los departamentos de Perú de 2009 a 2019.</td>
+</tr>
+<tr class="even">
+<td>Hipótesis específicas</td>
+<td>La desnutrición en menores de 5 años se relaciona significativamente con la pobreza en los departamentos de Perú. <br> La desnutrición en menores de 5 años se relaciona significativamente con el analfabetismo en los departamentos de Perú.</td>
+</tr>
+<tr class="odd">
+<td>Variable endógena</td>
+<td>Desnutrición en niños menores de 5 años</td>
+</tr>
+<tr class="even">
+<td>Indicador</td>
+<td>Tasa de desnutrición en menores de 5 años</td>
+</tr>
+<tr class="odd">
+<td>Variables exógenas</td>
+<td>Pobreza <br> Analfabetismo <br> Inflación</td>
+</tr>
+<tr class="even">
+<td>Indicadores</td>
+<td>Tasa de pobreza <br> Tasa de analfabetismo <br> IPC</td>
+</tr>
+<tr class="odd">
+<td>Tipo de investigación</td>
+<td>Aplicada</td>
+</tr>
+<tr class="even">
+<td>Diseño de investigación</td>
+<td>Descriptivo - correlacional</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="propuesta-de-investigación-influencia-de-la-recaudación-de-impuestos-prediales-en-la-recaudación-tributaria-de-la-municipalidad-distrital-de-huamanga-en-el-año-2021." class="level1">
+<h1>Propuesta de investigación: Influencia de la recaudación de impuestos prediales en la recaudación tributaria de la Municipalidad Distrital de Huamanga en el año 2021.</h1>
+<p><strong>Justificación:</strong></p>
+<p>Esta investigación tiene como objetivo analizar el impacto de la recaudación de impuestos prediales en la recaudación tributaria de la Municipalidad Distrital de Huamanga. Se busca determinar si los ciudadanos otorgan la debida importancia al cumplimiento de sus obligaciones tributarias, así como promover una mayor conciencia sobre la importancia de realizar los pagos correspondientes.</p>
+<p>Además, se plantea la posibilidad de investigar la influencia del impuesto a la renta en los tributos nacionales, con el fin de ampliar el alcance de la investigación.</p>
+<p>Para llevar a cabo este estudio, se sugiere utilizar métodos como la realización de encuestas para obtener datos precisos sobre la recaudación de impuestos prediales. En caso de que no se encuentren datos disponibles para el distrito de Huamanga, se podría considerar ampliar el análisis a nivel nacional.</p>
+<p>Fuentes de referencia:</p>
+<ol type="1">
+<li><p>Guía de Meta: Recaudación de impuestos y tasas 2019-2020. Disponible en: <a href="https://www.mef.gob.pe/contenidos/presu_publ/migl/metas/GUIA_META_2_rcaudacion2019_2020.pdf">enlace a la fuente</a>.</p></li>
+<li><p>Banco Central de Reserva del Perú: Estadísticas económicas. Disponible en: <a href="https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/RD13778DM/html">enlace a la fuente</a>.</p></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Título</th>
+<th>Modo Oración</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Problema de investigación</td>
+<td>¿De qué manera el impuesto predial se relaciona con la recaudación tributaria en la Municipalidad Distrital de Huamanga-2021?</td>
+</tr>
+<tr class="even">
+<td>Problema específico</td>
+<td>¿De qué manera el impuesto predial se relaciona con los impuestos municipales en la Municipalidad Distrital de Huamanga-2021?</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>¿De qué manera la recaudación tributaria se relaciona con el auto valúo en la Municipalidad Distrital de Huamanga-2021?</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>¿De qué manera el impuesto predial se relaciona con las tasas municipales en la Municipalidad Distrital de Huamanga-2021?</td>
+</tr>
+<tr class="odd">
+<td>Objetivo general</td>
+<td>Analizar si el impuesto predial se relaciona con la recaudación tributaria en la municipalidad distrital de Huamanga-2021</td>
+</tr>
+<tr class="even">
+<td>Objetivos específicos</td>
+<td>- Demostrar si el impuesto predial se relaciona con los impuestos municipales en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- Demostrar si la recaudación tributaria se relaciona con el auto valúo en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Demostrar si el impuesto predial se relaciona con las tasas municipales en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="odd">
+<td>Hipótesis general</td>
+<td>El impuesto predial se relaciona con la recaudación tributaria en la municipalidad distrital de Huamanga-2021</td>
+</tr>
+<tr class="even">
+<td>Hipótesis específicas</td>
+<td>- El impuesto predial se relaciona con los impuestos municipales en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- La recaudación tributaria se relaciona con el auto valuó en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- El impuesto predial se relaciona con las tasas municipales en la Municipalidad Distrital de Huamanga-2021</td>
+</tr>
+<tr class="odd">
+<td>Variables e Indicadores</td>
+<td><strong>Variable Independiente:</strong> Impuesto predial</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Indicadores: Auto valúo, Predios</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>Variable Dependiente:</strong> Recaudación tributaria</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Indicadores: Impuestos municipales, Tasas municipales (licencias de funcionamiento)</td>
+</tr>
+<tr class="odd">
+<td>Metodología</td>
+<td>- Tipo de investigación: Descriptivo y correlacional</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="propuesta-de-investigación-propuesta-de-programa-de-inserción-escolar-con-formación-e-incorporación-al-mundo-laboral-de-manera-emprendedora-en-la-región-ayacucho." class="level1">
+<h1>Propuesta de investigación: Propuesta de programa de inserción escolar con formación e incorporación al mundo laboral de manera emprendedora en la región Ayacucho.</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>PROBLEMAS</th>
+<th>OBJETIVOS</th>
+<th>HIPÓTESIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿Cómo se desempeñan las Startup en el Perú y cuáles son sus perspectivas de desarrollo?</td>
+<td>Describir el desempeño de las Startup en el Perú y estimar sus perspectivas de desarrollo.</td>
+<td>Esta investigación es de nivel descriptivo, por lo que no precisa una hipótesis precisa. Sin embargo, pueden surgir hipótesis “emergentes” durante el desarrollo de la investigación.</td>
+</tr>
+<tr class="even">
+<td>ESPECÍFICO 1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>¿Cómo se desempeñan las Startup en el Perú?</td>
+<td>Describir el desempeño de las Startup en el Perú.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>ESPECÍFICO 2</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>¿Cuáles son las perspectivas de desarrollo de las Startup en el Perú?</td>
+<td>Estimar las perspectivas de desarrollo de las Startup en el Perú.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>VARIABLES</th>
+<th>(CATEGORÍA DE ANÁLISIS)</th>
+<th>METODOLOGÍA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Desempeño de la Startup</td>
+<td>Desempeño</td>
+<td>Propósito: Investigación Básica<br>Nivel: Descriptivo<br>Método: Analítico-sintético<br>Enfoque: Cuantitativo<br>Diseño: Diseño de investigación no experimental</td>
+</tr>
+<tr class="even">
+<td>Perspectiva de desarrollo</td>
+<td>Perspectiva</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Se tomaría datos de la ENAHO viendo el nivel de empleo</p>
+</section>
+<section id="propuesta-de-investigación-choques-externos-e-internos-sobre-la-dinámica-de-los-ingresos-tributarios-en-el-perú-periodo-2000---2019" class="level1">
+<h1>Propuesta de investigación: Choques externos e internos sobre la dinámica de los ingresos tributarios en el Perú, periodo 2000 - 2019</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 32%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>PROBLEMA DE INVESTIGACIÓN</th>
+<th>OBJETIVOS</th>
+<th>HIPÓTESIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿De qué manera los shocks externos e internos afectan los ingresos tributarios en Perú (2000-2019)?</td>
+<td>Evaluar la influencia del Producto Bruto Interno (PBI) y los precios de exportación en los ingresos tributarios de Perú (1990-2019).</td>
+<td>Los indicadores del Producto Bruto Interno (PBI) e Índice de Precios de Exportación (IPX) han influido positivamente en la dinámica de los ingresos tributarios de Perú (2000-2019).</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Cuantificar la influencia de los precios de exportación en los ingresos tributarios de Perú (2000-2019).</td>
+<td>Existiría influencia del IPX en la captación de ingresos tributarios de Perú en el periodo 2000 – 2019.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Cuantificar la influencia del crecimiento del PBI en los ingresos tributarios de Perú (2000-2019).</td>
+<td>Existiría influencia del PBI en la captación de los ingresos tributarios del Perú en el periodo 2000– 2019.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Determinar el nivel de influencia y bidireccionalidad entre los ingresos tributarios y el crecimiento económico de Perú (2000-2019).</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>VARIABLES E INDICADORES</td>
+<td>METODOLOGÍA</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Variable endógena: Ingresos tributarios del gobierno central</td>
+<td>Tipo de investigación: No experimental longitudinal</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Variables exógenas: Índice de precios de exportación<br>Producto Bruto Interno real</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
 </section>
 
- ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-02 modelos-ste/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-03-pe-univariados/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-03-pe-univariados/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-04-desestacionalizacion-filtros/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-04-desestacionalizacion-filtros/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-05-var/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-05-var/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-06-no-estacionarios/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-06-no-estacionarios/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-07-cointegracion/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-07-cointegracion/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-08-modelos-volatilidad/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-08-modelos-volatilidad/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-09-adrl/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-09-adrl/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-10-datos-panel/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-10-datos-panel/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-11-otros-modelos/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-11-otros-modelos/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-12-apendice/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Informática</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-08-03-series-de-tiempo-12-apendice/</guid>
-  <pubDate>Sun, 27 Aug 2023 05:00:00 GMT</pubDate>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
+  author = {Achalma, Edison},
+  title = {Ideas de Investigación En {Econometría} {Análisis} de
+    Variables y Relaciones Económicas},
+  date = {2023-06-03},
+  url = {https://kapitan.net/econometria/econometria/2023-06-03-ideas-investigacion},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, E. (2023, June 3). Ideas de investigación en Econometría
+Análisis de variables y relaciones económicas. Retrieved from <a href="https://kapitan.net/econometria/econometria/2023-06-03-ideas-investigacion">https://kapitan.net/econometria/econometria/2023-06-03-ideas-investigacion</a>
+</div></div></section></div> ]]></description>
+  <category>Econometría</category>
+  <category>Economía</category>
+  <category>Invetigación económica</category>
+  <guid>https://achalmaedison.netlify.app/econometria/econometria/2023-06-03-ideas-investigacion/</guid>
+  <pubDate>Sat, 03 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

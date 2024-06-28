@@ -1,6 +1,6 @@
 ---
-title: Blogs
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+title: Econometría
+subtitle: Análisis, técnicas y aplicaciones en econometría con R, Python, Gretl, Stata y ejercicios numéricos.
 listing:
   - id: ultimas-entradas
     contents: 
@@ -22,10 +22,10 @@ listing:
     filter-ui: true
     categories: numbered
     feed: true
-page-layout: full
+# page-layout: full
 # margin-header: signup.html
-title-block-banner: "#EDF3F9"
-title-block-banner-color: body
+# title-block-banner: "#EDF3F9"
+# title-block-banner-color: body
 # css: index.css
 search: false
 comments: false

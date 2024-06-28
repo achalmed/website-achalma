@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -137,10 +151,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -176,18 +186,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -202,8 +204,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -230,14 +233,11 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
-\hypertarget{quxfae-nos-ofrece-rstudio}{%
-\section{¿Qúe nos ofrece RStudio?}\label{quxfae-nos-ofrece-rstudio}}
+\section{¿Qúe nos ofrece RStudio?}\label{quxfae-nos-ofrece-rstudio}
 
-\hypertarget{beneficios-del-software-rstudio}{%
 \subsection{Beneficios del software
-RStudio}\label{beneficios-del-software-rstudio}}
+RStudio}\label{beneficios-del-software-rstudio}
 
 RStudio es una herramienta poderosa que brinda numerosas ventajas para
 los usuarios. A continuación, destacamos algunas de las funcionalidades
@@ -278,7 +278,7 @@ que ofrece:
   interactivos o aplicaciones web.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[H]
 
 \caption{Interfaz de RStudio: Una poderosa herramienta para el
 desarrollo en R}
@@ -287,20 +287,18 @@ desarrollo en R}
 
 }
 
-\end{figure}
+\end{figure}%
 
-\hypertarget{archivos-de-script-en-r-.r}{%
 \subsection{Archivos de Script en R
-(.R)}\label{archivos-de-script-en-r-.r}}
+(.R)}\label{archivos-de-script-en-r-.r}
 
 En el mundo del análisis de datos y programación en R, los archivos de
 script (.R) desempeñan un papel fundamental. Estos archivos contienen la
 secuencia de comandos necesaria para realizar análisis y manipulación de
 datos de manera sistemática y reproducible.
 
-\hypertarget{ventajas-de-utilizar-archivos-de-script-en-r}{%
 \subsubsection{Ventajas de utilizar archivos de script en
-R:}\label{ventajas-de-utilizar-archivos-de-script-en-r}}
+R:}\label{ventajas-de-utilizar-archivos-de-script-en-r}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -325,9 +323,8 @@ R:}\label{ventajas-de-utilizar-archivos-de-script-en-r}}
   nuestro análisis de manera más eficiente.
 \end{enumerate}
 
-\hypertarget{creando-y-ejecutando-un-script-en-rstudio}{%
 \subsubsection{Creando y Ejecutando un Script en
-RStudio}\label{creando-y-ejecutando-un-script-en-rstudio}}
+RStudio}\label{creando-y-ejecutando-un-script-en-rstudio}
 
 Los scripts nos permiten escribir y ejecutar una serie de comandos de
 manera secuencial, lo que facilita la automatización y reproducción de
@@ -434,8 +431,7 @@ mejorar tus habilidades de programación en R. ¡Diviértete explorando el
 mundo del análisis de datos con RStudio!
 \end{quote}
 
-\hypertarget{shortcuts}{%
-\subsection{Shortcuts}\label{shortcuts}}
+\subsection{Shortcuts}\label{shortcuts}
 
 Aquí tienes una tabla con algunos atajos de teclado útiles en RStudio
 para usuarios de Ubuntu Linux:
@@ -498,16 +494,14 @@ RStudio en Ubuntu Linux. Recuerda que también puedes personalizar los
 atajos de teclado según tus preferencias en la sección de configuración
 de RStudio.
 
-\hypertarget{espacio-de-trabajo-.rdata}{%
 \subsection{Espacio de trabajo
-(.Rdata)}\label{espacio-de-trabajo-.rdata}}
+(.Rdata)}\label{espacio-de-trabajo-.rdata}
 
 El espacio de trabajo en R consiste en todos los objetos que se crean o
 cargan durante una sesión de R.
 
-\hypertarget{creaciuxf3n-de-objetos-de-datos}{%
 \subsubsection{Creación de objetos de
-datos}\label{creaciuxf3n-de-objetos-de-datos}}
+datos}\label{creaciuxf3n-de-objetos-de-datos}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -545,9 +539,8 @@ datos}\label{creaciuxf3n-de-objetos-de-datos}}
 Los objetos de datos creados se almacenan en el entorno global, que es
 parte del espacio de trabajo de R.
 
-\hypertarget{inspecciuxf3n-de-objetos-de-datos}{%
 \subsubsection{Inspección de objetos de
-datos}\label{inspecciuxf3n-de-objetos-de-datos}}
+datos}\label{inspecciuxf3n-de-objetos-de-datos}
 
 Puedes inspeccionar los objetos de datos haciendo clic sobre ellos en el
 panel de entorno o en el panel de objetos. Esto abrirá una vista previa
@@ -557,9 +550,8 @@ ninguna información.
 
 \includegraphics{images/Screenshot_20230611_094530.png}
 
-\hypertarget{guardado-del-espacio-de-trabajo}{%
 \subsubsection{Guardado del espacio de
-trabajo}\label{guardado-del-espacio-de-trabajo}}
+trabajo}\label{guardado-del-espacio-de-trabajo}
 
 En RStudio, puedes guardar todos los objetos en tu espacio de trabajo en
 un archivo llamado \texttt{.Rdata}. Esta función te permite almacenar y
@@ -583,9 +575,8 @@ mantener un respaldo de tus archivos en caso de cualquier eventualidad.
 en tu espacio de trabajo guardado!
 \end{quote}
 
-\hypertarget{carga-del-espacio-de-trabajo}{%
 \subsubsection{Carga del espacio de
-trabajo}\label{carga-del-espacio-de-trabajo}}
+trabajo}\label{carga-del-espacio-de-trabajo}
 
 Para cargar el espacio de trabajo previamente guardado, sigue estos
 pasos:
@@ -622,15 +613,13 @@ anteriores y continuar donde lo dejaste sin tener que volver a crear los
 objetos desde cero!
 \end{quote}
 
-\hypertarget{historial-.rhistory}{%
-\subsection{Historial (.Rhistory)}\label{historial-.rhistory}}
+\subsection{Historial (.Rhistory)}\label{historial-.rhistory}
 
 El archivo de historial es un archivo de texto que registra todos los
 comandos ejecutados durante una sesión de RStudio.
 
-\hypertarget{inspecciuxf3n-del-historial-de-comandos}{%
 \subsubsection{Inspección del historial de
-comandos}\label{inspecciuxf3n-del-historial-de-comandos}}
+comandos}\label{inspecciuxf3n-del-historial-de-comandos}
 
 Puedes ver el historial de comandos ejecutados durante tu sesión de
 trabajo haciendo clic en la pestaña ``History'' en la parte superior
@@ -640,9 +629,8 @@ utilizarlos según sea necesario.
 
 \includegraphics{images/Screenshot_20230611_101644.png}
 
-\hypertarget{guardado-del-historial-de-comandos}{%
 \subsubsection{Guardado del historial de
-comandos}\label{guardado-del-historial-de-comandos}}
+comandos}\label{guardado-del-historial-de-comandos}
 
 Si deseas guardar tu historial de comandos, puedes hacerlo en cualquier
 momento durante tu sesión de trabajo. Esto te permitirá acceder a tus
@@ -672,9 +660,8 @@ pasos:
 
 \includegraphics{images/Screenshot_20230611_102856.png}
 
-\hypertarget{reutilizaciuxf3n-del-historial-de-comandos}{%
 \subsubsection{Reutilización del historial de
-comandos}\label{reutilizaciuxf3n-del-historial-de-comandos}}
+comandos}\label{reutilizaciuxf3n-del-historial-de-comandos}
 
 El historial se guarda en un archivo llamado \texttt{.Rhistory}. Puedes
 reutilizar todo el historial de comandos haciendo clic en el archivo

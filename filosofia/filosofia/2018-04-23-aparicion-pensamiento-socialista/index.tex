@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -192,10 +195,8 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, breakable, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
-\hypertarget{presentaciuxf3n}{%
-\section{Presentación}\label{presentaciuxf3n}}
+\section{Presentación}\label{presentaciuxf3n}
 
 El actual movimiento de resistencia global contra el capitalismo, bajo
 la consigna de ``otro mundo es posible'', ha resaltado el pensamiento
@@ -219,13 +220,11 @@ para comprender los fundamentos y los desafíos del movimiento de
 resistencia global actual y reafirmar la consigna de ``otro mundo es
 posible''.
 
-\hypertarget{apariciuxf3n-del-pensamiento-socialista}{%
 \section{Aparición del pensamiento
-socialista}\label{apariciuxf3n-del-pensamiento-socialista}}
+socialista}\label{apariciuxf3n-del-pensamiento-socialista}
 
-\hypertarget{antecedentes-histuxf3ricos-del-socialismo}{%
 \subsection{Antecedentes históricos del
-socialismo}\label{antecedentes-histuxf3ricos-del-socialismo}}
+socialismo}\label{antecedentes-histuxf3ricos-del-socialismo}
 
 ``La Revolución Industrial trajo consigo el fin de la seguridad
 económica de la antigua estructura basada en la agricultura, las aldeas
@@ -246,12 +245,10 @@ que cientos de miles de artesanos se veían arrojados al mercado laboral.
 La creciente pobreza de las masas resultaba cada vez más opresiva a
 medida que las grandes fortunas se multiplicaban.''
 
-\hypertarget{tipos-de-socialismo}{%
-\section{Tipos de Socialismo}\label{tipos-de-socialismo}}
+\section{Tipos de Socialismo}\label{tipos-de-socialismo}
 
-\hypertarget{socialismo-utuxf3pico-alrededor-de-1800}{%
 \subsection{Socialismo Utópico (alrededor de
-1800)}\label{socialismo-utuxf3pico-alrededor-de-1800}}
+1800)}\label{socialismo-utuxf3pico-alrededor-de-1800}
 
 El socialismo utópico, la primera corriente del pensamiento socialista
 moderno, se desarrolló en los siglos XVIII y XIX en Europa. Surgió como
@@ -273,8 +270,7 @@ la solidaridad universal en lugar de la lucha de clases, y buscaban la
 cooperación de los capitalistas en sus proyectos, incluso buscando su
 financiamiento.
 
-\hypertarget{socialismo-de-estado}{%
-\subsection{Socialismo de Estado}\label{socialismo-de-estado}}
+\subsection{Socialismo de Estado}\label{socialismo-de-estado}
 
 El socialismo de Estado se refiere a un sistema en el cual el gobierno
 posee y opera todos o algunos sectores específicos de la economía, con
@@ -296,8 +292,7 @@ cooperativas, donde los trabajadores o los consumidores se convertían en
 propietarios. Louis Blanc fue uno de los principales defensores del
 Estado socialista.
 
-\hypertarget{socialismo-cristiano}{%
-\subsection{Socialismo Cristiano}\label{socialismo-cristiano}}
+\subsection{Socialismo Cristiano}\label{socialismo-cristiano}
 
 El socialismo cristiano se desarrolló en Inglaterra y Alemania después
 de 1848, y tuvo a Charles Kingsley como uno de sus principales
@@ -321,8 +316,7 @@ identificación entre cristianismo y socialismo. Algunos sostienen que el
 socialismo cristiano se remonta a la época de Jesús, argumentando que
 Jesús predicaba y practicaba la igualdad entre las personas.
 
-\hypertarget{anarquismo}{%
-\subsection{Anarquismo}\label{anarquismo}}
+\subsection{Anarquismo}\label{anarquismo}
 
 El anarquismo, con Pierre-Joseph Proudhon (1809-1865) como uno de sus
 primeros defensores, sostiene la abolición de todas las formas de
@@ -347,8 +341,7 @@ métodos para lograr sus objetivos pueden variar, la comunidad ideal
 propuesta por los anarquistas guarda similitudes con la de los
 socialistas utópicos.
 
-\hypertarget{socialismo-marxista}{%
-\subsection{Socialismo Marxista}\label{socialismo-marxista}}
+\subsection{Socialismo Marxista}\label{socialismo-marxista}
 
 Principales defensores: Marx y Engels.
 
@@ -362,9 +355,8 @@ Además, el marxismo desempeñó un papel fundamental en la construcción
 del campo socialista y en los movimientos anticoloniales y de liberación
 nacional del siglo XX.
 
-\hypertarget{el-socialismo-marxista-o-cientuxedfico}{%
 \subsubsection{El socialismo marxista o
-científico:}\label{el-socialismo-marxista-o-cientuxedfico}}
+científico:}\label{el-socialismo-marxista-o-cientuxedfico}
 
 El socialismo marxista se fundamenta en la teoría del valor trabajo y en
 la teoría de la explotación por parte de los capitalistas hacia aquellos
@@ -382,8 +374,7 @@ pública y son gestionados por el gobierno central. La producción y la
 inversión se planifican, y la utilidad y el libre mercado son
 reemplazados por una distribución planificada.
 
-\hypertarget{comunismo-seguxfan-marx}{%
-\subsubsection{Comunismo según Marx:}\label{comunismo-seguxfan-marx}}
+\subsubsection{Comunismo según Marx:}\label{comunismo-seguxfan-marx}
 
 El comunismo es la etapa de la sociedad que eventualmente reemplaza al
 socialismo. En el comunismo, el lema es ``De cada uno según su
@@ -403,8 +394,7 @@ causas comunes. En estas comunidades, las personas trabajan juntas,
 comparten sus ganancias y retiran de un fondo común las cosas que
 necesitan.
 
-\hypertarget{revisionismo}{%
-\subsection{Revisionismo}\label{revisionismo}}
+\subsection{Revisionismo}\label{revisionismo}
 
 En Alemania, Eduard Bernstein (1850-1932) fue un defensor del
 revisionismo, mientras que en Inglaterra, los socialistas fabianos,
@@ -432,8 +422,7 @@ como la democracia. Aunque a menudo se utiliza como sinónimo de
 ``socialdemocracia'', su alcance es más amplio, incluyendo diversas
 corrientes.
 
-\hypertarget{sindicalismo}{%
-\subsection{Sindicalismo}\label{sindicalismo}}
+\subsection{Sindicalismo}\label{sindicalismo}
 
 Georges Sorel (1847-1922) fue un promotor y popularizador del
 sindicalismo en los círculos laborales de los países latinos de Europa.
@@ -455,8 +444,7 @@ Estas unidades estarían federadas y formarían un centro administrativo,
 con la expectativa de que el gobierno coercitivo desapareciera en última
 instancia.
 
-\hypertarget{socialismo-de-gremios}{%
-\subsection{Socialismo de gremios}\label{socialismo-de-gremios}}
+\subsection{Socialismo de gremios}\label{socialismo-de-gremios}
 
 G. D. H. Cole (1889-1959), profesor de economía en la Universidad de
 Oxford, fue el principal defensor del socialismo de gremios. Este
@@ -494,9 +482,8 @@ anarquismo la importancia de la voluntad individual como impulsora de
 los cambios sociales, así como el espíritu autogestionario y
 federalista.
 
-\hypertarget{caracteruxedsticas-comunes-del-socialismo}{%
 \section{Características comunes del
-Socialismo}\label{caracteruxedsticas-comunes-del-socialismo}}
+Socialismo}\label{caracteruxedsticas-comunes-del-socialismo}
 
 Las diversas corrientes del socialismo comparten características
 comunes:
@@ -535,9 +522,8 @@ comunes:
   o empresas cooperativas.
 \end{enumerate}
 
-\hypertarget{a-quiuxe9nes-beneficiaba-o-trataba-de-beneficiar-el-socialismo}{%
 \subsection{¿A quiénes beneficiaba o trataba de beneficiar el
-socialismo?}\label{a-quiuxe9nes-beneficiaba-o-trataba-de-beneficiar-el-socialismo}}
+socialismo?}\label{a-quiuxe9nes-beneficiaba-o-trataba-de-beneficiar-el-socialismo}
 
 El socialismo buscaba beneficiar a los trabajadores, despertar la
 conciencia de la sociedad e inspirar a los reformadores de la clase
@@ -546,10 +532,9 @@ críticos argumentan que al apartar a los trabajadores de la organización
 de sindicatos y partidos políticos, el socialismo también servía a los
 patronos y terratenientes.
 
-\hypertarget{en-quuxe9-forma-el-socialismo-era-vuxe1lido-uxfatil-o-correcto-en-su-uxe9poca}{%
 \subsection{¿En qué forma el socialismo era válido, útil o correcto en
 su
-época?}\label{en-quuxe9-forma-el-socialismo-era-vuxe1lido-uxfatil-o-correcto-en-su-uxe9poca}}
+época?}\label{en-quuxe9-forma-el-socialismo-era-vuxe1lido-uxfatil-o-correcto-en-su-uxe9poca}
 
 En sus inicios en el siglo XIX, el socialismo utópico expresaba las
 preocupaciones sociales de la humanidad. Si bien no se enfrentaron
@@ -563,9 +548,8 @@ cooperativas, las leyes de compensación laboral, los sindicatos y las
 pensiones. Estas ideas y políticas se han institucionalizado en las
 naciones capitalistas actuales.
 
-\hypertarget{principios-perdurables-del-socialismo}{%
 \subsection{Principios perdurables del
-socialismo}\label{principios-perdurables-del-socialismo}}
+socialismo}\label{principios-perdurables-del-socialismo}
 
 El socialismo sentó las bases del pensamiento económico socialista
 contemporáneo, que enfatiza la propiedad estatal de los medios de
@@ -580,12 +564,10 @@ de negocios. Este énfasis y análisis obligaron a una reevaluación de las
 suposiciones básicas y de las teorías aceptadas dentro de la profesión
 de la economía.
 
-\hypertarget{principales-representantes}{%
-\section{Principales representantes}\label{principales-representantes}}
+\section{Principales representantes}\label{principales-representantes}
 
-\hypertarget{henry-comte-de-saint-simon-1760-1825}{%
 \subsection{Henry Comte de Saint-Simon
-(1760-1825)}\label{henry-comte-de-saint-simon-1760-1825}}
+(1760-1825)}\label{henry-comte-de-saint-simon-1760-1825}
 
 Proveniente de una familia noble francesa empobrecida, Henry Comte de
 Saint-Simon destacó en la Revolución Estadounidense, donde luchó del
@@ -635,9 +617,8 @@ Sus principales ideas y propuestas fueron las siguientes:
   propiedad privada, él mismo no lo respaldaba.
 \end{itemize}
 
-\hypertarget{charles-fourier-1772-1837}{%
 \subsection{Charles Fourier
-(1772-1837)}\label{charles-fourier-1772-1837}}
+(1772-1837)}\label{charles-fourier-1772-1837}
 
 Charles Fourier fue un excéntrico socialista utópico que logró reunir un
 numeroso grupo de seguidores durante los últimos años de su vida e
@@ -683,9 +664,8 @@ Sus principales ideas y propuestas fueron las siguientes:
   a pesar de aumentar considerablemente la producción.
 \end{itemize}
 
-\hypertarget{simonde-de-sismondi-1773-1842}{%
 \subsection{Simonde de Sismondi
-(1773-1842)}\label{simonde-de-sismondi-1773-1842}}
+(1773-1842)}\label{simonde-de-sismondi-1773-1842}
 
 Simonde de Sismondi fue un economista e historiador suizo de ascendencia
 francesa. Durante los disturbios revolucionarios de 1793-1794, él y su
@@ -731,8 +711,7 @@ Las principales ideas y propuestas de Sismondi fueron las siguientes:
   progenie, es decir, su prole.
 \end{itemize}
 
-\hypertarget{robert-owen-1771-1858}{%
-\subsection{Robert Owen (1771-1858):}\label{robert-owen-1771-1858}}
+\subsection{Robert Owen (1771-1858):}\label{robert-owen-1771-1858}
 
 Robert Owen fue el socialista utópico más espectacular y famoso. Hijo de
 un quincallero y talabartero galés, asistió a la escuela solo durante
@@ -778,8 +757,7 @@ Las principales ideas y propuestas de Robert Owen fueron las siguientes:
 \item
 \end{itemize}
 
-\hypertarget{louis-blanc-1811-1882}{%
-\subsection{Louis Blanc (1811-1882)}\label{louis-blanc-1811-1882}}
+\subsection{Louis Blanc (1811-1882)}\label{louis-blanc-1811-1882}
 
 Considerado uno de los fundadores del socialismo de Estado. Fue un
 reformador, periodista e historiador francés proveniente de una familia
@@ -822,9 +800,8 @@ nacionales con el fin de brindar empleo a los desempleados.
   nacional.
 \end{itemize}
 
-\hypertarget{charles-kingsley-1819-1875}{%
 \subsection{Charles Kingsley
-(1819-1875)}\label{charles-kingsley-1819-1875}}
+(1819-1875)}\label{charles-kingsley-1819-1875}
 
 Fue un clérigo, poeta, novelista y reformador. Además de ser profesor de
 historia moderna en Cambridge y canónigo de Westminster, Kingsley y
@@ -859,8 +836,7 @@ trabajo y sus escritos reflejan su convicción de que el cambio social
 debe basarse en una transformación personal y una responsabilidad
 colectiva.
 
-\hypertarget{publicaciones-similares}{%
-\section{Publicaciones Similares}\label{publicaciones-similares}}
+\section{Publicaciones Similares}\label{publicaciones-similares}
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y
 recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo

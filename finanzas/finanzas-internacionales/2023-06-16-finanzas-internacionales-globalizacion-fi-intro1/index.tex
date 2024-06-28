@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -194,14 +197,11 @@ relevancia en un mundo interconectado}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, frame hidden, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 
-\hypertarget{oruxedgenes-y-conceptos-fundamentales-de-las-finanzas-internacionales}{%
 \section{Orígenes y Conceptos Fundamentales de las Finanzas
-Internacionales}\label{oruxedgenes-y-conceptos-fundamentales-de-las-finanzas-internacionales}}
+Internacionales}\label{oruxedgenes-y-conceptos-fundamentales-de-las-finanzas-internacionales}
 
-\hypertarget{economuxeda-internacional}{%
-\subsection{Economía Internacional}\label{economuxeda-internacional}}
+\subsection{Economía Internacional}\label{economuxeda-internacional}
 
 El campo de las finanzas internacionales es de vital importancia en el
 ámbito económico global, ya que abarca una amplia gama de temas
@@ -256,8 +256,7 @@ internacionales.
   tipos de cambio.
 \end{enumerate}
 
-\hypertarget{finanzas-corporativas}{%
-\subsection{Finanzas Corporativas}\label{finanzas-corporativas}}
+\subsection{Finanzas Corporativas}\label{finanzas-corporativas}
 
 En el ámbito de las finanzas corporativas, las empresas se enfrentan a
 desafíos y oportunidades en el contexto de un entorno global. Los
@@ -319,21 +318,13 @@ los aspectos fundamentales que sustentan las transacciones financieras
 internacionales y las operaciones corporativas en un entorno global en
 constante cambio.
 
-\begin{figure}[H]
+\includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-1.png}
 
-{\centering \includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-1.png}
-
-}
-
-\end{figure}
-
-\hypertarget{finanzas-internacionales-conceptos-y-relevancia}{%
 \section{Finanzas Internacionales: Conceptos y
-Relevancia}\label{finanzas-internacionales-conceptos-y-relevancia}}
+Relevancia}\label{finanzas-internacionales-conceptos-y-relevancia}
 
-\hypertarget{quuxe9-son-las-finanzas-internacionales}{%
 \subsection{¿Qué son las Finanzas
-Internacionales?}\label{quuxe9-son-las-finanzas-internacionales}}
+Internacionales?}\label{quuxe9-son-las-finanzas-internacionales}
 
 Las finanzas internacionales constituyen un campo de estudio que se
 enfoca en analizar los flujos de efectivo y la valuación de activos en
@@ -343,9 +334,8 @@ naciones y denominados en diversas monedas. Las finanzas internacionales
 son fundamentales para comprender y gestionar las transacciones
 financieras que trascienden las fronteras nacionales.
 
-\hypertarget{administraciuxf3n-financiera-internacional}{%
 \subsection{Administración Financiera
-Internacional}\label{administraciuxf3n-financiera-internacional}}
+Internacional}\label{administraciuxf3n-financiera-internacional}
 
 La administración financiera internacional se refiere al proceso de toma
 de decisiones financieras por parte de ejecutivos de empresas
@@ -356,9 +346,8 @@ así como la exposición a fluctuaciones en los tipos de cambio. La
 administración financiera internacional implica considerar tanto los
 aspectos económicos como los monetarios de la economía global.
 
-\hypertarget{importancia-del-riesgo-poluxedtico-y-de-tipo-de-cambio}{%
 \subsection{Importancia del Riesgo Político y de Tipo de
-Cambio}\label{importancia-del-riesgo-poluxedtico-y-de-tipo-de-cambio}}
+Cambio}\label{importancia-del-riesgo-poluxedtico-y-de-tipo-de-cambio}
 
 En el ámbito de las finanzas internacionales, es crucial tener en cuenta
 los riesgos asociados a los flujos de efectivo en diferentes países y
@@ -369,9 +358,8 @@ relaciona con la volatilidad en las tasas de cambio entre distintas
 monedas. Estos riesgos pueden afectar significativamente los resultados
 financieros de las organizaciones y deben ser gestionados adecuadamente.
 
-\hypertarget{imperfecciones-de-los-mercados-internacionales}{%
 \subsection{Imperfecciones de los Mercados
-Internacionales}\label{imperfecciones-de-los-mercados-internacionales}}
+Internacionales}\label{imperfecciones-de-los-mercados-internacionales}
 
 Los mercados financieros internacionales presentan diversas
 imperfecciones que pueden generar tanto amenazas como oportunidades para
@@ -383,9 +371,8 @@ Comprender y manejar estas imperfecciones es esencial para aprovechar
 las oportunidades y mitigar los riesgos asociados a las operaciones
 internacionales.
 
-\hypertarget{generaciuxf3n-de-valor-y-problema-de-agencia}{%
 \subsection{Generación de Valor y Problema de
-Agencia}\label{generaciuxf3n-de-valor-y-problema-de-agencia}}
+Agencia}\label{generaciuxf3n-de-valor-y-problema-de-agencia}
 
 El objetivo principal en las finanzas internacionales es generar valor
 para las empresas. La fórmula utilizada para medir este valor es la
@@ -404,12 +391,10 @@ los ejecutivos de las organizaciones. Este problema debe ser abordado de
 manera efectiva para garantizar la maximización del valor para los
 accionistas y la sostenibilidad de las empresas en el largo plazo.
 
-\hypertarget{globalizaciuxf3n-un-nuevo-paradigma-econuxf3mico}{%
 \subsection{Globalización: Un Nuevo Paradigma
-Económico}\label{globalizaciuxf3n-un-nuevo-paradigma-econuxf3mico}}
+Económico}\label{globalizaciuxf3n-un-nuevo-paradigma-econuxf3mico}
 
-\hypertarget{la-globalizaciuxf3n}{%
-\subsubsection{La Globalización}\label{la-globalizaciuxf3n}}
+\subsubsection{La Globalización}\label{la-globalizaciuxf3n}
 
 La globalización es un proceso de integración económica, social y
 política que tiene como objetivo la creación de un mercado mundial
@@ -419,9 +404,8 @@ dificulta determinar su origen exacto. La globalización no solo se
 manifiesta en el ámbito de la producción, sino también en la inversión y
 el consumo.
 
-\hypertarget{la-globalizaciuxf3n-en-distintas-uxe1reas}{%
 \subsubsection{La Globalización en Distintas
-Áreas}\label{la-globalizaciuxf3n-en-distintas-uxe1reas}}
+Áreas}\label{la-globalizaciuxf3n-en-distintas-uxe1reas}
 
 El proceso de globalización no se desarrolla de manera uniforme en todas
 las áreas. Algunas regiones están más avanzadas en términos de
@@ -431,9 +415,8 @@ para las diferentes monedas. Asimismo, los mercados de capital están
 experimentando un rápido avance en su integración, facilitando la
 movilidad de los flujos financieros a nivel mundial.
 
-\hypertarget{factores-que-impulsan-la-globalizaciuxf3n}{%
 \subsubsection{Factores que Impulsan la
-Globalización}\label{factores-que-impulsan-la-globalizaciuxf3n}}
+Globalización}\label{factores-que-impulsan-la-globalizaciuxf3n}
 
 La creciente globalización se ha visto influenciada por diversos
 factores. Algunos de los principales son:
@@ -481,9 +464,8 @@ factores. Algunos de los principales son:
   interconexión y colaboración a nivel global.
 \end{enumerate}
 
-\hypertarget{desafuxedos-y-oportunidades-para-los-pauxedses-en-desarrollo}{%
 \subsubsection{Desafíos y Oportunidades para los Países en
-Desarrollo}\label{desafuxedos-y-oportunidades-para-los-pauxedses-en-desarrollo}}
+Desarrollo}\label{desafuxedos-y-oportunidades-para-los-pauxedses-en-desarrollo}
 
 En el contexto de la globalización, los países en desarrollo se
 enfrentan a un doble desafío. Por un lado, deben cerrar la brecha que
@@ -493,14 +475,12 @@ para ser competitivos en la nueva economía global. Esto implica la
 adopción de políticas que promuevan la innovación, el desarrollo de
 capacidades y la apertura a los mercados internacionales.
 
-\hypertarget{medidas-de-la-globalizaciuxf3n-un-mundo-cada-vez-muxe1s-integrado}{%
 \subsection{Medidas de la Globalización: Un Mundo Cada Vez más
-Integrado}\label{medidas-de-la-globalizaciuxf3n-un-mundo-cada-vez-muxe1s-integrado}}
+Integrado}\label{medidas-de-la-globalizaciuxf3n-un-mundo-cada-vez-muxe1s-integrado}
 
-\hypertarget{participaciuxf3n-de-las-exportaciones-en-el-producto-interno-bruto-pib-mundial}{%
 \subsubsection{Participación de las Exportaciones en el Producto Interno
 Bruto (PIB)
-Mundial}\label{participaciuxf3n-de-las-exportaciones-en-el-producto-interno-bruto-pib-mundial}}
+Mundial}\label{participaciuxf3n-de-las-exportaciones-en-el-producto-interno-bruto-pib-mundial}
 
 La participación de las exportaciones en el PIB mundial es una medida
 que indica el grado de integración económica a nivel global. Durante las
@@ -509,10 +489,9 @@ crecimiento significativo, pasando de un 7\% a un 20\%. Este aumento
 demuestra que las economías están cada vez más interconectadas a través
 del comercio internacional.
 
-\hypertarget{tasa-de-crecimiento-de-las-exportaciones-en-comparaciuxf3n-con-el-crecimiento-econuxf3mico}{%
 \subsubsection{Tasa de Crecimiento de las Exportaciones en Comparación
 con el Crecimiento
-Económico}\label{tasa-de-crecimiento-de-las-exportaciones-en-comparaciuxf3n-con-el-crecimiento-econuxf3mico}}
+Económico}\label{tasa-de-crecimiento-de-las-exportaciones-en-comparaciuxf3n-con-el-crecimiento-econuxf3mico}
 
 La tasa de crecimiento de las exportaciones en relación con el
 crecimiento económico es otra medida importante de la globalización. En
@@ -522,10 +501,9 @@ volumen de las exportaciones mundiales se multiplicó por 100. Para
 muchas empresas, las exportaciones son una fuente crucial de crecimiento
 en términos de ventas y ganancias.
 
-\hypertarget{porcentaje-de-la-producciuxf3n-industrial-atribuido-a-empresas-multinacionales}{%
 \subsubsection{Porcentaje de la Producción Industrial Atribuido a
 Empresas
-Multinacionales}\label{porcentaje-de-la-producciuxf3n-industrial-atribuido-a-empresas-multinacionales}}
+Multinacionales}\label{porcentaje-de-la-producciuxf3n-industrial-atribuido-a-empresas-multinacionales}
 
 El porcentaje de la producción industrial atribuido a empresas
 multinacionales ubicadas en un país es un indicador del grado de
@@ -535,9 +513,8 @@ Hungría, este porcentaje supera el 70\%. En Canadá, por ejemplo, alcanza
 el 50\%. Esto refleja la presencia significativa de empresas
 multinacionales y su impacto en la producción industrial.
 
-\hypertarget{monto-de-transacciones-en-los-mercados-financieros-internacionales}{%
 \subsubsection{Monto de Transacciones en los Mercados Financieros
-Internacionales}\label{monto-de-transacciones-en-los-mercados-financieros-internacionales}}
+Internacionales}\label{monto-de-transacciones-en-los-mercados-financieros-internacionales}
 
 El monto de las transacciones en los mercados financieros
 internacionales es una medida clave para evaluar la globalización
@@ -548,9 +525,8 @@ involucrado en transacciones por un valor de 320 dólares diarios. Esta
 cifra destaca la importancia de los flujos financieros internacionales y
 su impacto en la economía global.
 
-\hypertarget{grado-de-internacionalizaciuxf3n-de-los-portafolios-de-inversiuxf3n}{%
 \subsubsection{Grado de Internacionalización de los Portafolios de
-Inversión}\label{grado-de-internacionalizaciuxf3n-de-los-portafolios-de-inversiuxf3n}}
+Inversión}\label{grado-de-internacionalizaciuxf3n-de-los-portafolios-de-inversiuxf3n}
 
 El grado de internacionalización de los portafolios de inversión es una
 medida que muestra el alcance de las inversiones en activos financieros
@@ -561,14 +537,12 @@ internacionalización de los portafolios refleja la creciente
 interconexión de los mercados financieros y la búsqueda de rendimientos
 en un contexto global.
 
-\hypertarget{impacto-de-la-globalizaciuxf3n-en-el-crecimiento-empresarial-y-macroeconuxf3mico}{%
 \subsection{Impacto de la Globalización en el Crecimiento Empresarial y
-Macroeconómico}\label{impacto-de-la-globalizaciuxf3n-en-el-crecimiento-empresarial-y-macroeconuxf3mico}}
+Macroeconómico}\label{impacto-de-la-globalizaciuxf3n-en-el-crecimiento-empresarial-y-macroeconuxf3mico}
 
-\hypertarget{apertura-econuxf3mica-y-crecimiento-de-la-inversiuxf3n-extranjera-directa-ied}{%
 \subsubsection{Apertura Económica y Crecimiento de la Inversión
 Extranjera Directa
-(IED)}\label{apertura-econuxf3mica-y-crecimiento-de-la-inversiuxf3n-extranjera-directa-ied}}
+(IED)}\label{apertura-econuxf3mica-y-crecimiento-de-la-inversiuxf3n-extranjera-directa-ied}
 
 Desde el inicio del proceso de apertura económica en 1986, se ha
 observado un crecimiento sin precedentes en la Inversión Extranjera
@@ -579,10 +553,9 @@ sido un resultado directo de la globalización, que ha permitido la
 expansión de las empresas a nivel internacional y la búsqueda de nuevos
 mercados y oportunidades.
 
-\hypertarget{crecimiento-de-los-instrumentos-derivados-y-flujos-internacionales-de-capital}{%
 \subsubsection{Crecimiento de los Instrumentos Derivados y Flujos
 Internacionales de
-Capital}\label{crecimiento-de-los-instrumentos-derivados-y-flujos-internacionales-de-capital}}
+Capital}\label{crecimiento-de-los-instrumentos-derivados-y-flujos-internacionales-de-capital}
 
 En la década de 1990, se observó un rápido crecimiento en los contratos
 de los instrumentos derivados, con una tasa anual de crecimiento del
@@ -599,10 +572,9 @@ activos financieros, como acciones, bonos y bienes raíces. Estos flujos
 reflejan la creciente interconexión de los mercados financieros y la
 búsqueda de rendimientos en un contexto global.
 
-\hypertarget{clasificaciuxf3n-de-empresas-seguxfan-su-integraciuxf3n-en-la-economuxeda-mundial}{%
 \subsubsection{Clasificación de Empresas según su Integración en la
 Economía
-Mundial}\label{clasificaciuxf3n-de-empresas-seguxfan-su-integraciuxf3n-en-la-economuxeda-mundial}}
+Mundial}\label{clasificaciuxf3n-de-empresas-seguxfan-su-integraciuxf3n-en-la-economuxeda-mundial}
 
 Las empresas pueden ser clasificadas según su grado de integración en la
 economía mundial. Estas clasificaciones incluyen:
@@ -626,10 +598,9 @@ economía mundial. Estas clasificaciones incluyen:
 Estas clasificaciones reflejan la creciente presencia y complejidad de
 las empresas en un entorno globalizado.
 
-\hypertarget{ventajas-de-las-empresas-multinacionales-y-beneficios-macroeconuxf3micos-de-la-globalizaciuxf3n}{%
 \subsubsection{Ventajas de las Empresas Multinacionales y Beneficios
 Macroeconómicos de la
-Globalización}\label{ventajas-de-las-empresas-multinacionales-y-beneficios-macroeconuxf3micos-de-la-globalizaciuxf3n}}
+Globalización}\label{ventajas-de-las-empresas-multinacionales-y-beneficios-macroeconuxf3micos-de-la-globalizaciuxf3n}
 
 Las empresas multinacionales (CMN) obtienen diversas ventajas de su
 presencia en múltiples mercados:
@@ -667,7 +638,6 @@ varias ventajas:
   conocimiento científico, tecnológico y administrativo.
 \end{itemize}
 
-\hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0497}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
@@ -675,8 +645,8 @@ varias ventajas:
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2050}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1863}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2298}}@{}}
-\caption{\label{tbl-1}Las empresas mas grandes del mudno para el
-2021}\tabularnewline
+\caption{Las empresas mas grandes del mudno para el
+2021}\label{tbl-1}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Puesto
@@ -724,26 +694,18 @@ Valor de Mercado (billones de dólares)
 10 & Exxon Mobil & 264.9 & -22.4 & 433.5 & 240.3 \\
 \end{longtable}
 
-\begin{figure}[H]
+\includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-2.png}
 
-{\centering \includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-2.png}
-
-}
-
-\end{figure}
-
-\hypertarget{cruxedticas-a-la-globalizaciuxf3n}{%
 \subsection{Críticas a la
-Globalización}\label{cruxedticas-a-la-globalizaciuxf3n}}
+Globalización}\label{cruxedticas-a-la-globalizaciuxf3n}
 
 La globalización, a pesar de sus beneficios y oportunidades, también ha
 sido objeto de críticas y preocupaciones por parte de diversos actores.
 A continuación, se presentan algunas de las principales críticas a la
 globalización:
 
-\hypertarget{excesiva-volatilidad-de-los-precios}{%
 \subsubsection{1. Excesiva volatilidad de los
-precios}\label{excesiva-volatilidad-de-los-precios}}
+precios}\label{excesiva-volatilidad-de-los-precios}
 
 La globalización ha llevado a una mayor interconexión de los mercados
 internacionales, lo que puede resultar en una mayor volatilidad de los
@@ -753,8 +715,7 @@ tener un impacto significativo en los precios de los productos. Esta
 volatilidad puede dificultar la planificación y la estabilidad económica
 tanto a nivel microeconómico como macroeconómico.
 
-\hypertarget{efecto-de-contagio}{%
-\subsubsection{2. Efecto de contagio}\label{efecto-de-contagio}}
+\subsubsection{2. Efecto de contagio}\label{efecto-de-contagio}
 
 La interconexión de los mercados financieros y económicos a nivel global
 puede llevar a un efecto de contagio, donde las crisis económicas o
@@ -763,9 +724,8 @@ debe a la interdependencia de las economías y a la rápida transmisión de
 información y capitales a través de las fronteras. El efecto de contagio
 puede amplificar las crisis y dificultar su contención.
 
-\hypertarget{tendencia-hacia-la-deflaciuxf3n}{%
 \subsubsection{3. Tendencia hacia la
-deflación}\label{tendencia-hacia-la-deflaciuxf3n}}
+deflación}\label{tendencia-hacia-la-deflaciuxf3n}
 
 Algunos críticos argumentan que la globalización ha llevado a una
 tendencia hacia la deflación, es decir, una disminución generalizada y
@@ -775,9 +735,8 @@ reducción de los precios de los bienes y servicios. La deflación puede
 tener efectos negativos en la economía, como la disminución de los
 ingresos y la demanda agregada.
 
-\hypertarget{incremento-de-la-desigualdad-distributiva}{%
 \subsubsection{4. Incremento de la desigualdad
-distributiva}\label{incremento-de-la-desigualdad-distributiva}}
+distributiva}\label{incremento-de-la-desigualdad-distributiva}
 
 Se argumenta que la globalización ha contribuido al aumento de la
 desigualdad distributiva en muchos países. A medida que las empresas se
@@ -788,9 +747,8 @@ globalización pueden no distribuirse equitativamente, lo que resulta en
 una mayor concentración de riqueza en manos de unos pocos, mientras que
 otros experimentan un estancamiento o disminución de sus ingresos.
 
-\hypertarget{tensiuxf3n-de-conflictos-por-limitados-mercados-y-recursos}{%
 \subsubsection{5. Tensión de conflictos por limitados mercados y
-recursos}\label{tensiuxf3n-de-conflictos-por-limitados-mercados-y-recursos}}
+recursos}\label{tensiuxf3n-de-conflictos-por-limitados-mercados-y-recursos}
 
 La globalización también ha generado tensiones y conflictos relacionados
 con la competencia por mercados y recursos limitados. A medida que las
@@ -799,9 +757,8 @@ surgir conflictos entre países por el acceso a recursos naturales, como
 petróleo, minerales o agua. Estos conflictos pueden tener implicaciones
 políticas, económicas y sociales.
 
-\hypertarget{impacto-negativo-en-los-trabajadores-de-pauxedses-desarrollados}{%
 \subsubsection{6. Impacto negativo en los trabajadores de países
-desarrollados}\label{impacto-negativo-en-los-trabajadores-de-pauxedses-desarrollados}}
+desarrollados}\label{impacto-negativo-en-los-trabajadores-de-pauxedses-desarrollados}
 
 Una crítica común es que la globalización perjudica a los trabajadores
 en los países desarrollados, ya que las empresas trasladan la producción
@@ -812,9 +769,8 @@ en un mercado
 
 laboral globalizado y pueden experimentar una mayor inseguridad laboral.
 
-\hypertarget{reducciuxf3n-de-la-soberanuxeda-nacional}{%
 \subsubsection{7. Reducción de la soberanía
-nacional}\label{reducciuxf3n-de-la-soberanuxeda-nacional}}
+nacional}\label{reducciuxf3n-de-la-soberanuxeda-nacional}
 
 La globalización plantea desafíos para la soberanía nacional, ya que
 implica una mayor interdependencia y la necesidad de coordinación y
@@ -825,9 +781,8 @@ críticos argumentan que esto puede socavar la capacidad de los gobiernos
 para proteger los intereses nacionales y satisfacer las necesidades de
 sus ciudadanos.
 
-\hypertarget{crisis-financieras-cada-vez-muxe1s-graves}{%
 \subsubsection{8. Crisis financieras cada vez más
-graves}\label{crisis-financieras-cada-vez-muxe1s-graves}}
+graves}\label{crisis-financieras-cada-vez-muxe1s-graves}
 
 Otra crítica importante es que la globalización ha llevado a una mayor
 frecuencia y gravedad de las crisis financieras. La interconexión de los

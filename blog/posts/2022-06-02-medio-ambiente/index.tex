@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -195,15 +198,12 @@ recursos naturales}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
-\hypertarget{resuelva-las-siguientes-preguntas}{%
 \section{Resuelva las siguientes
-preguntas}\label{resuelva-las-siguientes-preguntas}}
+preguntas}\label{resuelva-las-siguientes-preguntas}
 
-\hypertarget{quuxe9-es-el-cambio-climuxe1tico-y-cuxf3mo-afecta-a-nuestras-vidas}{%
 \subsection{¿Qué es el cambio climático y cómo afecta a nuestras
-vidas?}\label{quuxe9-es-el-cambio-climuxe1tico-y-cuxf3mo-afecta-a-nuestras-vidas}}
+vidas?}\label{quuxe9-es-el-cambio-climuxe1tico-y-cuxf3mo-afecta-a-nuestras-vidas}
 
 El cambio climático se refiere a la alteración del clima atribuida a
 causas naturales y, de manera directa o indirecta, a la actividad
@@ -235,9 +235,8 @@ lo hacen particularmente vulnerable al cambio climático.
 
 Aquí está el texto mejorado:
 
-\hypertarget{cuxf3mo-mitigar-el-cambio-climuxe1tico}{%
 \subsection{¿Cómo mitigar el cambio
-climático?}\label{cuxf3mo-mitigar-el-cambio-climuxe1tico}}
+climático?}\label{cuxf3mo-mitigar-el-cambio-climuxe1tico}
 
 La lucha contra el cambio climático es un desafío importante, pero con
 el esfuerzo colectivo y la implementación de medidas adecuadas de
@@ -270,9 +269,8 @@ fomentar la colaboración internacional para abordar este desafío global
 de manera efectiva. Juntos, podemos marcar la diferencia en la
 mitigación del cambio climático y construir un futuro más sostenible.
 
-\hypertarget{cuxf3mo-adaptarnos-a-los-cambios}{%
 \subsection{¿Cómo adaptarnos a los
-cambios?}\label{cuxf3mo-adaptarnos-a-los-cambios}}
+cambios?}\label{cuxf3mo-adaptarnos-a-los-cambios}
 
 Cuando se trata de adaptarnos a las consecuencias del cambio climático,
 existen diversas medidas que nos ayudan a reducir nuestra
@@ -308,9 +306,8 @@ vulnerabilidad. A continuación, se presentan algunas acciones clave:
   proteger a la población de manera rápida y efectiva.
 \end{itemize}
 
-\hypertarget{cuxf3mo-promover-reformas-inclusivas}{%
 \subsection{¿Cómo promover reformas
-inclusivas?}\label{cuxf3mo-promover-reformas-inclusivas}}
+inclusivas?}\label{cuxf3mo-promover-reformas-inclusivas}
 
 Una forma efectiva de promover reformas inclusivas es a través de la
 ``Creación y Fomento de Capacidades''. Este enfoque se basa en difundir
@@ -355,9 +352,8 @@ este enfoque incluyen:
 
 Aquí está el texto mejorado:
 
-\hypertarget{otros-problemas-ambientales.}{%
 \section{Otros problemas
-ambientales.}\label{otros-problemas-ambientales.}}
+ambientales.}\label{otros-problemas-ambientales.}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -409,13 +405,12 @@ el modelo económico circular y se definen sus respectivos indicadores:
 A continuación, se proporciona la definición conceptual, los indicadores
 y las unidades de medida de estas variables:
 
-\hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1321}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.7177}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1502}}@{}}
-\caption{\label{tbl-1}Variables e indicadores del modelo de economía
-circular}\tabularnewline
+\caption{Variables e indicadores del modelo de economía
+circular}\label{tbl-1}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Variable
@@ -461,9 +456,9 @@ de superficie forestal medida en hectáreas \\
 
 En base a lo expuesto, planteamos el siguiente modelo econométrico:
 
-\begin{equation}\protect\hypertarget{eq-1}{}{
+\begin{equation}\phantomsection\label{eq-1}{
 PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
-}\label{eq-1}\end{equation}
+}\end{equation}
 
 Donde:
 
@@ -511,11 +506,13 @@ continuación, se grafica esta relación:
 \caption{\label{fig-1}Relación entre las prácticas agrícolas
 insostenibles y la pérdida de biodiversidad}
 
-{\centering \includegraphics{20230603001915.png}
+\centering{
+
+\includegraphics{20230603001915.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 En la gráfica, se observa una relación positiva entre las prácticas
 agrícolas insostenibles (PAI) y la pérdida de diversidad (PD). A medida
@@ -549,9 +546,8 @@ niveles de diversidad biológica y los servicios ecosistémicos en áreas
 clave, socavando así la sostenibilidad a largo plazo de la producción
 agrícola en sí (p.~22).
 
-\hypertarget{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico.}{%
 \section{El Perú es vulnerable al cambio
-climático.}\label{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico.}}
+climático.}\label{el-peruxfa-es-vulnerable-al-cambio-climuxe1tico.}
 
 \textbf{¿Qué sectores son más vulnerables y contribuyen más a las
 emisiones de gases de efecto invernadero?}
@@ -710,11 +706,13 @@ agropecuarias y la industria.
 \caption{\label{fig-2}Relación entre las prácticas agrícolas
 insostenibles y la pérdida de biodiversidad}
 
-{\centering \includegraphics{20230603083843.png}
+\centering{
+
+\includegraphics{20230603083843.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 Nota: Prevencionintegral\&ORP
 
@@ -757,24 +755,21 @@ aplicación efectiva aún requiere mejoras para garantizar un cumplimiento
 adecuado y promover un mayor control de la contaminación en el sector
 industrial.
 
-\hypertarget{anuxe1lisis-de-las-exportaciones-de-productos-tradicionales-precios-del-petruxf3leo-crudo-y-derivados-y-precios-del-gas-natural-durante-el-periodo-enero-2012---mayo-2022}{%
 \section{Análisis de las exportaciones de productos tradicionales,
 precios del petróleo crudo y derivados, y precios del gas natural
 durante el periodo enero 2012 - mayo
-2022}\label{anuxe1lisis-de-las-exportaciones-de-productos-tradicionales-precios-del-petruxf3leo-crudo-y-derivados-y-precios-del-gas-natural-durante-el-periodo-enero-2012---mayo-2022}}
+2022}\label{anuxe1lisis-de-las-exportaciones-de-productos-tradicionales-precios-del-petruxf3leo-crudo-y-derivados-y-precios-del-gas-natural-durante-el-periodo-enero-2012---mayo-2022}
 
 En este análisis, examinaremos tanto las exportaciones de productos
 tradicionales como los precios del petróleo crudo y derivados, y los
 precios del gas natural de forma individual y conjunta durante el
 periodo comprendido entre enero de 2012 y mayo de 2022.
 
-\hypertarget{anuxe1lisis-individual-de-las-series}{%
 \subsection{Análisis individual de las
-series}\label{anuxe1lisis-individual-de-las-series}}
+series}\label{anuxe1lisis-individual-de-las-series}
 
-\hypertarget{anuxe1lisis-de-los-gruxe1ficos}{%
 \subsubsection{Análisis de los
-gráficos}\label{anuxe1lisis-de-los-gruxe1ficos}}
+gráficos}\label{anuxe1lisis-de-los-gruxe1ficos}
 
 La Figura~\ref{fig-3} muestra las exportaciones de productos
 tradicionales en comparación con los precios del petróleo crudo y
@@ -785,11 +780,13 @@ derivados (en dólares estadounidenses por barril).
 \caption{\label{fig-3}Exportaciones de productos tradicionales y precios
 del petróleo crudo y derivados}
 
-{\centering \includegraphics{20230603085638.png}
+\centering{
+
+\includegraphics{20230603085638.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.}
 
@@ -830,11 +827,13 @@ estadounidenses por metro cúbico).
 \caption{\label{fig-4}Exportaciones de productos tradicionales y precios
 del gas natural}
 
-{\centering \includegraphics{20230603090113.png}
+\centering{
+
+\includegraphics{20230603090113.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Fuente: BCRP (14 de julio de 2022). Elaboración propia.}
 
@@ -872,9 +871,8 @@ crecimiento interanual del 26,2\%, impulsado por una mayor extracción de
 todos sus componentes (hidrocarburos líquidos y gas natural) desde 2021.
 En el periodo de enero a abril, el sector se expandió un 15,0\%.
 
-\hypertarget{anuxe1lisis-de-normalidad-de-las-series}{%
 \subsubsection{Análisis de normalidad de las
-series}\label{anuxe1lisis-de-normalidad-de-las-series}}
+series}\label{anuxe1lisis-de-normalidad-de-las-series}
 
 La Figura~\ref{fig-5} muestra los resultados de la prueba de normalidad
 aplicada al precio del Petróleo crudo y derivados.
@@ -884,11 +882,13 @@ aplicada al precio del Petróleo crudo y derivados.
 \caption{\label{fig-5}Prueba de normalidad del precio del Petróleo crudo
 y derivados}
 
-{\centering \includegraphics{20230603090708.png}
+\centering{
+
+\includegraphics{20230603090708.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Elaboración propia.}
 
@@ -918,11 +918,13 @@ la falta de normalidad.
 \caption{\label{fig-6}Corrección de normalidad del precio del Petróleo
 crudo y derivados}
 
-{\centering \includegraphics{20230603090807.png}
+\centering{
+
+\includegraphics{20230603090807.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Elaboración propia.}
 
@@ -942,11 +944,13 @@ aplicada al precio del Gas natural.
 
 \caption{\label{fig-7}Prueba de normalidad del precio del Gas natural}
 
-{\centering \includegraphics{20230603091227.png}
+\centering{
+
+\includegraphics{20230603091227.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Elaboración propia.}
 
@@ -972,11 +976,13 @@ normalidad.
 \caption{\label{fig-8}Corrección de normalidad del precio del Gas
 natural}
 
-{\centering \includegraphics{20230603091315.png}
+\centering{
+
+\includegraphics{20230603091315.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{Nota: Elaboración propia.}
 
@@ -992,9 +998,8 @@ mayor al nivel de significancia del 5\%, lo que confirma que la serie de
 precios del Gas natural sigue una distribución normal después de la
 transformación.
 
-\hypertarget{anuxe1lisis-conjunta-de-las-series}{%
 \subsection{Análisis conjunta de las
-series}\label{anuxe1lisis-conjunta-de-las-series}}
+series}\label{anuxe1lisis-conjunta-de-las-series}
 
 La Figura~\ref{fig-9} muestra la evolución del precio del petróleo y el
 gas en dólares.
@@ -1004,11 +1009,13 @@ gas en dólares.
 \caption{\label{fig-9}Evolución del precio del petróleo y gas (en
 dólares)}
 
-{\centering \includegraphics{20230603091833.png}
+\centering{
+
+\includegraphics{20230603091833.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
 nosotros.}
@@ -1031,37 +1038,33 @@ de gas y petróleo.
 \begin{figure}
 
 \caption{\label{fig-10}Análisis de caja y bigote del precio de gas y
-petróleo}\begin{minipage}[t]{0.50\linewidth}
+petróleo}
+
+\begin{minipage}{0.50\linewidth}
+
 \subcaption{\label{fig-10.1}Surus}
 
-{\centering 
-
-\raisebox{-\height}{
+\centering{
 
 \includegraphics{20230603091856.png}
 
 }
 
-}
-
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}{0.50\linewidth}
+
 \subcaption{\label{fig-10.2}Hanno}
 
-{\centering 
-
-\raisebox{-\height}{
+\centering{
 
 \includegraphics{20230603091845.png}
 
 }
 
-}
-
 \end{minipage}%
 
-\end{figure}
+\end{figure}%
 
 \emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
 nosotros.}
@@ -1094,11 +1097,13 @@ la relación entre el precio del gas y el precio del petróleo.
 \caption{\label{fig-11}Gráfico de dispersión de las variables precio de
 gas y precio de petróleo}
 
-{\centering \includegraphics{20230603091904.png}
+\centering{
+
+\includegraphics{20230603091904.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{\textbf{Nota:} Datos obtenidos del BCRP y gráfico elaborado por
 nosotros.}
@@ -1111,7 +1116,7 @@ también tiende a aumentar.
 La Tabla 2 muestra los resultados de la regresión entre el precio del
 petróleo y el precio del gas.
 
-\begin{figure}
+\begin{figure}[H]
 
 \caption{Tabla 2: Regresión de precio de petróleo y precio del gas}
 
@@ -1119,7 +1124,7 @@ petróleo y el precio del gas.
 
 }
 
-\end{figure}
+\end{figure}%
 
 \emph{\textbf{Nota:} Datos obtenidos del BCRP.}
 
@@ -1133,10 +1138,9 @@ en el precio del gas se explica por el precio del petróleo.
 La ecuación de regresión muestra que, por cada aumento en el precio del
 petróleo, el precio del gas aumenta en 1.0527 dólares.
 
-\hypertarget{relaciuxf3n-entre-el-volumen-del-cobre-miles-de-toneladas-y-el-oro-miles-de-onzas-troy.}{%
 \section{Relación entre el volumen del cobre (miles de toneladas) y el
 oro (miles de onzas
-troy).}\label{relaciuxf3n-entre-el-volumen-del-cobre-miles-de-toneladas-y-el-oro-miles-de-onzas-troy.}}
+troy).}\label{relaciuxf3n-entre-el-volumen-del-cobre-miles-de-toneladas-y-el-oro-miles-de-onzas-troy.}
 
 Para analizar la relación entre el volumen del cobre (medido en miles de
 toneladas) y el oro (medido en miles de onzas troy), consideramos las

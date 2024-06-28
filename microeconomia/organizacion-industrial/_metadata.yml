@@ -57,7 +57,7 @@ format:
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos
     toc-location: left  # Ubicación de la tabla de contenidos (left, right)
-    css: index.css  # Archivo CSS personalizado para el formato HTML
+    # css: index.css  # Archivo CSS personalizado para el formato HTML
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
     smooth-scroll: true  # Activar desplazamiento suave en el formato HTML

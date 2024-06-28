@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 
 <head>
 
@@ -11,7 +11,7 @@
 <meta name="author" content="Edison Achalma" />
 <meta name="description" content="Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!" />
 
-<title>Notas de Clase Series de Tiempo – Dr Edison Achalma | Data-centric AI | Applied AI | Coaching & Mentoring | Masterclasses & Public Speaking</title>
+<title>Notas de Clase Series de Tiempo – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,28 +40,46 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N2FL85753"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGH6TP6RB3"></script>
 
-<script type="text/javascript">
+<script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-3N2FL85753', { 'anonymize_ip': true});
+gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 </script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"es"
+  });
+});
+</script> 
+  
 <style>html{ scroll-behavior: smooth; }</style>
 <meta name="quarto:status" content="draft">
 
@@ -96,7 +114,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.css" />
-<link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
@@ -109,6 +126,9 @@ window.Quarto = {
     <a href="/index.html" class="navbar-brand navbar-brand-logo">
     <img src="/images/logo-dr-daniel-kapitan.png" alt="" class="navbar-logo" />
     </a>
+    <a class="navbar-brand" href="/index.html">
+    <span class="navbar-title">EDISON ACHALMA</span>
+    </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
 </div>
@@ -118,16 +138,16 @@ window.Quarto = {
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn"
       data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral"
       onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
-        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
+        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral"
         onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -138,10 +158,10 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.linkedin.com/in/dkapitan/"  title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/dkapitan"  title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-    <a href="https://kapitan.net/blog/index.xml"  title="RSS feed" class="quarto-navigation-tool px-1" aria-label="RSS feed"><i class="bi bi-rss"></i></a>
-    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Search"></div>
+    <a href="https://www.linkedin.com/in/achalmaedison/"  title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+    <a href="https://twitter.com/achalmaedison"  title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed"  title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Buscar"></div>
 </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -149,7 +169,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="/projects/index.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -248,12 +268,6 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://anthology-of-data.science" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Anthology of Data Science</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="/appointment/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Book an appointment</span></a>
   </div>
@@ -288,8 +302,8 @@ window.Quarto = {
 </div>
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
+  <div class="quarto-title-meta-heading">Autor/a</div>
+  <div class="quarto-title-meta-heading">Afiliación</div>
   
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:achalmed.18@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
@@ -307,16 +321,16 @@ window.Quarto = {
 
       
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Aug 2023</p>
+      <p class="date">ago 2023</p>
     </div>
   </div>
   
     <div>
-    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Jun 2024</p>
+      <p class="date-modified">jun 2024</p>
     </div>
   </div>
     
@@ -363,7 +377,7 @@ X_1, X_2, X_3, \ldots ,X_T
   &amp; \{X^{(j)}_1, X^{(j)}_2, \ldots, X^{(j)}_T\} &amp;
 \end{eqnarray*}\]</span>
 <p>Donde <span class="math inline">\(j \in \mathbb{Z}\)</span>. En lo subsecuente, diremos que una serie de tiempo es una realización del proceso estocástico subyacente. Considerando, en consecuencia, al proceso estocástico con todas sus posibilidades de realización.</p>
-<p>Para hacer más sencilla la notación no distinguiremos entre el proceso en sí mismo y una de sus realizaciones, es decir, siempre escribiremos a una serie de tiempo como la secuencia mostrada en la ecuación (<a href="#eq-Serie" class="quarto-xref">Equation 1</a>), o más precisamente como la siguiente realización:</p>
+<p>Para hacer más sencilla la notación no distinguiremos entre el proceso en sí mismo y una de sus realizaciones, es decir, siempre escribiremos a una serie de tiempo como la secuencia mostrada en la ecuación (<a href="#eq-Serie" class="quarto-xref">Ecuación 1</a>), o más precisamente como la siguiente realización:</p>
 <p><span class="math display">\[
 \{ X_1, X_2, \ldots, X_T \}
 \]</span></p>
@@ -423,7 +437,7 @@ Cov[X_t,X_s] = \mathbb{E}[(X_t - \mathbb{E}[X_t])(X_s - \mathbb{E}[X_s])]
     \end{array}
 \right]
 \tag{2}\]</span></span></p>
-<p>Donde es claro que en la matriz de la ecuación (<a href="#eq-MATCOV" class="quarto-xref">Equation 2</a>) existen <span class="math inline">\(T(T-1)/2\)</span> covarianzas distintas, ya que se cumple que <span class="math inline">\(Cov[X_t,X_s] = Cov[X_s,X_t]\)</span>, para <span class="math inline">\(t \neq s\)</span>.</p>
+<p>Donde es claro que en la matriz de la ecuación (<a href="#eq-MATCOV" class="quarto-xref">Ecuación 2</a>) existen <span class="math inline">\(T(T-1)/2\)</span> covarianzas distintas, ya que se cumple que <span class="math inline">\(Cov[X_t,X_s] = Cov[X_s,X_t]\)</span>, para <span class="math inline">\(t \neq s\)</span>.</p>
 <p>A menudo, esas covarianzas son denominadas como autocovarianzas puesto que ellas son covarianzas entre variables aleatorias pertenecientes al mismo proceso estocástico pero en un momento <span class="math inline">\(t\)</span> diferente. Si el proceso estocástico tiene una distribución normal multivariada, su función de distribución estará totalmente descrita por sus momentos de primer y segundo orden.</p>
 <p>Ahora introduciremos el concepto de ergodicidad, el cual indica que los momentos muestrales, los cuales son calculados en la base de una serie de tiempo con un número finito de observaciones, en la medida que <span class="math inline">\(T \rightarrow \infty\)</span> sus correspondientes momentos muestrales, tienden a los verdaderos valores poblacionales, los cuales definiremos como <span class="math inline">\(\mu\)</span>, para la media, y <span class="math inline">\(\sigma^2_X\)</span> para la varianza.</p>
 <p>Este concepto sólo es cierto si asumimos que, por ejemplo, el valor esperado y la varianza son como se dice a continuación para todo <span class="math inline">\(t = 1, 2, \ldots, T\)</span>:</p>
@@ -654,19 +668,19 @@ JB = \frac{T}{6} \left(\hat{S} + \frac{1}{4} (\hat{K} - 3)^2 \right)
 </table>
 <p>label{Est_Pax}</p>
 <div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:quarto-sidebar-section-1">Projects</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/pharmaccess.qmdPharmAccess">PharmAccess</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/mytomorrows.qmdMyTomorrows">MyTomorrows</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/roetz-life.qmdRoetz-Life">Roetz Life</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/blue-radix.qmdBlue-Radix">Blue Radix</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/amphia.qmdAmphia-Sensium">Amphia Sensium</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/has.qmdHAS-Green-Academy">HAS Green Academy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/sensire.qmdSensire">Sensire</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/blog/index.htmlBlog">Blog</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/econometria/index.htmlEconometria">Econometria</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/filosofia/index.htmlFilosofía">Filosofía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/finanzas/index.htmlFinanzas">Finanzas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/informatica/index.htmlInformatica">Informatica</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/macroeconomia/index.htmlMacroeconomía">Macroeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/matematica/index.qmdMatemáticas">Matemáticas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/microeconomia/index.htmlMicroeconomía">Microeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:https://anthology-of-data.scienceAnthology-of-Data-Science">Anthology of Data Science</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/appointment/index.htmlBook-an-appointment">Book an appointment</span></p>
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">EDISON ACHALMA</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:quarto-sidebar-section-1">Projects</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/pharmaccess.qmdPharmAccess">PharmAccess</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/mytomorrows.qmdMyTomorrows">MyTomorrows</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/roetz-life.qmdRoetz-Life">Roetz Life</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/blue-radix.qmdBlue-Radix">Blue Radix</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/amphia.qmdAmphia-Sensium">Amphia Sensium</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/has.qmdHAS-Green-Academy">HAS Green Academy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/projects/sensire.qmdSensire">Sensire</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/blog/index.htmlBlog">Blog</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/econometria/index.htmlEconometria">Econometria</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/filosofia/index.htmlFilosofía">Filosofía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/finanzas/index.htmlFinanzas">Finanzas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/informatica/index.htmlInformatica">Informatica</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/macroeconomia/index.htmlMacroeconomía">Macroeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/matematica/index.qmdMatemáticas">Matemáticas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/microeconomia/index.htmlMicroeconomía">Microeconomía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar:/appointment/index.htmlBook-an-appointment">Book an appointment</span></p>
 <div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-left">
-<p><br> Copyright © 2023 Daniel Kapitan<br> This website was created with <a href="https://quarto.org"><img src="../../../images/quarto.png" class="img-fluid" alt="Quarto" width="65" /></a></p>
+<p><br> Copyright © 2024 Edison Achalma<br> This website was created with <a href="https://quarto.org"><img src="../../../images/quarto.png" class="img-fluid" alt="Quarto" width="65" /></a></p>
 </div>
 <div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-center">
-<p><br> <strong>Postal address:</strong><br> DWMM Holding B.V.<br> Marie Baronstraat 15<br> 3056 AA ROTTERDAM</p>
+<p><br> <strong>Postal address:</strong><br> Ayacucho.<br> Perú<br> 3056 COVADONGA</p>
 </div>
 <div class="hidden quarto-markdown-envelope-contents" data-render-id="footer-right">
-<p><br> <strong>Chamber of Commerce (KvK):</strong> 52920259<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../../../resources/230901-algemene-voorwaarden.pdf">Dutch</a><br></p>
+<p><br> <strong>Chamber of Commerce (KvK):</strong> 51934179301<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../../../resources/230901-algemene-voorwaarden.pdf">Español</a><br></p>
 </div>
 </div>
 <div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Dr Edison Achalma | Data-centric AI | Applied AI | Coaching &amp; Mentoring | Masterclasses &amp; Public Speaking</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span></p>
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">Dr Edison Achalma | Economía | Matemática | Informática | Filosofía - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">Dr Edison Achalma | Economía | Matemática | Informática | Filosofía - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">Dr Edison Achalma | Economía | Matemática | Informática | Filosofía - Notas de Clase Series de Tiempo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc">Únete a esta emocionante serie de introducción a Linux, donde te guiaré a través de los pasos para descargar e instalar GNU/Linux en tu equipo. Aprenderás a seleccionar el hardware adecuado, descargar la imagen ISO de tu distribución preferida y preparar los medios de instalación. Además, exploraremos diferentes opciones para probar o instalar Linux. ¡Embárcate en esta aventura y descubre el poder de GNU/Linux!</span></p>
 </div>
 </section>
 </section>
@@ -715,12 +729,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -815,7 +829,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/kapitan\.net");
+      var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1148,12 +1162,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js"
+  repo="achalmed/website-achalma"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <div class='footer-contents'><br>
-Copyright &copy; 2023 Daniel Kapitan<br>
+Copyright &copy; 2024 Edison Achalma<br>
 This website was created with 
 [![](/images/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org)
 </div>  
@@ -1161,17 +1182,17 @@ This website was created with
     <div class="nav-footer-center">
       <div class='footer-contents'><br>
 __Postal address:__<br>
-DWMM Holding B.V.<br>
-Marie Baronstraat 15<br>
-3056 AA  ROTTERDAM
+Ayacucho.<br>
+Perú<br>
+3056 COVADONGA
 </div>  
     </div>
     <div class="nav-footer-right">
       <div class='footer-contents'><br>
-__Chamber of Commerce (KvK):__ 52920259<br>
+__Chamber of Commerce (KvK):__ 51934179301<br>
 __RSIN:__ 850665851<br>
 __IBAN:__ NL47 KNAB 0259 5268 27<br>
-__Terms & Conditions__ in [Dutch](/resources/230901-algemene-voorwaarden.pdf)<br>
+__Terms & Conditions__ in [Español](/resources/230901-algemene-voorwaarden.pdf)<br>
 </div>  
     </div>
   </div>

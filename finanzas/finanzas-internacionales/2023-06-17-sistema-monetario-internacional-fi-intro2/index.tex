@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -195,11 +198,9 @@ mundial.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, frame hidden, breakable, boxrule=0pt, interior hidden]}{\end{tcolorbox}}\fi
 
-\hypertarget{el-sistema-monetario-internacional}{%
 \section{El Sistema Monetario
-Internacional}\label{el-sistema-monetario-internacional}}
+Internacional}\label{el-sistema-monetario-internacional}
 
 El sistema monetario internacional es un marco institucional establecido
 para facilitar los pagos internacionales, regular los flujos de capital
@@ -211,9 +212,8 @@ bienes, servicios y capitales son cada vez más intensos, se hace
 necesaria la existencia de instituciones que regulen y faciliten estas
 transacciones.
 
-\hypertarget{reguxedmenes-cambiarios-y-apertura}{%
 \subsection{Regímenes cambiarios y
-apertura}\label{reguxedmenes-cambiarios-y-apertura}}
+apertura}\label{reguxedmenes-cambiarios-y-apertura}
 
 Es importante destacar que los países pueden seguir diferentes reglas en
 lo que respecta a los regímenes cambiarios y el grado de apertura de sus
@@ -224,9 +224,8 @@ donde el valor de su moneda fluctúa en respuesta a las fuerzas del
 mercado. Además, el grado de apertura de una economía se refiere a la
 medida en que permite el comercio internacional y los flujos de capital.
 
-\hypertarget{volatilidad-y-tipos-de-cambio}{%
 \subsection{Volatilidad y tipos de
-cambio}\label{volatilidad-y-tipos-de-cambio}}
+cambio}\label{volatilidad-y-tipos-de-cambio}
 
 En la actualidad, los mercados financieros internacionales se
 caracterizan por una alta volatilidad en todas las variables económicas,
@@ -236,9 +235,8 @@ tecnológico y la liberalización financiera. Los tipos de cambio fluctúan
 en respuesta a factores como las tasas de interés, la inflación, los
 flujos de capital y los eventos económicos y políticos a nivel mundial.
 
-\hypertarget{divisas-y-cotizaciuxf3n-de-tipos-de-cambio}{%
 \subsection{Divisas y cotización de tipos de
-cambio}\label{divisas-y-cotizaciuxf3n-de-tipos-de-cambio}}
+cambio}\label{divisas-y-cotizaciuxf3n-de-tipos-de-cambio}
 
 Una divisa es la moneda de otro país, siempre y cuando sea libremente
 convertible a otras monedas en el mercado cambiario. La cotización del
@@ -249,8 +247,7 @@ comprar un dólar estadounidense (USD). Por ejemplo, si se requieren 1.5
 unidades de la moneda nacional para comprar 1 USD, se diría que el tipo
 de cambio es de 1.5.
 
-\hypertarget{reguxedmenes-cambiarios}{%
-\section{Regímenes Cambiarios}\label{reguxedmenes-cambiarios}}
+\section{Regímenes Cambiarios}\label{reguxedmenes-cambiarios}
 
 El régimen cambiario se refiere a un conjunto de reglas que describen el
 papel que desempeña el Banco Central en la determinación del tipo de
@@ -343,19 +340,13 @@ Australia, Brasil, Canadá, Estados Unidos, Japón, México y Reino Unido.
 
 \caption{\label{fig-1}Regímenes cambiarios}
 
-{\centering 
+\centering{
 
-\begin{figure}[H]
-
-{\centering \includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-1.png}
+\includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-1.png}
 
 }
 
-\end{figure}
-
-}
-
-\end{figure}
+\end{figure}%
 
 En una economía abierta, la política cambiaria juega un papel crucial en
 la consecución de los objetivos de la política macroeconómica, que
@@ -387,23 +378,16 @@ así su efectividad y sostenibilidad a largo plazo.
 \caption{\label{fig-2}Interrelaciones entre tipo de cambio, variables y
 políticas económicas}
 
-{\centering 
+\centering{
 
-\begin{figure}[H]
-
-{\centering \includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-2.png}
+\includegraphics[width=5.5in,height=3.5in]{index_files/figure-latex/dot-figure-2.png}
 
 }
 
-\end{figure}
+\end{figure}%
 
-}
-
-\end{figure}
-
-\hypertarget{la-uniuxf3n-monetaria-europea-y-el-euro}{%
 \section{La Unión Monetaria Europea y el
-Euro}\label{la-uniuxf3n-monetaria-europea-y-el-euro}}
+Euro}\label{la-uniuxf3n-monetaria-europea-y-el-euro}
 
 En 1979, los países de la Comunidad Económica Europea (CEE)
 establecieron el Sistema Monetario Europeo (SME) con el objetivo de
@@ -413,9 +397,8 @@ embargo, el sistema no logró su funcionamiento óptimo debido a la falta
 de coordinación de las políticas macroeconómicas entre los países
 miembros.
 
-\hypertarget{la-creaciuxf3n-del-euro-y-la-uniuxf3n-monetaria-europea}{%
 \subsection{La creación del Euro y la Unión Monetaria
-Europea}\label{la-creaciuxf3n-del-euro-y-la-uniuxf3n-monetaria-europea}}
+Europea}\label{la-creaciuxf3n-del-euro-y-la-uniuxf3n-monetaria-europea}
 
 En 1991, los 12 miembros de la CEE firmaron el Tratado de Maastricht, el
 cual estableció un cronograma para la creación de la Unión Europea (UE)
@@ -423,18 +406,16 @@ con una moneda común, el Euro, y un banco central común. Los países
 acordaron coordinar sus políticas fiscales y monetarias, y se
 establecieron criterios de convergencia.
 
-\hypertarget{los-compromisos-y-criterios-de-convergencia}{%
 \subsection{Los compromisos y criterios de
-convergencia}\label{los-compromisos-y-criterios-de-convergencia}}
+convergencia}\label{los-compromisos-y-criterios-de-convergencia}
 
 Cada país se comprometió a mantener el déficit presupuestario por debajo
 del 3\% del Producto Interno Bruto (PIB), la deuda pública por debajo
 del 60\% del PIB, lograr una baja inflación y mantener el tipo de cambio
 dentro de un rango establecido.
 
-\hypertarget{ventajas-del-euro-y-la-uniuxf3n-monetaria}{%
 \subsection{Ventajas del Euro y la Unión
-Monetaria}\label{ventajas-del-euro-y-la-uniuxf3n-monetaria}}
+Monetaria}\label{ventajas-del-euro-y-la-uniuxf3n-monetaria}
 
 La adopción del Euro ha generado diversas ventajas para los países
 miembros de la UE, entre las cuales se destacan:
@@ -469,9 +450,8 @@ miembros de la UE, entre las cuales se destacan:
   factor de estabilidad que promueve la paz en Europa.
 \end{enumerate}
 
-\hypertarget{desventajas-de-la-moneda-comuxfan}{%
 \subsection{Desventajas de la moneda
-común}\label{desventajas-de-la-moneda-comuxfan}}
+común}\label{desventajas-de-la-moneda-comuxfan}
 
 A pesar de las ventajas mencionadas, la moneda común también presenta
 ciertas desventajas:
@@ -494,13 +474,11 @@ ciertas desventajas:
   países que tenían monedas fuertes, como Alemania y los Países Bajos.
 \end{enumerate}
 
-\hypertarget{historia-del-sistema-monetario-internacional}{%
 \section{Historia del sistema monetario
-internacional}\label{historia-del-sistema-monetario-internacional}}
+internacional}\label{historia-del-sistema-monetario-internacional}
 
-\hypertarget{el-patruxf3n-oro-cluxe1sico-1875-1914}{%
 \subsection{El patrón oro clásico:
-1875-1914}\label{el-patruxf3n-oro-cluxe1sico-1875-1914}}
+1875-1914}\label{el-patruxf3n-oro-cluxe1sico-1875-1914}
 
 En el periodo del patrón oro clásico, que abarcó desde 1875 hasta 1914,
 el sistema monetario internacional se basaba en el uso del oro como
@@ -570,9 +548,8 @@ autoridades buscaban alternativas no recesivas para lograr el equilibrio
 externo, como el proteccionismo, restricciones a los movimientos
 internacionales de capital y políticas de esterilización.
 
-\hypertarget{el-periodo-de-entreguerras-1918-1939}{%
 \subsection{El periodo de Entreguerras
-(1918-1939)}\label{el-periodo-de-entreguerras-1918-1939}}
+(1918-1939)}\label{el-periodo-de-entreguerras-1918-1939}
 
 El periodo de Entreguerras, que abarca desde 1918 hasta 1939, se
 caracterizó por desafíos significativos para el sistema monetario
@@ -629,10 +606,9 @@ equilibrio. Los especuladores sistemáticamente elevaban el valor de las
 monedas fuertes y reducían el valor de las monedas débiles, generando
 mayores inestabilidades en los tipos de cambio.
 
-\hypertarget{el-sistema-de-bretton-woods-1944-1971-cooperaciuxf3n-monetaria-y-colapso}{%
 \subsection{El sistema de Bretton Woods (1944-1971): Cooperación
 monetaria y
-colapso}\label{el-sistema-de-bretton-woods-1944-1971-cooperaciuxf3n-monetaria-y-colapso}}
+colapso}\label{el-sistema-de-bretton-woods-1944-1971-cooperaciuxf3n-monetaria-y-colapso}
 
 El sistema de Bretton Woods, establecido en la Conferencia de Bretton
 Woods en julio de 1944, fue un marco internacional diseñado para
@@ -729,10 +705,9 @@ expansivas de Estados Unidos crearon un fenómeno de ``exportación de la
 inflación'', lo que llevó a la libre flotación de las monedas como
 opción para evitar ``importar la inflación'' de Estados Unidos.
 
-\hypertarget{el-sistema-monetario-internacional-actual-adaptaciuxf3n-a-las-condiciones-cambiantes-de-la-economuxeda-mundial}{%
 \subsection{El sistema monetario internacional actual: Adaptación a las
 condiciones cambiantes de la economía
-mundial}\label{el-sistema-monetario-internacional-actual-adaptaciuxf3n-a-las-condiciones-cambiantes-de-la-economuxeda-mundial}}
+mundial}\label{el-sistema-monetario-internacional-actual-adaptaciuxf3n-a-las-condiciones-cambiantes-de-la-economuxeda-mundial}
 
 El sistema monetario internacional se encuentra en constante ajuste para
 responder a las dinámicas de la economía global. En las últimas dos
@@ -868,9 +843,8 @@ implementan diversas medidas, como:
   para mejorar la productividad y la calidad de vida.
 \end{itemize}
 
-\hypertarget{el-futuro-del-fondo-monetario-internacional}{%
 \section{El Futuro del Fondo Monetario
-Internacional}\label{el-futuro-del-fondo-monetario-internacional}}
+Internacional}\label{el-futuro-del-fondo-monetario-internacional}
 
 En vista de los dramáticos cambios en la economía mundial, se plantea la
 necesidad de realizar ajustes en la arquitectura del sistema monetario
@@ -921,10 +895,9 @@ propuestas de cambio para el FMI.
   financiero internacional.
 \end{enumerate}
 
-\hypertarget{comparaciuxf3n-entre-tipos-de-cambio-fijos-y-flexibles-caracteruxedsticas-y-consecuencias}{%
 \section{Comparación entre Tipos de Cambio Fijos y Flexibles:
 Características y
-Consecuencias}\label{comparaciuxf3n-entre-tipos-de-cambio-fijos-y-flexibles-caracteruxedsticas-y-consecuencias}}
+Consecuencias}\label{comparaciuxf3n-entre-tipos-de-cambio-fijos-y-flexibles-caracteruxedsticas-y-consecuencias}
 
 En el ámbito del sistema monetario internacional, existen diferentes
 enfoques en cuanto a la gestión de los tipos de cambio. Dos de los
@@ -932,8 +905,7 @@ enfoques principales son los tipos de cambio fijos y los tipos de cambio
 flexibles. A continuación, se analizan las características y las
 consecuencias de cada uno de ellos.
 
-\hypertarget{tipos-de-cambio-fijos}{%
-\subsection{Tipos de cambio fijos}\label{tipos-de-cambio-fijos}}
+\subsection{Tipos de cambio fijos}\label{tipos-de-cambio-fijos}
 
 Los tipos de cambio fijos se caracterizan por mantener una paridad
 establecida entre las monedas de diferentes países. Algunas de las
@@ -972,8 +944,7 @@ características y consecuencias asociadas son las siguientes:
   económico.
 \end{enumerate}
 
-\hypertarget{tipos-de-cambio-flexibles}{%
-\subsection{Tipos de cambio flexibles}\label{tipos-de-cambio-flexibles}}
+\subsection{Tipos de cambio flexibles}\label{tipos-de-cambio-flexibles}
 
 Por otro lado, los tipos de cambio flexibles permiten que las tasas de
 cambio se determinen libremente en los mercados de divisas. A

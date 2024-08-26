@@ -19,11 +19,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
-
-
 # Introducción a la Elasticidad
 ## ¿Qué es la elasticidad?
 
@@ -64,7 +59,7 @@ La elasticidad precio de la demanda es una medida importante en economía que no
 ::: {.cell execution_count=1}
 
 ::: {.cell-output .cell-output-display}
-![](index_files/figure-html/cell-2-output-1.png){width=581 height=432}
+![](index_files/figure-pdf/cell-2-output-1.pdf){}
 :::
 :::
 
@@ -191,9 +186,11 @@ Si el $P_x$ aumenta en 1% entonces $X^d$ disminuye en 1%.
 
 
 
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
 
 1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 
@@ -206,6 +203,7 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
 6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
+
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

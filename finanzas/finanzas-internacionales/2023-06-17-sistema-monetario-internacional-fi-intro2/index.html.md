@@ -25,8 +25,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # El Sistema Monetario Internacional
 
 El sistema monetario internacional es un marco institucional establecido para facilitar los pagos internacionales, regular los flujos de capital y determinar los tipos de cambio entre las diferentes monedas. Este sistema se basa en acuerdos internacionales y requiere un alto grado de cooperación entre los gobiernos de los principales países. En el contexto de la globalización, donde los flujos internacionales de bienes, servicios y capitales son cada vez más intensos, se hace necesaria la existencia de instituciones que regulen y faciliten estas transacciones.

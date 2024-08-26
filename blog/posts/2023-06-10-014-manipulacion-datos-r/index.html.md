@@ -24,7 +24,5 @@ date: "06/12/2023"
 
 
 
-
-
 # Manipulación de datos
 

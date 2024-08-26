@@ -25,8 +25,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB
 
 Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android. Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra [guía aquí](https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/) .

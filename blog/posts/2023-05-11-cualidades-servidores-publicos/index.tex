@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -192,14 +195,11 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, breakable]}{\end{tcolorbox}}\fi
 
-\hypertarget{cuuxe1les-son-las-cualidades-de-los-servidores-puxfablicos}{%
 \section{¿Cuáles son las cualidades de los servidores
-públicos?}\label{cuuxe1les-son-las-cualidades-de-los-servidores-puxfablicos}}
+públicos?}\label{cuuxe1les-son-las-cualidades-de-los-servidores-puxfablicos}
 
-\hypertarget{amabilidad}{%
-\subsection{Amabilidad}\label{amabilidad}}
+\subsection{Amabilidad}\label{amabilidad}
 
 Con demasiada frecuencia, equiparamos la amabilidad con no ser asertivo
 o incluso ser agresivo. Hay tantas personas llenas de ideas brillantes.
@@ -207,8 +207,7 @@ Pero aquellos con la amabilidad de crear formas inclusivas y poderosas
 de diseñar, dar forma, entregar y evaluar esas ideas brillantes son las
 que siempre quiero conectar y aprender.
 
-\hypertarget{juicio-astuto}{%
-\subsection{Juicio astuto}\label{juicio-astuto}}
+\subsection{Juicio astuto}\label{juicio-astuto}
 
 Es la capacidad de ver a través de alguien. El servidor público está en
 una posición única: está obligado por la maquinación de un maestro
@@ -219,9 +218,8 @@ máscara le están hablando. Si se entiende eso, se resuelve muchos
 misterios y desamores. Los siguientes pasos son imaginación, trabajo
 duro, trabajo en equipo y una mente abierta.
 
-\hypertarget{habilidades-a-prueba-de-futuro}{%
 \subsection{Habilidades a prueba de
-futuro}\label{habilidades-a-prueba-de-futuro}}
+futuro}\label{habilidades-a-prueba-de-futuro}
 
 La cara del gobierno está cambiando: el cambio no es solo en los poderes
 geopolíticos, sino en los crecientes poderes de las ciudades, del sector
@@ -238,16 +236,14 @@ ofrece la tecnología emergente. Necesitan la capacidad de ir más allá de
 los programas y políticas ``marcar la casilla'' y adoptar enfoques y
 socios innovadores.
 
-\hypertarget{justicia}{%
-\subsection{~Justicia}\label{justicia}}
+\subsection{~Justicia}\label{justicia}
 
 Lo que hace a un bueno a un servidor público, particularmente en
 términos de políticos y funcionarios políticos, es la calidad de operar
 desde una premisa de ideas y principios, no intereses individuales y
 agendas partidistas.
 
-\hypertarget{tenacidad}{%
-\subsection{Tenacidad}\label{tenacidad}}
+\subsection{Tenacidad}\label{tenacidad}
 
 La vocación civil y el compromiso requieren el deseo constante de
 mejorar la calidad de vida de la sociedad, la situación actual y las
@@ -258,8 +254,7 @@ Necesitan tenacidad y consistencia para lograr resultados prácticos para
 mejorar la vida de las personas; para construir esa visión de una
 sociedad mejor.
 
-\hypertarget{un-sentido-del-deber}{%
-\subsection{Un sentido del deber}\label{un-sentido-del-deber}}
+\subsection{Un sentido del deber}\label{un-sentido-del-deber}
 
 Se está atravesando un proceso doloroso para descubrir la corrupción en
 el Perú en este momento y, en el fondo, casi siempre hay un servidor
@@ -273,8 +268,7 @@ Entonces un servidor público siempre debe tener en cuenta al
 del gobierno a menudo se ve como una posición de estado, y no una de
 servir al bien público.
 
-\hypertarget{un-toque-de-rebeliuxf3n.}{%
-\subsection{Un toque de rebelión.}\label{un-toque-de-rebeliuxf3n.}}
+\subsection{Un toque de rebelión.}\label{un-toque-de-rebeliuxf3n.}
 
 Los servidores públicos más efectivos son aquellos que desafían
 constantemente. Desafían sus propias ideas y prejuicios, desafían la
@@ -286,40 +280,35 @@ statu quo. El desafío y la colaboración conducen a la innovación, y eso
 es lo que nos ayudará a todos a resolver algunos de los problemas más
 apremiantes de nuestro tiempo.
 
-\hypertarget{motivador}{%
-\subsection{Motivador}\label{motivador}}
+\subsection{Motivador}\label{motivador}
 
 Ser motivador es un factor relevante para que las personas que trabajan
 en el sector público vayan a cumplir sus funciones de la mejor manera y
 puedan ayudar a que los objetivos institucionales se cumplan en la fecha
 programada.
 
-\hypertarget{promueve-el-diuxe1logo}{%
-\subsection{Promueve el diálogo}\label{promueve-el-diuxe1logo}}
+\subsection{Promueve el diálogo}\label{promueve-el-diuxe1logo}
 
 El diálogo es básico en el sector público para llegar a consensos
 rápidamente. Un servidor público con esta característica será capaz de
 destrabar muchos cuellos de botella con una llamada o conversación cara
 a cara para sacar adelante sus proyectos.
 
-\hypertarget{serenidad}{%
-\subsection{Serenidad}\label{serenidad}}
+\subsection{Serenidad}\label{serenidad}
 
 En situaciones extremas y de crisis, el funcionario público moderno debe
 saber guardar la calma para no transmitir la desesperación a sus
 compañeros. Así, podrá lidiar con las presiones del corto y largo plazo
 gracias a una toma de decisiones inteligente.
 
-\hypertarget{enfocado-en-resultados}{%
-\subsection{Enfocado en resultados}\label{enfocado-en-resultados}}
+\subsection{Enfocado en resultados}\label{enfocado-en-resultados}
 
 Esta es una cualidad imprescindible pues todas las entidades públicas y
 sus funciones están hechas para cumplir una serie de objetivos. Si el
 servidor público no llega a su trabajo con la idea de alcanzarlos
 entonces no ayudará al desarrollo general.
 
-\hypertarget{sabe-delegar}{%
-\subsection{Sabe delegar}\label{sabe-delegar}}
+\subsection{Sabe delegar}\label{sabe-delegar}
 
 Una sola persona no va a poder acumular toda la carga de una entidad.
 Por eso, es vital saber delegar, crear una línea horizontal de trabajo

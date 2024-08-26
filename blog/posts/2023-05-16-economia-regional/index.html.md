@@ -30,8 +30,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Países en vías de desarrollo
 
 Los países en vías de desarrollo son un grupo de naciones que se caracterizan por su enfoque en el aprovechamiento del **potencial** productivo de su sociedad. El concepto de potencial se refiere a la **diferencia existente entre los recursos disponibles en el país y los recursos que realmente se utilizan.**

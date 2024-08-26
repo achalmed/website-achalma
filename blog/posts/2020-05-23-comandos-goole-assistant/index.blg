@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'index.blg'
+[149] biber:340> INFO - === lun ago 26, 2024, 13:00:36
+[176] Biber.pm:419> INFO - Reading 'index.bcf'
+[290] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[313] bbl.pm:660> INFO - Writing 'index.bbl' with encoding 'UTF-8'
+[313] bbl.pm:763> INFO - Output to index.bbl
+[313] Biber.pm:131> WARN - The file 'index.bcf' does not contain any citations!
+[313] Biber.pm:133> INFO - WARNINGS: 1

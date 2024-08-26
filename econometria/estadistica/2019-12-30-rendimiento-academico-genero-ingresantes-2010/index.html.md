@@ -27,8 +27,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 **Influencia del género en el rendimiento académico de los ingresantes 2010 a la Universidad Nacional de San Cristóbal de Huamanga**
 
 **Introducción:** El presente estudio se enfoca en analizar la relación entre el rendimiento académico y el género de los estudiantes que ingresaron en el año 2010 a la Universidad Nacional de San Cristóbal de Huamanga. Se consideran variables endógenas el rendimiento académico y variables exógenas el género de los estudiantes.

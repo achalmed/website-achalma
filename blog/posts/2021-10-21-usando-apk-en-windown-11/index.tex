@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -193,12 +196,10 @@ con Windows 11}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
-\hypertarget{windows-11-cuxf3mo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb}{%
 \section{Windows 11: Cómo descargar APK usando el subsistema de Windows
 para Android y
-ADB}\label{windows-11-cuxf3mo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb}}
+ADB}\label{windows-11-cuxf3mo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb}
 
 Aquí se explica cómo descargar un archivo APK para instalar la
 aplicación de Android en su PC con Windows 11 usando el Subsistema de
@@ -207,10 +208,9 @@ manualmente en su PC con Windows 11 usando su archivo Msixbundle de
 nuestra~\href{https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/}{guía
 aquí}~.
 
-\hypertarget{paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows}{%
 \subsection{Paso 1: habilite el modo de desarrollador en el subsistema
 de
-Windows}\label{paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows}}
+Windows}\label{paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows}
 
 Instale~\href{https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/}{el
 Subsistema de Windows para Android}~primero.~Cuando haya terminado, abra
@@ -222,9 +222,8 @@ Haga clic en Subsistema de Windows para Android.~O haga clic en Abrir.
 
 En el Subsistema de Windows para Android, active el modo Desarrollador.
 
-\hypertarget{paso-2-instale-las-herramientas-de-la-plataforma-sdk}{%
 \subsection{Paso 2: Instale las herramientas de la plataforma
-SDK}\label{paso-2-instale-las-herramientas-de-la-plataforma-sdk}}
+SDK}\label{paso-2-instale-las-herramientas-de-la-plataforma-sdk}
 
 Visite la página de herramientas de la plataforma SDK de
 Google~\href{https://developer.android.com/studio/releases/platform-tools.html}{aquí}~.
@@ -252,9 +251,8 @@ plataforma.
 
 Tendrá adb.exe y algunos otros archivos aquí.
 
-\hypertarget{paso-3-instale-la-aplicaciuxf3n-de-android}{%
 \subsection{Paso 3: Instale la aplicación de
-Android}\label{paso-3-instale-la-aplicaciuxf3n-de-android}}
+Android}\label{paso-3-instale-la-aplicaciuxf3n-de-android}
 
 Haga doble clic en la carpeta de herramientas de la plataforma para
 abrirla.
@@ -312,9 +310,8 @@ Así es como se ve Snapchat en Windows 11.
 
 Eso es todo.
 
-\hypertarget{cargar-apk-automuxe1ticamente-con-un-doble-clic}{%
 \subsection{Cargar APK automáticamente con un doble
-clic}\label{cargar-apk-automuxe1ticamente-con-un-doble-clic}}
+clic}\label{cargar-apk-automuxe1ticamente-con-un-doble-clic}
 
 Sabemos que usar un comando adb no es la forma más fácil de instalar una
 aplicación de Android en su PC.~Afortunadamente, ahora puede hacer doble

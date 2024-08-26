@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -194,14 +197,11 @@ que marcaron la evolución del Perú.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable, enhanced, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
-\hypertarget{la-economuxeda-peruana-desde-1970-hasta-1990}{%
 \section{LA ECONOMÍA PERUANA DESDE 1970 HASTA
-1990}\label{la-economuxeda-peruana-desde-1970-hasta-1990}}
+1990}\label{la-economuxeda-peruana-desde-1970-hasta-1990}
 
-\hypertarget{peruxedodo-de-1970-1975}{%
-\subsection{PERÍODO DE 1970 -- 1975}\label{peruxedodo-de-1970-1975}}
+\subsection{PERÍODO DE 1970 -- 1975}\label{peruxedodo-de-1970-1975}
 
 PRESIDENTE : General JUAN VELASCO ALVARADO (3 de octubre de 1968)
 
@@ -280,8 +280,7 @@ Pero el proceso fue muy contradictorio; llevado adelante sin respetar
 las libertades ciudadanas se hizo evidente su naturaleza autoritaria y
 vertical.
 
-\hypertarget{peruxedodo-de-1975---1980}{%
-\subsection{PERÍODO DE 1975 - 1980}\label{peruxedodo-de-1975---1980}}
+\subsection{PERÍODO DE 1975 - 1980}\label{peruxedodo-de-1975---1980}
 
 PRESIDENTE: General FRANCISCO MORALES BERMÚDEZ CERRUTI (29 de agosto
 de~1975)
@@ -391,8 +390,7 @@ General Francisco Morales Bermúdez fueron:
   42\% en 1979
 \end{enumerate}
 
-\hypertarget{peruxedodo-de-1980---1985}{%
-\subsection{PERÍODO DE 1980 - 1985}\label{peruxedodo-de-1980---1985}}
+\subsection{PERÍODO DE 1980 - 1985}\label{peruxedodo-de-1980---1985}
 
 En la década del 80, el Perú se convirtió prácticamente inviable azotado
 por la violencia terrorista, el fenómeno del niño de 1983, el más fuerte
@@ -434,8 +432,7 @@ por las altas tasas de interés internacional y la irrupción violenta de
 Sendero Luminoso en 1981 y su subsistencia hasta 1992, trajo consigo que
 las reservas internacionales se reduzcan.
 
-\hypertarget{peruxedodo-de-1985-1990}{%
-\subsection{PERÍODO DE 1985 -- 1990}\label{peruxedodo-de-1985-1990}}
+\subsection{PERÍODO DE 1985 -- 1990}\label{peruxedodo-de-1985-1990}
 
 Primer gobierno del presidente Alan García Pérez~ (1985 -- 1990), regida
 también por la Constitución política de 1979.
@@ -476,9 +473,8 @@ aumentó considerablemente, el PBI real cayó y una Inflación acumulada de
 Es por ello que el gobierno de García ha sido catalogado como el peor
 gobierno de la historia del Perú.
 
-\hypertarget{las-medidas-de-la-reforma-econuxf3mica-en-la-duxe9cada-del-90}{%
 \subsection{LAS MEDIDAS DE LA REFORMA ECONÓMICA EN LA DÉCADA DEL
-90:}\label{las-medidas-de-la-reforma-econuxf3mica-en-la-duxe9cada-del-90}}
+90:}\label{las-medidas-de-la-reforma-econuxf3mica-en-la-duxe9cada-del-90}
 
 Durante el resto de 1990 y buena parte de 1991, las principales medidas
 del nuevo gobierno se concentraron en el plano económico: continuar con
@@ -513,8 +509,7 @@ de derechos laborales, etc. cuando Fujimori asumió el Gobierno, el 44\%
 de los peruanos vivían en situación de pobreza. Tras la aplicación del
 ``Fujishock'' esta cifra creció al 60\%.
 
-\hypertarget{conclusiuxf3n}{%
-\section{CONCLUSIÓN}\label{conclusiuxf3n}}
+\section{CONCLUSIÓN}\label{conclusiuxf3n}
 
 La economía peruana ha sufrido de una deficiente asignación de recursos
 y bajos niveles de inversión privada. Durante las décadas de los
@@ -534,8 +529,7 @@ Estado se ha debilitado y retrocedido, mientras
 los~sempiternos~problemas de la pobreza y la discriminación se han
 profundizado.
 
-\hypertarget{bibliografuxeda}{%
-\section{BIBLIOGRAFÍA}\label{bibliografuxeda}}
+\section{BIBLIOGRAFÍA}\label{bibliografuxeda}
 
 \begin{itemize}
 \tightlist

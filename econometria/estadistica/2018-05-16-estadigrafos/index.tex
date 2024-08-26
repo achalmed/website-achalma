@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -78,10 +92,26 @@
 \def\fps@figure{htbp}
 \makeatother
 
-\makeatletter
-\makeatother
-\makeatletter
-\makeatother
+% Preámbulo
+\usepackage{comment} % Permite comentar secciones del código
+\usepackage{marvosym} % Agrega símbolos adicionales
+\usepackage{graphicx} % Permite insertar imágenes
+\usepackage{mathptmx} % Fuente de texto matemática
+\usepackage{amssymb} % Símbolos adicionales de matemáticas
+\usepackage{lipsum} % Crea texto aleatorio
+\usepackage{amsthm} % Teoremas y entornos de demostración
+\usepackage{float} % Control de posiciones de figuras y tablas
+\usepackage{rotating} % Rotación de elementos
+\usepackage{multirow} % Celdas combinadas en tablas
+\usepackage{tabularx} % Tablas con ancho de columna ajustable
+\usepackage{mdframed} % Marcos alrededor de elementos flotantes
+
+% Series de tiempo
+\usepackage{booktabs}
+
+
+% Configuración adicional
+
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -118,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -144,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -173,18 +196,16 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
-\hypertarget{tbl-1}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1094}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2656}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3125}}@{}}
-\caption{\label{tbl-1}Distribución de la edad de los estudiantes de la
-serie 200 de Economía durante el curso de Estadística en el período
-2018-I}\tabularnewline
+\caption{Distribución de la edad de los estudiantes de la serie 200 de
+Economía durante el curso de Estadística en el período
+2018-I}\label{tbl-1}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -269,16 +290,15 @@ Interpretación:
   En total, se registraron 111 estudiantes en la muestra.
 \end{itemize}
 
-\hypertarget{tbl-2}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1094}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2656}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3125}}@{}}
-\caption{\label{tbl-2}Distribución de los estudiantes de la serie 200 de
-Economía que cursan Estadística durante el período
-2018-I}\tabularnewline
+\caption{Distribución de los estudiantes de la serie 200 de Economía que
+cursan Estadística durante el período
+2018-I}\label{tbl-2}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -350,16 +370,15 @@ Interpretación:
   En resumen, se registraron 111 estudiantes en total en la muestra.
 \end{itemize}
 
-\hypertarget{tbl-3}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-3}Distribución del tiempo de llegada de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del tiempo de llegada de los estudiantes de la
+serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-3}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -433,16 +452,15 @@ Interpretación:
   llegada.
 \end{itemize}
 
-\hypertarget{tbl-4}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1094}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2656}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3125}}@{}}
-\caption{\label{tbl-4}Distribución del número de cursos matriculados por
-los estudiantes de la serie 200 de Economía que cursan Estadística
-durante el período 2018-I}\tabularnewline
+\caption{Distribución del número de cursos matriculados por los
+estudiantes de la serie 200 de Economía que cursan Estadística durante
+el período 2018-I}\label{tbl-4}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -506,16 +524,15 @@ Interpretación:
   8 cursos.
 \end{itemize}
 
-\hypertarget{tbl-5}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1094}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2656}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3125}}@{}}
-\caption{\label{tbl-5}Distribución del número de veces que los
-estudiantes de la serie 200 de Economía llevan el curso de Estadística
-durante el período 2018-I}\tabularnewline
+\caption{Distribución del número de veces que los estudiantes de la
+serie 200 de Economía llevan el curso de Estadística durante el período
+2018-I}\label{tbl-5}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -576,16 +593,15 @@ Interpretación:
   curso de Estadística.
 \end{itemize}
 
-\hypertarget{tbl-6}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1364}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1515}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1515}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2576}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3030}}@{}}
-\caption{\label{tbl-6}Distribución del género de los estudiantes de la
-serie 200 de Economía que cursan Estadística durante el período
-2018-I}\tabularnewline
+\caption{Distribución del género de los estudiantes de la serie 200 de
+Economía que cursan Estadística durante el período
+2018-I}\label{tbl-6}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -621,16 +637,15 @@ Masculino & 71 & 64,0 & 64,0 & 100,0 \\
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-7}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1389}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1389}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2361}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2778}}@{}}
-\caption{\label{tbl-7}Distribución de la estatura de los estudiantes de
-la serie 200 de Economía que cursan Estadística durante el período
-2018-I}\tabularnewline
+\caption{Distribución de la estatura de los estudiantes de la serie 200
+de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-7}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -672,16 +687,15 @@ Porcentaje acumulado
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-8}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1094}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1562}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2656}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3125}}@{}}
-\caption{\label{tbl-8}Distribución del peso de los estudiantes de la
-serie 200 de Economía que cursan Estadística durante el período
-2018-I}\tabularnewline
+\caption{Distribución del peso de los estudiantes de la serie 200 de
+Economía que cursan Estadística durante el período
+2018-I}\label{tbl-8}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Valores
@@ -723,16 +737,15 @@ Porcentaje acumulado
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-9}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2785}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1266}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1266}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2152}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2532}}@{}}
-\caption{\label{tbl-9}Distribución del distrito de residencia de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del distrito de residencia de los estudiantes de
+la serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-9}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Distrito
@@ -774,16 +787,15 @@ Perdidos - Sistema & 2 & 1,8 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-10}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-10}Distribución del índice académico de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del índice académico de los estudiantes de la
+serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-10}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Índice académico
@@ -827,16 +839,15 @@ Perdidos - Sistema & 3 & 2,7 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-11}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-11}Distribución del intervalo de notas de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del intervalo de notas de los estudiantes de la
+serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-11}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Intervalo de notas
@@ -876,16 +887,15 @@ Perdidos - Sistema & 3 & 2,7 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-12}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-12}Distribución del departamento del colegio de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del departamento del colegio de los estudiantes de
+la serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-12}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Departamento
@@ -926,16 +936,15 @@ Perdidos - Sistema & 2 & 1,8 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-13}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-13}Distribución de la provincia del colegio de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución de la provincia del colegio de los estudiantes de
+la serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-13}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Provincia
@@ -983,16 +992,15 @@ Perdidos - Sistema & 1 & 0,9 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-14}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2785}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1266}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1266}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2152}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2532}}@{}}
-\caption{\label{tbl-14}Distribución del distrito del colegio de los
-estudiantes de la serie 200 de Economía que cursan Estadística durante
-el período 2018-I}\tabularnewline
+\caption{Distribución del distrito del colegio de los estudiantes de la
+serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-14}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Distrito
@@ -1061,16 +1069,15 @@ CHUNGUI & 1 & 0,9 & 0,9 & 100,0 \\
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-15}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-15}Distribución del número de hermanos de los
-alumnos de la serie 200 de Economía que cursan Estadística durante el
-período 2018-I}\tabularnewline
+\caption{Distribución del número de hermanos de los alumnos de la serie
+200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-15}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Número de hermanos
@@ -1114,16 +1121,15 @@ Porcentaje acumulado
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-16}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-16}Distribución de la actividad laboral de los
-alumnos de la serie 200 de Economía que cursan Estadística durante el
-período 2018-I}\tabularnewline
+\caption{Distribución de la actividad laboral de los alumnos de la serie
+200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-16}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Actividad laboral
@@ -1161,16 +1167,15 @@ Perdidos - Sistema & 2 & 1,8 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-17}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2692}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1282}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1282}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2179}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2564}}@{}}
-\caption{\label{tbl-17}Distribución del uso del comedor de la UNSCH
-entre los alumnos de la serie 200 de Economía que cursan Estadística
-durante el período 2018-I}\tabularnewline
+\caption{Distribución del uso del comedor de la UNSCH entre los alumnos
+de la serie 200 de Economía que cursan Estadística durante el período
+2018-I}\label{tbl-17}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Uso del comedor UNSCH
@@ -1208,16 +1213,15 @@ Perdidos - Sistema & 1 & 0,9 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-18}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-18}Distribución de los alumnos de Estadística de la
-serie 200 de Economía durante el período 2018-I según si viven solos o
-no.}\tabularnewline
+\caption{Distribución de los alumnos de Estadística de la serie 200 de
+Economía durante el período 2018-I según si viven solos o
+no.}\label{tbl-18}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 ¿Viven solo?
@@ -1255,16 +1259,15 @@ Perdidos - Sistema & 2 & 1,8 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-19}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1739}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2464}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2899}}@{}}
-\caption{\label{tbl-19}Distribución del estado civil de los alumnos de
-Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Distribución del estado civil de los alumnos de Estadística de
+la serie 200 de Economía durante el período
+2018-I.}\label{tbl-19}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado Civil
@@ -1302,16 +1305,15 @@ Soltera & 39 & 35,1 & 35,1 & 100,0 \\
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-20}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2692}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1282}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1282}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2179}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2564}}@{}}
-\caption{\label{tbl-20}Distribución de la dependencia económica de los
-alumnos de Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Distribución de la dependencia económica de los alumnos de
+Estadística de la serie 200 de Economía durante el período
+2018-I.}\label{tbl-20}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Dependencia Económica
@@ -1349,16 +1351,15 @@ Perdidos - Sistema & 2 & 1,8 & & \\
 Total & 111 & 100,0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-21}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2297}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1351}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1351}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2297}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2703}}@{}}
-\caption{\label{tbl-21}Distribución de la primera profesión de los
-alumnos de Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Distribución de la primera profesión de los alumnos de
+Estadística de la serie 200 de Economía durante el período
+2018-I.}\label{tbl-21}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Primera Profesión
@@ -1394,16 +1395,15 @@ No & 2 & 1,8 & 1,8 & 100,0 \\
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-22}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2192}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1370}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1370}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2329}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2740}}@{}}
-\caption{\label{tbl-22}Distribución de la movilidad propia de los
-alumnos de Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Distribución de la movilidad propia de los alumnos de
+Estadística de la serie 200 de Economía durante el período
+2018-I.}\label{tbl-22}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Movilidad Propia
@@ -1439,7 +1439,6 @@ No & 108 & 97,3 & 97,3 & 100,0 \\
 Total & 111 & 100,0 & 100,0 & \\
 \end{longtable}
 
-\hypertarget{tbl-23}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0909}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1136}}
@@ -1447,8 +1446,8 @@ Total & 111 & 100,0 & 100,0 & \\
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1250}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2841}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2045}}@{}}
-\caption{\label{tbl-23}Características de los alumnos de Estadística de
-la serie 200 de Economía durante el período 2018-I.}\tabularnewline
+\caption{Características de los alumnos de Estadística de la serie 200
+de Economía durante el período 2018-I.}\label{tbl-23}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1485,16 +1484,15 @@ Perdidos & 2 & 1 & 2 & 2 & 0 \\
 Válido & 109 & 110 & 109 & 109 & 111 \\
 \end{longtable}
 
-\hypertarget{tbl-24}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1493}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1493}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1493}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2537}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2985}}@{}}
-\caption{\label{tbl-24}Nivel de instrucción de los padres de los alumnos
-de Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Nivel de instrucción de los padres de los alumnos de
+Estadística de la serie 200 de Economía durante el período
+2018-I.}\label{tbl-24}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1529,16 +1527,15 @@ SUPERIOR & 32 & 28.8 & 28.8 & 100.0 \\
 Total & 111 & 100.0 & 100.0 & \\
 \end{longtable}
 
-\hypertarget{tbl-25}{}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-25}Nivel de instrucción de las madres de los alumnos
-de Estadística de la serie 200 de Economía durante el período
-2018-I.}\tabularnewline
+\caption{Nivel de instrucción de las madres de los alumnos de
+Estadística de la serie 200 de Economía durante el período
+2018-I.}\label{tbl-25}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1576,15 +1573,14 @@ Perdidos - Sistema & 1 & 0.9 & & \\
 Total & 111 & 100.0 & & \\
 \end{longtable}
 
-\hypertarget{tbl-26}{}
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2400}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2267}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
-\caption{\label{tbl-26}Número de hijos de los alumnos de Estadística de
-la serie 200 de Economía durante el período 2018-I.}\tabularnewline
+\caption{Número de hijos de los alumnos de Estadística de la serie 200
+de Economía durante el período 2018-I.}\label{tbl-26}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering

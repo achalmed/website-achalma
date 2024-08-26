@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -194,15 +197,12 @@ categorías en el ámbito gubernamental.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, enhanced, breakable, frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
-\hypertarget{indagar-definiciones-conceptos-y-aplicaciuxf3n-de-gestiuxf3n-puxfablica-y-administraciuxf3n-puxfablica.}{%
 \section{Indagar definiciones, conceptos y aplicación de gestión pública
 y administración
-pública.}\label{indagar-definiciones-conceptos-y-aplicaciuxf3n-de-gestiuxf3n-puxfablica-y-administraciuxf3n-puxfablica.}}
+pública.}\label{indagar-definiciones-conceptos-y-aplicaciuxf3n-de-gestiuxf3n-puxfablica-y-administraciuxf3n-puxfablica.}
 
-\hypertarget{administraciuxf3n-puxfablica}{%
-\subsection{Administración pública}\label{administraciuxf3n-puxfablica}}
+\subsection{Administración pública}\label{administraciuxf3n-puxfablica}
 
 Son actividades que se realiza para el buen manejo de recursos públicos.
 Estas actividades la pueden realizar las instituciones, organismos ya
@@ -216,8 +216,7 @@ objetivos de la administración pública no están muy detallados.
 La administración pública perdura en el tiempo, porque lo constituyen
 las instituciones del estado.
 
-\hypertarget{gestiuxf3n-puxfablica}{%
-\subsection{Gestión pública}\label{gestiuxf3n-puxfablica}}
+\subsection{Gestión pública}\label{gestiuxf3n-puxfablica}
 
 La gestión pública se ocupa del uso de los medios adecuados para
 alcanzar un fin colectivo, es decir trata de las herramientas de
@@ -237,10 +236,9 @@ interés público, por otra parte, la administración pública es la parte
 menos dinámica que recoge todas las acciones realizadas para alcanzar
 los fines del estado.
 
-\hypertarget{quuxe9-diferencia-existe-entre-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica}{%
 \section{¿Qué diferencia existe entre la gestión pública y la
 administración
-pública?}\label{quuxe9-diferencia-existe-entre-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica}}
+pública?}\label{quuxe9-diferencia-existe-entre-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica}
 
 GESTIÓN PÚBLICA
 
@@ -277,9 +275,8 @@ ADMINISTRACIÓN PÚBLICA
   políticos sobre el bien común.
 \end{itemize}
 
-\hypertarget{son-sinuxf3nimos-la-gestiuxf3n-puxfablica-con-la-administraciuxf3n-puxfablica}{%
 \subsection{¿Son sinónimos la gestión pública con la administración
-pública?}\label{son-sinuxf3nimos-la-gestiuxf3n-puxfablica-con-la-administraciuxf3n-puxfablica}}
+pública?}\label{son-sinuxf3nimos-la-gestiuxf3n-puxfablica-con-la-administraciuxf3n-puxfablica}
 
 Para responder esta pregunta remontémonos a clases de lenguaje y
 razonamiento verbal, recordemos que para que dos palabras o términos
@@ -302,10 +299,9 @@ conclusión desde el punto de vista con enfoque gramatical de su
 significado y uso en el área de economía, administración y claramente en
 su significado de uso en el sector público.
 
-\hypertarget{cuuxe1l-es-la-importancia-de-cada-una-de-estas-categoruxedas-en-la-gestiuxf3n-gubernamental}{%
 \subsection{¿Cuál es la importancia de cada una de estas categorías en
 la gestión
-gubernamental?}\label{cuuxe1l-es-la-importancia-de-cada-una-de-estas-categoruxedas-en-la-gestiuxf3n-gubernamental}}
+gubernamental?}\label{cuuxe1l-es-la-importancia-de-cada-una-de-estas-categoruxedas-en-la-gestiuxf3n-gubernamental}
 
 \textbf{Gestión pública:}
 
@@ -334,10 +330,9 @@ comunitaria básica, que permite la convivencia de quienes se reúnen para
 vivir en sociedad, y tales servicios están relacionados con el
 transporte, seguridad pública y medioambiente.
 
-\hypertarget{cuuxe1l-es-el-campo-de-aplicaciuxf3n-de-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica-seuxf1ale-casos-y-ejemplos.}{%
 \subsection{¿Cuál es el campo de aplicación de la gestión pública y la
 administración pública?, señale casos y
-ejemplos.}\label{cuuxe1l-es-el-campo-de-aplicaciuxf3n-de-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica-seuxf1ale-casos-y-ejemplos.}}
+ejemplos.}\label{cuuxe1l-es-el-campo-de-aplicaciuxf3n-de-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica-seuxf1ale-casos-y-ejemplos.}
 
 \textbf{Campo de aplicación de:}
 

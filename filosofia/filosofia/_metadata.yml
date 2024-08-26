@@ -89,6 +89,8 @@ format:
       - right=2.54cm  # Margen derecho
       - bottom=2.54cm  # Margen inferior
       - left=2.54cm  # Margen izquierdo
+    fig-width: 7
+    fig-height: 5
     # toc: true  # Habilitar la tabla de contenido
     # toc-depth: 3  # Profundidad de la tabla de contenido
     # toc-title: Contenidos  # Título de la tabla de contenido

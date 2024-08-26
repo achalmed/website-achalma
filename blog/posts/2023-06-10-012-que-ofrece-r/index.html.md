@@ -25,8 +25,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # ¿Qúe nos ofrece RStudio?
 
 ## Beneficios del software RStudio

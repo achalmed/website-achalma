@@ -24,8 +24,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Econompia agraria y rural
 
 ## La economía agraria

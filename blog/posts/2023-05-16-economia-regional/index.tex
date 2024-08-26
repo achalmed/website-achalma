@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -195,11 +198,9 @@ regional.}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
-\hypertarget{pauxedses-en-vuxedas-de-desarrollo}{%
 \section{Países en vías de
-desarrollo}\label{pauxedses-en-vuxedas-de-desarrollo}}
+desarrollo}\label{pauxedses-en-vuxedas-de-desarrollo}
 
 Los países en vías de desarrollo son un grupo de naciones que se
 caracterizan por su enfoque en el aprovechamiento del \textbf{potencial}
@@ -302,8 +303,7 @@ cuando el precio del dólar aumenta, se refleja en el incremento del
 precio del pollo, mientras que si el precio del dólar disminuye, el
 precio del pollo también disminuye.
 
-\hypertarget{a-quuxe9-se-debe-esto}{%
-\subsection{¿A qué se debe esto?}\label{a-quuxe9-se-debe-esto}}
+\subsection{¿A qué se debe esto?}\label{a-quuxe9-se-debe-esto}
 
 Se debe a que, por ejemplo, nosotros no producimos maíz de gallina, lo
 produce Colombia. Gran parte de nuestras importaciones de maíz de
@@ -330,8 +330,7 @@ Esto no solo ayudará a reducir la dependencia externa, sino que también
 contribuirá al desarrollo económico y la autonomía de nuestras empresas
 locales.
 
-\hypertarget{pauxedses-industrializados}{%
-\subsection{Países industrializados}\label{pauxedses-industrializados}}
+\subsection{Países industrializados}\label{pauxedses-industrializados}
 
 En el contexto de los países industrializados, es fundamental destacar
 la importancia de la industrialización en el proceso de desarrollo
@@ -392,9 +391,8 @@ lado, el sector privado juega un papel importante en la inversión
 económica, ya que son las empresas privadas las que generalmente
 realizan inversiones significativas en el país.
 
-\hypertarget{las-caracteruxedsticas-de-una-sociedad-en-desarrollo-son}{%
 \subsection{Las características de una sociedad en desarrollo
-son:}\label{las-caracteruxedsticas-de-una-sociedad-en-desarrollo-son}}
+son:}\label{las-caracteruxedsticas-de-una-sociedad-en-desarrollo-son}
 
 Las características de una sociedad en desarrollo abarcan diferentes
 aspectos que reflejan su situación socioeconómica. Entre estas
@@ -493,9 +491,8 @@ en términos de potencialidades productivas desaprovechadas. Además,
 dependemos de estas economías en diversos aspectos, como lo económico,
 cultural, político y tecnológico.
 
-\hypertarget{caracteruxedsticas-de-los-pauxedses-con-problemas-de-desarollo}{%
 \subsection{Características de los países con problemas de
-desarollo}\label{caracteruxedsticas-de-los-pauxedses-con-problemas-de-desarollo}}
+desarollo}\label{caracteruxedsticas-de-los-pauxedses-con-problemas-de-desarollo}
 
 En los países con problemas de desarrollo, como el nuestro, existen
 características que influyen en nuestra situación económica y social.
@@ -740,9 +737,8 @@ más necesitada. Es crucial abordar esta situación y buscar una
 representación más amplia y equitativa que promueva el bienestar de toda
 la sociedad.
 
-\hypertarget{clasificamos-en-tres-sectores-a-la-economuxeda}{%
 \subsection{Clasificamos en tres sectores a la
-economía}\label{clasificamos-en-tres-sectores-a-la-economuxeda}}
+economía}\label{clasificamos-en-tres-sectores-a-la-economuxeda}
 
 La economía se clasifica en tres sectores que reflejan la importancia de
 las diferentes actividades realizadas en una sociedad.
@@ -777,9 +773,8 @@ humano de participar en actividades creativas y productivas} también
 juega un papel importante en la economía, ya que permite dar sentido y
 propósito a la vida de las personas.
 
-\hypertarget{a-quuxe9-se-debe-que-no-transformamos-los-minerales}{%
 \subsection{¿A qué se debe que no transformamos los
-minerales?}\label{a-quuxe9-se-debe-que-no-transformamos-los-minerales}}
+minerales?}\label{a-quuxe9-se-debe-que-no-transformamos-los-minerales}
 
 \begin{quote}
 La falta de transformación de los minerales, como el cobre, en nuestro
@@ -810,9 +805,8 @@ sector secundario. Sin embargo, este paso hacia el sector secundario es
 difícil de lograr, lo cual también dificulta la entrada al sector
 terciario, es decir, al sector de servicios.
 
-\hypertarget{la-globalizaciuxf3n-y-las-economuxedas-regionales}{%
 \section{La globalización y las economías
-regionales}\label{la-globalizaciuxf3n-y-las-economuxedas-regionales}}
+regionales}\label{la-globalizaciuxf3n-y-las-economuxedas-regionales}
 
 \begin{quote}
 Entre el gobierno y la empresa debe estar la ciencia, la produccion
@@ -943,9 +937,8 @@ y promover la formación de trabajadores capacitados en el manejo de las
 tecnologías avanzadas, como parte de los esfuerzos por superar los
 problemas de desarrollo en las economías menos desarrolladas.
 
-\hypertarget{cuuxe1les-son-las-necesidades-de-la-mano-de-obra}{%
 \subsection{¿Cuáles son las necesidades de la mano de
-obra?}\label{cuuxe1les-son-las-necesidades-de-la-mano-de-obra}}
+obra?}\label{cuuxe1les-son-las-necesidades-de-la-mano-de-obra}
 
 Las necesidades de la mano de obra se centran en contar con trabajadores
 altamente capacitados y especializados en la producción de bienes o
@@ -965,9 +958,8 @@ autonomías, aumentar las interdependencias y fomentar la fragmentación
 de las unidades territoriales, lo que puede resultar en la marginación
 de ciertas áreas.
 
-\hypertarget{la-economuxeda-regional-en-el-contexto-de-la-globalizaciuxf3n}{%
 \section{La economía regional en el contexto de la
-globalización}\label{la-economuxeda-regional-en-el-contexto-de-la-globalizaciuxf3n}}
+globalización}\label{la-economuxeda-regional-en-el-contexto-de-la-globalizaciuxf3n}
 
 La globalización es un fenómeno transversal y en constante flujo, que
 afecta a todas las áreas de actividad humana. Sin embargo, también
@@ -1004,10 +996,9 @@ global y el mercado local, de manera que podamos aprovechar las
 oportunidades de la globalización sin descuidar nuestras propias
 necesidades económicas regionales.
 
-\hypertarget{alcanzar-el-bienestar-en-uxe1mbitos-regionales-y-la-importancia-de-la-innovaciuxf3n}{%
 \subsection{Alcanzar el bienestar en ámbitos regionales y la importancia
 de la
-innovación}\label{alcanzar-el-bienestar-en-uxe1mbitos-regionales-y-la-importancia-de-la-innovaciuxf3n}}
+innovación}\label{alcanzar-el-bienestar-en-uxe1mbitos-regionales-y-la-importancia-de-la-innovaciuxf3n}
 
 \textbf{El objetivo fundamental es lograr recursos óptimos para la
 población que reside en áreas geográficas específicas}, brindando a las
@@ -1040,9 +1031,8 @@ mejores condiciones de vida para la población. Es necesario reconocer
 que esto es un aspecto elemental y básico para alcanzar el desarrollo
 deseado en estas regiones.
 
-\hypertarget{percepciuxf3n-de-la-disociaciuxf3n-social-y-la-importancia-de-la-regionalizaciuxf3n}{%
 \subsection{Percepción de la disociación social y la importancia de la
-regionalización}\label{percepciuxf3n-de-la-disociaciuxf3n-social-y-la-importancia-de-la-regionalizaciuxf3n}}
+regionalización}\label{percepciuxf3n-de-la-disociaciuxf3n-social-y-la-importancia-de-la-regionalizaciuxf3n}
 
 Una percepción que surge es la disociación de la sociedad entre la
 racionalización instrumental propia de la sociedad industrial y las
@@ -1075,10 +1065,9 @@ para mejorar las condiciones en las que nos desenvolvemos. Es a través
 de la colaboración y la búsqueda de objetivos comunes que podremos
 generar avances significativos en nuestras regiones.
 
-\hypertarget{aprovechando-los-beneficios-de-la-globalizaciuxf3n-para-el-desarrollo-regional}{%
 \subsection{Aprovechando los beneficios de la globalización para el
 desarrollo
-regional}\label{aprovechando-los-beneficios-de-la-globalizaciuxf3n-para-el-desarrollo-regional}}
+regional}\label{aprovechando-los-beneficios-de-la-globalizaciuxf3n-para-el-desarrollo-regional}
 
 Es importante reconocer que \textbf{oponerse al sistema global no es una
 opción viable}. En cambio, \textbf{debemos aprovechar y crear las
@@ -1118,10 +1107,9 @@ una producción más sólida y de mayor calidad. Es esencial evitar la
 marginación y, al mismo tiempo, respetar los usos y costumbres de
 nuestros antepasados.
 
-\hypertarget{diversas-perspectivas-sobre-la-relaciuxf3n-entre-globalizaciuxf3n-y-desarrollo-regional}{%
 \subsection{Diversas perspectivas sobre la relación entre globalización
 y desarrollo
-regional}\label{diversas-perspectivas-sobre-la-relaciuxf3n-entre-globalizaciuxf3n-y-desarrollo-regional}}
+regional}\label{diversas-perspectivas-sobre-la-relaciuxf3n-entre-globalizaciuxf3n-y-desarrollo-regional}
 
 Existen diferentes enfoques para abordar la relación entre el proceso
 global y el proceso local/regional:
@@ -1254,8 +1242,7 @@ central para atender las necesidades de la población y buscar
 alternativas de solución. La descentralización debe convencernos de su
 importancia y de los beneficios que puede traer consigo.
 
-\hypertarget{resumen}{%
-\subsection{Resumen}\label{resumen}}
+\subsection{Resumen}\label{resumen}
 
 Hablamos sobre \textbf{el proceso de globalización y cómo el desarrollo
 regional puede mejorar las condiciones de vida de la población}. Es
@@ -1348,9 +1335,8 @@ producidos durante un año, y no debe confundirse con el presupuesto
 público, que son conceptos completamente diferentes.
 \end{quote}
 
-\hypertarget{el-crecimiento-econuxf3mico-y-la-reducciuxf3n-de-la-pobreza}{%
 \section{El crecimiento económico y la reducción de la
-pobreza}\label{el-crecimiento-econuxf3mico-y-la-reducciuxf3n-de-la-pobreza}}
+pobreza}\label{el-crecimiento-econuxf3mico-y-la-reducciuxf3n-de-la-pobreza}
 
 El crecimiento económico, medido principalmente a través del Producto
 Interno Bruto (PIB), puede desempeñar un papel importante en la
@@ -1389,8 +1375,7 @@ En los países menos desarrollados, la situación puede volverse caótica y
 resultar en una difícil cobertura de las necesidades básicas por parte
 del gobierno y de las organizaciones públicas y privadas.
 
-\hypertarget{indicadores}{%
-\subsection{Indicadores}\label{indicadores}}
+\subsection{Indicadores}\label{indicadores}
 
 \textbf{La migración es otra característica común en los países con
 problemas de pobreza}, como es el caso de África, donde se evidencian
@@ -1442,9 +1427,8 @@ limitando las posibilidades de crecimiento. Por lo tanto, es imperativo
 erradicar la pobreza y la pobreza extrema, para abrir camino hacia un
 crecimiento más sólido y equitativo.
 
-\hypertarget{cuxf3mo-erradicar-la-pobreza-en-un-mundo-de-abundancia}{%
 \subsection{¿Cómo erradicar la pobreza en un mundo de
-abundancia?}\label{cuxf3mo-erradicar-la-pobreza-en-un-mundo-de-abundancia}}
+abundancia?}\label{cuxf3mo-erradicar-la-pobreza-en-un-mundo-de-abundancia}
 
 En nuestro mundo abundan los recursos, la riqueza y los alimentos, pero
 lamentablemente no llegan de manera equitativa a toda la población. Por
@@ -1535,9 +1519,8 @@ las zonas más pobres, estos mecanismos deben ser subsidiarios y asumidos
 por el sector público, en lugar de depender exclusivamente del sector
 privado.
 
-\hypertarget{el-rol-econuxf3mico-del-estado}{%
 \subsection{El Rol Económico del
-Estado}\label{el-rol-econuxf3mico-del-estado}}
+Estado}\label{el-rol-econuxf3mico-del-estado}
 
 \begin{quote}
 El estado debe de participar subsidiariamente
@@ -1571,10 +1554,9 @@ para su desarrollo. El Estado debe fortalecer su capacidad de atención y
 evitar que la población se aproveche de su incapacidad para brindar un
 adecuado apoyo.
 
-\hypertarget{cuxf3mo-es-que-se-implementa-la-poluxedtica-social-dentro-de-este-encare-de-reducciuxf3n-de-pobreza-y-extrema-pobreza}{%
 \subsection{¿Cómo es que se implementa la política social dentro de este
 encare de reducción de pobreza y extrema
-pobreza?}\label{cuxf3mo-es-que-se-implementa-la-poluxedtica-social-dentro-de-este-encare-de-reducciuxf3n-de-pobreza-y-extrema-pobreza}}
+pobreza?}\label{cuxf3mo-es-que-se-implementa-la-poluxedtica-social-dentro-de-este-encare-de-reducciuxf3n-de-pobreza-y-extrema-pobreza}
 
 Dentro del enfoque de reducción de la pobreza y extrema pobreza, se
 implementan diversas estrategias con el objetivo de promover el
@@ -1611,10 +1593,9 @@ sector público participe en actividades financieras. La creación de
 fondos rotatorios y sistemas de financiamiento, como Pro Compite, son
 medidas que pueden contribuir al desarrollo económico y social.
 
-\hypertarget{quiuxe9n-implementa-la-poluxedtica-social-en-la-reducciuxf3n-de-la-pobreza-y-la-extrema-pobreza}{%
 \subsection{¿Quién Implementa la Política Social en la Reducción de la
 Pobreza y la Extrema
-Pobreza?}\label{quiuxe9n-implementa-la-poluxedtica-social-en-la-reducciuxf3n-de-la-pobreza-y-la-extrema-pobreza}}
+Pobreza?}\label{quiuxe9n-implementa-la-poluxedtica-social-en-la-reducciuxf3n-de-la-pobreza-y-la-extrema-pobreza}
 
 En el marco de la reducción de la pobreza y la extrema pobreza, surge la
 interrogante sobre quiénes son los responsables de implementar la
@@ -1693,9 +1674,8 @@ Esto implica garantizar que los profesionales y ciudadanos más
 capacitados ocupen los puestos más relevantes en la administración
 pública y en la toma de decisiones económicas.
 
-\hypertarget{estrategias-de-inversiuxf3n-para-reducir-la-pobreza}{%
 \subsection{Estrategias de Inversión para Reducir la
-Pobreza}\label{estrategias-de-inversiuxf3n-para-reducir-la-pobreza}}
+Pobreza}\label{estrategias-de-inversiuxf3n-para-reducir-la-pobreza}
 
 La reducción de la pobreza requiere la implementación de
 \textbf{inversiones estratégicas}, centrándose principalmente en dos
@@ -1749,8 +1729,7 @@ conocimiento práctico antes que en el teórico. Esto implica invertir en
 capital intelectual científico y tecnológico, y preparar a la población
 en estas áreas.
 
-\hypertarget{resumen-1}{%
-\subsection{Resumen}\label{resumen-1}}
+\subsection{Resumen}\label{resumen-1}
 
 La influencia de los medios de comunicación en la política social es un
 factor significativo a considerar.
@@ -1865,9 +1844,8 @@ reducir los sesgos y evitar que las decisiones políticas solo favorezcan
 a ciertos grupos de poder. La transparencia y la imparcialidad son
 fundamentales en este sentido.
 
-\hypertarget{gobernabilidad-e-instituciones}{%
 \subsection{Gobernabilidad e
-instituciones}\label{gobernabilidad-e-instituciones}}
+instituciones}\label{gobernabilidad-e-instituciones}
 
 \textbf{La gobernabilidad de un país se basa en la solidez de sus
 instituciones.} Implica la eficiente y eficaz gestión de los diferentes
@@ -1974,11 +1952,10 @@ normativa y ejecutar, porque en el intermedio están las instituciones
 públicas y estas en el caso peruano no traducen la normatividad
 correctamente y no cumplen.
 
-\hypertarget{en-el-peruxfa-la-calidad-de-las-instituciones-estuxe1-a-la-altura-de-las-metas-estuxe1n-las-instituciones-puxfablicas-organizadas-para-alcanzar-las-metas-que-se-les-propone}{%
 \subsection{¿En el Perú la calidad de las instituciones está a la altura
 de las metas, están las instituciones públicas organizadas para alcanzar
 las metas que se les
-propone?}\label{en-el-peruxfa-la-calidad-de-las-instituciones-estuxe1-a-la-altura-de-las-metas-estuxe1n-las-instituciones-puxfablicas-organizadas-para-alcanzar-las-metas-que-se-les-propone}}
+propone?}\label{en-el-peruxfa-la-calidad-de-las-instituciones-estuxe1-a-la-altura-de-las-metas-estuxe1n-las-instituciones-puxfablicas-organizadas-para-alcanzar-las-metas-que-se-les-propone}
 
 Aun no, porque estamos en proceso, ya que las instituciones públicas
 reflejan los intereses personales de los empleados públicos más no para
@@ -2425,9 +2402,8 @@ brilla por su ausencia no hay presencia del gobierno en el quehacer de
 la población, lo que tenemos presencia de instituciones que no
 funcionan.
 
-\hypertarget{los-4-principios-buxe1sicos-de-la-buena-gobernabilidad}{%
 \subsection{Los 4 principios básicos de la buena
-gobernabilidad:}\label{los-4-principios-buxe1sicos-de-la-buena-gobernabilidad}}
+gobernabilidad:}\label{los-4-principios-buxe1sicos-de-la-buena-gobernabilidad}
 
 Decimos que una institución es una estructura de orden social que hace
 que la sociedad funcione por eso es que siempre nos vamos a preguntar y
@@ -2454,9 +2430,8 @@ la razón y para esto están los técnicos y especialistas porque si bien
 es cierto hay demandas insatisfechas pues hay que priorizar ya que de
 ahí sale la calidad del gasto.
 
-\hypertarget{la-prestaciuxf3n-de-servicios-puxfablicos}{%
 \section{La prestación de servicios
-públicos}\label{la-prestaciuxf3n-de-servicios-puxfablicos}}
+públicos}\label{la-prestaciuxf3n-de-servicios-puxfablicos}
 
 Cuando hablamos de prestación de servicios públicos nos estamos
 refiriendo al orden social pre establecido que pueden ser de servicios
@@ -2719,8 +2694,7 @@ diferencias en la infraestructura en el mediano y largo plazo, el gasto
 público debe ser descentralizado, pero hay que mejorar la eficiencia y
 eficacia del gasto público en las regiones y gobiernos locales.
 
-\hypertarget{desarrollo-territorial}{%
-\subsection{Desarrollo territorial}\label{desarrollo-territorial}}
+\subsection{Desarrollo territorial}\label{desarrollo-territorial}
 
 El desarrollo territorial se debe de generar evitando la dispersión en
 proyectos atomizados y fomentando la coinversión público-privada
@@ -2754,9 +2728,8 @@ del país territorialmente el Gobierno se organiza y constituye a nivel
 nacional, regional y local (3 niveles de gobierno) y es aquí donde
 podemos hablar de niveles de gobierno.
 
-\hypertarget{cuxf3mo-planteamos-el-desarrollo-considerando-e-territorio}{%
 \subsection{¿Cómo planteamos el desarrollo considerando e
-territorio?}\label{cuxf3mo-planteamos-el-desarrollo-considerando-e-territorio}}
+territorio?}\label{cuxf3mo-planteamos-el-desarrollo-considerando-e-territorio}
 
 El país territorialmente está dividido en 4 áreas: Departamentos o
 Regiones, Provincias, Distritos y centros poblados y sobre estas el
@@ -3062,9 +3035,8 @@ centrales del mecanismo son:
   beneficiarios de algunas atenciones de parte del gobierno.
 \end{enumerate}
 
-\hypertarget{ley-de-bases-de-la-descentralizaciuxf3n}{%
 \section{Ley de bases de la
-descentralización}\label{ley-de-bases-de-la-descentralizaciuxf3n}}
+descentralización}\label{ley-de-bases-de-la-descentralizaciuxf3n}
 
 Artículo 29.- Conformación de las regiones
 
@@ -3240,12 +3212,10 @@ hablar directamente con los ministros o el presidente de la república,
 era un obstáculo para el proceso de regionalización que en nada ayudo
 que más bien le quito velocidad al proceso de descentralización.
 
-\hypertarget{ley-orguxe1nica-de-gobiernos-regionales}{%
 \section{Ley orgánica de gobiernos
-regionales}\label{ley-orguxe1nica-de-gobiernos-regionales}}
+regionales}\label{ley-orguxe1nica-de-gobiernos-regionales}
 
-\hypertarget{ruxe9gimen-normativo}{%
-\subsection{Régimen normativo}\label{ruxe9gimen-normativo}}
+\subsection{Régimen normativo}\label{ruxe9gimen-normativo}
 
 Artículo 36.- Generalidades
 
@@ -3405,10 +3375,9 @@ el agua a través de esta función. Ya que lo ideal sería que nuestras
 ríos y lagunas en el caso de Ayacucho estén debidamente identificadas en
 todo su potencial.
 
-\hypertarget{lineamientos-prioritarios-de-la-poluxedtica-general-del-gobierno-al-2021}{%
 \subsection{Lineamientos prioritarios de la política general del
 gobierno al
-2021}\label{lineamientos-prioritarios-de-la-poluxedtica-general-del-gobierno-al-2021}}
+2021}\label{lineamientos-prioritarios-de-la-poluxedtica-general-del-gobierno-al-2021}
 
 Estos lineamientos se hicieron pensando que al 2021 deberíamos de llegar
 en óptimas condiciones como país superando muchas barreras y que como
@@ -3514,9 +3483,8 @@ Y los logros que esperamos alcanzar al 2021 deberían de ser:
   actualidad se ha incrementado)
 \end{enumerate}
 
-\hypertarget{ejes-de-la-poluxedtica-general-de-gobierno}{%
 \subsection{Ejes de la política general de
-Gobierno}\label{ejes-de-la-poluxedtica-general-de-gobierno}}
+Gobierno}\label{ejes-de-la-poluxedtica-general-de-gobierno}
 
 los ejes de la política general de Gobierno son 5: 1. la integridad y
 lucha contra la corrupción 2. es el fortalecimiento institucional para
@@ -3524,9 +3492,8 @@ la gobernabilidad. 3. el crecimiento económico equitativo competitivo y
 sostenible. 4. Desarrollo social y bienestar de la población 5.
 Descentralización efectiva para el desarrollo
 
-\hypertarget{los-lineamientos-que-se-basan-un}{%
 \subsection{Los lineamientos que se basan
-un}\label{los-lineamientos-que-se-basan-un}}
+un}\label{los-lineamientos-que-se-basan-un}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3606,8 +3573,7 @@ aprovecharlo porque dinamiza toda la actividad.
   pueden tener proyectos birregionales.
 \end{enumerate}
 
-\hypertarget{la-descentralizaciuxf3n}{%
-\section{La descentralización}\label{la-descentralizaciuxf3n}}
+\section{La descentralización}\label{la-descentralizaciuxf3n}
 
 había sido concebida para lograr objetivos en el desarrollo económico y
 que no solo el desarrollo económico sino también la competitividad la
@@ -3617,9 +3583,8 @@ competencias de los servicios públicos en los niveles más cercanos a la
 población que es la expresión o la razón de ser de los gobiernos
 regionales los gobiernos locales.
 
-\hypertarget{los-desafuxedos-de-la-descentralizaciuxf3n}{%
 \subsection{Los desafíos de la
-descentralización}\label{los-desafuxedos-de-la-descentralizaciuxf3n}}
+descentralización}\label{los-desafuxedos-de-la-descentralizaciuxf3n}
 
 dado estas condiciones que tenemos para mejorar el nivel de organización
 y contribuir al desarrollo del país 1 de los grandes desafíos:
@@ -3743,8 +3708,7 @@ sistema administrativos tipos de gestión
 Estructura: es un conjunto de relaciones que ordenan la distribución y
 composición de las partes.
 
-\hypertarget{la-regionalizaciuxf3n}{%
-\section{La regionalización}\label{la-regionalizaciuxf3n}}
+\section{La regionalización}\label{la-regionalizaciuxf3n}
 
 EL RACIONALISMO: es una teoría que postula la razón humana como fuente
 de conocimiento que se opone en el sentido filosófico a la experiencia.
@@ -3773,9 +3737,7 @@ RESUMEN
 La organización sistemática del trabajo para obtener el mayor
 rendimiento de productividad al mínimo costo.
 
-\hypertarget{tipos-de-racionalizaciuxf3n}{%
-\subsection{Tipos de
-racionalización}\label{tipos-de-racionalizaciuxf3n}}
+\subsection{Tipos de racionalización}\label{tipos-de-racionalizaciuxf3n}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3812,8 +3774,7 @@ comunes inducida por condiciones naturales o de otra clase. Ejemplo: la
 cuenca de un rio o una zona sin adecuado abastecimiento de agua para la
 agricultura.
 
-\hypertarget{regiuxf3n-homoguxe9nea}{%
-\subsubsection{Región homogénea}\label{regiuxf3n-homoguxe9nea}}
+\subsubsection{Región homogénea}\label{regiuxf3n-homoguxe9nea}
 
 Corresponde a una región continua en que cada una de las zonas o partes
 presentan características lo más próximo posible a los demás es
@@ -3821,8 +3782,7 @@ esencialmente morfológicas y estéticas. Región de planificación: es el
 espacio geográfico definido en términos de elaboración de planes tendrá
 diferentes niveles según el objetivo del país.
 
-\hypertarget{regiuxf3n-plan}{%
-\subsubsection{Región-Plan}\label{regiuxf3n-plan}}
+\subsubsection{Región-Plan}\label{regiuxf3n-plan}
 
 Es un espacio que refleja el objetivo de un plan determinado y que puede
 ser una estrategia de desarrollo multinacional, nacional, interregional,
@@ -3830,8 +3790,7 @@ regional, subregional o local. Se podría decir que es el espacio en el
 cual diversas partes proceden de una misma decisión. Ejemplo: las
 filiales proceden de una matriz.
 
-\hypertarget{regionalismo}{%
-\subsection{Regionalismo}\label{regionalismo}}
+\subsection{Regionalismo}\label{regionalismo}
 
 Es el sentimiento de identificación socioeconómica de los asentamientos
 humanos respectos a otros ámbitos geográficos con el cual se siente
@@ -3841,8 +3800,7 @@ También se define como una alternativa de inversión desde el punto de
 vista económica y se debe ver como un proceso abierto plural no
 uniformizarte.
 
-\hypertarget{regionalizaciuxf3n}{%
-\subsection{Regionalización}\label{regionalizaciuxf3n}}
+\subsection{Regionalización}\label{regionalizaciuxf3n}
 
 Es el proceso de redistribución y reorganimiento espacial que busca la
 articulación económica social y geopolítica, ecológica y administrativa
@@ -3857,9 +3815,8 @@ La regionalización es una inserción del país en el circuito capitalista
 y ellos se encuentran en el plan de regionalización que como fundamento
 tiene en la descentralización.
 
-\hypertarget{criterios-de-identificaciuxf3n-de-regiones}{%
 \subsection{Criterios de identificación de
-regiones}\label{criterios-de-identificaciuxf3n-de-regiones}}
+regiones}\label{criterios-de-identificaciuxf3n-de-regiones}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3887,16 +3844,14 @@ movían allí). el flujo principal está en huamanga
   zonas deprimidas: zonas de extrema pobreza y pobreza
 \end{enumerate}
 
-\hypertarget{regiuxf3n-poluxedtica}{%
-\subsection{Región política}\label{regiuxf3n-poluxedtica}}
+\subsection{Región política}\label{regiuxf3n-poluxedtica}
 
 Es una zona geográfica designada como una unidad administrativa
 gubernamental de una zona o de una dependencia territorial de una
 combinación de una o más naciones con uno o más territorios
 dependientes.
 
-\hypertarget{regiuxf3n-polarizada}{%
-\subsection{Región polarizada}\label{regiuxf3n-polarizada}}
+\subsection{Región polarizada}\label{regiuxf3n-polarizada}
 
 Es el espacio que se encuentra bajo la influencia de un polo y que se
 manifiesta esta influencia por el intercambio de flujos y por la
@@ -3914,8 +3869,7 @@ alrededor de ello es que vamos a tener que este determinar considerando
 la zona de influencia de ese polo de desarrollo la extensión de la
 región.
 
-\hypertarget{reorganizaciuxf3n}{%
-\subsection{Reorganización}\label{reorganizaciuxf3n}}
+\subsection{Reorganización}\label{reorganizaciuxf3n}
 
 Se entiende por la reorganización de una entidad privada o pública
 cuando las acciones son de transformación sustancial qué significa
@@ -3957,8 +3911,7 @@ totalmente distinta de pensar.
   ordenamiento principalmente del potencial humano de la gente.
 \end{itemize}
 
-\hypertarget{economuxeda-regional}{%
-\subsection{Economía regional}\label{economuxeda-regional}}
+\subsection{Economía regional}\label{economuxeda-regional}
 
 es el estudio del comportamiento económico del hombre en el espacio
 (tierra) analiza por tanto los procesos económicos a nivel espacial y
@@ -3996,8 +3949,7 @@ deberíamos saber cuál es el nivel de influencia. Ejemplo: que tiene el
 gasto público en el PBI en cuanto porciento incide presupuesto en
 infraestructura.
 
-\hypertarget{centralismo}{%
-\subsection{Centralismo}\label{centralismo}}
+\subsection{Centralismo}\label{centralismo}
 
 centralismos es una tendencia a mantener las dependencias como ubicación
 en los centros urbanos de carácter metropolitano las instituciones
@@ -4023,8 +3975,7 @@ A nivel de gobierno esta descentralizado los gobiernos regionales y
 municipalidades le ha delegado: ejemplo el INC es una organización
 centralizada desconcentrada porque hay casi en todo departamento.
 
-\hypertarget{desarrollo}{%
-\subsection{Desarrollo}\label{desarrollo}}
+\subsection{Desarrollo}\label{desarrollo}
 
 el desarrollo es un proceso que lleva a una modificación sustantiva de
 las estructuras económicas políticas e ideológicas de una sociedad,
@@ -4035,16 +3986,14 @@ públicas y privadas.
 El desarrollo se concebí como un cambio radical del ordenamiento
 tradicional en lo económico, social, político y cultural de la sociedad.
 
-\hypertarget{desarrollo-regional}{%
-\subsubsection{Desarrollo regional}\label{desarrollo-regional}}
+\subsubsection{Desarrollo regional}\label{desarrollo-regional}
 
 Es el incremento del bienestar e un territorio en particular diferente
 al integrado por las jurisdicciones político administrativo de un país,
 cuando el desarrollo nacional le enfoca como el desarrollo de conjunto
 de regiones que conforman el país
 
-\hypertarget{objetivo-principal}{%
-\subsubsection{Objetivo principal}\label{objetivo-principal}}
+\subsubsection{Objetivo principal}\label{objetivo-principal}
 
 \begin{itemize}
 \tightlist
@@ -4055,8 +4004,7 @@ de regiones que conforman el país
   La equidad entre sus pobladores, tener metas y objetivos claros.
 \end{itemize}
 
-\hypertarget{la-descentralizaciuxf3n-1}{%
-\subsection{La descentralización}\label{la-descentralizaciuxf3n-1}}
+\subsection{La descentralización}\label{la-descentralizaciuxf3n-1}
 
 la descentralización es un principio organizativo según el cual a partir
 de una entidad central se generan entidades con personería jurídica
@@ -4072,9 +4020,8 @@ llegar a la población más alejada que no tiene beneficios del Gobierno y
 estas jurídicamente van a tener autonomía o personería propia no van a
 depender de otras entidades.
 
-\hypertarget{descentralizaciuxf3n-administrativa}{%
 \subsubsection{Descentralización
-administrativa}\label{descentralizaciuxf3n-administrativa}}
+administrativa}\label{descentralizaciuxf3n-administrativa}
 
 la descentralización administrativa es la delegación de autoridad y
 deberes a oficinas regionales o defunciones especificas a fin de que
@@ -4084,8 +4031,7 @@ la dirección regional agraria toma sus decisiones directamente,
 presidente regional no tiene que pedirle permiso en absoluto al ministro
 de Agricultura para hacer acciones propias a nivel de la región.
 
-\hypertarget{la-desconcentraciuxf3n}{%
-\subsection{La desconcentración}\label{la-desconcentraciuxf3n}}
+\subsection{La desconcentración}\label{la-desconcentraciuxf3n}
 
 la desconcentración es un principio también organizativo según la cual
 se genera una delegación de funciones atribuciones y decisiones desde un
@@ -4102,17 +4048,15 @@ persona la autoridad que delega sigue siendo responsable la autoridad
 que delega sigue siendo responsable en consecuencia puedes revocar la
 delegación o revisar las decisiones.
 
-\hypertarget{desconcentraciuxf3n-administrativa}{%
 \subsubsection{Desconcentración
-administrativa}\label{desconcentraciuxf3n-administrativa}}
+administrativa}\label{desconcentraciuxf3n-administrativa}
 
 una desconcentración administrativa para quedar mejor la
 desconcentración es un proceso técnico proceso técnico administrativo
 mediante el cual las autoridades proceden las a delegar funciones desde
 un nivel de autoridad funcionales o territoriales de mejor jerarquía.
 
-\hypertarget{acciuxf3n-administrativa}{%
-\subsubsection{Acción administrativa}\label{acciuxf3n-administrativa}}
+\subsubsection{Acción administrativa}\label{acciuxf3n-administrativa}
 
 la acción administrativa es la labor desarrollada en 1 o varios puestos
 de trabajo que puede ser de naturaleza física o intelectual también se
@@ -4126,8 +4070,7 @@ acciones administrativas.
 
 el Gobierno actúa en representación del Estado.
 
-\hypertarget{el-estado}{%
-\subsection{El estado}\label{el-estado}}
+\subsection{El estado}\label{el-estado}
 
 el estado es una construcción social es la institucionalización jurídica
 y política de la sociedad tiene como elementos constitutivos el poder
@@ -4139,8 +4082,7 @@ poder político sea los elegidos políticos representados por los
 políticos el estado está constituido por los políticos Gobierno central
 Poder Ejecutivo el poder legislativo emanan la elección de la población.
 
-\hypertarget{elemento-del-estado}{%
-\subsubsection{Elemento del estado}\label{elemento-del-estado}}
+\subsubsection{Elemento del estado}\label{elemento-del-estado}
 
 el territorio el área geográfica el ámbito geográfico de ese país el
 Perú todavía no es una nación que somos un conjunto de etnias enteras o
@@ -4182,8 +4124,7 @@ los otros poderes para aprobar las leyes como es el poder legislativo y
 además para que estas leyes se ejecuten tiene que ingresar el poder
 judicial).
 
-\hypertarget{organizaciuxf3n-del-pauxeds}{%
-\section{Organización del país}\label{organizaciuxf3n-del-pauxeds}}
+\section{Organización del país}\label{organizaciuxf3n-del-pauxeds}
 
 Cuando hablamos de organización del país tenemos que ver como se
 visualiza el país tenemos que construir una visión país, tenemos que ver
@@ -4284,9 +4225,8 @@ programas para alcanzar el logro de los fines de objetivos y metas
 institucionales a través del conjunto de procesos y acciones necesarias
 que vas a poner en marcha.
 
-\hypertarget{componentes-de-la-gestiuxf3n-puxfablica-como-estuxe1-dividido}{%
 \subsection{Componentes de la gestión pública como está
-dividido}\label{componentes-de-la-gestiuxf3n-puxfablica-como-estuxe1-dividido}}
+dividido}\label{componentes-de-la-gestiuxf3n-puxfablica-como-estuxe1-dividido}
 
 La gestión pública por un lado tiene al gobierno y por otro lado a la
 administración pública.
@@ -4322,8 +4262,7 @@ empresa de una institución de una compañía de negocios.
 
 Ejemplo: el administrador de excelencia de gestores.
 
-\hypertarget{tipos-de-gestiuxf3n}{%
-\subsection{Tipos de gestión}\label{tipos-de-gestiuxf3n}}
+\subsection{Tipos de gestión}\label{tipos-de-gestiuxf3n}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4351,8 +4290,7 @@ Ejemplo: el administrador de excelencia de gestores.
 En el sector privado tenemos gestión empresarial, gestión educativa y
 gestión humana de calidad comercial y cultural.
 
-\hypertarget{gobierno}{%
-\subsection{Gobierno}\label{gobierno}}
+\subsection{Gobierno}\label{gobierno}
 
 El gobierno viene a ser la autoridad que controla y administra las
 instituciones del estado, ejerce el poder del estado con un ordenamiento
@@ -4385,9 +4323,8 @@ el tiempo por eso se habla políticas públicas las políticas públicas no
 son para 2 años 3 años si no es para el largo plazo hasta alcanzar los
 logros esperados.
 
-\hypertarget{cuuxe1l-es-el-rol-del-estado}{%
 \subsubsection{¿Cuál es el rol del
-estado?}\label{cuuxe1l-es-el-rol-del-estado}}
+estado?}\label{cuuxe1l-es-el-rol-del-estado}
 
 esa construcción social esa representación institucionalizada
 jurídicamente por ejemplo el rol del estado es garantizar la seguridad
@@ -4437,9 +4374,8 @@ en todo caso, no podemos decir que sea un derecho para que en alguna
 medida todos tengamos la posibilidad de promover la promoción de la
 igualdad de oportunidades.
 
-\hypertarget{el-estado-quienes-lo-constituyen}{%
 \subsubsection{¿El estado quienes lo
-constituyen?}\label{el-estado-quienes-lo-constituyen}}
+constituyen?}\label{el-estado-quienes-lo-constituyen}
 
 \begin{itemize}
 \tightlist
@@ -4517,9 +4453,8 @@ hacer.
   descentralizar el MEEF tiene que ser un proceso técnico.
 \end{itemize}
 
-\hypertarget{en-quuxe9-se-debe-centrar-el-estado-hacia-la-modernizaciuxf3n}{%
 \subsubsection{¿En qué se debe centrar el estado hacia la
-modernización?}\label{en-quuxe9-se-debe-centrar-el-estado-hacia-la-modernizaciuxf3n}}
+modernización?}\label{en-quuxe9-se-debe-centrar-el-estado-hacia-la-modernizaciuxf3n}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4548,9 +4483,8 @@ modernización?}\label{en-quuxe9-se-debe-centrar-el-estado-hacia-la-modernizaciu
   estratégico nacional.
 \end{enumerate}
 
-\hypertarget{por-quuxe9-es-necesario-impulsar-un-proceso-de-modernizaciuxf3n}{%
 \subsubsection{¿Por qué es necesario impulsar un proceso de
-modernización?}\label{por-quuxe9-es-necesario-impulsar-un-proceso-de-modernizaciuxf3n}}
+modernización?}\label{por-quuxe9-es-necesario-impulsar-un-proceso-de-modernizaciuxf3n}
 
 en la actualidad tenemos el sector público muy pesado muy amplios
 debemos impulsar hace tiempo se debió hacer un nuevo proceso de
@@ -4614,8 +4548,7 @@ la planificación te permite tomar decisiones adecuadas te permite hacer
 que el desarrollo económico, social, político y cultural sea armónico y
 secuencial.
 
-\hypertarget{realidad-nacional}{%
-\section{Realidad nacional}\label{realidad-nacional}}
+\section{Realidad nacional}\label{realidad-nacional}
 
 cuando hablamos de realidad nacional nos estamos refiriendo al conjunto
 de recursos humanos naturales y financieros elementos institucionales y

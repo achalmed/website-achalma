@@ -28,8 +28,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Introducción
 
 **¿Estás interesado en aprender los fundamentos de Git y GitHub?** ¡Has llegado al lugar perfecto! En este blog, te presentaremos una guía completa que podrás utilizar como referencia diaria.

@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -99,10 +113,6 @@
 % Configuración adicional
 
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -138,18 +148,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -164,8 +166,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{biblatex}
-\addbibresource{../../../../references.bib}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\addbibresource{../../../references.bib}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -192,1277 +195,978 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, boxrule=0pt, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
-Basic
+\subsubsection{Mastering Google Assistant: Basic
+Commands}\label{mastering-google-assistant-basic-commands}
 
-Stop playing
+Google Assistant is a powerful tool that can help you with various tasks
+using simple voice commands. Here is a comprehensive list of basic
+commands to get you started with controlling your device, managing your
+schedule, and more.
 
-\begin{itemize}
-\tightlist
-\item
-  OK Google, stop.
-\end{itemize}
-
-Pause
+\paragraph{Stop and Pause}\label{stop-and-pause}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, pause.~
+  \textbf{Stop playing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, stop.''
+  \end{itemize}
 \item
-  OK Google, resume.~
+  \textbf{Pause}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, pause.''
+  \item
+    ``OK Google, resume.''
+  \end{itemize}
 \end{itemize}
 
-Control the volume
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, increase volume.~
-\item
-  OK Google, volume up.
-\item
-  OK Google, decrease volume.
-\item
-  OK Google, volume down.
-\end{itemize}
-
-Ask for help
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, help.
-\end{itemize}
-
-Examples of what you can ask
+\paragraph{Control the Volume}\label{control-the-volume}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, what can you do?
-\end{itemize}
-
-Ask to repeat the last phrase
-
-\begin{itemize}
-\tightlist
+  ``OK Google, increase volume.''
 \item
-  OK Google, repeat.
+  ``OK Google, volume up.''
+\item
+  ``OK Google, decrease volume.''
+\item
+  ``OK Google, volume down.''
 \end{itemize}
 
-Change Google Assistant's voice
+\paragraph{Ask for Help}\label{ask-for-help}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, change your voice.
-\end{itemize}
-
-You can string two commands together
-
-\begin{itemize}
-\tightlist
+  ``OK Google, help.''
 \item
-  OK Google, what is time, and what's the weather?
+  ``OK Google, what can you do?''
 \end{itemize}
 
-Bluetooth
-
-Pair a Bluetooth device
+\paragraph{Repeat the Last Phrase}\label{repeat-the-last-phrase}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, pair Bluetooth.
+  ``OK Google, repeat.''
 \end{itemize}
 
-Connect to a Bluetooth device
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, connect.
-\item
-  OK Google, connect to my phone.
-\end{itemize}
-
-Disconnecting from a Bluetooth device
+\paragraph{Change Google Assistant's
+Voice}\label{change-google-assistants-voice}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, disconnect.
-\item
-  OK Google, disconnect from my phone.
+  ``OK Google, change your voice.''
 \end{itemize}
 
-Calendar
-
-Hear information about agenda / Calendar
+\paragraph{Combine Commands}\label{combine-commands}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, what's my calendar for today?
-\item
-  OK Google, what's my agenda for Friday?
-\item
-  OK Google, calendar for tomorrow.
+  ``OK Google, what is the time, and what's the weather?''
 \end{itemize}
 
-Add a calendar event
+\paragraph{Bluetooth}\label{bluetooth}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, add an event to my calendar.
+  \textbf{Pair a Bluetooth device}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, pair Bluetooth.''
+  \end{itemize}
 \item
-  OK Google, add the meeting to my calendar for tomorrow at 5 p.m.
+  \textbf{Connect to a Bluetooth device}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, connect.''
+  \item
+    ``OK Google, connect to my phone.''
+  \end{itemize}
+\item
+  \textbf{Disconnect from a Bluetooth device}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, disconnect.''
+  \item
+    ``OK Google, disconnect from my phone.''
+  \end{itemize}
 \end{itemize}
 
-How many days until holiday
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, how many days until Christmas?
-\item
-  OK Google, how many days until new year?
-\end{itemize}
-
-Calls and messages
-
-Call a contact
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, call.
-\item
-  OK Google, make a call.
-\item
-  OK Google, call Eugene.
-\item
-  OK Google, call Eugene on speaker.
-\item
-  OK Google, find Eugene phone number.
-\end{itemize}
-
-SMS
+\paragraph{Calendar}\label{calendar}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, SMS.
+  \textbf{Hear information about agenda/Calendar}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's my calendar for today?''
+  \item
+    ``OK Google, what's my agenda for Friday?''
+  \item
+    ``OK Google, calendar for tomorrow.''
+  \end{itemize}
 \item
-  OK Google, text Eugene.
+  \textbf{Add a calendar event}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, add an event to my calendar.''
+  \item
+    ``OK Google, add the meeting to my calendar for tomorrow at 5 p.m.''
+  \end{itemize}
 \item
-  OK Google, text John Buy some milk.
-\item
-  OK Google, message to John Hello, John.
+  \textbf{How many days until holidays}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how many days until Christmas?''
+  \item
+    ``OK Google, how many days until New Year?''
+  \end{itemize}
 \end{itemize}
 
-Send a WhatsApp or Viber message
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, message Eugene via WhatsApp.
-\item
-  OK Google, message Eugene via Viber.
-\item
-  OK Google, message Eugene Hello, Eugene.
-\item
-  OK Google, WhatsApp John.
-\item
-  OK Google, Viber John.
-\item
-  OK Google, voice message to Eugene.
-\item
-  OK Google, voice message to Eugene via WhatsApp.
-\end{itemize}
-
-Calculator
-
-Arithmetic
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, multiply 15 to 16.
-\item
-  OK Google, what's 15 times 16?
-\item
-  OK Google, what is 15\% of 50?
-\item
-  OK Google, what's the square root of 42?
-\end{itemize}
-
-Unit Converter
+\paragraph{Calls and Messages}\label{calls-and-messages}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, how many meters are in a mile?
+  \textbf{Call a contact}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, call.''
+  \item
+    ``OK Google, make a call.''
+  \item
+    ``OK Google, call Eugene.''
+  \item
+    ``OK Google, call Eugene on speaker.''
+  \item
+    ``OK Google, find Eugene's phone number.''
+  \end{itemize}
 \item
-  OK Google, 10 inches in meters.
+  \textbf{Send SMS}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, SMS.''
+  \item
+    ``OK Google, text Eugene.''
+  \item
+    ``OK Google, text John `Buy some milk.'\,''
+  \item
+    ``OK Google, message to John `Hello, John.'\,''
+  \end{itemize}
 \item
-  OK Google, how many grams are in a kilogram?
-\item
-  OK Google, 5 liters in gallons.
-\item
-  OK Google, how many pounds in a kilo?
+  \textbf{Send a WhatsApp or Viber message}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, message Eugene via WhatsApp.''
+  \item
+    ``OK Google, message Eugene via Viber.''
+  \item
+    ``OK Google, message Eugene `Hello, Eugene.'\,''
+  \item
+    ``OK Google, WhatsApp John.''
+  \item
+    ``OK Google, Viber John.''
+  \item
+    ``OK Google, voice message to Eugene.''
+  \item
+    ``OK Google, voice message to Eugene via WhatsApp.''
+  \end{itemize}
 \end{itemize}
 
-Currency exchange rate
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, how many dollars is a euro?
-\item
-  OK Google, 15 US dollars in Russian rubles.
-\end{itemize}
-
-Stock Exchange
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, What's the stock price of Apple?
-\item
-  OK Google, how much the bitcoin costs?
-\end{itemize}
-
-Cooking
-
-Named timer
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, set chicken timer to 10 minutes.
-\item
-  OK Google, how much time is left for chicken?
-\end{itemize}
-
-Dish caloricity
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, how many calories are in a beefsteak?
-\item
-  OK Google, how many calories are in a glass of Cola?
-\end{itemize}
-
-The nutritional value
+\paragraph{Calculator}\label{calculator}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, how much sugar in Cola?
+  \textbf{Arithmetic}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, multiply 15 by 16.''
+  \item
+    ``OK Google, what's 15 times 16?''
+  \item
+    ``OK Google, what is 15\% of 50?''
+  \item
+    ``OK Google, what's the square root of 42?''
+  \end{itemize}
 \item
-  OK Google, how much protein in chicken?
+  \textbf{Unit Converter}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how many meters are in a mile?''
+  \item
+    ``OK Google, 10 inches in meters.''
+  \item
+    ``OK Google, how many grams are in a kilogram?''
+  \item
+    ``OK Google, 5 liters in gallons.''
+  \item
+    ``OK Google, how many pounds in a kilo?''
+  \end{itemize}
 \item
-  OK Google, how much vitamin A in a carrot?
+  \textbf{Currency Exchange Rate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how many dollars is a euro?''
+  \item
+    ``OK Google, 15 US dollars in Russian rubles.''
+  \end{itemize}
+\item
+  \textbf{Stock Exchange}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's the stock price of Apple?''
+  \item
+    ``OK Google, how much does Bitcoin cost?''
+  \end{itemize}
 \end{itemize}
 
-Dictionary
-
-Word meanings
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, What is the definition of the word instant?
-\item
-  OK Google, What does the word mammal mean?
-\item
-  OK Google, find the definition of agila.
-\end{itemize}
-
-Word spelling
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, How do you spell ambassador?
-\end{itemize}
-
-Easter Eggs
-
-Getting to know Google Assistant
-
-\begin{itemize}
-\item
-  OK Google, what are you?
-\item
-  OK Google, what's your favorite color?
-\item
-  OK Google, how are you?
-\item
-  OK Google, do you have kids?
-\item
-  OK Google, what's your quest ?
-\item
-  OK Google, tell me about your childhood.
-\item
-  OK Google, can you drive?
-\item
-  OK Google, who made you?
-\item
-  OK Google, where do you live?
-\item
-  OK Google, what do you dream about?
-\item
-  OK Google, do you have feelings?
-\end{itemize}
-
-Party tricks
-
-\begin{itemize}
-\item
-  OK Google, I need the poem.
-\item
-  OK Google, tell me a story.
-\item
-  OK Google, roll a dice.
-\item
-  OK Google, flip a coin.
-\item
-  OK Google, tell me a joke.
-\item
-  OK Google, sing a song.
-\item
-  OK Google, beatbox.
-\item
-  OK Google, tell me something I don't know.
-\item
-  OK Google, sing a lullaby.
-\item
-  OK Google, what am I thinking now?
-\item
-  OK Google, surprise me.
-\end{itemize}
-
-Email
-
-Send email
-
-\begin{itemize}
-\item
-  OK Google, email.
-\item
-  OK Google, send an email.
-\item
-  OK Google, send an email to Eugene.
-\item
-  OK Google, send email to Eugene Buy some milk.
-\end{itemize}
-
-Geography
-
-Country facts
-
-\begin{itemize}
-\item
-  OK Google, how many people live in Russia?
-\item
-  OK Google, what's the capital of Austria?
-\item
-  OK Google, Spain area.
-\end{itemize}
-
-Facts about oceans/seas/rivers/lakes
-
-\begin{itemize}
-\item
-  OK Google, biggest ocean.
-\item
-  OK Google, Depth of the Pacific Ocean
-\item
-  OK Google, the saltiest ocean.
-\item
-  OK Google, the longest river.
-\item
-  OK Google, what's the longest river in Russia?
-\item
-  OK Google, deepest lake.
-\item
-  OK Google, the deepest lake in Canada.
-\end{itemize}
-
-Discover facts about nature
-
-\begin{itemize}
-\item
-  OK Google, why is the sky blue?
-\item
-  OK Google, where does the rain come from?
-\end{itemize}
-
-History
-
-Historical events
-
-\begin{itemize}
-\item
-  OK Google, what happened during enlightenment?
-\item
-  OK Google, when did World War 2 begin?
-\item
-  OK Google, Olympic Games in the USSR.
-\item
-  OK Google, when was the Cold War?
-\end{itemize}
-
-Lists
-
-Add item to the list
-
-\begin{itemize}
-\item
-  OK Google, add bread to my shopping list.
-\item
-  OK Google, add milk and potatoes to my shopping list.
-\end{itemize}
-
-Ask what's on list
-
-\begin{itemize}
-\item
-  OK Google, what's on my shopping list?
-\item
-  OK Google, my shopping list.
-\end{itemize}
-
-Music
-
-Play music on Google Music
-
-\begin{itemize}
-\item
-  OK Google, play some music on Google Play.
-\item
-  OK Google, play jazz music on Google Play.
-\end{itemize}
-
-Play a Google Music playlist
+\paragraph{Cooking}\label{cooking}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, play my Trance playlist on Google Play.
+  \textbf{Named Timer}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, set chicken timer to 10 minutes.''
+  \item
+    ``OK Google, how much time is left for chicken?''
+  \end{itemize}
+\item
+  \textbf{Dish Caloricity}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how many calories are in a beefsteak?''
+  \item
+    ``OK Google, how many calories are in a glass of Cola?''
+  \end{itemize}
+\item
+  \textbf{The Nutritional Value}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how much sugar is in Cola?''
+  \item
+    ``OK Google, how much protein is in chicken?''
+  \item
+    ``OK Google, how much vitamin A is in a carrot?''
+  \end{itemize}
 \end{itemize}
 
-Play a song
-
-\begin{itemize}
-\item
-  OK Google, play Can't Stop on Google Play Music.
-\item
-  OK Google, plays At The End by Linkin Park.
-\end{itemize}
-
-Play an artist
-
-\begin{itemize}
-\item
-  OK Google, play music by Taylor Swift.
-\item
-  OK Google, play One Republic.
-\end{itemize}
-
-Play an album
-
-\begin{itemize}
-\item
-  OK Google, play the last U2 album.
-\item
-  OK Google, play Essential Classical on Google Play.
-\end{itemize}
-
-Control what's playing
-
-\begin{itemize}
-\item
-  OK Google, next.
-\item
-  OK Google, previous.
-\item
-  OK Google, repeat this song.
-\end{itemize}
-
-Fast forward or rewind
-
-\begin{itemize}
-\item
-  OK Google, ski forward 1 minute.
-\item
-  OK Google, skin back 1 minute.
-\end{itemize}
-
-Play music based on genre /mood/activity
-
-\begin{itemize}
-\item
-  OK Google, play some fun music.
-\item
-  OK Google, play music for a workout.
-\item
-  OK Google, play songs for sleeping.
-\end{itemize}
-
-Find the song by part of the lyrics
+\paragraph{Dictionary}\label{dictionary}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, play the song that goes: Head out on the highway.
+  \textbf{Word Meanings}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what is the definition of the word `instant'?''
+  \item
+    ``OK Google, what does the word `mammal' mean?''
+  \item
+    ``OK Google, find the definition of `agila.'\,''
+  \end{itemize}
+\item
+  \textbf{Word Spelling}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how do you spell `ambassador?'\,''
+  \end{itemize}
 \end{itemize}
 
-Ask what's playing
-
-\begin{itemize}
-\item
-  OK Google, what song is this?
-\item
-  OK Google, what song is playing?
-\item
-  OK Google, what's this album?
-\end{itemize}
-
-Get information
-
-\begin{itemize}
-\item
-  OK Google, who sings the song Let It Go?
-\item
-  OK Google, who is in the band Daft Punk?
-\item
-  OK Google, what year did Linkin Park release Hybrid Theory
-\end{itemize}
-
-Movies
-
-Today in the cinema
-
-\begin{itemize}
-\item
-  OK Google, what movies are playing tonight?
-\item
-  OK Google, movie schedule.
-\end{itemize}
-
-Movies short summary
-
-\begin{itemize}
-\item
-  OK Google, tell me about the movie ``The Matrix''.
-\item
-  OK Google, «Blade Runner» duration
-\item
-  OK Google, how many seasons in ``Game of Thrones''?
-\end{itemize}
-
-Info about actors
-
-\begin{itemize}
-\item
-  OK Google, who plays in ``Blade Runner''?
-\item
-  OK Google, what is Johnny Depp's latest movie?
-\item
-  OK Google, how many Oscars has Tom Cruise won?
-\item
-  OK Google, who plays Doctor Who?
-\end{itemize}
-
-News
-
-Listen to the latest news
-
-\begin{itemize}
-\item
-  OK Google, tell me the news.
-\item
-  OK Google, news.
-\end{itemize}
-
-Listen to the latest news about a specific news category
-
-\begin{itemize}
-\item
-  OK Google, what's the latest in technology?
-\item
-  OK Google, sports news.
-\end{itemize}
-
-Ask what's playing (news)
+\paragraph{Easter Eggs}\label{easter-eggs}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, what's playing?
+  \textbf{Getting to Know Google Assistant}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what are you?''
+  \item
+    ``OK Google, what's your favorite color?''
+  \item
+    ``OK Google, how are you?''
+  \item
+    ``OK Google, do you have kids?''
+  \item
+    ``OK Google, what's your quest?''
+  \item
+    ``OK Google, tell me about your childhood.''
+  \item
+    ``OK Google, can you drive?''
+  \item
+    ``OK Google, who made you?''
+  \item
+    ``OK Google, where do you live?''
+  \item
+    ``OK Google, what do you dream about?''
+  \item
+    ``OK Google, do you have feelings?''
+  \end{itemize}
+\item
+  \textbf{Party Tricks}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, I need a poem.''
+  \item
+    ``OK Google, tell me a story.''
+  \item
+    ``OK Google, roll a dice.''
+  \item
+    ``OK Google, flip a coin.''
+  \item
+    ``OK Google, tell me a joke.''
+  \item
+    ``OK Google, sing a song.''
+  \item
+    ``OK Google, beatbox.''
+  \item
+    ``OK Google, tell me something I don't know.''
+  \item
+    ``OK Google, sing a lullaby.''
+  \item
+    ``OK Google, what am I thinking now?''
+  \item
+    ``OK Google, surprise me.''
+  \end{itemize}
 \end{itemize}
 
-Summary of your day, including weather, traffic, and some news.
+\paragraph{Email}\label{email}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, what's my Flash Briefing?
+  \textbf{Send Email}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, email.''
+  \item
+    ``OK Google, send an email.''
+  \item
+    ``OK Google, send an email to Eugene.''
+  \item
+    ``OK Google, send an email to Eugene `Buy some milk.'\,''
+  \end{itemize}
 \end{itemize}
 
-Navigation
-
-Routes
-
-\begin{itemize}
-\item
-  OK Google, the pathway to the nearest supermarket.
-\item
-  OK Google, the route to Moscow.
-\end{itemize}
-
-Hear commute conditions
-
-\begin{itemize}
-\item
-  OK Google, what's the traffic?
-\item
-  OK Google, what's the traffic like?
-\end{itemize}
-
-Travel time to home or work
-
-\begin{itemize}
-\item
-  OK Google, how long drive to work?
-\item
-  OK Google, time to home.
-\end{itemize}
-
-Specify destination
-
-\begin{itemize}
-\item
-  OK Google, how long will it take to drive to Red Square?
-\item
-  OK Google, how long will it take to walk to Historical Museum?
-\end{itemize}
-
-Nearby places
-
-\begin{itemize}
-\item
-  OK Google, where's the nearest swimming pool?
-\item
-  OK Google, find me a fast food store.
-\item
-  OK Google, where can I buy a coffee?
-\end{itemize}
-
-People
-
-Facts about celebrities
-
-\begin{itemize}
-\item
-  OK Google, who is James Watson?
-\item
-  OK Google, tell me about Thomas Edison.
-\item
-  OK Google, how tall is Barack Obama?
-\item
-  OK Google, who invented the phone?
-\item
-  OK Google, when was Donald Trump born?
-\item
-  OK Google, who is the president of Croatia?
-\end{itemize}
-
-Physics \& Chemistry
-
-Physical
-
-\begin{itemize}
-\item
-  OK Google, gravity on Earth.
-\item
-  OK Google, speed of light.
-\item
-  OK Google, what is gravity?
-\item
-  OK Google, Newton's first law.
-\end{itemize}
-
-Chemical
-
-\begin{itemize}
-\item
-  OK Google, air composition.
-\item
-  OK Google, petroleum composition.
-\item
-  OK Google, the atomic number of oxygen.
-\item
-  OK Google, uranium half-life.
-\end{itemize}
-
-Places
-
-Near places
-
-\begin{itemize}
-\item
-  OK Google, where's the nearest swimming pool?
-\item
-  OK Google, find me a fast food shop.
-\item
-  OK Google, where can I buy a coffee?
-\end{itemize}
-
-Radio
-
-Listen to the radio station by Radio Station Name using the Tuneln Radio
-app
-
-\begin{itemize}
-\item
-  OK Google, play Bloomberg Radio on Tunnel.
-\item
-  OK Google, play BBC on Tunnel.
-\end{itemize}
-
-Listen to radio station by frequency
-
-\begin{itemize}
-\item
-  OK Google, play 103.1 FM.
-\item
-  OK Google, play 106.1 FM Boston.
-\end{itemize}
-
-Reminders
-
-Create a time-based reminder
-
-\begin{itemize}
-\item
-  OK Google, create a reminder.
-\item
-  OK Google, a new reminder.
-\end{itemize}
-
-Create a time-based reminder for a specific action
-
-\begin{itemize}
-\item
-  OK Google, remind me to visit Mom.
-\item
-  OK Google, remind me to buy milk.
-\end{itemize}
-
-Create a time-based reminder at one go
-
-\begin{itemize}
-\item
-  OK Google, remind me to call Grandma tomorrow at 9 p.m.
-\item
-  OK Google, remind me to buy some coffee on Friday at 10p.m.
-\end{itemize}
-
-Check reminders
-
-\begin{itemize}
-\item
-  OK Google, what's in my reminders?
-\item
-  OK Google, what are my reminders for tomorrow?
-\item
-  OK Google, my reminders for tomorrow.
-\item
-  OK Google, check my reminders.
-\item
-  OK Google, check all my reminders.
-\end{itemize}
-
-Cancel reminders
-
-\begin{itemize}
-\item
-  OK Google, delete the reminder.
-\item
-  OK Google, remove the reminder.
-\item
-  OK Google, cancel the reminder to buy milk.
-\item
-  OK Google, delete all reminders.
-\end{itemize}
-
-Smart Home
-
-Call on Android-phone
+\paragraph{Geography}\label{geography}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, where is my phone?
+  \textbf{Country Facts}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how many people live in Russia?''
+  \item
+    ``OK Google, what's the capital of Austria?''
+  \item
+    ``OK Google, Spain area.''
+  \end{itemize}
+\item
+  \textbf{Facts About Oceans/Seas/Rivers/Lakes}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, biggest ocean.''
+  \item
+    ``OK Google, depth of the Pacific Ocean.''
+  \item
+    ``OK Google, the saltiest ocean.''
+  \item
+    ``OK Google, the longest river.''
+  \item
+    ``OK Google, what's the longest river in Russia?''
+  \item
+    ``OK Google, deepest lake.''
+  \item
+    ``OK Google, the deepest lake in Canada.''
+  \end{itemize}
+\item
+  \textbf{Discover Facts About Nature}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, why is the sky blue?''
+  \item
+    ``OK Google, where does the rain come from?''
+  \end{itemize}
 \end{itemize}
 
-Control the light
-
-\begin{itemize}
-\item
-  OK Google, turn on lights.
-\item
-  OK Google, turn off lights.
-\end{itemize}
-
-Controls the brightness of light
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, set the lights to 50\%.
-\end{itemize}
-
-Control the smart plug
-
-\begin{itemize}
-\item
-  OK Google, turn on my smart plug.
-\item
-  OK Google, turn off my smart plug.
-\end{itemize}
-
-Control the thermostat
-
-\begin{itemize}
-\item
-  OK Google, raise temp 2 degrees.
-\item
-  OK Google, set the temperature to 72.
-\item
-  OK Google, what's the temperature inside?
-\end{itemize}
-
-Sports
-
-Sports news
-
-\begin{itemize}
-\tightlist
-\item
-  OK Google, what is my Sports Update?
-\end{itemize}
-
-Result of last match
-
-\begin{itemize}
-\item
-  OK Google, what was the score for the Washington Capitals game?
-\item
-  OK Google, last Chicago Bulls game?
-\item
-  OK Google, did Washington Capitals win?
-\end{itemize}
-
-League position
-
-\begin{itemize}
-\item
-  OK Google, how are the Lakers doing?
-\item
-  OK Google, what are the Pittsburgh Penguins standings?
-\end{itemize}
-
-Next match time
+\paragraph{History}\label{history}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, when Washington Capitals playing next?
+  \textbf{Historical Events}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what happened during the Enlightenment?''
+  \item
+    ``OK Google, when did World War 2 begin?''
+  \item
+    ``OK Google, Olympic Games in the USSR.''
+  \item
+    ``OK Google, when was the Cold War?''
+  \end{itemize}
 \end{itemize}
 
-The club's roster
-
-\begin{itemize}
-\item
-  OK Google, French national football team lineup.
-\item
-  OK Google, who plays for Real Madrid?
-\item
-  OK Google, Barcelona team lineup.
-\item
-  OK Google, Washington Capitals roster.
-\end{itemize}
-
-Get player info
-
-\begin{itemize}
-\item
-  OK Google, where does Messi play?
-\item
-  OK Google,~ what team does Cristiano Ronaldo play for?
-\item
-  OK Google, Cristiano Ronaldo height.
-\item
-  OK Google, Messi's age.
-\end{itemize}
-
-Timer \& Alarm
-
-Find out time / Date
-
-\begin{itemize}
-\item
-  OK Google, what time is it?
-\item
-  OK Google, what's the date?
-\end{itemize}
-
-Time zones
-
-\begin{itemize}
-\item
-  OK Google, what time is it in Berlin?
-\item
-  OK Google, time in New York?
-\item
-  OK Google, the time difference between Moscow and Washington.
-\end{itemize}
-
-Set a timer
-
-\begin{itemize}
-\item
-  OK Google, set a timer for 1 minute.
-\item
-  OK Google, set timer 5 minutes for paste.
-\end{itemize}
-
-Set a timer with name
-
-\begin{itemize}
-\item
-  OK Google, set timer~ Pizza for 5 minutes.
-\item
-  OK Google, set timer Pasta for 10 minutes.
-\end{itemize}
-
-Check timers
-
-\begin{itemize}
-\item
-  OK Google, my timers.
-\item
-  OK Google, how much time is left for pasta?
-\end{itemize}
-
-Cancel timers
+\paragraph{Lists}\label{lists}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, cancel timers.
+  \textbf{Add Item to the List}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, add bread to my shopping list.''
+  \item
+    ``OK Google, add milk and potatoes to my shopping list.''
+  \end{itemize}
+\item
+  \textbf{Ask What's on List}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's on my shopping list?''
+  \item
+    ``OK Google, my shopping list.''
+  \end{itemize}
 \end{itemize}
 
-Set an alarm
-
-\begin{itemize}
-\item
-  OK Google, set an alarm for 8 a.m.
-\item
-  OK Google, set an alarm for weekdays at 7 a.m.
-\item
-  OK Google, snooze.
-\item
-  OK Google, snooze for 10 minutes.
-\end{itemize}
-
-Check / Cancel alarms
-
-\begin{itemize}
-\item
-  OK Google, what alarms are set?
-\item
-  OK Google, cancel my alarms.
-\end{itemize}
-
-Set a sleep timer
-
-\begin{itemize}
-\item
-  OK Google, set a sleep timer for 30 minutes.
-\item
-  OK Google, stop playing in 30 minutes.
-\end{itemize}
-
-Translations
-
-Translate to Russian
-
-\begin{itemize}
-\item
-  OK Google, how do we say good night in Russian?
-\item
-  OK Google, translates Excusez-Moi to Russian.
-\end{itemize}
-
-Translate to French
+\paragraph{Music}\label{music}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, how do we say excuse me in French?
+  \textbf{Play Music on Google Music}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play some music on Google Play.''
+  \item
+    ``OK Google, play jazz music on Google Play.''
+  \end{itemize}
+\item
+  \textbf{Play a Google Music Playlist}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play my Trance playlist on Google Play.''
+  \end{itemize}
+\item
+  \textbf{Play a Song}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play `Can't Stop' on Google Play Music.''
+  \item
+    ``OK Google, play `At The End' by Linkin Park.''
+  \end{itemize}
+\item
+  \textbf{Play an Artist}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play music by Taylor Swift.''
+  \item
+    ``OK Google, play One Republic.''
+  \end{itemize}
+\item
+  \textbf{Play an Album}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play the last U2 album.''
+  \item
+    ``OK Google, play `Essential Classical' on Google Play.''
+  \end{itemize}
+\item
+  \textbf{Control What's Playing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, next.''
+  \item
+    ``OK Google, previous.''
+  \item
+    ``OK Google, repeat this song.''
+  \end{itemize}
+\item
+  \textbf{Fast Forward or Rewind}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, skip forward 1 minute.''
+  \item
+    ``OK Google, skip back 1 minute.''
+  \end{itemize}
+\item
+  \textbf{Play Music Based on Genre/Mood/Activity}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play some fun music.''
+  \item
+    ``OK Google, play music for a workout.''
+  \item
+    ``OK Google, play songs for sleeping.''
+  \end{itemize}
+\item
+  \textbf{Find the Song by Part of the Lyrics}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play the song that goes `Head out on the highway.'\,''
+  \end{itemize}
+\item
+  \textbf{Ask What's Playing}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what song is this?''
+  \item
+    ``OK Google, what song is playing?''
+  \item
+    ``OK Google, what's this album?''
+  \end{itemize}
+\item
+  \textbf{Get Information}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, who sings the song `Let It Go?'\,''
+  \item
+    ``OK Google, who is in the band Daft Punk?''
+  \item
+    ``OK Google, what year did Linkin Park release `Hybrid Theory?'\,''
+  \end{itemize}
 \end{itemize}
 
-Translate to German
+\paragraph{Movies}\label{movies}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, translate Good evening to German.
+  \textbf{Today in the Cinema}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what movies are playing tonight?''
+  \item
+    ``OK Google, movie schedule.''
+  \end{itemize}
+\item
+  \textbf{Movies Short Summary}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, tell me about the movie `The Matrix.'\,''
+  \item
+    ``OK Google, `Blade Runner' duration
+  \end{itemize}
 \end{itemize}
 
-Translate to Spanish
+.''
+
+\paragraph{Navigation}\label{navigation}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, how do we say Guten Tag in English?
+  \textbf{Address and Business Search}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, where is my work?''
+  \item
+    ``OK Google, what is the address of the nearest pharmacy?''
+  \item
+    ``OK Google, where is the closest supermarket?''
+  \item
+    ``OK Google, find a Chinese restaurant.''
+  \end{itemize}
+\item
+  \textbf{Navigation}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, how do I get to the nearest gas station?''
+  \item
+    ``OK Google, take me to the nearest hotel.''
+  \item
+    ``OK Google, navigate me home.''
+  \item
+    ``OK Google, show me directions to work.''
+  \item
+    ``OK Google, navigate me to 321 King's Street, London.''
+  \item
+    ``OK Google, how much time does it take to get to the hospital?''
+  \item
+    ``OK Google, find the fastest route to the restaurant.''
+  \end{itemize}
+\item
+  \textbf{Taxi}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, call a taxi.''
+  \item
+    ``OK Google, order a taxi.''
+  \item
+    ``OK Google, book an Uber to 321 King's Street, London.''
+  \end{itemize}
 \end{itemize}
 
-Travel
-
-Flights
-
-\begin{itemize}
-\item
-  OK Google, how much is a round-trip flight to New York?
-\item
-  OK Google, how much is a one-way flight to New York cost?
-\item
-  OK Google, how much are flights to St.~Petersburg in weeks?
-\item
-  OK Google, prices for an airline ticket to St.~Petersburg.
-\item
-  OK Google, find me flights to Paris.
-\item
-  OK Google, what is the schedules for flights to New York?
-\item
-  OK Google, find flights with United Airlines?
-\item
-  OK Google, the state of United Airlines 515.
-\item
-  OK Google, when does Delta Flight 315 arrive?
-\item
-  OK Google, when does United Airlines 515 leave?
-\end{itemize}
-
-Find restaurant to try
-
-\begin{itemize}
-\item
-  OK Google, what hotels are nearby?
-\item
-  OK Google, hotels in Moscow.
-\end{itemize}
-
-Discover place to visit
-
-\begin{itemize}
-\item
-  OK Google, attractions in Saint Petersburg?
-\item
-  OK Google, things to do in St.~Petersburg?
-\end{itemize}
-
-TV
-
-Control TV
-
-\begin{itemize}
-\item
-  OK Google, turn on TV.
-\item
-  OK Google, volume up.
-\item
-  OK Google, volume down.
-\item
-  OK Google, turn off my TV.
-\end{itemize}
-
-Play music
-
-\begin{itemize}
-\item
-  OK Google, play rock music on my TV.
-\item
-  OK Google, play Eminem on my TV.
-\end{itemize}
-
-Play radio
-
-\begin{itemize}
-\item
-  OK Google, play NBC on Tunnel on my TV.
-\item
-  OK Google, play BBC on Tunnel on my TV.
-\end{itemize}
-
-Play recommended video on YouTube
-
-\begin{itemize}
-\item
-  OK Google, play YouTube.
-\item
-  OK Google, open YouTube.
-\item
-  OK Google, next.
-\item
-  OK Google, turn on subtitles
-\end{itemize}
-
-Find the video on YouTube
-
-\begin{itemize}
-\item
-  OK Google, play funny cat videos
-\item
-  OK Google, play the latest from Euronews.
-\item
-  OK Google, play yoga videos.
-\end{itemize}
-
-Netflix
-
-\begin{itemize}
-\item
-  OK Google, play Stranger Things on Netflix
-\item
-  OK Google, play Disenchantment episode 2 on Netflix.
-\end{itemize}
-
-News
-
-\begin{itemize}
-\item
-  OK Google, watch the news.
-\item
-  OK Google, watch technology news
-\item
-  OK Google, watch Fox news.
-\item
-  OK Google, next.
-\end{itemize}
-
-Google Photos
-
-\begin{itemize}
-\item
-  OK Google, show me photos on TV.
-\item
-  OK Google, show me photos of San Francisco on TV.
-\item
-  OK Google, show me photos of mountains on TV
-\item
-  OK Google, show me photos of the beach trip 2018 on TV
-\end{itemize}
-
-Security Camera
-
-\begin{itemize}
-\item
-  OK Google, show me front door on my TV
-\item
-  OK Google, what's on my backyard?
-\end{itemize}
-
-Weather
-
-\begin{itemize}
-\item
-  OK Google, show me the weather on my TV
-\item
-  OK Google, show me the weather for tomorrow on my TV.
-\end{itemize}
-
-Calculator
-
-\begin{itemize}
-\item
-  OK Google, show me Google´s stock price on my TV
-\item
-  OK Google, show me how many feet are in a mile on my TV.
-\end{itemize}
-
-Sport
+\paragraph{News}\label{news}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, show the score of the Capitals game on my TV
+  \textbf{Daily News}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's the latest news?''
+  \item
+    ``OK Google, what's the news about Apple?''
+  \item
+    ``OK Google, news about Canada.''
+  \end{itemize}
 \end{itemize}
 
-Translate and dictionary
-
-\begin{itemize}
-\item
-  OK Google, show me how to say ``Good morning'' in French on my TV.
-\item
-  OK Google, show me how to say ``How are you?'' in Spanish on my TV.
-\item
-  OK Google, show me the definition of ``perseverance'' on my TV.
-\end{itemize}
-
-Weather
-
-Ask for current weather (for your Google Home device address)
+\paragraph{Places}\label{places}
 
 \begin{itemize}
 \tightlist
 \item
-  OK Google, what's the weather?
+  \textbf{Find Business Hours}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, is the pharmacy open?''
+  \item
+    ``OK Google, when does Starbucks close?''
+  \end{itemize}
+\item
+  \textbf{Search for Places and Businesses}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, where is the nearest grocery store?''
+  \item
+    ``OK Google, where is the closest museum?''
+  \item
+    ``OK Google, find me a pizza place.''
+  \item
+    ``OK Google, find me an Italian restaurant.''
+  \end{itemize}
 \end{itemize}
 
-Weather forecast
+\paragraph{Podcasts}\label{podcasts}
 
 \begin{itemize}
+\tightlist
 \item
-  OK Google, what's the weather tomorrow?
-\item
-  OK Google, weather on Monday.
-\item
-  OK Google, weather on weekend.
-\item
-  OK Google, what's the weather next week?
+  \textbf{Play a Podcast}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play the latest episode of `The Daily.'\,''
+  \item
+    ``OK Google, play `The Joe Rogan Experience.'\,''
+  \end{itemize}
 \end{itemize}
 
-Specific questions about weather / forecast
+\paragraph{Radio}\label{radio}
 
 \begin{itemize}
+\tightlist
 \item
-  OK Google, is it sunny today?
-\item
-  OK Google, is it going to rain tomorrow?
-\item
-  OK Google, should I take an umbrella?
+  \textbf{Listen to the Radio}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, play NPR.''
+  \item
+    ``OK Google, play BBC Radio 1.''
+  \item
+    ``OK Google, play 106.7 FM.''
+  \end{itemize}
 \end{itemize}
 
-Weather forecast for a specific location
+\paragraph{Reminders}\label{reminders}
 
 \begin{itemize}
+\tightlist
 \item
-  OK Google, weather tomorrow in Moscow?
+  \textbf{Set Reminders}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, remind me to call John in 20 minutes.''
+  \item
+    ``OK Google, remind me to check the oven in 10 minutes.''
+  \item
+    ``OK Google, remind me to buy milk at 4 p.m.''
+  \item
+    ``OK Google, remind me to take out the trash tomorrow.''
+  \end{itemize}
 \item
-  OK Google, will it rain tomorrow in St.~Petersburg?
+  \textbf{Check Reminders}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what are my reminders for today?''
+  \item
+    ``OK Google, what are my reminders for tomorrow?''
+  \end{itemize}
 \end{itemize}
+
+\paragraph{Smart Home}\label{smart-home}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Control Smart Lights}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, turn on the lights.''
+  \item
+    ``OK Google, turn off the lights.''
+  \item
+    ``OK Google, dim the lights.''
+  \item
+    ``OK Google, brighten the lights.''
+  \item
+    ``OK Google, change the living room lights to blue.''
+  \end{itemize}
+\item
+  \textbf{Control Smart Thermostats}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, set the thermostat to 72 degrees.''
+  \item
+    ``OK Google, increase the temperature by 2 degrees.''
+  \item
+    ``OK Google, decrease the temperature by 2 degrees.''
+  \item
+    ``OK Google, set the thermostat to cool mode.''
+  \end{itemize}
+\item
+  \textbf{Control Smart Plugs}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, turn on the coffee maker.''
+  \item
+    ``OK Google, turn off the fan.''
+  \end{itemize}
+\item
+  \textbf{Control Smart Locks}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, lock the front door.''
+  \item
+    ``OK Google, is the front door locked?''
+  \end{itemize}
+\item
+  \textbf{Control Smart Cameras}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, show me the front door camera.''
+  \item
+    ``OK Google, show me the living room camera.''
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Timers and Alarms}\label{timers-and-alarms}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Set a Timer}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, set a timer for 10 minutes.''
+  \item
+    ``OK Google, set a second timer for 5 minutes.''
+  \item
+    ``OK Google, set a chicken timer for 30 minutes.''
+  \end{itemize}
+\item
+  \textbf{Set an Alarm}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, set an alarm for 6 a.m.''
+  \item
+    ``OK Google, set a daily alarm for 7 a.m.''
+  \item
+    ``OK Google, set a one-time alarm for 9 p.m. on Tuesday.''
+  \end{itemize}
+\item
+  \textbf{Check and Manage Alarms}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what are my alarms?''
+  \item
+    ``OK Google, delete my 7 a.m. alarm.''
+  \item
+    ``OK Google, cancel all alarms.''
+  \end{itemize}
+\item
+  \textbf{Stop Alarms}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, stop.''
+  \item
+    ``OK Google, snooze for 10 minutes.''
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Weather}\label{weather}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Current Weather}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's the weather like?''
+  \item
+    ``OK Google, what's the weather?''
+  \item
+    ``OK Google, what's the temperature?''
+  \item
+    ``OK Google, what's the weather in London?''
+  \end{itemize}
+\item
+  \textbf{Weather Forecast}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``OK Google, what's the weather forecast for tomorrow?''
+  \item
+    ``OK Google, will it rain tomorrow?''
+  \item
+    ``OK Google, what's the 7-day weather forecast?''
+  \item
+    ``OK Google, what's the weather this weekend?''
+  \end{itemize}
+\end{itemize}
+
+By using these commands, you can efficiently interact with Google
+Assistant to make your daily tasks easier and more convenient.
 
 
 \printbibliography

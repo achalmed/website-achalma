@@ -19,9 +19,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Presentación
 
 El actual movimiento de resistencia global contra el capitalismo, bajo la consigna de "otro mundo es posible", ha resaltado el pensamiento socialista como una alternativa. En este contexto, resulta imperativo estudiar, comprender y debatir la teoría del surgimiento del pensamiento socialista.

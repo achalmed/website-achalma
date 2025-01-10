@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: _site
   resources: 
-    - resume.pdf
     - cv.pdf
 
 website:
@@ -20,8 +19,8 @@ website:
       repo: achalmed/website-achalma
   cookie-consent: true
   site-url: https://achalmaedison.netlify.app/
-  repo-url: https://github.com/achalmed/website-achalma
-  repo-actions: [edit, issue]
+  #repo-url: https://github.com/achalmed/website-achalma
+  #repo-actions: [edit, issue]
   page-navigation: true
   back-to-top-navigation: true
   #reader-mode: true
@@ -48,23 +47,6 @@ website:
         href: https://github.com/achalmed
         text: "GitHub profile"
     contents:
-      - section: "Projects"
-        href: projects/index.qmd
-        contents:
-          - text: "PharmAccess"
-            href: projects/pharmaccess.qmd
-          - text: "MyTomorrows"
-            href: projects/mytomorrows.qmd
-          - text: "Roetz Life"
-            href: projects/roetz-life.qmd
-          - text: "Blue Radix"
-            href: projects/blue-radix.qmd
-          - text: "Amphia Sensium"
-            href: projects/amphia.qmd
-          - text: "HAS Green Academy"
-            href: projects/has.qmd
-          - text: "Sensire"
-            href: projects/sensire.qmd
       - text: "Blog"
         href: blog/index.qmd
       - text: "Econometria"
@@ -78,7 +60,7 @@ website:
       - text: "Macroeconomía"
         href: macroeconomia/index.qmd
       - text: "Matemáticas"
-        href: matematica/index.qmd
+        href: matematicas/index.qmd
       - text: "Microeconomía"
         href: microeconomia/index.qmd
       - text: "Book an appointment"
@@ -86,7 +68,7 @@ website:
   page-footer:
     left: |
       <br>
-      Copyright &copy; 2024 Edison Achalma<br>
+      Copyright &copy; 2025 Edison Achalma<br>
       This website was created with 
       [![](/images/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org)
     center: |
@@ -116,5 +98,12 @@ format:
     css: styles.css
     toc: false
 
-execute: 
-  freeze: auto
+execute:
+  keep-md: true  # Mantener archivos .md generados
+  keep-ipynb: true
+  echo: true  # Mostrar comandos ejecutados
+  output: true  # Mostrar resultados de la ejecución
+  warning: false  # Ocultar advertencias
+  error: false  # Ocultar errores
+  cache: true  # Habilitar el almacenamiento en caché
+  enabled: true  # Habilitar la ejecución

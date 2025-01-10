@@ -21,9 +21,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Sistema económio y mercado
 
 ## Sistema económico

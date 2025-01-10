@@ -22,9 +22,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Introducción
 
 

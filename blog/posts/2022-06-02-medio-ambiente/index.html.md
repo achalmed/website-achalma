@@ -30,7 +30,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
 # Resuelva las siguientes preguntas
 
 ## ¿Qué es el cambio climático y cómo afecta a nuestras vidas?

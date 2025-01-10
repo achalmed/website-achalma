@@ -58,63 +58,19 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 
 
 
+:::{.cell}
 
-
-
-::::::{.cell layout-align="default"}
-
-:::::{.cell-output-display}
-
-::::{}
-`<figure class=''>`{=html}
+:::{.cell-output-display}
 
 :::{}
-```{=html}
-<svg width="672" height="480" viewbox="0.00 0.00 304.06 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 300.06,-112 300.06,4 -4,4"></polygon>
-<!-- Finanzas_corporativas -->
-<g id="node1" class="node">
-<title>Finanzas_corporativas</title>
-<path fill="#e8e8e8" stroke="black" d="M121.58,-108C121.58,-108 11.81,-108 11.81,-108 5.81,-108 -0.19,-102 -0.19,-96 -0.19,-96 -0.19,-84 -0.19,-84 -0.19,-78 5.81,-72 11.81,-72 11.81,-72 121.58,-72 121.58,-72 127.58,-72 133.58,-78 133.58,-84 133.58,-84 133.58,-96 133.58,-96 133.58,-102 127.58,-108 121.58,-108"></path>
-<text text-anchor="middle" x="66.69" y="-86.4" font-family="Arial" font-size="12.00">Finanzas corporativas</text>
-</g>
-<!-- Finanzas_internacionales -->
-<g id="node3" class="node">
-<title>Finanzas_internacionales</title>
-<path fill="#e8e8e8" stroke="black" d="M206.94,-36C206.94,-36 82.45,-36 82.45,-36 76.45,-36 70.45,-30 70.45,-24 70.45,-24 70.45,-12 70.45,-12 70.45,-6 76.45,0 82.45,0 82.45,0 206.94,0 206.94,0 212.94,0 218.94,-6 218.94,-12 218.94,-12 218.94,-24 218.94,-24 218.94,-30 212.94,-36 206.94,-36"></path>
-<text text-anchor="middle" x="144.69" y="-14.4" font-family="Arial" font-size="12.00">Finanzas internacionales</text>
-</g>
-<!-- Finanzas_corporativas&#45;&gt;Finanzas_internacionales -->
-<g id="edge1" class="edge">
-<title>Finanzas_corporativas-&gt;Finanzas_internacionales</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M85.97,-71.7C95.61,-63.05 107.42,-52.45 117.92,-43.03"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="125.63,-36.1 121.2,-46.13 122.08,-39.63 118.36,-42.97 118.19,-42.78 118.02,-42.6 121.75,-39.26 115.19,-39.43 125.63,-36.1 125.63,-36.1"></polygon>
-</g>
-<!-- Economia_internacional -->
-<g id="node2" class="node">
-<title>Economia_internacional</title>
-<path fill="#e8e8e8" stroke="black" d="M283.94,-108C283.94,-108 163.45,-108 163.45,-108 157.45,-108 151.45,-102 151.45,-96 151.45,-96 151.45,-84 151.45,-84 151.45,-78 157.45,-72 163.45,-72 163.45,-72 283.94,-72 283.94,-72 289.94,-72 295.94,-78 295.94,-84 295.94,-84 295.94,-96 295.94,-96 295.94,-102 289.94,-108 283.94,-108"></path>
-<text text-anchor="middle" x="223.69" y="-86.4" font-family="Arial" font-size="12.00">Economía internacional</text>
-</g>
-<!-- Economia_internacional&#45;&gt;Finanzas_internacionales -->
-<g id="edge2" class="edge">
-<title>Economia_internacional-&gt;Finanzas_internacionales</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M204.17,-71.7C194.31,-62.97 182.21,-52.24 171.5,-42.75"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="164,-36.1 174.47,-39.37 167.9,-39.23 171.65,-42.55 171.48,-42.74 171.32,-42.92 167.57,-39.61 168.5,-46.1 164,-36.1 164,-36.1"></polygon>
-</g>
-</g>
-</svg>
-```
+
+:::{}
+
+![](index_files/figure-latex/dot-figure-1.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
 :::
-`</figure>`{=html}
-::::
-:::::
-::::::
-
-
-
+:::
+:::
+:::
 
 
 
@@ -253,93 +209,19 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
+:::{.cell}
 
-
-
-::::::{.cell layout-align="default"}
-
-:::::{.cell-output-display}
-
-::::{}
-`<figure class=''>`{=html}
+:::{.cell-output-display}
 
 :::{}
-```{=html}
-<svg width="672" height="480" viewbox="0.00 0.00 619.84 71.34" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 67.34)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-67.34 615.84,-67.34 615.84,4 -4,4"></polygon>
-<!-- Oposicion a \n la globalización -->
-<g id="node1" class="node">
-<title>Oposicion a \n la globalización</title>
-<path fill="#e8e8e8" stroke="black" d="M89.57,-48.84C89.57,-48.84 11.81,-48.84 11.81,-48.84 5.81,-48.84 -0.19,-42.84 -0.19,-36.84 -0.19,-36.84 -0.19,-24.24 -0.19,-24.24 -0.19,-18.24 5.81,-12.24 11.81,-12.24 11.81,-12.24 89.57,-12.24 89.57,-12.24 95.57,-12.24 101.57,-18.24 101.57,-24.24 101.57,-24.24 101.57,-36.84 101.57,-36.84 101.57,-42.84 95.57,-48.84 89.57,-48.84"></path>
-<text text-anchor="middle" x="50.69" y="-34.14" font-family="Arial" font-size="12.00">Oposicion a </text>
-<text text-anchor="middle" x="50.69" y="-19.74" font-family="Arial" font-size="12.00"> la globalización</text>
-</g>
-<!-- Globalización -->
-<g id="node2" class="node">
-<title>Globalización</title>
-<path fill="#e8e8e8" stroke="black" d="M305.57,-48.54C305.57,-48.54 241.5,-48.54 241.5,-48.54 235.5,-48.54 229.5,-42.54 229.5,-36.54 229.5,-36.54 229.5,-24.54 229.5,-24.54 229.5,-18.54 235.5,-12.54 241.5,-12.54 241.5,-12.54 305.57,-12.54 305.57,-12.54 311.57,-12.54 317.57,-18.54 317.57,-24.54 317.57,-24.54 317.57,-36.54 317.57,-36.54 317.57,-42.54 311.57,-48.54 305.57,-48.54"></path>
-<text text-anchor="middle" x="273.54" y="-26.94" font-family="Arial" font-size="12.00">Globalización</text>
-</g>
-<!-- Oposicion a \n la globalización&#45;&gt;Globalización -->
-<g id="edge1" class="edge">
-<title>Oposicion a \n la globalización-&gt;Globalización</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M111.63,-40.8C114.25,-41.09 116.84,-41.33 119.38,-41.54 160.2,-44.83 170.73,-45.19 211.52,-41.54 217.31,-41.02 223.37,-40.23 229.33,-39.31"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="111.84,-37.3 101.49,-39.56 110.99,-44.25 111.84,-37.3"></polygon>
-<text text-anchor="middle" x="165.45" y="-47.74" font-family="Times,serif" font-size="14.00">Desigualdad</text>
-</g>
-<!-- Globalización&#45;&gt;Oposicion a \n la globalización -->
-<g id="edge2" class="edge">
-<title>Globalización-&gt;Oposicion a \n la globalización</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M218.97,-30.54C183.2,-30.54 136.5,-30.54 101.53,-30.54"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="219.22,-34.04 229.22,-30.54 219.22,-27.04 219.22,-34.04"></polygon>
-</g>
-<!-- Globalización&#45;&gt;Oposicion a \n la globalización -->
-<g id="edge3" class="edge">
-<title>Globalización-&gt;Oposicion a \n la globalización</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M229.32,-13.87C223.41,-12.17 217.37,-10.71 211.52,-9.74 171.12,-3.04 159.88,-3.66 119.38,-9.74 116.74,-10.14 114.05,-10.62 111.36,-11.16"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="101.58,-13.39 110.33,-6.78 106.4,-12.04 111.27,-10.92 111.33,-11.17 111.38,-11.41 106.51,-12.52 112.33,-15.56 101.58,-13.39 101.58,-13.39"></polygon>
-<text text-anchor="middle" x="165.45" y="-13.74" font-family="Times,serif" font-size="14.00">Crisis financiera</text>
-</g>
-<!-- Crecimiento \n económico -->
-<g id="node3" class="node">
-<title>Crecimiento \n económico</title>
-<path fill="#e8e8e8" stroke="black" d="M600.02,-48.84C600.02,-48.84 540.31,-48.84 540.31,-48.84 534.31,-48.84 528.31,-42.84 528.31,-36.84 528.31,-36.84 528.31,-24.24 528.31,-24.24 528.31,-18.24 534.31,-12.24 540.31,-12.24 540.31,-12.24 600.02,-12.24 600.02,-12.24 606.02,-12.24 612.02,-18.24 612.02,-24.24 612.02,-24.24 612.02,-36.84 612.02,-36.84 612.02,-42.84 606.02,-48.84 600.02,-48.84"></path>
-<text text-anchor="middle" x="570.16" y="-34.14" font-family="Arial" font-size="12.00">Crecimiento </text>
-<text text-anchor="middle" x="570.16" y="-19.74" font-family="Arial" font-size="12.00"> económico</text>
-</g>
-<!-- Globalización&#45;&gt;Crecimiento \n económico -->
-<g id="edge4" class="edge">
-<title>Globalización-&gt;Crecimiento \n económico</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M317.74,-39.31C323.7,-40.23 329.76,-41.02 335.55,-41.54 412.99,-48.46 433.07,-48.73 510.48,-41.54 513.01,-41.3 515.59,-41.01 518.2,-40.68"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="528.26,-39.21 519.02,-45.11 523.35,-40.18 518.4,-40.9 518.37,-40.65 518.33,-40.41 523.28,-39.68 517.72,-36.2 528.26,-39.21 528.26,-39.21"></polygon>
-<text text-anchor="middle" x="423.02" y="-50.74" font-family="Times,serif" font-size="14.00">Políticas económicas correctas</text>
-</g>
-<!-- Globalización&#45;&gt;Crecimiento \n económico -->
-<g id="edge5" class="edge">
-<title>Globalización-&gt;Crecimiento \n económico</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M317.69,-30.54C370.96,-30.54 461.42,-30.54 518.09,-30.54"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="528.26,-30.54 518.26,-35.04 523.26,-30.79 518.26,-30.79 518.26,-30.54 518.26,-30.29 523.26,-30.29 518.26,-26.04 528.26,-30.54 528.26,-30.54"></polygon>
-</g>
-<!-- Globalización&#45;&gt;Crecimiento \n económico -->
-<g id="edge6" class="edge">
-<title>Globalización-&gt;Crecimiento \n económico</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M317.75,-13.87C323.66,-12.17 329.7,-10.71 335.55,-9.74 412.25,2.98 433.86,3.44 510.48,-9.74 513.14,-10.2 515.83,-10.76 518.53,-11.41"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="528.28,-14.07 517.45,-15.78 523.39,-12.99 518.57,-11.68 518.63,-11.44 518.7,-11.19 523.52,-12.51 519.82,-7.09 528.28,-14.07 528.28,-14.07"></polygon>
-<text text-anchor="middle" x="423.02" y="-13.74" font-family="Times,serif" font-size="14.00">Beneficio del comercio</text>
-</g>
-</g>
-</svg>
-```
+
+:::{}
+
+![](index_files/figure-latex/dot-figure-2.png){width="5.5in" height="3.5in" fig-pos='H' fig-env='figure'}
 :::
-`</figure>`{=html}
-::::
-:::::
-::::::
-
-
-
+:::
+:::
+:::
 
 
 

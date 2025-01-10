@@ -24,9 +24,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # ¡En este primero de mayo: seguir sembrando revolución!
 
 > ¡Proletarios de todos los países, uníos!

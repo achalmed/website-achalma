@@ -35,15 +35,7 @@ crossref:
   tbl-title: Tabla  # Título de las tablas en las referencias
   tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
   ref-hyperlink: true  # Habilitar enlaces en las referencias
-execute:
-  keep-md: true  # Mantener archivos .md generados
-  keep-ipynb: true
-  echo: true  # Mostrar comandos ejecutados
-  output: true  # Mostrar resultados de la ejecución
-  warning: false  # Ocultar advertencias
-  error: false  # Ocultar errores
-  cache: false  # Habilitar el almacenamiento en caché
-  enabled: true  # Habilitar la ejecución
+
 
 draft: true  # Modo de borrador (false = final, true = borrador)
 

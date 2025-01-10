@@ -19,6 +19,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción a la Elasticidad
 ## ¿Qué es la elasticidad?
 
@@ -56,7 +58,7 @@ En los próximos fragmentos, exploraremos cada tipo de elasticidad en más detal
 
 La elasticidad precio de la demanda es una medida importante en economía que nos permite entender cómo cambia la cantidad demandada de un bien o servicio ante variaciones en su precio. Esta medida nos ayuda a comprender la sensibilidad de los consumidores frente a los cambios de precio.
 
-::: {#52942ebe .cell execution_count=1}
+::: {.cell execution_count=1}
 
 ::: {.cell-output .cell-output-display}
 ![](index_files/figure-html/cell-2-output-1.png){width=581 height=432}
@@ -186,11 +188,9 @@ Si el $P_x$ aumenta en 1% entonces $X^d$ disminuye en 1%.
 
 
 
-
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
-
 
 1.  [Introducción a organización industrial](../2023-06-12-introducion-organizacion-industrial-oi-cap1/index.qmd)
 
@@ -203,7 +203,6 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 5.  [Medidas de concentracion](../2023-06-16-concentracion-poder-oi-cap3/index.qmd)
 
 6.  [Estructura de mercado](../2023-06-17-estructura-mercado-oi-cap4/index.qmd)
-
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

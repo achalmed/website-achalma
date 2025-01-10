@@ -31,5 +31,6 @@ listing:
 # css: index.css
 search: false
 comments: false
+draft: true  # Modo de borrador (false = final, true = borrador)
 ---
 

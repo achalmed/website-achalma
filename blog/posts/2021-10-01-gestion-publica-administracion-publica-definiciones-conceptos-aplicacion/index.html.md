@@ -1,8 +1,12 @@
 ---
 title: Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación
 subtitle: Comprendiendo la diferencia y la importancia de estas categorías en el ámbito gubernamental.
+shorttitle: "Gestión Pública y Administración Pública"
 description: |
-  Explora las definiciones, conceptos y aplicaciones de la gestión pública y la administración pública en este artículo informativo. Aprende cómo estas categorías están estrechamente relacionadas con el buen manejo de los recursos públicos y el logro de metas colectivas. Descubre las diferencias clave entre gestión pública y administración pública, así como su importancia en la gestión gubernamental.
+  Accede al [PDF](https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf) completo aquí.
+abstract: |
+  | Explora las definiciones, conceptos y aplicaciones de la gestión pública y la administración pública en este artículo informativo. Aprende cómo estas categorías están estrechamente relacionadas con el buen manejo de los recursos públicos y el logro de metas colectivas. Descubre las diferencias clave entre gestión pública y administración pública, así como su importancia en la gestión gubernamental.
+keywords: [keyword1, keyword2]
 categories:
   - Planeamiento y Presupuesto Público
   - Administración Pública
@@ -97,9 +101,22 @@ La importancia de la administración pública radica en que ésta se encuentra l
 
 Los decisores políticos tienen la responsabilidad de adoptar políticas que conlleven a enfrentar y resolver problemas que afectan a la comunidad en los diferentes ámbitos de su responsabilidad. Estas políticas son adoptadas individualmente o reunidos en el colectivo al que pertenecen (Consejo de ministros, Consejos Regionales, Concejos Municipales, un directorio, etc.). Por su parte los servidores públicos ponen en práctica las políticas haciendo uso de un conjunto de tecnologías de gestión e instrumentos de orden normativo y gerencial
 
-**Administración pública:** La administración pública es un campo donde los líderes sirven a las comunidades para promover el bien común y lograr un cambio positivo en el sector público. Las aptitudes que se requieren en el campo de la administración pública, tales como la gestión de proyectos y programas, se suelen transferir al sector privado. Los administradores públicos a menudo, proporcionan información a los clientes y supervisan e implementan varios programas para las organizaciones. Suelen ser responsables de dirigir y asesorar a los empleados de la organización, como investigadores, oficiales de programas y consultores. También, pueden evaluar programas y servicios dentro de una organización, así como implementar cambios en iniciativas de políticas públicas, el seguimiento y la aprobación de presupuestos,
+**Administración pública:** La administración pública es un campo donde los líderes sirven a las comunidades para promover el bien común y lograr un cambio positivo en el sector público. Las aptitudes que se requieren en el campo de la administración pública, tales como la gestión de proyectos y programas, se suelen transferir al sector privado. Los administradores públicos a menudo, proporcionan información a los clientes y supervisan e implementan varios programas para las organizaciones. Suelen ser responsables de dirigir y asesorar a los empleados de la organización, como investigadores, oficiales de programas y consultores. También, pueden evaluar programas y servicios dentro de una organización, así como implementar cambios en iniciativas de políticas públicas, el seguimiento y la aprobación de presupuestos,
 
 Ejemplos:
 
 -   el programa Pensión 65 (también premiada por buenas prácticas) con su plan saberes productivos, estrategia para la protección de las personas adultas mayores en Vulnerabilidad.
 -   el Proyecto de Ampliación Lima Airport Partners (LAP) del aeropuerto Jorge Chávez, el cual garantiza para el 2024 un aeropuerto al nivel de las instalaciones europeas más modernas, facilitando y promoviendo el turismo, el comercio y las comunicaciones.
+
+
+# Publicaciones Similares
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
+1.  [Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación](../2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.qmd)
+2. [Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R](../2021-07-14-comandos-blogdown/index.qmd)
+
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

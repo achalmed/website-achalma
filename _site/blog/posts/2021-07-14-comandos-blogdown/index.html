@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Edison Achalma">
-<meta name="description" content="Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.">
+<meta name="author" content="Elmer Edison Achalma Mendoza">
+<meta name="keywords" content="keyword1, keyword2">
+<meta name="description" content="Accede al PDF completo aquí.">
 
-<title>Comandos útiles de Blogdown para crear sitios web con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2363a7b1713459e3bb7e05f1febbb7c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-f7890bc79a3f65ef06a5b1c5352a79fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-dfa763637307eba5d3568df1604b076d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-b81d752bd840e549d0ce9a97cbbf8251.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -134,18 +135,21 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Comandos útiles de Blogdown para crear sitios web con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
-<meta property="og:description" content="Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.">
+<meta property="og:title" content="Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<meta property="og:description" content="Accede al PDF completo aquí.">
 <meta property="og:image" content="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Comandos útiles de Blogdown para crear sitios web con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
-<meta name="twitter:description" content="Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.">
+<meta name="twitter:title" content="Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<meta name="twitter:description" content="Accede al PDF completo aquí.">
 <meta name="twitter:image" content="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Comandos útiles de Blogdown para crear sitios web con R">
-<meta name="citation_author" content="Edison Achalma">
+<meta name="citation_title" content="Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R">
+<meta name="citation_abstract" content="| Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+">
+<meta name="citation_keywords" content="keyword1,keyword2">
+<meta name="citation_author" content="Elmer Edison Achalma Mendoza">
 <meta name="citation_publication_date" content="2021-07-14">
 <meta name="citation_cover_date" content="2021-07-14">
 <meta name="citation_year" content="2021">
@@ -188,7 +192,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Comandos útiles de Blogdown para crear sitios web con R</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -211,6 +215,54 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../blog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blog</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../econometria/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Econometria</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../filosofia/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Filosofía</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../finanzas/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finanzas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../informatica/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Informatica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../macroeconomia/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Macroeconomía</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../matematicas/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../microeconomia/index.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Microeconomía</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../appointment/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Book an appointment</span></a>
   </div>
@@ -221,16 +273,37 @@ cookieconsent.run({
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#blogdown-el-poder-de-crear-sitios-web-con-r-markdown-y-hugo" id="toc-blogdown-el-poder-de-crear-sitios-web-con-r-markdown-y-hugo" class="nav-link active" data-scroll-target="#blogdown-el-poder-de-crear-sitios-web-con-r-markdown-y-hugo">Blogdown: ¡El Poder de Crear Sitios Web con R Markdown y Hugo!</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#comenzando-con-blogdown" id="toc-comenzando-con-blogdown" class="nav-link" data-scroll-target="#comenzando-con-blogdown">Comenzando con Blogdown</a>
   <ul class="collapse">
-  <li><a href="#comenzando-con-blogdown" id="toc-comenzando-con-blogdown" class="nav-link" data-scroll-target="#comenzando-con-blogdown">Comenzando con Blogdown</a></li>
-  <li><a href="#creando-publicaciones-y-construyendo-tu-sitio" id="toc-creando-publicaciones-y-construyendo-tu-sitio" class="nav-link" data-scroll-target="#creando-publicaciones-y-construyendo-tu-sitio">Creando Publicaciones y Construyendo tu Sitio</a></li>
-  <li><a href="#verificando-y-actualizando-tu-sitio" id="toc-verificando-y-actualizando-tu-sitio" class="nav-link" data-scroll-target="#verificando-y-actualizando-tu-sitio">Verificando y Actualizando tu Sitio</a></li>
-  <li><a href="#personalizando-y-mejorando-tu-sitio" id="toc-personalizando-y-mejorando-tu-sitio" class="nav-link" data-scroll-target="#personalizando-y-mejorando-tu-sitio">Personalizando y Mejorando tu Sitio</a></li>
-  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
+  <li><a href="#qué-es-blogdown-y-cómo-se-instala" id="toc-qué-es-blogdown-y-cómo-se-instala" class="nav-link" data-scroll-target="#qué-es-blogdown-y-cómo-se-instala">¿Qué es Blogdown y cómo se instala?</a></li>
+  <li><a href="#creación-de-un-nuevo-sitio" id="toc-creación-de-un-nuevo-sitio" class="nav-link" data-scroll-target="#creación-de-un-nuevo-sitio">Creación de un Nuevo Sitio</a></li>
+  <li><a href="#previsualización-en-el-navegador" id="toc-previsualización-en-el-navegador" class="nav-link" data-scroll-target="#previsualización-en-el-navegador">Previsualización en el Navegador</a></li>
   </ul></li>
+  <li><a href="#creando-publicaciones-y-construyendo-tu-sitio" id="toc-creando-publicaciones-y-construyendo-tu-sitio" class="nav-link" data-scroll-target="#creando-publicaciones-y-construyendo-tu-sitio">Creando Publicaciones y Construyendo tu Sitio</a>
+  <ul class="collapse">
+  <li><a href="#añadiendo-una-nueva-publicación" id="toc-añadiendo-una-nueva-publicación" class="nav-link" data-scroll-target="#añadiendo-una-nueva-publicación">Añadiendo una Nueva Publicación</a></li>
+  <li><a href="#generando-el-sitio-web-estático" id="toc-generando-el-sitio-web-estático" class="nav-link" data-scroll-target="#generando-el-sitio-web-estático">Generando el Sitio Web Estático</a></li>
+  </ul></li>
+  <li><a href="#verificando-y-actualizando-tu-sitio-web" id="toc-verificando-y-actualizando-tu-sitio-web" class="nav-link" data-scroll-target="#verificando-y-actualizando-tu-sitio-web">Verificando y Actualizando tu Sitio Web</a>
+  <ul class="collapse">
+  <li><a href="#comprobando-errores-en-el-sitio" id="toc-comprobando-errores-en-el-sitio" class="nav-link" data-scroll-target="#comprobando-errores-en-el-sitio">Comprobando Errores en el Sitio</a></li>
+  <li><a href="#manteniendo-hugo-actualizado" id="toc-manteniendo-hugo-actualizado" class="nav-link" data-scroll-target="#manteniendo-hugo-actualizado">Manteniendo Hugo Actualizado</a></li>
+  <li><a href="#actualización-de-dependencias" id="toc-actualización-de-dependencias" class="nav-link" data-scroll-target="#actualización-de-dependencias">Actualización de Dependencias</a></li>
+  </ul></li>
+  <li><a href="#personalización-y-mejora-de-tu-sitio" id="toc-personalización-y-mejora-de-tu-sitio" class="nav-link" data-scroll-target="#personalización-y-mejora-de-tu-sitio">Personalización y Mejora de tu Sitio</a>
+  <ul class="collapse">
+  <li><a href="#modificando-el-tema-del-sitio" id="toc-modificando-el-tema-del-sitio" class="nav-link" data-scroll-target="#modificando-el-tema-del-sitio">Modificando el Tema del Sitio</a></li>
+  <li><a href="#comandos-personalizados-con-hugo" id="toc-comandos-personalizados-con-hugo" class="nav-link" data-scroll-target="#comandos-personalizados-con-hugo">Comandos Personalizados con Hugo</a></li>
+  </ul></li>
+  <li><a href="#desplegando-tu-sitio-en-la-web" id="toc-desplegando-tu-sitio-en-la-web" class="nav-link" data-scroll-target="#desplegando-tu-sitio-en-la-web">Desplegando tu Sitio en la Web</a>
+  <ul class="collapse">
+  <li><a href="#implementando-en-netlify" id="toc-implementando-en-netlify" class="nav-link" data-scroll-target="#implementando-en-netlify">Implementando en Netlify</a></li>
+  </ul></li>
+  <li><a href="#conclusión-tu-camino-hacia-el-éxito-con-blogdown" id="toc-conclusión-tu-camino-hacia-el-éxito-con-blogdown" class="nav-link" data-scroll-target="#conclusión-tu-camino-hacia-el-éxito-con-blogdown">Conclusión: Tu Camino Hacia el Éxito con Blogdown</a></li>
+  <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -241,17 +314,19 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Comandos útiles de Blogdown para crear sitios web con R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i></button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Una guía completa para comenzar a utilizar Blogdown en RStudio</p>
   <div class="quarto-categories">
     <div class="quarto-category">RStudio</div>
     <div class="quarto-category">Blogdown</div>
+    <div class="quarto-category">Desarrollo Web</div>
+    <div class="quarto-category">Herramientas para R</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    <p>Aprende a crear sitios web utilizando Blogdown, una herramienta que te permite construir páginas web estáticas con RStudio de manera fácil y rápida. Esta guía te enseñará los comandos más importantes para comenzar a crear tu propio sitio web en RStudio.</p>
+    <p>Accede al <a href="https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.pdf">PDF</a> completo aquí.</p>
   </div>
 </div>
 
@@ -260,7 +335,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Afiliación</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:achalmed.18@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    <p class="author"><a href="https://achalmaedison.netlify.app">Elmer Edison Achalma Mendoza</a> <a href="mailto:achalmed.18@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -290,121 +365,142 @@ cookieconsent.run({
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Resumen</div>
+    <div class="line-block">Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!</div>
+  </div>
+</div>
 
+<div>
+  <div class="keywords">
+    <div class="block-title">Palabras clave</div>
+    <p>keyword1, keyword2</p>
+  </div>
+</div>
 
 </header>
 
 
-<section id="blogdown-el-poder-de-crear-sitios-web-con-r-markdown-y-hugo" class="level1">
-<h1>Blogdown: ¡El Poder de Crear Sitios Web con R Markdown y Hugo!</h1>
-<p>¡Hola a todos! Si eres un apasionado de R y te gusta la idea de crear tu propio sitio web, ¡tengo una gran noticia para ti! Hoy quiero hablarte sobre <strong>Blogdown</strong>, un paquete de R que te permite crear sitios web increíbles utilizando R Markdown y Hugo.</p>
-<p>Blogdown simplifica el proceso de creación de sitios web estáticos, aprovechando el poder de Hugo, un generador de sitios estáticos rápido y flexible. A continuación, te mostraré algunos de los comandos más comunes que te ayudarán a comenzar con Blogdown.</p>
-<section id="comenzando-con-blogdown" class="level3">
-<h3 class="anchored" data-anchor-id="comenzando-con-blogdown">Comenzando con Blogdown</h3>
-<section id="blogdownnew_site" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownnew_site">1. <code>blogdown::new_site()</code></h4>
-<p>Este comando es el punto de partida. Ejecutarlo creará un nuevo sitio web de Blogdown en tu directorio actual. ¡Es tan sencillo como escribir una línea de código y presionar Enter!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">new_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>En la era digital actual, la creación de sitios web personales o profesionales no tiene por qué ser un proceso complejo. Si eres un apasionado de la programación y quieres adentrarte en el mundo de la creación de sitios web estáticos, ¡estás en el lugar indicado! Hoy te hablaré sobre <strong>Blogdown</strong>, una herramienta poderosa para crear sitios web utilizando R Markdown y Hugo. A través de este artículo, descubrirás cómo aprovechar el potencial de estos paquetes de R para crear un sitio web desde cero, de manera sencilla y con un control total sobre el contenido.</p>
+<p>Blogdown es ideal para quienes buscan una forma rápida, flexible y eficaz de generar sitios web estáticos, y en este artículo, te guiaré paso a paso para que puedas crear tu propio sitio sin dificultades. ¿Estás listo para transformar tus ideas en páginas web de calidad? ¡Sigue leyendo!</p>
 </section>
-<section id="blogdownserve_site" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownserve_site">2. <code>blogdown::serve_site()</code></h4>
-<p>Una vez que hayas creado tu sitio, seguramente querrás verlo en acción. Con este comando, puedes iniciar un servidor local y visualizar tu sitio web en el navegador.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">serve_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="comenzando-con-blogdown" class="level1">
+<h1>Comenzando con Blogdown</h1>
+<section id="qué-es-blogdown-y-cómo-se-instala" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-blogdown-y-cómo-se-instala">¿Qué es Blogdown y cómo se instala?</h2>
+<p>Blogdown es un paquete de R que facilita la creación de sitios web estáticos, utilizando R Markdown para la gestión de contenido y Hugo para la generación rápida de páginas. Si ya tienes R y RStudio instalados en tu sistema, ¡es muy fácil empezar!</p>
+<p>Para instalar Blogdown, solo necesitas ejecutar el siguiente comando en tu consola de R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"blogdown"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Una vez que hayas instalado Blogdown, estás listo para empezar a construir tu sitio web.</p>
 </section>
-<section id="blogdownstop_server" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownstop_server">3. <code>blogdown::stop_server()</code></h4>
-<p>Cuando hayas terminado de revisar tu sitio y quieras detener el servidor local, este comando es tu mejor amigo.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">stop_server</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="creación-de-un-nuevo-sitio" class="level2">
+<h2 class="anchored" data-anchor-id="creación-de-un-nuevo-sitio">Creación de un Nuevo Sitio</h2>
+<p>El primer paso para empezar a trabajar con Blogdown es crear un nuevo sitio. Esto lo puedes hacer fácilmente con el comando:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">new_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando creará un nuevo sitio web en el directorio que selecciones, generando la estructura básica del sitio, incluyendo un archivo de configuración y las carpetas necesarias.</p>
+</section>
+<section id="previsualización-en-el-navegador" class="level2">
+<h2 class="anchored" data-anchor-id="previsualización-en-el-navegador">Previsualización en el Navegador</h2>
+<p>Una vez que hayas creado tu sitio, querrás verlo en acción. Para ello, puedes iniciar un servidor local con el comando:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">serve_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando abrirá tu sitio en el navegador y te permitirá ver cómo luce en tiempo real.</p>
 </section>
 </section>
-<section id="creando-publicaciones-y-construyendo-tu-sitio" class="level3">
-<h3 class="anchored" data-anchor-id="creando-publicaciones-y-construyendo-tu-sitio">Creando Publicaciones y Construyendo tu Sitio</h3>
-<section id="blogdownnew_post" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownnew_post">4. <code>blogdown::new_post()</code></h4>
-<p>¿Listo para compartir contenido con el mundo? Este comando crea un nuevo archivo de publicación en el directorio <code>content/post</code>. Solo necesitas especificar el título y Blogdown hará el resto.</p>
+<section id="creando-publicaciones-y-construyendo-tu-sitio" class="level1">
+<h1>Creando Publicaciones y Construyendo tu Sitio</h1>
+<section id="añadiendo-una-nueva-publicación" class="level2">
+<h2 class="anchored" data-anchor-id="añadiendo-una-nueva-publicación">Añadiendo una Nueva Publicación</h2>
+<p>Una de las características más útiles de Blogdown es la posibilidad de crear publicaciones de manera sencilla. Para agregar una nueva entrada a tu blog, usa el siguiente comando:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">new_post</span>(<span class="at">title =</span> <span class="st">"Mi Primera Publicación"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando creará un archivo de publicación en el directorio <code>content/post</code> y lo abrirá para que puedas empezar a escribir.</p>
 </section>
-<section id="blogdownbuild_site" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownbuild_site">5. <code>blogdown::build_site()</code></h4>
-<p>Cuando estés satisfecho con tu contenido y quieras generar tu sitio web estático, usa este comando. Compilará y generará tu sitio web en el directorio <code>public</code>.</p>
+<section id="generando-el-sitio-web-estático" class="level2">
+<h2 class="anchored" data-anchor-id="generando-el-sitio-web-estático">Generando el Sitio Web Estático</h2>
+<p>Cuando ya hayas agregado contenido y quieras generar el sitio web estático, utiliza:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">build_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdownclean" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownclean">6. <code>blogdown::clean()</code></h4>
-<p>Si necesitas limpiar el directorio <code>public</code> eliminando todos los archivos generados anteriormente, este comando te será muy útil.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">clean</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando compila todos los archivos necesarios y genera el sitio web en el directorio <code>public</code>, listo para ser implementado.</p>
 </section>
 </section>
-<section id="verificando-y-actualizando-tu-sitio" class="level3">
-<h3 class="anchored" data-anchor-id="verificando-y-actualizando-tu-sitio">Verificando y Actualizando tu Sitio</h3>
-<section id="blogdowncheck_site" class="level4">
-<h4 class="anchored" data-anchor-id="blogdowncheck_site">7. <code>blogdown::check_site()</code></h4>
-<p>Antes de construir tu sitio, es una buena idea verificar si hay errores. Este comando te ayudará a asegurarte de que todo esté en orden.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">check_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="verificando-y-actualizando-tu-sitio-web" class="level1">
+<h1>Verificando y Actualizando tu Sitio Web</h1>
+<section id="comprobando-errores-en-el-sitio" class="level2">
+<h2 class="anchored" data-anchor-id="comprobando-errores-en-el-sitio">Comprobando Errores en el Sitio</h2>
+<p>Antes de proceder con la construcción de tu sitio, siempre es recomendable verificar si hay errores. Utiliza:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">check_site</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando realiza una revisión completa del sitio y te avisa de cualquier posible error que deba corregirse.</p>
 </section>
-<section id="blogdownupdate_hugo" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownupdate_hugo">8. <code>blogdown::update_hugo()</code></h4>
-<p>Hugo es una parte fundamental de Blogdown. Mantenerlo actualizado es crucial para aprovechar las últimas características y correcciones de errores.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_hugo</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="manteniendo-hugo-actualizado" class="level2">
+<h2 class="anchored" data-anchor-id="manteniendo-hugo-actualizado">Manteniendo Hugo Actualizado</h2>
+<p>Hugo es el motor detrás de la generación del sitio. Para asegurarte de que siempre estás utilizando la versión más reciente, puedes actualizar Hugo con:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_hugo</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="blogdownupdate_dependencies" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownupdate_dependencies">9. <code>blogdown::update_dependencies()</code></h4>
-<p>Blogdown depende de varios paquetes y herramientas. Este comando actualiza todas esas dependencias para que tu sitio funcione sin problemas.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_dependencies</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdowncheck_new_version" class="level4">
-<h4 class="anchored" data-anchor-id="blogdowncheck_new_version">10. <code>blogdown::check_new_version()</code></h4>
-<p>Para estar siempre al día, puedes verificar si hay una nueva versión de Blogdown disponible.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">check_new_version</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="actualización-de-dependencias" class="level2">
+<h2 class="anchored" data-anchor-id="actualización-de-dependencias">Actualización de Dependencias</h2>
+<p>Blogdown depende de varios paquetes y bibliotecas que ayudan a la creación y gestión de tu sitio. Para mantenerlas al día, ejecuta:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_dependencies</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="personalizando-y-mejorando-tu-sitio" class="level3">
-<h3 class="anchored" data-anchor-id="personalizando-y-mejorando-tu-sitio">Personalizando y Mejorando tu Sitio</h3>
-<section id="blogdownhugo_cmd" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownhugo_cmd">11. <code>blogdown::hugo_cmd()</code></h4>
-<p>Si necesitas ejecutar un comando de Hugo personalizado en tu sitio web, este comando es justo lo que necesitas.</p>
+<section id="personalización-y-mejora-de-tu-sitio" class="level1">
+<h1>Personalización y Mejora de tu Sitio</h1>
+<section id="modificando-el-tema-del-sitio" class="level2">
+<h2 class="anchored" data-anchor-id="modificando-el-tema-del-sitio">Modificando el Tema del Sitio</h2>
+<p>Un aspecto clave de un sitio web es su apariencia, y con Blogdown, puedes modificar el tema de manera sencilla. Si deseas editar el tema actual de tu sitio, usa:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">edit_theme</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si no estás satisfecho con el tema, puedes instalar uno nuevo. Para ello, usa:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">install_theme</span>(<span class="st">"nombre_del_tema"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="comandos-personalizados-con-hugo" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-personalizados-con-hugo">Comandos Personalizados con Hugo</h2>
+<p>Si necesitas ejecutar algún comando específico de Hugo, puedes hacerlo fácilmente con:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">hugo_cmd</span>(<span class="st">"comando_personalizado"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdownedit_theme" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownedit_theme">12. <code>blogdown::edit_theme()</code></h4>
-<p>¿Quieres modificar el tema de tu sitio? Este comando abre el directorio del tema utilizado por tu sitio web para que puedas editarlo a tu gusto.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">edit_theme</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdowninstall_theme" class="level4">
-<h4 class="anchored" data-anchor-id="blogdowninstall_theme">13. <code>blogdown::install_theme()</code></h4>
-<p>Agregar nuevos temas de Hugo es muy fácil con este comando. Puedes instalar un tema adicional y darle un nuevo aspecto a tu sitio web.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">install_theme</span>(<span class="st">"nombre_del_tema"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdownupdate_academic" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownupdate_academic">14. <code>blogdown::update_academic()</code></h4>
-<p>Si utilizas el tema Académico, este comando te ayudará a mantenerlo actualizado.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_academic</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="blogdownupdate_netlify" class="level4">
-<h4 class="anchored" data-anchor-id="blogdownupdate_netlify">15. <code>blogdown::update_netlify()</code></h4>
-<p>Finalmente, si utilizas Netlify para implementar tu sitio web, este comando actualizará la configuración para que todo funcione perfectamente.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_netlify</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando te permite ejecutar cualquier comando que Hugo soporte para mejorar y personalizar tu sitio aún más.</p>
 </section>
 </section>
-<section id="conclusión" class="level3">
-<h3 class="anchored" data-anchor-id="conclusión">Conclusión</h3>
-<p>Blogdown es una herramienta increíble para cualquier usuario de R que quiera crear y mantener un sitio web estático. Con comandos simples y efectivos, puedes diseñar, construir y personalizar tu sitio web de manera eficiente. ¡Espero que esta guía te ayude a dar tus primeros pasos con Blogdown y que pronto estés compartiendo tu contenido con el mundo!</p>
-<p>¡Feliz blogging!</p>
+<section id="desplegando-tu-sitio-en-la-web" class="level1">
+<h1>Desplegando tu Sitio en la Web</h1>
+<section id="implementando-en-netlify" class="level2">
+<h2 class="anchored" data-anchor-id="implementando-en-netlify">Implementando en Netlify</h2>
+<p>Una de las ventajas de Blogdown es su integración con servicios de hosting como Netlify. Si utilizas Netlify para alojar tu sitio, este comando actualizará la configuración:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">update_netlify</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="conclusión-tu-camino-hacia-el-éxito-con-blogdown" class="level1">
+<h1>Conclusión: Tu Camino Hacia el Éxito con Blogdown</h1>
+<p>Blogdown es una herramienta versátil y poderosa para crear sitios web estáticos usando R. Con unos pocos comandos y algo de creatividad, puedes diseñar y personalizar tu sitio de manera eficiente. Ya sea que estés creando un blog personal o un sitio profesional, Blogdown ofrece todo lo necesario para ayudarte a construir tu presencia en línea de forma rápida y sin complicaciones.</p>
+<p>Recuerda que la clave del éxito en la creación de un sitio web está en la simplicidad y la personalización. ¡No dudes en experimentar con los diferentes comandos y herramientas que Blogdown te ofrece para crear un sitio web que refleje tu estilo único!</p>
+</section>
+<section id="publicaciones-similares" class="level1">
+<h1>Publicaciones Similares</h1>
+<p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<ol type="1">
+<li><a href="../../../blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.html">Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación</a></li>
+<li><a href="../../../blog/posts/2021-07-14-comandos-blogdown/index.html">Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R</a></li>
+</ol>
+<p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
 
 </section>
-</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2021,
-  author = {Achalma, Edison},
-  title = {Comandos útiles de Blogdown para crear sitios web con R},
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{edison_achalma_mendoza2021,
+  author = {Edison Achalma Mendoza, Elmer},
+  title = {Blogdown La Herramienta Perfecta para Crear Sitios Web
+    Estáticos con R},
   date = {2021-07-14},
   url = {https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/},
-  langid = {es}
+  langid = {es},
+  abstract = {\textbar{} Descubre cómo crear tu propio sitio web
+    estático con Blogdown, una herramienta poderosa que combina R
+    Markdown y Hugo. Aprende a usar comandos sencillos para
+    personalizar, construir y alojar tu sitio web de manera fácil y
+    rápida. ¡Comienza tu proyecto web hoy mismo!}
 }
-</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-Achalma, E. (2021, July 14). Comandos útiles de Blogdown para crear
-sitios web con R. Retrieved from <a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/">https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/</a>
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-edison_achalma_mendoza2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Edison Achalma Mendoza, Elmer. 2021. <span>“Blogdown La Herramienta
+Perfecta para Crear Sitios Web Estáticos con R.”</span> July 14, 2021.
+<a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/">https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

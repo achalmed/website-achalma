@@ -1,12 +1,51 @@
 #title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
-#title-block-banner: images/philosophy2.jpg
+#title-block-banner: images/philosophy2.jpg # Color del banner del bloque de título personalizado
 #title-block-banner-color: body  # Color del texto en el banner del bloque de título
 
-fig-cap-location: top  # Ubicación de las leyendas de las figuras
-tbl-cap-location: top  # Ubicación de las leyendas de las tablas
+# LAYOUT
+# fig-cap-location: top  # Ubicación de las leyendas de las figuras
+# tbl-cap-location: top  # Ubicación de las leyendas de las tablas
 
+documentmode: jou # man Manuscrito, jou Revista, doc Documento, stu Estudiante
+
+# PARA ESTUDIANTE
+# course: Introduction to Statistics (EDUC 5101)
+# professor: W. Joel Schneider
+# duedate: 12/22/2024
+
+# PARA UNICAMENTE MODO JOU
+# journal: Psychological Review
+# volume: 2024, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+
+fontsize: 12pt
+a4paper: true
+
+lang: es
+language: 
+  citation-last-author-separator: "y"
+  citation-masked-author: "Cita Enmascarada"
+  citation-masked-title: "Título Enmascarado"
+  citation-masked-date: "n.f."
+  title-block-author-note: "Nota de Autores"
+  title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
+  title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
+  references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el metanálisis."
+
+# Configuración de flotantes en el texto
+floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto
+
+# Configuración de máscara
+mask: false  # Para ocultar información sensible
+
+# Configuración de borrador
+draftfirst: true  # Coloca una marca de agua de borrador en la primera página.
+draftall: true  # Coloca una marca de agua de borrador en todas las páginas.
+
+# TITLE AND AUTHOR
 author:
-  - name: Edison Achalma # Nombre del autor
+  - name: Elmer Edison Achalma Mendoza # Nombre del autor
     url: https://achalmaedison.netlify.app  # URL del autor
     affiliation: 
         - name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
@@ -21,14 +60,19 @@ author:
       corresponding: true
       equal-contributor: true
       deceased: false
+author-note:
+  disclosures:
+    conflict of interest: El autor no tiene ningún conflicto de intereses que declarar.
 date-modified: "today"  # Fecha de modificación del documento
 search: true  # Habilitar búsqueda en el documento
 
+# REFERENCES
 citation: true  # Habilitar citas bibliográficas
 google-scholar: true  # Habilitar enlaces a Google Scholar
-csl: apa-6th-edition.csl  # Estilo de citas
+# csl: apa-6th-edition.csl  # Estilo de citas
 cite-method: biblatex  # Método de citación
 
+# CROSS-REFERENCES
 crossref:
   fig-title: Figura  # Título de las figuras en las referencias
   fig-prefix: Figura  # Prefijo para las leyendas de las figuras
@@ -36,10 +80,7 @@ crossref:
   tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
   ref-hyperlink: true  # Habilitar enlaces en las referencias
 
-
 draft: true  # Modo de borrador (false = final, true = borrador)
-
-highlight-style: github
 
 format:
   html:
@@ -72,33 +113,8 @@ format:
       body-width: 1000px # en rem: 1000px / 16 = 62.5rem
       margin-width: 200px #  en rem: 200px / 16 = 12.5rem
       gutter-width: 1.5rem
-  pdf:
-    documentclass: article  # Clase de documento para el PDF scrartcl, article
-    papersize: a4  # Tamaño del papel (letter, A4)
-    language: es  # Idioma del documento
-    geometry: 
-      - top=2.54cm  # Margen superior
-      - right=2.54cm  # Margen derecho
-      - bottom=2.54cm  # Margen inferior
-      - left=2.54cm  # Margen izquierdo
-    fig-width: 7
-    fig-height: 5
-    # toc: true  # Habilitar la tabla de contenido
-    # toc-depth: 3  # Profundidad de la tabla de contenido
-    # toc-title: Contenidos  # Título de la tabla de contenido
-    # number-sections: true  # Numerar secciones
-    # number-depth: 3  # Profundidad de numeración de secciones
-    highlight-style: github  # Estilo de resaltado de código
-    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
-    colorlinks: true  # Habilitar enlaces con colores
-    cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
-    link-citation: true  # Habilitar enlaces en las citas
-    link-bibliography: true  # Habilitar enlaces en la bibliografía
-    keep-tex: true  # Mantener archivos .tex generados
-    pdf-engine: pdflatex    # Motor de PDF (xelatex, pdflatex, lualatex, tectonic, latexmk)
-    include-in-header: 
-      - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
-    output-file: index.pdf
+  # apaquarto-docx: default
+  apaquarto-pdf: default
 format-links: 
   - pdf
   - ipynb

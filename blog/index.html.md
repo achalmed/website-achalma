@@ -5,14 +5,15 @@ listing:
   - id: ultimas-entradas
     contents: 
       - "posts/*/index.qmd"
-    type: default
+    type: default # (table, default, table)
     sort: 
       - "date desc"
       - "title desc"
     date-format: short
     filter-ui: true
-    categories: numbered
+    categories: cloud # (numbered, unnumbered, cloud)
     feed: true
+    fields: [image, date, title, author, reading-time]
 # page-layout: full
 # margin-header: signup.html
 # title-block-banner: "#EDF3F9"

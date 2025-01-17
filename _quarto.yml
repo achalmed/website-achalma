@@ -105,5 +105,6 @@ execute:
   output: true  # Mostrar resultados de la ejecución
   warning: false  # Ocultar advertencias
   error: false  # Ocultar errores
-  cache: true  # Habilitar el almacenamiento en caché
-  enabled: true  # Habilitar la ejecución
+  enabled: false  # Habilitar la ejecución
+  freeze: false  # re-render only when source changes
+  cache: false  # Habilitar el almacenamiento en caché

@@ -326,4 +326,4 @@ CHAT BOT
 
 ### Contact details
 
-**email:** [achalmaedison\@kapitan.net](mailto:achalmed.18@gmail.com) <br>
+**email:** [achalmaedison\@kapital.net](mailto:achalmed.18@gmail.com) <br>

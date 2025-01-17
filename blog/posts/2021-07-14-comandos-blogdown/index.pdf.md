@@ -3,7 +3,7 @@ title: Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R
 subtitle: Una guía completa para comenzar a utilizar Blogdown en RStudio
 shorttitle: "Blogdown"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
 abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Comandos
   - DesarrolloWeb
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
 date: "07/14/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
@@ -143,8 +143,9 @@ Recuerda que la clave del éxito en la creación de un sitio web está en la sim
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1.  [Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación](../2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.qmd)
-2. [Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R](../2021-07-14-comandos-blogdown/index.qmd)
+1.  [Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión 📚  [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
+
+2. [Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown) Lee sin conexión 📚  [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

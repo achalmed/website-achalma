@@ -40,8 +40,8 @@ floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se mueva
 mask: false  # Para ocultar información sensible
 
 # Configuración de borrador
-draftfirst: true  # Coloca una marca de agua de borrador en la primera página.
-draftall: true  # Coloca una marca de agua de borrador en todas las páginas.
+draftfirst: false  # Coloca una marca de agua de borrador en la primera página.
+draftall: false  # Coloca una marca de agua de borrador en todas las páginas.
 
 # TITLE AND AUTHOR
 author:

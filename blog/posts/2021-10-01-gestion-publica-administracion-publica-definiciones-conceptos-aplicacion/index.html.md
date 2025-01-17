@@ -3,7 +3,7 @@ title: Gestión Pública y Administración Pública Definiciones, Conceptos y Ap
 subtitle: Comprendiendo la diferencia y la importancia de estas categorías en el ámbito gubernamental.
 shorttitle: "Gestión Pública y Administración Pública"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf) completo aquí.
 abstract: |
   | Explora las definiciones, conceptos y aplicaciones de la gestión pública y la administración pública en este artículo informativo. Aprende cómo estas categorías están estrechamente relacionadas con el buen manejo de los recursos públicos y el logro de metas colectivas. Descubre las diferencias clave entre gestión pública y administración pública, así como su importancia en la gestión gubernamental.
 keywords: [keyword1, keyword2]
@@ -25,7 +25,7 @@ citation:
     - Noe Borda 
     - Kattya Castillo 
     - Yuri Fernandez
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf
 date: "10/01/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
@@ -114,8 +114,9 @@ Ejemplos:
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1.  [Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación](../2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.qmd)
-2. [Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R](../2021-07-14-comandos-blogdown/index.qmd)
+1.  [Gestión Pública y Administración Pública Definiciones, Conceptos y Aplicación](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión 📚  [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
+
+2. [Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown) Lee sin conexión 📚  [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

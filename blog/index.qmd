@@ -21,6 +21,6 @@ listing:
 # css: index.css
 search: false
 comments: false
-draft: true  # Modo de borrador (false = final, true = borrador)
+draft: false  # Modo de borrador solo esta pagina (false = final, true = borrador)
 ---
 

@@ -1,10 +1,12 @@
 #title-block-banner: "#EDF3F9"  # Color del banner del bloque de título
-#title-block-banner: images/philosophy2.jpg
+#title-block-banner: images/philosophy2.jpg # Color del banner del bloque de título personalizado
 #title-block-banner-color: body  # Color del texto en el banner del bloque de título
 
+# LAYOUT
 fig-cap-location: top  # Ubicación de las leyendas de las figuras
 tbl-cap-location: top  # Ubicación de las leyendas de las tablas
 
+# TITLE AND AUTHOR
 author:
   - name: Edison Achalma # Nombre del autor
     url: https://achalmaedison.netlify.app  # URL del autor
@@ -24,40 +26,37 @@ author:
 date-modified: "today"  # Fecha de modificación del documento
 search: true  # Habilitar búsqueda en el documento
 
+# REFERENCES
 citation: true  # Habilitar citas bibliográficas
 google-scholar: true  # Habilitar enlaces a Google Scholar
 csl: apa-6th-edition.csl  # Estilo de citas
 cite-method: biblatex  # Método de citación
 
+# CROSS-REFERENCES
 crossref:
   fig-title: Figura  # Título de las figuras en las referencias
   fig-prefix: Figura  # Prefijo para las leyendas de las figuras
   tbl-title: Tabla  # Título de las tablas en las referencias
   tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
   ref-hyperlink: true  # Habilitar enlaces en las referencias
-execute:
-  keep-md: true  # Mantener archivos .md generados
-  keep-ipynb: true
-  echo: true  # Mostrar comandos ejecutados
-  output: true  # Mostrar resultados de la ejecución
-  warning: false  # Ocultar advertencias
-  error: false  # Ocultar errores
-  cache: false  # Habilitar el almacenamiento en caché
-  enabled: true  # Habilitar la ejecución
 
-draft: false  # Modo de borrador (false = final, true = borrador)
 
+draft: true  # Modo de borrador (false = final, true = borrador)
+
+image-path: "index_files/figure-html/"  # Aquí defines la ruta global para las imágenes
+
+# CODE
 highlight-style: github
 
 format:
   html:
     page-layout: article  # Diseño de página para el formato HTML (por ejemplo, article, full, o custom)
-    toc: false  # Mostrar tabla de contenidos (false, true)
+    toc: true  # Mostrar tabla de contenidos (false, true)
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos
     toc-location: left  # Ubicación de la tabla de contenidos (left, right)
-    css: index.css  # Archivo CSS personalizado para el formato HTML
+    # css: index.css  # Archivo CSS personalizado para el formato HTML
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
     smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
@@ -66,43 +65,69 @@ format:
     citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
     footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
     code-copy: true  # Habilitar la funcionalidad de copiar código
-    code-fold: false  # Habilitar el plegado de código
+    code-fold: true  # Habilitar el plegado de código
     code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
-    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
+    code-overflow: scroll  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
     code-tools:
       source: repo  # Mostrar el código fuente en las herramientas de código (repo, true)
       toggle: false  # Habilitar la funcionalidad de alternar código
       caption: none  # Opción para la leyenda del código
     mermaid: 
       theme: neutral
-    include-after-body:
-      - ../signup.html  # Archivo HTML para incluir después del contenido principal del cuerpo
+    grid: 
+      sidebar-width: 400px # en rem: 400px / 16 = 25rem
+      body-width: 1000px # en rem: 1000px / 16 = 62.5rem
+      margin-width: 200px #  en rem: 200px / 16 = 12.5rem
+      gutter-width: 1.5rem
   pdf:
+    # LAYOUT
     documentclass: article  # Clase de documento para el PDF scrartcl, article
     papersize: a4  # Tamaño del papel (letter, A4)
-    language: es  # Idioma del documento
     geometry: 
       - top=2.54cm  # Margen superior
       - right=2.54cm  # Margen derecho
       - bottom=2.54cm  # Margen inferior
       - left=2.54cm  # Margen izquierdo
+    # LANGUAGE
+    language: es  # Idioma del documento
+    # FORMAT OPTIONS
+    pdf-engine: pdflatex    # Motor de PDF (pdflatex)
+    # fontfamily: anttor
+    # pdf-engine: xelatex       # Motor de PDF (xelatex, lualatex, tectonic, latexmk)
+    # FONTS
+    # sansfont: "Open Sans" # Establece la fuente sans-serif para los encabezados
+    # mainfont: "Merriweather" # Establece la fuente principal para el texto del cuerpo principal en (Merriweather)
+    # monofont: "Consolas" # Establece la fuente monoespaciada para el código en Consolas
+    # mathfont: "TeX-Gyre-Termes-Math" # Establece la fuente para las matemáticas en (TeX Gyre Termes Math).
+    # CJKmainfont: "Noto Sans CJK SC" # Establece la fuente principal CJK (chino, japonés, coreano) en Noto Sans CJK SC.
+    # FIGURES
+    fig-width: 7
+    fig-height: 5
+    # TABLE OF CONTENTS
     # toc: true  # Habilitar la tabla de contenido
     # toc-depth: 3  # Profundidad de la tabla de contenido
     # toc-title: Contenidos  # Título de la tabla de contenido
+    # NUMBERING
     # number-sections: true  # Numerar secciones
     # number-depth: 3  # Profundidad de numeración de secciones
+    # CODE
     highlight-style: github  # Estilo de resaltado de código
+    code-overflow: wrap  # Manejo de desbordamiento de código (wrap, scroll, truncate, etc.)
+    # COLORS
     colorlinks: true  # Habilitar enlaces con colores
+    # REFERENCES
     cite-method: biblatex  # Método de citación (citeproc, natbib, o biblatex)
     link-citation: true  # Habilitar enlaces en las citas
     link-bibliography: true  # Habilitar enlaces en la bibliografía
+    # RENDERING
     keep-tex: true  # Mantener archivos .tex generados
-    pdf-engine: pdflatex    # Motor de PDF (xelatex, pdflatex, lualatex, tectonic, latexmk)
-    #include-in-header: 
-    #  text: |
-    #  - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
     output-file: index.pdf
-format-links: [pdf] # (false)
+    # INCLUDES
+    include-in-header: 
+      - file: packages.tex  # Archivo LaTeX a incluir en el encabezado
+format-links: 
+  - pdf
+  - ipynb
 
 jupyter: python3
 

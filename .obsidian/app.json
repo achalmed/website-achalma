@@ -1,0 +1,16 @@
+{
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "index files/images",
+  "livePreview": false,
+  "showLineNumber": true,
+  "userIgnoreFilters": [
+    "_extensions/",
+    "site_libs/",
+    "scripts/",
+    "_site/"
+  ],
+  "newLinkFormat": "relative",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "blog/posts"
+}

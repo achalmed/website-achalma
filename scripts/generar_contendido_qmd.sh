@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del blog principal (como "blog"), ahora relativo a la carpeta script
-main_blog="../macroeconomia"
+main_blog="../blog"
 
 # Función para convertir la ruta a un enlace Markdown con títulos más legibles
 convert_to_link() {

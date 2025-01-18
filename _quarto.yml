@@ -105,6 +105,6 @@ execute:
   output: true  # Mostrar resultados de la ejecución
   warning: false  # Ocultar advertencias
   error: false  # Ocultar errores
-  enabled: false  # Habilitar la ejecución
-  freeze: false  # re-render only when source changes
-  cache: false  # Habilitar el almacenamiento en caché
+  enabled: false  # Habilitar la ejecución: quarto render notebook.ipynb --execute
+  freeze: true  # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
+  cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject

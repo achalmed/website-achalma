@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "b56f8fcfe096a6e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "5ca660e8f99dee80",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b159f711a5598d6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/_contenido_posts.qmd",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "_contenido_posts"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7e9a75914269e3eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "a23f6cdd1f673921",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a085c1714ece2a9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "b81869a0c339a6fa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "9ee3305d1a6e68df",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f5ffac457bf11826",
+    "type": "split",
+    "children": [
+      {
+        "id": "09207deb4f7f4523",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "74b0c3a1488ecd17",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Anclaje, Envoltura, Alineación y Organización de Objetos en LibreOffice.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Anclaje, Envoltura, Alineación y Organización de Objetos en LibreOffice"
+            }
+          },
+          {
+            "id": "cd0474bfcb6f3177",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Anclaje, Envoltura, Alineación y Organización de Objetos en LibreOffice.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Anclaje, Envoltura, Alineación y Organización de Objetos en LibreOffice"
+            }
+          },
+          {
+            "id": "89fee44c578b8b9d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "678cf29afe0fa28f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2024 05 26 instalando specitify.md"
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 2024 05 26 instalando specitify"
+            }
+          },
+          {
+            "id": "0870e7ed019513e2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "random-note:Abrir nota al azar": false,
+      "audio-recorder:Iniciar/Detener la grabación": false,
+      "qmd-as-md-obsidian:Toggle Quarto Preview": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "b159f711a5598d6d",
+  "lastOpenFiles": [
+    "blog/posts/2021-07-14-comandos-blogdown/index.pdf.md",
+    "2024-12-25.md",
+    "prueba de raiz unitaria.md",
+    "adb.md",
+    "separa hojas de excel.md",
+    "tipografias.md",
+    "2024 07 31 organizando tipos de archivos de softwares.md",
+    "2024 05 26 ejcuntado payload.md",
+    "sms.md",
+    "ensayo de postulacion.md",
+    "2024 05 10.md",
+    "2024 08 23.md",
+    "2024-12-31.md",
+    "2024 08 28.md",
+    "2024 05 03.md",
+    "instalar tor browser.md",
+    "2024 05 26 instalando specitify.md",
+    "frases.md",
+    "2024 06 24.md",
+    "202408231156.md",
+    "sitios web asombrosos.md",
+    "2024 08 29.md",
+    "14 03 2024 mensaje.md",
+    "Vectores Autorregresivos.md",
+    "sync list complejo.md",
+    "2024 04 25.md",
+    "1.jpg",
+    "2.jpg",
+    "cb1.jpg",
+    "Pasted image 20241225160431.png",
+    "Pasted image 20241225160425.png",
+    "Pasted image 20241225160414.png",
+    "Pasted image 20241225160407.png",
+    "Pasted image 20241225160400.png",
+    "Pasted image 20241225160240.png",
+    "Pasted image 20241225160233.png"
+  ]
+}

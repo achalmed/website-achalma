@@ -24,6 +24,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # LA ECONOMÍA PERUANA DESDE 1970 HASTA 1990
 
 ## PERÍODO DE 1970 – 1975
@@ -150,17 +152,17 @@ El Perú de hoy es macro económicamente más estable y próspero, pero es tambi
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Comandos Goole Assistant](https://achalmaedison.netlify.app/posts/2020-05-23-comandos-goole-assistant) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2020-05-23-comandos-goole-assistant/index.pdf)
-2. [Comandos Blogdown](https://achalmaedison.netlify.app/posts/2021-07-14-comandos-blogdown) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2021-07-14-comandos-blogdown/index.pdf)
-3. [Gestion Publica Administracion Publica Definiciones Conceptos Aplicacion](https://achalmaedison.netlify.app/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
-4. [Reformas Modernizacion Gestion Publica Peru](https://achalmaedison.netlify.app/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf)
-5. [Economia Agraria](https://achalmaedison.netlify.app/posts/2022-04-22-economia-agraria) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2022-04-22-economia-agraria/index.pdf)
-6. [Medio Ambiente](https://achalmaedison.netlify.app/posts/2022-06-02-medio-ambiente) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2022-06-02-medio-ambiente/index.pdf)
-7. [Cualidades Servidores Publicos](https://achalmaedison.netlify.app/posts/2023-05-11-cualidades-servidores-publicos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2023-05-11-cualidades-servidores-publicos/index.pdf)
-8. [La Economia Peruana 1970 1990 Un Analisis Periodos Desafios](https://achalmaedison.netlify.app/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf)
-9. [Economia Regional](https://achalmaedison.netlify.app/posts/2023-05-16-economia-regional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2023-05-16-economia-regional/index.pdf)
-10. [Pautas Presentacion Informe Investigacion](https://achalmaedison.netlify.app/posts/2023-06-03-pautas-presentacion-informe-investigacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf)
-11. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
+1. [Comandos Goole Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-goole-assistant) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-goole-assistant/index.pdf)
+2. [Comandos Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf)
+3. [Gestion Publica Administracion Publica Definiciones Conceptos Aplicacion](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
+4. [Reformas Modernizacion Gestion Publica Peru](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf)
+5. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
+6. [Medio Ambiente](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf)
+7. [Cualidades Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf)
+8. [La Economia Peruana 1970 1990 Un Analisis Periodos Desafios](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf)
+9. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+10. [Pautas Presentacion Informe Investigacion](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf)
+11. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Nombre del blog principal (como "blog"), ahora relativo a la carpeta script
-main_blog="../blog"
+# Nombre del blog principal (cambia esto a la carpeta que desees procesar)
+main_blog="../blog"  # Por ejemplo, cambia a "../finanzas" o "../macroeconomia" según sea necesario
 
 # Función para convertir la ruta a un enlace Markdown con títulos más legibles
 convert_to_link() {
@@ -10,8 +10,10 @@ convert_to_link() {
     # Sacar la fecha y convertir guiones en espacios
     local title=$(echo "$folder_name" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//' | tr '-' ' ' | sed 's/\b\(.\)/\u\1/g')
     local subblog=$(dirname "$path" | xargs basename)
-    # Usar una ruta absoluta para la URL sin añadir ../
-    local url="https://achalmaedison.netlify.app/$subblog/$folder_name"
+    # Obtener el nombre de la carpeta principal (sin "../")
+    local main_folder=$(basename "$main_blog")
+    # Ajustar la URL para usar el nombre de la carpeta principal correcta
+    local url="https://achalmaedison.netlify.app/$main_folder/$subblog/$folder_name"
     local pdf_url="$url/index.pdf"
 
     echo -e "[$title]($url) Lee sin conexión 📚 [PDF]($pdf_url)"

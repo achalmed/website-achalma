@@ -34,6 +34,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Indagar definiciones, conceptos y aplicación de gestión pública y administración pública.
 
 ## Administración pública

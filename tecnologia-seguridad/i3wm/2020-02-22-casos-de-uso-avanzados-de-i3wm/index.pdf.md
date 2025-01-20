@@ -28,6 +28,8 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 1. Introducción a los casos de uso avanzados en i3wm
 ## Explorando funcionalidades más avanzadas y especializadas de i3wm
 ## Ventajas de aprovechar características avanzadas para optimizar tu flujo de trabajo

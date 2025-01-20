@@ -25,6 +25,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Orígenes y Conceptos Fundamentales de las Finanzas Internacionales
 
 ## Economía Internacional
@@ -61,6 +63,8 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 
 
 
+
+
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -76,6 +80,8 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 ::::
 :::::
 ::::::
+
+
 
 
 
@@ -216,6 +222,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
+
+
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -231,6 +239,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 ::::
 :::::
 ::::::
+
+
 
 
 

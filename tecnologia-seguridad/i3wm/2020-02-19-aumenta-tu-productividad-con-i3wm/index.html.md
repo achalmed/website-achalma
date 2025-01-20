@@ -28,6 +28,8 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 1. Introducción a la productividad en i3wm
 ## Cómo i3wm puede mejorar tu flujo de trabajo y eficiencia
 ## Beneficios de utilizar herramientas y trucos específicos en i3wm

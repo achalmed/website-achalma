@@ -27,6 +27,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción
 
 En la era digital actual, la creación de sitios web personales o profesionales no tiene por qué ser un proceso complejo. Si eres un apasionado de la programación y quieres adentrarte en el mundo de la creación de sitios web estáticos, ¡estás en el lugar indicado! Hoy te hablaré sobre **Blogdown**, una herramienta poderosa para crear sitios web utilizando R Markdown y Hugo. A través de este artículo, descubrirás cómo aprovechar el potencial de estos paquetes de R para crear un sitio web desde cero, de manera sencilla y con un control total sobre el contenido.

@@ -30,6 +30,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 ¡Hola, lector! Te doy la más cordial bienvenida a esta nueva entrega de nuestra serie de introducción a Linux. En esta ocasión, vamos a sumergirnos en un tema fascinante y fundamental: las Particiones y Volúmenes en Linux.
 
 Si ya has leído nuestros artículos anteriores sobre GNU/Linux, distribuciones y entornos de escritorio, estás listo para adentrarte en el apasionante mundo de la administración del sistema. Aquí descubrirás cómo estructurar y gestionar tus particiones, así como los volúmenes que albergan tus datos.

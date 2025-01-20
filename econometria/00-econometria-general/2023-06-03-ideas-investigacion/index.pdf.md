@@ -157,13 +157,8 @@ Se tomaría datos de la ENAHO viendo el nivel de empleo
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
--   [Unidad 01](../unidad-01/index.qmd)
-
--   [Unidad 02](../unidad-02/index.qmd)
-
--   [Unidad 03](../unidad-03/index.qmd)
-
--   [Unidad 04](../unidad-04/index.qmd)
+1. [Recaudacion Impuestos Gob Nac Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf)
+2. [Ideas Investigacion](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

@@ -25,6 +25,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Mastering Google Assistant: Basic Commands
 
 Google Assistant is a powerful tool that can help you with various tasks using simple voice commands.

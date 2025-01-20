@@ -28,6 +28,8 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 1. Introducción a la integración de i3wm en tu entorno de trabajo
 ## Importancia de adaptar i3wm a tus necesidades laborales
 ## Ventajas de utilizar aplicaciones y utilidades específicas con i3wm

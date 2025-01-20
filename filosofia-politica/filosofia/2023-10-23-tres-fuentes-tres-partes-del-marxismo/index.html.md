@@ -24,6 +24,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Explorando las Tres Fuentes y Tres Partes del Marxismo según Lenin
 
 Me complace compartir con ustedes uno de los textos más maravillosos de síntesis del marxismo. Este texto ha sido desarrollado por Lenin en un prodigio de cinco hojas, resumiendo toda la teoría marxista tal como se había desarrollado en su momento. El texto se llama "Tres Fuentes y Tres Partes Integrantes del Marxismo" y fue escrito por Lenin en 1913, cuando se encontraba en el exilio.

@@ -25,6 +25,8 @@ draft: true
 
 
 
+
+
 <!--# MEDICION DE LA ESTRUCTURA Y DESEMPEÑO DE LA ORGANIZACIÓN INDUSTRIAL
 
 En este capitulo aprenderemos:

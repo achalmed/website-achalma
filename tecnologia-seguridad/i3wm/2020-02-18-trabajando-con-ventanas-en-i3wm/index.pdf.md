@@ -28,6 +28,8 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 1. Introducción a la gestión eficiente de ventanas en i3wm
 ## Filosofía de gestión de ventanas en mosaico (tiling)
 ## Ventajas de utilizar la gestión en mosaico en i3wm

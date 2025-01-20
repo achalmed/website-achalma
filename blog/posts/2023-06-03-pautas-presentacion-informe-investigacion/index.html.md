@@ -24,6 +24,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción
 
 Al iniciar el semestre académico, es fundamental que los alumnos definan de manera precisa el objetivo de su trabajo de investigación y evalúen su relevancia, factibilidad y valor agregado. Se recomienda tomar estas decisiones después de revisar la literatura básica y explorar la disponibilidad de información estadística sobre el tema de investigación.

@@ -28,6 +28,8 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 1. Introducción a la comparativa entre i3wm y otros gestores de ventanas
 ## Importancia de elegir el gestor de ventanas adecuado
 ## Objetivo de la comparativa y ventajas de i3wm a considerar

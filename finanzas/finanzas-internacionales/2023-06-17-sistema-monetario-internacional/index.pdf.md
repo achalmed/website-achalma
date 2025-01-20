@@ -26,6 +26,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # El Sistema Monetario Internacional
 
 El sistema monetario internacional es un marco institucional establecido para facilitar los pagos internacionales, regular los flujos de capital y determinar los tipos de cambio entre las diferentes monedas. Este sistema se basa en acuerdos internacionales y requiere un alto grado de cooperación entre los gobiernos de los principales países. En el contexto de la globalización, donde los flujos internacionales de bienes, servicios y capitales son cada vez más intensos, se hace necesaria la existencia de instituciones que regulen y faciliten estas transacciones.
@@ -82,6 +84,8 @@ En este régimen, el tipo de cambio se determina mediante el juego de oferta y d
 
 
 
+
+
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -103,6 +107,8 @@ Regímenes cambiarios
 
 
 
+
+
 En una economía abierta, la política cambiaria juega un papel crucial en la consecución de los objetivos de la política macroeconómica, que incluyen el logro de un equilibrio tanto interno como externo.
 
 Dado que las economías abiertas se enfrentan a diversos desafíos, la conducción de la política cambiaria depende de las prioridades establecidas en variables clave como la inflación, el desempleo, las tasas de interés, la balanza comercial y el crecimiento económico. Estas variables influyen en la toma de decisiones relacionadas con el tipo de cambio y su gestión.
@@ -110,6 +116,8 @@ Dado que las economías abiertas se enfrentan a diversos desafíos, la conducci�
 La evolución del sistema monetario internacional en el siglo XX ha estado marcada por la confrontación entre regímenes cambiarios fijos y flexibles, así como por la búsqueda de un equilibrio tanto interno como externo en los objetivos macroeconómicos. Esta historia refleja los esfuerzos constantes por encontrar el enfoque más adecuado para manejar las fluctuaciones cambiarias y mantener la estabilidad en la economía global.
 
 Es importante tener en cuenta que ningún régimen cambiario puede funcionar eficientemente si no se complementa con políticas fiscales y monetarias responsables y prudentes. Estas políticas son fundamentales para respaldar y fortalecer el régimen cambiario elegido, garantizando así su efectividad y sostenibilidad a largo plazo.
+
+
 
 
 
@@ -131,6 +139,8 @@ Interrelaciones entre tipo de cambio, variables y políticas económicas
 ::::
 :::::
 ::::::
+
+
 
 
 

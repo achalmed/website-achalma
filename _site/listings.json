@@ -1,5 +1,115 @@
 [
   {
+    "listing": "/teching/index.html",
+    "items": []
+  },
+  {
+    "listing": "/matematicas/index.html",
+    "items": [
+      "/matematicas/matematicas/2024-03-31-por-editar/index.html"
+    ]
+  },
+  {
+    "listing": "/microeconomia/index.html",
+    "items": [
+      "/microeconomia/microeconomia/2024-03-31-por-editar/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-23-elasticidad-oi/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-17-estructura-mercado-oi-cap4/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-16-medidas-concentracion-desempeno-organizacion-industrial-oi-cap3/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante-oi-cap2/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion-oi-cap1/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos-oi-cap1/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-12-introducion-organizacion-industrial-oi-cap1/index.html",
+      "/microeconomia/microeconomia/2021-08-09-07-fallas-de-mercado/index.html",
+      "/microeconomia/microeconomia/2021-08-02-06-modelo-de-intercambio-puro/index.html",
+      "/microeconomia/microeconomia/2021-07-26-05-monopolio-y-modelos-de-oligopolio/index.html",
+      "/microeconomia/microeconomia/2021-07-19-04-equilibrio-parcial-y-competitivo/index.html",
+      "/microeconomia/microeconomia/2021-07-12-03-decisiones-de-consumo-y-produccion-en-el-tiempo/index.html",
+      "/microeconomia/microeconomia/2021-07-05-02-teoria-del-productor/index.html",
+      "/microeconomia/microeconomia/2021-06-28-01-teoria-del-consumidor/index.html"
+    ]
+  },
+  {
+    "listing": "/gestion-publica-herramientas/index.html",
+    "items": [
+      "/gestion-publica-herramientas/gestion-publica/2024-03-31-por-editar/index.html"
+    ]
+  },
+  {
+    "listing": "/tecnologia-seguridad/index.html",
+    "items": [
+      "/tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html",
+      "/tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html",
+      "/tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html",
+      "/tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html",
+      "/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux/index.html",
+      "/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html",
+      "/tecnologia-seguridad/operating-system/2023-02-16-guia-git/index.html",
+      "/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html",
+      "/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-23-solucion-de-problemas-comunes-en-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-22-casos-de-uso-avanzados-de-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-21-integracion-de-i3wm-en-tu-entorno-de-trabajo/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-20-i3wm-vs-otros-gestores-de-ventanas/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-19-aumenta-tu-productividad-con-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-18-trabajando-con-ventanas-en-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-18-personalizando-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-17-atajos-de-teclado-y-comandos-esenciales-de-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-16-guia-de-instalacion-y-configuracion-de-i3wm/index.html",
+      "/tecnologia-seguridad/i3wm/2020-02-15-introduccion-a-i3wm/index.html"
+    ]
+  },
+  {
+    "listing": "/econometria/index.html",
+    "items": [
+      "/econometria/02-macroeconometria/2024-03-31-por-editar/index.html",
+      "/econometria/04-econometria-financiera/2024-03-31-por-editar/index.html",
+      "/econometria/05-econometria-bayesiana/2024-03-31-por-editar/index.html",
+      "/econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html",
+      "/econometria/07-econometria-y-topicos-economia-empirica/2024-03-31-por-editar/index.html",
+      "/econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html",
+      "/econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html",
+      "/econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html",
+      "/econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html",
+      "/econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html",
+      "/econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html",
+      "/econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html",
+      "/econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html",
+      "/econometria/05-econometria-bayesiana/2022-03-28-04-aplicaciones-econometricas/index.html",
+      "/econometria/05-econometria-bayesiana/2022-03-21-03-simulacion-y-estimacion-bayesiana/index.html",
+      "/econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html",
+      "/econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html",
+      "/econometria/04-econometria-financiera/2022-02-28-01-introduccion/index.html",
+      "/econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html",
+      "/econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html",
+      "/econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html",
+      "/econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html",
+      "/econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html",
+      "/econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html",
+      "/econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html",
+      "/econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html",
+      "/econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html",
+      "/econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html",
+      "/econometria/03-microeconometria/2024-31-por-editar/index.html",
+      "/econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html",
+      "/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html",
+      "/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html",
+      "/econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html",
+      "/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html",
+      "/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html",
+      "/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html",
+      "/econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html",
+      "/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html",
+      "/econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html",
+      "/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html",
+      "/econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html",
+      "/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html",
+      "/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.html",
+      "/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.html",
+      "/econometria/estadistica/2018-05-16-estadigrafos/index.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.html",
@@ -17,12 +127,8 @@
     ]
   },
   {
-    "listing": "/econometria/index.html",
-    "items": [
-      "/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.html",
-      "/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.html",
-      "/econometria/estadistica/2018-05-16-estadigrafos/index.html"
-    ]
+    "listing": "/investigacion-metodologia/index.html",
+    "items": []
   },
   {
     "listing": "/filosofia-politica/index.html",
@@ -37,69 +143,126 @@
     ]
   },
   {
-    "listing": "/finanzas/index.html",
-    "items": [
-      "/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.html",
-      "/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.html"
-    ]
-  },
-  {
-    "listing": "/gestion-publica-herramientas/index.html",
-    "items": []
-  },
-  {
-    "listing": "/herramientas-oficina/index.html",
-    "items": []
-  },
-  {
-    "listing": "/macroeconomia/index.html",
-    "items": [
-      "/macroeconomia/economia-basica/2014-01-01-01-conceptos-basicos-de-economia/index.html"
-    ]
-  },
-  {
-    "listing": "/matematicas/index.html",
-    "items": []
-  },
-  {
-    "listing": "/microeconomia/index.html",
-    "items": [
-      "/microeconomia/organizacion-industrial/2023-06-23-elasticidad-oi/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante-oi-cap2/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion-oi-cap1/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos-oi-cap1/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-12-introducion-organizacion-industrial-oi-cap1/index.html"
-    ]
-  },
-  {
     "listing": "/programacion-software/index.html",
     "items": [
+      "/programacion-software/bloomberg/2024-03-31-por-editar/index.html",
+      "/programacion-software/cpp/2024-03-31-por-editar/index.html",
+      "/programacion-software/eviews/2024-03-31-por-editar/index.html",
+      "/programacion-software/fundamentos-programacion/2024-03-31-por-editar/index.html",
+      "/programacion-software/stata/2024-03-31-por-editar/index.html",
+      "/programacion-software/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.html",
+      "/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.html",
+      "/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.html",
+      "/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.html",
+      "/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.html",
+      "/programacion-software/matlab/2022-07-25-primeros-pasos-en-matlab/index.html",
+      "/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto/index.html",
+      "/programacion-software/stata/2022-07-11-07-paneles-de-datos/index.html",
+      "/programacion-software/stata/2022-07-04-06-series-de-tiempo/index.html",
+      "/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.html",
+      "/programacion-software/stata/2022-06-20-04-regresiones/index.html",
+      "/programacion-software/stata/2022-06-13-03-data-visualization/index.html",
+      "/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.html",
+      "/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.html",
+      "/programacion-software/eviews/2022-02-21-07-modelacion/index.html",
+      "/programacion-software/eviews/2022-02-14-06-empleo-de-subrutinas/index.html",
+      "/programacion-software/eviews/2022-02-07-05-objetos-avanzados/index.html",
+      "/programacion-software/python/2021-12-13-10-metodos-de-machine-learning-para-regresion-con-python/index.html",
+      "/programacion-software/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.html",
+      "/programacion-software/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.html",
+      "/programacion-software/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.html",
+      "/programacion-software/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.html",
+      "/programacion-software/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.html",
+      "/programacion-software/python/2021-08-23-07-dataframes-con-python/index.html",
+      "/programacion-software/python/2021-08-16-06-funciones-con-python/index.html",
+      "/programacion-software/python/2021-06-21-05-iteraciones-con-python/index.html",
+      "/programacion-software/python/2021-06-14-04-ejecucion-condicional-con-python/index.html",
+      "/programacion-software/python/2021-06-07-03-objetos-de-python/index.html",
+      "/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.html",
+      "/programacion-software/r/2021-04-12-03-visualizacion-de-datos/index.html",
+      "/programacion-software/r/2021-04-05-02-manipulacion-de-datos/index.html",
+      "/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.html",
+      "/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos/index.html",
+      "/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.html",
       "/programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html",
       "/programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html",
       "/programacion-software/r/2020-06-10-012-que-ofrece-r/index.html",
       "/programacion-software/r/2020-06-10-013-debemos-saber-r/index.html",
-      "/programacion-software/r/2020-06-10-011-instalacion-r/index.html"
+      "/programacion-software/r/2020-06-10-011-instalacion-r/index.html",
+      "/programacion-software/latex/2015-07-17-06-tikz/index.html",
+      "/programacion-software/latex/2015-07-16-05-presentaciones-en-beamer/index.html",
+      "/programacion-software/latex/2015-07-15-04-latex-y-referencias/index.html",
+      "/programacion-software/latex/2015-07-14-03-latex-como-editor-de-texto/index.html",
+      "/programacion-software/latex/2015-07-13-02-latex-y-matematica/index.html",
+      "/programacion-software/latex/2015-07-12-01-introduccion-al-latex/index.html"
     ]
   },
   {
-    "listing": "/tecnologia-seguridad/index.html",
+    "listing": "/finanzas/index.html",
     "items": [
-      "/tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html",
-      "/tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html",
-      "/tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html",
-      "/tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html",
-      "/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html",
-      "/tecnologia-seguridad/operating-system/2023-02-16-guia-git/index.html",
-      "/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html",
-      "/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html"
+      "/finanzas/finanzas/2024-03-31-por-editar/index.html",
+      "/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.html",
+      "/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.html",
+      "/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.html",
+      "/finanzas/finanzas/2022-09-05-06-teoria-de-portafolio/index.html",
+      "/finanzas/finanzas/2022-08-29-05-derivados-financieros/index.html",
+      "/finanzas/finanzas/2022-08-22-04-renta-fija/index.html",
+      "/finanzas/finanzas/2022-08-15-03-renta-variable/index.html",
+      "/finanzas/finanzas/2022-08-08-02-finanzas-corporativas/index.html",
+      "/finanzas/finanzas/2022-08-01-01-conceptos-basicos/index.html"
     ]
   },
   {
-    "listing": "/teching/index.html",
-    "items": []
+    "listing": "/macroeconomia/index.html",
+    "items": [
+      "/macroeconomia/macroeconomia/2024-03-31-por-editar/index.html",
+      "/macroeconomia/macroeconomia/2022-01-31-11-modelos-de-empleo/index.html",
+      "/macroeconomia/macroeconomia/2022-01-24-10-economia-monetaria/index.html",
+      "/macroeconomia/macroeconomia/2022-01-17-09-crecimiento-economico/index.html",
+      "/macroeconomia/macroeconomia/2022-01-10-08-ciclos-economicos-reales-rbc/index.html",
+      "/macroeconomia/macroeconomia/2022-01-03-07-fluctuaciones-de-corto-plazo/index.html",
+      "/macroeconomia/macroeconomia/2021-12-27-06-sector-externo/index.html",
+      "/macroeconomia/macroeconomia/2021-12-20-05-modelo-de-mundell-fleming/index.html",
+      "/macroeconomia/macroeconomia/2021-08-09-04-tipo-de-cambio/index.html",
+      "/macroeconomia/macroeconomia/2021-08-02-03-teoria-de-la-inversion/index.html",
+      "/macroeconomia/macroeconomia/2021-07-26-02-teoria-de-consumo/index.html",
+      "/macroeconomia/macroeconomia/2021-07-19-01-conceptos-basicos/index.html",
+      "/macroeconomia/economia-basica/2014-03-29-14-comercio-internacional/index.html",
+      "/macroeconomia/economia-basica/2014-03-22-13-desempleo/index.html",
+      "/macroeconomia/economia-basica/2014-03-15-12-indicadores-economicos/index.html",
+      "/macroeconomia/economia-basica/2014-03-08-11-sector-publico/index.html",
+      "/macroeconomia/economia-basica/2014-03-01-10-inflacion/index.html",
+      "/macroeconomia/economia-basica/2014-02-25-09-macroeconomia-basica/index.html",
+      "/macroeconomia/economia-basica/2014-02-18-08-sistema-financiero/index.html",
+      "/macroeconomia/economia-basica/2014-02-11-07-empresas/index.html",
+      "/macroeconomia/economia-basica/2014-02-04-06-mercados/index.html",
+      "/macroeconomia/economia-basica/2014-01-28-05-teoria-oferta-demanda/index.html",
+      "/macroeconomia/economia-basica/2014-01-21-04-teoria-costos/index.html",
+      "/macroeconomia/economia-basica/2014-01-14-03-teoria-produccion/index.html",
+      "/macroeconomia/economia-basica/2014-01-07-02-necesidades-bienes/index.html",
+      "/macroeconomia/economia-basica/2014-01-01-01-conceptos-basicos-de-economia/index.html"
+    ]
   },
   {
-    "listing": "/investigacion-metodologia/index.html",
-    "items": []
+    "listing": "/herramientas-oficina/index.html",
+    "items": [
+      "/herramientas-oficina/ofimatica/2024-03-31-por-editar/index.html",
+      "/herramientas-oficina/power-bi/2024-03-31-por-editar/index.html",
+      "/herramientas-oficina/ofimatica/2023-01-23-08-eventos/index.html",
+      "/herramientas-oficina/ofimatica/2023-01-16-07-formularios/index.html",
+      "/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.html",
+      "/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.html",
+      "/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba/index.html",
+      "/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos/index.html",
+      "/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar/index.html",
+      "/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.html",
+      "/herramientas-oficina/power-bi/2022-10-24-08-vizualizacion-de-datos/index.html",
+      "/herramientas-oficina/power-bi/2022-10-17-06-lenguaje-de-analisis-de-datos-dax-columnas-campos-calculados/index.html",
+      "/herramientas-oficina/power-bi/2022-10-10-05-inteligencia-de-tiempo-dimension-de-tiempo/index.html",
+      "/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos/index.html",
+      "/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2/index.html",
+      "/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl/index.html",
+      "/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power-conceptos-basicos/index.html"
+    ]
   }
 ]

@@ -28,6 +28,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción
 
 ¡Bienvenidos al blog! En esta ocasión, exploraremos un tema fundamental para cualquier desarrollador o entusiasta de Python: la configuración de un entorno virtual utilizando Anaconda. Si alguna vez te has preguntado cómo mantener tus proyectos de Python aislados, organizados y libres de conflictos de dependencias, estás en el lugar correcto.

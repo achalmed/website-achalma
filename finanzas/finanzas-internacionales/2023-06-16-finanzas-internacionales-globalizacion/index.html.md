@@ -25,6 +25,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Orígenes y Conceptos Fundamentales de las Finanzas Internacionales
 
 ## Economía Internacional
@@ -56,6 +58,8 @@ En el ámbito de las finanzas corporativas, las empresas se enfrentan a desafío
 5.  **Inversión en Portafolios Internacionales:** La inversión en portafolios internacionales implica la adquisición de activos financieros, como acciones y bonos, emitidos por empresas o gobiernos extranjeros. Los inversores internacionales diversifican sus carteras de inversión para aprovechar las oportunidades de rendimiento y reducir los riesgos asociados con la concentración en un solo país o una sola moneda. La inversión en portafolios internacionales requiere un análisis detallado de los mercados financieros y una evaluación de los riesgos y las oportunidades en cada país.
 
 Al comprender estos conceptos en los campos de la economía internacional y las finanzas corporativas, se puede tener una visión más completa de los aspectos fundamentales que sustentan las transacciones financieras internacionales y las operaciones corporativas en un entorno global en constante cambio.
+
+
 
 
 
@@ -112,6 +116,8 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 ::::
 :::::
 ::::::
+
+
 
 
 
@@ -252,6 +258,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
+
+
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -333,6 +341,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 ::::
 :::::
 ::::::
+
+
 
 
 

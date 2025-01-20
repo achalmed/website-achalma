@@ -27,8 +27,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Introducción
 En esta era digital, tener acceso a una variedad de recursos bibliográficos y de documentación en línea es esencial para investigadores, estudiantes y académicos. Ya sea que estés trabajando en una tesis, buscando artículos científicos, redactando informes o simplemente explorando, aquí tienes una lista exhaustiva de plataformas que te ayudarán a llevar tu investigación al siguiente nivel.
 

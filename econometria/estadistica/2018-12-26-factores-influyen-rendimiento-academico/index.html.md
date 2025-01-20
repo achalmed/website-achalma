@@ -27,6 +27,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción
 
 En el presente estudio, se busca evaluar las variables internas y externas que impactan en el rendimiento académico de los alumnos de las series 100 y 200 de la escuela de Economía. Con el fin de llevar a cabo esta evaluación, se aplicó una encuesta escrita a 174 estudiantes universitarios pertenecientes a dichas series.

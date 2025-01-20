@@ -4,7 +4,7 @@ title: La Economía Agraria
 subtitle: Una leccion detallada de economia agraria
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - EconomíaPeruana
   - PolíticasEconómicas
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-04-22-economia-agraria/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf
 date: "04/22/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

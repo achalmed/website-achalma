@@ -3,7 +3,7 @@ title: Abordando el cambio climático y otros desafíos ambientales Perspectivas
 subtitle: Explorando el impacto, mitigación y adaptación al cambio climático, reformas inclusivas y análisis de productos tradicionales y recursos naturales
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -23,7 +23,7 @@ citation:
     - Anais Fernández
     - Brenda Gamboa
     - Margoth Gómez
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-06-02-medio-ambiente/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf
 date: "06/02/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

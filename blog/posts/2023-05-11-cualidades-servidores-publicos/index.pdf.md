@@ -3,7 +3,7 @@ title: ¿Cuáles son las cualidades de los servidores públicos?
 subtitle: Cualidades de los servidores públicos.
 shorttitle: "Blogdown"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf) completo aquí.
 abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]

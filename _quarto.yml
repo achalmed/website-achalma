@@ -52,17 +52,27 @@ website:
       - text: "Econometria"
         href: econometria/index.qmd
       - text: "Filosofía"
-        href: filosofia/index.qmd
+        href: filosofia-politica/index.qmd
       - text: "Finanzas"
         href: finanzas/index.qmd
-      - text: "Informatica"
-        href: informatica/index.qmd
+      - text: "Gestión Pública"
+        href: gestion-publica-herramientas/index.qmd
+      - text: "Ofimática"
+        href: herramientas-oficina/index.qmd 
+      - text: "Investigación y metodología"
+        href: investigacion-metodologia/index.qmd         
       - text: "Macroeconomía"
         href: macroeconomia/index.qmd
       - text: "Matemáticas"
         href: matematicas/index.qmd
       - text: "Microeconomía"
         href: microeconomia/index.qmd
+      - text: "Programación y Software"
+        href: programacion-software/index.qmd
+      - text: "Cursos"
+        href: teching/index.qmd    
+      - text: "Tecnología y Seguridad"
+        href: tecnologia-seguridad/index.qmd 
       - text: "Book an appointment"
         href: appointment/index.qmd
   page-footer:

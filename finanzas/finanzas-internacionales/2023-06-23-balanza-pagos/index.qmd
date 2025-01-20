@@ -1,0 +1,29 @@
+---
+title: Balanza de pagos
+subtitle: Explorando los sistemas monetarios internacionales, tipos de cambio fijos y flexibles, y el papel en evolución del FMI en la economía mundial.
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+abstract: |
+  | Primer parrafo de abstrac
+keywords: [keyword1, keyword2]
+categories:
+  - Finanzas Internacionales
+tags:
+  - FinanzasInternacionales
+  - SistemaMonetarioInternacional
+  - RegímenesCambiarios
+  - TiposDeCambio
+  - FMI
+  - EconomíaGlobal
+citation:
+  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf
+date: "06/23/2023"
+draft: true
+---
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_finanzas-internacionales.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

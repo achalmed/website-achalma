@@ -3,7 +3,7 @@ title: Pautas para la presentación del informe de investigación en economía e
 subtitle: Guía práctica para estudiantes de economía en la elaboración de informes de investigación
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - Econometría
   - MetodologíaDeInvestigación
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf
 date: "06/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

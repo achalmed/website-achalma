@@ -1,0 +1,78 @@
+---
+title: Editar
+subtitle: Editar
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+abstract: |
+  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+keywords: [keyword1, keyword2]
+categories:
+  - RStudio
+  - Blogdown
+  - Desarrollo Web
+  - Herramientas para R
+tags:
+  - RStudio
+  - Blogdown
+  - Comandos
+  - DesarrolloWeb
+citation:
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+date: "02/15/2020"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+
+# ¿Qué es i3wm?
+
+## Definición de i3wm
+
+## Características principales de i3wm
+
+# Ventajas de utilizar i3wm 
+
+## Eficiencia y rendimiento 
+
+## Enfoque minimalista 
+
+## Personalización y flexibilidad 
+
+## Uso eficiente del espacio en el escritorio
+
+# Conceptos fundamentales de i3wm 
+
+## Gestión de ventanas en mosaico (tiling window management) 
+
+## Espacios de trabajo (workspaces) 3.3. Modos y barras de estado (modes and status bars) 
+
+## Atajos de teclado y comandos básicos
+
+# Instalación de i3wm 
+
+## Requisitos del sistema 
+
+## Instalación en distribuciones populares (ejemplo: Ubuntu, Arch Linux)
+
+# Primeros pasos con i3wm 
+
+## Iniciar sesión en i3wm
+
+## Orientación básica en el entorno de i3wm 
+
+## Navegación entre ventanas y workspaces
+
+# Recursos adicionales y comunidad 
+
+## Documentación oficial y guías de referencia 
+
+## Comunidades en línea y foros de discusión 
+
+## Sitios web y blogs recomendados para aprender más sobre i3wm
+
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_i3wm.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

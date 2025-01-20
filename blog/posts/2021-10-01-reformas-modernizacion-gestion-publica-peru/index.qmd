@@ -3,7 +3,7 @@ title: Reformas y Modernización de la Gestión Pública en Perú.
 subtitle: Hacia una gestión eficiente y transparente en beneficio de la sociedad.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -21,7 +21,7 @@ citation:
     - Noe Borda
     - Kattya Castillo
     - Yuri Fernandez
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf
 date: "10/01/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

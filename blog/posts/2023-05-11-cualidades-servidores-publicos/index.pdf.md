@@ -26,8 +26,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # ¿Cuáles son las cualidades de los servidores públicos?
 
 ## Amabilidad

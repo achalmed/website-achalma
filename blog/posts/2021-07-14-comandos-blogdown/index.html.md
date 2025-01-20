@@ -1,29 +1,28 @@
 ---
-title: Blogdown La Herramienta Perfecta para Crear Sitios Web Estáticos con R
-subtitle: Una guía completa para comenzar a utilizar Blogdown en RStudio
-shorttitle: "Blogdown"
+documentmode: doc  # Modo de documento: man (Manuscrito), jou (Revista), doc (Documento), stu (Estudiante)
+title: Guía para Comenzar a Crear Sitios Web con Blogdown
+subtitle: Desde la Instalación hasta la Implementación Utilizando R y Hugo
+shorttitle: "Crear Sitios con Blogdown "
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
-keywords: [keyword1, keyword2]
+  | This article introduces Blogdown, an R package for creating static websites using R Markdown and Hugo. It provides a step-by-step guide on how to install Blogdown, set up a new site, preview it locally, create blog posts, build the site, check for errors, update Hugo and dependencies, customize the site's theme, and deploy the site using services like Netlify. The aim is to empower users, from beginners to advanced, to build and manage their own web presence with ease and flexibility.
+keywords: [Blogdown, R Markdown, Hugo, static websites, web development]
 categories:
-  - RStudio
-  - Blogdown
   - Desarrollo Web
-  - Herramientas para R
+  - Programación en R
+  - Publicación Digital
 tags:
+  - blogdown commands
+  - website building
+  - Hugo themes
   - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Netlify deployment
 citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
 date: "07/14/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

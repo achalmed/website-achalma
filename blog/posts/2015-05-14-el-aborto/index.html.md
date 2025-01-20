@@ -73,8 +73,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Introducción
 
 En este trabajo, se aborda el tema del aborto, un asunto de creciente relevancia en la sociedad contemporánea. Últimamente, se ha observado un incremento significativo en el número de adolescentes que optan por el aborto, no solo en nuestro país sino también en lugares como España, donde ha aumentado un 19%. Es crucial para nosotros, como estudiantes, informarnos y reflexionar sobre la importancia de la vida. Debemos ser conscientes de las consecuencias de nuestras acciones y tomar decisiones responsables frente a problemas complejos. La finalidad de este documento es iluminar sobre los riesgos asociados al aborto y cómo enfrentar situaciones similares de manera informada.

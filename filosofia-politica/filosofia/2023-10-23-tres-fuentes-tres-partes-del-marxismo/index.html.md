@@ -17,10 +17,8 @@ tags:
 citation:
   pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.pdf
 date: "10/23/2023"
-draft: false  # Modo de borrador (false = final, true = borrador)
+draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

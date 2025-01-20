@@ -26,8 +26,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Introducción
 
 ## ¿El ser humano es inherentemente bueno o malo?

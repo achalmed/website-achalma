@@ -1,23 +1,24 @@
 ---
-title: Naturaleza Humana y su impacto político, sesgos científicos. Más allá de los Límites Impuestos
-subtitle: Explorando las implicaciones políticas de nuestras concepciones sobre la naturaleza humana.
-shorttitle: "Editar"
+title: Naturaleza Humana
+subtitle: Perspectivas Filosóficas y Sus Implicaciones
+shorttitle: "Naturaleza Humana y Filosofía"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf) completo aquí.
 abstract: |
-  | Primer parrafo de abstrac
-keywords: [keyword1, keyword2]
+  | This article explores philosophical perspectives on human nature through the lenses of Rousseau, Hobbes, Marx, Hume, and Freud. It discusses whether humans are inherently good or bad, or if human nature is simply a product of circumstances. The piece examines metaphysical versus anti-metaphysical approaches to defining human nature and considers their ethical and political implications. It also critiques how these beliefs about human nature shape individual behavior, societal norms, and even scientific interpretations, using examples like Broca's study on brain weight to illustrate biases in research. The discussion emphasizes the importance of consciously choosing one's concept of human nature, recognizing its profound impact on personal and collective life.
+keywords: [human nature, philosophy, ethics, metaphysics, social implications]
 categories:
-  - Filosofía
+  - Filosofía  
+  - Ética  
+  - Psicología Social
 tags:
-  - Filosofía
-  - NaturalezaHumana
-  - Política
-  - SesgosCientíficos
-  - LibertadIndividual
-  - IgualdadDeGénero.
+  - Rousseau  
+  - Hobbes  
+  - Marx  
+  - Hume  
+  - Freud
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-09-naturaleza-humana/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf
 date: "06/09/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

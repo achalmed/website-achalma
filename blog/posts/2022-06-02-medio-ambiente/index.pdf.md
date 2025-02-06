@@ -1,21 +1,22 @@
 ---
-title: Abordando el cambio climático y otros desafíos ambientales Perspectivas y soluciones
-subtitle: Explorando el impacto, mitigación y adaptación al cambio climático, reformas inclusivas y análisis de productos tradicionales y recursos naturales
-shorttitle: "Editar"
+title: Impacto del Cambio Climático en Perú
+subtitle: Análisis de Sectores Vulnerables y Políticas de Mitigación
+shorttitle: "Cambio Climático en Perú"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf) completo aquí.
 abstract: |
-  | Primer parrafo de abstrac
-keywords: [keyword1, keyword2]
+  | This document explores the implications of climate change in Peru, focusing on how it affects various sectors including agriculture, fishing, mining, energy, infrastructure, tourism, and health. It discusses the vulnerability of the Peruvian economy to climate variations, detailing the sectors most at risk and their contributions to greenhouse gas emissions. The text also covers strategies for mitigation and adaptation, emphasizing sustainable practices, regulatory measures, and price setting for natural resources. The study includes an econometric analysis of traditional exports and natural gas and oil prices over the period from January 2012 to May 2022, assessing their volatility and normality.
+keywords: [climate change, environmental policy, sustainable development, economic impact, Peru]
 categories:
-  - Economía de los Recursos y del Medio Ambiente
+  - Medio Ambiente  
+  - Economía  
+  - Política Pública
 tags:
-  - EconomíaDeLosRecursosYDelMedioAmbiente
-  - CambioClimático
-  - MedioAmbiente
-  - Sostenibilidad
-  - Economía
-  - RecursosNaturales
+  - Adaptación Climática  
+  - Mitigación de Gases Efecto Invernadero  
+  - Economía Circular  
+  - Biodiversidad  
+  - Recursos Naturales
 citation:
   author:
     - Edison Achalma
@@ -27,6 +28,8 @@ citation:
 date: "06/02/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 

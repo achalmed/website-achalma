@@ -1,19 +1,21 @@
 ---
-title: La Economía Peruana de 1970 a 1990 Un Análisis de sus Períodos y Desafíos
-subtitle: Una revisión detallada de los gobiernos y políticas económicas que marcaron la evolución del Perú.
-shorttitle: "Editar"
+title: Economía Peruana entre 1970 y 1990
+subtitle: Análisis de Políticas y Desafíos Económicos
+shorttitle: "Economía Peruana 1970-1990"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf) completo aquí.
 abstract: |
-  | Primer parrafo de abstrac
-keywords: [keyword1, keyword2]
+  | This article examines the Peruvian economy from 1970 to 1990, analyzing economic policies, reforms, and the resulting challenges during this period. It covers the administrations of Juan Velasco Alvarado, Francisco Morales Bermúdez, Fernando Belaúnde Terry, and Alan García Pérez, detailing measures like agrarian reform, industrial promotion, control over foreign investment, and economic adjustments. The document highlights the transition from state interventionism to economic liberalization in the 1990s, discussing impacts like inflation, fiscal deficits, and social inequalities.
+keywords: [economic policy, Peru, economic reform, inflation, neoliberalism]
 categories:
-  - Economía Política
+  - Historia Económica  
+  - Política Económica
 tags:
-  - EconomíaPolítica
-  - EconomíaPeruana
-  - PolíticasEconómicas
-  - DesafíosSocioeconómicos
+  - Reforma Agraria  
+  - Intervencionismo Estatal  
+  - Liberalización Económica  
+  - Crisis Económica  
+  - Ajuste Estructural
 citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf
 date: "05/12/2023"

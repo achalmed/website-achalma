@@ -1,7 +1,7 @@
 ---
 documentmode: doc  # Modo de documento: man (Manuscrito), jou (Revista), doc (Documento), stu (Estudiante)
 title: Guía para Comenzar a Crear Sitios Web con Blogdown
-subtitle: Desde la Instalación hasta la Implementación Utilizando R y Hugo
+subtitle: Utilizando R y Hugo
 shorttitle: "Crear Sitios con Blogdown "
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
@@ -23,6 +23,8 @@ citation:
 date: "07/14/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 

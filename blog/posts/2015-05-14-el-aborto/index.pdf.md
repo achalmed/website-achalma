@@ -4,7 +4,7 @@ title: El aborto
 subtitle: Consecuencias y Consideraciones Éticas en la Sociedad Contemporánea
 shorttitle: "El Aborto: Una Mirada Profunda"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) completo aquí.
 abstract: |
   | Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales.
 keywords: [Aborto, Adolescentes, Consecuencias]
@@ -60,7 +60,7 @@ citation:
     - Edison Achalma
     - Yeno Areste
     - Cristían Galindo
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
 bibliography: mybibliography.bib
 
 course: Española (EDUC 5101)
@@ -68,6 +68,8 @@ professor: Yuri
 date: "05/14/2015"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 
@@ -138,12 +140,6 @@ Otras complicaciones incluyen un aumento en cesáreas, nacimientos prematuros, y
 - Violenta el quinto mandamiento, "no matarás", un principio moral para la realización humana.
 - Las prácticas abortivas son, en muchos aspectos, inhumanas y tienen consecuencias devastadoras.
 
-# Bibliografía
-
-- Buendía, A. (2005). *Archivos de México*, 75(4), 387-388.
-- Flores, A. (1999). *La reorganización de la biblioteca del Hospital Mocel*. México: UNAM.
-- Higashida, B. (1995). *Educación para la salud*. México: Interamericana Mac Graw Hill.
-- Juárez, B., & Martínez, P. (2000). *El derecho a la vida*.
 
 
 # Publicaciones Similares

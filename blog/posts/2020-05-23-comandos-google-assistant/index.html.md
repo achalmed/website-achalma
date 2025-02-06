@@ -1,25 +1,29 @@
 ---
-title: Aprende a usar Google Assistant Comandos útiles y trucos
-subtitle: Maximiza tu experiencia con el asistente virtual de Google
-shorttitle: "Blogdown"
+title: Comandos Esenciales para Google Assistant
+subtitle: Guía para Principiantes
+shorttitle: "Comandos Google Assistant"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant/index.pdf)
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
-keywords: [keyword1, keyword2]
+  | This article provides a comprehensive guide to basic commands for Google Assistant, detailing how to control devices, manage schedules, and utilize various functionalities including music playback, setting reminders, and smart home control. The document includes commands for stopping or pausing media, adjusting volume, asking for help, and even engaging in fun interactions with the Assistant. This guide is aimed at helping users maximize their interaction with Google Assistant for everyday convenience.
+keywords: [Google Assistant, voice commands, smart home, productivity, entertainment]
 categories:
   - Tecnología
+  - Asistentes Virtuales  
   - Productividad
-  - Asistentes Virtuales
 tags:
-  - GoogleAssistant
-  - ComandosDeVoz
-  - Automatización
+  - comandos de voz  
+  - calendario  
+  - música  
+  - hogar inteligente  
+  - entretenimiento
 citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant/index.pdf
 date: "05/23/2020"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 

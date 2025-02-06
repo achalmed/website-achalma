@@ -1,9 +1,9 @@
 ---
 title: Pautas para la Presentación del Informe de Investigación en Economía
-subtitle: Una Guía para Estudiantes de Economía en el Proceso de Investigación Académica
+subtitle: Guía para Estudiantes
 shorttitle: "Pautas Informe Económico"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf) completo aquí.
 abstract: |
   | This document provides guidelines for economics students on how to present a research report. It covers the formulation of research problems, hypothesis testing, studying economic relationships, and model building. It suggests a structured approach including problem statement, objectives, significance, theoretical considerations, hypotheses, methodology, and data analysis. This guide aims to assist students in conducting rigorous and relevant economic research by outlining key components and steps to follow in the research process.
 keywords: [economic research, research methodology, hypothesis testing, economic models, data analysis]
@@ -22,6 +22,8 @@ citation:
 date: "06/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 

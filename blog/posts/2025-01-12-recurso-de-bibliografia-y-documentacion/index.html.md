@@ -1,6 +1,6 @@
 ---
 title: Recursos de Bibliografía y Documentación para Investigadores
-subtitle: Una Guía Completa para Acceder a Información Académica en Línea
+subtitle: Guía para Acceder a Información Académica en Línea
 shorttitle: "Recursos de Investigación"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf) completo aquí.

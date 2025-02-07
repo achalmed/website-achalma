@@ -27,6 +27,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Introducción
 
 En el presente estudio, se busca evaluar las variables internas y externas que impactan en el rendimiento académico de los alumnos de las series 100 y 200 de la escuela de Economía. Con el fin de llevar a cabo esta evaluación, se aplicó una encuesta escrita a 174 estudiantes universitarios pertenecientes a dichas series.
@@ -106,9 +108,8 @@ Estas estimaciones proporcionan información sobre los valores promedio y la var
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Estadigrafos](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf)
-2. [Factores Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.pdf)
-3. [Rendimiento Academico Genero Ingresantes 2010](https://achalmaedison.netlify.app/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf)
+1. [Estadigrafos](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf)
+2. [Factores Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

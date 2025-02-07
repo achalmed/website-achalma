@@ -30,6 +30,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 | Valores | Frecuencia | Porcentaje | Porcentaje válido | Porcentaje acumulado |
 | :-----: | :--------: | :--------: | :---------------: | :------------------: |
 |   10    |     1      |    0,9     |        0,9        |         0,9          |
@@ -442,9 +444,8 @@ Interpretación:
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Estadigrafos](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf)
-2. [Factores Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.pdf)
-3. [Rendimiento Academico Genero Ingresantes 2010](https://achalmaedison.netlify.app/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf)
+1. [Estadigrafos](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf)
+2. [Factores Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

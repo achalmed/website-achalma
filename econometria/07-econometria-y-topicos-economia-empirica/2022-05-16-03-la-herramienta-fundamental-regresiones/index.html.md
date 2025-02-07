@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría
+  -  Econometria Y Topicos Economia Empirica
   - Tópicos de Econometría
   - Regresiones
   - Análisis de Datos

@@ -8,7 +8,7 @@ abstract: |
   | This article explores philosophical perspectives on human nature through the lenses of Rousseau, Hobbes, Marx, Hume, and Freud. It discusses whether humans are inherently good or bad, or if human nature is simply a product of circumstances. The piece examines metaphysical versus anti-metaphysical approaches to defining human nature and considers their ethical and political implications. It also critiques how these beliefs about human nature shape individual behavior, societal norms, and even scientific interpretations, using examples like Broca's study on brain weight to illustrate biases in research. The discussion emphasizes the importance of consciously choosing one's concept of human nature, recognizing its profound impact on personal and collective life.
 keywords: [human nature, philosophy, ethics, metaphysics, social implications]
 categories:
-  - Filosofía  
+  - Filosofia
   - Ética  
   - Psicología Social
 tags:

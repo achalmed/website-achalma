@@ -8,7 +8,7 @@ abstract: |
   | This document explores the implications of climate change in Peru, focusing on how it affects various sectors including agriculture, fishing, mining, energy, infrastructure, tourism, and health. It discusses the vulnerability of the Peruvian economy to climate variations, detailing the sectors most at risk and their contributions to greenhouse gas emissions. The text also covers strategies for mitigation and adaptation, emphasizing sustainable practices, regulatory measures, and price setting for natural resources. The study includes an econometric analysis of traditional exports and natural gas and oil prices over the period from January 2012 to May 2022, assessing their volatility and normality.
 keywords: [climate change, environmental policy, sustainable development, economic impact, Peru]
 categories:
-  - Medio Ambiente  
+  - Posts
   - Economía  
   - Política Pública
 tags:

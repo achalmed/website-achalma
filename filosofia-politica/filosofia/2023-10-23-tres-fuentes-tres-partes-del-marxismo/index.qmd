@@ -8,7 +8,7 @@ abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Filosofía
+  - Filosofia
 tags:
   - Filosofía
   - Marxismo

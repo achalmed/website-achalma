@@ -9,7 +9,7 @@ abstract: |
   | This article introduces Blogdown, an R package for creating static websites using R Markdown and Hugo. It provides a step-by-step guide on how to install Blogdown, set up a new site, preview it locally, create blog posts, build the site, check for errors, update Hugo and dependencies, customize the site's theme, and deploy the site using services like Netlify. The aim is to empower users, from beginners to advanced, to build and manage their own web presence with ease and flexibility.
 keywords: [Blogdown, R Markdown, Hugo, static websites, web development]
 categories:
-  - Desarrollo Web
+  - Posts
   - Programación en R
   - Publicación Digital
 tags:

@@ -8,7 +8,7 @@ abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]
 categories:
-  - RStudio
+  - Python
   - Blogdown
   - Desarrollo Web
   - Herramientas para R

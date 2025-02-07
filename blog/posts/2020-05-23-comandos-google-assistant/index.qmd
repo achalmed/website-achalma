@@ -8,7 +8,7 @@ abstract: |
   | This article provides a comprehensive guide to basic commands for Google Assistant, detailing how to control devices, manage schedules, and utilize various functionalities including music playback, setting reminders, and smart home control. The document includes commands for stopping or pausing media, adjusting volume, asking for help, and even engaging in fun interactions with the Assistant. This guide is aimed at helping users maximize their interaction with Google Assistant for everyday convenience.
 keywords: [Google Assistant, voice commands, smart home, productivity, entertainment]
 categories:
-  - Tecnología
+  - Posts
   - Asistentes Virtuales  
   - Productividad
 tags:

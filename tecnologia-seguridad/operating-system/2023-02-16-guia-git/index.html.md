@@ -8,7 +8,7 @@ abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Git
+  - Operating System
   - GitHub
 tags:
   - Git

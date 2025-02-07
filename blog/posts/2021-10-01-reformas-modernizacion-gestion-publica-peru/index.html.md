@@ -8,7 +8,7 @@ abstract: |
   | This article discusses the need for public management reform and modernization in Peru to enhance efficiency and effectiveness for the benefit of citizens. It highlights three key initiatives: the development of a Strategic Plan for Public Management Modernization, the implementation of a performance evaluation and management control system by the Ministry of Economy's Budget Directorate, and the establishment of a High Public Management System for appointing competent leaders through transparent public contests. The piece also explores broader state reforms across political, economic, health, agrarian, and tax sectors, emphasizing the necessity for government collaboration with public, private, and academic sectors. It concludes with principles for modernizing public management, aiming to foster a culture of ethics, transparency, and efficiency in delivering public services.
 keywords: [public management reform, state modernization, Peru, public policy, governance efficiency]
 categories:
-  - Administración Pública
+  - Posts
   - Reforma del Estado  
   - Política Pública
 tags:

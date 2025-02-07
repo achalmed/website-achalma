@@ -9,7 +9,7 @@ abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Organización industrial
+  - Organizacion Industrial
   - Economía y Negocios
 tags:
   - OrganizaciónIndustrial

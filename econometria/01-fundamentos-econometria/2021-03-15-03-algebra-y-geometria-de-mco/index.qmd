@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Funadamentos de econometría
+  -  Fundamentos Econometria
   - Matemáticas  
   - Econometría
 tags:

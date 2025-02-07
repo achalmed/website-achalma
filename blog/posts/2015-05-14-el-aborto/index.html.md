@@ -9,7 +9,7 @@ abstract: |
   | Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales.
 keywords: [Aborto, Adolescentes, Consecuencias]
 categories:
-  - Ética y Moral
+  - Posts
   - Salud Pública
   - Derechos Humanos
 tags:

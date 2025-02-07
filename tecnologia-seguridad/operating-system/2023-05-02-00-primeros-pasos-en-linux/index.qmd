@@ -8,7 +8,7 @@ abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Informática
+  - Operating System
   - Sistemas Operativos
 tags:
   - Linux

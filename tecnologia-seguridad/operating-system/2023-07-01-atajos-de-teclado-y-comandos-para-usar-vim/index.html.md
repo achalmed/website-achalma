@@ -9,7 +9,7 @@ abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - vIM
+  - Operating System
 tags:
   - EconomíaBásica
   - Economía

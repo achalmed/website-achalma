@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Evaluación de Impacto
+  -  Evaluacion Impacto
   - Regresión Discontinua
   - Análisis de Datos
 tags:

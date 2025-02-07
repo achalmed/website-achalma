@@ -9,7 +9,7 @@ abstract: |
   | This article explores the agrarian and rural economy in Peru, focusing on the application of economic principles to agriculture, the implications of population growth on food security, and the historical context of agrarian reform. It discusses the theories of land use, agricultural methods, and decision-making from classical economists to contemporary thinkers. The document also addresses the challenges of small-scale farming, the impact of technological adoption, and the importance of property rights in enhancing productivity and competitiveness. It concludes with a critique of past agrarian policies and suggests strategic actions for development based on property rights and land tenure.
 keywords: [agrarian economics, rural development, agricultural productivity, land reform, property rights]
 categories:
-  - Economía  
+  - Posts
   - Agricultura  
   - Desarrollo Rural
 tags:

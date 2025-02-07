@@ -8,7 +8,7 @@ abstract: |
   | This article examines the Peruvian economy from 1970 to 1990, analyzing economic policies, reforms, and the resulting challenges during this period. It covers the administrations of Juan Velasco Alvarado, Francisco Morales Bermúdez, Fernando Belaúnde Terry, and Alan García Pérez, detailing measures like agrarian reform, industrial promotion, control over foreign investment, and economic adjustments. The document highlights the transition from state interventionism to economic liberalization in the 1990s, discussing impacts like inflation, fiscal deficits, and social inequalities.
 keywords: [economic policy, Peru, economic reform, inflation, neoliberalism]
 categories:
-  - Historia Económica  
+  - Posts
   - Política Económica
 tags:
   - Reforma Agraria  

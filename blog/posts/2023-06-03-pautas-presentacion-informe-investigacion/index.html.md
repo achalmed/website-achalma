@@ -8,7 +8,7 @@ abstract: |
   | This document provides guidelines for economics students on how to present a research report. It covers the formulation of research problems, hypothesis testing, studying economic relationships, and model building. It suggests a structured approach including problem statement, objectives, significance, theoretical considerations, hypotheses, methodology, and data analysis. This guide aims to assist students in conducting rigorous and relevant economic research by outlining key components and steps to follow in the research process.
 keywords: [economic research, research methodology, hypothesis testing, economic models, data analysis]
 categories:
-  - Economía
+  - Posts
   - Metodología de Investigación
   - Educación Superior
 tags:

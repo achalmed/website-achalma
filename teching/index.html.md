@@ -1,10 +1,10 @@
 ---
 title: Cursos y ponencias
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+subtitle: Material de apoyo y recursos para los cursos que imparto. Notas de clase, ejercicios, presentaciones y explicaciones detalladas sobre los temas abordados en cada curso.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "posts/*/index.qmd"
+      - "economia-preuniversitaria/*/index.qmd"
     type: default # (table, default, table)
     sort: 
       - "date desc"

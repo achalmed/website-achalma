@@ -1,10 +1,10 @@
 ---
 title: Gestión pública
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+subtitle: Casos prácticos, normativa y herramientas utilizadas en la administración pública. Abordaremos temas como el uso de SIGA, SIAF, legislación vigente y experiencias en la gestión de recursos públicos.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "gestion-publica/*/index.qmd"
+      - "posts/*/index.qmd"
     type: default # (table, default, table)
     sort: 
       - "date desc"

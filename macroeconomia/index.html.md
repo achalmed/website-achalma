@@ -1,11 +1,10 @@
 ---
 title: Macroeconomía
-subtitle: Análisis de políticas, modelos y tendencias en la economía global.
+subtitle: Estudio de las variables económicas a nivel agregado. Aquí discutiremos temas como crecimiento económico, inflación, política monetaria y fiscal, ciclos económicos y modelos macroeconómicos.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "economia-basica/*/index.qmd"
-      - "macroeconomia/*/index.qmd"
+      - "posts/*/index.qmd"
     type: default # (table, default, table)
     sort: 
       - "date desc"

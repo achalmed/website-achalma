@@ -1,6 +1,6 @@
 ---
-title: Investigación e metología
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+title: Investigación y metodología
+subtitle: Recursos para la elaboración de tesis, artículos académicos y monografías. Consejos sobre redacción, metodología científica, revisión de literatura y técnicas para estructurar una investigación sólida.
 listing:
   - id: ultimas-entradas
     contents: 

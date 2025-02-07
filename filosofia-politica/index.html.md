@@ -1,10 +1,10 @@
 ---
-title: Filosofía
-subtitle: Exploraciones sobre política, marxismo y su impacto en la vida cotidiana, junto a una crítica de la sociedad actual.
+title: Filosofía y política
+subtitle: Discusión sobre las corrientes filosóficas. Desde el marxismo hasta la escuela austriaca explorando sus implicaciones en la economía, la política y la sociedad, junto a una visión crítica del mundo actual.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "filosofia/*/index.qmd"
+      - "posts/*/index.qmd"
     type: default # (table, default, table)
     sort: 
       - "date desc"

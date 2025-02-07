@@ -1,6 +1,6 @@
 ---
 title: Microeconomía
-subtitle: Desentrañando el comportamiento de individuos y empresas en mercados específicos.
+subtitle: Análisis del comportamiento de los agentes económicos. Se incluyen temas como teoría del consumidor, teoría de la empresa, competencia, externalidades y equilibrio de mercado.
 listing:
   - id: ultimas-entradas
     contents: 

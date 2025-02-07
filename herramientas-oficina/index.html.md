@@ -1,6 +1,6 @@
 ---
 title: Herramientas de oficina
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+subtitle: Guías y trucos para mejorar la productividad con herramientas ofimáticas. Desde el uso avanzado de Excel hasta la automatización de tareas con macros y software especializado.
 listing:
   - id: ultimas-entradas
     contents: 

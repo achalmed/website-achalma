@@ -1,0 +1,32 @@
+---
+title: Teoría de la producción
+subtitle: Editar
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf) completo aquí.
+abstract: |
+  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+keywords: [keyword1, keyword2]
+categories:
+  - Economia Basica
+  - Blogdown
+  - Desarrollo Web
+  - Herramientas para R
+tags:
+  - RStudio
+  - Blogdown
+  - Comandos
+  - DesarrolloWeb
+citation:
+  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf
+date: "01/14/2014"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_economia-preuniversitaria.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

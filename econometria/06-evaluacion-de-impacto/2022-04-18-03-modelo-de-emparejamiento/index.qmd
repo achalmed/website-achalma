@@ -1,0 +1,33 @@
+---
+title: Modelo de Emparejamiento
+subtitle: Uso del Propensity Score Matching
+shorttitle: "Modelo de Emparejamiento"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/06-evaluacion-de-impacto/2022-04-18-03-modelo-de-emparejamiento/index.pdf) completo aquí.
+abstract: |
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
+keywords: [keyword1, keyword2]
+categories:
+  -  Evaluacion Impacto
+  - Modelo de Emparejamiento
+  - Análisis de Datos
+tags:
+  - Modelo de Emparejamiento
+  - Propensity Score Matching
+  - Sesgo de Selección
+citation:
+  pdf-url: https://achalmaedison.netlify.app/06-evaluacion-de-impacto/2022-04-18-03-modelo-de-emparejamiento/index.pdf
+date: "04/18/2022"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_06-evaluacion-de-impacto.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}
+
+
+

@@ -61,7 +61,7 @@ comments: false
 
 ::: {.g-col-10}
 ¡Hola!
-Soy [achalmaedison](https://achalmaedison.netlify.app/cv.pdf), un economista en proceso y entusiasta de las matemáticas y de la informática.
+Soy [achalmaedison](https://achalmaedison.netlify.app/resources/cv.pdf), un economista en proceso y entusiasta de las matemáticas y de la informática.
 Compartiré mis apuntes de clase, guías de problemas, resúmenes y exámenes resueltos, ya que estoy convencido de que compartir mis apuntes con la comunidad es provechoso para todos.
 
 Cuando no estoy frente a mi computadora, disfruto de la fotografía y de viajar a nuevos lugares.

@@ -1,10 +1,10 @@
 ---
 title: Finanzas
-subtitle: Explorando conceptos, estrategias y tendencias en el mundo financiero.
+subtitle: Análisis de mercados financieros, inversión y estrategias económicas. Publicaciones sobre valoración de activos, teoría de portafolio, gestión de riesgos y economía financiera aplicada.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "finanzas/*/index.qmd"
+      - "posts/*/index.qmd"
       - "finanzas-internacionales/*/index.qmd"
     type: default # (table, default, table)
     sort: 

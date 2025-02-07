@@ -33,7 +33,7 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Introduccion Al Mundo De Bi Y La Suite Power Conceptos Basicos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power-conceptos-basicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power-conceptos-basicos/index.pdf)
+1. [01 Introduccion Al Mundo De Bi Y La Suite Power](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power/index.pdf)
 2. [02 Power Query Proceso Etl](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl/index.pdf)
 3. [03 Proceso Etl 2](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2/index.pdf)
 4. [04 Power Pivot Modelo De Datos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos/index.pdf)

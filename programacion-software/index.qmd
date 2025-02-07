@@ -1,6 +1,6 @@
 ---
 title: Programación y Software
-subtitle: Guías y publicaciones sobre el uso diario de software y lenguajes de programación, además del uso de Linux y técnicas de hacking.
+subtitle: Uso de herramientas computacionales para el análisis económico y estadístico. Desde R y Python hasta MATLAB, Stata y Julia, con ejemplos aplicados a la modelización y el procesamiento de datos.
 listing:
   - id: ultimas-entradas
     contents: 

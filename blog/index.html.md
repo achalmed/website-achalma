@@ -1,6 +1,6 @@
 ---
-title: Blog posts
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+title: Blog Personal
+subtitle: Un espacio donde comparto reflexiones, ideas y pensamientos sobre diversos temas. Desde experiencias personales hasta análisis críticos de la realidad, este blog es un reflejo de mis intereses y aprendizajes cotidianos.
 listing:
   - id: ultimas-entradas
     contents: 

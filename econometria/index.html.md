@@ -1,17 +1,17 @@
 ---
 title: Econometría
-subtitle: Análisis, técnicas y aplicaciones en econometría con R, Python, Gretl, Stata y ejercicios numéricos.
+subtitle: Exploración de métodos estadísticos aplicados a la economía. Aquí encontrarás desde teoría econométrica hasta ejercicios prácticos, modelos de predicción, análisis de series de tiempo y aplicaciones en datos reales usando R, Gretl, Stata y otros.
 listing:
   - id: ultimas-entradas
     contents: 
-      - "00-econometria/*/index.qmd"
+      - "00-econometria-general/*/index.qmd"
       - "01-fundamentos-econometria/*/index.qmd"
       - "02-macroeconometria/*/index.qmd"
       - "03-microeconometria/*/index.qmd"
       - "04-econometria-financiera/*/index.qmd"
       - "05-econometria-bayesiana/*/index.qmd"
-      - "06-evaluacion-impacto/*/index.qmd"
-      - "07-econometria-y-topicos-economia-empirica/*/index.qmd"
+      - "06-evaluacion-de-impacto/*/index.qmd"
+      - "07-topicos-de-econometria/*/index.qmd"
       - "estadistica/*/index.qmd"
       - "estadistica-para-economistas/*/index.qmd"
     type: default # (table, default, table)

@@ -35,4 +35,4 @@ Si necesitas contactarme, puedes hacerlo a través de mi correo electrónico: [a
 
 ¡Gracias por visitar mi sitio web!
 
-![Screenshot](Screenshot.png)
+![Screenshot](images/Screenshot.png)

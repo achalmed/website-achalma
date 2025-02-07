@@ -1,6 +1,6 @@
 ---
 title: Matemática
-subtitle: Teorías, problemas y aplicaciones de la matemática en diversas disciplinas.
+subtitle: Exploración de herramientas matemáticas fundamentales para la economía. Análisis de optimización, álgebra lineal, cálculo, ecuaciones diferenciales y teoría de juegos aplicados a modelos económicos.
 listing:
   - id: ultimas-entradas
     contents: 

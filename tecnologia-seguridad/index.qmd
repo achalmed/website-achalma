@@ -1,6 +1,6 @@
 ---
 title: Tecnología y Seguridad
-subtitle: Blog personal con reflexiones, experiencias y pensamientos variados.
+subtitle: Un espacio para hablar sobre Linux, hacking ético, seguridad informática y personalización del sistema. Incluye guías sobre configuraciones avanzadas, privacidad y herramientas de ciberseguridad.
 listing:
   - id: ultimas-entradas
     contents: 

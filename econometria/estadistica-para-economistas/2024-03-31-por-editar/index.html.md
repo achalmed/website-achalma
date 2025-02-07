@@ -34,7 +34,7 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Rendimiento Academico Genero Ingresantes 2010](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf)
+1. [Rendimiento Academico Y Genero De Ingresantes A Unsch](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.pdf)
 2. [Por Editar](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar/index.pdf)
 
 

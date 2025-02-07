@@ -23,8 +23,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Presentación
 
 El actual movimiento de resistencia global contra el capitalismo, bajo la consigna de "otro mundo es posible", ha resaltado el pensamiento socialista como una alternativa. En este contexto, resulta imperativo estudiar, comprender y debatir la teoría del surgimiento del pensamiento socialista.
@@ -220,13 +218,13 @@ La postura de Kingsley combinaba su fe cristiana con su compromiso con la justic
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
-2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo/index.pdf)
-3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo/index.pdf)
-4. [Seminario Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista/index.pdf)
-5. [Entendiendo Mariategui](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui/index.pdf)
-6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf)
-7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
+1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
+2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo/index.pdf)
+3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo/index.pdf)
+4. [Seminario Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista/index.pdf)
+5. [Entendiendo Mariategui](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui/index.pdf)
+6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf)
+7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

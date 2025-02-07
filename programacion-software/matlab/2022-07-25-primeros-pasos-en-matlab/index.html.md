@@ -33,7 +33,7 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Primeros Pasos En Matlab](https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-primeros-pasos-en-matlab) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-primeros-pasos-en-matlab/index.pdf)
+1. [Primeros Pasos En Matlab](https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-primeros-pasos-en-matlab) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-primeros-pasos-en-matlab/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

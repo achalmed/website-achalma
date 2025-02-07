@@ -19,7 +19,7 @@ tags:
   - DesarrolloWeb
 citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
-date: "07/14/2021"
+date: "03/31/2024"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
 
@@ -33,7 +33,7 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Por Editar](https://achalmaedison.netlify.app/matematicas/matematicas/2024-03-31-por-editar) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/matematicas/matematicas/2024-03-31-por-editar/index.pdf)
+1. [Por Editar](https://achalmaedison.netlify.app/matematicas/matematicas/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/matematicas/matematicas/2024-03-31-por-editar/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

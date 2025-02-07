@@ -33,7 +33,7 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Por Editar](https://achalmaedison.netlify.app/macroeconomia/gestion-publica/2024-03-31-por-editar) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/gestion-publica/2024-03-31-por-editar/index.pdf)
+1. [Por Editar](https://achalmaedison.netlify.app/gestion-publica-herramientas/gestion-publica/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/gestion-publica-herramientas/gestion-publica/2024-03-31-por-editar/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

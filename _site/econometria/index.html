@@ -82,7 +82,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
@@ -303,7 +304,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="RXN0YWQlQzMlQURzdGljYQ=="><span class="quarto-category-count category-cloud-7">Estadística</span></div><div class="category" data-category="RXN0YWQlQzMlQURzdGljYSUyMHBhcmElMjBFY29ub21pc3Rhcw=="><span class="quarto-category-count category-cloud-4">Estadística para Economistas</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="QW4lQzMlQTFsaXNpcyUyMGRlJTIwRGF0b3M="><span class="quarto-category-count category-cloud-3">Análisis de Datos</span></div><div class="category" data-category="QW4lQzMlQTFsaXNpcyUyMGRlJTIwUmVncmVzaSVDMyVCM24="><span class="quarto-category-count category-cloud-1">Análisis de Regresión</span></div><div class="category" data-category="QW4lQzMlQTFsaXNpcyUyMGRlJTIwU2VyaWVzJTIwZGUlMjBUaWVtcG8="><span class="quarto-category-count category-cloud-1">Análisis de Series de Tiempo</span></div><div class="category" data-category="QXBsaWNhY2lvbmVzJTIwZW4lMjBTZXJpZXMlMjBkZSUyMFRpZW1wbw=="><span class="quarto-category-count category-cloud-1">Aplicaciones en Series de Tiempo</span></div><div class="category" data-category="QXByZW5kaXphamUlMjBBdXRvbSVDMyVBMXRpY28="><span class="quarto-category-count category-cloud-1">Aprendizaje Automático</span></div><div class="category" data-category="Q2F1c2FsaWRhZA=="><span class="quarto-category-count category-cloud-1">Causalidad</span></div><div class="category" data-category="RGF0b3MlMjBkZSUyMFBhbmVs"><span class="quarto-category-count category-cloud-1">Datos de Panel</span></div><div class="category" data-category="RGlmZXJlbmNpYXMlMjBlbiUyMERpZmVyZW5jaWFz"><span class="quarto-category-count category-cloud-1">Diferencias en Diferencias</span></div><div class="category" data-category="RGlzZSVDMyVCMW8lMjBFeHBlcmltZW50YWw="><span class="quarto-category-count category-cloud-1">Diseño Experimental</span></div><div class="category" data-category="RGlzZSVDMyVCMW8lMjBkZSUyMEludmVzdGlnYWNpJUMzJUIzbg=="><span class="quarto-category-count category-cloud-1">Diseño de Investigación</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYQ=="><span class="quarto-category-count category-cloud-5">Econometría</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYSUyMEFwbGljYWRh"><span class="quarto-category-count category-cloud-1">Econometría Aplicada</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYSUyMEF2YW56YWRh"><span class="quarto-category-count category-cloud-1">Econometría Avanzada</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYQ=="><span class="quarto-category-count category-cloud-1">Econometría Bayesiana</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYSUyMENvbXB1dGFjaW9uYWw="><span class="quarto-category-count category-cloud-1">Econometría Computacional</span></div><div class="category" data-category="RWNvbm9tZXRyJUMzJUFEYSUyMEZpbmFuY2llcmE="><span class="quarto-category-count category-cloud-1">Econometría Financiera</span></div><div class="category" data-category="RWNvbm9tJUMzJUFEYQ=="><span class="quarto-category-count category-cloud-1">Economía</span></div><div class="category" data-category="RWNvbm9tJUMzJUFEYSUyMEV4cGVyaW1lbnRhbA=="><span class="quarto-category-count category-cloud-1">Economía Experimental</span></div><div class="category" data-category="RWZlY3RvcyUyMEZpam9z"><span class="quarto-category-count category-cloud-1">Efectos Fijos</span></div><div class="category" data-category="RW5zYXlvcyUyMENvbnRyb2xhZG9zJTIwQWxlYXRvcmlvcw=="><span class="quarto-category-count category-cloud-1">Ensayos Controlados Aleatorios</span></div><div class="category" data-category="RXN0YWQlQzMlQURzdGljYQ=="><span class="quarto-category-count category-cloud-2">Estadística</span></div><div class="category" data-category="RXN0YWQlQzMlQURzdGljYSUyMEFwbGljYWRh"><span class="quarto-category-count category-cloud-1">Estadística Aplicada</span></div><div class="category" data-category="RXN0YWQlQzMlQURzdGljYSUyMHBhcmElMjBFY29ub21pc3Rhcw=="><span class="quarto-category-count category-cloud-1">Estadística para Economistas</span></div><div class="category" data-category="RXN0aW1hY2klQzMlQjNu"><span class="quarto-category-count category-cloud-1">Estimación</span></div><div class="category" data-category="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3Rv"><span class="quarto-category-count category-cloud-2">Evaluación de Impacto</span></div><div class="category" data-category="RXZlbnQlMjBTdHVkaWVz"><span class="quarto-category-count category-cloud-1">Event Studies</span></div><div class="category" data-category="RXhwZXJpbWVudG9zJTIwQWxlYXRvcmlvcw=="><span class="quarto-category-count category-cloud-1">Experimentos Aleatorios</span></div><div class="category" data-category="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURh"><span class="quarto-category-count category-cloud-3">Funadamentos de econometría</span></div><div class="category" data-category="SWRlbnRpZmljYWNpJUMzJUIzbg=="><span class="quarto-category-count category-cloud-1">Identificación</span></div><div class="category" data-category="SW5mZXJlbmNpYSUyMEJheWVzaWFuYQ=="><span class="quarto-category-count category-cloud-1">Inferencia Bayesiana</span></div><div class="category" data-category="SW5mZXJlbmNpYSUyMEVjb24lQzMlQjNtaWNh"><span class="quarto-category-count category-cloud-1">Inferencia Económica</span></div><div class="category" data-category="SW5mZXJlbmNpYSUyMEVzdGFkJUMzJUFEc3RpY2E="><span class="quarto-category-count category-cloud-1">Inferencia Estadística</span></div><div class="category" data-category="TWFjcm9lY29ub21ldHIlQzMlQURh"><span class="quarto-category-count category-cloud-1">Macroeconometría</span></div><div class="category" data-category="TWFjcm9lY29ub21ldHIlQzMlQURhJTIwQXBsaWNhZGE="><span class="quarto-category-count category-cloud-1">Macroeconometría Aplicada</span></div><div class="category" data-category="TWF0ZW0lQzMlQTF0aWNhcw=="><span class="quarto-category-count category-cloud-1">Matemáticas</span></div><div class="category" data-category="TWV0b2RvbG9nJUMzJUFEYXM="><span class="quarto-category-count category-cloud-1">Metodologías</span></div><div class="category" data-category="TWljcm9lY29ub21ldHIlQzMlQURh"><span class="quarto-category-count category-cloud-2">Microeconometría</span></div><div class="category" data-category="TW9kZWxhZG8lMjBFc3RhZCVDMyVBRHN0aWNv"><span class="quarto-category-count category-cloud-1">Modelado Estadístico</span></div><div class="category" data-category="TW9kZWxvJTIwZGUlMjBFbXBhcmVqYW1pZW50bw=="><span class="quarto-category-count category-cloud-1">Modelo de Emparejamiento</span></div><div class="category" data-category="TW9kZWxvcyUyMEFSTUE="><span class="quarto-category-count category-cloud-1">Modelos ARMA</span></div><div class="category" data-category="TW9kZWxvcyUyMERpbiVDMyVBMW1pY29z"><span class="quarto-category-count category-cloud-1">Modelos Dinámicos</span></div><div class="category" data-category="TW9kZWxvcyUyMEVjb25vbSVDMyVBOXRyaWNvcw=="><span class="quarto-category-count category-cloud-1">Modelos Econométricos</span></div><div class="category" data-category="TW9kZWxvcyUyMEVjb25vbSVDMyVBOXRyaWNvcyUyME11bHRpdmFyaWFkb3M="><span class="quarto-category-count category-cloud-1">Modelos Econométricos Multivariados</span></div><div class="category" data-category="TW9kZWxvcyUyMEVzdGFkJUMzJUFEc3RpY29z"><span class="quarto-category-count category-cloud-1">Modelos Estadísticos</span></div><div class="category" data-category="TW9kZWxvcyUyME5vJTIwTGluZWFsZXM="><span class="quarto-category-count category-cloud-1">Modelos No Lineales</span></div><div class="category" data-category="TW9kZWxvcyUyMGRlJTIwRmFjdG9yZXMlMjBMYXRlbnRlcw=="><span class="quarto-category-count category-cloud-1">Modelos de Factores Latentes</span></div><div class="category" data-category="TSVDMyVBOXRvZG8lMjBkZSUyMENvbnRyb2wlMjBTaW50JUMzJUE5dGljbw=="><span class="quarto-category-count category-cloud-1">Método de Control Sintético</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwQ3VhbnRpdGF0aXZvcw=="><span class="quarto-category-count category-cloud-1">Métodos Cuantitativos</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwRXN0YWQlQzMlQURzdGljb3M="><span class="quarto-category-count category-cloud-1">Métodos Estadísticos</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwZGUlMjBFc3RpbWFjaSVDMyVCM24="><span class="quarto-category-count category-cloud-1">Métodos de Estimación</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwZGUlMjBFc3RpbWFjaSVDMyVCM24lMjBFY29ub20lQzMlQTl0cmljYQ=="><span class="quarto-category-count category-cloud-1">Métodos de Estimación Econométrica</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwZGUlMjBQcmlvcml6YWNpJUMzJUIzbg=="><span class="quarto-category-count category-cloud-1">Métodos de Priorización</span></div><div class="category" data-category="TSVDMyVBOXRvZG9zJTIwZGUlMjBTaW11bGFjaSVDMyVCM24="><span class="quarto-category-count category-cloud-1">Métodos de Simulación</span></div><div class="category" data-category="UG9sJUMzJUFEdGljYXMlMjBQJUMzJUJBYmxpY2Fz"><span class="quarto-category-count category-cloud-1">Políticas Públicas</span></div><div class="category" data-category="UHJveWVjY2lvbmVz"><span class="quarto-category-count category-cloud-1">Proyecciones</span></div><div class="category" data-category="UHJveWVjY2lvbmVzJTIwTWFjcm9lY29uJUMzJUIzbWljYXM="><span class="quarto-category-count category-cloud-1">Proyecciones Macroeconómicas</span></div><div class="category" data-category="UmVncmVzaW9uZXM="><span class="quarto-category-count category-cloud-1">Regresiones</span></div><div class="category" data-category="UmVncmVzaSVDMyVCM24lMjBEaXNjb250aW51YQ=="><span class="quarto-category-count category-cloud-1">Regresión Discontinua</span></div><div class="category" data-category="UmVzdWx0YWRvcyUyMFBvdGVuY2lhbGVz"><span class="quarto-category-count category-cloud-1">Resultados Potenciales</span></div><div class="category" data-category="U2VsZWNjaSVDMyVCM24="><span class="quarto-category-count category-cloud-1">Selección</span></div><div class="category" data-category="U2VyaWVzJTIwZGUlMjBUaWVtcG8="><span class="quarto-category-count category-cloud-1">Series de Tiempo</span></div><div class="category" data-category="VCVDMyVCM3BpY29zJTIwZGUlMjBFY29ub21ldHIlQzMlQURh"><span class="quarto-category-count category-cloud-2">Tópicos de Econometría</span></div><div class="category" data-category="VmFyaWFibGVzJTIwSW5zdHJ1bWVudGFsZXM="><span class="quarto-category-count category-cloud-1">Variables Instrumentales</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
@@ -339,7 +340,1379 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RXN0YWQlQzMlQURzdGljYSUyMHBhcmElMjBFY29ub21pc3Rhcw==" data-listing-date-sort="1577682000000" data-listing-file-modified-sort="1738905730463" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="2" data-listing-word-count-sort="364">
+<div class="quarto-post image-right" data-index="0" data-categories="TWFjcm9lY29ub21ldHIlQzMlQURh" data-listing-date-sort="1711861200000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external"></a></p><a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/02-macroeconometria/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-date">
+31/3/24
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3Rv" data-listing-date-sort="1711861200000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-date">
+31/3/24
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="RXN0YWQlQzMlQURzdGljYSUyMHBhcmElMjBFY29ub21pc3Rhcw==" data-listing-date-sort="1711861200000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external"></a></p><a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/estadistica-para-economistas/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-date">
+31/3/24
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ1JlZ3Jlc2lvbmVzJTJDTW9kZWxvcyUyME5vJTIwTGluZWFsZXM=" data-listing-date-sort="1655701200000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external">Temas Avanzados en Econometría</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external">Regresiones, Modelos No Lineales y más</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-20-08-miscelanea/index.html" class="no-external">
+<div class="listing-date">
+20/6/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ0V2ZW50JTIwU3R1ZGllcyUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9zJTJDRWNvbm9tJUMzJUFEYQ==" data-listing-date-sort="1655096400000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external">Event Studies</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external">Revisión de Investigaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-13-07-event-studies-en-economia/index.html" class="no-external">
+<div class="listing-date">
+13/6/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ0VmZWN0b3MlMjBGaWpvcyUyQ0RpZmVyZW5jaWFzJTIwZW4lMjBEaWZlcmVuY2lhcyUyQ0RhdG9zJTIwZGUlMjBQYW5lbA==" data-listing-date-sort="1654491600000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external">Efectos Fijos y Diferencias</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external">Análisis de Datos de Panel</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.html" class="no-external">
+<div class="listing-date">
+6/6/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ1JlZ3Jlc2klQzMlQjNuJTIwRGlzY29udGludWElMkNEaXNlJUMzJUIxbyUyMEV4cGVyaW1lbnRhbCUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1653886800000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external">Regresión Discontinua</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external">Diseño y Aplicaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-30-05-diseño-de-regresion-discontinua-rdd/index.html" class="no-external">
+<div class="listing-date">
+30/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ1ZhcmlhYmxlcyUyMEluc3RydW1lbnRhbGVzJTJDQ2F1c2FsaWRhZCUyQ1Jlc3VsdGFkb3MlMjBQb3RlbmNpYWxlcw==" data-listing-date-sort="1653282000000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external">Variables Instrumentales</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external">Causalidad y Resultados Potenciales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.html" class="no-external">
+<div class="listing-date">
+23/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ1JlZ3Jlc2lvbmVzJTJDQW4lQzMlQTFsaXNpcyUyMGRlJTIwRGF0b3MlMkNDYXVzYWxpZGFk" data-listing-date-sort="1652677200000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external">Regresiones</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external">Fundamentos y Aplicaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-16-03-la-herramienta-fundamental-regresiones/index.html" class="no-external">
+<div class="listing-date">
+16/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDTSVDMyVBOXRvZG8lMjBkZSUyMENvbnRyb2wlMjBTaW50JUMzJUE5dGljbyUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1652677200000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external">Método de Control Sintético</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external">Uso en la Evaluación de Impacto</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-05-16-07-metodo-de-control-sintetico-mcs/index.html" class="no-external">
+<div class="listing-date">
+16/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGElMjBFeHBlcmltZW50YWwlMkNTZWxlY2NpJUMzJUIzbiUyQ0Vuc2F5b3MlMjBDb250cm9sYWRvcyUyMEFsZWF0b3Jpb3M=" data-listing-date-sort="1652072400000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external">Métodos Experimentales</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external">Resolviendo el Problema de Selección</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.html" class="no-external">
+<div class="listing-date">
+9/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDUmVncmVzaSVDMyVCM24lMjBEaXNjb250aW51YSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1652072400000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external">Análisis de Papers con RDD</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external">Aplicaciones Prácticas</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.html" class="no-external">
+<div class="listing-date">
+9/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDUmVncmVzaSVDMyVCM24lMjBEaXNjb250aW51YSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1651467600000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external">Regresión Discontinua Sharp vs Fuzzy</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external">Diferencias y Similitudes</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-05-02-05-regresion-discontinua-sharp-vs-fuzzy/index.html" class="no-external">
+<div class="listing-date">
+2/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ1QlQzMlQjNwaWNvcyUyMGRlJTIwRWNvbm9tZXRyJUMzJUFEYSUyQ0VzdGltYWNpJUMzJUIzbiUyQ0lkZW50aWZpY2FjaSVDMyVCM24=" data-listing-date-sort="1651467600000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external"></a></p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external">Fundamentos de la Econometría</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external">Estimación e Identificación</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/07-econometria-y-topicos-economia-empirica/2022-05-02-01-introduccion-a-la-econometria/index.html" class="no-external">
+<div class="listing-date">
+2/5/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDUmVncmVzaSVDMyVCM24lMjBEaXNjb250aW51YSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1650862800000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external">Regresión Discontinua</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external">Uso en la Evaluación de Impacto</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-04-25-04-regresion-discontinua-rd/index.html" class="no-external">
+<div class="listing-date">
+25/4/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDTW9kZWxvJTIwZGUlMjBFbXBhcmVqYW1pZW50byUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1650258000000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external">Modelo de Emparejamiento</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external">Uso del Propensity Score Matching</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-04-18-03-modelo-de-emparejamiento/index.html" class="no-external">
+<div class="listing-date">
+18/4/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDRXhwZXJpbWVudG9zJTIwQWxlYXRvcmlvcyUyQ0Rpc2UlQzMlQjFvJTIwZGUlMjBJbnZlc3RpZ2FjaSVDMyVCM24=" data-listing-date-sort="1649653200000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external">Experimentos Aleatorios</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external">Diseño y Análisis</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-04-11-02-introduccion-a-los-experimentos-aleatorios/index.html" class="no-external">
+<div class="listing-date">
+11/4/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-categories="RXZhbHVhY2klQzMlQjNuJTIwZGUlMjBJbXBhY3RvJTJDTWV0b2RvbG9nJUMzJUFEYXMlMkNQb2wlQzMlQUR0aWNhcyUyMFAlQzMlQkFibGljYXM=" data-listing-date-sort="1649048400000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external"></a></p><a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external">Evaluación de Impacto</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external">Conceptos y Metodologías</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/06-evaluacion-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.html" class="no-external">
+<div class="listing-date">
+4/4/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="18" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYSUyQ0FwbGljYWNpb25lcyUyMGVuJTIwU2VyaWVzJTIwZGUlMjBUaWVtcG8lMkNNb2RlbG9zJTIwRGluJUMzJUExbWljb3MlMkNFY29ub21ldHIlQzMlQURhJTIwQXZhbnphZGE=" data-listing-date-sort="1648443600000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external"></a></p><a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external">Aplicaciones Econométricas de la Inferencia Bayesiana</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external">Modelos VAR, Estado-Espacio y DSGE en la Predicción Económica</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.html" class="no-external">
+<div class="listing-date">
+28/3/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYSUyQ00lQzMlQTl0b2RvcyUyMGRlJTIwU2ltdWxhY2klQzMlQjNuJTJDRWNvbm9tZXRyJUMzJUFEYSUyMENvbXB1dGFjaW9uYWwlMkNJbmZlcmVuY2lhJTIwRXN0YWQlQzMlQURzdGljYQ==" data-listing-date-sort="1647838800000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external"></a></p><a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external">Simulación y Estimación Bayesiana</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external">Algoritmos de Muestreo y Aplicaciones Computacionales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.html" class="no-external">
+<div class="listing-date">
+21/3/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYSUyQ00lQzMlQTl0b2RvcyUyMGRlJTIwUHJpb3JpemFjaSVDMyVCM24lMkNJbmZlcmVuY2lhJTIwRWNvbiVDMyVCM21pY2E=" data-listing-date-sort="1647579600000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external"></a></p><a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external">Priorización Bayesiana</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external">Tipos de Distribuciones Prior y su Impacto en la Inferencia</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.html" class="no-external">
+<div class="listing-date">
+18/3/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMFJlZ3Jlc2klQzMlQjNuJTJDSW5mZXJlbmNpYSUyMEJheWVzaWFuYSUyQ0Vjb25vbWV0ciVDMyVBRGElMjBBcGxpY2FkYQ==" data-listing-date-sort="1647234000000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external"></a></p><a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external">Modelos de Regresión Bayesiana</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external">Análisis Bivariado, Multivariado y Consideraciones de Perturbación</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/index.html" class="no-external">
+<div class="listing-date">
+14/3/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEJheWVzaWFuYSUyQ01vZGVsYWRvJTIwRXN0YWQlQzMlQURzdGljbyUyQ00lQzMlQTl0b2RvcyUyMGRlJTIwU2ltdWxhY2klQzMlQjNu" data-listing-date-sort="1646629200000" data-listing-file-modified-sort="1738913199207" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external"></a></p><a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external">Probabilidad e Inferencia Bayesian</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external">Fundamentos Teóricos, Modelos de Regresión y Aplicaciones Computacionales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/index.html" class="no-external">
+<div class="listing-date">
+7/3/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="23" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyMEZpbmFuY2llcmElMkNTZXJpZXMlMjBkZSUyMFRpZW1wbw==" data-listing-date-sort="1646024400000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external"></a></p><a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external">Modelos de Volatilidad en Series de Tiempo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external">Estimación y Aplicaciones de ARCH y GARCH en Finanzas</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.html" class="no-external">
+<div class="listing-date">
+28/2/22
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="24" data-categories="TWljcm9lY29ub21ldHIlQzMlQURh" data-listing-date-sort="1639371600000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external">Editar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external">Editar</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-12-13-09-/index.html" class="no-external">
+<div class="listing-date">
+13/12/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="25" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyMEFwbGljYWRhJTJDQW4lQzMlQTFsaXNpcyUyMGRlJTIwRGF0b3M=" data-listing-date-sort="1638766800000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external">Modelos de Panel Data Dinámico</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external">Métodos de Estimación y Corrección de Sesgos en Series Temporales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.html" class="no-external">
+<div class="listing-date">
+6/12/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="26" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDTWljcm9lY29ub21ldHIlQzMlQURhJTJDQW4lQzMlQTFsaXNpcyUyMGRlJTIwRGF0b3MlMkNFY29ub21ldHIlQzMlQURh" data-listing-date-sort="1638162000000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external">Modelos de Panel Data Estático</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external">Estimación y Aplicaciones en Modelos de Efectos Fijos y Aleatorios</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-11-29-07-panel-data-estatico/index.html" class="no-external">
+<div class="listing-date">
+29/11/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="27" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDTW9kZWxvcyUyMEVzdGFkJUMzJUFEc3RpY29zJTJDTSVDMyVBOXRvZG9zJTIwZGUlMjBFc3RpbWFjaSVDMyVCM24=" data-listing-date-sort="1637557200000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external">Modelos de Ecuaciones Simultáneas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external">Identificación y Métodos de Estimación en Sistemas de Ecuaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-11-22-06-modelos-de-ecuaciones-simultaneas/index.html" class="no-external">
+<div class="listing-date">
+22/11/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="28" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyMEFwbGljYWRhJTJDRWNvbm9tZXRyJUMzJUFEYQ==" data-listing-date-sort="1636952400000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external">Sesgo de Selección</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external">Métodos de Estimación y Corrección mediante Heckit y Máxima Verosimilitud</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.html" class="no-external">
+<div class="listing-date">
+15/11/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="29" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDQW4lQzMlQTFsaXNpcyUyMGRlJTIwRGF0b3MlMkNFY29ub21ldHIlQzMlQURh" data-listing-date-sort="1636347600000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external">Modelos con Variables Censuradas y Truncadas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external">Métodos de Estimación y Evaluación en Datos Limitados</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.html" class="no-external">
+<div class="listing-date">
+8/11/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="30" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyMEFwbGljYWRhJTJDTW9kZWxvcyUyMEVzdGFkJUMzJUFEc3RpY29z" data-listing-date-sort="1635742800000" data-listing-file-modified-sort="1738913199201" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external">Modelos Multinomiales y Ordenados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external">Métodos de Estimación y Evaluación en Variables Dependientes Categóricas</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.html" class="no-external">
+<div class="listing-date">
+1/11/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="31" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDTW9kZWxvcyUyMEVjb25vbSVDMyVBOXRyaWNvcyUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1635138000000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external">Modelos Fraccionados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external">Transformaciones y Métodos de Estimación en Datos Proporcionales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.html" class="no-external">
+<div class="listing-date">
+25/10/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="32" data-categories="TWljcm9lY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyQ01vZGVsb3MlMjBFc3RhZCVDMyVBRHN0aWNvcw==" data-listing-date-sort="1634533200000" data-listing-file-modified-sort="1738913199202" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external"></a></p><a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external">Modelos de Elección Discreta</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external">Estimación y Evaluación de Probit y Logit en Variables Dependientes Binomiales</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.html" class="no-external">
+<div class="listing-date">
+18/10/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="33" data-categories="TWFjcm9lY29ub21ldHIlQzMlQURhJTJDTW9kZWxvcyUyME5vJTIwTGluZWFsZXMlMkNNYWNyb2Vjb25vbWV0ciVDMyVBRGElMjBBcGxpY2FkYQ==" data-listing-date-sort="1633928400000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external"></a></p><a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external">Modelos No Lineales en Econometría</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external">Umbrales, Transiciones Suaves y Markov-Switching</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.html" class="no-external">
+<div class="listing-date">
+11/10/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="34" data-categories="TWFjcm9lY29ub21ldHIlQzMlQURhJTJDTW9kZWxvcyUyMGRlJTIwRmFjdG9yZXMlMjBMYXRlbnRlcyUyQ00lQzMlQTl0b2RvcyUyMGRlJTIwRXN0aW1hY2klQzMlQjNuJTIwRWNvbm9tJUMzJUE5dHJpY2E=" data-listing-date-sort="1633323600000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external"></a></p><a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external">Modelos de Factores Latentes en Econometría</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external">Filtro de Kalman y Modelos de Espacio-Estado</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/index.html" class="no-external">
+<div class="listing-date">
+4/10/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="35" data-categories="TWFjcm9lY29ub21ldHIlQzMlQURhJTJDTW9kZWxvcyUyMEVjb25vbSVDMyVBOXRyaWNvcyUyME11bHRpdmFyaWFkb3MlMkNQcm95ZWNjaW9uZXMlMjBNYWNyb2Vjb24lQzMlQjNtaWNhcw==" data-listing-date-sort="1632718800000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external"></a></p><a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external">Análisis Multivariado en Macroeconometría</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external">Modelos VAR, SVAR y Métodos de Identificación</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.html" class="no-external">
+<div class="listing-date">
+27/9/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="36" data-categories="TWFjcm9lY29ub21ldHIlQzMlQURhJTJDQW4lQzMlQTFsaXNpcyUyMGRlJTIwU2VyaWVzJTIwZGUlMjBUaWVtcG8lMkNNb2RlbG9zJTIwQVJNQSUyQ1Byb3llY2Npb25lcw==" data-listing-date-sort="1632114000000" data-listing-file-modified-sort="1738913199204" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external"></a></p><a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external">Análisis Univariado de Series de Tiempo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external">Identificación de Modelos y Proyecciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.html" class="no-external">
+<div class="listing-date">
+20/9/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="37" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0Vjb25vbWV0ciVDMyVBRGE=" data-listing-date-sort="1621832400000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external">Perturbaciones No Esféricas en Regresión</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external">Implicaciones y Soluciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.html" class="no-external">
+<div class="listing-date">
+24/5/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="38" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGE=" data-listing-date-sort="1621227600000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external">Problemas de Endogeneidad en Regresión</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external">Métodos de Corrección</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.html" class="no-external">
+<div class="listing-date">
+17/5/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="39" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1620622800000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external">Modelo de Regresión Lineal con Heterocedasticidad</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external">Enfoques de Corrección</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.html" class="no-external">
+<div class="listing-date">
+10/5/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="40" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ00lQzMlQTl0b2RvcyUyMEN1YW50aXRhdGl2b3M=" data-listing-date-sort="1620018000000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external">Inferencia Estadística en Regresión Lineal</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external">Pruebas de Hipótesis y Estimación</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.html" class="no-external">
+<div class="listing-date">
+3/5/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="41" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyQ0VzdGFkJUMzJUFEc3RpY2E=" data-listing-date-sort="1619413200000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external">Multicolinealidad en Modelos de Regresión</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external">Detección y Manejo</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.html" class="no-external">
+<div class="listing-date">
+26/4/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="42" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0FuJUMzJUExbGlzaXMlMjBkZSUyMERhdG9z" data-listing-date-sort="1618808400000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external">Medidas de Bondad de Ajuste en Regresión</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external">Evaluación de Modelos</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.html" class="no-external">
+<div class="listing-date">
+19/4/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="43" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0FwcmVuZGl6YWplJTIwQXV0b20lQzMlQTF0aWNv" data-listing-date-sort="1618030800000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external">El Trade Off entre Sesgo y Varianza</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external">Implicaciones en Modelos Estadísticos</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.html" class="no-external">
+<div class="listing-date">
+10/4/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="44" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0Vjb25vbWV0ciVDMyVBRGE=" data-listing-date-sort="1616994000000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external">Propiedades del Estimador MCO en Muestras Infinitas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external">Estudio Asintótico</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.html" class="no-external">
+<div class="listing-date">
+29/3/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="45" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0Vjb25vbWV0ciVDMyVBRGE=" data-listing-date-sort="1616389200000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external">Propiedades del Estimador MCO en Muestras Finitas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external">Análisis Detallado</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.html" class="no-external">
+<div class="listing-date">
+22/3/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="46" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDTWF0ZW0lQzMlQTF0aWNhcyUyQ0Vjb25vbWV0ciVDMyVBRGE=" data-listing-date-sort="1615784400000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external">Álgebra y Geometría de Mínimos Cuadrados Ordinarios</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external">Una Perspectiva Matemática</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.html" class="no-external">
+<div class="listing-date">
+15/3/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="47" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRWNvbm9tZXRyJUMzJUFEYSUyQ00lQzMlQTl0b2RvcyUyMEVzdGFkJUMzJUFEc3RpY29z" data-listing-date-sort="1615179600000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external">Estimador de Mínimos Cuadrados Ordinarios</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external">Métodos y Aplicaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.html" class="no-external">
+<div class="listing-date">
+8/3/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="48" data-categories="RnVuYWRhbWVudG9zJTIwZGUlMjBlY29ub21ldHIlQzMlQURhJTJDRXN0YWQlQzMlQURzdGljYSUyQ0Vjb25vbWV0ciVDMyVBRGE=" data-listing-date-sort="1614574800000" data-listing-file-modified-sort="1738913199206" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external"></a></p><a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external">Modelo Clásico de Regresión Lineal</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external">Fundamentos y Aplicaciones</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.html" class="no-external">
+<div class="listing-date">
+1/3/21
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="49" data-categories="RXN0YWQlQzMlQURzdGljYSUyMHBhcmElMjBFY29ub21pc3Rhcw==" data-listing-date-sort="1577682000000" data-listing-file-modified-sort="1738913199205" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="2" data-listing-word-count-sort="364">
 <div class="thumbnail">
 <p><a href="../econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.html" class="no-external"></a></p><a href="../econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -367,7 +1740,7 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="RXN0YWQlQzMlQURzdGljYQ==" data-listing-date-sort="1545800400000" data-listing-file-modified-sort="1738905730462" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="4" data-listing-word-count-sort="613">
+<div class="quarto-post image-right" data-index="50" data-categories="RXN0YWQlQzMlQURzdGljYQ==" data-listing-date-sort="1545800400000" data-listing-file-modified-sort="1738913199204" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="4" data-listing-word-count-sort="613">
 <div class="thumbnail">
 <p><a href="../econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.html" class="no-external"></a></p><a href="../econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -395,7 +1768,7 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="RXN0YWQlQzMlQURzdGljYQ==" data-listing-date-sort="1526446800000" data-listing-file-modified-sort="1738905730462" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="83" data-listing-word-count-sort="16553">
+<div class="quarto-post image-right" data-index="51" data-categories="RXN0YWQlQzMlQURzdGljYQ==" data-listing-date-sort="1526446800000" data-listing-file-modified-sort="1738913199204" data-listing-date-modified-sort="1738904400000" data-listing-reading-time-sort="83" data-listing-word-count-sort="16553">
 <div class="thumbnail">
 <p><a href="../econometria/estadistica/2018-05-16-estadigrafos/index.html" class="no-external"></a></p><a href="../econometria/estadistica/2018-05-16-estadigrafos/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -427,6 +1800,9 @@ Edison Achalma
 <div class="listing-no-matching d-none">
 No hay resultados
 </div>
+<nav id="ultimas-entradas-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

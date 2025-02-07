@@ -618,9 +618,9 @@ Por otro lado, los tipos de cambio flexibles permiten que las tasas de cambio se
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
+2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
+3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

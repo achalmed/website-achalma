@@ -25,6 +25,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 # Orígenes y Conceptos Fundamentales de las Finanzas Internacionales
 
 ## Economía Internacional
@@ -56,6 +58,8 @@ En el ámbito de las finanzas corporativas, las empresas se enfrentan a desafío
 5.  **Inversión en Portafolios Internacionales:** La inversión en portafolios internacionales implica la adquisición de activos financieros, como acciones y bonos, emitidos por empresas o gobiernos extranjeros. Los inversores internacionales diversifican sus carteras de inversión para aprovechar las oportunidades de rendimiento y reducir los riesgos asociados con la concentración en un solo país o una sola moneda. La inversión en portafolios internacionales requiere un análisis detallado de los mercados financieros y una evaluación de los riesgos y las oportunidades en cada país.
 
 Al comprender estos conceptos en los campos de la economía internacional y las finanzas corporativas, se puede tener una visión más completa de los aspectos fundamentales que sustentan las transacciones financieras internacionales y las operaciones corporativas en un entorno global en constante cambio.
+
+
 
 
 
@@ -112,6 +116,8 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 ::::
 :::::
 ::::::
+
+
 
 
 
@@ -252,6 +258,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
+
+
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -338,6 +346,8 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
+
+
 ## Críticas a la Globalización
 
 La globalización, a pesar de sus beneficios y oportunidades, también ha sido objeto de críticas y preocupaciones por parte de diversos actores. A continuación, se presentan algunas de las principales críticas a la globalización:
@@ -382,9 +392,9 @@ Otra crítica importante es que la globalización ha llevado a una mayor frecuen
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
+2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
+3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

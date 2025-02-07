@@ -3,7 +3,7 @@ title: Análisis Multivariado en Macroeconometría
 subtitle: Modelos VAR, SVAR y Métodos de Identificación
 shorttitle: "Análisis Multivariado"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Proyecciones macroeconómicas
   - Modelos VECM
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/02-macroeconometria/2021-09-27-03-analisis-multivariado/index.pdf
 date: "09/27/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

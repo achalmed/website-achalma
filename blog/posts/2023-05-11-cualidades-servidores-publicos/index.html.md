@@ -3,7 +3,7 @@ title: Cualidades Esenciales de los Servidores Públicos
 subtitle: Administración Pública Eficiente y Humana
 shorttitle: "Cualidades Servidores Públicos"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-05-11-cualidades-servidores-publicos/index.pdf) completo aquí.
 abstract: |
   | This article delves into the essential qualities that public servants should embody to enhance public administration effectiveness and empathy. Key attributes discussed include kindness, astuteness in judgment, future-proof skills, justice, tenacity, a sense of duty, a touch of rebellion, motivation, dialogue promotion, serenity, result-oriented focus, and delegation skills. These qualities are explored in the context of adapting to changing governmental, civil, and private sector dynamics, emphasizing the need for innovation and integrity in public service roles.
 keywords: [public service, leadership qualities, innovation in government, integrity, public administration]
@@ -17,7 +17,7 @@ tags:
   - Diálogo  
   - Gestión de Crisis
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/posts/2023-05-11-cualidades-servidores-publicos/index.pdf
 date: "05/11/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

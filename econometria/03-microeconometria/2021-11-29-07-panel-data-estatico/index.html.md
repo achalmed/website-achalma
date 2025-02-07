@@ -3,7 +3,7 @@ title: Modelos de Panel Data Estático
 subtitle: Estimación y Aplicaciones en Modelos de Efectos Fijos y Aleatorios
 shorttitle: "Panel Data Estático"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/03-microeconometria/2021-11-29-07-panel-data-estatico/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Mínimos Cuadrados Generalizados
   - Verosimilitud condicional
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/03-microeconometria/2021-11-29-07-panel-data-estatico/index.pdf
 date: "11/29/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

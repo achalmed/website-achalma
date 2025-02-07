@@ -4,7 +4,7 @@ title: Economía Agraria y Rural en el Perú
 subtitle: Análisis de Desafíos y Oportunidades
 shorttitle: "Economía Agraria en Perú"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-04-22-economia-agraria/index.pdf) completo aquí.
 abstract: |
   | This article explores the agrarian and rural economy in Peru, focusing on the application of economic principles to agriculture, the implications of population growth on food security, and the historical context of agrarian reform. It discusses the theories of land use, agricultural methods, and decision-making from classical economists to contemporary thinkers. The document also addresses the challenges of small-scale farming, the impact of technological adoption, and the importance of property rights in enhancing productivity and competitiveness. It concludes with a critique of past agrarian policies and suggests strategic actions for development based on property rights and land tenure.
 keywords: [agrarian economics, rural development, agricultural productivity, land reform, property rights]
@@ -19,7 +19,7 @@ tags:
   - Seguridad Alimentaria  
   - Capacitación Rural
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/posts/2022-04-22-economia-agraria/index.pdf
 date: "04/22/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

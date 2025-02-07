@@ -4,7 +4,7 @@ title: Introducción a los Sistemas Económicos. Cómo se distribuyen los recurs
 subtitle: Explorando los fundamentos de los sistemas económicos y sus implicaciones en la sociedad
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/organizacion-industrial/2023-06-13-sistemas-economicos-oi-cap1/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - EconomíaPlanificada
   - EconomíaMixta
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-13-sistemas-economicos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/organizacion-industrial/2023-06-13-sistemas-economicos-oi-cap1/index.pdf
 date: "06/13/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

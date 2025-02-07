@@ -3,7 +3,7 @@ title: Distribuciones de GNU/Linux
 subtitle: Descubre las distribuciones de Linux, sus características únicas y las ventajas que ofrecen en este apasionante viaje tecnológico.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-06-18-02-distribuciones-linux/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

@@ -3,7 +3,7 @@ title: Rendimiento académico y genero de los ingresantes
 subtitle: a la Universidad Nacional de San Cristóbal de Huamanga
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

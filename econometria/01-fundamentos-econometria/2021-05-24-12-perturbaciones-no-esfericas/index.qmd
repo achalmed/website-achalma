@@ -3,7 +3,7 @@ title: Perturbaciones No Esféricas en Regresión
 subtitle: Implicaciones y Soluciones
 shorttitle: "Perturbaciones No Esféricas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Heterocedasticidad  
   - Modelos de Errores
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf
 date: "05/24/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

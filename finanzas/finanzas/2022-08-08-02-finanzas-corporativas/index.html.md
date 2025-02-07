@@ -3,7 +3,7 @@ title: Finanzas Corporativas
 subtitle: Lectura y Análisis de Estados Financieros
 shorttitle: "Finanzas Corporativas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/2022-08-08-02-finanzas-corporativas/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Flujo de Efectivo
   - Ratios Financieros
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/2022-08-08-02-finanzas-corporativas/index.pdf
 date: "08/08/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

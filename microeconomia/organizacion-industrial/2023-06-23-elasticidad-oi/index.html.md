@@ -3,7 +3,7 @@ title: Explorando la Elasticidad. Entendiendo las Dinámicas del Mercado
 subtitle: Elasticidad
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/organizacion-industrial/2023-06-23-elasticidad-oi/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

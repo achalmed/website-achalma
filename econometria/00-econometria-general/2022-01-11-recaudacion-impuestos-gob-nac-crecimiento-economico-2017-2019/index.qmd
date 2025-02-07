@@ -3,7 +3,7 @@ title: Análisis del Impacto del Crecimiento Económico en la Recaudación de Im
 subtitle: relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]

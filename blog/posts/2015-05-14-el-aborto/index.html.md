@@ -4,7 +4,7 @@ title: El aborto
 subtitle: Consecuencias y Consideraciones Éticas en la Sociedad Contemporánea
 shorttitle: "El Aborto: Una Mirada Profunda"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2015-05-14-el-aborto/index.pdf) completo aquí.
 abstract: |
   | Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales.
 keywords: [Aborto, Adolescentes, Consecuencias]

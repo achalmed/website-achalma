@@ -3,7 +3,7 @@ title: Métodos Experimentales
 subtitle: Resolviendo el Problema de Selección
 shorttitle: "Métodos Experimentales"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Selección
   - Ensayos Naturales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/07-econometria-y-topicos-economia-empirica/2022-05-09-02-metodos-experimentales-en-economia/index.pdf
 date: "05/09/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

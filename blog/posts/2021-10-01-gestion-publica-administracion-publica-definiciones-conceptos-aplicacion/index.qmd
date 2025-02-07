@@ -3,7 +3,7 @@ title: Diferencias entre Gestión Pública y Administración Pública
 subtitle: Aplicaciones en el Contexto Gubernamental
 shorttitle: "Gestión vs. Administración Pública"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf) completo aquí.
 abstract: |
   | This article examines the concepts of public management and public administration, detailing their definitions, differences, and applications within the governmental context. Public administration involves the efficient handling of public resources by various institutions across different government levels, focusing on bureaucratic structures and resource safeguarding. On the other hand, public management emphasizes the use of appropriate means to achieve collective goals through policy implementation, resource allocation, and program management. The paper discusses how these two areas, while related, differ in their dynamism, objectives, and impact on public life, providing concrete examples like the "Pensión 65" program and the Jorge Chávez Airport expansion to illustrate their practical application.
 keywords: [public administration, public management, resource allocation, policy implementation, public sector]

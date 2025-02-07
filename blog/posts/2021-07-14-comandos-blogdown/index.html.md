@@ -4,7 +4,7 @@ title: Guía para Comenzar a Crear Sitios Web con Blogdown
 subtitle: Utilizando R y Hugo
 shorttitle: "Crear Sitios con Blogdown "
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
 abstract: |
   | This article introduces Blogdown, an R package for creating static websites using R Markdown and Hugo. It provides a step-by-step guide on how to install Blogdown, set up a new site, preview it locally, create blog posts, build the site, check for errors, update Hugo and dependencies, customize the site's theme, and deploy the site using services like Netlify. The aim is to empower users, from beginners to advanced, to build and manage their own web presence with ease and flexibility.
 keywords: [Blogdown, R Markdown, Hugo, static websites, web development]
@@ -19,7 +19,7 @@ tags:
   - RStudio
   - Netlify deployment
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/posts/2021-07-14-comandos-blogdown/index.pdf
 date: "07/14/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

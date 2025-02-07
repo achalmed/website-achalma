@@ -4,7 +4,7 @@ title: Ideas de investigación en Econometría Análisis de variables y relacion
 subtitle: Explora diferentes enfoques para investigar la economía y sus interacciones a través de la Econometría
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - VariablesMacroeconómicas
   - Crisis
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf
 date: "06/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

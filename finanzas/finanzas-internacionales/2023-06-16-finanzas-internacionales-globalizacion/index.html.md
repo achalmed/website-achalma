@@ -3,7 +3,7 @@ title: Perspectivas Globales. Explorando los Fundamentos y Alcances de las Finan
 subtitle: Un análisis en profundidad de los conceptos clave y su relevancia en un mundo interconectado
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - MercadosFinancieros
   - Globalización
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf
 date: "06/16/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

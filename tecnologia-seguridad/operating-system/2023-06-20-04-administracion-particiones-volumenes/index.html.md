@@ -3,7 +3,7 @@ title: Administracion de particiones y volumenes
 subtitle: Descubre cómo organizar y proteger tus datos en GNU/Linux con Particiones, Volúmenes LVM y el cifrado LUKS
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

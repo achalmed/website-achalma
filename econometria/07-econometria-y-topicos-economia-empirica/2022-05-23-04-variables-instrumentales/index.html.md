@@ -3,7 +3,7 @@ title: Variables Instrumentales
 subtitle: Causalidad y Resultados Potenciales
 shorttitle: "Variables Instrumentales"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Causalidad
   - Resultados Potenciales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/07-econometria-y-topicos-economia-empirica/2022-05-23-04-variables-instrumentales/index.pdf
 date: "05/23/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

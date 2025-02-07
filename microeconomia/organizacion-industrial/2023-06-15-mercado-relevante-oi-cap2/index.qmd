@@ -4,7 +4,7 @@ title: El Mercado Relevante Industrial de Bienes y el Mercado Geográfico
 subtitle: Explorando las Implicaciones Teóricas y Prácticas del Mercado Relevante en la Industria de Bienes. Perspectivas y Desafíos
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/organizacion-industrial/2023-06-15-mercado-relevante-oi-cap2/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - MercadoRelevanteIndustrial
   - MercadoGeográficoRelevante
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-15-mercado-relevante-oi-cap-2/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/organizacion-industrial/2023-06-15-mercado-relevante-oi-cap2/index.pdf
 date: "06/15/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

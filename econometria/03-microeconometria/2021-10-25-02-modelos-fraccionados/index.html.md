@@ -3,7 +3,7 @@ title: Modelos Fraccionados
 subtitle: Transformaciones y Métodos de Estimación en Datos Proporcionales
 shorttitle: "Modelos Fraccionados"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Regresión fraccionada
   - Estimación logística
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.pdf
 date: "10/25/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

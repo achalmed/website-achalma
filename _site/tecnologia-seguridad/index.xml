@@ -2680,18 +2680,6 @@ Achalma, Edison. 2023. <span>“Distribuciones de GNU/Linux.”</span> June
   <pubDate>Sun, 18 Jun 2023 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Operating System</category>
-  <category>Tecnología</category>
-  <category>Sistemas Operativos</category>
-  <category>Linux</category>
-  <guid>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux/</guid>
-  <pubDate>Sat, 17 Jun 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Linux Primeros Pasos</title>
   <dc:creator>Edison Achalma</dc:creator>
   <link>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/</link>
@@ -4341,6 +4329,105 @@ flujo de trabajo.”</span> September 27, 2022. <a href="https://achalmaedison.n
   <category>Operating System</category>
   <guid>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/</guid>
   <pubDate>Tue, 27 Sep 2022 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Cómo usar APK en Windows 11 una guía paso a paso</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="windows-11-cómo-descargar-apk-usando-el-subsistema-de-windows-para-android-y-adb" class="level1">
+<h1>Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB</h1>
+<p>Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android. Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra <a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">guía aquí</a>.</p>
+<section id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-habilite-el-modo-de-desarrollador-en-el-subsistema-de-windows">Paso 1: habilite el modo de desarrollador en el subsistema de Windows</h2>
+<p>Instale <a href="https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/">el Subsistema de Windows para Android</a> primero. Cuando haya terminado, abra la aplicación ‘Subsistema de Windows para Android’ en su PC. Para esto, presione la tecla de Windows y busque Subsistema de Windows para Android.</p>
+<p>Haga clic en Subsistema de Windows para Android. O haga clic en Abrir.</p>
+<p>En el Subsistema de Windows para Android, active el modo Desarrollador.</p>
+</section>
+<section id="paso-2-instale-las-herramientas-de-la-plataforma-sdk" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-instale-las-herramientas-de-la-plataforma-sdk">Paso 2: Instale las herramientas de la plataforma SDK</h2>
+<p>Visite la página de herramientas de la plataforma SDK de Google <a href="https://developer.android.com/studio/releases/platform-tools.html">aquí</a> .</p>
+<p>Haga clic en Descargar SDK Platform-Tools para Windows.</p>
+<p>Desplácese hacia abajo hasta el final y seleccione la casilla de verificación para aceptar los términos y condiciones. Luego haga clic en el botón verde para descargar las herramientas de la plataforma.</p>
+<p>Se descargará en su PC un archivo zip llamado platform-tools_r31.0.3-windows (la versión puede cambiar).</p>
+<p>Para su comodidad, cree una nueva carpeta separada llamada carpeta para aplicaciones en el Explorador de Windows. Ahora, transfiera el archivo de herramientas de la plataforma a esta carpeta.</p>
+<p>Haga clic con el botón derecho en el archivo de herramientas de la plataforma y seleccione Extraer todo.</p>
+<p>Haga clic en Extraer.</p>
+<p>El archivo será extraído. Abra la carpeta llamada herramientas de la plataforma.</p>
+<p>Tendrá adb.exe y algunos otros archivos aquí.</p>
+</section>
+<section id="paso-3-instale-la-aplicación-de-android" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-instale-la-aplicación-de-android">Paso 3: Instale la aplicación de Android</h2>
+<p>Haga doble clic en la carpeta de herramientas de la plataforma para abrirla.</p>
+<p>Aquí, haga clic en la barra de direcciones y escriba <strong>cmd,</strong> y luego presione la tecla Intro.</p>
+<p>Se abrirá una ventana de comando con su ubicación establecida en la carpeta de herramientas de la plataforma. Esto es importante.</p>
+<p>Ahora, tenemos la ventana del símbolo del sistema en la carpeta donde tenemos el archivo adb.exe. Es decir, nuestra carpeta de herramientas de plataforma.</p>
+<p>Ahora, descargue el archivo APK de la aplicación de Android que desea instalar. Por ejemplo, si desea instalar Snapchat, busque <strong>Snapchat APK</strong> en Google y descargue su archivo APK desde cualquier sitio web confiable en el que confíe. Luego, cambie el nombre del archivo a algo más simple como snapchat.apk. Ahora, transfiera snapchat.apk a la carpeta de herramientas de la plataforma.</p>
+<p>Ahora podemos instalar la aplicación Snapchat para Android usando snapchat.apk y adb en su PC.</p>
+<p>Abra el Subsistema de Windows para Android y busque la IP donde se puede conectar con ADB en la opción de modo Desarrollador.</p>
+<p>En la ventana del símbolo del sistema, escriba el siguiente comando y presione Entrar:</p>
+<p>adb.exe connect (dirección IP-aquí)</p>
+<p>Ejemplo: adb.exe conectar 127.0.0.1:12345</p>
+<p>Ahora, escriba el comando de instalación que se proporciona a continuación y luego presione Enter:</p>
+<p>adb.exe install (apk-file-name-here.apk)</p>
+<p>Ejemplo: adb.exe instalar Snapchat.apk</p>
+<p>La aplicación de Android ahora se instalará en su PC usando ADB y el archivo APK que proporcionó.</p>
+<p>Cuando haya terminado, verá el mensaje de Éxito.</p>
+<p>Puede cerrar la ventana CMD ahora.</p>
+<p>Ahora puede abrir la aplicación de Android en su PC.</p>
+<p>Presione la tecla de Windows y luego escriba el nombre de su aplicación. En nuestro caso, es Snapchat.</p>
+<p>Así es como se ve Snapchat en Windows 11.</p>
+<p>Eso es todo.</p>
+</section>
+<section id="cargar-apk-automáticamente-con-un-doble-clic" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-apk-automáticamente-con-un-doble-clic">Cargar APK automáticamente con un doble clic</h2>
+<p>Sabemos que usar un comando adb no es la forma más fácil de instalar una aplicación de Android en su PC. Afortunadamente, ahora puede hacer doble clic en un archivo APK para instalarlo. Consulta el siguiente enlace para saber cómo configurarlo.</p>
+</section>
+</section>
+<section id="publicaciones-similares" class="level1">
+<h1>Publicaciones Similares</h1>
+<p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<ol type="1">
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11">Usando Apk En Windown 11</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim">Comandos Vim</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-git">Guia Git</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-git/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux">00 Primeros Pasos En Linux</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux">01 Introduccion Linux</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux">02 Distribuciones Linux</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux">03 Instalacion Linux</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes">04 Administracion Particiones Volumenes</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim">Atajos De Teclado Y Comandos Para Usar Vim</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.pdf">PDF</a></li>
+</ol>
+<p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2021,
+  author = {Achalma, Edison},
+  title = {Cómo usar APK en Windows 11 una guía paso a paso},
+  date = {2021-10-21},
+  url = {https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/},
+  langid = {es},
+  abstract = {\textbar{} Primer parrafo de abstrac}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2021" class="csl-entry quarto-appendix-citeas">
+Achalma, Edison. 2021. <span>“Cómo usar APK en Windows 11 una guía paso
+a paso.”</span> October 21, 2021. <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/">https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/</a>.
+</div></div></section></div> ]]></description>
+  <category>Operating System</category>
+  <category>Informática</category>
+  <category>Android</category>
+  <guid>https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/</guid>
+  <pubDate>Thu, 21 Oct 2021 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
+>
 </item>
 <item>
   <title>Cómo usar APK en Windows 11 una guía paso a paso</title>

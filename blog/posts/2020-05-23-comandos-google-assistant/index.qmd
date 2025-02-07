@@ -3,7 +3,7 @@ title: Comandos Esenciales para Google Assistant
 subtitle: Guía para Principiantes
 shorttitle: "Comandos Google Assistant"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant/index.pdf)
+  Accede al [PDF](https://achalmaedison.netlify.app/posts/2020-05-23-comandos-google-assistant/index.pdf)
 abstract: |
   | This article provides a comprehensive guide to basic commands for Google Assistant, detailing how to control devices, manage schedules, and utilize various functionalities including music playback, setting reminders, and smart home control. The document includes commands for stopping or pausing media, adjusting volume, asking for help, and even engaging in fun interactions with the Assistant. This guide is aimed at helping users maximize their interaction with Google Assistant for everyday convenience.
 keywords: [Google Assistant, voice commands, smart home, productivity, entertainment]
@@ -18,7 +18,7 @@ tags:
   - hogar inteligente  
   - entretenimiento
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/posts/2020-05-23-comandos-google-assistant/index.pdf
 date: "05/23/2020"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

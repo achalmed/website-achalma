@@ -3,7 +3,7 @@ title: Análisis de Papers con RDD
 subtitle: Aplicaciones Prácticas
 shorttitle: "Análisis de Papers con RDD"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - STATA
   - R
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/06-evaluacion-impacto/2022-05-09-06-analizando-papers-con-rdd-usando-stata-y-r/index.pdf
 date: "05/09/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

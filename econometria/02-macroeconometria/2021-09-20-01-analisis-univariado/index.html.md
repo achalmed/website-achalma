@@ -3,7 +3,7 @@ title: Análisis Univariado de Series de Tiempo
 subtitle: Identificación de Modelos y Proyecciones
 shorttitle: "Análisis Univariado"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/02-macroeconometria/2021-09-20-01-analisis-univariado/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Cointegración uniecuacional
   - Quiebres estructurales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/02-macroeconometria/2021-09-20-01-analisis-univariado/index.pdf
 date: "09/20/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

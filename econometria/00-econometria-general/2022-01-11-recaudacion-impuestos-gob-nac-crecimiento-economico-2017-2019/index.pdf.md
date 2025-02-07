@@ -1,20 +1,16 @@
 ---
 title: Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho
-subtitle: Un estudio sobre la relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
+subtitle: relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
 abstract: |
-  | Primer parrafo de abstrac
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Econometría
 tags:
-  - Econometría
-  - CrecimientoEconómico
-  - RecaudaciónDeImpuestos
-  - ValorAgregadoBruto(VAB)
-  - AnálisisEstadístico
+  - 
 citation:
   author:
     - Edison Achalma 
@@ -24,7 +20,7 @@ citation:
     - Kattya Castillo 
     - Hans Castro
     - Luz Cuba
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2022-01-11-v1-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
 bibliography: references.bib
 date: "01/11/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)

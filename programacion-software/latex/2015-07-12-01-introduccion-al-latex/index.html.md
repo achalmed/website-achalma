@@ -1,22 +1,21 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Introducción a LaTeX
+subtitle: Instalación y Conceptos Básicos
+shorttitle: "Intro a LaTeX"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-12-01-introduccion-al-latex/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Latex
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Software de Edición
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - LaTeX Installation  
+  - Basic Elements  
+  - LaTeX Interfaces  
+  - Document Structure  
+  - Text Formatting
 citation:
   pdf-url: https://achalmaedison.netlify.app/latex/2015-07-12-01-introduccion-al-latex/index.pdf
 date: "07/12/2015"
@@ -26,6 +25,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

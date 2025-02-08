@@ -1,22 +1,22 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: LaTeX como Herramienta de Edición de Texto
+subtitle: Incorporación de Figuras, Tablas y Códigos
+shorttitle: "Edición Texto LaTeX"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Latex
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Escritura Técnica  
+  - Edición de Documentos
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Figures  
+  - Tables  
+  - Code Blocks  
+  - Document Formatting  
+  - Sectioning
 citation:
   pdf-url: https://achalmaedison.netlify.app/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf
 date: "07/14/2015"
@@ -26,6 +26,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

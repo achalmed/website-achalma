@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Estimación de Ecuaciones en Eviews
+subtitle: Métodos y Tablas
+shorttitle: "Estim Ecuaciones Eviews"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Eviews
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Econometría  
+  - Análisis de Datos  
+  - Software de Análisis
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Equation Object  
+  - LS TSLS 3SLS  
+  - Table Object  
+  - Model Specification  
+  - Data Interaction
 citation:
   pdf-url: https://achalmaedison.netlify.app/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf
 date: "09/13/2021"
@@ -26,6 +27,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

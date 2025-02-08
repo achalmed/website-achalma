@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Dinámica de los Mercados
+subtitle: Interacción Económica
+shorttitle: "Dinámica Mercados"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Economía  
+  - Microeconomía  
+  - Educación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Oferta y Demanda  
+  - Equilibrio de Mercado  
+  - Competencia  
+  - Mercados de Productos  
+  - Mercados de Factores
 citation:
   pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf
 date: "02/04/2014"

@@ -1,22 +1,22 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Visualización de Datos con Stata
+subtitle: Gráficos y Mapas
+shorttitle: "Visualización Stata"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/stata/2022-06-13-03-data-visualization/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Stata
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Análisis de Datos  
+  - Visualización  
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Graphs  
+  - Geospatial Data  
+  - Histogram  
+  - Export Graphics  
+  - Agrarian Census
 citation:
   pdf-url: https://achalmaedison.netlify.app/stata/2022-06-13-03-data-visualization/index.pdf
 date: "06/13/2022"
@@ -26,6 +26,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

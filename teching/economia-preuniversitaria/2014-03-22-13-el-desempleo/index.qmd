@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Análisis del Desempleo
+subtitle: Causas y Consecuencias
+shorttitle: "Desempleo"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Economía  
+  - Empleo  
+  - Educación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Tipos de Desempleo  
+  - Tasa de Desempleo  
+  - Política Laboral  
+  - Impacto Económico  
+  - Desempleo Juvenil
 citation:
   pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf
 date: "03/22/2014"

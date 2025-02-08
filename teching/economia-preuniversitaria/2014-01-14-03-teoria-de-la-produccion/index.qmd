@@ -1,7 +1,7 @@
 ---
-title: Teoría de la producción
-subtitle: Editar
-shorttitle: "Editar"
+title: Teoría de la Producción
+subtitle: Procesos y Eficiencia
+shorttitle: "Teoría Producción"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf) completo aquí.
 abstract: |
@@ -9,14 +9,16 @@ abstract: |
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Economía  
+  - Microeconomía  
+  - Educación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Funciones de Producción  
+  - Productividad  
+  - Factores de Producción  
+  - Costo de Producción  
+  - Eficiencia
+
 citation:
   pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf
 date: "01/14/2014"

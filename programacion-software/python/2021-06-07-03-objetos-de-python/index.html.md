@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Estructuras de Datos en Python
+subtitle: Listas, Diccionarios y Tuplas
+shorttitle: "Objetos Python"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/python/2021-06-07-03-objetos-de-python/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Python
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Programación   
+  - Estructuras de Datos
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Lists  
+  - Dictionaries  
+  - Tuples  
+  - Multiple Assignments  
+  - Data Structures
+
 citation:
   pdf-url: https://achalmaedison.netlify.app/python/2021-06-07-03-objetos-de-python/index.pdf
 date: "06/07/2021"
@@ -26,6 +27,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

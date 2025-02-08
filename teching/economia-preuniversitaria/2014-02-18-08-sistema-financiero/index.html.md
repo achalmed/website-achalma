@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: El Sistema Financiero
+subtitle: Funciones y Estructura
+shorttitle: "Sistema Financiero"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-18-08-sistema-financiero/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Economía  
+  - Finanzas  
+  - Educación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Bancos  
+  - Mercados Financieros  
+  - Regulación Financiera  
+  - Intermediación Financiera  
+  - Política Monetaria
 citation:
   pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-18-08-sistema-financiero/index.pdf
 date: "02/18/2014"

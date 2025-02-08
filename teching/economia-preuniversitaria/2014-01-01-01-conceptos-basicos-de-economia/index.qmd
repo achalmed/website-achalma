@@ -1,17 +1,26 @@
 ---
-title: Conceptos basicos de economia
-subtitle: Exp
-shorttitle: "Editar"
+title: Conceptos Básicos de Economía
+subtitle: Fundamentos para el Estudio
+shorttitle: "Intro Economía"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia/index.pdf) completo aquí.
 abstract: |
-  | Primer parrafo de abstrac
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
+  - Economía  
+  - Educación  
+  - Fundamentos
 tags:
-  - EconomíaBásica
-  - Economía
+  - Economía Positiva  
+  - Economía Normativa  
+  - Recursos Escasos  
+  - Escasez  
+  - Elección Económica
+
+citation:
+  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf
 date: "01/01/2014"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

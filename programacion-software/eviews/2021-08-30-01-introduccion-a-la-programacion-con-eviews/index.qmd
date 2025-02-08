@@ -1,7 +1,7 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Introducción a la Programación en Eviews
+subtitle: Objetos y Estructuras Básicas
+shorttitle: "Intro Prog Eviews"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf) completo aquí.
 abstract: |
@@ -9,19 +9,21 @@ abstract: |
 keywords: [keyword1, keyword2]
 categories:
   - Eviews
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Programación  
+  - Econometría  
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Object-Oriented Programming  
+  - Workfile Creation  
+  - Scalar Vector Matrix  
+  - Series Group Objects  
+  - Eviews Basics
 citation:
   pdf-url: https://achalmaedison.netlify.app/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf
 date: "08/30/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 {{< include ../../_contenido-inicio.qmd >}}
 

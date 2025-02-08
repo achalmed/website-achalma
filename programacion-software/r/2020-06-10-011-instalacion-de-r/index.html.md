@@ -3,7 +3,7 @@ title: Instalación de R en Linux
 subtitle: Explorando las capacidades de R y su uso en el entorno Linux
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2020-06-10-011-instalacion-de-r/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/r/2020-06-10-011-instalacion-de-r/index.pdf) completo aquí.
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

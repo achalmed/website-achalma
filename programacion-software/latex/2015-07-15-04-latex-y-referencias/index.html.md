@@ -1,22 +1,22 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Gestión de Referencias en LaTeX
+subtitle: Desde Citas Internas hasta Bibliografías
+shorttitle: "Referencias LaTeX"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-15-04-latex-y-referencias/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Latex
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Escritura Académica  
+  - Documentación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Cross-Referencing  
+  - Bibliography Management  
+  - BibTeX  
+  - Citation  
+  - Reference Formatting
 citation:
   pdf-url: https://achalmaedison.netlify.app/latex/2015-07-15-04-latex-y-referencias/index.pdf
 date: "07/15/2015"
@@ -26,6 +26,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

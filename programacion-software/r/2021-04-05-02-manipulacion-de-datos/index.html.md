@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Manipulación de Datos en R
+subtitle: Estrategias y Técnicas Eficientes
+shorttitle: "Manipulación Datos R"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/r/2021-04-05-02-manipulacion-de-datos/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - R
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Programación en R  
+  - Análisis de Datos  
+  - Tidyverse
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Data Wrangling  
+  - Factors  
+  - Dates Times  
+  - Custom Functions  
+  - Loops
 citation:
   pdf-url: https://achalmaedison.netlify.app/r/2021-04-05-02-manipulacion-de-datos/index.pdf
 date: "04/05/2021"
@@ -26,6 +27,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

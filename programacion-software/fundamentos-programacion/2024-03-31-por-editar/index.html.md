@@ -28,6 +28,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
+
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:

@@ -1,7 +1,7 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Introducción a Visual Basic para Aplicaciones
+subtitle: Fundamentos y Uso del Editor
+shorttitle: "Intro VBA"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf) completo aquí.
 abstract: |
@@ -9,14 +9,15 @@ abstract: |
 keywords: [keyword1, keyword2]
 categories:
   - Ofimatica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Programación  
+  - VBA  
+  - Introducción
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - VBA Language  
+  - Macro Recorder  
+  - Objects Properties  
+  - Variable Declaration  
+  - Excel Macros
 citation:
   pdf-url: https://achalmaedison.netlify.app/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf
 date: "12/05/2022"
@@ -26,6 +27,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

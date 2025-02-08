@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Fundamentos de Oferta y Demanda
+subtitle: Ley y Aplicaciones
+shorttitle: "Oferta y Demanda"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-28-05-teoria-de-la-oferta-y-demanda/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Economia Basica
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Economía  
+  - Microeconomía  
+  - Educación
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Curvas de Oferta  
+  - Curvas de Demanda  
+  - Elasticidad  
+  - Equilibrio  
+  - Cambios en el Mercado
 citation:
   pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-28-05-teoria-de-la-oferta-y-demanda/index.pdf
 date: "01/28/2014"

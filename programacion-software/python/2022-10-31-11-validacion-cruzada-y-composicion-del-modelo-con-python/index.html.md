@@ -1,22 +1,23 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Técnicas de Validación Cruzada y Composición de Modelos
+subtitle: Evaluación y Optimización en Aprendizaje Automático
+shorttitle: "Validación y Modelo"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - Python
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Machine Learning  
+  - Modelización  
+  - Estadística
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Cross Validation  
+  - Grid Search  
+  - Contribución de Datos  
+  - Contribución de Variables  
+  - Modelos Predictivos
 citation:
   pdf-url: https://achalmaedison.netlify.app/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf
 date: "10/31/2022"
@@ -26,6 +27,10 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
 # Publicaciones Similares

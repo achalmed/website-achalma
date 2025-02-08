@@ -1,27 +1,30 @@
 ---
-title: Editar
-subtitle: Editar
-shorttitle: "Editar"
+title: Minería de Textos en Machine Learning
+subtitle: Limpieza, Análisis y Aplicaciones
+shorttitle: "Minería Textos ML"
 description: |
   Accede al [PDF](https://achalmaedison.netlify.app/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf) completo aquí.
 abstract: |
-  | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   - R
-  - Blogdown
-  - Desarrollo Web
-  - Herramientas para R
+  - Machine Learning  
+  - Procesamiento de Lenguaje Natural  
+  - Análisis de Datos
 tags:
-  - RStudio
-  - Blogdown
-  - Comandos
-  - DesarrolloWeb
+  - Text Cleaning  
+  - Sentiment Analysis  
+  - Word Clouds  
+  - Airbnb Data  
+  - Text Mining
 citation:
   pdf-url: https://achalmaedison.netlify.app/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf
 date: "11/28/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 {{< include ../../_contenido-inicio.qmd >}}
 

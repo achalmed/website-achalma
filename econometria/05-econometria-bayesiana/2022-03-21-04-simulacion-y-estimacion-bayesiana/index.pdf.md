@@ -3,12 +3,12 @@ title: Simulación y Estimación Bayesiana
 subtitle: Algoritmos de Muestreo y Aplicaciones Computacionales
 shorttitle: "Simulación Bayesiana"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría Bayesiana
+  -  Econometria Bayesiana
   - Métodos de Simulación
   - Econometría Computacional
   - Inferencia Estadística
@@ -19,12 +19,10 @@ tags:
   - Aplicaciones computacionales
   - Estimación de modelos económicos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/index.pdf
 date: "03/21/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

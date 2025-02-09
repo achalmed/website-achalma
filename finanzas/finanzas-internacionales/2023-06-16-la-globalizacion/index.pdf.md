@@ -3,7 +3,7 @@ title: Perspectivas Globales. Explorando los Fundamentos y Alcances de las Finan
 subtitle: Un análisis en profundidad de los conceptos clave y su relevancia en un mundo interconectado
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -16,12 +16,10 @@ tags:
   - MercadosFinancieros
   - Globalización
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-16-globalizacion-finanzas-internacionales-fi1/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf
 date: "06/16/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -63,8 +61,6 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -80,8 +76,6 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 ::::
 :::::
 ::::::
-
-
 
 
 
@@ -222,8 +216,6 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -239,8 +231,6 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 ::::
 :::::
 ::::::
-
-
 
 
 
@@ -290,9 +280,9 @@ Otra crítica importante es que la globalización ha llevado a una mayor frecuen
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf)
+2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
+3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

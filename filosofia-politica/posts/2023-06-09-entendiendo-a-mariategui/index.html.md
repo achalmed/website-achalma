@@ -25,8 +25,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Entendiendo a Mariátegui: una perspectiva profunda^[Este blog está inspirado en la conferencia del doctor Abimael Guzmán Reynoso dictada en el año 1968 en la Universidad Nacional de San Cristóbal de Huamanga de Ayacucho. Si bien el contenido se basa en el legado revolucionario de José Carlos Mariátegui, reconocemos la influencia de dicha conferencia en la exploración de las ideas presentadas.]
 
 Para comprender a Mariátegui, es esencial acercarse a su figura con respeto y desde una posición de clase clara y precisa. De lo contrario, resultará imposible apreciar la riqueza y vigencia de su pensamiento. Aunque Mariátegui falleció hace años, su legado intelectual sigue vivo y pujante, en contraste con otros pensamientos que, aunque pertenecientes a personas aún vivas, carecen de vitalidad.

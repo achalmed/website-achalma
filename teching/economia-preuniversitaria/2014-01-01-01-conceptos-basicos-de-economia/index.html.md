@@ -29,8 +29,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Economía
 
 La palabra "economía" proviene del griego antiguo "oikonomia", que se compone de dos términos: "oikos", que significa "casa" o "hogar", y "nomos", que se traduce como "ley" o "norma".

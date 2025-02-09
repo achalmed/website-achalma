@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Macroeconometría
+  -  Macroeconometria
   - Análisis de Series de Tiempo
   - Modelos ARMA
   - Proyecciones
@@ -23,8 +23,6 @@ citation:
 date: "09/20/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

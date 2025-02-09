@@ -27,8 +27,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # La Empresa como Organización: Un Enfoque Cooperativo, Humano y Social
 
 La empresa es un tipo específico de organización que se caracteriza por su estructura social, su enfoque cooperativo y su impacto en la sociedad. Destacan los valores cooperativos, humanos y sociales que la empresa promueve en su funcionamiento.
@@ -95,8 +93,6 @@ La empresa está compuesta por diversos elementos que desempeñan un papel funda
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -128,8 +124,6 @@ La empresa está compuesta por diversos elementos que desempeñan un papel funda
 ::::
 :::::
 ::::::
-
-
 
 
 

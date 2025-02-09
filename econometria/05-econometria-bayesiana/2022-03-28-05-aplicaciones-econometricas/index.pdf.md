@@ -3,12 +3,12 @@ title: Aplicaciones Econométricas de la Inferencia Bayesiana
 subtitle: Modelos VAR, Estado-Espacio y DSGE en la Predicción Económica
 shorttitle: "Aplicaciones Bayesianas en Econometría"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría Bayesiana
+  -  Econometria Bayesiana
   - Aplicaciones en Series de Tiempo
   - Modelos Dinámicos
   - Econometría Avanzada
@@ -19,12 +19,10 @@ tags:
   - Modelos panel
   - Variables dependientes multirespuesta
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/index.pdf
 date: "03/28/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

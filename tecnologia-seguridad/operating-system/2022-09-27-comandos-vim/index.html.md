@@ -24,8 +24,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 Vim es un editor de texto muy poderoso utilizado en sistemas Linux y Unix. A continuación, se presentan algunos de los comandos y combinaciones de teclas más utilizados en Vim:
 
 1. Modos de Vim:

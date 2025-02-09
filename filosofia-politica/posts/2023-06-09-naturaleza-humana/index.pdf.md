@@ -3,12 +3,12 @@ title: Naturaleza Humana
 subtitle: Perspectivas Filosóficas y Sus Implicaciones
 shorttitle: "Naturaleza Humana y Filosofía"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf) completo aquí.
 abstract: |
   | This article explores philosophical perspectives on human nature through the lenses of Rousseau, Hobbes, Marx, Hume, and Freud. It discusses whether humans are inherently good or bad, or if human nature is simply a product of circumstances. The piece examines metaphysical versus anti-metaphysical approaches to defining human nature and considers their ethical and political implications. It also critiques how these beliefs about human nature shape individual behavior, societal norms, and even scientific interpretations, using examples like Broca's study on brain weight to illustrate biases in research. The discussion emphasizes the importance of consciously choosing one's concept of human nature, recognizing its profound impact on personal and collective life.
 keywords: [human nature, philosophy, ethics, metaphysics, social implications]
 categories:
-  - Filosofía  
+  - Filosofia
   - Ética  
   - Psicología Social
 tags:
@@ -18,12 +18,10 @@ tags:
   - Hume  
   - Freud
 citation:
-  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf
 date: "06/09/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -140,13 +138,13 @@ Por lo tanto, es de vital importancia revisar nuestras creencias, ya que moldean
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
-2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo/index.pdf)
-3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo/index.pdf)
-4. [Seminario Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista/index.pdf)
-5. [Entendiendo Mariategui](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui/index.pdf)
-6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf)
-7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
+1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
+2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf)
+3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf)
+4. [Seminario De Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf)
+5. [Entendiendo A Mariategui](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf)
+6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf)
+7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

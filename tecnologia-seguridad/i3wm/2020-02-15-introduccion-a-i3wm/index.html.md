@@ -28,8 +28,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # ¿Qué es i3wm?
 
 ## Definición de i3wm

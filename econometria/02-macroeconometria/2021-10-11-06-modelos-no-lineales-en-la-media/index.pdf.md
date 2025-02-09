@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Macroeconometría
+  -  Macroeconometria
   - Modelos No Lineales
   - Macroeconometría Aplicada
 tags:
@@ -21,8 +21,6 @@ citation:
 date: "10/11/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

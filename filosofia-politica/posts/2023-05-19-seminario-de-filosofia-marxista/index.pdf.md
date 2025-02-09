@@ -3,23 +3,21 @@ title: Seminario de filosofía
 subtitle: Notas sobre filosofía marxista
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Política
+  - Filosofia
   - Filosofía
   - Marxismo
 tags:
   - Filosofía
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-05-19-seminario-filosofia-marxista/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf
 date: "05/19/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -214,13 +212,13 @@ Como comunistas, debemos ser los heraldos del futuro. La ideología nos permite 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
-2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-03-03-el-capitalismo/index.pdf)
-3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-04-29-primero-de-mayo/index.pdf)
-4. [Seminario Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-05-19-seminario-filosofia-marxista/index.pdf)
-5. [Entendiendo Mariategui](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-entendiendo-mariategui/index.pdf)
-6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-06-09-naturaleza-humana/index.pdf)
-7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/filosofia-politica/filosofia/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
+1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
+2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf)
+3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf)
+4. [Seminario De Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf)
+5. [Entendiendo A Mariategui](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf)
+6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf)
+7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

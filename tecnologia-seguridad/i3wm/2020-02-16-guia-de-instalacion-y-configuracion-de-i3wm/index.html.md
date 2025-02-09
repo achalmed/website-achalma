@@ -28,8 +28,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Introducción a i3wm en diferentes distribuciones de Linux
 ## Ventajas de utilizar i3wm en distribuciones de Linux
 ## Consideraciones y requisitos antes de la instalación

@@ -3,12 +3,12 @@ title: Modelos de Panel Data Dinámico
 subtitle: Métodos de Estimación y Corrección de Sesgos en Series Temporales
 shorttitle: "Panel Data Dinámico"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Microeconometría
+  -  Microeconometria
   - Econometría Aplicada
   - Análisis de Datos
 tags:
@@ -16,12 +16,10 @@ tags:
   - Sesgo de Nickell
   - Variables instrumentales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
-date: "07/14/2021"
+  pdf-url: https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-12-06-08-panel-data-dinamico/index.pdf
+date: "12/06/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -35,7 +33,7 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Modelos De Esesion Discreta Probit Y Logit](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-esesion-discreta-probit-y-logit/index.pdf)
+1. [01 Modelos De Eleccion Discreta Probit Y Logit](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit/index.pdf)
 2. [02 Modelos Fraccionados](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-25-02-modelos-fraccionados/index.pdf)
 3. [03 Modelos Multinomiales Y Ordenados](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-01-03-modelos-multinomiales-y-ordenados/index.pdf)
 4. [04 Modelos Con Variables Censuradas Y Truncadas](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-08-04-modelos-con-variables-censuradas-y-truncadas/index.pdf)

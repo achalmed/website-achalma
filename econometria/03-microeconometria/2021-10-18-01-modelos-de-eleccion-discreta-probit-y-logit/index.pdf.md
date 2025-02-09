@@ -3,7 +3,7 @@ title: Modelos de Elección Discreta
 subtitle: Estimación y Evaluación de Probit y Logit en Variables Dependientes Binomiales
 shorttitle: "Elección Discreta"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,12 +17,10 @@ tags:
   - Efecto marginal
   - Bondad de ajuste
 citation:
-  pdf-url: https://achalmaedison.netlify.app/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-10-18-01-modelos-de-eleccion-discreta-probit-y-logit/index.pdf
 date: "10/18/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

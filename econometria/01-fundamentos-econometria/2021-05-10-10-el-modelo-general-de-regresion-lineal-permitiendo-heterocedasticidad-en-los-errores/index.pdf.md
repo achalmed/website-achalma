@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Funadamentos de econometría
+  -  Fundamentos Econometria
   - Econometría  
   - Análisis de Datos
 tags:
@@ -20,8 +20,6 @@ citation:
 date: "05/10/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

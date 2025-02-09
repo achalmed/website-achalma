@@ -25,8 +25,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Sistema económio y mercado
 
 ## Sistema económico
@@ -199,8 +197,6 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -332,8 +328,6 @@ El proceso se repite hasta que no existan productos sustitutos adicionales. Se e
 
 
 
-
-
 1.  ¿Puede una empresa monopólica incrementar el precio de su producto entre 5% a 10% de manera rentable?
 
 2.  ¿Puede una empresa monopólica que produce y vende los bienes A y B incrementar el precio de A y B entre 5% y 10% de manera rentable?
@@ -382,8 +376,6 @@ La ganancia total en el mercado, considerando las tres empresas, aumenta a $B_T 
 En este ejemplo, el monopolista A encuentra beneficioso incrementar el precio de su producto A en un 10%. Los consumidores sustituyen el consumo de los otros bienes (B y C), lo que conduce a un incremento en las ganancias totales de \$5000 a \$5400. Por lo tanto, podemos concluir que el mercado es relevante para el producto A.
 
 Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un monopolista, considerando los efectos de los cambios en el precio y la demanda. Este análisis es crucial para comprender la posición de poder de un monopolista y evaluar la competencia en el mercado.
-
-
 
 
 
@@ -478,8 +470,6 @@ Estos ejemplos ilustran cómo se puede determinar el mercado relevante para un m
 ::::
 :::::
 ::::::
-
-
 
 
 

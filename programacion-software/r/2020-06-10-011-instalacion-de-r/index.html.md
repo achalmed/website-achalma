@@ -26,8 +26,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # Instalación
 
 En este artículo, te guiaré para descargar e instalar R y RStudio en sistema operativo Ubuntu Linux.

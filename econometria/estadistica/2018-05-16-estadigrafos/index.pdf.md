@@ -3,12 +3,12 @@ title: Análisis estadístico de los alumnos de Estadística de la serie 200 de 
 subtitle: Explorando los estadígrafos
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Estadística
+  - Estadistica
 tags:
   - Estadística
   - CaracterísticasDemográficas
@@ -24,8 +24,6 @@ citation:
 date: "05/16/2018"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -445,7 +443,7 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 
 
 1. [Estadigrafos](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf)
-2. [Factores Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-influyen-rendimiento-academico/index.pdf)
+2. [Factores Que Influyen Rendimiento Academico](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

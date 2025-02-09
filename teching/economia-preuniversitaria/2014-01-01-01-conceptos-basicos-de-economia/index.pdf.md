@@ -1,22 +1,29 @@
 ---
-title: Conceptos basicos de economia
-subtitle: Exp
-shorttitle: "Editar"
+title: Conceptos Básicos de Economía
+subtitle: Fundamentos para el Estudio
+shorttitle: "Intro Economía"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia/index.pdf) completo aquí.
 abstract: |
-  | Primer parrafo de abstrac
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Economía Básica
+  - Economia Basica
+  - Economía  
+  - Educación  
+  - Fundamentos
 tags:
-  - EconomíaBásica
-  - Economía
+  - Economía Positiva  
+  - Economía Normativa  
+  - Recursos Escasos  
+  - Escasez  
+  - Elección Económica
+
+citation:
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia/index.pdf
 date: "01/01/2014"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -194,20 +201,20 @@ Estos actores económicos interactúan entre sí en el sistema económico, parti
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Conceptos Basicos De Economia](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-01-01-conceptos-basicos-de-economia) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-01-01-conceptos-basicos-de-economia/index.pdf)
-2. [02 Necesidades Bienes](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-07-02-necesidades-bienes) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-07-02-necesidades-bienes/index.pdf)
-3. [03 Teoria Produccion](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-14-03-teoria-produccion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-14-03-teoria-produccion/index.pdf)
-4. [04 Teoria Costos](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-21-04-teoria-costos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-21-04-teoria-costos/index.pdf)
-5. [05 Teoria Oferta Demanda](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-28-05-teoria-oferta-demanda) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-01-28-05-teoria-oferta-demanda/index.pdf)
-6. [06 Mercados](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-04-06-mercados) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-04-06-mercados/index.pdf)
-7. [07 Empresas](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-11-07-empresas) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-11-07-empresas/index.pdf)
-8. [08 Sistema Financiero](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-18-08-sistema-financiero) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-18-08-sistema-financiero/index.pdf)
-9. [09 Macroeconomia Basica](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-25-09-macroeconomia-basica) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-02-25-09-macroeconomia-basica/index.pdf)
-10. [10 Inflacion](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-01-10-inflacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-01-10-inflacion/index.pdf)
-11. [11 Sector Publico](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-08-11-sector-publico) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-08-11-sector-publico/index.pdf)
-12. [12 Indicadores Economicos](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-15-12-indicadores-economicos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-15-12-indicadores-economicos/index.pdf)
-13. [13 Desempleo](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-22-13-desempleo) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-22-13-desempleo/index.pdf)
-14. [14 Comercio Internacional](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-29-14-comercio-internacional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/macroeconomia/economia-basica/2014-03-29-14-comercio-internacional/index.pdf)
+1. [01 Conceptos Basicos De Economia](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-01-conceptos-basicos-de-economia/index.pdf)
+2. [02 Las Necesidades Y Bienes](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf)
+3. [03 Teoria De La Produccion](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf)
+4. [04 Teoria De Los Costos](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos/index.pdf)
+5. [05 Teoria De La Oferta Y Demanda](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-28-05-teoria-de-la-oferta-y-demanda) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-28-05-teoria-de-la-oferta-y-demanda/index.pdf)
+6. [06 Los Mercados](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-04-06-los-mercados) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf)
+7. [07 Las Empresas](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-11-07-las-empresas) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-11-07-las-empresas/index.pdf)
+8. [08 Sistema Financiero](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-18-08-sistema-financiero) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-18-08-sistema-financiero/index.pdf)
+9. [09 La Macroeconomia](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-25-09-la-macroeconomia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-25-09-la-macroeconomia/index.pdf)
+10. [10 La Inflacion](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-01-10-la-inflacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-01-10-la-inflacion/index.pdf)
+11. [11 El Sector Publico](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-08-11-el-sector-publico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-08-11-el-sector-publico/index.pdf)
+12. [12 Los Indicadores Economicos](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-15-12-los-indicadores-economicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-15-12-los-indicadores-economicos/index.pdf)
+13. [13 El Desempleo](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-22-13-el-desempleo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf)
+14. [14 Comercio Internacional](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-29-14-comercio-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-29-14-comercio-internacional/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

@@ -26,8 +26,6 @@ date: "06/17/2023"
 
 
 
-
-
 ¡Hola, estimado lector! Ya sea que acabes de adentrarte en el fascinante mundo de GNU/Linux y su acogedora comunidad, o que lleves un tiempo utilizando Linux y estés ansioso por aprender cada vez más, esta página es perfecta para ti.
 
 # ¿Qué es GNU/Linux? Introducción

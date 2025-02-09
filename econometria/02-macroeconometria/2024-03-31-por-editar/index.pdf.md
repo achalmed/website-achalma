@@ -3,24 +3,22 @@ title: Editar
 subtitle: Editar
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/02-macroeconometria/2024-03-31-por-editar/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Macroeconometría
+  -  Macroeconometria
 tags:
   - RStudio
   - Blogdown
   - Comandos
   - DesarrolloWeb
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/02-macroeconometria/2024-03-31-por-editar/index.pdf
 date: "03/31/2024"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

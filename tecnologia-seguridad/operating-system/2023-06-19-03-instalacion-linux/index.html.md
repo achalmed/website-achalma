@@ -30,8 +30,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 ¡Hola, lector!
 
 Bienvenido a esta emocionante serie de introducción a Linux. Si estás dando tus primeros pasos en este fascinante mundo, estás en el lugar adecuado. Aquí, desgranaremos algunos aspectos fundamentales que debes conocer, desde las distribuciones y entornos gráficos hasta las aplicaciones y la administración del sistema.

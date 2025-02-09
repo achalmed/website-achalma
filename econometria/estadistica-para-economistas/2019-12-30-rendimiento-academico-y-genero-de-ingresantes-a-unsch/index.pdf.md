@@ -1,14 +1,14 @@
 ---
-title: Rendimiento académico y genero de los ingresantes
-subtitle: a la Universidad Nacional de San Cristóbal de Huamanga
+title: Rendimiento académico y genero de los ingresantes 2010
+subtitle: Universidad Nacional de San Cristóbal de Huamanga
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
 categories:
-  - Estadística para Economistas
+  - Estadistica Para Economistas
 tags:
   - EstadísticaParaEconomistas
   - GéneroYEducación
@@ -24,8 +24,6 @@ citation:
 date: "12/30/2019"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -55,7 +53,7 @@ Dado que los datos disponibles presentan limitaciones, en este estudio se invest
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Rendimiento Academico Genero Ingresantes 2010](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-genero-ingresantes-2010/index.pdf)
+1. [Rendimiento Academico Y Genero De Ingresantes A Unsch](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.pdf)
 2. [Por Editar](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar/index.pdf)
 
 

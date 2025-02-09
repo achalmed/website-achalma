@@ -3,12 +3,12 @@ title: Análisis del Impacto del Crecimiento Económico en la Recaudación de Im
 subtitle: relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría General
+  -  Econometria General
 tags:
   - Econometría General
 citation:
@@ -25,8 +25,6 @@ bibliography: references.bib
 date: "01/11/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -86,8 +84,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 
 
-
-
 ```{=html}
 <!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
 
@@ -99,8 +95,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 ¿Quién o quiénes serán los usuarios? -->
 ```
-
-
 
 
 
@@ -714,8 +708,7 @@ Por otro lado, mediante una regresión lineal simple se estableció el grado de 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Recaudacion Impuestos Gob Nac Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf)
-2. [Ideas Investigacion](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf)
+1. [Recaudacion De Impuestos Y Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

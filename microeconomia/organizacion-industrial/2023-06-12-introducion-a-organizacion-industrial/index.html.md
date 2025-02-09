@@ -26,8 +26,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 # ¿Qué estudiaremos en organización industrial?
 
 Exploraremos una serie de temas fundamentales que nos ayudarán a comprender la dinámica empresarial y los mercados en los que operan. A través de un análisis detallado, profundizaremos en los siguientes aspectos:
@@ -263,8 +261,6 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -285,8 +281,6 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 ::::
 :::::
 ::::::
-
-
 
 
 

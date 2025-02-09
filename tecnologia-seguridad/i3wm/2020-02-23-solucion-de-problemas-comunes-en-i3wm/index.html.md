@@ -28,8 +28,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 1. Introducción a la solución de problemas en i3wm
 ## Importancia de abordar los problemas comunes en i3wm
 ## Beneficios de mejorar el rendimiento y estabilidad en i3wm

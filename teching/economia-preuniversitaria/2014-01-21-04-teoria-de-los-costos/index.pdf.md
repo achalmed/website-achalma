@@ -3,7 +3,7 @@ title: Teoría de los Costos en la Empresa
 subtitle: Análisis y Decisión Económica
 shorttitle: "Teoría Costos"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,12 +19,10 @@ tags:
   - Costos de Oportunidad  
   - Producción
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-21-04-teoria-de-los-costos/index.pdf
 date: "01/21/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

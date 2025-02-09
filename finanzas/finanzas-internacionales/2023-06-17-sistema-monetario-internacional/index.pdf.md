@@ -3,7 +3,7 @@ title: Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el
 subtitle: Explorando los sistemas monetarios internacionales, tipos de cambio fijos y flexibles, y el papel en evolución del FMI en la economía mundial.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -17,12 +17,10 @@ tags:
   - FMI
   - EconomíaGlobal
 citation:
-  pdf-url: https://achalmaedison.netlify.app/docs/blog/posts/2023-06-17-sistema-monetario-internacional-fi2/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf
 date: "06/17/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -84,8 +82,6 @@ En este régimen, el tipo de cambio se determina mediante el juego de oferta y d
 
 
 
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -107,8 +103,6 @@ Regímenes cambiarios
 
 
 
-
-
 En una economía abierta, la política cambiaria juega un papel crucial en la consecución de los objetivos de la política macroeconómica, que incluyen el logro de un equilibrio tanto interno como externo.
 
 Dado que las economías abiertas se enfrentan a diversos desafíos, la conducción de la política cambiaria depende de las prioridades establecidas en variables clave como la inflación, el desempleo, las tasas de interés, la balanza comercial y el crecimiento económico. Estas variables influyen en la toma de decisiones relacionadas con el tipo de cambio y su gestión.
@@ -116,8 +110,6 @@ Dado que las economías abiertas se enfrentan a diversos desafíos, la conducci�
 La evolución del sistema monetario internacional en el siglo XX ha estado marcada por la confrontación entre regímenes cambiarios fijos y flexibles, así como por la búsqueda de un equilibrio tanto interno como externo en los objetivos macroeconómicos. Esta historia refleja los esfuerzos constantes por encontrar el enfoque más adecuado para manejar las fluctuaciones cambiarias y mantener la estabilidad en la economía global.
 
 Es importante tener en cuenta que ningún régimen cambiario puede funcionar eficientemente si no se complementa con políticas fiscales y monetarias responsables y prudentes. Estas políticas son fundamentales para respaldar y fortalecer el régimen cambiario elegido, garantizando así su efectividad y sostenibilidad a largo plazo.
-
-
 
 
 
@@ -139,8 +131,6 @@ Interrelaciones entre tipo de cambio, variables y políticas económicas
 ::::
 :::::
 ::::::
-
-
 
 
 
@@ -386,9 +376,9 @@ Por otro lado, los tipos de cambio flexibles permiten que las tasas de cambio se
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Finanzas Internacionales Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-finanzas-internacionales-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf)
+2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
+3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

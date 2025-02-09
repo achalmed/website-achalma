@@ -28,8 +28,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 1. Introducción a la personalización en i3wm
 ## Importancia de la personalización en un entorno de trabajo
 ## Ventajas de personalizar i3wm según tus preferencias

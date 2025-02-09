@@ -3,12 +3,12 @@ title: Priorización Bayesiana
 subtitle: Tipos de Distribuciones Prior y su Impacto en la Inferencia
 shorttitle: "Priorización Bayesiana"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría Bayesiana
+  -  Econometria Bayesiana
   - Métodos de Priorización
   - Inferencia Económica
 tags:
@@ -18,12 +18,10 @@ tags:
   - Impacto en modelos econométricos
   - Análisis de sensibilidad
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf
-date: "03/31/2024"
+  pdf-url: https://achalmaedison.netlify.app/econometria/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/index.pdf
+date: "03/18/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

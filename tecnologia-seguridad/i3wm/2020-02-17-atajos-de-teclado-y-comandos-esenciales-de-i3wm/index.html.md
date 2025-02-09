@@ -29,8 +29,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 1. Introducción al flujo de trabajo en i3wm
 ## Filosofía y enfoque de i3wm en la productividad
 ## Ventajas de utilizar atajos de teclado y comandos

@@ -8,7 +8,7 @@ abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Macroeconometría
+  -  Macroeconometria
   - Modelos de Factores Latentes
   - Métodos de Estimación Econométrica
 tags:
@@ -21,8 +21,6 @@ citation:
 date: "10/04/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 

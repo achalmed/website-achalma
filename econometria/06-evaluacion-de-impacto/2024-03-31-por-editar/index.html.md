@@ -21,8 +21,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 

@@ -3,7 +3,7 @@ title: Propiedades del Estimador MCO en Muestras Infinitas
 subtitle: Estudio Asintótico
 shorttitle: "Propiedades MCO Infinitas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Consistencia  
   - Eficiencia
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf
 date: "03/29/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

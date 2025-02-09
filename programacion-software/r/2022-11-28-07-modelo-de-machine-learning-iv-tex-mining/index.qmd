@@ -3,7 +3,7 @@ title: Minería de Textos en Machine Learning
 subtitle: Limpieza, Análisis y Aplicaciones
 shorttitle: "Minería Textos ML"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Airbnb Data  
   - Text Mining
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.pdf
 date: "11/28/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

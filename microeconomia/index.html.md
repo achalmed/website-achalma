@@ -4,7 +4,7 @@ subtitle: Análisis del comportamiento de los agentes económicos. Se incluyen t
 listing:
   - id: ultimas-entradas
     contents: 
-      - "microeconomia/*/index.qmd"
+      - "posts/*/index.qmd"
       - "organizacion-industrial/*/index.qmd"
     type: default # (table, default, table)
     sort: 

@@ -3,7 +3,7 @@ title: Ejecución Condicional en Python
 subtitle: Lógica y Control de Flujo
 shorttitle: "Condicionales Python"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-06-14-04-ejecucion-condicional-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-06-14-04-ejecucion-condicional-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Try Except  
   - Short-Circuit
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-06-14-04-ejecucion-condicional-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-06-14-04-ejecucion-condicional-con-python/index.pdf
 date: "06/14/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

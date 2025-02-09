@@ -3,7 +3,7 @@ title: Dinámica de los Mercados
 subtitle: Interacción Económica
 shorttitle: "Dinámica Mercados"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Mercados de Productos  
   - Mercados de Factores
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-04-06-los-mercados/index.pdf
 date: "02/04/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

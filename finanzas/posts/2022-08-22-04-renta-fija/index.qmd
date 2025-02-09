@@ -3,7 +3,7 @@ title: Renta Fija
 subtitle: Características y Valoración
 shorttitle: "Renta Fija"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-08-22-04-renta-fija/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/posts/2022-08-22-04-renta-fija/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Curva de Rendimiento
   - Valorización de Bonos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2022-08-22-04-renta-fija/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/posts/2022-08-22-04-renta-fija/index.pdf
 date: "08/22/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

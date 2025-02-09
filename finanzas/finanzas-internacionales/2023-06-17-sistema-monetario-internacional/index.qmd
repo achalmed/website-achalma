@@ -3,7 +3,7 @@ title: Perspectivas Monetarias Globales. Análisis de Regímenes Cambiarios y el
 subtitle: Explorando los sistemas monetarios internacionales, tipos de cambio fijos y flexibles, y el papel en evolución del FMI en la economía mundial.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - FMI
   - EconomíaGlobal
 citation:
-  pdf-url: https://achalmaedison.netlify.app/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf
 date: "06/17/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

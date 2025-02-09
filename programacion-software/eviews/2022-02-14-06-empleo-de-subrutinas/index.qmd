@@ -3,7 +3,7 @@ title: Subrutinas en Eviews
 subtitle: Aplicaciones y Generalización de Modelos
 shorttitle: "Subrutinas Eviews"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/eviews/2022-02-14-06-empleo-de-subrutinas/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/eviews/2022-02-14-06-empleo-de-subrutinas/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -20,7 +20,7 @@ tags:
   - Multivariate Modeling
 
 citation:
-  pdf-url: https://achalmaedison.netlify.app/eviews/2022-02-14-06-empleo-de-subrutinas/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/eviews/2022-02-14-06-empleo-de-subrutinas/index.pdf
 date: "02/14/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

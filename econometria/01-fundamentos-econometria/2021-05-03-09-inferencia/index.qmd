@@ -3,7 +3,7 @@ title: Inferencia Estadística en Regresión Lineal
 subtitle: Pruebas de Hipótesis y Estimación
 shorttitle: "Inferencia en Regresión"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Intervalos de Confianza  
   - Pruebas t y F
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf
 date: "05/03/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

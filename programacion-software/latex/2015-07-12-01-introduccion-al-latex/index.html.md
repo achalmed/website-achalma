@@ -3,7 +3,7 @@ title: Introducción a LaTeX
 subtitle: Instalación y Conceptos Básicos
 shorttitle: "Intro a LaTeX"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-12-01-introduccion-al-latex/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/latex/2015-07-12-01-introduccion-al-latex/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Document Structure  
   - Text Formatting
 citation:
-  pdf-url: https://achalmaedison.netlify.app/latex/2015-07-12-01-introduccion-al-latex/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/latex/2015-07-12-01-introduccion-al-latex/index.pdf
 date: "07/12/2015"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

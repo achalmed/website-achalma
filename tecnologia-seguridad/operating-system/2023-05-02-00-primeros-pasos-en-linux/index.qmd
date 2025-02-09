@@ -3,7 +3,7 @@ title: Linux Primeros Pasos
 subtitle: Una guía para principiantes en Linux
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - OpenSource
   - Comandos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.pdf
 date: "05/02/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,7 +3,7 @@ title: Recursos de Bibliografía y Documentación para Investigadores
 subtitle: Guía para Acceder a Información Académica en Línea
 shorttitle: "Recursos de Investigación"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf) completo aquí.
 abstract: |
   | This comprehensive guide lists a variety of online platforms for accessing bibliographic and documentation resources essential for researchers, students, and academics. It includes general academic resource portals, open access journal directories, databases for theses and dissertations, medical and health sciences resources, academic writing aids, and tools for data sharing. The guide aims to facilitate research by providing links to tools that support different stages of academic inquiry, from literature review to thesis writing, ensuring researchers have the means to enhance their work from any location.
 keywords: [academic resources, online databases, research tools, open access, thesis writing]
@@ -18,7 +18,7 @@ tags:
   - tesis y disertaciones
   - literatura científica
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf
 date: "01/12/2025"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

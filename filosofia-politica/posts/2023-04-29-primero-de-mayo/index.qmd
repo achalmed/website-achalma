@@ -3,7 +3,7 @@ title: Día Internacional de los Trabajadores de mayo de 2023.
 subtitle: Mensaje del Primero de Mayo del Partido Comunista del Perú.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-04-29-primero-de-mayo/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - DíaDelProletariado
 author: Comité Central Partido Comunista del Perú
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-04-29-primero-de-mayo/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf
 date: "04/29/2023"
 image: DALL·E 2023-04-29 23.15.46.png
 image-alt: "¡En este primero de mayo: seguir sembrando revolución!"

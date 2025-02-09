@@ -3,7 +3,7 @@ title: Renta Variable
 subtitle: Métodos de Valoración y Análisis
 shorttitle: "Renta Variable"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-08-15-03-renta-variable/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/posts/2022-08-15-03-renta-variable/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Dividendos
   - Flujo de Caja Libre Descontado
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2022-08-15-03-renta-variable/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/posts/2022-08-15-03-renta-variable/index.pdf
 date: "08/15/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

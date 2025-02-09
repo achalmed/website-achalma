@@ -3,7 +3,7 @@ title: Automatización en Excel con VBA
 subtitle: Manipulación de Hojas y Celdas
 shorttitle: "Excel Automatización"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Select Copy Paste  
   - VBA Macros
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf
 date: "12/12/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

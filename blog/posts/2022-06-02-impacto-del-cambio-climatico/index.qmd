@@ -3,7 +3,7 @@ title: Impacto del Cambio Climático en Perú
 subtitle: Análisis de Sectores Vulnerables y Políticas de Mitigación
 shorttitle: "Cambio Climático en Perú"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf) completo aquí.
 abstract: |
   | This document explores the implications of climate change in Peru, focusing on how it affects various sectors including agriculture, fishing, mining, energy, infrastructure, tourism, and health. It discusses the vulnerability of the Peruvian economy to climate variations, detailing the sectors most at risk and their contributions to greenhouse gas emissions. The text also covers strategies for mitigation and adaptation, emphasizing sustainable practices, regulatory measures, and price setting for natural resources. The study includes an econometric analysis of traditional exports and natural gas and oil prices over the period from January 2012 to May 2022, assessing their volatility and normality.
 keywords: [climate change, environmental policy, sustainable development, economic impact, Peru]

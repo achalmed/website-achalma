@@ -3,7 +3,7 @@ title: Efectos Fijos y Diferencias
 subtitle: Análisis de Datos de Panel
 shorttitle: "Efectos Fijos y Diferencias"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Diferencias en Diferencias
   - Análisis de Datos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/index.pdf
 date: "06/06/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

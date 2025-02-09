@@ -3,7 +3,7 @@ title: El capitalismo ¿Cáncer de nuestra era?
 subtitle: Reflexiones sobre la pobreza y la desigualdad en un sistema económico depredador e injusto.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-03-03-el-capitalismo/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - Desigualdad
   - Pobreza
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-03-03-el-capitalismo/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf
 date: "03/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

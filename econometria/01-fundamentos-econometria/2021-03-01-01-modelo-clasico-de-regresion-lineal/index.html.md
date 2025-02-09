@@ -3,7 +3,7 @@ title: Modelo Clásico de Regresión Lineal
 subtitle: Fundamentos y Aplicaciones
 shorttitle: "Modelo Regresión Lineal"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Modelo Clásico  
   - Supuestos de Regresión
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf
 date: "03/01/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

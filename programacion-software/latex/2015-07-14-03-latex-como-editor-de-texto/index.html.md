@@ -3,7 +3,7 @@ title: LaTeX como Herramienta de Edición de Texto
 subtitle: Incorporación de Figuras, Tablas y Códigos
 shorttitle: "Edición Texto LaTeX"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Document Formatting  
   - Sectioning
 citation:
-  pdf-url: https://achalmaedison.netlify.app/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/latex/2015-07-14-03-latex-como-editor-de-texto/index.pdf
 date: "07/14/2015"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

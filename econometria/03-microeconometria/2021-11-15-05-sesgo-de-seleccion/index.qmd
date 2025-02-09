@@ -3,7 +3,7 @@ title: Sesgo de Selección
 subtitle: Métodos de Estimación y Corrección mediante Heckit y Máxima Verosimilitud
 shorttitle: "Sesgo de Selección"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Estimación por máxima verosimilitud
   - Ecuación de selección
 citation:
-  pdf-url: https://achalmaedison.netlify.app/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/03-microeconometria/2021-11-15-05-sesgo-de-seleccion/index.pdf
 date: "11/15/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

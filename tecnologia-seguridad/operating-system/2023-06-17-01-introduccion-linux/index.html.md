@@ -3,7 +3,7 @@ title: Introduccion a GNU/Linux
 subtitle: Descubre por qué GNU/Linux supera a Windows y macOS en términos de libertad de uso, seguridad y amplia variedad de opciones de personalización.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-06-17-01-introduccion-linux/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-06-17-01-introduccion-linux/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

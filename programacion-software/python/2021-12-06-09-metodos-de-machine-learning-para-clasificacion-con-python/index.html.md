@@ -3,7 +3,7 @@ title: Aprendizaje Automático para Clasificación
 subtitle: Técnicas y Algoritmos Clave
 shorttitle: "ML para Clasificación"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Random Forests  
   - Multi-Class
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.pdf
 date: "12/06/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

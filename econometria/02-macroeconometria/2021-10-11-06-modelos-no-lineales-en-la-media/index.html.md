@@ -3,7 +3,7 @@ title: Modelos No Lineales en Econometría
 subtitle: Umbrales, Transiciones Suaves y Markov-Switching
 shorttitle: "Modelos No Lineales"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Regímenes no lineales
   - Dinámica de series de tiempo
 citation:
-  pdf-url: https://achalmaedison.netlify.app/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/index.pdf
 date: "10/11/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

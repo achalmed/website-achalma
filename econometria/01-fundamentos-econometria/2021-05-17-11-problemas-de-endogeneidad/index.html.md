@@ -3,7 +3,7 @@ title: Problemas de Endogeneidad en Regresión
 subtitle: Métodos de Corrección
 shorttitle: "Endogeneidad en Regresión"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Endogeneidad  
   - Sesgo de Selección
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf
 date: "05/17/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

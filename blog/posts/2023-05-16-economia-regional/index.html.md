@@ -3,7 +3,7 @@ title: Desarrollo y Descentralización en Perú
 subtitle: Análisis Económico Regional y Políticas Públicas
 shorttitle: "Desarrollo y Descentralización en Perú"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-05-16-economia-regional/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) completo aquí.
 abstract: |
   | This document delves into the regional economic development and decentralization in Peru, exploring how these concepts interact with the country's economic, political, and social structures. It discusses the principles of regionalism, regionalization, and decentralization, alongside the challenges and strategies for effective governance. The text examines the role of public and private sectors in development, the importance of infrastructure, and the implementation of public policies aimed at reducing regional disparities and enhancing public service delivery. It also critiques the current state of decentralization, suggesting reforms for better governance and economic growth.
 keywords: [regional development, decentralization, public administration, economic policy, Peru]
@@ -17,7 +17,7 @@ tags:
   - Modernización del Estado  
   - Descentralización Administrativa
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-05-16-economia-regional/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf
 date: "05/16/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

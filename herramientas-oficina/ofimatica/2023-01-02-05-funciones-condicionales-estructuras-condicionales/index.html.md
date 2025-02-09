@@ -3,7 +3,7 @@ title: Condicionales en Visual Basic
 subtitle: Control de Flujo con Decisiones
 shorttitle: "Condicionales VB"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Conditional Logic  
   - Decision Making
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf
 date: "01/02/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

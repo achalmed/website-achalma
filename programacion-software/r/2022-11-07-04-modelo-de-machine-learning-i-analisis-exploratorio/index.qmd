@@ -3,7 +3,7 @@ title: Análisis Exploratorio en Machine Learning
 subtitle: Componentes Principales y Agrupamiento
 shorttitle: "Análisis Expl ML"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Hierarchical Clustering  
   - Outliers
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.pdf
 date: "11/07/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,7 +3,7 @@ title: Fundamentos de la Econometría
 subtitle: Estimación e Identificación
 shorttitle: "Econometría"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-05-02-01-introduccion-a-la-econometria/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-05-02-01-introduccion-a-la-econometria/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Mínimos Cuadrados
   - Expectativas Condicionales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-05-02-01-introduccion-a-la-econometria/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-05-02-01-introduccion-a-la-econometria/index.pdf
 date: "05/02/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

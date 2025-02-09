@@ -3,7 +3,7 @@ title: Creación de Presentaciones con Beamer en LaTeX
 subtitle: Escribir y Diseñar Diapositivas
 shorttitle: "Beamer Presentaciones"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/latex/2015-07-16-05-presentaciones-en-beamer/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/latex/2015-07-16-05-presentaciones-en-beamer/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Academic Presentations  
   - Template Customization
 citation:
-  pdf-url: https://achalmaedison.netlify.app/latex/2015-07-16-05-presentaciones-en-beamer/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/latex/2015-07-16-05-presentaciones-en-beamer/index.pdf
 date: "07/16/2015"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

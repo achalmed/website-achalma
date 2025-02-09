@@ -3,7 +3,7 @@ title: Modelos de Clasificación en Machine Learning
 subtitle: Regresión Logística, KNN y Árboles de Decisión
 shorttitle: "Clasificación ML"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Bagging  
   - Random Forest
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.pdf
 date: "11/14/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,7 +3,7 @@ title: Visualización de Datos con R
 subtitle: Gráficos y Reportes Dinámicos
 shorttitle: "Visualización Datos R"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2021-04-12-03-visualizacion-de-datos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2021-04-12-03-visualizacion-de-datos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Rmarkdown  
   - GGPlot
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2021-04-12-03-visualizacion-de-datos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2021-04-12-03-visualizacion-de-datos/index.pdf
 date: "04/12/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

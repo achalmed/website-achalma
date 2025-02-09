@@ -3,7 +3,7 @@ title: Guía de Git Cómo trabajar en equipo en proyectos
 subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-02-16-guia-de-git-y-github/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -20,7 +20,7 @@ tags:
   - GitTips
   - OpenSource
 citation:
-  pdf-url: https://achalmaedison.netlify.app/operating-system/2023-02-16-guia-de-git-y-github/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf
 date: "02/16/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

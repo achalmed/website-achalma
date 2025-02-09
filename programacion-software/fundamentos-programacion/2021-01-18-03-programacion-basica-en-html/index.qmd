@@ -3,7 +3,7 @@ title: Introducción a la Programación Web con HTML
 subtitle: Fundamentos y Primeros Pasos
 shorttitle: "Intro Prog Web HTML"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Aplicaciones Prácticas  
   - Eventos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf
 date: "01/18/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

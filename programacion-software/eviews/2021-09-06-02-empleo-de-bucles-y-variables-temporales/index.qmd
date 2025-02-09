@@ -3,7 +3,7 @@ title: Uso de Bucles y Variables Temporales en Eviews
 subtitle: Automatización y Manipulación de Datos
 shorttitle: "Bucles y Vars Eviews"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Vector Matrix Operations  
   - Group Creation
 citation:
-  pdf-url: https://achalmaedison.netlify.app/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.pdf
 date: "09/06/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

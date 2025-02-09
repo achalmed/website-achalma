@@ -3,7 +3,7 @@ title: Técnicas de Validación Cruzada y Composición de Modelos
 subtitle: Evaluación y Optimización en Aprendizaje Automático
 shorttitle: "Validación y Modelo"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Contribución de Variables  
   - Modelos Predictivos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.pdf
 date: "10/31/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

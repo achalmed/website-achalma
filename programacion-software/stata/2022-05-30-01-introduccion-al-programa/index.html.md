@@ -3,7 +3,7 @@ title: Introducción a Stata
 subtitle: Interfaz, Datos y Aplicaciones Prácticas
 shorttitle: "Intro Stata"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/stata/2022-05-30-01-introduccion-al-programa/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Data Formats  
   - ENAHO Modules
 citation:
-  pdf-url: https://achalmaedison.netlify.app/stata/2022-05-30-01-introduccion-al-programa/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.pdf
 date: "05/30/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

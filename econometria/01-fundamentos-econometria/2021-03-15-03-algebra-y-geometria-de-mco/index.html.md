@@ -3,7 +3,7 @@ title: Álgebra y Geometría de Mínimos Cuadrados Ordinarios
 subtitle: Una Perspectiva Matemática
 shorttitle: "Álgebra MCO"
 description: |
-  Accede al [PDF]((https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf) completo aquí.
+  Accede al [PDF]((https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Geometría Estadística  
   - MCO
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf
 date: "03/15/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

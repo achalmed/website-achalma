@@ -4,7 +4,7 @@ subtitle: Exploración de herramientas matemáticas fundamentales para la econom
 listing:
   - id: ultimas-entradas
     contents: 
-      - "matematicas/*/index.qmd"
+      - "posts/*/index.qmd"
     type: default # (table, default, table)
     sort: 
       - "date desc"

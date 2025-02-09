@@ -3,7 +3,7 @@ title: Manipulación de Datos en Stata
 subtitle: Rutinas, Transformaciones y Descripción
 shorttitle: "Manipulación Datos Stata"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/stata/2022-06-06-02-manipulando-los-datos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Descriptive Statistics  
   - Macroeconomic Data
 citation:
-  pdf-url: https://achalmaedison.netlify.app/stata/2022-06-06-02-manipulando-los-datos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.pdf
 date: "06/06/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

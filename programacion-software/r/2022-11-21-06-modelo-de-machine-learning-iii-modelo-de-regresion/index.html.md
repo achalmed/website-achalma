@@ -3,7 +3,7 @@ title: Modelos de Regresión en Machine Learning
 subtitle: Árboles de Decisión y Métodos de Regularización
 shorttitle: "Regresión ML"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Least Squares  
   - Ridge Lasso
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.pdf
 date: "11/21/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

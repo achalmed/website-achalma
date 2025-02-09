@@ -3,7 +3,7 @@ title: Aparición del Pensamiento Socialista
 subtitle: Aparición del pensamiento socialista
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -12,7 +12,7 @@ categories:
 tags:
   - EconomíaPolítica
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf
 date: "04/23/2018"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

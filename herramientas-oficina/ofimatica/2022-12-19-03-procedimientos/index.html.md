@@ -3,7 +3,7 @@ title: Procedimientos en Visual Basic
 subtitle: Organización del Código
 shorttitle: "Procedimientos VB"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2022-12-19-03-procedimientos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Reusability  
   - VBA Procedures
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2022-12-19-03-procedimientos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos/index.pdf
 date: "12/19/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

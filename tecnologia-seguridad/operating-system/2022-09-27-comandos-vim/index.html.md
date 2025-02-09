@@ -3,7 +3,7 @@ title: Comandos básicos de Vim para mejorar tu flujo de trabajo
 subtitle: Aprende a utilizar los comandos esenciales de Vim para ser más productivo en tu programación.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2022-09-27-comandos-vim/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - Comandos
   - Programación
 citation:
-  pdf-url: https://achalmaedison.netlify.app/operating-system/2022-09-27-comandos-vim/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.pdf
 date: "09/27/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,7 +3,7 @@ title: Lo que debemos saber de R
 subtitle: Explorando las capacidades de R y su uso en el entorno Linux
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.pdf) completo aquí.
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - ManipulaciónDeDatos
   - AnálisisDeDatos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.pdf
 date: "06/10/2020"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

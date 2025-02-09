@@ -3,7 +3,7 @@ title: Seminario de filosofía
 subtitle: Notas sobre filosofía marxista
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -14,7 +14,7 @@ categories:
 tags:
   - Filosofía
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf
 date: "05/19/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

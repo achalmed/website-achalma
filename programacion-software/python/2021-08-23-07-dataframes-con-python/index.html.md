@@ -3,7 +3,7 @@ title: Manipulación de Dataframes en Python
 subtitle: Creación, Modificación y Análisis
 shorttitle: "Dataframes en Python"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-08-23-07-dataframes-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-08-23-07-dataframes-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Merge  
   - Import/Export
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-08-23-07-dataframes-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-08-23-07-dataframes-con-python/index.pdf
 date: "08/23/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

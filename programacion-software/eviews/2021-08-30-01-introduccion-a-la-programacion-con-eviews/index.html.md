@@ -3,7 +3,7 @@ title: Introducción a la Programación en Eviews
 subtitle: Objetos y Estructuras Básicas
 shorttitle: "Intro Prog Eviews"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf) completo aquí.
 abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Series Group Objects  
   - Eviews Basics
 citation:
-  pdf-url: https://achalmaedison.netlify.app/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.pdf
 date: "08/30/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

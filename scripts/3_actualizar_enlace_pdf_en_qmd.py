@@ -2,7 +2,7 @@ import os
 import re
 
 # Directorio raíz del blog
-blog_root = '../filosofia-politica'  # Ajusta esta ruta según tu estructura 'ruta/a/tu/carpeta/de/blog'
+blog_root = '../blog'  # Ajusta esta ruta según tu estructura 'ruta/a/tu/carpeta/de/blog'
 
 # Iterar sobre todas las carpetas en el directorio del blog (subblogs)
 for subblog in os.listdir(blog_root):
@@ -28,10 +28,11 @@ for subblog in os.listdir(blog_root):
                             content = file.read()
 
                         # Actualizar el enlace del PDF en la descripción
-                        updated_content = re.sub(r'\(https:\/\/achalmaedison\.netlify\.app\/.*\/index\.pdf\)', f'(https://achalmaedison.netlify.app/{subblog}/{folder}/index.pdf)', content)
+                        blog_name = os.path.basename(blog_root)
+                        updated_content = re.sub(r'\(https:\/\/achalmaedison\.netlify\.app\/.*\/index\.pdf\)', f'(https://achalmaedison.netlify.app/{blog_name}/{subblog}/{folder}/index.pdf)', content)
 
                         # Actualizar el enlace del PDF en la citación
-                        updated_content = re.sub(r'citation:\n  pdf-url: .*', f'citation:\n  pdf-url: https://achalmaedison.netlify.app/{subblog}/{folder}/index.pdf', updated_content)
+                        updated_content = re.sub(r'citation:\n  pdf-url: .*', f'citation:\n  pdf-url: https://achalmaedison.netlify.app/{blog_name}/{subblog}/{folder}/index.pdf', updated_content)
 
                         # Escribir el contenido actualizado de vuelta al archivo
                         with open(qmd_file, 'w', encoding='utf-8') as file:

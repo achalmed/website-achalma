@@ -3,7 +3,7 @@ title: Desarrollando el Pensamiento Lógico
 subtitle: Herramientas y Ejercicios
 shorttitle: "Pensamiento Lógico"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Conectivos  
   - Diagramas de Flujo  
 citation:
-  pdf-url: https://achalmaedison.netlify.app/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf
 date: "01/04/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

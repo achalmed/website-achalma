@@ -3,7 +3,7 @@ title: Tres fuentes y tres partes del marxismo
 subtitle: según Lenin
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -15,7 +15,7 @@ tags:
   - Política
   - Lenin
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf
 date: "10/23/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

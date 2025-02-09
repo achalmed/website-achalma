@@ -3,7 +3,7 @@ title: Regresiones
 subtitle: Fundamentos y Aplicaciones
 shorttitle: "Regresiones"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-05-16-03-la-herramienta-fundamental-regresiones/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-05-16-03-la-herramienta-fundamental-regresiones/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Causalidad
   - Heterogeneidad
 citation:
-  pdf-url: https://achalmaedison.netlify.app/07-topicos-de-econometria/2022-05-16-03-la-herramienta-fundamental-regresiones/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/07-topicos-de-econometria/2022-05-16-03-la-herramienta-fundamental-regresiones/index.pdf
 date: "05/16/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

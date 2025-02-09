@@ -3,7 +3,7 @@ title: Predicción y Métricas de Desempeño
 subtitle: Evaluación de Modelos Predictivos
 shorttitle: "Predicción y Métricas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Recall  
   - ROC AUC
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.pdf
 date: "11/29/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,7 +3,7 @@ title: Bucle y Repetición en Visual Basic
 subtitle: Estructuras Iterativas
 shorttitle: "Bucles VB"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Do While  
   - Iteration
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf
 date: "01/09/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

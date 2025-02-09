@@ -3,7 +3,7 @@ title: Estructura y Funcionamiento de las Empresas
 subtitle: Desde la Microeconomía
 shorttitle: "Empresas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-11-07-las-empresas/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-11-07-las-empresas/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Beneficios y Pérdidas  
   - Estrategias Empresariales
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-02-11-07-las-empresas/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-02-11-07-las-empresas/index.pdf
 date: "02/11/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

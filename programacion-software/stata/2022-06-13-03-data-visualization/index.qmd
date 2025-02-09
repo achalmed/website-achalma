@@ -3,7 +3,7 @@ title: Visualización de Datos con Stata
 subtitle: Gráficos y Mapas
 shorttitle: "Visualización Stata"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/stata/2022-06-13-03-data-visualization/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Export Graphics  
   - Agrarian Census
 citation:
-  pdf-url: https://achalmaedison.netlify.app/stata/2022-06-13-03-data-visualization/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization/index.pdf
 date: "06/13/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

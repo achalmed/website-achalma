@@ -3,7 +3,7 @@ title: Introducción a Visual Basic para Aplicaciones
 subtitle: Fundamentos y Uso del Editor
 shorttitle: "Intro VBA"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf) completo aquí.
 abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Variable Declaration  
   - Excel Macros
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf
 date: "12/05/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

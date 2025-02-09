@@ -3,7 +3,7 @@ title: Medidas de Bondad de Ajuste en Regresión
 subtitle: Evaluación de Modelos
 shorttitle: "Bondad de Ajuste"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Ajuste de Modelo  
   - Validación de Modelo
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf
 date: "04/19/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

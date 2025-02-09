@@ -4,7 +4,7 @@ title: La Empresa como Organización. Promoviendo Valores Cooperativos, Humanos 
 subtitle: Explorando la estructura social y el enfoque cooperativo de las empresas para impactar positivamente en la sociedad
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Cooperación
   - Impactosocial
 citation:
-  pdf-url: https://achalmaedison.netlify.app/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf
 date: "06/13/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

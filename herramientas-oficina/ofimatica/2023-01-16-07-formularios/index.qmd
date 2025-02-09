@@ -3,7 +3,7 @@ title: Diseño de Formularios en Visual Basic
 subtitle: Creación y Gestión de Interfaces
 shorttitle: "Formularios VB"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2023-01-16-07-formularios/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Form Properties  
   - Event-Driven Programming
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2023-01-16-07-formularios/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios/index.pdf
 date: "01/16/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

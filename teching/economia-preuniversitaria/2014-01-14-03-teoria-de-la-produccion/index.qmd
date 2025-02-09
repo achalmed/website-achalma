@@ -3,7 +3,7 @@ title: Teoría de la Producción
 subtitle: Procesos y Eficiencia
 shorttitle: "Teoría Producción"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf) completo aquí.
 abstract: |
   | Descubre cómo crear tu propio sitio web estático con Blogdown, una herramienta poderosa que combina R Markdown y Hugo. Aprende a usar comandos sencillos para personalizar, construir y alojar tu sitio web de manera fácil y rápida. ¡Comienza tu proyecto web hoy mismo!
 keywords: [keyword1, keyword2]
@@ -20,7 +20,7 @@ tags:
   - Eficiencia
 
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-14-03-teoria-de-la-produccion/index.pdf
 date: "01/14/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

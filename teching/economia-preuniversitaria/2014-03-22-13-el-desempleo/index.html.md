@@ -3,7 +3,7 @@ title: Análisis del Desempleo
 subtitle: Causas y Consecuencias
 shorttitle: "Desempleo"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Impacto Económico  
   - Desempleo Juvenil
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-22-13-el-desempleo/index.pdf
 date: "03/22/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

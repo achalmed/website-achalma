@@ -3,7 +3,7 @@ title: Funciones en Programación Python
 subtitle: Desde la Definición hasta su Uso
 shorttitle: "Funciones Python"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-08-16-06-funciones-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-08-16-06-funciones-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Numpy  
   - Pandas
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-08-16-06-funciones-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-08-16-06-funciones-con-python/index.pdf
 date: "08/16/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

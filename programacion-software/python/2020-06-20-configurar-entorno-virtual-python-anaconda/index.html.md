@@ -3,7 +3,7 @@ title: Configuración de entornos virtuales con Anaconda
 subtitle: Aprende a crear, activar, desactivar y eliminar entornos virtuales en Conda para mantener tus proyectos organizados y libres de conflictos de dependencias.
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

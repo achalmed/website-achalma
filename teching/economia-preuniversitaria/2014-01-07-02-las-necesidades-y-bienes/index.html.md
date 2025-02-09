@@ -3,7 +3,7 @@ title: Necesidades Humanas y Bienes Económicos
 subtitle: Bases de la Economía
 shorttitle: "Necesidades y Bienes"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Satisfacción de Necesidades  
   - Utilidad
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-07-02-las-necesidades-y-bienes/index.pdf
 date: "01/07/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

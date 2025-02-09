@@ -3,7 +3,7 @@ title: Gestión de Portafolio
 subtitle: Optimización y Análisis
 shorttitle: "Portafolio"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-09-05-06-teoria-de-portafolio/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/posts/2022-09-05-06-teoria-de-portafolio/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -17,7 +17,7 @@ tags:
   - Asignación de Activos
   - CAPMb
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2022-09-05-06-teoria-de-portafolio/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/posts/2022-09-05-06-teoria-de-portafolio/index.pdf
 date: "09/05/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

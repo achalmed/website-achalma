@@ -3,7 +3,7 @@ title:  El legado revolucionario de Mariátegui. Siguiendo su camino hacia un fu
 subtitle: Explorando el pensamiento y la acción de José Carlos Mariátegui para inspirar el cambio social
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-06-09-entendiendo-a-mariategui/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   -  Revolución
   -  IntelectualeRevolucionarios
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-06-09-entendiendo-a-mariategui/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf
 date: "06/09/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

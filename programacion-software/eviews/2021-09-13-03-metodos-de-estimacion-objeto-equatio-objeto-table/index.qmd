@@ -3,7 +3,7 @@ title: Estimación de Ecuaciones en Eviews
 subtitle: Métodos y Tablas
 shorttitle: "Estim Ecuaciones Eviews"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Model Specification  
   - Data Interaction
 citation:
-  pdf-url: https://achalmaedison.netlify.app/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.pdf
 date: "09/13/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

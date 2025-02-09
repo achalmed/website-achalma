@@ -3,7 +3,7 @@ title: Naturaleza Humana
 subtitle: Perspectivas Filosóficas y Sus Implicaciones
 shorttitle: "Naturaleza Humana y Filosofía"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2023-06-09-naturaleza-humana/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf) completo aquí.
 abstract: |
   | This article explores philosophical perspectives on human nature through the lenses of Rousseau, Hobbes, Marx, Hume, and Freud. It discusses whether humans are inherently good or bad, or if human nature is simply a product of circumstances. The piece examines metaphysical versus anti-metaphysical approaches to defining human nature and considers their ethical and political implications. It also critiques how these beliefs about human nature shape individual behavior, societal norms, and even scientific interpretations, using examples like Broca's study on brain weight to illustrate biases in research. The discussion emphasizes the importance of consciously choosing one's concept of human nature, recognizing its profound impact on personal and collective life.
 keywords: [human nature, philosophy, ethics, metaphysics, social implications]
@@ -18,7 +18,7 @@ tags:
   - Hume  
   - Freud
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2023-06-09-naturaleza-humana/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf
 date: "06/09/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---

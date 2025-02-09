@@ -3,7 +3,7 @@ title: Evaluación de Impacto
 subtitle: Conceptos y Metodologías
 shorttitle: "Evaluación de Impacto"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/06-evaluacion-de-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/06-evaluacion-de-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Teoría de Cambio
   - Matriz de Marco Lógico
 citation:
-  pdf-url: https://achalmaedison.netlify.app/06-evaluacion-de-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/06-evaluacion-de-impacto/2022-04-04-01-introduccion-a-la-evaluacion-de-impacto/index.pdf
 date: "04/04/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

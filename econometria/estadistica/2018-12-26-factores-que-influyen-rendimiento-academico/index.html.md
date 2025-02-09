@@ -3,7 +3,7 @@ title: Factores que influyen en el rendimiento académico de la serie 100 y 200
 subtitle: Procesamiento de datos
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

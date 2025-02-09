@@ -3,7 +3,7 @@ title: Fundamentos de Variables en Python
 subtitle: Valores, Operaciones y Flujo de Datos
 shorttitle: "Variables Python"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Inputs  
   - Mnemonic
 citation:
-  pdf-url: https://achalmaedison.netlify.app/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf
 date: "05/31/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

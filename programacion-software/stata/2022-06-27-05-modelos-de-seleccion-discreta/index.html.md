@@ -3,7 +3,7 @@ title: Modelos de Selección Discreta en Stata
 subtitle: Probit, Logit y Análisis Multinomial
 shorttitle: "Selección Discreta Stata"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Probit Logit  
   - ENAHO Data
 citation:
-  pdf-url: https://achalmaedison.netlify.app/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf
 date: "06/27/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

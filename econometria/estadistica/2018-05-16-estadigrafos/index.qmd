@@ -3,7 +3,7 @@ title: Análisis estadístico de los alumnos de Estadística de la serie 200 de 
 subtitle: Explorando los estadígrafos
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/estadistica/2018-05-16-estadigrafos/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/estadistica/2018-05-16-estadigrafos/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

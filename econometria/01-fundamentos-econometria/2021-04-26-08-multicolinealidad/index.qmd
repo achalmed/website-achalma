@@ -3,7 +3,7 @@ title: Multicolinealidad en Modelos de Regresión
 subtitle: Detección y Manejo
 shorttitle: "Multicolinealidad"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -16,7 +16,7 @@ tags:
   - Regresión Lineal  
   - Diagnóstico de Modelos
 citation:
-  pdf-url: https://achalmaedison.netlify.app/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf
 date: "04/26/2021"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

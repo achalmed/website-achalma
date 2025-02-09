@@ -4,7 +4,7 @@ title: Domina las habilidades de edición de texto en Vim, una guía completa pa
 subtitle: Descubre los atajos de teclado, comandos y técnicas avanzadas de Vim para buscar, reemplazar y transformar texto de manera eficiente
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Primer parrafo de abstrac
 keywords: [keyword1, keyword2]

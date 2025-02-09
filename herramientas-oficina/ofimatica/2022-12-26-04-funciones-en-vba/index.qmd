@@ -3,7 +3,7 @@ title: Funciones en Visual Basic para Aplicaciones
 subtitle: Creación y Uso Eficiente
 shorttitle: "Funciones VBA"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - VBA Programming
 
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf
 date: "12/26/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

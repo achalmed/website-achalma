@@ -3,7 +3,7 @@ title: Entendiendo la Inflación
 subtitle: Causas y Efectos en la Economía
 shorttitle: "Inflación"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-01-10-la-inflacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-01-10-la-inflacion/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Política Monetaria  
   - IPC
 citation:
-  pdf-url: https://achalmaedison.netlify.app/economia-preuniversitaria/2014-03-01-10-la-inflacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-03-01-10-la-inflacion/index.pdf
 date: "03/01/2014"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

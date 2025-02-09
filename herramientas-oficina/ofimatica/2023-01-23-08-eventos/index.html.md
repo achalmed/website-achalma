@@ -3,7 +3,7 @@ title: Manejo de Eventos en Visual Basic
 subtitle: Interacción Dinámica en Aplicaciones
 shorttitle: "Eventos VB"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/ofimatica/2023-01-23-08-eventos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -19,7 +19,7 @@ tags:
   - Event Triggers  
   - GUI Programming
 citation:
-  pdf-url: https://achalmaedison.netlify.app/ofimatica/2023-01-23-08-eventos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos/index.pdf
 date: "01/23/2023"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

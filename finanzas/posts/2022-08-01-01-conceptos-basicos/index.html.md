@@ -3,7 +3,7 @@ title: Fundamentos de Finanzas
 subtitle: Valor del Dinero y Evaluación de Proyectos
 shorttitle: "Finanzas Básicas"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/posts/2022-08-01-01-conceptos-basicos/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/finanzas/posts/2022-08-01-01-conceptos-basicos/index.pdf) completo aquí.
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
@@ -18,7 +18,7 @@ tags:
   - Series Infinitas
   - TIR
 citation:
-  pdf-url: https://achalmaedison.netlify.app/posts/2022-08-01-01-conceptos-basicos/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/finanzas/posts/2022-08-01-01-conceptos-basicos/index.pdf
 date: "08/01/2022"
 draft: true  # Modo de borrador (false = final, true = borrador)
 ---

@@ -3,12 +3,12 @@ title: Recursos de Bibliografía y Documentación para Investigadores
 subtitle: Guía para Acceder a Información Académica en Línea
 shorttitle: "Recursos de Investigación"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf) completo aquí.
 abstract: |
   | This comprehensive guide lists a variety of online platforms for accessing bibliographic and documentation resources essential for researchers, students, and academics. It includes general academic resource portals, open access journal directories, databases for theses and dissertations, medical and health sciences resources, academic writing aids, and tools for data sharing. The guide aims to facilitate research by providing links to tools that support different stages of academic inquiry, from literature review to thesis writing, ensuring researchers have the means to enhance their work from any location.
 keywords: [academic resources, online databases, research tools, open access, thesis writing]
 categories:
-  - Educación
+  - Posts
   - Investigación
   - Bibliotecología
 tags:
@@ -18,7 +18,7 @@ tags:
   - tesis y disertaciones
   - literatura científica
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf
 date: "01/12/2025"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
@@ -139,18 +139,9 @@ Este blog reúne un conjunto diverso de recursos que puedes usar desde casa para
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Comandos Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-google-assistant/index.pdf)
-3. [Comandos Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf)
-4. [Gestion Publica Administracion Publica Definiciones Conceptos Aplicacion](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
-5. [Reformas Modernizacion Gestion Publica Peru](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf)
-6. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-7. [Medio Ambiente](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf)
-8. [Cualidades Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf)
-9. [La Economia Peruana 1970 1990 Un Analisis Periodos Desafios](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf)
-10. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
-11. [Pautas Presentacion Informe Investigacion](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf)
-12. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
+1. [Ideas De Investigacion Para Economia](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf)
+2. [Pautas De Presentacion Del Informe De Investigacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf)
+3. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

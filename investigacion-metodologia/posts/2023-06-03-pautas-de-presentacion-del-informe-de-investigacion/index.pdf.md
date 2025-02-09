@@ -3,12 +3,12 @@ title: Pautas para la Presentación del Informe de Investigación en Economía
 subtitle: Guía para Estudiantes
 shorttitle: "Pautas Informe Económico"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf) completo aquí.
+  Accede al [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf) completo aquí.
 abstract: |
   | This document provides guidelines for economics students on how to present a research report. It covers the formulation of research problems, hypothesis testing, studying economic relationships, and model building. It suggests a structured approach including problem statement, objectives, significance, theoretical considerations, hypotheses, methodology, and data analysis. This guide aims to assist students in conducting rigorous and relevant economic research by outlining key components and steps to follow in the research process.
 keywords: [economic research, research methodology, hypothesis testing, economic models, data analysis]
 categories:
-  - Economía
+  - Posts
   - Metodología de Investigación
   - Educación Superior
 tags:
@@ -18,12 +18,10 @@ tags:
   - política económica
   - análisis econométrico
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf
 date: "06/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -125,17 +123,9 @@ Mendoza Bellido, W. E. (2007). Cómo investigan los economistas: Guía para elab
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Comandos Goole Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-goole-assistant) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-goole-assistant/index.pdf)
-2. [Comandos Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-blogdown/index.pdf)
-3. [Gestion Publica Administracion Publica Definiciones Conceptos Aplicacion](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-administracion-publica-definiciones-conceptos-aplicacion/index.pdf)
-4. [Reformas Modernizacion Gestion Publica Peru](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-modernizacion-gestion-publica-peru/index.pdf)
-5. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-6. [Medio Ambiente](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-medio-ambiente/index.pdf)
-7. [Cualidades Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-servidores-publicos/index.pdf)
-8. [La Economia Peruana 1970 1990 Un Analisis Periodos Desafios](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-1970-1990-un-analisis-periodos-desafios/index.pdf)
-9. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
-10. [Pautas Presentacion Informe Investigacion](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2023-06-03-pautas-presentacion-informe-investigacion/index.pdf)
-11. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión 📚 [PDF](https://achalmaedison.netlify.app/blog/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
+1. [Ideas De Investigacion Para Economia](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf)
+2. [Pautas De Presentacion Del Informe De Investigacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf)
+3. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

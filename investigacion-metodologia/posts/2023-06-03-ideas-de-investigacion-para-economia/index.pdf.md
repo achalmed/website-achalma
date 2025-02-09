@@ -4,12 +4,12 @@ title: Ideas de investigación en Econometría Análisis de variables y relacion
 subtitle: Explora diferentes enfoques para investigar la economía y sus interacciones a través de la Econometría
 shorttitle: "Editar"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf) completo aquí. Actualizar enlace
+  Accede al [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf) completo aquí. Actualizar enlace
 abstract: |
   | Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
-  - Econometría
+  -  Econometria General
   - Economía
   - Invetigación económica
 tags:
@@ -18,12 +18,10 @@ tags:
   - VariablesMacroeconómicas
   - Crisis
 citation:
-  pdf-url: https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf
 date: "06/03/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
-
-
 
 
 
@@ -156,8 +154,9 @@ Se tomaría datos de la ENAHO viendo el nivel de empleo
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Recaudacion Impuestos Gob Nac Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf)
-2. [Ideas Investigacion](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2023-06-03-ideas-investigacion/index.pdf)
+1. [Ideas De Investigacion Para Economia](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf)
+2. [Pautas De Presentacion Del Informe De Investigacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf)
+3. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

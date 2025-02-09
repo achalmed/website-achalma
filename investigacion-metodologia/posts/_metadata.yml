@@ -1,0 +1,135 @@
+# Configuración del Bloque de Título
+# title-block-banner: "#EDF3F9"  # Color del banner del bloque de título (opción 1)
+# title-block-banner: images/philosophy2.jpg  # Imagen para el banner del bloque de título (opción 2)
+# title-block-banner-color: body  # Color del texto en el banner del bloque de título
+
+# Configuración de Diseño
+documentmode: jou  # Modo de documento: 
+                   # - man (Manuscrito): Ideal para preparar manuscritos que se enviarán para revisión antes de su publicación. Ofrece un estilo minimalista y sin distracciones, enfocándose en el contenido para la evaluación.
+                   # - jou (Revista): Para documentos ya revisados y listos para ser publicados en revistas científicas o académicas. Ajusta el formato según las normas de la revista, incluyendo portadas elaboradas, encabezados y pies de página específicos.
+                   # - doc (Documento): Adecuado para documentos formales que no están destinados específicamente a la publicación en revistas o como manuscritos, permitiendo una mayor personalización en el diseño y estructura.
+                   # - stu (Estudiante): Diseñado para trabajos académicos de estudiantes, como ensayos, monografías, tesis, y proyectos de curso. Provee un formato educativo con secciones específicas para facilitar la evaluación académica.
+# documentmode: doc  # Modo de documento: man (Manuscrito), jou (Revista), doc (Documento), stu (Estudiante)
+
+# Configuraciones Específicas por Modo
+# PARA ESTUDIANTE
+# course: Introduction to Statistics (EDUC 5101)
+# professor: W. Joel Schneider
+# duedate: 12/22/2024
+
+# PARA MODO DE REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2024, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+
+# Configuración de Documento
+fontsize: 12pt
+a4paper: true
+numbered-lines: false  # Númerar líneas del documento
+
+# Configuración de Elementos Flotantes
+floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto
+
+# Configuración de Visibilidad y Borrador
+mask: false  # Para ocultar información sensible
+draftfirst: false  # Marca de agua de borrador en la primera página
+draftall: false  # Marca de agua de borrador en todas las páginas
+draft: true  # Modo de borrador (true = borrador, false = final)
+
+# Información del Autor
+author:
+  - name: Edison Achalma  # Nombre del autor
+    url: https://achalmaedison.netlify.app  # URL del autor
+    affiliation: 
+      - name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+        department: Economía
+        address: Portla Independencia N 57
+        city: Ayacucho
+        region: AYA
+        country: Perú
+        postal-code: ~
+    affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364  # ORCID del autor
+    email: achalmed.18@gmail.com
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+
+# Nota del Autor
+author-note:
+  disclosures:
+    conflict of interest: El autor no tiene ningún conflicto de intereses que declarar.
+
+# Configuración de Idioma y Estilo de Citas
+lang: es
+language: 
+  citation-last-author-separator: "y"
+  citation-masked-author: "Cita Enmascarada"
+  citation-masked-title: "Título Enmascarado"
+  citation-masked-date: "n.f."
+  title-block-author-note: "Nota de Autores"
+  title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
+  title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
+  references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el metanálisis."
+
+# Configuración de Fecha y Búsqueda
+date-modified: "today"  # Fecha de modificación del documento
+search: true  # Habilitar búsqueda en el documento
+
+# Configuración de Referencias y Citas
+citation: true  # Habilitar citas bibliográficas
+google-scholar: true  # Habilitar enlaces a Google Scholar
+# csl: apa-6th-edition.csl  # Estilo de citas (opcional, comentado)
+# cite-method: biblatex  # Método de citación OJO APAQUARTO trabaja con CITEPROC
+
+# Configuración de Referencias Cruzadas
+crossref:
+  fig-title: Figura  # Título de las figuras en las referencias
+  fig-prefix: Figura  # Prefijo para las leyendas de las figuras
+  tbl-title: Tabla  # Título de las tablas en las referencias
+  tbl-prefix: Tabla  # Prefijo para las leyendas de las tablas
+  ref-hyperlink: true  # Habilitar enlaces en las referencias
+
+# Configuración de Formato de Salida
+format:
+  html:
+    page-layout: article  # Diseño de página para el formato HTML
+    toc: true  # Mostrar tabla de contenidos
+    toc-depth: 3  # Profundidad de la tabla de contenidos
+    toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
+    toc-title: Contenidos  # Título de la tabla de contenidos
+    toc-location: left  # Ubicación de la tabla de contenidos
+    smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
+    link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
+    citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
+    footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
+    code-copy: true  # Habilitar la funcionalidad de copiar código
+    code-fold: true  # Habilitar el plegado de código
+    code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
+    code-overflow: scroll  # Manejo de desbordamiento de código
+    code-tools:
+      source: repo  # Mostrar el código fuente en las herramientas de código
+      toggle: false  # Habilitar la funcionalidad de alternar código
+      caption: none  # Opción para la leyenda del código
+    mermaid: 
+      theme: neutral
+    grid: 
+      sidebar-width: 400px
+      body-width: 1000px
+      margin-width: 200px
+      gutter-width: 1.5rem
+  
+  apaquarto-pdf: default
+
+# Enlaces de Formato
+format-links: 
+  - pdf
+  - ipynb
+
+# Configuración del Entorno de Ejecución
+jupyter: python3
+
+# Configuración del Editor
+editor: source # visual y source

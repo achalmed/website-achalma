@@ -14,6 +14,10 @@ date: "05/23/2020"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
 
+
+
+
+
 # Sitios Web Inspiradores
 
 En este blog, me gustaría compartir una selección de sitios web que recientemente he descubierto y que me han impresionado por su estructura atípica. Aunque estos son básicamente sitios creados con HTML, CSS y JavaScript, los creadores han dedicado mucho esfuerzo y profesionalismo en su diseño y desarrollo.
@@ -45,8 +49,23 @@ Sitios Web Destacados:
 Este artículo no solo te da ideas sobre el diseño web, sino también cómo la creatividad puede transformar la manera en que presentas tu trabajo online. 
 
 
-{{< include ../../_contenido-inicio.qmd >}}
 
-{{< include ../_contenido_posts.qmd >}}
+# Publicaciones Similares
 
-{{< include ../../_contenido-final.qmd >}}
+Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
+
+
+1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
+2. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
+3. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
+4. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
+5. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
+6. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
+7. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
+8. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
+9. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
+10. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
+

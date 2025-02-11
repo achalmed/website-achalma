@@ -1,7 +1,7 @@
 {
   "useMarkdownLinks": true,
-  "showUnsupportedFiles": true,
-  "attachmentFolderPath": "index files/images",
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "./",
   "livePreview": false,
   "showLineNumber": true,
   "userIgnoreFilters": [
@@ -12,5 +12,6 @@
   ],
   "newLinkFormat": "relative",
   "newFileLocation": "folder",
-  "newFileFolderPath": "blog/posts"
+  "newFileFolderPath": "blog/posts",
+  "alwaysUpdateLinks": true
 }

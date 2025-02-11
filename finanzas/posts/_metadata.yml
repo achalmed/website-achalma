@@ -31,6 +31,10 @@ numbered-lines: false  # Númerar líneas del documento
 # Configuración de Elementos Flotantes
 floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto
 
+
+reference-location: margin # (document, section, block, margin)
+# citation-location: margin # (document, margin)
+
 # Configuración de Visibilidad y Borrador
 mask: false  # Para ocultar información sensible
 draftfirst: false  # Marca de agua de borrador en la primera página
@@ -84,6 +88,8 @@ google-scholar: true  # Habilitar enlaces a Google Scholar
 # csl: apa-6th-edition.csl  # Estilo de citas (opcional, comentado)
 # cite-method: biblatex  # Método de citación OJO APAQUARTO trabaja con CITEPROC
 
+link-citations: true
+
 # Configuración de Referencias Cruzadas
 crossref:
   fig-title: Figura  # Título de las figuras en las referencias
@@ -100,15 +106,19 @@ format:
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 2  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos
-    toc-location: left  # Ubicación de la tabla de contenidos
+    toc-location: left  # (left, body, right) Ubicación de la tabla de contenidos
     smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
     link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
     citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
     footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
-    code-copy: true  # Habilitar la funcionalidad de copiar código
-    code-fold: true  # Habilitar el plegado de código
+    # code-block-background: true
+    # code-block-border-left: "#31BAE9"
+    highlight-style: github
+    code-copy: true  # (hover, true, false) Habilitar la funcionalidad de copiar código
+    code-fold: true  # (false, true, show) Habilitar el plegado de código
     code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
     code-overflow: scroll  # Manejo de desbordamiento de código
+    code-line-numbers: true
     code-tools:
       source: repo  # Mostrar el código fuente en las herramientas de código
       toggle: false  # Habilitar la funcionalidad de alternar código
@@ -117,9 +127,9 @@ format:
       theme: neutral
     grid: 
       sidebar-width: 400px
-      body-width: 1000px
-      margin-width: 200px
-      gutter-width: 1.5rem
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 5rem
   
   apaquarto-pdf: default
 

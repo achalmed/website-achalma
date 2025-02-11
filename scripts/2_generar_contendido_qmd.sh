@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del blog principal (cambia esto a la carpeta que desees procesar)
-main_blog="../filosofia-politica"  # Por ejemplo, cambia a "../finanzas" o "../macroeconomia" según sea necesario
+main_blog="../herramientas-oficina"  # Por ejemplo, cambia a "../finanzas" o "../macroeconomia" según sea necesario
 
 # Función para convertir la ruta a un enlace Markdown con títulos más legibles
 convert_to_link() {

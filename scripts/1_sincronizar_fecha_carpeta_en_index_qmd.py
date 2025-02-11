@@ -2,7 +2,7 @@ import os
 import re
 
 # Directorio raíz del blog
-blog_root = '../filosofia-politica'  # Ajusta esta ruta según tu estructura 'ruta/a/tu/carpeta/de/blog'
+blog_root = '../herramientas-oficina'  # Ajusta esta ruta según tu estructura 'ruta/a/tu/carpeta/de/blog'
 
 # Iterar sobre todas las carpetas en el directorio del blog (subblogs)
 for subblog in os.listdir(blog_root):

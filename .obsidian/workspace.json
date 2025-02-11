@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0b393f14a3842773",
+        "id": "26aab663e8d126c0",
         "type": "tabs",
         "children": [
           {
-            "id": "0b1d2f05a6c2205a",
+            "id": "fd6ab48fc440b0e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/posts/2020-05-23-comandos-de-google-assistant/index.qmd",
+                "file": "blog/posts/2015-05-14-el-aborto/index.qmd",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -165,6 +165,20 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "5dea6be132753851",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
           }
         ],
         "currentTab": 4
@@ -184,22 +198,33 @@
       "random-note:Abrir nota al azar": false,
       "audio-recorder:Iniciar/Detener la grabación": false,
       "qmd-as-md-obsidian:Toggle Quarto Preview": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "zk-prefixer:Crear nueva nota única": false
     }
   },
-  "active": "0b1d2f05a6c2205a",
+  "active": "fd6ab48fc440b0e4",
   "lastOpenFiles": [
-    "blog/posts/2015-05-15-el-aborto/index.qmd",
+    "_site/blog/index.feed-full-staged",
+    "_site/blog/index-listing.json",
+    "blog/index.html",
+    "blog/index_files/mediabag",
+    "blog/index_files",
+    "blog/posts/2015-05-14-el-aborto/index.html",
+    "blog/posts/2015-05-14-el-aborto/index_files/mediabag",
+    "blog/posts/2015-05-14-el-aborto/index_files",
+    "blog/index.qmd",
+    "index.html",
+    "index_files/mediabag",
+    "blog/index.html.md",
+    "blog/posts/2025-02-09.md",
+    "Sin título.canvas",
+    "README.md",
+    "Sin título 1.canvas",
+    "microeconomia/posts/2021-06-28-01-teoria-del-consumidor/index.pdf.md",
+    "tecnologia-seguridad/i3wm/2020-02-23-solucion-de-problemas-comunes-en-i3wm/index.html.md",
     "blog/posts/2015-05-15-el-aborto/index.html.md",
     "blog/posts/2015-05-15-el-aborto/index.pdf.md",
-    "econometria/02-macroeconometria/2021-09-20-01-analisis-univariado/index.qmd",
-    "finanzas/posts/2022-08-08-02-finanzas-corporativas/index.qmd",
-    "matematicas/posts/2024-03-31-por-editar/index.qmd",
-    "blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.qmd",
-    "finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.qmd",
     "tecnologia-seguridad/i3wm/2020-02-15-introduccion-a-i3wm/index.pdf.md",
-    "Sin título.canvas",
-    "blog/posts/_contenido_posts.qmd",
     "blog/posts/2021-07-14-comandos-blogdown/index.pdf.md",
     "2024-12-25.md",
     "prueba de raiz unitaria.md",
@@ -217,11 +242,6 @@
     "2024 05 03.md",
     "instalar tor browser.md",
     "2024 05 26 instalando specitify.md",
-    "frases.md",
-    "2024 06 24.md",
-    "202408231156.md",
-    "sitios web asombrosos.md",
-    "2024 08 29.md",
     "1.jpg",
     "2.jpg",
     "cb1.jpg",

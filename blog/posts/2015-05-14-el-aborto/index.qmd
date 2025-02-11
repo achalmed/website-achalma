@@ -27,13 +27,13 @@ author:
         address: Portla Independencia N 57
         city: Ayacucho
         region: PE
-        postal-code: 
+        postal-code:
     role:
       - writing
       - conceptualization
   - name: Yeno Areste
     affiliations: Universidad Nacional de San Cristóbal de Huamanga
-    orcid: 
+    orcid:
     role:
       - formal anlaysis
       - visualization
@@ -42,7 +42,7 @@ author:
     affiliations:
       - name: Universidad Nacional de San Cristóbal de Huamanga
         department: Física
-    orcid: 
+    orcid:
     role:
       - editing
       - funding acquistion

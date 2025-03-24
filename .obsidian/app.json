@@ -13,5 +13,8 @@
   "newLinkFormat": "relative",
   "newFileLocation": "folder",
   "newFileFolderPath": "blog/posts",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "tabSize": 4,
+  "uriCallbacks": false,
+  "showInlineTitle": true
 }

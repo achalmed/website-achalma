@@ -1,0 +1,50 @@
+---
+title: Editar
+subtitle: Editar
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar/index.pdf) completo aquí.
+abstract: |
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
+keywords: [keyword1, keyword2]
+categories:
+  - Ofimatica
+  - Blogdown
+  - Desarrollo Web
+  - Herramientas para R
+tags:
+  - RStudio
+  - Blogdown
+  - Comandos
+  - DesarrolloWeb
+citation:
+  pdf-url: https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar/index.pdf
+date: "03/31/2024"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+buscar y eliminar párrafos vacíos o saltos (varios enter)
+
+```
+^$
+```
+
+Para buscar espacios duplicados o más entre palabras usando expresiones regulares en LibreOffice Writer, puedes utilizar la siguiente expresión regular:
+
+```
+\s+
+```
+
+eliminar todos los saltos de línea manuales en tu documento en LibreOffice Writer, puedes hacer lo siguiente:
+
+```
+$
+```
+
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_ofimatica.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}
+

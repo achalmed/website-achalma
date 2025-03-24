@@ -1,0 +1,33 @@
+---
+title: Introducción a R para Programación
+subtitle: Fundamentos y Manejo de Datos
+shorttitle: "Intro R Programación"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/r/2021-04-05-02-manipulacion-de-datos/index.pdf) completo aquí.
+abstract: |
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
+keywords: [keyword1, keyword2]
+categories:
+  - R
+  - Programación en R  
+  - Análisis de Datos  
+tags:
+  - R Language
+  - Data Import
+  - Data Objects
+  - R Packages
+  - Tidyverse
+citation:
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/r/2021-04-05-02-manipulacion-de-datos/index.pdf
+date: "04/05/2021"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_r.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}
+

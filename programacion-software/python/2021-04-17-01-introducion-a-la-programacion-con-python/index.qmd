@@ -1,0 +1,32 @@
+---
+title: Introducción a la Programación con Python
+subtitle: Motivación y Fundamentos
+shorttitle: "Motivación y Fundamentos"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf) completo aquí.
+abstract: |
+  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
+keywords: [keyword1, keyword2]
+categories:
+  - Python
+  - Programación   
+  - Básico
+tags:
+  - Aprendizaje de Programación
+  - Data Science
+  - Machine Learning
+  - Curva de Aprendizaje
+  - Lenguajes Comparados
+citation:
+  pdf-url: https://achalmaedison.netlify.app/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.pdf
+date: "05/31/2021"
+draft: true  # Modo de borrador (false = final, true = borrador)
+---
+
+Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_python.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

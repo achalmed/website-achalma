@@ -1,18 +1,33 @@
 ---
-title: Sitios Web
-subtitle: Asombrosos
+title: Inspiración Web
+subtitle: Portafolios Excepcionales en HTML, CSS y JS
 shorttitle: "Sitios Web Asombrosos"
 description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
+  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
 categories:
-  - Web
+  - Diseño Web
+  - Desarrollo Web
+  - Inspiración
 tags:
-  - Web
+  - Diseño Web
+  - Portafolio
+  - HTML
+  - CSS
+  - JavaScript
+  - Minimalismo
+  - Interactividad
+  - Creatividad
+  - Desarrollo Frontend
+  - Experiencia de Usuario (UX)
+  - Animación Web
+  - Diseño Responsivo
 citation:
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf
-date: "05/23/2020"
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf
+date: "04/23/2017"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
 
 
 

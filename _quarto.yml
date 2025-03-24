@@ -118,3 +118,5 @@ execute:
   enabled: false  # Habilitar la ejecución: quarto render notebook.ipynb --execute
   freeze: true  # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
   cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
+
+

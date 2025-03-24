@@ -1,0 +1,85 @@
+---
+title: Guía de Git Cómo trabajar en equipo en proyectos
+subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.
+shorttitle: Editar
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf) completo aquí. Actualizar enlace
+abstract: "| Primer parrafo de abstrac"
+keywords:
+  - keyword1
+  - keyword2
+categories:
+  - Operating System
+  - GitHub
+tags:
+  - Git
+  - GitHub
+  - Colaboración
+  - DesarrolloDeSoftware
+  - GitBasics
+  - GitAdvanced
+  - GitTips
+  - OpenSource
+citation:
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf
+date: 02/16/2023
+draft: false
+---
+
+#Comandos  #Windows11 
+
+IP PÚBLICA: nslookup myip.opendns.com resolver1.opendns.com
+
+200.121.132.66
+
+RED 5HGZ
+
+C:\Users\Edison>netsh wlan show drivers
+
+Interface name: Wi-Fi
+
+    Driver                    : Intel(R) Wireless-AC 9461
+    Vendor                    : Intel Corporation
+    Provider                  : Intel
+    Date                      : 6/29/2021
+    Version                   : 22.70.0.6
+    INF file                  : oem192.inf
+    Type                      : Native Wi-Fi Driver
+    Radio types supported     : 802.11b 802.11g 802.11n 802.11a 802.11ac
+    FIPS 140-2 mode supported : Yes
+    802.11w Management Frame Protection supported : Yes
+    Hosted network supported  : No
+    Authentication and cipher supported in infrastructure mode:
+                                Open            None
+                                Open            WEP-40bit
+                                Open            WEP-104bit
+                                Open            WEP
+                                WPA-Enterprise  TKIP
+                                WPA-Enterprise  CCMP
+                                WPA-Personal    TKIP
+                                WPA-Personal    CCMP
+                                WPA2-Enterprise TKIP
+                                WPA2-Enterprise CCMP
+                                WPA2-Personal   TKIP
+                                WPA2-Personal   CCMP
+                                Open            Vendor defined
+                                WPA3-Personal   CCMP
+                                Vendor defined  Vendor defined
+                                WPA3-Enterprise 192 BitsGCMP-256
+                                OWE             CCMP
+    IHV service present       : Yes
+    IHV adapter OUI           : [00 00 00], type: [00]
+    IHV extensibility DLL path: C:\WINDOWS\system32\IntelIHVRouter08.dll
+    IHV UI extensibility ClSID: {00000000-0000-0000-0000-000000000000}
+    IHV diagnostics CLSID     : {00000000-0000-0000-0000-000000000000}
+    Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)
+
+
+C:\Users\Edison>
+
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_operating-system.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

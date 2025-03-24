@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "26aab663e8d126c0",
+        "id": "02b02755b9015a70",
         "type": "tabs",
         "children": [
           {
-            "id": "fd6ab48fc440b0e4",
+            "id": "682f0543f96d2e83",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/posts/2015-05-14-el-aborto/index.qmd",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "index"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -65,9 +51,9 @@
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
@@ -88,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 399.5
   },
   "right": {
     "id": "f5ffac457bf11826",
@@ -150,10 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 05 26 instalando specitify.md"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 2024 05 26 instalando specitify"
+              "title": "Esquema"
             }
           },
           {
@@ -179,9 +167,19 @@
               "icon": "lucide-archive",
               "title": "Todas las propiedades"
             }
+          },
+          {
+            "id": "9bf0dc3ea664d2a6",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -202,23 +200,33 @@
       "zk-prefixer:Crear nueva nota única": false
     }
   },
-  "active": "fd6ab48fc440b0e4",
+  "active": "682f0543f96d2e83",
   "lastOpenFiles": [
-    "_site/blog/index.feed-full-staged",
-    "_site/blog/index-listing.json",
-    "blog/index.html",
-    "blog/index_files/mediabag",
-    "blog/index_files",
-    "blog/posts/2015-05-14-el-aborto/index.html",
-    "blog/posts/2015-05-14-el-aborto/index_files/mediabag",
-    "blog/posts/2015-05-14-el-aborto/index_files",
-    "blog/index.qmd",
-    "index.html",
-    "index_files/mediabag",
+    "README.md",
+    "tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html.md",
+    "tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html.md",
     "blog/index.html.md",
+    "blog/_contenido-inicio.qmd",
+    "blog/_contenido-final.qmd",
+    "blog/posts/Untitled.md",
+    "blog/posts/_contenido_posts.qmd",
+    "blog/posts/2017-04-23-sitios-web-asombrosos/index.html.md",
+    "blog/posts/2017-04-23-sitios-web-asombrosos/index.qmd",
+    "blog/posts/2015-05-14-el-aborto/index.pdf.md",
+    "blog/posts/2015-05-14-el-aborto/index.html.md",
+    "blog/posts/2015-05-14-el-aborto/index.qmd",
+    "tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/index.qmd",
+    "tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.qmd",
+    "programacion-software/python/2021-12-13-10-metodos-de-machine-learning-para-regresion-con-python/index.html.md",
+    "econometria/06-evaluacion-de-impacto/2022-04-25-04-regresion-discontinua-rd/index.html.md",
+    "tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.pdf.md",
+    "tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html.md",
+    "tecnologia-seguridad/operating-system/2021-08-17-limpieza-y-optimizacion-de-pc/index.qmd",
+    "programacion-software/r/2020-06-10-012-que-ofrece-r/index_files/figure-html/Screenshot_20230611_103319.png",
+    "tecnologia-seguridad/operating-system/2019-06-19-adb/index.qmd",
+    "tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/index.qmd",
     "blog/posts/2025-02-09.md",
     "Sin título.canvas",
-    "README.md",
     "Sin título 1.canvas",
     "microeconomia/posts/2021-06-28-01-teoria-del-consumidor/index.pdf.md",
     "tecnologia-seguridad/i3wm/2020-02-23-solucion-de-problemas-comunes-en-i3wm/index.html.md",
@@ -233,15 +241,6 @@
     "tipografias.md",
     "2024 07 31 organizando tipos de archivos de softwares.md",
     "2024 05 26 ejcuntado payload.md",
-    "sms.md",
-    "ensayo de postulacion.md",
-    "2024 05 10.md",
-    "2024 08 23.md",
-    "2024-12-31.md",
-    "2024 08 28.md",
-    "2024 05 03.md",
-    "instalar tor browser.md",
-    "2024 05 26 instalando specitify.md",
     "1.jpg",
     "2.jpg",
     "cb1.jpg",
@@ -250,7 +249,6 @@
     "Pasted image 20241225160414.png",
     "Pasted image 20241225160407.png",
     "Pasted image 20241225160400.png",
-    "Pasted image 20241225160240.png",
-    "Pasted image 20241225160233.png"
+    "Pasted image 20241225160240.png"
   ]
 }

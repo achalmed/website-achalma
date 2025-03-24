@@ -8,5 +8,7 @@
   "exportFormats": [],
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": false,
-  "whichNotesToOpenAfterImport": "first-imported-note"
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "pdfExportImageOCR": true,
+  "pdfExportImageTesseractPath": "/usr/bin/tesseract"
 }

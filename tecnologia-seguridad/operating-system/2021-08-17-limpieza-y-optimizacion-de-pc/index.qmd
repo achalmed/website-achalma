@@ -1,0 +1,92 @@
+---
+title: Guía de Git Cómo trabajar en equipo en proyectos
+subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf) completo aquí. Actualizar enlace
+abstract: |
+  | Primer parrafo de abstrac
+keywords: [keyword1, keyword2]
+categories:
+  - Operating System
+  - GitHub
+tags:
+  - Git
+  - GitHub
+  - Colaboración
+  - DesarrolloDeSoftware
+  - GitBasics
+  - GitAdvanced
+  - GitTips
+  - OpenSource
+citation:
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf
+date: "02/16/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
+---
+
+# Limpieza y Optimización de PC - Windows 11
+
+**Pasos para Limpiar tu PC:**
+
+1. **Eliminación de Archivos Temporales:**
+   
+   - Presiona "Win + R" para abrir el cuadro de ejecución.
+   - Escribe `%temp%` y presiona Enter.
+   - Selecciona todos los archivos y elimínalos.
+   - Ejecuta nuevamente y escribe "temp" sin porcentajes.
+   - Elimina todos los archivos nuevamente.
+
+2. **Limpieza de Prefetch:**
+   
+   - Presiona "Win + R".
+   - Escribe "prefetch" y presiona Enter.
+   - Selecciona y elimina los archivos.
+
+3. **Limpieza de Registros:**
+   
+   - Presiona "Win + R".
+   - Escribe "eventvwr" y presiona Enter.
+   - En la ventana que se abre, ve a "Windows Log", luego "Registro de Windows".
+   - Vacía los registros de "Aplicación" y "Eventos".
+
+4. **Limpieza con Cleanmgr:**
+   
+   - Ejecuta el siguiente comando en "Ejecutar":
+     ```
+     %SystemRoot%\System32\Cmd.exe /c Cleanmgr /sageset:65535 &Cleanmgr /sagerun:65535
+     ```
+
+**Limpieza y Optimización de PC - Linux:**
+
+1. **Eliminación de Paquetes de Instalación:**
+   
+   - Ejecuta el comando:
+     ```
+     sudo apt-get autoremove
+     ```
+
+2. **Limpieza de Paquetes en Caché:**
+   
+   - Ejecuta los siguientes comandos:
+     ```
+     sudo apt-get autoclean
+     sudo apt-get clean
+     ```
+
+3. **Eliminación de Paquetes Huérfanos:**
+   
+   - Utiliza el siguiente comando para verificar paquetes huérfanos:
+     ```
+     sudo deborphan
+     ```
+
+**Recuerda que estos pasos pueden liberar espacio y mejorar el rendimiento de tu sistema. Asegúrate de respaldar cualquier dato importante antes de realizar estas operaciones.**
+
+Este procedimiento te ayudará a mantener tu sistema limpio y eficiente. No olvides revisar regularmente para mantener un rendimiento óptimo.
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_operating-system.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

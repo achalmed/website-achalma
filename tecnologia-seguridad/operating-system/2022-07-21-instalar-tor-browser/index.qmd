@@ -1,0 +1,45 @@
+---
+title: Guía de Git Cómo trabajar en equipo en proyectos
+subtitle: Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.
+shorttitle: "Editar"
+description: |
+  Accede al [PDF](https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf) completo aquí. Actualizar enlace
+abstract: |
+  | Primer parrafo de abstrac
+keywords: [keyword1, keyword2]
+categories:
+  - Operating System
+  - GitHub
+tags:
+  - Git
+  - GitHub
+  - Colaboración
+  - DesarrolloDeSoftware
+  - GitBasics
+  - GitAdvanced
+  - GitTips
+  - OpenSource
+citation:
+  pdf-url: https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf
+date: "02/16/2023"
+draft: false  # Modo de borrador (false = final, true = borrador)
+---
+
+# descargar tor desde navegador
+
+`cd Downloads`
+
+`tar -xf tor-browser-linux---`
+
+`cd tor-browser`
+
+`lsd`
+
+`./start-tor-browser.desktop --register-app`
+
+
+{{< include ../../_contenido-inicio.qmd >}}
+
+{{< include ../_contenido_operating-system.qmd >}}
+
+{{< include ../../_contenido-final.qmd >}}

@@ -55,7 +55,6 @@ citation:
     - Yeno Areste
     - Cristían Galindo
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
-bibliography: mybibliography.bib
 course: Española (EDUC 5101)
 professor: Yuri
 date: 05/14/2015
@@ -65,70 +64,6 @@ draft: false
 
 
 
-
-# Introducción
-
-En este trabajo, se aborda el tema del aborto, un asunto de creciente relevancia en la sociedad contemporánea. Últimamente, se ha observado un incremento significativo en el número de adolescentes que optan por el aborto, no solo en nuestro país sino también en lugares como España, donde ha aumentado un 19%. Es crucial para nosotros, como estudiantes, informarnos y reflexionar sobre la importancia de la vida. Debemos ser conscientes de las consecuencias de nuestras acciones y tomar decisiones responsables frente a problemas complejos. La finalidad de este documento es iluminar sobre los riesgos asociados al aborto y cómo enfrentar situaciones similares de manera informada.
-
-# El Aborto
-
-## Etimología
-
-La palabra "aborto" proviene del latín *Abortus*, donde *Ab* significa "mal" y *Ortus*, "nacimiento". Así, se refiere a un parto anticipado, una privación del nacimiento o un nacimiento antes de tiempo.
-
-## Definición
-
-El aborto es la interrupción deliberada del proceso fisiológico del embarazo, resultando en la muerte del producto de la concepción, ya sea dentro o fuera del claustro materno.
-
-A sentence that needs a citation [@higashidaEducacionParaSalud1995].
-
-## Causas
-
-El aborto tiene raíces predominantemente psicológicas, motivadas por diversos miedos:
-
-[@romeroAbortoCifras2020]
-
--   **Miedo por las capacidades económicas:** La preocupación por no poder mantener a un hijo puede llevar a una mujer a abortar. Este temor se relaciona con la falta de confianza en Dios, olvidando que lo más valioso para una madre es su hijo. Nuestra sociedad de consumo y valores superficiales ha desvalorizado la vida prenatal, creando miedos infundados. Un ejemplo notable es el de Kay James, quien, a pesar de nacer en circunstancias económicas adversas, logró una vida exitosa.
-
--   **Miedo al juicio social:** Especialmente en adolescentes embarazadas durante el noviazgo, el temor a lo que piensen padres o la comunidad puede influir en la decisión. La vida, dada por Dios, debería estar por encima de cualquier juicio humano.
-
--   **Miedo al embarazo y al parto:** Ser madre es la misión más noble de una mujer, un proceso natural que no debería ser temido, comparado incluso con la aceptación de esta función en el reino animal.
-
--   **Problemas de salud:** Ejemplos históricos como el de Beethoven, nacido de padres con graves problemas de salud, demuestran que no todos los embarazos con riesgos deben terminar en aborto.
-
--   **Violación:** Aunque es un trauma profundo, incluso en estos casos, hablamos de un ser humano en desarrollo.
-
-## Tipos de Aborto
-
--   **Aborto Espontáneo:** Ocurre de manera natural.
--   **Aborto Inducido:** Es intencional, con o sin apoyo médico, y puede tener múltiples motivaciones sociales o legales.
--   **Aborto Terapéutico:** Justificado médicamente para:
-    -   Salvar la vida de la madre.
-    -   Proteger su salud física o mental.
-    -   Evitar el nacimiento de un niño con enfermedades graves.
-    -   Reducir el número de fetos en embarazos múltiples.
-
-## Consecuencias
-
-El aborto puede llevar a una serie de complicaciones:
-
-1.  **Succión, Legrado o Aspiración:** Riesgo de infecciones, traumas, hemorragias, entre otros.
-2.  **Dilatación y Curetaje (D y C):** Además de los riesgos anteriores, puede causar perforaciones uterinas.
-3.  **Dilatación y Evacuación (D y E):** Añade riesgos de infecciones específicas y complicaciones en futuros embarazos.
-4.  **Inyección Salina:** Riesgo de ruptura uterina y embolismo.
-5.  **Prostaglandinas:** Posibles rupturas uterinas, sepsis, y fallos cardíacos o renales.
-6.  **Extracción Menstrual:** Puede resultar en infecciones si no se confirma el embarazo.
-7.  **Mifeprex o Mifepristona (RU 486):** Riesgos de infecciones severas y sangrado excesivo.
-8.  **Aborto por Nacimiento Parcial:** Alta posibilidad de hemorragia y necesidad de histerectomía.
-9.  **Píldora del Día Después:** Cambios en la vasculatura que pueden llevar a alteraciones hemorrágicas.
-
-Otras complicaciones incluyen un aumento en cesáreas, nacimientos prematuros, y problemas de fertilidad.
-
-# Conclusiones
-
--   El aborto puede ser considerado el asesinato de una persona desde la concepción, donde el feto posee derechos legales.
--   Violenta el quinto mandamiento, "no matarás", un principio moral para la realización humana.
--   Las prácticas abortivas son, en muchos aspectos, inhumanas y tienen consecuencias devastadoras.
 
 
 # Publicaciones Similares
@@ -154,5 +89,3 @@ Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. 
 
 # Referencias
 
-::: {#refs}
-:::

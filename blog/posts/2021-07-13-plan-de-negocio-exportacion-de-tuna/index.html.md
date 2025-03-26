@@ -4,10 +4,11 @@ documentmode: stu
 # PARA ESTUDIANTE
 course: Economía internacional II
 professor: Econ. William Dante Canales Molina
+duedate: 07/13/2021
 title: Exportación de Tuna desde Ayacucho
 subtitle: Un Análisis del Mercado Internacional
 shorttitle: "EXPORTACIÓN DE TUNA"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) completo aquí.
+description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) completo aquí.
 abstract: This study explores the strategic and ethical considerations of exporting prickly pear (tuna) from Ayacucho, Peru, to international markets, with a focus on Beijing, China. It examines the operational framework of Ecotuna S.C.R.L., a Peruvian company established in 2020, aiming to penetrate global markets within a year. The analysis includes market demand in China, logistical processes, and economic viability, highlighting the fruit’s nutritional value and its alignment with shifting consumer preferences toward healthier diets. Ethical implications, such as sustainable production and fair trade, are addressed in the context of contemporary societal needs. Drawing on trade data and consumer trends, the research underscores the potential for Ayacucho’s tuna to compete with leading exporters like Mexico while fostering local development. The study concludes by outlining key challenges and opportunities for sustainable export growth.
 keywords:
   - prickly pear export
@@ -37,14 +38,14 @@ author:
         city: Ayacucho
         region: PE
         postal-code:
+        id: unsch
     role:
       - writing
       - conceptualization
   - name: Semnia Chocce
     orcid:
     affiliations:
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Economía
+      - ref: unsch
     role:
       - formal anlaysis
       - visualization
@@ -52,24 +53,21 @@ author:
   - name: July Durand
     orcid:
     affiliations:
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Economía
+      - ref: unsch
     role:
       - editing
       - funding acquistion
   - name: Brenda Gamboa
     orcid:
     affiliations:
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Economía
+      - ref: unsch
     role:
       - editing
       - funding acquistion
   - name: Alejandrina Galindo
     orcid:
     affiliations:
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Economía
+      - ref: unsch
     role:
       - editing
       - funding acquistion
@@ -81,10 +79,11 @@ citation:
     - July Durand
     - Brenda Gamboa
     - Alejandrina Galindo
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf
 date: 07/13/2021
 draft: false
 ---
+
 
 
 

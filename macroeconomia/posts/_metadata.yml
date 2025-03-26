@@ -32,7 +32,7 @@ numbered-lines: false  # Númerar líneas del documento
 floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto
 
 
-reference-location: margin # (document, section, block, margin)
+# reference-location: margin # (document, section, block, margin)
 # citation-location: margin # (document, margin)
 
 # Configuración de Visibilidad y Borrador

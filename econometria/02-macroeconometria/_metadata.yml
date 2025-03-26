@@ -77,6 +77,13 @@ language:
   title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
   title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
   references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el metanálisis."
+  section-title-abstract: Abstract	# Abtract title
+  section-title-references: Referencias	# References title
+  title-block-keywords: Palbras clave	# Keywords
+  crossref-fig-title: Figura	# Figure title prefix
+  crossref-tbl-title: Tabla	# Table title prefix
+  crossref-apx-prefix: Anexo	# Appendix title prefix
+  crossref-eq-prefix: Ecuación # Equation title prefix
 
 # Configuración de Fecha y Búsqueda
 date-modified: "today"  # Fecha de modificación del documento
@@ -143,4 +150,8 @@ format-links:
 jupyter: python3
 
 # Configuración del Editor
-editor: source # visual y source
+# editor: source # visual y source
+
+editor:
+  markdown:
+    canonical: true

@@ -31,6 +31,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
 ### Instrucciones para la Instalación Manual de "Stats" en Spicetify
 
 1. **Descarga y descompresión:**

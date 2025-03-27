@@ -2,14 +2,14 @@
 documentmode: stu
 # Configuraciones Específicas por Modo
 # PARA ESTUDIANTE
-course: Economía internacional II
+course: Economía Internacional II
 professor: Econ. Richard Atao Quispe
 duedate: 09/15/2020
 title: Plan De Exportación De Trucha Arcoiris
 subtitle: Estrategia de Exportación a los Estados Unidos y Otras Regiones
 shorttitle: "Exportación de Trucha Arcoíris"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) completo aquí.
-abstract: The present research aims to design an export plan for rainbow trout fillets to the US market, following the methodology of PROMPERÚ and the guidelines for an export business plan. AQUAZUL SCRL, a Peruvian company located in Ayacucho, specializes in producing and marketing rainbow trout. The region of Ayacucho has a suitable climate for trout farming, with small centers already in place. The company plans to produce 2000 kg of fresh or refrigerated trout fillets monthly, to be sold at a price of $8.40/kg. The US market offers significant opportunities due to its accessible market conditions, availability for business, specialized fairs, excellent logistics infrastructure, and stable economy. The study includes a detailed analysis of the market, production costs, logistics, and financial feasibility, concluding that the project is economically and financially viable with a net present value (NPV) of $69,519 and an internal rate of return (IRR) of 21%.
+description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf) completo aquí.
+abstract: "The present research aims to design an export plan for rainbow trout fillets to the US market, following the methodology of PROMPERÚ and the guidelines for an export business plan. AQUAZUL SCRL, a Peruvian company located in Ayacucho, specializes in producing and marketing rainbow trout. The region of Ayacucho has a suitable climate for trout farming, with small centers already in place. The company plans to produce 2000 kg of fresh or refrigerated trout fillets monthly, to be sold at a price of $8.40/kg. The US market offers significant opportunities due to its accessible market conditions, availability for business, specialized fairs, excellent logistics infrastructure, and stable economy. The study includes a detailed analysis of the market, production costs, logistics, and financial feasibility, concluding that the project is economically and financially viable with a net present value (NPV) of $69,519 and an internal rate of return (IRR) of 21%."
 keywords:
   - Rainbow Trout
   - Export Plan
@@ -33,18 +33,17 @@ author:
     orcid: 0000-0001-6996-3364
     email: elmer.achalma.09@unsch.edu.pe
     affiliations:
+      - id: unsch
       - name: Universidad Nacional de San Cristóbal de Huamanga
         department: Economía
         address: Portla Independencia N 57
         city: Ayacucho
         region: PE
         postal-code:
-        id: unsch
     role:
       - writing
       - conceptualization
   - name: Félix Bermudo
-    orcid:
     affiliations:
       - ref: unsch
     role:
@@ -52,21 +51,18 @@ author:
       - visualization
       - editin
   - name: Luis De La Cruz
-    orcid:
     affiliations:
       - ref: unsch
     role:
       - editing
       - funding acquistion
   - name: Diana Gutierrez
-    orcid:
     affiliations:
       - ref: unsch
     role:
       - editing
       - funding acquistion
   - name: Brenda Huiza
-    orcid:
     affiliations:
       - ref: unsch
     role:
@@ -80,10 +76,16 @@ citation:
     - Luis De La Cruz
     - Diana Gutierrez
     - Brenda Huiza
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf
 date: 09/15/2020
 draft: false
 ---
+
+
+
+
+
+
 
 
 
@@ -124,25 +126,25 @@ Debido a la nueva visión que debe tiene Aquazul, se ha realizado una prueba de 
 
 Nuestro producto para ofrecer es filete de trucha Filetes frescos o refrigerados de truchas empacados al vacío en paquetes de 1000 gr. cada uno el cual será comercializado en los mercados mayoristas de Estados Unidos.
 
-- ​ **Características y propiedades de la materia prima**
+-   ​ **Características y propiedades de la materia prima**
 
 Es una especie de pescado de agua dulce cultivada de manera intensiva en estanques y jaulas flotantes en la margen de los ríos y en lagunas de la sierra del Perú. Las truchas son familias de la subfamilia salmoninae. En el Perú crían la variante trucha arco iris (Oncorhynchus myskiss). Ministerio de Agricultura y Riego (2019).
 
-- ​ **Propiedades de la materia prima**
+-   ​ **Propiedades de la materia prima**
 
 Gracias a su bajo contenido en sal, es ideal para las personas que padecen de hipertensión arterial. Además, cuenta con un alto valor proteico que fortalece y acelera el crecimiento de los músculos. Un superalimento peruano que sirve para el desarrollo del cerebro y que previene enfermedades cardiacas y mentales, debido a su rico contenido en omega 3.
 
 | **Componentes**         | **Fresco** | **Enlatado** |
-| ----------------------- | :--------: | :----------: |
+|-------------------------|:----------:|:------------:|
 | **Humedad**             |    75.8    |     66.8     |
 | **Grasa**               |    3.1     |     9.0      |
 | **Proteína**            |    19.5    |     21.5     |
 | **Sales Minerales**     |    1.2     |     1.2      |
 | **Calorías** **(100g)** |    139     |     213      |
 
-: Valor nutricional de la trucha
+: Valor nutricional de la trucha 
 
-- ​ **Beneficios de la salud**
+-   ​ **Beneficios de la salud**
 
 La trucha cuenta con un alto valor proteico que fortalece y acelera el crecimiento de los músculos. Contribuye, también, con el desarrollo del cerebro y previene enfermedades cardiacas y mentales, debido a su rico contenido en omega 3.
 
@@ -172,16 +174,16 @@ Bajo la partida arancelaria 0304420000, SIICEX informa que las principales empre
 
 ### Externo: análisis PESTA
 
-- **Factor político**
+-   **Factor político**
 
 Estados Unidos vivirá un agitado año electoral. El crecimiento del empleo y la estabilización de la economía serán sus principales cartas de presentación de Donald Trump para ser reelegido; no obstante, el aumento de la participación electoral de las minorías y de los jóvenes le juega en contra.
 
-- **Factor económico**
+-   **Factor económico**
 
 La COVID-19 (coronavirus) ha provocado la recesión mundial más profunda que se ha experimentado en décadas. Si bien el resultado final aún es incierto, debido a la pandemia la gran mayoría de los mercados emergentes y de las economías en desarrollo se contraerá, con un daño perdurable en la productividad laboral y el producto potencial. Una vez que la crisis amaine, se deberá reafirmar un compromiso creíble con políticas sostenibles y llevar a cabo las reformas que se necesiten para apoyar las perspectivas a largo plazo. La coordinación y la cooperación mundiales serán fundamentales. (Banco Mundial, 2020).
 
 |                     |  2017   |  2018   |  2019e  |  2020f   |  2021f  |  2020f   |  2021f  |
-| ------------------- | :-----: | :-----: | :-----: | :------: | :-----: | :------: | :-----: |
+|---------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 | **Mundo**           | **3.3** | **3.0** | **2.4** | **-5.2** | **4.2** | **-7.7** | **1.6** |
 | Estados Unidos      |   2.4   |   2.9   |   2.3   |   -6.1   |   4.0   |   -7.9   |   2.3   |
 | Zona Euro           |   2.5   |   1.9   |   1.2   |   -9.1   |   4.5   |  -10.1   |   3.2   |
@@ -189,31 +191,31 @@ La COVID-19 (coronavirus) ha provocado la recesión mundial más profunda que se
 | China               |   6.8   |   6.6   |   6.1   |   1.0    |   6.9   |   -4.9   |   1.1   |
 | Federación de Rusia |   1.8   |   2.5   |   1.3   |   -6.0   |   2.7   |   -7.6   |   0.9   |
 
-: Diferencia en puntos porcentuales con respecto a proyecciones de enero 2020
+: Diferencia en puntos porcentuales con respecto a proyecciones de enero 2020 
 
-- **Factor social**
+-   **Factor social**
 
 Estados Unidos cuenta con una población proyectada par a el 2021 de 332,84 millones de habitantes la cual muestra un crecimiento de 0.77% considerando que la población en el presente año es de 331,05 millones de habitantes, el 82% de la población total es urbana la cual está dispuesta siempre a probar nuevos productos de fácil consumo y sobre todo que sean nutritivos.
 
-- **Factor tecnológico**
+-   **Factor tecnológico**
 
 La organización Mundial de la propiedad Intelectual (OMPI,2019), afirma que Estados Unidos sigue siendo una de las naciones más innovadoras del mundo.
 
 ### Interno: autodiagnóstico empresarial (análisis del potencial exportador)
 
-- **Gestión administrativa**
+-   **Gestión administrativa**
 
 De acuerdo con el Sistema Integrado de Información de Comercio Exterior (SIICEX,2019), las principales empresas peruanas exportadoras de trucha frescas-refrigeradas, excepto hígados, huevas y lechas, en los períodos 2018, 2019 fueron Mar Andino Perú S.A.C. y Peruvian Andean Trout S.A.C.
 
 Entre los principales mercados de exportación, Estados Unidos experimenta una variación de -28% de exportación entre los periodos 2018-2019, Japón, Uruguay y China experimentaron un aumento de 7629%, 0% y 2329% mientras en Canadá disminuyó en -73%; las ventas en mercados como Estados Unidos para el 2019 tuvieron un valor de FOB 10,929.50 mil USD, seguido de Japón FOB 157.16 mil USD.
 
-- **Gestión productiva y logística**
+-   **Gestión productiva y logística**
 
 Se desarrollará la compra de truchas al por mayor de distintas partes de la región dado que la región cuenta con la capacidad de producción necesaria para abastecer el mercado tanto regional, nacional e internacional.
 
 **Capacidad.** La empresa contará con una amplia capacidad de producción, utilizando el 100% de su capacidad en abastecer el mercado internacional.
 
-- **Gestión económica y financiera**
+-   **Gestión económica y financiera**
 
 De acuerdo al Plan Regional de Acuicultura de Ayacucho 2017-2021, en su fase estratégica se indica un escenario positivo para el acceso a créditos financieros, los cuales aumentarán para el año 2021 a 170 créditos a comparación con 2016 ya que se realizarán mayores charlas y talleres informativos sobre los requisitos mínimos con los que debe contar.
 
@@ -227,30 +229,30 @@ La matriz cuenta con 15 factores determinantes de éxito, ocho fortalezas y siet
 
 **Aplicación de la evaluación de los factores internos (Matriz EFI)**
 
-| **Factores determinantes de éxito**                                                                                              | **Peso** | **Valor** | **Pond.** |
-| -------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-------: |
-| **Fortalezas**                                                                                                                   |          |           |           |
-| Posicionamiento de los productos acuícolas en el mercado local e internacional.                                                  |   0,08   |     4     |   0,32    |
-| Expansión del mercado con demanda de productos saludables y sostenibles como los de origen acuícola                              |   0,08   |     4     |   0,32    |
-| La producción acuícola favorece la diversificación de la economía regional                                                       |   0,07   |     3     |   0,21    |
-| Disponibilidad de recursos hídricos y diversidad geográfica potencia el desarrollo de acuicultura.                               |   0,09   |     4     |   0,36    |
-| Diversidad de especies nativas con potencial para practicar su cultivo.                                                          |   0,07   |     3     |   0,21    |
-| Incentivos para empresas que desean exportar, inicien el proceso de modernización tecnológica, adecuación ambiental y sanitaria. |   0,06   |     3     |   0,18    |
-| Bajo costo de mano de obra.                                                                                                      |   0,05   |     3     |   0,15    |
-| Mercado interno con potencial de crecimiento.                                                                                    |   0,06   |     4     |   0,24    |
-| **Subtotal fortalezas**                                                                                                          | **0,56** |           | **1,99**  |
-| **Debilidades**                                                                                                                  |          |           |           |
-| Poca diversificación de especies cultivadas y mercados.                                                                          |   0,07   |     1     |   0,07    |
-| Débil promoción del consumo y producción de productos acuícolas.                                                                 |   0,05   |     2     |    0,1    |
-| Baja inversión en I&D                                                                                                            |   0,04   |     1     |   0,04    |
-| Deficiente infraestructura en toda la cadena de producción y comercialización.                                                   |   0,06   |     2     |   0,12    |
-| Incipiente tecnología que impide la identificación de nuevas especies y el desarrollo de nuevas técnicas de cultivo.             |   0,06   |     2     |   0,12    |
-| Falta de personal, profesional y técnico, calificado en producción acuícola                                                      |   0,07   |     1     |   0,07    |
-| No existe difusión de la Responsabilidad Social Empresaria en la cadena acuícola.                                                |   0,09   |     1     |   0,09    |
-| **Subtotal debilidades**                                                                                                         | **0,44** |           | **0,61**  |
-| **Total**                                                                                                                        |  **1**   |           |  **2,6**  |
+| **Factores determinantes de éxito** | **Peso** | **Valor** | **Pond.** |
+|----------------------|:---------------:|:---------------:|:---------------:|
+| **Fortalezas** |  |  |  |
+| Posicionamiento de los productos acuícolas en el mercado local e internacional. | 0,08 | 4 | 0,32 |
+| Expansión del mercado con demanda de productos saludables y sostenibles como los de origen acuícola | 0,08 | 4 | 0,32 |
+| La producción acuícola favorece la diversificación de la economía regional | 0,07 | 3 | 0,21 |
+| Disponibilidad de recursos hídricos y diversidad geográfica potencia el desarrollo de acuicultura. | 0,09 | 4 | 0,36 |
+| Diversidad de especies nativas con potencial para practicar su cultivo. | 0,07 | 3 | 0,21 |
+| Incentivos para empresas que desean exportar, inicien el proceso de modernización tecnológica, adecuación ambiental y sanitaria. | 0,06 | 3 | 0,18 |
+| Bajo costo de mano de obra. | 0,05 | 3 | 0,15 |
+| Mercado interno con potencial de crecimiento. | 0,06 | 4 | 0,24 |
+| **Subtotal fortalezas** | **0,56** |  | **1,99** |
+| **Debilidades** |  |  |  |
+| Poca diversificación de especies cultivadas y mercados. | 0,07 | 1 | 0,07 |
+| Débil promoción del consumo y producción de productos acuícolas. | 0,05 | 2 | 0,1 |
+| Baja inversión en I&D | 0,04 | 1 | 0,04 |
+| Deficiente infraestructura en toda la cadena de producción y comercialización. | 0,06 | 2 | 0,12 |
+| Incipiente tecnología que impide la identificación de nuevas especies y el desarrollo de nuevas técnicas de cultivo. | 0,06 | 2 | 0,12 |
+| Falta de personal, profesional y técnico, calificado en producción acuícola | 0,07 | 1 | 0,07 |
+| No existe difusión de la Responsabilidad Social Empresaria en la cadena acuícola. | 0,09 | 1 | 0,09 |
+| **Subtotal debilidades** | **0,44** |  | **0,61** |
+| **Total** | **1** |  | **2,6** |
 
-: Matriz de evaluación de los factores internos (EFI) {tbl-colwidths="[70,10,10,10]"}
+: Matriz de evaluación de los factores internos (EFI) {tbl-colwidths="\[70,10,10,10\]"}
 
 De acuerdo con los resultados que arroja la matriz EFI observamos que la empresa tiene una estructura interna muy débil puesto que al sumar todos los criterios internos nos arroja un promedio de 2.6, lo que nos muestra que está por encima de la suma promedio. Quiere decir que se está planteando estrategias que ayuden a fortalecer la estructura interna de la organización.
 
@@ -260,30 +262,30 @@ Según se aprecia en la Tabla 2.4., en el análisis de la MEFE se obtuvo como re
 
 **Aplicación de evaluación de los factores externos (matriz EFE)**
 
-| **Factores determinantes de éxito**                                                                                              | **Peso** | **Valor** | **Pond.** |
-| -------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: | :-------: |
-| **Fortalezas**                                                                                                                   |          |           |           |
-| Posicionamiento de los productos acuícolas en el mercado local e internacional.                                                  |   0,08   |     4     |   0,32    |
-| Expansión del mercado con demanda de productos saludables y sostenibles como los de origen acuícola                              |   0,08   |     4     |   0,32    |
-| La producción acuícola favorece la diversificación de la economía regional                                                       |   0,07   |     3     |   0,21    |
-| Disponibilidad de recursos hídricos y diversidad geográfica potencia el desarrollo de acuicultura.                               |   0,09   |     4     |   0,36    |
-| Diversidad de especies nativas con potencial para practicar su cultivo.                                                          |   0,07   |     3     |   0,21    |
-| Incentivos para empresas que desean exportar, inicien el proceso de modernización tecnológica, adecuación ambiental y sanitaria. |   0,06   |     3     |   0,18    |
-| Bajo costo de mano de obra.                                                                                                      |   0,05   |     3     |   0,15    |
-| Mercado interno con potencial de crecimiento.                                                                                    |   0,06   |     4     |   0,24    |
-| **Subtotal fortalezas**                                                                                                          | **0,56** |           | **1,99**  |
-| **Debilidades**                                                                                                                  |          |           |           |
-| Poca diversificación de especies cultivadas y mercados.                                                                          |   0,07   |     1     |   0,07    |
-| Débil promoción del consumo y producción de productos acuícolas.                                                                 |   0,05   |     2     |    0,1    |
-| Baja inversión en I&D                                                                                                            |   0,04   |     1     |   0,04    |
-| Deficiente infraestructura en toda la cadena de producción y comercialización.                                                   |   0,06   |     2     |   0,12    |
-| Incipiente tecnología que impide la identificación de nuevas especies y el desarrollo de nuevas técnicas de cultivo.             |   0,06   |     2     |   0,12    |
-| Falta de personal, profesional y técnico, calificado en producción acuícola                                                      |   0,07   |     1     |   0,07    |
-| No existe difusión de la Responsabilidad Social Empresaria en la cadena acuícola.                                                |   0,09   |     1     |   0,09    |
-| **Subtotal debilidades**                                                                                                         | **0,44** |           | **0,61**  |
-| **Total**                                                                                                                        |  **1**   |           |  **2,6**  |
+| **Factores determinantes de éxito** | **Peso** | **Valor** | **Pond.** |
+|----------------------|:---------------:|:---------------:|:---------------:|
+| **Fortalezas** |  |  |  |
+| Posicionamiento de los productos acuícolas en el mercado local e internacional. | 0,08 | 4 | 0,32 |
+| Expansión del mercado con demanda de productos saludables y sostenibles como los de origen acuícola | 0,08 | 4 | 0,32 |
+| La producción acuícola favorece la diversificación de la economía regional | 0,07 | 3 | 0,21 |
+| Disponibilidad de recursos hídricos y diversidad geográfica potencia el desarrollo de acuicultura. | 0,09 | 4 | 0,36 |
+| Diversidad de especies nativas con potencial para practicar su cultivo. | 0,07 | 3 | 0,21 |
+| Incentivos para empresas que desean exportar, inicien el proceso de modernización tecnológica, adecuación ambiental y sanitaria. | 0,06 | 3 | 0,18 |
+| Bajo costo de mano de obra. | 0,05 | 3 | 0,15 |
+| Mercado interno con potencial de crecimiento. | 0,06 | 4 | 0,24 |
+| **Subtotal fortalezas** | **0,56** |  | **1,99** |
+| **Debilidades** |  |  |  |
+| Poca diversificación de especies cultivadas y mercados. | 0,07 | 1 | 0,07 |
+| Débil promoción del consumo y producción de productos acuícolas. | 0,05 | 2 | 0,1 |
+| Baja inversión en I&D | 0,04 | 1 | 0,04 |
+| Deficiente infraestructura en toda la cadena de producción y comercialización. | 0,06 | 2 | 0,12 |
+| Incipiente tecnología que impide la identificación de nuevas especies y el desarrollo de nuevas técnicas de cultivo. | 0,06 | 2 | 0,12 |
+| Falta de personal, profesional y técnico, calificado en producción acuícola | 0,07 | 1 | 0,07 |
+| No existe difusión de la Responsabilidad Social Empresaria en la cadena acuícola. | 0,09 | 1 | 0,09 |
+| **Subtotal debilidades** | **0,44** |  | **0,61** |
+| **Total** | **1** |  | **2,6** |
 
-: Matriz de evaluación de los factores externos {tbl-colwidths="[70,10,10,10]"}
+: Matriz de evaluación de los factores externos {tbl-colwidths="\[70,10,10,10\]"}
 
 ## Plan estratégico
 
@@ -301,13 +303,13 @@ Producir y exportar la Trucha Arcoíris, para el consumo humano a los mercados l
 
 ### Objetivos específicos
 
-| OBJETIVOS ESPECÍFICOS                                           | ESTRATEGIA                                                                                                                                                           | INDICADOR                                        |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| OEE1. Captar clientes en EE. UU                                 | Elaborar un plan de Marketing digital y posicionar nuestra marca dentro de las redes sociales, revistas virtuales y realizar publicidades en medios estadounidenses. | Número de clientes en EE. UU                     |
-| OEE2. Incrementar contactos con potenciales importadores        | Participar de ferias internacionales donde se dé a conocer el producto                                                                                               | Número de participaciones en ferias              |
-| OEE3. Crear alianzas estratégicas con proveedores               | Contactar a los proveedores de materia prima y establecer relaciones                                                                                                 | Número de proveedores contactados                |
-| OEE4. Ofrecer productos de calidad                              | Establecer una producción bajo los estándares de calidad internacional y participar en diferentes conferencias que ayuden a mejorar la calidad de nuestro producto   | Números de certificaciones                       |
-| OEE5. Hacer conocer nuestro producto como saludable y ecológico | Realizar una campaña de publicidad acerca de los beneficios de nuestro producto y resaltarlos en el etiquetado de este.                                              | \% de compradores que prefieren nuestro producto |
+| OBJETIVOS ESPECÍFICOS | ESTRATEGIA | INDICADOR |
+|-------------------|-----------------------------------|-------------------|
+| OEE1. Captar clientes en EE. UU | Elaborar un plan de Marketing digital y posicionar nuestra marca dentro de las redes sociales, revistas virtuales y realizar publicidades en medios estadounidenses. | Número de clientes en EE. UU |
+| OEE2. Incrementar contactos con potenciales importadores | Participar de ferias internacionales donde se dé a conocer el producto | Número de participaciones en ferias |
+| OEE3. Crear alianzas estratégicas con proveedores | Contactar a los proveedores de materia prima y establecer relaciones | Número de proveedores contactados |
+| OEE4. Ofrecer productos de calidad | Establecer una producción bajo los estándares de calidad internacional y participar en diferentes conferencias que ayuden a mejorar la calidad de nuestro producto | Números de certificaciones |
+| OEE5. Hacer conocer nuestro producto como saludable y ecológico | Realizar una campaña de publicidad acerca de los beneficios de nuestro producto y resaltarlos en el etiquetado de este. | \% de compradores que prefieren nuestro producto |
 
 : Tabla de objetivos, estrategias e indicadores.
 
@@ -317,21 +319,21 @@ Producir y exportar la Trucha Arcoíris, para el consumo humano a los mercados l
 
 ![Organigrama de la empresa AQUAZUL](index_files/figure-html/lu137401d6rd_tmp_eddade33.png)
 
-a) **Área: Gerencia general**
+a)  **Área: Gerencia general**
 
 **Gerente General:** Será el que representa, imagen y encargado de administrar el funcionamiento y desarrollo de manera eficiente la empresa.
 
-b) **Área: Contabilidad**
+b)  **Área: Contabilidad**
 
 **Contador:** Dirigir las operaciones relacionadas con la Contabilidad General y planificar actividades necesarias para el cierre oportuno de la información contable.
 
-c) **Área: Departamento de operaciones**
+c)  **Área: Departamento de operaciones**
 
 **Jefe de operaciones:** Será quien se encargue de liderazgo en la gestión tanto de las materias primas y como del personal de operaciones. La supervisión del inventario, de las compras y los suministros es fundamental para el trabajo. Asimismo, elaboración de presupuestos, control de costos y el mantenimiento de la organización.
 
 **Personal de producción:** Personal encargado de la empaquetar, embalar y verificar la etapa final de la producción para que el producto esté en condiciones de comercializarse.
 
-d) **Área: Departamento de marketing y comercialización.**
+d)  **Área: Departamento de marketing y comercialización.**
 
 **Cargo: jefe de marketing y comercialización**
 
@@ -343,13 +345,13 @@ Esta persona tendrá que trabajar con bastante innovación porque debe lograr el
 
 ### Tipos de reclutamiento
 
-- ​ **Reclutamiento interno:** Se desarrollará un programa de desarrollo personal para los empleados, procesamiento y exportación de truchas.
-- **​ Reclutamiento externo:** El reclutamiento externo de personal se realizará de dos formas, el primero será mediante el uso de agencias de reclutamiento y la segunda forma será mediante carteles públicos u avisos en los periódicos.
+-   ​ **Reclutamiento interno:** Se desarrollará un programa de desarrollo personal para los empleados, procesamiento y exportación de truchas.
+-   **​ Reclutamiento externo:** El reclutamiento externo de personal se realizará de dos formas, el primero será mediante el uso de agencias de reclutamiento y la segunda forma será mediante carteles públicos u avisos en los periódicos.
 
 ### Tipos de selección
 
-- ​ Se realizará una entrevista de trabajo con prueba de conocimiento específico, porque creemos que la especialización es de primordial importancia para el mejor desenvolvimiento de las labores.
-- ​ Por último, para considerar que el postulante es apto para el puesto al que aspira se tomara una prueba psicotécnica de aptitud, esto para medir las habilidades, competencias y capacidad del postulante.
+-   ​ Se realizará una entrevista de trabajo con prueba de conocimiento específico, porque creemos que la especialización es de primordial importancia para el mejor desenvolvimiento de las labores.
+-   ​ Por último, para considerar que el postulante es apto para el puesto al que aspira se tomara una prueba psicotécnica de aptitud, esto para medir las habilidades, competencias y capacidad del postulante.
 
 ### Tipos de inducción
 
@@ -401,41 +403,41 @@ Posicionar nuestro producto con los estándares de calidad a nivel mundial, en e
 
 ## Selección del mercado objetivo
 
-| **Canales de distribución y logística exportadora**                                                                                                | **EE.UU** | **Japón** | **Canadá** |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | ---------- |
-| El conocimiento de los canales de distribución en el país objetivo es amplio                                                                       | 3         | 3         | 3          |
-| Los medios logísticos existentes permiten llegar sin mayor retraso o dificultad a este mercado                                                     | 3         | 3         | 3          |
-| Los costos de transporte no afectan significativamente las posibilidades de exportación de mi producto                                             | 2         | 2         | 2          |
-| Los requerimientos de envase y embalaje del país de destino no constituyen una dificultad a la exportación                                         | 3         | 2         | 3          |
-| Poseo suficientes experiencias en contratos de compra venta internacional y conocimiento de condiciones de pago más frecuentes en el país objetivo | 1         | 1         | 1          |
+| **Canales de distribución y logística exportadora** | **EE.UU** | **Japón** | **Canadá** |
+|-----------------------|:---------------:|:---------------:|:---------------:|
+| El conocimiento de los canales de distribución en el país objetivo es amplio | 3 | 3 | 3 |
+| Los medios logísticos existentes permiten llegar sin mayor retraso o dificultad a este mercado | 3 | 3 | 3 |
+| Los costos de transporte no afectan significativamente las posibilidades de exportación de mi producto | 2 | 2 | 2 |
+| Los requerimientos de envase y embalaje del país de destino no constituyen una dificultad a la exportación | 3 | 2 | 3 |
+| Poseo suficientes experiencias en contratos de compra venta internacional y conocimiento de condiciones de pago más frecuentes en el país objetivo | 1 | 1 | 1 |
 
-: Canales de distribución y logística exportadora {tbl-colwidths="[70,10,10,10]"}
+: Canales de distribución y logística exportadora {tbl-colwidths="\[70,10,10,10\]"}
 
-| **Intensidad de la competencia**                                                                                                                    | **EE.UU** | **Japón** | **Canadá** |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | ---------- |
-| Los productores locales no representan una fuerte competencia y no tienen una gran capacidad de influencia sobre las políticas comerciales          | 2         | 2         | 2          |
-| Los competidores externos son pocos y presentan un bajo posicionamiento en el mercado                                                               | 3         | 3         | 1          |
-| Los exportadores peruanos de mis productos son escasos y no presentan en la actualidad un posicionamiento superior al de mi empresa en este mercado | 3         | 3         | 3          |
-| Total                                                                                                                                               | 8         | 8         | 6          |
+| **Intensidad de la competencia** | **EE.UU** | **Japón** | **Canadá** |
+|-----------------------|:---------------:|:---------------:|:---------------:|
+| Los productores locales no representan una fuerte competencia y no tienen una gran capacidad de influencia sobre las políticas comerciales | 2 | 2 | 2 |
+| Los competidores externos son pocos y presentan un bajo posicionamiento en el mercado | 3 | 3 | 1 |
+| Los exportadores peruanos de mis productos son escasos y no presentan en la actualidad un posicionamiento superior al de mi empresa en este mercado | 3 | 3 | 3 |
+| **Total** | **8** | **8** | **6** |
 
-: Medición de la intensidad de la competencia {#tbl-mytable apa-note="No/Nunca = 1; Algunos/A veces = 2; Si/Siempre = 3" data-quarto-disable-processing="true"}
+: Medición de la intensidad de la competencia {#tbl-mytable apa-note="No/Nunca = 1; Algunos/A veces = 2; Si/Siempre = 3" data-quarto-disable-processing="true" tbl-colwidths="[55,15,15,15]"}
 
-| **Riesgos**                                                                                                       | **EE.UU** | **Japón** | **Canadá** |
-| ----------------------------------------------------------------------------------------------------------------- | --------- | --------- | ---------- |
-| El país no presenta riesgos desde el punto de vista socioeconómico, político legal y comercial.                   | 3         | 3         | 3          |
-| Las empresas con las que voy a negociar presentan un nivel de riesgo entre bajo y mínimo                          | 3         | 3         | 3          |
-| La percepción de la comunidad empresarial respecto a la calidad de buen pagador de las empresas del país es buena | 3         | 3         | 3          |
-| Total                                                                                                             | 9         | 9         | 9          |
+| **Riesgos** | **EE.UU** | **Japón** | **Canadá** |
+|----------------------|:---------------:|:---------------:|:---------------:|
+| El país no presenta riesgos desde el punto de vista socioeconómico, político legal y comercial. | 3 | 3 | 3 |
+| Las empresas con las que voy a negociar presentan un nivel de riesgo entre bajo y mínimo | 3 | 3 | 3 |
+| La percepción de la comunidad empresarial respecto a la calidad de buen pagador de las empresas del país es buena | 3 | 3 | 3 |
+| **Total** | **9** | **9** | **9** |
 
 : Medición de riesgo {#tbl-mytable apa-note="No/Nunca = 1; Algunos/A veces = 2; Si/Siempre = 3" data-quarto-disable-processing="true"}
 
-| **Distancia Sicológica**                                                                                | **EE.UU** | **Japón** | **Canadá** |
-| ------------------------------------------------------------------------------------------------------- | --------- | --------- | ---------- |
-| mi empresa tiene experiencia en el mercado                                                              | 1         | 1         | 1          |
-| Existe afinidad cultural y buena comunicación con la comunidad empresarial de este país                 | 3         | 2         | 3          |
-| mi empresa cuanta con contactos de negocios previamente establecidos                                    | 2         | 2         | 2          |
-| Mi producto puede ser adaptado a los requerimientos del mercado, de ser necesario, sin mayor dificultad | 3         | 2         | 3          |
-| Total                                                                                                   | 9         | 7         | 9          |
+| **Distancia Sicológica** | **EE.UU** | **Japón** | **Canadá** |
+|----------------------|:---------------:|:---------------:|:---------------:|
+| mi empresa tiene experiencia en el mercado | 1 | 1 | 1 |
+| Existe afinidad cultural y buena comunicación con la comunidad empresarial de este país | 3 | 2 | 3 |
+| mi empresa cuanta con contactos de negocios previamente establecidos | 2 | 2 | 2 |
+| Mi producto puede ser adaptado a los requerimientos del mercado, de ser necesario, sin mayor dificultad | 3 | 2 | 3 |
+| **Total** | **9** | **7** | **9** |
 
 : Medición de la distancia sicológica {#tbl-mytable apa-note="No/Nunca = 1; Algunos/A veces = 2; Si/Siempre = 3" data-quarto-disable-processing="true"}
 
@@ -461,35 +463,35 @@ Al aplicar el test de selección el país que obtuvo el mayor puntaje es EE.UU, 
 
 ## Ficha país
 
-|                                | FICHA PAÍS: ESTADOS UNIDOS DE AMÉRICA                                                                                                                                                                                 |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Área:**                      | 9 826 675 km2                                                                                                                                                                                                         |
-| **Capital:**                   | Washington D.C                                                                                                                                                                                                        |
-| **Ciudades importantes:**      | 18.804 millones Nueva York-Newark, 12.447 millones Los Ángeles-Long Beach-Santa Ana, 8.865 millones Chicago, 6.371 millones Houston, 6.301 millones Dallas-Fort Worth, 5.322 millones WASHINGTON, DC (capital) (2020) |
-| **Población:**                 | 329,278 864                                                                                                                                                                                                           |
-| **Idioma oficial:**            | No tiene idioma oficial, pero el inglés ha adquirido status oficial en 31 de los 50 estados.                                                                                                                          |
-| **Ubicación geográfica**       | Norte América, bordea el Norte de los Océanos Atlántico y Pacifico, entre Canadá y México.                                                                                                                            |
-| **Organización territorial:**  | 50 estados y 1 distrito.                                                                                                                                                                                              |
-| **PBI:**                       | \$ 19,49 billones (2019)                                                                                                                                                                                              |
-| **PBI per cápita:**            | \$ 59.800 (2019)                                                                                                                                                                                                      |
-| **Tasa de crecimiento anual:** | 0,72% (2019)                                                                                                                                                                                                          |
-| **Moneda:**                    | Dólar estadounidense                                                                                                                                                                                                  |
-| **Clima:**                     | Es muy variado, depende de la estación y de la ubicación.                                                                                                                                                             |
-| **Voltaje:**                   | 110 voltios                                                                                                                                                                                                           |
-| **Pesos y medidas:**           | Libras, onzas, pulgadas, yardas, millas.                                                                                                                                                                              |
-| **Días festivos:**             | 1 de enero, 20 de enero, 17 de febrero, 31 de marzo, 5 de mayo, 26 de mayo, 4 de julio, 1 de setiembre, 13 de octubre, 11 de noviembre, 27 de noviembre y 25 de diciembre.                                            |
-| **Códigos telefónicos:**       | 00 + 1 + Ciudad + Número                                                                                                                                                                                              |
+|   | FICHA PAÍS: ESTADOS UNIDOS DE AMÉRICA |
+|---------------------|---------------------------------------------------|
+| **Área:** | 9 826 675 km2 |
+| **Capital:** | Washington D.C |
+| **Ciudades importantes:** | 18.804 millones Nueva York-Newark, 12.447 millones Los Ángeles-Long Beach-Santa Ana, 8.865 millones Chicago, 6.371 millones Houston, 6.301 millones Dallas-Fort Worth, 5.322 millones WASHINGTON, DC (capital) (2020) |
+| **Población:** | 329,278 864 |
+| **Idioma oficial:** | No tiene idioma oficial, pero el inglés ha adquirido status oficial en 31 de los 50 estados. |
+| **Ubicación geográfica** | Norte América, bordea el Norte de los Océanos Atlántico y Pacifico, entre Canadá y México. |
+| **Organización territorial:** | 50 estados y 1 distrito. |
+| **PBI:** | \$ 19,49 billones (2019) |
+| **PBI per cápita:** | \$ 59.800 (2019) |
+| **Tasa de crecimiento anual:** | 0,72% (2019) |
+| **Moneda:** | Dólar estadounidense |
+| **Clima:** | Es muy variado, depende de la estación y de la ubicación. |
+| **Voltaje:** | 110 voltios |
+| **Pesos y medidas:** | Libras, onzas, pulgadas, yardas, millas. |
+| **Días festivos:** | 1 de enero, 20 de enero, 17 de febrero, 31 de marzo, 5 de mayo, 26 de mayo, 4 de julio, 1 de setiembre, 13 de octubre, 11 de noviembre, 27 de noviembre y 25 de diciembre. |
+| **Códigos telefónicos:** | 00 + 1 + Ciudad + Número |
 
 : Ficha país de Estados Unidos de Norteamérica {#tbl-mytable apa-note="The World Fatbook-CIA" data-quarto-disable-processing="true"}
 
 ## Exigencias del producto
 
-| **Exigencia del producto:**                                  | Filete de trucha                                                                                                                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **En el mercado de:**                                        | Estados Unidos de América.                                                                                                                                                |
+| **Exigencia del producto:** | Filete de trucha |
+|------------------------|------------------------------------------------|
+| **En el mercado de:** | Estados Unidos de América. |
 | **Acuerdos comerciales- Arancel- Preferencias arancelarias** | Estados unidos otorga preferencia arancelaria con un arancel del 0%, Por el tratado de libre comercio EE. UU-Perú. El Acuerdo de Promoción Comercial (APC) Perú – EE. UU. |
-| **Denominación de origen:**                                  | No cuenta con denominación de origen.                                                                                                                                     |
-| **Normas de empaque:**                                       | Se aplicará la ley sobre etiquetado de productos nutritivos y educación (NLEA)                                                                                            |
+| **Denominación de origen:** | No cuenta con denominación de origen. |
+| **Normas de empaque:** | Se aplicará la ley sobre etiquetado de productos nutritivos y educación (NLEA) |
 
 : Exigencias del producto a exportar {#tbl-mytable apa-note="Ministerio de Comercio Exterior y Turismo (2019), Ministerio de La Producción (2019), FDA." data-quarto-disable-processing="true"}
 
@@ -507,16 +509,16 @@ No existen barreras pararancelarias que impidan o compliquen la exportación de 
 
 Los componentes principales en la distribución del producto serán los siguientes:
 
-| COMPONENTE                 | DESCRIPCIÓN                                                                                                                                                                                                                                                                                                       |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Exportador                 | Dueño del producto de la empresa exportadora, en este caso es la empresa exportadora de trucha fresca y congelada Aquazul.                                                                                                                                                                                        |
-| Distribuidor a mayorista   | El exportador seguirá siendo responsable por los defectos o daños causados por los productos, pero el distribuidor será responsable ante la aduana y en general ante las autoridades americanas una vez que la mercancía haya sido nacionalizada. La empresa o el supermercado mayorista será New Atlantic S.A.C. |
-| Detallista o minorista     | Serán los minimarkets estadounidenses, este se encargará de la compra de mercancías para su reventa y la exhibición de la misma. Adquirirá los productos directamente a la empresa distribuidora New Atlantic S.A.C.                                                                                              |
-| Usuario o consumidor final | La persona final de la cadena de distribución serán las familias estadounidenses de aquellos lugares donde New Atlantic S.A.C. tenga sucursales.                                                                                                                                                                  |
+| COMPONENTE | DESCRIPCIÓN |
+|---------------------|---------------------------------------------------|
+| Exportador | Dueño del producto de la empresa exportadora, en este caso es la empresa exportadora de trucha fresca y congelada Aquazul. |
+| Distribuidor a mayorista | El exportador seguirá siendo responsable por los defectos o daños causados por los productos, pero el distribuidor será responsable ante la aduana y en general ante las autoridades americanas una vez que la mercancía haya sido nacionalizada. La empresa o el supermercado mayorista será New Atlantic S.A.C. |
+| Detallista o minorista | Serán los minimarkets estadounidenses, este se encargará de la compra de mercancías para su reventa y la exhibición de la misma. Adquirirá los productos directamente a la empresa distribuidora New Atlantic S.A.C. |
+| Usuario o consumidor final | La persona final de la cadena de distribución serán las familias estadounidenses de aquellos lugares donde New Atlantic S.A.C. tenga sucursales. |
 
 : Composición y descripción de los actores de la cadena distributiva
 
-El canal de distribución de la empresa Aquazul será por medio del _canal mayorista o canal cuatro_ ya que la trucha ira del productor, a manos del mayorista o distribuidor, luego pasará por un minorista o detallista para llegar al consumidor final o usuario, de la siguiente forma:
+El canal de distribución de la empresa Aquazul será por medio del *canal mayorista o canal cuatro* ya que la trucha ira del productor, a manos del mayorista o distribuidor, luego pasará por un minorista o detallista para llegar al consumidor final o usuario, de la siguiente forma:
 
 Exportador---------\> Distribuidor--------\> Minorista---------\> Usuario
 
@@ -540,47 +542,47 @@ El punto de origen o el aeropuerto de origen para él envió será desde Lima (J
 
 El objetivo de esta sección es presentar la demanda de trucha para los 5 próximos años, usando métodos estadísticos. Eso nos permitirá determinar cómo evolucionará el mercado de la trucha en Estados Unidos asimismo planificar en el largo plazo las oportunidades para nuestra empresa.
 
-a) Demanda de productos sustitutos:
+a)  Demanda de productos sustitutos:
 
 El salmón que es directamente un sustituto de la trucha del otro lado, tenemos los productos de comida marítima en lata que es una forma de consumo muy importante en los hábitos de consumo de los estadounidenses.
 
-- ​ _El salmón:_ La buena noticia es que el salmón ha ido escalando paulatinamente hasta sentarse en el segundo lugar de los productos del mar más importados por la nación norteamericana.
+-   ​ *El salmón:* La buena noticia es que el salmón ha ido escalando paulatinamente hasta sentarse en el segundo lugar de los productos del mar más importados por la nación norteamericana.
 
 En los últimos años el consumo de salmón ha sido como la mostrada en la tabla 3.11.
 
 | AÑO  | CANTIDAD |
-| ---- | -------- |
-| 2009 | 3.554    |
-| 2010 | 3.814    |
-| 2011 | 4.085    |
-| 2012 | 4.369    |
-| 2013 | 4.664    |
-| 2014 | 4.972    |
-| 2015 | 5.291    |
-| 2016 | 5.622    |
-| 2017 | 5.965    |
-| 2018 | 6.32     |
-| 2019 | 6.687    |
+|:----:|:--------:|
+| 2009 |  3.554   |
+| 2010 |  3.814   |
+| 2011 |  4.085   |
+| 2012 |  4.369   |
+| 2013 |  4.664   |
+| 2014 |  4.972   |
+| 2015 |  5.291   |
+| 2016 |  5.622   |
+| 2017 |  5.965   |
+| 2018 |   6.32   |
+| 2019 |  6.687   |
 
 : Consumo per cápita de salmón 2009-2019 (En libras)
 
-- ​ _Comida marítima en lata_: el atún y sus productos derivados se ubicaron en un tercer lugar, con US\$1.570 millones y 385.825 toneladas; mientras que la tilapia se escaló hasta el cuarto puesto, al significar US\$673 millones y 172.546 toneladas.
+-   ​ *Comida marítima en lata*: el atún y sus productos derivados se ubicaron en un tercer lugar, con US\$1.570 millones y 385.825 toneladas; mientras que la tilapia se escaló hasta el cuarto puesto, al significar US\$673 millones y 172.546 toneladas.
 
-  ![Productos sustitutos de la trucha en el mercado norteamericano](index_files/figure-html/lu137401d6rd_tmp_8ae05c66.png)
+    ![Productos sustitutos de la trucha en el mercado norteamericano](index_files/figure-html/lu137401d6rd_tmp_8ae05c66.png)
 
-b) Selección del método de proyección:
+b)  Selección del método de proyección:
 
 Los datos reales de importación obtenidos del Global Aquaculture Alliance que se procesaran han sido ingresados al software estadístico Minitab, a los cuales se les sometió a 6 de los modelos de proyección de series de tiempo, resultando con menor error MAD el análisis de tendencia cuadrática.
 
 El objetivo de la identificación de la información histórica es determinar un patrón básico en su comportamiento, que permita la proyección futura de la variable deseada.
 
 | AÑO  | PRONÓSTICO DE IMPORTACIONES EN Kg. |
-| ---- | ---------------------------------- |
-| 2021 | 5465129                            |
-| 2022 | 5637880                            |
-| 2023 | 5810631                            |
-| 2024 | 5983383                            |
-| 2025 | 6156134                            |
+|:----:|:----------------------------------:|
+| 2021 |              5465129               |
+| 2022 |              5637880               |
+| 2023 |              5810631               |
+| 2024 |              5983383               |
+| 2025 |              6156134               |
 
 : Proyección de las importaciones de trucha a EE. UU (Solo filete y trucha entera congelada)
 
@@ -611,7 +613,7 @@ Los estadounidenses se muestran cada vez más preocupados por los ingredientes d
 ### Medición de mercado
 
 | Producción TM             | 24233 |
-| ------------------------- | ----- |
+|:--------------------------|:-----:|
 | Importaciones (+) TM      | 5016  |
 | Exportaciones (-) TM      | 1458  |
 | Consumo Aparente (C.A) TM | 27791 |
@@ -620,25 +622,25 @@ Los estadounidenses se muestran cada vez más preocupados por los ingredientes d
 
 Esta tabla muestra el consumo aparente de trucha en el mercado estadounidense, el cual se ha encontrado considerando la producción nacional más las importaciones menos las exportaciones, quedando como resultado un consumo aparente de **27,791 TM** al año.
 
-| Consumo Aparente (C.A) TM           | 27791     |
-| ----------------------------------- | --------- |
+| Consumo Aparente (C.A) TM           |   27791   |
+|-------------------------------------|:---------:|
 | Población EE.UU. De 18 a más (2017) | 252063800 |
-| Consumo per cápita TM               | 0         |
-| Consumo per cápita por Kg           | 0.11      |
+| Consumo per cápita TM               |     0     |
+| Consumo per cápita por Kg           |   0.11    |
 
 : Consumo per - cápita
 
 | Método de la razón de la cadena |                |
-| ------------------------------- | -------------- |
-| Q (\$) = n*p*q                  | \$30,470,049   |
-| Q (Kg) = n\*q                   | 2313595        |
-| Q (TM) = Q(Kg)/1000             | 2313.6         |
-| \% de mercado a conquistar      | 0.45 %         |
-| Demanda del mercado (Kg/año)    | 10353          |
-| (Kg/mes)                        | 863            |
-| (TM/año)                        | 10.4           |
-| (TM/mes)                        | 0.86           |
-| Dda. Anual en Dólares           | \$ 136,353     |
+|---------------------------------|:--------------:|
+| Q (\$) = n*p*q                  |  \$30,470,049  |
+| Q (Kg) = n\*q                   |    2313595     |
+| Q (TM) = Q(Kg)/1000             |     2313.6     |
+| \% de mercado a conquistar      |     0.45 %     |
+| Demanda del mercado (Kg/año)    |     10353      |
+| (Kg/mes)                        |      863       |
+| (TM/año)                        |      10.4      |
+| (TM/mes)                        |      0.86      |
+| Dda. Anual en Dólares           |   \$ 136,353   |
 | Demanda Anual en Soles          | S/. 449,966.45 |
 
 : Razón de la cadena
@@ -665,11 +667,11 @@ La tabla muestra la demanda anual de trucha en el mercado estadounidense, para e
 
 ### Mix de marketing
 
-- ​ **Producto**
+-   ​ **Producto**
 
 La trucha es un alimento de alto valor nutritivo para el ser humano en todas sus etapas de desarrollo, especialmente durante la formación de un nuevo ser y las primeras etapas de su crecimiento. Es una fuente rica en componentes minerales como el calcio, fósforo, sodio y potasio. Contiene omega 3 para el correcto funcionamiento de las actividades cerebrales, capacidad del aprendizaje, reduce la viscosidad de la sangre, controla los niveles de colesterol y de grasa, mejora la función del sistema inmunológico.
 
-- ​ **Precio**
+-   ​ **Precio**
 
 El precio final de exportación de los filetes de trucha de 1000 gr. será de US\$ 8.40. En este, se considera que el mercado de Estados Unidos registra una alta preferencia por productos nutritivos y saludables.
 
@@ -677,21 +679,21 @@ Para poder llegar a este precio sugerido en el punto de venta, nuestra empresa t
 
 Precio FCA Callao: US\$ 8.40 y forma de pago: carta de crédito confirmada irrevocable
 
-- ​ **Plaza**
+-   ​ **Plaza**
 
 El canal de distribución que se va a utilizar será indirecto, conformado por el productor, exportador, supermercados y el consumidor final.
 
-- ​ **Promoción**
+-   ​ **Promoción**
 
 Para dar a conocer nuestro producto se va a participar en ferias, también se va a crear una página web, en la cual los consumidores podrán verificar la información acerca de la procedencia del producto, propiedades, beneficios, atributos, recetas, entre otros.
 
 ### Presupuesto de marketing
 
 | GASTO EN PUBLICIDAD MENSUAL     | 2183328  |
-| ------------------------------- | -------- |
+|---------------------------------|:--------:|
 | GASTO ANUAL                     | 26199936 |
-| INGRESO POR VENTA ANUAL         | 727776   |
-| GASTO EN MARKETING SOBRE VENTAS | 0,3%     |
+| INGRESO POR VENTA ANUAL         |  727776  |
+| GASTO EN MARKETING SOBRE VENTAS |   0,3%   |
 
 : Gasto en marketing con respecto a los ingresos por ventas anuales
 
@@ -703,14 +705,14 @@ En lo que respecta a Marketing se va a invertir el 0,3% con respecto a los ingre
 
 ### Insumos
 
-| **Partida arancelaria:**        | 304420000                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Nombre científico:**          | Oncorhynchus mykiss                                                                                                                                                                                                                                                                                                                    |
-| **Ventana comercial**           | Venta de todo el año                                                                                                                                                                                                                                                                                                                   |
-| **Descripción**                 | Filetes frescos o refrigerados de truchas.                                                                                                                                                                                                                                                                                             |
-| **Presentación**                | Filetes frescos o refrigerados de truchas empacados al vacío en paquetes de 500g cada uno.                                                                                                                                                                                                                                             |
-| Características fisicoquímicas: | Composición por 100 gramos por porción comestible - Calorías 89,8 - Grasas (g) 3.0 - Magnesio (mg) 28.0 - Fósforo (mg) 250 - Proteínas (g) 19,7 - Hiero (mg) 1,0 - Potasio (mg) 250 - Zinc (mg) 0,8                                                                                                                                    |
-| **Comentarios:**                | La trucha es muy consumida por el ser humano debido a los grandes beneficios que nos puede aportar, entre los que destacan: disminuye el sobrepeso, es buena para personas con hipertensión arterial ya que tiene poca sal, y además es perfecta para una dieta siempre y cuando esta sea combinada con un poco de ejercicios diarios. |
+| **Partida arancelaria:** | 304420000 |
+|---------------------|:--------------------------------------------------|
+| **Nombre científico:** | Oncorhynchus mykiss |
+| **Ventana comercial** | Venta de todo el año |
+| **Descripción** | Filetes frescos o refrigerados de truchas. |
+| **Presentación** | Filetes frescos o refrigerados de truchas empacados al vacío en paquetes de 500g cada uno. |
+| **Características fisicoquímicas:** | Composición por 100 gramos por porción comestible - Calorías 89,8 - Grasas (g) 3.0 - Magnesio (mg) 28.0 - Fósforo (mg) 250 - Proteínas (g) 19,7 - Hiero (mg) 1,0 - Potasio (mg) 250 - Zinc (mg) 0,8 |
+| **Comentarios** | La trucha es muy consumida por el ser humano debido a los grandes beneficios que nos puede aportar, entre los que destacan: disminuye el sobrepeso, es buena para personas con hipertensión arterial ya que tiene poca sal, y además es perfecta para una dieta siempre y cuando esta sea combinada con un poco de ejercicios diarios. |
 
 : Ficha de insumo producto {#tbl-mytable2 apa-note="Ministerio de comercio exterior y turismo" data-quarto-disable-processing="true"}
 
@@ -718,27 +720,27 @@ En lo que respecta a Marketing se va a invertir el 0,3% con respecto a los ingre
 
 ## Cadena de producción
 
-| Descripción                                                                                                                                                                                                                                                                                                                                                                        | Colaboradores | Tiempo                     | Recursos                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | -------------------------- | ------------------------------- |
-| 1\. Se compra la trucha a loa Distritos.                                                                                                                                                                                                                                                                                                                                           | 1             | 1 hora                     | centro de Producción            |
-| 2\. Se recepciona el producto en planta de procesamiento, verificando su tamaño y peso.                                                                                                                                                                                                                                                                                            | 2             | 1 hora                     | Canastas /Jabas, balanza        |
-| 3\. Se clasifica el producto por peso y tamaño                                                                                                                                                                                                                                                                                                                                     | 1             | 2 horas                    | Canastas /Jabas                 |
-| 4\. El pescado es lavado con abundante agua potable libre de contaminación y descamado con escobillas, eliminando posibles sangrados, mucosidad y mejorando la apariencia del producto                                                                                                                                                                                             | 2             | 2 a 3 horas                | Descamador manual, tabla y agua |
-| 5. La trucha es eviscerada efectuando un corte ventral hasta la abertura anal, con la finalidad de permitir el fácil acceso a la cavidad abdominal para una completa eliminación del estómago y los restos de vísceras. El descabezado se realiza con un corte perpendicular a la espina dorsal, en forma recta, pasando por la zona donde roza el borde más extremo del opérculo. | 2             |                            | cuchillo y agua                 |
-| 6\. se retiran todos los huesos pequeños que tiene la trucha                                                                                                                                                                                                                                                                                                                       | 2             |                            | cuchillo, agua y tabla          |
-| 7\. se procede a filetear el producto en pequeños cortes de 500 gr cada uno                                                                                                                                                                                                                                                                                                        | 2             | 1 hora                     | Cuchillos                       |
-| 8\. La trucha eviscerada, descabezada y fileteada es lavada con abundante agua potable, limpiando escrupulosamente la masa muscular eliminando toda la sangre y posibles restos de intestinos u otros residuos.                                                                                                                                                                    | 2             | 1 hora                     | Agua y tinas de metal           |
-| 9\. Se pesa el producto, se envasa en bolsas de polietileno y se sella para ser refrigerado.                                                                                                                                                                                                                                                                                       | 1             | 1 horas                    | Bolsas de polietileno           |
-| 10\. Se refrigera el producto para luego ser empacado y almacenado.                                                                                                                                                                                                                                                                                                                | 2             | 3 a 4 días                 | Cámara de congelación           |
-| 11\. Se empaca el producto                                                                                                                                                                                                                                                                                                                                                         | 2             | 5 horas                    | Cajas de cartón corrugado       |
-| 12\. Se almacena para luego ser exportado.                                                                                                                                                                                                                                                                                                                                         | 2             | 1 hora                     |                                 |
-| **Total, de colaboradores.**                                                                                                                                                                                                                                                                                                                                                       | **6**         | **3 a 4 días + 16 horas.** |                                 |
+| Descripción | Colaboradores | Tiempo | Recursos |
+|-----------------------|:---------------:|-----------------|-----------------|
+| 1\. Se compra la trucha a loa Distritos. | 1 | 1 hora | Centro de Producción |
+| 2\. Se recepciona el producto en planta de procesamiento, verificando su tamaño y peso. | 2 | 1 hora | Canastas /Jabas, balanza |
+| 3\. Se clasifica el producto por peso y tamaño | 1 | 2 horas | Canastas /Jabas |
+| 4\. El pescado es lavado con abundante agua potable libre de contaminación y descamado con escobillas, eliminando posibles sangrados, mucosidad y mejorando la apariencia del producto | 2 | 2 a 3 horas | Descamador manual, tabla y agua |
+| 5\. La trucha es eviscerada efectuando un corte ventral hasta la abertura anal, con la finalidad de permitir el fácil acceso a la cavidad abdominal para una completa eliminación del estómago y los restos de vísceras. El descabezado se realiza con un corte perpendicular a la espina dorsal, en forma recta, pasando por la zona donde roza el borde más extremo del opérculo. | 2 |  | Cuchillo y agua |
+| 6\. se retiran todos los huesos pequeños que tiene la trucha | 2 |  | Cuchillo, agua y tabla |
+| 7\. se procede a filetear el producto en pequeños cortes de 500 gr cada uno | 2 | 1 hora | Cuchillos |
+| 8\. La trucha eviscerada, descabezada y fileteada es lavada con abundante agua potable, limpiando escrupulosamente la masa muscular eliminando toda la sangre y posibles restos de intestinos u otros residuos. | 2 | 1 hora | Agua y tinas de metal |
+| 9\. Se pesa el producto, se envasa en bolsas de polietileno y se sella para ser refrigerado. | 1 | 1 horas | Bolsas de polietileno |
+| 10\. Se refrigera el producto para luego ser empacado y almacenado. | 2 | 3 a 4 días | Cámara de congelación |
+| 11\. Se empaca el producto | 2 | 5 horas | Cajas de cartón corrugado |
+| 12\. Se almacena para luego ser exportado. | 2 | 1 hora |  |
+| **Total, de colaboradores.** | **6** | **3 a 4 días + 16 horas.** |  |
 
-: Descripción de los procesos productivos para elaboración de filete de trucha {tbl-colwidths="[55,15,15,15]"}
+: Descripción de los procesos productivos para elaboración de filete de trucha {tbl-colwidths="\[55,15,15,15\]"}
 
 **Figura 4.1.**
 
-_Flujo del proceso productivo._
+*Flujo del proceso productivo.*
 
 ​Adquisición de la trucha
 
@@ -774,60 +776,60 @@ Se ha considerado un incremento en la producción de 5% anual, durante los prime
 
 ### Materia prima
 
-| **CONCEPTO**                       | **AÑOS**       |                |                |                |                |
-| ---------------------------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
-|                                    | **1**          | **2**          | **3**          | **4**          | **5**          |
-| I. COSTOS DIRECTOS                 | 339.050,00     | 357.327,50     | 374.943,88     | 393.441,07     | 412.863,12     |
-| Compra de trucha al por mayor      | 300.000,00     | 315.000,00     | 330.750,00     | 347.287,50     | 364.651,88     |
-| Compra de hielo en escamas         | 1.050,00       | 1.102,50       | 1.157,63       | 1.215,51       | 1.276,28       |
-| Bolsas para empaques con impresión | 2.000,00       | 2.100,00       | 2.205,00       | 2.315,25       | 2.431,01       |
-| Mano de obra directa               | 32.500,00      | 34.125,00      | 35.831,25      | 37.622,81      | 39.503,95      |
-| Otros costos directos              | 3.500,00       | 5.000,00       | 5.000,00       | 5.000,00       | 5.000,00       |
-| II\. COSTOS INDIRECTOS             | 21.080,00      | 22.134,00      | 23.240,70      | 24.402,74      | 25.622,87      |
-| Mano de obra indirecta             | 10.680,00      | 11.214,00      | 11.774,70      | 12.363,44      | 12.981,61      |
-| Otros costos indirectos            | 10.400,00      | 10.920,00      | 11.466,00      | 12.039,30      | 12.641,27      |
-| **TOTAL COSTOS DE PRODUCCIÓN**     | **360.130,00** | **379.461,50** | **398.184,58** | **417.843,80** | **438.485,99** |
+| **CONCEPTO** | **AÑOS** |   |   |   |   |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  | **1** | **2** | **3** | **4** | **5** |
+| **I. COSTOS DIRECTOS** | **339.050,00** | **357.327,50** | **374.943,88** | **393.441,07** | **412.863,12** |
+| Compra de trucha al por mayor | 300.000,00 | 315.000,00 | 330.750,00 | 347.287,50 | 364.651,88 |
+| Compra de hielo en escamas | 1.050,00 | 1.102,50 | 1.157,63 | 1.215,51 | 1.276,28 |
+| Bolsas para empaques con impresión | 2.000,00 | 2.100,00 | 2.205,00 | 2.315,25 | 2.431,01 |
+| Mano de obra directa | 32.500,00 | 34.125,00 | 35.831,25 | 37.622,81 | 39.503,95 |
+| Otros costos directos | 3.500,00 | 5.000,00 | 5.000,00 | 5.000,00 | 5.000,00 |
+| **II. COSTOS INDIRECTOS** | **21.080,00** | **22.134,00** | **23.240,70** | **24.402,74** | **25.622,87** |
+| Mano de obra indirecta | 10.680,00 | 11.214,00 | 11.774,70 | 12.363,44 | 12.981,61 |
+| Otros costos indirectos | 10.400,00 | 10.920,00 | 11.466,00 | 12.039,30 | 12.641,27 |
+| **TOTAL COSTOS DE PRODUCCIÓN** | **360.130,00** | **379.461,50** | **398.184,58** | **417.843,80** | **438.485,99** |
 
-: Cuadro de Costos de Producción {tbl-colwidths="[30,14,14,14,14,14]"}
+: Cuadro de Costos de Producción {tbl-colwidths="\[30,14,14,14,14,14\]"}
 
 La tabla 4.3 muestra los costos de producción en los que la empresa incurre. Se ha tenido en cuenta el incremento de 5% de producción anual para los años proyectados, donde se ha considerado como materia prima la trucha viva que se va a comprar de los centros productivos de la región a un precio de S/.10.00 el kg, comprando un promedio mensual de 2,500 kg de trucha viva o 30,000 kg al año, lo que en promedio cuesta S/ 300,000; también se ha considerado como materia prima el empaque a utilizar para comercializar la trucha en el mercado estadounidense, en la que se incluye. Cajas de Tecnoport, cajas de cartón (228 Uds. anual), etiquetas especiales de exportación (18642 Uds. Anual), Gel pack (9,600 Uds.) y bolsas de polietileno (18648 unidades, dado que por cada kg se necesita 2 bolsas) en a que se va envasar el filete de trucha refrigerado, el monto de los costos totales para los años 1, 2, 3,4 y 5 están mostrados en la tabla 4.3.
 
 ### Mano de obra
 
-| **Personal**                                   | **Unidades** | **Cantidad (meses)** | **Costo Mensual (s/)** | **Costo Anual (S/)** |
-| ---------------------------------------------- | ------------ | -------------------- | ---------------------- | -------------------- |
-| MANO DE OBRA DIRECTA                           |              |                      |                        | **144.000,00**       |
-| Personal planta de procesamiento (12 Personas) | Meses        | 12                   | 12.000,00              | 144.000,00           |
-| MANO DE OBRA INDIRECTA                         |              |                      |                        | **83.400,00**        |
-| Personal de control de calidad (1 Personal)    | Meses        | 12                   | 1.200,00               | 14.400,00            |
-| Jefe de producción                             | Meses        | 12                   | 2.000,00               | 24.000,00            |
-| Técnico en producción                          | Meses        | 12                   | 1.500,00               | 18.000,00            |
-| Almacenero                                     | Meses        | 12                   | 750,00                 | 9.000,00             |
-| Vigilancia                                     | Meses        | 12                   | 1.500,00               | 18.000,00            |
-| MANO DE OBRA ADMINISTRATIVA                    |              |                      |                        | **74.400,00**        |
-| Administrador                                  | Meses        | 12                   | 2.000,00               | 24.000,00            |
-| Secretaria                                     | Meses        | 12                   | 800,00                 | 9.600,00             |
-| Contador                                       | Meses        | 12                   | 1.000,00               | 12.000,00            |
-| Chofer del proceso de producción               | Meses        | 12                   | 1.200,00               | 14.400,00            |
-| Chofer de la planta de procesamiento           | Meses        | 12                   | 1.200,00               | 14.400,00            |
-| MANO DE OBRA DE VENTAS                         |              |                      |                        | **24.000,00**        |
-| Agente vendedor a todo costo                   | Meses        | 12                   | 2.000,00               | 24.000,00            |
-| **COSTO TOTAL**                                |              |                      |                        | **325.800,00**       |
+| **Personal** | **Unidades** | **Cantidad (meses)** | **Costo Mensual (s/)** | **Costo Anual (S/)** |
+|---------------|:-------------:|:-------------:|:-------------:|:-------------:|
+| **MANO DE OBRA DIRECTA** |  |  |  | **144.000,00** |
+| Personal planta de procesamiento (12 Personas) | Meses | 12 | 12.000,00 | 144.000,00 |
+| **MANO DE OBRA INDIRECTA** |  |  |  | **83.400,00** |
+| Personal de control de calidad (1 Personal) | Meses | 12 | 1.200,00 | 14.400,00 |
+| Jefe de producción | Meses | 12 | 2.000,00 | 24.000,00 |
+| Técnico en producción | Meses | 12 | 1.500,00 | 18.000,00 |
+| Almacenero | Meses | 12 | 750,00 | 9.000,00 |
+| Vigilancia | Meses | 12 | 1.500,00 | 18.000,00 |
+| **MANO DE OBRA ADMINISTRATIVA** |  |  |  | **74.400,00** |
+| Administrador | Meses | 12 | 2.000,00 | 24.000,00 |
+| Secretaria | Meses | 12 | 800,00 | 9.600,00 |
+| Contador | Meses | 12 | 1.000,00 | 12.000,00 |
+| Chofer del proceso de producción | Meses | 12 | 1.200,00 | 14.400,00 |
+| Chofer de la planta de procesamiento | Meses | 12 | 1.200,00 | 14.400,00 |
+| **MANO DE OBRA DE VENTAS** |  |  |  | **24.000,00** |
+| Agente vendedor a todo costo | Meses | 12 | 2.000,00 | 24.000,00 |
+| **COSTO TOTAL** |  |  |  | **325.800,00** |
 
-: Cuadro de Costos de la Mano de obra {tbl-colwidths="[46,12,12,15,15]"}
+: Cuadro de Costos de la Mano de obra {tbl-colwidths="\[46,12,12,15,15\]"}
 
 Para la mano de obra directa se ha considerado el personal que tiene el contacto directo con el producto, aquí se considera al personal que recepciona, filetea, empaca y refrigera el producto, en esta etapa se cuenta con 12 trabajadores los que tienen como remuneración S/ 38 diarios, llegando a requerir S/ 1000 mensual o S/ 14,400.00 anual, el que se incrementa a lo largo de los años proyectados.
 
 ### Gastos de fabricación
 
-| **CONCEPTO**                        | **COSTO TOTAL** |
-| ----------------------------------- | --------------- |
-| I. GASTOS ADMINISTRATIVOS           | 78.000,00       |
-| Mano de obra administrativa         | 74.400,00       |
-| Útiles de oficina                   | 3.600,00        |
-| II\. GASTOS GENERALES (5% IF)       | 30.430,00       |
-| III\. GASTOS DE SUPERVISIÓN (3% IF) | 18.258,00       |
-| **TOTAL DE GASTOS DE FABRICACIÓN**  | **126.688,00**  |
+| **CONCEPTO**                           | **COSTO TOTAL** |
+|----------------------------------------|-----------------|
+| **I. GASTOS ADMINISTRATIVOS**          | **78.000,00**   |
+| Mano de obra administrativa            | 74.400,00       |
+| Útiles de oficina                      | 3.600,00        |
+| **II. GASTOS GENERALES (5% IF)**       | **30.430,00**   |
+| **III. GASTOS DE SUPERVISIÓN (3% IF)** | **18.258,00**   |
+| **TOTAL DE GASTOS DE FABRICACIÓN**     | **126.688,00**  |
 
 : Cuadro de gastos de fabricación.
 
@@ -849,44 +851,44 @@ El sistema de HACCP facilita la inspección por parte de las autoridades encarga
 
 ### Elementos del precio de exportación
 
-| Elemento                              | Ítem                                                 |
-| ------------------------------------- | ---------------------------------------------------- |
-| Costo Del Producto                    | Fabricación                                          |
-|                                       | Empaque especial para exportación                    |
-|                                       | Etiquetas especiales para exportación                |
-|                                       | Embalaje                                             |
-| Costos De Transporte Y Seguro Interno | Fletes de fábrica a puerta despacho                  |
-|                                       | Seguros de transporte (fábrica a puerto de despacho) |
-| Costos Varios                         | Comisión para el agente de aduna, despachador        |
-|                                       | Costo de documento(s) de exportación                 |
-|                                       | Costo de certificado de origen                       |
-| Manejo De Carga                       | Utilización de instalaciones aeroportuarias          |
-|                                       | Almacenaje                                           |
-|                                       | Pesaje o cubicaje, carga                             |
-|                                       | Cargue y estiba                                      |
-| Costos Financieros                    | Crédito otorgado al comprador                        |
-|                                       | Póliza de seguro de crédito a la exportación         |
-| Otros Costos De Exportación           | Varios (comisiones, envíos de muestras, etc.)        |
-|                                       | Costo FCA en aeropuerto de origen                    |
+| Elemento | Ítem |
+|------------------------------|------------------------------------------|
+| Costo Del Producto | Fabricación |
+|  | Empaque especial para exportación |
+|  | Etiquetas especiales para exportación |
+|  | Embalaje |
+| Costos De Transporte Y Seguro Interno | Fletes de fábrica a puerta despacho |
+|  | Seguros de transporte (fábrica a puerto de despacho) |
+| Costos Varios | Comisión para el agente de aduna, despachador |
+|  | Costo de documento(s) de exportación |
+|  | Costo de certificado de origen |
+| Manejo De Carga | Utilización de instalaciones aeroportuarias |
+|  | Almacenaje |
+|  | Pesaje o cubicaje, carga |
+|  | Cargue y estiba |
+| Costos Financieros | Crédito otorgado al comprador |
+|  | Póliza de seguro de crédito a la exportación |
+| Otros Costos De Exportación | Varios (comisiones, envíos de muestras, etc.) |
+|  | Costo FCA en aeropuerto de origen |
 
 : Elementos e ítems del precio de exportación
 
 ### Costos y gastos de exportación
 
-| CÁLCULO DE COSTOS ESTIMADOS en USD y soles                   |                |                |
-| ------------------------------------------------------------ | -------------- | -------------- |
-| Costo total (Costo de fabricación-Producto terminado)        | \$ 3,324. 09   | S/.12002.89    |
-| Costo de empaque (Envase, Empaque, Embalaje y Unitarización) | \$205.00       | S/.740.05      |
-| Costo de Etiquetado, Marcado y Codificación                  | \$98.60        | S/.355.95      |
-| Costo de Manipuleo en el local del exportador                | \$144.00       | S/.519.84      |
-| Utilidad (25%)                                               | **\$942.92**   | **S/.3403.94** |
-| EX-WORK Total                                                | **\$4,714.61** | **17019.74**   |
-| Flete por transporte interno                                 | \$609.42       | 250.61         |
-| Estiba                                                       | \$15.85        | S/. 57.22      |
-| Agente de Aduana                                             | \$160.00       | S/.577.6       |
-| Costos Operativos                                            | \$ 277.01.00   | S/.1000        |
-| FCA Total                                                    | \$5,766.89     | S/.20818.47    |
-| FCA Unitario                                                 | **\$8.40**     | **30.32**      |
+| CÁLCULO DE COSTOS ESTIMADOS en USD y soles |   |   |
+|:----------------------------------|------------------|------------------|
+| Costo total (Costo de fabricación-Producto terminado) | \$ 3,324. 09 | S/.12002.89 |
+| Costo de empaque (Envase, Empaque, Embalaje y Unitarización) | \$205.00 | S/.740.05 |
+| Costo de Etiquetado, Marcado y Codificación | \$98.60 | S/.355.95 |
+| Costo de Manipuleo en el local del exportador | \$144.00 | S/.519.84 |
+| **Utilidad (25%)** | **\$942.92** | **S/.3403.94** |
+| **EX-WORK Total** | **\$4,714.61** | **17019.74** |
+| Flete por transporte interno | \$609.42 | 250.61 |
+| Estiba | \$15.85 | S/. 57.22 |
+| Agente de Aduana | \$160.00 | S/.577.6 |
+| Costos Operativos | \$ 277.01.00 | S/.1000 |
+| FCA Total | \$5,766.89 | S/.20818.47 |
+| **FCA Unitario** | **\$8.40** | **30.32** |
 
 : Cálculo de costos estimados y precio FCA en USD {#tbl-mytable2 apa-note="LATE-Simulador financiero (Promperú)"}
 
@@ -894,9 +896,9 @@ Para el cálculo del precio FCA de exportación se tomó en cuenta un envió de 
 
 Para realizar el cálculo se consideran lo siguiente:
 
-- ​ Tipo de cambio 3.61
-- ​ Contenedor de 20 pies
-- ​ Envío de 1000 Kg. De filete, 1kg por unidad.
+-   ​ Tipo de cambio 3.61
+-   ​ Contenedor de 20 pies
+-   ​ Envío de 1000 Kg. De filete, 1kg por unidad.
 
 Para obtener el costo total de fabricación se multiplicó el costo de producción unitaria (S/.12.00) por la cantidad de envío. Además, se hizo uso del simulador financiero LATE que Promperú nos brinda, el cual se muestra en el Anexo No 1 y Anexo No 2.
 
@@ -907,22 +909,22 @@ El precio que se seleccionó fue en función al mercado, es decir, en base a los
 Para ello se tomó como referencia el promedio del precio FOB de exportación de los dos últimos dos años de exportación, estos se muestran en la Tabla 5.3.
 
 | **2018**           |           | **2019**  |      |
-| ------------------ | --------- | --------- | ---- |
-| ENERO              | 11.73     | ENERO     | 6.26 |
-| FEBRERO            | 11.79     | FEBRERO   | 6.29 |
-| MARZO              | 11.76     | MARZO     | 6.41 |
-| ABRIL              | 11.74     | ABRIL     | 6.92 |
-| MAYO               | 11.68     | MAYO      | 7.36 |
-| JUNIO              | 11.68     | JUNIO     | 7.93 |
-| JULIO              | 11.73     | JULIO     | 6.33 |
-| AGOSTO             | 11.28     | AGOSTO    | 6.33 |
-| SETIEMBRE          | 6.52      | SETIEMBRE | 7.25 |
-| OCTUBRE            | 6.43      | OCTUBRE   | 7.19 |
-| NOVIEMBRE          | 6.44      | NOVIEMBRE | 7.15 |
-| DICIEMBRE          | 6.19      | DICIEMBRE | 7.15 |
+|:-------------------|:---------:|:----------|:----:|
+| ENERO              |   11.73   | ENERO     | 6.26 |
+| FEBRERO            |   11.79   | FEBRERO   | 6.29 |
+| MARZO              |   11.76   | MARZO     | 6.41 |
+| ABRIL              |   11.74   | ABRIL     | 6.92 |
+| MAYO               |   11.68   | MAYO      | 7.36 |
+| JUNIO              |   11.68   | JUNIO     | 7.93 |
+| JULIO              |   11.73   | JULIO     | 6.33 |
+| AGOSTO             |   11.28   | AGOSTO    | 6.33 |
+| SETIEMBRE          |   6.52    | SETIEMBRE | 7.25 |
+| OCTUBRE            |   6.43    | OCTUBRE   | 7.19 |
+| NOVIEMBRE          |   6.44    | NOVIEMBRE | 7.15 |
+| DICIEMBRE          |   6.19    | DICIEMBRE | 7.15 |
 | **TOTAL PROMEDIO** | **8.398** |           |      |
 
-: Precio FOB promedio de las exportaciones de PERÚ en los últimos 2 años hacia EE. UU {#tbl-mytable2 apa-note="[_SIICEX_](http://www.siicex.gob.pe/) SUNAT" data-quarto-disable-processing="true"}
+: Precio FOB promedio de las exportaciones de PERÚ en los últimos 2 años hacia EE. UU {#tbl-mytable2 apa-note="[*SIICEX*](http://www.siicex.gob.pe/) SUNAT" data-quarto-disable-processing="true"}
 
 ## Modalidades de pago
 
@@ -963,8 +965,8 @@ Descripción del envase: bolsa de polietileno
 Cantidad de productos: 1000 g en una bolsa
 
 | LARGO CM | ANCHO CM | ALTO CM |
-| -------- | -------- | ------- |
-| 30       | 20       | 5       |
+|:--------:|:--------:|:-------:|
+|    30    |    20    |    5    |
 
 **b. Envase secundario**
 
@@ -973,8 +975,8 @@ Descripción del envase: Caja de tecnoport.
 Cantidad de productos: 40 kg en una caja.
 
 | LARGO CM | ANCHO CM | ALTO CM |
-| -------- | -------- | ------- |
-| 60       | 80       | 33      |
+|:--------:|:--------:|:-------:|
+|    60    |    80    |   33    |
 
 **c. Paletización**
 
@@ -983,8 +985,8 @@ Descripción del envase: Paletas de madera
 Cantidad de productos: 200 Kg de filete de trucha congelada en cada pallet
 
 | LARGO CM | ANCHO CM | ALTO CM |
-| -------- | -------- | ------- |
-| 120      | 80       | 0.15    |
+|:--------:|:--------:|:-------:|
+|   120    |    80    |  0.15   |
 
 **d. Contenedor**
 
@@ -992,17 +994,17 @@ Descripción del envase: Contenedor RMP con temperatura regulable con código po
 
 ### Utilización de embalajes: Rotulados e Etiquetado
 
-a) Envase Primario
+a)  Envase Primario
 
 Rotulado: Señalización y Código de barras
 
 Etiquetado: País de origen, marcas de peso, número de paquete y dimensiones de la caja, puerto de entrada, marcas del consignatario, marcas de advertencia, marca de manipuleo, marca del embarcador, los datos en español e inglés.
 
-b) Palatización
+b)  Palatización
 
 Rotulado: Reglamentos técnicos específicos sobre etiquetados de determinados productos para EE.UU (variedad del producto, material del empaque, tamaño, cantidades por empaque en español e inglés)
 
-c) Contenedor
+c)  Contenedor
 
 Rotulado: Reglamentos técnicos específicos sobre etiquetados de determinados productos para EE.UU. (packinglist, número de contenedor, temperatura registrada del contenedor, número de pallets, nombre de la empresa comercializadora, aeropuerto de origen, aeropuerto de destino).
 
@@ -1024,24 +1026,24 @@ La tasa de desempleo bajó de 3,9% a 3.7% en 2019. Sin embargo, el FMI prevé qu
 
 El operador logístico con quien se va trabajar es la empresa “New Atlantic S.A.C” cuya información se detalla en la siguiente tabla.
 
-| Nombre comercial          | Natsac                                                                                                                                        |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| RUC                       | 20562763351                                                                                                                                   |
-| Razón social              | New atlantic sac                                                                                                                              |
-| Tipo de dirección         | Oficina Comercia                                                                                                                              |
-| Dirección                 | Av Oscar Benavides 4595-201 callao                                                                                                            |
-| País                      | Perú                                                                                                                                          |
-| Departamento              | CALLAO                                                                                                                                        |
-| Provincia                 | CALLAO                                                                                                                                        |
-| Distrito                  | CALLAO                                                                                                                                        |
-| Teléfono Oficina          | 14697815                                                                                                                                      |
-| Teléfono Celular          | 981366393                                                                                                                                     |
-| Correo                    | [luis.mogrovejo\@new-atlantic.com](mailto:luis.mogrovejo@new-atlantic.com)                                                                    |
-| Página Web                | https://www.new-atlantic.com/nosotros.php                                                                                                     |
-| Persona de Contacto       | Luis angel mogrovejo ramos                                                                                                                    |
+| Nombre comercial | Natsac |
+|---------------------|---------------------------------------------------|
+| RUC | 20562763351 |
+| Razón social | New atlantic sac |
+| Tipo de dirección | Oficina Comercia |
+| Dirección | Av Oscar Benavides 4595-201 callao |
+| País | Perú |
+| Departamento | LIMA |
+| Provincia | CALLAO |
+| Distrito | CALLAO |
+| Teléfono Oficina | 14697815 |
+| Teléfono Celular | 981366393 |
+| Correo | [luis.mogrovejo\@new-atlantic.com](mailto:luis.mogrovejo@new-atlantic.com) |
+| Página Web | https://www.new-atlantic.com/nosotros.php |
+| Persona de Contacto | Luis angel mogrovejo ramos |
 | Descripción de la empresa | New atlantic sac, brinda servicio logistico door to door, ofrecemos la venta de fletes, seguros, servicio de agenciamiento, transporte local. |
 
-: Ficha empresarial del operador logístico {tbl-colwidths="[40,60]"}
+: Ficha empresarial del operador logístico {tbl-colwidths="\[40,60\]"}
 
 ## Manejo documentario
 
@@ -1059,21 +1061,21 @@ Nuestro producto tendrá como destino el mercado estadounidense por el cual seg�
 
 ## Modelo de cotización
 
-| **Aquazul S.C.R. L**      | COTIZACIÓN N°001-2020                                                                                                                                               |                       |                                       |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------- |
-| Fecha De Cotización       | 21/09/20                                                                                                                                                            | Empresa De Destino    | Trader Joe´s                          |
-| Nombre De Destinatario    | Joe Coulombe                                                                                                                                                        |                       |                                       |
-| Dirección De La Empresa   | [142 E 14th St, Nueva York, NY 10003-4170](https://www.tripadvisor.com.pe/Restaurant_Review-g60763-d1099366-Reviews-Trader_Joe-New_York_City_New_York.html#MAPVIEW) |                       |                                       |
-| País Destino              | EE.UU                                                                                                                                                               | Referencia            | Nueva York                            |
-| Partida Arancelaria       | 304420000                                                                                                                                                           | Producto              | Filete refrigerado de trucha Arcoíris |
-| Descripción De La Calidad | Producto natural y saludable                                                                                                                                        | Cantidad              | 2000Kg                                |
-| Precio Fca Unitario       | \$ 8.40                                                                                                                                                             | Precio Fca Total      | \$ 16800.00                           |
-| Moneda De Cotización      | Dólar americano                                                                                                                                                     |                       |                                       |
-| Forma De Pago             | El 50% 15 días antes de la entrega de la mercancía y el 50% restante cuando la mercancía llega al aeropuerto de destino                                             |                       |                                       |
-| Fecha De Embarque         | 30/05/21                                                                                                                                                            | Medio De Transporte   | Aéreo                                 |
-| Aeropuerto De Embarque    | Puerto internacional Callao-LimaPerú.                                                                                                                               | Aeropuerto De Llegada | Nueva York                            |
+| **Aquazul S.C.R. L** | COTIZACIÓN N°001-2020 |   |   |
+|-----------------|---------------------|-----------------|-----------------|
+| Fecha De Cotización | 21/09/20 | Empresa De Destino | Trader Joe´s |
+| Nombre De Destinatario | Joe Coulombe |  |  |
+| Dirección De La Empresa | [142 E 14th St, Nueva York, NY 10003-4170](https://www.tripadvisor.com.pe/Restaurant_Review-g60763-d1099366-Reviews-Trader_Joe-New_York_City_New_York.html#MAPVIEW) |  |  |
+| País Destino | EE.UU | Referencia | Nueva York |
+| Partida Arancelaria | 304420000 | Producto | Filete refrigerado de trucha Arcoíris |
+| Descripción De La Calidad | Producto natural y saludable | Cantidad | 2000Kg |
+| Precio Fca Unitario | \$ 8.40 | Precio Fca Total | \$ 16800.00 |
+| Moneda De Cotización | Dólar americano |  |  |
+| Forma De Pago | El 50% 15 días antes de la entrega de la mercancía y el 50% restante cuando la mercancía llega al aeropuerto de destino |  |  |
+| Fecha De Embarque | 30/05/21 | Medio De Transporte | Aéreo |
+| Aeropuerto De Embarque | Puerto internacional Callao-LimaPerú. | Aeropuerto De Llegada | Nueva York |
 
-: {tbl-colwidths="[30,34,18,18]"}
+: {tbl-colwidths="\[30,34,18,18\]"}
 
 # Capítulo VI Análisis financiero y plan financiero
 
@@ -1081,34 +1083,35 @@ Nuestro producto tendrá como destino el mercado estadounidense por el cual seg�
 
 ### Análisis del balance general y estructura del balance general
 
-| **ACTIVO**                         | **AÑOS**   |            |            |            |            |
-| ---------------------------------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-|                                    | **1**      | **2**      | **3**      | **4**      | **5**      |
-| Activo corriente                   |            |            |            |            |            |
-| Efectivo y equivalente de efectivo | 39050      | 75400      | 117200     | 157101     | 202990     |
-| Cuentas por cobrar comerciales     |            | 28750      | 29880      | 30500      | 30550      |
-| Total activo corriente             | 39050      | 104150     | 147080     | 187601     | 233540     |
-| Activo no corriente                |            |            |            |            |            |
-| IME(Neto)                          | 132115     | 123134     | 112142     | 101136     | 90140      |
-| Intangibles                        | 2156       | 1702       | 1080       | 652        |            |
-| Total activo no corriente          | 134271     | 124836     | 113222     | 101788     | 90140      |
-| Total activo                       | 173321     | 228986     | 260302     | 289389     | 323680     |
-| **PASIVO**                         |            |            |            |            |            |
-| Pasivo corriente                   |            |            |            |            |            |
-| Obligaciones financieras C-P       | 16200      | 18202      | 25115      | 31269      | 0          |
-| Gastos por tributos                |            | 16400      | 17950      | 22845      | 25987      |
-| Total pasivo corriente             | 16200      | 34602      | 43065      | 54114      | 25987      |
-| Pasivo no corriente                |            |            |            |            |            |
-| Obligaciones financieras L-P       | 72850      | 55645      | 29894      | 0          | 0          |
-| Total pasivo no corriente          | 72850      | 55645      | 29894      | 0          | 0          |
-| Total pasivo                       | 89050      | 90247      | 72959      | 54114      | 25987      |
-| **Patrimonio**                     |            |            |            |            |            |
-| Capital                            | 68450      | 102450     | 102450     | 102450     | 102450     |
-| Resultados acumulados              |            | 39854      | 85231      | 138102     | 196689     |
-| Total patrimonio                   | 68450      | 142304     | 187681     | 240552     | 299139     |
-| **Total pasivo y patrimonio**      | **157500** | **232551** | **260640** | **294666** | **325126** |
+|  |  |  |  |  |  |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  | **1** | **2** | **3** | **4** | **5** |
+| **Activo** |  |  |  |  |  |
+| **Activo corriente** |  |  |  |  |  |
+| Efectivo y equivalente de efectivo | 39050 | 75400 | 117200 | 157101 | 202990 |
+| Cuentas por cobrar comerciales |  | 28750 | 29880 | 30500 | 30550 |
+| **Total activo corriente** | **39050** | **104150** | **147080** | **187601** | **233540** |
+| Activo no corriente |  |  |  |  |  |
+| IME(Neto) | 132115 | 123134 | 112142 | 101136 | 90140 |
+| Intangibles | 2156 | 1702 | 1080 | 652 |  |
+| **Total activo no corriente** | **134271** | **124836** | **113222** | **101788** | **90140** |
+| **Total activo** | **173321** | **228986** | **260302** | **289389** | **323680** |
+| **Pasivo** |  |  |  |  |  |
+| Pasivo corriente |  |  |  |  |  |
+| Obligaciones financieras C-P | 16200 | 18202 | 25115 | 31269 | 0 |
+| Gastos por tributos |  | 16400 | 17950 | 22845 | 25987 |
+| **Total pasivo corriente** | **16200** | **34602** | **43065** | **54114** | **25987** |
+| Pasivo no corriente |  |  |  |  |  |
+| Obligaciones financieras L-P | 72850 | 55645 | 29894 | 0 | 0 |
+| **Total pasivo no corriente** | **72850** | **55645** | **29894** | **0** | **0** |
+| **Total pasivo** | **89050** | **90247** | **72959** | **54114** | **25987** |
+| **Patrimonio** |  |  |  |  |  |
+| Capital | 68450 | 102450 | 102450 | 102450 | 102450 |
+| Resultados acumulados |  | 39854 | 85231 | 138102 | 196689 |
+| **Total patrimonio** | **68450** | **142304** | **187681** | **240552** | **299139** |
+| **Total pasivo y patrimonio** | **157500** | **232551** | **260640** | **294666** | **325126** |
 
-: Balance general al 31 de diciembre con financiamiento, proyectado.
+: Balance general al 31 de diciembre con financiamiento, proyectado {tbl-colwidths="[50,10,10,10,10,10]"}
 
 En la tabla 6.1. se muestra el balance general con financiamiento desde el año 1 hasta el año 5 del proyecto, todos ellos muestran resultados al 31 de diciembre para cada año, excepto en el año 1 en el que se realizan todas las inversiones iniciales para que el proyecto se lleve a cabo, en este año se considera dentro del activo corriente al efectivo y equivalente de efectivo, y es el resultante de la diferencia del ingreso mensual y el egreso mensual que es de S/ 39,050; que es el monto necesario para que empiece a funcionar el proyecto; la utilidad antes del impuesto a la renta, depreciación de maquinaria, construcciones, amortización de intangibles todo ello menos amortización de la deuda y cuentas por cobrar comerciales dando una cantidad de S/ 75,400; y así sucesivamente se repite el proceso hasta llegar al año 5.
 
@@ -1116,34 +1119,35 @@ En el patrimonio se considera el capital aportado por los inversionistas, que pa
 
 ### Análisis horizontal
 
-| **ACTIVO**                         | **AÑOS**  |           |           |           |            | **AÑOS**    |             |             |             |              |
-| ---------------------------------- | --------- | --------- | --------- | --------- | ---------- | ----------- | ----------- | ----------- | ----------- | ------------ |
-|                                    | **1 a 2** | **2 a 3** | **3 a 4** | **4 a 5** | **1 a 5**  | **1 a 2**   | **2 a 3**   | **3 a 4**   | **4 a 5**   | **1 a 5**    |
-| Activo corriente                   |           |           |           |           |            |             |             |             |             |              |
-| Efectivo y equivalente de efectivo | 36350     | 41800     | 39901     | 45889     | 163940     | 93.00 %     | 55.00 %     | 34.00 %     | 29.00 %     | 420.00 %     |
-| Cuentas por cobrar comerciales     | 28750     | 1130      | 620       | 50        | 30550      |             | 4.00 %      | 2.00 %      | 0.00 %      |              |
-| Total activo corriente             | 65100     | 42930     | 40521     | 45939     | 194490     | 167.00 %    | 41.00 %     | 28.00 %     | 24.00 %     | 498.00 %     |
-| Activo no corriente                |           |           |           |           |            |             |             |             |             |              |
-| IME(Neto)                          | -8981     | -10992    | -11006    | -10996    | -41975     | -7.00 %     | -9.00 %     | -10.00 %    | -11.00 %    | -32.00 %     |
-| Intangibles                        | -454      | -622      | -428      | -652      | -2156      | -21.00 %    | -37.00 %    | -40.00 %    | -100.00 %   | -100.00 %    |
-| Total activo no corriente          | -9435     | -11614    | -11434    | -11648    | -44131     | -7.00 %     | -9.00 %     | -10.00 %    | -11.00 %    | -33.00 %     |
-| Total activo                       | 55665     | 31316     | 29087     | 34291     | 150359     | 32.00 %     | 14.00 %     | 11.00 %     | 12.00 %     | 87.00 %      |
-| **PASIVO**                         |           |           |           |           |            |             |             |             |             |              |
-| Pasivo corriente                   |           |           |           |           |            |             |             |             |             |              |
-| Obligaciones financieras C-P       | 2002      | 6913      | 6154      | -31269    | -16200     | 12.00 %     | 38.00 %     | 25.00 %     | -100.00 %   | -100.00 %    |
-| Gastos por tributos                | 16400     | 1550      | 4895      | 3142      | 25987      |             | 9.00 %      | 27.00 %     | 14.00 %     |              |
-| Total pasivo corriente             | 18402     | 8463      | 11049     | -28127    | 9787       | 114.00 %    | 24.00 %     | 26.00 %     | -52.00 %    | 60.00 %      |
-| Pasivo no corriente                |           |           |           |           |            |             |             |             |             |              |
-| Obligaciones financieras L-P       | -17205    | -25751    | -29894    | 0         | -72850     | -24.00 %    | -46.00 %    | -100.00 %   |             | -100.00 %    |
-| Total pasivo no corriente          | -17205    | -25751    | -29894    | 0         | -72850     | -24.00 %    | -46.00 %    | -100.00 %   |             | -100.00 %    |
-| Total pasivo                       | 1197      | -17288    | -18845    | -28127    | -63063     | 1.00 %      | -19.00 %    | -26.00 %    | -52.00 %    | -71.00 %     |
-| **Patrimonio**                     |           |           |           |           |            |             |             |             |             |              |
-| Capital                            | 34000     | 0         | 0         | 0         | 34000      | 50.00 %     | 0.00 %      | 0.00 %      | 0.00 %      | 50.00 %      |
-| Resultados acumulados              | 39854     | 45377     | 52871     | 58587     | 196689     |             | 114.00 %    | 62.00 %     | 42.00 %     |              |
-| Total patrimonio                   | 73854     | 45377     | 52871     | 58587     | 230689     | 108.00 %    | 32.00 %     | 28.00 %     | 24.00 %     | 337.00 %     |
-| **Total pasivo y patrimonio**      | **75051** | **28089** | **34026** | **30460** | **167626** | **48.00 %** | **12.00 %** | **13.00 %** | **10.00 %** | **106.00 %** |
+|  |  |  |  |  |  |  |  |  |  |  |
+|-------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **AÑOS** | **1 a 2** | **2 a 3** | **3 a 4** | **4 a 5** | **1 a 5** | **1 a 2** | **2 a 3** | **3 a 4** | **4 a 5** | **1 a 5** |
+| **Activo** |  |  |  |  |  |  |  |  |  |  |
+| **Activo corriente** |  |  |  |  |  |  |  |  |  |  |
+| Efectivo y equivalente de efectivo | 36350 | 41800 | 39901 | 45889 | 163940 | 93 % | 55 % | 34 % | 29 % | 420 % |
+| Cuentas por cobrar comerciales | 28750 | 1130 | 620 | 50 | 30550 |  | 4 % | 2 % | 0 % |  |
+| **Total activo corriente** | **65100** | **42930** | **40521** | **45939** | **194490** | **167 %** | **41 %** | **28 %** | **24 %** | **498 %** |
+| **Activo no corriente** |  |  |  |  |  |  |  |  |  |  |
+| IME(Neto) | -8981 | -10992 | -11006 | -10996 | -41975 | -7 % | -9 % | -10 % | -1 % | -32 % |
+| Intangibles | -454 | -622 | -428 | -652 | -2156 | -21 % | -37 % | -40 % | -100 % | -100 % |
+| **Total activo no corriente** | **-9435** | **-11614** | **-11434** | **-11648** | **-44131** | **-7 %** | **-9 %** | **-10 %** | **-11 %** | **-33 %** |
+| **Total activo** | **55665** | **31316** | **29087** | **34291** | **150359** | **32 %** | **14 %** | **11 %** | **12 %** | **87 %** |
+| **Pasivo** |  |  |  |  |  |  |  |  |  |  |
+| **Pasivo corriente** |  |  |  |  |  |  |  |  |  |  |
+| Obligaciones financieras C-P | 2002 | 6913 | 6154 | -31269 | -16200 | 12 % | 38 % | 25 % | -100 % | -100 % |
+| Gastos por tributos | 16400 | 1550 | 4895 | 3142 | 25987 |  | 9 % | 27 % | 14 % |  |
+| **Total pasivo corriente** | **18402** | **8463** | **11049** | **-28127** | **9787** | **114 %** | **24 %** | **26 %** | **-52 %** | **60 %** |
+| **Pasivo no corriente** |  |  |  |  |  |  |  |  |  |  |
+| Obligaciones financieras L-P | -17205 | -25751 | -29894 | 0 | -72850 | -24 % | -46 % | -100 % |  | -100 % |
+| **Total pasivo no corriente** | **-17205** | **-25751** | **-29894** | **0** | **-72850** | **-24 %** | **-46 %** | **-100 %** |  | **-100 %** |
+| **Total pasivo** | **1197** | **-17288** | **-18845** | **-28127** | **-63063** | **1 %** | **-19 %** | **-26 %** | **-52 %** | **-71 %** |
+| **Patrimonio** |  |  |  |  |  |  |  |  |  |  |
+| Capital | 34000 | 0 | 0 | 0 | 34000 | 50 % | 0 % | 0 % | 0 % | 50 % |
+| Resultados acumulados | 39854 | 45377 | 52871 | 58587 | 196689 |  | 114 % | 62 % | 42 % |  |
+| **Total patrimonio** | **73854** | **45377** | **52871** | **58587** | **230689** | **108 %** | **32 %** | **28 %** | **24 %** | **337 %** |
+| **Total pasivo y patrimonio** | **75051** | **28089** | **34026** | **30460** | **167626** | **48 %** | **12 %** | **13 %** | **10 %** | **106 %** |
 
-: Balance general al 31 de diciembre con financiamiento, proyectado.
+: Balance general al 31 de diciembre con financiamiento, proyectado {tbl-colwidths="\[20,8,8,8,8,8,8,8,8,8,8\]"}
 
 En la tabla 6.2. se muestra el análisis horizontal del balance general con financiamiento desde el año 1 hasta el año 5 del proyecto, todos ellos muestran resultados al 31 de diciembre para cada año, en el año 1 se considera dentro del activo corriente al efectivo y equivalente de efectivo los cuales presentan crecimientos de 93% en el primer año y de un 420% en los 5 años; con respecto a las cuentas por cobrar comerciales en el año 1 no se presenta un aumento porcentual, ya para el año 2 el porcentaje es de 41%. Para el activo no corriente se ha considerado el costo total de los inmuebles, maquinaria y equipo se tuvo una reducción de 7%; para los años siguientes desde el año 1 hasta el año 5 se tuvo una disminución en 32%.
 
@@ -1151,34 +1155,34 @@ Ya que en el pasivo corriente está formado por las obligaciones financieras a c
 
 ### Análisis vertical
 
-|                                    | **AÑO** |        |        |        |        |                                    | **AÑO**  |          |          |          |          |
-| ---------------------------------- | ------- | ------ | ------ | ------ | ------ | ---------------------------------- | -------- | -------- | -------- | -------- | -------- |
-|                                    | **1**   | **2**  | **3**  | **4**  | **5**  |                                    | **1**    | **2**    | **3**    | **4**    | **5**    |
-| **ACTIVO CORRIENTE**               |         |        |        |        |        | **ACTIVO CORRIENTE**               |          |          |          |          |          |
-| Efectivo y equivalente de efectivo | 39050   | 75400  | 117200 | 157101 | 202990 | Efectivo y equivalente de efectivo | 23.00 %  | 33.00 %  | 45.00 %  | 54.00 %  | 63.00 %  |
-| Cuentas por cobrar comerciales     |         | 28750  | 29880  | 30500  | 30550  | Cuentas por cobrar comerciales     | 0.00 %   | 13.00 %  | 11.00 %  | 11.00 %  | 9.00 %   |
-| Total activo corriente             | 39050   | 104150 | 147080 | 187601 | 233540 | Total activo corriente             | 23.00 %  | 45.00 %  | 57.00 %  | 65.00 %  | 72.00 %  |
-| Activo no corriente                |         |        |        |        |        | Activo no corriente                |          |          |          |          |          |
-| IME(Neto)                          | 132115  | 123134 | 112142 | 101136 | 90140  | IME(Neto)                          | 76.00 %  | 54.00 %  | 43.00 %  | 35.00 %  | 28.00 %  |
-| Intangibles                        | 2156    | 1702   | 1080   | 652    |        | Intangibles                        | 1.00 %   | 1.00 %   | 0.00 %   | 0.00 %   | 0.00 %   |
-| Total activo no corriente          | 134271  | 124836 | 113222 | 101788 | 90140  | Total activo no corriente          | 77.00 %  | 55.00 %  | 43.00 %  | 35.00 %  | 28.00 %  |
-| **TOTAL ACTIVO**                   | 173321  | 228986 | 260302 | 289389 | 323680 | **TOTAL PASIVO**                   | 100.00 % | 100.00 % | 100.00 % | 100.00 % | 100.00 % |
-| **PASIVO**                         |         |        |        |        |        | **PASIVO**                         |          |          |          |          |          |
-| Pasivo corriente                   |         |        |        |        |        | Pasivo corriente                   |          |          |          |          |          |
-| Obligaciones financieras C-P       | 16200   | 18202  | 25115  | 31269  | 0      | Obligaciones financieras C-P       | 10.00 %  | 8.00 %   | 10.00 %  | 11.00 %  | 0.00 %   |
-| Gastos por tributos                |         | 16400  | 17950  | 22845  | 25987  | Gastos por tributos                | 0.00 %   | 7.00 %   | 7.00 %   | 8.00 %   | 8.00 %   |
-| Total pasivo corriente             | 16200   | 34602  | 43065  | 54114  | 25987  | Total pasivo corriente             | 10.00 %  | 15.00 %  | 17.00 %  | 18.00 %  | 8.00 %   |
-| Pasivo no corriente                |         |        |        |        |        | Pasivo no corriente                |          |          |          |          |          |
-| Obligaciones financieras L-P       | 72850   | 55645  | 29894  | 0      | 0      | Obligaciones financieras L-P       | 46.00 %  | 24.00 %  | 11.00 %  | 0.00 %   | 0.00 %   |
-| Total pasivo no corriente          | 72850   | 55645  | 29894  | 0      | 0      | Total pasivo no corriente          | 46.00 %  | 24.00 %  | 11.00 %  | 0.00 %   | 0.00 %   |
-| Total pasivo                       | 89050   | 90247  | 72959  | 54114  | 25987  | Total pasivo                       | 57.00 %  | 39.00 %  | 28.00 %  | 18.00 %  | 8.00 %   |
-| **PATRIMONIO**                     |         |        |        |        |        | **PATRIMONIO**                     |          |          |          |          |          |
-| Capital                            | 68450   | 102450 | 102450 | 102450 | 102450 | Capital                            | 43.00 %  | 44.00 %  | 39.00 %  | 35.00 %  | 32.00 %  |
-| Resultados acumulados              |         | 39854  | 85231  | 138102 | 196689 | Resultados acumulados              | 0.00 %   | 17.00 %  | 33.00 %  | 47.00 %  | 60.00 %  |
-| Total patrimonio                   | 68450   | 142304 | 187681 | 240552 | 299139 | Total patrimonio                   | 43.00 %  | 61.00 %  | 72.00 %  | 82.00 %  | 92.00 %  |
-| **TOTAL PASIVO Y PATRIMONIO**      | 157500  | 232551 | 260640 | 294666 | 325126 | **TOTAL PASIVO Y PATRIMONIO**      | 100.00 % | 100.00 % | 100.00 % | 100.00 % | 100.00 % |
+|   | **AÑO** |   |   |   |   |   | **AÑO** |   |   |   |   |
+|------|:----:|:----:|:----:|:----:|:----:|------|:----:|:----:|:----:|:----:|:----:|
+|  | **1** | **2** | **3** | **4** | **5** |  | **1** | **2** | **3** | **4** | **5** |
+| **Activo corriente** |  |  |  |  |  | **Activo corriente** |  |  |  |  |  |
+| Efectivo y equivalente de efectivo | 39050 | 75400 | 117200 | 157101 | 202990 | Efectivo y equivalente de efectivo | 23 % | 33 % | 45 % | 54 % | 63 % |
+| Cuentas por cobrar comerciales |  | 28750 | 29880 | 30500 | 30550 | Cuentas por cobrar comerciales | 0 % | 13 % | 11 % | 11 % | 9 % |
+| Total activo corriente | 39050 | 104150 | 147080 | 187601 | 233540 | Total activo corriente | 23 % | 45 % | 57 % | 65 % | 72 % |
+| Activo no corriente |  |  |  |  |  | Activo no corriente |  |  |  |  |  |
+| IME(Neto) | 132115 | 123134 | 112142 | 101136 | 90140 | IME(Neto) | 76 % | 54 % | 43 % | 35 % | 28 % |
+| Intangibles | 2156 | 1702 | 1080 | 652 |  | Intangibles | 1 % | 1 % | 0 % | 0 % | 0 % |
+| Total activo no corriente | 134271 | 124836 | 113222 | 101788 | 90140 | Total activo no corriente | 77 % | 55 % | 43 % | 35 % | 28 % |
+| **Total activo** | 173321 | 228986 | 260302 | 289389 | 323680 | **Total pasivo** | 100 % | 100 % | 100 % | 100 % | 100 % |
+| **Pasivo** |  |  |  |  |  | **Pasivo** |  |  |  |  |  |
+| Pasivo corriente |  |  |  |  |  | Pasivo corriente |  |  |  |  |  |
+| Obligaciones financieras C-P | 16200 | 18202 | 25115 | 31269 | 0 | Obligaciones financieras C-P | 10 % | 8 % | 10 % | 11 % | 0 % |
+| Gastos por tributos |  | 16400 | 17950 | 22845 | 25987 | Gastos por tributos | 0 % | 7 % | 7 % | 8 % | 8 % |
+| Total pasivo corriente | 16200 | 34602 | 43065 | 54114 | 25987 | Total pasivo corriente | 10 % | 15 % | 17 % | 18 % | 8 % |
+| Pasivo no corriente |  |  |  |  |  | Pasivo no corriente |  |  |  |  |  |
+| Obligaciones financieras L-P | 72850 | 55645 | 29894 | 0 | 0 | Obligaciones financieras L-P | 46 % | 24 % | 11 % | 0 % | 0 % |
+| Total pasivo no corriente | 72850 | 55645 | 29894 | 0 | 0 | Total pasivo no corriente | 46 % | 24 % | 11 % | 0 % | 0 % |
+| Total pasivo | 89050 | 90247 | 72959 | 54114 | 25987 | Total pasivo | 57 % | 39 % | 28 % | 18 % | 8 % |
+| **Patrimonio** |  |  |  |  |  | **Patrimonio** |  |  |  |  |  |
+| Capital | 68450 | 102450 | 102450 | 102450 | 102450 | Capital | 43 % | 44 % | 39 % | 35 % | 32 % |
+| Resultados acumulados |  | 39854 | 85231 | 138102 | 196689 | Resultados acumulados | 0 % | 17 % | 33 % | 47 % | 60 % |
+| Total patrimonio | 68450 | 142304 | 187681 | 240552 | 299139 | Total patrimonio | 43 % | 61 % | 72 % | 82 % | 92 % |
+| **Total pasivo y patrimonio** | 157500 | 232551 | 260640 | 294666 | 325126 | **Total pasivo y patrimonio** | 100 % | 100 % | 100 % | 100 % | 100 % |
 
-: Balance general al 31 de diciembre con financiamiento, proyectado.
+: Balance general al 31 de diciembre con financiamiento, proyectado {tbl-colwidths="\[14,8,8,8,8,8,14,8,8,8,8,8\]"}
 
 En la tabla 6.3 se muestra el análisis vertical del balance general con financiamiento desde el año 1 hasta el año 5 del proyecto, todos ellos muestran resultados al 31 de diciembre para cada año, dentro del activo corriente al efectivo y equivalente de efectivo en el año 5 el 72% del total hay más liquidez en la empresa; con respecto a las cuentas por cobrar comerciales en el año 2 se presenta un mayor porcentaje del 13%. Para el activo no corriente se ha considerado el costo total de los inmuebles, maquinaria y equipo en al año 1 presenta mayor porcentaje con 77%; para los años siguientes desde el año 1 hasta el año 5 se tuvo una disminución.
 
@@ -1186,39 +1190,39 @@ Ya que en el pasivo corriente está formado por las obligaciones financieras a c
 
 ## Análisis del estado de pérdidas y ganancias
 
-| concepto                    | 1          | 2          | 3          | 4          | 5          |
-| --------------------------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Ventas                      | 727776     | 764165     | 802373     | 842492     | 884616     |
-| Costo de ventas -           | 288000     | 302400     | 317520     | 333396     | 350066     |
-| Utilidad bruta              | 439776     | 461765     | 484853     | 509096     | 534550     |
-| Gastos administrativos -    | 126688     | 133022     | 139674     | 146657     | 153990     |
-| Gastos de venta -           | 49656      | 52139      | 54746      | 57483      | 60357      |
-| Depreciación -              | 12580      | 13209      | 13869      | 14563      | 15291      |
-| Amortización -              | 64212      | 42927      | 0          | 0          | 0          |
-| Utilidad de la operación    | 186640     | 195972     | 205771     | 216059     | 226862     |
-| Gastos financieros -        | 31939      | 48075      | 0          | 0          | 0          |
-| Utilidad antes de impuestos | 154701     | 162436     | 170558     | 179086     | 188040     |
-| Impuesto Renta -            | 46410      | 48731      | 51167      | 53726      | 56412      |
-| **Utilidad neta**           | **108291** | **113705** | **119391** | **125360** | **131628** |
+| **Concepto** | **1** | **2** | **3** | **4** | **5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Ventas | 727776 | 764165 | 802373 | 842492 | 884616 |
+| Costo de ventas - | 288000 | 302400 | 317520 | 333396 | 350066 |
+| Utilidad bruta | 439776 | 461765 | 484853 | 509096 | 534550 |
+| Gastos administrativos - | 126688 | 133022 | 139674 | 146657 | 153990 |
+| Gastos de venta - | 49656 | 52139 | 54746 | 57483 | 60357 |
+| Depreciación - | 12580 | 13209 | 13869 | 14563 | 15291 |
+| Amortización - | 64212 | 42927 | 0 | 0 | 0 |
+| Utilidad de la operación | 186640 | 195972 | 205771 | 216059 | 226862 |
+| Gastos financieros - | 31939 | 48075 | 0 | 0 | 0 |
+| Utilidad antes de impuestos | 154701 | 162436 | 170558 | 179086 | 188040 |
+| Impuesto Renta - | 46410 | 48731 | 51167 | 53726 | 56412 |
+| **Utilidad neta** | **108291** | **113705** | **119391** | **125360** | **131628** |
 
-: Estado de ganancias y pérdidas de la empresa (periodo de 5 años)
+: Estado de ganancias y pérdidas de la empresa (periodo de 5 años) {tbl-colwidths="[30,14,14,14,14,14]"}
 
 Al ingreso generado por la venta de trucha se le restará el costo de ventas, gastos administrativos, gastos financieros e impuesto. Una vez aplicadas dichas deducciones se obtiene una utilidad de 108291 soles el primer año de operatividad, por cada 100 soles que ingresa a la empresa 15% son de utilidad y 40% son para costo. Durante el transcurso de los 5 años se aprecian utilidades positivas y crecientes.
 
 ### Costos de ventas
 
-| **concepto**            | **1**      | **2**      | **3**      | **4**      | **5**        |
-| ----------------------- | ---------- | ---------- | ---------- | ---------- | ------------ |
-| Materia prima requerida | 240000     | 252000     | 264600     | 277830     | 291721.5     |
-| Mano de obra            | 12000      | 12600      | 13230      | 13891.5    | 14586.075    |
-| Gastos indirectos       | 21080      | 22134      | 23240.7    | 24402.735  | 25622.872    |
-| Costo de producción     | 273080     | 286734     | 301070.7   | 316124.235 | 331930.447   |
-| Producción disponible   | 14920      | 15666      | 16449.3    | 17271.765  | 18135.353    |
-| **Costo de ventas**     | **288000** | **302400** | **317520** | **333396** | **350065.8** |
+| **Concepto** | **1** | **2** | **3** | **4** | **5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Materia prima requerida | 240000 | 252000 | 264600 | 277830 | 291721.5 |
+| Mano de obra | 12000 | 12600 | 13230 | 13891.5 | 14586.075 |
+| Gastos indirectos | 21080 | 22134 | 23240.7 | 24402.735 | 25622.872 |
+| Costo de producción | 273080 | 286734 | 301070.7 | 316124.235 | 331930.447 |
+| Producción disponible | 14920 | 15666 | 16449.3 | 17271.765 | 18135.353 |
+| **Costo de ventas** | **288000** | **302400** | **317520** | **333396** | **350065.8** |
 
-: Cuadro de costo de ventas.
+: Cuadro de costo de ventas {tbl-colwidths="[30,14,14,14,14,14]"}
 
-## Ratios financieras\*\*
+## Ratios financieras
 
 ### Ratios de liquidez
 
@@ -1240,38 +1244,38 @@ Al ingreso generado por la venta de trucha se le restará el costo de ventas, ga
 
 ### Presupuesto maestro
 
-#### Presupuesto de operación\*\*
+#### Presupuesto de operación
 
-**Presupuesto de Ingresos –Ventas**
+**Presupuesto de Ingresos – Ventas**
 
-| **Concepto**                 | **Periodo 1**   | **Periodo 2**   | **Periodo 3**   | **Periodo 4**   | **periodo 5** |
-| ---------------------------- | --------------- | --------------- | --------------- | --------------- | ------------- |
-| unidades vendidas            | 24000           | 25200           | 26460           | 27783           | 29172.15      |
-| Precio Unidad (US\$)         | 8.4             | 8.4             | 8.4             | 8.4             | 8.4           |
-| Total, ingresos en dólares   | 201,600.00      | 211,680.00      | 222,264.00      | 233,377.20      | 245,046.06    |
+| **Concepto** | **Periodo 1** | **Periodo 2** | **Periodo 3** | **Periodo 4** | **Periodo 5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Unidades vendidas | 24000 | 25200 | 26460 | 27783 | 29172.15 |
+| Precio Unidad (US\$) | 8.4 | 8.4 | 8.4 | 8.4 | 8.4 |
+| Total, ingresos en dólares | 201,600.00 | 211,680.00 | 222,264.00 | 233,377.20 | 245,046.06 |
 | **Total, ingresos en soles** | **55844.87535** | **58637.11911** | **61568.97507** | **64647.42382** | **67879.795** |
 
-: Presupuesto de Ingresos y Ventas
+: Presupuesto de Ingresos y Ventas {tbl-colwidths="[30,14,14,14,14,14]"}
 
 Para la venta del año 1 el ingreso es de S/55844.87535 lo cual se muestra en la tabla …de 24000 unidades de filete de trucha refrigerada cada una con 1kg, la que se comercializará a un precio (FCA) de \$8.40 dólares o S/ 26.54/ unidades, Para los años posteriores los ingresos se incrementan en 5%, lo cual es muy favorable para que la empresa continúe en el mercado dado que las preferencias por el filete de trucha refrigerada en el mercado estadounidense van incrementando.
 
 **Presupuesto de Producción**
 
-| **CONCEPTO**                       | **AÑOS**       |                |                |                |                |
-| ---------------------------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
-|                                    | **1**          | **2**          | **3**          | **4**          | **5**          |
-| I. COSTOS DIRECTOS                 | 339.050,00     | 357.327,50     | 374.943,88     | 393.441,07     | 412.863,12     |
-| Compra de trucha al por mayor      | 300.000,00     | 315.000,00     | 330.750,00     | 347.287,50     | 364.651,88     |
-| Compra de hielo en escamas         | 1.050,00       | 1.102,50       | 1.157,63       | 1.215,51       | 1.276,28       |
-| Bolsas para empaques con impresión | 2.000,00       | 2.100,00       | 2.205,00       | 2.315,25       | 2.431,01       |
-| Mano de obra directa               | 32.500,00      | 34.125,00      | 35.831,25      | 37.622,81      | 39.503,95      |
-| Otros costos directos              | 3.500,00       | 5.000,00       | 5.000,00       | 5.000,00       | 5.000,00       |
-| II\. COSTOS INDIRECTOS             | 21.080,00      | 22.134,00      | 23.240,70      | 24.402,74      | 25.622,87      |
-| Mano de obra indirecta             | 10.680,00      | 11.214,00      | 11.774,70      | 12.363,44      | 12.981,61      |
-| Otros costos indirectos            | 10.400,00      | 10.920,00      | 11.466,00      | 12.039,30      | 12.641,27      |
-| **TOTAL COSTOS DE PRODUCCIÓN**     | **360.130,00** | **379.461,50** | **398.184,58** | **417.843,80** | **438.485,99** |
+| **CONCEPTO** | **AÑOS** |   |   |   |   |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  | **1** | **2** | **3** | **4** | **5** |
+| **I. Costos directos** | **339.050,00** | **357.327,50** | **374.943,88** | **393.441,07** | **412.863,12** |
+| Compra de trucha al por mayor | 300.000,00 | 315.000,00 | 330.750,00 | 347.287,50 | 364.651,88 |
+| Compra de hielo en escamas | 1.050,00 | 1.102,50 | 1.157,63 | 1.215,51 | 1.276,28 |
+| Bolsas para empaques con impresión | 2.000,00 | 2.100,00 | 2.205,00 | 2.315,25 | 2.431,01 |
+| Mano de obra directa | 32.500,00 | 34.125,00 | 35.831,25 | 37.622,81 | 39.503,95 |
+| Otros costos directos | 3.500,00 | 5.000,00 | 5.000,00 | 5.000,00 | 5.000,00 |
+| **II. Costos indirectos** | **21.080,00** | **22.134,00** | **23.240,70** | **24.402,74** | **25.622,87** |
+| Mano de obra indirecta | 10.680,00 | 11.214,00 | 11.774,70 | 12.363,44 | 12.981,61 |
+| Otros costos indirectos | 10.400,00 | 10.920,00 | 11.466,00 | 12.039,30 | 12.641,27 |
+| **Total de costos de producción** | **360.130,00** | **379.461,50** | **398.184,58** | **417.843,80** | **438.485,99** |
 
-: Presupuesto de Costos de Producción
+: Presupuesto de Costos de Producción {tbl-colwidths="[30,14,14,14,14,14]"}
 
 La tabla 6.11, indica los costos de producción anuales, muestra el presupuesto de producción mensual para el año 1, en la que se han considerado los siguientes ítems: costos directos y costos indirectos dando como resultado el costo total que es la suma de todos los gastos en los que la empresa piscicola Aquazul S.C.R.L incurre para producir y comercializar el producto en el mercado estadounidense. Aquí no existen inventarios puesto que es producto perecible y en cuanto se produce se comercializa al mercado estadounidense.
 
@@ -1281,15 +1285,15 @@ Acerca de los costos indirectos S/ 21.080,00 que es lo que se necesita para canc
 
 **Presupuesto de gasto de Fabricación**
 
-| **Concepto**                                | **Periodo 1**  | **Periodo 2** | **Periodo 3** | **Periodo 4**  | **Periodo 5**   |
-| ------------------------------------------- | -------------- | ------------- | ------------- | -------------- | --------------- |
-| TOTAL, INGRESOS                             | 59874360.98    | 62868079.03   | 69312057.13   | 72777659.99    | 76416542.99     |
-| GASTOS ADMINISTRATIVOS                      | 78,000.00      | 81900         | 85995         | 90294.75       | 94809.4875      |
-| GASTOS GENERALES (5% IF)                    | 30,430.00      | 31951.5       | 33549.075     | 35226.52875    | 36987.85519     |
-| GASTOS DE SUPERVISIÓN (3% IF)               | 18,258.00      | 19170.9       | 20129.445     | 21135.91725    | 22192.71311     |
-| **TOTAL, COSTOS INDIRECTOS DE FABRICACIÓN** | **126,688.00** | **133022.4**  | **139673.52** | **146657.196** | **153990.0558** |
+| **Concepto** | **Periodo 1** | **Periodo 2** | **Periodo 3** | **Periodo 4** | **Periodo 5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| TOTAL, INGRESOS | 59874360.98 | 62868079.03 | 69312057.13 | 72777659.99 | 76416542.99 |
+| GASTOS ADMINISTRATIVOS | 78,000.00 | 81900 | 85995 | 90294.75 | 94809.4875 |
+| GASTOS GENERALES (5% IF) | 30,430.00 | 31951.5 | 33549.075 | 35226.52875 | 36987.85519 |
+| GASTOS DE SUPERVISIÓN (3% IF) | 18,258.00 | 19170.9 | 20129.445 | 21135.91725 | 22192.71311 |
+| **TOTAL, COSTOS INDIRECTOS DE FABRICACIÓN** | **126,688.00** | **133022.4** | **139673.52** | **146657.196** | **153990.0558** |
 
-: Presupuesto de Gasto de Fabricación
+: Presupuesto de Gasto de Fabricación {tbl-colwidths="[30,14,14,14,14,14]"}
 
 La tabla 6.12. muestra los gastos de fabricación en los que incurrirá la empresa, ello a sido proyectado para hasta el periodo 5,
 
@@ -1297,50 +1301,49 @@ Siendo para el primer año estos gastos de fabricación los siguientes gastos ad
 
 #### Presupuesto de construcción
 
-| **Item Construcción**                 | **Unidad De Medida** | **Especificación Técnica**   | **Tamaño** | **Costo Unitario** | **Costo Total** |
-| ------------------------------------- | -------------------- | ---------------------------- | ---------- | ------------------ | --------------- |
-| Terreno                               | m2                   | Terreno para la construcción | 140 m2     | 50                 | 7000            |
-| ESTRUCTURAS                           |                      |                              |            |                    |                 |
-| Muro de ladrillo                      | m2                   | Ladrillo                     | 140 m2     | 207                | 28980           |
-| Techo                                 | m2                   | Estructura metálica          | 140 m2     | 88                 | 12320           |
-| Piso                                  | m2                   | Concreto                     | 140 m2     | 57                 | 7980            |
-| ACABADOS                              |                      |                              |            |                    |                 |
-| Portón                                | m2                   | Metal                        | 12 m2      | 132                | 1585            |
-| Baños                                 | m2                   | Cerámica                     | 12 m2      | 26                 | 312             |
-| Instalaciones eléctricas y sanitarias | m2                   | Sistema de corriente y agua  | 140 m2     | 74                 | 10329           |
-| Instalación de tanque elevado.        | m3                   | Sistema de agua              | 140 m2     | 634                | 634             |
-| Revestimientos                        | m2                   | Tarrajeo y pintado           | 140 m2     | 65                 | 9100            |
-| **TOTAL, DE CONSTRUCCIONES**          | **78240**            |                              |            |                    |                 |
+| **Item Construcción** | **Unidad De Medida** | **Especificación Técnica** | **Tamaño** | **Costo Unitario** | **Costo Total** |
+|------------|:----------:|------------|:----------:|:----------:|:----------:|
+| Terreno | m2 | Terreno para la construcción | 140 m2 | 50 | 7000 |
+| **ESTRUCTURAS** |  |  |  |  |  |
+| Muro de ladrillo | m2 | Ladrillo | 140 m2 | 207 | 28980 |
+| Techo | m2 | Estructura metálica | 140 m2 | 88 | 12320 |
+| Piso | m2 | Concreto | 140 m2 | 57 | 7980 |
+| **ACABADOS** |  |  |  |  |  |
+| Portón | m2 | Metal | 12 m2 | 132 | 1585 |
+| Baños | m2 | Cerámica | 12 m2 | 26 | 312 |
+| Instalaciones eléctricas y sanitarias | m2 | Sistema de corriente y agua | 140 m2 | 74 | 10329 |
+| Instalación de tanque elevado. | m3 | Sistema de agua | 140 m2 | 634 | 634 |
+| Revestimientos | m2 | Tarrajeo y pintado | 140 m2 | 65 | 9100 |
+| **TOTAL, DE CONSTRUCCIONES** |  |  |  |  | **78240** |
 
-: Presupuesto de construcción para la planta procesadora _Fuente: Diario el peruano “Valores unitarios” Elaboración: propia_
+: Presupuesto de construcción para la planta procesadora  {#tbl-mytable2 apa-note="Diario el peruano “Valores unitarios" data-quarto-disable-processing="true" tbl-colwidths="[22,14,22,14,14,14]"}
 
 La tabla 6.13. muestra el total de inversiones para la construcción de la planta procesadora de filete de trucha la que asciende a S/ 78239, valores tomados de el diario Oficial “El Peruano” en el que se detallan los costos unitarios para la construcción teniendo en cuenta el material a utilizar, la tabla también muestra el costo del terreno ubicado en la Asociación José Ortiz Vergara que asciende a S/ 101000.00 los 140 M2.
 
 #### Presupuesto de maquinaria y equipo
 
-| **Equipos para producir 10 TM** |           |                |             |
-| ------------------------------- | --------- | -------------- | ----------- |
-| Descripción                     | Cantidad  | Costo unitario | Costo total |
-| Armario de refrigeración        | 1         | 52800          | 52800       |
-| Máquina de empaque al vacío     | 1         | 5749           | 5749        |
-| Mesas de metal                  | 6         | 480            | 2880        |
-| Jabas para pescado x 25 kg      | 34        | 10             | 340         |
-| Tinas de metal                  | 6         | 25             | 150         |
-| Balanzas                        | 2         | 490            | 980         |
-|                                 | **62899** |                |             |
+| Descripción                 | Cantidad | Costo unitario | Costo total |
+|-----------------------------|:--------:|:--------------:|:-----------:|
+| Armario de refrigeración    |    1     |     52800      |    52800    |
+| Máquina de empaque al vacío |    1     |      5749      |    5749     |
+| Mesas de metal              |    6     |      480       |    2880     |
+| Jabas para pescado x 25 kg  |    34    |       10       |     340     |
+| Tinas de metal              |    6     |       25       |     150     |
+| Balanzas                    |    2     |      490       |     980     |
+|                             |          |                |  **62899**  |
 
-: Presupuesto de maquinaria para el funcionamiento de la planta procesadora de filete de trucha
+: Presupuesto de maquinaria para el funcionamiento de la planta procesadora de filete de trucha para producir 10 TM
 
 La tabla 6.14 muestra el total de inversiones para la adquisición de maquinaria requerida para llevar a cabo el proyecto la que asciende a S/ 62899, en la que se va a comprar un armario de refrigeración para la conservación del producto, maquinaria de empaque al vacío para sellar el producto, mesas de metal necesarias para el proceso requerido, jabas de pescado para su transporte de un lugar a otro, tinas de metal para su almacenamiento y balanzas para el pesado de nuestro producto.
 
 ### Crédito bancario
 
 | Construcción                  | 78240.00  |           |
-| ----------------------------- | --------- | --------- |
+|-------------------------------|:---------:|:---------:|
 | Equipos                       | 62899.00  |           |
 | TOTAL, PARA EJECUTAR PROYECTO | 141139.00 |           |
-| Inversionistas                | 24%       | 34000     |
-| Financiamiento                | 76%       | 107139.00 |
+| Inversionistas                |    24%    |   34000   |
+| Financiamiento                |    76%    | 107139.00 |
 
 : Capital Total para emprender el Proyecto
 
@@ -1352,18 +1355,18 @@ Fuente: Elaboración Propia, a partir del simulador de crédito ProEmpresa
 
 En base a la información anterior se realiza los siguientes cálculos: Intereses, amortización y cuota
 
-| CAPITAL         | 107,139.00    |                  |             |
-| --------------- | ------------- | ---------------- | ----------- |
-| TEM             | 3.34%         |                  |             |
-| AÑOS            | 5.0           |                  |             |
-| FRECUENCIA      | 1             |                  |             |
-| NÚMERO DE PAGOS | 5             |                  |             |
-| **PERIODO**     | **INTERESES** | **AMORTIZACIÓN** | **CUOTA**   |
-| 1               | S/51,694.57   | S/8,390.62       | S/60,085.18 |
-| 2               | S/47,646.09   | S/12,439.09      | S/60,085.18 |
-| 3               | S/41,644.23   | S/18,440.95      | S/60,085.18 |
-| 4               | S/32,746.48   | S/27,338.71      | S/60,085.18 |
-| 5               | S/19,555.55   | S/40,529.64      | S/60,085.18 |
+| CAPITAL         |  107,139.00   |                  |             |
+|:----------------|:-------------:|:----------------:|:-----------:|
+| TEM             |     3.34%     |                  |             |
+| AÑOS            |      5.0      |                  |             |
+| FRECUENCIA      |       1       |                  |             |
+| NÚMERO DE PAGOS |       5       |                  |             |
+| **PERIODO**     | **INTERESES** | **AMORTIZACIÓN** |  **CUOTA**  |
+| 1               |  S/51,694.57  |    S/8,390.62    | S/60,085.18 |
+| 2               |  S/47,646.09  |   S/12,439.09    | S/60,085.18 |
+| 3               |  S/41,644.23  |   S/18,440.95    | S/60,085.18 |
+| 4               |  S/32,746.48  |   S/27,338.71    | S/60,085.18 |
+| 5               |  S/19,555.55  |   S/40,529.64    | S/60,085.18 |
 
 : Tabla de Amortizaciones {#tbl-mytable2 apa-note="Elaboración Propia, a partir del simulador de crédito ProEmpresa" data-quarto-disable-processing="true"}
 
@@ -1373,61 +1376,61 @@ Donde: El Valor de cuota es de 8,012.57, con una TEA de 48.25 % y una TEM de 3.3
 
 ### Presupuesto de gastos (administrativos, exportación y financieros)
 
-| **CONCEPTO**           | **1**     | **2**     | **3**     | **4**     | **5**     |
-| ---------------------- | --------- | --------- | --------- | --------- | --------- |
-| Sueldo administrativo  | 74400     | 74400     | 74400     | 74400     | 74400     |
-| Promoción y publicidad | 8733      | 8733      | 8733      | 8733      | 8733      |
-| Otros Gastos adm.      | 3600      | 3600      | 3600      | 3600      | 3600      |
+| **CONCEPTO**           |   **1**   |   **2**   |   **3**   |   **4**   |   **5**   |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Sueldo administrativo  |   74400   |   74400   |   74400   |   74400   |   74400   |
+| Promoción y publicidad |   8733    |   8733    |   8733    |   8733    |   8733    |
+| Otros Gastos adm.      |   3600    |   3600    |   3600    |   3600    |   3600    |
 | **Total Gastos Adm.**  | **86733** | **86733** | **86733** | **86733** | **86733** |
 
-: Gastos administrativos para los años del 1 al 5
+: Gastos administrativos para los años del 1 al 5 {tbl-colwidths="[30,14,14,14,14,14]"}
 
 La tabla 6.17., muestra los gastos administrativos para los años 1 al 5, en los que se ha considerado el sueldo para el personal administrativo, pero aquí no se considera el Sueldo del jefe de producción qué es considerado como mano de obra directa, en la tabla de producción; también se consideran los gastos por teléfonos e internet, así como los gastos de promoción y publicidad descrita en el plan de marketing, dichos gastos son de 86733 anuales necesarios para cancelar los gastos administrativos.
 
-| **CONCEPTOS**            | **1**      | **2**      | **3**      | **4**      | **5**      |
-| ------------------------ | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Empaque /embalaje        | 17761      | 32148      | 58187      | 105319     | 190628     |
-| Terminal aéreo           | 223        | 223        | 223        | 223        | 223        |
-| Costos aduaneros         | 13862      | 13862      | 13862      | 13862      | 13862      |
-| AWB                      | 116        | 116        | 116        | 116        | 116        |
-| Transporte local         | 251        | 251        | 251        | 251        | 251        |
-| Transporte internacional | 207187     | 207187     | 207187     | 207187     | 207187     |
-| Seguro                   | 0          | 0          | 0          | 0          | 0          |
-| Certificados             | 4583       | 4583       | 4583       | 4583       | 4583       |
+| **CONCEPTOS** | **1** | **2** | **3** | **4** | **5** |
+|:-----------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Empaque / embalaje | 17761 | 32148 | 58187 | 105319 | 190628 |
+| Terminal aéreo | 223 | 223 | 223 | 223 | 223 |
+| Costos aduaneros | 13862 | 13862 | 13862 | 13862 | 13862 |
+| AWB | 116 | 116 | 116 | 116 | 116 |
+| Transporte local | 251 | 251 | 251 | 251 | 251 |
+| Transporte internacional | 207187 | 207187 | 207187 | 207187 | 207187 |
+| Seguro | 0 | 0 | 0 | 0 | 0 |
+| Certificados | 4583 | 4583 | 4583 | 4583 | 4583 |
 | **Total g. Exportación** | **243983** | **258369** | **284409** | **331541** | **416850** |
 
-: Gastos de exportación {#tbl-mytable2 apa-note="SANIPES" data-quarto-disable-processing="true"}
+: Gastos de exportación {tbl-colwidths="[30,14,14,14,14,14]" #tbl-mytable2 apa-note="SANIPES" data-quarto-disable-processing="true"}
 
 La tabla 6.18, muestra los gastos de exportación en los que se considera el empaque y embalaje; así como los costos aduaneros que se consideran en el análisis de precios de exportación, los que se necesita cubrir con una cantidad de 243983, en el que va incrementando año a año 0.81% De acuerdo con la tasa de crecimiento poblacional en Estados Unidos.
 
-| **CONCEPTO**                    | **1**     | **2**     | **3**     | **4**     | **5**     |
-| ------------------------------- | --------- | --------- | --------- | --------- | --------- |
-| Intereses                       | 51695     | 47646     | 41644     | 32746     | 19556     |
-| Amortizaciones                  | 8391      | 12439     | 18441     | 27339     | 40530     |
+| **CONCEPTO** | **1** | **2** | **3** | **4** | **5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Intereses | 51695 | 47646 | 41644 | 32746 | 19556 |
+| Amortizaciones | 8391 | 12439 | 18441 | 27339 | 40530 |
 | **Total de gastos financieros** | **60085** | **60085** | **60085** | **60085** | **60085** |
 
-: Gastos Financieros.
+: Gastos Financieros {tbl-colwidths="[30,14,14,14,14,14]"}
 
 La tabla 6.19., muestra los gastos financieros para los años proyectados luz que ascienden a 60085 para el primer año, donde las amortizaciones van incrementando y a lo largo del proyecto lo que demuestra que el préstamo sí está cancelando año tras año, Por otro lado los intereses generados por el préstamo adquirido pan disminuyendo en cuanto se va cancelando el préstamo para llevar a cabo el proyecto.
 
 ### Presupuesto financiero
 
-| **CONCEPTO**                | **1**      | **2**      | **3**      | **4**      | **5**      |
-| --------------------------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Ventas                      | 727776     | 733671     | 739614     | 745605     | 751644     |
-| Costo de ventas             | 288000     | 290333     | 292684     | 295055     | 297445     |
-| Utilidad bruta              | 439776     | 443338     | 446929     | 450549     | 454199     |
-| Gastos administrativos      | 86733      | 86733      | 86733      | 86733      | 86733      |
-| Gastos de venta             | 49656      | 49656      | 49656      | 49656      | 49656      |
-| Depreciación                | 12580      | 12580      | 12580      | 12580      | 12580      |
-| Amortización                | 8391       | 12439      | 18441      | 27339      | 40530      |
-| Utilidad de la operación    | 282416     | 281930     | 279519     | 274242     | 264700     |
-| Gastos financieros          | 60085      | 60085      | 60085      | 60085      | 60085      |
-| Utilidad antes de impuestos | 222331     | 221845     | 219434     | 214156     | 204615     |
-| Impuesto Renta              | 66699      | 66553      | 65830      | 64247      | 61384      |
-| **Utilidad neta**           | **155632** | **155291** | **153604** | **149909** | **143230** |
+| **CONCEPTO** | **1** | **2** | **3** | **4** | **5** |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Ventas | 727776 | 733671 | 739614 | 745605 | 751644 |
+| Costo de ventas | 288000 | 290333 | 292684 | 295055 | 297445 |
+| Utilidad bruta | 439776 | 443338 | 446929 | 450549 | 454199 |
+| Gastos administrativos | 86733 | 86733 | 86733 | 86733 | 86733 |
+| Gastos de venta | 49656 | 49656 | 49656 | 49656 | 49656 |
+| Depreciación | 12580 | 12580 | 12580 | 12580 | 12580 |
+| Amortización | 8391 | 12439 | 18441 | 27339 | 40530 |
+| Utilidad de la operación | 282416 | 281930 | 279519 | 274242 | 264700 |
+| Gastos financieros | 60085 | 60085 | 60085 | 60085 | 60085 |
+| Utilidad antes de impuestos | 222331 | 221845 | 219434 | 214156 | 204615 |
+| Impuesto Renta | 66699 | 66553 | 65830 | 64247 | 61384 |
+| **Utilidad neta** | **155632** | **155291** | **153604** | **149909** | **143230** |
 
-: Estado de resultados con financiamiento
+: Estado de resultados con financiamiento {tbl-colwidths="[30,14,14,14,14,14]"}
 
 La tabla denominada estado resultados sin financiamiento muestra que al finalizar el periodo la empresa obtiene una utilidad que proyectada a través del tiempo va incrementando, mostrando un resultado favorable para la empresa. Mientras que una variación promedio de 11% durante los 5 años considerados para el proyecto. Este resultado nos muestra que la participación en ventas los filetes de trucha arcoíris en el mercado estadounidense es positiva.
 
@@ -1435,74 +1438,71 @@ La tabla denominada estado resultados sin financiamiento muestra que al finaliza
 
 Para poder realizar el análisis de rentabilidad hacemos uso del flujo de caja el cual nos permite ingresar en el análisis del VAN y TIR para poder diagnosticar la rentabilidad del negocio.
 
-| CONCEPTOS                      | **0**       | **1**         | **2**         | **3**         | **4**         | **5**         |
-| ------------------------------ | ----------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| **INGRESOS**                   |             | **727776**    | **764165**    | **802373**    | **842492**    | **884616**    |
-| **Venta de Activos**           |             |               |               |               |               |               |
-| Costo Producción               |             | 273080        | 273080        | 273080        | 273080        | 273080        |
-| Gastos Administrativos         |             | 86733         | 86733         | 86733         | 86733         | 86733         |
-| Gastos de Venta                |             | 49656         | 49656         | 49656         | 49656         | 49656         |
-| Depreciación maquinarias       |             | 7428          | 7428          | 7428          | 7428          | 7428          |
-| Depreciación de Construcciones |             | 3526          | 3526          | 3526          | 3526          | 3526          |
-| Amortización De Intangibles    |             | 13798,4       | 13798,4       | 13798,4       | 13798,4       | 13798,4       |
-|                                |             |               |               |               |               |               |
-| **Utilidad**                   |             | **293554**    | **329943**    | **368151**    | **408270**    | **450395**    |
-| Renta                          |             | 88066,29      | 98982,93      | 110445,40     | 122480,99     | 135118,37     |
-| **Utilidad Neta**              |             | **205488,00** | **230960,16** | **257705,93** | **285788,99** | **315276,20** |
-| Depreciación Maquinarias       |             | 7428          | 7428          | 7428          | 7428          | 7428          |
-| Depreciación Construcciones    |             | 3526          | 3526          | 3526          | 3526          | 3526          |
-|                                |             |               |               |               |               |               |
-| Equipos (10)                   | 58317       |               |               |               |               | 58317         |
-| Equipos (5)                    | 4386        |               |               |               |               |               |
-| Equipos (1)                    | 196         |               |               |               |               |               |
-| Intangibles                    | 68992       |               |               |               |               |               |
-| Amortización De Intangibles    |             | 13798         | 13798         | 13798         | 13798         | 13798         |
-|                                |             |               |               |               |               |               |
-| Terreno                        | 101000      |               |               |               |               | 101000        |
-| Construcciones                 | 78240       |               |               |               |               | 60610         |
-| Capital Trabajo                | 22850       | 69548         | 104015        | 133487        | 207553        | 537453        |
-| **Flujo De Caja**              | **-333981** | **11450**     | **148971**    | **151698**    | **160692**    | **1097409**   |
+| CONCEPTOS | **0** | **1** | **2** | **3** | **4** | **5** |
+|-----------|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| **INGRESOS** |  | **727776** | **764165** | **802373** | **842492** | **884616** |
+| **Venta de Activos** |  |  |  |  |  |  |
+| Costo Producción |  | 273080 | 273080 | 273080 | 273080 | 273080 |
+| Gastos Administrativos |  | 86733 | 86733 | 86733 | 86733 | 86733 |
+| Gastos de Venta |  | 49656 | 49656 | 49656 | 49656 | 49656 |
+| Depreciación maquinarias |  | 7428 | 7428 | 7428 | 7428 | 7428 |
+| Depreciación de Construcciones |  | 3526 | 3526 | 3526 | 3526 | 3526 |
+| Amortización De Intangibles |  | 13798,4 | 13798,4 | 13798,4 | 13798,4 | 13798,4 |
+| **Utilidad** |  | **293554** | **329943** | **368151** | **408270** | **450395** |
+| Renta |  | 88066,29 | 98982,93 | 110445,40 | 122480,99 | 135118,37 |
+| **Utilidad Neta** |  | **205488,00** | **230960,16** | **257705,93** | **285788,99** | **315276,20** |
+| Depreciación Maquinarias |  | 7428 | 7428 | 7428 | 7428 | 7428 |
+| Depreciación Construcciones |  | 3526 | 3526 | 3526 | 3526 | 3526 |
+| Equipos (10) | 58317 |  |  |  |  | 58317 |
+| Equipos (5) | 4386 |  |  |  |  |  |
+| Equipos (1) | 196 |  |  |  |  |  |
+| Intangibles | 68992 |  |  |  |  |  |
+| Amortización De Intangibles |  | 13798 | 13798 | 13798 | 13798 | 13798 |
+| Terreno | 101000 |  |  |  |  | 101000 |
+| Construcciones | 78240 |  |  |  |  | 60610 |
+| Capital Trabajo | 22850 | 69548 | 104015 | 133487 | 207553 | 537453 |
+| **Flujo De Caja** | **-333981** | **11450** | **148971** | **151698** | **160692** | **1097409** |
 
-: Flujo de caja proyectado sin financiamiento
+: Flujo de caja proyectado sin financiamiento {tbl-colwidths="[30,14,14,14,14,14]"}
 
 Al realizarse el flujo de caja económico se puede observar que se tiene un flujo para el primer año S/. 333981, el cual se va incrementando a lo largo de los años cómo llegando a 1097409 para el quinto año del proyecto cómo el cual es un resultado positivo y favorable para la empresa.
 
-| CONCEPTO                       | **0**       | **1**         | **2**         | **3**         | **4**         | **5**         |
-| ------------------------------ | ----------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| **INGRESOS**                   |             | **727776**    | **764165**    | **802373**    | **842492**    | **884616**    |
-| **Venta de Activos**           |             |               |               |               |               |               |
-| Costo Producción               |             | 273080        | 286734        | 301071        | 316124        | 331930        |
-| Gastos Administrativos         |             | 86733         | 86733         | 86733         | 86733         | 86733         |
-| Gastos de Venta                |             | 49656         | 49656         | 49656         | 49656         | 49656         |
-| Depreciación de Maquinarias    |             | 7428          | 7428          | 7428          | 7428          | 7428          |
-| Depreciación de Construcciones |             | 3526          | 3526          | 3526          | 3526          | 3526          |
-| Amortización De Intangibles    |             | 489           | 489           | 489           | 489           | 489           |
-| Intereses/Préstamos            |             | 25744         | 22545         | 18579         | 13661         | 7562          |
-| **Utilidad**                   |             | **281120**    | **307053**    | **334891**    | **364874**    | **397291**    |
-| Renta                          |             | 84335,98      | 92116,00      | 100467,34     | 109462,33     | 119187,40     |
-| **Utilidad Neta**              |             | **196783,95** | **214937,34** | **234423,80** | **255412,10** | **278103,94** |
-| Depreciación de Maquinarias    |             | 7428          | 7428          | 7428          | 7428          | 7428          |
-| Depreciación Construcciones    |             | 3526          | 3526          | 3526          | 3526          | 3526          |
-| Amortización de la Deuda       |             | 13328         | 16526         | 20492         | 25411         | 31509         |
-| Equipos (10)                   | 58317       |               |               |               |               | 58317         |
-| Equipos (5)                    | 4386        |               |               |               |               |               |
-| Equipos (1)                    | 196         | 196           | 196           | 196           | 196           | 196           |
-| Intangibles                    | 68992       |               |               |               |               |               |
-| Amortización De Intangibles    |             | 13798         | 13798         | 13798         | 13798         | 13798         |
-| Préstamo                       | 107266      |               |               |               |               |               |
-| Terreno                        | 101000      |               |               |               |               | 101000        |
-| Construcciones                 | 78240       |               |               |               |               | 60610         |
-| Capital Trabajo                | 22850       | 69548         | 104015        | 133487        | 207553        | 537453        |
-| **Flujo De Caja**              | **-226715** | **118953**    | 18139         | **200585**    | **19456**     | **1021103**   |
+| CONCEPTO | **0** | **1** | **2** | **3** | **4** | **5** |
+|-----------|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| **INGRESOS** |  | **727776** | **764165** | **802373** | **842492** | **884616** |
+| **Venta de Activos** |  |  |  |  |  |  |
+| Costo Producción |  | 273080 | 286734 | 301071 | 316124 | 331930 |
+| Gastos Administrativos |  | 86733 | 86733 | 86733 | 86733 | 86733 |
+| Gastos de Venta |  | 49656 | 49656 | 49656 | 49656 | 49656 |
+| Depreciación de Maquinarias |  | 7428 | 7428 | 7428 | 7428 | 7428 |
+| Depreciación de Construcciones |  | 3526 | 3526 | 3526 | 3526 | 3526 |
+| Amortización De Intangibles |  | 489 | 489 | 489 | 489 | 489 |
+| Intereses/Préstamos |  | 25744 | 22545 | 18579 | 13661 | 7562 |
+| **Utilidad** |  | **281120** | **307053** | **334891** | **364874** | **397291** |
+| Renta |  | 84335,98 | 92116,00 | 100467,34 | 109462,33 | 119187,40 |
+| **Utilidad Neta** |  | **196783,95** | **214937,34** | **234423,80** | **255412,10** | **278103,94** |
+| Depreciación de Maquinarias |  | 7428 | 7428 | 7428 | 7428 | 7428 |
+| Depreciación Construcciones |  | 3526 | 3526 | 3526 | 3526 | 3526 |
+| Amortización de la Deuda |  | 13328 | 16526 | 20492 | 25411 | 31509 |
+| Equipos (10) | 58317 |  |  |  |  | 58317 |
+| Equipos (5) | 4386 |  |  |  |  |  |
+| Equipos (1) | 196 | 196 | 196 | 196 | 196 | 196 |
+| Intangibles | 68992 |  |  |  |  |  |
+| Amortización De Intangibles |  | 13798 | 13798 | 13798 | 13798 | 13798 |
+| Préstamo | 107266 |  |  |  |  |  |
+| Terreno | 101000 |  |  |  |  | 101000 |
+| Construcciones | 78240 |  |  |  |  | 60610 |
+| Capital Trabajo | 22850 | 69548 | 104015 | 133487 | 207553 | 537453 |
+| **Flujo De Caja** | **-226715** | **118953** | **18139** | **200585** | **19456** | **1021103** |
 
-: Flujo de caja proyectado con financiamiento.
+: Flujo de caja proyectado con financiamiento {tbl-colwidths="[35,13,13,13,13,13]"}
 
 En realizar el flujo de caja financiero observamos que se tiene un flujo de 226715 para el primer año cómo al igual que en el flujo de caja económico, tiene un comportamiento creciente a lo largo de los años proyectados, resultado favorable para la empresa, ya qué representa el dinero disponible en caja después de haber pagado todos los costos, gastos y obligaciones financieras.
 
 **Evaluación económica-financiera**
 
 | COK (Costo de oportunidad de Capital) | 0,1594 | VANE  | 90155 |         |
-| ------------------------------------- | ------ | ----- | ----- | ------- |
+|---------------------------------------|:------:|:-----:|:-----:|:-------:|
 |                                       |        | 15,94 | TIRE  | 27.00 % |
 
 : Evaluación Económica
@@ -1516,8 +1516,8 @@ Al realizar la evaluación del proyecto sin considerar un financiamiento, consid
 De acuerdo con la evaluación realizada se observa que el proyecto arroja una tasa de rendimiento de 16%, considerando un VANE de S/. 90155 por lo que se afirma que el proyecto es factible.
 
 | WACC (Costo Promedio Ponderado de Capital) | 0,32 | VANF | 69518 |       |
-| ------------------------------------------ | ---- | ---- | ----- | ----- |
-|                                            |      | 32   | TIRF  | 37,0% |
+|--------------------------------------------|:----:|:----:|:-----:|:-----:|
+|                                            |      |  32  | TIRF  | 37,0% |
 
 : Evaluación financiera
 
@@ -1544,14 +1544,14 @@ Teniendo en cuenta lo anterior, se procede a interpretar.
 3.  Pesimista: El proyecto muestra que al disminuir el precio en 8%, se generan indicadores negativos (VANF S/ -8,497)
 
 | **Año** | **Flujo Efectivo A Valor Presente** | **Flujos De Efectivo Acumulativos** |
-| ------- | ----------------------------------- | ----------------------------------- |
-| 0       | 226715                              |                                     |
-| 1       | 105415                              | 105415                              |
-| 2       | 18139                               | 123554                              |
-| 3       | 187303                              | 205442                              |
-| 4       | 19456                               | 206759                              |
-| 5       | 1003623                             | 1023079                             |
-| PRI     | 7                                   |                                     |
+|:----------------:|:-------------------------:|:-------------------------:|
+| 0 | 226715 |  |
+| 1 | 105415 | 105415 |
+| 2 | 18139 | 123554 |
+| 3 | 187303 | 205442 |
+| 4 | 19456 | 206759 |
+| 5 | 1003623 | 1023079 |
+| **PRI** | 7 |  |
 
 : Período de recuperación de la inversión (PRI)
 
@@ -1565,7 +1565,7 @@ Donde:
 
 a: Año inmediato anterior en que se recupera la inversión.
 
-b. Inversión Inicial
+b.  Inversión Inicial
 
 c: Flujo de Efectivo Acumulado del año inmediato en el que se recupera la inversión
 
@@ -1579,35 +1579,35 @@ d: Flujo de efectivo del año en el que se recupera la inversión.
 
 ![Determinación de costos y el precio de exportación mediante el simulador financiero LATE.](index_files/figure-html/lu137401d6rd_tmp_bd7c7d98.png)
 
-# REFERENCIAS
+# Referencias
 
 Acuicultura: alta conversión de alimento a carne. (2013, 13 de abril). La Nación. Obtenido de http://www.lanacion.com.ar/1571887-acuicultura-alta-conversion-de-alimento-a-carne
 
 Agencia Agraria de Noticias. (2017a, 14 de junio). Perú y Chile impulsarán pesca y acuicultura con sanidad e inocuidad. 2017. Obtenido de http://agraria.pe/noticias/peru-y-chile-impulsaran-pesca-y-acuicultura-con-sanidad-14084
 
-Comisión de Promoción del Perú para la Exportación y el Turismo (2020). _Herramientas para las MIPYME: Simulador Financiero_. Consultado el 1 de noviembre de 2020. https://simuladorfinanciero.promperu.gob.pe/
+Comisión de Promoción del Perú para la Exportación y el Turismo (2020). *Herramientas para las MIPYME: Simulador Financiero*. Consultado el 1 de noviembre de 2020. https://simuladorfinanciero.promperu.gob.pe/
 
-Comisión de Promoción del Perú para la Exportación y el Turismo (2020). _Plataforma de exportación asistida LATE_. Obtenido de https://www.late.gob.pe/Formularios/PasosFuncionales/frmInteligenciaMercado.aspx#no-back-button
+Comisión de Promoción del Perú para la Exportación y el Turismo (2020). *Plataforma de exportación asistida LATE*. Obtenido de https://www.late.gob.pe/Formularios/PasosFuncionales/frmInteligenciaMercado.aspx#no-back-button
 
-DP WORL Callao (2019). _Tarifario de importación y exportación._ Obtenido de https://www.dpworldcallao.com.pe/uploads/tarifario/tarifario-abreviado-2019-1.pdf
+DP WORL Callao (2019). *Tarifario de importación y exportación.* Obtenido de https://www.dpworldcallao.com.pe/uploads/tarifario/tarifario-abreviado-2019-1.pdf
 
-Santander,Trade Markets. (s.f.). _Estados Unidos, Política y Economía_. Obtenido de https://santandertrade.com/es/portal/analizar-mercados/estados-unidos/politica-y-economia
+Santander,Trade Markets. (s.f.). *Estados Unidos, Política y Economía*. Obtenido de https://santandertrade.com/es/portal/analizar-mercados/estados-unidos/politica-y-economia
 
-Sistema Integrado de Información de Comercio Exterior (2020). _Herramientas para las MIPYME: Calculador Callao Online._ Obtenido de http://www.callaoonline.com/Cotizador.aspx
+Sistema Integrado de Información de Comercio Exterior (2020). *Herramientas para las MIPYME: Calculador Callao Online.* Obtenido de http://www.callaoonline.com/Cotizador.aspx
 
-Sistema Integrado de Información de Comercio Exterior (2020). _Herramientas para las MIPYME: Tarifas de importación y exportación Callao._ Obtenido de https://www.neptunia.com.pe/HTML_Libre/TARIFARIO_WEB_CAL.HTM
+Sistema Integrado de Información de Comercio Exterior (2020). *Herramientas para las MIPYME: Tarifas de importación y exportación Callao.* Obtenido de https://www.neptunia.com.pe/HTML_Libre/TARIFARIO_WEB_CAL.HTM
 
-Plataforma de exportación asistida LATE (2020). _Rutas aéreas_. Obtenido de [http://rutasaereas.promperu.gob.pe/#](http://rutasaereas.promperu.gob.pe/)
+Plataforma de exportación asistida LATE (2020). *Rutas aéreas*. Obtenido de [http://rutasaereas.promperu.gob.pe/#](http://rutasaereas.promperu.gob.pe/)
 
-Velazco, J. (2019). _Plan de exportación de filete de trucha arcoíris hacia el mercado estadounidense_ \[tesis para optar el título profesional, Universidad Nacional de Piura\]. Repositorio Dspace http://repositorio.unp.edu.pe/bitstream/handle/UNP/1681/ADM-VEL-GUT-2018.pdf?sequence=1&isAllowed=y
+Velazco, J. (2019). *Plan de exportación de filete de trucha arcoíris hacia el mercado estadounidense* \[tesis para optar el título profesional, Universidad Nacional de Piura\]. Repositorio Dspace http://repositorio.unp.edu.pe/bitstream/handle/UNP/1681/ADM-VEL-GUT-2018.pdf?sequence=1&isAllowed=y
 
-CENTRAL INTELLIGENCE AGENCY. (2020). _CENTRAL INTELLIGENCE AGENCY. CENTRAL INTELLIGENCE_: Obtenido de https://www.cia.gov/library/publications/the-world-factbook/
+CENTRAL INTELLIGENCE AGENCY. (2020). *CENTRAL INTELLIGENCE AGENCY. CENTRAL INTELLIGENCE*: Obtenido de https://www.cia.gov/library/publications/the-world-factbook/
 
-Ministerio de Comercio Exterior y Turismo. (2020). _Informes y Publicaciones_: Obtenido de https://www.gob.pe/mincetur
+Ministerio de Comercio Exterior y Turismo. (2020). *Informes y Publicaciones*: Obtenido de https://www.gob.pe/mincetur
 
-Ministerio de la Producción. (2020). _Informes y Publicaciones_: Obtenido de https://www.gob.pe/produce
+Ministerio de la Producción. (2020). *Informes y Publicaciones*: Obtenido de https://www.gob.pe/produce
 
-U.S. FOOD & DRUG. (2020). _U.S. FOOD & DRUG_. Obtenido de Información para Consumidores ¨Consejos utiles para los consumidores de la FDA¨: https://www.fda.gov/about-fda/fda-en-espanol
+U.S. FOOD & DRUG. (2020). *U.S. FOOD & DRUG*. Obtenido de Información para Consumidores ¨Consejos utiles para los consumidores de la FDA¨: https://www.fda.gov/about-fda/fda-en-espanol
 
 
 # Publicaciones Similares

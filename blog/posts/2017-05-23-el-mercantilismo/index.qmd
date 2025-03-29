@@ -1,4 +1,5 @@
 ---
+git gt---
 # documentmode: stu
 # Configuraciones Específicas por Modo
 # PARA ESTUDIANTE
@@ -36,7 +37,7 @@ author:
       - id: unsch
       - name: Universidad Nacional de San Cristóbal de Huamanga
         department: Economía
-        address: Portla Independencia N 57
+        # address: Portal Independencia N 57
         city: Ayacucho
         region: PE
         postal-code:
@@ -68,6 +69,30 @@ author:
       - ref: unsch
     role:
       - redacción
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: Si la voluntad es la fuerza motriz que impulsa al hombre, pues aquella es quién hace al hombre. El trabajo va dirigido a los profesores que nos acompañan a diario en nuestra formación profesional y a aquellas mujeres que son nuestra inspiración diaria, nuestras madres.
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
 # Google Scholar
 citation:
   type: article-journal
@@ -95,8 +120,8 @@ En esta monografía encontraremos lo esencial para entender los pensamientos eco
 
 Según Pérez J. (2011) “el pensamiento mercantilista surgió a inicios del XVI Y XVII Y abarco parte del siglo XVIII. El mercantilismo se basa en dos teorías importantes: el superávit comercial y la política proteccionista”.
 
-- ​ **Teoría del superávit comercial:** es cuando el valor total de las exportaciones de un país es superior al valor total de sus importaciones.
-- ​ **Teoría de la política proteccionista:** es cuando un país implanta políticas de restricción comercial a la importación, para proteger a la Producción nacional.
+-   ​ **Teoría del superávit comercial:** es cuando el valor total de las exportaciones de un país es superior al valor total de sus importaciones.
+-   ​ **Teoría de la política proteccionista:** es cuando un país implanta políticas de restricción comercial a la importación, para proteger a la Producción nacional.
 
 La suma de estas dos políticas dio origen al mercantilismo pues el superávit fiscal permitía en mayor medida el ingreso de divisas al país y con las políticas proteccionistas, los productos internos tenían un valor de venta mayor al de los productos importados, cumpliendo así la primera teoría (mayor exportación que importación). Es así que en esta época nace el capitalismo acompañado de un excesivo control de comercio exterior, debido al elevado flujo de mercaderías que circulaba entre los países.
 
@@ -140,7 +165,7 @@ La escuela mercantilista suponía la implementación de un sistema que protegier
 
 ## Los principios más importantes de la escuela mercantilista.
 
-   1. ​ **El oro y la plata son la forma más deseable de riqueza**.
+1.  ​ **El oro y la plata son la forma más deseable de riqueza**.
 
 Los mercantilistas tendían a igualar la riqueza de una nación con la cantidad de lingotes de oro y plata que poseía. Algunos de los primeros mercantilistas creían que esos metales preciosos eran el único tipo de riqueza al que se podía aspirar. Todos valoraban los lingotes como la única forma de alcanzar el poder y la riqueza. Por consiguiente, era necesario un excedente de exportaciones de un país para generar pagos en moneda dura. Incluso cuando estaban en guerra, las naciones exportaban bienes para el enemigo, siempre y cuando los productos se pagaran en oro.
 
@@ -152,7 +177,7 @@ Importación libre de impuestos de materia prima que no se produce domésticamen
 
 Las prohibiciones contra el movimiento exterior de materia prima ayudaron a mantener bajos los precios de las exportaciones de bienes terminados. Por ejemplo, una ley aprobada en 1565-1566 durante el reinado de la reina Isabel prohibía la exportación de ovejas vivas. Las penalidades por violar esa ley eran la confiscación de la propiedad, un año en prisión y la amputación de la mano izquierda. La pena de muerte se prescribía por una segunda ofensa. La exportación de lana cruda estaba prohibida y se aplicaban las mismas penalidades en una ley promulgada durante el reinado de Carlos II (1660-1685).
 
-1. ​ **Colonialismo y monopolio del comercio.**
+1.  ​ **Colonialismo y monopolio del comercio.**
 
 Los comerciantes capitalistas favorecían la colonización y querían mantener a las colonias eternamente dependientes de la madre patria y subordinadas a ella. Cualquiera de los beneficios que se extendían hacia las colonias debido al crecimiento y el poder militar de la madre patria era un subproducto accidental de la política de explotación.
 
@@ -238,24 +263,25 @@ Jean Baptiste Colbert como la mayoría de mercantilistas estaba a favor de la ac
 
 # Conclusión
 
-1. ​ El mercantilismo es un conjunto de ideas que considera que la prosperidad de una nación o estado depende del capital que pueda tener es toda búsqueda de riqueza y de predominio territorial, como la demostración de ser una gran potencia y en mayor escala la única.
+1.  ​ El mercantilismo es un conjunto de ideas que considera que la prosperidad de una nación o estado depende del capital que pueda tener es toda búsqueda de riqueza y de predominio territorial, como la demostración de ser una gran potencia y en mayor escala la única.
 
-1. ​ También se puede decir que fue un conjunto de ideas económicas que tendía al fortalecimiento de los nuevos estados europeos, mediante la creciente intervención del gobierno en la economía y el exagerado nacionalismo en las relaciones entre los distintos países.
-1. ​ Fue la corriente que impulso a las grandes potencias a conquistar los mares, nuevos horizontes con el fin de aumentar sus riquezas y territorios.
+2.  ​ También se puede decir que fue un conjunto de ideas económicas que tendía al fortalecimiento de los nuevos estados europeos, mediante la creciente intervención del gobierno en la economía y el exagerado nacionalismo en las relaciones entre los distintos países.
 
-1. ​ Esta corriente demuestra según sus antecedentes que toda nación que se encierra termina explotando, como también que la grande potencia siempre busca su conveniencia en toda negociación, es por esto que América se convirtió en granero de Europa.
+3.  ​ Fue la corriente que impulso a las grandes potencias a conquistar los mares, nuevos horizontes con el fin de aumentar sus riquezas y territorios.
 
-1. Importancia preponderante dada a los metales preciosos que el Estado debía procurar acrecentar al máximo. Para alcanzar tal objetivo había que tratar de obtener una Balanza Comercial Favorable, fomentando especialmente la exportación de artículos industrializados y restringiendo su importación. Esto significaba, a su vez, el estímulo de las industrias de elaboración, para el consumo interno y para las ventas al exterior. Así se formaron las primeras Manufacturas, establecimientos de magnitud mucho mayor que los talleres de artesanía corrientes hasta entonces.
+4.  ​ Esta corriente demuestra según sus antecedentes que toda nación que se encierra termina explotando, como también que la grande potencia siempre busca su conveniencia en toda negociación, es por esto que América se convirtió en granero de Europa.
 
-1. ​ Conveniencia de la adquisición de colonias como fuentes de materias primas (eventualmente de metales preciosos) y mercados de los bienes elaborados en la metrópoli. La aplicación de estas ideas contribuyó, especialmente, al progreso de Francia e Inglaterra.
+5.  Importancia preponderante dada a los metales preciosos que el Estado debía procurar acrecentar al máximo. Para alcanzar tal objetivo había que tratar de obtener una Balanza Comercial Favorable, fomentando especialmente la exportación de artículos industrializados y restringiendo su importación. Esto significaba, a su vez, el estímulo de las industrias de elaboración, para el consumo interno y para las ventas al exterior. Así se formaron las primeras Manufacturas, establecimientos de magnitud mucho mayor que los talleres de artesanía corrientes hasta entonces.
+
+6.  ​ Conveniencia de la adquisición de colonias como fuentes de materias primas (eventualmente de metales preciosos) y mercados de los bienes elaborados en la metrópoli. La aplicación de estas ideas contribuyó, especialmente, al progreso de Francia e Inglaterra.
 
 # Bibliografía
 
 ASOCIACION FONDO DE INVESTIGACION y EDITORES (2009). Lima - Perù
 
-​ Introduccion a la economia, enfoque social.
+​Introduccion a la economia, enfoque social.
 
-BRUE, S. y RANDY G. (2009) _Historia del pensamiento económico,_ México: Cengage Learning Editores, S.A.
+BRUE, S. y RANDY G. (2009) *Historia del pensamiento económico,* México: Cengage Learning Editores, S.A.
 
 ERIC, R. (2010). Historia de las doctrinas económicas. México D.F.: Fondo de cultura económica.
 

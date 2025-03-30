@@ -106,11 +106,11 @@ format:
         - flatly
         - mozilla.scss
     css: styles.css
-    toc: true
+    toc: false # Mostrar tabla de contenidos
 
 execute:
   keep-md: true  # Mantener archivos .md generados
-  keep-ipynb: true
+  keep-ipynb: true 
   echo: true  # Mostrar comandos ejecutados
   output: true  # Mostrar resultados de la ejecución
   warning: false  # Ocultar advertencias

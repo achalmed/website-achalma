@@ -234,7 +234,7 @@ format:
     toc-depth: 3  # Profundidad de la tabla de contenidos
     toc-expand: 4  # Nivel de anidamiento inicial de la tabla de contenidos expandida
     toc-title: Contenidos  # Título de la tabla de contenidos
-    toc-location: left  # (left, body, right) Ubicación de la tabla de contenidos
+    toc-location: right  # (left, body, right) Ubicación de la tabla de contenidos
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
     smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
@@ -296,10 +296,7 @@ format:
     numbered-lines: false  # Númerar líneas del documento
 
 # Enlaces de Formato
-format-links: 
-  - pdf
-  - ipynb
-
+format-links: true # enlace a pdf, docx, html, epub, notebook
 # Configuración del Entorno de Ejecución
 jupyter: python3
 

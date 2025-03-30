@@ -5,7 +5,7 @@ listing:
   - id: ultimas-entradas
     contents: 
       - "posts/*/index.qmd"
-    type: default # (table, default, table)
+    type: default # (table, default)
     sort: 
       - "date desc"
       - "title desc"

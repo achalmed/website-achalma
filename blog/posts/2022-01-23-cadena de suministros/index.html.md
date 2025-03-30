@@ -24,6 +24,13 @@ tags:
   - Transporte  
   - Coordinación global  
   - Empresas modernas
+author:
+  - name: Jane Doe
+    affiliations:
+      - name: Minnesota Department of Natural Resources
+        address: 500 Lafayette Road Saint Paul, MN 55155
+      - name: University of Minnesota
+        department: Department of Mathematics
 # Nota del Autor
 author-note:
   status-changes: 
@@ -58,9 +65,6 @@ citation:
 date: 01/23/2022
 draft: false
 ---
-
-
-
 
 
 
@@ -185,7 +189,4 @@ Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. 
 
 
 # Referencias
-
-::: {#refs}
-:::
 

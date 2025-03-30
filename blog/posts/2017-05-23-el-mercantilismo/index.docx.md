@@ -6,7 +6,7 @@ course: Metodología
 professor: Blanca Rivera Guillén
 duedate: 05/23/2017
 title: El mercantilismo
-subtitle: desarrollo económico en Europa
+subtitle: Desarrollo económico en Europa
 shorttitle: "Mercantilismo"
 description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) completo aquí.
 abstract: "This paper explores the mercantilist economic thought that emerged in Europe between the 16th and 18th centuries, a period marked by the transition from feudalism to national markets. Mercantilism, characterized by policies promoting trade surpluses and protectionism, aimed to strengthen nation-states through the accumulation of precious metals and the regulation of international trade. The study examines its historical context, key principles such as the emphasis on exports over imports, and its lasting contributions, including the concept of balance of payments. It also analyzes how mercantilist ideas influenced the development of internal markets, colonial exploitation, and early capitalism. Drawing from historical texts, the paper highlights the role of merchants and governments in shaping economic policies and their relevance in modern trade debates. The findings underscore mercantilism’s impact on economic nationalism and its enduring legacy in global commerce."
@@ -36,7 +36,7 @@ author:
       - id: unsch
       - name: Universidad Nacional de San Cristóbal de Huamanga
         department: Economía
-        address: Portla Independencia N 57
+        # address: Portal Independencia N 57
         city: Ayacucho
         region: PE
         postal-code:
@@ -103,12 +103,10 @@ citation:
     - Juan Curi
     - Yuri Fernández
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf
+bibliography: mybibliography.bib
 date: 05/23/2017
 draft: false
 ---
-
-
-
 
 
 
@@ -127,8 +125,8 @@ En esta monografía encontraremos lo esencial para entender los pensamientos eco
 
 Según Pérez J. (2011) “el pensamiento mercantilista surgió a inicios del XVI Y XVII Y abarco parte del siglo XVIII. El mercantilismo se basa en dos teorías importantes: el superávit comercial y la política proteccionista”.
 
-- ​ **Teoría del superávit comercial:** es cuando el valor total de las exportaciones de un país es superior al valor total de sus importaciones.
-- ​ **Teoría de la política proteccionista:** es cuando un país implanta políticas de restricción comercial a la importación, para proteger a la Producción nacional.
+-   ​ **Teoría del superávit comercial:** es cuando el valor total de las exportaciones de un país es superior al valor total de sus importaciones.
+-   ​ **Teoría de la política proteccionista:** es cuando un país implanta políticas de restricción comercial a la importación, para proteger a la Producción nacional.
 
 La suma de estas dos políticas dio origen al mercantilismo pues el superávit fiscal permitía en mayor medida el ingreso de divisas al país y con las políticas proteccionistas, los productos internos tenían un valor de venta mayor al de los productos importados, cumpliendo así la primera teoría (mayor exportación que importación). Es así que en esta época nace el capitalismo acompañado de un excesivo control de comercio exterior, debido al elevado flujo de mercaderías que circulaba entre los países.
 
@@ -136,11 +134,11 @@ No está de más decir que para realizar un estudio sobre la teoría del comerci
 
 ## Definición del mercantilismo
 
-Según Landreth (2007) el mercantilismo es
+Según @landrethHistoryEconomicThought2002 el mercantilismo es
 
 el nombre que se le ha dado a 250 años de literatura económica y a la práctica económica implantada entre 1500 y 1750. En tanto que la literatura económica del escolasticismo fue escrita por los monjes medievales, la teoría económica del mercantilismo fue trabajo de mercaderes…….
 
-El mercantilismo se ha caracterizado como el tiempo en el que cada persona ere su propio economista (p. 36).
+El mercantilismo se ha caracterizado como el tiempo en el que cada persona era su propio economista (p. 36).
 
 El mercantilismo se ha caracterizado por darle una mayor importancia a la producción en el lugar del consumo, este tipo de economía surge en contra del escolasticismo medieval al darle prioridad al poder y la riqueza de la nación.
 
@@ -148,7 +146,7 @@ Los escritores mercantilistas estaban estrechamente conectado a la política eco
 
 ## El mercantilismo como pensamiento económico.
 
-Para Silva y Ruiz (2008) el pensamiento económico del mercantilismo se da a conocer en la siguiente cita.
+Para @marquezPensamientoEconomicoCon2008 el pensamiento económico del mercantilismo se da a conocer en la siguiente cita.
 
 El mercantilismo -como pensamiento económico- se entiende como el conjunto de ideas que dominaron durante la época en que se construyeron los mercados europeos, en su fase previa a la revolución industrial. El mercantilismo transformó no sólo la forma de producir y comerciar, sino que cambió la sociedad, las instituciones y el Estado, así como la forma en que éstas se insertan en un proceso de globalización comercial. Esta inserción obligó a gobernantes y pensadores a tener una mirada menos interesada en los feudos y más en el conjunto de un emergente Estado nación (p.46).
 
@@ -160,7 +158,7 @@ Los cambios que se dieron en ese entonces obligaron a las personas a cambiar sus
 
 Los antecedentes históricos de la escuela mercantilista sucedieron en el periodo de la edad media con el feudalismo, la cual tenían una economía basada en la tierra Y se caracterizó por ser autosuficiente. El periodo del feudalismo tuvo a la escuela escolástica que estableció un puente entre los antiguos griegos y romanos y los europeos del momento en que se dinamiza la construcción de los mercados en la Europa medieval y abre el camino al mercantilismo.
 
-Para Stanley y Grand (2009) los antecedentes históricos generados antes del mercantilismo son.
+Para @brueHistoriaPensamientoEconomico2009 los antecedentes históricos generados antes del mercantilismo son.
 
 La autosuficiencia de la comunidad feudal lentamente le cedió el paso al nuevo sistema del capitalismo mercantil. Las ciudades, que tenían un crecimiento gradual durante la Edad Media, aumentaron en importancia. El comercio floreció tanto al interior de cada país como entre los países y se expandió la utilización del dinero. El descubrimiento del oro en el hemisferio occidental facilitó el creciente volumen del comercio y estimuló las teorías acerca de los metales preciosos. Los grandes descubrimientos geográficos, basados en parte en el desarrollo de la navegación, ampliaron la esfera del comercio (p.13).
 
@@ -172,11 +170,11 @@ La escuela mercantilista suponía la implementación de un sistema que protegier
 
 ## Los principios más importantes de la escuela mercantilista.
 
-   1. ​ **El oro y la plata son la forma más deseable de riqueza**.
+1.  ​ **El oro y la plata son la forma más deseable de riqueza**.
 
 Los mercantilistas tendían a igualar la riqueza de una nación con la cantidad de lingotes de oro y plata que poseía. Algunos de los primeros mercantilistas creían que esos metales preciosos eran el único tipo de riqueza al que se podía aspirar. Todos valoraban los lingotes como la única forma de alcanzar el poder y la riqueza. Por consiguiente, era necesario un excedente de exportaciones de un país para generar pagos en moneda dura. Incluso cuando estaban en guerra, las naciones exportaban bienes para el enemigo, siempre y cuando los productos se pagaran en oro.
 
-El ensayista francés Michel de Montaigne escribió en 1580: “La utilidad de un hombre es el daño de otro… No es posible obtener cualquier utilidad si no es a costa de otro (Citado por Grant, 2009, p. 16)”. Todos los países no exportaban simultáneamente más de lo que importaban. Por consiguiente, el propio país debía promover las exportaciones y acumular riquezas a costa de sus vecinos. Sólo una nación poderosa podía conquistar y conservar colonias, dominar las rutas del comercio, ganar guerras en contra de sus rivales y competir con éxito en el comercio internacional. Conforme a este concepto estático de la vida económica, había una cantidad fija de recursos económicos en el mundo; un país podía incrementar sus recursos sólo a costa de otro.
+El ensayista francés Michel de Montaigne escribió en 1580: “La utilidad de un hombre es el daño de otro… No es posible obtener cualquier utilidad si no es a costa de otro (Citado por @brueHistoriaPensamientoEconomico2009, p. 16)”. Todos los países no exportaban simultáneamente más de lo que importaban. Por consiguiente, el propio país debía promover las exportaciones y acumular riquezas a costa de sus vecinos. Sólo una nación poderosa podía conquistar y conservar colonias, dominar las rutas del comercio, ganar guerras en contra de sus rivales y competir con éxito en el comercio internacional. Conforme a este concepto estático de la vida económica, había una cantidad fija de recursos económicos en el mundo; un país podía incrementar sus recursos sólo a costa de otro.
 
 El mercantilismo nacionalista condujo de una manera muy natural al militarismo. Los poderosos navíos y las flotas mercantes eran un requerimiento. Debido a que las pesquerías eran “cunas de marinos”, es decir, ya que eran terrenos de capacitación para el personal naval, los mercantilistas le impusieron una “cuaresma política” a Inglaterra en 1549. Se prohibía por ley que las personas comieran carne ciertos días de la semana, con el fin de asegurar un mercado doméstico para el pescado y por tanto una demanda de marineros. Ese decreto se mantuvo enérgicamente durante alrededor de un siglo y no desapareció de los libros de estatutos sino hasta el siglo XIX.
 
@@ -184,7 +182,7 @@ Importación libre de impuestos de materia prima que no se produce domésticamen
 
 Las prohibiciones contra el movimiento exterior de materia prima ayudaron a mantener bajos los precios de las exportaciones de bienes terminados. Por ejemplo, una ley aprobada en 1565-1566 durante el reinado de la reina Isabel prohibía la exportación de ovejas vivas. Las penalidades por violar esa ley eran la confiscación de la propiedad, un año en prisión y la amputación de la mano izquierda. La pena de muerte se prescribía por una segunda ofensa. La exportación de lana cruda estaba prohibida y se aplicaban las mismas penalidades en una ley promulgada durante el reinado de Carlos II (1660-1685).
 
-1. ​ **Colonialismo y monopolio del comercio.**
+1.  ​ **Colonialismo y monopolio del comercio.**
 
 Los comerciantes capitalistas favorecían la colonización y querían mantener a las colonias eternamente dependientes de la madre patria y subordinadas a ella. Cualquiera de los beneficios que se extendían hacia las colonias debido al crecimiento y el poder militar de la madre patria era un subproducto accidental de la política de explotación.
 
@@ -200,7 +198,7 @@ Por consiguiente, se requería un poderoso gobierno nacional para asegurar una r
 
 ## ¿Qué principios de la escuela mercantilista se convirtieron en contribuciones perdurables?
 
-Para Grant (2009) los mercantilistas hicieron una contribución a la economía al hacer hincapié en la importancia del comercio internacional. En ese contexto, también desarrollaron la noción económica y contable de lo que hoy día se conoce como la balanza de pagos entre una nación y el resto del mundo. Pero fuera de esas contribuciones, los mercantilistas contribuyeron con muy poco a la teoría económica como se conoce hoy en día. La mayoría de ellos no logró captar que un país se volvía más rico no sólo al empobrecer a sus vecinos, sino también al descubrir una mayor cantidad de recursos naturales, producir más bienes de capital y utilizar la mano de obra en una forma más eficiente (p.16).
+Para @brueHistoriaPensamientoEconomico2009 los mercantilistas hicieron una contribución a la economía al hacer hincapié en la importancia del comercio internacional. En ese contexto, también desarrollaron la noción económica y contable de lo que hoy día se conoce como la balanza de pagos entre una nación y el resto del mundo. Pero fuera de esas contribuciones, los mercantilistas contribuyeron con muy poco a la teoría económica como se conoce hoy en día. La mayoría de ellos no logró captar que un país se volvía más rico no sólo al empobrecer a sus vecinos, sino también al descubrir una mayor cantidad de recursos naturales, producir más bienes de capital y utilizar la mano de obra en una forma más eficiente (p.16).
 
 Es un desarrollo mercantil con su propia justificación mercantil los principales que pusieron en práctica fueron los países europeos y tomaron como base el desarrollo económico y se pensaba que en el desarrollo era lo que enriquecía a un país, tanto como las relaciones mercantiles, la gran tarea de los países es poder garantizar un saldo positivo de las exportaciones sobre las importaciones realizadas en un país en vía de desarrollo, lograr una balanza comercial positiva, para crecer necesitamos un apoyo a la producción , control de los intercambios, apoyo de nuestros representantes legales, apoyo por la marina, obtención y aumentos a las reservas monetarias.
 
@@ -224,11 +222,11 @@ El enfoque mercantilista de China ha impulsado un poderoso crecimiento económic
 
 ## ¿A quiénes beneficiaba o trataba de beneficiar la escuela mercantilista?
 
-Para Stanley y Randy (2009) “esta doctrina beneficiaba a los comerciantes capitalistas, a los reyes y funcionarios del gobierno. En específico, favorecía a quienes eran más poderosos y tenían los monopolios y privilegios mejores” (p.16).
+Para @brueHistoriaPensamientoEconomico2009 “esta doctrina beneficiaba a los comerciantes capitalistas, a los reyes y funcionarios del gobierno. En específico, favorecía a quienes eran más poderosos y tenían los monopolios y privilegios mejores” (p.16).
 
 Las decisiones autónomas por de derecho divino decididas por el rey, implicaba el respaldado de la iglesia católica, aquella que cedió sus tierras, sus feudos a posición de los terratenientes, productores, quienes años más tarde tomarían el poder político, social y económico de dichas naciones, concediéndose como burgueses hacia esos entonces, los monarcas que permanecieron en su trono aumentaban su poder, tomaban al máximo el manejo de su nación de mano con sus funcionarios, familiares que sumaban a la decisión de un futura situación. El monopolio concentrado en su comercio exterior, cual generaba ingresos desmedidos obteniéndose tas las invasiones a América, agregando su proteccionismo y nacionalismo contribuían en superar sus propios límites de riquezas, maximizándolas y propiciando su nivel político, social y económico.
 
-Para Landreth, (2004) el propósito de la actividad económica, de acuerdo con la mayoría de los mercantilistas, era la producción….
+Para @landrethHistoryEconomicThought2002 el propósito de la actividad económica, de acuerdo con la mayoría de los mercantilistas, era la producción….
 
 Para los mercantilistas, la riqueza de una nación no estaba definida en términos de la suma de la riqueza individual. Se proponía aumentar la riqueza de una nación al estimular de manera simultánea la producción, aumentar las exportaciones y restringir el consumo doméstico (p.37).
 
@@ -236,13 +234,13 @@ La finalidad del mercantilismo constaba en aumentar la riqueza de una nación, m
 
 Una característica innata del mercantilismo es la política nacionalista y el proteccionismo, se promulgaba que el estado debe ejercer un férreo control sobre la industria y el comercio para aumentar el poder de la nación al lograr que las exportaciones superen el valor de las importaciones. El mercantilismo tuvo gran éxito al estimular el crecimiento de la industria.
 
-Según Landreth y Colander (2004) …un país debe impulsar las exportaciones y desalentar las importaciones mediante los aranceles, las cuotas, los subsidios, los impuestos y medidas similares, a fin de lograr una balanza favorable de comercio. Debe estimularse la producción mediante la intervención gubernamental en la economía doméstica y a través de la regulación del comercio exterior (p.37).
+Según @landrethHistoryEconomicThought2002 un país debe impulsar las exportaciones y desalentar las importaciones mediante los aranceles, las cuotas, los subsidios, los impuestos y medidas similares, a fin de lograr una balanza favorable de comercio. Debe estimularse la producción mediante la intervención gubernamental en la economía doméstica y a través de la regulación del comercio exterior (p.37).
 
 Las exportaciones incrementan los fondos de capital, vender sus productos a un mercado externo no en uno nacional. Adquiriendo en minoría bienes externos, por la mínima cantidad de ingreso de estos, determinados por los aranceles (impuesto establecido por un país importador hacia uno exportador), impuestos (dinero que se ha de pagar al estado) y subsidios (pago del gobierno a un productor o varios) este último aumenta la oferta nacional, haciendo más beneficiosa al consumo de productos nacionales. Una intervención gubernamental, estatal o del estado estimulando la producción, generando un mayor progreso en la economía local, siendo estos bienes producidos y consumidos en su círculo comercial, controlando la cantidad de entrada y salida de productos y el consumo de estos.
 
 ## ¿De qué forma la escuela mercantilista era válida, útil o correcta para su época?
 
-Para Stanley y Randy (2009), los argumentos a favor de la acumulación de lingotes de oro y plata, aun cuando exagerados, tenían cierto sentido en un periodo de transición entre la economía autosuficiente de la Edad Media y la economía de dinero y crédito de los tiempos modernos (p.18).
+Para @brueHistoriaPensamientoEconomico2009 los argumentos a favor de la acumulación de lingotes de oro y plata, aun cuando exagerados, tenían cierto sentido en un periodo de transición entre la economía autosuficiente de la Edad Media y la economía de dinero y crédito de los tiempos modernos (p.18).
 
 El mercantilismo siendo un régimen económico que imperó durante los siglos XVI y XVII en Europa y fue aplicado, por consiguiente, en América.
 
@@ -256,13 +254,13 @@ En conclusión, nos remontamos a aquellas épocas, siguientes del medievalismo, 
 
 # Principales Exponentes Del Pensamiento Mercantilista
 
-Eric R. (2010) afirma que:
+@rollHistoriaDoctrinasEconomicas2014 afirma que:
 
 Así, contemplamos los actos de un labrador en la siembra, cuando arroja el grano abundante y bueno en la tierra lo tomamos más bien por un loco que por un labrador; pero cuando pensamos en su tarea en la época de la cosecha, que es el final de sus esfuerzos, descubrimos el mérito pingue producto de sus actos (p.26).
 
 Vemos aquí que el legado especial del director de la Compañía de las Indias Orientales ha tomado un carácter general; que nos hace saber y entender la importancia del comercio en la economía, puesto que los mercantilistas creían que la riqueza de una nación estaba en el comercio de metales precioso, ahora en pleno siglo XXI ponemos afirmar rotundamente que el comercio de metales no genera ganancia significativa.
 
-Grant y Stanley (2009) afirma que:
+@brueHistoriaPensamientoEconomico2009 afirma que:
 
 Colbert era un defensor de la acumulación de lingotes, creía que la fuerza de un Estado depende de sus finanzas, las cuales se bajan en su cobranza de impuestos, y que, a su vez, la recolección de impuestos es mayor si abunda el dinero. Favorecía la expansión de las exportaciones, la reducción de las importaciones y las leyes que impedía la salida de lingotes del país (p.38).
 
@@ -270,34 +268,18 @@ Jean Baptiste Colbert como la mayoría de mercantilistas estaba a favor de la ac
 
 # Conclusión
 
-1. ​ El mercantilismo es un conjunto de ideas que considera que la prosperidad de una nación o estado depende del capital que pueda tener es toda búsqueda de riqueza y de predominio territorial, como la demostración de ser una gran potencia y en mayor escala la única.
+1.  ​ El mercantilismo es un conjunto de ideas que considera que la prosperidad de una nación o estado depende del capital que pueda tener es toda búsqueda de riqueza y de predominio territorial, como la demostración de ser una gran potencia y en mayor escala la única.
 
-1. ​ También se puede decir que fue un conjunto de ideas económicas que tendía al fortalecimiento de los nuevos estados europeos, mediante la creciente intervención del gobierno en la economía y el exagerado nacionalismo en las relaciones entre los distintos países.
-1. ​ Fue la corriente que impulso a las grandes potencias a conquistar los mares, nuevos horizontes con el fin de aumentar sus riquezas y territorios.
+2.  ​ También se puede decir que fue un conjunto de ideas económicas que tendía al fortalecimiento de los nuevos estados europeos, mediante la creciente intervención del gobierno en la economía y el exagerado nacionalismo en las relaciones entre los distintos países.
 
-1. ​ Esta corriente demuestra según sus antecedentes que toda nación que se encierra termina explotando, como también que la grande potencia siempre busca su conveniencia en toda negociación, es por esto que América se convirtió en granero de Europa.
+3.  ​ Fue la corriente que impulso a las grandes potencias a conquistar los mares, nuevos horizontes con el fin de aumentar sus riquezas y territorios.
 
-1. Importancia preponderante dada a los metales preciosos que el Estado debía procurar acrecentar al máximo. Para alcanzar tal objetivo había que tratar de obtener una Balanza Comercial Favorable, fomentando especialmente la exportación de artículos industrializados y restringiendo su importación. Esto significaba, a su vez, el estímulo de las industrias de elaboración, para el consumo interno y para las ventas al exterior. Así se formaron las primeras Manufacturas, establecimientos de magnitud mucho mayor que los talleres de artesanía corrientes hasta entonces.
+4.  ​ Esta corriente demuestra según sus antecedentes que toda nación que se encierra termina explotando, como también que la grande potencia siempre busca su conveniencia en toda negociación, es por esto que América se convirtió en granero de Europa.
 
-1. ​ Conveniencia de la adquisición de colonias como fuentes de materias primas (eventualmente de metales preciosos) y mercados de los bienes elaborados en la metrópoli. La aplicación de estas ideas contribuyó, especialmente, al progreso de Francia e Inglaterra.
+5.  Importancia preponderante dada a los metales preciosos que el Estado debía procurar acrecentar al máximo. Para alcanzar tal objetivo había que tratar de obtener una Balanza Comercial Favorable, fomentando especialmente la exportación de artículos industrializados y restringiendo su importación. Esto significaba, a su vez, el estímulo de las industrias de elaboración, para el consumo interno y para las ventas al exterior. Así se formaron las primeras Manufacturas, establecimientos de magnitud mucho mayor que los talleres de artesanía corrientes hasta entonces.
 
-# Bibliografía
+6.  ​ Conveniencia de la adquisición de colonias como fuentes de materias primas (eventualmente de metales preciosos) y mercados de los bienes elaborados en la metrópoli. La aplicación de estas ideas contribuyó, especialmente, al progreso de Francia e Inglaterra.
 
-ASOCIACION FONDO DE INVESTIGACION y EDITORES (2009). Lima - Perù
-
-​ Introduccion a la economia, enfoque social.
-
-BRUE, S. y RANDY G. (2009) _Historia del pensamiento económico,_ México: Cengage Learning Editores, S.A.
-
-ERIC, R. (2010). Historia de las doctrinas económicas. México D.F.: Fondo de cultura económica.
-
-GRANT, B. S. (2009). Historia del pensamiento económico. México D.F.: Cengage Learning Editores, S.A.
-
-LANDRETH, H. y. (2004). Historia del pensamiento económico. México D.F.: Compañía editorial continental.
-
-MÁRQUEZ, Y. y. (2008). Pensamiento económico con énfasis en pensamiento económico público. Núcleo.
-
-PORTO, J. P. (2017). Definición del mercantilismo. Definición.de, 1-2.
 
 
 # Publicaciones Similares
@@ -323,3 +305,13 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 
+
+
+# Referencias
+
+::: {#refs}
+:::
+
+ASOCIACION FONDO DE INVESTIGACION y EDITORES (2009). Lima - Perù ​Introduccion a la economia, enfoque social.
+
+PORTO, J. P. (2017). Definición del mercantilismo. Definición.de, 1-2.

@@ -19,7 +19,7 @@ website:
       repo: achalmed/website-achalma
   cookie-consent: true
   site-url: https://achalmaedison.netlify.app/
-  #repo-url: https://github.com/achalmed/website-achalma
+  repo-url: https://github.com/achalmed/website-achalma
   #repo-actions: [edit, issue]
   page-navigation: true
   back-to-top-navigation: true
@@ -106,7 +106,7 @@ format:
         - flatly
         - mozilla.scss
     css: styles.css
-    toc: false
+    toc: true
 
 execute:
   keep-md: true  # Mantener archivos .md generados

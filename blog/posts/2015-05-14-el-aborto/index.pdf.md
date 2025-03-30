@@ -1,4 +1,10 @@
 ---
+# documentmode: stu
+# Configuraciones Específicas por Modo
+# PARA ESTUDIANTE
+course: Española (EDUC 5101)
+professor: Yuri
+duedate: 05/14/2015
 title: El aborto
 subtitle: Consecuencias y Consideraciones Éticas en la Sociedad Contemporánea
 shorttitle: "El Aborto: Una Mirada Profunda"
@@ -13,51 +19,68 @@ categories:
   - Salud Pública
   - Derechos Humanos
 tags:
-  - AbortoInducido
-  - EmbarazoAdolescente
-  - RiesgosSalud
+  - Aborto Inducido
+  - Embarazo Adolescente
+  - Riesgos Salud
 author:
   - name: Edison Achalma
     corresponding: true
     orcid: 0000-0001-6996-3364
     email: elmer.achalma.09@unsch.edu.pe
     affiliations:
+      - id: unsch
       - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Física
-        address: Portla Independencia N 57
+        department: Matemática FISMA
+        # address: Portal Independencia N 57
         city: Ayacucho
         region: PE
         postal-code:
     role:
-      - writing
-      - conceptualization
+      - redacción
+      - conceptualización
   - name: Yeno Areste
-    affiliations: Universidad Nacional de San Cristóbal de Huamanga
-    orcid:
+    affiliations:
+      - ref: unsch
     role:
-      - formal anlaysis
-      - visualization
-      - editin
+      - redacción
   - name: Cristían Galindo
     affiliations:
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Física
-    orcid:
+      - ref: unsch
     role:
-      - editing
-      - funding acquistion
+      - redacción
+# Nota del Autor
 author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
   disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
     gratitude: Quiero agradecer a todos mis maestros ya que ellos me enseñan valorar los estudios y a superarme cada día, también agradezco a mis padres porque ellos están en los días más difíciles de mi vida como estudiante. Y agradezco a Dios por darme la salud que tengo, estoy seguro que mis metas planteadas darán fruto en el futuro y por ende me debo esforzar cada día para ser mejor en la universidad y en todo lugar sin olvidar el respeto que engrandece a la persona.
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+# Google Scholar
 citation:
+  # type: article-journal
   author:
     - Edison Achalma
     - Yeno Areste
     - Cristían Galindo
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
-bibliography: mybibliography.bib
-course: Española (EDUC 5101)
-professor: Yuri
+# bibliography: mybibliography.bib
 date: 05/14/2015
 draft: false
 ---
@@ -66,13 +89,11 @@ draft: false
 
 
 
-# Introducción
 
-En este trabajo, se aborda el tema del aborto, un asunto de creciente relevancia en la sociedad contemporánea. Últimamente, se ha observado un incremento significativo en el número de adolescentes que optan por el aborto, no solo en nuestro país sino también en lugares como España, donde ha aumentado un 19%. Es crucial para nosotros, como estudiantes, informarnos y reflexionar sobre la importancia de la vida. Debemos ser conscientes de las consecuencias de nuestras acciones y tomar decisiones responsables frente a problemas complejos. La finalidad de este documento es iluminar sobre los riesgos asociados al aborto y cómo enfrentar situaciones similares de manera informada.
+En este trabajo he llevado a cabo el tema El Aborto, ya que en estos últimos años se ha visto el incremento de adolescentes que abortan no sólo en nuestro país ya que en España por ejemplo ha aumentado un 19% más últimamente por eso es muy importante para nosotros los estudiantes, informarnos para así valorar la importancia que tiene la vida, y que por más que a veces hagamos las cosas a la ligera también debemos pensar que tiene sus consecuencias y que por eso debemos ser responsables en tomar buenas decisiones ante un problema.
+La finalidad que quiero trasmitir es que antes de tomar una decisión como el de abortar debemos conocer los riesgos que pueden ocurrir y saber cómo afrontar una situación así.
 
-# El Aborto
-
-## Etimología
+# El Aborto: Una Mirada Profunda
 
 La palabra "aborto" proviene del latín *Abortus*, donde *Ab* significa "mal" y *Ortus*, "nacimiento". Así, se refiere a un parto anticipado, una privación del nacimiento o un nacimiento antes de tiempo.
 
@@ -80,13 +101,9 @@ La palabra "aborto" proviene del latín *Abortus*, donde *Ab* significa "mal" y 
 
 El aborto es la interrupción deliberada del proceso fisiológico del embarazo, resultando en la muerte del producto de la concepción, ya sea dentro o fuera del claustro materno.
 
-A sentence that needs a citation [@higashidaEducacionParaSalud1995].
-
 ## Causas
 
 El aborto tiene raíces predominantemente psicológicas, motivadas por diversos miedos:
-
-[@romeroAbortoCifras2020]
 
 -   **Miedo por las capacidades económicas:** La preocupación por no poder mantener a un hijo puede llevar a una mujer a abortar. Este temor se relaciona con la falta de confianza en Dios, olvidando que lo más valioso para una madre es su hijo. Nuestra sociedad de consumo y valores superficiales ha desvalorizado la vida prenatal, creando miedos infundados. Un ejemplo notable es el de Kay James, quien, a pesar de nacer en circunstancias económicas adversas, logró una vida exitosa.
 
@@ -126,9 +143,11 @@ Otras complicaciones incluyen un aumento en cesáreas, nacimientos prematuros, y
 
 # Conclusiones
 
--   El aborto puede ser considerado el asesinato de una persona desde la concepción, donde el feto posee derechos legales.
--   Violenta el quinto mandamiento, "no matarás", un principio moral para la realización humana.
--   Las prácticas abortivas son, en muchos aspectos, inhumanas y tienen consecuencias devastadoras.
+El aborto es el asesinato de una persona, ya que desde el momento de la concepción el feto es considerado como tal, con derechos que lo protegen ante la ley.
+
+aborto viola el quinto mandamiento no matarás que Dios nos encomendó para realizarnos como personas.
+
+Aprendimos que los diferentes tipos de abortos que existen son terriblemente inhumanos y crueles y que tienen consecuencias al practicarse.
 
 
 # Publicaciones Similares
@@ -137,15 +156,19 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 
 
 1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-3. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
-4. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
-5. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
-6. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-7. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
-8. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
-9. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
-10. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+2. [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
+3. [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf)
+4. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
+5. [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf)
+6. [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf)
+7. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
+8. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
+9. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
+10. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
+11. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
+12. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
+13. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
+14. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
@@ -154,5 +177,11 @@ Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. 
 
 # Referencias
 
-::: {#refs}
-:::
+
+Buendía, A. (2005)  Archivos de México,75(4), 387-388.
+
+Flores, A. (1999). La reorganización de la biblioteca del Hospital Mocel. México: UNAM
+
+Higashida, B. (1995). Educación para la salud. México: Interamericana Mac Graw Hill.
+
+Juárez, B. y Martínez, P. (2000).El derecho a la vida

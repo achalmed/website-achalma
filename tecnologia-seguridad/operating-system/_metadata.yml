@@ -126,7 +126,7 @@ title-block-modified: "Modified"
 title-block-keywords: Palabras Claves	# : "Keywords"
 
 callout-tip-title: "Tip"
-callout-note-title: "Note"
+callout-note-title: "Nota" # : "Note"
 callout-warning-title: "Warning"
 callout-important-title: "Important"
 callout-caution-title: "Caution"
@@ -261,7 +261,7 @@ format:
       margin-width: 250px
       gutter-width: 5rem
     # reference-location: margin # (document, section, block, margin)
-    citation-location: margin # (document, margin)
+    citation-location: document # (document, margin)
   
   apaquarto-pdf:
     # Can be jou (journal), man (manuscript), stu (student), or doc (document)
@@ -285,7 +285,7 @@ format:
     list-of-figures: true
     list-of-tables: true
     # papersize: "us-letter"
-    keep-tex: false
+    keep-tex: true
     fontsize: 12pt
     a4paper: true
     numbered-lines: false  # Númerar líneas del documento

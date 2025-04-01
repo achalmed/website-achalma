@@ -1,7 +1,7 @@
 ---
 title: "Edison Achalma"
 subtitle: Data Scientist & Journalist
-image: sidebar/vk-profile.jpg
+image: sidebar/vka-profile.jpg
 image-alt: "Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"
 about:
   template: trestles
@@ -94,6 +94,7 @@ header-includes: >
 resources:
   - ../assets/about.css
 ---
+
 
 
 

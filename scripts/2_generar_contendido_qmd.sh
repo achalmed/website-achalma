@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del blog principal (cambia esto a la carpeta que desees procesar)
-main_blog="../teching"  # Por ejemplo, cambia a "../finanzas" o "../macroeconomia" según sea necesario
+main_blog="../blog"  # Por ejemplo, cambia a "../finanzas" o "../macroeconomia" según sea necesario
 
 # Función para convertir la ruta a un enlace Markdown con títulos más legibles
 convert_to_link() {
@@ -16,7 +16,7 @@ convert_to_link() {
     local url="https://achalmaedison.netlify.app/$main_folder/$subblog/$folder_name"
     local pdf_url="$url/index.pdf"
 
-    echo -e "[$title]($url) Lee sin conexión [PDF]($pdf_url)"
+    echo -e "[{{< fa regular file-pdf >}}]($pdf_url) [$title]($url)"
 }
 
 # Procesar cada subblog dentro del main_blog

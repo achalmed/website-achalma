@@ -125,6 +125,11 @@ format:
     highlight-style: a11y
     code-link: true
     pagetitle: "{{< meta title >}}"
+    lightbox:
+      match: auto
+      effect: fade
+      desc-position: right
+      loop: false
 
 execute:
   keep-md: true  # Mantener archivos .md generados

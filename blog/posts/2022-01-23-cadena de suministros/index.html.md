@@ -1,10 +1,19 @@
 ---
-# documentmode: stu
-# Configuraciones Específicas por Modo
-# PARA ESTUDIANTE
-course: Metodología
-professor: Dr. Pelayo HILARIO VALENZUELA
-duedate: 01/23/2022
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+# course: Metodología (EDUC 5101)
+# professor: Dr. Edison Achalma Mendoza
+# duedate: 01/23/2022
+# MODO REVISTA (JOU)
+# journal: The American Economic Review # Econometrica, The American Economic Review, Revista de Economía, Revista de la CEPAL
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+# image: featured.png
 title: Cadena de suministros
 shorttitle: "Gestión de la cadena de suministros"
 abstract: "The supply chain management (SCM) is a critical framework for coordinating business processes across multiple entities, including suppliers, manufacturers, distributors, and retailers. This article explores the main stages of the supply chain—sourcing, manufacturing, distribution, and consumption—and their integration to deliver products efficiently to consumers. It examines how these stages interact to minimize costs while meeting customer demands. Additionally, the study categorizes supply chains into three types: industrial, commercial, and service-based enterprises, highlighting their distinct operational characteristics. Using the tuna supply chain as an example, the article illustrates global coordination among fishing fleets, intermediaries, manufacturers, and retailers, emphasizing the role of transportation workers. Drawing from established literature, the analysis underscores the importance of intra- and inter-organizational synergy in modern supply chain management. The findings aim to provide a comprehensive understanding of supply chain dynamics for students and practitioners in business and logistics."
@@ -24,13 +33,7 @@ tags:
   - Transporte  
   - Coordinación global  
   - Empresas modernas
-author:
-  - name: Jane Doe
-    affiliations:
-      - name: Minnesota Department of Natural Resources
-        address: 500 Lafayette Road Saint Paul, MN 55155
-      - name: University of Minnesota
-        department: Department of Mathematics
+
 # Nota del Autor
 author-note:
   status-changes: 
@@ -48,20 +51,31 @@ author-note:
     # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
     related-report: ~
     # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
-    conflict-of-interest: El autor no tienen conflictos de intereses que revelar.
+    conflict-of-interest: El autor no tiene conflictos de interés que revelar.
     # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
     financial-support: ~
     # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
     gratitude: ~
     # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
     authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
 # Google Scholar
+# bibliography: mybibliography.bib
 citation:
   type: article-journal
   author:
     - Edison Achalma
-  pdf-url: https://achalmaedison.netlify.app/blog/posts/
-# bibliography: mybibliography.bib
+  pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
 date: 01/23/2022
 draft: false
 ---
@@ -71,9 +85,13 @@ draft: false
 
 
 
-# Cadena de suministros
 
-hola como estas 
+
+
+
+
+
+# Cadena de suministros
 
 ## Conceptos básicos
 

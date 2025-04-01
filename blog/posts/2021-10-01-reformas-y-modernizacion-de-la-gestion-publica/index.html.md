@@ -1,11 +1,24 @@
 ---
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+# course: Metodología (EDUC 5101)
+# professor: Dr. Edison Achalma Mendoza
+# duedate: 01/23/2022
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2021
+copyrightext: All rights reserved
+# image: featured.png
 title: Reformas y Modernización de la Gestión Pública en Perú
 subtitle: Propuestas para Mejorar la Eficiencia y Eficacia del Estado Peruano 
 shorttitle: "Reformas Gestión Pública Perú"
-description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf) completo aquí. Actualizar enlace
 abstract: |
-  | This article discusses the need for public management reform and modernization in Peru to enhance efficiency and effectiveness for the benefit of citizens. It highlights three key initiatives: the development of a Strategic Plan for Public Management Modernization, the implementation of a performance evaluation and management control system by the Ministry of Economy's Budget Directorate, and the establishment of a High Public Management System for appointing competent leaders through transparent public contests. The piece also explores broader state reforms across political, economic, health, agrarian, and tax sectors, emphasizing the necessity for government collaboration with public, private, and academic sectors. It concludes with principles for modernizing public management, aiming to foster a culture of ethics, transparency, and efficiency in delivering public services.
+  This article discusses the need for public management reform and modernization in Peru to enhance efficiency and effectiveness for the benefit of citizens. It highlights three key initiatives: the development of a Strategic Plan for Public Management Modernization, the implementation of a performance evaluation and management control system by the Ministry of Economy's Budget Directorate, and the establishment of a High Public Management System for appointing competent leaders through transparent public contests. The piece also explores broader state reforms across political, economic, health, agrarian, and tax sectors, emphasizing the necessity for government collaboration with public, private, and academic sectors. It concludes with principles for modernizing public management, aiming to foster a culture of ethics, transparency, and efficiency in delivering public services.
 keywords: [public management reform, state modernization, Peru, public policy, governance efficiency]
 categories:
   - Posts
@@ -17,7 +30,46 @@ tags:
   - reforma económica  
   - modernización  
   - políticas públicas
+
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: El autor no tiene conflictos de interés que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: ~
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+# bibliography: mybibliography.bib
 citation:
+  type: article-journal
   author:
     - Edison Achalma
     - Felix Bermudo
@@ -28,6 +80,9 @@ citation:
 date: "10/01/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
+
 
 
 

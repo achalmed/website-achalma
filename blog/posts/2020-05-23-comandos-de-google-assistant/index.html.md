@@ -1,11 +1,23 @@
 ---
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+# course: Metodología (EDUC 5101)
+# professor: Dr. Pelayo Hilario Valenzuela
+# duedate: 01/23/2022
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2020
+copyrightext: All rights reserved
+# image: featured.png
 title: Comandos Esenciales para Google Assistant
 subtitle: Guía para Principiantes
 shorttitle: "Comandos Google Assistant"
-description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-abstract: |
-  | This article provides a comprehensive guide to basic commands for Google Assistant, detailing how to control devices, manage schedules, and utilize various functionalities including music playback, setting reminders, and smart home control. The document includes commands for stopping or pausing media, adjusting volume, asking for help, and even engaging in fun interactions with the Assistant. This guide is aimed at helping users maximize their interaction with Google Assistant for everyday convenience.
+abstract: "This article provides a comprehensive guide to basic commands for Google Assistant, detailing how to control devices, manage schedules, and utilize various functionalities including music playback, setting reminders, and smart home control. The document includes commands for stopping or pausing media, adjusting volume, asking for help, and even engaging in fun interactions with the Assistant. This guide is aimed at helping users maximize their interaction with Google Assistant for everyday convenience."
 keywords: [Google Assistant, voice commands, smart home, productivity, entertainment]
 categories:
   - Posts
@@ -17,11 +29,55 @@ tags:
   - música  
   - hogar inteligente  
   - entretenimiento
+
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: El autor no tienen conflictos de intereses que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: ~
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+# bibliography: mybibliography.bib
 citation:
+  type: article-journal
+  author:
+    - Edison Achalma
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf
 date: "05/23/2020"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
+
 
 
 

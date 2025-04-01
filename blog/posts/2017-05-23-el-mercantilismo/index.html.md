@@ -8,7 +8,6 @@ duedate: 05/23/2017
 title: El mercantilismo
 subtitle: Desarrollo económico en Europa
 shorttitle: "Mercantilismo"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) completo aquí.
 abstract: "This paper explores the mercantilist economic thought that emerged in Europe between the 16th and 18th centuries, a period marked by the transition from feudalism to national markets. Mercantilism, characterized by policies promoting trade surpluses and protectionism, aimed to strengthen nation-states through the accumulation of precious metals and the regulation of international trade. The study examines its historical context, key principles such as the emphasis on exports over imports, and its lasting contributions, including the concept of balance of payments. It also analyzes how mercantilist ideas influenced the development of internal markets, colonial exploitation, and early capitalism. Drawing from historical texts, the paper highlights the role of merchants and governments in shaping economic policies and their relevance in modern trade debates. The findings underscore mercantilism’s impact on economic nationalism and its enduring legacy in global commerce."
 keywords:
   -  mercantilism
@@ -107,6 +106,12 @@ bibliography: mybibliography.bib
 date: 05/23/2017
 draft: false
 ---
+
+
+
+
+
+
 
 
 

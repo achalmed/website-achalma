@@ -1,19 +1,71 @@
 ---
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+# course: Metodología (EDUC 5101)
+# professor: Dr. Edison Achalma Mendoza
+# duedate: 01/23/2022
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2022
+copyrightext: All rights reserved
+# image: featured.png
 title: Análisis del Impacto del Crecimiento Económico en la Recaudación de Impuestos en Ayacucho
-subtitle: relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
+subtitle: Relación entre el Valor Agregado Bruto y los ingresos fiscales en el periodo 2007-2019
 shorttitle: "Editar"
-description: |
-  Accede al [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf) completo aquí. Actualizar enlace
 abstract: |
-  | Este abstract será actualizado una vez que se complete el contenido final del artículo.
+  Este abstract será actualizado una vez que se complete el contenido final del artículo.
 keywords: [keyword1, keyword2]
 categories:
   -  Econometria General
 tags:
   - Econometría General
+
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: El autor no tiene conflictos de interés que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: ~
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+bibliography: references.bib
 citation:
+  type: article-journal
   author:
-    - Edison Achalma 
+    - Edison Achalma
     - Nataly Bañico 
     - Nikole Berrocal 
     - Elvis Carbajal
@@ -21,10 +73,16 @@ citation:
     - Hans Castro
     - Luz Cuba
   pdf-url: https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-impuestos-gob-nac-crecimiento-economico-2017-2019/index.pdf
-bibliography: references.bib
 date: "01/11/2022"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
+
+
+
+
+
+
+
 
 
 
@@ -84,6 +142,13 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 
 
+
+
+
+
+
+
+
 ```{=html}
 <!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
 
@@ -95,6 +160,13 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 ¿Quién o quiénes serán los usuarios? -->
 ```
+
+
+
+
+
+
+
 
 
 

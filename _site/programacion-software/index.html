@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programación y Software – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Programación y Software – Edison Achalma</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../teching/index.html" rel="next">
-<link href="../microeconomia/index.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
@@ -41,15 +39,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8c8f22ac663594560b197fda53c3fc21.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2cc02687fefd4b10684fdc5e10e129b4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f767f33979b9db2a595e356395a5eed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ab68e6919955523fbbf490bf4f7b400a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
+  "panel-placement": "end",
   "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
@@ -57,6 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -81,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-categories','listing-date','listing-image','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -127,6 +130,7 @@ cookieconsent.run({
 });
 </script> 
   
+<link rel="stylesheet" href="../assets/listing-default.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -158,154 +162,134 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Dr Edison Achalma | Economía | Matemática | Informática | Filosofía" href="index.xml" data-external="1"><meta property="og:title" content="Programación y Software – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<link rel="alternate" type="application/rss+xml" title="Edison Achalma" href="index.xml" data-external="1"><meta property="og:title" content="Programación y Software">
 <meta property="og:description" content="Uso de herramientas computacionales para el análisis económico y estadístico. Desde R y Python hasta MATLAB, Stata y Julia, con ejemplos aplicados a la modelización y el procesamiento de datos.">
 <meta property="og:site_name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Programación y Software – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<meta name="twitter:title" content="Programación y Software">
 <meta name="twitter:description" content="Uso de herramientas computacionales para el análisis económico y estadístico. Desde R y Python hasta MATLAB, Stata y Julia, con ejemplos aplicados a la modelización y el procesamiento de datos.">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-md " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/logo-dr-edison-kapital.png" alt="" class="navbar-logo">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">EDISON ACHALMA</span>
+    <span class="navbar-title">Edison Achalma</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publication/index.qmd"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-ellipsis-h" role="img" aria-label="More">
+</i> 
+ <span class="menu-text">More</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
+        <li>
+    <a class="dropdown-item" href="../econometria/index.html">
+ <span class="dropdown-text">Econometria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../filosofia-politica/index.html">
+ <span class="dropdown-text">Filosofía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../finanzas/index.html">
+ <span class="dropdown-text">Finanzas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../gestion-publica-herramientas/index.html">
+ <span class="dropdown-text">Gestión</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../herramientas-oficina/index.html">
+ <span class="dropdown-text">Ofimática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../investigacion-metodologia/index.html">
+ <span class="dropdown-text">Metodología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../macroeconomia/index.html">
+ <span class="dropdown-text">Macroeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../matematicas/index.html">
+ <span class="dropdown-text">Matemáticas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../microeconomia/index.html">
+ <span class="dropdown-text">Microeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../programacion-software/index.html">
+ <span class="dropdown-text">Programación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teching/index.html">
+ <span class="dropdown-text">Cursos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tecnologia-seguridad/index.html">
+ <span class="dropdown-text">Tecnología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../appointment/index.html">
+ <span class="dropdown-text">Book an appointment</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+    <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../programacion-software/index.html">Programación y Software</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
-    <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Buscar"></div>
-</div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blog</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../econometria/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Econometria</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../filosofia-politica/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Filosofía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../finanzas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Finanzas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../gestion-publica-herramientas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gestión Pública</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../herramientas-oficina/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ofimática</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../investigacion-metodologia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Investigación y metodología</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../macroeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../matematicas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matemáticas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../microeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Microeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../programacion-software/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Programación y Software</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../teching/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cursos</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tecnologia-seguridad/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tecnología y Seguridad</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appointment/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Book an appointment</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw="><span class="quarto-category-count category-cloud-3">Comunicación visual</span></div><div class="category" data-category="RGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU="><span class="quarto-category-count category-cloud-3">Desarrollo de software</span></div><div class="category" data-category="UHl0aG9u"><span class="quarto-category-count category-cloud-3">Python</span></div><div class="category" data-category="Ug=="><span class="quarto-category-count category-cloud-5">R</span></div><div class="category" data-category="UlN0dWRpbw=="><span class="quarto-category-count category-cloud-5">RStudio</span></div><div class="category" data-category="VGVjbm9sb2clQzMlQURh"><span class="quarto-category-count category-cloud-3">Tecnología</span></div><div class="category" data-category="VGlwb2dyYWYlQzMlQURh"><span class="quarto-category-count category-cloud-3">Tipografía</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -315,7 +299,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -334,17 +318,11 @@ Si disfrutas mis blogs y artículos sobre economía, finanzas y análisis de dat
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-ultimas-entradas">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="VGlwb2dyYWYlQzMlQURhJTJDQ29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw=" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1742872777619" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="493">
+<div class="quarto-post image-right" data-index="0" data-categories="VGlwb2dyYWYlQzMlQURhJTJDQ29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw=" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1743484881238" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="493">
 <div class="thumbnail">
 <p><a href="../programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html" class="no-external"></a></p><a href="../programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -353,6 +331,14 @@ Si disfrutas mis blogs y artículos sobre economía, finanzas y análisis de dat
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html" class="no-external">Selección y aplicación para mejorar la legibilidad</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('VGlwb2dyYWYlQzMlQURh'); return false;">
+Tipografía
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw='); return false;">
+Comunicación visual
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -369,10 +355,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="VGlwb2dyYWYlQzMlQURhJTJDQ29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw=" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1739419597085" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="22" data-listing-word-count-sort="4330">
+<div class="quarto-post image-right" data-index="1" data-categories="VGlwb2dyYWYlQzMlQURhJTJDQ29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw=" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1743484930218" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="22" data-listing-word-count-sort="4330">
 <div class="thumbnail">
 <p><a href="../programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html" class="no-external"></a></p><a href="../programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -381,6 +367,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html" class="no-external">Selección y aplicación para mejorar la legibilidad</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('VGlwb2dyYWYlQzMlQURh'); return false;">
+Tipografía
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tdW5pY2FjaSVDMyVCM24lMjB2aXN1YWw='); return false;">
+Comunicación visual
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -397,10 +391,52 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="UHl0aG9uJTJDVGVjbm9sb2clQzMlQURhJTJDRGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU=" data-listing-date-sort="1592629200000" data-listing-file-modified-sort="1739084889200" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="12" data-listing-word-count-sort="2326">
+<div class="quarto-post image-right" data-index="2" data-categories="Qmxvb21iZXJnJTJDQmxvZ2Rvd24lMkNEZXNhcnJvbGxvJTIwV2ViJTJDSGVycmFtaWVudGFzJTIwcGFyYSUyMFI=" data-listing-date-sort="1711861200000" data-listing-file-modified-sort="1743470600453" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external"></a></p><a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external">
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external">Editar</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Qmxvb21iZXJn'); return false;">
+Bloomberg
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QmxvZ2Rvd24='); return false;">
+Blogdown
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzYXJyb2xsbyUyMFdlYg=='); return false;">
+Desarrollo Web
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SGVycmFtaWVudGFzJTIwcGFyYSUyMFI='); return false;">
+Herramientas para R
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="../programacion-software/bloomberg/2024-03-31-por-editar/index.html" class="no-external">
+<div class="listing-date">
+31/3/24
+</div>
+<div class="listing-author">
+Edison Achalma
+</div>
+<div class="listing-reading-time">
+1 minutos
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDVGVjbm9sb2clQzMlQURhJTJDRGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU=" data-listing-date-sort="1592629200000" data-listing-file-modified-sort="1743485634717" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="12" data-listing-word-count-sort="2326">
 <div class="thumbnail">
 <p><a href="../programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html" class="no-external"></a></p><a href="../programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -409,6 +445,17 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html" class="no-external">Aprende a crear, activar, desactivar y eliminar entornos virtuales en Conda para mantener tus proyectos organizados y libres de conflictos de dependencias.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VGVjbm9sb2clQzMlQURh'); return false;">
+Tecnología
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU='); return false;">
+Desarrollo de software
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -425,10 +472,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDVGVjbm9sb2clQzMlQURhJTJDRGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU=" data-listing-date-sort="1592542800000" data-listing-file-modified-sort="1739084889200" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="16" data-listing-word-count-sort="3037">
+<div class="quarto-post image-right" data-index="4" data-categories="UHl0aG9uJTJDVGVjbm9sb2clQzMlQURhJTJDRGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU=" data-listing-date-sort="1592542800000" data-listing-file-modified-sort="1743485608688" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="16" data-listing-word-count-sort="3037">
 <div class="thumbnail">
 <p><a href="../programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html" class="no-external"></a></p><a href="../programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -437,6 +484,17 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html" class="no-external">Una guía paso a paso para instalar y configurar Anaconda en Ubuntu Linux y aprovechar al máximo su plataforma de gestión de paquetes y entornos virtuales.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VGVjbm9sb2clQzMlQURh'); return false;">
+Tecnología
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmU='); return false;">
+Desarrollo de software
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -453,7 +511,7 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1739084889203" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="21" data-listing-word-count-sort="4006">
+<div class="quarto-post image-right" data-index="5" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1743486052774" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="21" data-listing-word-count-sort="4006">
 <div class="thumbnail">
 <p><a href="../programacion-software/r/2020-06-10-012-que-ofrece-r/index.html" class="no-external"></a></p><a href="../programacion-software/r/2020-06-10-012-que-ofrece-r/index.html" class="no-external">
 <p class="card-img-top"><img src="r/2020-06-10-012-que-ofrece-r/index_files/figure-html/Screenshot_20230610_233058.png"  class="thumbnail-image card-img"/></p>
@@ -465,6 +523,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/r/2020-06-10-012-que-ofrece-r/index.html" class="no-external">Explorando las capacidades de R y su uso en el entorno Linux</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">
+RStudio
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -481,10 +547,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1739084889202" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="16" data-listing-word-count-sort="3051">
+<div class="quarto-post image-right" data-index="6" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1743486093517" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2811">
 <div class="thumbnail">
 <p><a href="../programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html" class="no-external"></a></p><a href="../programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -493,6 +559,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html" class="no-external">Explorando las capacidades de R y su uso en el entorno Linux</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">
+RStudio
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -504,12 +578,12 @@ Edison Achalma
 Edison Achalma
 </div>
 <div class="listing-reading-time">
-16 minutos
+15 minutos
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1739084889202" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
+<div class="quarto-post image-right" data-index="7" data-categories="UiUyQ1JTdHVkaW8=" data-listing-date-sort="1591765200000" data-listing-file-modified-sort="1743485985947" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
 <div class="thumbnail">
 <p><a href="../programacion-software/r/2020-06-10-011-instalacion-de-r/index.html" class="no-external"></a></p><a href="../programacion-software/r/2020-06-10-011-instalacion-de-r/index.html" class="no-external">
 <p class="card-img-top"><img src="r/2020-06-10-011-instalacion-de-r/index_files/figure-html/Screenshot_20230610_222900.png"  class="thumbnail-image card-img"/></p>
@@ -521,6 +595,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../programacion-software/r/2020-06-10-011-instalacion-de-r/index.html" class="no-external">Explorando las capacidades de R y su uso en el entorno Linux</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbw=='); return false;">
+RStudio
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -541,7 +623,7 @@ Edison Achalma
 <div class="listing-no-matching d-none">
 No hay resultados
 </div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -959,30 +1041,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-      <a href="../microeconomia/index.html" class="pagination-link" aria-label="Microeconomía">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Microeconomía</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../teching/index.html" class="pagination-link" aria-label="Cursos">
-        <span class="nav-page-text">Cursos</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><br> Copyright © 2025 Edison Achalma<br> This website was created with <a href="https://quarto.org"><img src="../images/quarto.png" class="img-fluid" alt="Quarto" width="65"></a></p>
+<p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><br> <strong>Postal address:</strong><br> Ayacucho.<br> Perú<br> 3056 COVADONGA</p>
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
 <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-<p><br> <strong>Chamber of Commerce (KvK):</strong> 51934179301<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../resources/230901-algemene-voorwaarden.pdf">Español</a><br></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../accessibility.html">
+<p>Accessibility</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 

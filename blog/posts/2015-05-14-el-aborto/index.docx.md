@@ -90,6 +90,39 @@ draft: false
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 En este trabajo he llevado a cabo el tema El Aborto, ya que en estos últimos años se ha visto el incremento de adolescentes que abortan no sólo en nuestro país ya que en España por ejemplo ha aumentado un 19% más últimamente por eso es muy importante para nosotros los estudiantes, informarnos para así valorar la importancia que tiene la vida, y que por más que a veces hagamos las cosas a la ligera también debemos pensar que tiene sus consecuencias y que por eso debemos ser responsables en tomar buenas decisiones ante un problema.
 La finalidad que quiero trasmitir es que antes de tomar una decisión como el de abortar debemos conocer los riesgos que pueden ocurrir y saber cómo afrontar una situación así.
 

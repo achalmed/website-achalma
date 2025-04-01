@@ -5,10 +5,10 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Edison Achalma</title>
 <link>https://achalmaedison.netlify.app/programacion-software/</link>
 <atom:link href="https://achalmaedison.netlify.app/programacion-software/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<description>Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social.</description>
 <generator>quarto-1.6.42</generator>
 <lastBuildDate>Sun, 12 Jan 2025 05:00:00 GMT</lastBuildDate>
 <item>
@@ -30,6 +30,18 @@
   <category>Comunicación visual</category>
   <guid>https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/</guid>
   <pubDate>Sun, 12 Jan 2025 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/programacion-software/bloomberg/2024-03-31-por-editar/index.html}</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/programacion-software/bloomberg/2024-03-31-por-editar/</link>
+  <description>{B4F502887207:/programacion-software/bloomberg/2024-03-31-por-editar/index.html}</description>
+  <category>Bloomberg</category>
+  <category>Blogdown</category>
+  <category>Desarrollo Web</category>
+  <category>Herramientas para R</category>
+  <guid>https://achalmaedison.netlify.app/programacion-software/bloomberg/2024-03-31-por-editar/</guid>
+  <pubDate>Sun, 31 Mar 2024 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>{B4F502887207:/programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html}</title>
@@ -85,17 +97,7 @@
 </item>
 </channel>
 </rss>
-
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/</guid>
-  <pubDate>Mon, 21 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>{B4F502887207:/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.html}</title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/</link>
-  <description>{B4F502887207:/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.html}</description>
-  <category>R</category>
+ <category>R</category>
   <category>Blogdown</category>
   <category>Desarrollo Web</category>
   <category>Herramientas para R</category>

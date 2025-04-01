@@ -5,10 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Edison Achalma</title>
 <link>https://achalmaedison.netlify.app/blog/</link>
 <atom:link href="https://achalmaedison.netlify.app/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
+It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;&lt;br&gt;
+{{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
+</description>
 <generator>quarto-1.6.42</generator>
 <lastBuildDate>Fri, 12 May 2023 05:00:00 GMT</lastBuildDate>
 <item>
@@ -56,7 +59,6 @@
 <item>
   <title>{B4F502887207:/blog/posts/2022-01-23-cadena de suministros/index.html}</title>
   <dc:creator>Edison Achalma</dc:creator>
-  <dc:creator>Jane Doe</dc:creator>
   <link>https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros/</link>
   <description>{B4F502887207:/blog/posts/2022-01-23-cadena de suministros/index.html}</description>
   <category>Posts</category>
@@ -108,8 +110,10 @@
   <link>https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/</link>
   <description>{B4F502887207:/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.html}</description>
   <category>Posts</category>
-  <category>Comercio Internacional y Economía</category>
-  <category>Agricultura Sostenible y Desarrollo Local</category>
+  <category>Comercio Internacional</category>
+  <category>Economía</category>
+  <category>Agricultura Sostenible</category>
+  <category>Desarrollo Local</category>
   <guid>https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/</guid>
   <pubDate>Tue, 13 Jul 2021 05:00:00 GMT</pubDate>
 </item>
@@ -183,7 +187,7 @@
 </item>
 </channel>
 </rss>
-o Areste</dc:creator>
+te</dc:creator>
   <dc:creator>Cristían Galindo</dc:creator>
   <link>https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/</link>
   <description>{B4F502887207:/blog/posts/2015-05-14-el-aborto/index.html}</description>

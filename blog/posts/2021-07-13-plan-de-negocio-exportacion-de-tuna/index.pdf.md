@@ -8,7 +8,7 @@ duedate: 07/13/2021
 title: Exportación de Tuna desde Ayacucho
 subtitle: Un Análisis del Mercado Internacional
 shorttitle: "EXPORTACIÓN DE TUNA"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) completo aquí.
+# description: |
 abstract: This study explores the strategic and ethical considerations of exporting prickly pear (tuna) from Ayacucho, Peru, to international markets, with a focus on Beijing, China. It examines the operational framework of Ecotuna S.C.R.L., a Peruvian company established in 2020, aiming to penetrate global markets within a year. The analysis includes market demand in China, logistical processes, and economic viability, highlighting the fruit’s nutritional value and its alignment with shifting consumer preferences toward healthier diets. Ethical implications, such as sustainable production and fair trade, are addressed in the context of contemporary societal needs. Drawing on trade data and consumer trends, the research underscores the potential for Ayacucho’s tuna to compete with leading exporters like Mexico while fostering local development. The study concludes by outlining key challenges and opportunities for sustainable export growth.
 keywords:
   - prickly pear export
@@ -83,6 +83,12 @@ citation:
 date: 07/13/2021
 draft: false
 ---
+
+
+
+
+
+
 
 
 
@@ -623,15 +629,19 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 
 
 1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-3. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
-4. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
-5. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
-6. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-7. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
-8. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
-9. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
-10. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+2. [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
+3. [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf)
+4. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
+5. [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf)
+6. [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf)
+7. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
+8. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
+9. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
+10. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
+11. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
+12. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
+13. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
+14. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

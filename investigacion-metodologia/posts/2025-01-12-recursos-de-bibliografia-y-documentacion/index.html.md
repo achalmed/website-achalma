@@ -29,6 +29,11 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
+
+
+
+
+
 # Introducción
 
 En la era digital actual, el acceso a recursos bibliográficos y documentales en línea es crucial para la comunidad académica. Este artículo ofrece una guía exhaustiva de plataformas y herramientas diseñadas para asistir en diversas fases de la investigación académica.

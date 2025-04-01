@@ -1,15 +1,23 @@
 ---
-# documentmode: stu
-# Configuraciones Específicas por Modo
-# PARA ESTUDIANTE
-course: Española (EDUC 5101)
-professor: Yuri
-duedate: 05/14/2015
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+# course: Española (EDUC 5101)
+# professor: Yuri
+# duedate: 05/14/2015
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+# image: featured.png
 title: El aborto
 subtitle: Consecuencias y Consideraciones Éticas en la Sociedad Contemporánea
-shorttitle: "El Aborto: Una Mirada Profunda"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) completo aquí.
-abstract: Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales.
+shorttitle: "El Aborto"
+abstract: "Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales."
 keywords:
   - Aborto
   - Adolescentes
@@ -22,22 +30,24 @@ tags:
   - Aborto Inducido
   - Embarazo Adolescente
   - Riesgos Salud
+
+# Información del Autor
 author:
-  - name: Edison Achalma
-    corresponding: true
-    orcid: 0000-0001-6996-3364
-    email: elmer.achalma.09@unsch.edu.pe
-    affiliations:
+  - name: Edison Achalma  # Nombre del autor
+    url: https://achalmaedison.netlify.app  # URL del autor
+    affiliation: 
       - id: unsch
-      - name: Universidad Nacional de San Cristóbal de Huamanga
-        department: Matemática FISMA
-        # address: Portal Independencia N 57
-        city: Ayacucho
-        region: PE
-        postal-code:
-    role:
-      - redacción
+        name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+        department: Economía
+    affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364  # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+    roles:
       - conceptualización
+      - redacción
   - name: Yeno Areste
     affiliations:
       - ref: unsch
@@ -48,6 +58,7 @@ author:
       - ref: unsch
     role:
       - redacción
+
 # Nota del Autor
 author-note:
   status-changes: 
@@ -72,15 +83,26 @@ author-note:
     gratitude: Quiero agradecer a todos mis maestros ya que ellos me enseñan valorar los estudios y a superarme cada día, también agradezco a mis padres porque ellos están en los días más difíciles de mi vida como estudiante. Y agradezco a Dios por darme la salud que tengo, estoy seguro que mis metas planteadas darán fruto en el futuro y por ende me debo esforzar cada día para ser mejor en la universidad y en todo lugar sin olvidar el respeto que engrandece a la persona.
     # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
     authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
 # Google Scholar
+# bibliography: mybibliography.bib
 citation:
-  # type: article-journal
+  type: article-journal
   author:
     - Edison Achalma
     - Yeno Areste
     - Cristían Galindo
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
-# bibliography: mybibliography.bib
 date: 05/14/2015
 draft: false
 ---
@@ -90,10 +112,17 @@ draft: false
 
 
 
+
+
+
+
+
+
 En este trabajo he llevado a cabo el tema El Aborto, ya que en estos últimos años se ha visto el incremento de adolescentes que abortan no sólo en nuestro país ya que en España por ejemplo ha aumentado un 19% más últimamente por eso es muy importante para nosotros los estudiantes, informarnos para así valorar la importancia que tiene la vida, y que por más que a veces hagamos las cosas a la ligera también debemos pensar que tiene sus consecuencias y que por eso debemos ser responsables en tomar buenas decisiones ante un problema.
+
 La finalidad que quiero trasmitir es que antes de tomar una decisión como el de abortar debemos conocer los riesgos que pueden ocurrir y saber cómo afrontar una situación así.
 
-# El Aborto: Una Mirada Profunda
+# El Aborto
 
 La palabra "aborto" proviene del latín *Abortus*, donde *Ab* significa "mal" y *Ortus*, "nacimiento". Así, se refiere a un parto anticipado, una privación del nacimiento o un nacimiento antes de tiempo.
 
@@ -118,8 +147,11 @@ El aborto tiene raíces predominantemente psicológicas, motivadas por diversos 
 ## Tipos de Aborto
 
 -   **Aborto Espontáneo:** Ocurre de manera natural.
+
 -   **Aborto Inducido:** Es intencional, con o sin apoyo médico, y puede tener múltiples motivaciones sociales o legales.
+
 -   **Aborto Terapéutico:** Justificado médicamente para:
+
     -   Salvar la vida de la madre.
     -   Proteger su salud física o mental.
     -   Evitar el nacimiento de un niño con enfermedades graves.
@@ -177,11 +209,10 @@ Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. 
 
 # Referencias
 
-
 Buendía, A. (2005)  Archivos de México,75(4), 387-388.
 
 Flores, A. (1999). La reorganización de la biblioteca del Hospital Mocel. México: UNAM
 
 Higashida, B. (1995). Educación para la salud. México: Interamericana Mac Graw Hill.
 
-Juárez, B. y Martínez, P. (2000).El derecho a la vida
+Juárez, B. y Martínez, P. (2000). El derecho a la vida

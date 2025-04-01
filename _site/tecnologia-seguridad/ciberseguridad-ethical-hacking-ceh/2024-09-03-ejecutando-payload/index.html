@@ -2,15 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Edison Achalma">
 <meta name="keywords" content="keyword1, keyword2">
-<meta name="description" content="Accede al PDF completo aquí. Actualizar enlace">
 
-<title>Guía de Git Cómo trabajar en equipo en proyectos – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Guía de Git Cómo trabajar en equipo en proyectos – Edison Achalma</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,15 +73,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2363a7b1713459e3bb7e05f1febbb7c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-00813bf0d8c7110aaf806f34ff77ac9f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-56103c4b8744d8e0739e3e744590aecf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-e6f30a06d65eb18ce5df2ea917f73a28.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
+  "panel-placement": "end",
   "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
@@ -90,6 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -134,19 +138,18 @@ cookieconsent.run({
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Guía de Git Cómo trabajar en equipo en proyectos – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
-<meta property="og:description" content="Accede al PDF completo aquí. Actualizar enlace">
+<meta property="og:title" content="Guía de Git Cómo trabajar en equipo en proyectos">
+<meta property="og:description" content="Primer parrafo de abstrac">
 <meta property="og:image" content="https://achalmaedison.netlify.app/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Guía de Git Cómo trabajar en equipo en proyectos – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
-<meta name="twitter:description" content="Accede al PDF completo aquí. Actualizar enlace">
+<meta name="twitter:title" content="Guía de Git Cómo trabajar en equipo en proyectos">
+<meta name="twitter:description" content="Primer parrafo de abstrac">
 <meta name="twitter:image" content="https://achalmaedison.netlify.app/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Guía de Git Cómo trabajar en equipo en proyectos">
-<meta name="citation_abstract" content="| Primer parrafo de abstrac
+<meta name="citation_abstract" content="Primer parrafo de abstrac
 ">
 <meta name="citation_keywords" content="keyword1,keyword2">
 <meta name="citation_author" content="Edison Achalma">
@@ -159,180 +162,135 @@ cookieconsent.run({
 <meta name="citation_language" content="es">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-md " data-bs-theme="dark">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/logo-dr-edison-kapital.png" alt="" class="navbar-logo">
+    <img src="../../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">EDISON ACHALMA</span>
+    <span class="navbar-title">Edison Achalma</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Guía de Git Cómo trabajar en equipo en proyectos</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="sidebar-tools-main tools-wide">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publication/index.qmd"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-ellipsis-h" role="img" aria-label="More">
+</i> 
+ <span class="menu-text">More</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
+        <li>
+    <a class="dropdown-item" href="../../../econometria/index.html">
+ <span class="dropdown-text">Econometria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../filosofia-politica/index.html">
+ <span class="dropdown-text">Filosofía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../finanzas/index.html">
+ <span class="dropdown-text">Finanzas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gestion-publica-herramientas/index.html">
+ <span class="dropdown-text">Gestión</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../herramientas-oficina/index.html">
+ <span class="dropdown-text">Ofimática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../investigacion-metodologia/index.html">
+ <span class="dropdown-text">Metodología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../macroeconomia/index.html">
+ <span class="dropdown-text">Macroeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../matematicas/index.html">
+ <span class="dropdown-text">Matemáticas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../microeconomia/index.html">
+ <span class="dropdown-text">Microeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../programacion-software/index.html">
+ <span class="dropdown-text">Programación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../teching/index.html">
+ <span class="dropdown-text">Cursos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../tecnologia-seguridad/index.html">
+ <span class="dropdown-text">Tecnología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../appointment/index.html">
+ <span class="dropdown-text">Book an appointment</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
     <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
     <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
     <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Buscar"></div>
 </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../blog/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blog</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../econometria/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Econometria</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../filosofia-politica/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Filosofía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../finanzas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Finanzas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../gestion-publica-herramientas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gestión Pública</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../herramientas-oficina/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ofimática</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../investigacion-metodologia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Investigación y metodología</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../macroeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../matematicas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matemáticas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../microeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Microeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../programacion-software/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programación y Software</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../teching/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cursos</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tecnologia-seguridad/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tecnología y Seguridad</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../appointment/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Book an appointment</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">Contenidos</h2>
-   
-  <ul>
-  <li><a href="#creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso" id="toc-creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso" class="nav-link active" data-scroll-target="#creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso">Creando y Ejecutando un Payload Malicioso con Metasploit: Una Guía Paso a Paso</a></li>
-  <li><a href="#paso-1-obtener-la-dirección-ip-con-ifconfig" id="toc-paso-1-obtener-la-dirección-ip-con-ifconfig" class="nav-link" data-scroll-target="#paso-1-obtener-la-dirección-ip-con-ifconfig">Paso 1: Obtener la Dirección IP con ifconfig</a></li>
-  <li><a href="#paso-2-crear-el-payload-con-msfvenom" id="toc-paso-2-crear-el-payload-con-msfvenom" class="nav-link" data-scroll-target="#paso-2-crear-el-payload-con-msfvenom">Paso 2: Crear el Payload con msfvenom</a></li>
-  <li><a href="#paso-3-configurar-el-handler-en-metasploit" id="toc-paso-3-configurar-el-handler-en-metasploit" class="nav-link" data-scroll-target="#paso-3-configurar-el-handler-en-metasploit">Paso 3: Configurar el Handler en Metasploit</a></li>
-  <li><a href="#paso-4-configurar-el-exploit-handler" id="toc-paso-4-configurar-el-exploit-handler" class="nav-link" data-scroll-target="#paso-4-configurar-el-exploit-handler">Paso 4: Configurar el Exploit Handler</a></li>
-  <li><a href="#paso-5-ejecutar-el-handler" id="toc-paso-5-ejecutar-el-handler" class="nav-link" data-scroll-target="#paso-5-ejecutar-el-handler">Paso 5: Ejecutar el Handler</a></li>
-  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
-  <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Guía de Git Cómo trabajar en equipo en proyectos</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i></button></div></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<div class="quarto-title-block"><div><h1 class="title">Guía de Git Cómo trabajar en equipo en proyectos</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/index.qmd"><i class="bi"></i></button></div></div>
 <p class="subtitle lead">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Operating System</div>
-    <div class="quarto-category">GitHub</div>
-  </div>
+    <div class="quarto-categories">
+        <div class="quarto-category">Operating System</div>
+        <div class="quarto-category">GitHub</div>
+      </div>
   </div>
 
-<div>
-  <div class="description">
-    <p>Accede al <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.pdf">PDF</a> completo aquí. Actualizar enlace</p>
-  </div>
-</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Autor/a</div>
   <div class="quarto-title-meta-heading">Afiliación</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:achalmed.18@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:elmer.achalma.09@unsch.edu.pe" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -349,14 +307,14 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">feb 2023</p>
+      <p class="date">16 de febrero de 2023</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">mar 2025</p>
+      <p class="date-modified">1 de abril de 2025</p>
     </div>
   </div>
     
@@ -365,7 +323,7 @@ cookieconsent.run({
 <div>
   <div class="abstract">
     <div class="block-title">Resumen</div>
-    <div class="line-block">Primer parrafo de abstrac</div>
+    <p>Primer parrafo de abstrac</p>
   </div>
 </div>
 
@@ -376,7 +334,37 @@ cookieconsent.run({
   </div>
 </div>
 
-</header>
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso" id="toc-creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso" class="nav-link active" data-scroll-target="#creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso">Creando y Ejecutando un Payload Malicioso con Metasploit: Una Guía Paso a Paso</a></li>
+  <li><a href="#paso-1-obtener-la-dirección-ip-con-ifconfig" id="toc-paso-1-obtener-la-dirección-ip-con-ifconfig" class="nav-link" data-scroll-target="#paso-1-obtener-la-dirección-ip-con-ifconfig">Paso 1: Obtener la Dirección IP con ifconfig</a></li>
+  <li><a href="#paso-2-crear-el-payload-con-msfvenom" id="toc-paso-2-crear-el-payload-con-msfvenom" class="nav-link" data-scroll-target="#paso-2-crear-el-payload-con-msfvenom">Paso 2: Crear el Payload con msfvenom</a></li>
+  <li><a href="#paso-3-configurar-el-handler-en-metasploit" id="toc-paso-3-configurar-el-handler-en-metasploit" class="nav-link" data-scroll-target="#paso-3-configurar-el-handler-en-metasploit">Paso 3: Configurar el Handler en Metasploit</a></li>
+  <li><a href="#paso-4-configurar-el-exploit-handler" id="toc-paso-4-configurar-el-exploit-handler" class="nav-link" data-scroll-target="#paso-4-configurar-el-exploit-handler">Paso 4: Configurar el Exploit Handler</a></li>
+  <li><a href="#paso-5-ejecutar-el-handler" id="toc-paso-5-ejecutar-el-handler" class="nav-link" data-scroll-target="#paso-5-ejecutar-el-handler">Paso 5: Ejecutar el Handler</a></li>
+  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
+  <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word (apaquarto)</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
 
 
 <section id="creando-y-ejecutando-un-payload-malicioso-con-metasploit-una-guía-paso-a-paso" class="level1">
@@ -456,17 +444,9 @@ cookieconsent.run({
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{achalma2023,
-  author = {Achalma, Edison},
-  title = {Guía de Git Cómo trabajar en equipo en proyectos},
-  date = {2023-02-16},
-  url = {https://achalmaedison.netlify.app/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/},
-  langid = {es},
-  abstract = {\textbar{} Primer parrafo de abstrac}
-}
-</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
 Achalma, Edison. 2023. <span>“Guía de Git Cómo trabajar en equipo en
-proyectos.”</span> February 16, 2023. <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/">https://achalmaedison.netlify.app/tecnologia-seguridad/ciberseguridad-ethical-hacking-ceh/2024-09-03-ejecutando-payload/</a>.
+proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/">https://achalmaedison.netlify.app/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -941,20 +921,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><br> Copyright © 2025 Edison Achalma<br> This website was created with <a href="https://quarto.org"><img src="../../../images/quarto.png" class="img-fluid" alt="Quarto" width="65"></a></p>
+<p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><br> <strong>Postal address:</strong><br> Ayacucho.<br> Perú<br> 3056 COVADONGA</p>
+<p><a class="link-dark me-1" href="../../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
 <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-<p><br> <strong>Chamber of Commerce (KvK):</strong> 51934179301<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../../../resources/230901-algemene-voorwaarden.pdf">Español</a><br></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../accessibility.html">
+<p>Accessibility</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 

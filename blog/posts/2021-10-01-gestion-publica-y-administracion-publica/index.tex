@@ -1,0 +1,532 @@
+\documentclass[
+  jou,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+\StartBabelCommands{spanish}{captions} [unicode, fontenc=TU EU1 EU2, charset=utf8] \SetString{\keywordname}{Palabras
+Claves}
+\EndBabelCommands
+
+
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{newtx}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+
+
+
+
+\title{Diferencias entre Gestión Pública y Administración Pública:
+Aplicaciones en el Contexto Gubernamental}
+
+
+\shorttitle{Gestión vs.~Administración Pública}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2025}
+
+
+
+\author{Edison Achalma}
+
+
+
+\affiliation{
+{Departamento de Economía, Universidad Nacional de San Cristóbal de
+Huamanga}}
+
+
+
+
+\leftheader{Achalma}
+
+\date{2021-10-01}
+
+
+\abstract{This article examines the concepts of public management and
+public administration, detailing their definitions, differences, and
+applications within the governmental context. Public administration
+involves the efficient handling of public resources by various
+institutions across different government levels, focusing on
+bureaucratic structures and resource safeguarding. On the other hand,
+public management emphasizes the use of appropriate means to achieve
+collective goals through policy implementation, resource allocation, and
+program management. The paper discusses how these two areas, while
+related, differ in their dynamism, objectives, and impact on public
+life, providing concrete examples like the ``Pensión 65'' program and
+the Jorge Chávez Airport expansion to illustrate their practical
+application. }
+
+\keywords{public administration, public management, resource
+allocation, policy implementation, public sector}
+
+\authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
+\par{ }
+\par{   Los autores no tienen conflictos de intereses que
+revelar.    Los roles de autor se clasificaron utilizando la taxonomía
+de roles de colaborador (CRediT; https://credit.niso.org/) de la
+siguiente manera:  Edison Achalma:   conceptualización, redacción}
+\par{La correspondencia relativa a este artículo debe dirigirse a Edison
+Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+}
+
+\usepackage{pbalance} 
+\usepackage{float}
+\makeatletter
+\let\oldtpt\ThreePartTable
+\let\endoldtpt\endThreePartTable
+\def\ThreePartTable{\@ifnextchar[\ThreePartTable@i \ThreePartTable@ii}
+\def\ThreePartTable@i[#1]{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldtpt[#1]
+}
+\def\ThreePartTable@ii{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldtpt
+}
+\def\endThreePartTable{
+\endoldtpt
+\end{minipage}
+\twocolumn
+\end{figure}}
+\makeatother
+
+
+\makeatletter
+\let\endoldlt\endlongtable		
+\def\endlongtable{
+\hline
+\endoldlt}
+\makeatother
+
+\newenvironment{twocolumntable}% environment name
+{% begin code
+\begin{table*}[!htbp]%
+\onecolumn%
+}%
+{%
+\twocolumn%
+\end{table*}%
+}% end code
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Diferencias entre Gestión Pública y
+Administración Pública}
+
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\setlength\LTleft{0pt}
+
+
+\section{Explorando Definiciones, Conceptos y Aplicación de Gestión
+Pública y Administración
+Pública}\label{explorando-definiciones-conceptos-y-aplicaciuxf3n-de-gestiuxf3n-puxfablica-y-administraciuxf3n-puxfablica}
+
+\subsection{Administración Pública}\label{administraciuxf3n-puxfablica}
+
+La administración pública comprende las actividades ejecutadas para el
+manejo eficiente de los recursos públicos. Estas pueden ser llevadas a
+cabo por instituciones u organismos tanto públicos como privados, que
+operan en cualquiera de los tres niveles de gobierno: nacional, regional
+o local.
+
+La administración pública se relaciona estrechamente con dos conceptos
+fundamentales: la burocracia y el resguardo de los recursos del Estado.
+Además, se caracteriza por tener objetivos que no siempre están
+claramente definidos. Es una estructura duradera, ya que está
+constituida por las instituciones del Estado.
+
+\subsection{Gestión Pública}\label{gestiuxf3n-puxfablica}
+
+La gestión pública se centra en el empleo de medios adecuados para
+alcanzar objetivos colectivos, es decir, en las herramientas de decisión
+para la asignación y distribución de los recursos públicos. En resumen,
+es el conjunto de acciones y decisiones que las entidades de la
+administración pública toman para cumplir con sus fines, objetivos y
+metas específicos.
+
+Los objetivos de la gestión pública están bien definidos tanto a corto
+como a largo plazo.
+
+\subsection{Diferencia entre Gestión Pública y Administración
+Pública}\label{diferencia-entre-gestiuxf3n-puxfablica-y-administraciuxf3n-puxfablica}
+
+\textbf{Gestión Pública:}
+
+\begin{itemize}
+\tightlist
+\item
+  Es un conjunto de procesos y acciones destinados a alcanzar fines,
+  objetivos y metas específicos.
+\item
+  Sus resultados se logran a través de la gestión de políticas, recursos
+  y programas.
+\item
+  Es más práctica y orientada a cumplir objetivos colectivos.
+\item
+  Puede cambiar con los gobiernos, adoptando diferentes enfoques
+  políticos e ideológicos.
+\item
+  Se centra en la eficiencia y eficacia de las acciones gubernamentales.
+\end{itemize}
+
+\textbf{Administración Pública:}
+
+\begin{itemize}
+\tightlist
+\item
+  Es un conjunto de organizaciones con una estructura piramidal y
+  jerárquica, basada en principios de legalidad, eficiencia y eficacia.
+\item
+  Está sujeta a los gobiernos de turno para canalizar y resolver
+  demandas sociales.
+\item
+  Es más estable y perdura en el tiempo.
+\item
+  Puede verse influenciada por el ``cuoteo político'', donde los
+  intereses políticos pueden prevalecer sobre el bien común.
+\end{itemize}
+
+\subsection{¿Son Sinónimos la Gestión Pública y la Administración
+Pública?}\label{son-sinuxf3nimos-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica}
+
+Desde una perspectiva lingüística, para que dos términos sean sinónimos,
+deben compartir el mismo campo semántico, clase gramatical y, lo más
+importante, poseer significados similares. La administración pública se
+enfoca en las actividades para el manejo de recursos, mientras que la
+gestión pública trata sobre el uso de esos recursos para alcanzar
+objetivos colectivos. A pesar de compartir campos semánticos y
+gramaticales, sus significados, aunque cercanos, no son idénticos. Por
+lo tanto, aunque tienen significados relacionados, no son sinónimos
+exactos en el contexto de economía, administración y sector público.
+
+\subsection{Importancia de la Gestión y Administración Pública en la
+Gestión
+Gubernamental}\label{importancia-de-la-gestiuxf3n-y-administraciuxf3n-puxfablica-en-la-gestiuxf3n-gubernamental}
+
+\textbf{Gestión Pública:}
+
+Es crucial porque determina cómo se utilizan los recursos públicos para
+cumplir con planes y políticas en diferentes niveles (nacional,
+sectorial, regional, local). La gestión pública es un conjunto de
+instrumentos que se aplican para desarrollar las fuerzas productivas,
+impactando directamente en la vida social y en cómo se gobierna y
+administra a la sociedad. Refleja la capacidad institucional de los
+gobiernos.
+
+\textbf{Administración Pública:}
+
+Su importancia radica en su conexión directa con la vida diaria de los
+ciudadanos, proporcionando servicios públicos esenciales para la
+convivencia comunitaria como transporte, seguridad y medio ambiente.
+
+\subsection{Campo de Aplicación de la Gestión Pública y la
+Administración Pública - Casos y
+Ejemplos}\label{campo-de-aplicaciuxf3n-de-la-gestiuxf3n-puxfablica-y-la-administraciuxf3n-puxfablica---casos-y-ejemplos}
+
+\textbf{Gestión Pública:}
+
+\begin{itemize}
+\tightlist
+\item
+  Opera a través de autoridades políticas y servidores públicos que
+  toman decisiones y ejecutan acciones en el marco de sus respectivas
+  leyes de creación. Los decisores políticos adoptan políticas para
+  solucionar problemas comunitarios, mientras que los servidores
+  públicos implementan estas políticas utilizando tecnologías de gestión
+  y herramientas normativas y gerenciales.
+\end{itemize}
+
+\textbf{Administración Pública:}
+
+\begin{itemize}
+\tightlist
+\item
+  Es un campo donde los líderes promueven el bienestar comunitario y el
+  cambio positivo en el sector público. Incluye la gestión de proyectos
+  y programas, la supervisión de empleados y la evaluación de servicios
+  y políticas públicas.
+\end{itemize}
+
+\textbf{Ejemplos:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Programa Pensión 65:} Con su plan ``Saberes Productivos'',
+  ofrece protección a personas mayores en situación de vulnerabilidad.
+\item
+  \textbf{Proyecto de Ampliación del Aeropuerto Jorge Chávez:} A cargo
+  de Lima Airport Partners (LAP), busca modernizar el aeropuerto para
+  2024, promoviendo el turismo, comercio y comunicaciones.
+\end{itemize}
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto}{El
+  Aborto} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos}{Sitios
+  Web Asombrosos} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo}{El
+  Mercantilismo} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant}{Comandos
+  De Google Assistant} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires}{Plan
+  De Negocio Exportacion De Trucha Arcoires} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna}{Plan
+  De Negocio Exportacion De Tuna} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown}{Comandos
+  De Blogdown} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica}{Gestion
+  Publica Y Administracion Publica} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica}{Reformas
+  Y Modernizacion De La Gestion Publica} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria}{Economia
+  Agraria} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico}{Impacto
+  Del Cambio Climatico} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos}{Cualidades
+  De Los Servidores Publicos} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990}{La
+  Economia Peruana Entre 1970 1990} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional}{Economia
+  Regional} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf}{PDF}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

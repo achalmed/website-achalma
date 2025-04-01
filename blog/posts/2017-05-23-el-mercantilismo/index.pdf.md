@@ -113,6 +113,9 @@ draft: false
 
 
 
+
+
+
 La edad media, dominada por formas de organización política feudal y un sistema económico señorial, y de escaso avance científico, empieza a romperse con la apertura de las rutas comerciales con el extremo oriente y con la intensa acumulación de metales preciosos de las naciones europeas, ocasionada por la conquista de América. La concepción mercantilista empieza en el siglo XVI, pero toma fuerza en el siglo XVII y abarca parte del siglo XVIII.
 
 La característica principal del mercantilismo es la de ser el pensamiento económico fundamental que surgió con la construcción de los mercados nacionales europeos debido al auge comercial que se tenía por el descubrimiento de nuevas rutas comerciales. El mercantilismo sienta las bases teóricas que soportan la construcción y el fortalecimiento del mercado interno, hecho que supone la regulación del comercio internacional para ponerlo en función del desarrollo nacional.

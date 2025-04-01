@@ -1,49 +1,54 @@
+# Freeze computed outputs
+#execute:
+#freeze: true
+
 # Configuración del Bloque de Título
+title-block-banner: true
 # title-block-banner: "#EDF3F9"  # Color del banner del bloque de título (opción 1)
 # title-block-banner: images/philosophy2.jpg  # Imagen para el banner del bloque de título (opción 2)
 # title-block-banner-color: body  # Color del texto en el banner del bloque de título
 
+# Enable CC licence appendix
+license: "CC BY-SA"
 
 # Configuración de Elementos Flotantes
-floatsintext: true  # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto. El floatsintextcampo no se aplica cuando una salida .pdf está en modo de diario
+floatsintext: true # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto. El floatsintextcampo no se aplica cuando una salida .pdf está en modo de diario
 
 # Información del Autor
 author:
-  - name: Edison Achalma  # Nombre del autor
-    url: https://achalmaedison.netlify.app  # URL del autor
-    affiliation: 
+  - name: Edison Achalma # Nombre del autor
+    url: https://achalmaedison.netlify.app # URL del autor
+    affiliation:
       - id: unsch
-        name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
-        department: Economía
-        address: Portal Independencia N 57
+        name: Universidad Nacional de San Cristóbal de Huamanga # Afiliación del autor
+        department: Escuela Profesional de Economía
+        # address: Portal Independencia N 57
         city: Ayacucho
         region: AYA
         country: Perú
         postal-code: ~
-    affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
-    orcid: 0000-0001-6996-3364  # ORCID del autor
-    email: achalmed.18@gmail.com
+    affiliation-url: https://www.gob.pe/unsch # URL de la afiliación del autor
+    orcid: 0000-0001-6996-3364 # ORCID del autor
+    email: elmer.achalma.09@unsch.edu.pe
     attributes:
       corresponding: true
       equal-contributor: true
       deceased: false
-    # Los roles son opcionales. 
-    # Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
-    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, 
-    # metodología, administración de proyectos, recursos, software, supervisión, validación, 
-    # visualización, redacción, edición.
+    # Los roles son opcionales. Seleccione de la taxonomía CRediT: Contributor Roles https://credit.niso.org/
+    # conceptualización, curación de datos, Análisis formal, adquisición de financiación, investigación, metodología,
+    # administración de proyectos, recursos, software, supervisión, validación, visualización, redacción, edición.
     roles:
       - conceptualización
       - redacción
 
 # Nota del Autor
 author-note:
-  status-changes: 
+  status-changes:
     # Ejemplo: [Nombre del autor] está ahora en [afiliación].
     affiliation-change: ~
     # Ejemplo: [Nombre del autor] ha fallecido.
     deceased: ~
-  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew
   disclosures:
     # Ejemplo: Este estudio se registró en X (Identificador Y).
     study-registration: ~
@@ -62,19 +67,22 @@ author-note:
     authorship-agreements: ~
 
 # Configuración de Referencias y Citas
-citation:  # Habilitar citas bibliográficas
+citation: # Habilitar citas bibliográficas
   type: article-journal
+  author:
+    - Edison Achalma
   url: https://achalmaedison.netlify.app/
-google-scholar: true  # Habilitar enlaces a Google Scholar
+google-scholar: true # Habilitar enlaces a Google Scholar
 # csl: apa-6th-edition.csl  # Estilo de citas (opcional, comentado)
 # cite-method: biblatex  # Método de citación OJO APAQUARTO trabaja con CITEPROC
 link-citations: true
+appendix-cite-as: display
 
 # Configuración de Visibilidad y Borrador
-mask: false  # Para ocultar información sensible
-draftfirst: false  # Marca de agua de borrador en la primera página
-draftall: false  # Marca de agua de borrador en todas las páginas
-draft: true  # Modo de borrador (true = borrador, false = final)
+mask: false # Para ocultar información sensible
+draftfirst: false # Marca de agua de borrador en la primera página
+draftall: false # Marca de agua de borrador en todas las páginas
+draft: true # Modo de borrador (true = borrador, false = final)
 
 # Configuración de Idioma y Estilo de Citas
 # Language options. See https://quarto.org/docs/authoring/language.html
@@ -108,7 +116,7 @@ manuscript-meca-bundle: "MECA Bundle"
 section-title-abstract: "Abstract" # Abtract title
 section-title-appendices: "Appendices"
 section-title-footnotes: "Footnotes"
-section-title-references: Referencias	# References title : "References"
+section-title-references: Referencias # References title : "References"
 section-title-reuse: "Reuse"
 section-title-copyright: "Copyright"
 section-title-citation: "Citation"
@@ -123,7 +131,7 @@ title-block-affiliation-single: "Affiliation"
 title-block-affiliation-plural: "Affiliations"
 title-block-published: "Published"
 title-block-modified: "Modified"
-title-block-keywords: Palabras Claves	# : "Keywords"
+title-block-keywords: Palabras Claves # : "Keywords"
 
 callout-tip-title: "Tip"
 callout-note-title: "Nota" # : "Note"
@@ -173,8 +181,8 @@ toggle-reader-mode: "Toggle reader mode"
 toggle-navigation: "Toggle navigation"
 
 # Configuración de Referencias Cruzadas
-crossref-fig-title: Figura	# Figure title prefix: "Figure"
-crossref-tbl-title: Tabla	# Table title prefix : "Table"
+crossref-fig-title: Figura # Figure title prefix: "Figure"
+crossref-tbl-title: Tabla # Table title prefix : "Table"
 crossref-lst-title: "Listing"
 crossref-thm-title: "Theorem"
 crossref-lem-title: "Lemma"
@@ -185,7 +193,7 @@ crossref-def-title: "Definition"
 crossref-exm-title: "Example"
 crossref-exr-title: "Exercise"
 crossref-ch-prefix: "Chapter"
-crossref-apx-prefix: Anexo	# Appendix title prefix : "Appendix"
+crossref-apx-prefix: Anexo # Appendix title prefix : "Appendix"
 crossref-sec-prefix: "Section"
 crossref-eq-prefix: Ecuación # Equation title prefix : "Equation"
 crossref-lof-title: "List of Figures"
@@ -220,63 +228,61 @@ listing-page-filter: "Filter"
 
 # draft: "Draft"
 
-
 # Configuración de Fecha y Búsqueda
-date-modified: "today"  # Fecha de modificación del documento
-search: true  # Habilitar búsqueda en el documento
+date-modified: "today" # Fecha de modificación del documento
+search: true # Habilitar búsqueda en el documento
 
 # Configuración de Formato de Salida
 format:
   html:
-    page-layout: article  # Diseño de página para el formato HTML
+    # page-layout: article  # Diseño de página para el formato HTML
     # mainfont: Times, Times New Roman, serif
-    toc: true  # Mostrar tabla de contenidos
-    toc-depth: 3  # Profundidad de la tabla de contenidos
-    toc-expand: 4  # Nivel de anidamiento inicial de la tabla de contenidos expandida
-    toc-title: Contenidos  # Título de la tabla de contenidos
-    toc-location: right  # (left, body, right) Ubicación de la tabla de contenidos
+    toc: true # Mostrar tabla de contenidos
+    toc-depth: 2 # Profundidad de la tabla de contenidos
+    toc-expand: 3 # Nivel de anidamiento inicial de la tabla de contenidos expandida
+    toc-title: Tabla de contenidos # Título de la tabla de contenidos
+    toc-location: right # (left, body, right) Ubicación de la tabla de contenidos
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
-    smooth-scroll: true  # Activar desplazamiento suave en el formato HTML
-    link-external-newwindow: true  # Abrir enlaces externos en una nueva ventana
-    citations-hover: true  # Mostrar citas emergentes al pasar el cursor sobre ellas
-    footnotes-hover: true  # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
+    smooth-scroll: true # Activar desplazamiento suave en el formato HTML
+    link-external-newwindow: true # Abrir enlaces externos en una nueva ventana
+    citations-hover: true # Mostrar citas emergentes al pasar el cursor sobre ellas
+    footnotes-hover: true # Mostrar notas al pie emergentes al pasar el cursor sobre ellas
     # code-block-background: true
     # code-block-border-left: "#31BAE9"
     highlight-style: github
-    code-copy: true  # (hover, true, false) Habilitar la funcionalidad de copiar código
-    code-fold: true  # (false, true, show) Habilitar el plegado de código
-    code-summary: "Mostrar el código"  # Texto para mostrar/ocultar el código
-    code-overflow: scroll  # Manejo de desbordamiento de código
+    code-copy: true # (hover, true, false) Habilitar la funcionalidad de copiar código
+    code-fold: true # (false, true, show) Habilitar el plegado de código
+    code-summary: "Mostrar el código" # Texto para mostrar/ocultar el código
+    code-overflow: scroll # : wrap Manejo de desbordamiento de código
     code-line-numbers: true
     code-tools:
-      source: repo  # Mostrar el código fuente en las herramientas de código
-      toggle: false  # Habilitar la funcionalidad de alternar código
-      caption: none  # Opción para la leyenda del código
-    mermaid: 
+      source: repo # Mostrar el código fuente en las herramientas de código
+      toggle: false # Habilitar la funcionalidad de alternar código
+      caption: none # Opción para la leyenda del código
+    mermaid:
       theme: neutral
-    grid: 
-      sidebar-width: 400px
-      body-width: 800px
-      margin-width: 250px
-      gutter-width: 5rem
+    #grid:
+    #sidebar-width: 400px
+    #body-width: 800px
+    #margin-width: 250px
+    #gutter-width: 5rem
     # reference-location: margin # (document, section, block, margin)
     citation-location: document # (document, margin)
-  
+    template-partials:
+      - ../../_partials/title-block-link-buttons/title-block.html
+
   apaquarto-pdf:
-    # Can be jou (journal), man (manuscript), stu (student), or doc (document)
-    documentmode: jou  # Modo de documento: 
+    documentmode: jou # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
     # - man (Manuscrito): Similar al formato .docx
     # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
     # - doc (Documento): Similar al predeterminado LaTex artículos.
     # - stu (Estudiante): Formateado para trabajos de estudiantes
-
-    # Configuraciones Específicas por Modo
     # MODO ESTUDIANTE (STU)
     # course: Introduction to Statistics (EDUC 5101)
     # professor: W. Joel Schneider
     # duedate: 12/22/2024
-    # MODO DE REVISTA (JOU)
+    # MODO REVISTA (JOU)
     # journal: Psychological Review
     # volume: 2024, Vol. 131, No. 2, 10--60
     copyrightnotice: 2025
@@ -288,12 +294,12 @@ format:
     keep-tex: true
     fontsize: 12pt
     a4paper: true
-    numbered-lines: false  # Númerar líneas del documento
+    numbered-lines: false # Númerar líneas del documento
   apaquarto-docx:
     toc: true
     fontsize: 12pt
     a4paper: true
-    numbered-lines: false  # Númerar líneas del documento
+    numbered-lines: false # Númerar líneas del documento
 
 # Enlaces de Formato
 format-links: true # enlace a pdf, docx, html, epub, notebook
@@ -306,3 +312,8 @@ jupyter: python3
 editor:
   markdown:
     canonical: true
+
+# Enable comments
+comments:
+  utterances:
+    repo: achalmed/website-achalma

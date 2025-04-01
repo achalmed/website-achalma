@@ -1,0 +1,504 @@
+\documentclass[
+  jou,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+\StartBabelCommands{spanish}{captions} [unicode, fontenc=TU EU1 EU2, charset=utf8] \SetString{\keywordname}{Palabras
+Claves}
+\EndBabelCommands
+
+
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{newtx}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+
+
+
+
+\title{Día Internacional de los Trabajadores de mayo de 2023.: Mensaje
+del Primero de Mayo del Partido Comunista del Perú.}
+
+
+\shorttitle{Editar}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2025}
+
+
+
+\author{Comité Central Partido Comunista del Perú}
+
+
+
+\authorsaffiliations{
+}
+
+
+
+
+\leftheader{Perú}
+
+\date{2023-04-29}
+
+
+\abstract{Primer parrafo de abstrac }
+
+\keywords{keyword1, keyword2}
+
+\authornote{ 
+\par{ }
+\par{   Los autores no tienen conflictos de intereses que revelar.    }
+\par{La correspondencia relativa a este artículo debe dirigirse a }
+}
+
+\usepackage{pbalance} 
+\usepackage{float}
+\makeatletter
+\let\oldtpt\ThreePartTable
+\let\endoldtpt\endThreePartTable
+\def\ThreePartTable{\@ifnextchar[\ThreePartTable@i \ThreePartTable@ii}
+\def\ThreePartTable@i[#1]{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldtpt[#1]
+}
+\def\ThreePartTable@ii{\begin{figure}[!htbp]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldtpt
+}
+\def\endThreePartTable{
+\endoldtpt
+\end{minipage}
+\twocolumn
+\end{figure}}
+\makeatother
+
+
+\makeatletter
+\let\endoldlt\endlongtable		
+\def\endlongtable{
+\hline
+\endoldlt}
+\makeatother
+
+\newenvironment{twocolumntable}% environment name
+{% begin code
+\begin{table*}[!htbp]%
+\onecolumn%
+}%
+{%
+\twocolumn%
+\end{table*}%
+}% end code
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Día Internacional de los Trabajadores de mayo de
+2023.}
+
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\setlength\LTleft{0pt}
+
+
+\section{¡En este primero de mayo: seguir sembrando
+revolución!}\label{en-este-primero-de-mayo-seguir-sembrando-revoluciuxf3n}
+
+\begin{quote}
+¡Proletarios de todos los países, uníos!
+\end{quote}
+
+En el día del proletariado internacional, persistiendo en la tradición e
+impronta revolucionarias enseñadas por nuestro Presidente Gonzalo, el
+Partido Comunista del Perú saluda con júbilo comunista a la clase obrera
+y al pueblo peruano y del mundo, reafirmando su indeclinable compromiso
+de enarbolar, defender y aplicar el marxismo-leninismo-maoísmo, nuestra
+arma ideológica estratégica universal y el pensamiento gonzalo, nuestra
+arma ideológica estratégica, específica y principal.
+
+Cuando la bipolaridad entre Estados Unidos y China se sigue
+desarrollando para un nuevo reparto del mundo y aumenta el peligro de
+una tercera guerra mundial, la clase obrera persiste en su lucha,
+combate la explotación capitalista y, enfrentando adversidades, brega
+decididamente por constituir, reconstituir o fortalecer sus partidos
+comunistas y avanza en la unidad de los comunistas, enarbolando el
+marxismo-leninismo-maoísmo, principalmente el maoísmo, para que los
+partidos comunistas dirijan la revolución y preparen la guerra popular
+para derrotar la guerra contrarrevolucionaria y construir la nueva
+sociedad.
+
+Nuestro Presidente Gonzalo nos enseñó:
+
+\begin{quote}
+Pensamos que la historia del proletariado es la historia de su
+ideología: el marxismo-leninismo-maoísmo; es la historia de su partido:
+el Partido Comunista; y es la historia de su revolución: la revolución
+proletaria mundial, esto es su lucha por instaurar la dictadura del
+proletariado, construir el socialismo y marchar al comunismo. A la vez,
+la historia del proletariado es confirmación cotidiana de la ley
+fundamental: la contradicción, pues toda la vida del proletariado
+muestra: la lucha es lo absoluto y la victoria, relativa; y esta se
+logra a través de fracasos que también son relativos.
+\end{quote}
+
+Del Manifiesto del Partido Comunista hasta hoy han pasado 175 años en
+los que la clase ha desarrollado su ideología hasta llegar al
+marxismo-leninismo-maoísmo, principalmente maoísmo, el cual es necesidad
+vital enarbolarlo hoy. En ese proceso los partidos comunistas en dura
+lucha contra el revisionismo y la reacción han devenido en partidos de
+nuevo tipo, máquinas de combate que hoy bregan por convertirse en
+vanguardia real de la clase y el pueblo y dirigir la guerra popular para
+conquistar el poder. Y la revolución proletaria mundial, en medio de
+avances y retrocesos, éxitos y fracasos, se desenvuelve desarrollando la
+lucha antiimperialista y por el socialismo rumbo al comunismo.
+
+El siglo XX ha sido el siglo de la revolución proletaria, siglo en el
+cual la tercera parte de la humanidad vivió bajo el socialismo y la
+democracia popular alzando la bandera roja con la hoz del campesino y el
+martillo de la clase obrera. Fue un gran campo socialista que auguraba
+el futuro paraíso en la Tierra.Mas el revisionismo y la reacción mundial
+lo socavaron y destruyeron, restaurando el poder del capital
+monopolista.
+
+Estados Unidos primero, ejerciendo de superpotencia hegemónica única a
+fines de esa centuria, y luego Estados Unidos y China, disputando en
+bipolaridad el dominio mundial en este siglo XXI, encabezan el sistema
+imperialista que mantiene al proletariado y a los pueblos en explotación
+económica, opresión política, control ideológico. Pero las masas no
+cesan de luchar, jamás lo harán. Otra vez se organizan, sacan lección de
+los fracasos y se preparan para volver a tomar los cielos por asalto.
+
+Una muestra son las últimas movilizaciones masivas en Europa contra el
+descenso de los salarios, el desempleo, el deterioro en salud pública y
+educación, así como contra el recorte de pensiones. Mientras en América
+latina se registran protestas masivas que, en síntesis, se oponen a la
+explotación y opresión del capitalismo neoliberal.
+
+En nuestra patria, las clases dominantes, tras el fin de la heroica
+guerra popular y la imposición de 40 años de neoliberalismo, piensan que
+su dominio les permite matar, golpear, perseguir y apresar trabajadores
+impunemente, cambiar presidentes cuando les conviene, terruquear sin
+medida a su antojo, tener presos políticos eternamente y desaparecer sus
+restos, impedir referéndum por asamblea constituyente, mantener fiscales
+y jueces colocados a su medida, controlar con dinero todos los medios de
+comunicación; en fin, mantener su Estado explotador, policiaco y
+corrupto por siempre, acallando con plomo la protesta popular.
+
+Nuestro pueblo combatiente no lo está permitiendo. Hartos de explotación
+y opresión capitalista, la clase obrera, los campesinos, el pueblo
+trabajador han expresado con voz de trueno y andar de gigante el rechazo
+al neoliberalismo y su redoblada explotación, exigen sanción a los
+asesinos del pueblo empezando por Boluarte, su gobierno y parlamento
+golpista y demandan una nueva constitución con asamblea constituyente
+que permita democratizar la sociedad, acabar con la persecución política
+y ejercer real soberanía sobre los recursos nacionales.
+
+Son ya más de 40 años de aplicación del derecho penal del enemigo con
+una legislación antiterrorista usada como arma de guerra contra el
+pueblo. Un caso emblemático de esta es la condena de cadena perpetua que
+niega el primer derecho constitucional, el derecho a la vida y que en el
+Perú desde los años 90 se ha aplicado a miles de personas. Como ejemplo
+podemos citar que en México, Brasil, Venezuela, España no existe la pena
+de cadena perpetua. En Francia desde los años 90 solo se ha aplicado a
+cuatro personas. En otros países donde existe como Japón o Alemania se
+revisa a los diez o veinte años.
+
+Pero es en el Perú donde la cadena perpetua se ha aplicado con más saña
+contra los presos políticos de la guerra popular por rebelarse contra la
+explotación y opresión estatal. Cadena perpetua que llegó a su punto
+culminante con la prisión, tortura, aislamiento absoluto, asesinato,
+incineración y desaparición de las cenizas de Abimael Guzmán Reinoso,
+nuestro por siempre querido y respetado Presidente Gonzalo, el más
+grande revolucionario de la historia peruana. Crimen hasta hoy impune
+que pretenden seguir aplicando contra su esposa Elena Yparraguirre,
+camarada Míriam, y otros dirigentes comunistas.
+
+En particular, a los camaradas Osmán Morote de 78 años y Margot Liendo
+de 74 años, que ya cumplen 35 años de prisión efectiva, según ley, se
+aplica la revisión de su pena. A ellos les corresponde la libertad
+inmediata, pues negársela significa una pena de muerte encubierta para
+luego incinerarlos y desaparecer sus cenizas, siniestros planes que la
+reacción peruana ha maquinado para que nunca salgan libres los presos
+políticos de la guerra popular. La libertad de Osmán y Margot es su
+derecho.
+
+La lucha política por una asamblea constituyente con el pueblo y para el
+pueblo requiere el fin de toda persecución y la libertad de los presos
+políticos, empezando por la derogatoria de toda legislación que impida o
+restrinja la participación popular. A una nueva constitución
+corresponderá estampar a plenitud el derecho político por excelencia de
+rebelarse contra la opresión; el derecho a la vida anulando la cadena
+perpetua y garantizando la existencia digna de las masas populares; la
+libertad de expresión, reunión, asociación, participación política
+acabando con la legislación antiterrorista persecutoria del pueblo;
+defensa real de nuestros recursos naturales contra la penetración
+imperialista; así como otros derechos y libertades que han sido negados
+o recortados bajo la imposición del neoliberalismo.
+
+La actual lucha del pueblo peruano sigue desenvolviéndose y aislando más
+al gobierno golpista. Aplicando diversas formas de lucha aprendidas a lo
+largo de su historia, la clase obrera y el pueblo se va educando en la
+comprensión de que solo acabando con el capitalismo puede alcanzar su
+emancipación. Una nueva constitución dentro del marco burgués puede
+lograr mejores condiciones para las masas trabajadoras, pero solo una
+revolución, la revolución socialista dirigida por el proletariado, puede
+lograr la transformación total que el Perú requiere.
+
+\textbf{¡VIVA EL PRIMERO DE MAYO, DÍA DEL PROLETARIADO INTERNACIONAL!}
+
+\textbf{¡GLORIA AL MARXISMO-LENINISMO-MAOÍSMO!}
+
+¡VIVA LA LUCHA DE LA CLASE OBRERA CONTRA EL CAPITALISMO EN EL MUNDO!
+
+¡EL PRESIDENTE GONZALO VIVE EN LAS LUCHAS DEL PROLETARIADO Y EL PUEBLO!
+
+¡LIBERTAD A LOS PRESOS POLÍTICOS DE AYER Y HOY!
+
+¡ABAJO EL CAPITALISMO, HACIA LA REVOLUCIÓN SOCIALISTA!
+
+Mayo de 2023
+
+Comité Central Partido Comunista del Perú
+
+Ediciones Bandera Roja
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista}{Aparicion
+  Pensamiento Socialista} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo}{El
+  Capitalismo} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo}{Primero
+  De Mayo} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista}{Seminario
+  De Filosofia Marxista} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui}{Entendiendo
+  A Mariategui} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana}{Naturaleza
+  Humana} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo}{Tres
+  Fuentes Tres Partes Del Marxismo} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf}{PDF}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

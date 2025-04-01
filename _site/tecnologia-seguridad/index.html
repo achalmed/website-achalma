@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tecnología y Seguridad – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía</title>
+<title>Tecnología y Seguridad – Edison Achalma</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appointment/index.html" rel="next">
-<link href="../teching/index.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
@@ -41,15 +39,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8c8f22ac663594560b197fda53c3fc21.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2cc02687fefd4b10684fdc5e10e129b4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f767f33979b9db2a595e356395a5eed2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ab68e6919955523fbbf490bf4f7b400a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
+  "panel-placement": "end",
   "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
@@ -57,6 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -81,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-categories','listing-date','listing-image','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -127,6 +130,7 @@ cookieconsent.run({
 });
 </script> 
   
+<link rel="stylesheet" href="../assets/listing-default.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -158,154 +162,134 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Dr Edison Achalma | Economía | Matemática | Informática | Filosofía" href="index.xml" data-external="1"><meta property="og:title" content="Tecnología y Seguridad – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<link rel="alternate" type="application/rss+xml" title="Edison Achalma" href="index.xml" data-external="1"><meta property="og:title" content="Tecnología y Seguridad">
 <meta property="og:description" content="Un espacio para hablar sobre Linux, hacking ético, seguridad informática y personalización del sistema. Incluye guías sobre configuraciones avanzadas, privacidad y herramientas de ciberseguridad.">
 <meta property="og:site_name" content="AchalmaEdison">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Tecnología y Seguridad – Dr Edison Achalma | Economía | Matemática | Informática | Filosofía">
+<meta name="twitter:title" content="Tecnología y Seguridad">
 <meta name="twitter:description" content="Un espacio para hablar sobre Linux, hacking ético, seguridad informática y personalización del sistema. Incluye guías sobre configuraciones avanzadas, privacidad y herramientas de ciberseguridad.">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-md " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/logo-dr-edison-kapital.png" alt="" class="navbar-logo">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">EDISON ACHALMA</span>
+    <span class="navbar-title">Edison Achalma</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publication/index.qmd"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-ellipsis-h" role="img" aria-label="More">
+</i> 
+ <span class="menu-text">More</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
+        <li>
+    <a class="dropdown-item" href="../econometria/index.html">
+ <span class="dropdown-text">Econometria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../filosofia-politica/index.html">
+ <span class="dropdown-text">Filosofía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../finanzas/index.html">
+ <span class="dropdown-text">Finanzas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../gestion-publica-herramientas/index.html">
+ <span class="dropdown-text">Gestión</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../herramientas-oficina/index.html">
+ <span class="dropdown-text">Ofimática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../investigacion-metodologia/index.html">
+ <span class="dropdown-text">Metodología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../macroeconomia/index.html">
+ <span class="dropdown-text">Macroeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../matematicas/index.html">
+ <span class="dropdown-text">Matemáticas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../microeconomia/index.html">
+ <span class="dropdown-text">Microeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../programacion-software/index.html">
+ <span class="dropdown-text">Programación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teching/index.html">
+ <span class="dropdown-text">Cursos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tecnologia-seguridad/index.html">
+ <span class="dropdown-text">Tecnología</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../appointment/index.html">
+ <span class="dropdown-text">Book an appointment</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+    <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tecnologia-seguridad/index.html">Tecnología y Seguridad</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
-    <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Buscar"></div>
-</div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../blog/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blog</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../econometria/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Econometria</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../filosofia-politica/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Filosofía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../finanzas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Finanzas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../gestion-publica-herramientas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Gestión Pública</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../herramientas-oficina/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ofimática</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../investigacion-metodologia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Investigación y metodología</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../macroeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Macroeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../matematicas/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matemáticas</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../microeconomia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Microeconomía</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../programacion-software/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programación y Software</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../teching/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cursos</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tecnologia-seguridad/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tecnología y Seguridad</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appointment/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Book an appointment</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="QWRtaW5pc3RyYWNpJUMzJUIzbiUyMGRlbCUyMFNpc3RlbWE="><span class="quarto-category-count category-cloud-1">Administración del Sistema</span></div><div class="category" data-category="QW5kcm9pZA=="><span class="quarto-category-count category-cloud-1">Android</span></div><div class="category" data-category="R2l0SHVi"><span class="quarto-category-count category-cloud-6">GitHub</span></div><div class="category" data-category="SW5mb3JtJUMzJUExdGljYQ=="><span class="quarto-category-count category-cloud-1">Informática</span></div><div class="category" data-category="TGludXg="><span class="quarto-category-count category-cloud-2">Linux</span></div><div class="category" data-category="T3BlcmF0aW5nJTIwU3lzdGVt"><span class="quarto-category-count category-cloud-10">Operating System</span></div><div class="category" data-category="U2lzdGVtYXMlMjBPcGVyYXRpdm9z"><span class="quarto-category-count category-cloud-3">Sistemas Operativos</span></div><div class="category" data-category="VGVjbm9sb2clQzMlQURh"><span class="quarto-category-count category-cloud-2">Tecnología</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -315,7 +299,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -334,17 +318,11 @@ Si disfrutas mis blogs y artículos sobre economía, finanzas y análisis de dat
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-ultimas-entradas">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="T3BlcmF0aW5nJTIwU3lzdGVt" data-listing-date-sort="1688187600000" data-listing-file-modified-sort="1739084918530" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="144" data-listing-word-count-sort="28786">
+<div class="quarto-post image-right" data-index="0" data-categories="T3BlcmF0aW5nJTIwU3lzdGVt" data-listing-date-sort="1688187600000" data-listing-file-modified-sort="1743487755844" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="144" data-listing-word-count-sort="28786">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -353,6 +331,11 @@ Si disfrutas mis blogs y artículos sobre economía, finanzas y análisis de dat
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-07-01-atajos-de-teclado-y-comandos-para-usar-vim/index.html" class="no-external">Descubre los atajos de teclado, comandos y técnicas avanzadas de Vim para buscar, reemplazar y transformar texto de manera eficiente</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -369,10 +352,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXglMkNBZG1pbmlzdHJhY2klQzMlQjNuJTIwZGVsJTIwU2lzdGVtYQ==" data-listing-date-sort="1687237200000" data-listing-file-modified-sort="1739084918526" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1061">
+<div class="quarto-post image-right" data-index="1" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXglMkNBZG1pbmlzdHJhY2klQzMlQjNuJTIwZGVsJTIwU2lzdGVtYQ==" data-listing-date-sort="1687237200000" data-listing-file-modified-sort="1743487671264" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1061">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -381,6 +364,23 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-06-20-04-administracion-particiones-volumenes/index.html" class="no-external">Descubre cómo organizar y proteger tus datos en GNU/Linux con Particiones, Volúmenes LVM y el cifrado LUKS</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VGVjbm9sb2clQzMlQURh'); return false;">
+Tecnología
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U2lzdGVtYXMlMjBPcGVyYXRpdm9z'); return false;">
+Sistemas Operativos
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TGludXg='); return false;">
+Linux
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QWRtaW5pc3RyYWNpJUMzJUIzbiUyMGRlbCUyMFNpc3RlbWE='); return false;">
+Administración del Sistema
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -397,10 +397,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXg=" data-listing-date-sort="1687150800000" data-listing-file-modified-sort="1739084918529" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
+<div class="quarto-post image-right" data-index="2" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXg=" data-listing-date-sort="1687150800000" data-listing-file-modified-sort="1743487647063" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -409,6 +409,20 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-06-19-03-instalacion-linux/index.html" class="no-external">Descubre cómo seleccionar hardware, descargar la imagen ISO y preparar los medios de instalación. Exploraremos opciones para probar o instalar Linux en tu equipo.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VGVjbm9sb2clQzMlQURh'); return false;">
+Tecnología
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U2lzdGVtYXMlMjBPcGVyYXRpdm9z'); return false;">
+Sistemas Operativos
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TGludXg='); return false;">
+Linux
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -425,10 +439,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXg=" data-listing-date-sort="1687064400000" data-listing-file-modified-sort="1739084918529" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2083">
+<div class="quarto-post image-right" data-index="3" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDVGVjbm9sb2clQzMlQURhJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9zJTJDTGludXg=" data-listing-date-sort="1687064400000" data-listing-file-modified-sort="1743487613972" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2083">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -437,6 +451,20 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-06-18-02-distribuciones-linux/index.html" class="no-external">Descubre las distribuciones de Linux, sus características únicas y las ventajas que ofrecen en este apasionante viaje tecnológico.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('VGVjbm9sb2clQzMlQURh'); return false;">
+Tecnología
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U2lzdGVtYXMlMjBPcGVyYXRpdm9z'); return false;">
+Sistemas Operativos
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TGludXg='); return false;">
+Linux
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -453,10 +481,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9z" data-listing-date-sort="1683003600000" data-listing-file-modified-sort="1739084918528" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2689">
+<div class="quarto-post image-right" data-index="4" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDU2lzdGVtYXMlMjBPcGVyYXRpdm9z" data-listing-date-sort="1683003600000" data-listing-file-modified-sort="1743487768632" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2689">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -465,6 +493,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html" class="no-external">Una guía para principiantes en Linux</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U2lzdGVtYXMlMjBPcGVyYXRpdm9z'); return false;">
+Sistemas Operativos
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -481,10 +517,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739317126201" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="2" data-listing-word-count-sort="334">
+<div class="quarto-post image-right" data-index="5" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487382944" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="334">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2021-08-17-limpieza-y-optimizacion-de-pc/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2021-08-17-limpieza-y-optimizacion-de-pc/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2021-08-17-limpieza-y-optimizacion-de-pc/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -493,6 +529,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2021-08-17-limpieza-y-optimizacion-de-pc/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -509,10 +553,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739317261111" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="5" data-listing-word-count-sort="821">
+<div class="quarto-post image-right" data-index="6" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487433235" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="5" data-listing-word-count-sort="821">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -521,6 +565,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -537,10 +589,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739317370745" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="quarto-post image-right" data-index="7" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487459084" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2022-07-21-instalar-tor-browser/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2022-07-21-instalar-tor-browser/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2022-07-21-instalar-tor-browser/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -549,6 +601,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2022-07-21-instalar-tor-browser/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -565,10 +625,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739418826821" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="446">
+<div class="quarto-post image-right" data-index="8" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487480131" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="446">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2022-08-14-crear-enlaces-duros-o-hard-link-en-linux/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2022-08-14-crear-enlaces-duros-o-hard-link-en-linux/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2022-08-14-crear-enlaces-duros-o-hard-link-en-linux/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -577,6 +637,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2022-08-14-crear-enlaces-duros-o-hard-link-en-linux/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -593,10 +661,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739084918527" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="39" data-listing-word-count-sort="7637">
+<div class="quarto-post image-right" data-index="9" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487521546" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="39" data-listing-word-count-sort="7637">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -605,6 +673,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -621,10 +697,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739509828109" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<div class="quarto-post image-right" data-index="10" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487782176" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2019-06-19-adb/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2019-06-19-adb/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2019-06-19-adb/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -633,6 +709,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2019-06-19-adb/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -649,10 +733,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743054781060" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="2" data-listing-word-count-sort="363">
+<div class="quarto-post image-right" data-index="11" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487744416" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="2" data-listing-word-count-sort="363">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2024-07-15-instalando-specitify/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2024-07-15-instalando-specitify/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2024-07-15-instalando-specitify/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -661,6 +745,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2024-07-15-instalando-specitify/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -677,10 +769,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1739421610730" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="5" data-listing-word-count-sort="981">
+<div class="quarto-post image-right" data-index="12" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDR2l0SHVi" data-listing-date-sort="1676523600000" data-listing-file-modified-sort="1743487333047" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="5" data-listing-word-count-sort="981">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -689,6 +781,14 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/index.html" class="no-external">Aprende a usar Git para controlar versiones, colaborar con otros desarrolladores y mantener tu código organizado.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">
+GitHub
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -705,10 +805,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="T3BlcmF0aW5nJTIwU3lzdGVt" data-listing-date-sort="1664254800000" data-listing-file-modified-sort="1739084918528" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="590">
+<div class="quarto-post image-right" data-index="13" data-categories="T3BlcmF0aW5nJTIwU3lzdGVt" data-listing-date-sort="1664254800000" data-listing-file-modified-sort="1743487773988" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="590">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -717,6 +817,11 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2022-09-27-comandos-vim/index.html" class="no-external">Aprende a utilizar los comandos esenciales de Vim para ser más productivo en tu programación.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -733,10 +838,10 @@ Edison Achalma
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDSW5mb3JtJUMzJUExdGljYSUyQ0FuZHJvaWQ=" data-listing-date-sort="1634792400000" data-listing-file-modified-sort="1739084918531" data-listing-date-modified-sort="1743310800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="587">
+<div class="quarto-post image-right" data-index="14" data-categories="T3BlcmF0aW5nJTIwU3lzdGVtJTJDSW5mb3JtJUMzJUExdGljYSUyQ0FuZHJvaWQ=" data-listing-date-sort="1634792400000" data-listing-file-modified-sort="1743487408307" data-listing-date-modified-sort="1743483600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="587">
 <div class="thumbnail">
 <p><a href="../tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html" class="no-external"></a></p><a href="../tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="sidebar.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="../tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -745,6 +850,17 @@ Edison Achalma
 </h3>
 <div class="listing-subtitle">
 <a href="../tecnologia-seguridad/operating-system/2021-10-21-usando-apk-en-windown-11/index.html" class="no-external">Aprende a instalar y ejecutar aplicaciones de Android en tu PC con Windows 11</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlcmF0aW5nJTIwU3lzdGVt'); return false;">
+Operating System
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SW5mb3JtJUMzJUExdGljYQ=='); return false;">
+Informática
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QW5kcm9pZA=='); return false;">
+Android
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -765,7 +881,7 @@ Edison Achalma
 <div class="listing-no-matching d-none">
 No hay resultados
 </div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1183,30 +1299,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-      <a href="../teching/index.html" class="pagination-link" aria-label="Cursos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cursos</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../appointment/index.html" class="pagination-link" aria-label="Book an appointment">
-        <span class="nav-page-text">Book an appointment</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><br> Copyright © 2025 Edison Achalma<br> This website was created with <a href="https://quarto.org"><img src="../images/quarto.png" class="img-fluid" alt="Quarto" width="65"></a></p>
+<p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><br> <strong>Postal address:</strong><br> Ayacucho.<br> Perú<br> 3056 COVADONGA</p>
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
 <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-<p><br> <strong>Chamber of Commerce (KvK):</strong> 51934179301<br> <strong>RSIN:</strong> 850665851<br> <strong>IBAN:</strong> NL47 KNAB 0259 5268 27<br> <strong>Terms &amp; Conditions</strong> in <a href="../resources/230901-algemene-voorwaarden.pdf">Español</a><br></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../accessibility.html">
+<p>Accessibility</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 

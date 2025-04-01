@@ -1,0 +1,610 @@
+\documentclass[
+  doc,
+  floatsintext,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\geometry{inner=1in, outer=1in}
+\fancyhfoffset[LE,RO]{0cm}
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{spanish}
+\StartBabelCommands{spanish}{captions} [unicode, fontenc=TU EU1 EU2, charset=utf8] \SetString{\keywordname}{Palabras
+Claves}
+\EndBabelCommands
+
+
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+
+
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+
+
+\usepackage{newtx}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+
+
+
+
+\title{Guía para Comenzar a Crear Sitios Web con Blogdown: Utilizando R
+y Hugo}
+
+
+\shorttitle{Crear Sitios con Blogdown}
+
+
+\usepackage{etoolbox}
+
+
+
+\ccoppy{\textcopyright~2025}
+
+
+
+\author{Edison Achalma}
+
+
+
+\affiliation{
+{Departamento de Economía, Universidad Nacional de San Cristóbal de
+Huamanga}}
+
+
+
+
+\leftheader{Achalma}
+
+\date{2021-07-14}
+
+
+\abstract{This article introduces Blogdown, an R package for creating
+static websites using R Markdown and Hugo. It provides a step-by-step
+guide on how to install Blogdown, set up a new site, preview it locally,
+create blog posts, build the site, check for errors, update Hugo and
+dependencies, customize the site's theme, and deploy the site using
+services like Netlify. The aim is to empower users, from beginners to
+advanced, to build and manage their own web presence with ease and
+flexibility. }
+
+\keywords{Blogdown, R Markdown, Hugo, static websites, web development}
+
+\authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
+\par{ }
+\par{   Los autores no tienen conflictos de intereses que
+revelar.    Los roles de autor se clasificaron utilizando la taxonomía
+de roles de colaborador (CRediT; https://credit.niso.org/) de la
+siguiente manera:  Edison Achalma:   conceptualización, redacción}
+\par{La correspondencia relativa a este artículo debe dirigirse a Edison
+Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
+}
+
+\makeatletter
+\let\endoldlt\endlongtable
+\def\endlongtable{
+\hline
+\endoldlt
+}
+\makeatother
+
+\urlstyle{same}
+
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\hypertarget{toc}{}
+\tableofcontents
+\newpage
+\section[Introduction]{Guía para Comenzar a Crear Sitios Web con
+Blogdown}
+
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\setlength\LTleft{0pt}
+
+
+\section{Introducción}\label{introducciuxf3n}
+
+En la era digital actual, la creación de sitios web personales o
+profesionales no tiene por qué ser un proceso complejo. Si eres un
+apasionado de la programación y quieres adentrarte en el mundo de la
+creación de sitios web estáticos, ¡estás en el lugar indicado! Hoy te
+hablaré sobre \textbf{Blogdown}, una herramienta poderosa para crear
+sitios web utilizando R Markdown y Hugo. A través de este artículo,
+descubrirás cómo aprovechar el potencial de estos paquetes de R para
+crear un sitio web desde cero, de manera sencilla y con un control total
+sobre el contenido.
+
+Blogdown es ideal para quienes buscan una forma rápida, flexible y
+eficaz de generar sitios web estáticos, y en este artículo, te guiaré
+paso a paso para que puedas crear tu propio sitio sin dificultades.
+¿Estás listo para transformar tus ideas en páginas web de calidad?
+¡Sigue leyendo!
+
+\section{Comenzando con Blogdown}\label{comenzando-con-blogdown}
+
+\subsection{¿Qué es Blogdown y cómo se
+instala?}\label{quuxe9-es-blogdown-y-cuxf3mo-se-instala}
+
+Blogdown es un paquete de R que facilita la creación de sitios web
+estáticos, utilizando R Markdown para la gestión de contenido y Hugo
+para la generación rápida de páginas. Si ya tienes R y RStudio
+instalados en tu sistema, ¡es muy fácil empezar!
+
+Para instalar Blogdown, solo necesitas ejecutar el siguiente comando en
+tu consola de R:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"blogdown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Una vez que hayas instalado Blogdown, estás listo para empezar a
+construir tu sitio web.
+
+\subsection{Creación de un Nuevo
+Sitio}\label{creaciuxf3n-de-un-nuevo-sitio}
+
+El primer paso para empezar a trabajar con Blogdown es crear un nuevo
+sitio. Esto lo puedes hacer fácilmente con el comando:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{new\_site}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando creará un nuevo sitio web en el directorio que selecciones,
+generando la estructura básica del sitio, incluyendo un archivo de
+configuración y las carpetas necesarias.
+
+\subsection{Previsualización en el
+Navegador}\label{previsualizaciuxf3n-en-el-navegador}
+
+Una vez que hayas creado tu sitio, querrás verlo en acción. Para ello,
+puedes iniciar un servidor local con el comando:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{serve\_site}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando abrirá tu sitio en el navegador y te permitirá ver cómo
+luce en tiempo real.
+
+\section{Creando Publicaciones y Construyendo tu
+Sitio}\label{creando-publicaciones-y-construyendo-tu-sitio}
+
+\subsection{Añadiendo una Nueva
+Publicación}\label{auxf1adiendo-una-nueva-publicaciuxf3n}
+
+Una de las características más útiles de Blogdown es la posibilidad de
+crear publicaciones de manera sencilla. Para agregar una nueva entrada a
+tu blog, usa el siguiente comando:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{new\_post}\NormalTok{(}\AttributeTok{title =} \StringTok{"Mi Primera Publicación"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando creará un archivo de publicación en el directorio
+\texttt{content/post} y lo abrirá para que puedas empezar a escribir.
+
+\subsection{Generando el Sitio Web
+Estático}\label{generando-el-sitio-web-estuxe1tico}
+
+Cuando ya hayas agregado contenido y quieras generar el sitio web
+estático, utiliza:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{build\_site}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando compila todos los archivos necesarios y genera el sitio web
+en el directorio \texttt{public}, listo para ser implementado.
+
+\section{Verificando y Actualizando tu Sitio
+Web}\label{verificando-y-actualizando-tu-sitio-web}
+
+\subsection{Comprobando Errores en el
+Sitio}\label{comprobando-errores-en-el-sitio}
+
+Antes de proceder con la construcción de tu sitio, siempre es
+recomendable verificar si hay errores. Utiliza:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{check\_site}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando realiza una revisión completa del sitio y te avisa de
+cualquier posible error que deba corregirse.
+
+\subsection{Manteniendo Hugo
+Actualizado}\label{manteniendo-hugo-actualizado}
+
+Hugo es el motor detrás de la generación del sitio. Para asegurarte de
+que siempre estás utilizando la versión más reciente, puedes actualizar
+Hugo con:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{update\_hugo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Actualización de
+Dependencias}\label{actualizaciuxf3n-de-dependencias}
+
+Blogdown depende de varios paquetes y bibliotecas que ayudan a la
+creación y gestión de tu sitio. Para mantenerlas al día, ejecuta:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{update\_dependencies}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Personalización y Mejora de tu
+Sitio}\label{personalizaciuxf3n-y-mejora-de-tu-sitio}
+
+\subsection{Modificando el Tema del
+Sitio}\label{modificando-el-tema-del-sitio}
+
+Un aspecto clave de un sitio web es su apariencia, y con Blogdown,
+puedes modificar el tema de manera sencilla. Si deseas editar el tema
+actual de tu sitio, usa:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{edit\_theme}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Si no estás satisfecho con el tema, puedes instalar uno nuevo. Para
+ello, usa:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{install\_theme}\NormalTok{(}\StringTok{"nombre\_del\_tema"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Comandos Personalizados con
+Hugo}\label{comandos-personalizados-con-hugo}
+
+Si necesitas ejecutar algún comando específico de Hugo, puedes hacerlo
+fácilmente con:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{hugo\_cmd}\NormalTok{(}\StringTok{"comando\_personalizado"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Este comando te permite ejecutar cualquier comando que Hugo soporte para
+mejorar y personalizar tu sitio aún más.
+
+\section{Desplegando tu Sitio en la
+Web}\label{desplegando-tu-sitio-en-la-web}
+
+\subsection{Implementando en Netlify}\label{implementando-en-netlify}
+
+Una de las ventajas de Blogdown es su integración con servicios de
+hosting como Netlify. Si utilizas Netlify para alojar tu sitio, este
+comando actualizará la configuración:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{blogdown}\SpecialCharTok{::}\FunctionTok{update\_netlify}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Conclusión: Tu Camino Hacia el Éxito con
+Blogdown}\label{conclusiuxf3n-tu-camino-hacia-el-uxe9xito-con-blogdown}
+
+Blogdown es una herramienta versátil y poderosa para crear sitios web
+estáticos usando R. Con unos pocos comandos y algo de creatividad,
+puedes diseñar y personalizar tu sitio de manera eficiente. Ya sea que
+estés creando un blog personal o un sitio profesional, Blogdown ofrece
+todo lo necesario para ayudarte a construir tu presencia en línea de
+forma rápida y sin complicaciones.
+
+Recuerda que la clave del éxito en la creación de un sitio web está en
+la simplicidad y la personalización. ¡No dudes en experimentar con los
+diferentes comandos y herramientas que Blogdown te ofrece para crear un
+sitio web que refleje tu estilo único!
+
+\section{Publicaciones Similares}\label{publicaciones-similares}
+
+Si te interesó este artículo, te recomendamos que explores otros blogs y
+recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo
+algunas sugerencias:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto}{El
+  Aborto} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos}{Sitios
+  Web Asombrosos} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo}{El
+  Mercantilismo} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant}{Comandos
+  De Google Assistant} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires}{Plan
+  De Negocio Exportacion De Trucha Arcoires} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna}{Plan
+  De Negocio Exportacion De Tuna} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown}{Comandos
+  De Blogdown} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica}{Gestion
+  Publica Y Administracion Publica} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica}{Reformas
+  Y Modernizacion De La Gestion Publica} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria}{Economia
+  Agraria} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico}{Impacto
+  Del Cambio Climatico} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos}{Cualidades
+  De Los Servidores Publicos} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990}{La
+  Economia Peruana Entre 1970 1990} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf}{PDF}
+\item
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional}{Economia
+  Regional} Lee sin conexión
+  \href{https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf}{PDF}
+\end{enumerate}
+
+Esperamos que encuentres estas publicaciones igualmente interesantes y
+útiles. ¡Disfruta de la lectura!
+
+
+
+
+
+
+\end{document}

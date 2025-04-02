@@ -84,9 +84,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
@@ -95,7 +92,7 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Volatilidad En Las Series De Tiempo](https://achalmaedison.netlify.app/econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/index.pdf) [01 Volatilidad En Las Series De Tiempo](https://achalmaedison.netlify.app/econometria/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

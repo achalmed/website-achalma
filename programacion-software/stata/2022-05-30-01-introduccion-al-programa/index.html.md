@@ -81,9 +81,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
@@ -92,15 +89,15 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Introduccion Al Programa](https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.pdf)
-2. [02 Manipulando Los Datos](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.pdf)
-3. [03 Data Visualization](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization/index.pdf)
-4. [04 Regresiones](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-20-04-regresiones) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-20-04-regresiones/index.pdf)
-5. [05 Modelos De Seleccion Discreta](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf)
-6. [06 Series De Tiempo](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-04-06-series-de-tiempo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-04-06-series-de-tiempo/index.pdf)
-7. [07 Paneles De Datos](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-11-07-paneles-de-datos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-11-07-paneles-de-datos/index.pdf)
-8. [08 Modelos De Evaluacion De Impacto](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto/index.pdf)
-9. [Por Editar](https://achalmaedison.netlify.app/programacion-software/stata/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/stata/2024-03-31-por-editar/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.pdf) [01 Introduccion Al Programa](https://achalmaedison.netlify.app/programacion-software/stata/2022-05-30-01-introduccion-al-programa)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.pdf) [02 Manipulando Los Datos](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-06-02-manipulando-los-datos)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization/index.pdf) [03 Data Visualization](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-13-03-data-visualization)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-20-04-regresiones/index.pdf) [04 Regresiones](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-20-04-regresiones)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.pdf) [05 Modelos De Seleccion Discreta](https://achalmaedison.netlify.app/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-04-06-series-de-tiempo/index.pdf) [06 Series De Tiempo](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-04-06-series-de-tiempo)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-11-07-paneles-de-datos/index.pdf) [07 Paneles De Datos](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-11-07-paneles-de-datos)
+8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto/index.pdf) [08 Modelos De Evaluacion De Impacto](https://achalmaedison.netlify.app/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto)
+9. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/stata/2024-03-31-por-editar/index.pdf) [Por Editar](https://achalmaedison.netlify.app/programacion-software/stata/2024-03-31-por-editar)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

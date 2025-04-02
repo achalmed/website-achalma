@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -47,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,31 +77,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XGH6TP6RB3"></script>
 
-<script type="text/plain" cookie-consent="tracking">
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 </script>
-
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({
-  "notice_banner_type":"simple",
-  "consent_type":"implied",
-  "palette":"light",
-  "language":"en",
-  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
-  "notice_banner_reject_button_hide":false,
-  "preferences_center_close_button_hide":false,
-  "website_name":""
-  ,
-"language":"es"
-  });
-});
-</script> 
-  
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -190,7 +173,7 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../publication/index.qmd"> 
+    <a class="nav-link" href="../../../publication/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
@@ -314,7 +297,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">31 de marzo de 2025</p>
+      <p class="date-modified">2 de abril de 2025</p>
     </div>
   </div>
     
@@ -435,13 +418,8 @@ window.Quarto = {
 <li><strong>Variables exógenas:</strong> Pérdida de biodiversidad, contaminación del aire, uso insostenible del agua y deforestación.</li>
 </ul>
 <p>A continuación, se proporciona la definición conceptual, los indicadores y las unidades de medida de estas variables:</p>
-<div id="tbl-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Note below table">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;1: Variables e indicadores del modelo de economía circular
-</figcaption>
-<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<caption>Variables e indicadores del modelo de economía circular</caption>
 <colgroup>
 <col style="width: 18%">
 <col style="width: 63%">
@@ -482,9 +460,6 @@ Tabla&nbsp;1: Variables e indicadores del modelo de economía circular
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
 <p>En base a lo expuesto, planteamos el siguiente modelo econométrico:</p>
 <p><span id="eq-1"><span class="math display">\[
 PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
@@ -504,7 +479,7 @@ PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
 <div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_001915.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_001915.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad"><img src="index_files/figure-html/20230603_001915.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad
@@ -562,7 +537,7 @@ Figura&nbsp;1: Relación entre las prácticas agrícolas insostenibles y la pér
 <div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_083843.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_083843.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad"><img src="index_files/figure-html/20230603_083843.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2: Relación entre las prácticas agrícolas insostenibles y la pérdida de biodiversidad
@@ -587,7 +562,7 @@ Figura&nbsp;2: Relación entre las prácticas agrícolas insostenibles y la pér
 <div id="fig-3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_085638.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_085638.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Exportaciones de productos tradicionales y precios del petróleo crudo y derivados"><img src="index_files/figure-html/20230603_085638.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3: Exportaciones de productos tradicionales y precios del petróleo crudo y derivados
@@ -603,7 +578,7 @@ Figura&nbsp;3: Exportaciones de productos tradicionales y precios del petróleo 
 <div id="fig-4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_090113.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_090113.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Exportaciones de productos tradicionales y precios del gas natural"><img src="index_files/figure-html/20230603_090113.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4: Exportaciones de productos tradicionales y precios del gas natural
@@ -623,7 +598,7 @@ Figura&nbsp;4: Exportaciones de productos tradicionales y precios del gas natura
 <div id="fig-5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_090708.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_090708.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;5: Prueba de normalidad del precio del Petróleo crudo y derivados"><img src="index_files/figure-html/20230603_090708.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5: Prueba de normalidad del precio del Petróleo crudo y derivados
@@ -638,7 +613,7 @@ Figura&nbsp;5: Prueba de normalidad del precio del Petróleo crudo y derivados
 <div id="fig-6" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_090807.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_090807.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;6: Corrección de normalidad del precio del Petróleo crudo y derivados"><img src="index_files/figure-html/20230603_090807.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6: Corrección de normalidad del precio del Petróleo crudo y derivados
@@ -651,7 +626,7 @@ Figura&nbsp;6: Corrección de normalidad del precio del Petróleo crudo y deriva
 <div id="fig-7" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091227.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_091227.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;7: Prueba de normalidad del precio del Gas natural"><img src="index_files/figure-html/20230603_091227.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7: Prueba de normalidad del precio del Gas natural
@@ -664,7 +639,7 @@ Figura&nbsp;7: Prueba de normalidad del precio del Gas natural
 <div id="fig-8" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091315.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_091315.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Corrección de normalidad del precio del Gas natural"><img src="index_files/figure-html/20230603_091315.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;8: Corrección de normalidad del precio del Gas natural
@@ -681,7 +656,7 @@ Figura&nbsp;8: Corrección de normalidad del precio del Gas natural
 <div id="fig-9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091833.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_091833.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figura&nbsp;9: Evolución del precio del petróleo y gas (en dólares)"><img src="index_files/figure-html/20230603_091833.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9: Evolución del precio del petróleo y gas (en dólares)
@@ -700,7 +675,7 @@ Figura&nbsp;9: Evolución del precio del petróleo y gas (en dólares)
 <div id="fig-10.1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-10.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091856.png" class="img-fluid figure-img" data-ref-parent="fig-10">
+<a href="index_files/figure-html/20230603_091856.png" class="lightbox" data-gallery="fig-10" title="Figura&nbsp;10&nbsp;(a): Surus"><img src="index_files/figure-html/20230603_091856.png" class="img-fluid figure-img" data-ref-parent="fig-10"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-10.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Surus
@@ -712,7 +687,7 @@ Figura&nbsp;9: Evolución del precio del petróleo y gas (en dólares)
 <div id="fig-10.2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-10.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091845.png" class="img-fluid figure-img" data-ref-parent="fig-10">
+<a href="index_files/figure-html/20230603_091845.png" class="lightbox" data-gallery="fig-10" title="Figura&nbsp;10&nbsp;(b): Hanno"><img src="index_files/figure-html/20230603_091845.png" class="img-fluid figure-img" data-ref-parent="fig-10"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-10.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Hanno
@@ -735,7 +710,7 @@ Figura&nbsp;10: Análisis de caja y bigote del precio de gas y petróleo
 <div id="fig-11" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/20230603_091904.png" class="img-fluid figure-img">
+<a href="index_files/figure-html/20230603_091904.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figura&nbsp;11: Gráfico de dispersión de las variables precio de gas y precio de petróleo"><img src="index_files/figure-html/20230603_091904.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11: Gráfico de dispersión de las variables precio de gas y precio de petróleo
@@ -745,10 +720,14 @@ Figura&nbsp;11: Gráfico de dispersión de las variables precio de gas y precio 
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP y gráfico elaborado por nosotros.</em></p>
 <p><strong>Interpretación:</strong> En el gráfico, se puede observar una relación lineal positiva moderada entre el precio del petróleo y el precio del gas. A medida que el precio del petróleo aumenta, el precio del gas también tiende a aumentar.</p>
 <p>La Tabla 2 muestra los resultados de la regresión entre el precio del petróleo y el precio del gas.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/20230603_100307.png" class="img-fluid figure-img"></p>
-<figcaption>Tabla 2: Regresión de precio de petróleo y precio del gas</figcaption>
+<div id="fig-12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/20230603_100307.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figura&nbsp;12: Tabla 2: Regresión de precio de petróleo y precio del gas"><img src="index_files/figure-html/20230603_100307.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12: Tabla 2: Regresión de precio de petróleo y precio del gas
+</figcaption>
 </figure>
 </div>
 <p><em><strong>Nota:</strong> Datos obtenidos del BCRP.</em></p>
@@ -765,20 +744,21 @@ Figura&nbsp;11: Gráfico de dispersión de las variables precio de gas y precio 
 <h1>Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
 <ol type="1">
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto">El Aborto</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos">Sitios Web Asombrosos</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo">El Mercantilismo</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant">Comandos De Google Assistant</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires">Plan De Negocio Exportacion De Trucha Arcoires</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna">Plan De Negocio Exportacion De Tuna</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown">Comandos De Blogdown</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica">Gestion Publica Y Administracion Publica</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica">Reformas Y Modernizacion De La Gestion Publica</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria">Economia Agraria</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico">Impacto Del Cambio Climatico</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos">Cualidades De Los Servidores Publicos</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990">La Economia Peruana Entre 1970 1990</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf">PDF</a></li>
-<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional">Economia Regional</a> Lee sin conexión <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf">PDF</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto">El Aborto</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos">Sitios Web Asombrosos</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo">El Mercantilismo</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant">Comandos De Google Assistant</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires">Plan De Negocio Exportacion De Trucha Arcoires</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna">Plan De Negocio Exportacion De Tuna</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown">Comandos De Blogdown</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica">Gestion Publica Y Administracion Publica</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica">Reformas Y Modernizacion De La Gestion Publica</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena%20de%20suministros/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena%20de%20suministros">Cadena De Suministros</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria">Economia Agraria</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico">Impacto Del Cambio Climatico</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos">Cualidades De Los Servidores Publicos</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990">La Economia Peruana Entre 1970 1990</a></li>
+<li><a href="https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional">Economia Regional</a></li>
 </ol>
 <p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
 
@@ -1273,7 +1253,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><a class="link-dark me-1" href="../../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1301,6 +1281,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

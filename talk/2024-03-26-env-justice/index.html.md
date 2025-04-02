@@ -14,7 +14,6 @@ categories:
 
 
 
-
 Source: Climate Leaders @Penn on [LinkedIn](https://www.linkedin.com/posts/climate-leaders-penn_environmental-justice-and-policy-panel-activity-7176237910923325440-SspR?utm_source=share&utm_medium=member_desktop)
 
 **What:** Panel discussion with speakers from Philly Thrive, Penn Urban Health Lab, and Philadelphia Office of Sustainability

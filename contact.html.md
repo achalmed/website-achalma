@@ -20,6 +20,7 @@ resources:
 
 
 
+
 ::: {.grid}
 
 ::: {.g-col-5 #note}
@@ -49,7 +50,7 @@ También me encanta saber si mis materiales educativos te han resultado útiles 
 
 <form 
 style="margin-top: -5em;"
-action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
+action="https://formspree.io/f/mgvananz" method="POST" accept-charset="utf-8">
 
 
 <label for="full-name">Full Name</label>
@@ -85,13 +86,14 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
 
 
 
+
 ```{=html}
 <form
   style="margin-top: 4em;"
-  action="https://buttondown.com/api/emails/embed-subscribe/spcanelon"
+  action="https://buttondown.com/api/emails/embed-subscribe/achalmaedison"
   method="post"
   target="popupwindow"
-  onsubmit="window.open('https://buttondown.com/spcanelon?tag=website', 'popupwindow')"
+  onsubmit="window.open('https://buttondown.com/achalmaedison?tag=website', 'popupwindow')"
   class="embeddable-buttondown-form"
 >
   <label for="bd-email">Email Address</label>
@@ -104,10 +106,11 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
   class="btn btn-primary mt-1"
   type="submit" value="Subscribe" />
   <p>
-    <a href="https://buttondown.com/refer/spcanelon" target="_blank">Powered by Buttondown.</a>
+    <a href="https://buttondown.com/refer/achalmaedison" target="_blank">Powered by Buttondown.</a>
   </p>
 </form>
 ```
+
 
 
 

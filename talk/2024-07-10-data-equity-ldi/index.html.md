@@ -21,7 +21,6 @@ links:
 
 
 
-
 ## Description
 
 Emily and I had the pleasure of presenting to the 2024 cohort of LDI Summer Undergraduate Mentored Research Program (SUMR). The materials for this interactive presentation were adapted from the Urban Institute’s series of [Do No Harm guides](https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization), which focus on how to incorporate principles of equity into data collection, visualization, and communication. We concluded our talk by playing a game with the Scholars, encouraging them to use what they took away from the presentation to identify areas for improvement in a series of visualizations taken from published dashboards, papers, and other sources.

@@ -83,9 +83,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # ¿Qué estudiaremos en organización industrial?
 
 Exploraremos una serie de temas fundamentales que nos ayudarán a comprender la dinámica empresarial y los mercados en los que operan. A través de un análisis detallado, profundizaremos en los siguientes aspectos:
@@ -325,9 +322,6 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 
 
 
-
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -341,9 +335,6 @@ Por otro lado, las condiciones básicas de demanda se centran en la perspectiva 
 ::::
 :::::
 ::::::
-
-
-
 
 
 
@@ -446,13 +437,13 @@ En este sentido, las distorsiones se resuelven a través de la acción directa d
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Introducion A Organizacion Industrial](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial/index.pdf)
-2. [Empresa Como Organizacion](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf)
-3. [Sistemas Economicos](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos/index.pdf)
-4. [Mercado Relevante](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante/index.pdf)
-5. [Medidas Concentracion Desempeño](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-16-medidas-concentracion-desempeño) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-16-medidas-concentracion-desempeño/index.pdf)
-6. [Estructura Del Mercado](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-17-estructura-del-mercado) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-17-estructura-del-mercado/index.pdf)
-7. [Elasticidad](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-23-elasticidad) Lee sin conexión [PDF](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-23-elasticidad/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial/index.pdf) [Introducion A Organizacion Industrial](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.pdf) [Empresa Como Organizacion](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos/index.pdf) [Sistemas Economicos](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante/index.pdf) [Mercado Relevante](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-16-medidas-concentracion-desempeño/index.pdf) [Medidas Concentracion Desempeño](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-16-medidas-concentracion-desempeño)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-17-estructura-del-mercado/index.pdf) [Estructura Del Mercado](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-17-estructura-del-mercado)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-23-elasticidad/index.pdf) [Elasticidad](https://achalmaedison.netlify.app/microeconomia/organizacion-industrial/2023-06-23-elasticidad)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

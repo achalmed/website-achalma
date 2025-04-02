@@ -8,7 +8,6 @@ title: "License"
 
 
 
-
 My [blog posts](/blog) are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 <center>
@@ -16,10 +15,7 @@ My [blog posts](/blog) are released under a [Creative Commons Attribution-ShareA
 
 
 
-
 {{< fa brands creative-commons size=2xl >}} {{< fa brands creative-commons-by size=2xl >}} {{< fa brands creative-commons-sa size=2xl >}}
-
-
 
 
 

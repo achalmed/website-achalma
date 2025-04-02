@@ -8,7 +8,6 @@ duedate: 05/23/2017
 title: El mercantilismo
 subtitle: Desarrollo económico en Europa
 shorttitle: "Mercantilismo"
-description: Accede al [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) completo aquí.
 abstract: "This paper explores the mercantilist economic thought that emerged in Europe between the 16th and 18th centuries, a period marked by the transition from feudalism to national markets. Mercantilism, characterized by policies promoting trade surpluses and protectionism, aimed to strengthen nation-states through the accumulation of precious metals and the regulation of international trade. The study examines its historical context, key principles such as the emphasis on exports over imports, and its lasting contributions, including the concept of balance of payments. It also analyzes how mercantilist ideas influenced the development of internal markets, colonial exploitation, and early capitalism. Drawing from historical texts, the paper highlights the role of merchants and governments in shaping economic policies and their relevance in modern trade debates. The findings underscore mercantilism’s impact on economic nationalism and its enduring legacy in global commerce."
 keywords:
   -  mercantilism
@@ -290,20 +289,21 @@ Jean Baptiste Colbert como la mayoría de mercantilistas estaba a favor de la ac
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
-3. [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf)
-4. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-5. [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf)
-6. [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf)
-7. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
-8. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
-9. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
-10. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-11. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
-12. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
-13. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
-14. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf) [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf) [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown)
+8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf) [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica)
+9. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf) [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica)
+10. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros/index.pdf) [Cadena De Suministros](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros)
+11. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf) [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria)
+12. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf) [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico)
+13. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf) [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos)
+14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf) [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990)
+15. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

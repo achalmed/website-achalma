@@ -1,14 +1,22 @@
 ---
-documentmode: stu
-# Configuraciones Específicas por Modo
-# PARA ESTUDIANTE
+documentmode: stu  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
 course: Economía Internacional II
 professor: Econ. Richard Atao Quispe
-duedate: 09/15/2020
+# duedate: 09/15/2020
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2020
+copyrightext: All rights reserved
+# image: featured.png
 title: Plan De Exportación De Trucha Arcoiris
 subtitle: Estrategia de Exportación a los Estados Unidos y Otras Regiones
 shorttitle: "Exportación de Trucha Arcoíris"
-# description: |
 abstract: "The present research aims to design an export plan for rainbow trout fillets to the US market, following the methodology of PROMPERÚ and the guidelines for an export business plan. AQUAZUL SCRL, a Peruvian company located in Ayacucho, specializes in producing and marketing rainbow trout. The region of Ayacucho has a suitable climate for trout farming, with small centers already in place. The company plans to produce 2000 kg of fresh or refrigerated trout fillets monthly, to be sold at a price of $8.40/kg. The US market offers significant opportunities due to its accessible market conditions, availability for business, specialized fairs, excellent logistics infrastructure, and stable economy. The study includes a detailed analysis of the market, production costs, logistics, and financial feasibility, concluding that the project is economically and financially viable with a net present value (NPV) of $69,519 and an internal rate of return (IRR) of 21%."
 keywords:
   - Rainbow Trout
@@ -69,7 +77,45 @@ author:
       - editing
       - funding acquistion
 
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: ~
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+# bibliography: mybibliography.bib
 citation:
+  type: article-journal
   author:
     - Edison Achalma
     - Félix Bermudo
@@ -89,10 +135,7 @@ draft: false
 
 
 
-
-
-
-# RESUMEN EJECUTIVO
+# Resumen Ejecutivo
 
 El presente trabajo de investigación tiene como objetivo general diseñar un plan de exportación de Trucha Arcoíris en filete al mercado estadounidense; siguiendo la metodología de PROMPERÚ y los lineamientos del plan de negocio exportador.
 
@@ -1615,20 +1658,21 @@ U.S. FOOD & DRUG. (2020). *U.S. FOOD & DRUG*. Obtenido de Información para Cons
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
-3. [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf)
-4. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-5. [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf)
-6. [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf)
-7. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
-8. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
-9. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
-10. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-11. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
-12. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
-13. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
-14. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf) [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf) [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown)
+8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf) [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica)
+9. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf) [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica)
+10. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros/index.pdf) [Cadena De Suministros](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros)
+11. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf) [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria)
+12. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf) [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico)
+13. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf) [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos)
+14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf) [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990)
+15. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

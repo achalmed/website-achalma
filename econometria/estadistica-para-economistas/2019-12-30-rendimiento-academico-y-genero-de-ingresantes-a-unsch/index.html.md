@@ -85,9 +85,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 **Influencia del género en el rendimiento académico de los ingresantes 2010 a la Universidad Nacional de San Cristóbal de Huamanga**
 
 **Introducción:** El presente estudio se enfoca en analizar la relación entre el rendimiento académico y el género de los estudiantes que ingresaron en el año 2010 a la Universidad Nacional de San Cristóbal de Huamanga. Se consideran variables endógenas el rendimiento académico y variables exógenas el género de los estudiantes.
@@ -112,8 +109,8 @@ Dado que los datos disponibles presentan limitaciones, en este estudio se invest
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Rendimiento Academico Y Genero De Ingresantes A Unsch](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.pdf)
-2. [Por Editar](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.pdf) [Rendimiento Academico Y Genero De Ingresantes A Unsch](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar/index.pdf) [Por Editar](https://achalmaedison.netlify.app/econometria/estadistica-para-economistas/2024-03-31-por-editar)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

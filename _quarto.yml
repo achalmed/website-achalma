@@ -1,15 +1,15 @@
 project:
   type: website
   output-dir: _site
-  resources: 
+  resources:
     - cv.pdf
-  #post-render: 
+  #post-render:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
 website:
   title: "Edison Achalma"
   description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social."
-  google-analytics: 
+  google-analytics:
     tracking-id: "G-XGH6TP6RB3"
     anonymize-ip: true
   open-graph:
@@ -17,13 +17,13 @@ website:
     site-name: AchalmaEdison
   twitter-card:
     creator: "@achalmaedison"
-  comments: 
-    utterances: 
+  comments:
+    utterances:
       repo: achalmed/website-achalma
       label: utterances
       theme: body-light
       issue-term: title
-  cookie-consent: true
+  # cookie-consent: true
   site-url: https://achalmaedison.netlify.app/
   repo-url: https://github.com/achalmed/website-achalma
 
@@ -45,7 +45,7 @@ website:
         href: about/index.qmd
       - text: Talks
         aria-label: "Invited Talks"
-        href: talk/index.qmd  
+        href: talk/index.qmd
       - text: Publications
         aria-label: "Publications"
         href: publication/index.qmd
@@ -68,9 +68,9 @@ website:
           - text: "Gestión"
             href: gestion-publica-herramientas/index.qmd
           - text: "Ofimática"
-            href: herramientas-oficina/index.qmd 
+            href: herramientas-oficina/index.qmd
           - text: "Metodología"
-            href: investigacion-metodologia/index.qmd         
+            href: investigacion-metodologia/index.qmd
           - text: "Macroeconomía"
             href: macroeconomia/index.qmd
           - text: "Matemáticas"
@@ -80,15 +80,15 @@ website:
           - text: "Programación"
             href: programacion-software/index.qmd
           - text: "Cursos"
-            href: teching/index.qmd    
+            href: teching/index.qmd
           - text: "Tecnología"
-            href: tecnologia-seguridad/index.qmd 
+            href: tecnologia-seguridad/index.qmd
           - text: "Book an appointment"
             href: appointment/index.qmd
-  
-  page-footer:  
+
+  page-footer:
     left: >-
-     &#169; 2025 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
+      &#169; 2025 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
     center: |
       <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
       <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
@@ -97,7 +97,7 @@ website:
       <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
       <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
 
-    right: 
+    right:
       - text: "Accessibility"
         aria-label: "Accessibility Commitment"
         href: accessibility.qmd
@@ -113,7 +113,7 @@ website:
 # bibliography: references.bib
 lang: es
 
-format: 
+format:
   html:
     theme:
       light:
@@ -132,12 +132,12 @@ format:
       loop: false
 
 execute:
-  keep-md: true  # Mantener archivos .md generados
-  keep-ipynb: true 
-  echo: true  # true: Incluir el código fuente en la salida, false: (predeterminado en formatos de presentación como beamer, revealjs, y pptx): no incluir el código fuente en la salida
-  output: true  # Mostrar resultados de la ejecución
-  warning: false  # false: Ocultar advertencias, true: Incluir advertencias en la salida renderizada.
-  error: false  # Ocultar errores
-  enabled: false  # Habilitar la ejecución: quarto render notebook.ipynb --execute
-  freeze: true  # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
-  cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
+  keep-md: true # Mantener archivos .md generados
+  keep-ipynb: true
+  echo: true # true: Incluir el código fuente en la salida, false: (predeterminado en formatos de presentación como beamer, revealjs, y pptx): no incluir el código fuente en la salida
+  output: true # Mostrar resultados de la ejecución
+  warning: false # false: Ocultar advertencias, true: Incluir advertencias en la salida renderizada.
+  error: false # Ocultar errores
+  enabled: false # Habilitar la ejecución: quarto render notebook.ipynb --execute
+  freeze: true # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
+  cache: true # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject

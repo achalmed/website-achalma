@@ -51,7 +51,6 @@ links:
 
 
 
-
 ::: {.callout-tip collapse="true"}
 ## Expand to see web analytics
 
@@ -104,11 +103,9 @@ width: 100%;
 
 
 
-
 ::: {.cell}
 
 :::
-
 
 
 

@@ -85,9 +85,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Introducción
 
 Al iniciar el semestre académico, es fundamental que los alumnos definan de manera precisa el objetivo de su trabajo de investigación y evalúen su relevancia, factibilidad y valor agregado. Se recomienda tomar estas decisiones después de revisar la literatura básica y explorar la disponibilidad de información estadística sobre el tema de investigación.
@@ -184,9 +181,10 @@ Mendoza Bellido, W. E. (2007). Cómo investigan los economistas: Guía para elab
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Ideas De Investigacion Para Economia](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf)
-2. [Pautas De Presentacion Del Informe De Investigacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf)
-3. [Recurso De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recurso-de-bibliografia-y-documentacion/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.pdf) [Ideas De Investigacion Para Economia](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.pdf) [Pautas De Presentacion Del Informe De Investigacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.pdf) [Recursos De Bibliografia Y Documentacion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion/index.pdf) [Recursos Para Traducción Y Correccion](https://achalmaedison.netlify.app/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

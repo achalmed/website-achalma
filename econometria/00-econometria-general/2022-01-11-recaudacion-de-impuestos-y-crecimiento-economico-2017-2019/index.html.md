@@ -85,9 +85,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Introducción {#sec-introducción .unnumbered}
 
 En el Perú, al igual que en otros países de Latinoamérica, el crecimiento económico juega un papel fundamental en la recaudación de impuestos. Sin embargo, eventos externos y factores negativos pueden afectar el crecimiento económico y, por ende, el crecimiento tributario. Como menciona CEPAL (2019), "Si bien los ingresos tributarios en las economías de ALC registraron un mayor dinamismo en 2018, la región enfrentó posteriormente importantes desafíos, los cuales se intensificaron como resultado de la pandemia del COVID-19".
@@ -146,9 +143,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 
 
-
-
-
 ```{=html}
 <!-- En esta parte el alumno, expone cuáles son las razones por las que plantea la investigación. Estas motivaciones pueden ser de carácter teórico, metodológico o práctico.
 
@@ -160,9 +154,6 @@ Determinar la influencia del crecimiento económico en la recaudación de impues
 
 ¿Quién o quiénes serán los usuarios? -->
 ```
-
-
-
 
 
 
@@ -780,7 +771,7 @@ Por otro lado, mediante una regresión lineal simple se estableció el grado de 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Recaudacion De Impuestos Y Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019) Lee sin conexión [PDF](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf) [Recaudacion De Impuestos Y Crecimiento Economico 2017 2019](https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

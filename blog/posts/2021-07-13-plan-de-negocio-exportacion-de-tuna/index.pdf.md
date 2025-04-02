@@ -1,15 +1,23 @@
 ---
-documentmode: stu
-# Configuraciones Específicas por Modo
-# PARA ESTUDIANTE
+documentmode: stu  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
 course: Economía internacional II
 professor: Econ. William Dante Canales Molina
 duedate: 07/13/2021
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2021
+copyrightext: All rights reserved
+# image: featured.png
 title: Exportación de Tuna desde Ayacucho
 subtitle: Un Análisis del Mercado Internacional
 shorttitle: "EXPORTACIÓN DE TUNA"
-# description: |
-abstract: This study explores the strategic and ethical considerations of exporting prickly pear (tuna) from Ayacucho, Peru, to international markets, with a focus on Beijing, China. It examines the operational framework of Ecotuna S.C.R.L., a Peruvian company established in 2020, aiming to penetrate global markets within a year. The analysis includes market demand in China, logistical processes, and economic viability, highlighting the fruit’s nutritional value and its alignment with shifting consumer preferences toward healthier diets. Ethical implications, such as sustainable production and fair trade, are addressed in the context of contemporary societal needs. Drawing on trade data and consumer trends, the research underscores the potential for Ayacucho’s tuna to compete with leading exporters like Mexico while fostering local development. The study concludes by outlining key challenges and opportunities for sustainable export growth.
+abstract: "This study explores the strategic and ethical considerations of exporting prickly pear (tuna) from Ayacucho, Peru, to international markets, with a focus on Beijing, China. It examines the operational framework of Ecotuna S.C.R.L., a Peruvian company established in 2020, aiming to penetrate global markets within a year. The analysis includes market demand in China, logistical processes, and economic viability, highlighting the fruit’s nutritional value and its alignment with shifting consumer preferences toward healthier diets. Ethical implications, such as sustainable production and fair trade, are addressed in the context of contemporary societal needs. Drawing on trade data and consumer trends, the research underscores the potential for Ayacucho’s tuna to compete with leading exporters like Mexico while fostering local development. The study concludes by outlining key challenges and opportunities for sustainable export growth."
 keywords:
   - prickly pear export
   - international trade
@@ -18,8 +26,10 @@ keywords:
   - sustainable agriculture
 categories:
   - Posts
-  - Comercio Internacional y Economía
-  - Agricultura Sostenible y Desarrollo Local
+  - Comercio Internacional
+  - Economía
+  - Agricultura Sostenible
+  - Desarrollo Local
 tags:
   - Tuna (prickly pear)
   - Export logistics
@@ -72,7 +82,45 @@ author:
       - editing
       - funding acquistion
 
+# Nota del Autor
+author-note:
+  status-changes: 
+    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor] ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
+    related-report: ~
+    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    gratitude: ~
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+# bibliography: mybibliography.bib
 citation:
+  type: article-journal
   author:
     - Edison Achalma
     - Semnia Chocce
@@ -83,12 +131,6 @@ citation:
 date: 07/13/2021
 draft: false
 ---
-
-
-
-
-
-
 
 
 
@@ -628,20 +670,21 @@ Si sería rentable pues nuestro precio promedio es 10.43 dólares el cual es men
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf)
-2. [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf)
-3. [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf)
-4. [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf)
-5. [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf)
-6. [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf)
-7. [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf)
-8. [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf)
-9. [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf)
-10. [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf)
-11. [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf)
-12. [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf)
-13. [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf)
-14. [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf) [El Aborto](https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo/index.pdf) [El Mercantilismo](https://achalmaedison.netlify.app/blog/posts/2017-05-23-el-mercantilismo)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.pdf) [Plan De Negocio Exportacion De Trucha Arcoires](https://achalmaedison.netlify.app/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.pdf) [Plan De Negocio Exportacion De Tuna](https://achalmaedison.netlify.app/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown/index.pdf) [Comandos De Blogdown](https://achalmaedison.netlify.app/blog/posts/2021-07-14-comandos-de-blogdown)
+8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.pdf) [Gestion Publica Y Administracion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-gestion-publica-y-administracion-publica)
+9. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.pdf) [Reformas Y Modernizacion De La Gestion Publica](https://achalmaedison.netlify.app/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica)
+10. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros/index.pdf) [Cadena De Suministros](https://achalmaedison.netlify.app/blog/posts/2022-01-23-cadena de suministros)
+11. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria/index.pdf) [Economia Agraria](https://achalmaedison.netlify.app/blog/posts/2022-04-22-economia-agraria)
+12. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf) [Impacto Del Cambio Climatico](https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico)
+13. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.pdf) [Cualidades De Los Servidores Publicos](https://achalmaedison.netlify.app/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos)
+14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf) [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990)
+15. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

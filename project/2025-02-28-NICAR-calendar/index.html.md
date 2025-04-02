@@ -72,7 +72,6 @@ links:
 
 
 
-
 This year I'm excited to be attending [NICAR 2025](https://www.ire.org/training/conferences/nicar-2025/) which seems to be a wildly popular U.S. conference for data journalists. 🥳📊
 
 I built a **build-your-own calendar** tool to help me explore, find, and export a custom selection of sessions to a calendar file. My hope is you find it helpful too! 👇🏽

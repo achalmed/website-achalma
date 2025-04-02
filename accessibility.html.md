@@ -8,7 +8,6 @@ title: "Accessibility commitment"
 
 
 
-
 Travel back to the [home page](/) or [about page](/about).
 
 ## Feedback

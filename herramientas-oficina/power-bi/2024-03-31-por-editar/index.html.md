@@ -85,9 +85,6 @@ draft: true # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
 
@@ -96,14 +93,14 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Introduccion Al Mundo De Bi Y La Suite Power](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power/index.pdf)
-2. [02 Power Query Proceso Etl](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl/index.pdf)
-3. [03 Proceso Etl 2](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2/index.pdf)
-4. [04 Power Pivot Modelo De Datos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos/index.pdf)
-5. [05 Inteligencia De Tiempo Dimension De Tiempo](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-10-05-inteligencia-de-tiempo-dimension-de-tiempo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-10-05-inteligencia-de-tiempo-dimension-de-tiempo/index.pdf)
-6. [06 Lenguaje De Analisis De Datos Dax Columnas Campos Calculados](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-17-06-lenguaje-de-analisis-de-datos-dax-columnas-campos-calculados) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-17-06-lenguaje-de-analisis-de-datos-dax-columnas-campos-calculados/index.pdf)
-7. [08 Vizualizacion De Datos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-24-08-vizualizacion-de-datos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-24-08-vizualizacion-de-datos/index.pdf)
-8. [Por Editar](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2024-03-31-por-editar/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power/index.pdf) [01 Introduccion Al Mundo De Bi Y La Suite Power](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-12-01-introduccion-al-mundo-de-bi-y-la-suite-power)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl/index.pdf) [02 Power Query Proceso Etl](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-19-02-power-query-proceso-etl)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2/index.pdf) [03 Proceso Etl 2](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-09-26-03-proceso-etl-2)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos/index.pdf) [04 Power Pivot Modelo De Datos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-03-04-power-pivot-modelo-de-datos)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-10-05-inteligencia-de-tiempo-dimension-de-tiempo/index.pdf) [05 Inteligencia De Tiempo Dimension De Tiempo](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-10-05-inteligencia-de-tiempo-dimension-de-tiempo)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-17-06-lenguaje-de-analisis-de-datos-dax-columnas-campos-calculados/index.pdf) [06 Lenguaje De Analisis De Datos Dax Columnas Campos Calculados](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-17-06-lenguaje-de-analisis-de-datos-dax-columnas-campos-calculados)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-24-08-vizualizacion-de-datos/index.pdf) [08 Vizualizacion De Datos](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2022-10-24-08-vizualizacion-de-datos)
+8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2024-03-31-por-editar/index.pdf) [Por Editar](https://achalmaedison.netlify.app/herramientas-oficina/power-bi/2024-03-31-por-editar)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

@@ -84,9 +84,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # El Sistema Monetario Internacional
 
 El sistema monetario internacional es un marco institucional establecido para facilitar los pagos internacionales, regular los flujos de capital y determinar los tipos de cambio entre las diferentes monedas. Este sistema se basa en acuerdos internacionales y requiere un alto grado de cooperación entre los gobiernos de los principales países. En el contexto de la globalización, donde los flujos internacionales de bienes, servicios y capitales son cada vez más intensos, se hace necesaria la existencia de instituciones que regulen y faciliten estas transacciones.
@@ -147,9 +144,6 @@ En este régimen, el tipo de cambio se determina mediante el juego de oferta y d
 
 
 
-
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -164,9 +158,6 @@ Regímenes cambiarios
 ::::
 :::::
 ::::::
-
-
-
 
 
 
@@ -192,9 +183,6 @@ Es importante tener en cuenta que ningún régimen cambiario puede funcionar efi
 
 
 
-
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -209,9 +197,6 @@ Interrelaciones entre tipo de cambio, variables y políticas económicas
 ::::
 :::::
 ::::::
-
-
-
 
 
 
@@ -461,9 +446,9 @@ Por otro lado, los tipos de cambio flexibles permiten que las tasas de cambio se
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf) [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf) [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf) [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

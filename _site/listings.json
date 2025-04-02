@@ -1,48 +1,69 @@
 [
   {
-    "listing": "/herramientas-oficina/index.html",
+    "listing": "/programacion-software/index.html",
     "items": [
-      "/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/index.html",
-      "/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/index.html"
+      "/programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html",
+      "/programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html",
+      "/programacion-software/bloomberg/2024-03-31-por-editar/index.html",
+      "/programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html",
+      "/programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html",
+      "/programacion-software/r/2020-06-10-012-que-ofrece-r/index.html",
+      "/programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html",
+      "/programacion-software/r/2020-06-10-011-instalacion-de-r/index.html"
     ]
   },
   {
-    "listing": "/teching/index.html",
+    "listing": "/matematicas/index.html",
+    "items": []
+  },
+  {
+    "listing": "/microeconomia/index.html",
     "items": [
-      "/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html"
+      "/microeconomia/organizacion-industrial/2023-06-23-elasticidad/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos/index.html",
+      "/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial/index.html"
     ]
   },
   {
-    "listing": "/macroeconomia/index.html",
-    "items": []
-  },
-  {
-    "listing": "/project/2024-06-16-ccd-sips/index.html",
-    "items": []
-  },
-  {
-    "listing": "/about/index.html",
+    "listing": "/project/index.html",
     "items": [
-      "/blog/posts/2023-05-16-economia-regional/index.html",
-      "/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.html",
-      "/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.html",
-      "/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.html",
-      "/blog/posts/2022-04-22-economia-agraria/index.html",
-      "/blog/posts/2022-01-23-cadena de suministros/index.html",
-      "/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.html",
-      "/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.html",
-      "/blog/posts/2021-07-14-comandos-de-blogdown/index.html",
-      "/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.html",
-      "/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.html",
-      "/blog/posts/2020-05-23-comandos-de-google-assistant/index.html",
-      "/blog/posts/2017-05-23-el-mercantilismo/index.html",
-      "/blog/posts/2017-04-23-sitios-web-asombrosos/index.html",
-      "/blog/posts/2015-05-14-el-aborto/index.html",
-      "/talk/2024-07-10-data-equity-ldi/index.html",
-      "/talk/2024-03-26-env-justice/index.html",
-      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
       "/project/2025-02-28-NICAR-calendar/index.html",
       "/project/2024-06-16-ccd-sips/index.html"
+    ]
+  },
+  {
+    "listing": "/talk/index.html",
+    "items": [
+      "/talk/2024-07-10-data-equity-ldi/index.html",
+      "/talk/2024-03-26-env-justice/index.html"
+    ]
+  },
+  {
+    "listing": "/gestion-publica-herramientas/index.html",
+    "items": []
+  },
+  {
+    "listing": "/finanzas/index.html",
+    "items": [
+      "/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.html",
+      "/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.html"
+    ]
+  },
+  {
+    "listing": "/publication/index.html",
+    "items": [
+      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html"
+    ]
+  },
+  {
+    "listing": "/econometria/index.html",
+    "items": [
+      "/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.html",
+      "/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.html",
+      "/econometria/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico/index.html",
+      "/econometria/estadistica/2018-05-16-estadigrafos/index.html"
     ]
   },
   {
@@ -66,166 +87,48 @@
     ]
   },
   {
-    "listing": "/econometria/index.html",
-    "items": [
-      "/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.html",
-      "/econometria/estadistica-para-economistas/2019-12-30-rendimiento-academico-y-genero-de-ingresantes-a-unsch/index.html",
-      "/econometria/estadistica/2018-12-26-factores-que-influyen-rendimiento-academico/index.html",
-      "/econometria/estadistica/2018-05-16-estadigrafos/index.html"
-    ]
-  },
-  {
-    "listing": "/filosofia-politica/index.html",
-    "items": [
-      "/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.html",
-      "/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.html",
-      "/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.html",
-      "/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.html",
-      "/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.html",
-      "/filosofia-politica/posts/2023-03-03-el-capitalismo/index.html",
-      "/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.html"
-    ]
-  },
-  {
-    "listing": "/investigacion-metodologia/index.html",
-    "items": [
-      "/investigacion-metodologia/posts/2025-01-12-recursos-de-bibliografia-y-documentacion/index.html",
-      "/investigacion-metodologia/posts/2025-02-09-recursos-para-traducción-y-correccion/index.html",
-      "/investigacion-metodologia/posts/2023-06-03-pautas-de-presentacion-del-informe-de-investigacion/index.html",
-      "/investigacion-metodologia/posts/2023-06-03-ideas-de-investigacion-para-economia/index.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
+    "listing": "/about/index.html",
     "items": [
       "/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.html",
       "/blog/posts/2023-05-11-cualidades-de-los-servidores-publicos/index.html",
       "/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.html",
       "/blog/posts/2022-04-22-economia-agraria/index.html",
       "/blog/posts/2022-01-23-cadena de suministros/index.html",
-      "/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.html",
       "/blog/posts/2021-10-01-gestion-publica-y-administracion-publica/index.html",
+      "/blog/posts/2021-10-01-reformas-y-modernizacion-de-la-gestion-publica/index.html",
       "/blog/posts/2021-07-14-comandos-de-blogdown/index.html",
       "/blog/posts/2021-07-13-plan-de-negocio-exportacion-de-tuna/index.html",
       "/blog/posts/2020-09-15-plan-de-negocio-exportacion-de-trucha-arcoires/index.html",
       "/blog/posts/2020-05-23-comandos-de-google-assistant/index.html",
       "/blog/posts/2017-05-23-el-mercantilismo/index.html",
       "/blog/posts/2017-04-23-sitios-web-asombrosos/index.html",
-      "/blog/posts/2015-05-14-el-aborto/index.html"
-    ]
-  },
-  {
-    "listing": "/programacion-software/index.html",
-    "items": [
-      "/programacion-software/fundamentos-programacion/2018-06-09-typografia/index.html",
-      "/programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.html",
-      "/programacion-software/bloomberg/2024-03-31-por-editar/index.html",
-      "/programacion-software/cpp/2024-03-31-por-editar/index.html",
-      "/programacion-software/eviews/2024-03-31-por-editar/index.html",
-      "/programacion-software/fundamentos-programacion/2024-03-31-por-editar/index.html",
-      "/programacion-software/stata/2024-03-31-por-editar/index.html",
-      "/programacion-software/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/index.html",
-      "/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/index.html",
-      "/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/index.html",
-      "/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/index.html",
-      "/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/index.html",
-      "/programacion-software/matlab/2022-07-25-01-primeros-pasos-en-matlab/index.html",
-      "/programacion-software/matlab/2022-08-01-02-elementos-basicos-en-matlab-i/index.html",
-      "/programacion-software/matlab/2022-08-08-03-elementos-basicos-en-matlab-ii/index.html",
-      "/programacion-software/matlab/2022-08-15-04-programacion-en-matlab/index.html",
-      "/programacion-software/matlab/2022-08-22-05-visualizacion-de-datos-en-matlab/index.html",
-      "/programacion-software/matlab/2022-08-29-06-sentencias-de-control/index.html",
-      "/programacion-software/matlab/2022-09-05-07-metodos-numericos/index.html",
-      "/programacion-software/matlab/2022-09-12-08-tipos-de-datos-heterogeneos/index.html",
-      "/programacion-software/matlab/2022-09-19-09-funciones-avanzadas/index.html",
-      "/programacion-software/matlab/2022-09-26-10-toolbox-optimization/index.html",
-      "/programacion-software/matlab/2022-10-03-11-aplicaciones/index.html",
-      "/programacion-software/stata/2022-07-18-08-modelos-de-evaluacion-de-impacto/index.html",
-      "/programacion-software/stata/2022-07-11-07-paneles-de-datos/index.html",
-      "/programacion-software/stata/2022-07-04-06-series-de-tiempo/index.html",
-      "/programacion-software/stata/2022-06-27-05-modelos-de-seleccion-discreta/index.html",
-      "/programacion-software/stata/2022-06-20-04-regresiones/index.html",
-      "/programacion-software/stata/2022-06-13-03-data-visualization/index.html",
-      "/programacion-software/stata/2022-06-06-02-manipulando-los-datos/index.html",
-      "/programacion-software/stata/2022-05-30-01-introduccion-al-programa/index.html",
-      "/programacion-software/eviews/2022-02-21-07-modelacion/index.html",
-      "/programacion-software/eviews/2022-02-14-06-empleo-de-subrutinas/index.html",
-      "/programacion-software/eviews/2022-02-07-05-objetos-avanzados/index.html",
-      "/programacion-software/python/2021-12-13-10-metodos-de-machine-learning-para-regresion-con-python/index.html",
-      "/programacion-software/python/2021-12-06-09-metodos-de-machine-learning-para-clasificacion-con-python/index.html",
-      "/programacion-software/python/2021-11-29-08-prediccion-y-metrica-de-performance-con-python/index.html",
-      "/programacion-software/eviews/2021-09-13-03-metodos-de-estimacion-objeto-equatio-objeto-table/index.html",
-      "/programacion-software/eviews/2021-09-06-02-empleo-de-bucles-y-variables-temporales/index.html",
-      "/programacion-software/eviews/2021-08-30-01-introduccion-a-la-programacion-con-eviews/index.html",
-      "/programacion-software/python/2021-08-23-07-dataframes-con-python/index.html",
-      "/programacion-software/python/2021-08-16-06-funciones-con-python/index.html",
-      "/programacion-software/python/2021-06-21-05-iteraciones-con-python/index.html",
-      "/programacion-software/python/2021-06-14-04-ejecucion-condicional-con-python/index.html",
-      "/programacion-software/python/2021-06-07-03-objetos-de-python/index.html",
-      "/programacion-software/python/2021-04-17-01-introducion-a-la-programacion-con-python/index.html",
-      "/programacion-software/python/2021-05-31-02-variables-expresiones-y-statements-con-python/index.html",
-      "/programacion-software/r/2021-04-12-03-visualizacion-de-datos/index.html",
-      "/programacion-software/r/2021-04-05-02-manipulacion-de-datos/index.html",
-      "/programacion-software/r/2021-03-027-01-introduccion-al-programa/index.html",
-      "/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.html",
-      "/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos/index.html",
-      "/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.html",
-      "/programacion-software/python/2020-06-20-configurar-entorno-virtual-python-anaconda/index.html",
-      "/programacion-software/python/2020-06-19-instalacion-de-anaconda/index.html",
-      "/programacion-software/r/2020-06-10-012-que-ofrece-r/index.html",
-      "/programacion-software/r/2020-06-10-013-lo-que-debemos-saber-de-r/index.html",
-      "/programacion-software/r/2020-06-10-011-instalacion-de-r/index.html",
-      "/programacion-software/latex/2015-07-17-06-tikz/index.html",
-      "/programacion-software/latex/2015-07-16-05-presentaciones-en-beamer/index.html",
-      "/programacion-software/latex/2015-07-15-04-latex-y-referencias/index.html",
-      "/programacion-software/latex/2015-07-14-03-latex-como-editor-de-texto/index.html",
-      "/programacion-software/latex/2015-07-13-02-latex-y-matematica/index.html",
-      "/programacion-software/latex/2015-07-12-01-introduccion-al-latex/index.html"
-    ]
-  },
-  {
-    "listing": "/finanzas/index.html",
-    "items": [
-      "/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.html",
-      "/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.html"
-    ]
-  },
-  {
-    "listing": "/gestion-publica-herramientas/index.html",
-    "items": []
-  },
-  {
-    "listing": "/talk/index.html",
-    "items": [
+      "/blog/posts/2015-05-14-el-aborto/index.html",
       "/talk/2024-07-10-data-equity-ldi/index.html",
-      "/talk/2024-03-26-env-justice/index.html"
-    ]
-  },
-  {
-    "listing": "/project/index.html",
-    "items": [
+      "/talk/2024-03-26-env-justice/index.html",
+      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
       "/project/2025-02-28-NICAR-calendar/index.html",
       "/project/2024-06-16-ccd-sips/index.html"
     ]
   },
   {
-    "listing": "/microeconomia/index.html",
-    "items": [
-      "/microeconomia/organizacion-industrial/2023-06-23-elasticidad/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-15-mercado-relevante/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-13-empresa-como-organizacion/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-13-sistemas-economicos/index.html",
-      "/microeconomia/organizacion-industrial/2023-06-12-introducion-a-organizacion-industrial/index.html"
-    ]
-  },
-  {
-    "listing": "/matematicas/index.html",
+    "listing": "/project/2024-06-16-ccd-sips/index.html",
     "items": []
   },
   {
-    "listing": "/publication/index.html",
+    "listing": "/macroeconomia/index.html",
+    "items": []
+  },
+  {
+    "listing": "/teching/index.html",
     "items": [
-      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html"
+      "/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html"
+    ]
+  },
+  {
+    "listing": "/herramientas-oficina/index.html",
+    "items": [
+      "/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/index.html",
+      "/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/index.html"
     ]
   }
 ]

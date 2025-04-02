@@ -83,9 +83,6 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Orígenes y Conceptos Fundamentales de las Finanzas Internacionales
 
 ## Economía Internacional
@@ -126,9 +123,6 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 
 
 
-
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -142,9 +136,6 @@ Al comprender estos conceptos en los campos de la economía internacional y las 
 ::::
 :::::
 ::::::
-
-
-
 
 
 
@@ -293,9 +284,6 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 
 
 
-
-
-
 ::::::{.cell layout-align="default"}
 
 :::::{.cell-output-display}
@@ -309,9 +297,6 @@ A nivel macroeconómico, la integración en la economía global ofrece varias ve
 ::::
 :::::
 ::::::
-
-
-
 
 
 
@@ -365,9 +350,9 @@ Otra crítica importante es que la globalización ha llevado a una mayor frecuen
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf)
-2. [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf)
-3. [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion/index.pdf) [La Globalizacion](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-16-la-globalizacion)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional/index.pdf) [Sistema Monetario Internacional](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-17-sistema-monetario-internacional)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos/index.pdf) [Balanza Pagos](https://achalmaedison.netlify.app/finanzas/finanzas-internacionales/2023-06-23-balanza-pagos)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

@@ -82,9 +82,6 @@ draft: true  # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
 # Explorando las Tres Fuentes y Tres Partes del Marxismo según Lenin
 
 Me complace compartir con ustedes uno de los textos más maravillosos de síntesis del marxismo. Este texto ha sido desarrollado por Lenin en un prodigio de cinco hojas, resumiendo toda la teoría marxista tal como se había desarrollado en su momento. El texto se llama "Tres Fuentes y Tres Partes Integrantes del Marxismo" y fue escrito por Lenin en 1913, cuando se encontraba en el exilio.
@@ -213,13 +210,13 @@ Todo esto se relaciona con las Tres Fuentes y Tres Partes. El marxismo no es sim
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf)
-2. [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf)
-3. [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf)
-4. [Seminario De Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf)
-5. [Entendiendo A Mariategui](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf)
-6. [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf)
-7. [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo) Lee sin conexión [PDF](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista/index.pdf) [Aparicion Pensamiento Socialista](https://achalmaedison.netlify.app/filosofia-politica/posts/2018-04-23-aparicion-pensamiento-socialista)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo/index.pdf) [El Capitalismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-03-03-el-capitalismo)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo/index.pdf) [Primero De Mayo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-04-29-primero-de-mayo)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista/index.pdf) [Seminario De Filosofia Marxista](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-05-19-seminario-de-filosofia-marxista)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui/index.pdf) [Entendiendo A Mariategui](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-entendiendo-a-mariategui)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana/index.pdf) [Naturaleza Humana](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-06-09-naturaleza-humana)
+7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo/index.pdf) [Tres Fuentes Tres Partes Del Marxismo](https://achalmaedison.netlify.app/filosofia-politica/posts/2023-10-23-tres-fuentes-tres-partes-del-marxismo)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

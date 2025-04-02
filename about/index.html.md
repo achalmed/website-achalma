@@ -1,6 +1,6 @@
 ---
 title: "Edison Achalma"
-subtitle: Data Scientist & Journalist
+subtitle: Data Scientist & Economist
 image: sidebar/vka-profile.jpg
 image-alt: "Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"
 about:
@@ -14,7 +14,7 @@ about:
       href: accessibility.qmd
     - text: "{{< fa brands bluesky >}}"
       aria-label: "Bluesky"
-      href: https://bsky.app/profile/silviacanelon.com
+      href: https://bsky.app/profile/achalmaedison.com
     - icon: linkedin
       aria-label: "LinkedIn"
       href: https://linkedin.com/in/achalmaedison
@@ -22,7 +22,7 @@ about:
       aria-label: GitHub
       href: https://github.com/achalmed
     # - icon: mastodon
-    #   href: https://hachyderm.io/@achalmaedison
+    #   href: https://mastodon.social/@achalmaedison
     - text: "{{< ai orcid >}}"
       href: https://orcid.org/0000-0001-6996-3364
     - text: "{{< ai google-scholar >}}"
@@ -100,13 +100,13 @@ resources:
 
 
 ::: {#hero-heading}
-<div class="h1">Hey, I'm happy you're here</div>
+<div class="h1">Hola, me alegro de que estés aquí.</div>
 
-Thanks for stopping by!
+¡Gracias por pasar por aquí!
 
-A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informática. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa. Learn more about my research interests in [publications](/publication).
+A lo largo de mi trayectoria, he adquirido experiencia en programación y seguridad informática. Estoy comprometido en la excelencia, el aprendizaje continuo, el impacto positivo y el respeto hacia los demás. Estos principios me guían en mi vida y en mi carrera, y me inspiran a alcanzar mis metas y contribuir al mundo de manera significativa. Más información sobre mis intereses de investigación en publicaciones. [publicaciones](/publication).
 
-Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
+¡Ponte en contacto [conmigo enviándome una nota](/contact.qmd)! {{< fa feather-pointed >}}
 
 :::
 
@@ -118,7 +118,7 @@ Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
 
 **Economista convertido en informático, curioso por todas las intersecciones de los datos y la sociedad.**
 
-I enjoy using [R](https://www.r-project.org/about.html) to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my [blog](/blog) and presentations in [talks](/talk).
+Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi [blog](/blog) y en mis [presentaciones](/talk).
 
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020</li>
@@ -128,12 +128,12 @@ I enjoy using [R](https://www.r-project.org/about.html) to optimize my data scie
 
 ::: {.g-col-6 #about-me-2}
 
-Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
+Me interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades.
 
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.med.upenn.edu/mbmi/certificate.html">Certificate in Biomedical Informatics</a> ∙ University of Pennsylvania ∙ 2019</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Ph.D. in Biomedical Engineering ∙ Purdue University ∙ 2018</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Economista ∙ Universidad Nacional de San Cristobal de Huamanaga ∙ 2024</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Economía ∙ Universidad Nacional de San Cristobal de Huamanaga ∙ 2012</li>
 </ul>
 
 :::
@@ -141,7 +141,7 @@ Prior to joining the Urban Health Lab, I developed novel data mining methods to 
 :::
 <!-- end grid -->
 
-## Lately ...
+## Últimamente  ...
 
 :::: {.grid}
 
@@ -149,28 +149,28 @@ Prior to joining the Urban Health Lab, I developed novel data mining methods to 
 #### Blog
 ::: {#blog}
 :::
-[See all &rarr;](../blog){.about-links .subtitle}
+[Ver todo &rarr;](../blog){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
 #### Talks
 ::: {#talk}
 :::
-[See all &rarr;](../talk){.about-links .subtitle}
+[Ver todo &rarr;](../talk){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
 #### Publications
 ::: {#publication}
 :::
-[See all &rarr;](../publication){.about-links .subtitle}
+[Ver todo &rarr;](../publication){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
 #### Projects
 ::: {#project}
 :::
-[See all &rarr;](../project){.about-links .subtitle}
+[Ver todo &rarr;](../project){.about-links .subtitle}
 :::
 
 ::::

@@ -1,5 +1,5 @@
 ---
-# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+documentmode: stu  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
     # - man (Manuscrito): Similar al formato .docx
     # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
     # - doc (Documento): Similar al predeterminado LaTex artículos.
@@ -214,10 +214,12 @@ Traducción realizada con la versión gratuita del traductor DeepL.com
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-1. [01 Pensamiento Logico](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf)
-2. [02 Introduccion A Los Algoritmos](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos/index.pdf)
-3. [03 Programacion Basica En Html](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf)
-4. [Por Editar](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2024-03-31-por-editar) Lee sin conexión [PDF](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2024-03-31-por-editar/index.pdf)
+1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2018-06-09-typografia/index.pdf) [Typografia](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2018-06-09-typografia)
+2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares/index.pdf) [Organizando Tipos De Archivos De Softwares](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2019-08-13-organizando-tipos-de-archivos-de-softwares)
+3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico/index.pdf) [01 Pensamiento Logico](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-04-01-pensamiento-logico)
+4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos/index.pdf) [02 Introduccion A Los Algoritmos](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-11-02-introduccion-a-los-algoritmos)
+5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html/index.pdf) [03 Programacion Basica En Html](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2021-01-18-03-programacion-basica-en-html)
+6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2024-03-31-por-editar/index.pdf) [Por Editar](https://achalmaedison.netlify.app/programacion-software/fundamentos-programacion/2024-03-31-por-editar)
 
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!

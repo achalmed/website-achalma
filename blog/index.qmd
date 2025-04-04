@@ -2,16 +2,15 @@
 title: "Blog Personal"
 # subtitle: Un espacio donde comparto reflexiones, ideas y pensamientos sobre diversos temas. Desde experiencias personales hasta análisis críticos de la realidad, este blog es un reflejo de mis intereses y aprendizajes cotidianos.
 description: |
-  This is my blog where I practice sharing my curiosity about R.<br>
-  It includes notes and tutorials for my future self and hopefully also for you.<br><br>
+  Este es mi blog donde practico compartir mi curiosidad.<br>
+  Incluye notas y tutoriales para mi futuro y espero que también para ti.<br><br>
   {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
-
 listing:
   - id: ultimas-entradas
     contents: 
-      - "posts/*/index.qmd"
-      - "posts/*/index.markdown"
-      - "posts/*/index.md"
+      - "posts/**/index.qmd"
+      - "posts/**/index.markdown"
+      - "posts/**/index.md"
     type: default # (table, default)
     sort: 
       - "date desc"
@@ -22,7 +21,7 @@ listing:
     fields: [title, author, categories, date, image, reading-time]
     image-placeholder: sidebar.jpg
     image-align: right
-   # page-size: 5
+    # page-size: 5
     categories: false # (numbered, unnumbered, cloud, false)
     feed: true
     

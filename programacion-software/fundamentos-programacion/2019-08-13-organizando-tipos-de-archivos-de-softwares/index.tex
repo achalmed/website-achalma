@@ -1,5 +1,5 @@
 \documentclass[
-  jou,
+  stu,
   floatsintext,
   longtable,
   a4paper,
@@ -43,6 +43,8 @@ Claves}
 
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}
@@ -178,46 +180,13 @@ manera:  Edison Achalma:   conceptualización, redacción}
 Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
 
-\usepackage{pbalance} 
-\usepackage{float}
 \makeatletter
-\let\oldtpt\ThreePartTable
-\let\endoldtpt\endThreePartTable
-\def\ThreePartTable{\@ifnextchar[\ThreePartTable@i \ThreePartTable@ii}
-\def\ThreePartTable@i[#1]{\begin{figure}[!htbp]
-\onecolumn
-\begin{minipage}{0.5\textwidth}
-\oldtpt[#1]
-}
-\def\ThreePartTable@ii{\begin{figure}[!htbp]
-\onecolumn
-\begin{minipage}{0.5\textwidth}
-\oldtpt
-}
-\def\endThreePartTable{
-\endoldtpt
-\end{minipage}
-\twocolumn
-\end{figure}}
-\makeatother
-
-
-\makeatletter
-\let\endoldlt\endlongtable		
+\let\endoldlt\endlongtable
 \def\endlongtable{
 \hline
-\endoldlt}
+\endoldlt
+}
 \makeatother
-
-\newenvironment{twocolumntable}% environment name
-{% begin code
-\begin{table*}[!htbp]%
-\onecolumn%
-}%
-{%
-\twocolumn%
-\end{table*}%
-}% end code
 
 \urlstyle{same}
 

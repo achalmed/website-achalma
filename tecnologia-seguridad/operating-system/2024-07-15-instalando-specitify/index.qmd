@@ -90,7 +90,7 @@ draft: false  # Modo de borrador (false = final, true = borrador)
    - Mueve la carpeta `stats` a la carpeta `CustomApps` dentro del directorio de Spicetify.
    - La estructura del directorio debería ser similar a la siguiente:
 
-     ```
+     ```sh
      📦spicetify/CustomApps
      ┣ 📂marketplace
      ┣ etc...

@@ -84,15 +84,6 @@ draft: true # Modo de borrador (false = final, true = borrador)
 
 
 
-
-
-
-
-
-
-
-
-
 Para convertir varios archivos con extensión `.docx` a `.odt` a través de una línea de comando de Linux, puede utilizar la herramienta `soffice` que viene con LibreOffice. Aquí hay un ejemplo de cómo hacerlo de `docx` a `odt`
 
 `soffice --headless --convert-to odt *.docx `

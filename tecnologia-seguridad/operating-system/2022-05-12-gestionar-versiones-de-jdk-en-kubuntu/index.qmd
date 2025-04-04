@@ -82,13 +82,11 @@ draft: false  # Modo de borrador (false = final, true = borrador)
   
 Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada en Ubuntu) puede hacerse de varias maneras, aquí te describo algunas de las más comunes:
 
-  
 
 1. Usando update-alternatives para gestionar versiones JDK:
 
 - Listar versiones instaladas:
-    
-    bash
+
     
     ```bash
     sudo update-alternatives --config java
@@ -100,7 +98,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
     - Puedes instalar diferentes versiones de OpenJDK usando apt:
         
-        bash
         
         ```bash
         sudo apt update
@@ -108,8 +105,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
         ```
         
     - Para Oracle JDK, generalmente necesitas añadir un PPA o descargarlo manualmente debido a las licencias:
-        
-        bash
         
         ```bash
         sudo add-apt-repository ppa:linuxuprising/java
@@ -119,8 +114,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
         
 - Configurar la versión predeterminada: Después de instalar, usa update-alternatives para elegir la versión predeterminada:
     
-    bash
-    
     ```bash
     sudo update-alternatives --config java
     sudo update-alternatives --config javac
@@ -129,11 +122,9 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
 
   
 
-2. Usando SDKMAN! para gestionar múltiples JDKs:
+1. Usando SDKMAN! para gestionar múltiples JDKs:
 
 - Instalar SDKMAN!:
-    
-    bash
     
     ```bash
     curl -s "https://get.sdkman.io" | bash
@@ -142,7 +133,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
 - Listar versiones disponibles de JDK:
     
-    bash
     
     ```bash
     sdk list java
@@ -150,7 +140,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
 - Instalar una versión específica:
     
-    bash
     
     ```bash
     sdk install java <version-id>
@@ -160,7 +149,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
 - Cambiar entre versiones:
     
-    bash
     
     ```bash
     sdk use java <version-id>
@@ -168,7 +156,6 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
 - Establecer una versión como predeterminada:
     
-    bash
     
     ```bash
     sdk default java <version-id>
@@ -176,15 +163,13 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
     
 - Eliminar una versión:
     
-    bash
     
     ```bash
     sdk uninstall java <version-id>
     ```
     
 - Actualizar una versión: SDKMAN! puede manejar actualizaciones automáticamente, pero para actualizar manualmente:
-    
-    bash
+
     
     ```bash
     sdk upgrade java
@@ -193,11 +178,10 @@ Gestionar varias versiones de JDK en Kubuntu (o cualquier distribución basada e
 
   
 
-3. Eliminar versiones de JDK:
+1. Eliminar versiones de JDK:
 
 - Eliminar con apt:
     
-    bash
     
     ```bash
     sudo apt remove openjdk-8-jdk  # Reemplaza 8 con la versión que quieras eliminar

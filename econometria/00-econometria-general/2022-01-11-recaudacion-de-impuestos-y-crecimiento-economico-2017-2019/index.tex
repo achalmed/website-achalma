@@ -43,6 +43,8 @@ Claves}
 
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}
@@ -155,7 +157,7 @@ Claves}
 
 
 \title{Análisis del Impacto del Crecimiento Económico en la Recaudación
-de Impuestos en Ayacucho: relación entre el Valor Agregado Bruto y los
+de Impuestos en Ayacucho: Relación entre el Valor Agregado Bruto y los
 ingresos fiscales en el periodo 2007-2019}
 
 
@@ -166,7 +168,7 @@ ingresos fiscales en el periodo 2007-2019}
 
 
 
-\ccoppy{\textcopyright~2025}
+\ccoppy{\textcopyright~2022}
 
 
 
@@ -175,8 +177,8 @@ ingresos fiscales en el periodo 2007-2019}
 
 
 \affiliation{
-{Departamento de Economía, Universidad Nacional de San Cristóbal de
-Huamanga}}
+{Escuela Profesional de Economía, Universidad Nacional de San Cristóbal
+de Huamanga}}
 
 
 
@@ -193,10 +195,10 @@ contenido final del artículo. }
 
 \authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
 \par{ }
-\par{   Los autores no tienen conflictos de intereses que
-revelar.    Los roles de autor se clasificaron utilizando la taxonomía
-de roles de colaborador (CRediT; https://credit.niso.org/) de la
-siguiente manera:  Edison Achalma:   conceptualización, redacción}
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
 \par{La correspondencia relativa a este artículo debe dirigirse a Edison
 Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
@@ -286,6 +288,9 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
 \makeatother
 
 % From https://tex.stackexchange.com/a/645996/211326
@@ -2533,9 +2538,9 @@ algunas sugerencias:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
+  \href{https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019}{Recaudacion
-  De Impuestos Y Crecimiento Economico 2017 2019} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/index.pdf}{PDF}
+  De Impuestos Y Crecimiento Economico 2017 2019}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y

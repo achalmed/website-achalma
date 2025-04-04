@@ -4,7 +4,7 @@ author: ""
 comments: false
 citation: false
 description: |
-  This porfolio includes openly available educational material I have created,<br> along with works, software, and tools I have contributed to or designed.
+  Este portafolio incluye material educativo disponible abiertamente que he creado,<br> junto con trabajos, software y herramientas a los que he contribuido o que he diseñado.
 listing: 
   contents:
     - "/*/index.qmd"

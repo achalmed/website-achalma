@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -259,7 +293,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2 de abril de 2025</p>
+      <p class="date-modified">4 de abril de 2025</p>
     </div>
   </div>
     
@@ -288,7 +322,13 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link active" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
+  <li><a href="#comandos-útiles-en-windows-11" id="toc-comandos-útiles-en-windows-11" class="nav-link active" data-scroll-target="#comandos-útiles-en-windows-11">Comandos útiles en Windows 11</a>
+  <ul class="collapse">
+  <li><a href="#obtener-la-ip-pública" id="toc-obtener-la-ip-pública" class="nav-link" data-scroll-target="#obtener-la-ip-pública">Obtener la IP pública</a></li>
+  <li><a href="#ver-detalles-de-los-controladores-wi-fi" id="toc-ver-detalles-de-los-controladores-wi-fi" class="nav-link" data-scroll-target="#ver-detalles-de-los-controladores-wi-fi">Ver detalles de los controladores Wi-Fi</a></li>
+  <li><a href="#notas-adicionales" id="toc-notas-adicionales" class="nav-link" data-scroll-target="#notas-adicionales">Notas adicionales</a></li>
+  </ul></li>
+  <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word (apaquarto)</a></li></ul></div></nav>
     </div>
@@ -306,47 +346,82 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 
 
 <p>#Comandos #Windows11</p>
-<p>IP PÚBLICA: nslookup myip.opendns.com resolver1.opendns.com</p>
-<p>200.121.132.66</p>
-<p>RED 5HGZ</p>
-<p>C:&gt;netsh wlan show drivers</p>
-<p>Interface name: Wi-Fi</p>
-<pre><code>Driver                    : Intel(R) Wireless-AC 9461
-Vendor                    : Intel Corporation
-Provider                  : Intel
-Date                      : 6/29/2021
-Version                   : 22.70.0.6
-INF file                  : oem192.inf
-Type                      : Native Wi-Fi Driver
-Radio types supported     : 802.11b 802.11g 802.11n 802.11a 802.11ac
-FIPS 140-2 mode supported : Yes
-802.11w Management Frame Protection supported : Yes
-Hosted network supported  : No
-Authentication and cipher supported in infrastructure mode:
-                            Open            None
-                            Open            WEP-40bit
-                            Open            WEP-104bit
-                            Open            WEP
-                            WPA-Enterprise  TKIP
-                            WPA-Enterprise  CCMP
-                            WPA-Personal    TKIP
-                            WPA-Personal    CCMP
-                            WPA2-Enterprise TKIP
-                            WPA2-Enterprise CCMP
-                            WPA2-Personal   TKIP
-                            WPA2-Personal   CCMP
-                            Open            Vendor defined
-                            WPA3-Personal   CCMP
-                            Vendor defined  Vendor defined
-                            WPA3-Enterprise 192 BitsGCMP-256
-                            OWE             CCMP
-IHV service present       : Yes
-IHV adapter OUI           : [00 00 00], type: [00]
-IHV extensibility DLL path: C:\WINDOWS\system32\IntelIHVRouter08.dll
-IHV UI extensibility ClSID: {00000000-0000-0000-0000-000000000000}
-IHV diagnostics CLSID     : {00000000-0000-0000-0000-000000000000}
-Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)</code></pre>
-<p>C:&gt;</p>
+<section id="comandos-útiles-en-windows-11" class="level1">
+<h1>Comandos útiles en Windows 11</h1>
+<p>Este artículo recopila comandos y ejemplos prácticos para obtener información de red en Windows 11, incluyendo la IP pública y detalles de los controladores de red inalámbrica.</p>
+<section id="obtener-la-ip-pública" class="level2">
+<h2 class="anchored" data-anchor-id="obtener-la-ip-pública">Obtener la IP pública</h2>
+<p>Para conocer tu dirección IP pública, utiliza el siguiente comando en la terminal:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource cmd number-lines code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1"></a>nslookup myip.opendns.com resolver1.opendns.com</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ejemplo de resultado:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource cmd number-lines code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1"></a>200.121.132.66</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este comando consulta el servicio de OpenDNS para devolver tu IP pública actual.</p>
+</section>
+<section id="ver-detalles-de-los-controladores-wi-fi" class="level2">
+<h2 class="anchored" data-anchor-id="ver-detalles-de-los-controladores-wi-fi">Ver detalles de los controladores Wi-Fi</h2>
+<p>El comando <code>netsh wlan show drivers</code> muestra información detallada sobre los controladores de la interfaz Wi-Fi. A continuación, se presenta un ejemplo ejecutado en una máquina con Windows 11:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource cmd number-lines code-with-copy"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1"></a>C:\Users\achalmaedison<span class="kw">&gt;</span>netsh wlan show drivers</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="resultado-del-comando" class="level3">
+<h3 class="anchored" data-anchor-id="resultado-del-comando">Resultado del comando</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource cmd number-lines code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1"></a>Interface name: Wi<span class="at">-Fi</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    Driver                    : Intel(R<span class="kw">)</span> Wireless-AC 9461</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    Vendor                    : Intel Corporation</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    Provider                  : Intel</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="bu">Date</span>                      : 6<span class="at">/29/2021</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>    Version                   : 22.70.0.6</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    INF file                  : oem192.inf</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="bu">Type</span>                      : Native Wi<span class="at">-Fi</span> Driver</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    Radio types supported     : 802.11b 802.11g 802.11n 802.11a 802.11ac</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    FIPS 140<span class="at">-2</span> mode supported : Yes</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    802.11w Management Frame Protection supported : Yes</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    Hosted network supported  : No</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    Authentication and cipher supported in infrastructure mode:</span>
+<span id="cb4-15"><a href="#cb4-15"></a>                                Open            None</span>
+<span id="cb4-16"><a href="#cb4-16"></a>                                Open            WEP<span class="at">-40bit</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>                                Open            WEP<span class="at">-104bit</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>                                Open            WEP</span>
+<span id="cb4-19"><a href="#cb4-19"></a>                                WPA-Enterprise  TKIP</span>
+<span id="cb4-20"><a href="#cb4-20"></a>                                WPA-Enterprise  CCMP</span>
+<span id="cb4-21"><a href="#cb4-21"></a>                                WPA-Personal    TKIP</span>
+<span id="cb4-22"><a href="#cb4-22"></a>                                WPA-Personal    CCMP</span>
+<span id="cb4-23"><a href="#cb4-23"></a>                                WPA2-Enterprise TKIP</span>
+<span id="cb4-24"><a href="#cb4-24"></a>                                WPA2-Enterprise CCMP</span>
+<span id="cb4-25"><a href="#cb4-25"></a>                                WPA2-Personal   TKIP</span>
+<span id="cb4-26"><a href="#cb4-26"></a>                                WPA2-Personal   CCMP</span>
+<span id="cb4-27"><a href="#cb4-27"></a>                                Open            Vendor defined</span>
+<span id="cb4-28"><a href="#cb4-28"></a>                                WPA3-Personal   CCMP</span>
+<span id="cb4-29"><a href="#cb4-29"></a>                                Vendor defined  Vendor defined</span>
+<span id="cb4-30"><a href="#cb4-30"></a>                                WPA3-Enterprise 192 Bits GCMP<span class="at">-256</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a>                                OWE             CCMP</span>
+<span id="cb4-32"><a href="#cb4-32"></a>    IHV service present       : Yes</span>
+<span id="cb4-33"><a href="#cb4-33"></a>    IHV adapter OUI           : [00 00 00], type: [00]</span>
+<span id="cb4-34"><a href="#cb4-34"></a>    IHV extensibility DLL path: C:\WINDOWS\system32\IntelIHVRouter08.dll</span>
+<span id="cb4-35"><a href="#cb4-35"></a>    IHV UI extensibility ClSID: {00000000<span class="at">-0000-0000-0000-000000000000</span>}</span>
+<span id="cb4-36"><a href="#cb4-36"></a>    IHV diagnostics CLSID     : {00000000<span class="at">-0000-0000-0000-000000000000</span>}</span>
+<span id="cb4-37"><a href="#cb4-37"></a>    Wireless Display Supported: Yes (Graphics Driver: Yes, Wi<span class="at">-Fi</span> Driver: Yes<span class="kw">)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="explicación-del-resultado" class="level3">
+<h3 class="anchored" data-anchor-id="explicación-del-resultado">Explicación del resultado</h3>
+<ul>
+<li><strong>Nombre de la interfaz</strong>: Wi-Fi.</li>
+<li><strong>Controlador</strong>: Intel(R) Wireless-AC 9461, proporcionado por Intel Corporation.</li>
+<li><strong>Versión y fecha</strong>: Versión 22.70.0.6, lanzada el 29/06/2021.</li>
+<li><strong>Estándares soportados</strong>: Incluye 802.11a/b/g/n/ac, cubriendo redes de 2.4 GHz y 5 GHz.</li>
+<li><strong>Seguridad</strong>: Compatible con WPA3, WPA2, WPA (Enterprise y Personal), y cifrados como TKIP, CCMP y GCMP-256.</li>
+<li><strong>Funcionalidades avanzadas</strong>: Soporte para FIPS 140-2, protección de tramas de gestión 802.11w y Wireless Display (Miracast).</li>
+</ul>
+</section>
+</section>
+<section id="notas-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="notas-adicionales">Notas adicionales</h2>
+<ul>
+<li>El ejemplo muestra una configuración típica para una red de 5 GHz, dado que el controlador soporta 802.11ac.</li>
+<li>Para ejecutar estos comandos, abre la terminal de Windows (CMD) como administrador si es necesario.</li>
+</ul>
+<p>¡Explora estas herramientas para diagnosticar y gestionar tu red en Windows 11!</p>
+</section>
+</section>
 <section id="publicaciones-similares" class="level1">
 <h1>Publicaciones Similares</h1>
 <p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
@@ -375,7 +450,7 @@ Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)</code>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
 Achalma, Edison. 2023. <span>“Guía de Git Cómo trabajar en equipo en
-proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/">https://achalmaedison.netlify.app/</a>.
+proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/">https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2017-05-21-comandos-de-informacion-windows/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -850,7 +925,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

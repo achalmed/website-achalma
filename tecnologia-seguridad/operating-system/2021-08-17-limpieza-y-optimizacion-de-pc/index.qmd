@@ -107,7 +107,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 4. **Limpieza con Cleanmgr:**
    
    - Ejecuta el siguiente comando en "Ejecutar":
-     ```
+  
+     ```bash
      %SystemRoot%\System32\Cmd.exe /c Cleanmgr /sageset:65535 &Cleanmgr /sagerun:65535
      ```
 
@@ -116,14 +117,16 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 1. **Eliminación de Paquetes de Instalación:**
    
    - Ejecuta el comando:
-     ```
+
+     ```bash
      sudo apt-get autoremove
      ```
 
 2. **Limpieza de Paquetes en Caché:**
    
    - Ejecuta los siguientes comandos:
-     ```
+
+     ```bash
      sudo apt-get autoclean
      sudo apt-get clean
      ```
@@ -131,7 +134,8 @@ draft: false  # Modo de borrador (false = final, true = borrador)
 3. **Eliminación de Paquetes Huérfanos:**
    
    - Utiliza el siguiente comando para verificar paquetes huérfanos:
-     ```
+   - 
+     ```bash
      sudo deborphan
      ```
 

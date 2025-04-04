@@ -67,11 +67,7 @@ author-note:
     authorship-agreements: ~
 
 # Configuración de Referencias y Citas
-citation: # Habilitar citas bibliográficas
-  type: article-journal
-  author:
-    - Edison Achalma
-  url: https://achalmaedison.netlify.app/
+citation: true
 google-scholar: true # Habilitar enlaces a Google Scholar
 # csl: apa-6th-edition.csl  # Estilo de citas (opcional, comentado)
 # cite-method: biblatex  # Método de citación OJO APAQUARTO trabaja con CITEPROC
@@ -317,3 +313,6 @@ editor:
 comments:
   utterances:
     repo: achalmed/website-achalma
+    issue-term: title
+    theme: boxy-light
+    label: "comments :crystal_ball:"

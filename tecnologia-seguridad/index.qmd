@@ -5,7 +5,9 @@ listing:
   - id: ultimas-entradas
     contents: 
       - "i3wm/*/index.qmd"
-      - "operating-system"
+      - "operating-system/*/index.qmd"
+      - "ciberseguridad-ethical-hacking-ceh/*/index.qmd"
+      - "ciberseguridad-cybersoc-ccs/*/index.qmd"
     type: default # (table, default)
     sort: 
       - "date desc"
@@ -16,7 +18,7 @@ listing:
     fields: [title, author, categories, date, image, reading-time]
     image-placeholder: sidebar.jpg
     image-align: right
-   # page-size: 5
+    # page-size: 5
     categories: false # (numbered, unnumbered, cloud, false)
     feed: true
     

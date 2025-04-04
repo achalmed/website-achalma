@@ -80,19 +80,19 @@ draft: true # Modo de borrador (false = final, true = borrador)
 
 buscar y eliminar párrafos vacíos o saltos (varios enter)
 
-```         
+```bash         
 ^$
 ```
 
 Para buscar espacios duplicados o más entre palabras usando expresiones regulares en LibreOffice Writer, puedes utilizar la siguiente expresión regular:
 
-```         
+```bash         
 \s+
 ```
 
 eliminar todos los saltos de línea manuales en tu documento en LibreOffice Writer, puedes hacer lo siguiente:
 
-```         
+```bash         
 $
 ```
 

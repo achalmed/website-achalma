@@ -1,8 +1,8 @@
 ---
 title: "Talks"
 description: |
-  This is a home for invited talks and workshops, each linked with accompanying materials.<br>
-  A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
+  Este espacio alberga charlas y talleres invitados, cada uno con sus respectivos materiales.<br>
+  Puede encontrar una colección de presentaciones en [slides.silviacanelon.com](https://slides.achalmaedison.com)
 listing: 
   contents: 
     - "**/index.qmd"

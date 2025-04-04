@@ -1,5 +1,5 @@
 ---
-# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+documentmode: stu  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
     # - man (Manuscrito): Similar al formato .docx
     # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
     # - doc (Documento): Similar al predeterminado LaTex artículos.

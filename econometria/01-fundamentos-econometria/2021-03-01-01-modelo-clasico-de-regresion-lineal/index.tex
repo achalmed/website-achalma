@@ -43,6 +43,8 @@ Claves}
 
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}
@@ -131,7 +133,7 @@ Claves}
 
 
 
-\ccoppy{\textcopyright~2025}
+\ccoppy{\textcopyright~2021}
 
 
 
@@ -140,8 +142,8 @@ Claves}
 
 
 \affiliation{
-{Departamento de Economía, Universidad Nacional de San Cristóbal de
-Huamanga}}
+{Escuela Profesional de Economía, Universidad Nacional de San Cristóbal
+de Huamanga}}
 
 
 
@@ -158,10 +160,10 @@ contenido final del artículo. }
 
 \authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
 \par{ }
-\par{   Los autores no tienen conflictos de intereses que
-revelar.    Los roles de autor se clasificaron utilizando la taxonomía
-de roles de colaborador (CRediT; https://credit.niso.org/) de la
-siguiente manera:  Edison Achalma:   conceptualización, redacción}
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
 \par{La correspondencia relativa a este artículo debe dirigirse a Edison
 Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
@@ -252,6 +254,9 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
 
 % From https://tex.stackexchange.com/a/645996/211326
 %%% apa7 doesn't want to add appendix section titles in the toc
@@ -310,54 +315,54 @@ algunas sugerencias:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal}{01
-  Modelo Clasico De Regresion Lineal} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/index.pdf}{PDF}
+  Modelo Clasico De Regresion Lineal}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco}{02
-  El Estimador De Minimos Cuadrados Ordinarios Mco} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/index.pdf}{PDF}
+  El Estimador De Minimos Cuadrados Ordinarios Mco}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco}{03
-  Algebra Y Geometria De Mco} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/index.pdf}{PDF}
+  Algebra Y Geometria De Mco}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco}{04
-  Propiedades En Muestras Finitas Del Estimador Mco} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/index.pdf}{PDF}
+  Propiedades En Muestras Finitas Del Estimador Mco}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco}{05
-  Propiedades En Muestras Infinitas Del Estimador Mco} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/index.pdf}{PDF}
+  Propiedades En Muestras Infinitas Del Estimador Mco}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza}{06
-  El Trade Off Sesgo Varianza} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/index.pdf}{PDF}
+  El Trade Off Sesgo Varianza}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste}{07
-  Bondad De Ajuste} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/index.pdf}{PDF}
+  Bondad De Ajuste}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad}{08
-  Multicolinealidad} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/index.pdf}{PDF}
+  Multicolinealidad}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia}{09
-  Inferencia} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-03-09-inferencia/index.pdf}{PDF}
+  Inferencia}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores}{10
   El Modelo General De Regresion Lineal Permitiendo Heterocedasticidad
-  En Los Errores} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/index.pdf}{PDF}
+  En Los Errores}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad}{11
-  Problemas De Endogeneidad} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/index.pdf}{PDF}
+  Problemas De Endogeneidad}
 \item
+  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas}{12
-  Perturbaciones No Esfericas} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/econometria/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/index.pdf}{PDF}
+  Perturbaciones No Esfericas}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y

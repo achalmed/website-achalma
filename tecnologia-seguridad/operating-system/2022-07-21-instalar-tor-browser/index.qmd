@@ -79,17 +79,55 @@ date: "02/16/2023"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
 
-# descargar tor desde navegador
+# 📥 Descargar e instalar Tor desde el navegador en Linux
 
-`cd Downloads`
+Tor es una herramienta esencial para la privacidad y el anonimato en Internet. A continuación, te explicamos cómo descargar e instalar Tor en Linux de manera sencilla.
 
-`tar -xf tor-browser-linux---`
+## 📌 Pasos para la instalación
 
-`cd tor-browser`
+1. **Descargar el navegador Tor**  
+   Ve a la [página oficial de Tor](https://www.torproject.org/) y descarga la versión correspondiente a tu sistema operativo.
 
-`lsd`
+2. **Abrir la terminal y navegar a la carpeta de descargas**  
 
-`./start-tor-browser.desktop --register-app`
+   ```bash
+   cd ~/Downloads
+   ```
+
+3. **Extraer el archivo descargado**  
+
+   Sustituye `tor-browser-linux---` por el nombre exacto del archivo que descargaste.  
+   ```bash
+   tar -xf tor-browser-linux---
+   ```
+
+4. **Entrar al directorio de Tor**  
+
+   ```bash
+   cd tor-browser
+   ```
+
+5. **Verificar los archivos dentro del directorio**  
+
+   ```bash
+   ls
+   ```
+
+6. **Registrar la aplicación en el sistema**  
+
+   ```bash
+   ./start-tor-browser.desktop --register-app
+   ```
+
+## 🎯 Conclusión
+
+Ahora puedes abrir Tor desde el menú de aplicaciones de tu sistema o ejecutarlo manualmente con: 
+
+```bash
+   ./start-tor-browser.desktop
+```
+
+**Navega de manera segura y anónima con Tor.**  
 
 
 {{< include ../../_contenido-inicio.qmd >}}

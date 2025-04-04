@@ -294,7 +294,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2 de abril de 2025</p>
+      <p class="date-modified">4 de abril de 2025</p>
     </div>
   </div>
     
@@ -346,60 +346,48 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 </ol>
 <ul>
 <li><p>Listar versiones instaladas:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">sudo</span> update-alternatives <span class="at">--config</span> java</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Esto te mostrará las versiones de Java disponibles y te permitirá elegir una como predeterminada.</p></li>
 <li><p>Instalar una nueva versión de JDK:</p>
 <ul>
 <li><p>Puedes instalar diferentes versiones de OpenJDK usando apt:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">sudo</span> apt install openjdk-8-jdk openjdk-11-jdk openjdk-17-jdk  <span class="co"># O cualquier otra versión que desees</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Para Oracle JDK, generalmente necesitas añadir un PPA o descargarlo manualmente debido a las licencias:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> add-apt-repository ppa:linuxuprising/java</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="fu">sudo</span> apt install oracle-java11-installer  <span class="co"># Asegúrate de reemplazar 11 con la versión que quieras</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 <li><p>Configurar la versión predeterminada: Después de instalar, usa update-alternatives para elegir la versión predeterminada:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sudo</span> update-alternatives <span class="at">--config</span> java</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="fu">sudo</span> update-alternatives <span class="at">--config</span> javac</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
-<ol start="2" type="1">
+<ol type="1">
 <li>Usando SDKMAN! para gestionar múltiples JDKs:</li>
 </ol>
 <ul>
 <li><p>Instalar SDKMAN!:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">"https://get.sdkman.io"</span> <span class="kw">|</span> <span class="fu">bash</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="bu">source</span> <span class="st">"</span><span class="va">$HOME</span><span class="st">/.sdkman/bin/sdkman-init.sh"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Listar versiones disponibles de JDK:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">sdk</span> list java</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Instalar una versión específica:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">sdk</span> install java <span class="op">&lt;</span>version-id<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Donde <version-id> es el identificador de la versión que deseas instalar, como 8.0.265-zulu, 17.0.1-tem, etc.</version-id></p></li>
 <li><p>Cambiar entre versiones:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">sdk</span> use java <span class="op">&lt;</span>version-id<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Establecer una versión como predeterminada:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">sdk</span> default java <span class="op">&lt;</span>version-id<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Eliminar una versión:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">sdk</span> uninstall java <span class="op">&lt;</span>version-id<span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Actualizar una versión: SDKMAN! puede manejar actualizaciones automáticamente, pero para actualizar manualmente:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">sdk</span> upgrade java</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
-<ol start="3" type="1">
+<ol type="1">
 <li>Eliminar versiones de JDK:</li>
 </ol>
 <ul>
 <li><p>Eliminar con apt:</p>
-<p>bash</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">sudo</span> apt remove openjdk-8-jdk  <span class="co"># Reemplaza 8 con la versión que quieras eliminar</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Eliminar con SDKMAN!: Usa el comando mencionado anteriormente para desinstalar versiones.</p></li>
 </ul>
@@ -438,7 +426,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
 Achalma, Edison. 2023. <span>“Guía de Git Cómo trabajar en equipo en
-proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/">https://achalmaedison.netlify.app/</a>.
+proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/">https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2022-05-12-gestionar-versiones-de-jdk-en-kubuntu/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -913,7 +901,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

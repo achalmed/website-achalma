@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -260,7 +294,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2 de abril de 2025</p>
+      <p class="date-modified">4 de abril de 2025</p>
     </div>
   </div>
     
@@ -294,6 +328,11 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
   <li><a href="#versión-de-microsoft-windows-10.0.22000.282" id="toc-versión-de-microsoft-windows-10.0.22000.282" class="nav-link" data-scroll-target="#versión-de-microsoft-windows-10.0.22000.282">Versión de Microsoft Windows: 10.0.22000.282</a></li>
   <li><a href="#cambio-de-directorio-a-la-ubicación-de-adb" id="toc-cambio-de-directorio-a-la-ubicación-de-adb" class="nav-link" data-scroll-target="#cambio-de-directorio-a-la-ubicación-de-adb">Cambio de directorio a la ubicación de <code>ADB</code></a></li>
   <li><a href="#conexión-con-adb" id="toc-conexión-con-adb" class="nav-link" data-scroll-target="#conexión-con-adb">Conexión con ADB</a></li>
+  <li><a href="#instalación-de-instagram-apk" id="toc-instalación-de-instagram-apk" class="nav-link" data-scroll-target="#instalación-de-instagram-apk">Instalación de Instagram APK</a></li>
+  <li><a href="#descarga-de-adb" id="toc-descarga-de-adb" class="nav-link" data-scroll-target="#descarga-de-adb">Descarga de ADB</a></li>
+  <li><a href="#configuración" id="toc-configuración" class="nav-link" data-scroll-target="#configuración">Configuración</a></li>
+  <li><a href="#comandos-para-conexión-e-instalación-de-aplicaciones" id="toc-comandos-para-conexión-e-instalación-de-aplicaciones" class="nav-link" data-scroll-target="#comandos-para-conexión-e-instalación-de-aplicaciones">Comandos para conexión e instalación de aplicaciones</a></li>
+  <li><a href="#ejemplo-de-salida-esperada" id="toc-ejemplo-de-salida-esperada" class="nav-link" data-scroll-target="#ejemplo-de-salida-esperada">Ejemplo de salida esperada</a></li>
   </ul></li>
   <li><a href="#publicaciones-similares" id="toc-publicaciones-similares" class="nav-link" data-scroll-target="#publicaciones-similares">Publicaciones Similares</a></li>
   </ul>
@@ -322,40 +361,59 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 </section>
 <section id="cambio-de-directorio-a-la-ubicación-de-adb" class="level2">
 <h2 class="anchored" data-anchor-id="cambio-de-directorio-a-la-ubicación-de-adb">Cambio de directorio a la ubicación de <code>ADB</code></h2>
-<pre><code>C:\Users\achalmaedison&gt;cd "C:\Users\achalmaedison\Downloads\ADB"</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">C:\Users\achalmaedison</span><span class="op">&gt;</span>cd <span class="st">"C:\Users\achalmaedison\Downloads\ADB"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="conexión-con-adb" class="level2">
 <h2 class="anchored" data-anchor-id="conexión-con-adb">Conexión con ADB</h2>
-<pre><code>C:\Users\achalmaedison\Downloads\ADB&gt;adb connect 127.0.0.1:58526</code></pre>
-<p>Ya conectado a 127.0.0.1:58526</p>
-<section id="instalación-de-instagram-apk" class="level3">
-<h3 class="anchored" data-anchor-id="instalación-de-instagram-apk">Instalación de Instagram APK</h3>
-<pre><code>C:\Users\achalmaedison\Downloads\ADB&gt;adb install Instagram.apk</code></pre>
-<p>Realizando Instalación en Streaming</p>
-<p>Instalación Exitosa</p>
-<pre><code>C:\Users\achalmaedison\Downloads\ADB&gt;</code></pre>
-<p>Este es un ejemplo de cómo utilizar los comandos ADB en un entorno Windows.</p>
-<p>DESCARGAMOS ADB</p>
-<p>https://developer.android.com/studio/releases/platform-tools</p>
-<p>configuramos sub system for android activamos modo desarrollador copiamos dirección IP</p>
-<p>Open CMD as Administrator</p>
-<p>abrir Carpeta platform-tools que esta en el disco local C en el terminal (cd C:-tools )</p>
-<p>comandos</p>
-<pre><code>abd connect 127.0.0.1:58526.</code></pre>
-<pre><code>adb install gmail.apk</code></pre>
-<pre><code>adb install facebook-354-0-0-22-110.apk</code></pre>
-<p><strong>Si no funciona reiniciar</strong></p>
-<p>POR EJEMPLO</p>
-<p>Microsoft Windows [Version 10.0.22000.527] (c) Microsoft Corporation. All rights reserved.</p>
-<pre><code>C:\platform-tools&gt;adb connect 172.28.22.78
-* daemon not running; starting now at tcp:5037
-* daemon started successfully
-connected to 172.28.22.78:5555</code></pre>
-<pre><code>C:\platform-tools&gt;adb install termux-app_v0.118.0+github-debug_arm64-v8a.apk
-Performing Streamed Install
-Success</code></pre>
-<pre><code>C:\platform-tools&gt;</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">C:\Users\achalmaedison\Downloads\ADB</span><span class="op">&gt;</span>adb connect 127.0.0.1:58526</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Salida esperada:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">Ya</span> conectado a 127.0.0.1:58526</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="instalación-de-instagram-apk" class="level2">
+<h2 class="anchored" data-anchor-id="instalación-de-instagram-apk">Instalación de Instagram APK</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">C:\Users\achalmaedison\Downloads\ADB</span><span class="op">&gt;</span>adb install Instagram.apk</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Salida esperada:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">Realizando</span> Instalación en Streaming</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">Instalación</span> Exitosa</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este es un ejemplo de cómo utilizar los comandos ADB en un entorno Windows.</p>
+</section>
+<section id="descarga-de-adb" class="level2">
+<h2 class="anchored" data-anchor-id="descarga-de-adb">Descarga de ADB</h2>
+<p>Puedes descargar ADB desde el siguiente enlace:</p>
+<p><a href="https://developer.android.com/studio/releases/platform-tools">Plataforma de herramientas de Android</a></p>
+</section>
+<section id="configuración" class="level2">
+<h2 class="anchored" data-anchor-id="configuración">Configuración</h2>
+<ol type="1">
+<li>Configurar el subsistema de Android.</li>
+<li>Activar el modo desarrollador.</li>
+<li>Copiar la dirección IP del dispositivo.</li>
+<li>Abrir <strong>CMD</strong> como administrador.</li>
+<li>Navegar a la carpeta <code>platform-tools</code> ubicada en <code>C:\platform-tools</code>:</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">cd</span> C:<span class="dt">\p</span>latform-tools</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="comandos-para-conexión-e-instalación-de-aplicaciones" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-para-conexión-e-instalación-de-aplicaciones">Comandos para conexión e instalación de aplicaciones</h2>
+<p>Conectar el dispositivo:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">adb</span> connect 127.0.0.1:58526</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Instalar aplicaciones:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">adb</span> install gmail.apk</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">adb</span> install facebook-354-0-0-22-110.apk</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Nota:</strong> Si los comandos no funcionan, intenta reiniciar el sistema.</p>
+</section>
+<section id="ejemplo-de-salida-esperada" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-de-salida-esperada">Ejemplo de salida esperada</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">Microsoft</span> Windows [Version 10.0.22000.527]</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="kw">(</span><span class="ex">c</span><span class="kw">)</span> <span class="ex">Microsoft</span> Corporation. All rights reserved.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">C:\platform-tools</span><span class="op">&gt;</span>adb connect 172.28.22.78</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="ex">*</span> daemon not running<span class="kw">;</span> <span class="ex">starting</span> now at tcp:5037</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="ex">*</span> daemon started successfully</span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="ex">connected</span> to 172.28.22.78:5555</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="ex">C:\platform-tools</span><span class="op">&gt;</span>adb install termux-app_v0.118.0+github-debug_arm64-v8a.apk</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="ex">Performing</span> Streamed Install</span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="ex">Success</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1"></a><span class="ex">C:\platform-tools</span><span class="op">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="publicaciones-similares" class="level1">
@@ -386,7 +444,7 @@ Success</code></pre>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas" role="listitem">
 Achalma, Edison. 2023. <span>“Guía de Git Cómo trabajar en equipo en
-proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/">https://achalmaedison.netlify.app/</a>.
+proyectos,”</span> February. <a href="https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2019-06-19-adb/">https://achalmaedison.netlify.app/tecnologia-seguridad/operating-system/2019-06-19-adb/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -861,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

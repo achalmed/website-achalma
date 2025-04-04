@@ -1,7 +1,7 @@
 ---
 title: "Publications" 
 description: |
-  This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.
+  Este es el hogar de mis publicaciones de investigación, cada una vinculada con preimpresiones, carteles y/o noticias.
 listing: 
   contents: 
     - "**/index.qmd"

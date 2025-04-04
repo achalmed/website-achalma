@@ -43,6 +43,8 @@ Claves}
 
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}
@@ -131,7 +133,7 @@ Claves}
 
 
 
-\ccoppy{\textcopyright~2025}
+\ccoppy{\textcopyright~2022}
 
 
 
@@ -158,10 +160,10 @@ contenido final del artículo. }
 
 \authornote{\par{\addORCIDlink{Edison Achalma}{0000-0001-6996-3364}} 
 \par{ }
-\par{   Los autores no tienen conflictos de intereses que
-revelar.    Los roles de autor se clasificaron utilizando la taxonomía
-de roles de colaborador (CRediT; https://credit.niso.org/) de la
-siguiente manera:  Edison Achalma:   conceptualización, redacción}
+\par{   El autor no tiene conflictos de interés que revelar.    Los
+roles de autor se clasificaron utilizando la taxonomía de roles de
+colaborador (CRediT; https://credit.niso.org/) de la siguiente
+manera:  Edison Achalma:   conceptualización, redacción}
 \par{La correspondencia relativa a este artículo debe dirigirse a Edison
 Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
@@ -252,6 +254,9 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
 
 % From https://tex.stackexchange.com/a/645996/211326
 %%% apa7 doesn't want to add appendix section titles in the toc
@@ -310,33 +315,33 @@ algunas sugerencias:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-01-01-conceptos-basicos/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-01-01-conceptos-basicos}{01
-  Conceptos Basicos} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-01-01-conceptos-basicos/index.pdf}{PDF}
+  Conceptos Basicos}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-08-02-finanzas-corporativas/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-08-02-finanzas-corporativas}{02
-  Finanzas Corporativas} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-08-02-finanzas-corporativas/index.pdf}{PDF}
+  Finanzas Corporativas}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-15-03-renta-variable/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-15-03-renta-variable}{03
-  Renta Variable} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-15-03-renta-variable/index.pdf}{PDF}
+  Renta Variable}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-22-04-renta-fija/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-22-04-renta-fija}{04
-  Renta Fija} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-22-04-renta-fija/index.pdf}{PDF}
+  Renta Fija}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-29-05-derivados-financieros/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-29-05-derivados-financieros}{05
-  Derivados Financieros} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-08-29-05-derivados-financieros/index.pdf}{PDF}
+  Derivados Financieros}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-09-05-06-teoria-de-portafolio/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2022-09-05-06-teoria-de-portafolio}{06
-  Teoria De Portafolio} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2022-09-05-06-teoria-de-portafolio/index.pdf}{PDF}
+  Teoria De Portafolio}
 \item
+  \href{https://achalmaedison.netlify.app/finanzas/posts/2024-03-31-por-editar/index.pdf}{\faIcon{file-pdf}}
   \href{https://achalmaedison.netlify.app/finanzas/posts/2024-03-31-por-editar}{Por
-  Editar} Lee sin conexión
-  \href{https://achalmaedison.netlify.app/finanzas/posts/2024-03-31-por-editar/index.pdf}{PDF}
+  Editar}
 \end{enumerate}
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y

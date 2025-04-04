@@ -121,6 +121,7 @@ ls -li
 ```
 
 Observamos que ambos comparten el mismo inodo
+
 ```bash
 786433 -rw-r--r-- 2 achalma achalma 0 jun 21 21:27 enlace-duro-a-test.txt
 786433 -rw-r--r-- 2 achalma achalma 0 jun 21 21:27 test.txt

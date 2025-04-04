@@ -1,5 +1,5 @@
 ---
-# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+documentmode: doc  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
     # - man (Manuscrito): Similar al formato .docx
     # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
     # - doc (Documento): Similar al predeterminado LaTex artículos.
@@ -76,90 +76,79 @@ date: "10/21/2021"
 draft: false  # Modo de borrador (false = final, true = borrador)
 ---
 
-# Windows 11: Cómo descargar APK usando el subsistema de Windows para Android y ADB
+# Windows 11: Cómo descargar APK usando el Subsistema de Windows para Android y ADB
 
-Aquí se explica cómo descargar un archivo APK para instalar la aplicación de Android en su PC con Windows 11 usando el Subsistema de Windows para Android. Puede instalar Windows Subsystem para Android manualmente en su PC con Windows 11 usando su archivo Msixbundle de nuestra [guía aquí](https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/).
+Aquí te explicamos cómo descargar un archivo APK para instalar una aplicación de Android en tu PC con Windows 11 usando el Subsistema de Windows para Android. Puedes instalar el Subsistema de Windows para Android manualmente en tu PC con su archivo Msixbundle siguiendo nuestra [guía aquí](https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/).
 
+## Paso 1: Habilitar el modo de desarrollador en el subsistema de Windows
 
-## Paso 1: habilite el modo de desarrollador en el subsistema de Windows
+1.  Instala el [Subsistema de Windows para Android](https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/).
+2.  Abre la aplicación 'Subsistema de Windows para Android' en tu PC. Para ello, presiona la tecla **Windows** y busca **Subsistema de Windows para Android**.
+3.  Haz clic en la aplicación para abrirla.
+4.  Dentro de la aplicación, activa el **Modo Desarrollador**.
 
-Instale [el Subsistema de Windows para Android](https://nerdschalk.com/android-apps-on-windows-11-dev-channel-how-to-install-windows-subsystem-for-android-manually-with-msixbundle/) primero. Cuando haya terminado, abra la aplicación 'Subsistema de Windows para Android' en su PC. Para esto, presione la tecla de Windows y busque Subsistema de Windows para Android.
+## Paso 2: Instalar las herramientas de la plataforma SDK
 
-Haga clic en Subsistema de Windows para Android. O haga clic en Abrir.
+1.  Visita la página de herramientas de la plataforma SDK de Google [aquí](https://developer.android.com/studio/releases/platform-tools.html).
+2.  Descarga **SDK Platform-Tools para Windows**.
+3.  Acepta los términos y condiciones y haz clic en el botón de descarga.
+4.  Se descargará un archivo ZIP llamado **platform-tools_rXX.X.X-windows.zip** (la versión puede variar).
+5.  Crea una carpeta separada en el Explorador de Windows, por ejemplo, `C:\Plataforma-Tools`.
+6.  Mueve el archivo ZIP descargado a esta carpeta.
+7.  Haz clic derecho en el archivo y selecciona **Extraer todo**, luego haz clic en **Extraer**.
+8.  Abre la carpeta `platform-tools`, donde encontrarás `adb.exe` y otros archivos.
 
-En el Subsistema de Windows para Android, active el modo Desarrollador.
+## Paso 3: Instalar la aplicación de Android
 
-## Paso 2: Instale las herramientas de la plataforma SDK
+1.  Abre la carpeta **platform-tools**.
 
-Visite la página de herramientas de la plataforma SDK de Google [aquí](https://developer.android.com/studio/releases/platform-tools.html) .
+2.  Haz clic en la barra de direcciones, escribe **`cmd`** y presiona **Enter**.
 
-Haga clic en Descargar SDK Platform-Tools para Windows.
+3.  Se abrirá una ventana de comandos en la ubicación de la carpeta **platform-tools**.
 
-Desplácese hacia abajo hasta el final y seleccione la casilla de verificación para aceptar los términos y condiciones. Luego haga clic en el botón verde para descargar las herramientas de la plataforma.
+4.  Descarga el archivo APK de la aplicación de Android que deseas instalar.
 
-Se descargará en su PC un archivo zip llamado platform-tools_r31.0.3-windows (la versión puede cambiar).
+    -   Por ejemplo, para instalar Snapchat, busca **Snapchat APK** en Google y descarga el archivo de una fuente confiable.
+    -   Renombra el archivo a algo simple, como `snapchat.apk`, y muévelo a la carpeta **platform-tools**.
 
-Para su comodidad, cree una nueva carpeta separada llamada carpeta para aplicaciones en el Explorador de Windows. Ahora, transfiera el archivo de herramientas de la plataforma a esta carpeta.
+5.  Abre el **Subsistema de Windows para Android** y copia la dirección **IP** en la opción de **Modo Desarrollador**.
 
-Haga clic con el botón derecho en el archivo de herramientas de la plataforma y seleccione Extraer todo.
+6.  En la ventana de comandos, ejecuta el siguiente comando:
 
-Haga clic en Extraer.
+    ``` sh
+    adb.exe connect [DIRECCIÓN_IP]
+    ```
 
-El archivo será extraído. Abra la carpeta llamada herramientas de la plataforma.
+    **Ejemplo:**
 
-Tendrá adb.exe y algunos otros archivos aquí.
+    ``` sh
+    adb.exe connect 127.0.0.1:12345
+    ```
 
+7.  Luego, instala la aplicación ejecutando:
 
-## Paso 3: Instale la aplicación de Android
+    ``` sh
+    adb.exe install [NOMBRE_DEL_APK]
+    ```
 
-Haga doble clic en la carpeta de herramientas de la plataforma para abrirla.
+    **Ejemplo:**
 
-Aquí, haga clic en la barra de direcciones y escriba **cmd,** y luego presione la tecla Intro.
+    ``` sh
+    adb.exe install snapchat.apk
+    ```
 
-Se abrirá una ventana de comando con su ubicación establecida en la carpeta de herramientas de la plataforma. Esto es importante.
+8.  Cuando la instalación finalice, verás el mensaje **Success**.
 
-Ahora, tenemos la ventana del símbolo del sistema en la carpeta donde tenemos el archivo adb.exe. Es decir, nuestra carpeta de herramientas de plataforma.
+9.  Cierra la ventana de comandos.
 
-Ahora, descargue el archivo APK de la aplicación de Android que desea instalar. Por ejemplo, si desea instalar Snapchat, busque **Snapchat APK** en Google y descargue su archivo APK desde cualquier sitio web confiable en el que confíe. Luego, cambie el nombre del archivo a algo más simple como snapchat.apk. Ahora, transfiera snapchat.apk a la carpeta de herramientas de la plataforma.
+10. Abre la aplicación en tu PC escribiendo su nombre en el menú Inicio (por ejemplo, **Snapchat**).
 
-Ahora podemos instalar la aplicación Snapchat para Android usando snapchat.apk y adb en su PC.
+## Cargar APK automáticamente con doble clic
 
-Abra el Subsistema de Windows para Android y busque la IP donde se puede conectar con ADB en la opción de modo Desarrollador.
-
-En la ventana del símbolo del sistema, escriba el siguiente comando y presione Entrar:
-
-adb.exe connect (dirección IP-aquí)
-
-Ejemplo: adb.exe conectar 127.0.0.1:12345
-
-Ahora, escriba el comando de instalación que se proporciona a continuación y luego presione Enter:
-
-adb.exe install (apk-file-name-here.apk)
-
-Ejemplo: adb.exe instalar Snapchat.apk
-
-La aplicación de Android ahora se instalará en su PC usando ADB y el archivo APK que proporcionó.
-
-Cuando haya terminado, verá el mensaje de Éxito.
-
-Puede cerrar la ventana CMD ahora.
-
-Ahora puede abrir la aplicación de Android en su PC.
-
-Presione la tecla de Windows y luego escriba el nombre de su aplicación. En nuestro caso, es Snapchat.
-
-Así es como se ve Snapchat en Windows 11.
-
-Eso es todo.
-
-## Cargar APK automáticamente con un doble clic
-
-Sabemos que usar un comando adb no es la forma más fácil de instalar una aplicación de Android en su PC. Afortunadamente, ahora puede hacer doble clic en un archivo APK para instalarlo. Consulta el siguiente enlace para saber cómo configurarlo.
+Si prefieres instalar APKs con un doble clic en lugar de usar comandos ADB, puedes configurarlo siguiendo nuestra guía [aquí](#).
 
 {{< include ../../_contenido-inicio.qmd >}}
 
 {{< include ../_contenido_operating-system.qmd >}}
 
 {{< include ../../_contenido-final.qmd >}}
-
-

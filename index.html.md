@@ -1,5 +1,5 @@
 ---
-title: "Edison Achalma, Dr"
+title: "Edison Achalma, B.S."
 pagetitle: "Edison Achalma"
 subtitle: "Economist at the University of San Cristobal of Huamanga"
 image: assets/silvia/img/skyline-philly-dual.png
@@ -54,7 +54,6 @@ resources:
 
 
 
-
 <br><br>
 
 
@@ -66,7 +65,6 @@ resources:
 
 :::
 <!-- hero-heading -->
-
 
 
 

@@ -1,5 +1,5 @@
 ---
-# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+documentmode: doc  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
     # - man (Manuscrito): Similar al formato .docx
     # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
     # - doc (Documento): Similar al predeterminado LaTex artículos.
@@ -82,14 +82,37 @@ draft: false
 
 #Comandos  #Windows11 
 
-IP PÚBLICA: nslookup myip.opendns.com resolver1.opendns.com
+# Comandos útiles en Windows 11
 
+Este artículo recopila comandos y ejemplos prácticos para obtener información de red en Windows 11, incluyendo la IP pública y detalles de los controladores de red inalámbrica.
+
+## Obtener la IP pública
+
+Para conocer tu dirección IP pública, utiliza el siguiente comando en la terminal:
+
+```cmd
+nslookup myip.opendns.com resolver1.opendns.com
+```
+
+Ejemplo de resultado:
+
+```cmd
 200.121.132.66
+```
 
-RED 5HGZ
+Este comando consulta el servicio de OpenDNS para devolver tu IP pública actual.
 
-C:\Users\Edison>netsh wlan show drivers
+## Ver detalles de los controladores Wi-Fi
 
+El comando `netsh wlan show drivers` muestra información detallada sobre los controladores de la interfaz Wi-Fi. A continuación, se presenta un ejemplo ejecutado en una máquina con Windows 11:
+
+```cmd
+C:\Users\achalmaedison>netsh wlan show drivers
+```
+
+### Resultado del comando
+
+```cmd
 Interface name: Wi-Fi
 
     Driver                    : Intel(R) Wireless-AC 9461
@@ -119,7 +142,7 @@ Interface name: Wi-Fi
                                 Open            Vendor defined
                                 WPA3-Personal   CCMP
                                 Vendor defined  Vendor defined
-                                WPA3-Enterprise 192 BitsGCMP-256
+                                WPA3-Enterprise 192 Bits GCMP-256
                                 OWE             CCMP
     IHV service present       : Yes
     IHV adapter OUI           : [00 00 00], type: [00]
@@ -127,9 +150,24 @@ Interface name: Wi-Fi
     IHV UI extensibility ClSID: {00000000-0000-0000-0000-000000000000}
     IHV diagnostics CLSID     : {00000000-0000-0000-0000-000000000000}
     Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)
+```
 
+### Explicación del resultado
 
-C:\Users\Edison>
+- **Nombre de la interfaz**: Wi-Fi.
+- **Controlador**: Intel(R) Wireless-AC 9461, proporcionado por Intel Corporation.
+- **Versión y fecha**: Versión 22.70.0.6, lanzada el 29/06/2021.
+- **Estándares soportados**: Incluye 802.11a/b/g/n/ac, cubriendo redes de 2.4 GHz y 5 GHz.
+- **Seguridad**: Compatible con WPA3, WPA2, WPA (Enterprise y Personal), y cifrados como TKIP, CCMP y GCMP-256.
+- **Funcionalidades avanzadas**: Soporte para FIPS 140-2, protección de tramas de gestión 802.11w y Wireless Display (Miracast).
+
+## Notas adicionales
+
+- El ejemplo muestra una configuración típica para una red de 5 GHz, dado que el controlador soporta 802.11ac.
+- Para ejecutar estos comandos, abre la terminal de Windows (CMD) como administrador si es necesario.
+
+¡Explora estas herramientas para diagnosticar y gestionar tu red en Windows 11!
+
 
 
 {{< include ../../_contenido-inicio.qmd >}}

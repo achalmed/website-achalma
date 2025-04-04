@@ -19,8 +19,6 @@ resources:
 
 
 
-
-
 ::: {.grid}
 
 ::: {.g-col-5 #note}
@@ -85,8 +83,6 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
 
 
 
-
-
 ```{=html}
 <form
   style="margin-top: 4em;"
@@ -110,8 +106,6 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
   </p>
 </form>
 ```
-
-
 
 
 

@@ -2,8 +2,22 @@ project:
   type: website
   output-dir: _site
   resources:
-    - cv.pdf
+    - resourses/cv.pdf
     - blog/sidebar.jpg
+    - econometria/sidebar.jpg
+    - filosofia-politica/sidebar.jpg
+    - finanzas/sidebar.jpg
+    - gestion-publica-herramientas/sidebar.jpg
+    - herramientas-oficina/sidebar.jpg
+    - investigacion-metodologia/sidebar.jpg
+    - macroeconomia/sidebar.jpg
+    - matematicas/sidebar.jpg
+    - microeconomia/sidebar.jpg
+    - programacion-software/sidebar.jpg
+    - tecnologia-seguridad/sidebar.jpg
+    - teching/sidebar.jpg
+    - talk/sidebar.jpg
+
   #post-render:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
@@ -109,7 +123,7 @@ website:
         aria-label: "License Details"
         href: license.qmd
       - icon: rss
-        href: index.xml
+        href: https://achalmaedison.netlify.app/blog/index.xml
 
 # bibliography: references.bib
 lang: es

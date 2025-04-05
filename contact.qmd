@@ -63,7 +63,7 @@ action="https://formspree.io/f/mgvananz" method="POST" accept-charset="utf-8">
 
 ::: {.g-col-5 #buttondown}
 
-# Suscríbete a mi boletín informativo {{< fa envelope >}}
+# Una nota ocasional, sin ruido ni spam {{< fa envelope >}}
 
 Puede utilizar este formulario para registrarse y recibir una pequeña nota por correo electrónico cada vez que publique algo nuevo en mi sitio web.
 
@@ -104,3 +104,12 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
 
 :::
 <!-- end grid -->
+
+# Agenda para reunirnos {{< fa solid calendar >}}
+
+
+```{=html}
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0-fMJoBZQZOOppP8OOBVpWvwmdcy9md-nrXtKUfha_wpFHyEtZmiGE-wC77jcnpkxamfdHWDzc?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+```

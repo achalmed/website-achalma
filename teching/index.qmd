@@ -1,6 +1,10 @@
 ---
 title: Cursos y ponencias
-subtitle: Material de apoyo y recursos para los cursos que imparto. Notas de clase, ejercicios, presentaciones y explicaciones detalladas sobre los temas abordados en cada curso.
+# subtitle: Material de apoyo y recursos para los cursos que imparto. Notas de clase, ejercicios, presentaciones y explicaciones detalladas sobre los temas abordados en cada curso.
+description: |
+  Este es mi blog donde practico compartir mi curiosidad.<br>
+  Incluye notas y tutoriales para mi futuro y espero que también para ti.<br><br>
+  {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 listing:
   - id: ultimas-entradas
     contents: 

@@ -1,10 +1,19 @@
 ---
-# documentmode: stu
-# Configuraciones Específicas por Modo
-# PARA ESTUDIANTE
-course: Metodología
+# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    # - man (Manuscrito): Similar al formato .docx
+    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+    # - doc (Documento): Similar al predeterminado LaTex artículos.
+    # - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+course: Metodología (EDUC 5101)
 professor: Blanca Rivera Guillén
 duedate: 05/23/2017
+# MODO REVISTA (JOU)
+# journal: Psychological Review
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+# image: featured.png
 title: El mercantilismo
 subtitle: Desarrollo económico en Europa
 shorttitle: "Mercantilismo"
@@ -26,6 +35,7 @@ tags:
   - Políticas proteccionistas  
   - Colonización  
   - Acumulación de metales preciosos
+
 author:
   - name: Edison Achalma
     corresponding: true

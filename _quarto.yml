@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - cv.pdf
+    - blog/sidebar.jpg
   #post-render:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
@@ -132,7 +133,7 @@ format:
       loop: false
 
 execute:
-  keep-md: true # Mantener archivos .md generados
+  keep-md: false # Mantener archivos .md generados
   keep-ipynb: true
   echo: true # true: Incluir el código fuente en la salida, false: (predeterminado en formatos de presentación como beamer, revealjs, y pptx): no incluir el código fuente en la salida
   output: true # Mostrar resultados de la ejecución

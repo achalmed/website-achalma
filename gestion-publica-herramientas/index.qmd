@@ -1,6 +1,10 @@
 ---
 title: Gestión pública
-subtitle: Casos prácticos, normativa y herramientas utilizadas en la administración pública. Abordaremos temas como el uso de SIGA, SIAF, legislación vigente y experiencias en la gestión de recursos públicos.
+# subtitle: Casos prácticos, normativa y herramientas utilizadas en la administración pública. Abordaremos temas como el uso de SIGA, SIAF, legislación vigente y experiencias en la gestión de recursos públicos.
+description: |
+  Este es mi blog donde practico compartir mi curiosidad.<br>
+  Incluye notas y tutoriales para mi futuro y espero que también para ti.<br><br>
+  {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 listing:
   - id: ultimas-entradas
     contents: 
@@ -15,7 +19,7 @@ listing:
     fields: [title, author, categories, date, image, reading-time]
     image-placeholder: sidebar.jpg
     image-align: right
-   # page-size: 5
+    # page-size: 5
     categories: false # (numbered, unnumbered, cloud, false)
     feed: true
     

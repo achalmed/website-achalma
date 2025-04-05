@@ -1,19 +1,21 @@
+/* Estilo del formulario */
 #form {
-  margin-top: 2em;
+  margin-top: 2em; /* Margen superior: 2 veces el tamaño de la fuente base (32px si base es 16px) */
 }
 
-/* mobile query up for screens up to ~992px wide */
+/* Consulta de medios para pantallas móviles hasta ~992px de ancho */
 @media screen and (max-width: 991.98px) {
-  /* wrap lately section */
+  /* Ajusta la sección de cuadrícula para que se envuelva en pantallas pequeñas */
   .grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
   }
   
+  /* Estilo del formulario en pantallas móviles */
   #form {
-    margin-top: 0em;
-    flex-basis: 100% !important;
-    flex-grow: 1;
+    margin-top: 0em; /* Elimina el margen superior en móviles */
+    flex-basis: 100% !important; /* Ocupa el 100% del ancho disponible, forzada */
+    flex-grow: 1; /* Permite que el formulario crezca para llenar el espacio disponible */
   }
 }
 

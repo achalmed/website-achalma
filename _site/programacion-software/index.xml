@@ -8,7 +8,10 @@
 <title>Edison Achalma</title>
 <link>https://achalmaedison.netlify.app/programacion-software/</link>
 <atom:link href="https://achalmaedison.netlify.app/programacion-software/index.xml" rel="self" type="application/rss+xml"/>
-<description>Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social.</description>
+<description>Este es mi blog donde practico compartir mi curiosidad.&lt;br&gt;
+Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&gt;&lt;br&gt;
+{{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
+</description>
 <generator>quarto-1.6.42</generator>
 <lastBuildDate>Sun, 12 Jan 2025 05:00:00 GMT</lastBuildDate>
 <item>
@@ -667,8 +670,6 @@ font-style: inherit;">bash</span> nombre_del_instalador.sh</span></code></pre></
 <p>Después de ejecutar el comando anterior, seguirás las instrucciones del instalador de Anaconda en la terminal. Acepta los términos de licencia, selecciona la ubicación de instalación y responde cualquier pregunta adicional que se te presente durante el proceso de instalación.</p>
 <p><strong>Paso 6: Añadir Anaconda al PATH del sistema</strong></p>
 <p>Una vez que la instalación se complete, se te preguntará si deseas agregar Anaconda al PATH del sistema. Es recomendable seleccionar “yes” para que puedas acceder a los comandos de Anaconda desde cualquier ubicación en la terminal.</p>
-<p>¡Y eso es todo! Has completado la instalación de Anaconda en tu sistema Ubuntu Linux. Ahora puedes comenzar a aprovechar todas las características y herramientas que ofrece esta increíble plataforma.</p>
-<p>Para una guía más detalla para la instalación de Anaconda visite: <a href="../2023-06-19-instalacion-de-anaconda/index.qmd">Instalación de Anaconda en Linux</a></p>
 </section>
 <section id="configuración-de-un-entorno-virtual-en-conda" class="level1">
 <h1>Configuración de un entorno virtual en Conda</h1>
@@ -2721,156 +2722,6 @@ Achalma, Edison. 2020. <span>“Instalación de R en Linux,”</span> June.
   <category>RStudio</category>
   <guid>https://achalmaedison.netlify.app/programacion-software/r/2020-06-10-011-instalacion-de-r/</guid>
   <pubDate>Wed, 10 Jun 2020 05:00:00 GMT</pubDate>
-</item>
-</channel>
-</rss>
- Natural</category>
-  <category>Análisis de Datos</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/r/2022-11-28-07-modelo-de-machine-learning-iv-tex-mining/</guid>
-  <pubDate>Mon, 28 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>R</category>
-  <category>Machine Learning</category>
-  <category>Modelos Predictivos</category>
-  <category>Estadística</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/r/2022-11-21-06-modelo-de-machine-learning-iii-modelo-de-regresion/</guid>
-  <pubDate>Mon, 21 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>R</category>
-  <category>Machine Learning</category>
-  <category>Clasificación</category>
-  <category>Algoritmos</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/r/2022-11-14-05-modelo-de-machine-learning-ii-modelo-de-clasificacion/</guid>
-  <pubDate>Mon, 14 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>R</category>
-  <category>Machine Learning</category>
-  <category>Análisis de Datos</category>
-  <category>Estadística Multivariada</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/r/2022-11-07-04-modelo-de-machine-learning-i-analisis-exploratorio/</guid>
-  <pubDate>Mon, 07 Nov 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Python</category>
-  <category>Machine Learning</category>
-  <category>Modelización</category>
-  <category>Estadística</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/python/2022-10-31-11-validacion-cruzada-y-composicion-del-modelo-con-python/</guid>
-  <pubDate>Mon, 31 Oct 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-01-primeros-pasos-en-matlab/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Programación en MATLAB</category>
-  <category>Educación</category>
-  <category>Software Aplicado</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-07-25-01-primeros-pasos-en-matlab/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-01-02-elementos-basicos-en-matlab-i/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-01-02-elementos-basicos-en-matlab-i/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-08-03-elementos-basicos-en-matlab-ii/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-08-03-elementos-basicos-en-matlab-ii/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-15-04-programacion-en-matlab/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-15-04-programacion-en-matlab/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-22-05-visualizacion-de-datos-en-matlab/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-22-05-visualizacion-de-datos-en-matlab/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-29-06-sentencias-de-control/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-08-29-06-sentencias-de-control/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-09-05-07-metodos-numericos/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-09-05-07-metodos-numericos/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title></title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/programacion-software/matlab/2022-09-12-08-tipos-de-datos-heterogeneos/</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Matlab</category>
-  <category>Blogdown</category>
-  <category>Desarrollo Web</category>
-  <category>Herramientas para R</category>
-  <guid>https://achalmaedison.netlify.app/programacion-software/matlab/2022-09-12-08-tipos-de-datos-heterogeneos/</guid>
-  <pubDate>Mon, 25 Jul 2022 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

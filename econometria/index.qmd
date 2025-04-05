@@ -1,6 +1,10 @@
 ---
 title: Econometría
-subtitle: Exploración de métodos estadísticos aplicados a la economía. Aquí encontrarás desde teoría econométrica hasta ejercicios prácticos, modelos de predicción, análisis de series de tiempo y aplicaciones en datos reales usando R, Gretl, Stata y otros.
+# subtitle: Exploración de métodos estadísticos aplicados a la economía. Aquí encontrarás desde teoría econométrica hasta ejercicios prácticos, modelos de predicción, análisis de series de tiempo y aplicaciones en datos reales usando R, Gretl, Stata y otros.
+description: |
+  Este es mi blog donde practico compartir mi curiosidad.<br>
+  Incluye notas y tutoriales para mi futuro y espero que también para ti.<br><br>
+  {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 listing:
   - id: ultimas-entradas
     contents: 

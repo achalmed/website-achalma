@@ -1,83 +1,83 @@
+/* Importa el archivo de colores personalizado */
 @import url(silvia/colors.scss);
 
-/* title and subtitle */
+/* Título y subtítulo */
 #title-block-header {
-  margin-bottom: 0px;
+  margin-bottom: 0px; /* Elimina el margen inferior del bloque de título */
 }
 
-/* see all links */
+/* Enlaces "Ver todo" (como subtítulos) */
 .about-links.subtitle {
-  font-family: "Red Hat Text"
+  font-family: "Red Hat Text"; /* Fuente personalizada: Red Hat Text */
 }
 
-/* social links: block of links */
+/* Enlaces sociales: bloque de enlaces */
 .about-entity .about-links {
-  justify-content: center !important;
-  column-gap: 0em !important;
-  font-size: 1.2em !important;
+  justify-content: center !important; /* Centra los enlaces horizontalmente, forzada */
+  column-gap: 0em !important; /* Espacio entre columnas: 0, forzada */
+  font-size: 1.2em !important; /* Tamaño de fuente: 1.2 veces el tamaño base, forzada */
 }
 
-/* social links: individual links */
+/* Enlaces sociales: enlaces individuales */
 .about-entity .about-link {
-  padding: 0.25em 0.25em !important;
-  border: none !important;  
+  padding: 0.25em 0.25em !important; /* Relleno uniforme de 0.25em en todos los lados, forzada */
+  border: none !important; /* Elimina cualquier borde, forzada */
 }
 
-/* about area */
+/* Área "acerca de" */
 .about-entity {
-  background-color: var(--spc-bg-1);
-  padding: 3em 0em 3em 0em !important;
-  margin: 0em 2em 0em 2em;
-  border-radius: 5px;
+  background-color: var(--spc-bg-1); /* Color de fondo: usa una variable personalizada definida en colors.scss */
+  padding: 3em 0em 3em 0em !important; /* Relleno: 3em arriba, 0 a los lados, 3em abajo, forzada */
+  margin: 0em 2em 0em 2em; /* Margen: 0 arriba, 2em a los lados, 0 abajo, 2em a la izquierda */
+  border-radius: 5px; /* Esquinas redondeadas de 5px */
 }
 
-/* mobile query up for screens up to ~992px wide */
+/* Consulta de medios para pantallas móviles hasta ~992px de ancho */
 @media screen and (max-width: 991.98px) {
-  /* wrap lately section */
+  /* Ajusta la sección "lately" para que se envuelva */
   #lately .grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
   }
   
-  /* listings */
+  /* Listados (blog, charlas, publicaciones, proyectos) */
   #blog, #talks, #publications, #projects {
-    flex-basis: 40% !important;
-    flex-grow: 1;
+    flex-basis: 40% !important; /* Ocupa el 40% del ancho disponible como base, forzada */
+    flex-grow: 1; /* Permite que los elementos crezcan para llenar el espacio disponible */
   }
 
-  /* social links: block of links */
+  /* Enlaces sociales: bloque de enlaces */
   .about-entity .about-links {
-    font-size: 1.2em !important;
+    font-size: 1.2em !important; /* Tamaño de fuente: 1.2 veces el tamaño base, forzada */
   }
 }
 
-/* mobile query up for screens up to ~576px wide */
+/* Consulta de medios para pantallas móviles hasta ~576px de ancho */
 @media screen and (max-width: 576px) {
-
-  /* wrap about me section */
+  /* Ajusta la sección "acerca de mí" para que se envuelva */
   #about-me .grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
   }
 
-  /* wrap lately section */
+  /* Ajusta la sección "lately" para que se envuelva */
   #lately .grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
   }
 
-  /* listings */
+  /* Listados (blog, charlas, publicaciones, proyectos) */
   #blog, #talks, #publications, #projects {
-    flex-basis: 100% !important;
+    flex-basis: 100% !important; /* Ocupa el 100% del ancho disponible, forzada */
   }
 
-  /* social links: block of links */
+  /* Enlaces sociales: bloque de enlaces */
   .about-entity .about-links {
-    font-size: 1em !important;
+    font-size: 1em !important; /* Tamaño de fuente: igual al tamaño base, forzada */
   }
 
-  /* about area */
+  /* Área "acerca de" */
   .about-entity {
-    margin: 0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em; /* Elimina todos los márgenes en pantallas pequeñas */
   }
 }

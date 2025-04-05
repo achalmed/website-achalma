@@ -11,6 +11,12 @@ title-block-banner: true
 # Enable CC licence appendix
 license: "CC BY-SA"
 
+# Default for table of contents
+toc: true # Mostrar tabla de contenidos
+toc-title: Tabla de contenidos # Título de la tabla de contenidos
+toc-location: right # (left, body, right) Ubicación de la tabla de contenidos
+
+
 # Configuración de Elementos Flotantes
 floatsintext: true # Permite que los flotantes (figuras, tablas, etc.) se muevan dentro del texto. El floatsintextcampo no se aplica cuando una salida .pdf está en modo de diario
 
@@ -233,11 +239,8 @@ format:
   html:
     # page-layout: article  # Diseño de página para el formato HTML
     # mainfont: Times, Times New Roman, serif
-    toc: true # Mostrar tabla de contenidos
     toc-depth: 2 # Profundidad de la tabla de contenidos
     toc-expand: 3 # Nivel de anidamiento inicial de la tabla de contenidos expandida
-    toc-title: Tabla de contenidos # Título de la tabla de contenidos
-    toc-location: right # (left, body, right) Ubicación de la tabla de contenidos
     # number-sections: true  # Numerar las secciones del documento
     # number-depth: 3  # Profundidad de numeración de secciones
     smooth-scroll: true # Activar desplazamiento suave en el formato HTML

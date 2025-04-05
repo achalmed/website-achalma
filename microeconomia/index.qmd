@@ -1,6 +1,10 @@
 ---
 title: Microeconomía
-subtitle: Análisis del comportamiento de los agentes económicos. Se incluyen temas como teoría del consumidor, teoría de la empresa, competencia, externalidades y equilibrio de mercado.
+# subtitle: Análisis del comportamiento de los agentes económicos. Se incluyen temas como teoría del consumidor, teoría de la empresa, competencia, externalidades y equilibrio de mercado.
+description: |
+  Este es mi blog donde practico compartir mi curiosidad.<br>
+  Incluye notas y tutoriales para mi futuro y espero que también para ti.<br><br>
+  {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 listing:
   - id: ultimas-entradas
     contents: 
@@ -16,7 +20,7 @@ listing:
     fields: [title, author, categories, date, image, reading-time]
     image-placeholder: sidebar.jpg
     image-align: right
-   # page-size: 5
+    # page-size: 5
     categories: false # (numbered, unnumbered, cloud, false)
     feed: true
     

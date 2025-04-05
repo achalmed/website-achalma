@@ -1,106 +1,108 @@
-/* title */
+/* Título principal */
 .title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.1em !important;
+  font-size: 3rem; /* Tamaño de fuente del título: 3 veces el tamaño base (48px si base es 16px) */
+  font-weight: 700; /* Grosor de la fuente: negrita fuerte */
+  line-height: 1.1em !important; /* Altura de línea: 1.1 veces el tamaño de la fuente, forzada */
 }
 
-/* subtitle + Learn More About Me */
+/* Subtítulo y enlace "Learn More About Me" */
 .subtitle {
-  font-family: "Petrona";
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: "Petrona"; /* Fuente personalizada: Petrona */
+  font-size: 1rem; /* Tamaño de fuente: igual al tamaño base (16px si base es 16px) */
+  font-weight: 700; /* Grosor de la fuente: negrita fuerte */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  letter-spacing: 0.1em; /* Espaciado entre letras: 0.1 veces el tamaño de la fuente */
 }
 
-/* heading, subtitle, and blurb */
+/* Contenido de encabezado, subtítulo y texto breve (blurb) */
 .entity-contents {
-  text-align: right !important;
-  padding: 0 2em 0 2em;
+  text-align: right !important; /* Alinea el texto a la derecha, forzada */
+  padding: 0 2em 0 2em; /* Relleno: 0 arriba, 2em a la derecha, 0 abajo, 2em a la izquierda */
 }
 
-/* blurb */
+/* Texto breve (blurb) */
 .about-contents {
-  padding: 0 0 0 2em !important;
+  padding: 0 0 0 2em !important; /* Relleno: 0 arriba, 0 a la derecha, 0 abajo, 2em a la izquierda, forzada */
 }
 
-/* social links: block of links */
+/* Enlaces sociales: bloque de enlaces */
 .about-entity .about-links {
-  justify-content: flex-end !important;
-  column-gap: 0em !important;
-  font-size: 1.2em !important;
+  justify-content: flex-end !important; /* Alinea los enlaces al final del contenedor (derecha), forzada */
+  column-gap: 0em !important; /* Espacio entre columnas: 0, forzada */
+  font-size: 1.2em !important; /* Tamaño de fuente: 1.2 veces el tamaño base, forzada */
 }
 
-/* social links: individual links */
+/* Enlaces sociales: enlaces individuales */
 .about-entity .about-link {
-  padding: 0.25em 0.25em !important;
-  border: none !important;  
+  padding: 0.25em 0.25em !important; /* Relleno uniforme de 0.25em en todos los lados, forzada */
+  border: none !important; /* Elimina cualquier borde, forzada */
 }
 
-/* Learn More About Me */
+/* Enlace "Learn More About Me" dentro de .about-links */
 .about-links.subtitle {
-  font-size: 1em !important;
-  font-family: "Red Hat Text";
-  justify-content: flex-end !important;
+  font-size: 1em !important; /* Tamaño de fuente: igual al tamaño base, forzada */
+  font-family: "Red Hat Text"; /* Fuente personalizada: Red Hat Text */
+  justify-content: flex-end !important; /* Alinea el contenido al final (derecha), forzada */
 }
 
-/* image */
+/* Imagen en la sección "about" */
 .about-image {
-  margin-top: -2em;
-  padding: 0 2em 0em 0;
+  margin-top: -2em; /* Margen superior negativo: sube la imagen 2em */
+  padding: 0 2em 0em 0; /* Relleno: 0 arriba, 2em a la derecha, 0 abajo, 0 a la izquierda */
 }
 
-/* // Home
-
+/* Sección comentada: Home y enlaces sociales (estructura alternativa) */
+/* 
+// Home
 // social links
 .about-entity {
   // block of links
   .about-links {
-    column-gap: 0em !important;
-    font-size: 1.2em;
+    column-gap: 0em !important; // Espacio entre columnas: 0, forzada
+    font-size: 1.2em; // Tamaño de fuente: 1.2 veces el tamaño base
   }
   // individual links
   .about-link {
-    padding: 0.25em 0.25em !important;
-    border: none !important;
+    padding: 0.25em 0.25em !important; // Relleno uniforme de 0.25em, forzada
+    border: none !important; // Elimina bordes, forzada
   }
-} */
+}
+*/
 
-/* mobile query up for screens up to ~992px wide */
+/* Consulta de medios para pantallas móviles hasta ~992px de ancho */
 @media screen and (max-width: 991.98px) {
-    /* move text up & center */
-    .entity-contents {
-      order: 2 !important;
-      margin: -4em 0 0 0 !important;
-      padding: 0 0 0 0em !important;
-      text-align: center !important;
-    }
+  /* Mueve el texto hacia arriba y lo centra */
+  .entity-contents {
+    order: 2 !important; /* Cambia el orden en flexbox: segundo elemento, forzada */
+    margin: -4em 0 0 0 !important; /* Margen: -4em arriba (sube), 0 en los demás lados, forzada */
+    padding: 0 0 0 0em !important; /* Elimina todo el relleno, forzada */
+    text-align: center !important; /* Centra el texto, forzada */
+  }
 
-    /* center subtitle */
-    .subtitle {
-      text-align: center !important;
-    }
+  /* Centra el subtítulo */
+  .subtitle {
+    text-align: center !important; /* Alinea el texto del subtítulo al centro, forzada */
+  }
 
-    /* social links: block of links */
-    .about-entity .about-links {
-      justify-content: center !important;
-      font-size: 1em !important;
-    }
+  /* Enlaces sociales: bloque de enlaces */
+  .about-entity .about-links {
+    justify-content: center !important; /* Centra los enlaces horizontalmente, forzada */
+    font-size: 1em !important; /* Tamaño de fuente: igual al tamaño base, forzada */
+  }
 
-    /* blurb */
-    .about-contents {
-      padding: 0 0 0 0em !important;
-    }
+  /* Texto breve (blurb) */
+  .about-contents {
+    padding: 0 0 0 0em !important; /* Elimina todo el relleno, forzada */
+  }
 
-    /* center Learn More About Me */
-    .about-links.subtitle {
-      justify-content: center !important;
-    }
+  /* Centra el enlace "Learn More About Me" */
+  .about-links.subtitle {
+    justify-content: center !important; /* Centra el contenido horizontalmente, forzada */
+  }
 
-    /* move image up, adjust padding */
-    .about-image {
-      order: 1 !important;
-      padding: 0 2em 0 2em !important;
-    }
+  /* Mueve la imagen hacia arriba y ajusta el relleno */
+  .about-image {
+    order: 1 !important; /* Cambia el orden en flexbox: primer elemento, forzada */
+    padding: 0 2em 0 2em !important; /* Relleno: 0 arriba, 2em a los lados, 0 abajo, forzada */
+  }
 }

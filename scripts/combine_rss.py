@@ -21,7 +21,7 @@ feeds = [
 # Crear el nuevo documento RSS
 rss = ET.Element("rss", version="2.0")
 channel = ET.SubElement(rss, "channel")
-ET.SubElement(channel, "title").text = "Feed General - Todos los Blogs"
+ET.SubElement(channel, "title").text = "Achalma Edison - Todos los Blogs"
 ET.SubElement(channel, "link").text = "https://achalmaedison.netlify.app/"  # Cambia por tu dominio real
 ET.SubElement(channel, "description").text = "Feed consolidado de todos los blogs"
 

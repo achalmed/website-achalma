@@ -31,8 +31,8 @@ Este proyecto está bajo la Licencia [LICENSE](license.qmd). Ver el archivo lice
 
 ## Contacto
 
-Si necesitas contactarme, puedes hacerlo a través de mi correo electrónico: [achalmaedison@info.com](mailto:achalmed.18@gmail.com).
+Si necesitas contactarme, puedes hacerlo a través de mi correo electrónico: [mailto:achalmed.18@gmail.com](https://achalmaedison.netlify.app/contact).
 
 ¡Gracias por visitar mi sitio web!
 
-![Screenshot](images/Screenshot.png)
+![Screenshot](assets/silvia/img//Screenshot.png)

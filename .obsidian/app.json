@@ -1,8 +1,8 @@
 {
   "useMarkdownLinks": true,
   "showUnsupportedFiles": false,
-  "attachmentFolderPath": "./",
-  "livePreview": false,
+  "attachmentFolderPath": "./index_files",
+  "livePreview": true,
   "showLineNumber": true,
   "userIgnoreFilters": [
     "_extensions/",
@@ -16,5 +16,6 @@
   "alwaysUpdateLinks": true,
   "tabSize": 4,
   "uriCallbacks": false,
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "propertiesInDocument": "visible"
 }

@@ -1,23 +1,11 @@
 ---
-# documentmode: jou  # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
-    # - man (Manuscrito): Similar al formato .docx
-    # - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
-    # - doc (Documento): Similar al predeterminado LaTex artículos.
-    # - stu (Estudiante): Formateado para trabajos de estudiantes
-# MODO ESTUDIANTE (STU)
-# course: Española (EDUC 5101)
-# professor: Yuri
-# duedate: 05/14/2015
-# MODO REVISTA (JOU)
-# journal: Psychological Review
-# volume: 2025, Vol. 131, No. 2, 10--60
 copyrightnotice: 2025
 copyrightext: All rights reserved
 image: featured.jpg
 title: El aborto
 subtitle: Consecuencias y Consideraciones Éticas en la Sociedad Contemporánea
-shorttitle: "El Aborto"
-abstract: "Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales."
+shorttitle: El Aborto
+abstract: Este trabajo aborda el tema del aborto desde una perspectiva crítica y educativa, explorando sus causas, tipos y las graves consecuencias tanto físicas como psicológicas asociadas. Se analizan los miedos y presiones sociales que influyen en la decisión de abortar, así como las implicaciones éticas y legales de este acto. El documento busca informar y reflexionar sobre el valor de la vida y las responsabilidades inherentes a la toma de decisiones en situaciones de embarazo no deseado, ofreciendo una visión integral que combina datos científicos, testimonios y consideraciones morales.
 keywords:
   - Aborto
   - Adolescentes
@@ -27,20 +15,21 @@ categories:
   - Salud Pública
   - Derechos Humanos
 tags:
-  - Aborto Inducido
-  - Embarazo Adolescente
-  - Riesgos Salud
-
-# Información del Autor
+  - Aborto
+  - Inducido
+  - Embarazo
+  - Adolescente
+  - Riesgos
+  - Salud
 author:
-  - name: Edison Achalma  # Nombre del autor
-    url: https://achalmaedison.netlify.app  # URL del autor
-    affiliation: 
+  - name: Edison Achalma
+    url: https://achalmaedison.netlify.app
+    affiliation:
       - id: unsch
-        name: Universidad Nacional de San Cristóbal de Huamanga  # Afiliación del autor
+        name: Universidad Nacional de San Cristóbal de Huamanga
         department: Economía
-    affiliation-url: https://www.gob.pe/unsch  # URL de la afiliación del autor
-    orcid: 0000-0001-6996-3364  # ORCID del autor
+    affiliation-url: https://www.gob.pe/unsch
+    orcid: 0000-0001-6996-3364
     email: elmer.achalma.09@unsch.edu.pe
     attributes:
       corresponding: true
@@ -58,44 +47,20 @@ author:
       - ref: unsch
     role:
       - redacción
-
-# Nota del Autor
 author-note:
-  status-changes: 
-    # Ejemplo: [Nombre del autor] está ahora en [afiliación].
-    affiliation-change: ~
-    # Ejemplo: [Nombre del autor] ha fallecido.
-    deceased: ~
-  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew 
+  status-changes:
+    affiliation-change: 
+    deceased: 
   disclosures:
-    # Ejemplo: Este estudio se registró en X (Identificador Y).
-    study-registration: ~
-    # Reconozca y cite los datos/materiales que se van a compartir.
-    data-sharing: ~
-    # Ejemplo: Este artículo se basa en datos publicados en [Referencia].
-    # Ejemplo: Este artículo se basa en la disertación realizada por [cita].
-    related-report: ~
-    # Ejemplo: [Nombre del autor] ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    study-registration: 
+    data-sharing: 
+    related-report: 
     conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
-    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención] de [Fuente de financiación].
-    financial-support: ~
-    # Ejemplo: Los autores agradecen a [Persona] por [Motivo].
+    financial-support: 
     gratitude: Quiero agradecer a todos mis maestros ya que ellos me enseñan valorar los estudios y a superarme cada día, también agradezco a mis padres porque ellos están en los días más difíciles de mi vida como estudiante. Y agradezco a Dios por darme la salud que tengo, estoy seguro que mis metas planteadas darán fruto en el futuro y por ende me debo esforzar cada día para ser mejor en la universidad y en todo lugar sin olvidar el respeto que engrandece a la persona.
-    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
-    authorship-agreements: ~
-
-description: '' # Texto que se muestra debajo de las etiquetas, no en la página del listado
-# links:
-# - icon: pin-map-fill
-#   name: Collection of maps
-#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
-# - icon: github
-#   icon_pack: fab
-#   name: R-Ladies template files
-#   url: https://github.com/spcanelon/RLadies-xaringan-template
-eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
-# Google Scholar
-# bibliography: mybibliography.bib
+    authorship-agreements: 
+description: ""
+eval: false
 citation:
   type: article-journal
   author:
@@ -103,7 +68,7 @@ citation:
     - Yeno Areste
     - Cristían Galindo
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2015-05-14-el-aborto/index.pdf
-date: 05/14/2015
+date: 2015-05-14
 draft: false
 ---
 

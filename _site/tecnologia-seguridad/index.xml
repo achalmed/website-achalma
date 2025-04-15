@@ -3719,6 +3719,9 @@ font-style: inherit;">git</span> remote rm origin</span></code></pre></div>
 <ul>
 <li><p><code>git status</code>: Muestra el estado actual.</p></li>
 <li><p><code>git diff</code>: Compara cambios no confirmados.</p></li>
+<li><p><code>git log</code></p></li>
+<li><p><code>git log --graph</code></p></li>
+<li><p><code>git log --graph --pretty=oneline</code></p></li>
 <li><p><code>git log --oneline</code>: Historial compacto. Ejemplo:</p>
 <div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="ex" style="color: null;
 background-color: null;

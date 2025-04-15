@@ -300,6 +300,12 @@ git clone --branch=nombre-rama https://github.com/usuario/repositorio.git
 - `git status`: Muestra el estado actual.
 
 - `git diff`: Compara cambios no confirmados.
+- `git log`
+-  `git log --graph`
+- `git log --graph --pretty=oneline`
+- `git log --graph --decorate --all --oneline`
+- `git config --global alias.tree "log --graph --decorate --all --oneline"`
+- `git tree`
 
 - `git log --oneline`: Historial compacto. Ejemplo:
 
@@ -307,15 +313,31 @@ git clone --branch=nombre-rama https://github.com/usuario/repositorio.git
   7e320e8 update
   ```
 
-- git blame [archivo]: Autores y fechas de cambios.
+- `git blame [archivo]`: Autores y fechas de cambios.
+
+- `touch .gitignore`
+
+
 
 ## Trabajar con ramas
 
 1. Crea y cambia a una rama:
 
+Navegando en ramas
+- `git checkout holagit.py`
+- `git log`
+-  `git checkout 707c7f864de5e036c54b43df5a1bfa464fb4d9ba`
+- `git tree`
+- `git checkout 380beab`
+Creando ramas
+
    ```bash
    git checkout -b nueva-rama
    ```
+
+`git branch login`
+`git switch login`
+
 
 2. Fusiona ramas:
 
@@ -324,12 +346,71 @@ git clone --branch=nombre-rama https://github.com/usuario/repositorio.git
    git merge nueva-rama
    ```
 
-3. Etiqueta un commit:
+`git switch login`
+`git merge main`
+`git tree`
+
+
+correccion de conflicto
+
+- `git merge main`
+- conflicto tal vez por que se modifico la mimsa linea en distintos branch
+- corregir el error
+- `git add archivo_conflicto.py`
+- `git commit -m "correccion conflicto"`
+
+
+
+3. Reset
+- `git tree`
+- `git reset --hard af18c2a`
+-  `git log`
+-  `git reflog`  log completo
+- `git checkout 380beab`
+
+3. Etiqueta un commit: (Para versiones)
 
    ```bash
    git tag v1.0.0
    git push origin main --tags
    ```
+
+- `git tag clase_1`
+-  `git log` o `git tree`
+- `git tag`  Listado de tags
+-   `git checkout tags/clase_1`
+- 
+
+# Guardar temporalmente un trabajo no terminado
+git status
+
+git switch main
+
+git stash
+
+ git stash list
+git switch main
+Hago los cambios
+git switch login
+
+git stash pop
+git add .
+git commit -m "Login v2"
+
+git stash drop
+
+
+
+# Comparar archivos o rmas
+
+git diff login
+
+
+
+
+
+
+
 
 ## Sincronización
 

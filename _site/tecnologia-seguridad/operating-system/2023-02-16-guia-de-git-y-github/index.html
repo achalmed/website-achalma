@@ -294,7 +294,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">7 de abril de 2025</p>
+      <p class="date-modified">18 de abril de 2025</p>
     </div>
   </div>
     
@@ -334,6 +334,10 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
   <li><a href="#subir-un-proyecto-a-github" id="toc-subir-un-proyecto-a-github" class="nav-link" data-scroll-target="#subir-un-proyecto-a-github">Subir un proyecto a GitHub</a></li>
   <li><a href="#observar-el-repositorio" id="toc-observar-el-repositorio" class="nav-link" data-scroll-target="#observar-el-repositorio">Observar el repositorio</a></li>
   <li><a href="#trabajar-con-ramas" id="toc-trabajar-con-ramas" class="nav-link" data-scroll-target="#trabajar-con-ramas">Trabajar con ramas</a></li>
+  </ul></li>
+  <li><a href="#guardar-temporalmente-un-trabajo-no-terminado" id="toc-guardar-temporalmente-un-trabajo-no-terminado" class="nav-link" data-scroll-target="#guardar-temporalmente-un-trabajo-no-terminado">Guardar temporalmente un trabajo no terminado</a></li>
+  <li><a href="#comparar-archivos-o-rmas" id="toc-comparar-archivos-o-rmas" class="nav-link" data-scroll-target="#comparar-archivos-o-rmas">Comparar archivos o rmas</a>
+  <ul class="collapse">
   <li><a href="#sincronización" id="toc-sincronización" class="nav-link" data-scroll-target="#sincronización">Sincronización</a></li>
   </ul></li>
   <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
@@ -508,24 +512,73 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 <li><p><code>git log</code></p></li>
 <li><p><code>git log --graph</code></p></li>
 <li><p><code>git log --graph --pretty=oneline</code></p></li>
+<li><p><code>git log --graph --decorate --all --oneline</code></p></li>
+<li><p><code>git config --global alias.tree "log --graph --decorate --all --oneline"</code></p></li>
+<li><p><code>git tree</code></p></li>
 <li><p><code>git log --oneline</code>: Historial compacto. Ejemplo:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1"></a><span class="ex">7e320e8</span> update</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>git blame [archivo]: Autores y fechas de cambios.</p></li>
+<li><p><code>git blame [archivo]</code>: Autores y fechas de cambios.</p></li>
+<li><p><code>touch .gitignore</code></p></li>
 </ul>
 </section>
 <section id="trabajar-con-ramas" class="level2">
 <h2 class="anchored" data-anchor-id="trabajar-con-ramas">Trabajar con ramas</h2>
 <ol type="1">
-<li><p>Crea y cambia a una rama:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nueva-rama</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li>Crea y cambia a una rama:</li>
+</ol>
+<p>Navegando en ramas - <code>git checkout holagit.py</code> - <code>git log</code> - <code>git checkout 707c7f864de5e036c54b43df5a1bfa464fb4d9ba</code> - <code>git tree</code> - <code>git checkout 380beab</code> Creando ramas</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nueva-rama</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>git branch login</code> <code>git switch login</code></p>
+<ol start="2" type="1">
 <li><p>Fusiona ramas:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">git</span> checkout main</span>
 <span id="cb24-2"><a href="#cb24-2"></a><span class="fu">git</span> merge nueva-rama</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Etiqueta un commit:</p>
+</ol>
+<p><code>git switch login</code> <code>git merge main</code> <code>git tree</code></p>
+<p>correccion de conflicto</p>
+<ul>
+<li><code>git merge main</code></li>
+<li>conflicto tal vez por que se modifico la mimsa linea en distintos branch</li>
+<li>corregir el error</li>
+<li><code>git add archivo_conflicto.py</code></li>
+<li><code>git commit -m "correccion conflicto"</code></li>
+</ul>
+<ol start="3" type="1">
+<li>Reset</li>
+</ol>
+<ul>
+<li><code>git tree</code></li>
+<li><code>git reset --hard af18c2a</code></li>
+<li><code>git log</code></li>
+<li><code>git reflog</code> log completo</li>
+<li><code>git checkout 380beab</code></li>
+</ul>
+<ol start="3" type="1">
+<li><p>Etiqueta un commit: (Para versiones)</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">git</span> tag v1.0.0</span>
 <span id="cb25-2"><a href="#cb25-2"></a><span class="fu">git</span> push origin main <span class="at">--tags</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
+<ul>
+<li><code>git tag clase_1</code></li>
+<li><code>git log</code> o <code>git tree</code></li>
+<li><code>git tag</code> Listado de tags</li>
+<li><code>git checkout tags/clase_1</code></li>
+<li></li>
+</ul>
 </section>
+</section>
+<section id="guardar-temporalmente-un-trabajo-no-terminado" class="level1">
+<h1>Guardar temporalmente un trabajo no terminado</h1>
+<p>git status</p>
+<p>git switch main</p>
+<p>git stash</p>
+<p>git stash list git switch main Hago los cambios git switch login</p>
+<p>git stash pop git add . git commit -m “Login v2”</p>
+<p>git stash drop</p>
+</section>
+<section id="comparar-archivos-o-rmas" class="level1">
+<h1>Comparar archivos o rmas</h1>
+<p>git diff login</p>
 <section id="sincronización" class="level2">
 <h2 class="anchored" data-anchor-id="sincronización">Sincronización</h2>
 <ul>

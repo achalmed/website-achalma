@@ -3722,22 +3722,30 @@ font-style: inherit;">git</span> remote rm origin</span></code></pre></div>
 <li><p><code>git log</code></p></li>
 <li><p><code>git log --graph</code></p></li>
 <li><p><code>git log --graph --pretty=oneline</code></p></li>
+<li><p><code>git log --graph --decorate --all --oneline</code></p></li>
+<li><p><code>git config --global alias.tree "log --graph --decorate --all --oneline"</code></p></li>
+<li><p><code>git tree</code></p></li>
 <li><p><code>git log --oneline</code>: Historial compacto. Ejemplo:</p>
 <div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">7e320e8</span> update</span></code></pre></div></li>
-<li><p>git blame [archivo]: Autores y fechas de cambios.</p></li>
+<li><p><code>git blame [archivo]</code>: Autores y fechas de cambios.</p></li>
+<li><p><code>touch .gitignore</code></p></li>
 </ul>
 </section>
 <section id="trabajar-con-ramas" class="level2">
 <h2 class="anchored" data-anchor-id="trabajar-con-ramas">Trabajar con ramas</h2>
 <ol type="1">
-<li><p>Crea y cambia a una rama:</p>
+<li>Crea y cambia a una rama:</li>
+</ol>
+<p>Navegando en ramas - <code>git checkout holagit.py</code> - <code>git log</code> - <code>git checkout 707c7f864de5e036c54b43df5a1bfa464fb4d9ba</code> - <code>git tree</code> - <code>git checkout 380beab</code> Creando ramas</p>
 <div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> checkout <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-b</span> nueva-rama</span></code></pre></div></li>
+font-style: inherit;">-b</span> nueva-rama</span></code></pre></div>
+<p><code>git branch login</code> <code>git switch login</code></p>
+<ol start="2" type="1">
 <li><p>Fusiona ramas:</p>
 <div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3745,7 +3753,28 @@ font-style: inherit;">git</span> checkout main</span>
 <span id="cb24-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> merge nueva-rama</span></code></pre></div></li>
-<li><p>Etiqueta un commit:</p>
+</ol>
+<p><code>git switch login</code> <code>git merge main</code> <code>git tree</code></p>
+<p>correccion de conflicto</p>
+<ul>
+<li><code>git merge main</code></li>
+<li>conflicto tal vez por que se modifico la mimsa linea en distintos branch</li>
+<li>corregir el error</li>
+<li><code>git add archivo_conflicto.py</code></li>
+<li><code>git commit -m "correccion conflicto"</code></li>
+</ul>
+<ol start="3" type="1">
+<li>Reset</li>
+</ol>
+<ul>
+<li><code>git tree</code></li>
+<li><code>git reset --hard af18c2a</code></li>
+<li><code>git log</code></li>
+<li><code>git reflog</code> log completo</li>
+<li><code>git checkout 380beab</code></li>
+</ul>
+<ol start="3" type="1">
+<li><p>Etiqueta un commit: (Para versiones)</p>
 <div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> tag v1.0.0</span>
@@ -3755,7 +3784,27 @@ font-style: inherit;">git</span> push origin main <span class="at" style="color:
 background-color: null;
 font-style: inherit;">--tags</span></span></code></pre></div></li>
 </ol>
+<ul>
+<li><code>git tag clase_1</code></li>
+<li><code>git log</code> o <code>git tree</code></li>
+<li><code>git tag</code> Listado de tags</li>
+<li><code>git checkout tags/clase_1</code></li>
+<li></li>
+</ul>
 </section>
+</section>
+<section id="guardar-temporalmente-un-trabajo-no-terminado" class="level1">
+<h1>Guardar temporalmente un trabajo no terminado</h1>
+<p>git status</p>
+<p>git switch main</p>
+<p>git stash</p>
+<p>git stash list git switch main Hago los cambios git switch login</p>
+<p>git stash pop git add . git commit -m “Login v2”</p>
+<p>git stash drop</p>
+</section>
+<section id="comparar-archivos-o-rmas" class="level1">
+<h1>Comparar archivos o rmas</h1>
+<p>git diff login</p>
 <section id="sincronización" class="level2">
 <h2 class="anchored" data-anchor-id="sincronización">Sincronización</h2>
 <ul>

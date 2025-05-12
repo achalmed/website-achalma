@@ -13,6 +13,269 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 {{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 </description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Sun, 11 May 2025 23:10:04 GMT</lastBuildDate>
+<lastBuildDate>Sun, 11 May 2025 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Teoría y política monetaria</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/</link>
+  <description><![CDATA[ 
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<p>Dinero, eje central.</p>
+<p>Bitcoin, activo altamente especulativo.</p>
+<ul>
+<li>Transaccional</li>
+<li>Inter temporal</li>
+<li>óptimo</li>
+<li>Dinámico, Ajuste de acuerdo a las necesidades</li>
+<li>Estocástico (aleatorio)</li>
+</ul>
+<div id="f0d81199" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Configuración de la simulación</span></span>
+<span id="cb1-5">np.random.seed(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42</span>)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Para reproducibilidad</span></span>
+<span id="cb1-6">n_days <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">365</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Un año</span></span>
+<span id="cb1-7">base_happiness <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Nivel base de felicidad</span></span>
+<span id="cb1-8">white_noise <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.random.normal(loc<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, scale<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>n_days)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ruido blanco: media 0, desv. estándar 10</span></span>
+<span id="cb1-9">happiness <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> base_happiness <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> white_noise  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Serie de felicidad</span></span>
+<span id="cb1-10">time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.arange(n_days)</span>
+<span id="cb1-11"></span>
+<span id="cb1-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Eventos estocásticos: uno positivo y uno negativo</span></span>
+<span id="cb1-13">event_positive_day <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span id="cb1-14">event_negative_day <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">250</span></span>
+<span id="cb1-15">happiness[event_positive_day] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Evento positivo</span></span>
+<span id="cb1-16">happiness[event_negative_day] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Evento negativo</span></span>
+<span id="cb1-17"></span>
+<span id="cb1-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Creación del gráfico</span></span>
+<span id="cb1-19">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb1-20">plt.plot(time, happiness, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Felicidad'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, alpha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span>)</span>
+<span id="cb1-21">plt.axhline(y<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>base_happiness, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'green'</span>, linestyle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Nivel base de felicidad'</span>)</span>
+<span id="cb1-22">plt.scatter([event_positive_day], [happiness[event_positive_day]], color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gold'</span>, s<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Evento positivo'</span>)</span>
+<span id="cb1-23">plt.scatter([event_negative_day], [happiness[event_negative_day]], color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'red'</span>, s<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Evento negativo'</span>)</span>
+<span id="cb1-24">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Felicidad a través del tiempo'</span>)</span>
+<span id="cb1-25">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Días'</span>)</span>
+<span id="cb1-26">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Nivel de felicidad'</span>)</span>
+<span id="cb1-27">plt.grid(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-28">plt.legend()</span>
+<span id="cb1-29"></span>
+<span id="cb1-30"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Mostrar el gráfico</span></span>
+<span id="cb1-31">plt.show()</span>
+<span id="cb1-32"></span>
+<span id="cb1-33"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Guardar el gráfico</span></span>
+<span id="cb1-34"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#plt.savefig('happiness_over_time.png')</span></span></code></pre></div>
+</details>
+</div>
+<p>Token Vale</p>
+<ul>
+<li>Foward looking, decision hacia delante</li>
+<li>Equilibrio general</li>
+<li>Bienestar</li>
+</ul>
+<p>Tenemos tres partes el bienestar menos el sacrificio del tiempo en la actividad - los usos i represntado por funcion de oscio (tiempo disponible), el resultado debe ser positivo</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AL%20=%20Max%20E%20(%5Csum_%7Bt%20=%201%7D%5E%7B%5Cinfty%7D%20%20%5Cbeta_%7Bt%7D%20%20(u(C_%7Bt%7D,%20%5Cfrac%7BM_%7Bt%7D%7D%7BP_%7Bt%7D%7D,%5Cepsilon_%7Bt%7D))%20-%20%20%5Cint%5Climits_0%5E1%20v(h_%7Bt%7D(i),%5Cepsilon_%7Bt%7D)di+)%20+%20%5Clambda%20(%5Cint_%7B0%7D%5E%7B1%7D%20h_%7Bt%7D(i)%20w_%7Bt%7D%20(i)%5C,di%20+%20%5Cint_%7B0%7D%5E%7B1%7D%20%5Cpi_%7Bt%7D%20(i)%20+%20%5C,di%20+%20M_%7Bt-1%7D%20+%20%5Cbeta_%7Bt-1%7D(1+R_%7Bt-1%7D)%20)%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A-%20%5Cint_%7B0%7D%5E%7B1%7D%20P_%7Bt%7D%20(i)%20C_%7Bt%7D%5C,di%20+%20M_%7Bt%7D%20+%20%5Cbeta_%7Bt%7D%20+%20T_%7Bt%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbeta%5E%7Bt%7D"> : Factor de actualización. Tiene un rendimiento <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1+R_%7Bt%7D%7D"> debe ser iguak a renta de capital humano.</p>
+<p><img src="https://latex.codecogs.com/png.latex?u"> : Bienestar. Continu en el tiempo y espacio</p>
+<p><img src="https://latex.codecogs.com/png.latex?C_%7Bt%7D"> Canasta de bienes y servicios. estatico (discreto) en el tiempo y espacio</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BM_%7Bt%7D%7D%7BP_%7Bt%7D%7D"> : Valor real del dinero (líquido y divisible)</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cepsilon_%7Bt%7D"> : Evento estocástico que afecta al bienestar</p>
+<p><img src="https://latex.codecogs.com/png.latex?h_%7Bt%7D(i)"> : Horas dedicadas a la actividad i</p>
+<p>se agrega sumatoria por que tiene agreacion discreta</p>
+<p><img src="https://latex.codecogs.com/png.latex?w_%7Bt%7D(i)"> : Salario que se paga por hacer i actividades</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cpi_%7Bt%7D%20(i)"> : Renta que se paga por participar en actividad i</p>
+<p><img src="https://latex.codecogs.com/png.latex?M_%7Bt%7D"> : Dinero</p>
+<p><img src="https://latex.codecogs.com/png.latex?M_%7Bt-1%7D"> : Dinero que tengo pero que decidí antes</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbeta_%7Bt%7D"> : ahorro</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbeta_%7Bt-1%7D(1+R_%7Bt-1%7D)"> : ahorro capitalizado</p>
+<p><img src="https://latex.codecogs.com/png.latex?T_%7Bt%7D">: impuesto</p>
+<p>lo que mehos hecho es caracterizar el recurso disponible</p>
+<section id="publicaciones-similares" class="level1">
+<h1>Publicaciones Similares</h1>
+<p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<ol type="1">
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-07-19-01-conceptos-basicos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-07-19-01-conceptos-basicos">01 Conceptos Basicos</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-07-26-02-teoria-de-consumo/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-07-26-02-teoria-de-consumo">02 Teoria De Consumo</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-08-02-03-teoria-de-la-inversion/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-08-02-03-teoria-de-la-inversion">03 Teoria De La Inversion</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-08-09-04-tipo-de-cambio/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-08-09-04-tipo-de-cambio">04 Tipo De Cambio</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-12-20-05-modelo-de-mundell-fleming/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-12-20-05-modelo-de-mundell-fleming">05 Modelo De Mundell Fleming</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-12-27-06-sector-externo/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2021-12-27-06-sector-externo">06 Sector Externo</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-03-07-fluctuaciones-de-corto-plazo/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-03-07-fluctuaciones-de-corto-plazo">07 Fluctuaciones De Corto Plazo</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-10-08-ciclos-economicos-reales-rbc/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-10-08-ciclos-economicos-reales-rbc">08 Ciclos Economicos Reales Rbc</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-17-09-crecimiento-economico/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-17-09-crecimiento-economico">09 Crecimiento Economico</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-24-10-economia-monetaria/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-24-10-economia-monetaria">10 Economia Monetaria</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-31-11-modelos-de-empleo/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2022-01-31-11-modelos-de-empleo">11 Modelos De Empleo</a></li>
+<li><a href="https://achalmaedison.netlify.app/macroeconomia/posts/2024-03-31-por-editar/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/macroeconomia/posts/2024-03-31-por-editar">Por Editar</a></li>
+</ol>
+<p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2025" class="csl-entry quarto-appendix-citeas">
+Achalma, Edison. 2025. <span>“Teoría y política monetaria,”</span> May.
+<a href="https://achalmaedison.netlify.app/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/">https://achalmaedison.netlify.app/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/</a>.
+</div></div></section></div> ]]></description>
+  <category>Macroeconomia</category>
+  <category>Blogdown</category>
+  <category>Desarrollo Web</category>
+  <category>Herramientas para R</category>
+  <guid>https://achalmaedison.netlify.app/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/</guid>
+  <pubDate>Sun, 11 May 2025 05:00:00 GMT</pubDate>
+</item>
 </channel>
 </rss>

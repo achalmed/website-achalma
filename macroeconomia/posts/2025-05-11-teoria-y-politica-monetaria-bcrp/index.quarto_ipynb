@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "e71daa2a",
+   "id": "a2e08b16",
    "metadata": {},
    "source": [
     "---\n",
@@ -72,7 +72,6 @@
     "#   icon_pack: fab\n",
     "#   name: R-Ladies template files\n",
     "#   url: https://github.com/spcanelon/RLadies-xaringan-template\n",
-    "eval: true # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código\n",
     "# Google Scholar\n",
     "# bibliography: mybibliography.bib\n",
     "citation:\n",
@@ -82,6 +81,8 @@
     "  pdf-url: https://achalmaedison.netlify.app/macroeconomia/posts/2024-03-31-por-editar/index.pdf\n",
     "date: \"05/11/2025\"\n",
     "draft: false  # Modo de borrador (false = final, true = borrador)\n",
+    "eval: true  # Habilitado para procesar el código\n",
+    "jupyter: python3\n",
     "---\n",
     "\n",
     "\n",
@@ -141,7 +142,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5ba9f6c8",
+   "id": "a3145db3",
    "metadata": {},
    "source": [
     "Token Vale\n",

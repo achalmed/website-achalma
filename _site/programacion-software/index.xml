@@ -33,7 +33,7 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 
 <section id="grafico-de-lineas" class="level1">
 <h1>Grafico de lineas</h1>
-<div id="efbd1314" class="cell" data-execution_count="1">
+<div id="99266bde" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
@@ -50,13 +50,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb1-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para mejor visualización</span></span>
-<span id="cb1-5">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb1-6"></span>
 <span id="cb1-7"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -275,7 +271,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </div>
 </div>
 </div>
-<div id="806883b9" class="cell" data-execution_count="2">
+<div id="dcd84d70" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
@@ -394,7 +390,7 @@ Figura&nbsp;1: A line plot on a polar axis
 <h1>Gráfico de barras</h1>
 <section id="horizontal" class="level2">
 <h2 class="anchored" data-anchor-id="horizontal">horizontal</h2>
-<div id="2cf0463f" class="cell" data-execution_count="4">
+<div id="7128091e" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
@@ -406,13 +402,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb4-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb4-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb4-5"></span>
 <span id="cb4-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -517,16 +509,12 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="vertical" class="level2">
 <h2 class="anchored" data-anchor-id="vertical">vertical</h2>
-<div id="488009c9" class="cell" data-execution_count="5">
+<div id="47d63cd1" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>])</span>
+font-style: inherit;">#plt.figure(figsize=[10,8])</span></span>
 <span id="cb5-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#Consumo de legumbres en el 2001</span></span>
@@ -578,7 +566,7 @@ font-style: inherit;">"Consumo de Legumbres en el 2001"</span>)</span>
 </section>
 <section id="histograma" class="level1">
 <h1>Histograma</h1>
-<div id="ee3efa6c" class="cell" data-execution_count="6">
+<div id="32eeb900" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
@@ -590,13 +578,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb6-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb6-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb6-5"></span>
 <span id="cb6-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -784,7 +768,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="grafico-circular" class="level1">
 <h1>Grafico circular</h1>
-<div id="1bbf500c" class="cell" data-execution_count="7">
+<div id="a8d23ec5" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
@@ -796,13 +780,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb7-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb7-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb7-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb7-5"></span>
 <span id="cb7-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -937,7 +917,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="grafico-de-donut" class="level1">
 <h1>Grafico de Donut</h1>
-<div id="2c9c8d2f" class="cell" data-execution_count="8">
+<div id="311e8dbc" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
@@ -949,13 +929,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb8-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb8-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb8-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb8-5"></span>
 <span id="cb8-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1110,7 +1086,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="grafico-de-cajas" class="level1">
 <h1>Grafico de cajas</h1>
-<div id="5fa6fff8" class="cell" data-execution_count="9">
+<div id="ce190e0d" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
@@ -1122,13 +1098,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb9-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb9-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb9-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb9-5"></span>
 <span id="cb9-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1307,7 +1279,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="grafico-de-barras-combinadas" class="level1">
 <h1>Grafico de barras combinadas</h1>
-<div id="cde85124" class="cell" data-execution_count="10">
+<div id="15718a1c" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="im" style="color: #00769E;
@@ -1319,13 +1291,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb10-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb10-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb10-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb10-5"></span>
 <span id="cb10-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1522,7 +1490,7 @@ font-style: inherit;"># Mostrar el gráfico</span></span>
 </section>
 <section id="graficos-combinados" class="level1">
 <h1>Graficos combinados</h1>
-<div id="d516075d" class="cell" data-execution_count="11">
+<div id="2e847f25" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="im" style="color: #00769E;
@@ -1534,13 +1502,9 @@ font-style: inherit;">as</span> plt</span>
 <span id="cb11-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb11-4">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+<span id="cb11-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>))</span>
+font-style: inherit;">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb11-5"></span>
 <span id="cb11-6"><span class="co" style="color: #5E5E5E;
 background-color: null;

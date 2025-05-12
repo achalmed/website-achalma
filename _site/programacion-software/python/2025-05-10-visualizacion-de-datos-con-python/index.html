@@ -362,14 +362,14 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 
 <section id="grafico-de-lineas" class="level1">
 <h1>Grafico de lineas</h1>
-<div id="efbd1314" class="cell" data-execution_count="1">
+<div id="99266bde" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Configurar el tamaño de la figura para mejor visualización</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
 <span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Datos de consumo de carne bovina (kg por habitante)</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>consumo_bovino <span class="op">=</span> [<span class="fl">22.1</span>, <span class="fl">22.1</span>, <span class="fl">23.1</span>, <span class="fl">23.9</span>, <span class="fl">24.6</span>, <span class="fl">21.7</span>, <span class="fl">23.5</span>, <span class="fl">22.0</span>, <span class="fl">22.5</span>, <span class="fl">23.6</span>, <span class="fl">21.7</span>]</span>
@@ -416,7 +416,7 @@ gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div id="806883b9" class="cell" data-execution_count="2">
+<div id="dcd84d70" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -471,13 +471,13 @@ Figura&nbsp;1: A line plot on a polar axis
 <h1>Gráfico de barras</h1>
 <section id="horizontal" class="level2">
 <h2 class="anchored" data-anchor-id="horizontal">horizontal</h2>
-<div id="2cf0463f" class="cell" data-execution_count="4">
+<div id="7128091e" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a></span>
 <span id="cb4-6"><a href="#cb4-6"></a><span class="co"># Tipos de legumbres y sus respectivos consumos en kg por habitante en 2001</span></span>
 <span id="cb4-7"><a href="#cb4-7"></a>tipos_legumbres <span class="op">=</span> [<span class="st">"Poroto"</span>, <span class="st">"Lenteja"</span>, <span class="st">"Garbanzo"</span>, <span class="st">"Arveja"</span>]</span>
@@ -514,10 +514,10 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="vertical" class="level2">
 <h2 class="anchored" data-anchor-id="vertical">vertical</h2>
-<div id="488009c9" class="cell" data-execution_count="5">
+<div id="47d63cd1" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>plt.figure(figsize<span class="op">=</span>[<span class="dv">10</span>,<span class="dv">8</span>])</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#plt.figure(figsize=[10,8])</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co">#Consumo de legumbres en el 2001</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>legumbres<span class="op">=</span>[<span class="st">"Poroto"</span>,<span class="st">"Lenteja"</span>,<span class="st">"Garbanzo"</span>,<span class="st">"Arveja"</span>]</span>
 <span id="cb5-4"><a href="#cb5-4"></a>consumo<span class="op">=</span>[<span class="fl">2.1</span>, <span class="fl">1.0</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>]</span>
@@ -541,13 +541,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="histograma" class="level1">
 <h1>Histograma</h1>
-<div id="ee3efa6c" class="cell" data-execution_count="6">
+<div id="32eeb900" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a></span>
 <span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Datos de niveles de glucosa (mg/dl)</span></span>
 <span id="cb6-7"><a href="#cb6-7"></a>niveles_glucosa <span class="op">=</span> [<span class="dv">52</span>, <span class="dv">54</span>, <span class="dv">55</span>, <span class="dv">57</span>, <span class="dv">56</span>, <span class="dv">57</span>, <span class="dv">54</span>, <span class="dv">59</span>, <span class="dv">60</span>, <span class="dv">57</span>, <span class="dv">52</span>, <span class="dv">62</span>, <span class="dv">64</span>, <span class="dv">68</span>, <span class="dv">64</span>, <span class="dv">72</span>, <span class="dv">77</span>, <span class="dv">80</span>, </span>
@@ -587,13 +587,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="grafico-circular" class="level1">
 <h1>Grafico circular</h1>
-<div id="1bbf500c" class="cell" data-execution_count="7">
+<div id="a8d23ec5" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a></span>
 <span id="cb7-6"><a href="#cb7-6"></a><span class="co"># Datos de marcas de autos y sus ventas (en alguna unidad, ej. miles de unidades)</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a>marcas_autos <span class="op">=</span> [<span class="st">"Kia"</span>, <span class="st">"Toyota"</span>, <span class="st">"Nissan"</span>, <span class="st">"Suzuki"</span>, <span class="st">"Audi"</span>]</span>
@@ -636,13 +636,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="grafico-de-donut" class="level1">
 <h1>Grafico de Donut</h1>
-<div id="2c9c8d2f" class="cell" data-execution_count="8">
+<div id="311e8dbc" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2"></a></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb8-5"><a href="#cb8-5"></a></span>
 <span id="cb8-6"><a href="#cb8-6"></a><span class="co"># Datos de marcas de autos y sus ventas (en alguna unidad, ej. miles de unidades)</span></span>
 <span id="cb8-7"><a href="#cb8-7"></a>marcas_autos <span class="op">=</span> [<span class="st">"Kia"</span>, <span class="st">"Toyota"</span>, <span class="st">"Nissan"</span>, <span class="st">"Suzuki"</span>, <span class="st">"Audi"</span>]</span>
@@ -689,13 +689,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="grafico-de-cajas" class="level1">
 <h1>Grafico de cajas</h1>
-<div id="5fa6fff8" class="cell" data-execution_count="9">
+<div id="ce190e0d" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a href="#cb9-2"></a></span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb9-5"><a href="#cb9-5"></a></span>
 <span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Datos de las edades de los alumnos</span></span>
 <span id="cb9-7"><a href="#cb9-7"></a>edades_alumnos <span class="op">=</span> [<span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">12</span>, <span class="dv">17</span>, <span class="dv">16</span>, <span class="dv">15</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">17</span>]</span>
@@ -736,13 +736,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="grafico-de-barras-combinadas" class="level1">
 <h1>Grafico de barras combinadas</h1>
-<div id="cde85124" class="cell" data-execution_count="10">
+<div id="15718a1c" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb10-5"><a href="#cb10-5"></a></span>
 <span id="cb10-6"><a href="#cb10-6"></a><span class="co"># Datos de ventas de autos por día (en unidades)</span></span>
 <span id="cb10-7"><a href="#cb10-7"></a>ventas_toyota <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">9</span>]</span>
@@ -791,13 +791,13 @@ Figura&nbsp;1: A line plot on a polar axis
 </section>
 <section id="graficos-combinados" class="level1">
 <h1>Graficos combinados</h1>
-<div id="d516075d" class="cell" data-execution_count="11">
+<div id="2e847f25" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="co"># Configurar el tamaño de la figura para una mejor visualización</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#plt.figure(figsize=(10, 8))</span></span>
 <span id="cb11-5"><a href="#cb11-5"></a></span>
 <span id="cb11-6"><a href="#cb11-6"></a><span class="co"># Datos de vacunación proyectada (en número de pacientes)</span></span>
 <span id="cb11-7"><a href="#cb11-7"></a>vacunacion_proyectada <span class="op">=</span> [<span class="dv">250</span>, <span class="dv">120</span>, <span class="dv">270</span>, <span class="dv">560</span>, <span class="dv">450</span>, <span class="dv">280</span>, <span class="dv">550</span>]</span>

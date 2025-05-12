@@ -60,7 +60,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de consumo de carne bovina (kg por habitante)
 consumo_bovino = [22.1, 22.1, 23.1, 23.9, 24.6, 21.7, 23.5, 22.0, 22.5, 23.6, 21.7]
@@ -139,7 +139,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Tipos de legumbres y sus respectivos consumos en kg por habitante en 2001
 tipos_legumbres = ["Poroto", "Lenteja", "Garbanzo", "Arveja"]
@@ -169,7 +169,7 @@ plt.show()
 ## vertical
 
 ```{python}
-plt.figure(figsize=[10,8])
+#plt.figure(figsize=[10,8])
 #Consumo de legumbres en el 2001
 legumbres=["Poroto","Lenteja","Garbanzo","Arveja"]
 consumo=[2.1, 1.0, 0.3, 0.5]
@@ -187,7 +187,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de niveles de glucosa (mg/dl)
 niveles_glucosa = [52, 54, 55, 57, 56, 57, 54, 59, 60, 57, 52, 62, 64, 68, 64, 72, 77, 80, 
@@ -224,7 +224,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de marcas de autos y sus ventas (en alguna unidad, ej. miles de unidades)
 marcas_autos = ["Kia", "Toyota", "Nissan", "Suzuki", "Audi"]
@@ -262,7 +262,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de marcas de autos y sus ventas (en alguna unidad, ej. miles de unidades)
 marcas_autos = ["Kia", "Toyota", "Nissan", "Suzuki", "Audi"]
@@ -305,7 +305,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de las edades de los alumnos
 edades_alumnos = [12, 13, 12, 17, 16, 15, 14, 15, 15, 16, 14, 12, 15, 16, 14, 12, 16, 17]
@@ -342,7 +342,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de ventas de autos por día (en unidades)
 ventas_toyota = [10, 15, 19, 14, 9]
@@ -386,7 +386,7 @@ plt.show()
 import matplotlib.pyplot as plt
 
 # Configurar el tamaño de la figura para una mejor visualización
-plt.figure(figsize=(10, 8))
+#plt.figure(figsize=(10, 8))
 
 # Datos de vacunación proyectada (en número de pacientes)
 vacunacion_proyectada = [250, 120, 270, 560, 450, 280, 550]

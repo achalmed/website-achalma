@@ -6,7 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiAlbum"
+      "LiSchool",
+      "LiListTodo",
+      "LiNotebook",
+      "LiFolderCog",
+      "LiActivity"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -30,5 +34,20 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "assets": "LiAlbum"
+  "notas": "LiNotepadText",
+  "ideas": "LiAtom",
+  "blogs": "LiApple",
+  "plantillas": "LiNotepadText",
+  "recursos": "LiAxe",
+  "agenda": "LiAlbum",
+  "recursos/cumpleanos.md": "LiBaby",
+  "recursos/sentidas condolencias.md": "LiAlarmClockOff",
+  "assets": "LiFolder",
+  "attachments": "LiFolder",
+  "curso metodologia cau unsch": "🏛",
+  "econometria": "🏛",
+  "Excalidraw": "LiActivity",
+  "meta": "LiFolderCog",
+  "Notas Zotero": "LiNotebook",
+  "sofia": "LiSchool"
 }

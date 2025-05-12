@@ -5164,5 +5164,26 @@
     "title": "Tipos de Elementos en Zotero",
     "section": "36. Note (Nota)",
     "text": "36. Note (Nota)\n\nCuándo utilizar:\n\nPara notas independientes usadas para organización o anotaciones.\nNo es ideal para citas, ya que usa los primeros 120 caracteres como título.\n\nCampos y su propósito:\n\nItem Type: Seleccionar “Note”.\nTitle: Primeros 120 caracteres de la nota (automático).\nDate Added/Modified: Campos automáticos.\n\nInformación oficial de Zotero:\n\nEste tipo es para notas internas. La documentación advierte que citar notas no es confiable y sugiere usar ítems completos para comentarios en bibliografías."
+  },
+  {
+    "objectID": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html",
+    "href": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html",
+    "title": "Visualización de Datos con Python",
+    "section": "",
+    "text": "Mostrar el código\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Configurar el tamaño de la figura para mejor visualización\nplt.figure(figsize=(10, 8))\n\n# Datos de consumo de carne bovina (kg por habitante)\nconsumo_bovino = [22.1, 22.1, 23.1, 23.9, 24.6, 21.7, 23.5, 22.0, 22.5, 23.6, 21.7]\nanios_bovino = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]\n\n# Datos de consumo de carne porcina (kg por habitante)\nconsumo_porcino = [17.9, 19.4, 19.1, 18.3, 19.3, 22.5, 23.5, 25.0, 24.0, 24.4, 25.6]\nanios_porcino = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]\n\n# Graficar consumo de carne bovina con marcadores circulares y línea discontinua\nplt.plot(anios_bovino, consumo_bovino, marker='o', linestyle='--', color='red', label='Carne Bovina')\n\n# Graficar consumo de carne porcina con marcadores de diamante y línea discontinua\nplt.plot(anios_porcino, consumo_porcino, marker='d', linestyle='--', color='blue', label='Carne Porcina')\n\n# Etiquetas de los ejes y título con formato adecuado\nplt.xlabel('Año')\nplt.ylabel('Consumo (kg por habitante)')\nplt.title('Consumo Anual de Carne en Chile (2001-2011)')\n\n# Añadir leyenda en la esquina inferior derecha\nplt.legend(loc='lower right')\n\n# Configurar marcas en el eje x para mostrar cada año\nplt.xticks(anios_bovino)\n\n# Añadir una cuadrícula para mejorar la legibilidad\nplt.grid(True, linestyle='--', alpha=0.7)\n\n# Ajustar el diseño para evitar recortes de etiquetas\nplt.tight_layout()\n\n# Guardar la figura en un archivo (opcional, se puede descomentar para usar)\n# plt.savefig('consumo_carne_chile.png')\n\n# Mostrar el gráfico\nplt.show()\n\n\n\n\nMostrar el código\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.linspace(0, 2 * np.pi, 200)\ny = np.sin(x)\n\nfig, ax = plt.subplots()\nax.plot(x, y)\nplt.show()\n\n\nhol\n\n\n\n\nMostrar el código\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\nFigura 1"
+  },
+  {
+    "objectID": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html#horizontal",
+    "href": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html#horizontal",
+    "title": "Visualización de Datos con Python",
+    "section": "horizontal",
+    "text": "horizontal\n\n\nMostrar el código\nimport matplotlib.pyplot as plt\n\n# Configurar el tamaño de la figura para una mejor visualización\nplt.figure(figsize=(10, 8))\n\n# Tipos de legumbres y sus respectivos consumos en kg por habitante en 2001\ntipos_legumbres = [\"Poroto\", \"Lenteja\", \"Garbanzo\", \"Arveja\"]\nconsumo_legumbres = [2.1, 1.0, 0.3, 0.5]\n\n# Crear un gráfico de barras con color personalizado y borde\nplt.bar(tipos_legumbres, consumo_legumbres, color='green', edgecolor='black', alpha=0.7)\n\n# Etiquetas de los ejes y título con formato adecuado\nplt.xlabel('Tipos de Legumbres')\nplt.ylabel('Consumo (kg por habitante)')\nplt.title('Consumo de Legumbres en Chile (2001)')\n\n# Añadir una cuadrícula en el eje y para facilitar la lectura\nplt.grid(True, axis='y', linestyle='--', alpha=0.7)\n\n# Ajustar el diseño para evitar recortes de etiquetas\nplt.tight_layout()\n\n# Guardar la figura en un archivo (opcional, descomentar para usar)\n# plt.savefig('consumo_legumbres_2001.png')\n\n# Mostrar el gráfico\nplt.show()"
+  },
+  {
+    "objectID": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html#vertical",
+    "href": "programacion-software/python/2025-05-10-visualizacion-de-datos-con-python/index.html#vertical",
+    "title": "Visualización de Datos con Python",
+    "section": "vertical",
+    "text": "vertical\n\n\nMostrar el código\nplt.figure(figsize=[10,8])\n#Consumo de legumbres en el 2001\nlegumbres=[\"Poroto\",\"Lenteja\",\"Garbanzo\",\"Arveja\"]\nconsumo=[2.1, 1.0, 0.3, 0.5]\n\nplt.barh(legumbres,consumo)\n\nplt.ylabel(\"Tipos de legumbre\")\nplt.xlabel(\"Consumo (kg/hab)\")\nplt.title(\"Consumo de Legumbres en el 2001\")\nplt.show()"
   }
 ]

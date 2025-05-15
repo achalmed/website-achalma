@@ -11,10 +11,36 @@
             "id": "51eae93ed9260e38",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "2025-05-13.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-13"
+            }
+          },
+          {
+            "id": "0172927407c4fb4b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/2025-05-13.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-05-13.excalidraw"
             }
           }
         ]
@@ -229,8 +255,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "51eae93ed9260e38",
+  "active": "6a085c1714ece2a9",
   "lastOpenFiles": [
+    "2025-05-13.md",
+    "Excalidraw/2025-05-13.excalidraw.md",
+    "Excalidraw",
     "macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/index.qmd",
     "_freeze/site_libs/quarto-html/tippy.umd.min.js",
     "_freeze/site_libs/quarto-html/zenscroll-min.js",
@@ -240,8 +269,6 @@
     "_freeze/site_libs/quarto-html/anchor.min.js",
     "_freeze/site_libs/quarto-html",
     "_site/macroeconomia/index.feed-full-staged",
-    "_site/macroeconomia/index-listing.json",
-    "macroeconomia/index-listing.json",
     "macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/index_files/figure-docx/fig-timeline-output-4.png",
     "_site/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/index_files/figure-pdf/fig-timeline-output-4.png",
     "_site/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/index_files/figure-html/fig-timeline-output-4.png",
@@ -277,7 +304,6 @@
     "blog/posts/2021-07-14-comandos-blogdown/index.pdf.md",
     "2024-12-25.md",
     "prueba de raiz unitaria.md",
-    "adb.md",
-    "separa hojas de excel.md"
+    "adb.md"
   ]
 }

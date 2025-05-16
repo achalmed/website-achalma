@@ -15,6 +15,75 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 <generator>quarto-1.6.42</generator>
 <lastBuildDate>Wed, 31 May 2023 05:00:00 GMT</lastBuildDate>
 <item>
+  <title>Separando Hojas de Excel en documentos individuales</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</link>
+  <description><![CDATA[ 
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<p>SEPARAR HOJAS DE EXCEL EN DOCUMENTOS INDIVIDUALES Seguramente en cualquier ocasion les han pedido que deben separar un documento en excel, el cual contiene varias hojas, ya que por facilidad de visualización y trabajo el documento se debe tener de esta manera, pero al final debemos tener documentos individuales para ser enviados por separado o simplemente para darle otro tratamiento. En este articulo aprenderemos a separar ese documento el cual contiene varias hojas y dejarlo en documentos individuales. Para ello solamente debemos ingresar al modo desarrollador en excel y copiar unas lineas de codigo y ejecutar y se realizara automaticamente la separacion. Se deben seguir los siguientes pasos:</p>
+<p>1- Creamos una carpeta donde vamos a guardar el documento el cual vamos a separar. 2- Abrimos el documento y pulsamos las teclas <code>alt+F11</code>. 3- De esta manera se abrirá el modo desarrollador, en la parte izquierda encontramos un icono que dice ver código. damos clic en el y se abrirá una ventana para insertar el código. Copiamos y pegamos el siguiente fragmento de código:</p>
+<pre><code>Sub Splitbook()
+'Updateby20140612
+Dim xPath As String
+xPath = Application.ActiveWorkbook.Path
+Application.ScreenUpdating = False
+Application.DisplayAlerts = False
+For Each xWs In ThisWorkbook.Sheets
+    xWs.Copy
+    Application.ActiveWorkbook.SaveAs Filename:=xPath &amp; "\" &amp; xWs.Name &amp; ".xlsx"
+    Application.ActiveWorkbook.Close False
+Next
+Application.DisplayAlerts = True
+Application.ScreenUpdating = True
+End Sub</code></pre>
+<p>4- Damos clic en el icono <strong>Ejecutar Sub</strong> el cual lo encontramos en la barra superior con un icono triangular. 5- Inmediatamente se ejecutará el código y vamos a visualizar la carpeta, encontrando las hojas ya separadas en documentos individuales.</p>
+<p>De esta manera se habrá solucionado esa tarea que tal vez puede resultar tediosa si no conocemos mucho del modo desarrollador en excel.</p>
+<section id="publicaciones-similares" class="level1">
+<h1>Publicaciones Similares</h1>
+<p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
+<ol type="1">
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba">01 Introduccion Al Lenguaje Y Editor Vba</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar">02 Grabar Y Modificar</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos">03 Procedimientos</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba">04 Funciones En Vba</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales">05 Funciones Condicionales Estructuras Condicionales</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles">06 Funciones Iterativas Estructuras Repetitivas O Bucles</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios">07 Formularios</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos">08 Eventos</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-03-17-comando-para-convertir-docx-a-odt/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-03-17-comando-para-convertir-docx-a-odt">Comando Para Convertir Docx A Odt</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-04-03-buscar-reemplazar-en-libreoffice/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-04-03-buscar-reemplazar-en-libreoffice">Buscar Reemplazar En Libreoffice</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-21-anclaje-envoltura-alineacion-y-organizacion-de-objetos-en-llibreoffice/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-21-anclaje-envoltura-alineacion-y-organizacion-de-objetos-en-llibreoffice">Anclaje Envoltura Alineacion Y Organizacion De Objetos En Llibreoffice</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba">Combinando Hojas De Excel Con Vba</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales">Separando Hojas De Excel En Documentos Individuales</a></li>
+<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar">Por Editar</a></li>
+</ol>
+<p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
+Achalma, Edison. 2023. <span>“Separando Hojas de Excel en documentos
+individuales,”</span> May. <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/">https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</a>.
+</div></div></section></div> ]]></description>
+  <category>Ofimatica</category>
+  <category>Programación</category>
+  <category>Excel</category>
+  <category>VBA</category>
+  <guid>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</guid>
+  <pubDate>Wed, 31 May 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Combinando Hojas de Excel</title>
   <dc:creator>Edison Achalma</dc:creator>
   <link>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/</link>
@@ -107,74 +176,6 @@ Achalma, Edison. 2023. <span>“Combinando Hojas de Excel,”</span> May. <a hre
   <category>Excel</category>
   <category>VBA</category>
   <guid>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/</guid>
-  <pubDate>Wed, 31 May 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Combinando Hojas de Excel</title>
-  <dc:creator>Edison Achalma</dc:creator>
-  <link>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</link>
-  <description><![CDATA[ 
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> 
--->
-<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
-<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
-
-
-
-<p>SEPARAR HOJAS DE EXCEL EN DOCUMENTOS INDIVIDUALES Seguramente en cualquier ocasion les han pedido que deben separar un documento en excel, el cual contiene varias hojas, ya que por facilidad de visualización y trabajo el documento se debe tener de esta manera, pero al final debemos tener documentos individuales para ser enviados por separado o simplemente para darle otro tratamiento. En este articulo aprenderemos a separar ese documento el cual contiene varias hojas y dejarlo en documentos individuales. Para ello solamente debemos ingresar al modo desarrollador en excel y copiar unas lineas de codigo y ejecutar y se realizara automaticamente la separacion. Se deben seguir los siguientes pasos:</p>
-<p>1- Creamos una carpeta donde vamos a guardar el documento el cual vamos a separar. 2- Abrimos el documento y pulsamos las teclas <code>alt+F11</code>. 3- De esta manera se abrirá el modo desarrollador, en la parte izquierda encontramos un icono que dice ver código. damos clic en el y se abrirá una ventana para insertar el código. Copiamos y pegamos el siguiente fragmento de código:</p>
-<pre><code>Sub Splitbook()
-'Updateby20140612
-Dim xPath As String
-xPath = Application.ActiveWorkbook.Path
-Application.ScreenUpdating = False
-Application.DisplayAlerts = False
-For Each xWs In ThisWorkbook.Sheets
-    xWs.Copy
-    Application.ActiveWorkbook.SaveAs Filename:=xPath &amp; "\" &amp; xWs.Name &amp; ".xlsx"
-    Application.ActiveWorkbook.Close False
-Next
-Application.DisplayAlerts = True
-Application.ScreenUpdating = True
-End Sub</code></pre>
-<p>4- Damos clic en el icono <strong>Ejecutar Sub</strong> el cual lo encontramos en la barra superior con un icono triangular. 5- Inmediatamente se ejecutará el código y vamos a visualizar la carpeta, encontrando las hojas ya separadas en documentos individuales.</p>
-<p>De esta manera se habrá solucionado esa tarea que tal vez puede resultar tediosa si no conocemos mucho del modo desarrollador en excel.</p>
-<section id="publicaciones-similares" class="level1">
-<h1>Publicaciones Similares</h1>
-<p>Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:</p>
-<ol type="1">
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-05-01-introduccion-al-lenguaje-y-editor-vba">01 Introduccion Al Lenguaje Y Editor Vba</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-12-02-grabar-y-modificar">02 Grabar Y Modificar</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-19-03-procedimientos">03 Procedimientos</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2022-12-26-04-funciones-en-vba">04 Funciones En Vba</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-02-05-funciones-condicionales-estructuras-condicionales">05 Funciones Condicionales Estructuras Condicionales</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-09-06-funciones-iterativas-estructuras-repetitivas-o-bucles">06 Funciones Iterativas Estructuras Repetitivas O Bucles</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-16-07-formularios">07 Formularios</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-01-23-08-eventos">08 Eventos</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-03-17-comando-para-convertir-docx-a-odt/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-03-17-comando-para-convertir-docx-a-odt">Comando Para Convertir Docx A Odt</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-04-03-buscar-reemplazar-en-libreoffice/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-04-03-buscar-reemplazar-en-libreoffice">Buscar Reemplazar En Libreoffice</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-21-anclaje-envoltura-alineacion-y-organizacion-de-objetos-en-llibreoffice/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-21-anclaje-envoltura-alineacion-y-organizacion-de-objetos-en-llibreoffice">Anclaje Envoltura Alineacion Y Organizacion De Objetos En Llibreoffice</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-05-31-combinando-hojas-de-excel-con-vba">Combinando Hojas De Excel Con Vba</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales">Separando Hojas De Excel En Documentos Individuales</a></li>
-<li><a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar/index.pdf"><i class="fa-regular fa-file-pdf" aria-label="file-pdf"></i></a> <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2024-03-31-por-editar">Por Editar</a></li>
-</ol>
-<p>Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!</p>
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2023" class="csl-entry quarto-appendix-citeas">
-Achalma, Edison. 2023. <span>“Combinando Hojas de Excel,”</span> May. <a href="https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/">https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</a>.
-</div></div></section></div> ]]></description>
-  <category>Ofimatica</category>
-  <category>Programación</category>
-  <category>Excel</category>
-  <category>VBA</category>
-  <guid>https://achalmaedison.netlify.app/herramientas-oficina/ofimatica/2023-06-05-separando-hojas-de-excel-en-documentos-individuales/</guid>
   <pubDate>Wed, 31 May 2023 05:00:00 GMT</pubDate>
 </item>
 </channel>

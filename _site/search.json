@@ -5192,5 +5192,47 @@
     "title": "Teoría y política monetaria",
     "section": "",
     "text": "Dinero, eje central.\nBitcoin, activo altamente especulativo.\n\nTransaccional\nInter temporal\nóptimo\nDinámico, Ajuste de acuerdo a las necesidades\nEstocástico (aleatorio)\n\n\n\nMostrar el código\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Configuración de la simulación\nnp.random.seed(42)  # Para reproducibilidad\nn_days = 365  # Un año\nbase_happiness = 50  # Nivel base de felicidad\nwhite_noise = np.random.normal(loc=0, scale=10, size=n_days)  # Ruido blanco: media 0, desv. estándar 10\nhappiness = base_happiness + white_noise  # Serie de felicidad\ntime = np.arange(n_days)\n\n# Eventos estocásticos: uno positivo y uno negativo\nevent_positive_day = 100\nevent_negative_day = 250\nhappiness[event_positive_day] += 20  # Evento positivo\nhappiness[event_negative_day] -= 20  # Evento negativo\n\n# Creación del gráfico\nplt.figure(figsize=(10, 6))\nplt.plot(time, happiness, label='Felicidad', color='blue', alpha=0.7)\nplt.axhline(y=base_happiness, color='green', linestyle='--', label='Nivel base de felicidad')\nplt.scatter([event_positive_day], [happiness[event_positive_day]], color='gold', s=100, label='Evento positivo')\nplt.scatter([event_negative_day], [happiness[event_negative_day]], color='red', s=100, label='Evento negativo')\nplt.title('Felicidad a través del tiempo')\nplt.xlabel('Días')\nplt.ylabel('Nivel de felicidad')\nplt.grid(True)\nplt.legend()\n\n# Mostrar el gráfico\nplt.show()\n\n# Guardar el gráfico\n#plt.savefig('happiness_over_time.png')\n\n\nToken Vale\n\nFoward looking, decision hacia delante\nEquilibrio general\nBienestar\n\nTenemos tres partes el bienestar menos el sacrificio del tiempo en la actividad - los usos i represntado por funcion de oscio (tiempo disponible), el resultado debe ser positivo\n\\[\nL = Max E (\\sum_{t = 1}^{\\infty}  \\beta_{t}  (u(C_{t}, \\frac{M_{t}}{P_{t}},\\epsilon_{t})) -  \\int\\limits_0^1 v(h_{t}(i),\\epsilon_{t})di+) + \\lambda (\\int_{0}^{1} h_{t}(i) w_{t} (i)\\,di + \\int_{0}^{1} \\pi_{t} (i) + \\,di + M_{t-1} + \\beta_{t-1}(1+R_{t-1}) )\n\\]\n\\[\n- \\int_{0}^{1} P_{t} (i) C_{t}\\,di + M_{t} + \\beta_{t} + T_{t}\n\\]\n\\(\\beta^{t}\\) : Factor de actualización. Tiene un rendimiento \\(\\frac{1}{1+R_{t}}\\) debe ser iguak a renta de capital humano.\n\\(u\\) : Bienestar. Continu en el tiempo y espacio\n\\(C_{t}\\) Canasta de bienes y servicios. estatico (discreto) en el tiempo y espacio\n\\(\\frac{M_{t}}{P_{t}}\\) : Valor real del dinero (líquido y divisible)\n\\(\\epsilon_{t}\\) : Evento estocástico que afecta al bienestar\n\\(h_{t}(i)\\) : Horas dedicadas a la actividad i\nse agrega sumatoria por que tiene agreacion discreta\n\\(w_{t}(i)\\) : Salario que se paga por hacer i actividades\n\\(\\pi_{t} (i)\\) : Renta que se paga por participar en actividad i\n\\(M_{t}\\) : Dinero\n\\(M_{t-1}\\) : Dinero que tengo pero que decidí antes\n\\(\\beta_{t}\\) : ahorro\n\\(\\beta_{t-1}(1+R_{t-1})\\) : ahorro capitalizado\n\\(T_{t}\\): impuesto\nlo que mehos hecho es caracterizar el recurso disponible\n\nPublicaciones Similares\nSi te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:\n\n 01 Conceptos Basicos\n 02 Teoria De Consumo\n 03 Teoria De La Inversion\n 04 Tipo De Cambio\n 05 Modelo De Mundell Fleming\n 06 Sector Externo\n 07 Fluctuaciones De Corto Plazo\n 08 Ciclos Economicos Reales Rbc\n 09 Crecimiento Economico\n 10 Economia Monetaria\n 11 Modelos De Empleo\n Por Editar\n\nEsperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!\n\n\n\n\nReutilizaciónCC BY-SA 4.0Cómo citarPor favor, cita este trabajo como:\nAchalma, Edison. 2025. “Teoría y política monetaria,” May.\nhttps://achalmaedison.netlify.app/macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/."
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "",
+    "text": "Trade Map - ITC\nTrade Map (Link con parámetros)\nMarket Price Information (MPI) - ITC\nInvestment Map - ITC\nGlobalData\nEuromonitor\nPanjiva (S&P Global)\nStatista\nEMIS - Emerging Markets\necommercedb\nVeritrade"
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#plataformas-de-inteligencia-comercial",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#plataformas-de-inteligencia-comercial",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "",
+    "text": "Trade Map - ITC\nTrade Map (Link con parámetros)\nMarket Price Information (MPI) - ITC\nInvestment Map - ITC\nGlobalData\nEuromonitor\nPanjiva (S&P Global)\nStatista\nEMIS - Emerging Markets\necommercedb\nVeritrade"
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#comercio-y-exportación-en-perú",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#comercio-y-exportación-en-perú",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "Comercio y Exportación en Perú",
+    "text": "Comercio y Exportación en Perú\n\nPeruMarketplace\nExportemos.pe\nEstadísticas de Exportaciones Peruanas - Exportemos.pe\nADEX Data Trade\nPROMPERÚ - Aula Virtual\nRUTEX - PROMPERÚ\nRepositorio PROMPERÚ\nInfoCenter\nRAM PROMPERÚ\nPlaguicidas LMR - PROMPERÚ\nSimulador Financiero PROMPERÚ\nDiagnóstico Financiero PROMPERÚ\nRutas Aéreas PROMPERÚ\nRutas Marítimas PROMPERÚ\nDirectorio Logístico PROMPERÚ\nCostos PROMPERÚ\nMATCH PROMPERÚ\nEcommerce PROMPERÚ\nIIRSA Norte"
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#normas-reglamentos-y-requisitos-técnicos",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#normas-reglamentos-y-requisitos-técnicos",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "Normas, Reglamentos y Requisitos Técnicos",
+    "text": "Normas, Reglamentos y Requisitos Técnicos\n\nConsulta de Requisitos - SENASA\nDIGESA - MINSA\nDIGEMID - MINSA\nVUCE - Ventanilla Única de Comercio Exterior\nMINCETUR - Reglamentos Técnicos\nALADI - Normas y Reglamentos Técnicos\nFood Safety - Novel Food (UE)"
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#mapas-y-herramientas-especializadas",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#mapas-y-herramientas-especializadas",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "Mapas y Herramientas Especializadas",
+    "text": "Mapas y Herramientas Especializadas\n\nMarket Access Map (EPA)\nSustainability Map\nGlobal Trade Helpdesk (ITC)\nStandards Map (ITC)"
+  },
+  {
+    "objectID": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#alertas-y-regulaciones-internacionales",
+    "href": "gestion-empresarial/inteligencia-comercial/2024-05-15-herramientas-y-plataformas-de-comercio-internacional/index.html#alertas-y-regulaciones-internacionales",
+    "title": "Herramientas y Plataformas de Inteligencia Comercial",
+    "section": "Alertas y Regulaciones Internacionales",
+    "text": "Alertas y Regulaciones Internacionales\n\nePing - Alertas de Regulaciones Técnicas\nMRL Global - LMR Internacionales"
   }
 ]

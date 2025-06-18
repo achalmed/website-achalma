@@ -1,0 +1,1139 @@
+---
+documentmode: stu # Modo de documento: Can be jou (journal), man (manuscript), stu (student), or doc (document)
+# - man (Manuscrito): Similar al formato .docx
+# - jou (Revista): Un formato pulido de dos columnas similar a muchas revistas APA.
+# - doc (Documento): Similar al predeterminado LaTex artículos.
+# - stu (Estudiante): Formateado para trabajos de estudiantes
+# MODO ESTUDIANTE (STU)
+course: Matemáticas Aplicadas a la Comunicación
+# professor: Dr. Edison Achalma Mendoza
+# duedate: 01/23/2022
+# MODO REVISTA (JOU)
+# journal: The American Economic Review # Econometrica, The American Economic Review, Revista de Economía, Revista de la CEPAL
+# volume: 2025, Vol. 131, No. 2, 10--60
+copyrightnotice: 2025
+copyrightext: All rights reserved
+# image: featured.png
+title: Proporcionalidad de Magnitudes
+# subtitle: Editar
+shorttitle: ~
+abstract: |
+  Este trabajo explora los fundamentos matemáticos de la proporcionalidad y sus aplicaciones en el campo de las Ciencias de la Comunicación. Se analizan conceptos clave como razones, proporciones y magnitudes, junto con sus implementaciones prácticas en estrategias mediáticas, análisis de audiencias y diseño de mensajes. El estudio demuestra cómo estas herramientas matemáticas optimizan procesos comunicacionales en entornos digitales y tradicionales
+keywords:
+  [
+    proporcionalidad,
+    comunicación,
+    matemáticas aplicadas,
+    análisis de audiencias,
+    estrategias mediáticas,
+  ]
+categories:
+  - Matemáticas
+  - Ciencias de la Comunicación
+  - Métodos Cuantitativos
+tags:
+  - Análisis de datos
+  - Proporciones
+  - Estrategias de comunicación
+  - Métricas digitales
+
+# Nota del Autor
+author-note:
+  status-changes:
+    # Ejemplo: [Nombre del autor$$ está ahora en [afiliación$$.
+    affiliation-change: ~
+    # Ejemplo: [Nombre del autor$$ ha fallecido.
+    deceased: ~
+  # Las divulgaciones se condensan en un párrafo, pero puede iniciar un campo con dos saltos de línea para separarlas: \n\nNew
+  disclosures:
+    # Ejemplo: Este estudio se registró en X (Identificador Y).
+    study-registration: ~
+    # Reconozca y cite los datos/materiales que se van a compartir.
+    data-sharing: ~
+    # Ejemplo: Este artículo se basa en datos publicados en [Referencia$$.
+    # Ejemplo: Este artículo se basa en la disertación realizada por [cita$$.
+    related-report: ~
+    # Ejemplo: [Nombre del autor$$ ha sido consultor remunerado de la Corporación X, que ha financiado este estudio.
+    conflict-of-interest: El autor no tiene conflictos de interés que revelar.
+    # Ejemplo: Este estudio ha contado con el apoyo de la subvención [Número de subvención$$ de [Fuente de financiación$$.
+    financial-support: ~
+    # Ejemplo: Los autores agradecen a [Persona$$ por [Motivo$$.
+    gratitude: Expreso mi sincero agradecimiento a todas las personas que contribuyeron directa e indirectamente a la realización de esta monografía. En especial. A mi profesor, por su valiosa orientación, correcciones y sugerencias que permitieron estructurar y mejorar este trabajo. A la institución educativa y a la Facultad de Ciencias de la Comunicación, por brindar las herramientas necesarias para mi desarrollo profesional. A los autores y especialistas cuyas investigaciones sirvieron como base teórica para este estudio. A mi familia y seres queridos, por su constante apoyo emocional durante este proceso. Este trabajo es el resultado de un esfuerzo colectivo, y por ello, mi más profundo reconocimiento a quienes hicieron posible su culminación.
+    # Ejemplo. Dado que los autores contribuyen por igual, el orden de autoría se determinó mediante el lanzamiento de una moneda al aire.
+    authorship-agreements: ~
+
+description: "" # Texto que se muestra debajo de las etiquetas, no en la página del listado
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips #./../talk/2021-03-16-xaringan-deploy-demo/
+# - icon: github
+#   icon_pack: fab
+#   name: R-Ladies template files
+#   url: https://github.com/spcanelon/RLadies-xaringan-template
+eval: true # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+# Google Scholar
+bibliography: mybibliography.bib
+citation:
+  type: article-journal
+  author:
+    - Edison Achalma
+  pdf-url: https://achalmaedison.netlify.app/matematicas/posts/2024-03-31-por-editar/index.pdf
+date: "05/20/2025"
+draft: true # Modo de borrador (false = final, true = borrador)
+jupyter: python3
+---
+
+Este trabajo monográfico analiza la aplicación de conceptos matemáticos de proporcionalidad, como la regla de tres, el reparto proporcional en el ámbito de las ciencias de la comunicación. Estas herramientas permiten resolver problemas prácticos, optimizar procesos y tomar decisiones informadas basadas en datos cuantitativos, en un contexto donde la precisión y la eficiencia son esenciales. El objetivo es demostrar cómo estas técnicas matemáticas, fundamentadas en razones y proporciones, se integran en la planificación estratégica, la distribución equitativa de recursos y la evaluación de resultados.
+
+La monografía se estructura en tres capítulos principales: el Capítulo I aborda los fundamentos teóricos de razones y proporciones, el Capítulo II explora las aplicaciones de las magnitudes proporcionales, y el Capítulo III presenta casos prácticos que ilustran su relevancia. Finalmente, se ofrecen conclusiones y recomendaciones para fortalecer el uso de estas herramientas en la formación académica y profesional, acompañadas de referencias bibliográficas.
+
+
+# Razones y Proporciones
+
+## Historia
+
+La historia de la razón y la proporcionalidad de magnitudes es un proceso complejo que se desarrolló desde la Antigua Grecia, pasando por la Edad Media y el Renacimiento, hasta influir en la enseñanza y comprensión actual de estos conceptos. El desarrollo de la razón y la proporcionalidad fue importante para el avance de las matemáticas y su aplicación en diversas disciplinas como las ciencias de la comunicación.
+
+
+## Orígenes y Evolución Histórica
+
+Según @thorupPreeuclideanTheoryProportions1992 los matemáticos griegos, antes de Euclides, ya exploraban teorías de proporciones basadas en el método de la "anthyphairesis" (división recíproca), que permitía comparar magnitudes incluso cuando no eran conmensurables. Euclides formalizó la teoría en el Libro V de los Elementos, definiendo la igualdad y el orden relativo de razones.
+
+para @abdounurPreliminarySurveyEmergence2009 en la Edad Media y Renacimiento, la traducción latina de Euclides por Campanus de Novara en el siglo XIII introdujo una interpretación aritmética de la proporcionalidad, añadiendo el concepto de “denominatio” para la razón, lo que no estaba en el original griego. Este proceso fue influenciado por tradiciones latinas y árabes, y se aceleró durante el Renacimiento.
+
+Ya en el Renacimiento, según @kimSilvioBellisRatio2023, Silvio Belli, en 1573, intentó simplificar y corregir la teoría de razón y proporción para facilitar su aprendizaje, aunque cometió errores matemáticos comprensibles para su época. Su obra refleja la transición hacia una visión más aritmética y aplicada, especialmente en arquitectura e ingeniería.
+
+
+## Etimología
+
+La palabra *razón* proviene del latín *ratio*, que significa "cálculo" o "proporción". Por su parte, *proporción* deriva del latín *proportio*, que implica una relación equilibrada o simétrica entre partes.
+
+## Definición
+
+### Razón
+
+Según @parkHistoricalDevelopmentsProcess2008, es una relación entre dos cantidades que indica cuántas veces una contiene a la otra o cómo se comparan entre sí. Se clasifica en:
+
+### Razón Aritmética
+
+Se refiere a la diferencia entre dos números o términos consecutivos de una secuencia (por ejemplo, en una progresión aritmética, la razón aritmética es la constante que se suma para pasar de un término al siguiente). Su fórmula es:
+
+  $$
+  r = A - B
+  $$
+  
+  Donde:
+
+  - $r$ es la razón
+
+  - $A$ es el Antecedente
+
+  - $B$ es el Consecuente.
+
+### Razón Geométrica
+
+Es la relación basada en el cociente entre dos cantidades, especialmente relevante en secuencias donde cada término se obtiene multiplicando el anterior por una constante (progresión geométrica). Su fórmula es:
+
+$$
+r = \frac{A}{B}
+$$
+
+  Donde:
+
+  - $r$ es la razón
+
+  - $A$ es el Antecedente
+
+  - $B$ es el Consecuente.
+
+### Proporción
+
+Es una igualdad entre dos razones, es decir, una relación que indica que dos pares de cantidades tienen la misma relación entre sí.
+
+**Proporción Aritmética**: Se da cuando la diferencia entre términos consecutivos es constante.
+  $$
+  A - B = C - D
+  $$
+
+  Donde:
+
+  - $A, B, C, D$ son magnitudes
+
+  - $A-C$ son los términos extremos
+
+  - $B-D$ los términos medios.
+  
+
+**Discreta** La proporcionalidad discreta aritmética establece una relación entre cuatro magnitudes donde la diferencia entre dos términos es igual a la diferencia entre otros dos. La relación se expresa como:
+
+$$
+A - B = C - D
+$$
+
+Donde:
+
+- $D$ es la cuarta diferencial de $A$, $B$ y $C$.
+
+**Continua** La proporcionalidad continua aritmética describe una relación entre tres magnitudes. La relación se expresa como:
+
+$$
+A - B = B - C
+$$
+
+Donde: - $C$ es la tercera diferencial de $A$ y $B$, y $B$ es la media diferencial de $A$ y $C$.
+
+
+
+
+**Proporción Geométrica**: Se da cuando la razón (cociente) entre términos consecutivos es constante. 
+  $$
+  \frac{A}{B} = \frac{C}{D} \quad \text{o} \quad A \cdot D = B \cdot C
+  $$
+
+Donde:
+- $A, B, C, D$ son magnitudes
+  
+- $A$ y $D$ son los términos extremos
+  
+- $B$ y $C$ son los términos medios.
+
+
+**Discreta** La proporcionalidad discreta geométrica describe una relación entre cuatro magnitudes donde el cociente entre dos términos es igual al cociente entre otros dos. La relación se expresa como:
+
+$$
+\frac{A}{B} = \frac{C}{D}
+$$
+
+Donde:
+
+- $D$ es la cuarta proporcional de $A$, $B$ y $C$.
+
+**Continua** La proporcionalidad continua geométrica describe una relación entre tres magnitudes. La relación se expresa as:
+
+$$
+\frac{A}{B} = \frac{B}{C}
+$$
+
+Donde:
+
+  - $C$ es la tercera proporcional de $A$ y $B$
+  
+  - $B$ es la media proporcional de $A$ y $C$, implicando:
+
+$$
+B^2 = A \cdot C
+$$
+
+**Propiedades de la Proporción Geométrica**:
+
+Sea la proporción $\frac{A}{B} = \frac{C}{D}$
+
+  - $\frac{A+B}{A} = \frac{C+D}{C}$
+
+  - $\frac{A-B}{B} = \frac{C-D}{D}$
+
+  - $\frac{A+B}{A-B} = \frac{C+D}{C-D}$
+
+  - $\frac{A^n}{B^n} = \frac{C^n}{D^n} ; \quad n \in \mathbb{Q}$
+
+  - $\frac{A-C}{B-D} = \frac{A}{B} = \frac{C}{D}$
+
+
+# Magnitudes Proporcionales
+
+Según @aricanInvestigatingPreserviceMathematics2022 es la relación entre dos cantidades donde el cambio en una afecta a la otra de manera predecible y constante, ya sea aumentando o disminuyendo juntas (directa) o en sentido contrario (inversa).
+
+## Magnitudes Directamente Proporcionales
+
+Dos magnitudes son directamente proporcionales si al multiplicar o dividir una por un número, la otra también se multiplica o divide por ese mismo número.
+
+
+Consideremos la relación entre el **número de publicaciones en redes sociales** de un medio periodístico y el **número de interacciones** (likes, comentarios, compartidos) que estas generan. La siguiente tabla muestra datos hipotéticos:
+
+| Publicaciones en redes sociales ($x$, en publicaciones) | 2    | 4    | 6    | 8    | 10   |
+| ------------------------------------------------------- | ---- | ---- | ---- | ---- | ---- |
+| Interacciones ($y$, en cientos)                         | 20   | 40   | 60   | 80   | 100  |
+
+: Relación entre Publicaciones en redes sociales e Interacciones {#tbl-mytable4 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+En esta tabla, observamos que el número de publicaciones en redes sociales y las interacciones son **directamente proporcionales**. A medida que aumenta el número de publicaciones, las interacciones crecen proporcionalmente.
+
+La razón entre las magnitudes es constante:
+
+$$
+\frac{\text{Publicaciones}}{\text{Interacciones}} = \frac{2}{20} = \frac{4}{40} = \frac{6}{60} = \frac{8}{80} = \frac{10}{100} = \frac{1}{10}
+$$
+
+La **constante de proporcionalidad** es:
+
+$$
+k = \frac{y}{x} = \frac{1}{10}
+$$
+
+
+## Representación Gráfica
+
+La relación directamente proporcional se representa como una línea recta que pasa por el origen. 
+
+```{python}
+#| fig-cap: "Relación entre Publicaciones en redes sociales e Interacciones"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+x = np.array([2, 4, 6, 8, 10])  # Publicaciones en redes sociales
+y = np.array([20, 40, 60, 80, 100])  # Interacciones (en cientos)
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(x, y, 'o-', color='blue', label='Datos observados')
+plt.plot(x, 10*x, '--', color='gray', label='Línea de proporcionalidad ($y = 10x$)')
+plt.xlabel('Publicaciones en redes sociales ($x$, en publicaciones)')
+plt.ylabel('Interacciones ($y$, en cientos)')
+# plt.title('Relación entre Publicaciones e Interacciones')
+# plt.grid(True)
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Caso General
+
+Para cualquier par de magnitudes directamente proporcionales $A$ e $B$, se cumple:
+
+| $A$  | $A_1$ | $A_2$ | $A_3$ |
+| ---- | ----- | ----- | ----- |
+| $B$  | $B_1$ | $B_2$ | $B_3$ |
+
+: Magnitudes directamente proporcionales {#tbl-mytable2 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+La relación entre estas magnitudes satisface:
+
+$$
+\frac{A_1}{B_1} = \frac{A_2}{B_2} = \frac{A_3}{B_3} = k
+$$
+
+En general:
+
+$$
+\frac{A_i}{B_i} = k, \quad \text{donde } 1 \leq i < n, \quad i \in \mathbb{Z}
+$$
+
+Aquí, $k$ es la **constante de proporcionalidad directa**.
+
+## Función de Proporcionalidad Directa
+
+La relación entre dos magnitudes directamente proporcionales se expresa mediante una **función lineal homogénea**:
+
+$$
+f(x) = kx
+$$
+
+donde $f(x)$ es la magnitud dependiente (en este caso, las interacciones), $x$ es la magnitud independiente (publicaciones) y $k$ es la constante de proporcionalidad.
+
+**Ejemplo** Artículos Publicados y Lectores
+
+Ahora, consideremos otro ejemplo. Supongamos que el **número de artículos publicados** en un sitio web periodístico está relacionado con el **número de lectores** que visitan el sitio:
+
+| Artículos publicados ($x$) | 1    | 2    | 3    | 4    | 5    |
+| -------------------------- | ---- | ---- | ---- | ---- | ---- |
+| Lectores ($y$, en cientos) | 15   | 30   | 45   | 60   | 75   |
+
+: Relación entre Artículos publicados y Lectores {#tbl-mytable8 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+La constante de proporcionalidad es:
+
+$$
+k = \frac{y}{x} = \frac{15}{1} = \frac{30}{2} = \frac{45}{3} = \frac{60}{4} = \frac{75}{5} = 15
+$$
+
+La función que describe esta relación es:
+
+$$
+y = 15x
+$$
+
+
+
+## Magnitudes Inversamente Proporcionales
+
+Dos magnitudes son inversamente proporcionales si al aumentar una, la otra disminuye en la misma proporción, y viceversa
+
+Imagina un medio periodístico que verifica noticias antes de publicarlas. A mayor **tiempo dedicado a verificar noticias**, menor es el **número de errores** en las publicaciones. La siguiente tabla se muestra los datos:
+
+| Tiempo de verificación ($x$, en horas)      | 1    | 2    | 4    | 8    |
+| ------------------------------------------- | ---- | ---- | ---- | ---- |
+| Errores en publicaciones ($y$, en cantidad) | 40   | 20   | 10   | 5    |
+
+: Relación entre Tiempo de verificación y Errores en publicaciones {#tbl-mytable10 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+El tiempo de verificación y los errores en publicaciones son **inversamente proporcionales**. Esto se verifica porque el producto de ambas magnitudes es constante:
+
+$$
+(\text{Tiempo de verificación}) \cdot (\text{Errores}) = 1 \cdot 40 = 2 \cdot 20 = 4 \cdot 10 = 8 \cdot 5 = 40
+$$
+
+La **constante de proporcionalidad inversa** es:
+
+$$
+x \cdot y = 40
+$$
+
+La relación se expresa como:
+
+$$
+y = \frac{40}{x}
+$$
+
+## Representación Gráfica
+
+La relación inversamente proporcional se visualiza como una curva hiperbólica.
+
+```{python}
+#| fig-cap: "Relación entre Tiempo de verificación y Errores en publicaciones"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+x = np.array([1, 2, 4, 8])  # Tiempo de verificación (en horas)
+y = np.array([40, 20, 10, 5])  # Errores en publicaciones (en cantidad)
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(x, y, '*-', color='blue', label='Datos observados')
+plt.plot(x, 40/x, '--', color='gray', label='Curva de proporcionalidad ($y = 40/x$)')
+plt.xlabel('Tiempo de verificación ($x$, en horas)')
+plt.ylabel('Errores en publicaciones ($y$, en cantidad)')
+# plt.title('Relación entre Verificación y Errores')
+# plt.grid(True)
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+La gráfica muestra cómo, al aumentar el tiempo de verificación, el número de errores disminuye, siguiendo una relación inversa.
+
+## Caso General
+
+Para dos magnitudes inversamente proporcionales $A$ e $B$, se cumple:
+
+| $A$  | $A_1$ | $A_2$ | $A_3$ | $\dots$ | $A_n$ |
+| ---- | ----- | ----- | ----- | ------- | ----- |
+| $B$  | $B_1$ | $B_2$ | $B_3$ | $\dots$ | $B_n$ |
+
+: Magnitudes inversamente proporcionales {#tbl-mytable11 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+El producto de las magnitudes es constante:
+
+$$
+A_1 \cdot B_1 = A_2 \cdot B_2 = A_3 \cdot B_3 = \dots = A_n \cdot B_n = k
+$$
+
+En general:
+
+$$
+A_i \cdot B_i = k, \quad \text{donde } 1 \leq i < n, \quad i \in \mathbb{Z}
+$$
+
+Aquí, $k$ es la **constante de proporcionalidad inversa**.
+
+## Función de Proporcionalidad Inversa
+
+La relación inversamente proporcional se expresa como:
+
+$$
+y = \frac{k}{x}
+$$
+
+donde $y$ es la magnitud dependiente (errores), $x$ es la magnitud independiente (tiempo de verificación) y $k$ es la constante de proporcionalidad inversa.
+
+**Ejemplo** Frecuencia de Titulares Clickbait y Confianza del Lector
+
+Consideremos otro ejemplo: la relación entre la **frecuencia de titulares clickbait** (titulares exagerados para atraer clics) y la **confianza del lector** en un medio:
+
+| Frecuencia de titulares clickbait ($x$, por semana) | 12    | 4    | 2.4    | 1.3    |
+| --------------------------------------------------- | ---- | ---- | ---- | ---- |
+| Confianza del lector ($y$, en escala 1-50)          | 5    | 15   | 25   | 45   |
+
+: Relación entre Frecuencia de titulares clickbait y Confianza del lector {#tbl-mytable12 apa-note="Elaboración propia" data-quarto-disable-processing="true"}
+
+El producto es constante:
+
+$$
+12 \cdot 5 = 4 \cdot 15 = 2.4 \cdot 25 = 1.3 \cdot 45 = 60
+$$
+
+La constante de proporcionalidad inversa es:
+
+$$
+x \cdot y = 60
+$$
+
+La función es:
+
+$$
+y = \frac{60}{x}
+$$
+
+## Propiedades
+
+Sean las magnitudes $A$ y $B$, entonces:
+
+1. Si $A \text{ DP } B \Rightarrow B \text{ DP } A$
+2. Si $A \text{ IP } B \Rightarrow B \text{ IP } A$
+3. $A \text{ IP } B \Leftrightarrow A \text{ DP } \left( \frac{1}{B} \right)$
+4. $A \text{ DP } B \Leftrightarrow A \text{ IP } \left( \frac{1}{B} \right)$
+5. Si $n \in \mathbb{Q}$, entonces:
+   - $A \text{ DP } B \Leftrightarrow A^n \text{ DP } B^n$
+   - $A \text{ IP } B \Leftrightarrow A^n \text{ IP } B^n$
+
+
+# Aplicaciones de las Magnitudes Proporcionales
+
+Las magnitudes proporcionales permiten distribuir cantidades de forma equitativa según una relación directa o inversa. Este proceso, conocido como **reparto proporcional**, asigna una cantidad total entre varias partes según una variable de referencia. Se divide en dos tipos: **reparto directo** y **reparto inverso**.
+
+## Reparto Directo
+
+El reparto directo distribuye una cantidad total entre varias partes proporcionalmente a sus magnitudes. Por ejemplo, supongamos que se desea repartir un presupuesto de S/ 12,000 entre tres proyectos según el número de publicaciones planificadas, con proporciones de 1, 3 y 4.
+
+Calculamos:
+
+$$
+\text{Total a repartir: } 12,000
+$$
+
+
+
+\begin{align*}
+\begin{cases}
+1k = \text{Monto para el primer proyecto} \\
+3k = \text{Monto para el segundo proyecto} \\
+4k = \text{Monto para el tercer proyecto} \\
+\end{cases}
+\end{align*}
+
+La suma total es:
+
+$$
+1k + 3k + 4k = 8k = 12,000
+$$
+
+Resolviendo para $k$:
+
+$$
+k = \frac{12,000}{8} = 1,500
+$$
+
+Por lo tanto, los montos asignados son:
+
+\begin{align*}
+\begin{cases}
+1k = 1 \cdot 1,500 = 1,500 \\
+3k = 3 \cdot 1,500 = 4,500 \\
+4k = 4 \cdot 1,500 = 6,000 \\
+\end{cases}
+\end{align*}
+
+Los proyectos reciben S/ 1,500, S/ 4,500 y S/ 6,000, respectivamente.
+
+### Gráfica del Reparto Directo
+
+La siguiente gráfica ilustra cómo se distribuye el presupuesto según las proporciones:
+
+```{python}
+#| fig-cap: "Distribución del presupuesto según número de publicaciones"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+proyectos = ['Proyecto 1', 'Proyecto 2', 'Proyecto 3']
+proporciones = np.array([1, 3, 4])
+montos = proporciones * 1500  # k = 1500
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.bar(proyectos, montos, color='skyblue', label='Monto asignado')
+plt.xlabel('Proyectos')
+plt.ylabel('Monto asignado (S/)')
+# plt.title('Reparto directo del presupuesto')
+# plt.grid(True, axis='y')
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Reparto Inverso
+
+El reparto inverso distribuye una cantidad total entre varias partes de forma inversamente proporcional a sus magnitudes. Por ejemplo, supongamos que se desea repartir un fondo de S/ 60,000 entre tres equipos según el tiempo de entrega de artículos, con proporciones de 1, 2 y 4 horas.
+
+La distribución se calcula como sigue:
+
+$$
+\text{Total a repartir: } 60,000
+$$
+
+\begin{align*}
+\begin{cases}
+\frac{k}{1} = \text{Monto para el primer equipo} \\
+\frac{k}{2} = \text{Monto para el segundo equipo} \\
+\frac{k}{4} = \text{Monto para el tercer equipo} \\
+\end{cases}
+\end{align*}
+
+La suma total es:
+
+$$
+\frac{k}{1} + \frac{k}{2} + \frac{k}{4} = k \left(1 + \frac{1}{2} + \frac{1}{4}\right) = k \cdot \frac{7}{4} = 60,000
+$$
+
+Resolviendo para $k$:
+
+$$
+k = \frac{60,000 \cdot 4}{7} \approx 34,285.71
+$$
+
+Por lo tanto, los montos asignados son:
+
+\begin{align*}
+\begin{cases}
+\frac{k}{1} \approx \frac{34,285.71}{1} \approx 34,285.71 \\
+\frac{k}{2} \approx \frac{34,285.71}{2} \approx 17,142.86 \\
+\frac{k}{4} \approx \frac{34,285.71}{4} \approx 8,571.43 \\
+\end{cases}
+\end{align*}
+
+Los equipos reciben aproximadamente S/ 34,286, S/ 17,143 y S/ 8,571, respectivamente.
+
+### Gráfica del Reparto Inverso
+
+La siguiente gráfica se muestra cómo se distribuye el fondo según el tiempo de entrega:
+
+```{python}
+#| fig-cap: "Distribución del fondo según tiempo de entrega"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+equipos = ['Equipo 1', 'Equipo 2', 'Equipo 3']
+tiempos = np.array([1, 2, 4])
+k = 34285.71
+montos = k / tiempos  # k dividido por los tiempos
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.bar(equipos, montos, color='lightcoral', label='Monto asignado')
+plt.xlabel('Equipos')
+plt.ylabel('Monto asignado (S/)')
+# plt.title('Reparto inverso del fondo')
+# plt.grid(True, axis='y')
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+
+# Regla de Tres y Porcentajes
+
+La regla de tres y los porcentajes son herramientas matemáticas esenciales para resolver problemas de proporcionalidad y comparación de datos.
+
+## Regla de Tres
+
+La **regla de tres** permite encontrar un valor desconocido a partir de tres valores conocidos, en relaciones de proporcionalidad directa o inversa.
+
+### Regla de Tres Simple Directa
+
+En una relación **directamente proporcional**, si una magnitud aumenta, la otra también lo hace en la misma proporción, cumpliendo:
+
+$$
+\frac{\text{Magnitud 1}}{\text{Magnitud 2}} = k
+$$
+
+De forma práctica, se multiplica en cruz:
+
+$$
+a \cdot x = b \cdot c \quad \Rightarrow \quad x = \frac{b \cdot c}{a}
+$$
+
+**Ejemplo**: Si escribir 2 artículos toma 4 horas, ¿cuánto tiempo tomará escribir 5 artículos?
+
+Planteamos:
+
+$$
+\frac{2 \text{ artículos}}{4 \text{ horas}} = \frac{5 \text{ artículos}}{x \text{ horas}}
+$$
+
+Multiplicamos en cruz:
+
+$$
+2 \cdot x = 4 \cdot 5 \quad \Rightarrow \quad 2x = 20 \quad \Rightarrow \quad x = \frac{20}{2} = 10
+$$
+
+Tomará 10 horas escribir 5 artículos.
+
+#### Gráfica de la Regla de Tres Directa
+
+La siguiente gráfica muestra la relación proporcional entre artículos y tiempo:
+
+```{python}
+#| fig-cap: "Relación entre número de artículos y tiempo de escritura"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+articulos = np.array([2, 5])
+tiempo = np.array([4, 10])
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(articulos, tiempo, 'o-', color='blue', label='Datos observados')
+plt.plot(articulos, 2*articulos, '--', color='gray', label='Proporción ($y = 2x$)')
+plt.xlabel('Número de artículos')
+plt.ylabel('Tiempo (horas)')
+# plt.title('Regla de tres simple directa')
+# plt.grid(True)
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+### Regla de Tres Simple Inversa
+
+En una relación **inversamente proporcional**, si una magnitud aumenta, la otra disminuye, cumpliendo:
+
+$$
+\text{Magnitud 1} \cdot \text{Magnitud 2} = k
+$$
+
+De forma práctica, se multiplica en paralelo:
+
+$$
+a \cdot b = c \cdot x \quad \Rightarrow \quad x = \frac{a \cdot b}{c}
+$$
+
+**Ejemplo**: Si con 4 máquinas se imprimen 200 revistas en 8 horas, ¿cuánto tiempo tomará con 12 máquinas?
+
+Planteamos:
+
+$$
+4 \cdot 8 = 12 \cdot x
+$$
+
+Resolviendo:
+
+$$
+4 \cdot 8 = 12x \quad \Rightarrow \quad 32 = 12x \quad \Rightarrow \quad x = \frac{32}{12} \approx 2.67
+$$
+
+Con 12 máquinas, tomará aproximadamente 2.67 horas.
+
+#### Gráfica de la Regla de Tres Inversa
+
+La siguiente gráfica muestra la relación inversa entre máquinas y tiempo:
+
+```{python}
+#| fig-cap: "Relación entre número de máquinas y tiempo de impresión"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+maquinas = np.array([4, 8])
+tiempo = np.array([12, 2.67])
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(maquinas, tiempo, 'o-', color='blue', label='Datos observados')
+plt.plot(maquinas, 32/maquinas, '--', color='gray', label='Proporción ($y = 32/x$)')
+plt.xlabel('Número de máquinas')
+plt.ylabel('Tiempo (horas)')
+# plt.title('Regla de tres simple inversa')
+# plt.grid(True)
+# plt.legend()
+
+# Ocultar bordes (spines) superiores y derechos
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+### Regla de Tres Compuesta
+
+La **regla de tres compuesta** se usa cuando más de dos magnitudes están involucradas. Se combinan proporciones directas e inversas para resolver el problema.
+
+**Ejemplo**: Si 3 periodistas escriben 6 artículos en 12 horas, ¿cuánto tiempo tomará a 6 periodistas escribir 12 artículos?
+
+- **Proporción directa** (artículos): Más artículos requieren más tiempo.
+- **Proporción inversa** (journalistas): Más periodistas reducen el tiempo.
+
+Planteamos:
+
+$$
+\frac{3 \text{ periodistas} \cdot 12 \text{ horas}}{6 \text{ artículos}} = \frac{6 \text{ periodistas} \cdot x \text{ horas}}{12 \text{ artículos}}
+$$
+
+Simplificando:
+
+$$
+\frac{3 \cdot 12}{6} = \frac{6 \cdot x}{12}
+$$
+
+$$
+\frac{36}{6} = \frac{6x}{12} \quad \Rightarrow \quad 6 = \frac{6x}{12} \quad \Rightarrow \quad 6 \cdot 12 = 6x \quad \Rightarrow \quad 72 = 6x \quad \Rightarrow \quad x = 12
+$$
+
+Tomará 12 horas.
+
+## Porcentajes
+
+El **porcentaje** expresa una proporción en términos de “por cada cien”, facilitando la comparación de datos. La fórmula para calcular un porcentaje es:
+
+$$
+\text{a por ciento de N} = a% \text{ de } N = \frac{a}{100} \cdot N
+$$
+
+**Ejemplo**: Calcular el 25% de 200 lectores.
+
+$$
+25% \text{ de } 200 = \frac{25}{100} \cdot 200 = 50
+$$
+
+50 lectores representan el 25% de 200.
+
+### Parte de un Total como Porcentaje
+
+Para expresar una parte de un total en porcentaje:
+
+$$
+\frac{\text{Parte}}{\text{Total}} \cdot 100% = \frac{a}{b} \cdot 100%
+$$
+
+**Ejemplo**: Si 30 de 150 suscriptores leen un artículo, ¿qué porcentaje representa?
+
+$$
+\frac{30}{150} \cdot 100% = 20%
+$$
+
+El 20% de los suscriptores leyeron el artículo.
+
+### Operaciones con Porcentajes
+
+Un número se puede expresar como el 100% de sí mismo:
+
+$$
+N = 100% \cdot N
+$$
+
+**Ejemplo**: Si el 40% de un presupuesto más el 60% del mismo presupuesto se usan, ¿qué porcentaje total se gastó?
+
+$$
+40%N + 60%N = 100%N
+$$
+
+Se gastó el 100% del presupuesto.
+
+### Aplicaciones de los Porcentajes
+
+#### a. Descuentos Sucesivos
+
+Para dos descuentos consecutivos de $a%$ y $b%$, el descuento único equivalente es:
+
+$$
+\text{Descuento único} = (a + b) - \frac{a \cdot b}{100}
+$$
+
+**Ejemplo**: Un equipo de publicidad aplica descuentos del 10% y 20% en un contrato. ¿Cuál es el descuento único equivalente?
+
+$$
+\text{Descuento único} = (10 + 20) - \frac{10 \cdot 20}{100} = 30 - 2 = 28
+$$
+
+El descuento único es del 28%.
+
+#### b. Aumentos Sucesivos
+
+Para dos incrementos consecutivos de $a%$ y $b%$, el aumento único equivalente es:
+
+$$
+\text{Aumento único} = (a + b) + \frac{a \cdot b}{100}
+$$
+
+**Ejemplo**: Si un presupuesto aumenta un 15% y luego un 10%, ¿cuál es el aumento único equivalente?
+
+$$
+\text{Aumento único} = (15 + 10) + \frac{15 \cdot 10}{100} = 25 + 1.5 = 26.5
+$$
+
+El aumento único es del 26.5%.
+
+
+# Ejemplos Aplicados a Ciencias de la Comunicación
+
+## Ejercicio 1
+
+**Problema**: Si producir 3 videos promocionales requiere 9 horas de trabajo, ¿cuánto tiempo tomará producir 7 videos?
+
+**Solución**:
+
+Dado que el número de videos y el tiempo de trabajo son directamente proporcionales, usamos la regla de tres simple directa:
+
+$$
+\frac{\text{Magnitud 1}}{\text{Magnitud 2}} = k \quad \Rightarrow \quad a \cdot x = b \cdot c \quad \Rightarrow \quad x = \frac{b \cdot c}{a}
+$$
+
+Planteamos la proporción:
+
+$$
+\frac{3 \text{ videos}}{9 \text{ horas}} = \frac{7 \text{ videos}}{x \text{ horas}}
+$$
+
+Multiplicamos en cruz:
+
+$$
+3 \cdot x = 9 \cdot 7
+$$
+
+$$
+3x = 63 \quad \Rightarrow \quad x = \frac{63}{3} = 21
+$$
+
+Se necesitan 21 horas para producir 7 videos.
+
+**Gráfica**:
+
+```{python}
+#| fig-cap: "Relación entre número de videos y tiempo de producción"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+videos = np.array([3, 7])
+tiempo = np.array([9, 21])
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(videos, tiempo, 'o-', color='blue', label='Datos observados')
+plt.plot(videos, 3*videos, '--', color='gray', label='Proporción ($y = 3x$)')
+plt.xlabel('Número de videos')
+plt.ylabel('Tiempo (horas)')
+# plt.grid(True)
+plt.legend()
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+## Ejercicio 2
+
+**Problema**: Si 5 diseñadores tardan 10 días en crear 100 gráficos, ¿cuántos días tardarán 10 diseñadores en crear los mismos 100 gráficos?
+
+**Solución**:
+
+Dado que el número de diseñadores y el tiempo son inversamente proporcionales (a más diseñadores, menos tiempo), usamos la regla de tres simple inversa:
+
+$$
+\text{Magnitud 1} \cdot \text{Magnitud 2} = k \quad \Rightarrow \quad a \cdot b = c \cdot x \quad \Rightarrow \quad x = \frac{a \cdot b}{c}
+$$
+
+Planteamos:
+
+$$
+5 \text{ diseñadores} \cdot 10 \text{ días} = 10 \text{ diseñadores} \cdot x \text{ días}
+$$
+
+Multiplicamos en paralelo:
+
+$$
+5 \cdot 10 = 10 \cdot x
+$$
+
+$$
+50 = 10x \quad \Rightarrow \quad x = \frac{50}{10} = 5
+$$
+
+Con 10 diseñadores, se tardarán 5 días.
+
+**Gráfica**:
+
+```{python}
+#| fig-cap: "Relación entre número de diseñadores y tiempo de creación"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+disenadores = np.array([5, 10])
+tiempo = np.array([10, 5])
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.plot(disenadores, tiempo, 'o-', color='blue', label='Datos observados')
+plt.plot(disenadores, 50/disenadores, '--', color='gray', label='Proporción ($y = 50/x$)')
+plt.xlabel('Número de diseñadores')
+plt.ylabel('Tiempo (días)')
+# plt.grid(True)
+plt.legend()
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+## Ejercicio 3
+
+**Problema**: Se desea repartir un presupuesto de S/ 15,000 entre tres campañas según el número de anuncios planificados, con proporciones de 2, 3 y 5. ¿Cuánto recibirá cada campaña?
+
+**Solución**:
+
+Usamos el reparto proporcional directo, donde el presupuesto se distribuye según las proporciones:
+
+$$
+\text{Total a repartir: } 15,000
+$$
+
+Asignamos:
+
+$$
+\begin{cases}
+2k = \text{Monto para la primera campaña} \
+3k = \text{Monto para la segunda campaña} \
+5k = \text{Monto para la tercera campaña} \
+\end{cases}
+$$
+
+La suma total es:
+
+$$
+2k + 3k + 5k = 10k = 15,000
+$$
+
+Resolviendo para $k$:
+
+$$
+k = \frac{15,000}{10} = 1,500
+$$
+
+Calculamos los montos:
+
+$$
+\begin{cases}
+2k = 2 \cdot 1,500 = 3,000 \
+3k = 3 \cdot 1,500 = 4,500 \
+5k = 5 \cdot 1,500 = 7,500 \
+\end{cases}
+$$
+
+Las campañas reciben S/ 3,000, S/ 4,500 y S/ 7,500, respectivamente.
+
+**Gráfica**:
+
+```{python}
+#| fig-cap: "Distribución del presupuesto según número de anuncios"
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos
+campanas = ['Campaña 1', 'Campaña 2', 'Campaña 3']
+proporciones = np.array([2, 3, 5])
+montos = proporciones * 1500
+
+# Gráfica
+plt.figure(figsize=(6,4))
+plt.bar(campanas, montos, color='skyblue', label='Monto asignado')
+plt.xlabel('Campañas')
+plt.ylabel('Monto asignado (S/)')
+# plt.grid(True, axis='y')
+plt.legend()
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+## Ejercicio 4
+
+**Problema**: Un contrato de servicios tiene un costo original de S/ 1,000. Se aplican dos descuentos sucesivos del 15% y del 10%. ¿Cuál es el costo final después de los descuentos?
+
+**Solución**:
+
+Para calcular el costo final, usamos la fórmula de descuentos sucesivos para encontrar el descuento único equivalente:
+
+$$
+\text{Descuento único} = (a + b) - \frac{a \cdot b}{100}
+$$
+
+Donde $a = 15%$ y $b = 10%$:
+
+$$
+\text{Descuento único} = (15 + 10) - \frac{15 \cdot 10}{100} = 25 - 1.5 = 23.5
+$$
+
+El descuento total es del 23.5%. Calculamos el monto del descuento:
+
+$$
+\text{Monto descontado} = 23.5% \text{ de } 1,000 = \frac{23.5}{100} \cdot 1,000 = 235
+$$
+
+El costo final es:
+
+$$
+1,000 - 235 = 765
+$$
+
+El costo final es S/ 765.
+
+
+
+# Conclusiones y Recomendaciones
+
+La proporcionalidad, a través de herramientas como la regla de tres simple, el reparto proporcional y los porcentajes, proporciona un marco matemático para abordar desafíos en la gestión de recursos y el análisis de datos. Estas técnicas permiten optimizar la asignación de presupuestos, planificar tiempos de producción y evaluar métricas de impacto, asegurando decisiones estratégicas basadas en cálculos precisos. Su simplicidad y versatilidad las convierten en recursos esenciales para profesionales que buscan eficiencia en entornos dinámicos, conectando la teoría matemática con aplicaciones prácticas.
+
+Para maximizar el impacto de estas herramientas, se recomienda incorporar módulos prácticos en los planes de estudio de ciencias de la comunicación, enfocados en resolver problemas reales, como la distribución de recursos o el análisis de indicadores de audiencia. Asimismo, se sugiere desarrollar talleres interactivos y recursos digitales, como simuladores o aplicaciones, que faciliten el aprendizaje de estas técnicas y refuercen las competencias cuantitativas de los estudiantes.
+
+# Bibliografía y referencias
+
+

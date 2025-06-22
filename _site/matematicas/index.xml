@@ -13,6 +13,1656 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 {{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 </description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Wed, 18 Jun 2025 22:47:24 GMT</lastBuildDate>
+<lastBuildDate>Tue, 20 May 2025 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Proporcionalidad de Magnitudes</title>
+  <dc:creator>Edison Achalma</dc:creator>
+  <link>https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/</link>
+  <description><![CDATA[ 
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<p>Este trabajo monográfico analiza la aplicación de conceptos matemáticos de proporcionalidad, como la regla de tres, el reparto proporcional en el ámbito de las ciencias de la comunicación. Estas herramientas permiten resolver problemas prácticos, optimizar procesos y tomar decisiones informadas basadas en datos cuantitativos, en un contexto donde la precisión y la eficiencia son esenciales. El objetivo es demostrar cómo estas técnicas matemáticas, fundamentadas en razones y proporciones, se integran en la planificación estratégica, la distribución equitativa de recursos y la evaluación de resultados.</p>
+<p>La monografía se estructura en tres capítulos principales: el Capítulo I aborda los fundamentos teóricos de razones y proporciones, el Capítulo II explora las aplicaciones de las magnitudes proporcionales, y el Capítulo III presenta casos prácticos que ilustran su relevancia. Finalmente, se ofrecen conclusiones y recomendaciones para fortalecer el uso de estas herramientas en la formación académica y profesional, acompañadas de referencias bibliográficas.</p>
+<section id="razones-y-proporciones" class="level1">
+<h1>Razones y Proporciones</h1>
+<section id="historia" class="level2">
+<h2 class="anchored" data-anchor-id="historia">Historia</h2>
+<p>La historia de la razón y la proporcionalidad de magnitudes es un proceso complejo que se desarrolló desde la Antigua Grecia, pasando por la Edad Media y el Renacimiento, hasta influir en la enseñanza y comprensión actual de estos conceptos. El desarrollo de la razón y la proporcionalidad fue importante para el avance de las matemáticas y su aplicación en diversas disciplinas como las ciencias de la comunicación.</p>
+</section>
+<section id="orígenes-y-evolución-histórica" class="level2">
+<h2 class="anchored" data-anchor-id="orígenes-y-evolución-histórica">Orígenes y Evolución Histórica</h2>
+<p>Según <span class="citation" data-cites="thorupPreeuclideanTheoryProportions1992">Thorup (1992)</span> los matemáticos griegos, antes de Euclides, ya exploraban teorías de proporciones basadas en el método de la “anthyphairesis” (división recíproca), que permitía comparar magnitudes incluso cuando no eran conmensurables. Euclides formalizó la teoría en el Libro V de los Elementos, definiendo la igualdad y el orden relativo de razones.</p>
+<p>para <span class="citation" data-cites="abdounurPreliminarySurveyEmergence2009">Abdounur (2009)</span> en la Edad Media y Renacimiento, la traducción latina de Euclides por Campanus de Novara en el siglo XIII introdujo una interpretación aritmética de la proporcionalidad, añadiendo el concepto de “denominatio” para la razón, lo que no estaba en el original griego. Este proceso fue influenciado por tradiciones latinas y árabes, y se aceleró durante el Renacimiento.</p>
+<p>Ya en el Renacimiento, según <span class="citation" data-cites="kimSilvioBellisRatio2023">Kim (2023)</span>, Silvio Belli, en 1573, intentó simplificar y corregir la teoría de razón y proporción para facilitar su aprendizaje, aunque cometió errores matemáticos comprensibles para su época. Su obra refleja la transición hacia una visión más aritmética y aplicada, especialmente en arquitectura e ingeniería.</p>
+</section>
+<section id="etimología" class="level2">
+<h2 class="anchored" data-anchor-id="etimología">Etimología</h2>
+<p>La palabra <em>razón</em> proviene del latín <em>ratio</em>, que significa “cálculo” o “proporción”. Por su parte, <em>proporción</em> deriva del latín <em>proportio</em>, que implica una relación equilibrada o simétrica entre partes.</p>
+</section>
+<section id="definición" class="level2">
+<h2 class="anchored" data-anchor-id="definición">Definición</h2>
+<section id="razón" class="level3">
+<h3 class="anchored" data-anchor-id="razón">Razón</h3>
+<p>Según <span class="citation" data-cites="parkHistoricalDevelopmentsProcess2008">Park (2008)</span>, es una relación entre dos cantidades que indica cuántas veces una contiene a la otra o cómo se comparan entre sí. Se clasifica en:</p>
+</section>
+<section id="razón-aritmética" class="level3">
+<h3 class="anchored" data-anchor-id="razón-aritmética">Razón Aritmética</h3>
+<p>Se refiere a la diferencia entre dos números o términos consecutivos de una secuencia (por ejemplo, en una progresión aritmética, la razón aritmética es la constante que se suma para pasar de un término al siguiente). Su fórmula es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20r%20=%20A%20-%20B%0A%20%20"></p>
+<p>Donde:</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?r"> es la razón</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?A"> es el Antecedente</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?B"> es el Consecuente.</p></li>
+</ul>
+</section>
+<section id="razón-geométrica" class="level3">
+<h3 class="anchored" data-anchor-id="razón-geométrica">Razón Geométrica</h3>
+<p>Es la relación basada en el cociente entre dos cantidades, especialmente relevante en secuencias donde cada término se obtiene multiplicando el anterior por una constante (progresión geométrica). Su fórmula es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ar%20=%20%5Cfrac%7BA%7D%7BB%7D%0A"></p>
+<p>Donde:</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?r"> es la razón</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?A"> es el Antecedente</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?B"> es el Consecuente.</p></li>
+</ul>
+</section>
+<section id="proporción" class="level3">
+<h3 class="anchored" data-anchor-id="proporción">Proporción</h3>
+<p>Es una igualdad entre dos razones, es decir, una relación que indica que dos pares de cantidades tienen la misma relación entre sí.</p>
+<p><strong>Proporción Aritmética</strong>: Se da cuando la diferencia entre términos consecutivos es constante. <img src="https://latex.codecogs.com/png.latex?%0A%20%20A%20-%20B%20=%20C%20-%20D%0A%20%20"></p>
+<p>Donde:</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?A,%20B,%20C,%20D"> son magnitudes</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?A-C"> son los términos extremos</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?B-D"> los términos medios.</p></li>
+</ul>
+<p><strong>Discreta</strong> La proporcionalidad discreta aritmética establece una relación entre cuatro magnitudes donde la diferencia entre dos términos es igual a la diferencia entre otros dos. La relación se expresa como:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA%20-%20B%20=%20C%20-%20D%0A"></p>
+<p>Donde:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?D"> es la cuarta diferencial de <img src="https://latex.codecogs.com/png.latex?A">, <img src="https://latex.codecogs.com/png.latex?B"> y <img src="https://latex.codecogs.com/png.latex?C">.</li>
+</ul>
+<p><strong>Continua</strong> La proporcionalidad continua aritmética describe una relación entre tres magnitudes. La relación se expresa como:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA%20-%20B%20=%20B%20-%20C%0A"></p>
+<p>Donde: - <img src="https://latex.codecogs.com/png.latex?C"> es la tercera diferencial de <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B">, y <img src="https://latex.codecogs.com/png.latex?B"> es la media diferencial de <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?C">.</p>
+<p><strong>Proporción Geométrica</strong>: Se da cuando la razón (cociente) entre términos consecutivos es constante. <img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cfrac%7BA%7D%7BB%7D%20=%20%5Cfrac%7BC%7D%7BD%7D%20%5Cquad%20%5Ctext%7Bo%7D%20%5Cquad%20A%20%5Ccdot%20D%20=%20B%20%5Ccdot%20C%0A%20%20"></p>
+<p>Donde: - <img src="https://latex.codecogs.com/png.latex?A,%20B,%20C,%20D"> son magnitudes</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?D"> son los términos extremos</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?B"> y <img src="https://latex.codecogs.com/png.latex?C"> son los términos medios.</p></li>
+</ul>
+<p><strong>Discreta</strong> La proporcionalidad discreta geométrica describe una relación entre cuatro magnitudes donde el cociente entre dos términos es igual al cociente entre otros dos. La relación se expresa como:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BA%7D%7BB%7D%20=%20%5Cfrac%7BC%7D%7BD%7D%0A"></p>
+<p>Donde:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?D"> es la cuarta proporcional de <img src="https://latex.codecogs.com/png.latex?A">, <img src="https://latex.codecogs.com/png.latex?B"> y <img src="https://latex.codecogs.com/png.latex?C">.</li>
+</ul>
+<p><strong>Continua</strong> La proporcionalidad continua geométrica describe una relación entre tres magnitudes. La relación se expresa as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BA%7D%7BB%7D%20=%20%5Cfrac%7BB%7D%7BC%7D%0A"></p>
+<p>Donde:</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?C"> es la tercera proporcional de <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?B"> es la media proporcional de <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?C">, implicando:</p></li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0AB%5E2%20=%20A%20%5Ccdot%20C%0A"></p>
+<p><strong>Propiedades de la Proporción Geométrica</strong>:</p>
+<p>Sea la proporción <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA%7D%7BB%7D%20=%20%5Cfrac%7BC%7D%7BD%7D"></p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA+B%7D%7BA%7D%20=%20%5Cfrac%7BC+D%7D%7BC%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA-B%7D%7BB%7D%20=%20%5Cfrac%7BC-D%7D%7BD%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA+B%7D%7BA-B%7D%20=%20%5Cfrac%7BC+D%7D%7BC-D%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA%5En%7D%7BB%5En%7D%20=%20%5Cfrac%7BC%5En%7D%7BD%5En%7D%20;%20%5Cquad%20n%20%5Cin%20%5Cmathbb%7BQ%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BA-C%7D%7BB-D%7D%20=%20%5Cfrac%7BA%7D%7BB%7D%20=%20%5Cfrac%7BC%7D%7BD%7D"></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="magnitudes-proporcionales" class="level1">
+<h1>Magnitudes Proporcionales</h1>
+<p>Según <span class="citation" data-cites="aricanInvestigatingPreserviceMathematics2022">Arican y Kiymaz (2022)</span> es la relación entre dos cantidades donde el cambio en una afecta a la otra de manera predecible y constante, ya sea aumentando o disminuyendo juntas (directa) o en sentido contrario (inversa).</p>
+<section id="magnitudes-directamente-proporcionales" class="level2">
+<h2 class="anchored" data-anchor-id="magnitudes-directamente-proporcionales">Magnitudes Directamente Proporcionales</h2>
+<p>Dos magnitudes son directamente proporcionales si al multiplicar o dividir una por un número, la otra también se multiplica o divide por ese mismo número.</p>
+<p>Consideremos la relación entre el <strong>número de publicaciones en redes sociales</strong> de un medio periodístico y el <strong>número de interacciones</strong> (likes, comentarios, compartidos) que estas generan. La siguiente tabla muestra datos hipotéticos:</p>
+<div id="tbl-mytable4" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Relación entre Publicaciones en redes sociales e Interacciones
+</figcaption>
+<div aria-describedby="tbl-mytable4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 73%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Publicaciones en redes sociales (<img src="https://latex.codecogs.com/png.latex?x">, en publicaciones)</th>
+<th>2</th>
+<th>4</th>
+<th>6</th>
+<th>8</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Interacciones (<img src="https://latex.codecogs.com/png.latex?y">, en cientos)</td>
+<td>20</td>
+<td>40</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>En esta tabla, observamos que el número de publicaciones en redes sociales y las interacciones son <strong>directamente proporcionales</strong>. A medida que aumenta el número de publicaciones, las interacciones crecen proporcionalmente.</p>
+<p>La razón entre las magnitudes es constante:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Ctext%7BPublicaciones%7D%7D%7B%5Ctext%7BInteracciones%7D%7D%20=%20%5Cfrac%7B2%7D%7B20%7D%20=%20%5Cfrac%7B4%7D%7B40%7D%20=%20%5Cfrac%7B6%7D%7B60%7D%20=%20%5Cfrac%7B8%7D%7B80%7D%20=%20%5Cfrac%7B10%7D%7B100%7D%20=%20%5Cfrac%7B1%7D%7B10%7D%0A"></p>
+<p>La <strong>constante de proporcionalidad</strong> es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ak%20=%20%5Cfrac%7By%7D%7Bx%7D%20=%20%5Cfrac%7B1%7D%7B10%7D%0A"></p>
+</section>
+<section id="representación-gráfica" class="level2">
+<h2 class="anchored" data-anchor-id="representación-gráfica">Representación Gráfica</h2>
+<p>La relación directamente proporcional se representa como una línea recta que pasa por el origen.</p>
+<div id="c78f0088" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb1-5">x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>])  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Publicaciones en redes sociales</span></span>
+<span id="cb1-6">y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>])  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Interacciones (en cientos)</span></span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb1-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb1-10">plt.plot(x, y, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb1-11">plt.plot(x, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>x, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Línea de proporcionalidad ($y = 10x$)'</span>)</span>
+<span id="cb1-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Publicaciones en redes sociales ($x$, en publicaciones)'</span>)</span>
+<span id="cb1-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Interacciones ($y$, en cientos)'</span>)</span>
+<span id="cb1-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Relación entre Publicaciones e Interacciones')</span></span>
+<span id="cb1-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb1-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb1-17"></span>
+<span id="cb1-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb1-19">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb1-20">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb1-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb1-22"></span>
+<span id="cb1-23">plt.tight_layout()</span>
+<span id="cb1-24">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Relación entre Publicaciones en redes sociales e Interacciones"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img" alt="Relación entre Publicaciones en redes sociales e Interacciones"></a></p>
+<figcaption>Relación entre Publicaciones en redes sociales e Interacciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="caso-general" class="level2">
+<h2 class="anchored" data-anchor-id="caso-general">Caso General</h2>
+<p>Para cualquier par de magnitudes directamente proporcionales <img src="https://latex.codecogs.com/png.latex?A"> e <img src="https://latex.codecogs.com/png.latex?B">, se cumple:</p>
+<div id="tbl-mytable2" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Magnitudes directamente proporcionales
+</figcaption>
+<div aria-describedby="tbl-mytable2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><img src="https://latex.codecogs.com/png.latex?A"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_1"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_2"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_3"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_1"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_2"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_3"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La relación entre estas magnitudes satisface:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BA_1%7D%7BB_1%7D%20=%20%5Cfrac%7BA_2%7D%7BB_2%7D%20=%20%5Cfrac%7BA_3%7D%7BB_3%7D%20=%20k%0A"></p>
+<p>En general:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BA_i%7D%7BB_i%7D%20=%20k,%20%5Cquad%20%5Ctext%7Bdonde%20%7D%201%20%5Cleq%20i%20%3C%20n,%20%5Cquad%20i%20%5Cin%20%5Cmathbb%7BZ%7D%0A"></p>
+<p>Aquí, <img src="https://latex.codecogs.com/png.latex?k"> es la <strong>constante de proporcionalidad directa</strong>.</p>
+</section>
+<section id="función-de-proporcionalidad-directa" class="level2">
+<h2 class="anchored" data-anchor-id="función-de-proporcionalidad-directa">Función de Proporcionalidad Directa</h2>
+<p>La relación entre dos magnitudes directamente proporcionales se expresa mediante una <strong>función lineal homogénea</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Af(x)%20=%20kx%0A"></p>
+<p>donde <img src="https://latex.codecogs.com/png.latex?f(x)"> es la magnitud dependiente (en este caso, las interacciones), <img src="https://latex.codecogs.com/png.latex?x"> es la magnitud independiente (publicaciones) y <img src="https://latex.codecogs.com/png.latex?k"> es la constante de proporcionalidad.</p>
+<p><strong>Ejemplo</strong> Artículos Publicados y Lectores</p>
+<p>Ahora, consideremos otro ejemplo. Supongamos que el <strong>número de artículos publicados</strong> en un sitio web periodístico está relacionado con el <strong>número de lectores</strong> que visitan el sitio:</p>
+<div id="tbl-mytable8" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Relación entre Artículos publicados y Lectores
+</figcaption>
+<div aria-describedby="tbl-mytable8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Artículos publicados (<img src="https://latex.codecogs.com/png.latex?x">)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lectores (<img src="https://latex.codecogs.com/png.latex?y">, en cientos)</td>
+<td>15</td>
+<td>30</td>
+<td>45</td>
+<td>60</td>
+<td>75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La constante de proporcionalidad es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ak%20=%20%5Cfrac%7By%7D%7Bx%7D%20=%20%5Cfrac%7B15%7D%7B1%7D%20=%20%5Cfrac%7B30%7D%7B2%7D%20=%20%5Cfrac%7B45%7D%7B3%7D%20=%20%5Cfrac%7B60%7D%7B4%7D%20=%20%5Cfrac%7B75%7D%7B5%7D%20=%2015%0A"></p>
+<p>La función que describe esta relación es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ay%20=%2015x%0A"></p>
+</section>
+<section id="magnitudes-inversamente-proporcionales" class="level2">
+<h2 class="anchored" data-anchor-id="magnitudes-inversamente-proporcionales">Magnitudes Inversamente Proporcionales</h2>
+<p>Dos magnitudes son inversamente proporcionales si al aumentar una, la otra disminuye en la misma proporción, y viceversa</p>
+<p>Imagina un medio periodístico que verifica noticias antes de publicarlas. A mayor <strong>tiempo dedicado a verificar noticias</strong>, menor es el <strong>número de errores</strong> en las publicaciones. La siguiente tabla se muestra los datos:</p>
+<div id="tbl-mytable10" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4: Relación entre Tiempo de verificación y Errores en publicaciones
+</figcaption>
+<div aria-describedby="tbl-mytable10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 72%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tiempo de verificación (<img src="https://latex.codecogs.com/png.latex?x">, en horas)</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Errores en publicaciones (<img src="https://latex.codecogs.com/png.latex?y">, en cantidad)</td>
+<td>40</td>
+<td>20</td>
+<td>10</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El tiempo de verificación y los errores en publicaciones son <strong>inversamente proporcionales</strong>. Esto se verifica porque el producto de ambas magnitudes es constante:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A(%5Ctext%7BTiempo%20de%20verificaci%C3%B3n%7D)%20%5Ccdot%20(%5Ctext%7BErrores%7D)%20=%201%20%5Ccdot%2040%20=%202%20%5Ccdot%2020%20=%204%20%5Ccdot%2010%20=%208%20%5Ccdot%205%20=%2040%0A"></p>
+<p>La <strong>constante de proporcionalidad inversa</strong> es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ax%20%5Ccdot%20y%20=%2040%0A"></p>
+<p>La relación se expresa como:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ay%20=%20%5Cfrac%7B40%7D%7Bx%7D%0A"></p>
+</section>
+<section id="representación-gráfica-1" class="level2">
+<h2 class="anchored" data-anchor-id="representación-gráfica-1">Representación Gráfica</h2>
+<p>La relación inversamente proporcional se visualiza como una curva hiperbólica.</p>
+<div id="708effce" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb2-5">x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>])  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tiempo de verificación (en horas)</span></span>
+<span id="cb2-6">y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>])  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Errores en publicaciones (en cantidad)</span></span>
+<span id="cb2-7"></span>
+<span id="cb2-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb2-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb2-10">plt.plot(x, y, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'*-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb2-11">plt.plot(x, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>x, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Curva de proporcionalidad ($y = 40/x$)'</span>)</span>
+<span id="cb2-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Tiempo de verificación ($x$, en horas)'</span>)</span>
+<span id="cb2-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Errores en publicaciones ($y$, en cantidad)'</span>)</span>
+<span id="cb2-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Relación entre Verificación y Errores')</span></span>
+<span id="cb2-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb2-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb2-17"></span>
+<span id="cb2-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb2-19">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb2-20">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb2-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb2-22"></span>
+<span id="cb2-23">plt.tight_layout()</span>
+<span id="cb2-24">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Relación entre Tiempo de verificación y Errores en publicaciones"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img" alt="Relación entre Tiempo de verificación y Errores en publicaciones"></a></p>
+<figcaption>Relación entre Tiempo de verificación y Errores en publicaciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La gráfica muestra cómo, al aumentar el tiempo de verificación, el número de errores disminuye, siguiendo una relación inversa.</p>
+</section>
+<section id="caso-general-1" class="level2">
+<h2 class="anchored" data-anchor-id="caso-general-1">Caso General</h2>
+<p>Para dos magnitudes inversamente proporcionales <img src="https://latex.codecogs.com/png.latex?A"> e <img src="https://latex.codecogs.com/png.latex?B">, se cumple:</p>
+<div id="tbl-mytable11" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5: Magnitudes inversamente proporcionales
+</figcaption>
+<div aria-describedby="tbl-mytable11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><img src="https://latex.codecogs.com/png.latex?A"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_1"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_2"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_3"></th>
+<th><img src="https://latex.codecogs.com/png.latex?%5Cdots"></th>
+<th><img src="https://latex.codecogs.com/png.latex?A_n"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_1"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_2"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_3"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cdots"></td>
+<td><img src="https://latex.codecogs.com/png.latex?B_n"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El producto de las magnitudes es constante:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA_1%20%5Ccdot%20B_1%20=%20A_2%20%5Ccdot%20B_2%20=%20A_3%20%5Ccdot%20B_3%20=%20%5Cdots%20=%20A_n%20%5Ccdot%20B_n%20=%20k%0A"></p>
+<p>En general:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA_i%20%5Ccdot%20B_i%20=%20k,%20%5Cquad%20%5Ctext%7Bdonde%20%7D%201%20%5Cleq%20i%20%3C%20n,%20%5Cquad%20i%20%5Cin%20%5Cmathbb%7BZ%7D%0A"></p>
+<p>Aquí, <img src="https://latex.codecogs.com/png.latex?k"> es la <strong>constante de proporcionalidad inversa</strong>.</p>
+</section>
+<section id="función-de-proporcionalidad-inversa" class="level2">
+<h2 class="anchored" data-anchor-id="función-de-proporcionalidad-inversa">Función de Proporcionalidad Inversa</h2>
+<p>La relación inversamente proporcional se expresa como:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ay%20=%20%5Cfrac%7Bk%7D%7Bx%7D%0A"></p>
+<p>donde <img src="https://latex.codecogs.com/png.latex?y"> es la magnitud dependiente (errores), <img src="https://latex.codecogs.com/png.latex?x"> es la magnitud independiente (tiempo de verificación) y <img src="https://latex.codecogs.com/png.latex?k"> es la constante de proporcionalidad inversa.</p>
+<p><strong>Ejemplo</strong> Frecuencia de Titulares Clickbait y Confianza del Lector</p>
+<p>Consideremos otro ejemplo: la relación entre la <strong>frecuencia de titulares clickbait</strong> (titulares exagerados para atraer clics) y la <strong>confianza del lector</strong> en un medio:</p>
+<div id="tbl-mytable12" class="quarto-float quarto-figure quarto-figure-center anchored" data-apa-note="Elaboración propia" data-quarto-disable-processing="true">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6: Relación entre Frecuencia de titulares clickbait y Confianza del lector
+</figcaption>
+<div aria-describedby="tbl-mytable12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 76%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frecuencia de titulares clickbait (<img src="https://latex.codecogs.com/png.latex?x">, por semana)</th>
+<th>12</th>
+<th>4</th>
+<th>2.4</th>
+<th>1.3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Confianza del lector (<img src="https://latex.codecogs.com/png.latex?y">, en escala 1-50)</td>
+<td>5</td>
+<td>15</td>
+<td>25</td>
+<td>45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El producto es constante:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A12%20%5Ccdot%205%20=%204%20%5Ccdot%2015%20=%202.4%20%5Ccdot%2025%20=%201.3%20%5Ccdot%2045%20=%2060%0A"></p>
+<p>La constante de proporcionalidad inversa es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ax%20%5Ccdot%20y%20=%2060%0A"></p>
+<p>La función es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ay%20=%20%5Cfrac%7B60%7D%7Bx%7D%0A"></p>
+</section>
+<section id="propiedades" class="level2">
+<h2 class="anchored" data-anchor-id="propiedades">Propiedades</h2>
+<p>Sean las magnitudes <img src="https://latex.codecogs.com/png.latex?A"> y <img src="https://latex.codecogs.com/png.latex?B">, entonces:</p>
+<ol type="1">
+<li>Si <img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20DP%20%7D%20B%20%5CRightarrow%20B%20%5Ctext%7B%20DP%20%7D%20A"></li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20IP%20%7D%20B%20%5CRightarrow%20B%20%5Ctext%7B%20IP%20%7D%20A"></li>
+<li><img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20IP%20%7D%20B%20%5CLeftrightarrow%20A%20%5Ctext%7B%20DP%20%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BB%7D%20%5Cright)"></li>
+<li><img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20DP%20%7D%20B%20%5CLeftrightarrow%20A%20%5Ctext%7B%20IP%20%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BB%7D%20%5Cright)"></li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BQ%7D">, entonces:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20DP%20%7D%20B%20%5CLeftrightarrow%20A%5En%20%5Ctext%7B%20DP%20%7D%20B%5En"></li>
+<li><img src="https://latex.codecogs.com/png.latex?A%20%5Ctext%7B%20IP%20%7D%20B%20%5CLeftrightarrow%20A%5En%20%5Ctext%7B%20IP%20%7D%20B%5En"></li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="aplicaciones-de-las-magnitudes-proporcionales" class="level1">
+<h1>Aplicaciones de las Magnitudes Proporcionales</h1>
+<p>Las magnitudes proporcionales permiten distribuir cantidades de forma equitativa según una relación directa o inversa. Este proceso, conocido como <strong>reparto proporcional</strong>, asigna una cantidad total entre varias partes según una variable de referencia. Se divide en dos tipos: <strong>reparto directo</strong> y <strong>reparto inverso</strong>.</p>
+<section id="reparto-directo" class="level2">
+<h2 class="anchored" data-anchor-id="reparto-directo">Reparto Directo</h2>
+<p>El reparto directo distribuye una cantidad total entre varias partes proporcionalmente a sus magnitudes. Por ejemplo, supongamos que se desea repartir un presupuesto de S/ 12,000 entre tres proyectos según el número de publicaciones planificadas, con proporciones de 1, 3 y 4.</p>
+<p>Calculamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BTotal%20a%20repartir:%20%7D%2012,000%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cbegin%7Bcases%7D%0A1k%20=%20%5Ctext%7BMonto%20para%20el%20primer%20proyecto%7D%20%5C%5C%0A3k%20=%20%5Ctext%7BMonto%20para%20el%20segundo%20proyecto%7D%20%5C%5C%0A4k%20=%20%5Ctext%7BMonto%20para%20el%20tercer%20proyecto%7D%20%5C%5C%0A%5Cend%7Bcases%7D%0A%5Cend%7Balign*%7D"></p>
+<p>La suma total es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A1k%20+%203k%20+%204k%20=%208k%20=%2012,000%0A"></p>
+<p>Resolviendo para <img src="https://latex.codecogs.com/png.latex?k">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ak%20=%20%5Cfrac%7B12,000%7D%7B8%7D%20=%201,500%0A"></p>
+<p>Por lo tanto, los montos asignados son:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cbegin%7Bcases%7D%0A1k%20=%201%20%5Ccdot%201,500%20=%201,500%20%5C%5C%0A3k%20=%203%20%5Ccdot%201,500%20=%204,500%20%5C%5C%0A4k%20=%204%20%5Ccdot%201,500%20=%206,000%20%5C%5C%0A%5Cend%7Bcases%7D%0A%5Cend%7Balign*%7D"></p>
+<p>Los proyectos reciben S/ 1,500, S/ 4,500 y S/ 6,000, respectivamente.</p>
+<section id="gráfica-del-reparto-directo" class="level3">
+<h3 class="anchored" data-anchor-id="gráfica-del-reparto-directo">Gráfica del Reparto Directo</h3>
+<p>La siguiente gráfica ilustra cómo se distribuye el presupuesto según las proporciones:</p>
+<div id="7873049f" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb3-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb3-3"></span>
+<span id="cb3-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb3-5">proyectos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proyecto 1'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proyecto 2'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proyecto 3'</span>]</span>
+<span id="cb3-6">proporciones <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>])</span>
+<span id="cb3-7">montos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> proporciones <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1500</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># k = 1500</span></span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb3-10">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb3-11">plt.bar(proyectos, montos, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'skyblue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado'</span>)</span>
+<span id="cb3-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proyectos'</span>)</span>
+<span id="cb3-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado (S/)'</span>)</span>
+<span id="cb3-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Reparto directo del presupuesto')</span></span>
+<span id="cb3-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True, axis='y')</span></span>
+<span id="cb3-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb3-17"></span>
+<span id="cb3-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb3-19">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb3-20">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb3-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb3-22"></span>
+<span id="cb3-23">plt.tight_layout()</span>
+<span id="cb3-24">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-4-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Distribución del presupuesto según número de publicaciones"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img" alt="Distribución del presupuesto según número de publicaciones"></a></p>
+<figcaption>Distribución del presupuesto según número de publicaciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="reparto-inverso" class="level2">
+<h2 class="anchored" data-anchor-id="reparto-inverso">Reparto Inverso</h2>
+<p>El reparto inverso distribuye una cantidad total entre varias partes de forma inversamente proporcional a sus magnitudes. Por ejemplo, supongamos que se desea repartir un fondo de S/ 60,000 entre tres equipos según el tiempo de entrega de artículos, con proporciones de 1, 2 y 4 horas.</p>
+<p>La distribución se calcula como sigue:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BTotal%20a%20repartir:%20%7D%2060,000%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cbegin%7Bcases%7D%0A%5Cfrac%7Bk%7D%7B1%7D%20=%20%5Ctext%7BMonto%20para%20el%20primer%20equipo%7D%20%5C%5C%0A%5Cfrac%7Bk%7D%7B2%7D%20=%20%5Ctext%7BMonto%20para%20el%20segundo%20equipo%7D%20%5C%5C%0A%5Cfrac%7Bk%7D%7B4%7D%20=%20%5Ctext%7BMonto%20para%20el%20tercer%20equipo%7D%20%5C%5C%0A%5Cend%7Bcases%7D%0A%5Cend%7Balign*%7D"></p>
+<p>La suma total es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bk%7D%7B1%7D%20+%20%5Cfrac%7Bk%7D%7B2%7D%20+%20%5Cfrac%7Bk%7D%7B4%7D%20=%20k%20%5Cleft(1%20+%20%5Cfrac%7B1%7D%7B2%7D%20+%20%5Cfrac%7B1%7D%7B4%7D%5Cright)%20=%20k%20%5Ccdot%20%5Cfrac%7B7%7D%7B4%7D%20=%2060,000%0A"></p>
+<p>Resolviendo para <img src="https://latex.codecogs.com/png.latex?k">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ak%20=%20%5Cfrac%7B60,000%20%5Ccdot%204%7D%7B7%7D%20%5Capprox%2034,285.71%0A"></p>
+<p>Por lo tanto, los montos asignados son:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cbegin%7Bcases%7D%0A%5Cfrac%7Bk%7D%7B1%7D%20%5Capprox%20%5Cfrac%7B34,285.71%7D%7B1%7D%20%5Capprox%2034,285.71%20%5C%5C%0A%5Cfrac%7Bk%7D%7B2%7D%20%5Capprox%20%5Cfrac%7B34,285.71%7D%7B2%7D%20%5Capprox%2017,142.86%20%5C%5C%0A%5Cfrac%7Bk%7D%7B4%7D%20%5Capprox%20%5Cfrac%7B34,285.71%7D%7B4%7D%20%5Capprox%208,571.43%20%5C%5C%0A%5Cend%7Bcases%7D%0A%5Cend%7Balign*%7D"></p>
+<p>Los equipos reciben aproximadamente S/ 34,286, S/ 17,143 y S/ 8,571, respectivamente.</p>
+<section id="gráfica-del-reparto-inverso" class="level3">
+<h3 class="anchored" data-anchor-id="gráfica-del-reparto-inverso">Gráfica del Reparto Inverso</h3>
+<p>La siguiente gráfica se muestra cómo se distribuye el fondo según el tiempo de entrega:</p>
+<div id="b707df3f" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb4-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb4-5">equipos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Equipo 1'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Equipo 2'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Equipo 3'</span>]</span>
+<span id="cb4-6">tiempos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>])</span>
+<span id="cb4-7">k <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">34285.71</span></span>
+<span id="cb4-8">montos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> k <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> tiempos  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># k dividido por los tiempos</span></span>
+<span id="cb4-9"></span>
+<span id="cb4-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb4-11">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb4-12">plt.bar(equipos, montos, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'lightcoral'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado'</span>)</span>
+<span id="cb4-13">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Equipos'</span>)</span>
+<span id="cb4-14">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado (S/)'</span>)</span>
+<span id="cb4-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Reparto inverso del fondo')</span></span>
+<span id="cb4-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True, axis='y')</span></span>
+<span id="cb4-17"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb4-18"></span>
+<span id="cb4-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb4-20">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb4-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb4-22">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb4-23"></span>
+<span id="cb4-24">plt.tight_layout()</span>
+<span id="cb4-25">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Distribución del fondo según tiempo de entrega"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img" alt="Distribución del fondo según tiempo de entrega"></a></p>
+<figcaption>Distribución del fondo según tiempo de entrega</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="regla-de-tres-y-porcentajes" class="level1">
+<h1>Regla de Tres y Porcentajes</h1>
+<p>La regla de tres y los porcentajes son herramientas matemáticas esenciales para resolver problemas de proporcionalidad y comparación de datos.</p>
+<section id="regla-de-tres" class="level2">
+<h2 class="anchored" data-anchor-id="regla-de-tres">Regla de Tres</h2>
+<p>La <strong>regla de tres</strong> permite encontrar un valor desconocido a partir de tres valores conocidos, en relaciones de proporcionalidad directa o inversa.</p>
+<section id="regla-de-tres-simple-directa" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-simple-directa">Regla de Tres Simple Directa</h3>
+<p>En una relación <strong>directamente proporcional</strong>, si una magnitud aumenta, la otra también lo hace en la misma proporción, cumpliendo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Ctext%7BMagnitud%201%7D%7D%7B%5Ctext%7BMagnitud%202%7D%7D%20=%20k%0A"></p>
+<p>De forma práctica, se multiplica en cruz:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Aa%20%5Ccdot%20x%20=%20b%20%5Ccdot%20c%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7Bb%20%5Ccdot%20c%7D%7Ba%7D%0A"></p>
+<p><strong>Ejemplo</strong>: Si escribir 2 artículos toma 4 horas, ¿cuánto tiempo tomará escribir 5 artículos?</p>
+<p>Planteamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B2%20%5Ctext%7B%20art%C3%ADculos%7D%7D%7B4%20%5Ctext%7B%20horas%7D%7D%20=%20%5Cfrac%7B5%20%5Ctext%7B%20art%C3%ADculos%7D%7D%7Bx%20%5Ctext%7B%20horas%7D%7D%0A"></p>
+<p>Multiplicamos en cruz:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A2%20%5Ccdot%20x%20=%204%20%5Ccdot%205%20%5Cquad%20%5CRightarrow%20%5Cquad%202x%20=%2020%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B20%7D%7B2%7D%20=%2010%0A"></p>
+<p>Tomará 10 horas escribir 5 artículos.</p>
+<section id="gráfica-de-la-regla-de-tres-directa" class="level4">
+<h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-directa">Gráfica de la Regla de Tres Directa</h4>
+<p>La siguiente gráfica muestra la relación proporcional entre artículos y tiempo:</p>
+<div id="2a11313f" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb5-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb5-3"></span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb5-5">articulos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>])</span>
+<span id="cb5-6">tiempo <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>])</span>
+<span id="cb5-7"></span>
+<span id="cb5-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb5-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb5-10">plt.plot(articulos, tiempo, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb5-11">plt.plot(articulos, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>articulos, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proporción ($y = 2x$)'</span>)</span>
+<span id="cb5-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Número de artículos'</span>)</span>
+<span id="cb5-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Tiempo (horas)'</span>)</span>
+<span id="cb5-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Regla de tres simple directa')</span></span>
+<span id="cb5-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb5-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb5-17"></span>
+<span id="cb5-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb5-19">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb5-20">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb5-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb5-22"></span>
+<span id="cb5-23">plt.tight_layout()</span>
+<span id="cb5-24">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Relación entre número de artículos y tiempo de escritura"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img" alt="Relación entre número de artículos y tiempo de escritura"></a></p>
+<figcaption>Relación entre número de artículos y tiempo de escritura</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regla-de-tres-simple-inversa" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-simple-inversa">Regla de Tres Simple Inversa</h3>
+<p>En una relación <strong>inversamente proporcional</strong>, si una magnitud aumenta, la otra disminuye, cumpliendo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BMagnitud%201%7D%20%5Ccdot%20%5Ctext%7BMagnitud%202%7D%20=%20k%0A"></p>
+<p>De forma práctica, se multiplica en paralelo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Aa%20%5Ccdot%20b%20=%20c%20%5Ccdot%20x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7Ba%20%5Ccdot%20b%7D%7Bc%7D%0A"></p>
+<p><strong>Ejemplo</strong>: Si con 4 máquinas se imprimen 200 revistas en 8 horas, ¿cuánto tiempo tomará con 12 máquinas?</p>
+<p>Planteamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A4%20%5Ccdot%208%20=%2012%20%5Ccdot%20x%0A"></p>
+<p>Resolviendo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A4%20%5Ccdot%208%20=%2012x%20%5Cquad%20%5CRightarrow%20%5Cquad%2032%20=%2012x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B32%7D%7B12%7D%20%5Capprox%202.67%0A"></p>
+<p>Con 12 máquinas, tomará aproximadamente 2.67 horas.</p>
+<section id="gráfica-de-la-regla-de-tres-inversa" class="level4">
+<h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-inversa">Gráfica de la Regla de Tres Inversa</h4>
+<p>La siguiente gráfica muestra la relación inversa entre máquinas y tiempo:</p>
+<div id="a7695e41" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb6-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb6-3"></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb6-5">maquinas <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>])</span>
+<span id="cb6-6">tiempo <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.67</span>])</span>
+<span id="cb6-7"></span>
+<span id="cb6-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb6-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb6-10">plt.plot(maquinas, tiempo, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb6-11">plt.plot(maquinas, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>maquinas, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proporción ($y = 32/x$)'</span>)</span>
+<span id="cb6-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Número de máquinas'</span>)</span>
+<span id="cb6-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Tiempo (horas)'</span>)</span>
+<span id="cb6-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.title('Regla de tres simple inversa')</span></span>
+<span id="cb6-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb6-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.legend()</span></span>
+<span id="cb6-17"></span>
+<span id="cb6-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb6-19">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb6-20">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb6-21">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb6-22"></span>
+<span id="cb6-23">plt.tight_layout()</span>
+<span id="cb6-24">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Relación entre número de máquinas y tiempo de impresión"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img" alt="Relación entre número de máquinas y tiempo de impresión"></a></p>
+<figcaption>Relación entre número de máquinas y tiempo de impresión</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regla-de-tres-compuesta" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-compuesta">Regla de Tres Compuesta</h3>
+<p>La <strong>regla de tres compuesta</strong> se usa cuando más de dos magnitudes están involucradas. Se combinan proporciones directas e inversas para resolver el problema.</p>
+<p><strong>Ejemplo</strong>: Si 3 periodistas escriben 6 artículos en 12 horas, ¿cuánto tiempo tomará a 6 periodistas escribir 12 artículos?</p>
+<ul>
+<li><strong>Proporción directa</strong> (artículos): Más artículos requieren más tiempo.</li>
+<li><strong>Proporción inversa</strong> (journalistas): Más periodistas reducen el tiempo.</li>
+</ul>
+<p>Planteamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B3%20%5Ctext%7B%20periodistas%7D%20%5Ccdot%2012%20%5Ctext%7B%20horas%7D%7D%7B6%20%5Ctext%7B%20art%C3%ADculos%7D%7D%20=%20%5Cfrac%7B6%20%5Ctext%7B%20periodistas%7D%20%5Ccdot%20x%20%5Ctext%7B%20horas%7D%7D%7B12%20%5Ctext%7B%20art%C3%ADculos%7D%7D%0A"></p>
+<p>Simplificando:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B3%20%5Ccdot%2012%7D%7B6%7D%20=%20%5Cfrac%7B6%20%5Ccdot%20x%7D%7B12%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B36%7D%7B6%7D%20=%20%5Cfrac%7B6x%7D%7B12%7D%20%5Cquad%20%5CRightarrow%20%5Cquad%206%20=%20%5Cfrac%7B6x%7D%7B12%7D%20%5Cquad%20%5CRightarrow%20%5Cquad%206%20%5Ccdot%2012%20=%206x%20%5Cquad%20%5CRightarrow%20%5Cquad%2072%20=%206x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%2012%0A"></p>
+<p>Tomará 12 horas.</p>
+</section>
+</section>
+<section id="porcentajes" class="level2">
+<h2 class="anchored" data-anchor-id="porcentajes">Porcentajes</h2>
+<p>El <strong>porcentaje</strong> expresa una proporción en términos de “por cada cien”, facilitando la comparación de datos. La fórmula para calcular un porcentaje es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Ba%20por%20ciento%20de%20N%7D%20=%20a%25%20%5Ctext%7B%20de%20%7D%20N%20=%20%5Cfrac%7Ba%7D%7B100%7D%20%5Ccdot%20N%0A"></p>
+<p><strong>Ejemplo</strong>: Calcular el 25% de 200 lectores.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A25%25%20%5Ctext%7B%20de%20%7D%20200%20=%20%5Cfrac%7B25%7D%7B100%7D%20%5Ccdot%20200%20=%2050%0A"></p>
+<p>50 lectores representan el 25% de 200.</p>
+<section id="parte-de-un-total-como-porcentaje" class="level3">
+<h3 class="anchored" data-anchor-id="parte-de-un-total-como-porcentaje">Parte de un Total como Porcentaje</h3>
+<p>Para expresar una parte de un total en porcentaje:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Ctext%7BParte%7D%7D%7B%5Ctext%7BTotal%7D%7D%20%5Ccdot%20100%25%20=%20%5Cfrac%7Ba%7D%7Bb%7D%20%5Ccdot%20100%25%0A"></p>
+<p><strong>Ejemplo</strong>: Si 30 de 150 suscriptores leen un artículo, ¿qué porcentaje representa?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B30%7D%7B150%7D%20%5Ccdot%20100%25%20=%2020%25%0A"></p>
+<p>El 20% de los suscriptores leyeron el artículo.</p>
+</section>
+<section id="operaciones-con-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="operaciones-con-porcentajes">Operaciones con Porcentajes</h3>
+<p>Un número se puede expresar como el 100% de sí mismo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AN%20=%20100%25%20%5Ccdot%20N%0A"></p>
+<p><strong>Ejemplo</strong>: Si el 40% de un presupuesto más el 60% del mismo presupuesto se usan, ¿qué porcentaje total se gastó?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A40%25N%20+%2060%25N%20=%20100%25N%0A"></p>
+<p>Se gastó el 100% del presupuesto.</p>
+</section>
+<section id="aplicaciones-de-los-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="aplicaciones-de-los-porcentajes">Aplicaciones de los Porcentajes</h3>
+<section id="a.-descuentos-sucesivos" class="level4">
+<h4 class="anchored" data-anchor-id="a.-descuentos-sucesivos">a. Descuentos Sucesivos</h4>
+<p>Para dos descuentos consecutivos de <img src="https://latex.codecogs.com/png.latex?a%25"> y <img src="https://latex.codecogs.com/png.latex?b%25">, el descuento único equivalente es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BDescuento%20%C3%BAnico%7D%20=%20(a%20+%20b)%20-%20%5Cfrac%7Ba%20%5Ccdot%20b%7D%7B100%7D%0A"></p>
+<p><strong>Ejemplo</strong>: Un equipo de publicidad aplica descuentos del 10% y 20% en un contrato. ¿Cuál es el descuento único equivalente?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BDescuento%20%C3%BAnico%7D%20=%20(10%20+%2020)%20-%20%5Cfrac%7B10%20%5Ccdot%2020%7D%7B100%7D%20=%2030%20-%202%20=%2028%0A"></p>
+<p>El descuento único es del 28%.</p>
+</section>
+<section id="b.-aumentos-sucesivos" class="level4">
+<h4 class="anchored" data-anchor-id="b.-aumentos-sucesivos">b. Aumentos Sucesivos</h4>
+<p>Para dos incrementos consecutivos de <img src="https://latex.codecogs.com/png.latex?a%25"> y <img src="https://latex.codecogs.com/png.latex?b%25">, el aumento único equivalente es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BAumento%20%C3%BAnico%7D%20=%20(a%20+%20b)%20+%20%5Cfrac%7Ba%20%5Ccdot%20b%7D%7B100%7D%0A"></p>
+<p><strong>Ejemplo</strong>: Si un presupuesto aumenta un 15% y luego un 10%, ¿cuál es el aumento único equivalente?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BAumento%20%C3%BAnico%7D%20=%20(15%20+%2010)%20+%20%5Cfrac%7B15%20%5Ccdot%2010%7D%7B100%7D%20=%2025%20+%201.5%20=%2026.5%0A"></p>
+<p>El aumento único es del 26.5%.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="ejemplos-aplicados-a-ciencias-de-la-comunicación" class="level1">
+<h1>Ejemplos Aplicados a Ciencias de la Comunicación</h1>
+<section id="ejercicio-1" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h2>
+<p><strong>Problema</strong>: Si producir 3 videos promocionales requiere 9 horas de trabajo, ¿cuánto tiempo tomará producir 7 videos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Dado que el número de videos y el tiempo de trabajo son directamente proporcionales, usamos la regla de tres simple directa:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Ctext%7BMagnitud%201%7D%7D%7B%5Ctext%7BMagnitud%202%7D%7D%20=%20k%20%5Cquad%20%5CRightarrow%20%5Cquad%20a%20%5Ccdot%20x%20=%20b%20%5Ccdot%20c%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7Bb%20%5Ccdot%20c%7D%7Ba%7D%0A"></p>
+<p>Planteamos la proporción:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B3%20%5Ctext%7B%20videos%7D%7D%7B9%20%5Ctext%7B%20horas%7D%7D%20=%20%5Cfrac%7B7%20%5Ctext%7B%20videos%7D%7D%7Bx%20%5Ctext%7B%20horas%7D%7D%0A"></p>
+<p>Multiplicamos en cruz:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A3%20%5Ccdot%20x%20=%209%20%5Ccdot%207%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A3x%20=%2063%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B63%7D%7B3%7D%20=%2021%0A"></p>
+<p>Se necesitan 21 horas para producir 7 videos.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="ada6e0b9" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb7-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb7-3"></span>
+<span id="cb7-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb7-5">videos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>])</span>
+<span id="cb7-6">tiempo <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">21</span>])</span>
+<span id="cb7-7"></span>
+<span id="cb7-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb7-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb7-10">plt.plot(videos, tiempo, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb7-11">plt.plot(videos, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>videos, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proporción ($y = 3x$)'</span>)</span>
+<span id="cb7-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Número de videos'</span>)</span>
+<span id="cb7-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Tiempo (horas)'</span>)</span>
+<span id="cb7-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb7-15">plt.legend()</span>
+<span id="cb7-16">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb7-17">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb7-18">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb7-19">plt.tight_layout()</span>
+<span id="cb7-20">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Relación entre número de videos y tiempo de producción"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img" alt="Relación entre número de videos y tiempo de producción"></a></p>
+<figcaption>Relación entre número de videos y tiempo de producción</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-2" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h2>
+<p><strong>Problema</strong>: Si 5 diseñadores tardan 10 días en crear 100 gráficos, ¿cuántos días tardarán 10 diseñadores en crear los mismos 100 gráficos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Dado que el número de diseñadores y el tiempo son inversamente proporcionales (a más diseñadores, menos tiempo), usamos la regla de tres simple inversa:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BMagnitud%201%7D%20%5Ccdot%20%5Ctext%7BMagnitud%202%7D%20=%20k%20%5Cquad%20%5CRightarrow%20%5Cquad%20a%20%5Ccdot%20b%20=%20c%20%5Ccdot%20x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7Ba%20%5Ccdot%20b%7D%7Bc%7D%0A"></p>
+<p>Planteamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A5%20%5Ctext%7B%20dise%C3%B1adores%7D%20%5Ccdot%2010%20%5Ctext%7B%20d%C3%ADas%7D%20=%2010%20%5Ctext%7B%20dise%C3%B1adores%7D%20%5Ccdot%20x%20%5Ctext%7B%20d%C3%ADas%7D%0A"></p>
+<p>Multiplicamos en paralelo:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A5%20%5Ccdot%2010%20=%2010%20%5Ccdot%20x%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A50%20=%2010x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B50%7D%7B10%7D%20=%205%0A"></p>
+<p>Con 10 diseñadores, se tardarán 5 días.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="3815f078" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb8-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb8-3"></span>
+<span id="cb8-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb8-5">disenadores <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>])</span>
+<span id="cb8-6">tiempo <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>])</span>
+<span id="cb8-7"></span>
+<span id="cb8-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb8-9">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb8-10">plt.plot(disenadores, tiempo, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o-'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'blue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Datos observados'</span>)</span>
+<span id="cb8-11">plt.plot(disenadores, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>disenadores, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gray'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Proporción ($y = 50/x$)'</span>)</span>
+<span id="cb8-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Número de diseñadores'</span>)</span>
+<span id="cb8-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Tiempo (días)'</span>)</span>
+<span id="cb8-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True)</span></span>
+<span id="cb8-15">plt.legend()</span>
+<span id="cb8-16">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb8-17">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb8-18">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb8-19">plt.tight_layout()</span>
+<span id="cb8-20">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Relación entre número de diseñadores y tiempo de creación"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img" alt="Relación entre número de diseñadores y tiempo de creación"></a></p>
+<figcaption>Relación entre número de diseñadores y tiempo de creación</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-3" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h2>
+<p><strong>Problema</strong>: Se desea repartir un presupuesto de S/ 15,000 entre tres campañas según el número de anuncios planificados, con proporciones de 2, 3 y 5. ¿Cuánto recibirá cada campaña?</p>
+<p><strong>Solución</strong>:</p>
+<p>Usamos el reparto proporcional directo, donde el presupuesto se distribuye según las proporciones:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BTotal%20a%20repartir:%20%7D%2015,000%0A"></p>
+<p>Asignamos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2k%20=%20%5Ctext%7BMonto%20para%20la%20primera%20campa%C3%B1a%7D%20%5C%0A3k%20=%20%5Ctext%7BMonto%20para%20la%20segunda%20campa%C3%B1a%7D%20%5C%0A5k%20=%20%5Ctext%7BMonto%20para%20la%20tercera%20campa%C3%B1a%7D%20%5C%0A%5Cend%7Bcases%7D%0A"></p>
+<p>La suma total es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A2k%20+%203k%20+%205k%20=%2010k%20=%2015,000%0A"></p>
+<p>Resolviendo para <img src="https://latex.codecogs.com/png.latex?k">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ak%20=%20%5Cfrac%7B15,000%7D%7B10%7D%20=%201,500%0A"></p>
+<p>Calculamos los montos:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2k%20=%202%20%5Ccdot%201,500%20=%203,000%20%5C%0A3k%20=%203%20%5Ccdot%201,500%20=%204,500%20%5C%0A5k%20=%205%20%5Ccdot%201,500%20=%207,500%20%5C%0A%5Cend%7Bcases%7D%0A"></p>
+<p>Las campañas reciben S/ 3,000, S/ 4,500 y S/ 7,500, respectivamente.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="74acdfd5" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb9-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb9-3"></span>
+<span id="cb9-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Datos</span></span>
+<span id="cb9-5">campanas <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Campaña 1'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Campaña 2'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Campaña 3'</span>]</span>
+<span id="cb9-6">proporciones <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>])</span>
+<span id="cb9-7">montos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> proporciones <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1500</span></span>
+<span id="cb9-8"></span>
+<span id="cb9-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gráfica</span></span>
+<span id="cb9-10">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))</span>
+<span id="cb9-11">plt.bar(campanas, montos, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'skyblue'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado'</span>)</span>
+<span id="cb9-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Campañas'</span>)</span>
+<span id="cb9-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Monto asignado (S/)'</span>)</span>
+<span id="cb9-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plt.grid(True, axis='y')</span></span>
+<span id="cb9-15">plt.legend()</span>
+<span id="cb9-16">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.gca()</span>
+<span id="cb9-17">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'top'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb9-18">ax.spines[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb9-19">plt.tight_layout()</span>
+<span id="cb9-20">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-10-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Distribución del presupuesto según número de anuncios"><img src="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img" alt="Distribución del presupuesto según número de anuncios"></a></p>
+<figcaption>Distribución del presupuesto según número de anuncios</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-4" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h2>
+<p><strong>Problema</strong>: Un contrato de servicios tiene un costo original de S/ 1,000. Se aplican dos descuentos sucesivos del 15% y del 10%. ¿Cuál es el costo final después de los descuentos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Para calcular el costo final, usamos la fórmula de descuentos sucesivos para encontrar el descuento único equivalente:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BDescuento%20%C3%BAnico%7D%20=%20(a%20+%20b)%20-%20%5Cfrac%7Ba%20%5Ccdot%20b%7D%7B100%7D%0A"></p>
+<p>Donde <img src="https://latex.codecogs.com/png.latex?a%20=%2015%25"> y <img src="https://latex.codecogs.com/png.latex?b%20=%2010%25">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BDescuento%20%C3%BAnico%7D%20=%20(15%20+%2010)%20-%20%5Cfrac%7B15%20%5Ccdot%2010%7D%7B100%7D%20=%2025%20-%201.5%20=%2023.5%0A"></p>
+<p>El descuento total es del 23.5%. Calculamos el monto del descuento:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7BMonto%20descontado%7D%20=%2023.5%25%20%5Ctext%7B%20de%20%7D%201,000%20=%20%5Cfrac%7B23.5%7D%7B100%7D%20%5Ccdot%201,000%20=%20235%0A"></p>
+<p>El costo final es:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A1,000%20-%20235%20=%20765%0A"></p>
+<p>El costo final es S/ 765.</p>
+</section>
+</section>
+<section id="conclusiones-y-recomendaciones" class="level1">
+<h1>Conclusiones y Recomendaciones</h1>
+<p>La proporcionalidad, a través de herramientas como la regla de tres simple, el reparto proporcional y los porcentajes, proporciona un marco matemático para abordar desafíos en la gestión de recursos y el análisis de datos. Estas técnicas permiten optimizar la asignación de presupuestos, planificar tiempos de producción y evaluar métricas de impacto, asegurando decisiones estratégicas basadas en cálculos precisos. Su simplicidad y versatilidad las convierten en recursos esenciales para profesionales que buscan eficiencia en entornos dinámicos, conectando la teoría matemática con aplicaciones prácticas.</p>
+<p>Para maximizar el impacto de estas herramientas, se recomienda incorporar módulos prácticos en los planes de estudio de ciencias de la comunicación, enfocados en resolver problemas reales, como la distribución de recursos o el análisis de indicadores de audiencia. Asimismo, se sugiere desarrollar talleres interactivos y recursos digitales, como simuladores o aplicaciones, que faciliten el aprendizaje de estas técnicas y refuercen las competencias cuantitativas de los estudiantes.</p>
+</section>
+<section id="bibliografía-y-referencias" class="level1">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía y referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-abdounurPreliminarySurveyEmergence2009" class="csl-entry">
+Abdounur, Oscar João. 2009. <span>«A Preliminary Survey on the Emergence of an Arithmetical Theory of Ratios»</span>. <em>Circumscribere</em> 9: 1-8. <a href="https://repositorio.usp.br/item/003065271">https://repositorio.usp.br/item/003065271</a>.
+</div>
+<div id="ref-aricanInvestigatingPreserviceMathematics2022" class="csl-entry">
+Arican, Muhammet, y Yasemin Kiymaz. 2022. <span>«Investigating <span>Preservice Mathematics Teachers</span>’ <span>Definitions</span>, <span>Formulas</span>, and <span>Graphs</span> of <span>Directly</span> and <span>Inversely Proportional Relationships</span>»</span>. <em>The Mathematics Enthusiast</em> 19 (2): 632-56. <a href="https://doi.org/10.54870/1551-3440.1566">https://doi.org/10.54870/1551-3440.1566</a>.
+</div>
+<div id="ref-kimSilvioBellisRatio2023" class="csl-entry">
+Kim, Williams. 2023. <span>«Silvio <span>Belli</span>’s <span>On Ratio</span> and <span>Proportion</span> | <span>Nexus Network Journal</span>»</span>. <em>Nexus Network Journal</em> 25: 5-39. <a href="https://doi.org/10.1007/s00004-022-00638-4">https://doi.org/10.1007/s00004-022-00638-4</a>.
+</div>
+<div id="ref-parkHistoricalDevelopmentsProcess2008" class="csl-entry">
+Park, Jung-Sook. 2008. <span>«The Historical Developments Process of the Representations and Meanings for Ratio and Proportion»</span>. <em>Journal for History of Mathematics</em> 21 (3): 53-66. <a href="https://koreascience.kr/article/JAKO200800557082829.page">https://koreascience.kr/article/JAKO200800557082829.page</a>.
+</div>
+<div id="ref-thorupPreeuclideanTheoryProportions1992" class="csl-entry">
+Thorup, Anders. 1992. <span>«A Pre-Euclidean Theory of Proportions»</span>. <em>Archive for History of Exact Sciences</em> 45 (1): 1-16. <a href="https://doi.org/10.1007/BF00375885">https://doi.org/10.1007/BF00375885</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2025" class="csl-entry quarto-appendix-citeas">
+Achalma, Edison. 2025. <span>“Proporcionalidad de Magnitudes,”</span>
+May. <a href="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/">https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/</a>.
+</div></div></section></div> ]]></description>
+  <category>Matemáticas</category>
+  <category>Ciencias de la Comunicación</category>
+  <category>Métodos Cuantitativos</category>
+  <guid>https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/</guid>
+  <pubDate>Tue, 20 May 2025 05:00:00 GMT</pubDate>
+</item>
 </channel>
 </rss>

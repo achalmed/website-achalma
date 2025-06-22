@@ -1,2 +1,2092 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Edison Achalma">
+<meta name="keywords" content="proporcionalidad, comunicación, matemáticas aplicadas, análisis de audiencias, estrategias mediáticas">
+
+<title>Proporcionalidad de Magnitudes – Edison Achalma B.Sc. Econ.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-454b827b4b54ab35ecc55589391ba004.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-05953cff9081f69344c6db5e2368b497.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XGH6TP6RB3"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XGH6TP6RB3', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Proporcionalidad de Magnitudes">
+<meta property="og:description" content="Este trabajo explora los fundamentos matemáticos de la proporcionalidad y sus aplicaciones en el campo de las Ciencias de la Comunicación. Se analizan conceptos clave como razones, proporciones y magnitudes, junto con sus implementaciones prácticas en estrategias mediáticas, análisis de audiencias y diseño de mensajes. El estudio demuestra cómo estas herramientas matemáticas optimizan procesos comunicacionales en entornos digitales y tradicionales">
+<meta property="og:image" content="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:site_name" content="AchalmaEdison">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:title" content="Proporcionalidad de Magnitudes">
+<meta name="twitter:description" content="Este trabajo explora los fundamentos matemáticos de la proporcionalidad y sus aplicaciones en el campo de las Ciencias de la Comunicación. Se analizan conceptos clave como razones, proporciones y magnitudes, junto con sus implementaciones prácticas en estrategias mediáticas, análisis de audiencias y diseño de mensajes. El estudio demuestra cómo estas herramientas matemáticas optimizan procesos comunicacionales en entornos digitales y tradicionales">
+<meta name="twitter:image" content="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:creator" content="@achalmaedison">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Proporcionalidad de Magnitudes">
+<meta name="citation_abstract" content="Este trabajo explora los fundamentos matemáticos de la proporcionalidad y sus aplicaciones en el campo de las Ciencias de la Comunicación. Se analizan conceptos clave como razones, proporciones y magnitudes, junto con sus implementaciones prácticas en estrategias mediáticas, análisis de audiencias y diseño de mensajes. El estudio demuestra cómo estas herramientas matemáticas optimizan procesos comunicacionales en entornos digitales y tradicionales
+">
+<meta name="citation_keywords" content="proporcionalidad,comunicación,matemáticas aplicadas,análisis de audiencias,estrategias mediáticas">
+<meta name="citation_author" content="Edison Achalma">
+<meta name="citation_publication_date" content="2025-05-20">
+<meta name="citation_cover_date" content="2025-05-20">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-05-20">
+<meta name="citation_fulltext_html_url" content="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/">
+<meta name="citation_pdf_url" content="https://achalmaedison.netlify.app/matematicas/posts/2024-03-31-por-editar/index.pdf">
+<meta name="citation_language" content="es">
+<meta name="citation_reference" content="citation_title=A preliminary survey on the emergence of an arithmetical theory of ratios;,citation_author=Oscar João Abdounur;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_fulltext_html_url=https://repositorio.usp.br/item/003065271;,citation_volume=9;,citation_journal_title=Circumscribere;">
+<meta name="citation_reference" content="citation_title=Investigating Preservice Mathematics Teachers’ Definitions, Formulas, and Graphs of Directly and Inversely Proportional Relationships;,citation_author=Muhammet Arican;,citation_author=Yasemin Kiymaz;,citation_publication_date=2022-06-01;,citation_cover_date=2022-06-01;,citation_year=2022;,citation_fulltext_html_url=https://scholarworks.umt.edu/tme/vol19/iss2/13;,citation_issue=2;,citation_doi=10.54870/1551-3440.1566;,citation_issn=1551-3440;,citation_volume=19;,citation_journal_title=The Mathematics Enthusiast;">
+<meta name="citation_reference" content="citation_title=A Mathematical Perspective of Ratio and Proportion;,citation_abstract=In mathematics, the concept of ratio is fundamental to many topics. Children encounter the concept in the earliest years of elementary school, even if they are not introduced to the actual word. They first learn the specific word “ratio,” in Grade 6. In fact, many sections of the elementary and middle school curriculum refer to, directly or indirectly, the concept of ratio. Price per item, fractions, percentages, probability, problems in motion, measurement, enlargement and reduction of shapes and figures, and π as a ratio between the circumference of a circle and its diameter, are just a few examples of ratios in the mathematics curriculum of elementary and middle school.;,citation_author=David Ben-Chaim;,citation_author=Yaffa Keret;,citation_author=Bat-Sheva Ilany;,citation_editor=David Ben-Chaim;,citation_editor=Yaffa Keret;,citation_editor=Bat-Sheva Ilany;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://doi.org/10.1007/978-94-6091-784-4_4;,citation_doi=10.1007/978-94-6091-784-4_4;,citation_isbn=978-94-6091-784-4;,citation_inbook_title=Ratio and Proportion: Research and Teaching in Mathematics Teachers’ Education (Pre- and In-Service Mathematics Teachers of Elementary and Middle School Classes);">
+<meta name="citation_reference" content="citation_title=Silvio Belli’s On Ratio and Proportion | Nexus Network Journal;,citation_author=Williams Kim;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://link.springer.com/article/10.1007/s00004-022-00638-4;,citation_doi=10.1007/s00004-022-00638-4;,citation_volume=25;,citation_journal_title=Nexus Network Journal;">
+<meta name="citation_reference" content="citation_title=La génesis histórica de los conceptos de razón y proporción y su posterior aritmetización;,citation_author=Antonio M. Oller Marcén;,citation_author=José María Gairín Sallán;,citation_publication_date=2013-11;,citation_cover_date=2013-11;,citation_year=2013;,citation_fulltext_html_url=http://www.scielo.org.mx/scielo.php?script=sci_abstract&amp;amp;amp;pid=S1665-24362013000300003&amp;lng=es&amp;nrm=iso&amp;tlng=es;,citation_issue=3;,citation_doi=10.12802/relime.13.1632;,citation_issn=1665-2436;,citation_volume=16;,citation_journal_title=Revista latinoamericana de investigación en matemática educativa;,citation_publisher=Comité Latinoamericano de Matemática Educativa A.C.;">
+<meta name="citation_reference" content="citation_title=Proporcionalidad aritmética: Una propuesta didáctica para alumnos de secundaria;,citation_author=Antonio Miguel Oller Marcén;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=http://uvadoc.uva.es/handle/10324/1118;,citation_doi=10.35376/10324/1118;,citation_dissertation_institution=Universidad de Valladolid;">
+<meta name="citation_reference" content="citation_title=The historical developments process of the representations and meanings for ratio and proportion;,citation_author=Jung-Sook Park;,citation_publication_date=2008;,citation_cover_date=2008;,citation_year=2008;,citation_fulltext_html_url=https://koreascience.kr/article/JAKO200800557082829.page;,citation_issue=3;,citation_volume=21;,citation_journal_title=Journal for History of Mathematics;,citation_publisher=The Korean Society for History of Mathematics;">
+<meta name="citation_reference" content="citation_title=A pre-euclidean theory of proportions;,citation_author=Anders Thorup;,citation_publication_date=1992-03-01;,citation_cover_date=1992-03-01;,citation_year=1992;,citation_fulltext_html_url=https://2024.sci-hub.se/590/de0db88acf4e264c7f623f1c0e025811/thorup1992.pdf?download=true#page=1.00&amp;amp;amp;gsr=0;,citation_issue=1;,citation_doi=10.1007/BF00375885;,citation_issn=1432-0657;,citation_volume=45;,citation_journal_title=Archive for History of Exact Sciences;,citation_journal_abbrev=Arch. Hist. Exact Sci.;">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Edison Achalma B.Sc. Econ.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-ellipsis-h" role="img" aria-label="More">
+</i> 
+ <span class="menu-text">More</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
+        <li>
+    <a class="dropdown-item" href="../../../econometria/index.html">
+ <span class="dropdown-text">Econometria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../filosofia-politica/index.html">
+ <span class="dropdown-text">Filosofía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../finanzas/index.html">
+ <span class="dropdown-text">Finanzas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gestion-empresarial/index.html">
+ <span class="dropdown-text">Gestión empresarial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gestion-publica/index.html">
+ <span class="dropdown-text">Gestión pública</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../herramientas-oficina/index.html">
+ <span class="dropdown-text">Ofimática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../investigacion-metodologia/index.html">
+ <span class="dropdown-text">Metodología de la investigación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../macroeconomia/index.html">
+ <span class="dropdown-text">Macroeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../matematicas/index.html">
+ <span class="dropdown-text">Matemáticas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../microeconomia/index.html">
+ <span class="dropdown-text">Microeconomía</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../programacion-software/index.html">
+ <span class="dropdown-text">Programación y Software</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../teching/index.html">
+ <span class="dropdown-text">Cursos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../tecnologia-seguridad/index.html">
+ <span class="dropdown-text">Seguridad informática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../appointment/index.html">
+ <span class="dropdown-text">Book an appointment</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://www.linkedin.com/in/achalmaedison/" title="LinkedIn profile" class="quarto-navigation-tool px-1" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+    <a href="https://twitter.com/achalmaedison" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    <a href="https://github.com/achalmed" title="GitHub profile" class="quarto-navigation-tool px-1" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<div class="quarto-title-block"><div><h1 class="title">Proporcionalidad de Magnitudes</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/achalmed/website-achalma/blob/main/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/index.qmd"><i class="bi"></i></button></div></div>
+    <div class="quarto-categories">
+        <div class="quarto-category">Matemáticas</div>
+        <div class="quarto-category">Ciencias de la Comunicación</div>
+        <div class="quarto-category">Métodos Cuantitativos</div>
+      </div>
+  </div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autor/a</div>
+  <div class="quarto-title-meta-heading">Afiliación</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://achalmaedison.netlify.app">Edison Achalma</a> <a href="mailto:elmer.achalma.09@unsch.edu.pe" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-6996-3364" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.gob.pe/unsch">
+            Universidad Nacional de San Cristóbal de Huamanga
+            </a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">20 de mayo de 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">22 de junio de 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Resumen</div>
+    <p>Este trabajo explora los fundamentos matemáticos de la proporcionalidad y sus aplicaciones en el campo de las Ciencias de la Comunicación. Se analizan conceptos clave como razones, proporciones y magnitudes, junto con sus implementaciones prácticas en estrategias mediáticas, análisis de audiencias y diseño de mensajes. El estudio demuestra cómo estas herramientas matemáticas optimizan procesos comunicacionales en entornos digitales y tradicionales</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Palabras clave</div>
+    <p>proporcionalidad, comunicación, matemáticas aplicadas, análisis de audiencias, estrategias mediáticas</p>
+  </div>
+</div>
+
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#razones-y-proporciones" id="toc-razones-y-proporciones" class="nav-link active" data-scroll-target="#razones-y-proporciones">Razones y Proporciones</a>
+  <ul class="collapse">
+  <li><a href="#historia" id="toc-historia" class="nav-link" data-scroll-target="#historia">Historia</a></li>
+  <li><a href="#orígenes-y-evolución-histórica" id="toc-orígenes-y-evolución-histórica" class="nav-link" data-scroll-target="#orígenes-y-evolución-histórica">Orígenes y Evolución Histórica</a></li>
+  <li><a href="#etimología" id="toc-etimología" class="nav-link" data-scroll-target="#etimología">Etimología</a></li>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición">Definición</a></li>
+  </ul></li>
+  <li><a href="#magnitudes-proporcionales" id="toc-magnitudes-proporcionales" class="nav-link" data-scroll-target="#magnitudes-proporcionales">Magnitudes Proporcionales</a>
+  <ul class="collapse">
+  <li><a href="#magnitudes-directamente-proporcionales" id="toc-magnitudes-directamente-proporcionales" class="nav-link" data-scroll-target="#magnitudes-directamente-proporcionales">Magnitudes Directamente Proporcionales</a></li>
+  <li><a href="#representación-gráfica" id="toc-representación-gráfica" class="nav-link" data-scroll-target="#representación-gráfica">Representación Gráfica</a></li>
+  <li><a href="#caso-general" id="toc-caso-general" class="nav-link" data-scroll-target="#caso-general">Caso General</a></li>
+  <li><a href="#función-de-proporcionalidad-directa" id="toc-función-de-proporcionalidad-directa" class="nav-link" data-scroll-target="#función-de-proporcionalidad-directa">Función de Proporcionalidad Directa</a></li>
+  <li><a href="#magnitudes-inversamente-proporcionales" id="toc-magnitudes-inversamente-proporcionales" class="nav-link" data-scroll-target="#magnitudes-inversamente-proporcionales">Magnitudes Inversamente Proporcionales</a></li>
+  <li><a href="#representación-gráfica-1" id="toc-representación-gráfica-1" class="nav-link" data-scroll-target="#representación-gráfica-1">Representación Gráfica</a></li>
+  <li><a href="#caso-general-1" id="toc-caso-general-1" class="nav-link" data-scroll-target="#caso-general-1">Caso General</a></li>
+  <li><a href="#función-de-proporcionalidad-inversa" id="toc-función-de-proporcionalidad-inversa" class="nav-link" data-scroll-target="#función-de-proporcionalidad-inversa">Función de Proporcionalidad Inversa</a></li>
+  <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a></li>
+  </ul></li>
+  <li><a href="#aplicaciones-de-las-magnitudes-proporcionales" id="toc-aplicaciones-de-las-magnitudes-proporcionales" class="nav-link" data-scroll-target="#aplicaciones-de-las-magnitudes-proporcionales">Aplicaciones de las Magnitudes Proporcionales</a>
+  <ul class="collapse">
+  <li><a href="#reparto-directo" id="toc-reparto-directo" class="nav-link" data-scroll-target="#reparto-directo">Reparto Directo</a></li>
+  <li><a href="#reparto-inverso" id="toc-reparto-inverso" class="nav-link" data-scroll-target="#reparto-inverso">Reparto Inverso</a></li>
+  </ul></li>
+  <li><a href="#regla-de-tres-y-porcentajes" id="toc-regla-de-tres-y-porcentajes" class="nav-link" data-scroll-target="#regla-de-tres-y-porcentajes">Regla de Tres y Porcentajes</a>
+  <ul class="collapse">
+  <li><a href="#regla-de-tres" id="toc-regla-de-tres" class="nav-link" data-scroll-target="#regla-de-tres">Regla de Tres</a></li>
+  <li><a href="#porcentajes" id="toc-porcentajes" class="nav-link" data-scroll-target="#porcentajes">Porcentajes</a></li>
+  </ul></li>
+  <li><a href="#ejemplos-aplicados-a-ciencias-de-la-comunicación" id="toc-ejemplos-aplicados-a-ciencias-de-la-comunicación" class="nav-link" data-scroll-target="#ejemplos-aplicados-a-ciencias-de-la-comunicación">Ejemplos Aplicados a Ciencias de la Comunicación</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
+  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
+  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
+  <li><a href="#ejercicio-4" id="toc-ejercicio-4" class="nav-link" data-scroll-target="#ejercicio-4">Ejercicio 4</a></li>
+  </ul></li>
+  <li><a href="#conclusiones-y-recomendaciones" id="toc-conclusiones-y-recomendaciones" class="nav-link" data-scroll-target="#conclusiones-y-recomendaciones">Conclusiones y Recomendaciones</a></li>
+  <li><a href="#bibliografía-y-referencias" id="toc-bibliografía-y-referencias" class="nav-link" data-scroll-target="#bibliografía-y-referencias">Bibliografía y referencias</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word (apaquarto)</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<p>Este trabajo monográfico analiza la aplicación de conceptos matemáticos de proporcionalidad, como la regla de tres, el reparto proporcional en el ámbito de las ciencias de la comunicación. Estas herramientas permiten resolver problemas prácticos, optimizar procesos y tomar decisiones informadas basadas en datos cuantitativos, en un contexto donde la precisión y la eficiencia son esenciales. El objetivo es demostrar cómo estas técnicas matemáticas, fundamentadas en razones y proporciones, se integran en la planificación estratégica, la distribución equitativa de recursos y la evaluación de resultados.</p>
+<p>La monografía se estructura en tres capítulos principales: el Capítulo I aborda los fundamentos teóricos de razones y proporciones, el Capítulo II explora las aplicaciones de las magnitudes proporcionales, y el Capítulo III presenta casos prácticos que ilustran su relevancia. Finalmente, se ofrecen conclusiones y recomendaciones para fortalecer el uso de estas herramientas en la formación académica y profesional, acompañadas de referencias bibliográficas.</p>
+<section id="razones-y-proporciones" class="level1">
+<h1>Razones y Proporciones</h1>
+<section id="historia" class="level2">
+<h2 class="anchored" data-anchor-id="historia">Historia</h2>
+<p>La historia de la razón y la proporcionalidad de magnitudes es un proceso complejo que se desarrolló desde la Antigua Grecia, pasando por la Edad Media y el Renacimiento, hasta influir en la enseñanza y comprensión actual de estos conceptos. El desarrollo de la razón y la proporcionalidad fue importante para el avance de las matemáticas y su aplicación en diversas disciplinas como las ciencias de la comunicación.</p>
+</section>
+<section id="orígenes-y-evolución-histórica" class="level2">
+<h2 class="anchored" data-anchor-id="orígenes-y-evolución-histórica">Orígenes y Evolución Histórica</h2>
+<p>Según <span class="citation" data-cites="thorupPreeuclideanTheoryProportions1992">Thorup (<a href="#ref-thorupPreeuclideanTheoryProportions1992" role="doc-biblioref">1992</a>)</span> los matemáticos griegos, antes de Euclides, ya exploraban teorías de proporciones basadas en el método de la “anthyphairesis” (división recíproca), que permitía comparar magnitudes incluso cuando no eran conmensurables. Euclides formalizó la teoría en el Libro V de los Elementos, definiendo la igualdad y el orden relativo de razones.</p>
+<p>para <span class="citation" data-cites="abdounurPreliminarySurveyEmergence2009">Abdounur (<a href="#ref-abdounurPreliminarySurveyEmergence2009" role="doc-biblioref">2009</a>)</span> en la Edad Media y Renacimiento, la traducción latina de Euclides por Campanus de Novara en el siglo XIII introdujo una interpretación aritmética de la proporcionalidad, añadiendo el concepto de “denominatio” para la razón, lo que no estaba en el original griego. Este proceso fue influenciado por tradiciones latinas y árabes, y se aceleró durante el Renacimiento.</p>
+<p>Ya en el Renacimiento, según <span class="citation" data-cites="kimSilvioBellisRatio2023">Kim (<a href="#ref-kimSilvioBellisRatio2023" role="doc-biblioref">2023</a>)</span>, Silvio Belli, en 1573, intentó simplificar y corregir la teoría de razón y proporción para facilitar su aprendizaje, aunque cometió errores matemáticos comprensibles para su época. Su obra refleja la transición hacia una visión más aritmética y aplicada, especialmente en arquitectura e ingeniería.</p>
+</section>
+<section id="etimología" class="level2">
+<h2 class="anchored" data-anchor-id="etimología">Etimología</h2>
+<p>La palabra <em>razón</em> proviene del latín <em>ratio</em>, que significa “cálculo” o “proporción”. Por su parte, <em>proporción</em> deriva del latín <em>proportio</em>, que implica una relación equilibrada o simétrica entre partes.</p>
+</section>
+<section id="definición" class="level2">
+<h2 class="anchored" data-anchor-id="definición">Definición</h2>
+<section id="razón" class="level3">
+<h3 class="anchored" data-anchor-id="razón">Razón</h3>
+<p>Según <span class="citation" data-cites="parkHistoricalDevelopmentsProcess2008">Park (<a href="#ref-parkHistoricalDevelopmentsProcess2008" role="doc-biblioref">2008</a>)</span>, es una relación entre dos cantidades que indica cuántas veces una contiene a la otra o cómo se comparan entre sí. Se clasifica en:</p>
+</section>
+<section id="razón-aritmética" class="level3">
+<h3 class="anchored" data-anchor-id="razón-aritmética">Razón Aritmética</h3>
+<p>Se refiere a la diferencia entre dos números o términos consecutivos de una secuencia (por ejemplo, en una progresión aritmética, la razón aritmética es la constante que se suma para pasar de un término al siguiente). Su fórmula es:</p>
+<p><span class="math display">\[
+  r = A - B
+  \]</span></p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(r\)</span> es la razón</p></li>
+<li><p><span class="math inline">\(A\)</span> es el Antecedente</p></li>
+<li><p><span class="math inline">\(B\)</span> es el Consecuente.</p></li>
+</ul>
+</section>
+<section id="razón-geométrica" class="level3">
+<h3 class="anchored" data-anchor-id="razón-geométrica">Razón Geométrica</h3>
+<p>Es la relación basada en el cociente entre dos cantidades, especialmente relevante en secuencias donde cada término se obtiene multiplicando el anterior por una constante (progresión geométrica). Su fórmula es:</p>
+<p><span class="math display">\[
+r = \frac{A}{B}
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(r\)</span> es la razón</p></li>
+<li><p><span class="math inline">\(A\)</span> es el Antecedente</p></li>
+<li><p><span class="math inline">\(B\)</span> es el Consecuente.</p></li>
+</ul>
+</section>
+<section id="proporción" class="level3">
+<h3 class="anchored" data-anchor-id="proporción">Proporción</h3>
+<p>Es una igualdad entre dos razones, es decir, una relación que indica que dos pares de cantidades tienen la misma relación entre sí.</p>
+<p><strong>Proporción Aritmética</strong>: Se da cuando la diferencia entre términos consecutivos es constante. <span class="math display">\[
+  A - B = C - D
+  \]</span></p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(A, B, C, D\)</span> son magnitudes</p></li>
+<li><p><span class="math inline">\(A-C\)</span> son los términos extremos</p></li>
+<li><p><span class="math inline">\(B-D\)</span> los términos medios.</p></li>
+</ul>
+<p><strong>Discreta</strong> La proporcionalidad discreta aritmética establece una relación entre cuatro magnitudes donde la diferencia entre dos términos es igual a la diferencia entre otros dos. La relación se expresa como:</p>
+<p><span class="math display">\[
+A - B = C - D
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(D\)</span> es la cuarta diferencial de <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span>.</li>
+</ul>
+<p><strong>Continua</strong> La proporcionalidad continua aritmética describe una relación entre tres magnitudes. La relación se expresa como:</p>
+<p><span class="math display">\[
+A - B = B - C
+\]</span></p>
+<p>Donde: - <span class="math inline">\(C\)</span> es la tercera diferencial de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, y <span class="math inline">\(B\)</span> es la media diferencial de <span class="math inline">\(A\)</span> y <span class="math inline">\(C\)</span>.</p>
+<p><strong>Proporción Geométrica</strong>: Se da cuando la razón (cociente) entre términos consecutivos es constante. <span class="math display">\[
+  \frac{A}{B} = \frac{C}{D} \quad \text{o} \quad A \cdot D = B \cdot C
+  \]</span></p>
+<p>Donde: - <span class="math inline">\(A, B, C, D\)</span> son magnitudes</p>
+<ul>
+<li><p><span class="math inline">\(A\)</span> y <span class="math inline">\(D\)</span> son los términos extremos</p></li>
+<li><p><span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> son los términos medios.</p></li>
+</ul>
+<p><strong>Discreta</strong> La proporcionalidad discreta geométrica describe una relación entre cuatro magnitudes donde el cociente entre dos términos es igual al cociente entre otros dos. La relación se expresa como:</p>
+<p><span class="math display">\[
+\frac{A}{B} = \frac{C}{D}
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(D\)</span> es la cuarta proporcional de <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span>.</li>
+</ul>
+<p><strong>Continua</strong> La proporcionalidad continua geométrica describe una relación entre tres magnitudes. La relación se expresa as:</p>
+<p><span class="math display">\[
+\frac{A}{B} = \frac{B}{C}
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(C\)</span> es la tercera proporcional de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span></p></li>
+<li><p><span class="math inline">\(B\)</span> es la media proporcional de <span class="math inline">\(A\)</span> y <span class="math inline">\(C\)</span>, implicando:</p></li>
+</ul>
+<p><span class="math display">\[
+B^2 = A \cdot C
+\]</span></p>
+<p><strong>Propiedades de la Proporción Geométrica</strong>:</p>
+<p>Sea la proporción <span class="math inline">\(\frac{A}{B} = \frac{C}{D}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(\frac{A+B}{A} = \frac{C+D}{C}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{A-B}{B} = \frac{C-D}{D}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{A+B}{A-B} = \frac{C+D}{C-D}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{A^n}{B^n} = \frac{C^n}{D^n} ; \quad n \in \mathbb{Q}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{A-C}{B-D} = \frac{A}{B} = \frac{C}{D}\)</span></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="magnitudes-proporcionales" class="level1">
+<h1>Magnitudes Proporcionales</h1>
+<p>Según <span class="citation" data-cites="aricanInvestigatingPreserviceMathematics2022">Arican y Kiymaz (<a href="#ref-aricanInvestigatingPreserviceMathematics2022" role="doc-biblioref">2022</a>)</span> es la relación entre dos cantidades donde el cambio en una afecta a la otra de manera predecible y constante, ya sea aumentando o disminuyendo juntas (directa) o en sentido contrario (inversa).</p>
+<section id="magnitudes-directamente-proporcionales" class="level2">
+<h2 class="anchored" data-anchor-id="magnitudes-directamente-proporcionales">Magnitudes Directamente Proporcionales</h2>
+<p>Dos magnitudes son directamente proporcionales si al multiplicar o dividir una por un número, la otra también se multiplica o divide por ese mismo número.</p>
+<p>Consideremos la relación entre el <strong>número de publicaciones en redes sociales</strong> de un medio periodístico y el <strong>número de interacciones</strong> (likes, comentarios, compartidos) que estas generan. La siguiente tabla muestra datos hipotéticos:</p>
+<div id="tbl-mytable4" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Relación entre Publicaciones en redes sociales e Interacciones
+</figcaption>
+<div aria-describedby="tbl-mytable4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 73%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Publicaciones en redes sociales (<span class="math inline">\(x\)</span>, en publicaciones)</th>
+<th>2</th>
+<th>4</th>
+<th>6</th>
+<th>8</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Interacciones (<span class="math inline">\(y\)</span>, en cientos)</td>
+<td>20</td>
+<td>40</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>En esta tabla, observamos que el número de publicaciones en redes sociales y las interacciones son <strong>directamente proporcionales</strong>. A medida que aumenta el número de publicaciones, las interacciones crecen proporcionalmente.</p>
+<p>La razón entre las magnitudes es constante:</p>
+<p><span class="math display">\[
+\frac{\text{Publicaciones}}{\text{Interacciones}} = \frac{2}{20} = \frac{4}{40} = \frac{6}{60} = \frac{8}{80} = \frac{10}{100} = \frac{1}{10}
+\]</span></p>
+<p>La <strong>constante de proporcionalidad</strong> es:</p>
+<p><span class="math display">\[
+k = \frac{y}{x} = \frac{1}{10}
+\]</span></p>
+</section>
+<section id="representación-gráfica" class="level2">
+<h2 class="anchored" data-anchor-id="representación-gráfica">Representación Gráfica</h2>
+<p>La relación directamente proporcional se representa como una línea recta que pasa por el origen.</p>
+<div id="c78f0088" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Datos</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>x <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>])  <span class="co"># Publicaciones en redes sociales</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>y <span class="op">=</span> np.array([<span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>])  <span class="co"># Interacciones (en cientos)</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb1-10"><a href="#cb1-10"></a>plt.plot(x, y, <span class="st">'o-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11"></a>plt.plot(x, <span class="dv">10</span><span class="op">*</span>x, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Línea de proporcionalidad ($y = 10x$)'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a>plt.xlabel(<span class="st">'Publicaciones en redes sociales ($x$, en publicaciones)'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>plt.ylabel(<span class="st">'Interacciones ($y$, en cientos)'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># plt.title('Relación entre Publicaciones e Interacciones')</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co"># plt.legend()</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb1-20"><a href="#cb1-20"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a>plt.tight_layout()</span>
+<span id="cb1-24"><a href="#cb1-24"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Relación entre Publicaciones en redes sociales e Interacciones"><img src="index_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img" alt="Relación entre Publicaciones en redes sociales e Interacciones"></a></p>
+<figcaption>Relación entre Publicaciones en redes sociales e Interacciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="caso-general" class="level2">
+<h2 class="anchored" data-anchor-id="caso-general">Caso General</h2>
+<p>Para cualquier par de magnitudes directamente proporcionales <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, se cumple:</p>
+<div id="tbl-mytable2" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Magnitudes directamente proporcionales
+</figcaption>
+<div aria-describedby="tbl-mytable2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(A_1\)</span></th>
+<th><span class="math inline">\(A_2\)</span></th>
+<th><span class="math inline">\(A_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\(B_1\)</span></td>
+<td><span class="math inline">\(B_2\)</span></td>
+<td><span class="math inline">\(B_3\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La relación entre estas magnitudes satisface:</p>
+<p><span class="math display">\[
+\frac{A_1}{B_1} = \frac{A_2}{B_2} = \frac{A_3}{B_3} = k
+\]</span></p>
+<p>En general:</p>
+<p><span class="math display">\[
+\frac{A_i}{B_i} = k, \quad \text{donde } 1 \leq i &lt; n, \quad i \in \mathbb{Z}
+\]</span></p>
+<p>Aquí, <span class="math inline">\(k\)</span> es la <strong>constante de proporcionalidad directa</strong>.</p>
+</section>
+<section id="función-de-proporcionalidad-directa" class="level2">
+<h2 class="anchored" data-anchor-id="función-de-proporcionalidad-directa">Función de Proporcionalidad Directa</h2>
+<p>La relación entre dos magnitudes directamente proporcionales se expresa mediante una <strong>función lineal homogénea</strong>:</p>
+<p><span class="math display">\[
+f(x) = kx
+\]</span></p>
+<p>donde <span class="math inline">\(f(x)\)</span> es la magnitud dependiente (en este caso, las interacciones), <span class="math inline">\(x\)</span> es la magnitud independiente (publicaciones) y <span class="math inline">\(k\)</span> es la constante de proporcionalidad.</p>
+<p><strong>Ejemplo</strong> Artículos Publicados y Lectores</p>
+<p>Ahora, consideremos otro ejemplo. Supongamos que el <strong>número de artículos publicados</strong> en un sitio web periodístico está relacionado con el <strong>número de lectores</strong> que visitan el sitio:</p>
+<div id="tbl-mytable8" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Relación entre Artículos publicados y Lectores
+</figcaption>
+<div aria-describedby="tbl-mytable8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Artículos publicados (<span class="math inline">\(x\)</span>)</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lectores (<span class="math inline">\(y\)</span>, en cientos)</td>
+<td>15</td>
+<td>30</td>
+<td>45</td>
+<td>60</td>
+<td>75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La constante de proporcionalidad es:</p>
+<p><span class="math display">\[
+k = \frac{y}{x} = \frac{15}{1} = \frac{30}{2} = \frac{45}{3} = \frac{60}{4} = \frac{75}{5} = 15
+\]</span></p>
+<p>La función que describe esta relación es:</p>
+<p><span class="math display">\[
+y = 15x
+\]</span></p>
+</section>
+<section id="magnitudes-inversamente-proporcionales" class="level2">
+<h2 class="anchored" data-anchor-id="magnitudes-inversamente-proporcionales">Magnitudes Inversamente Proporcionales</h2>
+<p>Dos magnitudes son inversamente proporcionales si al aumentar una, la otra disminuye en la misma proporción, y viceversa</p>
+<p>Imagina un medio periodístico que verifica noticias antes de publicarlas. A mayor <strong>tiempo dedicado a verificar noticias</strong>, menor es el <strong>número de errores</strong> en las publicaciones. La siguiente tabla se muestra los datos:</p>
+<div id="tbl-mytable10" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;4: Relación entre Tiempo de verificación y Errores en publicaciones
+</figcaption>
+<div aria-describedby="tbl-mytable10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 72%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tiempo de verificación (<span class="math inline">\(x\)</span>, en horas)</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Errores en publicaciones (<span class="math inline">\(y\)</span>, en cantidad)</td>
+<td>40</td>
+<td>20</td>
+<td>10</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El tiempo de verificación y los errores en publicaciones son <strong>inversamente proporcionales</strong>. Esto se verifica porque el producto de ambas magnitudes es constante:</p>
+<p><span class="math display">\[
+(\text{Tiempo de verificación}) \cdot (\text{Errores}) = 1 \cdot 40 = 2 \cdot 20 = 4 \cdot 10 = 8 \cdot 5 = 40
+\]</span></p>
+<p>La <strong>constante de proporcionalidad inversa</strong> es:</p>
+<p><span class="math display">\[
+x \cdot y = 40
+\]</span></p>
+<p>La relación se expresa como:</p>
+<p><span class="math display">\[
+y = \frac{40}{x}
+\]</span></p>
+</section>
+<section id="representación-gráfica-1" class="level2">
+<h2 class="anchored" data-anchor-id="representación-gráfica-1">Representación Gráfica</h2>
+<p>La relación inversamente proporcional se visualiza como una curva hiperbólica.</p>
+<div id="708effce" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Datos</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>x <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>])  <span class="co"># Tiempo de verificación (en horas)</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>y <span class="op">=</span> np.array([<span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">10</span>, <span class="dv">5</span>])  <span class="co"># Errores en publicaciones (en cantidad)</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb2-10"><a href="#cb2-10"></a>plt.plot(x, y, <span class="st">'*-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11"></a>plt.plot(x, <span class="dv">40</span><span class="op">/</span>x, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Curva de proporcionalidad ($y = 40/x$)'</span>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a>plt.xlabel(<span class="st">'Tiempo de verificación ($x$, en horas)'</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>plt.ylabel(<span class="st">'Errores en publicaciones ($y$, en cantidad)'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># plt.title('Relación entre Verificación y Errores')</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="co"># plt.legend()</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb2-20"><a href="#cb2-20"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb2-21"><a href="#cb2-21"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a>plt.tight_layout()</span>
+<span id="cb2-24"><a href="#cb2-24"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Relación entre Tiempo de verificación y Errores en publicaciones"><img src="index_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img" alt="Relación entre Tiempo de verificación y Errores en publicaciones"></a></p>
+<figcaption>Relación entre Tiempo de verificación y Errores en publicaciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La gráfica muestra cómo, al aumentar el tiempo de verificación, el número de errores disminuye, siguiendo una relación inversa.</p>
+</section>
+<section id="caso-general-1" class="level2">
+<h2 class="anchored" data-anchor-id="caso-general-1">Caso General</h2>
+<p>Para dos magnitudes inversamente proporcionales <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, se cumple:</p>
+<div id="tbl-mytable11" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;5: Magnitudes inversamente proporcionales
+</figcaption>
+<div aria-describedby="tbl-mytable11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(A_1\)</span></th>
+<th><span class="math inline">\(A_2\)</span></th>
+<th><span class="math inline">\(A_3\)</span></th>
+<th><span class="math inline">\(\dots\)</span></th>
+<th><span class="math inline">\(A_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\(B_1\)</span></td>
+<td><span class="math inline">\(B_2\)</span></td>
+<td><span class="math inline">\(B_3\)</span></td>
+<td><span class="math inline">\(\dots\)</span></td>
+<td><span class="math inline">\(B_n\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El producto de las magnitudes es constante:</p>
+<p><span class="math display">\[
+A_1 \cdot B_1 = A_2 \cdot B_2 = A_3 \cdot B_3 = \dots = A_n \cdot B_n = k
+\]</span></p>
+<p>En general:</p>
+<p><span class="math display">\[
+A_i \cdot B_i = k, \quad \text{donde } 1 \leq i &lt; n, \quad i \in \mathbb{Z}
+\]</span></p>
+<p>Aquí, <span class="math inline">\(k\)</span> es la <strong>constante de proporcionalidad inversa</strong>.</p>
+</section>
+<section id="función-de-proporcionalidad-inversa" class="level2">
+<h2 class="anchored" data-anchor-id="función-de-proporcionalidad-inversa">Función de Proporcionalidad Inversa</h2>
+<p>La relación inversamente proporcional se expresa como:</p>
+<p><span class="math display">\[
+y = \frac{k}{x}
+\]</span></p>
+<p>donde <span class="math inline">\(y\)</span> es la magnitud dependiente (errores), <span class="math inline">\(x\)</span> es la magnitud independiente (tiempo de verificación) y <span class="math inline">\(k\)</span> es la constante de proporcionalidad inversa.</p>
+<p><strong>Ejemplo</strong> Frecuencia de Titulares Clickbait y Confianza del Lector</p>
+<p>Consideremos otro ejemplo: la relación entre la <strong>frecuencia de titulares clickbait</strong> (titulares exagerados para atraer clics) y la <strong>confianza del lector</strong> en un medio:</p>
+<div id="tbl-mytable12" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-disable-processing="true" data-apa-note="Elaboración propia">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;6: Relación entre Frecuencia de titulares clickbait y Confianza del lector
+</figcaption>
+<div aria-describedby="tbl-mytable12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 76%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frecuencia de titulares clickbait (<span class="math inline">\(x\)</span>, por semana)</th>
+<th>12</th>
+<th>4</th>
+<th>2.4</th>
+<th>1.3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Confianza del lector (<span class="math inline">\(y\)</span>, en escala 1-50)</td>
+<td>5</td>
+<td>15</td>
+<td>25</td>
+<td>45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El producto es constante:</p>
+<p><span class="math display">\[
+12 \cdot 5 = 4 \cdot 15 = 2.4 \cdot 25 = 1.3 \cdot 45 = 60
+\]</span></p>
+<p>La constante de proporcionalidad inversa es:</p>
+<p><span class="math display">\[
+x \cdot y = 60
+\]</span></p>
+<p>La función es:</p>
+<p><span class="math display">\[
+y = \frac{60}{x}
+\]</span></p>
+</section>
+<section id="propiedades" class="level2">
+<h2 class="anchored" data-anchor-id="propiedades">Propiedades</h2>
+<p>Sean las magnitudes <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, entonces:</p>
+<ol type="1">
+<li>Si <span class="math inline">\(A \text{ DP } B \Rightarrow B \text{ DP } A\)</span></li>
+<li>Si <span class="math inline">\(A \text{ IP } B \Rightarrow B \text{ IP } A\)</span></li>
+<li><span class="math inline">\(A \text{ IP } B \Leftrightarrow A \text{ DP } \left( \frac{1}{B} \right)\)</span></li>
+<li><span class="math inline">\(A \text{ DP } B \Leftrightarrow A \text{ IP } \left( \frac{1}{B} \right)\)</span></li>
+<li>Si <span class="math inline">\(n \in \mathbb{Q}\)</span>, entonces:
+<ul>
+<li><span class="math inline">\(A \text{ DP } B \Leftrightarrow A^n \text{ DP } B^n\)</span></li>
+<li><span class="math inline">\(A \text{ IP } B \Leftrightarrow A^n \text{ IP } B^n\)</span></li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="aplicaciones-de-las-magnitudes-proporcionales" class="level1">
+<h1>Aplicaciones de las Magnitudes Proporcionales</h1>
+<p>Las magnitudes proporcionales permiten distribuir cantidades de forma equitativa según una relación directa o inversa. Este proceso, conocido como <strong>reparto proporcional</strong>, asigna una cantidad total entre varias partes según una variable de referencia. Se divide en dos tipos: <strong>reparto directo</strong> y <strong>reparto inverso</strong>.</p>
+<section id="reparto-directo" class="level2">
+<h2 class="anchored" data-anchor-id="reparto-directo">Reparto Directo</h2>
+<p>El reparto directo distribuye una cantidad total entre varias partes proporcionalmente a sus magnitudes. Por ejemplo, supongamos que se desea repartir un presupuesto de S/ 12,000 entre tres proyectos según el número de publicaciones planificadas, con proporciones de 1, 3 y 4.</p>
+<p>Calculamos:</p>
+<p><span class="math display">\[
+\text{Total a repartir: } 12,000
+\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\begin{cases}
+1k = \text{Monto para el primer proyecto} \\
+3k = \text{Monto para el segundo proyecto} \\
+4k = \text{Monto para el tercer proyecto} \\
+\end{cases}
+\end{align*}\]</span></p>
+<p>La suma total es:</p>
+<p><span class="math display">\[
+1k + 3k + 4k = 8k = 12,000
+\]</span></p>
+<p>Resolviendo para <span class="math inline">\(k\)</span>:</p>
+<p><span class="math display">\[
+k = \frac{12,000}{8} = 1,500
+\]</span></p>
+<p>Por lo tanto, los montos asignados son:</p>
+<p><span class="math display">\[\begin{align*}
+\begin{cases}
+1k = 1 \cdot 1,500 = 1,500 \\
+3k = 3 \cdot 1,500 = 4,500 \\
+4k = 4 \cdot 1,500 = 6,000 \\
+\end{cases}
+\end{align*}\]</span></p>
+<p>Los proyectos reciben S/ 1,500, S/ 4,500 y S/ 6,000, respectivamente.</p>
+<section id="gráfica-del-reparto-directo" class="level3">
+<h3 class="anchored" data-anchor-id="gráfica-del-reparto-directo">Gráfica del Reparto Directo</h3>
+<p>La siguiente gráfica ilustra cómo se distribuye el presupuesto según las proporciones:</p>
+<div id="7873049f" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Datos</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>proyectos <span class="op">=</span> [<span class="st">'Proyecto 1'</span>, <span class="st">'Proyecto 2'</span>, <span class="st">'Proyecto 3'</span>]</span>
+<span id="cb3-6"><a href="#cb3-6"></a>proporciones <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb3-7"><a href="#cb3-7"></a>montos <span class="op">=</span> proporciones <span class="op">*</span> <span class="dv">1500</span>  <span class="co"># k = 1500</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># Gráfica</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb3-11"><a href="#cb3-11"></a>plt.bar(proyectos, montos, color<span class="op">=</span><span class="st">'skyblue'</span>, label<span class="op">=</span><span class="st">'Monto asignado'</span>)</span>
+<span id="cb3-12"><a href="#cb3-12"></a>plt.xlabel(<span class="st">'Proyectos'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13"></a>plt.ylabel(<span class="st">'Monto asignado (S/)'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="co"># plt.title('Reparto directo del presupuesto')</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="co"># plt.grid(True, axis='y')</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="co"># plt.legend()</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb3-20"><a href="#cb3-20"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-21"><a href="#cb3-21"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb3-22"><a href="#cb3-22"></a></span>
+<span id="cb3-23"><a href="#cb3-23"></a>plt.tight_layout()</span>
+<span id="cb3-24"><a href="#cb3-24"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-4-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Distribución del presupuesto según número de publicaciones"><img src="index_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img" alt="Distribución del presupuesto según número de publicaciones"></a></p>
+<figcaption>Distribución del presupuesto según número de publicaciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="reparto-inverso" class="level2">
+<h2 class="anchored" data-anchor-id="reparto-inverso">Reparto Inverso</h2>
+<p>El reparto inverso distribuye una cantidad total entre varias partes de forma inversamente proporcional a sus magnitudes. Por ejemplo, supongamos que se desea repartir un fondo de S/ 60,000 entre tres equipos según el tiempo de entrega de artículos, con proporciones de 1, 2 y 4 horas.</p>
+<p>La distribución se calcula como sigue:</p>
+<p><span class="math display">\[
+\text{Total a repartir: } 60,000
+\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\begin{cases}
+\frac{k}{1} = \text{Monto para el primer equipo} \\
+\frac{k}{2} = \text{Monto para el segundo equipo} \\
+\frac{k}{4} = \text{Monto para el tercer equipo} \\
+\end{cases}
+\end{align*}\]</span></p>
+<p>La suma total es:</p>
+<p><span class="math display">\[
+\frac{k}{1} + \frac{k}{2} + \frac{k}{4} = k \left(1 + \frac{1}{2} + \frac{1}{4}\right) = k \cdot \frac{7}{4} = 60,000
+\]</span></p>
+<p>Resolviendo para <span class="math inline">\(k\)</span>:</p>
+<p><span class="math display">\[
+k = \frac{60,000 \cdot 4}{7} \approx 34,285.71
+\]</span></p>
+<p>Por lo tanto, los montos asignados son:</p>
+<p><span class="math display">\[\begin{align*}
+\begin{cases}
+\frac{k}{1} \approx \frac{34,285.71}{1} \approx 34,285.71 \\
+\frac{k}{2} \approx \frac{34,285.71}{2} \approx 17,142.86 \\
+\frac{k}{4} \approx \frac{34,285.71}{4} \approx 8,571.43 \\
+\end{cases}
+\end{align*}\]</span></p>
+<p>Los equipos reciben aproximadamente S/ 34,286, S/ 17,143 y S/ 8,571, respectivamente.</p>
+<section id="gráfica-del-reparto-inverso" class="level3">
+<h3 class="anchored" data-anchor-id="gráfica-del-reparto-inverso">Gráfica del Reparto Inverso</h3>
+<p>La siguiente gráfica se muestra cómo se distribuye el fondo según el tiempo de entrega:</p>
+<div id="b707df3f" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Datos</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>equipos <span class="op">=</span> [<span class="st">'Equipo 1'</span>, <span class="st">'Equipo 2'</span>, <span class="st">'Equipo 3'</span>]</span>
+<span id="cb4-6"><a href="#cb4-6"></a>tiempos <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>])</span>
+<span id="cb4-7"><a href="#cb4-7"></a>k <span class="op">=</span> <span class="fl">34285.71</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>montos <span class="op">=</span> k <span class="op">/</span> tiempos  <span class="co"># k dividido por los tiempos</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co"># Gráfica</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb4-12"><a href="#cb4-12"></a>plt.bar(equipos, montos, color<span class="op">=</span><span class="st">'lightcoral'</span>, label<span class="op">=</span><span class="st">'Monto asignado'</span>)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>plt.xlabel(<span class="st">'Equipos'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14"></a>plt.ylabel(<span class="st">'Monto asignado (S/)'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="co"># plt.title('Reparto inverso del fondo')</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co"># plt.grid(True, axis='y')</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co"># plt.legend()</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb4-21"><a href="#cb4-21"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb4-22"><a href="#cb4-22"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb4-23"><a href="#cb4-23"></a></span>
+<span id="cb4-24"><a href="#cb4-24"></a>plt.tight_layout()</span>
+<span id="cb4-25"><a href="#cb4-25"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Distribución del fondo según tiempo de entrega"><img src="index_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img" alt="Distribución del fondo según tiempo de entrega"></a></p>
+<figcaption>Distribución del fondo según tiempo de entrega</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="regla-de-tres-y-porcentajes" class="level1">
+<h1>Regla de Tres y Porcentajes</h1>
+<p>La regla de tres y los porcentajes son herramientas matemáticas esenciales para resolver problemas de proporcionalidad y comparación de datos.</p>
+<section id="regla-de-tres" class="level2">
+<h2 class="anchored" data-anchor-id="regla-de-tres">Regla de Tres</h2>
+<p>La <strong>regla de tres</strong> permite encontrar un valor desconocido a partir de tres valores conocidos, en relaciones de proporcionalidad directa o inversa.</p>
+<section id="regla-de-tres-simple-directa" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-simple-directa">Regla de Tres Simple Directa</h3>
+<p>En una relación <strong>directamente proporcional</strong>, si una magnitud aumenta, la otra también lo hace en la misma proporción, cumpliendo:</p>
+<p><span class="math display">\[
+\frac{\text{Magnitud 1}}{\text{Magnitud 2}} = k
+\]</span></p>
+<p>De forma práctica, se multiplica en cruz:</p>
+<p><span class="math display">\[
+a \cdot x = b \cdot c \quad \Rightarrow \quad x = \frac{b \cdot c}{a}
+\]</span></p>
+<p><strong>Ejemplo</strong>: Si escribir 2 artículos toma 4 horas, ¿cuánto tiempo tomará escribir 5 artículos?</p>
+<p>Planteamos:</p>
+<p><span class="math display">\[
+\frac{2 \text{ artículos}}{4 \text{ horas}} = \frac{5 \text{ artículos}}{x \text{ horas}}
+\]</span></p>
+<p>Multiplicamos en cruz:</p>
+<p><span class="math display">\[
+2 \cdot x = 4 \cdot 5 \quad \Rightarrow \quad 2x = 20 \quad \Rightarrow \quad x = \frac{20}{2} = 10
+\]</span></p>
+<p>Tomará 10 horas escribir 5 artículos.</p>
+<section id="gráfica-de-la-regla-de-tres-directa" class="level4">
+<h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-directa">Gráfica de la Regla de Tres Directa</h4>
+<p>La siguiente gráfica muestra la relación proporcional entre artículos y tiempo:</p>
+<div id="2a11313f" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Datos</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>articulos <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">5</span>])</span>
+<span id="cb5-6"><a href="#cb5-6"></a>tiempo <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">10</span>])</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb5-10"><a href="#cb5-10"></a>plt.plot(articulos, tiempo, <span class="st">'o-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb5-11"><a href="#cb5-11"></a>plt.plot(articulos, <span class="dv">2</span><span class="op">*</span>articulos, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Proporción ($y = 2x$)'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12"></a>plt.xlabel(<span class="st">'Número de artículos'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13"></a>plt.ylabel(<span class="st">'Tiempo (horas)'</span>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co"># plt.title('Regla de tres simple directa')</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="co"># plt.legend()</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb5-20"><a href="#cb5-20"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-21"><a href="#cb5-21"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb5-22"><a href="#cb5-22"></a></span>
+<span id="cb5-23"><a href="#cb5-23"></a>plt.tight_layout()</span>
+<span id="cb5-24"><a href="#cb5-24"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Relación entre número de artículos y tiempo de escritura"><img src="index_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img" alt="Relación entre número de artículos y tiempo de escritura"></a></p>
+<figcaption>Relación entre número de artículos y tiempo de escritura</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regla-de-tres-simple-inversa" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-simple-inversa">Regla de Tres Simple Inversa</h3>
+<p>En una relación <strong>inversamente proporcional</strong>, si una magnitud aumenta, la otra disminuye, cumpliendo:</p>
+<p><span class="math display">\[
+\text{Magnitud 1} \cdot \text{Magnitud 2} = k
+\]</span></p>
+<p>De forma práctica, se multiplica en paralelo:</p>
+<p><span class="math display">\[
+a \cdot b = c \cdot x \quad \Rightarrow \quad x = \frac{a \cdot b}{c}
+\]</span></p>
+<p><strong>Ejemplo</strong>: Si con 4 máquinas se imprimen 200 revistas en 8 horas, ¿cuánto tiempo tomará con 12 máquinas?</p>
+<p>Planteamos:</p>
+<p><span class="math display">\[
+4 \cdot 8 = 12 \cdot x
+\]</span></p>
+<p>Resolviendo:</p>
+<p><span class="math display">\[
+4 \cdot 8 = 12x \quad \Rightarrow \quad 32 = 12x \quad \Rightarrow \quad x = \frac{32}{12} \approx 2.67
+\]</span></p>
+<p>Con 12 máquinas, tomará aproximadamente 2.67 horas.</p>
+<section id="gráfica-de-la-regla-de-tres-inversa" class="level4">
+<h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-inversa">Gráfica de la Regla de Tres Inversa</h4>
+<p>La siguiente gráfica muestra la relación inversa entre máquinas y tiempo:</p>
+<div id="a7695e41" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Datos</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>maquinas <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">8</span>])</span>
+<span id="cb6-6"><a href="#cb6-6"></a>tiempo <span class="op">=</span> np.array([<span class="dv">12</span>, <span class="fl">2.67</span>])</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb6-10"><a href="#cb6-10"></a>plt.plot(maquinas, tiempo, <span class="st">'o-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a>plt.plot(maquinas, <span class="dv">32</span><span class="op">/</span>maquinas, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Proporción ($y = 32/x$)'</span>)</span>
+<span id="cb6-12"><a href="#cb6-12"></a>plt.xlabel(<span class="st">'Número de máquinas'</span>)</span>
+<span id="cb6-13"><a href="#cb6-13"></a>plt.ylabel(<span class="st">'Tiempo (horas)'</span>)</span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co"># plt.title('Regla de tres simple inversa')</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="co"># plt.legend()</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="co"># Ocultar bordes (spines) superiores y derechos</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb6-20"><a href="#cb6-20"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb6-21"><a href="#cb6-21"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb6-22"><a href="#cb6-22"></a></span>
+<span id="cb6-23"><a href="#cb6-23"></a>plt.tight_layout()</span>
+<span id="cb6-24"><a href="#cb6-24"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Relación entre número de máquinas y tiempo de impresión"><img src="index_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img" alt="Relación entre número de máquinas y tiempo de impresión"></a></p>
+<figcaption>Relación entre número de máquinas y tiempo de impresión</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regla-de-tres-compuesta" class="level3">
+<h3 class="anchored" data-anchor-id="regla-de-tres-compuesta">Regla de Tres Compuesta</h3>
+<p>La <strong>regla de tres compuesta</strong> se usa cuando más de dos magnitudes están involucradas. Se combinan proporciones directas e inversas para resolver el problema.</p>
+<p><strong>Ejemplo</strong>: Si 3 periodistas escriben 6 artículos en 12 horas, ¿cuánto tiempo tomará a 6 periodistas escribir 12 artículos?</p>
+<ul>
+<li><strong>Proporción directa</strong> (artículos): Más artículos requieren más tiempo.</li>
+<li><strong>Proporción inversa</strong> (journalistas): Más periodistas reducen el tiempo.</li>
+</ul>
+<p>Planteamos:</p>
+<p><span class="math display">\[
+\frac{3 \text{ periodistas} \cdot 12 \text{ horas}}{6 \text{ artículos}} = \frac{6 \text{ periodistas} \cdot x \text{ horas}}{12 \text{ artículos}}
+\]</span></p>
+<p>Simplificando:</p>
+<p><span class="math display">\[
+\frac{3 \cdot 12}{6} = \frac{6 \cdot x}{12}
+\]</span></p>
+<p><span class="math display">\[
+\frac{36}{6} = \frac{6x}{12} \quad \Rightarrow \quad 6 = \frac{6x}{12} \quad \Rightarrow \quad 6 \cdot 12 = 6x \quad \Rightarrow \quad 72 = 6x \quad \Rightarrow \quad x = 12
+\]</span></p>
+<p>Tomará 12 horas.</p>
+</section>
+</section>
+<section id="porcentajes" class="level2">
+<h2 class="anchored" data-anchor-id="porcentajes">Porcentajes</h2>
+<p>El <strong>porcentaje</strong> expresa una proporción en términos de “por cada cien”, facilitando la comparación de datos. La fórmula para calcular un porcentaje es:</p>
+<p><span class="math display">\[
+\text{a por ciento de N} = a% \text{ de } N = \frac{a}{100} \cdot N
+\]</span></p>
+<p><strong>Ejemplo</strong>: Calcular el 25% de 200 lectores.</p>
+<p><span class="math display">\[
+25% \text{ de } 200 = \frac{25}{100} \cdot 200 = 50
+\]</span></p>
+<p>50 lectores representan el 25% de 200.</p>
+<section id="parte-de-un-total-como-porcentaje" class="level3">
+<h3 class="anchored" data-anchor-id="parte-de-un-total-como-porcentaje">Parte de un Total como Porcentaje</h3>
+<p>Para expresar una parte de un total en porcentaje:</p>
+<p><span class="math display">\[
+\frac{\text{Parte}}{\text{Total}} \cdot 100% = \frac{a}{b} \cdot 100%
+\]</span></p>
+<p><strong>Ejemplo</strong>: Si 30 de 150 suscriptores leen un artículo, ¿qué porcentaje representa?</p>
+<p><span class="math display">\[
+\frac{30}{150} \cdot 100% = 20%
+\]</span></p>
+<p>El 20% de los suscriptores leyeron el artículo.</p>
+</section>
+<section id="operaciones-con-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="operaciones-con-porcentajes">Operaciones con Porcentajes</h3>
+<p>Un número se puede expresar como el 100% de sí mismo:</p>
+<p><span class="math display">\[
+N = 100% \cdot N
+\]</span></p>
+<p><strong>Ejemplo</strong>: Si el 40% de un presupuesto más el 60% del mismo presupuesto se usan, ¿qué porcentaje total se gastó?</p>
+<p><span class="math display">\[
+40%N + 60%N = 100%N
+\]</span></p>
+<p>Se gastó el 100% del presupuesto.</p>
+</section>
+<section id="aplicaciones-de-los-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="aplicaciones-de-los-porcentajes">Aplicaciones de los Porcentajes</h3>
+<section id="a.-descuentos-sucesivos" class="level4">
+<h4 class="anchored" data-anchor-id="a.-descuentos-sucesivos">a. Descuentos Sucesivos</h4>
+<p>Para dos descuentos consecutivos de <span class="math inline">\(a%\)</span> y <span class="math inline">\(b%\)</span>, el descuento único equivalente es:</p>
+<p><span class="math display">\[
+\text{Descuento único} = (a + b) - \frac{a \cdot b}{100}
+\]</span></p>
+<p><strong>Ejemplo</strong>: Un equipo de publicidad aplica descuentos del 10% y 20% en un contrato. ¿Cuál es el descuento único equivalente?</p>
+<p><span class="math display">\[
+\text{Descuento único} = (10 + 20) - \frac{10 \cdot 20}{100} = 30 - 2 = 28
+\]</span></p>
+<p>El descuento único es del 28%.</p>
+</section>
+<section id="b.-aumentos-sucesivos" class="level4">
+<h4 class="anchored" data-anchor-id="b.-aumentos-sucesivos">b. Aumentos Sucesivos</h4>
+<p>Para dos incrementos consecutivos de <span class="math inline">\(a%\)</span> y <span class="math inline">\(b%\)</span>, el aumento único equivalente es:</p>
+<p><span class="math display">\[
+\text{Aumento único} = (a + b) + \frac{a \cdot b}{100}
+\]</span></p>
+<p><strong>Ejemplo</strong>: Si un presupuesto aumenta un 15% y luego un 10%, ¿cuál es el aumento único equivalente?</p>
+<p><span class="math display">\[
+\text{Aumento único} = (15 + 10) + \frac{15 \cdot 10}{100} = 25 + 1.5 = 26.5
+\]</span></p>
+<p>El aumento único es del 26.5%.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="ejemplos-aplicados-a-ciencias-de-la-comunicación" class="level1">
+<h1>Ejemplos Aplicados a Ciencias de la Comunicación</h1>
+<section id="ejercicio-1" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h2>
+<p><strong>Problema</strong>: Si producir 3 videos promocionales requiere 9 horas de trabajo, ¿cuánto tiempo tomará producir 7 videos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Dado que el número de videos y el tiempo de trabajo son directamente proporcionales, usamos la regla de tres simple directa:</p>
+<p><span class="math display">\[
+\frac{\text{Magnitud 1}}{\text{Magnitud 2}} = k \quad \Rightarrow \quad a \cdot x = b \cdot c \quad \Rightarrow \quad x = \frac{b \cdot c}{a}
+\]</span></p>
+<p>Planteamos la proporción:</p>
+<p><span class="math display">\[
+\frac{3 \text{ videos}}{9 \text{ horas}} = \frac{7 \text{ videos}}{x \text{ horas}}
+\]</span></p>
+<p>Multiplicamos en cruz:</p>
+<p><span class="math display">\[
+3 \cdot x = 9 \cdot 7
+\]</span></p>
+<p><span class="math display">\[
+3x = 63 \quad \Rightarrow \quad x = \frac{63}{3} = 21
+\]</span></p>
+<p>Se necesitan 21 horas para producir 7 videos.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="ada6e0b9" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># Datos</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>videos <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">7</span>])</span>
+<span id="cb7-6"><a href="#cb7-6"></a>tiempo <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">21</span>])</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb7-10"><a href="#cb7-10"></a>plt.plot(videos, tiempo, <span class="st">'o-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb7-11"><a href="#cb7-11"></a>plt.plot(videos, <span class="dv">3</span><span class="op">*</span>videos, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Proporción ($y = 3x$)'</span>)</span>
+<span id="cb7-12"><a href="#cb7-12"></a>plt.xlabel(<span class="st">'Número de videos'</span>)</span>
+<span id="cb7-13"><a href="#cb7-13"></a>plt.ylabel(<span class="st">'Tiempo (horas)'</span>)</span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>plt.legend()</span>
+<span id="cb7-16"><a href="#cb7-16"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb7-17"><a href="#cb7-17"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-18"><a href="#cb7-18"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-19"><a href="#cb7-19"></a>plt.tight_layout()</span>
+<span id="cb7-20"><a href="#cb7-20"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Relación entre número de videos y tiempo de producción"><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img" alt="Relación entre número de videos y tiempo de producción"></a></p>
+<figcaption>Relación entre número de videos y tiempo de producción</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-2" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h2>
+<p><strong>Problema</strong>: Si 5 diseñadores tardan 10 días en crear 100 gráficos, ¿cuántos días tardarán 10 diseñadores en crear los mismos 100 gráficos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Dado que el número de diseñadores y el tiempo son inversamente proporcionales (a más diseñadores, menos tiempo), usamos la regla de tres simple inversa:</p>
+<p><span class="math display">\[
+\text{Magnitud 1} \cdot \text{Magnitud 2} = k \quad \Rightarrow \quad a \cdot b = c \cdot x \quad \Rightarrow \quad x = \frac{a \cdot b}{c}
+\]</span></p>
+<p>Planteamos:</p>
+<p><span class="math display">\[
+5 \text{ diseñadores} \cdot 10 \text{ días} = 10 \text{ diseñadores} \cdot x \text{ días}
+\]</span></p>
+<p>Multiplicamos en paralelo:</p>
+<p><span class="math display">\[
+5 \cdot 10 = 10 \cdot x
+\]</span></p>
+<p><span class="math display">\[
+50 = 10x \quad \Rightarrow \quad x = \frac{50}{10} = 5
+\]</span></p>
+<p>Con 10 diseñadores, se tardarán 5 días.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="3815f078" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># Datos</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>disenadores <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">10</span>])</span>
+<span id="cb8-6"><a href="#cb8-6"></a>tiempo <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">5</span>])</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co"># Gráfica</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb8-10"><a href="#cb8-10"></a>plt.plot(disenadores, tiempo, <span class="st">'o-'</span>, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Datos observados'</span>)</span>
+<span id="cb8-11"><a href="#cb8-11"></a>plt.plot(disenadores, <span class="dv">50</span><span class="op">/</span>disenadores, <span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, label<span class="op">=</span><span class="st">'Proporción ($y = 50/x$)'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12"></a>plt.xlabel(<span class="st">'Número de diseñadores'</span>)</span>
+<span id="cb8-13"><a href="#cb8-13"></a>plt.ylabel(<span class="st">'Tiempo (días)'</span>)</span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="co"># plt.grid(True)</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>plt.legend()</span>
+<span id="cb8-16"><a href="#cb8-16"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb8-17"><a href="#cb8-17"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb8-18"><a href="#cb8-18"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb8-19"><a href="#cb8-19"></a>plt.tight_layout()</span>
+<span id="cb8-20"><a href="#cb8-20"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Relación entre número de diseñadores y tiempo de creación"><img src="index_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img" alt="Relación entre número de diseñadores y tiempo de creación"></a></p>
+<figcaption>Relación entre número de diseñadores y tiempo de creación</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-3" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h2>
+<p><strong>Problema</strong>: Se desea repartir un presupuesto de S/ 15,000 entre tres campañas según el número de anuncios planificados, con proporciones de 2, 3 y 5. ¿Cuánto recibirá cada campaña?</p>
+<p><strong>Solución</strong>:</p>
+<p>Usamos el reparto proporcional directo, donde el presupuesto se distribuye según las proporciones:</p>
+<p><span class="math display">\[
+\text{Total a repartir: } 15,000
+\]</span></p>
+<p>Asignamos:</p>
+<p><span class="math display">\[
+\begin{cases}
+2k = \text{Monto para la primera campaña} \
+3k = \text{Monto para la segunda campaña} \
+5k = \text{Monto para la tercera campaña} \
+\end{cases}
+\]</span></p>
+<p>La suma total es:</p>
+<p><span class="math display">\[
+2k + 3k + 5k = 10k = 15,000
+\]</span></p>
+<p>Resolviendo para <span class="math inline">\(k\)</span>:</p>
+<p><span class="math display">\[
+k = \frac{15,000}{10} = 1,500
+\]</span></p>
+<p>Calculamos los montos:</p>
+<p><span class="math display">\[
+\begin{cases}
+2k = 2 \cdot 1,500 = 3,000 \
+3k = 3 \cdot 1,500 = 4,500 \
+5k = 5 \cdot 1,500 = 7,500 \
+\end{cases}
+\]</span></p>
+<p>Las campañas reciben S/ 3,000, S/ 4,500 y S/ 7,500, respectivamente.</p>
+<p><strong>Gráfica</strong>:</p>
+<div id="74acdfd5" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Mostrar el código</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># Datos</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>campanas <span class="op">=</span> [<span class="st">'Campaña 1'</span>, <span class="st">'Campaña 2'</span>, <span class="st">'Campaña 3'</span>]</span>
+<span id="cb9-6"><a href="#cb9-6"></a>proporciones <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>])</span>
+<span id="cb9-7"><a href="#cb9-7"></a>montos <span class="op">=</span> proporciones <span class="op">*</span> <span class="dv">1500</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co"># Gráfica</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">4</span>))</span>
+<span id="cb9-11"><a href="#cb9-11"></a>plt.bar(campanas, montos, color<span class="op">=</span><span class="st">'skyblue'</span>, label<span class="op">=</span><span class="st">'Monto asignado'</span>)</span>
+<span id="cb9-12"><a href="#cb9-12"></a>plt.xlabel(<span class="st">'Campañas'</span>)</span>
+<span id="cb9-13"><a href="#cb9-13"></a>plt.ylabel(<span class="st">'Monto asignado (S/)'</span>)</span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co"># plt.grid(True, axis='y')</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>plt.legend()</span>
+<span id="cb9-16"><a href="#cb9-16"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb9-17"><a href="#cb9-17"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb9-18"><a href="#cb9-18"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb9-19"><a href="#cb9-19"></a>plt.tight_layout()</span>
+<span id="cb9-20"><a href="#cb9-20"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-10-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Distribución del presupuesto según número de anuncios"><img src="index_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img" alt="Distribución del presupuesto según número de anuncios"></a></p>
+<figcaption>Distribución del presupuesto según número de anuncios</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-4" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h2>
+<p><strong>Problema</strong>: Un contrato de servicios tiene un costo original de S/ 1,000. Se aplican dos descuentos sucesivos del 15% y del 10%. ¿Cuál es el costo final después de los descuentos?</p>
+<p><strong>Solución</strong>:</p>
+<p>Para calcular el costo final, usamos la fórmula de descuentos sucesivos para encontrar el descuento único equivalente:</p>
+<p><span class="math display">\[
+\text{Descuento único} = (a + b) - \frac{a \cdot b}{100}
+\]</span></p>
+<p>Donde <span class="math inline">\(a = 15%\)</span> y <span class="math inline">\(b = 10%\)</span>:</p>
+<p><span class="math display">\[
+\text{Descuento único} = (15 + 10) - \frac{15 \cdot 10}{100} = 25 - 1.5 = 23.5
+\]</span></p>
+<p>El descuento total es del 23.5%. Calculamos el monto del descuento:</p>
+<p><span class="math display">\[
+\text{Monto descontado} = 23.5% \text{ de } 1,000 = \frac{23.5}{100} \cdot 1,000 = 235
+\]</span></p>
+<p>El costo final es:</p>
+<p><span class="math display">\[
+1,000 - 235 = 765
+\]</span></p>
+<p>El costo final es S/ 765.</p>
+</section>
+</section>
+<section id="conclusiones-y-recomendaciones" class="level1">
+<h1>Conclusiones y Recomendaciones</h1>
+<p>La proporcionalidad, a través de herramientas como la regla de tres simple, el reparto proporcional y los porcentajes, proporciona un marco matemático para abordar desafíos en la gestión de recursos y el análisis de datos. Estas técnicas permiten optimizar la asignación de presupuestos, planificar tiempos de producción y evaluar métricas de impacto, asegurando decisiones estratégicas basadas en cálculos precisos. Su simplicidad y versatilidad las convierten en recursos esenciales para profesionales que buscan eficiencia en entornos dinámicos, conectando la teoría matemática con aplicaciones prácticas.</p>
+<p>Para maximizar el impacto de estas herramientas, se recomienda incorporar módulos prácticos en los planes de estudio de ciencias de la comunicación, enfocados en resolver problemas reales, como la distribución de recursos o el análisis de indicadores de audiencia. Asimismo, se sugiere desarrollar talleres interactivos y recursos digitales, como simuladores o aplicaciones, que faciliten el aprendizaje de estas técnicas y refuercen las competencias cuantitativas de los estudiantes.</p>
+</section>
+<section id="bibliografía-y-referencias" class="level1">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía y referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-abdounurPreliminarySurveyEmergence2009" class="csl-entry" role="listitem">
+Abdounur, Oscar João. 2009. <span>«A Preliminary Survey on the Emergence of an Arithmetical Theory of Ratios»</span>. <em>Circumscribere</em> 9: 1-8. <a href="https://repositorio.usp.br/item/003065271">https://repositorio.usp.br/item/003065271</a>.
+</div>
+<div id="ref-aricanInvestigatingPreserviceMathematics2022" class="csl-entry" role="listitem">
+Arican, Muhammet, y Yasemin Kiymaz. 2022. <span>«Investigating <span>Preservice Mathematics Teachers</span>’ <span>Definitions</span>, <span>Formulas</span>, and <span>Graphs</span> of <span>Directly</span> and <span>Inversely Proportional Relationships</span>»</span>. <em>The Mathematics Enthusiast</em> 19 (2): 632-56. <a href="https://doi.org/10.54870/1551-3440.1566">https://doi.org/10.54870/1551-3440.1566</a>.
+</div>
+<div id="ref-kimSilvioBellisRatio2023" class="csl-entry" role="listitem">
+Kim, Williams. 2023. <span>«Silvio <span>Belli</span>’s <span>On Ratio</span> and <span>Proportion</span> | <span>Nexus Network Journal</span>»</span>. <em>Nexus Network Journal</em> 25: 5-39. <a href="https://doi.org/10.1007/s00004-022-00638-4">https://doi.org/10.1007/s00004-022-00638-4</a>.
+</div>
+<div id="ref-parkHistoricalDevelopmentsProcess2008" class="csl-entry" role="listitem">
+Park, Jung-Sook. 2008. <span>«The Historical Developments Process of the Representations and Meanings for Ratio and Proportion»</span>. <em>Journal for History of Mathematics</em> 21 (3): 53-66. <a href="https://koreascience.kr/article/JAKO200800557082829.page">https://koreascience.kr/article/JAKO200800557082829.page</a>.
+</div>
+<div id="ref-thorupPreeuclideanTheoryProportions1992" class="csl-entry" role="listitem">
+Thorup, Anders. 1992. <span>«A Pre-Euclidean Theory of Proportions»</span>. <em>Archive for History of Exact Sciences</em> 45 (1): 1-16. <a href="https://doi.org/10.1007/BF00375885">https://doi.org/10.1007/BF00375885</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Achalma, Edison. 2025. <span>“Proporcionalidad de Magnitudes,”</span>
+May. <a href="https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/">https://achalmaedison.netlify.app/matematicas/posts/2025-06-01-proporcionalidad-de-magnitudes-en-ciencias-de-la-comunicacion/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/achalmaedison\.netlify\.app\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<script src="https://utteranc.es/client.js" repo="achalmed/website-achalma" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../accessibility.html">
+<p>Accessibility</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

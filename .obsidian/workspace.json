@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fe1bb841d3dba92d",
+        "id": "b0258d96d2b02657",
         "type": "tabs",
         "children": [
           {
-            "id": "51eae93ed9260e38",
+            "id": "774ecdd1935852d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-05-13.md",
+                "file": "blog/posts/2025-06-18-conflicto-minero-en-las-bambas-peru/index.qmd",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,19 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-13"
-            }
-          },
-          {
-            "id": "0172927407c4fb4b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/2025-05-13.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-05-13.excalidraw"
+              "title": "index"
             }
           }
         ]
@@ -75,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#webscraping",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -160,7 +148,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Etiquetas"
@@ -225,7 +215,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -257,8 +247,9 @@
   },
   "active": "6a085c1714ece2a9",
   "lastOpenFiles": [
-    "2025-05-13.md",
+    "project/2024-06-16-ccd-sips/_2023/_index.md",
     "Excalidraw/2025-05-13.excalidraw.md",
+    "2025-05-13.md",
     "Excalidraw",
     "macroeconomia/posts/2025-05-11-teoria-y-politica-monetaria-bcrp/index.qmd",
     "_freeze/site_libs/quarto-html/tippy.umd.min.js",
@@ -282,7 +273,6 @@
     "blog/posts/2025-04-07.md",
     "Sin título 1.canvas",
     "Sin título.canvas",
-    "project/2024-06-16-ccd-sips/_2023/_index.md",
     "README.md",
     "tecnologia-seguridad/operating-system/2023-05-02-00-primeros-pasos-en-linux/index.html.md",
     "tecnologia-seguridad/operating-system/2023-02-16-guia-de-git-y-github/index.html.md",

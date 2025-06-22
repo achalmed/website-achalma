@@ -9,7 +9,7 @@ course: Manejo de Conflictos
 professor: Dr. ...
 duedate: 06/18/2025
 # MODO REVISTA (JOU)
-# journal: Psychological Review
+# journal: The American Economic Review # Econometrica, The American Economic Review, Revista de Economía, Revista de la CEPAL
 # volume: 2025, Vol. 131, No. 2, 10--60
 copyrightnotice: 2025
 copyrightext: All rights reserved
@@ -72,7 +72,6 @@ description: "Descubre las causas del conflicto minero en Las Bambas, sus impact
 #   icon_pack: fab
 #   name: R-Ladies template files
 #   url: https://github.com/spcanelon/RLadies-xaringan-template
-eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
 # Google Scholar
 # bibliography: mybibliography.bib
 citation:
@@ -82,6 +81,8 @@ citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf
 date: "06/18/2025"
 draft: false # Modo de borrador (false = final, true = borrador)
+eval: false # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
+jupyter: python3
 ---
 
 El conflicto minero en Las Bambas, ubicado en la región de Apurímac, Perú, constituye un caso emblemático de las tensiones socioambientales derivadas de proyectos extractivos en el país. Desde el inicio de las operaciones de la mina en 2015, gestionada por la empresa MMG Limited, las comunidades locales, principalmente campesinas e indígenas, han denunciado impactos ambientales significativos, como la contaminación de fuentes hídricas y la degradación de tierras agrícolas, así como impactos sociales, incluyendo la reubicación forzada y la criminalización de líderes comunales. Estos factores han desencadenado protestas, bloqueos del Corredor Minero Sur y enfrentamientos violentos, con al menos cinco muertes reportadas entre 2015 y 2025. La falta de consulta previa, conforme al Convenio 169 de la OIT, y la percepción de incumplimientos por parte de la empresa y el Estado han exacerbado el conflicto, evidenciando desafíos estructurales en la gobernanza minera peruana.

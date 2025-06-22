@@ -71,7 +71,6 @@ description: "" # Texto que se muestra debajo de las etiquetas, no en la página
 #   icon_pack: fab
 #   name: R-Ladies template files
 #   url: https://github.com/spcanelon/RLadies-xaringan-template
-eval: true # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
 # Google Scholar
 bibliography: mybibliography.bib
 citation:
@@ -81,6 +80,7 @@ citation:
   pdf-url: https://achalmaedison.netlify.app/matematicas/posts/2024-03-31-por-editar/index.pdf
 date: "05/20/2025"
 draft: false # Modo de borrador (false = final, true = borrador)
+eval: true # true(predeterminado): evaluar celda de código, false: no evaluar la celda de código
 jupyter: python3
 ---
 

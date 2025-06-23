@@ -294,11 +294,15 @@ format:
     fontsize: 12pt
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
+    number-sections: true # Numerar secciones
+    number-depth: 3 # Profundidad de numeración de secciones # OPCION para no numerar ### More Options {.unnumbered}
   apaquarto-docx:
     toc: true
     fontsize: 12pt
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
+    number-sections: true # Numerar secciones
+    number-depth: 5 # Profundidad de numeración de secciones
 
 # Enlaces de Formato
 format-links: true # enlace a pdf, docx, html, epub, notebook

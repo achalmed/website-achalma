@@ -234,19 +234,6 @@ listing-page-filter: "Filter"
 date-modified: "today" # Fecha de modificación del documento
 search: true # Habilitar búsqueda en el documento
 
-# Configuración de Ejecución
-execute:
-  keep-md: false # Mantener archivos .md generados
-  keep-ipynb: true
-  echo: true # true: Incluir el código fuente en la salida, false: (predeterminado en formatos de presentación como beamer, revealjs, y pptx): no incluir el código fuente en la salida
-  output: true # Mostrar resultados de la ejecución
-  warning: false # false: Ocultar advertencias, true: Incluir advertencias en la salida renderizada.
-  error: false # Ocultar errores
-  enabled: true # Habilitar la ejecución: quarto render notebook.ipynb --execute
-  freeze: auto # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
-  cache: true # PARA RESULTADOS DE CALCULO:primero instlar : python3 -m pip install jupyter-cache despues puede usar: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
-  eval: true # para ejecutar el código Python
-
 # Configuración de Formato de Salida
 format:
   html:
@@ -297,6 +284,7 @@ format:
     # MODO REVISTA (JOU)
     # journal: Psychological Review
     # volume: 2024, Vol. 131, No. 2, 10--60
+    copyrightnotice: 2025
     copyrightext: All rights reserved
     toc: true # Mostrar tabla de contenidos
     list-of-figures: true
@@ -306,20 +294,20 @@ format:
     fontsize: 12pt
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
-    execute:  # Configuración específica para PDF
-      echo: false  # No mostrar código en PDF
-      output: true
+    number-sections: true # Numerar secciones
+    number-depth: 3 # Profundidad de numeración de secciones # OPCION para no numerar ### More Options {.unnumbered}
   apaquarto-docx:
     toc: true
     fontsize: 12pt
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
+    number-sections: true # Numerar secciones
+    number-depth: 5 # Profundidad de numeración de secciones
 
 # Enlaces de Formato
 format-links: true # enlace a pdf, docx, html, epub, notebook
 # Configuración del Entorno de Ejecución
 jupyter: python3
-ipynb-shell-interactivity: all
 
 # Configuración del Editor
 # editor: source # visual y source

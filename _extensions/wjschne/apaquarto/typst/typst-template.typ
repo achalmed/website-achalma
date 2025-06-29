@@ -37,12 +37,8 @@
   toc: false,
   lang: "en",
   cols: 1,
-  first-page: 1,
-  suppresstitlepage: false,
   doc,
 ) = {
-
-  if suppresstitlepage {counter(page).update(first-page)}
 
   set page(
     margin: margin,
@@ -159,8 +155,6 @@
   } else {
     columns(cols, gutter: 4%, doc)
   }
-  
-
 
 
 }

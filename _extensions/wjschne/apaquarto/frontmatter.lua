@@ -9,8 +9,7 @@ local andreplacement = "and"
 
 
 local List = require 'pandoc.List'
-local utilsapa = require("utilsapa")
-local stringify = utilsapa.stringify
+local stringify = pandoc.utils.stringify
 
 local function get_and(m)
   if m.language and m.language["citation-last-author-separator"] then
@@ -647,14 +646,8 @@ return {
         end
         
         if FORMAT:match 'typst' then
-          local pg = '#pagebreak()\n\n' 
-          if meta['first-page'] then
-            pg = '#counter(page).update(' .. stringify(meta['first-page']) .. ' - 1)\n #pagebreak()\n\n'
-          end
-          body:extend({pandoc.RawBlock('typst', pg)})
+          body:extend({pandoc.RawBlock('typst', '#pagebreak()\n\n')})
         end
-        
-
         
         if FORMAT:match 'html' then
           body:extend({pandoc.RawBlock('html', '<br>')})
@@ -712,7 +705,6 @@ return {
         firstpageheader.classes = {"title", "unnumbered", "unlisted"}
         body:extend({firstpageheader})
       end
-      
 
       
 

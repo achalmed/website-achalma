@@ -183,24 +183,25 @@ toggle-reader-mode: "Toggle reader mode"
 toggle-navigation: "Toggle navigation"
 
 # Configuración de Referencias Cruzadas
-crossref-fig-title: Figura # Figure title prefix: "Figure"
-crossref-tbl-title: Tabla # Table title prefix : "Table"
-crossref-lst-title: "Listing"
-crossref-thm-title: "Theorem"
-crossref-lem-title: "Lemma"
-crossref-cor-title: "Corollary"
-crossref-prp-title: "Proposition"
-crossref-cnj-title: "Conjecture"
-crossref-def-title: "Definition"
-crossref-exm-title: "Example"
-crossref-exr-title: "Exercise"
-crossref-ch-prefix: "Chapter"
-crossref-apx-prefix: Anexo # Appendix title prefix : "Appendix"
-crossref-sec-prefix: "Section"
-crossref-eq-prefix: Ecuación # Equation title prefix : "Equation"
-crossref-lof-title: "List of Figures"
-crossref-lot-title: "List of Tables"
-crossref-lol-title: "List of Listings"
+language:
+  crossref-fig-title: Figura # Figure title prefix: "Figure"
+  rossref-tbl-title: Tabla # Table title prefix : "Table"
+  crossref-lst-title: "Listing"
+  crossref-thm-title: "Theorem"
+  crossref-lem-title: "Lemma"
+  crossref-cor-title: "Corollary"
+  crossref-prp-title: "Proposition"
+  crossref-cnj-title: "Conjecture"
+  crossref-def-title: "Definition"
+  crossref-exm-title: "Example"
+  crossref-exr-title: "Exercise"
+  crossref-ch-prefix: "Chapter"
+  crossref-apx-prefix: Anexo # Appendix title prefix : "Appendix"
+  crossref-sec-prefix: "Section"
+  crossref-eq-prefix: Ecuación # Equation title prefix : "Equation"
+  crossref-lof-title: "List of Figures"
+  crossref-lot-title: "List of Tables"
+  crossref-lol-title: "List of Listings"
 
 environment-proof-title: "Proof"
 environment-remark-title: "Remark"
@@ -228,7 +229,6 @@ listing-page-no-matches: "No matching items"
 listing-page-words: "{0} words"
 listing-page-filter: "Filter"
 
-# draft: "Draft"
 
 # Configuración de Fecha y Búsqueda
 date-modified: "today" # Fecha de modificación del documento
@@ -295,14 +295,14 @@ format:
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
     number-sections: true # Numerar secciones
-    number-depth: 3 # Profundidad de numeración de secciones # OPCION para no numerar ### More Options {.unnumbered}
+    # number-depth: 3 # Profundidad de numeración de secciones # OPCION para no numerar ### More Options {.unnumbered}
   apaquarto-docx:
     toc: true
     fontsize: 12pt
     a4paper: true
     numbered-lines: false # Númerar líneas del documento
     number-sections: true # Numerar secciones
-    number-depth: 5 # Profundidad de numeración de secciones
+    # number-depth: 5 # Profundidad de numeración de secciones
 
 # Enlaces de Formato
 format-links: true # enlace a pdf, docx, html, epub, notebook

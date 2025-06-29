@@ -182,7 +182,7 @@ Tabla&nbsp;1: Relación entre Publicaciones en redes sociales e Interacciones
 <section id="representación-gráfica" class="level2">
 <h2 class="anchored" data-anchor-id="representación-gráfica">Representación Gráfica</h2>
 <p>La relación directamente proporcional se representa como una línea recta que pasa por el origen.</p>
-<div id="c78f0088" class="cell" data-execution_count="1">
+<div id="a6c59a39" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
@@ -441,7 +441,7 @@ Tabla&nbsp;4: Relación entre Tiempo de verificación y Errores en publicaciones
 <section id="representación-gráfica-1" class="level2">
 <h2 class="anchored" data-anchor-id="representación-gráfica-1">Representación Gráfica</h2>
 <p>La relación inversamente proporcional se visualiza como una curva hiperbólica.</p>
-<div id="708effce" class="cell" data-execution_count="2">
+<div id="94fdae73" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
@@ -693,7 +693,7 @@ Tabla&nbsp;6: Relación entre Frecuencia de titulares clickbait y Confianza del 
 <section id="gráfica-del-reparto-directo" class="level3">
 <h3 class="anchored" data-anchor-id="gráfica-del-reparto-directo">Gráfica del Reparto Directo</h3>
 <p>La siguiente gráfica ilustra cómo se distribuye el presupuesto según las proporciones:</p>
-<div id="7873049f" class="cell" data-execution_count="3">
+<div id="c9e3d3bf" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
@@ -820,7 +820,7 @@ font-style: inherit;">False</span>)</span>
 <section id="gráfica-del-reparto-inverso" class="level3">
 <h3 class="anchored" data-anchor-id="gráfica-del-reparto-inverso">Gráfica del Reparto Inverso</h3>
 <p>La siguiente gráfica se muestra cómo se distribuye el fondo según el tiempo de entrega:</p>
-<div id="b707df3f" class="cell" data-execution_count="4">
+<div id="5617c8fb" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
@@ -956,7 +956,7 @@ font-style: inherit;">False</span>)</span>
 <section id="gráfica-de-la-regla-de-tres-directa" class="level4">
 <h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-directa">Gráfica de la Regla de Tres Directa</h4>
 <p>La siguiente gráfica muestra la relación proporcional entre artículos y tiempo:</p>
-<div id="2a11313f" class="cell" data-execution_count="5">
+<div id="580e1c20" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
@@ -1086,7 +1086,7 @@ font-style: inherit;">False</span>)</span>
 <section id="gráfica-de-la-regla-de-tres-inversa" class="level4">
 <h4 class="anchored" data-anchor-id="gráfica-de-la-regla-de-tres-inversa">Gráfica de la Regla de Tres Inversa</h4>
 <p>La siguiente gráfica muestra la relación inversa entre máquinas y tiempo:</p>
-<div id="a7695e41" class="cell" data-execution_count="6">
+<div id="d9335b14" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
@@ -1276,7 +1276,7 @@ font-style: inherit;">False</span>)</span>
 <p><img src="https://latex.codecogs.com/png.latex?%0A3x%20=%2063%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B63%7D%7B3%7D%20=%2021%0A"></p>
 <p>Se necesitan 21 horas para producir 7 videos.</p>
 <p><strong>Gráfica</strong>:</p>
-<div id="ada6e0b9" class="cell" data-execution_count="7">
+<div id="a427dc95" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
@@ -1393,7 +1393,7 @@ font-style: inherit;">False</span>)</span>
 <p><img src="https://latex.codecogs.com/png.latex?%0A50%20=%2010x%20%5Cquad%20%5CRightarrow%20%5Cquad%20x%20=%20%5Cfrac%7B50%7D%7B10%7D%20=%205%0A"></p>
 <p>Con 10 diseñadores, se tardarán 5 días.</p>
 <p><strong>Gráfica</strong>:</p>
-<div id="3815f078" class="cell" data-execution_count="8">
+<div id="b0508eb5" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
@@ -1513,7 +1513,7 @@ font-style: inherit;">False</span>)</span>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2k%20=%202%20%5Ccdot%201,500%20=%203,000%20%5C%0A3k%20=%203%20%5Ccdot%201,500%20=%204,500%20%5C%0A5k%20=%205%20%5Ccdot%201,500%20=%207,500%20%5C%0A%5Cend%7Bcases%7D%0A"></p>
 <p>Las campañas reciben S/ 3,000, S/ 4,500 y S/ 7,500, respectivamente.</p>
 <p><strong>Gráfica</strong>:</p>
-<div id="74acdfd5" class="cell" data-execution_count="9">
+<div id="c16180b9" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Mostrar el código</summary>
 <div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;

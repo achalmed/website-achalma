@@ -296,6 +296,12 @@ format:
     numbered-lines: false # Númerar líneas del documento
     number-sections: true # Numerar secciones
     # number-depth: 3 # Profundidad de numeración de secciones # OPCION para no numerar ### More Options {.unnumbered}
+    colorlinks: true # Habilitar enlaces de color
+    mainfont: "Latin Modern Roman" # Texto del cuerpo principal: "Times New Roman"
+    # sansfont: "Latin Modern Sans" # Encabezados
+    # monofont: "Latin Modern Mono" # Código
+    # mathfont: "Latin Modern Math" # Matemáticas
+    pdf-engine: xelatex # Motor de PDF, puede ser pdflatex, xelatex, lualatex o xetex
   apaquarto-docx:
     toc: true
     fontsize: 12pt

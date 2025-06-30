@@ -13,8 +13,8 @@ license: "CC BY-SA"
 
 # Default for table of contents
 toc: true # Mostrar tabla de contenidos
-toc-title: Tabla de contenidos # Título de la tabla de contenidos
-toc-location: right # (left, body, right) Ubicación de la tabla de contenidos
+toc-title: " " # Título de la tabla de contenidos
+toc-location: left # (left, body, right) Ubicación de la tabla de contenidos
 
 
 # Configuración de Elementos Flotantes
@@ -268,6 +268,8 @@ format:
     #gutter-width: 5rem
     # reference-location: margin # (document, section, block, margin)
     citation-location: document # (document, margin)
+    self-contained: true # Generar un único archivo HTML con todos los recursos incrustados
+    is-particlejs-enabled: true # Habilitar Particle.js en el formato HTML
     template-partials:
       - ../../_partials/title-block-link-buttons/title-block.html
 

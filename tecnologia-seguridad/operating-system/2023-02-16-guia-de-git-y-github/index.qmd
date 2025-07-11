@@ -96,20 +96,23 @@ Disponible en Linux, Windows y macOS, Git tiene una curva de aprendizaje inicial
 
 ## Comandos básicos de Git
 
-Aquí tienes los comandos fundamentales para empezar:
+Aquí tienes los comandos fundamentales:
 
-1. `git init`: Inicia un nuevo repositorio en el directorio actual.
-2. `git clone [url]`: Copia un repositorio existente a tu máquina.
+1. `echo "# Léeme" >> README.md`: Crea un archivo README.md con el texto "# Léeme".
+2. `git init`: Inicia un nuevo repositorio en el directorio actual.
 3. `git add [file]`: Añade un archivo al área de preparación.
-4. `git commit -m "mensaje"`: Guarda los cambios con un mensaje descriptivo.
-5. `git status`: Muestra el estado actual del repositorio.
-6. `git log`: Lista el historial de commits.
-7. `git diff`: Compara cambios no confirmados con el último commit.
-8. `git branch`: Muestra las ramas existentes.
-9. `git checkout [branch]`: Cambia a una rama específica.
-10. `git merge [branch]`: Fusiona una rama con la actual.
-11. `git config --global user.name "tu-nombre"`: Configura tu nombre de usuario.
-12. `git config --global user.email "tu-email@example.com"`: Configura tu correo.
+4. `git commit -m "Primer commit"`: Guarda los cambios con un mensaje descriptivo.
+5. `git branch -M main`: Muestra las ramas existentes.
+6. `git remote add origin git@github.com:achalmed/repositorio.git` : Vincula el repositorio local con uno remoto en GitHub.
+7. `git push -u origin main`: Envía los cambios al repositorio remoto.
+8. `git status`: Muestra el estado actual del repositorio.
+9. `git log`: Lista el historial de commits.
+10. `git diff`: Compara cambios no confirmados con el último commit.
+11. `git checkout [branch]`: Cambia a una rama específica.
+12. `git merge [branch]`: Fusiona una rama con la actual.
+13. `git config --global user.name "tu-nombre"`: Configura tu nombre de usuario.
+14. `git config --global user.email "tu-email@example.com"`: Configura tu correo.
+
 
 ## Instalación de Git en Ubuntu
 
@@ -279,14 +282,30 @@ git clone --branch=nombre-rama https://github.com/usuario/repositorio.git
 
 2. En tu proyecto local:
 
+**Con SSH**
+
    ```bash
+   echo "# examen" >> README.md
    git init
    git add .
-   git commit -m "Inicial"
+   git commit -m "Primer commit"
+   git branch -M main
    git remote add origin git@github.com:usuario/repositorio.git
    git push -u origin main
    ```
+**Con HTTPS**
 
+   ```bash
+   echo "# examen" >> README.md
+   git init
+   git add .
+   git commit -m "Primer commit"
+   git branch -M main
+   git remote add origin https://github.com/usuario/repositorio.git
+   git push -u origin main
+   ```
+   
+   
 3. Si aparece el error remote origin already exists:
 
    ```bash
@@ -301,7 +320,7 @@ git clone --branch=nombre-rama https://github.com/usuario/repositorio.git
 
 - `git diff`: Compara cambios no confirmados.
 - `git log`
--  `git log --graph`
+- `git log --graph`
 - `git log --graph --pretty=oneline`
 - `git log --graph --decorate --all --oneline`
 - `git config --global alias.tree "log --graph --decorate --all --oneline"`
@@ -351,7 +370,7 @@ Creando ramas
 `git tree`
 
 
-correccion de conflicto
+corrección de conflicto
 
 - `git merge main`
 - conflicto tal vez por que se modifico la mimsa linea en distintos branch
@@ -362,6 +381,7 @@ correccion de conflicto
 
 
 3. Reset
+
 - `git tree`
 - `git reset --hard af18c2a`
 -  `git log`
@@ -382,28 +402,31 @@ correccion de conflicto
 - 
 
 # Guardar temporalmente un trabajo no terminado
-git status
 
-git switch main
+`git status` 
 
-git stash
+`git switch main`
 
-git stash list
-git switch main
+`git stash`
+
+`git stash list`
+`git switch main`
+
 Hago los cambios
-git switch login
 
-git stash pop
-git add .
-git commit -m "Login v2"
+`git switch login`
 
-git stash drop
+`git stash pop`
+`git add .`
+`git commit -m "Login v2"`
+
+`git stash drop`
 
 
 
-# Comparar archivos o rmas
+# Comparar archivos o ramas
 
-git diff login
+`git diff login`
 
 
 

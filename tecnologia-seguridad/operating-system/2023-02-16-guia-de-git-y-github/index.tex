@@ -22,6 +22,8 @@ Claves}
 \EndBabelCommands
 
 
+\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
@@ -46,6 +48,8 @@ Claves}
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
 \usepackage{subcaption}
+
+
 \renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
@@ -156,11 +160,13 @@ Claves}
 
 
 
-\usepackage{newtx}
+\usepackage{fontspec} 
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 
+  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
 
 
 
@@ -232,14 +238,14 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
   \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{Listado de Figuras}
+  \renewcommand*\listfigurename{List of Figures}
 \else
-  \newcommand\listfigurename{Listado de Figuras}
+  \newcommand\listfigurename{List of Figures}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{Listado de Tablas}
+  \renewcommand*\listtablename{List of Tables}
 \else
-  \newcommand\listtablename{Listado de Tablas}
+  \newcommand\listtablename{List of Tables}
 \fi
 \ifdefined\figurename
   \renewcommand*\figurename{Figura}
@@ -255,8 +261,8 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listado}
-\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
 \makeatother
@@ -307,7 +313,7 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \newpage
 \section[Introduction]{Guía de Git Cómo trabajar en equipo en proyectos}
 
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{5}
 
 \setlength\LTleft{0pt}
 
@@ -340,23 +346,31 @@ proyectos eficientemente.
 
 \subsection{Comandos básicos de Git}\label{comandos-buxe1sicos-de-git}
 
-Aquí tienes los comandos fundamentales para empezar:
+Aquí tienes los comandos fundamentales:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
+  \texttt{echo\ "\#\ Léeme"\ \textgreater{}\textgreater{}\ README.md}:
+  Crea un archivo README.md con el texto ``\# Léeme''.
+\item
   \texttt{git\ init}: Inicia un nuevo repositorio en el directorio
   actual.
-\item
-  \texttt{git\ clone\ {[}url{]}}: Copia un repositorio existente a tu
-  máquina.
 \item
   \texttt{git\ add\ {[}file{]}}: Añade un archivo al área de
   preparación.
 \item
-  \texttt{git\ commit\ -m\ "mensaje"}: Guarda los cambios con un mensaje
-  descriptivo.
+  \texttt{git\ commit\ -m\ "Primer\ commit"}: Guarda los cambios con un
+  mensaje descriptivo.
+\item
+  \texttt{git\ branch\ -M\ main}: Muestra las ramas existentes.
+\item
+  \texttt{git\ remote\ add\ origin\ git@github.com:achalmed/repositorio.git}
+  : Vincula el repositorio local con uno remoto en GitHub.
+\item
+  \texttt{git\ push\ -u\ origin\ main}: Envía los cambios al repositorio
+  remoto.
 \item
   \texttt{git\ status}: Muestra el estado actual del repositorio.
 \item
@@ -364,8 +378,6 @@ Aquí tienes los comandos fundamentales para empezar:
 \item
   \texttt{git\ diff}: Compara cambios no confirmados con el último
   commit.
-\item
-  \texttt{git\ branch}: Muestra las ramas existentes.
 \item
   \texttt{git\ checkout\ {[}branch{]}}: Cambia a una rama específica.
 \item
@@ -626,16 +638,39 @@ GitHub}\label{subir-un-proyecto-a-github}
   Crea un repositorio en GitHub (público o privado).
 \item
   En tu proyecto local:
+\end{enumerate}
+
+\textbf{Con SSH}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\BuiltInTok{echo} \StringTok{"\# examen"} \OperatorTok{\textgreater{}\textgreater{}}\NormalTok{ README.md}
 \FunctionTok{git}\NormalTok{ init}
 \FunctionTok{git}\NormalTok{ add .}
-\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Inicial"}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Primer commit"}
+\FunctionTok{git}\NormalTok{ branch }\AttributeTok{{-}M}\NormalTok{ main}
 \FunctionTok{git}\NormalTok{ remote add origin git@github.com:usuario/repositorio.git}
 \FunctionTok{git}\NormalTok{ push }\AttributeTok{{-}u}\NormalTok{ origin main}
 \end{Highlighting}
 \end{Shaded}
+
+\textbf{Con HTTPS}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{echo} \StringTok{"\# examen"} \OperatorTok{\textgreater{}\textgreater{}}\NormalTok{ README.md}
+\FunctionTok{git}\NormalTok{ init}
+\FunctionTok{git}\NormalTok{ add .}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Primer commit"}
+\FunctionTok{git}\NormalTok{ branch }\AttributeTok{{-}M}\NormalTok{ main}
+\FunctionTok{git}\NormalTok{ remote add origin https://github.com/usuario/repositorio.git}
+\FunctionTok{git}\NormalTok{ push }\AttributeTok{{-}u}\NormalTok{ origin main}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
 \item
   Si aparece el error remote origin already exists:
 
@@ -662,6 +697,12 @@ GitHub}\label{subir-un-proyecto-a-github}
 \item
   \texttt{git\ log\ -\/-graph\ -\/-pretty=oneline}
 \item
+  \texttt{git\ log\ -\/-graph\ -\/-decorate\ -\/-all\ -\/-oneline}
+\item
+  \texttt{git\ config\ -\/-global\ alias.tree\ "log\ -\/-graph\ -\/-decorate\ -\/-all\ -\/-oneline"}
+\item
+  \texttt{git\ tree}
+\item
   \texttt{git\ log\ -\/-oneline}: Historial compacto. Ejemplo:
 
 \begin{Shaded}
@@ -670,21 +711,36 @@ GitHub}\label{subir-un-proyecto-a-github}
 \end{Highlighting}
 \end{Shaded}
 \item
-  git blame {[}archivo{]}: Autores y fechas de cambios.
+  \texttt{git\ blame\ {[}archivo{]}}: Autores y fechas de cambios.
+\item
+  \texttt{touch\ .gitignore}
 \end{itemize}
 
 \subsection{Trabajar con ramas}\label{trabajar-con-ramas}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Crea y cambia a una rama:
+\end{enumerate}
+
+Navegando en ramas - \texttt{git\ checkout\ holagit.py} -
+\texttt{git\ log} -
+\texttt{git\ checkout\ 707c7f864de5e036c54b43df5a1bfa464fb4d9ba} -
+\texttt{git\ tree} - \texttt{git\ checkout\ 380beab} Creando ramas
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{git}\NormalTok{ checkout }\AttributeTok{{-}b}\NormalTok{ nueva{-}rama}
 \end{Highlighting}
 \end{Shaded}
+
+\texttt{git\ branch\ login} \texttt{git\ switch\ login}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \item
   Fusiona ramas:
 
@@ -694,8 +750,54 @@ GitHub}\label{subir-un-proyecto-a-github}
 \FunctionTok{git}\NormalTok{ merge nueva{-}rama}
 \end{Highlighting}
 \end{Shaded}
+\end{enumerate}
+
+\texttt{git\ switch\ login} \texttt{git\ merge\ main} \texttt{git\ tree}
+
+corrección de conflicto
+
+\begin{itemize}
+\tightlist
 \item
-  Etiqueta un commit:
+  \texttt{git\ merge\ main}
+\item
+  conflicto tal vez por que se modifico la mimsa linea en distintos
+  branch
+\item
+  corregir el error
+\item
+  \texttt{git\ add\ archivo\_conflicto.py}
+\item
+  \texttt{git\ commit\ -m\ "correccion\ conflicto"}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Reset
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ tree}
+\item
+  \texttt{git\ reset\ -\/-hard\ af18c2a}
+\item
+  \texttt{git\ log}
+\item
+  \texttt{git\ reflog} log completo
+\item
+  \texttt{git\ checkout\ 380beab}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Etiqueta un commit: (Para versiones)
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -704,6 +806,43 @@ GitHub}\label{subir-un-proyecto-a-github}
 \end{Highlighting}
 \end{Shaded}
 \end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{git\ tag\ clase\_1}
+\item
+  \texttt{git\ log} o \texttt{git\ tree}
+\item
+  \texttt{git\ tag} Listado de tags
+\item
+  \texttt{git\ checkout\ tags/clase\_1}
+\item
+\end{itemize}
+
+\section{Guardar temporalmente un trabajo no
+terminado}\label{guardar-temporalmente-un-trabajo-no-terminado}
+
+\texttt{git\ status}
+
+\texttt{git\ switch\ main}
+
+\texttt{git\ stash}
+
+\texttt{git\ stash\ list} \texttt{git\ switch\ main}
+
+Hago los cambios
+
+\texttt{git\ switch\ login}
+
+\texttt{git\ stash\ pop} \texttt{git\ add\ .}
+\texttt{git\ commit\ -m\ "Login\ v2"}
+
+\texttt{git\ stash\ drop}
+
+\section{Comparar archivos o ramas}\label{comparar-archivos-o-ramas}
+
+\texttt{git\ diff\ login}
 
 \subsection{Sincronización}\label{sincronizaciuxf3n}
 

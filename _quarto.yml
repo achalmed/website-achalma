@@ -4,17 +4,6 @@ project:
   resources:
     - resourses/cv.pdf
     - blog/sidebar.jpg
-    - econometria/sidebar.jpg
-    - filosofia-politica/sidebar.jpg
-    - finanzas/sidebar.jpg
-    - gestion-publica-herramientas/sidebar.jpg
-    - herramientas-oficina/sidebar.jpg
-    - investigacion-metodologia/sidebar.jpg
-    - macroeconomia/sidebar.jpg
-    - matematicas/sidebar.jpg
-    - microeconomia/sidebar.jpg
-    - programacion-software/sidebar.jpg
-    - tecnologia-seguridad/sidebar.jpg
     - teching/sidebar.jpg
     - talk/sidebar.jpg
 
@@ -72,27 +61,27 @@ website:
         icon: ellipsis-h
         menu:
           - text: "Econometria"
-            href: econometria/index.qmd
+            href: https://epsilon-y-beta.netlify.app/
           - text: "Filosofía"
-            href: filosofia-politica/index.qmd
+            href: https://dialectica-y-mercado.netlify.app/
           - text: "Finanzas"
-            href: finanzas/index.qmd
+            href: https://pecunia-fluxus.netlify.app/
           - text: "Gestión empresarial"
-            href: gestion-empresarial/index.qmd
+            href: https://actus-mercator.netlify.app/
           - text: "Gestión pública"
-            href: gestion-publica/index.qmd
+            href: https://res-publica.netlify.app/
           - text: "Ofimática"
             href: herramientas-oficina/index.qmd
           - text: "Metodología de la investigación"
-            href: investigacion-metodologia/index.qmd
+            href: https://methodica.netlify.app/
           - text: "Macroeconomía"
-            href: macroeconomia/index.qmd
+            href: https://aequilibria.netlify.app/
           - text: "Matemáticas"
-            href: matematicas/index.qmd
+            href: https://axiomata.netlify.app/
           - text: "Microeconomía"
-            href: microeconomia/index.qmd
+            href: https://optimums.netlify.app/
           - text: "Programación y Software"
-            href: programacion-software/index.qmd
+            href: https://numerus-scriptum.netlify.app/
           - text: "Cursos"
             href: teching/index.qmd
           - text: "Seguridad informática"

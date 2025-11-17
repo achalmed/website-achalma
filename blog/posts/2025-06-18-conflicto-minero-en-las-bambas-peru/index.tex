@@ -15,11 +15,10 @@
 
 \usepackage[bidi=default]{babel}
 \babelprovide[main,import]{spanish}
-\StartBabelCommands{spanish}{captions} [unicode, fontenc=TU EU1 EU2, charset=utf8] \SetString{\keywordname}{Palabras
-Claves}
-\EndBabelCommands
 
 
+\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
@@ -116,11 +115,13 @@ Claves}
 
 
 
-\usepackage{newtx}
+\usepackage{fontspec} 
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 
+  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Latin Modern
+Roman}
 
 
 

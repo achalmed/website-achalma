@@ -33,11 +33,11 @@ about:
       href: https://github.com/achalmed
     # - icon: mastodon
     #   href: https://hachyderm.io/@achalmaedison
-    - text: "{{< ai orcid >}}"
-      href: https://orcid.org/0000-0001-6996-3364
-    - text: "{{< ai google-scholar >}}"
-      aria-label: "Google Scholar"
-      href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
+    #- text: "{{< ai orcid >}}"
+    #  href: https://orcid.org/0000-0001-6996-3364
+    #- text: "{{< ai google-scholar >}}"
+    #  aria-label: "Google Scholar"
+    #  href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
     - text: "{{< fa envelope >}}"
       aria-label: Newsletter
       href: https://buttondown.com/achalmaedison

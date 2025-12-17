@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,17 +34,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-08f2d463637cea5ffc7a3a3e4402d4bd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d5a81b5673604fa4063d541f11a590de.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1e67e786e38ab72cceeb5743e31909f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d4829be937aa8ff7e73ed9c5394a4077.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,7 +58,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -210,7 +209,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -248,7 +247,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo light-content">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Edison Achalma B.Sc. Econ.</span>
@@ -304,10 +304,6 @@ window.Quarto = {
  <span class="dropdown-text">Gestión pública</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../herramientas-oficina/index.qmd">
- <span class="dropdown-text">Ofimática</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="https://methodica.netlify.app/">
  <span class="dropdown-text">Metodología de la investigación</span></a>
   </li>  
@@ -332,7 +328,7 @@ window.Quarto = {
  <span class="dropdown-text">Cursos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tecnologia-seguridad/index.qmd">
+    <a class="dropdown-item" href="https://chaska-x.netlify.app/">
  <span class="dropdown-text">Seguridad informática</span></a>
   </li>  
         <li>
@@ -390,10 +386,10 @@ window.Quarto = {
      <span class="about-link-text"></span>
   </a>
   <a href="https://orcid.org/0000-0001-6996-3364" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-orcid" style="color:black"></i></span>
+     <span class="about-link-text">{{&lt; ai orcid &gt;}}</span>
   </a>
   <a href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-google-scholar" style="color:black"></i></span>
+     <span class="about-link-text">{{&lt; ai google-scholar &gt;}}</span>
   </a>
   <a href="https://buttondown.com/achalmaedison" class="about-link" rel="" target="">
      <span class="about-link-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span>
@@ -446,16 +442,16 @@ Hola, me alegro de que estés aquí.
 <h4 data-anchor-id="blog">Blog</h4>
 <div id="listing-blog" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="UG9zdHMlMkNQb2wlQzMlQUR0aWNhJTIwUCVDMyVCQWJsaWNhJTJDTWFuZWpvJTIwZGUlMjBDb25mbGljdG9z" data-listing-date-sort="1750222800000" data-listing-file-modified-sort="1750730924107" data-listing-date-modified-sort="1757307600000" data-listing-reading-time-sort="38" data-listing-word-count-sort="7463">
-<a href="../blog/posts/2025-06-18-conflicto-minero-en-las-bambas-peru/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="UG9zdHMlMkNQb2wlQzMlQUR0aWNhJTIwRWNvbiVDMyVCM21pY2E=" data-listing-date-sort="1683867600000" data-listing-file-modified-sort="1763657823529" data-listing-date-modified-sort="1765947600000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1901">
+<a href="../blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<!-- img(9CEB782EFEE6)[progressive=false, height=200]:blog:blog/posts/2025-06-18-conflicto-minero-en-las-bambas-peru/index.html -->
+<div class="listing-item-img-placeholder card-img-top" style="height: 200;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Análisis del Conflicto Minero en Las Bambas
+Economía Peruana 1970-1990
 </h5>
 <div class="card-subtitle listing-subtitle">
-Impactos Ambientales, Sociales y Estrategias de Resolución
+Analiza las políticas económicas y desafíos en Perú durante dos décadas críticas
 </div>
 </div>
 </div></a>
@@ -469,7 +465,7 @@ Impactos Ambientales, Sociales y Estrategias de Resolución
 <h4 data-anchor-id="talks">Talks</h4>
 <div id="listing-talk" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="cmVzZWFyY2glMkNNZXRvZG9sb2clQzMlQURhJTIwcGFyYSUyMGVsJTIwZXN0dWRpbyUyMHVuaXZlcnNpdGFyaW8lMkNjYXUlMkN1bnNjaA==" data-listing-date-sort="1739941200000" data-listing-file-modified-sort="1744921216566" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="g-col-1" data-index="0" data-categories="cmVzZWFyY2glMkNNZXRvZG9sb2clQzMlQURhJTIwcGFyYSUyMGVsJTIwZXN0dWRpbyUyMHVuaXZlcnNpdGFyaW8lMkNjYXUlMkN1bnNjaA==" data-listing-date-sort="1739941200000" data-listing-file-modified-sort="1763657823954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <a href="../talk/2025-02-19-sesion-09-practica-estructura-y-citas-apa/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -494,10 +490,10 @@ Segunda práctica en word
 <h4 data-anchor-id="publications">Publications</h4>
 <div id="listing-publication" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="UmVzZWFyY2g=" data-listing-date-sort="1657688400000" data-listing-file-modified-sort="1744921216341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
+<div class="g-col-1" data-index="0" data-categories="UmVzZWFyY2g=" data-listing-date-sort="1657688400000" data-listing-file-modified-sort="1763657823765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
 <a href="../publication/2022-07-13-enis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<!-- img(9CEB782EFEE6)[progressive=false, height=200]:publication:publication/2022-07-13-enis/index.html -->
+<p class="card-img-top"><img src="../publication/featured.jpg" style="height: 200;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023
@@ -572,13 +568,14 @@ Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -929,7 +926,7 @@ Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023
 <p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

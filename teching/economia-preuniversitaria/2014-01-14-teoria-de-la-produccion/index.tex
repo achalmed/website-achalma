@@ -6,6 +6,7 @@
   nolmodern,
   notxfonts,
   notimes,
+  12pt,
   colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
 
 \usepackage{amsmath}
@@ -15,9 +16,6 @@
 
 \usepackage[bidi=default]{babel}
 \babelprovide[main,import]{spanish}
-\StartBabelCommands{spanish}{captions} [unicode, fontenc=TU EU1 EU2, charset=utf8] \SetString{\keywordname}{Palabras
-Claves}
-\EndBabelCommands
 
 
 % get rid of language-specific shorthands (see #6817):
@@ -44,6 +42,8 @@ Claves}
 
 \usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
 \usepackage{subcaption}
+
+
 \renewcommand\thesubfigure{\Alph{subfigure}}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
@@ -170,20 +170,20 @@ manera:  Edison Achalma:   conceptualización, redacción}
 Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@unsch.edu.pe}}
 }
 
-\usepackage{pbalance} 
-\usepackage{float}
+\usepackage{pbalance}
+% \usepackage{float}
 \makeatletter
 \let\oldtpt\ThreePartTable
 \let\endoldtpt\endThreePartTable
 \def\ThreePartTable{\@ifnextchar[\ThreePartTable@i \ThreePartTable@ii}
 \def\ThreePartTable@i[#1]{\begin{figure}[!htbp]
 \onecolumn
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.485\textwidth}
 \oldtpt[#1]
 }
 \def\ThreePartTable@ii{\begin{figure}[!htbp]
 \onecolumn
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.48\textwidth}
 \oldtpt
 }
 \def\endThreePartTable{
@@ -224,14 +224,14 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
   \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{Listado de Figuras}
+  \renewcommand*\listfigurename{Lista de Figuras}
 \else
-  \newcommand\listfigurename{Listado de Figuras}
+  \newcommand\listfigurename{Lista de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{Listado de Tablas}
+  \renewcommand*\listtablename{Lista de Tablas}
 \else
-  \newcommand\listtablename{Listado de Tablas}
+  \newcommand\listtablename{Lista de Tablas}
 \fi
 \ifdefined\figurename
   \renewcommand*\figurename{Figura}
@@ -247,8 +247,8 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listado}
-\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listings}}
 \makeatother
 \makeatletter
 \makeatother
@@ -294,14 +294,17 @@ Achalma, Email: \href{mailto:elmer.achalma.09@unsch.edu.pe}{elmer.achalma.09@uns
 
 \maketitle
 
+
 \hypertarget{toc}{}
 \tableofcontents
 \newpage
 \section[Introduction]{Teoría de la Producción}
 
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{3}
 
 \setlength\LTleft{0pt}
+
+
 
 
 Este artículo está actualmente en proceso de edición, y todas las

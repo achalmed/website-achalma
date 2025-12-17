@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-08f2d463637cea5ffc7a3a3e4402d4bd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d5a81b5673604fa4063d541f11a590de.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-dbb9da40246b9941f50e7d7b839a9561.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3991f0cafa3ce0ddc196c1f5971b421e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -128,7 +127,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -162,7 +161,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo light-content">
+    <img src="../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Edison Achalma B.Sc. Econ.</span>
@@ -198,47 +198,43 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-more">    
         <li>
-    <a class="dropdown-item" href="../econometria/index.qmd">
+    <a class="dropdown-item" href="https://epsilon-y-beta.netlify.app/">
  <span class="dropdown-text">Econometria</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../filosofia-politica/index.qmd">
+    <a class="dropdown-item" href="https://dialectica-y-mercado.netlify.app/">
  <span class="dropdown-text">Filosofía</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../finanzas/index.qmd">
+    <a class="dropdown-item" href="https://pecunia-fluxus.netlify.app/">
  <span class="dropdown-text">Finanzas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../gestion-empresarial/index.qmd">
+    <a class="dropdown-item" href="https://actus-mercator.netlify.app/">
  <span class="dropdown-text">Gestión empresarial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../gestion-publica/index.qmd">
+    <a class="dropdown-item" href="https://res-publica.netlify.app/">
  <span class="dropdown-text">Gestión pública</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../herramientas-oficina/index.html">
- <span class="dropdown-text">Ofimática</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../investigacion-metodologia/index.qmd">
+    <a class="dropdown-item" href="https://methodica.netlify.app/">
  <span class="dropdown-text">Metodología de la investigación</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../macroeconomia/index.qmd">
+    <a class="dropdown-item" href="https://aequilibria.netlify.app/">
  <span class="dropdown-text">Macroeconomía</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../matematicas/index.qmd">
+    <a class="dropdown-item" href="https://axiomata.netlify.app/">
  <span class="dropdown-text">Matemáticas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../microeconomia/index.qmd">
+    <a class="dropdown-item" href="https://optimums.netlify.app/">
  <span class="dropdown-text">Microeconomía</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../programacion-software/index.qmd">
+    <a class="dropdown-item" href="https://numerus-scriptum.netlify.app/">
  <span class="dropdown-text">Programación y Software</span></a>
   </li>  
         <li>
@@ -246,7 +242,7 @@ window.Quarto = {
  <span class="dropdown-text">Cursos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tecnologia-seguridad/index.html">
+    <a class="dropdown-item" href="https://chaska-x.netlify.app/">
  <span class="dropdown-text">Seguridad informática</span></a>
   </li>  
         <li>
@@ -357,7 +353,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="UmVzZWFyY2g=" data-listing-date-sort="1657688400000" data-listing-file-modified-sort="1744921216341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
+<div class="quarto-post image-left" data-index="0" data-categories="UmVzZWFyY2g=" data-listing-date-sort="1657688400000" data-listing-file-modified-sort="1763657823765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../publication/2022-07-13-enis/index.html" class="no-external">Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023</a>
@@ -433,13 +429,14 @@ Edison Achalma
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -790,7 +787,7 @@ Edison Achalma
 <p>© 2025 Edison Achalma ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0001-6996-3364" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?hl=en&amp;user=LvAkIvcAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/achalmed" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/achalmaedison" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

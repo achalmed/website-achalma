@@ -118,10 +118,9 @@ format:
     theme:
       light:
         - cosmo
-        # - superhero
-        - assets/silvia-theme.scss
-        - assets/silvia/colors.scss
-        - assets/silvia/fonts.scss
+        - assets/theme_light.scss
+        - assets/colors.scss
+        - assets/fonts.scss
     highlight-style: a11y
     code-link: true
     pagetitle: "{{< meta title >}}"

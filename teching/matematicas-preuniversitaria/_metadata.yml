@@ -134,7 +134,7 @@ format:
     citation-location: document
     self-contained: true
     template-partials:
-      - ../_partials/title-block-link-buttons/title-block.html
+      - ../../_partials/title-block-link-buttons/title-block.html
     theme: litera
     other-links:
       - text: Gravatar

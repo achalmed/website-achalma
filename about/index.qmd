@@ -1,11 +1,11 @@
 ---
 title: "Edison Achalma"
 subtitle: Economist & Data Scientist 
-image: ../assets/profile.png
+image: ../assets/img/profile.png
 image-alt: "Smiling man with a tan complexion, dark eyes, and dark short wavy hair styled to one side"
 about:
   template: trestles
-  image-width: 14em
+  image-width: 20em
   image-shape: rounded
   id: hero-heading
   links:
@@ -71,7 +71,7 @@ listing:
   fields: [title, image]
   max-items: 1
   image-height: "200"
-  image-placeholder: "../publication/featured.jpg"
+  image-placeholder: ../publication/featured.jpg
 - id: project
   contents: 
     - "../project/*/index.qmd"
@@ -93,6 +93,7 @@ header-includes: >
   <link rel="stylesheet" href="../assets/about.css">
 resources:
   - ../assets/about.css
+  - ../publication/featured.jpg
 ---
 
 ::: {#hero-heading}

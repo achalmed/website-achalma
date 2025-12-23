@@ -1,8 +1,8 @@
 ---
 title: "Edison Achalma"
 subtitle: Economist & Data Scientist 
-image: sidebar/vka-profile.jpg
-image-alt: "Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"
+image: ../assets/profile.png
+image-alt: "Smiling man with a tan complexion, dark eyes, and dark short wavy hair styled to one side"
 about:
   template: trestles
   image-width: 14em
@@ -23,11 +23,11 @@ about:
       href: https://github.com/achalmed
     # - icon: mastodon
     #   href: https://mastodon.social/@achalmaedison
-    - text: "{{< ai orcid >}}"
-      href: https://orcid.org/0000-0001-6996-3364
-    - text: "{{< ai google-scholar >}}"
-      aria-label: "Google Scholar"
-      href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
+    #- text: "{{< ai orcid >}}"
+      #href: https://orcid.org/0000-0001-6996-3364
+    #- text: "{{< ai google-scholar >}}"
+      #aria-label: "Google Scholar"
+      #href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
     - text: "{{< fa envelope >}}"
       aria-label: Newsletter
       href: https://buttondown.com/achalmaedison
@@ -71,7 +71,7 @@ listing:
   fields: [title, image]
   max-items: 1
   image-height: "200"
-  image-placeholder: ../publication/featured.jpg
+  image-placeholder: "../publication/featured.jpg"
 - id: project
   contents: 
     - "../project/*/index.qmd"

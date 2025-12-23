@@ -158,6 +158,7 @@ format:
     number-sections: true
     colorlinks: true
     pdf-engine: xelatex
+    keep-md: false
 
   # ---------------------------------------------------------------------------
   # Formato DOCX (APA Quarto)
@@ -168,6 +169,7 @@ format:
     a4paper: true
     numbered-lines: false
     number-sections: true
+    keep-md: false
 
 # =============================================================================
 # CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN
@@ -177,8 +179,19 @@ jupyter: python3
 
 # Editor
 editor:
+  # Modo preferido (source o visual)
+  mode: source
+  
+  # Configuración de Markdown
   markdown:
-    canonical: true
+    canonical: true      # Formato consistente. Usar formato Markdown canónico (mejor para control de versiones)
+    wrap: 72            # 72 caracteres por línea
+    references:
+      location: section # Notas al pie por sección
+    
+    # Opciones de escritura
+    auto-wrapping: true
+    sentence-spacing: true
 
 # =============================================================================
 # CONFIGURACIÓN DE COMENTARIOS
@@ -190,3 +203,18 @@ comments:
     issue-term: title
     theme: boxy-light
     label: "comments :crystal_ball:"
+
+# =============================================================================
+# CONFIGURACIÓN DE EJECUCIÓN
+# =============================================================================
+
+execute:
+  freeze: true  # true: Nunca re-ejecutar durante el renderizado del proyecto. auto: Re-ejecutar solo cuando cambia el código fuente (fuciona solo si .qmd que tienen Python/R)
+  keep-md: true  # Mantener archivos .md generados
+  keep-ipynb: true 
+  echo: true  # Mostrar comandos ejecutados
+  output: true  # Mostrar resultados de la ejecución
+  warning: false  # Ocultar advertencias
+  error: false  # Ocultar errores
+  enabled: false  # Deshabilita la ejecución de código por defecto. Habilitar la ejecución: quarto render notebook.ipynb --execute
+  cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject

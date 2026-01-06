@@ -1,56 +1,702 @@
-/* Título y estructura general */
+/* ============================================================================
+   ESTILOS PARA LISTADOS DE ARTÍCULOS - DISEÑO ACADÉMICO
+   ============================================================================
+   
+   Estilos optimizados para la presentación de listados de blog posts,
+   artículos académicos y publicaciones.
+   
+   Características:
+   - Cards minimalistas y elegantes
+   - Énfasis en la tipografía
+   - Espaciado generoso
+   - Transiciones suaves
+   - Diseño responsive
+   
+   Autor: Edison Achalma
+   Fecha: Enero 2025
+   ============================================================================
+*/
 
-/* Elimina todos los estilos predeterminados del bloque de título y su contenedor */
+/* ----------------------------------------------------------------------------
+   SECCIÓN 1: ENCABEZADO Y TÍTULO PRINCIPAL
+   ----------------------------------------------------------------------------
+*/
+
+/* Reset completo del bloque de título */
 #title-block-header,
 #title-block-header-title {
-  all: unset; /* Restablece todas las propiedades CSS a sus valores iniciales */
-  background-image: none !important; /* Fuerza la eliminación de cualquier imagen de fondo */
+  all: unset;
+  /* Elimina todos los estilos predeterminados */
+  display: block;
+  background-image: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Estilo del título de la página */
+/* Contenedor principal del bloque de título */
+#title-block-header {
+  max-width: 100%;
+  overflow: visible;
+}
+
+/* Título principal de la página de listado */
 #title-block-header.quarto-title-block.default .quarto-title .title {
-  font-size: 2.5em; /* Establece el tamaño de fuente del título a 2.5 veces el tamaño base */
-  text-align: center; /* Centra el texto del título horizontalmente */
-  margin: 0 0 0.5em 0; /* Define márgenes: 0 arriba, 0 a los lados, 0.5em abajo, 0 a la izquierda */
+  /* Tipografía */
+  font-family: "Petrona", Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+
+  /* Espaciado */
+  margin: 0 auto 1rem;
+  padding: 0;
+
+  /* Alineación */
+  text-align: center;
+
+  /* Efectos */
+  color: inherit;
+  text-wrap: balance;
+  /* Evita líneas huérfanas */
+
+  /* Transición suave para cambios de color */
+  transition: color 0.3s ease;
 }
 
-/* Estilo del texto debajo del título (descripción) */
-.description p {
-  text-align: center; /* Centra el texto de la descripción */
-  margin: 0 1em 10em 1em; /* Márgenes: 0 arriba, 1em a los lados, 10em abajo (espacio grande), 1em a la izquierda */
-  padding: 0 0 5em 0; /* Relleno: 0 arriba, 0 a los lados, 5em abajo (espacio adicional), 0 a la izquierda */
+/* Subtítulo o descripción debajo del título */
+.subtitle {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--spc-text-secondary, #4A4A4A);
+  text-align: center;
+  margin: 0 auto 1rem;
+  max-width: 700px;
 }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 2: DESCRIPCIÓN Y CONTENIDO INTRODUCTORIO
+   ----------------------------------------------------------------------------
+*/
 
 /* Contenedor de la descripción */
 .description {
-  overflow: hidden; /* Evita que el contenido se desborde y corrige el flujo del diseño */
-  /* Corrige el flujo: asegura que los elementos respeten el espacio asignado */
+  /* Espaciado */
+  margin: 0 auto 4rem;
+  padding: 0 1rem 3rem;
+
+  /* Ancho máximo para legibilidad */
+  max-width: 800px;
+
+  /* Evitar desbordamiento */
+  overflow: visible;
 }
 
-/* Estilo de los enlaces dentro de la descripción */
+/* Párrafos dentro de la descripción */
+.description p {
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+
+  /* Espaciado */
+  margin: 0 0 1.5rem 0;
+
+  /* Alineación */
+  text-align: center;
+
+  /* Color */
+  color: var(--spc-text-primary, #1A1A1A);
+}
+
+/* Enlaces dentro de la descripción */
 .description a {
-  text-decoration: underline !important; /* Fuerza que los enlaces estén subrayados */
+  /* Subrayado personalizado */
+  text-decoration: underline;
+  text-decoration-color: var(--spc-secondary, #C44D3B);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+
+  /* Color */
+  color: var(--spc-secondary, #C44D3B);
+
+  /* Transición */
+  transition: all 0.25s ease;
 }
 
-/* Estilo de los enlaces al pasar el cursor sobre ellos */
+/* Estado hover de enlaces */
 .description a:hover {
-  text-decoration: none !important; /* Elimina el subrayado cuando el cursor pasa por encima */
+  text-decoration: none;
+  color: var(--spc-secondary-light, #D96E5D);
+  opacity: 0.85;
 }
 
-/* Estilo de las tarjetas del listado (listing cards) */
+/* ----------------------------------------------------------------------------
+   SECCIÓN 3: TARJETAS DE ARTÍCULOS (CARDS)
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de la lista de artículos */
+.quarto-listing {
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid de tarjetas */
+.list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Tarjeta individual */
 .card {
-  background: transparent; /* Fondo transparente para las tarjetas */
-  border: none; /* Elimina los bordes de las tarjetas */
-  border-radius: 4px; /* Añade esquinas redondeadas de 4px */
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* Sombra suave: 1px a la derecha, 1px abajo, 10px de desenfoque, 10% de opacidad */
+  /* Fondo y bordes */
+  background: var(--spc-bg, #FFFCF7);
+  border: 1px solid var(--spc-border-light, #EDEAE6);
+  border-radius: 8px;
+
+  /* Sombra sutil */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Espaciado interno */
+  padding: 0;
+
+  /* Efectos */
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* Estilo de las imágenes dentro de las tarjetas */
+/* Estado hover de la tarjeta */
+.card:hover {
+  /* Sombra más pronunciada */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Elevación sutil */
+  transform: translateY(-4px);
+
+  /* Borde más visible */
+  border-color: var(--spc-border, #E0DDD8);
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 4: IMAGEN DE LA TARJETA
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de la imagen */
+.card-img-top,
 .card-img {
-  border-radius: 8px 8px 0px 0px; /* Esquinas redondeadas solo en la parte superior (8px) */
+  /* Tamaño */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+
+  /* Bordes superiores redondeados */
+  border-radius: 8px 8px 0 0;
+
+  /* Sin borde inferior */
+  border-bottom: none;
+
+  /* Transición */
+  transition: transform 0.3s ease;
 }
 
-/* Clase para definir un color específico */
-.color {
-  color: papayawhip; /* Establece el color del texto a "papayawhip" (un tono crema claro) */
+/* Efecto hover en imagen */
+.card:hover .card-img-top,
+.card:hover .card-img {
+  transform: scale(1.05);
 }
+
+/* Contenedor que mantiene aspecto de imagen */
+.card-img-wrapper {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  height: 200px;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 5: CUERPO DE LA TARJETA
+   ----------------------------------------------------------------------------
+*/
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  /* Espaciado */
+  padding: 1.5rem;
+
+  /* Flexbox para distribución */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* Título del artículo en la tarjeta */
+.card-title {
+  /* Tipografía */
+  font-family: "Petrona", Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+
+  /* Espaciado */
+  margin: 0 0 0.5rem 0;
+
+  /* Color */
+  color: var(--spc-primary, #002642);
+
+  /* Limitar a 2 líneas con ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Transición */
+  transition: color 0.25s ease;
+}
+
+/* Hover en título */
+.card:hover .card-title {
+  color: var(--spc-primary-light, #1A4D6F);
+}
+
+/* Texto descriptivo de la tarjeta */
+.card-text {
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+
+  /* Color */
+  color: var(--spc-text-secondary, #4A4A4A);
+
+  /* Espaciado */
+  margin: 0 0 1rem 0;
+
+  /* Limitar a 3 líneas con ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 6: METADATOS (AUTOR, FECHA, CATEGORÍAS)
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de metadatos */
+.card-meta {
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.875rem;
+
+  /* Color */
+  color: var(--spc-text-muted, #6B6B6B);
+
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+
+  /* Espaciado */
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--spc-border-light, #EDEAE6);
+}
+
+/* Autor */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+/* Fecha de publicación */
+.card-date {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Iconos en metadatos (Font Awesome, etc.) */
+.card-meta i,
+.card-meta svg {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.7;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 7: CATEGORÍAS Y ETIQUETAS
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de categorías */
+.card-categories,
+.listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Etiqueta individual de categoría */
+.quarto-category,
+.listing-category {
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  /* Espaciado */
+  padding: 0.25rem 0.75rem;
+
+  /* Bordes */
+  border: 1px solid var(--spc-border, #E0DDD8);
+  border-radius: 4px;
+
+  /* Color */
+  color: var(--spc-text-secondary, #4A4A4A);
+  background: transparent;
+
+  /* Decoración */
+  text-decoration: none;
+
+  /* Transición */
+  transition: all 0.2s ease;
+}
+
+/* Estado hover de categoría */
+.quarto-category:hover,
+.listing-category:hover {
+  background: var(--spc-primary, #002642);
+  color: var(--spc-bg, #FFFCF7);
+  border-color: var(--spc-primary, #002642);
+  transform: translateY(-1px);
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 8: PIE DE TARJETA
+   ----------------------------------------------------------------------------
+*/
+
+/* Pie de la tarjeta (enlaces, acciones) */
+.card-footer {
+  /* Espaciado */
+  padding: 1rem 1.5rem;
+
+  /* Fondo */
+  background: transparent;
+
+  /* Borde superior */
+  border-top: 1px solid var(--spc-border-light, #EDEAE6);
+}
+
+/* Enlace "Leer más" */
+.card-link,
+.read-more {
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+
+  /* Color */
+  color: var(--spc-secondary, #C44D3B);
+
+  /* Decoración */
+  text-decoration: none;
+
+  /* Espaciado */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  /* Transición */
+  transition: all 0.25s ease;
+}
+
+/* Hover en enlace */
+.card-link:hover,
+.read-more:hover {
+  color: var(--spc-secondary-light, #D96E5D);
+  transform: translateX(4px);
+}
+
+/* Flecha o icono en enlace */
+.card-link::after,
+.read-more::after {
+  content: "→";
+  transition: transform 0.25s ease;
+}
+
+.card-link:hover::after,
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 9: ESTADOS ESPECIALES
+   ----------------------------------------------------------------------------
+*/
+
+/* Artículo destacado (featured) */
+.card.featured {
+  border: 2px solid var(--spc-secondary, #C44D3B);
+  background: linear-gradient(to bottom,
+      var(--spc-secondary-lightest, #F9EBE8) 0%,
+      var(--spc-bg, #FFFCF7) 100%);
+}
+
+/* Badge de "Nuevo" o "Destacado" */
+.card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  /* Tipografía */
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  /* Espaciado */
+  padding: 0.25rem 0.75rem;
+
+  /* Estilo */
+  background: var(--spc-secondary, #C44D3B);
+  color: white;
+  border-radius: 4px;
+
+  /* Sombra */
+  box-shadow: 0 2px 8px rgba(196, 77, 59, 0.3);
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 10: RESPONSIVIDAD
+   ----------------------------------------------------------------------------
+*/
+
+/* Tablets y pantallas medianas */
+@media (max-width: 991px) {
+
+  /* Grid con 2 columnas */
+  .list.grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Título más pequeño */
+  #title-block-header.quarto-title-block.default .quarto-title .title {
+    font-size: 2.25rem;
+  }
+
+  /* Descripción */
+  .description {
+    padding: 0 1rem 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .description p {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 767px) {
+
+  /* Grid de 1 columna */
+  .list.grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Título más pequeño */
+  #title-block-header.quarto-title-block.default .quarto-title .title {
+    font-size: 2rem;
+  }
+
+  /* Subtítulo */
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  /* Descripción */
+  .description {
+    padding: 0 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* Tarjetas */
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.9375rem;
+    -webkit-line-clamp: 4;
+    /* Más líneas en móvil */
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 479px) {
+
+  .card-img-top,
+  .card-img,
+  .card-img-wrapper {
+    height: 180px;
+  }
+
+  #title-block-header.quarto-title-block.default .quarto-title .title {
+    font-size: 1.75rem;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 11: MODO OSCURO
+   ----------------------------------------------------------------------------
+*/
+
+/* Estilos para modo oscuro (cuando se active) */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--spc-dark-bg-elevated, #22252B);
+    border-color: var(--spc-dark-border, #3A3D45);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--spc-dark-border-dark, #4A4D55);
+  }
+
+  .card-title {
+    color: var(--spc-dark-text-primary, #E8E6E3);
+  }
+
+  .card:hover .card-title {
+    color: var(--spc-dark-primary, #5B9BD5);
+  }
+
+  .card-text {
+    color: var(--spc-dark-text-secondary, #C4C2BE);
+  }
+
+  .card-meta {
+    color: var(--spc-dark-text-muted, #9B9994);
+    border-top-color: var(--spc-dark-border-light, #2F323A);
+  }
+
+  .card-footer {
+    border-top-color: var(--spc-dark-border-light, #2F323A);
+  }
+
+  .quarto-category,
+  .listing-category {
+    color: var(--spc-dark-text-secondary, #C4C2BE);
+    border-color: var(--spc-dark-border, #3A3D45);
+  }
+
+  .quarto-category:hover,
+  .listing-category:hover {
+    background: var(--spc-dark-primary, #5B9BD5);
+    color: var(--spc-dark-bg, #1A1D23);
+    border-color: var(--spc-dark-primary, #5B9BD5);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 12: ACCESIBILIDAD
+   ----------------------------------------------------------------------------
+*/
+
+/* Foco visible para navegación por teclado */
+.card:focus-within {
+  outline: 2px solid var(--spc-secondary, #C44D3B);
+  outline-offset: 4px;
+}
+
+/* Reducir animaciones para usuarios con preferencias */
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .card-img,
+  .card-title,
+  .card-link,
+  .read-more,
+  .quarto-category,
+  .listing-category {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .card:hover {
+    transform: none !important;
+  }
+}
+
+/* ============================================================================
+   NOTAS DE IMPLEMENTACIÓN
+   ============================================================================
+   
+   1. DISEÑO:
+      - Cards con sombras sutiles para profundidad
+      - Espaciado generoso entre elementos
+      - Transiciones suaves en hover
+      - Imágenes con efecto zoom sutil
+   
+   2. TIPOGRAFÍA:
+      - Jerarquía clara: títulos en Petrona, texto en Red Hat Text
+      - Tamaños escalables y responsive
+      - Line-clamp para truncar texto con elegancia
+   
+   3. ACCESIBILIDAD:
+      - Contraste adecuado en todos los elementos
+      - Foco visible para navegación por teclado
+      - Soporte para prefers-reduced-motion
+      - Alternativas en modo oscuro
+   
+   4. RESPONSIVE:
+      - Grid adaptativo: 3 columnas → 2 → 1
+      - Tamaños de fuente escalables
+      - Imágenes que mantienen aspecto
+   
+   5. PERFORMANCE:
+      - Transiciones con GPU (transform)
+      - Evitar repaints costosos
+      - Imágenes con object-fit para optimización
+   
+   ============================================================================
+*/

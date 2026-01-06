@@ -1,19 +1,706 @@
-/* css styles */
+/* ============================================================================
+   ESTILOS ADICIONALES - COMPLEMENTOS GENERALES
+   ============================================================================
+   
+   Estilos adicionales para elementos específicos que no están cubiertos
+   por los otros archivos SCSS del sistema.
+   
+   Incluye:
+   - Estilos para palabras clave (keywords)
+   - Efectos de partículas (particles.js)
+   - Componentes personalizados
+   - Utilidades específicas del sitio
+   
+   Autor: Edison Achalma
+   Fecha: Enero 2025
+   ============================================================================
+*/
 
+/* ----------------------------------------------------------------------------
+   SECCIÓN 1: PALABRAS CLAVE (KEYWORDS)
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de palabras clave */
+.keywords {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--spc-bg-accent, #F0EBE3);
+    border-left: 4px solid var(--spc-secondary, #C44D3B);
+    border-radius: 4px;
+}
+
+/* Párrafos dentro de keywords */
 .keywords p {
+    /* Estilo cursiva para énfasis */
     font-style: italic;
+
+    /* Tipografía */
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+
+    /* Color sutil */
+    color: var(--spc-text-secondary, #4A4A4A);
+
+    /* Espaciado */
+    margin: 0;
+    padding: 0;
 }
 
+/* Etiquetas individuales de keywords */
+.keywords .keyword-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+
+    /* Estilo */
+    background: var(--spc-bg, #FFFCF7);
+    border: 1px solid var(--spc-border, #E0DDD8);
+    border-radius: 4px;
+
+    /* Tipografía */
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-style: normal;
+
+    /* Color */
+    color: var(--spc-text-primary, #1A1A1A);
+
+    /* Transición */
+    transition: all 0.2s ease;
+}
+
+.keywords .keyword-tag:hover {
+    background: var(--spc-primary-lightest, #E8F0F5);
+    border-color: var(--spc-primary-light, #1A4D6F);
+    transform: translateY(-1px);
+}
+
+/* Versión modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .keywords {
+        background: var(--spc-dark-bg-accent, #2A2D35);
+        border-left-color: var(--spc-dark-secondary, #E88873);
+    }
+
+    .keywords p {
+        color: var(--spc-dark-text-secondary, #C4C2BE);
+    }
+
+    .keywords .keyword-tag {
+        background: var(--spc-dark-bg-elevated, #22252B);
+        border-color: var(--spc-dark-border, #3A3D45);
+        color: var(--spc-dark-text-primary, #E8E6E3);
+    }
+
+    .keywords .keyword-tag:hover {
+        background: var(--spc-dark-primary-lightest, #2A3844);
+        border-color: var(--spc-dark-primary, #5B9BD5);
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 2: PARTÍCULAS (PARTICLES.JS)
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor de partículas */
 #particles-js {
+    /* Posicionamiento absoluto para fondo */
     position: absolute;
-    /* Ensure it's positioned relative to the header */
+    top: 0;
+    left: 0;
+
+    /* Tamaño completo */
     width: 100%;
-    /* Cover the full width of the grid area */
     height: 100%;
-    /* Cover the full height of the grid area */
+
+    /* Z-index detrás del contenido */
+    z-index: -1;
+
+    /* Grid spanning (si aplica) */
     grid-column: screen-start / screen-end;
-    /* Span all columns */
-    /* You might need to adjust z-index if particles are behind other elements */
-    /* z-index: -1; // Example: place behind content */
+    grid-row: 1;
+
+    /* Opacidad sutil */
+    opacity: 0.6;
+
+    /* Transición para cambios */
+    transition: opacity 0.5s ease;
 }
 
+/* Ocultar partículas en modo oscuro si es necesario */
+@media (prefers-color-scheme: dark) {
+    #particles-js {
+        opacity: 0.3;
+    }
+}
+
+/* Ocultar partículas en impresión */
+@media print {
+    #particles-js {
+        display: none;
+    }
+}
+
+/* Desactivar partículas en dispositivos con motion reducido */
+@media (prefers-reduced-motion: reduce) {
+    #particles-js {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 3: COMPONENTES DE ARTÍCULO (ARTICLE)
+   ----------------------------------------------------------------------------
+*/
+
+/* Contenedor principal del artículo */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Encabezado del artículo */
+.article-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Título del artículo */
+.article-title {
+    font-family: "Petrona", Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    color: var(--spc-primary, #002642);
+}
+
+/* Subtítulo del artículo */
+.article-subtitle {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--spc-text-secondary, #4A4A4A);
+    margin: 0 0 1.5rem 0;
+}
+
+/* Metadatos del artículo (autor, fecha) */
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 0.9375rem;
+    color: var(--spc-text-muted, #6B6B6B);
+
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--spc-border-light, #EDEAE6);
+    border-bottom: 1px solid var(--spc-border-light, #EDEAE6);
+}
+
+.article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Cuerpo del artículo */
+.article-body {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--spc-text-primary, #1A1A1A);
+}
+
+/* Imágenes en el artículo */
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Pies de imagen */
+.article-body figcaption {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--spc-text-muted, #6B6B6B);
+    text-align: center;
+    margin-top: 0.75rem;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 4: BLOQUES DESTACADOS (CALLOUTS)
+   ----------------------------------------------------------------------------
+*/
+
+/* Bloque de nota/callout */
+.callout {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+/* Título del callout */
+.callout-title {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contenido del callout */
+.callout-content {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tipos de callout */
+.callout-note {
+    background: var(--spc-info-bg, #E8F0F5);
+    border-left-color: var(--spc-info, #2E5F7F);
+}
+
+.callout-note .callout-title {
+    color: var(--spc-info, #2E5F7F);
+}
+
+.callout-warning {
+    background: var(--spc-warning-bg, #FFF9E6);
+    border-left-color: var(--spc-warning, #B8860B);
+}
+
+.callout-warning .callout-title {
+    color: var(--spc-warning, #B8860B);
+}
+
+.callout-important {
+    background: var(--spc-danger-bg, #FCEAE8);
+    border-left-color: var(--spc-danger, #C44D3B);
+}
+
+.callout-important .callout-title {
+    color: var(--spc-danger, #C44D3B);
+}
+
+.callout-tip {
+    background: var(--spc-success-bg, #E8F5EC);
+    border-left-color: var(--spc-success, #4A7C59);
+}
+
+.callout-tip .callout-title {
+    color: var(--spc-success, #4A7C59);
+}
+
+/* Modo oscuro para callouts */
+@media (prefers-color-scheme: dark) {
+    .callout-note {
+        background: var(--spc-dark-info-bg, #2A3844);
+        border-left-color: var(--spc-dark-info, #7EAEE0);
+    }
+
+    .callout-note .callout-title {
+        color: var(--spc-dark-info, #7EAEE0);
+    }
+
+    .callout-warning {
+        background: var(--spc-dark-warning-bg, #3A3528);
+        border-left-color: var(--spc-dark-warning, #FFD54F);
+    }
+
+    .callout-warning .callout-title {
+        color: var(--spc-dark-warning, #FFD54F);
+    }
+
+    .callout-important {
+        background: var(--spc-dark-danger-bg, #3A2E2C);
+        border-left-color: var(--spc-dark-danger, #E88873);
+    }
+
+    .callout-important .callout-title {
+        color: var(--spc-dark-danger, #E88873);
+    }
+
+    .callout-tip {
+        background: var(--spc-dark-success-bg, #2A3830);
+        border-left-color: var(--spc-dark-success, #81C784);
+    }
+
+    .callout-tip .callout-title {
+        color: var(--spc-dark-success, #81C784);
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 5: TABLAS
+   ----------------------------------------------------------------------------
+*/
+
+/* Wrapper responsive para tablas */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+}
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+/* Celdas de encabezado */
+table thead th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--spc-bg-accent, #F0EBE3);
+    border-bottom: 2px solid var(--spc-border, #E0DDD8);
+    color: var(--spc-text-primary, #1A1A1A);
+}
+
+/* Celdas de datos */
+table tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--spc-border-light, #EDEAE6);
+    color: var(--spc-text-primary, #1A1A1A);
+}
+
+/* Filas alternas */
+table tbody tr:nth-child(even) {
+    background: var(--spc-bg-dark, #F8F4EE);
+}
+
+/* Hover en filas */
+table tbody tr:hover {
+    background: var(--spc-bg-accent, #F0EBE3);
+}
+
+/* Modo oscuro para tablas */
+@media (prefers-color-scheme: dark) {
+    table thead th {
+        background: var(--spc-dark-bg-accent, #2A2D35);
+        border-bottom-color: var(--spc-dark-border, #3A3D45);
+        color: var(--spc-dark-text-primary, #E8E6E3);
+    }
+
+    table tbody td {
+        border-bottom-color: var(--spc-dark-border-light, #2F323A);
+        color: var(--spc-dark-text-primary, #E8E6E3);
+    }
+
+    table tbody tr:nth-child(even) {
+        background: var(--spc-dark-bg-elevated, #22252B);
+    }
+
+    table tbody tr:hover {
+        background: var(--spc-dark-bg-accent, #2A2D35);
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 6: CÓDIGO Y SINTAXIS
+   ----------------------------------------------------------------------------
+*/
+
+/* Código inline personalizado */
+code:not(.sourceCode) {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.875rem;
+    padding: 0.2em 0.4em;
+    background: var(--spc-code-bg, #F5F2ED);
+    border: 1px solid var(--spc-code-border, #E0DDD8);
+    border-radius: 4px;
+    color: var(--spc-code-text, #1A1A1A);
+}
+
+/* Bloques de código */
+pre.sourceCode {
+    padding: 1.25rem;
+    border-radius: 8px;
+    background: var(--spc-code-bg, #F5F2ED);
+    border: 1px solid var(--spc-code-border, #E0DDD8);
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Modo oscuro para código */
+@media (prefers-color-scheme: dark) {
+    code:not(.sourceCode) {
+        background: var(--spc-dark-code-bg, #2A2D35);
+        border-color: var(--spc-dark-code-border, #3A3D45);
+        color: var(--spc-dark-code-text, #E8E6E3);
+    }
+
+    pre.sourceCode {
+        background: var(--spc-dark-code-bg, #2A2D35);
+        border-color: var(--spc-dark-code-border, #3A3D45);
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 7: BOTONES PERSONALIZADOS
+   ----------------------------------------------------------------------------
+*/
+
+/* Botón primario */
+.btn-primary-custom {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+
+    /* Tipografía */
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    /* Color */
+    color: white;
+    background: var(--spc-secondary, #C44D3B);
+
+    /* Bordes */
+    border: none;
+    border-radius: 8px;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: all 0.3s ease;
+
+    /* Sombra */
+    box-shadow: 0 2px 8px rgba(196, 77, 59, 0.2);
+}
+
+.btn-primary-custom:hover {
+    background: var(--spc-secondary-light, #D96E5D);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 77, 59, 0.3);
+}
+
+.btn-primary-custom:active {
+    transform: translateY(0);
+}
+
+/* Botón secundario */
+.btn-secondary-custom {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--spc-primary, #002642);
+    background: transparent;
+
+    border: 2px solid var(--spc-primary, #002642);
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    color: white;
+    background: var(--spc-primary, #002642);
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 8: UTILIDADES GENERALES
+   ----------------------------------------------------------------------------
+*/
+
+/* Separador visual */
+.separator {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent 0%,
+            var(--spc-border, #E0DDD8) 50%,
+            transparent 100%);
+    margin: 3rem 0;
+}
+
+/* Espaciado personalizado */
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+/* Padding personalizado */
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 1.5rem;
+}
+
+.p-4 {
+    padding: 2rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 9: RESPONSIVIDAD ADICIONAL
+   ----------------------------------------------------------------------------
+*/
+
+@media (max-width: 767px) {
+    .article-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .article-body {
+        font-size: 1rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN 10: IMPRESIÓN
+   ----------------------------------------------------------------------------
+*/
+
+@media print {
+
+    /* Ocultar elementos no necesarios */
+    #particles-js,
+    .article-meta,
+    .btn-primary-custom,
+    .btn-secondary-custom {
+        display: none;
+    }
+
+    /* Optimizar para papel */
+    .article-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .article-title {
+        font-size: 2rem;
+        color: black;
+    }
+
+    .article-body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: black;
+    }
+
+    /* Evitar ruptura de página en elementos */
+    .callout,
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================================================
+   NOTAS DE IMPLEMENTACIÓN
+   ============================================================================
+   
+   1. COMPONENTES:
+      - Keywords: Estilos específicos para metadatos del artículo
+      - Particles.js: Configuración de fondo animado
+      - Callouts: Bloques destacados para notas importantes
+      - Tablas: Diseño responsive y estilizado
+   
+   2. PERSONALIZACIÓN:
+      - Todos los estilos usan variables CSS del sistema de colores
+      - Soporte completo para modo oscuro
+      - Responsive en todos los componentes
+   
+   3. ACCESIBILIDAD:
+      - Contraste adecuado en todos los elementos
+      - Soporte para prefers-reduced-motion
+      - Estilos de impresión optimizados
+   
+   4. USO:
+      - Este archivo complementa los SCSS principales
+      - Se carga después de theme_light.scss o theme_dark.scss
+      - Variables CSS del sistema están disponibles automáticamente
+   
+   ============================================================================
+*/

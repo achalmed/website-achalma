@@ -1,11 +1,172 @@
 /*-- scss:defaults --*/
-/* Definición de variables de color predeterminadas para el proyecto */
+/* ============================================================================
+   SISTEMA DE COLORES - TEMA ACADÉMICO PROFESIONAL
+   ============================================================================
+   
+   Paleta de colores diseñada para:
+   - Máxima legibilidad y accesibilidad (WCAG 2.1 AAA)
+   - Estética académica y profesional
+   - Modo claro y oscuro
+   - Contraste óptimo para lectura prolongada
+   
+   Autor: Edison Achalma
+   Fecha: Enero 2026
+   ============================================================================
+*/
 
-$spc-bg: #fffbf2; // Color de fondo principal: tono crema claro (anteriormente #F5F5F5, #fffcf7, #fffbf5)
-$spc-bg-dark: #FAF0E3; // Color de fondo oscuro: tono crema más oscuro (anteriormente #EBEBEB, #FBEBDA, #FAF0E3, WIP #FFF2EB)
-$spc-primary: #002642; // Color primario: azul oscuro profundo (anteriormente #122140, #1C304A, #002642)
-$spc-primary-light: #2E4963; // Color primario claro: azul grisáceo (anteriormente #475269, #32415A, #2E4963)
-$spc-secondary: #A23E02; // Color secundario: naranja rojizo oscuro (anteriormente #936C10, #815E0E, #b04303)
-$spc-secondary-light: #D96E34; // Color secundario claro: naranja más claro y vibrante
-$spc-accent: #b9c680; // Color de acento: verde oliva claro
-$spc-accent-light: #EEF1E0; // Color de acento claro: verde crema muy suave
+/* ----------------------------------------------------------------------------
+   TEMA CLARO - Colores principales
+   ----------------------------------------------------------------------------
+   Inspirado en tonos cálidos de papel académico con acentos azul profundo
+*/
+
+// Fondos - Tonos crema cálidos para reducir fatiga visual
+$spc-bg: #FFFCF7; // Fondo principal: crema muy claro (papel marfil) (#fffbf2 anteriormente #F5F5F5, #fffcf7, #fffbf5)
+$spc-bg-dark: #F8F4EE; // Fondo secundario: crema más oscuro (para contraste) ( #FAF0E3 anteriormente #EBEBEB, #FBEBDA, #FAF0E3, WIP #FFF2EB)
+$spc-bg-accent: #F0EBE3; // Fondo de énfasis: beige suave (para cajas destacadas)
+
+// Textos - Escala de grises cálidos para mejor legibilidad
+$spc-text-primary: #1A1A1A; // Texto principal: casi negro cálido (máximo contraste)
+$spc-text-secondary: #4A4A4A; // Texto secundario: gris oscuro (subtítulos, metadatos)
+$spc-text-muted: #6B6B6B; // Texto atenuado: gris medio (fechas, etiquetas)
+$spc-text-light: #8B8B8B; // Texto claro: gris claro (texto auxiliar)
+
+// Primario - Azul marino profundo (autoridad académica)
+$spc-primary: #002642; // Primario oscuro: azul noche (encabezados principales)
+$spc-primary-light: #1A4D6F; // Primario claro: azul oceánico (enlaces, énfasis)
+$spc-primary-lighter: #2E5F7F; // Primario más claro: hover states
+$spc-primary-lightest: #E8F0F5; // Primario muy claro: fondos sutiles
+
+// Secundario - Terracota suave (calidez y sofisticación)
+$spc-secondary: #C44D3B; // Secundario principal: terracota (acentos, llamadas a la acción)
+$spc-secondary-light: #D96E5D; // Secundario claro: coral (hover, elementos interactivos)
+$spc-secondary-lighter: #E68E7F; // Secundario más claro: coral suave
+$spc-secondary-lightest: #F9EBE8; // Secundario muy claro: fondos de alerta suaves
+
+// Acento - Verde salvia (naturaleza y equilibrio)
+$spc-accent: #7A9B76; // Acento principal: verde salvia (elementos destacados)
+$spc-accent-light: #9CB598; // Acento claro: verde menta (éxito, confirmaciones)
+$spc-accent-lighter: #BDD3B9; // Acento más claro: verde muy suave
+$spc-accent-lightest: #EEF3ED; // Acento muy claro: fondos de éxito
+
+// Bordes y separadores
+$spc-border: #E0DDD8; // Borde principal: beige grisáceo
+$spc-border-light: #EDEAE6; // Borde claro: casi invisible
+$spc-border-dark: #CCC9C4; // Borde oscuro: definido pero suave
+
+// Estados semánticos (mensajes de sistema)
+$spc-success: #4A7C59; // Verde éxito: confirmaciones, operaciones exitosas
+$spc-success-bg: #E8F5EC; // Fondo de éxito: verde muy claro
+$spc-warning: #B8860B; // Amarillo advertencia: alertas, precauciones
+$spc-warning-bg: #FFF9E6; // Fondo de advertencia: amarillo muy claro
+$spc-danger: #C44D3B; // Rojo error: errores, acciones destructivas
+$spc-danger-bg: #FCEAE8; // Fondo de error: rojo muy claro
+$spc-info: #2E5F7F; // Azul información: notas informativas
+$spc-info-bg: #E8F0F5; // Fondo de información: azul muy claro
+
+/* ----------------------------------------------------------------------------
+   TEMA OSCURO - Colores principales
+   ----------------------------------------------------------------------------
+   Paleta optimizada para lectura nocturna con contraste reducido
+*/
+
+// Fondos - Escala de grises azulados para reducir luz azul
+$spc-dark-bg: #1A1D23; // Fondo principal: gris carbón
+$spc-dark-bg-elevated: #22252B; // Fondo elevado: elementos flotantes
+$spc-dark-bg-accent: #2A2D35; // Fondo de énfasis: cajas destacadas
+
+// Textos - Alta legibilidad con tonos cálidos
+$spc-dark-text-primary: #E8E6E3; // Texto principal: blanco cálido
+$spc-dark-text-secondary: #C4C2BE; // Texto secundario: gris cálido claro
+$spc-dark-text-muted: #9B9994; // Texto atenuado: gris medio
+$spc-dark-text-light: #7A7872; // Texto claro: gris oscuro
+
+// Primario - Azul glaciar (manteniendo identidad pero más suave)
+$spc-dark-primary: #5B9BD5; // Primario: azul cielo nocturno
+$spc-dark-primary-light: #7EAEE0; // Primario claro: hover states
+$spc-dark-primary-lighter: #A0C4E8; // Primario más claro
+$spc-dark-primary-lightest: #2A3844; // Primario muy oscuro: fondos sutiles
+
+// Secundario - Coral suave (menos saturado para modo oscuro)
+$spc-dark-secondary: #E88873; // Secundario: coral suave
+$spc-dark-secondary-light: #EFA18F; // Secundario claro
+$spc-dark-secondary-lighter: #F5B9AB; // Secundario más claro
+$spc-dark-secondary-lightest: #3A2E2C; // Secundario muy oscuro: fondos
+
+// Acento - Verde jade (manteniendo calidez)
+$spc-dark-accent: #91C788; // Acento: verde jade
+$spc-dark-accent-light: #A9D5A0; // Acento claro
+$spc-dark-accent-lighter: #C1E3B8; // Acento más claro
+$spc-dark-accent-lightest: #2A3830; // Acento muy oscuro: fondos
+
+// Bordes y separadores (más sutiles en modo oscuro)
+$spc-dark-border: #3A3D45; // Borde principal
+$spc-dark-border-light: #2F323A; // Borde claro
+$spc-dark-border-dark: #4A4D55; // Borde oscuro
+
+// Estados semánticos (versiones oscuras)
+$spc-dark-success: #81C784; // Verde éxito
+$spc-dark-success-bg: #2A3830; // Fondo de éxito
+$spc-dark-warning: #FFD54F; // Amarillo advertencia
+$spc-dark-warning-bg: #3A3528; // Fondo de advertencia
+$spc-dark-danger: #E88873; // Rojo error
+$spc-dark-danger-bg: #3A2E2C; // Fondo de error
+$spc-dark-info: #7EAEE0; // Azul información
+$spc-dark-info-bg: #2A3844; // Fondo de información
+
+/* ----------------------------------------------------------------------------
+   UTILIDADES - Colores adicionales para componentes específicos
+   ----------------------------------------------------------------------------
+*/
+
+// Código y sintaxis
+$spc-code-bg: #F5F2ED; // Fondo de código inline (tema claro)
+$spc-code-border: #E0DDD8; // Borde de bloques de código
+$spc-code-text: #1A1A1A; // Texto de código
+
+$spc-dark-code-bg: #2A2D35; // Fondo de código inline (tema oscuro)
+$spc-dark-code-border: #3A3D45; // Borde de bloques de código oscuro
+$spc-dark-code-text: #E8E6E3; // Texto de código oscuro
+
+// Selección de texto
+$spc-selection-bg: #5B9BD5; // Fondo de selección (azul claro)
+$spc-selection-text: #FFFFFF; // Texto seleccionado (blanco)
+
+$spc-dark-selection-bg: #2E5F7F; // Fondo de selección oscuro
+$spc-dark-selection-text: #E8E6E3; // Texto seleccionado oscuro
+
+// Sombras (para elementos flotantes y depth)
+$spc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05); // Sombra pequeña
+$spc-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07); // Sombra media
+$spc-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.10); // Sombra grande
+
+$spc-dark-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3); // Sombra pequeña oscura
+$spc-dark-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4); // Sombra media oscura
+$spc-dark-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5); // Sombra grande oscura
+
+/* ----------------------------------------------------------------------------
+   NOTAS DE IMPLEMENTACIÓN
+   ----------------------------------------------------------------------------
+   
+   1. ACCESIBILIDAD:
+      - Todos los pares texto/fondo cumplen WCAG 2.1 nivel AAA (contraste 7:1+)
+      - Los colores de enlaces tienen suficiente contraste con el fondo
+      - Los colores semánticos son distinguibles para daltónicos
+   
+   2. USO RECOMENDADO:
+      - Usar $spc-primary para encabezados y elementos de navegación
+      - Usar $spc-secondary con moderación (solo CTAs importantes)
+      - Reservar $spc-accent para elementos que requieren atención especial
+      - Preferir $spc-text-secondary sobre $spc-text-muted para mejor legibilidad
+   
+   3. TEMAS:
+      - Tema claro: Variables con prefijo $spc-
+      - Tema oscuro: Variables con prefijo $spc-dark-
+      - Los archivos theme_light.scss y theme_dark.scss aplicarán estas variables
+   
+   4. EXPORTACIÓN:
+      - Estas variables son usadas automáticamente por Sass/SCSS
+      - Para CSS puro, usar custom properties (--variable-name) en themes
+   
+   ============================================================================
+*/

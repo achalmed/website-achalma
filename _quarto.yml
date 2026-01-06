@@ -150,15 +150,43 @@ website:
 # bibliography: references.bib
 lang: es
 
+# ══════════════════════════════════════════════════════════════════════════
+# FORMATO HTML - TEMA Y ESTILOS
+# ══════════════════════════════════════════════════════════════════════════
+
 format:
   html:
+    # ──────────────────────────────────────────────────────────────────────
+    # TEMA - CONFIGURACIÓN PRINCIPAL
+    # ──────────────────────────────────────────────────────────────────────
+    
+    # Opción 1: Solo tema claro
+    # theme:
+    #   - cosmo                      # Bootstrap base
+    #   - assets/colors.scss         # Sistema de colores
+    #   - assets/fonts.scss          # Sistema tipográfico
+    #   - assets/theme_light.scss    # Tema claro
+    
+    # Opción 2: Tema claro y oscuro con toggle
     theme:
       light:
         - cosmo
-        - assets/theme_light.scss
         - assets/colors.scss
         - assets/fonts.scss
-    css: assets/styles.css
+        - assets/theme_light.scss
+      dark:
+        - darkly
+        - assets/colors.scss
+        - assets/fonts.scss
+        - assets/theme_dark.scss
+    
+    # ──────────────────────────────────────────────────────────────────────
+    # CSS ADICIONAL
+    # ──────────────────────────────────────────────────────────────────────
+    
+    css:
+      - assets/styles.css
+
     # Google Tag Manager
     include-in-header: assets/gtm-head.html
     include-after-body: assets/gtm-body.html

@@ -1,30 +1,19 @@
 ---
-title: "Publicaciones" 
+title: "Publicaciones"
 description: |
-  Este es el hogar de mis publicaciones de investigación, cada una vinculada con preimpresiones, carteles y/o noticias.
-listing: 
-  contents: 
-    - "**/index.qmd"
-    - "**/index.markdown"
-    - "**/index.md"
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, author, categories, date]
-  image-align: left
-  # image-height: 10em
-  # page-size: 5
-# page-layout: article
+  Este es el hogar de mis publicaciones académicas, incluyendo artículos,
+  preprints, ponencias y otros materiales de investigación.
 
-format: 
-  html: 
+format:
+  html:
     page-layout: full
-title-block-banner: false
+    toc: false
 
-header-includes: >
-  <link rel="stylesheet" href="../assets/listing-default.css">
-resources:
-  - ../assets/listing-default.css
+title-block-banner: false
 ---
+
+## Producción académica
+
+<div id="bibbase-publications"></div>
+
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fzotero-mypublications%2Fachalmaedison&jsonp=1"></script> 

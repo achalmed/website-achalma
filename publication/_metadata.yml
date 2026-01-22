@@ -14,3 +14,5 @@ format:
     code-overflow: wrap
     template-partials: 
       - ../_partials/title-block-link-buttons/title-block.html
+    header-includes:
+      - <link rel="stylesheet" href="../assets/bibbase.css">

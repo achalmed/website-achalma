@@ -1,0 +1,25 @@
+/* BibBase integration */
+
+.bibbase_paper {
+    margin-bottom: 1.2rem;
+}
+
+.bibbase_paper_title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.bibbase_paper_authors {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.bibbase_group {
+    margin-top: 2rem;
+}
+
+.bibbase_group i {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+}

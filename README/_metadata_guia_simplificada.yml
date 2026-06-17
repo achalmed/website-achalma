@@ -1,0 +1,192 @@
+# =============================================================================
+# CONFIGURACIÓN GENERAL DEL DOCUMENTO
+# =============================================================================
+
+# Metadatos del Documento
+date-modified: "today"
+license: "CC BY-SA"
+lang: es
+search: true
+lightbox: true
+
+# Configuración del Bloque de Título
+title-block-banner: true
+is-particlejs-enabled: true
+
+# =============================================================================
+# INFORMACIÓN DEL AUTOR
+# =============================================================================
+
+author:
+  - name: Edison Achalma
+    url: https://achalmaedison.netlify.app
+    affiliation:
+      - id: unsch
+        name: Universidad Nacional de San Cristóbal de Huamanga
+        department: Escuela Profesional de Economía
+        city: Ayacucho
+        region: AYA
+        country: Perú
+    affiliation-url: https://www.gob.pe/unsch
+    orcid: 0000-0001-6996-3364
+    email: elmer.achalma.09@unsch.edu.pe
+    attributes:
+      corresponding: true
+      equal-contributor: true
+      deceased: false
+    roles:
+      - conceptualización
+      - redacción
+
+# Nota del Autor
+author-note:
+  disclosures:
+    conflict-of-interest: Los autores no tienen conflictos de intereses que revelar.
+
+# =============================================================================
+# CONFIGURACIÓN DE TABLA DE CONTENIDOS
+# =============================================================================
+
+toc: true
+toc-title: " "
+toc-location: left
+
+# =============================================================================
+# CONFIGURACIÓN DE REFERENCIAS Y CITAS
+# =============================================================================
+
+floatsintext: true
+citation: true
+google-scholar: true
+link-citations: true
+appendix-cite-as: display
+citation-last-author-separator: "y"
+citation-masked-author: "Cita Enmascarada"
+citation-masked-title: "Título Enmascarado"
+citation-masked-date: "n.f."
+
+# Bloques de Títulos
+title-block-author-note: "Nota de Autores"
+title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
+title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
+references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el metanálisis."
+
+# =============================================================================
+# CONFIGURACIÓN DE REFERENCIAS CRUZADAS
+# =============================================================================
+
+language:
+  crossref-fig-title: Figura
+  crossref-tbl-title: Tabla
+  crossref-lst-title: "Listing"
+  crossref-thm-title: "Teorema"
+  crossref-lem-title: "Lema"
+  crossref-cor-title: "Corolario"
+  crossref-prp-title: "Proposición"
+  crossref-cnj-title: "Conjetura"
+  crossref-def-title: "Definición"
+  crossref-exm-title: "Ejemplo"
+  crossref-exr-title: "Ejercicio"
+  crossref-ch-prefix: "Capítulo"
+  crossref-apx-prefix: Anexo
+  crossref-sec-prefix: "Sección"
+  crossref-eq-prefix: Ecuación
+  crossref-lof-title: "Lista de Figuras"
+  crossref-lot-title: "Lista de Tablas"
+  crossref-lol-title: "Lista de Listings"
+
+# =============================================================================
+# CONFIGURACIÓN DE VISIBILIDAD Y BORRADOR
+# =============================================================================
+
+mask: false
+draft: true
+draftfirst: false
+draftall: false
+
+# =============================================================================
+# FORMATOS DE SALIDA
+# =============================================================================
+
+format:
+  # ---------------------------------------------------------------------------
+  # Formato HTML
+  # ---------------------------------------------------------------------------
+  html:
+    toc-depth: 1
+    toc-expand: 3
+    smooth-scroll: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    highlight-style: github
+    code-copy: true
+    code-fold: true
+    code-summary: "Mostrar el código"
+    code-overflow: scroll
+    code-line-numbers: true
+    code-tools:
+      source: repo
+      toggle: false
+      caption: none
+    mermaid:
+      theme: neutral
+    citation-location: document
+    self-contained: true
+    template-partials:
+      - ../_partials/title-block-link-buttons/title-block.html
+    theme: litera
+    other-links:
+      - text: Gravatar
+        href: https://gravatar.com/achalmaedison
+    format-links: true
+
+  # ---------------------------------------------------------------------------
+  # Formato PDF (APA Quarto)
+  # ---------------------------------------------------------------------------
+  apaquarto-pdf:
+    documentmode: jou
+    copyrightnotice: 2025
+    copyrightext: Todos los derechos reservados
+    toc: true
+    list-of-figures: true
+    list-of-tables: true
+    keep-tex: true
+    fontsize: 12pt
+    a4paper: true
+    numbered-lines: false
+    number-sections: true
+    colorlinks: true
+    pdf-engine: xelatex
+
+  # ---------------------------------------------------------------------------
+  # Formato DOCX (APA Quarto)
+  # ---------------------------------------------------------------------------
+  apaquarto-docx:
+    toc: true
+    fontsize: 12pt
+    a4paper: true
+    numbered-lines: false
+    number-sections: true
+
+# =============================================================================
+# CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN
+# =============================================================================
+
+jupyter: python3
+
+# Editor
+editor:
+  markdown:
+    canonical: true
+
+# =============================================================================
+# CONFIGURACIÓN DE COMENTARIOS
+# =============================================================================
+
+comments:
+  utterances:
+    repo: achalmed/website-achalma
+    issue-term: title
+    theme: boxy-light
+    label: "comments :crystal_ball:"

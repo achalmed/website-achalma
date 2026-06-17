@@ -1,0 +1,525 @@
+---
+# ============================================================================
+# PLANTILLA APAQUARTO - MODO ESTUDIANTE (stu)
+# Plantilla versátil para trabajos académicos estudiantiles en formato APA 7
+# Autor: Edison Achalma
+# Creada: Diciembre 2024
+# ============================================================================
+
+# ----------------------------------------------------------------------
+# INFORMACIÓN DEL DOCUMENTO
+# ----------------------------------------------------------------------
+
+# Título del documento
+# Para títulos con dos puntos, usar comillas
+title: "Mi Título del Trabajo: Un Análisis Completo"
+
+# Título corto para el encabezado (máximo 50 caracteres)
+# Si se omite, se usará el título principal
+shorttitle: "Título Corto"
+
+# Subtítulo opcional (se combinará con el título usando dos puntos)
+subtitle: "Subtitle"
+
+# ----------------------------------------------------------------------
+# INFORMACIÓN DEL ESTUDIANTE/AUTOR
+# ----------------------------------------------------------------------
+
+author:
+  - name: Edison Achalma
+    # Autor correspondiente (solo uno puede serlo)
+    corresponding: true
+    # ORCID (recomendado)
+    orcid: 0000-0002-XXXX-XXXX
+    # Email (requerido si corresponding: true)
+    email: achalmaedison@gmail.com
+    # Afiliaciones institucionales
+    affiliations:
+      - name: Universidad Nacional de San Cristóbal de Huamanga
+        department: Facultad de Ciencias Económicas, Administrativas y Contables
+        address: Portal Independencia N° 57
+        city: Ayacucho
+        region: Ayacucho
+        postal-code: 05003
+        country: Perú
+        # ID opcional para reutilizar afiliación
+        id: unsch
+    # Roles CRediT del autor (opcional pero recomendado)
+    role:
+      - conceptualization: lead
+      - writing: lead
+      - formal analysis: lead
+      - visualization: lead
+
+  # Ejemplo de segundo autor (descomentar si es necesario)
+  # - name: Segundo Autor
+  #   orcid: 0000-0000-0000-0002
+  #   affiliations:
+  #     # Usar 'ref' para referenciar afiliación existente
+  #     - ref: unsch
+  #   role:
+  #     - methodology: equal
+  #     - editing: supporting
+
+# ----------------------------------------------------------------------
+# INFORMACIÓN ESPECÍFICA PARA MODO ESTUDIANTE
+# ----------------------------------------------------------------------
+
+# Nombre del curso
+course: "Introducción a la Investigación Científica"
+
+# Nombre del profesor/instructor
+professor: "Dr. Nombre del Profesor"
+
+# Fecha de entrega (formato: DD/MM/AAAA o Mes DD, AAAA)
+duedate: "11 de Diciembre de 2025"
+
+# Nota adicional para estudiantes (opcional)
+# Puede incluir: número de estudiante, sección, etc.
+note: |
+  Código de estudiante: 2020123456
+  Sección: A
+
+# ----------------------------------------------------------------------
+# RESUMEN Y PALABRAS CLAVE
+# ----------------------------------------------------------------------
+
+# Resumen (abstract)
+# Para un solo párrafo, escribir en una línea
+abstract: "Este es el resumen de mi trabajo. Debe ser conciso y descriptivo, explicando el propósito, metodología, resultados principales y conclusiones del estudio. El resumen no debe exceder las 250 palabras para trabajos empíricos."
+
+# Para resúmenes con múltiples párrafos, usar formato pipe:
+# abstract: |
+#   | Este es el primer párrafo del resumen.
+#   | Este es el segundo párrafo del resumen.
+#   | Este es el tercer párrafo del resumen.
+
+# Palabras clave (3-5 recomendadas)
+keywords: [economía, estadística, metodología, análisis de datos, investigación]
+
+# Declaración de impacto (opcional pero cada vez más solicitada)
+# Describe la importancia teórica/práctica del trabajo
+impact-statement: ~
+# impact-statement: "Este estudio contribuye a la comprensión de..."
+
+# ----------------------------------------------------------------------
+# NOTA DEL AUTOR
+# ----------------------------------------------------------------------
+
+author-note:
+  status-changes:
+  # Cambios de afiliación desde que se realizó el trabajo
+    affiliation-change: ~
+    # affiliation-change: "Edison Achalma ahora está en Temple University."
+
+    # Autores fallecidos
+    deceased: ~
+    # deceased: "Segundo Autor falleció el 15 de enero de 2024."
+  
+  # Divulgaciones y reconocimientos
+  disclosures:
+    # Pre-registro del estudio
+    study-registration: ~
+    # study-registration: "Este estudio fue registrado en OSF (osf.io/xxxxx)."
+    
+    # Disponibilidad de datos y materiales
+    data-sharing: ~
+    # data-sharing: "Los datos están disponibles en https://github.com/usuario/proyecto"
+    
+    # Informes relacionados basados en los mismos datos
+    related-report: ~
+    # Declaración mínima si se necesita
+    # related-report: "Este artículo se basa en la tesis de licenciatura del autor."
+    
+    # Declaración de conflictos de interés
+    conflict-of-interest: "El autor declara que no existe conflicto de intereses."
+    # conflict-of-interest: "El autor declara que no existe conflicto de intereses."
+    
+    # Financiamiento (especificar todas las fuentes)
+    financial-support: ~
+    # financial-support: "Este trabajo fue financiado por..."
+    
+    # Agradecimientos
+    gratitude: ~
+    # gratitude: "El autor agradece a... por sus valiosos comentarios."
+    
+    # Acuerdos de autoría (si es necesario aclarar)
+    authorship-agreements: ~
+    # authorship-agreements: "Todos los autores contribuyeron equitativamente."
+
+  # Nota de correspondencia personalizada (sobrescribe la automática)
+  correspondence-note: ~
+  # correspondence-note: "Para correspondencia, contactar a..."
+
+# ----------------------------------------------------------------------
+# CONFIGURACIÓN DE FORMATO
+# ----------------------------------------------------------------------
+
+# Ubicación de figuras y tablas
+# true = entremezcladas en el texto
+# false = al final del documento (por defecto)
+floatsintext: false
+
+# Líneas numeradas (útil para revisión)
+numbered-lines: false
+
+# Líneas en blanco sobre el título (2-3 recomendado para APA)
+blank-lines-above-title: 2
+
+# Líneas en blanco sobre la nota del autor
+blank-lines-above-author-note: 2
+
+# ----------------------------------------------------------------------
+# REVISIÓN ANÓNIMA (PEER REVIEW)
+# ----------------------------------------------------------------------
+
+# Activar modo anónimo (oculta información identificable)
+mask: false
+
+# Citas enmascaradas (lista de claves de bibliografía)
+masked-citations: ~
+#   - miclave2020
+#   - otraclaveenmascarar2021
+
+# ----------------------------------------------------------------------
+# META-ANÁLISIS
+# ----------------------------------------------------------------------
+
+# Marcar estudios en meta-análisis con asteriscos
+meta-analysis: true
+
+# ----------------------------------------------------------------------
+# REFERENCIAS Y BIBLIOGRAFÍA
+# ----------------------------------------------------------------------
+
+# Archivo(s) de bibliografía
+bibliography: referencias.bib
+# Para múltiples archivos:
+# bibliography: [referencias1.bib, referencias2.bib]
+
+# Citas no mencionadas en el texto pero incluidas en referencias
+nocite: ~
+# Para meta-análisis, listar todos los estudios incluidos:
+# nocite: |
+#   @estudio2020, @estudio2021
+
+# Reemplazar & con "y" en citas parentéticas
+no-ampersand-parenthetical: false
+
+# ----------------------------------------------------------------------
+# CONFIGURACIÓN DE IDIOMA
+# ----------------------------------------------------------------------
+
+# Idioma principal del documento
+lang: es
+
+# Personalizaciones de idioma
+language:
+  # Separador para último autor en citas ("y" en español, "and" en inglés)
+  citation-last-author-separator: "y"
+  
+  # Textos para citas enmascaradas
+  citation-masked-author: "Cita Enmascarada"
+  citation-masked-date: "s.f."
+  citation-masked-title: "Título Enmascarado"
+  
+  # Encabezados de secciones
+  title-block-author-note: "Nota del Autor"
+  title-block-correspondence-note: "La correspondencia relativa a este artículo debe dirigirse a"
+  title-block-role-introduction: "Los roles de autor se clasificaron utilizando la taxonomía de roles de colaborador (CRediT; https://credit.niso.org/) de la siguiente manera:"
+  
+  # Referencias y meta-análisis
+  references-meta-analysis: "Las referencias marcadas con un asterisco indican estudios incluidos en el meta-análisis."
+  
+  # Declaración de impacto
+  title-impact-statement: "Declaración de Impacto"
+  
+  # Conteo de palabras
+  title-word-count: "Conteo de Palabras"
+  
+  # Personalizar términos de referencias cruzadas
+  section-title-abstract: "Resumen"
+  section-title-references: "Referencias"
+  title-block-keywords: "Palabras clave"
+  crossref-fig-title: "Figura"
+  crossref-tbl-title: "Tabla"
+  crossref-apx-prefix: "Apéndice"
+  crossref-eq-prefix: "Ecuación"
+
+# ----------------------------------------------------------------------
+# SUPRIMIR ELEMENTOS (si es necesario)
+# ----------------------------------------------------------------------
+
+# Suprimir página de título completa
+suppress-title-page: false
+
+# Suprimir elementos específicos
+suppress-title: false
+suppress-short-title: false
+suppress-author: false
+suppress-affiliation: false
+suppress-author-note: false
+suppress-orcid: false
+suppress-status-change-paragraph: false
+suppress-disclosures-paragraph: false
+suppress-credit-statement: false
+suppress-corresponding-paragraph: false
+suppress-corresponding-group: false
+suppress-corresponding-department: false
+suppress-corresponding-address: false
+suppress-corresponding-city: false
+suppress-corresponding-region: false
+suppress-corresponding-postal-code: false
+suppress-corresponding-email: false
+suppress-abstract: false
+suppress-impact-statement: false
+suppress-keywords: false
+suppress-title-introduction: false
+
+# ----------------------------------------------------------------------
+# FORMATOS DE SALIDA
+# ----------------------------------------------------------------------
+
+format:
+  # Formato PDF (requiere LaTeX instalado)
+  apaquarto-pdf:
+    # Modo de documento para PDF (stu, man, jou, doc)
+    documentmode: stu
+    # Tamaño de fuente (10pt, 11pt, 12pt)
+    fontsize: 12pt
+    # Usar papel A4 en lugar de carta
+    a4paper: false
+    # No repetir título en primera página de texto
+    donotrepeattitle: false
+    # Marca de agua "DRAFT" en primera página
+    draftfirst: false
+    # Marca de agua "DRAFT" en todas las páginas
+    draftall: false
+    # Ocultar información de correspondencia
+    nocorrespondence: false
+    # Mantener archivos intermedios de LaTeX
+    keep-tex: false
+  
+  # Formato Word/DOCX
+  apaquarto-docx:
+    # Configuración predeterminada
+    default
+  
+  # Formato HTML
+  apaquarto-html:
+    # Configuración predeterminada
+    default
+  
+  # Formato Typst (alternativa moderna a LaTeX)
+  apaquarto-typst:
+    # Configuración predeterminada
+    default
+
+# ----------------------------------------------------------------------
+# OPCIONES DE RENDERIZADO
+# ----------------------------------------------------------------------
+
+# Editor visual de RStudio/Positron
+editor: visual
+
+# Opciones de ejecución de código
+execute:
+  # Mostrar código en el documento
+  echo: false
+  # Mostrar advertencias
+  warning: false
+  # Mostrar mensajes
+  message: false
+  # Evaluar código al renderizar
+  eval: true
+---
+
+<!-- ========================================================================== -->
+
+<!-- INICIO DEL CONTENIDO DEL DOCUMENTO -->
+
+<!-- ========================================================================== -->
+
+```{=html}
+<!-- 
+NOTAS IMPORTANTES:
+- No incluir encabezado de nivel 1 para la introducción (el título actúa como tal)
+- Los encabezados de nivel 1 reservados: Método, Resultados, Discusión, Referencias
+- Las figuras deben tener etiquetas que inicien con fig-
+- Las tablas deben tener etiquetas que inicien con tbl-
+- Los apéndices deben tener etiquetas que inicien con apx-
+-->
+```
+
+<!-- INTRODUCCIÓN (sin encabezado) -->
+
+Este es el inicio de la introducción. En esta sección se presenta el contexto del trabajo, la revisión de literatura relevante, y el planteamiento del problema u objetivos de investigación.
+
+Puedes citar trabajos previos usando `@clave2020` para citas narrativas o `[@clave2020]` para citas parentéticas. Para múltiples citas: `[@clave2020; @otraclavelave2021]`.
+
+Para citas con páginas específicas: `[@clave2020, pp. 25-30]` o `@clave2020 [pp. 25-30]` para narrativas.
+
+## Revisión de Literatura
+
+Este es un encabezado de nivel 2 dentro de la introducción. Úsalo para organizar subsecciones temáticas.
+
+### Subtema Específico
+
+Este es un encabezado de nivel 3, útil para mayor especificidad dentro de las subsecciones.
+
+#### Encabezado de Nivel 4
+
+Los encabezados de nivel 4 aparecen en la misma línea que el texto siguiente. Este párrafo está asociado al encabezado de nivel 4.
+
+Los párrafos subsecuentes tienen formato normal.
+
+##### Encabezado de Nivel 5
+
+Similar al nivel 4, los encabezados de nivel 5 también aparecen en línea con el texto.
+
+## Marco Teórico
+
+Desarrolla aquí el marco teórico que sustenta tu investigación.
+
+## Hipótesis
+
+Si tu trabajo incluye hipótesis, enuméralas claramente:
+
+**H1**: Primera hipótesis del estudio.
+
+**H2**: Segunda hipótesis del estudio.
+
+# Método
+
+La sección de Método comienza con un encabezado de nivel 1. Aquí describes cómo se realizó el estudio.
+
+## Participantes
+
+Describe la muestra o participantes del estudio.
+
+## Materiales
+
+Describe los instrumentos, escalas, o materiales utilizados.
+
+## Procedimiento
+
+Explica paso a paso cómo se recolectaron los datos.
+
+## Análisis de Datos
+
+Describe las técnicas estadísticas o analíticas empleadas.
+
+# Resultados
+
+Presenta los hallazgos del estudio de manera organizada y objetiva.
+
+## Estadísticos Descriptivos
+
+Puedes incluir tablas de estadísticos descriptivos. Ejemplo de referencia a tabla: ver @tbl-descriptivos.
+
+```{r}
+#| label: tbl-descriptivos
+#| tbl-cap: "Estadísticos Descriptivos de las Variables Principales"
+#| echo: false
+
+# Código R para generar la tabla
+# library(flextable)
+# ... tu código aquí ...
+```
+
+## Análisis Principal
+
+Presenta los resultados del análisis principal.
+
+### Figura de Ejemplo
+
+Las figuras se pueden crear con código o importar. Ver @fig-ejemplo.
+
+```{r}
+#| label: fig-ejemplo
+#| fig-cap: "Distribución de la Variable Dependiente"
+#| fig-width: 6
+#| fig-height: 4
+#| echo: false
+
+# Código R para generar la figura
+# library(ggplot2)
+# ... tu código aquí ...
+```
+
+Para figuras importadas desde archivo:
+
+``` markdown
+![Título de la Figura](ruta/imagen.png){#fig-importada width="5in" fig-alt="Descripción accesible de la imagen" apa-note="Nota opcional debajo de la figura."}
+```
+
+# Discusión
+
+Interpreta los resultados en el contexto de la literatura existente y las hipótesis planteadas.
+
+## Implicaciones Teóricas
+
+Discute cómo los hallazgos contribuyen al conocimiento teórico.
+
+## Implicaciones Prácticas
+
+Menciona las aplicaciones prácticas de los resultados.
+
+## Limitaciones
+
+Reconoce honestamente las limitaciones del estudio.
+
+## Direcciones Futuras
+
+Sugiere líneas de investigación futura basadas en tus hallazgos.
+
+## Conclusión
+
+Resume los puntos principales y el valor del trabajo realizado.
+
+<!-- ========================================================================== -->
+
+<!-- REFERENCIAS -->
+
+<!-- ========================================================================== -->
+
+```{=html}
+<!-- 
+Las referencias se generan automáticamente desde el archivo .bib
+No escribas nada aquí manualmente
+-->
+```
+
+# Referencias {.unnumbered}
+
+::: {#refs}
+:::
+
+<!-- ========================================================================== -->
+
+<!-- APÉNDICES (OPCIONAL) -->
+
+<!-- ========================================================================== -->
+
+```{=html}
+<!-- 
+Los apéndices deben usar identificadores con prefijo #apx-
+Se numerarán automáticamente como Apéndice A, B, C, etc.
+-->
+```
+
+# Análisis Complementarios {#apx-analisis}
+
+Incluye aquí análisis adicionales que complementan pero no son centrales para el artículo principal.
+
+# Materiales Suplementarios {#apx-materiales}
+
+Puedes incluir escalas completas, scripts de análisis, o materiales adicionales.
+
+Para referenciar apéndices en el texto usa: `@apx-analisis` o `@apx-materiales`.
+
+<!-- ========================================================================== -->
+
+<!-- FIN DEL DOCUMENTO -->
+
+<!-- ========================================================================== -->

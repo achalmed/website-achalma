@@ -1,0 +1,520 @@
+---
+# ============================================================================
+# PLANTILLA APAQUARTO - MODO MANUSCRITO (man)
+# Plantilla versátil para manuscritos enviados a revistas (formato tradicional APA)
+# Autor: Edison Achalma
+# Creada: Diciembre 2024
+# ============================================================================
+
+# ----------------------------------------------------------------------
+# INFORMACIÓN DEL DOCUMENTO
+# ----------------------------------------------------------------------
+
+# Título del documento
+# Para títulos con dos puntos, usar comillas
+title: "Título del Manuscrito: Un Estudio Empírico Completo"
+
+# Título corto para encabezado
+shorttitle: "Título Corto del Manuscrito"
+
+# Subtítulo (se combinará con título usando dos puntos)
+subtitle: "subtitle"
+
+# ----------------------------------------------------------------------
+# AUTORES Y AFILIACIONES
+# ----------------------------------------------------------------------
+
+author:
+  - name: Edison Achalma
+  # Autor correspondiente
+    corresponding: true
+    # ORCID
+    orcid: 0000-0002-XXXX-XXXX
+    # Email
+    email: achalmaedison@gmail.com
+    # Afiliación institucional
+    affiliations:
+      - name: Universidad Nacional de San Cristóbal de Huamanga
+        department: Facultad de Ciencias Económicas, Administrativas y Contables
+        address: Portal Independencia N° 57
+        city: Ayacucho
+        region: Ayacucho
+        postal-code: 05003
+        country: Perú
+        id: unsch
+    # Roles del autor 
+    role:
+      - conceptualization: lead
+      - methodology: lead
+      - formal analysis: lead
+      - writing: lead
+      - visualization: lead
+
+  - name: Segundo Autor
+    orcid: 0000-0000-0000-0002
+    email: segundo@ejemplo.com
+    affiliations:
+      - ref: unsch
+    role:
+      - investigation: equal
+      - data curation: lead
+      - editing: supporting
+
+  - name: Tercer Autor
+    orcid: 0000-0000-0000-0003
+    email: tercero@otra-universidad.edu
+    affiliations:
+      - name: Universidad Ejemplo
+        department: Departamento de Investigación
+        city: Lima
+        region: Lima
+        country: Perú
+        id: uejem
+    role:
+      - methodology: supporting
+      - validation: lead
+      - editing: equal
+
+# Opción para listar afiliaciones por separado (útil con muchos autores)
+# affiliations:
+#   - id: unsch
+#     name: Universidad Nacional de San Cristóbal de Huamanga
+#     department: Facultad de Ciencias Económicas
+#     city: Ayacucho
+#     region: Ayacucho
+#     country: Perú
+#   - id: uejem
+#     name: Universidad Ejemplo
+#     department: Departamento de Investigación
+#     city: Lima
+#     region: Lima
+#     country: Perú
+
+# ----------------------------------------------------------------------
+# RESUMEN Y PALABRAS CLAVE
+# ----------------------------------------------------------------------
+
+# Resumen
+abstract: "Este resumen describe de manera concisa el propósito, metodología, hallazgos principales y conclusiones del estudio. Para artículos empíricos, debe incluir: el problema investigado, los participantes (número, tipo, edad, sexo, características relevantes), el método de investigación (diseño, materiales, procedimiento), los resultados principales (con niveles de significancia estadística), y las conclusiones e implicaciones. El resumen debe ser autocontenido, preciso, no evaluativo, coherente y legible. Máximo 250 palabras para artículos empíricos."
+
+# Palabras clave (opcionales)
+keywords: [palabra clave 1, palabra clave 2, palabra clave 3, análisis estadístico, metodología]
+
+# Declaración de impacto (opcional pero cada vez más solicitada)
+impact-statement: "Este estudio avanza la comprensión de [tema] al demostrar que [hallazgo principal]. Los resultados tienen implicaciones directas para [aplicación práctica] y sugieren nuevas direcciones para [investigación futura]. Los hallazgos pueden informar políticas/prácticas en [área relevante]."
+
+# ----------------------------------------------------------------------
+# NOTA DEL AUTOR
+# ----------------------------------------------------------------------
+
+author-note:
+  status-changes:
+    # Cambios de afiliación desde que se realizó el trabajo
+    affiliation-change: ~
+    # affiliation-change: "Edison Achalma ahora está en Temple University."
+    
+    # Autores fallecidos
+    deceased: ~
+    # deceased: "Segundo Autor falleció el 15 de enero de 2024."
+
+  disclosures:
+    # Pre-registro del estudio (altamente recomendado)
+    study-registration: "Este estudio fue pre-registrado en el Open Science Framework (OSF) el 15 de marzo de 2024 (https://osf.io/xxxxx/)."
+    
+    # Disponibilidad de datos y materiales (requerido por muchas revistas)
+    data-sharing: "Los datos, materiales de análisis y código están disponibles en el repositorio OSF del proyecto (https://osf.io/xxxxx/). Los datos sin procesar están disponibles previa solicitud al autor correspondiente debido a restricciones de privacidad de participantes."
+    
+    # Informes relacionados basados en los mismos datos
+    related-report: ~
+    # related-report: "Partes de estos datos fueron presentadas en la conferencia XYZ en julio de 2024."
+    
+    # Declaración de conflictos de interés (requerido)
+    conflict-of-interest: "Los autores declaran que no existen conflictos de interés relacionados con este manuscrito. Ningún autor tiene relaciones financieras o personales que pudieran haber influido inapropiadamente en el trabajo reportado."
+    
+    # Financiamiento (especificar todas las fuentes)
+    financial-support: "Este trabajo fue financiado por el Programa Nacional de Investigación Científica (Grant No. 2024-12345) otorgado a Edison Achalma. El segundo autor recibió apoyo del Programa de Becas Doctorales de CONCYTEC."
+    
+    # Agradecimientos
+    gratitude: "Los autores agradecen a la Dra. María González por sus valiosos comentarios sobre versiones previas de este manuscrito, y a los asistentes de investigación Juan Pérez y Ana López por su ayuda en la recolección de datos. También agradecemos a los participantes del estudio por su tiempo y contribución."
+    
+    # Acuerdos de autoría (si es necesario aclarar)
+    authorship-agreements: ~
+    # authorship-agreements: "El orden de autoría refleja contribuciones iguales de los dos primeros autores, determinado por sorteo."
+
+  # Sobrescribir nota de correspondencia automática (normalmente no necesario)
+  correspondence-note: ~
+
+# ----------------------------------------------------------------------
+# CONFIGURACIÓN DE FORMATO MANUSCRITO
+# ----------------------------------------------------------------------
+
+# Ubicación de figuras y tablas
+# true = en el texto (para revisión o versiones finales)
+# false = al final (estándar para manuscritos enviados a revisión)
+floatsintext: false
+
+# Líneas numeradas (útil para revisión de pares)
+numbered-lines: false
+
+# Espaciado sobre título
+blank-lines-above-title: 3
+
+# Espaciado sobre nota de autor
+blank-lines-above-author-note: 2
+
+
+# ----------------------------------------------------------------------
+# CONFIGURACIÓN DE REFERENCIAS
+# ----------------------------------------------------------------------
+
+# Archivo de bibliografía
+bibliography: referencias.bib
+
+# Estudios incluidos en meta-análisis (se marcan con asterisco)
+meta-analysis: true
+
+# Citas incluidas en referencias pero no citadas en texto
+nocite: ~
+# Para meta-análisis, listar todos los estudios incluidos:
+# nocite: |
+#   @estudio1, @estudio2, @estudio3
+
+# Opciones de formato de citas
+no-ampersand-parenthetical: false
+# ----------------------------------------------------------------------
+# ENMASCARAMIENTO PARA REVISIÓN CIEGA
+# ----------------------------------------------------------------------
+
+# Activar para revisión por pares anónima
+mask: false
+
+# Lista de citas propias a enmascarar
+masked-citations: ~
+#   - achalma2023
+#   - achalma2024estudio
+
+
+# ----------------------------------------------------------------------
+# CONFIGURACIÓN DE IDIOMA
+# ----------------------------------------------------------------------
+
+lang: es
+
+language:
+  citation-last-author-separator: "y"
+  citation-masked-author: "Cita Enmascarada"
+  citation-masked-date: "s.f."
+  citation-masked-title: "Título Enmascarado"
+  title-block-author-note: "Nota de Autores"
+  title-block-correspondence-note: "La correspondencia sobre este artículo debe dirigirse a"
+  title-block-role-introduction: "Los roles de autoría fueron clasificados usando la taxonomía CRediT (https://credit.niso.org/) como sigue:"
+  references-meta-analysis: "Las referencias marcadas con asterisco fueron incluidas en el meta-análisis."
+  title-impact-statement: "Declaración de Impacto"
+  section-title-abstract: "Resumen"
+  section-title-references: "Referencias"
+  title-block-keywords: "Palabras clave"
+  crossref-fig-title: "Figura"
+  crossref-tbl-title: "Tabla"
+  crossref-apx-prefix: "Apéndice"
+  crossref-eq-prefix: "Ecuación"
+
+# ----------------------------------------------------------------------
+# CONTROL DE ELEMENTOS VISUALES
+# ----------------------------------------------------------------------
+
+# Suprimir elementos específicos si la revista lo requiere
+suppress-title-page: false    # Cambiar a true para documentos muy informales
+suppress-title: false
+suppress-author: false        # Cambiar a true para documentos anónimos
+suppress-affiliation: false
+suppress-author-note: false   # Cambiar a true si no hay nota
+suppress-orcid: false
+suppress-abstract: false      # Cambiar a true si no hay abstract
+suppress-keywords: false      # Cambiar a true si no hay keywords
+suppress-title-introduction: false
+
+# ----------------------------------------------------------------------
+# FORMATOS DE SALIDA
+# ----------------------------------------------------------------------
+
+format:
+  # PDF - Modo manuscrito
+  apaquarto-pdf:
+    documentmode: man  # Formato manuscrito tradicional
+    fontsize: 12pt     # 11pt o 12pt son comunes
+    a4paper: false     # true para papel A4
+    donotrepeattitle: false
+    keep-tex: false    # Cambiar a true para debugging LaTeX
+  
+  # DOCX - Formato más usado para envío a revistas
+  apaquarto-docx: default
+  
+  # HTML - Excelente para visualización y compartir online
+  apaquarto-html: default
+
+  # Typst - Alternativa moderna a LaTeX
+  apaquarto-typst: default
+
+# ----------------------------------------------------------------------
+# OPCIONES DE EJECUCIÓN
+# ----------------------------------------------------------------------
+
+editor: visual
+
+execute:
+  echo: false      # No mostrar código R en documento final
+  warning: false   # Suprimir advertencias
+  message: false   # Suprimir mensajes
+  eval: true
+  cache: false     # Cambiar a true para acelerar renderizado
+---
+
+<!-- ========================================================================== -->
+
+<!-- CONTENIDO DEL MANUSCRITO -->
+
+<!-- ========================================================================== -->
+
+<!-- INTRODUCCIÓN -->
+
+La introducción presenta el contexto teórico y empírico del problema de investigación. Debe comenzar con una declaración clara del problema [@citaejemplo2020], seguida de una revisión de la literatura relevante que establezca el estado actual del conocimiento.
+
+<!-- Ejemplo de cita narrativa -->
+
+Como señalan @otroacutor2021, la comprensión actual de este fenómeno es limitada.
+
+<!-- Ejemplo de cita parentética -->
+
+Estudios previos han demostrado resultados mixtos [@estudio1; @estudio2; @estudio3].
+
+<!-- Ejemplo de cita con páginas -->
+
+Específicamente, se ha argumentado que "cita textual importante" [@autor2019, p. 156].
+
+## Revisión de Literatura
+
+### Teorías Relevantes
+
+Desarrolla las teorías que sustentan tu investigación, organizando la literatura de manera lógica y crítica.
+
+### Estudios Empíricos Previos
+
+Resume los hallazgos empíricos más relevantes, destacando consensos, discrepancias y vacíos en el conocimiento.
+
+### Justificación del Estudio Actual
+
+Articula claramente cómo tu estudio aborda vacíos o limitaciones en la literatura existente.
+
+## Objetivos e Hipótesis
+
+### Objetivo General
+
+Describe el objetivo principal del estudio de manera clara y específica.
+
+### Objetivos Específicos
+
+1.  Primer objetivo específico
+2.  Segundo objetivo específico
+3.  Tercer objetivo específico
+
+### Hipótesis
+
+**H1**: Primera hipótesis, prediciendo la relación/diferencia esperada.
+
+**H2**: Segunda hipótesis, con base teórica clara.
+
+**H3**: Tercera hipótesis, si es aplicable.
+
+# Método
+
+## Diseño
+
+Describe el diseño de investigación (experimental, cuasi-experimental, correlacional, etc.) y justifica su adecuación para responder las preguntas de investigación.
+
+## Participantes
+
+Un total de *N* = XXX participantes (*M*~edad~ = XX.XX años, *SD* = X.XX, rango: XX-XX años; XX% mujeres, XX% hombres, XX% otro/prefiero no decir) fueron reclutados mediante \[método de muestreo\]. Los criterios de inclusión fueron: (a) \[criterio 1\], (b) \[criterio 2\], y (c) \[criterio 3\]. Los criterios de exclusión incluyeron: \[criterios\].
+
+### Cálculo de Poder Estadístico
+
+El tamaño muestral fue determinado mediante análisis de poder a priori usando G*Power 3.1 [@faul2009]. Para detectar un tamaño de efecto mediano (*d\* = 0.50) con α = .05 y poder = .80 en \[tipo de prueba\], se requería un mínimo de XXX participantes.
+
+### Consideraciones Éticas
+
+El estudio fue aprobado por el Comité de Ética de \[Institución\] (Protocolo No. XXXX-2024). Todos los participantes proporcionaron consentimiento informado por escrito previo a su participación.
+
+## Materiales e Instrumentos
+
+### Instrumento 1: \[Nombre Completo\]
+
+Describe el instrumento, incluyendo: - Número de ítems y formato de respuesta - Dimensiones o subescalas - Rango de puntuaciones e interpretación - Evidencias de confiabilidad y validez previas - Confiabilidad en la muestra actual (e.g., α = .XX)
+
+### Instrumento 2: \[Nombre Completo\]
+
+Similar descripción para cada instrumento usado.
+
+## Procedimiento
+
+### Recolección de Datos
+
+Describe paso a paso cómo se recolectaron los datos:
+
+1.  **Reclutamiento**: \[Método y contexto de reclutamiento\]
+
+2.  **Consentimiento informado**: \[Proceso de obtención de consentimiento\]
+
+3.  **Aplicación de instrumentos**: \[Orden, duración, contexto\]
+
+4.  **Debriefing**: \[Información post-participación\]
+
+### Preparación de Datos
+
+Describe el tratamiento de datos faltantes, detección de valores atípicos, y transformaciones aplicadas.
+
+## Análisis de Datos
+
+Los análisis fueron realizados usando R versión 4.X.X [@rcoreteam2024] con los paquetes `tidyverse` [@wickham2019], `psych` [@revelle2024], y `lavaan` [@rosseel2012] para \[especificar uso\]. El nivel de significancia fue establecido en α = .05 para todas las pruebas, con corrección de Bonferroni aplicada para comparaciones múltiples donde fue apropiado.
+
+### Análisis Descriptivos
+
+Se calcularon medias, desviaciones estándar, y correlaciones bivariadas entre todas las variables principales.
+
+### Análisis Primarios
+
+Describe las pruebas estadísticas principales que responden directamente a tus hipótesis (e.g., ANOVA, regresión, SEM, etc.).
+
+### Análisis Secundarios
+
+Describe análisis exploratorios o complementarios.
+
+# Resultados
+
+## Estadísticos Descriptivos y Correlaciones
+
+La @tbl-descriptivos presenta los estadísticos descriptivos y las correlaciones entre las variables principales del estudio.
+
+```{r}
+#| label: tbl-descriptivos
+#| tbl-cap: "Medias, Desviaciones Estándar y Correlaciones entre Variables Principales"
+#| apa-note: "NoNote *p* < .05. **p* < .01. ***p* < .001."
+
+# Código para generar tabla de correlaciones
+# library(apaTables)
+# apa.cor.table(datos, filename = "tabla_cor.doc")
+```
+
+Como se observa en la @tbl-descriptivos, \[interpretación de correlaciones significativas\].
+
+## Prueba de Hipótesis 1
+
+Para probar H1, se condujo \[tipo de análisis\]. Los resultados revelaron \[hallazgo principal\], *t*(XX) = X.XX, *p* = .XXX, *d* = X.XX, IC 95% \[X.XX, X.XX\], apoyando/rechazando H1.
+
+La @fig-principal ilustra este efecto.
+
+```{r}
+#| label: fig-principal
+#| fig-cap: "Diferencias en Variable Dependiente por Grupo"
+#| fig-width: 6
+#| fig-height: 4
+#| apa-note: "Las barras de error representan intervalos de confianza al 95%."
+
+# Código para figura principal
+# library(ggplot2)
+# ggplot(datos, aes(x = grupo, y = variable)) + ...
+```
+
+## Prueba de Hipótesis 2
+
+Para H2, se realizó [tipo de análisis]. Como se muestra en la @tbl-regresion, [interpretación].
+
+```{r}
+#| label: tbl-regresion
+#| tbl-cap: "Análisis de Regresión: Predictores de Variable Dependiente"
+#| apa-note: "NoNote *p* < .05. **p* < .01. ***p* < .001."
+
+# Código para tabla de regresión
+```
+
+## Análisis Complementarios
+
+\[Presenta cualquier análisis adicional relevante\]
+
+# Discusión
+
+## Resumen de Hallazgos
+
+El presente estudio examinó \[objetivo principal\]. Los resultados principales indican que \[resumen de hallazgos clave\], lo cual es consistente/inconsistente con las predicciones teóricas.
+
+## Interpretación de Resultados
+
+### Hallazgo 1
+
+Nuestros resultados respecto a \[tema\] son consistentes con [@teoria2020], quien propuso que... Sin embargo, contrastan con los hallazgos de @estudiocontrario2019, posiblemente debido a...
+
+### Hallazgo 2
+
+\[Interpretación contextualizada del segundo hallazgo principal\]
+
+## Implicaciones Teóricas
+
+Los presentes hallazgos contribuyen a la literatura existente de varias maneras:
+
+1.  **Primera contribución**: \[Explicar aporte teórico\]
+
+2.  **Segunda contribución**: \[Explicar segundo aporte\]
+
+## Implicaciones Prácticas
+
+Los resultados tienen implicaciones directas para \[contexto aplicado\]:
+
+-   **Implicación 1**: \[Aplicación práctica específica\]
+-   **Implicación 2**: \[Segunda aplicación\]
+
+## Fortalezas y Limitaciones
+
+### Fortalezas
+
+Este estudio tiene varias fortalezas notables: (a) \[fortaleza 1\], (b) \[fortaleza 2\], y (c) \[fortaleza 3\].
+
+### Limitaciones
+
+A pesar de estas fortalezas, los resultados deben interpretarse considerando las siguientes limitaciones:
+
+1.  **Limitación 1**: \[Describir y explicar impacto\]
+
+2.  **Limitación 2**: \[Describir y explicar impacto\]
+
+## Direcciones para Investigación Futura
+
+Investigaciones futuras podrían:
+
+1.  Abordar las limitaciones del presente estudio mediante \[sugerencia específica\]
+
+2.  Extender estos hallazgos a \[nuevas poblaciones/contextos\]
+
+3.  Examinar los mecanismos subyacentes mediante \[diseño/método específico\]
+
+## Conclusión
+
+En conclusión, este estudio proporciona evidencia de que \[hallazgo principal\], con implicaciones importantes para \[área de aplicación\]. Los hallazgos \[apoyan/cuestionan\] la teoría de \[teoría relevante\] y sugieren que \[conclusión interpretativa principal\]. Se necesita investigación adicional para \[direcciones futuras clave\].
+
+# Referencias
+
+::: {#refs}
+:::
+
+# Material Suplementario {#apx-materiales}
+
+<!-- Incluir cuestionarios completos, procedimientos detallados, etc. -->
+
+# Análisis Adicionales {#apx-analisis}
+
+<!-- Análisis exploratorios no centrales para el artículo principal -->
+
+## Análisis de Sensibilidad
+
+<!-- Resultados cuando se excluyen outliers, etc. -->
+
+## Análisis por Subgrupos
+
+<!-- Si es relevante -->

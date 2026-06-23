@@ -11,8 +11,10 @@
 
   .title-block-content {
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
     max-width: 752px;
     margin: 0 auto;
     z-index: 1;
@@ -42,14 +44,14 @@
   style="position: relative; width: 100%; margin: 0; padding: 0;">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Including background image if featured.jpg exists, otherwise particles -->
+  <!-- Incluir imagen de fondo si existe featured.jpg, de lo contrario, partículas -->
   $if(featured.jpg)$
-  <img src="$featured.jpg$" alt="background image used for decoration" class="bg-image" />
+  <img src="$featured.jpg$" alt="imagen de fondo para decoración" class="bg-image" />
   $else$
   <div id="particles-js"></div>
   $endif$
 
-  <!-- Main title block content -->
+  <!-- Contenido principal del bloque de título -->
   <div class="title-block-content">
     <h1 class="title">$title$</h1>
     $if(subtitle)$
@@ -64,20 +66,12 @@
     </div>
     $endif$
     $endif$
-    $if(hide-description)$
-    $elseif(description)$
-    <div>
-      <div id="title-block-title-desc" class="description pt-4">
-        $description$
-      </div>
-    </div>
-    $endif$
 
     $title-metadata.html()$
 
     $if(links)$
     <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group"
-      aria-label="Links">
+      aria-label="Enlaces">
       $for(links)$
       <a href="$links.url$" class="btn btn-secondary text-capitalize"><i class="bi bi-$links.icon$ me-1"></i>
         $links.name$</a>
@@ -85,7 +79,7 @@
     </div>
     $endif$
 
-    <!-- Particle.js script loaded from a CDN, only if no featured.jpg -->
+    <!-- Cargar script de Particle.js desde CDN, solo si no hay featured.jpg -->
     $if(featured.jpg)$
     $else$
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -98,4 +92,3 @@
     $endif$
   </div>
 </header>
-

@@ -3,8 +3,8 @@ pagetitle: Edison Achalma - Contact
 # title: Send me a note
 name: Contact Form
 page-layout: article
-format: 
-  html: 
+format:
+  html:
     grid:
       margin-width: 0px
       sidebar-width: 0px
@@ -15,15 +15,15 @@ resources:
   - assets/contact.css
 ---
 
+## Envíame una nota {{< fa feather-pointed >}} {.lab-section}
+
 ::: {.grid}
 
-::: {.g-col-5 #note}
-
-# Envíame una nota {{< fa feather-pointed >}}
+::: {.g-col-12 .g-col-md-5 #note}
 
 Puedes utilizar este formulario para contactarme sobre charlas, colaboraciones o simplemente para saludarme.
 
-También me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. {{< bi heart-fill >}}
+También me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. {{< fa heart >}}
 
 <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
 <a class="link-dark me-1" href="https://bsky.app/profile/achalmaedison.com" title="bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a>
@@ -37,14 +37,12 @@ También me encanta saber si mis materiales educativos te han resultado útiles 
 :::
 <!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
 
-::: {.g-col-1}
+::: {.g-col-md-1}
 :::
 
-::: {.g-col-6 #form}
+::: {.g-col-12 .g-col-md-6 #form}
 
-<form 
-style="margin-top: -5em;"
-action="https://formspree.io/f/mgvananz" method="POST" accept-charset="utf-8">
+<form action="https://formspree.io/f/mgvananz" method="POST" accept-charset="utf-8">
 
 
 <label for="full-name">Full Name</label>
@@ -61,23 +59,26 @@ action="https://formspree.io/f/mgvananz" method="POST" accept-charset="utf-8">
 
 :::
 
-::: {.g-col-5 #buttondown}
+:::
+<!-- end grid -->
 
-# Una nota ocasional, sin ruido ni spam {{< fa envelope >}}
+## Una nota ocasional, sin ruido ni spam {{< fa envelope >}} {.lab-section}
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-5 #buttondown}
 
 Puede utilizar este formulario para registrarse y recibir una pequeña nota por correo electrónico cada vez que publique algo nuevo en mi sitio web.
 
 :::
 
-::: {.g-col-1}
+::: {.g-col-md-1}
 :::
 
-::: {.g-col-6 #buttondown-form}
-
+::: {.g-col-12 .g-col-md-6 #buttondown-form}
 
 ```{=html}
 <form
-  style="margin-top: 4em;"
   action="https://buttondown.com/api/emails/embed-subscribe/achalmaedison"
   method="post"
   target="popupwindow"
@@ -85,12 +86,12 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
   class="embeddable-buttondown-form"
 >
   <label for="bd-email">Email Address</label>
-  <input 
+  <input
   class="form-control"
-  placeholder="your@email.here" 
+  placeholder="your@email.here"
   type="email" name="email" id="bd-email" />
-  
-  <input 
+
+  <input
   class="btn btn-primary mt-1"
   type="submit" value="Subscribe" />
   <p>
@@ -101,12 +102,10 @@ Puede utilizar este formulario para registrarse y recibir una pequeña nota por 
 
 :::
 
-
 :::
 <!-- end grid -->
 
-# Agenda para reunirnos {{< fa solid calendar >}}
-
+## Agenda para reunirnos {{< fa solid calendar >}} {.lab-section}
 
 ```{=html}
 <!-- Google Calendar Appointment Scheduling begin -->

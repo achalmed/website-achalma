@@ -1,56 +1,67 @@
-/* Título y estructura general */
+/* ============================================================================
+   PÁGINAS DE LISTADO (blog, talks, cursos) — cabecera tipo revista científica
+   ============================================================================
+   Se carga vía header-includes en las páginas index de cada sección.
+   Las filas/tarjetas del listado las estilizan los temas (quarto-post, card);
+   aquí solo se diseña la cabecera editorial de la sección.
+   ============================================================================ */
 
-/* Elimina todos los estilos predeterminados del bloque de título y su contenedor */
-#title-block-header,
-#title-block-header-title {
-  all: unset; /* Restablece todas las propiedades CSS a sus valores iniciales */
-  background-image: none !important; /* Fuerza la eliminación de cualquier imagen de fondo */
+/* Cabecera de sección: masthead editorial alineado a la izquierda */
+#title-block-header {
+  background-image: none !important;
+  margin: 2.5rem 0 0;
 }
 
-/* Estilo del título de la página */
+/* Marca técnica sobre el título de sección */
+#title-block-header .quarto-title::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--lab-accent, #0F5CA8);
+  margin-bottom: 1.2rem;
+}
+
 #title-block-header.quarto-title-block.default .quarto-title .title {
-  font-size: 2.5em; /* Establece el tamaño de fuente del título a 2.5 veces el tamaño base */
-  text-align: center; /* Centra el texto del título horizontalmente */
-  margin: 0 0 0.5em 0; /* Define márgenes: 0 arriba, 0 a los lados, 0.5em abajo, 0 a la izquierda */
+  font-size: clamp(2.2rem, 1.7rem + 2vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin: 0 0 0.4em 0;
 }
 
-/* Estilo del texto debajo del título (descripción) */
-.description p {
-  text-align: center; /* Centra el texto de la descripción */
-  margin: 0 1em 10em 1em; /* Márgenes: 0 arriba, 1em a los lados, 10em abajo (espacio grande), 1em a la izquierda */
-  padding: 0 0 5em 0; /* Relleno: 0 arriba, 0 a los lados, 5em abajo (espacio adicional), 0 a la izquierda */
-}
-
-/* Contenedor de la descripción */
+/* Descripción: medida de lectura corta, tono secundario, regla inferior */
 .description {
-  overflow: hidden; /* Evita que el contenido se desborde y corrige el flujo del diseño */
-  /* Corrige el flujo: asegura que los elementos respeten el espacio asignado */
+  overflow: hidden;
 }
 
-/* Estilo de los enlaces dentro de la descripción */
+.description p {
+  text-align: left;
+  max-width: 62ch;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--lab-ink-2, #33404C);
+  margin: 0 0 2.2rem 0;
+  padding: 0 0 2.2rem 0;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
 .description a {
-  text-decoration: underline !important; /* Fuerza que los enlaces estén subrayados */
+  text-decoration: underline !important;
+  text-underline-offset: 0.22em;
 }
 
-/* Estilo de los enlaces al pasar el cursor sobre ellos */
 .description a:hover {
-  text-decoration: none !important; /* Elimina el subrayado cuando el cursor pasa por encima */
+  text-decoration: none !important;
 }
 
-/* Estilo de las tarjetas del listado (listing cards) */
-.card {
-  background: transparent; /* Fondo transparente para las tarjetas */
-  border: none; /* Elimina los bordes de las tarjetas */
-  border-radius: 4px; /* Añade esquinas redondeadas de 4px */
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* Sombra suave: 1px a la derecha, 1px abajo, 10px de desenfoque, 10% de opacidad */
-}
-
-/* Estilo de las imágenes dentro de las tarjetas */
-.card-img {
-  border-radius: 8px 8px 0px 0px; /* Esquinas redondeadas solo en la parte superior (8px) */
-}
-
-/* Clase para definir un color específico */
-.color {
-  color: papayawhip; /* Establece el color del texto a "papayawhip" (un tono crema claro) */
+/* Controles del listado (orden, filtro) como instrumentos discretos */
+.quarto-listing .listing-actions-group .form-select,
+.quarto-listing .listing-actions-group .form-control {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  background-color: transparent;
+  border-color: var(--lab-border, #E5E5DD);
+  color: var(--lab-muted, #5B6670);
+  border-radius: 6px;
 }

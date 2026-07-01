@@ -158,12 +158,19 @@ format:
         - assets/theme_light.scss
         - assets/colors.scss
         - assets/fonts.scss
+      dark:
+        - cosmo
+        - assets/theme_dark.scss
+        - assets/colors.scss
+        - assets/fonts.scss
     css: 
       - assets/styles.css
       - assets/bibbase.css
     # Google Tag Manager
     include-in-header: assets/gtm-head.html
-    include-after-body: assets/gtm-body.html
+    include-after-body:
+      - assets/gtm-body.html
+      - assets/interactions.html
     highlight-style: a11y
     code-link: true
     pagetitle: "{{< meta title >}}"

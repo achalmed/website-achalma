@@ -1,11 +1,67 @@
 /*-- scss:defaults --*/
-/* Definición de variables de color predeterminadas para el proyecto */
+/* ============================================================================
+   SISTEMA DE COLOR — "QUIET LABORATORY"
+   ============================================================================
+   Dos paletas diseñadas de forma independiente:
 
-$spc-bg: #fffbf2; // Color de fondo principal: tono crema claro (anteriormente #F5F5F5, #fffcf7, #fffbf5)
-$spc-bg-dark: #FAF0E3; // Color de fondo oscuro: tono crema más oscuro (anteriormente #EBEBEB, #FBEBDA, #FAF0E3, WIP #FFF2EB)
-$spc-primary: #002642; // Color primario: azul oscuro profundo (anteriormente #122140, #1C304A, #002642)
-$spc-primary-light: #2E4963; // Color primario claro: azul grisáceo (anteriormente #475269, #32415A, #2E4963)
-$spc-secondary: #A23E02; // Color secundario: naranja rojizo oscuro (anteriormente #936C10, #815E0E, #b04303)
-$spc-secondary-light: #D96E34; // Color secundario claro: naranja más claro y vibrante
-$spc-accent: #b9c680; // Color de acento: verde oliva claro
-$spc-accent-light: #EEF1E0; // Color de acento claro: verde crema muy suave
+   · LIGHT — "Paper Lab":  papel científico, tinta suave, azul de journal.
+   · DARK  — "Night Observatory": grafito azulado profundo, azul glaciar.
+
+   Contraste verificado WCAG AA para texto normal sobre sus fondos.
+   ============================================================================ */
+
+/* ----------------------------------------------------------------------------
+   PALETA LIGHT — "Paper Lab"
+   ---------------------------------------------------------------------------- */
+
+// Fondos
+$spc-bg: #FBFBF8 !default;             // papel: blanco cálido casi neutro
+$spc-bg-dark: #F2F2EC !default;        // superficie secundaria (paneles, TOC)
+$spc-bg-elevated: #FFFFFF !default;    // superficies elevadas (cards, menús)
+
+// Tinta (texto)
+$spc-primary: #101820 !default;        // tinta principal: negro suave azulado
+$spc-primary-light: #33404C !default;  // tinta secundaria (subtítulos)
+$spc-text-muted: #5B6670 !default;     // metadatos, fechas (AA sobre $spc-bg)
+
+// Azul científico (interacción: enlaces, botones, foco)
+$spc-secondary: #0F5CA8 !default;      // azul de journal
+$spc-secondary-light: #0B6FCE !default; // hover
+
+// Verde discreto (acentos menores, éxito)
+$spc-accent: #2F7D5D !default;
+$spc-accent-light: #EAF2EC !default;   // fondo verdoso muy suave (código inline)
+
+// Estructura
+$spc-border: #E5E5DD !default;         // hairlines
+$spc-border-strong: #CDCDC2 !default;  // bordes con más presencia
+$spc-code-bg: #F5F6F2 !default;        // fondo de bloques de código
+$spc-selection: #CFE3F6 !default;      // selección de texto
+
+/* ----------------------------------------------------------------------------
+   PALETA DARK — "Night Observatory"
+   ---------------------------------------------------------------------------- */
+
+// Fondos
+$spc-dark-bg: #0E1116 !default;          // grafito azulado profundo
+$spc-dark-bg-elevated: #151B22 !default; // superficies elevadas
+$spc-dark-bg-accent: #1B232C !default;   // hover / paneles activos
+
+// Texto
+$spc-dark-text-primary: #E6E9ED !default;   // blanco humo (no puro)
+$spc-dark-text-secondary: #A9B4BF !default; // texto secundario
+$spc-dark-text-muted: #8A95A0 !default;     // metadatos (AA sobre fondo)
+
+// Azul glaciar (interacción)
+$spc-dark-primary: #7CB5E8 !default;
+$spc-dark-primary-light: #9DC9F2 !default;
+
+// Verde jade discreto
+$spc-dark-accent: #7BC4A2 !default;
+$spc-dark-accent-bg: #14211C !default;
+
+// Estructura
+$spc-dark-border: #262E38 !default;
+$spc-dark-border-strong: #38424E !default;
+$spc-dark-code-bg: #12171E !default;
+$spc-dark-selection: #2B4562 !default;

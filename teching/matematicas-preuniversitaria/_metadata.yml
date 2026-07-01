@@ -89,7 +89,7 @@ toc: true                    # Mostrar tabla de contenidos
 toc-title: " "               # Título (vacío para solo mostrar el ícono)
 # toc-title: "Contenidos"    # O con título explícito
 
-toc-location: left           # Ubicación: left, right, body
+toc-location: right          # Ubicación: left, right, body (derecha: no interrumpe la lectura)
 toc-depth: 3                 # Profundidad de niveles (1-6)
 toc-expand: 2                # Nivel inicial expandido
 
@@ -186,7 +186,7 @@ format:
     toc-depth: 3
     toc-expand: 2
     toc-title: "Contenidos"
-    toc-location: left            # left, right, body
+    toc-location: right           # left, right, body (derecha: no interrumpe la lectura)
     
     # --- NAVEGACIÓN ---
     smooth-scroll: true           # Scroll suave al navegar
@@ -236,9 +236,9 @@ format:
     
     # Configuración de grid (ancho de columnas)
     grid:
-      sidebar-width: 400px
-      body-width: 1000px
-      margin-width: 200px
+      sidebar-width: 260px
+      body-width: 760px   # columna de lectura tipo journal (~70 caracteres)
+      margin-width: 320px  # margen derecho: TOC + otros formatos
       gutter-width: 1.5rem
 
     other-links:

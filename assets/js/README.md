@@ -8,12 +8,12 @@ propósito. Se cargan en todas las páginas mediante `assets/interactions.html`
 módulo oculta contenido por defecto, solo lo realza. Los módulos que animan
 respetan `prefers-reduced-motion`.
 
-| Módulo | Responsabilidad | Estilos asociados |
-|---|---|---|
-| `navbar.js` | `.lab-scrolled` en la navbar al hacer scroll | `03-layout/_navbar.scss` |
-| `cursor.js` | Glow que sigue el puntero (`--lab-mx/--lab-my`, `.lab-glow-on`); solo pointer fino, sin reduced-motion | `05-interactions/_microinteractions.scss` |
-| `hero.js` | Ajusta el hero de portada al alto visible (sale si no hay hero) | `05-pages/home.scss` (fallback CSS) |
-| `scroll-effects.js` | Revelado escalonado con IntersectionObserver (`.lab-reveal/.lab-in`) | `05-interactions/_microinteractions.scss` |
+| Módulo              | Responsabilidad                                                                                        | Estilos asociados                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
+| `navbar.js`         | `.lab-scrolled` en la navbar al hacer scroll                                                           | `03-layout/_navbar.scss`                  |
+| `cursor.js`         | Glow que sigue el puntero (`--lab-mx/--lab-my`, `.lab-glow-on`); solo pointer fino, sin reduced-motion | `05-interactions/_microinteractions.scss` |
+| `hero.js`           | Ajusta el hero de portada al alto visible (sale si no hay hero)                                        | `05-pages/home.scss` (fallback CSS)       |
+| `scroll-effects.js` | Revelado escalonado con IntersectionObserver (`.lab-reveal/.lab-in`)                                   | `05-interactions/_microinteractions.scss` |
 
 ## Módulos futuros (no crear hasta que hagan falta)
 

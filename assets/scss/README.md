@@ -17,20 +17,20 @@ vez y los temas solo declaran colores.
     Bootstrap: aquí se configura cosmo).
   - `/*-- scss:rules --*/` — reglas CSS (se emiten DESPUÉS de Bootstrap:
     aquí se sobreescribe).
-  Un partial solo puede importarse desde la sección que le corresponde.
+    Un partial solo puede importarse desde la sección que le corresponde.
 
 ## Capas
 
-| Capa | Contenido | Emite CSS |
-|---|---|---|
-| `00-settings/` | Paletas crudas (`$spc-*`), tokens semánticos (`$lab-*`), tipografía, layout y mapeo a Bootstrap | No |
-| `01-tools/` | Mixins y funciones Sass | No |
-| `02-base/` | @font-face, custom properties `--lab-*`, documento, tipografía aplicada | Sí |
-| `03-layout/` | Navbar, footer, TOC, responsive transversal | Sí |
-| `04-components/` | Title block, listados, código, tablas, matemáticas, citas, callouts, botones, paginación, social, búsqueda | Sí |
-| `05-interactions/` | Microinteracciones (.lab-reveal, glow) y reduced-motion | Sí |
-| `05-pages/` | Estilos por página, compilados APARTE del tema (ver abajo) | CSS propio |
-| `06-themes/` | Reglas exclusivas de un tema (hoy: ajustes nocturnos) | Sí |
+| Capa               | Contenido                                                                                                  | Emite CSS  |
+| ------------------ | ---------------------------------------------------------------------------------------------------------- | ---------- |
+| `00-settings/`     | Paletas crudas (`$spc-*`), tokens semánticos (`$lab-*`), tipografía, layout y mapeo a Bootstrap            | No         |
+| `01-tools/`        | Mixins y funciones Sass                                                                                    | No         |
+| `02-base/`         | @font-face, custom properties `--lab-*`, documento, tipografía aplicada                                    | Sí         |
+| `03-layout/`       | Navbar, footer, TOC, responsive transversal                                                                | Sí         |
+| `04-components/`   | Title block, listados, código, tablas, matemáticas, citas, callouts, botones, paginación, social, búsqueda | Sí         |
+| `05-interactions/` | Microinteracciones (.lab-reveal, glow) y reduced-motion                                                    | Sí         |
+| `05-pages/`        | Estilos por página, compilados APARTE del tema (ver abajo)                                                 | CSS propio |
+| `06-themes/`       | Reglas exclusivas de un tema (hoy: ajustes nocturnos)                                                      | Sí         |
 
 ## Flujo de tokens
 

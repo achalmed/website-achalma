@@ -191,6 +191,12 @@ format:
     # --- NAVEGACIÓN ---
     smooth-scroll: true           # Scroll suave al navegar
     link-external-newwindow: true # Enlaces externos en nueva pestaña
+
+    # --- NUMERACIÓN DE SECCIONES ---
+    # Jerárquica (1, 1.1, 1.1.1) como los PDF/DOCX apaquarto (ya la usan).
+    # El estilo visual vive en assets/scss/04-components/_section-numbers.scss
+    number-sections: true
+    number-depth: 3               # h1–h3 numerados; h4+ sin número (= toc-depth)
     
     # --- CITAS Y NOTAS ---
     citations-hover: true         # Popup con cita al pasar el mouse
@@ -238,7 +244,7 @@ format:
     grid:
       sidebar-width: 260px
       body-width: 760px   # columna de lectura tipo journal (~70 caracteres)
-      margin-width: 320px  # margen derecho: TOC + otros formatos
+      margin-width: 350px  # margen derecho: TOC en una línea + otros formatos
       gutter-width: 1.5rem
 
     other-links:

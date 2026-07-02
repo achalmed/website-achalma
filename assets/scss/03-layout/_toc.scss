@@ -2,11 +2,24 @@
 // 03-LAYOUT / TOC — tabla de contenidos lateral
 // ============================================================================
 // Propósito      : TOC como instrumento de navegación silencioso: título en
-//                  etiqueta técnica, raíl hairline y sección activa en azul.
-// Responsabilidad: nav[role="doc-toc"] dentro del sidebar.
+//                  etiqueta técnica, raíl hairline, sección activa en azul.
+//                  Refinado para artículos largos: sin scroll horizontal,
+//                  sangrías compactas y regulares por nivel, y partición de
+//                  palabras solo cuando es inevitable.
+// Responsabilidad: nav[role="doc-toc"] dentro del sidebar y el contenedor
+//                  #quarto-margin-sidebar. El ancho del panel lo define el
+//                  grid de cada sección (blog/posts/_metadata.yml:
+//                  margin-width).
 // Dependencias   : Tokens $lab-*, mixin lab-technical-label.
 // Modificar si   : Cambia la navegación interna de documentos.
 // ============================================================================
+
+/* El panel nunca desarrolla scroll horizontal: los títulos largos se parten
+   con guiones (lang=es) en vez de desbordar */
+#quarto-margin-sidebar,
+#quarto-sidebar-toc-left {
+  overflow-x: hidden;
+}
 
 .sidebar nav[role="doc-toc"] {
   > h2, > .toc-title {
@@ -18,9 +31,16 @@
     border-left: 1px solid $lab-border;
   }
 
+  /* Títulos largos: ajuste de línea limpio, con guiones como último recurso */
+  li a {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
   a {
     color: $lab-muted;
     font-size: 0.85rem;
+    line-height: 1.35;
     text-decoration: none;
     border-left: 1px solid transparent;
     margin-left: -1px;
@@ -33,5 +53,23 @@
       border-left-color: $lab-accent;
       font-weight: 500;
     }
+  }
+
+  /* ── Sangrías compactas y regulares (Quarto usa 1.2/2.4/3.6em) ──────────
+     Incrementos cortos y constantes: la jerarquía se lee sin robarle ancho
+     al texto. Los sub-niveles reducen ligeramente el cuerpo. */
+  ul > li > ul > li > a {
+    padding-left: 1.4em;
+    font-size: 0.8rem;
+  }
+
+  ul > li > ul > li > ul > li > a {
+    padding-left: 2.2em;
+    font-size: 0.78rem;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > a {
+    padding-left: 3em;
+    font-size: 0.78rem;
   }
 }

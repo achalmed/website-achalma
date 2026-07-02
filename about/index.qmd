@@ -90,9 +90,9 @@ format:
     page-layout: full
 
 header-includes: >
-  <link rel="stylesheet" href="../assets/about.css">
+  <link rel="stylesheet" href="../assets/css/pages/about.css">
 resources:
-  - ../assets/about.css
+  - ../assets/css/pages/about.css
   - ../publication/featured.jpg
 ---
 

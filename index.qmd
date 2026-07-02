@@ -49,9 +49,9 @@ execute:
   warning: false
 
 header-includes: >
-  <link rel="stylesheet" href="assets/index.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
 resources:
-  - assets/index.css
+  - assets/css/pages/home.css
 ---
 
 ::: {#hero-heading}

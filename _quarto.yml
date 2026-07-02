@@ -152,20 +152,17 @@ lang: es
 
 format:
   html:
+    # Design System: assets/scss/ (guía en assets/scss/README.md)
     theme:
       light:
         - cosmo
-        - assets/theme_light.scss
-        - assets/colors.scss
-        - assets/fonts.scss
+        - assets/scss/theme-light.scss
       dark:
         - cosmo
-        - assets/theme_dark.scss
-        - assets/colors.scss
-        - assets/fonts.scss
-    css: 
-      - assets/styles.css
-      - assets/bibbase.css
+        - assets/scss/theme-dark.scss
+    css:
+      - assets/css/global.css
+      - assets/css/components/bibbase.css
     # Google Tag Manager
     include-in-header: assets/gtm-head.html
     include-after-body:

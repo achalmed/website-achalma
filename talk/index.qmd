@@ -23,7 +23,7 @@ format:
 title-block-banner: false
 
 header-includes: >
-  <link rel="stylesheet" href="../assets/listing-default.css">
+  <link rel="stylesheet" href="../assets/css/pages/listing.css">
 resources:
-  - ../assets/listing-default.css
+  - ../assets/css/pages/listing.css
 ---

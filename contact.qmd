@@ -10,9 +10,9 @@ format:
       sidebar-width: 0px
 
 header-includes: >
-  <link rel="stylesheet" href="assets/contact.css">
+  <link rel="stylesheet" href="assets/css/pages/contact.css">
 resources:
-  - assets/contact.css
+  - assets/css/pages/contact.css
 ---
 
 ## Envíame una nota {{< fa feather-pointed >}} {.lab-section}

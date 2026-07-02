@@ -1,0 +1,37 @@
+// ============================================================================
+// 03-LAYOUT / TOC — tabla de contenidos lateral
+// ============================================================================
+// Propósito      : TOC como instrumento de navegación silencioso: título en
+//                  etiqueta técnica, raíl hairline y sección activa en azul.
+// Responsabilidad: nav[role="doc-toc"] dentro del sidebar.
+// Dependencias   : Tokens $lab-*, mixin lab-technical-label.
+// Modificar si   : Cambia la navegación interna de documentos.
+// ============================================================================
+
+.sidebar nav[role="doc-toc"] {
+  > h2, > .toc-title {
+    @include lab-technical-label(0.68rem, 0.14em, $weight: 500, $important: true);
+    color: $lab-muted;
+  }
+
+  > ul {
+    border-left: 1px solid $lab-border;
+  }
+
+  a {
+    color: $lab-muted;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-left: 1px solid transparent;
+    margin-left: -1px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover { color: $lab-accent; }
+
+    &.active {
+      color: $lab-accent;
+      border-left-color: $lab-accent;
+      font-weight: 500;
+    }
+  }
+}

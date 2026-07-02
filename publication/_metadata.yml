@@ -12,7 +12,6 @@ citation: false
 format: 
   html: 
     code-overflow: wrap
-    template-partials: 
+    template-partials:
       - ../_partials/title-block-link-buttons/title-block.html
-    header-includes:
-      - <link rel="stylesheet" href="../assets/bibbase.css">
+    # bibbase.css se carga globalmente desde _quarto.yml (assets/css/components/)

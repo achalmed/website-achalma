@@ -82,6 +82,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -544,7 +545,7 @@ de superficie forestal medida en hectáreas \\
 
 En base a lo expuesto, planteamos el siguiente modelo econométrico:
 
-\begin{equation}\phantomsection\label{eq-1}{
+\begin{equation}\protect\phantomsection\label{eq-1}{
 PBI_{V} = \beta_{0} + \beta_{1}CA + \beta_{2}BIO + \beta_{3}DEF + \mu
 }\end{equation}
 
@@ -1128,7 +1129,7 @@ de gas y petróleo.
 \caption{\label{fig-10}Análisis de caja y bigote del precio de gas y
 petróleo}
 
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}[t]{0.50\linewidth}
 
 \subcaption{\label{fig-10.1}Surus}
 
@@ -1140,7 +1141,7 @@ petróleo}
 
 \end{minipage}%
 %
-\begin{minipage}{0.50\linewidth}
+\begin{minipage}[t]{0.50\linewidth}
 
 \subcaption{\label{fig-10.2}Hanno}
 

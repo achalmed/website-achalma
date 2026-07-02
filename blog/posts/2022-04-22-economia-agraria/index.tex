@@ -82,6 +82,7 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -2536,6 +2537,7 @@ la oferta es menor que la demanda.
 tipos de terreno con diferentes niveles de fertilidad son propias de la
 naturaleza)
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1218}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0897}}
@@ -2573,6 +2575,7 @@ naturaleza)
 A & 450 & 3200 & 25\% & 4000 & 8.89 & 4500 & 10 & 500 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
 \end{longtable}
+}
 
 \begin{itemize}
 \item
@@ -2611,6 +2614,7 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 10 & 0 \\
   de todo
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1218}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0897}}
@@ -2649,6 +2653,7 @@ A & 450 & 3200 & 25\% & 4000 & 8.89 & 5625 & 12.5 & 1625 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 5000 & 12.5 & 1000 \\
 C & 320 & 3200 & 25\% & 4000 & 12.5 & 4000 & 12.5 & 0 \\
 \end{longtable}
+}
 
 \begin{itemize}
 \item
@@ -2678,6 +2683,7 @@ C & 320 & 3200 & 25\% & 4000 & 12.5 & 4000 & 12.5 & 0 \\
   tipo B ha obtenido una renta diferencial.
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1218}}
   >{\raggedright\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0897}}
@@ -2716,6 +2722,7 @@ X & 500 & 3200 & 25\% & 4000 & 8.00 & 5000 & 12.5 & 1000 \\
 A & 450 & 3200 & 25\% & 4000 & 8.89 & 4500 & 12.5 & 500 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 12.5 & 0 \\
 \end{longtable}
+}
 
 \begin{itemize}
 \tightlist
@@ -2730,6 +2737,7 @@ B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 12.5 & 0 \\
 
 \textbf{Renta diferencial por distancia del mercado}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0457}}
   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1600}}
@@ -2762,6 +2770,7 @@ A & 5 & 400 & 4000 & 20 & 4400 & 380 \\
 B & 50 & 400 & 4000 & 200 & 4400 & 200 \\
 C & 100 & 400 & 4000 & 400 & 4400 & 0 \\
 \end{longtable}
+}
 
 \begin{itemize}
 \item
@@ -2831,6 +2840,7 @@ mayor inversión de k, sea en salarios, abonos, instrumentos, etc.}
   pierdes el tiempo.
 \end{itemize}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0588}}
   >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0980}}
@@ -2867,6 +2877,7 @@ A2 & 420 & 3200 & 25\% & 4000 & 10 & 4200 & 200 \\
 Total & 870 & 6400 & 25\% & 8000 & 10 & 8700 & 700 \\
 B & 400 & 3200 & 25\% & 4000 & 10 & 4000 & 0 \\
 \end{longtable}
+}
 
 \begin{itemize}
 \item
@@ -2940,6 +2951,7 @@ precios a costo de factores de modo que este precio.
 
 Producción con una sola rotación por año
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1111}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2020}}
@@ -2969,6 +2981,7 @@ A & 100 & 100 & 200 & 100 & 1/2 \\
 B & 300 & 100 & 400 & 100 & 1/4 \\
 C & 500 & 100 & 600 & 100 & 1/6 \\
 \end{longtable}
+}
 
 También se presentaría renta diferencial si hacemos varias rotaciones
 osea, sacamos dos cosechas se duplica la renta diferencial, si sacamos
@@ -2995,6 +3008,7 @@ cultivo que viene a ser la renta absoluta.
 
 Por rotación
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1833}}
   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2000}}
@@ -3018,7 +3032,9 @@ A & 200 & 100 & 0.5 \\
 B & 200 & 100 & 0.5 \\
 C & 150 & 100 & 0.67 \\
 \end{longtable}
+}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1387}}
   >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0876}}
@@ -3054,6 +3070,7 @@ A & 450 & 8.88 & 12.5 & 15 & 1650 & 1125 & 27750 \\
 B & 400 & 10 & 12.5 & 15 & 1000 & 1000 & 2000 \\
 C & 320 & 12.5 & 12.5 & 15 & 0 & 800 & 800 \\
 \end{longtable}
+}
 
 en este cuadro tenemos 3 terrenos, el producto es 450, 400 y 320, el
 precio de cada uno a precio de costo de factores sería 8.88, 10 y 12.5.
@@ -3117,6 +3134,7 @@ es hacer un comparativo de la explotación de la pequeña y la grande.
 
 Un comparativo
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4521}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5479}}@{}}
@@ -3135,6 +3153,7 @@ Un comparativo
 01 pozo de agua & 50 pozos \\
 10 herramientas & 100 herramientas \\
 \end{longtable}
+}
 
 Tenemos dos propiedades una grande y una pequeña, una explotación de 20
 ha. en la gran explotación tiene todas sus comodidades, mientras en

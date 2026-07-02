@@ -107,15 +107,34 @@ A lo largo de mi trayectoria, he adquirido experiencia en programación y seguri
 
 :::
 
-## About me
+## Perfil {.lab-section}
 
 ::: {.grid}
 
-::: {.g-col-6 #about-me-1}
+::: {.g-col-12 .g-col-md-6 #about-me-1}
 
 **Economista convertido en informático, curioso por todas las intersecciones de los datos y la sociedad.**
 
 Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi [blog](/blog) y en mis [presentaciones](/talk).
+
+:::
+
+::: {.g-col-12 .g-col-md-6 #about-me-2}
+
+Me interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades.
+
+:::
+
+:::
+<!-- end grid -->
+
+## Formación y certificaciones {.lab-section}
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 #about-education}
+
+#### Formación
 
 <ul class="fa-ul">
     <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Economía ∙ Universidad Nacional de San Cristobal de Huamanga ∙ 2024</li>
@@ -123,9 +142,9 @@ Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo 
 
 :::
 
-::: {.g-col-6 #about-me-2}
+::: {.g-col-12 .g-col-md-6 #about-certifications}
 
-Me interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades.
+#### Certificaciones
 
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.linkedin.com/in/achalmaedison/details/certifications/1635550023508/single-media-viewer/?profileId=ACoAAB73yjUBKj0yy7RA10UHdDh1C9D96CfMrgY">Get Connected del programa Cisco Networking Academy</a> ∙ Cisco ∙ 2023</li>
@@ -138,7 +157,7 @@ Me interesa especialmente la investigación que combina la ciencia de datos con 
 :::
 <!-- end grid -->
 
-## Últimamente  ...
+## Últimamente {.lab-section}
 
 :::: {.grid}
 

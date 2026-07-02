@@ -17,13 +17,14 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 <title>Edison Achalma B.Sc. Econ.</title>
 <link>https://achalmaedison.netlify.app/teching/</link>
 </image>
-<generator>quarto-1.8.26</generator>
+<generator>quarto-1.9.38</generator>
 <lastBuildDate>Wed, 01 Jan 2014 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Conceptos básicos de economía</title>
   <dc:creator>Edison Achalma</dc:creator>
   <link>https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/</link>
   <description><![CDATA[ 
+
 
 <style>
   :root {
@@ -38,8 +39,10 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 
   .title-block-content {
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 60px;
+    /* Reducido de 130px */
+    padding-bottom: 60px;
+    /* Reducido de 130px */
     max-width: 752px;
     margin: 0 auto;
     z-index: 1;
@@ -64,7 +67,6 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
     z-index: 0;
   }
 </style>
-
 
 
 
@@ -217,8 +219,8 @@ Incluye notas y tutoriales para mi futuro y espero que también para ti.&lt;br&g
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-achalma2014" class="csl-entry quarto-appendix-citeas">
-Achalma, Edison. 2014. <span>“Conceptos básicos de economía,”</span>
-January. <a href="https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/">https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/</a>.
+Achalma, Edison. 2014. <em>Conceptos básicos de economía</em>. accepted,
+January 1. <a href="https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/">https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/</a>.
 </div></div></section></div> ]]></description>
   <category>Economia Basica</category>
   <guid>https://achalmaedison.netlify.app/teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/</guid>

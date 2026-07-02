@@ -2388,101 +2388,23 @@ accepted, April 22. <a href="https://achalmaedison.netlify.app/blog/posts/2022-0
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5449ND7J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- ==========================================================================
-  MICROINTERACCIONES — "QUIET LABORATORY"
-  ~1 KB de JS sin dependencias. Tres responsabilidades:
-    1. Navbar: clase .lab-scrolled al hacer scroll (transparencia → sólido).
-    2. Iluminación sutil que sigue el cursor (solo pointer:fine, sin
-       reduced-motion): actualiza --lab-mx / --lab-my que consumen los temas.
-    3. Aparición escalonada de tarjetas/filas de listados con
-       IntersectionObserver (clases .lab-reveal / .lab-in de los temas).
-  Si JS no se ejecuta, el sitio queda íntegro: nada se oculta por defecto.
+  MICROINTERACCIONES — "QUIET LABORATORY" (cargador de módulos)
+  ===========================================================================
+  Inyectado en todas las páginas vía include-after-body (_quarto.yml).
+  El código vive en módulos independientes en assets/js/ (ver su README):
+
+    · navbar.js         → clase .lab-scrolled al hacer scroll
+    · cursor.js         → iluminación que sigue el puntero (--lab-mx/--lab-my)
+    · hero.js           → ajuste del hero de portada al alto visible
+    · scroll-effects.js → aparición escalonada (.lab-reveal/.lab-in)
+
+  Rutas absolutas (/assets/js/...) para funcionar a cualquier profundidad.
+  Sin JS el sitio queda íntegro: nada se oculta por defecto.
 =========================================================================== -->
-<script>
-  (function () {
-    "use strict";
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    /* 1 ─ Navbar con estado de scroll */
-    var nav = document.querySelector(".navbar");
-    if (nav) {
-      var onScroll = function () {
-        nav.classList.toggle("lab-scrolled", window.scrollY > 20);
-      };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
-
-    /* 2 ─ Iluminación que sigue el cursor */
-    if (!reduce && window.matchMedia("(pointer: fine)").matches) {
-      var pending = false;
-      document.addEventListener(
-        "mousemove",
-        function (e) {
-          if (pending) return;
-          pending = true;
-          var x = e.clientX, y = e.clientY;
-          requestAnimationFrame(function () {
-            document.body.style.setProperty("--lab-mx", x + "px");
-            document.body.style.setProperty("--lab-my", y + "px");
-            document.body.classList.add("lab-glow-on");
-            pending = false;
-          });
-        },
-        { passive: true }
-      );
-      document.documentElement.addEventListener("mouseleave", function () {
-        document.body.classList.remove("lab-glow-on");
-      });
-    }
-
-    /* 3 ─ Hero de portada: ajuste exacto al alto visible (sin scroll inicial) */
-    var hero = document.querySelector(".quarto-about-solana");
-    if (hero) {
-      var footer = document.querySelector(".nav-footer");
-      var fitHero = function () {
-        hero.style.minHeight = "";
-        var top = hero.getBoundingClientRect().top + window.scrollY;
-        var free = window.innerHeight - top - (footer ? footer.offsetHeight : 0);
-        hero.style.minHeight = Math.max(free, 420) + "px";
-        /* segunda pasada: compensa márgenes y gaps del grid que quedan
-           entre el hero y el footer, midiendo el desbordamiento real */
-        var overflow = document.documentElement.scrollHeight - window.innerHeight;
-        if (overflow > 0) {
-          hero.style.minHeight = Math.max(free - overflow, 420) + "px";
-        }
-      };
-      fitHero();
-      /* re-ajustar cuando cargan las imágenes (cambian la altura del hero) */
-      window.addEventListener("load", fitHero);
-      window.addEventListener("resize", fitHero, { passive: true });
-    }
-
-    /* 4 ─ Aparición suave de listados y secciones narrativas (.lab-section) */
-    if (!reduce && "IntersectionObserver" in window) {
-      var items = document.querySelectorAll(
-        ".quarto-listing .quarto-post, .quarto-listing .card, .quarto-grid-item, .lab-section"
-      );
-      if (items.length) {
-        var io = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("lab-in");
-                io.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.06, rootMargin: "0px 0px -5% 0px" }
-        );
-        items.forEach(function (el, i) {
-          el.classList.add("lab-reveal");
-          el.style.transitionDelay = (i % 4) * 60 + "ms";
-          io.observe(el);
-        });
-      }
-    }
-  })();
-</script>
+<script src="../../../assets/js/navbar.js"></script>
+<script src="../../../assets/js/cursor.js"></script>
+<script src="../../../assets/js/hero.js"></script>
+<script src="../../../assets/js/scroll-effects.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

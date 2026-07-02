@@ -1,3 +1,5 @@
+/* GENERADO desde assets/scss/05-pages/home.scss — NO editar a mano.
+   Regenerar con: ./scripts/build-page-css.sh (corre solo en cada render) */
 /* ============================================================================
    HERO DE PORTADA — "QUIET LABORATORY"
    ============================================================================
@@ -6,7 +8,6 @@
    --lab-* definidos por los temas claro y oscuro, por lo que se adapta a
    ambos automáticamente.
    ============================================================================ */
-
 /* ── Escenario: el hero llena exactamente el alto visible ────────────────── */
 /* Fallback CSS (aprox. navbar + footer); interactions.html fija el valor
    exacto midiendo header y footer reales para que no haya scroll inicial. */
@@ -28,9 +29,7 @@
   content: "";
   position: absolute;
   inset: -8rem 0 -2rem;
-  background-image:
-    linear-gradient(var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px),
-    linear-gradient(90deg, var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px);
+  background-image: linear-gradient(var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px), linear-gradient(90deg, var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px);
   background-size: 44px 44px;
   -webkit-mask-image: radial-gradient(ellipse 85% 75% at 55% 25%, #000 25%, transparent 72%);
   mask-image: radial-gradient(ellipse 85% 75% at 55% 25%, #000 25%, transparent 72%);
@@ -44,7 +43,6 @@
 }
 
 /* ── Tipografía del hero ──────────────────────────────────────────────────── */
-
 /* Marca técnica sobre el nombre: pequeña regla en azul científico */
 .quarto-about-solana .quarto-title::before {
   content: "";
@@ -65,8 +63,7 @@
 
 /* Especialidad como etiqueta de instrumento: mono, mayúsculas, espaciada */
 .quarto-about-solana .subtitle.lead {
-  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo,
-    Consolas, monospace;
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.78rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -125,8 +122,7 @@
   padding: 0.7em 1.4em;
   margin-top: 0.5rem;
   text-decoration: none !important;
-  transition: background-color 0.25s ease, transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 #hero-heading .about-links.subtitle:hover,
@@ -164,7 +160,6 @@
     transform: none;
   }
 }
-
 .quarto-about-solana .quarto-title,
 .quarto-about-solana .about-links,
 .quarto-about-solana .about-contents,
@@ -172,10 +167,21 @@
   animation: lab-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.quarto-about-solana .quarto-title { animation-delay: 0.05s; }
-.quarto-about-solana .about-links { animation-delay: 0.16s; }
-.quarto-about-solana .about-contents { animation-delay: 0.24s; }
-.quarto-about-solana .about-image { animation-delay: 0.32s; }
+.quarto-about-solana .quarto-title {
+  animation-delay: 0.05s;
+}
+
+.quarto-about-solana .about-links {
+  animation-delay: 0.16s;
+}
+
+.quarto-about-solana .about-contents {
+  animation-delay: 0.24s;
+}
+
+.quarto-about-solana .about-image {
+  animation-delay: 0.32s;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .quarto-about-solana .quarto-title,
@@ -188,62 +194,51 @@
     transform: none;
   }
 }
-
 /* ── Pantallas bajas (portátiles): tipografía y aires más compactos ───────── */
 @media (min-width: 992px) and (max-height: 940px) {
   .quarto-about-solana .title {
     font-size: clamp(2.2rem, 1.6rem + 2.2vw, 3.4rem);
   }
-
   .about-contents {
     font-size: 0.97rem;
     line-height: 1.6;
   }
-
   #hero-heading .about-links.subtitle {
     padding: 0.6em 1.25em;
   }
 }
-
 /* ── Responsive: móvil apila texto primero, todo centrado ────────────────── */
 @media screen and (max-width: 991.98px) {
   .quarto-about-solana {
     min-height: auto;
     padding: 1rem 0 3rem;
   }
-
   .entity-contents {
     order: 1 !important;
     margin: 0 !important;
     padding: 0 !important;
     text-align: center !important;
   }
-
   .quarto-about-solana .quarto-title::before {
     margin-left: auto;
     margin-right: auto;
   }
-
   .subtitle {
     text-align: center !important;
   }
-
   .about-entity .about-links {
     justify-content: center !important;
     font-size: 1em !important;
   }
-
   .about-contents {
     margin: 0 auto;
     /* párrafo largo: alineado a la izquierda para legibilidad, aunque el
        resto del hero vaya centrado */
     text-align: left;
   }
-
   .about-links.subtitle {
     justify-content: center !important;
   }
-
   .about-image {
     order: 2 !important;
     margin: 2rem auto 0 !important;

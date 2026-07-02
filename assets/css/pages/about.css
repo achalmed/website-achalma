@@ -1,9 +1,10 @@
+/* GENERADO desde assets/scss/05-pages/about.scss — NO editar a mano.
+   Regenerar con: ./scripts/build-page-css.sh (corre solo en cada render) */
 /* ============================================================================
    PÁGINA ABOUT (plantilla trestles) — ficha de investigador
    ============================================================================
    Usa los tokens --lab-* definidos por los temas claro y oscuro.
    ============================================================================ */
-
 /* Título y subtítulo */
 #title-block-header {
   margin-bottom: 0;
@@ -74,37 +75,30 @@
     display: flex;
     flex-wrap: wrap;
   }
-
   #blog, #talks, #publications, #projects {
     flex-basis: 40% !important;
     flex-grow: 1;
   }
-
   .about-entity .about-links {
     font-size: 1.2em !important;
   }
 }
-
 /* Consulta de medios para pantallas móviles hasta ~576px de ancho */
 @media screen and (max-width: 576px) {
   #about-me .grid {
     display: flex;
     flex-wrap: wrap;
   }
-
   #lately .grid {
     display: flex;
     flex-wrap: wrap;
   }
-
   #blog, #talks, #publications, #projects {
     flex-basis: 100% !important;
   }
-
   .about-entity .about-links {
     font-size: 1em !important;
   }
-
   .about-entity {
     margin: 0;
   }

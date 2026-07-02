@@ -1,3 +1,5 @@
+/* GENERADO desde assets/scss/05-pages/contact.scss — NO editar a mano.
+   Regenerar con: ./scripts/build-page-css.sh (corre solo en cada render) */
 /* ============================================================================
    PÁGINA CONTACT — recorrido narrativo con formularios como instrumentos
    ============================================================================
@@ -5,7 +7,6 @@
    interactions.html). Aquí: formularios como paneles de laboratorio y
    etiquetas técnicas en monospace. Tokens --lab-* para ambos temas.
    ============================================================================ */
-
 /* Formularios como paneles con marco hairline */
 #form form,
 #buttondown-form form {
@@ -20,8 +21,7 @@
 #form label,
 #buttondown-form label {
   display: block;
-  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular,
-    Menlo, Consolas, monospace;
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.68rem;
   font-weight: 500;
   text-transform: uppercase;

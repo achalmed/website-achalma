@@ -243,8 +243,8 @@ format:
     # Configuración de grid (ancho de columnas)
     grid:
       sidebar-width: 0rem
-      body-width: 740px   # columna de lectura tipo journal (~70 caracteres)
-      margin-width: 430px  # margen derecho: TOC en una línea + otros formatos
+      body-width: 760px   # columna de lectura tipo journal (~70 caracteres)
+      margin-width: 410px  # margen derecho: TOC en una línea + otros formatos
       gutter-width: 1.5rem
 
     other-links:

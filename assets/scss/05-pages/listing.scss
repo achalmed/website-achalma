@@ -4,7 +4,7 @@
 // Propósito      : Estilos exclusivos de página (no forman parte del tema
 //                  global). Se compilan a assets/css/pages/listing.css con
 //                  scripts/build-page-css.sh (hook pre-render de Quarto).
-// Cargado por    : blog/index.qmd · talk/index.qmd · teching/index.qmd
+// Cargado por    : blog/index.qmd · cursos/index.qmd (y anidados)
 // Dependencias   : Custom properties --lab-* (02-base/_root.scss). Usar
 //                  SIEMPRE var(--lab-*) para soportar ambos temas.
 // Modificar aquí : NUNCA editar el .css generado; editar este archivo y

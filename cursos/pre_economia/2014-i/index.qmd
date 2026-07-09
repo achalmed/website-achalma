@@ -1,0 +1,40 @@
+---
+title: "Economía Preuniversitaria — Edición 2014-I"
+subtitle: "14 sesiones · Academia preuniversitaria"
+description: "Primera edición del curso: catorce sesiones que recorren los fundamentos de la economía, del concepto de escasez al comercio internacional."
+categories: [Economía]
+image: ../featured.jpg
+listing:
+  - id: sesiones
+    contents:
+      - "sesiones/*/index.qmd"
+    type: table
+    sort: "title"            # las carpetas 01–14 ya imponen el orden del curso
+    sort-ui: false
+    filter-ui: true
+    fields: [title, categories, reading-time]
+    field-display-names:
+      title: "Sesión"
+      categories: "Temas"
+      reading-time: "Lectura"
+    feed: true
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+**Docente:** Edison Achalma · **Periodo:** enero–marzo 2014 · **Sesiones:** 14
+
+Material de cada sesión (notas, ejercicios y PDF descargable). Usa el buscador
+para filtrar por tema.
+
+## Sesiones
+
+::: {#sesiones}
+:::

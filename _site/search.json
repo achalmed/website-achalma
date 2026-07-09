@@ -119,46 +119,921 @@
     "text": "git checkout main\ngit pull\ngit checkout -b &lt;tipo&gt;/&lt;nombre-corto&gt;        # ej: fix/typo-navbar\n# ...hacer los cambios...\ngit add &lt;archivos&gt;\ngit commit -m \"&lt;tipo&gt;: &lt;qué cambió y por qué&gt;\"\ngit push -u origin &lt;tipo&gt;/&lt;nombre-corto&gt;\ngh pr create --repo achalmed/website-achalma --head &lt;tipo&gt;/&lt;nombre-corto&gt; --base main \\\n  --title \"&lt;título corto&gt;\" --body \"&lt;qué cambió, por qué, notas para el revisor&gt;\"\nDespués: revisar en GitHub → Merge → git checkout main && git pull."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Edison Achalma, B.Sc.",
+    "objectID": "SECURITY.html",
+    "href": "SECURITY.html",
+    "title": "Security Policy",
     "section": "",
-    "text": "¡Hola! Soy achalmaedison, un economista en proceso y entusiasta de las matemáticas y de la informática. Compartiré mis apuntes de clase, guías de problemas, resúmenes y exámenes resueltos, ya que estoy convencido de que compartir mis apuntes con la comunidad es provechoso para todos.\nLearn more about me →"
+    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:\n\n\n\n\n\n\nUse this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
   },
   {
-    "objectID": "talk/2025-01-08-sesion-02-estructura-en-word/index.html",
-    "href": "talk/2025-01-08-sesion-02-estructura-en-word/index.html",
-    "title": "Diseño de Portadas y Formato APA",
+    "objectID": "SECURITY.html#supported-versions",
+    "href": "SECURITY.html#supported-versions",
+    "title": "Security Policy",
     "section": "",
-    "text": "Esta presentación aborda la creación de portadas para informes y monografías, siguiendo estándares académicos, y el uso de Microsoft Word para aplicar el formato APA a títulos y subtítulos. Incluye ejemplos prácticos de portadas estructuradas y documentos con encabezados ajustados en medidas y estilos según las normas APA. Dirigida a estudiantes y académicos, proporciona una base clara para organizar trabajos escritos, combinando diseño visual y normas técnicas para mejorar la presentación y legibilidad de textos académicos.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: Portada de Informe - Sesión 02\n\n\n\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 2: Portada de Monografía - Sesión 02\n\n\n\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 3: Títulos y Subtítulos en APA - Sesión 02"
+    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:"
   },
   {
-    "objectID": "talk/2025-02-12-sesion-08-tablas-figuras-y-notas/index.html",
-    "href": "talk/2025-02-12-sesion-08-tablas-figuras-y-notas/index.html",
-    "title": "Búsqueda en Internet y Formato APA, Tablas y Figuras",
+    "objectID": "SECURITY.html#reporting-a-vulnerability",
+    "href": "SECURITY.html#reporting-a-vulnerability",
+    "title": "Security Policy",
     "section": "",
-    "text": "Esta presentación explora los niveles de internet (superficial, profunda y oscura) y estrategias de búsqueda avanzada con operadores como comillas, AND, OR y exclusion (-), incluyendo ejemplos prácticos. También detalla el estilo APA 7ª edición para tablas y figuras, explicando su estructura, numeración, títulos y citas de fuentes, con casos de elaboración propia y adaptados. Orientada a estudiantes y académicos, ofrece herramientas para localizar información confiable en línea y presentarla visualmente según normas académicas.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 08"
+    "text": "Use this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
   },
   {
-    "objectID": "talk/2025-01-29-sesion-06-formato/index.html",
-    "href": "talk/2025-01-29-sesion-06-formato/index.html",
-    "title": "Citas APA y Formato de Documentos Académicos",
+    "objectID": "cursos/pre_algebra/index.html",
+    "href": "cursos/pre_algebra/index.html",
+    "title": "Álgebra",
     "section": "",
-    "text": "Esta presentación aborda las citas en estilo APA, explicando citas textuales (cortas y largas) y parafraseadas con ejemplos prácticos, junto a consideraciones para evitar el plagio. También detalla el formato de documentos académicos, incluyendo tamaño de papel, márgenes, tipo de letra, interlineado, títulos y estructura básica como página de título, resumen y referencias. Orientada a estudiantes y académicos, proporciona una guía precisa para citar fuentes correctamente y estructurar trabajos escritos según normas establecidas, aplicable a diversas disciplinas.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 06\n\n\n\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 2: sesion 06 practica"
+    "text": "Estructuras algebraicas, ecuaciones, inecuaciones y funciones."
   },
   {
-    "objectID": "talk/2025-01-15-sesion-04-practica-de-apa/index.html",
-    "href": "talk/2025-01-15-sesion-04-practica-de-apa/index.html",
+    "objectID": "cursos/pre_algebra/index.html#descripción",
+    "href": "cursos/pre_algebra/index.html#descripción",
+    "title": "Álgebra",
+    "section": "",
+    "text": "Estructuras algebraicas, ecuaciones, inecuaciones y funciones."
+  },
+  {
+    "objectID": "cursos/pre_algebra/index.html#objetivos",
+    "href": "cursos/pre_algebra/index.html#objetivos",
+    "title": "Álgebra",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_algebra/index.html#contenidos-sílabo",
+    "href": "cursos/pre_algebra/index.html#contenidos-sílabo",
+    "title": "Álgebra",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_algebra/index.html#bibliografía",
+    "href": "cursos/pre_algebra/index.html#bibliografía",
+    "title": "Álgebra",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_algebra/index.html#ediciones",
+    "href": "cursos/pre_algebra/index.html#ediciones",
+    "title": "Álgebra",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html",
+    "href": "cursos/optimizacion/index.html",
+    "title": "Optimización",
+    "section": "",
+    "text": "Optimización estática y dinámica: multiplicadores de Lagrange, Kuhn-Tucker y control óptimo."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#descripción",
+    "href": "cursos/optimizacion/index.html#descripción",
+    "title": "Optimización",
+    "section": "",
+    "text": "Optimización estática y dinámica: multiplicadores de Lagrange, Kuhn-Tucker y control óptimo."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#ficha-del-curso",
+    "href": "cursos/optimizacion/index.html#ficha-del-curso",
+    "title": "Optimización",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nMatemática · Pregrado\n\n\nSemestre sugerido\n4\n\n\nPrerrequisitos\nÁlgebra Lineal"
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#objetivos",
+    "href": "cursos/optimizacion/index.html#objetivos",
+    "title": "Optimización",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#contenidos-sílabo",
+    "href": "cursos/optimizacion/index.html#contenidos-sílabo",
+    "title": "Optimización",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#bibliografía",
+    "href": "cursos/optimizacion/index.html#bibliografía",
+    "title": "Optimización",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/optimizacion/index.html#ediciones",
+    "href": "cursos/optimizacion/index.html#ediciones",
+    "title": "Optimización",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html",
+    "href": "cursos/economia-publica/index.html",
+    "title": "Economía Pública",
+    "section": "",
+    "text": "Bienes públicos, externalidades, tributación y gasto público."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#descripción",
+    "href": "cursos/economia-publica/index.html#descripción",
+    "title": "Economía Pública",
+    "section": "",
+    "text": "Bienes públicos, externalidades, tributación y gasto público."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#ficha-del-curso",
+    "href": "cursos/economia-publica/index.html#ficha-del-curso",
+    "title": "Economía Pública",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n5\n\n\nPrerrequisitos\nMicroeconomía II"
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#objetivos",
+    "href": "cursos/economia-publica/index.html#objetivos",
+    "title": "Economía Pública",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#contenidos-sílabo",
+    "href": "cursos/economia-publica/index.html#contenidos-sílabo",
+    "title": "Economía Pública",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#bibliografía",
+    "href": "cursos/economia-publica/index.html#bibliografía",
+    "title": "Economía Pública",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-publica/index.html#ediciones",
+    "href": "cursos/economia-publica/index.html#ediciones",
+    "title": "Economía Pública",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_09_practica_estructura_y_citas_apa/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_09_practica_estructura_y_citas_apa/index.html",
+    "title": "Estructura y Citas APA",
+    "section": "",
+    "text": "Esta segunda práctica es sobre la estructura de documentos académicos en Word, siguiendo el estilo APA 7ª edición. Incluye portada, índice, capítulos, citas textuales y parafraseadas, y una lista de referencias, con ejemplos aplicados. Detalla la creación de tablas y figuras, numeradas y tituladas según normas APA, integrando fuentes citadas correctamente. Dirigida a estudiantes y académicos, proporciona un modelo práctico para organizar trabajos, citar fuentes y presentar datos visuales, adaptable a diversas temáticas de investigación."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_09_practica_estructura_y_citas_apa/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_09_practica_estructura_y_citas_apa/index.html#materiales",
+    "title": "Estructura y Citas APA",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nsesion 09 practica estructura y citas apa.odt\nsesion 09 practica estructura y citas apa.pdf\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_01_monografia_e_informe/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_01_monografia_e_informe/index.html",
+    "title": "Fundamentos de Redacción Académica",
+    "section": "",
+    "text": "Esta presentación introduce los fundamentos de la redacción académica para estudiantes universitarios. Explora los principales estilos de citación, como APA, MLA, Chicago, Vancouver, IEEE y Harvard, detallando sus usos y características. Incluye herramientas esenciales como procesadores de texto (Microsoft Word, LaTeX), gestores de referencias (Zotero, JabRef) y repositorios académicos (Google Académico, Scopus). Ofrece una guía práctica para elaborar monografías, desde la selección del tema hasta la edición final, con ejemplos de estructuras y consejos para informes y tesis, ideal para fortalecer habilidades de investigación y escritura."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_01_monografia_e_informe/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_01_monografia_e_informe/index.html#materiales",
+    "title": "Fundamentos de Redacción Académica",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_04_practica_de_apa/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_04_practica_de_apa/index.html",
     "title": "Práctica APA",
     "section": "",
-    "text": "Esta primera práctica es sobre la estructura de documentos académicos en Word, siguiendo el estilo APA 7ª edición. Incluye portada, índice, capítulos, citas textuales y parafraseadas, y una lista de referencias, con ejemplos aplicados. Detalla la creación de tablas y figuras, numeradas y tituladas según normas APA, integrando fuentes citadas correctamente. Dirigida a estudiantes y académicos, proporciona un modelo práctico para organizar trabajos, citar fuentes y presentar datos visuales, adaptable a diversas temáticas de investigación.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesion 04 practica apa"
+    "text": "Esta primera práctica es sobre la estructura de documentos académicos en Word, siguiendo el estilo APA 7ª edición. Incluye portada, índice, capítulos, citas textuales y parafraseadas, y una lista de referencias, con ejemplos aplicados. Detalla la creación de tablas y figuras, numeradas y tituladas según normas APA, integrando fuentes citadas correctamente. Dirigida a estudiantes y académicos, proporciona un modelo práctico para organizar trabajos, citar fuentes y presentar datos visuales, adaptable a diversas temáticas de investigación."
   },
   {
-    "objectID": "talk/2025-02-05-sesion-07-estilo-vancouver/index.html",
-    "href": "talk/2025-02-05-sesion-07-estilo-vancouver/index.html",
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_04_practica_de_apa/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_04_practica_de_apa/index.html#materiales",
+    "title": "Práctica APA",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nsesion 04 practica apa.odt\nsesion 04 practica apa.pdf\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_07_estilo_vancouver/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_07_estilo_vancouver/index.html",
     "title": "Estilo Vancouver: Citas y Referencias Académicas",
     "section": "",
-    "text": "Esta presentación introduce el estilo Vancouver, usado en ciencias de la salud, detallando su sistema numérico para citas textuales y de paráfrasis, con ejemplos prácticos. Explica el formato de tablas y figuras, incluyendo su numeración y citación, y presenta modelos de referencias para libros, artículos y tesis, tanto impresos como en línea. Dirigida a estudiantes y profesionales, ofrece una guía clara para aplicar este estilo, asegurando la correcta atribución de fuentes y la presentación estructurada de trabajos académicos en contextos científicos.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 07"
+    "text": "Esta presentación introduce el estilo Vancouver, usado en ciencias de la salud, detallando su sistema numérico para citas textuales y de paráfrasis, con ejemplos prácticos. Explica el formato de tablas y figuras, incluyendo su numeración y citación, y presenta modelos de referencias para libros, artículos y tesis, tanto impresos como en línea. Dirigida a estudiantes y profesionales, ofrece una guía clara para aplicar este estilo, asegurando la correcta atribución de fuentes y la presentación estructurada de trabajos académicos en contextos científicos."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_07_estilo_vancouver/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_07_estilo_vancouver/index.html#materiales",
+    "title": "Estilo Vancouver: Citas y Referencias Académicas",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_06_formato/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_06_formato/index.html",
+    "title": "Citas APA y Formato de Documentos Académicos",
+    "section": "",
+    "text": "Esta presentación aborda las citas en estilo APA, explicando citas textuales (cortas y largas) y parafraseadas con ejemplos prácticos, junto a consideraciones para evitar el plagio. También detalla el formato de documentos académicos, incluyendo tamaño de papel, márgenes, tipo de letra, interlineado, títulos y estructura básica como página de título, resumen y referencias. Orientada a estudiantes y académicos, proporciona una guía precisa para citar fuentes correctamente y estructurar trabajos escritos según normas establecidas, aplicable a diversas disciplinas."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_06_formato/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_06_formato/index.html#materiales",
+    "title": "Citas APA y Formato de Documentos Académicos",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nsesion 06 practica.odt\nsesion 06 practica.pdf\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_06_inteligencia_artificial/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_06_inteligencia_artificial/index.html",
+    "title": "Inteligencia artificial aplicada",
+    "section": "",
+    "text": "Materiales por publicar."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_06_inteligencia_artificial/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_06_inteligencia_artificial/index.html#materiales",
+    "title": "Inteligencia artificial aplicada",
+    "section": "",
+    "text": "Materiales por publicar."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html",
+    "title": "Normas APA",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html#diapositivas",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html#diapositivas",
+    "title": "Normas APA",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_05_apa/index.html#materiales",
+    "title": "Normas APA",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html",
+    "title": "Redacción académica",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html#diapositivas",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html#diapositivas",
+    "title": "Redacción académica",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_04_redaccion/index.html#materiales",
+    "title": "Redacción académica",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html",
+    "title": "La monografía y el informe",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html#diapositivas",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html#diapositivas",
+    "title": "La monografía y el informe",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_01_la_monografia/index.html#materiales",
+    "title": "La monografía y el informe",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nportada.odt\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/econometria/index.html",
+    "href": "cursos/econometria/index.html",
+    "title": "Econometría",
+    "section": "",
+    "text": "Modelos de regresión, inferencia y contrastación empírica. Niveles I y II como ediciones."
+  },
+  {
+    "objectID": "cursos/econometria/index.html#descripción",
+    "href": "cursos/econometria/index.html#descripción",
+    "title": "Econometría",
+    "section": "",
+    "text": "Modelos de regresión, inferencia y contrastación empírica. Niveles I y II como ediciones."
+  },
+  {
+    "objectID": "cursos/econometria/index.html#ficha-del-curso",
+    "href": "cursos/econometria/index.html#ficha-del-curso",
+    "title": "Econometría",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n5, 6 (niveles I–II)\n\n\nPrerrequisitos\nProb./Estadística, Matemáticas II y Microeconomía I (I) · Microeconomía II y Econometría I (II)"
+  },
+  {
+    "objectID": "cursos/econometria/index.html#objetivos",
+    "href": "cursos/econometria/index.html#objetivos",
+    "title": "Econometría",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/econometria/index.html#contenidos-sílabo",
+    "href": "cursos/econometria/index.html#contenidos-sílabo",
+    "title": "Econometría",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/econometria/index.html#bibliografía",
+    "href": "cursos/econometria/index.html#bibliografía",
+    "title": "Econometría",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/econometria/index.html#ediciones",
+    "href": "cursos/econometria/index.html#ediciones",
+    "title": "Econometría",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html",
+    "href": "cursos/macroeconomia/index.html",
+    "title": "Macroeconomía",
+    "section": "",
+    "text": "Determinación del producto, empleo, inflación y política macroeconómica. Niveles I y II como ediciones."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#descripción",
+    "href": "cursos/macroeconomia/index.html#descripción",
+    "title": "Macroeconomía",
+    "section": "",
+    "text": "Determinación del producto, empleo, inflación y política macroeconómica. Niveles I y II como ediciones."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#ficha-del-curso",
+    "href": "cursos/macroeconomia/index.html#ficha-del-curso",
+    "title": "Macroeconomía",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n3, 4 (niveles I–II)\n\n\nPrerrequisitos\nIntroducción a la Economía y Matemáticas I (I) · Matemáticas II y Macroeconomía I (II)"
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#objetivos",
+    "href": "cursos/macroeconomia/index.html#objetivos",
+    "title": "Macroeconomía",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#contenidos-sílabo",
+    "href": "cursos/macroeconomia/index.html#contenidos-sílabo",
+    "title": "Macroeconomía",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#bibliografía",
+    "href": "cursos/macroeconomia/index.html#bibliografía",
+    "title": "Macroeconomía",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia/index.html#ediciones",
+    "href": "cursos/macroeconomia/index.html#ediciones",
+    "title": "Macroeconomía",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html",
+    "href": "cursos/algebra-lineal/index.html",
+    "title": "Álgebra Lineal",
+    "section": "",
+    "text": "Vectores, matrices, sistemas lineales y espacios vectoriales aplicados a la economía."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#descripción",
+    "href": "cursos/algebra-lineal/index.html#descripción",
+    "title": "Álgebra Lineal",
+    "section": "",
+    "text": "Vectores, matrices, sistemas lineales y espacios vectoriales aplicados a la economía."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#ficha-del-curso",
+    "href": "cursos/algebra-lineal/index.html#ficha-del-curso",
+    "title": "Álgebra Lineal",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nMatemática · Pregrado\n\n\nSemestre sugerido\n2\n\n\nPrerrequisitos\nCálculo"
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#objetivos",
+    "href": "cursos/algebra-lineal/index.html#objetivos",
+    "title": "Álgebra Lineal",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#contenidos-sílabo",
+    "href": "cursos/algebra-lineal/index.html#contenidos-sílabo",
+    "title": "Álgebra Lineal",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#bibliografía",
+    "href": "cursos/algebra-lineal/index.html#bibliografía",
+    "title": "Álgebra Lineal",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/algebra-lineal/index.html#ediciones",
+    "href": "cursos/algebra-lineal/index.html#ediciones",
+    "title": "Álgebra Lineal",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/index.html",
+    "href": "cursos/index.html",
+    "title": "Cursos",
+    "section": "",
+    "text": "Power BI\n\n\nCiencia de Datos\n\n\nModelado, DAX y visualización de datos con Power BI.\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nCiencia de Datos\n\n\nProgramación en Python para el análisis y la ciencia de datos.\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nCiencia de Datos\n\n\nProgramación en R para estadística y ciencia de datos.\n\n\n\n\n\n\n\n\n\n\n\n\nSQL\n\n\nCiencia de Datos\n\n\nConsultas, modelado y administración de bases de datos relacionales.\n\n\n\n\n\n\n\n\n\n\n\n\nComercio Internacional\n\n\nEconomía\n\n\nTeorías del comercio, política comercial e integración económica.\n\n\n\n\n\n\n\n\n\n\n\n\nCrecimiento Económico\n\n\nEconomía\n\n\nModelos de crecimiento de largo plazo: capital, tecnología y convergencia.\n\n\n\n\n\n\n\n\n\n\n\n\nCurso 0\n\n\nEconomía\n\n\nNivelación en fundamentos matemáticos e introducción a la economía, previa al primer semestre.\n\n\n\n\n\n\n\n\n\n\n\n\nEconometría\n\n\nEconomía\n\n\nModelos de regresión, inferencia y contrastación empírica. Niveles I y II como ediciones.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía Computacional\n\n\nEconomía\n\n\nMétodos numéricos y computacionales para resolver y simular modelos económicos.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía Monetaria\n\n\nEconomía\n\n\nDinero, banca central, política monetaria e inflación.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía Pública\n\n\nEconomía\n\n\nBienes públicos, externalidades, tributación y gasto público.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía de los RRNN y Ambientales\n\n\nEconomía\n\n\nUso eficiente de recursos naturales, externalidades ambientales y política ambiental.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía del Desarrollo\n\n\nEconomía\n\n\nDeterminantes del desarrollo: pobreza, desigualdad e instituciones.\n\n\n\n\n\n\n\n\n\n\n\n\nEstadística\n\n\nEconomía\n\n\nEstadística descriptiva e inferencial aplicada al análisis de datos.\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluación Social de Proyectos\n\n\nEconomía\n\n\nEvaluación social de proyectos de inversión: precios sociales y análisis costo-beneficio.\n\n\n\n\n\n\n\n\n\n\n\n\nFinanzas\n\n\nEconomía\n\n\nValoración de activos, riesgo, estructura de capital y mercados financieros. Tres niveles como ediciones.\n\n\n\n\n\n\n\n\n\n\n\n\nMacroeconomía\n\n\nEconomía\n\n\nDeterminación del producto, empleo, inflación y política macroeconómica. Niveles I y II como ediciones.\n\n\n\n\n\n\n\n\n\n\n\n\nMacroeconomía Dinámica\n\n\nEconomía\n\n\nModelos dinámicos, expectativas racionales y equilibrio general dinámico.\n\n\n\n\n\n\n\n\n\n\n\n\nMicroeconometría Aplicada\n\n\nEconomía\n\n\nMétodos con datos microeconómicos: identificación causal y evaluación de impacto.\n\n\n\n\n\n\n\n\n\n\n\n\nMicroeconomía\n\n\nEconomía\n\n\nTeoría del consumidor y del productor, equilibrio parcial y general. Niveles I y II como ediciones sucesivas.\n\n\n\n\n\n\n\n\n\n\n\n\nOrganización Industrial\n\n\nEconomía\n\n\nEstructura de mercados, poder de mercado, competencia estratégica y regulación.\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluación de Proyectos\n\n\nGestión\n\n\nEvaluación privada y social de proyectos: indicadores de rentabilidad y riesgo.\n\n\n\n\n\n\n\n\n\n\n\n\nFormulación de Proyectos\n\n\nGestión\n\n\nIdentificación, diagnóstico y formulación de proyectos de inversión.\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigación de Mercados\n\n\nGestión\n\n\nDiseño de estudios de mercado: fuentes, muestreo, instrumentos y análisis de la demanda.\n\n\n\n\n\n\n\n\n\n\n\n\nMetodología de la Investigación\n\n\nInvestigación\n\n\nDiseño, redacción, citación y presentación de trabajos académicos (monografías e informes).\n\n\n\n\n\n\n\n\n\n\n\n\nCálculo\n\n\nMatemática\n\n\nCálculo diferencial e integral de una y varias variables para el análisis económico.\n\n\n\n\n\n\n\n\n\n\n\n\nOptimización\n\n\nMatemática\n\n\nOptimización estática y dinámica: multiplicadores de Lagrange, Kuhn-Tucker y control óptimo.\n\n\n\n\n\n\n\n\n\n\n\n\nÁlgebra Lineal\n\n\nMatemática\n\n\nVectores, matrices, sistemas lineales y espacios vectoriales aplicados a la economía.\n\n\n\n\n\n\n\n\n\n\n\n\nAritmética\n\n\nPreuniversitario\n\n\nTeoría de números, proporcionalidad y razonamiento cuantitativo.\n\n\n\n\n\n\n\n\n\n\n\n\nEconomía Preuniversitaria\n\n\nPreuniversitario\n\n\nFundamentos de la ciencia económica para el ingreso universitario: escasez, mercados, dinero y magnitudes macroeconómicas.\n\n\n\n\n\n\n\n\n\n\n\n\nÁlgebra\n\n\nPreuniversitario\n\n\nEstructuras algebraicas, ecuaciones, inecuaciones y funciones.\n\n\n\n\n\nNo hay resultados\n\n  \n\n\n\n\n\n\nReutilizaciónCC BY-SA 4.0"
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html",
+    "href": "cursos/microeconometria-aplicada/index.html",
+    "title": "Microeconometría Aplicada",
+    "section": "",
+    "text": "Métodos con datos microeconómicos: identificación causal y evaluación de impacto."
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#descripción",
+    "href": "cursos/microeconometria-aplicada/index.html#descripción",
+    "title": "Microeconometría Aplicada",
+    "section": "",
+    "text": "Métodos con datos microeconómicos: identificación causal y evaluación de impacto."
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#ficha-del-curso",
+    "href": "cursos/microeconometria-aplicada/index.html#ficha-del-curso",
+    "title": "Microeconometría Aplicada",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n7\n\n\nPrerrequisitos\nMicroeconomía II, Organización Industrial, Econometría II"
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#objetivos",
+    "href": "cursos/microeconometria-aplicada/index.html#objetivos",
+    "title": "Microeconometría Aplicada",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#contenidos-sílabo",
+    "href": "cursos/microeconometria-aplicada/index.html#contenidos-sílabo",
+    "title": "Microeconometría Aplicada",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#bibliografía",
+    "href": "cursos/microeconometria-aplicada/index.html#bibliografía",
+    "title": "Microeconometría Aplicada",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconometria-aplicada/index.html#ediciones",
+    "href": "cursos/microeconometria-aplicada/index.html#ediciones",
+    "title": "Microeconometría Aplicada",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/python/index.html",
+    "href": "cursos/python/index.html",
+    "title": "Python",
+    "section": "",
+    "text": "Programación en Python para el análisis y la ciencia de datos."
+  },
+  {
+    "objectID": "cursos/python/index.html#descripción",
+    "href": "cursos/python/index.html#descripción",
+    "title": "Python",
+    "section": "",
+    "text": "Programación en Python para el análisis y la ciencia de datos."
+  },
+  {
+    "objectID": "cursos/python/index.html#objetivos",
+    "href": "cursos/python/index.html#objetivos",
+    "title": "Python",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/python/index.html#contenidos-sílabo",
+    "href": "cursos/python/index.html#contenidos-sílabo",
+    "title": "Python",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/python/index.html#bibliografía",
+    "href": "cursos/python/index.html#bibliografía",
+    "title": "Python",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/python/index.html#ediciones",
+    "href": "cursos/python/index.html#ediciones",
+    "title": "Python",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html",
+    "href": "cursos/finanzas/index.html",
+    "title": "Finanzas",
+    "section": "",
+    "text": "Valoración de activos, riesgo, estructura de capital y mercados financieros. Tres niveles como ediciones."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#descripción",
+    "href": "cursos/finanzas/index.html#descripción",
+    "title": "Finanzas",
+    "section": "",
+    "text": "Valoración de activos, riesgo, estructura de capital y mercados financieros. Tres niveles como ediciones."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#ficha-del-curso",
+    "href": "cursos/finanzas/index.html#ficha-del-curso",
+    "title": "Finanzas",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n3, 4, 6 (niveles I–III)\n\n\nPrerrequisitos\nProb./Estadística, Matemáticas II y Microeconomía I (I) · Finanzas I (II) · Matemáticas III y Finanzas II (III)"
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#objetivos",
+    "href": "cursos/finanzas/index.html#objetivos",
+    "title": "Finanzas",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#contenidos-sílabo",
+    "href": "cursos/finanzas/index.html#contenidos-sílabo",
+    "title": "Finanzas",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#bibliografía",
+    "href": "cursos/finanzas/index.html#bibliografía",
+    "title": "Finanzas",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/finanzas/index.html#ediciones",
+    "href": "cursos/finanzas/index.html#ediciones",
+    "title": "Finanzas",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/calculo/index.html",
+    "href": "cursos/calculo/index.html",
+    "title": "Cálculo",
+    "section": "",
+    "text": "Cálculo diferencial e integral de una y varias variables para el análisis económico."
+  },
+  {
+    "objectID": "cursos/calculo/index.html#descripción",
+    "href": "cursos/calculo/index.html#descripción",
+    "title": "Cálculo",
+    "section": "",
+    "text": "Cálculo diferencial e integral de una y varias variables para el análisis económico."
+  },
+  {
+    "objectID": "cursos/calculo/index.html#ficha-del-curso",
+    "href": "cursos/calculo/index.html#ficha-del-curso",
+    "title": "Cálculo",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nMatemática · Pregrado\n\n\nSemestre sugerido\n1\n\n\nPrerrequisitos\nNinguno"
+  },
+  {
+    "objectID": "cursos/calculo/index.html#objetivos",
+    "href": "cursos/calculo/index.html#objetivos",
+    "title": "Cálculo",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/calculo/index.html#contenidos-sílabo",
+    "href": "cursos/calculo/index.html#contenidos-sílabo",
+    "title": "Cálculo",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/calculo/index.html#bibliografía",
+    "href": "cursos/calculo/index.html#bibliografía",
+    "title": "Cálculo",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/calculo/index.html#ediciones",
+    "href": "cursos/calculo/index.html#ediciones",
+    "title": "Cálculo",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/sql/index.html",
+    "href": "cursos/sql/index.html",
+    "title": "SQL",
+    "section": "",
+    "text": "Consultas, modelado y administración de bases de datos relacionales."
+  },
+  {
+    "objectID": "cursos/sql/index.html#descripción",
+    "href": "cursos/sql/index.html#descripción",
+    "title": "SQL",
+    "section": "",
+    "text": "Consultas, modelado y administración de bases de datos relacionales."
+  },
+  {
+    "objectID": "cursos/sql/index.html#objetivos",
+    "href": "cursos/sql/index.html#objetivos",
+    "title": "SQL",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/sql/index.html#contenidos-sílabo",
+    "href": "cursos/sql/index.html#contenidos-sílabo",
+    "title": "SQL",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/sql/index.html#bibliografía",
+    "href": "cursos/sql/index.html#bibliografía",
+    "title": "SQL",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/sql/index.html#ediciones",
+    "href": "cursos/sql/index.html#ediciones",
+    "title": "SQL",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html",
+    "href": "cursos/pre_economia/index.html",
+    "title": "Economía Preuniversitaria",
+    "section": "",
+    "text": "Fundamentos de la ciencia económica para el ingreso universitario: escasez, mercados, dinero y magnitudes macroeconómicas."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html#descripción",
+    "href": "cursos/pre_economia/index.html#descripción",
+    "title": "Economía Preuniversitaria",
+    "section": "",
+    "text": "Fundamentos de la ciencia económica para el ingreso universitario: escasez, mercados, dinero y magnitudes macroeconómicas."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html#objetivos",
+    "href": "cursos/pre_economia/index.html#objetivos",
+    "title": "Economía Preuniversitaria",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html#contenidos-sílabo",
+    "href": "cursos/pre_economia/index.html#contenidos-sílabo",
+    "title": "Economía Preuniversitaria",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html#bibliografía",
+    "href": "cursos/pre_economia/index.html#bibliografía",
+    "title": "Economía Preuniversitaria",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_economia/index.html#ediciones",
+    "href": "cursos/pre_economia/index.html#ediciones",
+    "title": "Economía Preuniversitaria",
+    "section": "Ediciones",
+    "text": "Ediciones\n\n\n\n\n\nEconomía Preuniversitaria — Edición 2014-I\n\n\n14 sesiones · Academia preuniversitaria\n\n\nPrimera edición del curso: catorce sesiones que recorren los fundamentos de la economía, del concepto de escasez al comercio internacional.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html",
+    "title": "Evaluación Social de Proyectos",
+    "section": "",
+    "text": "Evaluación social de proyectos de inversión: precios sociales y análisis costo-beneficio."
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#descripción",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#descripción",
+    "title": "Evaluación Social de Proyectos",
+    "section": "",
+    "text": "Evaluación social de proyectos de inversión: precios sociales y análisis costo-beneficio."
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#ficha-del-curso",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#ficha-del-curso",
+    "title": "Evaluación Social de Proyectos",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n8\n\n\nPrerrequisitos\nMicroeconomía II"
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#objetivos",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#objetivos",
+    "title": "Evaluación Social de Proyectos",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#contenidos-sílabo",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#contenidos-sílabo",
+    "title": "Evaluación Social de Proyectos",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#bibliografía",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#bibliografía",
+    "title": "Evaluación Social de Proyectos",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-social-de-proyectos/index.html#ediciones",
+    "href": "cursos/evaluacion-social-de-proyectos/index.html#ediciones",
+    "title": "Evaluación Social de Proyectos",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/r/index.html",
+    "href": "cursos/r/index.html",
+    "title": "R",
+    "section": "",
+    "text": "Programación en R para estadística y ciencia de datos."
+  },
+  {
+    "objectID": "cursos/r/index.html#descripción",
+    "href": "cursos/r/index.html#descripción",
+    "title": "R",
+    "section": "",
+    "text": "Programación en R para estadística y ciencia de datos."
+  },
+  {
+    "objectID": "cursos/r/index.html#objetivos",
+    "href": "cursos/r/index.html#objetivos",
+    "title": "R",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/r/index.html#contenidos-sílabo",
+    "href": "cursos/r/index.html#contenidos-sílabo",
+    "title": "R",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/r/index.html#bibliografía",
+    "href": "cursos/r/index.html#bibliografía",
+    "title": "R",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/r/index.html#ediciones",
+    "href": "cursos/r/index.html#ediciones",
+    "title": "R",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html",
+    "href": "cursos/economia-monetaria/index.html",
+    "title": "Economía Monetaria",
+    "section": "",
+    "text": "Dinero, banca central, política monetaria e inflación."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#descripción",
+    "href": "cursos/economia-monetaria/index.html#descripción",
+    "title": "Economía Monetaria",
+    "section": "",
+    "text": "Dinero, banca central, política monetaria e inflación."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#ficha-del-curso",
+    "href": "cursos/economia-monetaria/index.html#ficha-del-curso",
+    "title": "Economía Monetaria",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n8\n\n\nPrerrequisitos\nMacroeconomía Dinámica"
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#objetivos",
+    "href": "cursos/economia-monetaria/index.html#objetivos",
+    "title": "Economía Monetaria",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#contenidos-sílabo",
+    "href": "cursos/economia-monetaria/index.html#contenidos-sílabo",
+    "title": "Economía Monetaria",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#bibliografía",
+    "href": "cursos/economia-monetaria/index.html#bibliografía",
+    "title": "Economía Monetaria",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-monetaria/index.html#ediciones",
+    "href": "cursos/economia-monetaria/index.html#ediciones",
+    "title": "Economía Monetaria",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "publication/2022-07-13-enis/index.html",
+    "href": "publication/2022-07-13-enis/index.html",
+    "title": "Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023",
+    "section": "",
+    "text": "La Encuesta Nacional de Intenciones de Siembra (ENIS) se viene ejecutando en forma continua desde la Campaña Agrícola 2002-2003, constituyendo una valiosa fuente de información, referente a las estimaciones de siembra de los principales cultivos transitorios de importancia nacional y regional, para los productores agrarios de la región y para la oportuna toma de decisiones de la política sectorial, así como, para tratar de evitar los desbalances en la producción acorde a la oferta y demanda. Este trabajo está orientado a determinar la superficie de siembra de la Campaña Agrícola 2022-2023 y tiene la finalidad de planificar las siembras para el normal abastecimiento de productos agroalimentarios en beneficio la población en general."
+  },
+  {
+    "objectID": "publication/2022-07-13-enis/index.html#abstract",
+    "href": "publication/2022-07-13-enis/index.html#abstract",
+    "title": "Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023",
+    "section": "",
+    "text": "La Encuesta Nacional de Intenciones de Siembra (ENIS) se viene ejecutando en forma continua desde la Campaña Agrícola 2002-2003, constituyendo una valiosa fuente de información, referente a las estimaciones de siembra de los principales cultivos transitorios de importancia nacional y regional, para los productores agrarios de la región y para la oportuna toma de decisiones de la política sectorial, así como, para tratar de evitar los desbalances en la producción acorde a la oferta y demanda. Este trabajo está orientado a determinar la superficie de siembra de la Campaña Agrícola 2022-2023 y tiene la finalidad de planificar las siembras para el normal abastecimiento de productos agroalimentarios en beneficio la población en general."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Edison Achalma B.Sc. Econ.",
+    "section": "",
+    "text": "Puedes utilizar este formulario para contactarme sobre charlas, colaboraciones o simplemente para saludarme.\nTambién me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. \n       \n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+  },
+  {
+    "objectID": "contact.html#envíame-una-nota-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666561746865722d706f696e746564203e7d7d",
+    "href": "contact.html#envíame-una-nota-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666561746865722d706f696e746564203e7d7d",
+    "title": "Edison Achalma B.Sc. Econ.",
+    "section": "",
+    "text": "Puedes utilizar este formulario para contactarme sobre charlas, colaboraciones o simplemente para saludarme.\nTambién me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. \n       \n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+  },
+  {
+    "objectID": "contact.html#una-nota-ocasional-sin-ruido-ni-spam-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120656e76656c6f7065203e7d7d",
+    "href": "contact.html#una-nota-ocasional-sin-ruido-ni-spam-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120656e76656c6f7065203e7d7d",
+    "title": "Edison Achalma B.Sc. Econ.",
+    "section": "Una nota ocasional, sin ruido ni spam ",
+    "text": "Una nota ocasional, sin ruido ni spam \n\n\nPuede utilizar este formulario para registrarse y recibir una pequeña nota por correo electrónico cada vez que publique algo nuevo en mi sitio web.\n\n\n\n\n\n\n  Email Address\n  \n\n  \n  \n    Powered by Buttondown."
+  },
+  {
+    "objectID": "contact.html#agenda-para-reunirnos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642063616c656e646172203e7d7d",
+    "href": "contact.html#agenda-para-reunirnos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642063616c656e646172203e7d7d",
+    "title": "Edison Achalma B.Sc. Econ.",
+    "section": "Agenda para reunirnos ",
+    "text": "Agenda para reunirnos"
   },
   {
     "objectID": "accessibility.html",
@@ -245,158 +1120,1033 @@
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
   },
   {
-    "objectID": "talk/2025-01-07-sesion-01-monografia-e-informe/index.html",
-    "href": "talk/2025-01-07-sesion-01-monografia-e-informe/index.html",
-    "title": "Fundamentos de Redacción Académica",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Edison Achalma, B.Sc.",
     "section": "",
-    "text": "Esta presentación introduce los fundamentos de la redacción académica para estudiantes universitarios. Explora los principales estilos de citación, como APA, MLA, Chicago, Vancouver, IEEE y Harvard, detallando sus usos y características. Incluye herramientas esenciales como procesadores de texto (Microsoft Word, LaTeX), gestores de referencias (Zotero, JabRef) y repositorios académicos (Google Académico, Scopus). Ofrece una guía práctica para elaborar monografías, desde la selección del tema hasta la edición final, con ejemplos de estructuras y consejos para informes y tesis, ideal para fortalecer habilidades de investigación y escritura.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 01"
+    "text": "¡Hola! Soy achalmaedison, un economista en proceso y entusiasta de las matemáticas y de la informática. Compartiré mis apuntes de clase, guías de problemas, resúmenes y exámenes resueltos, ya que estoy convencido de que compartir mis apuntes con la comunidad es provechoso para todos.\nLearn more about me →"
   },
   {
-    "objectID": "talk/2025-01-14-sesion-03-citas-y-referencias/index.html",
-    "href": "talk/2025-01-14-sesion-03-citas-y-referencias/index.html",
-    "title": "Citas y Referencias en APA",
+    "objectID": "cursos/estadistica/index.html",
+    "href": "cursos/estadistica/index.html",
+    "title": "Estadística",
     "section": "",
-    "text": "Esta presentación detalla el uso de citas y referencias en el estilo APA, explicando citas textuales (cortas y largas) y parafraseadas, con ejemplos prácticos. Aborda cómo citar uno o más autores, incluyendo instituciones, y presenta la estructura básica de referencias para libros y artículos. Orientada a estudiantes y profesionales, ofrece una guía precisa para aplicar estas normas, asegurando la correcta atribución de fuentes y la prevención del plagio en la redacción académica.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 03"
+    "text": "Estadística descriptiva e inferencial aplicada al análisis de datos."
   },
   {
-    "objectID": "talk/index.html",
-    "href": "talk/index.html",
-    "title": "Talks",
+    "objectID": "cursos/estadistica/index.html#descripción",
+    "href": "cursos/estadistica/index.html#descripción",
+    "title": "Estadística",
     "section": "",
-    "text": "Estructura y Citas APA\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n19 feb 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nBúsqueda en Internet y Formato APA, Tablas y Figuras\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n12 feb 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nEstilo Vancouver: Citas y Referencias Académicas\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n5 feb 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nCitas APA y Formato de Documentos Académicos\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n29 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos Académicos en Línea y Técnicas de Parafraseo\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n22 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nPráctica APA\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n15 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nCitas y Referencias en APA\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n14 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nDiseño de Portadas y Formato APA\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n8 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\n\n\n\n\n\n\n\nFundamentos de Redacción Académica\n\n\n\nresearch\n\nMetodología para el estudio universitario\n\ncau\n\nunsch\n\n\n\n\n\n\n7 ene 2025\n\n\nEdison Achalma\n\n\n\n\n\nNo hay resultados"
+    "text": "Estadística descriptiva e inferencial aplicada al análisis de datos."
   },
   {
-    "objectID": "talk/2025-02-19-sesion-09-practica-estructura-y-citas-apa/index.html",
-    "href": "talk/2025-02-19-sesion-09-practica-estructura-y-citas-apa/index.html",
-    "title": "Estructura y Citas APA",
-    "section": "",
-    "text": "Esta segunda práctica es sobre la estructura de documentos académicos en Word, siguiendo el estilo APA 7ª edición. Incluye portada, índice, capítulos, citas textuales y parafraseadas, y una lista de referencias, con ejemplos aplicados. Detalla la creación de tablas y figuras, numeradas y tituladas según normas APA, integrando fuentes citadas correctamente. Dirigida a estudiantes y académicos, proporciona un modelo práctico para organizar trabajos, citar fuentes y presentar datos visuales, adaptable a diversas temáticas de investigación.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesion 09 practica estructura y citas apa"
+    "objectID": "cursos/estadistica/index.html#objetivos",
+    "href": "cursos/estadistica/index.html#objetivos",
+    "title": "Estadística",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
   },
   {
-    "objectID": "talk/2025-01-22-sesion-05-tecnicas-de-parafraseo/index.html",
-    "href": "talk/2025-01-22-sesion-05-tecnicas-de-parafraseo/index.html",
-    "title": "Recursos Académicos en Línea y Técnicas de Parafraseo",
-    "section": "",
-    "text": "Esta presentación explora herramientas en línea para la investigación académica, como Google Scholar, PubMed y RENATI, con ejemplos prácticos de búsqueda. Además, aborda técnicas de parafraseo, incluyendo sustitución de sinónimos y cambios estructurales, ilustradas con casos concretos para evitar el plagio. Dirigida a estudiantes y profesionales, ofrece una guía clara que combina teoría y práctica para mejorar la búsqueda de recursos y la redacción académica, aplicable en diversas áreas del conocimiento.\n\n\n\nUnable to display PDF file. Download instead.\n\n\nFigura 1: sesión 05"
+    "objectID": "cursos/estadistica/index.html#contenidos-sílabo",
+    "href": "cursos/estadistica/index.html#contenidos-sílabo",
+    "title": "Estadística",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html",
+    "objectID": "cursos/estadistica/index.html#bibliografía",
+    "href": "cursos/estadistica/index.html#bibliografía",
+    "title": "Estadística",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/estadistica/index.html#ediciones",
+    "href": "cursos/estadistica/index.html#ediciones",
+    "title": "Estadística",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "",
+    "text": "Uso eficiente de recursos naturales, externalidades ambientales y política ambiental."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#descripción",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#descripción",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "",
+    "text": "Uso eficiente de recursos naturales, externalidades ambientales y política ambiental."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#ficha-del-curso",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#ficha-del-curso",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n6\n\n\nPrerrequisitos\nMicroeconomía II, Microeconometría Aplicada"
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#objetivos",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#objetivos",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#contenidos-sílabo",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#contenidos-sílabo",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#bibliografía",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#bibliografía",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-recursos-naturales-ambientales/index.html#ediciones",
+    "href": "cursos/economia-recursos-naturales-ambientales/index.html#ediciones",
+    "title": "Economía de los RRNN y Ambientales",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "La palabra “economía” proviene del griego antiguo “oikonomia”, que se compone de dos términos: “oikos”, que significa “casa” o “hogar”, y “nomos”, que se traduce como “ley” o “norma”.\nEn su origen, el concepto de “oikonomia” se refería a la administración y gestión de un hogar o familia. Tenía un enfoque más estrecho y se centraba en la gestión de los recursos y las finanzas domésticas. Se ocupaba de temas como la producción, distribución y consumo de bienes y servicios dentro de la unidad familiar.\nCon el tiempo, el significado de “oikonomia” se amplió y se comenzó a aplicar a la administración de los recursos y la riqueza de una comunidad o sociedad en general. La economía dejó de ser simplemente un asunto doméstico para convertirse en una disciplina que estudia los procesos de producción, intercambio y consumo a nivel social.\n\n\n\nAdam Smith (1723-1790): Considerado el padre de la economía moderna, Smith definió la economía en su obra “La riqueza de las naciones” como la ciencia que estudia la manera en que las personas utilizan los recursos limitados para satisfacer sus necesidades ilimitadas.\nFederico Engels (1820-1895): Conocido principalmente por su colaboración con Karl Marx en la formulación de la teoría del socialismo científico y el marxismo, también ofreció una definición de economía en su obra “Principios de comunismo” y en otros escritos. Según Engels, la economía es “la ciencia que estudia la producción y la distribución de los medios de vida necesarios para la existencia humana”.\nEngels enfatizó la importancia de comprender cómo se producen y se distribuyen los bienes materiales en una sociedad. Para él, la economía no solo se trata de la administración de los recursos, sino también de las relaciones sociales y de poder que se establecen en torno a la producción y distribución de la riqueza.\nEngels y Marx desarrollaron una visión crítica del capitalismo y analizaron cómo las relaciones de producción capitalistas generaban desigualdades y alienación. Su enfoque económico se basaba en la idea de que el sistema económico determina en gran medida la estructura social y las condiciones de vida de las personas.\nJohn Maynard Keynes (1883-1946): Keynes definió la economía como “una disciplina moral” y la describió como el estudio de cómo las sociedades utilizan los recursos escasos para producir bienes y servicios, y cómo se distribuye esa producción entre los miembros de la sociedad.\nMilton Friedman (1912-2006): Friedman definió la economía en términos de elección y libertad individual. Según él, la economía es el estudio de cómo los individuos toman decisiones racionales para maximizar su bienestar, dadas las restricciones y oportunidades que enfrentan.\nPaul Samuelson (1915-2009): Samuelson, autor del influyente libro de texto “Economía”, definió la economía como el estudio de cómo las sociedades asignan los recursos escasos para satisfacer las necesidades humanas. Además, destacó la importancia de analizar el comportamiento humano y los sistemas de precios en la economía.\n\n\n\n\nEl objeto de estudio de la economía son los fenómenos económicos. La economía se enfoca en analizar, comprender y explicar los procesos económicos que ocurren en una sociedad.\nUn fenómeno económico es un evento o proceso relacionado con la actividad económica que ocurre en una sociedad. Estos fenómenos se refieren a los aspectos observables y medibles de la realidad económica.\nLos fenómenos económicos abarcan una amplia gama de aspectos, como la producción, distribución, intercambio y consumo de bienes y servicios, así como los factores que influyen en estos procesos, como los precios, los costos, los ingresos, el empleo, la inversión y las políticas económicas.\nA continuación, se presentan algunos aspectos fundamentales que constituyen el objeto de estudio de la economía:\n\nProducción: La economía examina cómo se produce y se utiliza la producción de bienes y servicios, considerando aspectos como la tecnología, los procesos de producción, la eficiencia y la productividad.\nDistribución: La economía analiza cómo se distribuye la riqueza, los ingresos y los recursos entre los diferentes miembros de la sociedad. Esto implica estudiar los mecanismos y sistemas de distribución, como los salarios, la renta, los impuestos y las políticas públicas relacionadas.\nConsumo: La economía se interesa por el comportamiento y las decisiones de consumo de los individuos y las familias, así como por los factores que influyen en esas decisiones, como los precios, los ingresos, las preferencias y las expectativas.\nMercados: La economía examina el funcionamiento de los mercados, donde se lleva a cabo el intercambio de bienes y servicios entre compradores y vendedores. Esto incluye el análisis de la oferta y la demanda, la formación de precios, la competencia y los efectos de la intervención del gobierno en los mercados.\nCrecimiento económico: La economía estudia los factores que impulsan el crecimiento económico a largo plazo, como la inversión, la innovación tecnológica, la acumulación de capital y la mejora de la productividad.\nPolíticas económicas: La economía también se ocupa del análisis de las políticas económicas, como las políticas fiscales, monetarias y comerciales, así como su impacto en el crecimiento, el empleo, la inflación y otros indicadores económicos.\n\n\n\n\nLos fenómenos económicos comparten varias características comunes. A continuación, se presentan algunas de las características principales de un fenómeno económico:\n\nRelacionado con la actividad económica: Los fenómenos económicos están vinculados a la producción, distribución, intercambio y consumo de bienes y servicios en una sociedad. Estos fenómenos surgen de las decisiones y acciones de los agentes económicos, como individuos, empresas y gobiernos.\nObservables y medibles: Los fenómenos económicos son eventos o procesos que se pueden observar y medir. Pueden ser cuantificados a través de datos económicos, estadísticas y mediciones, lo que permite un análisis objetivo y comparativo.\nImpacto en la economía: Los fenómenos económicos tienen repercusiones en el funcionamiento de la economía en su conjunto o en sectores específicos. Pueden influir en variables económicas, como el crecimiento económico, el empleo, la inflación, la inversión y el comercio, entre otros.\nInteracción entre factores: Los fenómenos económicos son el resultado de la interacción de múltiples factores económicos, sociales y políticos. Estos factores pueden incluir la oferta y demanda de bienes y servicios, los precios, los salarios, las políticas económicas, la tecnología, las preferencias de los consumidores, entre otros.\nContexto temporal y espacial: Los fenómenos económicos ocurren en un determinado período de tiempo y en un contexto geográfico específico. Pueden tener características y dinámicas particulares en diferentes momentos y lugares, lo que implica la necesidad de considerar el contexto temporal y espacial al analizarlos.\nCausas y efectos: Los fenómenos económicos tienen causas y efectos. Pueden ser resultado de múltiples factores y condiciones, y a su vez, pueden tener consecuencias y repercusiones en otros aspectos económicos y sociales.\n\n\n\n\nLa causa fundamental de los fenómenos económicos es la escasez. La escasez se refiere a la disparidad entre las necesidades y deseos ilimitados de los seres humanos y los recursos limitados disponibles para satisfacer esas necesidades y deseos.\nDado que los recursos son limitados, los individuos y la sociedad deben tomar decisiones sobre cómo asignar y utilizar eficientemente esos recursos escasos. Estas decisiones dan lugar a fenómenos económicos como la producción, la distribución, el intercambio y el consumo.\nA continuación, se presentan algunas de las causas comunes de los fenómenos económicos:\n\nOferta y demanda: Los cambios en la oferta y la demanda de bienes y servicios pueden ser una causa clave de fenómenos económicos. Por ejemplo, un aumento en la demanda de un producto puede llevar a un aumento en su precio, lo que a su vez puede impulsar la producción y la inversión en ese sector.\nCambios en los costos de producción: Los cambios en los costos de los insumos, como la mano de obra, los precios de las materias primas o la energía, pueden tener un impacto significativo en los fenómenos económicos. Por ejemplo, un aumento en el precio del petróleo puede generar aumentos en los costos de producción y, en consecuencia, inflación o disminución de la actividad económica.\nPolíticas económicas: Las decisiones de política económica, como las políticas fiscales (impuestos y gasto público) y las políticas monetarias (tasas de interés, oferta de dinero), pueden desencadenar fenómenos económicos. Por ejemplo, un aumento en el gasto público puede estimular la demanda agregada y el crecimiento económico.\nCambios tecnológicos: La innovación tecnológica y los avances pueden ser una causa importante de fenómenos económicos. Los cambios tecnológicos pueden mejorar la eficiencia en la producción, abrir nuevas oportunidades comerciales y alterar las estructuras de los mercados.\nEventos externos: Factores externos, como desastres naturales, crisis financieras, cambios políticos o conflictos internacionales, pueden provocar fenómenos económicos significativos. Estos eventos pueden afectar la producción, el comercio, la inversión y otros aspectos económicos.\nFactores socioculturales: Los factores socioculturales, como cambios demográficos, tendencias de consumo, valores y preferencias de los consumidores, también pueden influir en los fenómenos económicos. Por ejemplo, el envejecimiento de la población puede tener efectos en la demanda de ciertos productos y servicios.\n\n\n\n\nUn modelo económico es una representación simplificada de la realidad económica que utiliza conceptos, supuestos y relaciones matemáticas o estadísticas para analizar y comprender el comportamiento de los agentes económicos y los resultados de sus interacciones.\nLos modelos económicos son herramientas utilizadas por los economistas para estudiar y explicar fenómenos económicos, predecir resultados y evaluar políticas económicas. Estos modelos se construyen a través de la simplificación de la realidad económica, ya que es imposible tener en cuenta todos los factores y detalles en un análisis completo.\nAlgunas características de los modelos económicos incluyen:\n\nSupuestos simplificadores: Los modelos económicos se basan en supuestos simplificadores sobre el comportamiento de los agentes económicos, las interacciones entre ellos y las condiciones del mercado. Estos supuestos permiten aislar variables específicas y analizar su impacto de manera más clara.\nEcuaciones o relaciones matemáticas: Los modelos económicos a menudo utilizan ecuaciones o relaciones matemáticas para expresar las interacciones y las relaciones causales entre variables económicas. Estas ecuaciones pueden basarse en teorías económicas existentes o ser derivadas de datos empíricos.\nAnálisis de equilibrio: Los modelos económicos buscan identificar equilibrios, donde las variables del modelo se estabilizan y se alcanza un estado de “balance” en el sistema. Esto implica que las fuerzas de oferta y demanda, por ejemplo, se igualan y no hay presión para cambios significativos.\nPredicciones y simulaciones: Los modelos económicos permiten realizar predicciones y simulaciones de diferentes escenarios económicos. Al manipular las variables del modelo, se pueden evaluar los efectos y las consecuencias de diferentes políticas o cambios en las condiciones económicas.\nSimplificación de la realidad: Es importante tener en cuenta que los modelos económicos son simplificaciones de la realidad y no capturan todos los aspectos y complejidades del mundo real. Los modelos económicos son herramientas analíticas que proporcionan un marco conceptual para comprender los fenómenos económicos, pero siempre deben ser interpretados con precaución y considerando sus limitaciones."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#definiciones",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#definiciones",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#definiciones",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#definiciones",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "Adam Smith (1723-1790): Considerado el padre de la economía moderna, Smith definió la economía en su obra “La riqueza de las naciones” como la ciencia que estudia la manera en que las personas utilizan los recursos limitados para satisfacer sus necesidades ilimitadas.\nFederico Engels (1820-1895): Conocido principalmente por su colaboración con Karl Marx en la formulación de la teoría del socialismo científico y el marxismo, también ofreció una definición de economía en su obra “Principios de comunismo” y en otros escritos. Según Engels, la economía es “la ciencia que estudia la producción y la distribución de los medios de vida necesarios para la existencia humana”.\nEngels enfatizó la importancia de comprender cómo se producen y se distribuyen los bienes materiales en una sociedad. Para él, la economía no solo se trata de la administración de los recursos, sino también de las relaciones sociales y de poder que se establecen en torno a la producción y distribución de la riqueza.\nEngels y Marx desarrollaron una visión crítica del capitalismo y analizaron cómo las relaciones de producción capitalistas generaban desigualdades y alienación. Su enfoque económico se basaba en la idea de que el sistema económico determina en gran medida la estructura social y las condiciones de vida de las personas.\nJohn Maynard Keynes (1883-1946): Keynes definió la economía como “una disciplina moral” y la describió como el estudio de cómo las sociedades utilizan los recursos escasos para producir bienes y servicios, y cómo se distribuye esa producción entre los miembros de la sociedad.\nMilton Friedman (1912-2006): Friedman definió la economía en términos de elección y libertad individual. Según él, la economía es el estudio de cómo los individuos toman decisiones racionales para maximizar su bienestar, dadas las restricciones y oportunidades que enfrentan.\nPaul Samuelson (1915-2009): Samuelson, autor del influyente libro de texto “Economía”, definió la economía como el estudio de cómo las sociedades asignan los recursos escasos para satisfacer las necesidades humanas. Además, destacó la importancia de analizar el comportamiento humano y los sistemas de precios en la economía."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#objeto-de-estudio-de-la-economía",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#objeto-de-estudio-de-la-economía",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#objeto-de-estudio-de-la-economía",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#objeto-de-estudio-de-la-economía",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "El objeto de estudio de la economía son los fenómenos económicos. La economía se enfoca en analizar, comprender y explicar los procesos económicos que ocurren en una sociedad.\nUn fenómeno económico es un evento o proceso relacionado con la actividad económica que ocurre en una sociedad. Estos fenómenos se refieren a los aspectos observables y medibles de la realidad económica.\nLos fenómenos económicos abarcan una amplia gama de aspectos, como la producción, distribución, intercambio y consumo de bienes y servicios, así como los factores que influyen en estos procesos, como los precios, los costos, los ingresos, el empleo, la inversión y las políticas económicas.\nA continuación, se presentan algunos aspectos fundamentales que constituyen el objeto de estudio de la economía:\n\nProducción: La economía examina cómo se produce y se utiliza la producción de bienes y servicios, considerando aspectos como la tecnología, los procesos de producción, la eficiencia y la productividad.\nDistribución: La economía analiza cómo se distribuye la riqueza, los ingresos y los recursos entre los diferentes miembros de la sociedad. Esto implica estudiar los mecanismos y sistemas de distribución, como los salarios, la renta, los impuestos y las políticas públicas relacionadas.\nConsumo: La economía se interesa por el comportamiento y las decisiones de consumo de los individuos y las familias, así como por los factores que influyen en esas decisiones, como los precios, los ingresos, las preferencias y las expectativas.\nMercados: La economía examina el funcionamiento de los mercados, donde se lleva a cabo el intercambio de bienes y servicios entre compradores y vendedores. Esto incluye el análisis de la oferta y la demanda, la formación de precios, la competencia y los efectos de la intervención del gobierno en los mercados.\nCrecimiento económico: La economía estudia los factores que impulsan el crecimiento económico a largo plazo, como la inversión, la innovación tecnológica, la acumulación de capital y la mejora de la productividad.\nPolíticas económicas: La economía también se ocupa del análisis de las políticas económicas, como las políticas fiscales, monetarias y comerciales, así como su impacto en el crecimiento, el empleo, la inflación y otros indicadores económicos."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#características-de-un-fenómeno-económico",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#características-de-un-fenómeno-económico",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#características-de-un-fenómeno-económico",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#características-de-un-fenómeno-económico",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "Los fenómenos económicos comparten varias características comunes. A continuación, se presentan algunas de las características principales de un fenómeno económico:\n\nRelacionado con la actividad económica: Los fenómenos económicos están vinculados a la producción, distribución, intercambio y consumo de bienes y servicios en una sociedad. Estos fenómenos surgen de las decisiones y acciones de los agentes económicos, como individuos, empresas y gobiernos.\nObservables y medibles: Los fenómenos económicos son eventos o procesos que se pueden observar y medir. Pueden ser cuantificados a través de datos económicos, estadísticas y mediciones, lo que permite un análisis objetivo y comparativo.\nImpacto en la economía: Los fenómenos económicos tienen repercusiones en el funcionamiento de la economía en su conjunto o en sectores específicos. Pueden influir en variables económicas, como el crecimiento económico, el empleo, la inflación, la inversión y el comercio, entre otros.\nInteracción entre factores: Los fenómenos económicos son el resultado de la interacción de múltiples factores económicos, sociales y políticos. Estos factores pueden incluir la oferta y demanda de bienes y servicios, los precios, los salarios, las políticas económicas, la tecnología, las preferencias de los consumidores, entre otros.\nContexto temporal y espacial: Los fenómenos económicos ocurren en un determinado período de tiempo y en un contexto geográfico específico. Pueden tener características y dinámicas particulares en diferentes momentos y lugares, lo que implica la necesidad de considerar el contexto temporal y espacial al analizarlos.\nCausas y efectos: Los fenómenos económicos tienen causas y efectos. Pueden ser resultado de múltiples factores y condiciones, y a su vez, pueden tener consecuencias y repercusiones en otros aspectos económicos y sociales."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#causas-de-un-fenómeno-económico",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#causas-de-un-fenómeno-económico",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#causas-de-un-fenómeno-económico",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#causas-de-un-fenómeno-económico",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "La causa fundamental de los fenómenos económicos es la escasez. La escasez se refiere a la disparidad entre las necesidades y deseos ilimitados de los seres humanos y los recursos limitados disponibles para satisfacer esas necesidades y deseos.\nDado que los recursos son limitados, los individuos y la sociedad deben tomar decisiones sobre cómo asignar y utilizar eficientemente esos recursos escasos. Estas decisiones dan lugar a fenómenos económicos como la producción, la distribución, el intercambio y el consumo.\nA continuación, se presentan algunas de las causas comunes de los fenómenos económicos:\n\nOferta y demanda: Los cambios en la oferta y la demanda de bienes y servicios pueden ser una causa clave de fenómenos económicos. Por ejemplo, un aumento en la demanda de un producto puede llevar a un aumento en su precio, lo que a su vez puede impulsar la producción y la inversión en ese sector.\nCambios en los costos de producción: Los cambios en los costos de los insumos, como la mano de obra, los precios de las materias primas o la energía, pueden tener un impacto significativo en los fenómenos económicos. Por ejemplo, un aumento en el precio del petróleo puede generar aumentos en los costos de producción y, en consecuencia, inflación o disminución de la actividad económica.\nPolíticas económicas: Las decisiones de política económica, como las políticas fiscales (impuestos y gasto público) y las políticas monetarias (tasas de interés, oferta de dinero), pueden desencadenar fenómenos económicos. Por ejemplo, un aumento en el gasto público puede estimular la demanda agregada y el crecimiento económico.\nCambios tecnológicos: La innovación tecnológica y los avances pueden ser una causa importante de fenómenos económicos. Los cambios tecnológicos pueden mejorar la eficiencia en la producción, abrir nuevas oportunidades comerciales y alterar las estructuras de los mercados.\nEventos externos: Factores externos, como desastres naturales, crisis financieras, cambios políticos o conflictos internacionales, pueden provocar fenómenos económicos significativos. Estos eventos pueden afectar la producción, el comercio, la inversión y otros aspectos económicos.\nFactores socioculturales: Los factores socioculturales, como cambios demográficos, tendencias de consumo, valores y preferencias de los consumidores, también pueden influir en los fenómenos económicos. Por ejemplo, el envejecimiento de la población puede tener efectos en la demanda de ciertos productos y servicios."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#modelo-económico",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#modelo-económico",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#modelo-económico",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#modelo-económico",
     "title": "Conceptos básicos de economía",
     "section": "",
     "text": "Un modelo económico es una representación simplificada de la realidad económica que utiliza conceptos, supuestos y relaciones matemáticas o estadísticas para analizar y comprender el comportamiento de los agentes económicos y los resultados de sus interacciones.\nLos modelos económicos son herramientas utilizadas por los economistas para estudiar y explicar fenómenos económicos, predecir resultados y evaluar políticas económicas. Estos modelos se construyen a través de la simplificación de la realidad económica, ya que es imposible tener en cuenta todos los factores y detalles en un análisis completo.\nAlgunas características de los modelos económicos incluyen:\n\nSupuestos simplificadores: Los modelos económicos se basan en supuestos simplificadores sobre el comportamiento de los agentes económicos, las interacciones entre ellos y las condiciones del mercado. Estos supuestos permiten aislar variables específicas y analizar su impacto de manera más clara.\nEcuaciones o relaciones matemáticas: Los modelos económicos a menudo utilizan ecuaciones o relaciones matemáticas para expresar las interacciones y las relaciones causales entre variables económicas. Estas ecuaciones pueden basarse en teorías económicas existentes o ser derivadas de datos empíricos.\nAnálisis de equilibrio: Los modelos económicos buscan identificar equilibrios, donde las variables del modelo se estabilizan y se alcanza un estado de “balance” en el sistema. Esto implica que las fuerzas de oferta y demanda, por ejemplo, se igualan y no hay presión para cambios significativos.\nPredicciones y simulaciones: Los modelos económicos permiten realizar predicciones y simulaciones de diferentes escenarios económicos. Al manipular las variables del modelo, se pueden evaluar los efectos y las consecuencias de diferentes políticas o cambios en las condiciones económicas.\nSimplificación de la realidad: Es importante tener en cuenta que los modelos económicos son simplificaciones de la realidad y no capturan todos los aspectos y complejidades del mundo real. Los modelos económicos son herramientas analíticas que proporcionan un marco conceptual para comprender los fenómenos económicos, pero siempre deben ser interpretados con precaución y considerando sus limitaciones."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#fines-teóricos-de-la-economía",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#fines-teóricos-de-la-economía",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#fines-teóricos-de-la-economía",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#fines-teóricos-de-la-economía",
     "title": "Conceptos básicos de economía",
     "section": "2.1 Fines teóricos de la economía:",
     "text": "2.1 Fines teóricos de la economía:\n\nExplicación: Uno de los fines teóricos de la economía es explicar cómo funcionan los sistemas económicos y los fenómenos económicos. Los economistas buscan comprender las relaciones causales, los mecanismos y los principios económicos subyacentes que influyen en el comportamiento de los agentes económicos y en los resultados económicos.\nPredicción: La economía tiene como fin teórico la capacidad de predecir el comportamiento económico y los resultados de las políticas económicas. A través del uso de modelos económicos, teorías y análisis estadísticos, se busca estimar cómo ciertos cambios o eventos pueden afectar las variables económicas y las decisiones de los agentes económicos.\nComprendiendo el funcionamiento del mercado: La economía tiene como objetivo teórico analizar y comprender el funcionamiento de los mercados, incluyendo los mecanismos de oferta y demanda, los precios, la competencia y otros factores que influyen en las transacciones económicas."
   },
   {
-    "objectID": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#fines-prácticos-de-la-economía",
-    "href": "teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/index.html#fines-prácticos-de-la-economía",
+    "objectID": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#fines-prácticos-de-la-economía",
+    "href": "cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.html#fines-prácticos-de-la-economía",
     "title": "Conceptos básicos de economía",
     "section": "2.2 Fines prácticos de la economía:",
     "text": "2.2 Fines prácticos de la economía:\n\nMejora del bienestar económico: Uno de los fines prácticos de la economía es buscar la mejora del bienestar económico de las personas y la sociedad en general. Esto implica analizar y diseñar políticas económicas que promuevan el crecimiento económico, la estabilidad, la equidad, el empleo y la reducción de la pobreza.\nToma de decisiones informadas: La economía proporciona herramientas y análisis para apoyar la toma de decisiones informadas en los ámbitos individual, empresarial y gubernamental. Los principios económicos pueden ayudar a evaluar las ventajas y desventajas de diferentes opciones, considerando los costos, beneficios y las restricciones existentes.\nGestión eficiente de los recursos: La economía tiene como fin práctico la gestión eficiente de los recursos escasos. Esto implica analizar cómo se asignan los recursos y cómo se utilizan para maximizar el valor y minimizar los costos. La economía busca mejorar la eficiencia en la producción, distribución y consumo de bienes y servicios.\nEntender y abordar los problemas económicos: La economía busca entender y abordar los problemas económicos que afectan a la sociedad, como el desempleo, la inflación, la desigualdad, la pobreza, los desequilibrios comerciales, entre otros. Los economistas analizan las causas de estos problemas y proponen soluciones y políticas adecuadas para abordarlos."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Edison Achalma B.Sc. Econ.",
+    "objectID": "cursos/pre_economia/2014-i/index.html",
+    "href": "cursos/pre_economia/2014-i/index.html",
+    "title": "Economía Preuniversitaria — Edición 2014-I",
     "section": "",
-    "text": "Puedes utilizar este formulario para contactarme sobre charlas, colaboraciones o simplemente para saludarme.\nTambién me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. \n       \n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+    "text": "Docente: Edison Achalma · Periodo: enero–marzo 2014 · Sesiones: 14\nMaterial de cada sesión (notas, ejercicios y PDF descargable). Usa el buscador para filtrar por tema."
   },
   {
-    "objectID": "contact.html#envíame-una-nota-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666561746865722d706f696e746564203e7d7d",
-    "href": "contact.html#envíame-una-nota-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666561746865722d706f696e746564203e7d7d",
-    "title": "Edison Achalma B.Sc. Econ.",
+    "objectID": "cursos/pre_economia/2014-i/index.html#sesiones",
+    "href": "cursos/pre_economia/2014-i/index.html#sesiones",
+    "title": "Economía Preuniversitaria — Edición 2014-I",
+    "section": "Sesiones",
+    "text": "Sesiones\n\n\n    \n      \n      \n    \n\n\n\n\n\n\nSesión\n\n\n\nTemas\n\n\n\nLectura\n\n\n\n\n\n\n\n\nConceptos básicos de economía\n\n\nEconomia Basica\n\n\n16 minutos\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "cursos/power-bi/index.html",
+    "href": "cursos/power-bi/index.html",
+    "title": "Power BI",
     "section": "",
-    "text": "Puedes utilizar este formulario para contactarme sobre charlas, colaboraciones o simplemente para saludarme.\nTambién me encanta saber si mis materiales educativos te han resultado útiles y cómo podrían mejorarse, especialmente si pudieran hacerse más accesibles. \n       \n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+    "text": "Modelado, DAX y visualización de datos con Power BI."
   },
   {
-    "objectID": "contact.html#una-nota-ocasional-sin-ruido-ni-spam-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120656e76656c6f7065203e7d7d",
-    "href": "contact.html#una-nota-ocasional-sin-ruido-ni-spam-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120656e76656c6f7065203e7d7d",
-    "title": "Edison Achalma B.Sc. Econ.",
-    "section": "Una nota ocasional, sin ruido ni spam ",
-    "text": "Una nota ocasional, sin ruido ni spam \n\n\nPuede utilizar este formulario para registrarse y recibir una pequeña nota por correo electrónico cada vez que publique algo nuevo en mi sitio web.\n\n\n\n\n\n\n  Email Address\n  \n\n  \n  \n    Powered by Buttondown."
-  },
-  {
-    "objectID": "contact.html#agenda-para-reunirnos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642063616c656e646172203e7d7d",
-    "href": "contact.html#agenda-para-reunirnos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642063616c656e646172203e7d7d",
-    "title": "Edison Achalma B.Sc. Econ.",
-    "section": "Agenda para reunirnos ",
-    "text": "Agenda para reunirnos"
-  },
-  {
-    "objectID": "publication/2022-07-13-enis/index.html",
-    "href": "publication/2022-07-13-enis/index.html",
-    "title": "Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023",
+    "objectID": "cursos/power-bi/index.html#descripción",
+    "href": "cursos/power-bi/index.html#descripción",
+    "title": "Power BI",
     "section": "",
-    "text": "La Encuesta Nacional de Intenciones de Siembra (ENIS) se viene ejecutando en forma continua desde la Campaña Agrícola 2002-2003, constituyendo una valiosa fuente de información, referente a las estimaciones de siembra de los principales cultivos transitorios de importancia nacional y regional, para los productores agrarios de la región y para la oportuna toma de decisiones de la política sectorial, así como, para tratar de evitar los desbalances en la producción acorde a la oferta y demanda. Este trabajo está orientado a determinar la superficie de siembra de la Campaña Agrícola 2022-2023 y tiene la finalidad de planificar las siembras para el normal abastecimiento de productos agroalimentarios en beneficio la población en general."
+    "text": "Modelado, DAX y visualización de datos con Power BI."
   },
   {
-    "objectID": "publication/2022-07-13-enis/index.html#abstract",
-    "href": "publication/2022-07-13-enis/index.html#abstract",
-    "title": "Encuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023",
-    "section": "",
-    "text": "La Encuesta Nacional de Intenciones de Siembra (ENIS) se viene ejecutando en forma continua desde la Campaña Agrícola 2002-2003, constituyendo una valiosa fuente de información, referente a las estimaciones de siembra de los principales cultivos transitorios de importancia nacional y regional, para los productores agrarios de la región y para la oportuna toma de decisiones de la política sectorial, así como, para tratar de evitar los desbalances en la producción acorde a la oferta y demanda. Este trabajo está orientado a determinar la superficie de siembra de la Campaña Agrícola 2022-2023 y tiene la finalidad de planificar las siembras para el normal abastecimiento de productos agroalimentarios en beneficio la población en general."
+    "objectID": "cursos/power-bi/index.html#objetivos",
+    "href": "cursos/power-bi/index.html#objetivos",
+    "title": "Power BI",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
   },
   {
-    "objectID": "SECURITY.html",
-    "href": "SECURITY.html",
-    "title": "Security Policy",
-    "section": "",
-    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:\n\n\n\n\n\n\nUse this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
+    "objectID": "cursos/power-bi/index.html#contenidos-sílabo",
+    "href": "cursos/power-bi/index.html#contenidos-sílabo",
+    "title": "Power BI",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
   },
   {
-    "objectID": "SECURITY.html#supported-versions",
-    "href": "SECURITY.html#supported-versions",
-    "title": "Security Policy",
-    "section": "",
-    "text": "Use this section to tell people about which versions of your project are currently being supported with security updates.\n\n\n\nVersion\nSupported\n\n\n\n\n5.1.x\n:white_check_mark:\n\n\n5.0.x\n:x:\n\n\n4.0.x\n:white_check_mark:\n\n\n&lt; 4.0\n:x:"
+    "objectID": "cursos/power-bi/index.html#bibliografía",
+    "href": "cursos/power-bi/index.html#bibliografía",
+    "title": "Power BI",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
   },
   {
-    "objectID": "SECURITY.html#reporting-a-vulnerability",
-    "href": "SECURITY.html#reporting-a-vulnerability",
-    "title": "Security Policy",
+    "objectID": "cursos/power-bi/index.html#ediciones",
+    "href": "cursos/power-bi/index.html#ediciones",
+    "title": "Power BI",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html",
+    "href": "cursos/economia-del-desarrollo/index.html",
+    "title": "Economía del Desarrollo",
     "section": "",
-    "text": "Use this section to tell people how to report a vulnerability.\nTell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc."
+    "text": "Determinantes del desarrollo: pobreza, desigualdad e instituciones."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#descripción",
+    "href": "cursos/economia-del-desarrollo/index.html#descripción",
+    "title": "Economía del Desarrollo",
+    "section": "",
+    "text": "Determinantes del desarrollo: pobreza, desigualdad e instituciones."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#ficha-del-curso",
+    "href": "cursos/economia-del-desarrollo/index.html#ficha-del-curso",
+    "title": "Economía del Desarrollo",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n7\n\n\nPrerrequisitos\nMicroeconomía II, Microeconometría Aplicada"
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#objetivos",
+    "href": "cursos/economia-del-desarrollo/index.html#objetivos",
+    "title": "Economía del Desarrollo",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#contenidos-sílabo",
+    "href": "cursos/economia-del-desarrollo/index.html#contenidos-sílabo",
+    "title": "Economía del Desarrollo",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#bibliografía",
+    "href": "cursos/economia-del-desarrollo/index.html#bibliografía",
+    "title": "Economía del Desarrollo",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-del-desarrollo/index.html#ediciones",
+    "href": "cursos/economia-del-desarrollo/index.html#ediciones",
+    "title": "Economía del Desarrollo",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html",
+    "href": "cursos/curso-0/index.html",
+    "title": "Curso 0",
+    "section": "",
+    "text": "Nivelación en fundamentos matemáticos e introducción a la economía, previa al primer semestre."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#descripción",
+    "href": "cursos/curso-0/index.html#descripción",
+    "title": "Curso 0",
+    "section": "",
+    "text": "Nivelación en fundamentos matemáticos e introducción a la economía, previa al primer semestre."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#ficha-del-curso",
+    "href": "cursos/curso-0/index.html#ficha-del-curso",
+    "title": "Curso 0",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n0\n\n\nPrerrequisitos\nNinguno"
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#objetivos",
+    "href": "cursos/curso-0/index.html#objetivos",
+    "title": "Curso 0",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#contenidos-sílabo",
+    "href": "cursos/curso-0/index.html#contenidos-sílabo",
+    "title": "Curso 0",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#bibliografía",
+    "href": "cursos/curso-0/index.html#bibliografía",
+    "title": "Curso 0",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/curso-0/index.html#ediciones",
+    "href": "cursos/curso-0/index.html#ediciones",
+    "title": "Curso 0",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html",
+    "href": "cursos/economia-computacional/index.html",
+    "title": "Economía Computacional",
+    "section": "",
+    "text": "Métodos numéricos y computacionales para resolver y simular modelos económicos."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#descripción",
+    "href": "cursos/economia-computacional/index.html#descripción",
+    "title": "Economía Computacional",
+    "section": "",
+    "text": "Métodos numéricos y computacionales para resolver y simular modelos económicos."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#ficha-del-curso",
+    "href": "cursos/economia-computacional/index.html#ficha-del-curso",
+    "title": "Economía Computacional",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n7\n\n\nPrerrequisitos\nMacroeconomía Dinámica"
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#objetivos",
+    "href": "cursos/economia-computacional/index.html#objetivos",
+    "title": "Economía Computacional",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#contenidos-sílabo",
+    "href": "cursos/economia-computacional/index.html#contenidos-sílabo",
+    "title": "Economía Computacional",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#bibliografía",
+    "href": "cursos/economia-computacional/index.html#bibliografía",
+    "title": "Economía Computacional",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/economia-computacional/index.html#ediciones",
+    "href": "cursos/economia-computacional/index.html#ediciones",
+    "title": "Economía Computacional",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html",
+    "href": "cursos/pre_aritmetica/index.html",
+    "title": "Aritmética",
+    "section": "",
+    "text": "Teoría de números, proporcionalidad y razonamiento cuantitativo."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html#descripción",
+    "href": "cursos/pre_aritmetica/index.html#descripción",
+    "title": "Aritmética",
+    "section": "",
+    "text": "Teoría de números, proporcionalidad y razonamiento cuantitativo."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html#objetivos",
+    "href": "cursos/pre_aritmetica/index.html#objetivos",
+    "title": "Aritmética",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html#contenidos-sílabo",
+    "href": "cursos/pre_aritmetica/index.html#contenidos-sílabo",
+    "title": "Aritmética",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html#bibliografía",
+    "href": "cursos/pre_aritmetica/index.html#bibliografía",
+    "title": "Aritmética",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/pre_aritmetica/index.html#ediciones",
+    "href": "cursos/pre_aritmetica/index.html#ediciones",
+    "title": "Aritmética",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html",
+    "href": "cursos/comercio-internacional/index.html",
+    "title": "Comercio Internacional",
+    "section": "",
+    "text": "Teorías del comercio, política comercial e integración económica."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#descripción",
+    "href": "cursos/comercio-internacional/index.html#descripción",
+    "title": "Comercio Internacional",
+    "section": "",
+    "text": "Teorías del comercio, política comercial e integración económica."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#ficha-del-curso",
+    "href": "cursos/comercio-internacional/index.html#ficha-del-curso",
+    "title": "Comercio Internacional",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n9\n\n\nPrerrequisitos\nMacroeconomía II"
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#objetivos",
+    "href": "cursos/comercio-internacional/index.html#objetivos",
+    "title": "Comercio Internacional",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#contenidos-sílabo",
+    "href": "cursos/comercio-internacional/index.html#contenidos-sílabo",
+    "title": "Comercio Internacional",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#bibliografía",
+    "href": "cursos/comercio-internacional/index.html#bibliografía",
+    "title": "Comercio Internacional",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/comercio-internacional/index.html#ediciones",
+    "href": "cursos/comercio-internacional/index.html#ediciones",
+    "title": "Comercio Internacional",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html",
+    "href": "cursos/investigacion-de-mercados/index.html",
+    "title": "Investigación de Mercados",
+    "section": "",
+    "text": "Ciclo de vida, formulación y gestión de proyectos de inversión pública y privada."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html#descripción",
+    "href": "cursos/investigacion-de-mercados/index.html#descripción",
+    "title": "Investigación de Mercados",
+    "section": "",
+    "text": "Ciclo de vida, formulación y gestión de proyectos de inversión pública y privada."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html#objetivos",
+    "href": "cursos/investigacion-de-mercados/index.html#objetivos",
+    "title": "Investigación de Mercados",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html#contenidos-sílabo",
+    "href": "cursos/investigacion-de-mercados/index.html#contenidos-sílabo",
+    "title": "Investigación de Mercados",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html#bibliografía",
+    "href": "cursos/investigacion-de-mercados/index.html#bibliografía",
+    "title": "Investigación de Mercados",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/investigacion-de-mercados/index.html#ediciones",
+    "href": "cursos/investigacion-de-mercados/index.html#ediciones",
+    "title": "Investigación de Mercados",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html",
+    "href": "cursos/evaluacion-de-proyectos/index.html",
+    "title": "Evaluación de Proyectos",
+    "section": "",
+    "text": "Evaluación privada y social de proyectos: indicadores de rentabilidad y riesgo."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html#descripción",
+    "href": "cursos/evaluacion-de-proyectos/index.html#descripción",
+    "title": "Evaluación de Proyectos",
+    "section": "",
+    "text": "Evaluación privada y social de proyectos: indicadores de rentabilidad y riesgo."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html#objetivos",
+    "href": "cursos/evaluacion-de-proyectos/index.html#objetivos",
+    "title": "Evaluación de Proyectos",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html#contenidos-sílabo",
+    "href": "cursos/evaluacion-de-proyectos/index.html#contenidos-sílabo",
+    "title": "Evaluación de Proyectos",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html#bibliografía",
+    "href": "cursos/evaluacion-de-proyectos/index.html#bibliografía",
+    "title": "Evaluación de Proyectos",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/evaluacion-de-proyectos/index.html#ediciones",
+    "href": "cursos/evaluacion-de-proyectos/index.html#ediciones",
+    "title": "Evaluación de Proyectos",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html",
+    "href": "cursos/formulacion-de-proyectos/index.html",
+    "title": "Formulación de Proyectos",
+    "section": "",
+    "text": "Identificación, diagnóstico y formulación de proyectos de inversión."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html#descripción",
+    "href": "cursos/formulacion-de-proyectos/index.html#descripción",
+    "title": "Formulación de Proyectos",
+    "section": "",
+    "text": "Identificación, diagnóstico y formulación de proyectos de inversión."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html#objetivos",
+    "href": "cursos/formulacion-de-proyectos/index.html#objetivos",
+    "title": "Formulación de Proyectos",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html#contenidos-sílabo",
+    "href": "cursos/formulacion-de-proyectos/index.html#contenidos-sílabo",
+    "title": "Formulación de Proyectos",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html#bibliografía",
+    "href": "cursos/formulacion-de-proyectos/index.html#bibliografía",
+    "title": "Formulación de Proyectos",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/formulacion-de-proyectos/index.html#ediciones",
+    "href": "cursos/formulacion-de-proyectos/index.html#ediciones",
+    "title": "Formulación de Proyectos",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas. Próximamente."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html",
+    "href": "cursos/organizacion-industrial/index.html",
+    "title": "Organización Industrial",
+    "section": "",
+    "text": "Estructura de mercados, poder de mercado, competencia estratégica y regulación."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#descripción",
+    "href": "cursos/organizacion-industrial/index.html#descripción",
+    "title": "Organización Industrial",
+    "section": "",
+    "text": "Estructura de mercados, poder de mercado, competencia estratégica y regulación."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#ficha-del-curso",
+    "href": "cursos/organizacion-industrial/index.html#ficha-del-curso",
+    "title": "Organización Industrial",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n4\n\n\nPrerrequisitos\nMatemáticas II, Microeconomía II"
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#objetivos",
+    "href": "cursos/organizacion-industrial/index.html#objetivos",
+    "title": "Organización Industrial",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#contenidos-sílabo",
+    "href": "cursos/organizacion-industrial/index.html#contenidos-sílabo",
+    "title": "Organización Industrial",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#bibliografía",
+    "href": "cursos/organizacion-industrial/index.html#bibliografía",
+    "title": "Organización Industrial",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/organizacion-industrial/index.html#ediciones",
+    "href": "cursos/organizacion-industrial/index.html#ediciones",
+    "title": "Organización Industrial",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html",
+    "title": "Estructura del documento",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html#diapositivas",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html#diapositivas",
+    "title": "Estructura del documento",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_02_estructura/index.html#materiales",
+    "title": "Estructura del documento",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\npractica.odt\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/index.html",
+    "title": "Metodología de la Investigación — 2026-1 · CAU-UNSCH",
+    "section": "",
+    "text": "Docente: Edison Achalma · Institución: CAU-UNSCH · Periodo: 2026-1 · Sesiones: 6\nCada sesión trae sus diapositivas y materiales (práctica, tareas, evaluación y recursos) descargables."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/index.html#sesiones",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/index.html#sesiones",
+    "title": "Metodología de la Investigación — 2026-1 · CAU-UNSCH",
+    "section": "Sesiones",
+    "text": "Sesiones\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa monografía y el informe\n\n\n\nMonografía\n\nInforme\n\n\n\n\n\n\n2 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEstructura del documento\n\n\n\nEstructura\n\nFormato\n\n\n\n\n\n\n9 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nBúsqueda de información científica\n\n\n\nBúsqueda\n\nFuentes\n\nBases de datos\n\n\n\n\n\n\n16 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nRedacción académica\n\n\n\nRedacción\n\nEstilo\n\n\n\n\n\n\n23 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nNormas APA\n\n\n\nAPA\n\nCitas\n\nReferencias\n\n\n\n\n\n\n30 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nInteligencia artificial aplicada\n\n\n\nIA\n\nHerramientas\n\n\n\n\n\n\n6 abr 2026\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html",
+    "title": "Búsqueda de información científica",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html#diapositivas",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html#diapositivas",
+    "title": "Búsqueda de información científica",
+    "section": "",
+    "text": "Descargar diapositivas (PDF)\n\n\nFigura 1: Diapositivas de la sesión"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2026-1-cau-unsch/session_03_busqueda_de_informacion/index.html#materiales",
+    "title": "Búsqueda de información científica",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nplantilla antecedentes y marco teorico.ods\nplantilla antecedentes y marco teorico.xlsx\nplantilla estrategia para la recuperacion de informacion cientifica.docx\nplantilla estrategia para la recuperacion de informacion cientifica.odt\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/index.html",
+    "title": "Metodología de la Investigación",
+    "section": "",
+    "text": "Diseño, redacción, citación y presentación de trabajos académicos (monografías e informes)."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html#descripción",
+    "href": "cursos/metodologia-de-la-investigacion/index.html#descripción",
+    "title": "Metodología de la Investigación",
+    "section": "",
+    "text": "Diseño, redacción, citación y presentación de trabajos académicos (monografías e informes)."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html#objetivos",
+    "href": "cursos/metodologia-de-la-investigacion/index.html#objetivos",
+    "title": "Metodología de la Investigación",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html#contenidos-sílabo",
+    "href": "cursos/metodologia-de-la-investigacion/index.html#contenidos-sílabo",
+    "title": "Metodología de la Investigación",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html#bibliografía",
+    "href": "cursos/metodologia-de-la-investigacion/index.html#bibliografía",
+    "title": "Metodología de la Investigación",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/index.html#ediciones",
+    "href": "cursos/metodologia-de-la-investigacion/index.html#ediciones",
+    "title": "Metodología de la Investigación",
+    "section": "Ediciones",
+    "text": "Ediciones\n\n\n\n\n\nMetodología de la Investigación — 2026-1 · CAU-UNSCH\n\n\n6 sesiones · CAU-UNSCH\n\n\nNueva edición del taller: monografía e informe, estructura, búsqueda de información, redacción, APA e inteligencia artificial aplicada a la investigación.\n\n\n\n\n\n\n\n\n\n\nMetodología de la Investigación — 2025-1 · CAU-UNSCH\n\n\n9 sesiones · CAU-UNSCH\n\n\nTaller de redacción académica: estructura de monografías e informes, citación APA y Vancouver, parafraseo, formato, tablas y figuras.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_03_citas_y_referencias/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_03_citas_y_referencias/index.html",
+    "title": "Citas y Referencias en APA",
+    "section": "",
+    "text": "Esta presentación detalla el uso de citas y referencias en el estilo APA, explicando citas textuales (cortas y largas) y parafraseadas, con ejemplos prácticos. Aborda cómo citar uno o más autores, incluyendo instituciones, y presenta la estructura básica de referencias para libros y artículos. Orientada a estudiantes y profesionales, ofrece una guía precisa para aplicar estas normas, asegurando la correcta atribución de fuentes y la prevención del plagio en la redacción académica."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_03_citas_y_referencias/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_03_citas_y_referencias/index.html#materiales",
+    "title": "Citas y Referencias en APA",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_05_tecnicas_de_parafraseo/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_05_tecnicas_de_parafraseo/index.html",
+    "title": "Recursos Académicos en Línea y Técnicas de Parafraseo",
+    "section": "",
+    "text": "Esta presentación explora herramientas en línea para la investigación académica, como Google Scholar, PubMed y RENATI, con ejemplos prácticos de búsqueda. Además, aborda técnicas de parafraseo, incluyendo sustitución de sinónimos y cambios estructurales, ilustradas con casos concretos para evitar el plagio. Dirigida a estudiantes y profesionales, ofrece una guía clara que combina teoría y práctica para mejorar la búsqueda de recursos y la redacción académica, aplicable en diversas áreas del conocimiento."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_05_tecnicas_de_parafraseo/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_05_tecnicas_de_parafraseo/index.html#materiales",
+    "title": "Recursos Académicos en Línea y Técnicas de Parafraseo",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nMateriales por publicar.\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/index.html",
+    "title": "Metodología de la Investigación — 2025-1 · CAU-UNSCH",
+    "section": "",
+    "text": "Docente: Edison Achalma · Institución: CAU-UNSCH · Periodo: enero–febrero 2025 · Sesiones: 9\nCada sesión incluye sus diapositivas y materiales (práctica, tareas y recursos) descargables."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/index.html#sesiones",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/index.html#sesiones",
+    "title": "Metodología de la Investigación — 2025-1 · CAU-UNSCH",
+    "section": "Sesiones",
+    "text": "Sesiones\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFundamentos de Redacción Académica\n\n\n\nMonografía\n\nInforme\n\nEstructura\n\n\n\n\n\n\n7 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDiseño de Portadas y Formato APA\n\n\n\nEstructura\n\nWord\n\nFormato\n\n\n\n\n\n\n8 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCitas y Referencias en APA\n\n\n\nAPA\n\nCitas\n\nReferencias\n\n\n\n\n\n\n14 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPráctica APA\n\n\n\nAPA\n\nPráctica\n\n\n\n\n\n\n15 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos Académicos en Línea y Técnicas de Parafraseo\n\n\n\nParafraseo\n\nRedacción\n\n\n\n\n\n\n22 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCitas APA y Formato de Documentos Académicos\n\n\n\nFormato\n\nEstilo\n\n\n\n\n\n\n29 ene 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEstilo Vancouver: Citas y Referencias Académicas\n\n\n\nVancouver\n\nCitas\n\n\n\n\n\n\n5 feb 2025\n\n\n\n\n\n\n\n\n\n\n\n\nBúsqueda en Internet y Formato APA, Tablas y Figuras\n\n\n\nTablas\n\nFiguras\n\nNotas\n\n\n\n\n\n\n12 feb 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEstructura y Citas APA\n\n\n\nAPA\n\nEstructura\n\nPráctica\n\n\n\n\n\n\n19 feb 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_08_tablas_figuras_y_notas/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_08_tablas_figuras_y_notas/index.html",
+    "title": "Búsqueda en Internet y Formato APA, Tablas y Figuras",
+    "section": "",
+    "text": "Esta presentación explora los niveles de internet (superficial, profunda y oscura) y estrategias de búsqueda avanzada con operadores como comillas, AND, OR y exclusion (-), incluyendo ejemplos prácticos. También detalla el estilo APA 7ª edición para tablas y figuras, explicando su estructura, numeración, títulos y citas de fuentes, con casos de elaboración propia y adaptados. Orientada a estudiantes y académicos, ofrece herramientas para localizar información confiable en línea y presentarla visualmente según normas académicas."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_08_tablas_figuras_y_notas/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_08_tablas_figuras_y_notas/index.html#materiales",
+    "title": "Búsqueda en Internet y Formato APA, Tablas y Figuras",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nsesion 08 practica.odt\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_02_estructura_en_word/index.html",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_02_estructura_en_word/index.html",
+    "title": "Diseño de Portadas y Formato APA",
+    "section": "",
+    "text": "Esta presentación aborda la creación de portadas para informes y monografías, siguiendo estándares académicos, y el uso de Microsoft Word para aplicar el formato APA a títulos y subtítulos. Incluye ejemplos prácticos de portadas estructuradas y documentos con encabezados ajustados en medidas y estilos según las normas APA. Dirigida a estudiantes y académicos, proporciona una base clara para organizar trabajos escritos, combinando diseño visual y normas técnicas para mejorar la presentación y legibilidad de textos académicos."
+  },
+  {
+    "objectID": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_02_estructura_en_word/index.html#materiales",
+    "href": "cursos/metodologia-de-la-investigacion/2025-1-cau-unsch/session_02_estructura_en_word/index.html#materiales",
+    "title": "Diseño de Portadas y Formato APA",
+    "section": "Materiales",
+    "text": "Materiales\n\nDescargas\nPráctica\n\nsesion 02 plantilla de caratula.dotx\nsesion 02 portada informe.odt\nsesion 02 portada informe.pdf\nsesion 02 portada monografia.odt\nsesion 02 portada monografia.pdf\nsesion 02 titulos y subitulos.odt\nsesion 02 titulos y subitulos.pdf\n\n\n\nEnlaces"
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html",
+    "href": "cursos/macroeconomia-dinamica/index.html",
+    "title": "Macroeconomía Dinámica",
+    "section": "",
+    "text": "Modelos dinámicos, expectativas racionales y equilibrio general dinámico."
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#descripción",
+    "href": "cursos/macroeconomia-dinamica/index.html#descripción",
+    "title": "Macroeconomía Dinámica",
+    "section": "",
+    "text": "Modelos dinámicos, expectativas racionales y equilibrio general dinámico."
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#ficha-del-curso",
+    "href": "cursos/macroeconomia-dinamica/index.html#ficha-del-curso",
+    "title": "Macroeconomía Dinámica",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n6\n\n\nPrerrequisitos\nCrecimiento Económico"
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#objetivos",
+    "href": "cursos/macroeconomia-dinamica/index.html#objetivos",
+    "title": "Macroeconomía Dinámica",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#contenidos-sílabo",
+    "href": "cursos/macroeconomia-dinamica/index.html#contenidos-sílabo",
+    "title": "Macroeconomía Dinámica",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#bibliografía",
+    "href": "cursos/macroeconomia-dinamica/index.html#bibliografía",
+    "title": "Macroeconomía Dinámica",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/macroeconomia-dinamica/index.html#ediciones",
+    "href": "cursos/macroeconomia-dinamica/index.html#ediciones",
+    "title": "Macroeconomía Dinámica",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html",
+    "href": "cursos/crecimiento-economico/index.html",
+    "title": "Crecimiento Económico",
+    "section": "",
+    "text": "Modelos de crecimiento de largo plazo: capital, tecnología y convergencia."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#descripción",
+    "href": "cursos/crecimiento-economico/index.html#descripción",
+    "title": "Crecimiento Económico",
+    "section": "",
+    "text": "Modelos de crecimiento de largo plazo: capital, tecnología y convergencia."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#ficha-del-curso",
+    "href": "cursos/crecimiento-economico/index.html#ficha-del-curso",
+    "title": "Crecimiento Económico",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n5\n\n\nPrerrequisitos\nMatemáticas III, Macroeconomía II"
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#objetivos",
+    "href": "cursos/crecimiento-economico/index.html#objetivos",
+    "title": "Crecimiento Económico",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#contenidos-sílabo",
+    "href": "cursos/crecimiento-economico/index.html#contenidos-sílabo",
+    "title": "Crecimiento Económico",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#bibliografía",
+    "href": "cursos/crecimiento-economico/index.html#bibliografía",
+    "title": "Crecimiento Económico",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/crecimiento-economico/index.html#ediciones",
+    "href": "cursos/crecimiento-economico/index.html#ediciones",
+    "title": "Crecimiento Económico",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html",
+    "href": "cursos/microeconomia/index.html",
+    "title": "Microeconomía",
+    "section": "",
+    "text": "Teoría del consumidor y del productor, equilibrio parcial y general. Niveles I y II como ediciones sucesivas."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#descripción",
+    "href": "cursos/microeconomia/index.html#descripción",
+    "title": "Microeconomía",
+    "section": "",
+    "text": "Teoría del consumidor y del productor, equilibrio parcial y general. Niveles I y II como ediciones sucesivas."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#ficha-del-curso",
+    "href": "cursos/microeconomia/index.html#ficha-del-curso",
+    "title": "Microeconomía",
+    "section": "Ficha del curso",
+    "text": "Ficha del curso\n\n\n\n\n\n\n\nCampo\nDetalle\n\n\n\n\nÁrea\nEconomía · Pregrado\n\n\nSemestre sugerido\n2, 3 (niveles I–II)\n\n\nPrerrequisitos\nIntroducción a la Economía y Matemáticas I (I) · Matemáticas II y Microeconomía I (II)"
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#objetivos",
+    "href": "cursos/microeconomia/index.html#objetivos",
+    "title": "Microeconomía",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#contenidos-sílabo",
+    "href": "cursos/microeconomia/index.html#contenidos-sílabo",
+    "title": "Microeconomía",
+    "section": "Contenidos / Sílabo",
+    "text": "Contenidos / Sílabo\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#bibliografía",
+    "href": "cursos/microeconomia/index.html#bibliografía",
+    "title": "Microeconomía",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nPor completar."
+  },
+  {
+    "objectID": "cursos/microeconomia/index.html#ediciones",
+    "href": "cursos/microeconomia/index.html#ediciones",
+    "title": "Microeconomía",
+    "section": "Ediciones",
+    "text": "Ediciones\nAún no hay ediciones publicadas."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html",
+    "href": "docs/course-redesign-plan.html",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Estado: ✅ IMPLEMENTADO (2026-07-09). El análisis y el plan siguen abajo como registro; la sección “Estado de implementación” (final del documento) resume lo ejecutado y las decisiones tomadas.\nAutor: Claude Code · Fecha: 2026-07-09 · Alcance: solo website-achalma.\n\n\n\n\nEl sitio organiza el material docente por tipo de recurso (talk, teching) en lugar de por curso. Esto no escala: una “charla” y una “unidad” son ambas sesiones de un curso, y la separación obliga a duplicar navegación, listings y estilos. Se propone unificar ambas en una sección única Cursos con la jerarquía de un OpenCourseWare:\nÁrea → Curso (identidad estable) → Edición (una por dictado) → Sesión / Material\nEl rediseño reutiliza íntegramente el design system “Quiet Laboratory” (tokens --lab-*, 05-pages/, listings, microinteracciones), no rompe URLs (vía aliases de Quarto + _redirects de Netlify), y convierte metadatos hoy implícitos (institución, semestre, semana, tipo de material) en campos consultables por los listings.\nDecisión pendiente de tu aprobación antes de implementar: el nombre de la ruta raíz (cursos/ recomendado), y si se conserva talk/ como redirección permanente. Ver §7 y §10.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSección\nRuta\nContenido real hoy\nPatrón de item\n\n\n\n\nTalks\ntalk/\n9 sesiones de un taller de metodología (APA/Vancouver) en CAU-UNSCH, ene–feb 2025\ntalk/&lt;YYYY-MM-DD-slug&gt;/index.qmd\n\n\nTeaching\nteching/\nCurso Economía Preuniversitaria (14 unidades, 2014) + Matemática Preuniversitaria (carpeta vacía, solo _metadata.yml + featured.jpg)\nteching/&lt;curso&gt;/&lt;YYYY-MM-DD-slug&gt;/index.qmd\n\n\nBlog\nblog/\nEntradas APA trimestrales\nblog/posts/&lt;slug&gt;/index.qmd\n\n\nPublication\npublication/\nPublicaciones formales\n—\n\n\n\n\n\n\n\ntalk/ es item de primer nivel del navbar (Talks).\nteching/ está escondido bajo el menú “More” como Cursos (href: teching/index.qmd), mezclado con enlaces a los ~11 blogs satélite.\nIncoherencia: lo que el usuario llama “Cursos” ya apunta a teching, pero talk (que también es material de curso) vive aparte y más visible.\n\n\n\n\n\ntalk/index.qmd: contents: \"**/index.qmd\" (recursivo, recoge cualquier sesión que se cuelgue debajo).\nteching/index.qmd: contents: \"economia-preuniversitaria/*/index.qmd\" — ruta de un solo curso escrita a mano. matematicas-preuniversitaria no aparece en el listado: cada curso nuevo exige editar este archivo.\nAmbos comparten assets/css/pages/listing.css (cabecera editorial).\n\n\n\n\n\nSCSS ITCSS en assets/scss/ con contrato de tokens $lab-* → CSS vars --lab-* publicadas en 02-base/_root.scss. Vars disponibles: --lab-bg, --lab-bg-surface, --lab-bg-elevated, --lab-ink, --lab-ink-2, --lab-muted, --lab-accent, --lab-accent-2, --lab-border, --lab-border-strong, --lab-grid-line, --lab-glow, --lab-green, --lab-green-bg, --lab-code-bg, --lab-shadow-sm, --lab-shadow-md.\nEstilos por página en assets/scss/05-pages/*.scss, compilados a assets/css/pages/*.css por scripts/build-page-css.sh (hook project.pre-render). Regla del build: solo compila archivos SIN guion bajo inicial; los _*.scss son stubs inactivos.\nYa existe assets/scss/05-pages/_courses.scss (stub inactivo, sin reglas): el diseño de esta sección ya estaba previsto. Activarlo = renombrar a courses.scss + enlazarlo desde la página.\nJS modular en assets/js/ (navbar, cursor, hero, scroll-effects) inyectado en todas las páginas por assets/interactions.html. No requiere cambios.\n\n\n\n\n\ntalk/_metadata.yml (freeze, title-block-banner, partial de botones) está hardlinkeado con publication/_metadata.yml (2 enlaces, mismo inode).\nteching/economia-preuniversitaria/_metadata.yml, teching/matematicas-preuniversitaria/_metadata.yml y blog/posts/_metadata.yml comparten inode (3 enlaces): el bloque APA completo (autor, afiliación, disclosures) es idéntico.\nCada sesión declara su institución/semestre de forma narrativa en subtitle/categories (p. ej. \"Tercera Clase en CAU - UNSCH\"), no como campos estructurados → no filtrable ni agrupable por los listings.\n\n\n\n\n\n\n\n\n\n\n\n\n\nInode compartido\nArchivos\nNº enlaces\nAlcance\n\n\n\n\n_contenido-inicio.qmd\nblog/, teching/ … y el resto de la familia de blogs pub_*\n13\nCross-repo\n\n\n_contenido-final.qmd\nídem\n13\nCross-repo\n\n\n_metadata.yml (APA)\nblog/posts/, teching/economia-preuniversitaria/, teching/matematicas-preuniversitaria/\n3\nIntra-repo\n\n\n_metadata.yml (talk/pub)\ntalk/, publication/\n2\nIntra-repo\n\n\n\n\nRiesgo real: los _contenido-*.qmd (13 enlaces) están compartidos con otros proyectos del directorio ~/Documents (la familia Quarto). Editarlos o git mv-los modifica el mismo inode que ven pub_axiomata, pub_optimums, etc. La migración no debe tocar esos inodes; ver §8.\n\n\n\n\n\n42 artefactos LaTeX commiteados dentro de talk/*/ (.aux, .log, .fls, .fdb_latexmk, .nav, .snm, .toc, .synctex.gz). No deberían versionarse; inflan el repo (p. ej. sesion 03.pdf 3.3 MB + su .log 95 KB).\nURLs rotas en teching/economia-preuniversitaria/_contenido_economia-preuniversitaria.qmd: los enlaces apuntan a …/economia-preuniversitaria/… sin el prefijo /teching/ → 404 en producción.\nmatematicas-preuniversitaria es un curso fantasma (sin sesiones) que ya ensucia el árbol.\nNo existe _redirects ni netlify.toml: hoy no hay ninguna gestión de redirecciones (todo se sirve tal cual desde _site/).\n\n\n\n\n\n\n\nEje de organización equivocado: por tipo de recurso, no por curso. Con 80 cursos futuros el árbol talk/ + teching/&lt;curso&gt;/ colapsa.\nConcepto de “curso” ausente: no hay una entidad curso estable con descripción/objetivos/sílabo separada de sus ediciones (dictados).\nSin dimensión “edición”: no se puede volver a dictar Python 2026-I sin mezclar con 2025-II.\nListings frágiles: teching lista un curso a mano; añadir cursos rompe la navegación automática.\nMetadatos pobres: institución, semestre, semana, tipo de material viven en texto libre → sin filtros, sin agrupación, sin navegación por facetas.\ntalk vs teching es una distinción sin diferencia: ambas son sesiones docentes.\nDeuda: artefactos LaTeX versionados, URLs rotas, curso vacío, hardlinks cross-repo peligrosos.\n\n\n\n\n\n\n\nÁrea            (agrupación temática: Economía, Matemática, Investigación, Ciencia de Datos, Gestión)\n  └── Curso     (identidad ESTABLE y única: descripción, objetivos, sílabo, bibliografía)\n        └── Edición   (un dictado concreto: institución + periodo; p. ej. 2026-I · UNSCH)\n              └── Sesión / Material  (clase, diapositiva, PDF, ejercicio, examen, solución…)\n\nEl curso nunca cambia. Lo que cambia son las ediciones. (Modelo OCW/Canvas.)\nÁrea no es una carpeta física obligatoria: se modela como metadato (area:) para poder navegar por facetas sin encajonar la jerarquía de archivos.\n\n\n\n\ncursos/\n├── index.qmd                      # Landing: listing de cursos (auto, por metadatos)\n├── _metadata.yml                  # Config común de la sección (freeze, partial botones…)\n│\n├── economia-preuniversitaria/\n│   ├── index.qmd                  # Ficha del CURSO (descripción, objetivos, sílabo, ediciones)\n│   ├── curso.yml                  # Metadatos estables del curso (area, nivel, etiquetas…)\n│   └── 2014-i/                    # EDICIÓN\n│       ├── index.qmd              # Portada de la edición (docente, institución, calendario)\n│       └── sesiones/\n│           ├── 01-conceptos-basicos-de-economia/index.qmd\n│           ├── 02-las-necesidades-y-bienes/index.qmd\n│           └── … (14 sesiones)\n│\n└── metodologia-de-la-investigacion/\n    ├── index.qmd\n    ├── curso.yml\n    └── 2025-i-cau-unsch/          # ← las 9 \"talks\" actuales pasan aquí como una edición\n        ├── index.qmd\n        └── sesiones/\n            ├── 01-monografia-e-informe/index.qmd\n            └── … (09 sesiones)\nMateriales dentro de cada sesión (subcarpetas por tipo, opcionales): slides/, pdf/, ejercicios/, laboratorios/, soluciones/, examenes/, recursos/, src/ (LaTeX/notebooks). Hoy el PDF vive junto al index.qmd; se mantiene esa convención y se añaden subcarpetas solo cuando el material lo pida.\n\nNota de altura: no se crean carpetas físicas de “Área” ni de “semana”. Ambas son metadatos (§3.4). Esto mantiene el árbol poco profundo y evita reorganizaciones futuras.\n\n\n\n\n/cursos/                                             → índice de cursos\n/cursos/&lt;curso&gt;/                                     → ficha del curso\n/cursos/&lt;curso&gt;/&lt;edicion&gt;/                           → portada de la edición\n/cursos/&lt;curso&gt;/&lt;edicion&gt;/sesiones/&lt;NN-slug&gt;/        → sesión concreta\n\n\n\ncurso.yml (nivel curso, estable) — nuevo archivo por curso:\ncourse: \"Economía Preuniversitaria\"\ncourse-slug: economia-preuniversitaria\narea: Economía # faceta de navegación\nlevel: Preuniversitario\nsummary: \"Fundamentos de la ciencia económica para ingreso universitario.\"\ntags: [economia, preuniversitario]\nPortada de edición (&lt;edicion&gt;/index.qmd):\ntitle: \"Economía Preuniversitaria — 2014-I\"\nedition: 2014-I\ninstitution: Academia / UNSCH\nprofessor: Edison Achalma\nperiod: { start: 2014-01-01, end: 2014-03-29 }\nweeks: 14\nSesión (sesiones/&lt;NN-slug&gt;/index.qmd) — se añaden campos estructurados a lo que ya existe:\ntitle: \"Conceptos básicos de economía\"\ncourse: economia-preuniversitaria # enlaza a la ficha del curso\nedition: 2014-I\narea: Economía\ninstitution: UNSCH\nweek: 1\nsession: 1\ntype: clase # clase | diapositiva | practica | examen | solucion\ntags: [escasez, costo-de-oportunidad]\n# recursos (todos opcionales, alimentan botones/descargas):\npdf: index.pdf\nslides: slides/sesion-01.pdf\nsource: src/sesion-01.tex\ngithub: https://github.com/…\nvideo: ~\nduration: 90\ndate: 2014-01-01\nEstos campos son los que consumen los listings (§3.5) para generar navegación, filtros y facetas sin escribir índices a mano.\n\n\n\n\ncursos/index.qmd — listing de fichas de curso: contents: \"*/index.qmd\" (una tarjeta por curso), con categories alimentadas por area. Añadir un curso = crear su carpeta; el índice se actualiza solo.\ncursos/&lt;curso&gt;/index.qmd — la ficha del curso incrusta un listing de sus ediciones: contents: \"*/index.qmd\".\ncursos/&lt;curso&gt;/&lt;edicion&gt;/index.qmd — listing de sesiones: contents: \"sesiones/*/index.qmd\", sort: \"session\", con fields mostrando week, type, date, botones de descarga.\nNavegación por facetas (Área / Institución / Año / Semestre / Etiqueta): se implementa con filter-ui/categories de Quarto sobre los campos estructurados, más (opcional, fase 3) páginas-índice generadas por listing con contents filtrado por metadato. Todo se apoya en el buscador nativo de Quarto (search.json), ya activo.\n\n\n\n\n\n\nSe reutiliza el design system existente; nada de lenguaje visual nuevo:\n\nActivar el stub ya presente assets/scss/05-pages/_courses.scss → renombrar a courses.scss y enlazarlo (header-includes + resources) desde las páginas de curso, igual que hoy hace listing.css.\nTodas las reglas nuevas consumen solo var(--lab-*) (tabla §1.4) → soporte automático de modo claro/oscuro sin duplicar.\nComponentes reutilizados sin cambios: cabecera editorial (listing.scss), tarjetas quarto-post/card del tema, botones (04-components/_buttons.scss), microinteracciones (.lab-reveal, glow del cursor), navbar, footer, TOC, breakpoints y grid de Bootstrap.\nNovedades de UI que aporta courses.scss (todas sobre tokens existentes): tarjeta de curso, cabecera de ficha de curso, tira de “ediciones”, tabla de sesiones por semana, y chips de faceta. Sin nuevas fuentes, colores ni sombras fuera del contrato de tokens.\n\nProhibido: hex directos, $spc-* en módulos compartidos, editar a mano assets/css/pages/*.css (son generados por build-page-css.sh).\n\n\n\n\n\n\n\n\n\n\n\nÁrea\nImpacto\n\n\n\n\n_quarto.yml navbar\nTalks sale de primer nivel; Cursos sube a primer nivel apuntando a cursos/index.qmd. Se retira Cursos del menú “More”.\n\n\n_quarto.yml resources\ntalk/sidebar.jpg / teching/sidebar.jpg → cursos/….\n\n\nListings\nSe reemplazan 2 index frágiles por index auto-escalables.\n\n\nSCSS\nSe activa _courses.scss; listing.scss se sigue compartiendo. Sin duplicación.\n\n\nContenido\n9 talks + 14 unidades se mueven (no se reescriben) a la nueva jerarquía; se enriquecen metadatos.\n\n\nURLs\nCambian todas las de talk/ y teching/; mitigado con aliases + _redirects (§7).\n\n\nHardlinks\nSe preservan / sustituyen con cuidado (§8).\n\n\nRSS / SEO / sitemap\nfeed: true se mantiene en los nuevos listings; sitemap se regenera; canonical vía redirecciones 301.\n\n\n\n\n\n\n\nCada fase termina con quarto render + revisión visual de _site/ (no hay test suite) y bash -n en cualquier script tocado. Trabajar en rama aparte.\nFase 0 — Preparación y red de seguridad\n\nCrear rama feat/cursos-arquitectura.\nInventario de URLs actuales (extraer de _site/sitemap.xml) → base para el mapa de redirecciones.\nDocumentar y “romper con intención” los hardlinks intra-repo que se moverán (§8), sin tocar los cross-repo.\n\nFase 1 — Andamiaje de la sección cursos/\n\nCrear cursos/index.qmd, cursos/_metadata.yml, _courses.scss activo.\nAún sin mover contenido: validar que el listing vacío rinde y estiliza bien.\n\nFase 2 — Migrar Economía Preuniversitaria (piloto, curso con contenido)\n\ngit mv teching/economia-preuniversitaria → cursos/economia-preuniversitaria/2014-i/sesiones/… con renombrado NN-slug.\nCrear index.qmd de curso + curso.yml + index.qmd de edición.\nEnriquecer metadatos de sesión (§3.4). Corregir las URLs rotas del _contenido (bug §1.7).\nAñadir aliases: a cada sesión con su URL antigua.\n\nFase 3 — Migrar el taller de metodología (las 9 talk/)\n\ngit mv talk/* → cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/….\nExcluir del git mv los 42 artefactos LaTeX (borrarlos y añadir patrones a .gitignore); conservar solo .tex, .pdf e images/.\nAñadir aliases: con las URLs talk/ antiguas.\n\nFase 4 — Navegación, redirecciones y facetas\n\nActualizar navbar/resources en _quarto.yml.\nGenerar _redirects (Netlify) para las rutas de sección (/talk/* /cursos/…).\nAñadir navegación por facetas (Área/Institución/Año) con filter-ui.\nEliminar el curso fantasma matematicas-preuniversitaria (o convertirlo en ficha de curso sin ediciones si se planea dictarlo).\n\nFase 5 — Verificación y cierre\n\nrm -rf _site _freeze && quarto render; revisar todas las páginas nuevas, las redirecciones (old→new devuelve 301/alias), RSS y sitemap.\nActualizar CLAUDE.md (sección “Content sections”) y assets/scss/README.md.\nPR siguiendo docs/guia-flujo-pr.md.\n\n\n\n\n\nDoble red, porque son mecanismos complementarios:\n\naliases: de Quarto (por página, preferente): en el frontmatter de cada sesión migrada se listan sus URLs antiguas. Quarto genera páginas-redirección HTML con &lt;meta refresh&gt; + canonical hacia la nueva URL. Es autocontenido en el repo y sobrevive a cambios de hosting.\naliases:\n  - /talk/2025-01-14-sesion-03-citas-y-referencias/\n  - /teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/\n_redirects de Netlify (por patrón, para lo masivo y los 301 “de verdad”):\n/talk/*      /cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/:splat   301\n/teching/*   /cursos/:splat                                                             301\n(Los patrones se afinan tras el inventario de la Fase 0; se añade a resources de _quarto.yml para que se copie a _site/.)\n\nAdemás: se conserva feed: true en los listings con RSS, image/description por sesión para Open Graph, y se regenera sitemap.xml en el render final.\n\n\n\n\nPrincipio: nunca romper contenido compartido con otros proyectos.\n\n_contenido-inicio.qmd / _contenido-final.qmd (13 enlaces, cross-repo): no se referencian desde talk/ ni desde los items a migrar; no se tocan. Si alguna página nueva necesitara ese include, se copia el contenido a un archivo propio (romper el hardlink deliberadamente con cp --remove-destination) antes de editar, para no alterar el inode que ven los blogs pub_*.\n_metadata.yml APA (3 enlaces: blog/posts, economia, matematicas): al mover economia a cursos/…, el git mv conserva el contenido pero el nuevo archivo debe ser físico e independiente. Procedimiento: copiar con cp --remove-destination a la nueva ubicación (rompe el hardlink), verificar con stat/find -samefile que blog/posts mantiene su inode intacto, y recién entonces borrar el original. Igual criterio para talk↔︎publication.\nVerificación post-migración: find . -type f -links +1 -printf '%n %i %p\\n' no debe mostrar enlaces cruzados inesperados entre la nueva sección cursos/ y blog//publication/ ni con archivos fuera de website-achalma.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiesgo\nProb.\nImpacto\nMitigación\n\n\n\n\nRomper inode _contenido-*.qmd compartido con pub_*\nMedia\nAlto (afecta otros sitios)\nNo tocarlos; cp --remove-destination si hay que editar (§8)\n\n\nPérdida de posicionamiento por cambio de URL\nMedia\nMedio\naliases + _redirects 301 (§7)\n\n\ngit mv masivo pierde historia o rompe rutas relativas a imágenes/PDF\nMedia\nMedio\nMover por fases, un curso a la vez; revisar rutas image:/src tras cada mv\n\n\nListings recursivos capturan index.qmd no deseados (fichas de curso/edición)\nMedia\nBajo\ncontents con globs precisos por nivel (sesiones/*/index.qmd), no **\n\n\nfreeze: true sirve HTML cacheado con rutas viejas\nAlta\nBajo\nrm -rf _freeze antes del render final (Fase 5)\n\n\nArtefactos LaTeX arrastrados en el git mv\nAlta\nBajo\nExcluirlos y .gitignore (Fase 3)\n\n\nMetadatos incompletos en sesiones antiguas rompen filtros\nMedia\nBajo\nValores por defecto en _metadata.yml de la edición; enriquecer incrementalmente\n\n\n\n\n\n\n\n\nNombre de la ruta raíz: cursos/ (recomendado, coherente con el idioma del sitio) vs. courses/ vs. teaching/.\nDestino de las 9 talk/: ¿curso “Metodología de la investigación”, edición 2025-I CAU-UNSCH? (es lo que su contenido indica).\ntalk/ de primer nivel en el navbar: ¿se elimina y Cursos toma su lugar, o se conserva Talks como acceso directo filtrado?\nCurso fantasma matematicas-preuniversitaria: ¿se elimina o se deja como ficha de curso sin ediciones?\nLimpieza de artefactos LaTeX (42 archivos) y corrección de las URLs rotas del _contenido de economía: ¿se incluyen en esta migración?\n\n\nCon estas cinco respuestas se puede ejecutar la Fase 0 en firme. Hasta entonces, no se implementa nada.\n\n\n\n\n\n\n\n\nRuta raíz: cursos/.\nTalks eliminado del navbar de primer nivel; Cursos ocupa su lugar (href: cursos/index.qmd). El antiguo Cursos → teching/ se quitó del menú “More”.\nLas 9 talk/ son la edición 2025-I · CAU-UNSCH del curso Metodología de la Investigación.\nLimpiezas aplicadas: borrado de 42 artefactos LaTeX, corrección de URLs rotas de economía, eliminación del curso fantasma matematicas-preuniversitaria.\nNetlify: no se tocó nada (sin _redirects ni netlify.toml). La preservación de URLs se hace solo con aliases: de Quarto (páginas- redirección generadas dentro de _site/, íntegramente en el repo).\nScaffolding de cursos futuros: se crearon 19 fichas de curso listas para usar (17 vacías + 2 con contenido migrado), con plantillas en cursos/_plantillas/ y guía en cursos/README.md, para migrar manualmente más adelante sin rehacer la arquitectura.\n\n\n\n\n\nSección cursos/: index.qmd (índice con facetas por Área), _metadata.yml (config ligera de sección), README.md, _plantillas/{curso,edicion,sesion}.qmd.\n19 fichas de curso en 5 áreas (Economía 5, Matemática 4, Investigación 3, Ciencia de Datos 4, Gestión 3).\nMigración con git mv (historia preservada):\n\nEconomía Preuniversitaria → cursos/economia-preuniversitaria/2014-i/sesiones/01–14/ (portada de edición + sesiones/_metadata.yml APA independiente + footer de “Publicaciones similares” recreado con URLs corregidas).\nMetodología → cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/01–09/ (42 artefactos LaTeX purgados; PDFs/.tex/ODT/imágenes conservados).\n\naliases: en las 23 sesiones con su URL antigua (/teching/…, /talk/…).\nDiseño: assets/scss/05-pages/_courses.scss activado → courses.scss (tarjetas, chips de faceta, tabla de sesiones), compilado a assets/css/pages/courses.css; cargado en toda la sección vía cursos/_metadata.yml. Cero CSS duplicado; solo var(--lab-*).\n_quarto.yml: navbar + resources actualizados.\nabout/index.qmd: widget “Cursos” y enlaces repuntados a /cursos.\n.gitignore: añadidos *.nav, *.snm, *.vrb (Beamer).\nDocs: CLAUDE.md (secciones de contenido) y comentarios SCSS actualizados.\n\n\n\n\nEl comodín * de contents: en los listings de Quarto coincide a través de / (es recursivo). Por eso los listados padre (cursos/index.qmd y las fichas de curso) llevan exclusiones !*/*/index.qmd / !*/sesiones/*/index.qmd para no arrastrar ediciones ni sesiones. Documentado en cursos/README.md y CLAUDE.md.\n\n\n\nquarto render cursos --to html → 45 páginas sin errores ni warnings. Índice con 19 cursos y facetas correctas por Área; fichas con 1 edición; portada de edición con tabla de sesiones; alias /teching/… y /talk/… generan redirección JS; PDFs y materiales copiados a _site/. (Los formatos apaquarto-pdf/docx siguen declarados solo a nivel de sesiones/, no en las páginas de índice.)\n\n\n\n\nRellenar objetivos/sílabo/bibliografía de las fichas (marcados “Por completar”).\nAñadir ediciones/sesiones a los 17 cursos vacíos copiando las plantillas.\nRevisar el render completo del sitio (quarto render) — que sí dispara la compilación PDF apaquarto de las sesiones de economía (requiere TinyTeX).\nConfirmar el despliegue en Netlify (sin cambios de configuración por parte de Claude)."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#resumen-ejecutivo",
+    "href": "docs/course-redesign-plan.html#resumen-ejecutivo",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "El sitio organiza el material docente por tipo de recurso (talk, teching) en lugar de por curso. Esto no escala: una “charla” y una “unidad” son ambas sesiones de un curso, y la separación obliga a duplicar navegación, listings y estilos. Se propone unificar ambas en una sección única Cursos con la jerarquía de un OpenCourseWare:\nÁrea → Curso (identidad estable) → Edición (una por dictado) → Sesión / Material\nEl rediseño reutiliza íntegramente el design system “Quiet Laboratory” (tokens --lab-*, 05-pages/, listings, microinteracciones), no rompe URLs (vía aliases de Quarto + _redirects de Netlify), y convierte metadatos hoy implícitos (institución, semestre, semana, tipo de material) en campos consultables por los listings.\nDecisión pendiente de tu aprobación antes de implementar: el nombre de la ruta raíz (cursos/ recomendado), y si se conserva talk/ como redirección permanente. Ver §7 y §10."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#arquitectura-actual",
+    "href": "docs/course-redesign-plan.html#arquitectura-actual",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Sección\nRuta\nContenido real hoy\nPatrón de item\n\n\n\n\nTalks\ntalk/\n9 sesiones de un taller de metodología (APA/Vancouver) en CAU-UNSCH, ene–feb 2025\ntalk/&lt;YYYY-MM-DD-slug&gt;/index.qmd\n\n\nTeaching\nteching/\nCurso Economía Preuniversitaria (14 unidades, 2014) + Matemática Preuniversitaria (carpeta vacía, solo _metadata.yml + featured.jpg)\nteching/&lt;curso&gt;/&lt;YYYY-MM-DD-slug&gt;/index.qmd\n\n\nBlog\nblog/\nEntradas APA trimestrales\nblog/posts/&lt;slug&gt;/index.qmd\n\n\nPublication\npublication/\nPublicaciones formales\n—\n\n\n\n\n\n\n\ntalk/ es item de primer nivel del navbar (Talks).\nteching/ está escondido bajo el menú “More” como Cursos (href: teching/index.qmd), mezclado con enlaces a los ~11 blogs satélite.\nIncoherencia: lo que el usuario llama “Cursos” ya apunta a teching, pero talk (que también es material de curso) vive aparte y más visible.\n\n\n\n\n\ntalk/index.qmd: contents: \"**/index.qmd\" (recursivo, recoge cualquier sesión que se cuelgue debajo).\nteching/index.qmd: contents: \"economia-preuniversitaria/*/index.qmd\" — ruta de un solo curso escrita a mano. matematicas-preuniversitaria no aparece en el listado: cada curso nuevo exige editar este archivo.\nAmbos comparten assets/css/pages/listing.css (cabecera editorial).\n\n\n\n\n\nSCSS ITCSS en assets/scss/ con contrato de tokens $lab-* → CSS vars --lab-* publicadas en 02-base/_root.scss. Vars disponibles: --lab-bg, --lab-bg-surface, --lab-bg-elevated, --lab-ink, --lab-ink-2, --lab-muted, --lab-accent, --lab-accent-2, --lab-border, --lab-border-strong, --lab-grid-line, --lab-glow, --lab-green, --lab-green-bg, --lab-code-bg, --lab-shadow-sm, --lab-shadow-md.\nEstilos por página en assets/scss/05-pages/*.scss, compilados a assets/css/pages/*.css por scripts/build-page-css.sh (hook project.pre-render). Regla del build: solo compila archivos SIN guion bajo inicial; los _*.scss son stubs inactivos.\nYa existe assets/scss/05-pages/_courses.scss (stub inactivo, sin reglas): el diseño de esta sección ya estaba previsto. Activarlo = renombrar a courses.scss + enlazarlo desde la página.\nJS modular en assets/js/ (navbar, cursor, hero, scroll-effects) inyectado en todas las páginas por assets/interactions.html. No requiere cambios.\n\n\n\n\n\ntalk/_metadata.yml (freeze, title-block-banner, partial de botones) está hardlinkeado con publication/_metadata.yml (2 enlaces, mismo inode).\nteching/economia-preuniversitaria/_metadata.yml, teching/matematicas-preuniversitaria/_metadata.yml y blog/posts/_metadata.yml comparten inode (3 enlaces): el bloque APA completo (autor, afiliación, disclosures) es idéntico.\nCada sesión declara su institución/semestre de forma narrativa en subtitle/categories (p. ej. \"Tercera Clase en CAU - UNSCH\"), no como campos estructurados → no filtrable ni agrupable por los listings.\n\n\n\n\n\n\n\n\n\n\n\n\n\nInode compartido\nArchivos\nNº enlaces\nAlcance\n\n\n\n\n_contenido-inicio.qmd\nblog/, teching/ … y el resto de la familia de blogs pub_*\n13\nCross-repo\n\n\n_contenido-final.qmd\nídem\n13\nCross-repo\n\n\n_metadata.yml (APA)\nblog/posts/, teching/economia-preuniversitaria/, teching/matematicas-preuniversitaria/\n3\nIntra-repo\n\n\n_metadata.yml (talk/pub)\ntalk/, publication/\n2\nIntra-repo\n\n\n\n\nRiesgo real: los _contenido-*.qmd (13 enlaces) están compartidos con otros proyectos del directorio ~/Documents (la familia Quarto). Editarlos o git mv-los modifica el mismo inode que ven pub_axiomata, pub_optimums, etc. La migración no debe tocar esos inodes; ver §8.\n\n\n\n\n\n42 artefactos LaTeX commiteados dentro de talk/*/ (.aux, .log, .fls, .fdb_latexmk, .nav, .snm, .toc, .synctex.gz). No deberían versionarse; inflan el repo (p. ej. sesion 03.pdf 3.3 MB + su .log 95 KB).\nURLs rotas en teching/economia-preuniversitaria/_contenido_economia-preuniversitaria.qmd: los enlaces apuntan a …/economia-preuniversitaria/… sin el prefijo /teching/ → 404 en producción.\nmatematicas-preuniversitaria es un curso fantasma (sin sesiones) que ya ensucia el árbol.\nNo existe _redirects ni netlify.toml: hoy no hay ninguna gestión de redirecciones (todo se sirve tal cual desde _site/)."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#problemas-encontrados-síntesis",
+    "href": "docs/course-redesign-plan.html#problemas-encontrados-síntesis",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Eje de organización equivocado: por tipo de recurso, no por curso. Con 80 cursos futuros el árbol talk/ + teching/&lt;curso&gt;/ colapsa.\nConcepto de “curso” ausente: no hay una entidad curso estable con descripción/objetivos/sílabo separada de sus ediciones (dictados).\nSin dimensión “edición”: no se puede volver a dictar Python 2026-I sin mezclar con 2025-II.\nListings frágiles: teching lista un curso a mano; añadir cursos rompe la navegación automática.\nMetadatos pobres: institución, semestre, semana, tipo de material viven en texto libre → sin filtros, sin agrupación, sin navegación por facetas.\ntalk vs teching es una distinción sin diferencia: ambas son sesiones docentes.\nDeuda: artefactos LaTeX versionados, URLs rotas, curso vacío, hardlinks cross-repo peligrosos."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#nueva-arquitectura-propuesta",
+    "href": "docs/course-redesign-plan.html#nueva-arquitectura-propuesta",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Área            (agrupación temática: Economía, Matemática, Investigación, Ciencia de Datos, Gestión)\n  └── Curso     (identidad ESTABLE y única: descripción, objetivos, sílabo, bibliografía)\n        └── Edición   (un dictado concreto: institución + periodo; p. ej. 2026-I · UNSCH)\n              └── Sesión / Material  (clase, diapositiva, PDF, ejercicio, examen, solución…)\n\nEl curso nunca cambia. Lo que cambia son las ediciones. (Modelo OCW/Canvas.)\nÁrea no es una carpeta física obligatoria: se modela como metadato (area:) para poder navegar por facetas sin encajonar la jerarquía de archivos.\n\n\n\n\ncursos/\n├── index.qmd                      # Landing: listing de cursos (auto, por metadatos)\n├── _metadata.yml                  # Config común de la sección (freeze, partial botones…)\n│\n├── economia-preuniversitaria/\n│   ├── index.qmd                  # Ficha del CURSO (descripción, objetivos, sílabo, ediciones)\n│   ├── curso.yml                  # Metadatos estables del curso (area, nivel, etiquetas…)\n│   └── 2014-i/                    # EDICIÓN\n│       ├── index.qmd              # Portada de la edición (docente, institución, calendario)\n│       └── sesiones/\n│           ├── 01-conceptos-basicos-de-economia/index.qmd\n│           ├── 02-las-necesidades-y-bienes/index.qmd\n│           └── … (14 sesiones)\n│\n└── metodologia-de-la-investigacion/\n    ├── index.qmd\n    ├── curso.yml\n    └── 2025-i-cau-unsch/          # ← las 9 \"talks\" actuales pasan aquí como una edición\n        ├── index.qmd\n        └── sesiones/\n            ├── 01-monografia-e-informe/index.qmd\n            └── … (09 sesiones)\nMateriales dentro de cada sesión (subcarpetas por tipo, opcionales): slides/, pdf/, ejercicios/, laboratorios/, soluciones/, examenes/, recursos/, src/ (LaTeX/notebooks). Hoy el PDF vive junto al index.qmd; se mantiene esa convención y se añaden subcarpetas solo cuando el material lo pida.\n\nNota de altura: no se crean carpetas físicas de “Área” ni de “semana”. Ambas son metadatos (§3.4). Esto mantiene el árbol poco profundo y evita reorganizaciones futuras.\n\n\n\n\n/cursos/                                             → índice de cursos\n/cursos/&lt;curso&gt;/                                     → ficha del curso\n/cursos/&lt;curso&gt;/&lt;edicion&gt;/                           → portada de la edición\n/cursos/&lt;curso&gt;/&lt;edicion&gt;/sesiones/&lt;NN-slug&gt;/        → sesión concreta\n\n\n\ncurso.yml (nivel curso, estable) — nuevo archivo por curso:\ncourse: \"Economía Preuniversitaria\"\ncourse-slug: economia-preuniversitaria\narea: Economía # faceta de navegación\nlevel: Preuniversitario\nsummary: \"Fundamentos de la ciencia económica para ingreso universitario.\"\ntags: [economia, preuniversitario]\nPortada de edición (&lt;edicion&gt;/index.qmd):\ntitle: \"Economía Preuniversitaria — 2014-I\"\nedition: 2014-I\ninstitution: Academia / UNSCH\nprofessor: Edison Achalma\nperiod: { start: 2014-01-01, end: 2014-03-29 }\nweeks: 14\nSesión (sesiones/&lt;NN-slug&gt;/index.qmd) — se añaden campos estructurados a lo que ya existe:\ntitle: \"Conceptos básicos de economía\"\ncourse: economia-preuniversitaria # enlaza a la ficha del curso\nedition: 2014-I\narea: Economía\ninstitution: UNSCH\nweek: 1\nsession: 1\ntype: clase # clase | diapositiva | practica | examen | solucion\ntags: [escasez, costo-de-oportunidad]\n# recursos (todos opcionales, alimentan botones/descargas):\npdf: index.pdf\nslides: slides/sesion-01.pdf\nsource: src/sesion-01.tex\ngithub: https://github.com/…\nvideo: ~\nduration: 90\ndate: 2014-01-01\nEstos campos son los que consumen los listings (§3.5) para generar navegación, filtros y facetas sin escribir índices a mano.\n\n\n\n\ncursos/index.qmd — listing de fichas de curso: contents: \"*/index.qmd\" (una tarjeta por curso), con categories alimentadas por area. Añadir un curso = crear su carpeta; el índice se actualiza solo.\ncursos/&lt;curso&gt;/index.qmd — la ficha del curso incrusta un listing de sus ediciones: contents: \"*/index.qmd\".\ncursos/&lt;curso&gt;/&lt;edicion&gt;/index.qmd — listing de sesiones: contents: \"sesiones/*/index.qmd\", sort: \"session\", con fields mostrando week, type, date, botones de descarga.\nNavegación por facetas (Área / Institución / Año / Semestre / Etiqueta): se implementa con filter-ui/categories de Quarto sobre los campos estructurados, más (opcional, fase 3) páginas-índice generadas por listing con contents filtrado por metadato. Todo se apoya en el buscador nativo de Quarto (search.json), ya activo."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#diseño-visual-cero-css-nuevo-de-base",
+    "href": "docs/course-redesign-plan.html#diseño-visual-cero-css-nuevo-de-base",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Se reutiliza el design system existente; nada de lenguaje visual nuevo:\n\nActivar el stub ya presente assets/scss/05-pages/_courses.scss → renombrar a courses.scss y enlazarlo (header-includes + resources) desde las páginas de curso, igual que hoy hace listing.css.\nTodas las reglas nuevas consumen solo var(--lab-*) (tabla §1.4) → soporte automático de modo claro/oscuro sin duplicar.\nComponentes reutilizados sin cambios: cabecera editorial (listing.scss), tarjetas quarto-post/card del tema, botones (04-components/_buttons.scss), microinteracciones (.lab-reveal, glow del cursor), navbar, footer, TOC, breakpoints y grid de Bootstrap.\nNovedades de UI que aporta courses.scss (todas sobre tokens existentes): tarjeta de curso, cabecera de ficha de curso, tira de “ediciones”, tabla de sesiones por semana, y chips de faceta. Sin nuevas fuentes, colores ni sombras fuera del contrato de tokens.\n\nProhibido: hex directos, $spc-* en módulos compartidos, editar a mano assets/css/pages/*.css (son generados por build-page-css.sh)."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#impacto",
+    "href": "docs/course-redesign-plan.html#impacto",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Área\nImpacto\n\n\n\n\n_quarto.yml navbar\nTalks sale de primer nivel; Cursos sube a primer nivel apuntando a cursos/index.qmd. Se retira Cursos del menú “More”.\n\n\n_quarto.yml resources\ntalk/sidebar.jpg / teching/sidebar.jpg → cursos/….\n\n\nListings\nSe reemplazan 2 index frágiles por index auto-escalables.\n\n\nSCSS\nSe activa _courses.scss; listing.scss se sigue compartiendo. Sin duplicación.\n\n\nContenido\n9 talks + 14 unidades se mueven (no se reescriben) a la nueva jerarquía; se enriquecen metadatos.\n\n\nURLs\nCambian todas las de talk/ y teching/; mitigado con aliases + _redirects (§7).\n\n\nHardlinks\nSe preservan / sustituyen con cuidado (§8).\n\n\nRSS / SEO / sitemap\nfeed: true se mantiene en los nuevos listings; sitemap se regenera; canonical vía redirecciones 301."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#plan-de-migración-por-fases",
+    "href": "docs/course-redesign-plan.html#plan-de-migración-por-fases",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Cada fase termina con quarto render + revisión visual de _site/ (no hay test suite) y bash -n en cualquier script tocado. Trabajar en rama aparte.\nFase 0 — Preparación y red de seguridad\n\nCrear rama feat/cursos-arquitectura.\nInventario de URLs actuales (extraer de _site/sitemap.xml) → base para el mapa de redirecciones.\nDocumentar y “romper con intención” los hardlinks intra-repo que se moverán (§8), sin tocar los cross-repo.\n\nFase 1 — Andamiaje de la sección cursos/\n\nCrear cursos/index.qmd, cursos/_metadata.yml, _courses.scss activo.\nAún sin mover contenido: validar que el listing vacío rinde y estiliza bien.\n\nFase 2 — Migrar Economía Preuniversitaria (piloto, curso con contenido)\n\ngit mv teching/economia-preuniversitaria → cursos/economia-preuniversitaria/2014-i/sesiones/… con renombrado NN-slug.\nCrear index.qmd de curso + curso.yml + index.qmd de edición.\nEnriquecer metadatos de sesión (§3.4). Corregir las URLs rotas del _contenido (bug §1.7).\nAñadir aliases: a cada sesión con su URL antigua.\n\nFase 3 — Migrar el taller de metodología (las 9 talk/)\n\ngit mv talk/* → cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/….\nExcluir del git mv los 42 artefactos LaTeX (borrarlos y añadir patrones a .gitignore); conservar solo .tex, .pdf e images/.\nAñadir aliases: con las URLs talk/ antiguas.\n\nFase 4 — Navegación, redirecciones y facetas\n\nActualizar navbar/resources en _quarto.yml.\nGenerar _redirects (Netlify) para las rutas de sección (/talk/* /cursos/…).\nAñadir navegación por facetas (Área/Institución/Año) con filter-ui.\nEliminar el curso fantasma matematicas-preuniversitaria (o convertirlo en ficha de curso sin ediciones si se planea dictarlo).\n\nFase 5 — Verificación y cierre\n\nrm -rf _site _freeze && quarto render; revisar todas las páginas nuevas, las redirecciones (old→new devuelve 301/alias), RSS y sitemap.\nActualizar CLAUDE.md (sección “Content sections”) y assets/scss/README.md.\nPR siguiendo docs/guia-flujo-pr.md."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#estrategia-para-no-romper-enlaces-seo",
+    "href": "docs/course-redesign-plan.html#estrategia-para-no-romper-enlaces-seo",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Doble red, porque son mecanismos complementarios:\n\naliases: de Quarto (por página, preferente): en el frontmatter de cada sesión migrada se listan sus URLs antiguas. Quarto genera páginas-redirección HTML con &lt;meta refresh&gt; + canonical hacia la nueva URL. Es autocontenido en el repo y sobrevive a cambios de hosting.\naliases:\n  - /talk/2025-01-14-sesion-03-citas-y-referencias/\n  - /teching/economia-preuniversitaria/2014-01-01-conceptos-basicos-de-economia/\n_redirects de Netlify (por patrón, para lo masivo y los 301 “de verdad”):\n/talk/*      /cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/:splat   301\n/teching/*   /cursos/:splat                                                             301\n(Los patrones se afinan tras el inventario de la Fase 0; se añade a resources de _quarto.yml para que se copie a _site/.)\n\nAdemás: se conserva feed: true en los listings con RSS, image/description por sesión para Open Graph, y se regenera sitemap.xml en el render final."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#manejo-de-hardlinks",
+    "href": "docs/course-redesign-plan.html#manejo-de-hardlinks",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Principio: nunca romper contenido compartido con otros proyectos.\n\n_contenido-inicio.qmd / _contenido-final.qmd (13 enlaces, cross-repo): no se referencian desde talk/ ni desde los items a migrar; no se tocan. Si alguna página nueva necesitara ese include, se copia el contenido a un archivo propio (romper el hardlink deliberadamente con cp --remove-destination) antes de editar, para no alterar el inode que ven los blogs pub_*.\n_metadata.yml APA (3 enlaces: blog/posts, economia, matematicas): al mover economia a cursos/…, el git mv conserva el contenido pero el nuevo archivo debe ser físico e independiente. Procedimiento: copiar con cp --remove-destination a la nueva ubicación (rompe el hardlink), verificar con stat/find -samefile que blog/posts mantiene su inode intacto, y recién entonces borrar el original. Igual criterio para talk↔︎publication.\nVerificación post-migración: find . -type f -links +1 -printf '%n %i %p\\n' no debe mostrar enlaces cruzados inesperados entre la nueva sección cursos/ y blog//publication/ ni con archivos fuera de website-achalma."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#riesgos",
+    "href": "docs/course-redesign-plan.html#riesgos",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Riesgo\nProb.\nImpacto\nMitigación\n\n\n\n\nRomper inode _contenido-*.qmd compartido con pub_*\nMedia\nAlto (afecta otros sitios)\nNo tocarlos; cp --remove-destination si hay que editar (§8)\n\n\nPérdida de posicionamiento por cambio de URL\nMedia\nMedio\naliases + _redirects 301 (§7)\n\n\ngit mv masivo pierde historia o rompe rutas relativas a imágenes/PDF\nMedia\nMedio\nMover por fases, un curso a la vez; revisar rutas image:/src tras cada mv\n\n\nListings recursivos capturan index.qmd no deseados (fichas de curso/edición)\nMedia\nBajo\ncontents con globs precisos por nivel (sesiones/*/index.qmd), no **\n\n\nfreeze: true sirve HTML cacheado con rutas viejas\nAlta\nBajo\nrm -rf _freeze antes del render final (Fase 5)\n\n\nArtefactos LaTeX arrastrados en el git mv\nAlta\nBajo\nExcluirlos y .gitignore (Fase 3)\n\n\nMetadatos incompletos en sesiones antiguas rompen filtros\nMedia\nBajo\nValores por defecto en _metadata.yml de la edición; enriquecer incrementalmente"
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#decisiones-que-requieren-tu-confirmación-antes-de-implementar",
+    "href": "docs/course-redesign-plan.html#decisiones-que-requieren-tu-confirmación-antes-de-implementar",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Nombre de la ruta raíz: cursos/ (recomendado, coherente con el idioma del sitio) vs. courses/ vs. teaching/.\nDestino de las 9 talk/: ¿curso “Metodología de la investigación”, edición 2025-I CAU-UNSCH? (es lo que su contenido indica).\ntalk/ de primer nivel en el navbar: ¿se elimina y Cursos toma su lugar, o se conserva Talks como acceso directo filtrado?\nCurso fantasma matematicas-preuniversitaria: ¿se elimina o se deja como ficha de curso sin ediciones?\nLimpieza de artefactos LaTeX (42 archivos) y corrección de las URLs rotas del _contenido de economía: ¿se incluyen en esta migración?\n\n\nCon estas cinco respuestas se puede ejecutar la Fase 0 en firme. Hasta entonces, no se implementa nada."
+  },
+  {
+    "objectID": "docs/course-redesign-plan.html#estado-de-implementación-2026-07-09",
+    "href": "docs/course-redesign-plan.html#estado-de-implementación-2026-07-09",
+    "title": "Plan de rediseño de la arquitectura docente — de talk/teching a Cursos",
+    "section": "",
+    "text": "Ruta raíz: cursos/.\nTalks eliminado del navbar de primer nivel; Cursos ocupa su lugar (href: cursos/index.qmd). El antiguo Cursos → teching/ se quitó del menú “More”.\nLas 9 talk/ son la edición 2025-I · CAU-UNSCH del curso Metodología de la Investigación.\nLimpiezas aplicadas: borrado de 42 artefactos LaTeX, corrección de URLs rotas de economía, eliminación del curso fantasma matematicas-preuniversitaria.\nNetlify: no se tocó nada (sin _redirects ni netlify.toml). La preservación de URLs se hace solo con aliases: de Quarto (páginas- redirección generadas dentro de _site/, íntegramente en el repo).\nScaffolding de cursos futuros: se crearon 19 fichas de curso listas para usar (17 vacías + 2 con contenido migrado), con plantillas en cursos/_plantillas/ y guía en cursos/README.md, para migrar manualmente más adelante sin rehacer la arquitectura.\n\n\n\n\n\nSección cursos/: index.qmd (índice con facetas por Área), _metadata.yml (config ligera de sección), README.md, _plantillas/{curso,edicion,sesion}.qmd.\n19 fichas de curso en 5 áreas (Economía 5, Matemática 4, Investigación 3, Ciencia de Datos 4, Gestión 3).\nMigración con git mv (historia preservada):\n\nEconomía Preuniversitaria → cursos/economia-preuniversitaria/2014-i/sesiones/01–14/ (portada de edición + sesiones/_metadata.yml APA independiente + footer de “Publicaciones similares” recreado con URLs corregidas).\nMetodología → cursos/metodologia-de-la-investigacion/2025-i-cau-unsch/sesiones/01–09/ (42 artefactos LaTeX purgados; PDFs/.tex/ODT/imágenes conservados).\n\naliases: en las 23 sesiones con su URL antigua (/teching/…, /talk/…).\nDiseño: assets/scss/05-pages/_courses.scss activado → courses.scss (tarjetas, chips de faceta, tabla de sesiones), compilado a assets/css/pages/courses.css; cargado en toda la sección vía cursos/_metadata.yml. Cero CSS duplicado; solo var(--lab-*).\n_quarto.yml: navbar + resources actualizados.\nabout/index.qmd: widget “Cursos” y enlaces repuntados a /cursos.\n.gitignore: añadidos *.nav, *.snm, *.vrb (Beamer).\nDocs: CLAUDE.md (secciones de contenido) y comentarios SCSS actualizados.\n\n\n\n\nEl comodín * de contents: en los listings de Quarto coincide a través de / (es recursivo). Por eso los listados padre (cursos/index.qmd y las fichas de curso) llevan exclusiones !*/*/index.qmd / !*/sesiones/*/index.qmd para no arrastrar ediciones ni sesiones. Documentado en cursos/README.md y CLAUDE.md.\n\n\n\nquarto render cursos --to html → 45 páginas sin errores ni warnings. Índice con 19 cursos y facetas correctas por Área; fichas con 1 edición; portada de edición con tabla de sesiones; alias /teching/… y /talk/… generan redirección JS; PDFs y materiales copiados a _site/. (Los formatos apaquarto-pdf/docx siguen declarados solo a nivel de sesiones/, no en las páginas de índice.)\n\n\n\n\nRellenar objetivos/sílabo/bibliografía de las fichas (marcados “Por completar”).\nAñadir ediciones/sesiones a los 17 cursos vacíos copiando las plantillas.\nRevisar el render completo del sitio (quarto render) — que sí dispara la compilación PDF apaquarto de las sesiones de economía (requiere TinyTeX).\nConfirmar el despliegue en Netlify (sin cambios de configuración por parte de Claude)."
   },
   {
     "objectID": "license.html",
@@ -417,7 +2167,7 @@
     "href": "about/index.html#perfil",
     "title": "Edison Achalma",
     "section": "Perfil",
-    "text": "Perfil\n\n\nEconomista convertido en informático, curioso por todas las intersecciones de los datos y la sociedad.\nDisfruto usar R para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi blog y en mis presentaciones.\n\n\nMe interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades."
+    "text": "Perfil\n\n\nEconomista convertido en informático, curioso por todas las intersecciones de los datos y la sociedad.\nDisfruto usar R para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi blog y en mis cursos.\n\n\nMe interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades."
   },
   {
     "objectID": "about/index.html#formación-y-certificaciones",
@@ -431,7 +2181,7 @@
     "href": "about/index.html#últimamente",
     "title": "Edison Achalma",
     "section": "Últimamente",
-    "text": "Últimamente\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\nEconomía peruana 1970-1990\n\n\ncrisis y reformas\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nTalks\n\n\n\n\n\n\n\n\n\n\nEstructura y Citas APA\n\n\nSegunda práctica en word\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nPublications\n\n\n\n\n\n\n\n\nEncuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nProjects\n\n\n\n\nNo hay resultados\n\nVer todo →"
+    "text": "Últimamente\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\nEconomía peruana 1970-1990\n\n\ncrisis y reformas\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nCursos\n\n\n\n\n\n\n\n\n\n\nConceptos básicos de economía\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nPublications\n\n\n\n\n\n\n\n\nEncuesta Nacional de Intensiones de Siembra de la Campaña Agrícola 2022-2023\n\n\n\n\n\nNo hay resultados\n\nVer todo →\n\n\nProjects\n\n\n\n\nNo hay resultados\n\nVer todo →"
   },
   {
     "objectID": "blog/posts/2020-05-23-comandos-de-google-assistant/index.html",

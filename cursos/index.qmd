@@ -1,0 +1,38 @@
+---
+title: "Cursos"
+description: |
+  Repositorio docente abierto: cada curso reúne su descripción, sílabo y todas
+  sus ediciones con sesiones, diapositivas, ejercicios y materiales descargables.<br>
+  Organizado por áreas — Economía, Matemática, Investigación, Ciencia de Datos y Gestión.
+listing:
+  - id: cursos
+    contents:
+      - "*/index.qmd"          # una tarjeta por curso…
+      - "!*/*/index.qmd"       # …excluye portadas de edición…
+      - "!*/*/*/index.qmd"     # …y sesiones (session_*/ o sesiones/NN/); el glob * de Quarto es recursivo
+      - "!*/*/*/*/index.qmd"
+    type: grid
+    sort:
+      - "categories"
+      - "title"
+    sort-ui: false
+    filter-ui: true
+    fields: [title, subtitle, description, image]   # 'categories' alimenta las facetas, no se repite en la tarjeta
+    categories: numbered       # facetas por Área
+    grid-columns: 3
+    image-placeholder: sidebar.jpg
+    feed: false
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+search: true
+comments: false
+---
+
+::: {#cursos}
+:::

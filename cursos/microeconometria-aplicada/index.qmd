@@ -1,0 +1,51 @@
+---
+title: "Microeconometría Aplicada"
+subtitle: "Economía"
+description: "Métodos con datos microeconómicos: identificación causal y evaluación de impacto."
+categories: [Economía]
+image: /assets/img/default-preview.jpg
+nivel: Pregrado
+semestre: "7"
+prerequisitos: "Microeconomía II, Organización Industrial, Econometría II"
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+## Descripción
+
+Métodos con datos microeconómicos: identificación causal y evaluación de impacto.
+
+## Ficha del curso
+
+| Campo | Detalle |
+|---|---|
+| **Área** | Economía · Pregrado |
+| **Semestre sugerido** | 7 |
+| **Prerrequisitos** | Microeconomía II, Organización Industrial, Econometría II |
+
+## Objetivos
+
+> _Por completar._
+
+## Contenidos / Sílabo
+
+> _Por completar._
+
+## Bibliografía
+
+> _Por completar._
+
+## Ediciones
+
+_Aún no hay ediciones publicadas._
+
+<!-- Para añadir una edición: crea `microeconometria-aplicada/2026-1-cau-unsch/` copiando
+     cursos/_plantillas/edicion.qmd como index.qmd + sesiones/, y sustituye
+     este bloque por  ::: {#ediciones} :::  con el listing (ver cursos/README.md). -->

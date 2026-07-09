@@ -1,0 +1,40 @@
+# ============================================================================
+# cursos/_metadata.yml — configuración COMÚN de la sección docente "Cursos"
+# ============================================================================
+# Se aplica a TODA la jerarquía cursos/<curso>/<edición>/sesiones/… (Quarto
+# fusiona los _metadata.yml de cada carpeta ancestro).
+#
+# Aquí van SOLO defaults ligeros y transversales (HTML). La configuración APA
+# pesada (bloque de autor + formatos apaquarto-pdf/docx) se declara MÁS ABAJO,
+# a nivel de cada `…/sesiones/_metadata.yml`, para que las páginas de índice
+# (cursos/index, ficha de curso, portada de edición) se rendericen solo en HTML
+# y no disparen compilaciones LaTeX innecesarias.
+#
+# Archivo FÍSICO e independiente: no comparte inode con ninguna otra sección
+# (ver docs/course-redesign-plan.md §8, manejo de hardlinks).
+# ============================================================================
+
+lang: es
+license: "CC BY-SA"
+
+# No re-ejecutar código ni ejecutarlo por defecto (sitio estático).
+execute:
+  freeze: true
+  enabled: false
+
+# El partial de botones de acción se resuelve relativo a ESTE archivo (cursos/),
+# por lo que ../_partials = raíz del proyecto, válido a cualquier profundidad.
+citation: false
+title-block-banner: false
+
+# NOTA: listing.css/courses.css NO se cargan aquí. Las sesiones son páginas de
+# artículo (algunas compilan apaquarto-pdf) y el HTML crudo de un <link> a nivel
+# de sección se filtra al build LaTeX y lo rompe (Missing \begin{document}).
+# Esos estilos solo hacen falta en las PÁGINAS DE LISTADO (índice, fichas de
+# curso, portadas de edición), que los cargan por su cuenta vía header-includes
+# (son HTML puro, sin PDF). Ver cursos/index.qmd y las plantillas.
+format:
+  html:
+    code-overflow: wrap
+    template-partials:
+      - ../_partials/title-block-link-buttons/title-block.html

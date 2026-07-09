@@ -46,9 +46,8 @@ listing:
   max-items: 1
   image-height: "200"
 - id: talk
-  contents: 
-    - "../talk/*/index.qmd"
-    - "../talk/*/index.markdown"
+  contents:
+    - "../cursos/*/*/sesiones/*/index.qmd"   # última sesión de cualquier curso
   sort: date desc
   type: grid
   grid-columns: 1
@@ -115,7 +114,7 @@ A lo largo de mi trayectoria, he adquirido experiencia en programación y seguri
 
 **Economista convertido en informático, curioso por todas las intersecciones de los datos y la sociedad.**
 
-Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi [blog](/blog) y en mis [presentaciones](/talk).
+Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi [blog](/blog) y en mis [cursos](/cursos).
 
 :::
 
@@ -169,10 +168,10 @@ Me interesa especialmente la investigación que combina la ciencia de datos con 
 :::
 
 ::: {.g-col-3}
-#### Talks
+#### Cursos
 ::: {#talk}
 :::
-[Ver todo &rarr;](../talk){.about-links .subtitle}
+[Ver todo &rarr;](../cursos){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}

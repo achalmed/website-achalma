@@ -19,7 +19,7 @@ quarto preview
 
 # Render a single post or section only (code in that file IS re-executed regardless of freeze)
 quarto render blog/posts/2023-05-16-economia-regional/index.qmd
-quarto render talk/
+quarto render cursos/
 
 # Force full re-execution of all cached code chunks
 quarto render --cache-refresh
@@ -51,8 +51,7 @@ There is no lint/test suite — correctness is verified by rendering and visuall
 
 **Content sections**, each with its own `index.qmd` listing page:
 - `blog/posts/<date-slug>/index.qmd` — blog entries, each with full APA metadata (abstract, keywords, categories, tags, author-note, citation block). Published quarterly under the "Actus Mercator" citation scheme (Vol. = year, No. 1–4 = quarter).
-- `talk/<date-slug>/` — teaching session materials (research methodology, APA/Vancouver citation style), each with slides (PDF) and practice materials (ODT/DOCX).
-- `teching/` — course material for "Economía Preuniversitaria" (14 units), HTML/PDF/DOCX output.
+- `cursos/` — **unified teaching repository** (OCW-style), replacing the former `talk/` and `teching/` sections. Hierarchy: `cursos/<curso>/<edición>/sesiones/<NN-slug>/index.qmd`. A *course* is a stable identity (ficha with description/syllabus); an *edition* is one delivery (institution + period); sessions hold notes/slides/PDF/materials. Areas (Economía, Matemática, Investigación, Ciencia de Datos, Gestión) are `categories:` metadata, faceted automatically by the `cursos/index.qmd` listing. Migrated sessions preserve old `/talk/…` and `/teching/…` URLs via `aliases:`. Full design in `docs/course-redesign-plan.md`; how-to and templates in `cursos/README.md` + `cursos/_plantillas/`. **Gotcha:** Quarto's `*` in listing `contents` matches across `/` (recursive), so parent listings need `!…/sesiones/*/index.qmd` exclusions to avoid pulling in nested sessions.
 - `publication/` — formal publications and external reports.
 
 **`README/` folder** contains apaquarto *template* references (`index_doc.qmd`, `index_jou.qmd`, `index_man.qmd`, `index_stu.qmd` for different apaquarto output modes, plus `_metadata_guia.yml` / `_metadata_guia_simplificada.yml` metadata reference guides) — these are documentation/starting points for new academic documents, not site pages themselves.

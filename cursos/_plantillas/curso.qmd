@@ -1,0 +1,51 @@
+---
+# PLANTILLA DE CURSO — copia este archivo como  cursos/<slug-del-curso>/index.qmd
+# El curso es la identidad ESTABLE; sus dictados van en subcarpetas (ediciones).
+title: "Nombre del Curso"
+subtitle: "Área"                     # Economía | Matemática | Investigación | Ciencia de Datos | Gestión
+description: "Una o dos líneas que resuman de qué trata el curso."
+categories: [Área]                   # faceta de navegación en cursos/index.qmd
+image: /assets/img/default-preview.jpg
+# Cuando el curso tenga ediciones, activa este listado (una tarjeta por edición):
+# listing:
+#   - id: ediciones
+#     contents:
+#       - "*/index.qmd"                 # una tarjeta por edición…
+#       - "!*/sesiones/*/index.qmd"     # …excluye sesiones (el glob * de Quarto es recursivo)
+#     type: default
+#     sort: "title desc"
+#     sort-ui: false
+#     filter-ui: false
+#     fields: [title, subtitle, description, date]
+#     feed: false
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+## Descripción
+
+_Por completar._
+
+## Objetivos
+
+_Por completar._
+
+## Contenidos / Sílabo
+
+_Por completar._
+
+## Bibliografía
+
+_Por completar._
+
+## Ediciones
+
+_Aún no hay ediciones publicadas._
+<!-- Cuando exista una edición, reemplaza la línea anterior por:  ::: {#ediciones} :::  -->

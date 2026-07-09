@@ -6,8 +6,9 @@ project:
   resources:
     - resources/cv.pdf
     - blog/sidebar.jpg
-    - teching/sidebar.jpg
-    - talk/sidebar.jpg
+    - cursos/sidebar.jpg
+    - assets/css/pages/listing.css
+    - assets/css/pages/courses.css
 
   #post-render:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
@@ -86,9 +87,9 @@ website:
       - text: About
         aria-label: "About Me"
         href: about/index.qmd
-      - text: Talks
-        aria-label: "Invited Talks"
-        href: talk/index.qmd
+      - text: Cursos
+        aria-label: "Cursos y materiales docentes"
+        href: cursos/index.qmd
       - text: Publications
         aria-label: "Publications"
         href: publication/index.qmd
@@ -119,8 +120,6 @@ website:
             href: https://optimums.netlify.app/
           - text: "Programación y Software"
             href: https://numerus-scriptum.netlify.app/
-          - text: "Cursos"
-            href: teching/index.qmd
           - text: "Seguridad informática"
             href: https://chaska-x.netlify.app/
           - text: "Book an appointment"

@@ -1,0 +1,35 @@
+---
+# PLANTILLA DE EDICIÓN — copia como  cursos/<curso>/<edicion>/index.qmd
+# La edición es UN dictado concreto. Nómbrala <año>-<ciclo>-<institución>,
+# p. ej.  2026-1-cau-unsch  (Micro I) · 2026-2-cau-unsch (Micro II). Clases → sesiones/.
+title: "Nombre del Curso — 2026-1 · CAU-UNSCH"
+subtitle: "N sesiones · Institución"
+description: "Resumen de esta edición concreta."
+categories: [Área]
+image: ../featured.jpg                # o /assets/img/default-preview.jpg
+listing:
+  - id: sesiones
+    contents: ["sesiones/*/index.qmd"]
+    type: default                     # default | table | grid
+    sort: "title"                     # las carpetas 01, 02, 03… fijan el orden
+    sort-ui: false
+    filter-ui: true
+    fields: [title, categories, date, image]
+    feed: true
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/courses.css">
+format:
+  html:
+    page-layout: full
+title-block-banner: false
+toc: false
+comments: false
+---
+
+**Docente:** Edison Achalma · **Institución:** … · **Periodo:** … · **Sesiones:** …
+
+## Sesiones
+
+::: {#sesiones}
+:::

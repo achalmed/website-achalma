@@ -1,0 +1,89 @@
+// ============================================================================
+// 05-PAGES / COURSES — sección docente "Cursos" (cursos/, ediciones, sesiones)
+// ============================================================================
+// Propósito      : Retoques exclusivos de las páginas de cursos. NO forma parte
+//                  del tema global; se compila a assets/css/pages/courses.css con
+//                  scripts/build-page-css.sh (hook pre-render de Quarto).
+// Cargado por    : cursos/_metadata.yml (header-includes, toda la sección).
+// Dependencias   : Custom properties --lab-* (02-base/_root.scss). Usar SIEMPRE
+//                  var(--lab-*) para soportar los dos temas sin duplicar.
+// Reutiliza      : listing.css (masthead editorial) + tarjetas quarto del tema.
+// Modificar aquí : NUNCA editar el .css generado; editar este archivo y renderizar.
+// ============================================================================
+
+/* ── Rejilla de cursos: tarjetas con elevación discreta ──────────────────── */
+.quarto-grid-item.card {
+  background: var(--lab-bg-surface, #fff);
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 10px;
+  box-shadow: var(--lab-shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.04));
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.quarto-grid-item.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lab-shadow-md, 0 6px 18px rgba(0, 0, 0, 0.08));
+  border-color: var(--lab-border-strong, #C9C9BE);
+}
+
+/* Subtítulo (área / nivel) como etiqueta técnica sobre el título de la tarjeta */
+.quarto-grid-item .card-subtitle,
+.quarto-grid-item .listing-subtitle {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lab-muted, #5B6670);
+}
+
+/* ── Chips de categoría/área (facetas) como instrumentos discretos ───────── */
+.quarto-listing .listing-category,
+.quarto-grid-item .listing-category {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  color: var(--lab-ink-2, #33404C);
+  background: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.quarto-listing .listing-category:hover {
+  border-color: var(--lab-accent, #0F5CA8);
+  color: var(--lab-accent, #0F5CA8);
+}
+
+/* Nube/lista de facetas activa */
+.quarto-listing-category .category.active {
+  color: var(--lab-accent, #0F5CA8);
+  border-bottom: 2px solid var(--lab-accent, #0F5CA8);
+}
+
+/* ── Tabla de sesiones (portada de edición) ─────────────────────────────── */
+.quarto-listing-table table {
+  border-color: var(--lab-border, #E5E5DD);
+}
+
+.quarto-listing-table thead th {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--lab-muted, #5B6670);
+  border-bottom: 1px solid var(--lab-border-strong, #C9C9BE);
+}
+
+.quarto-listing-table tbody tr {
+  border-bottom: 1px solid var(--lab-grid-line, #F0F0EA);
+  transition: background-color 0.15s ease;
+}
+
+.quarto-listing-table tbody tr:hover {
+  background: var(--lab-bg-elevated, #FAFAF7);
+}
+
+/* ── Nota "próximamente" en cursos aún sin ediciones ─────────────────────── */
+.quarto-title-block + p em:only-child {
+  color: var(--lab-muted, #5B6670);
+}

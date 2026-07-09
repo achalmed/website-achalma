@@ -1,0 +1,36 @@
+---
+# PLANTILLA DE SESIÓN — estructura ESTÁNDAR de materiales
+# Copia como  cursos/<curso>/<edicion>/session_NN_slug/index.qmd  (carpeta numerada)
+# y crea junto a este index.qmd las subcarpetas estándar:
+#
+#   session_NN_slug/
+#   ├── index.qmd        ← esta página
+#   ├── slides/          → slides.pdf   (la presentación; si no hay, .gitkeep)
+#   ├── practice/        → prácticas (.odt/.docx/.pdf…)  o .gitkeep
+#   ├── homework/        → tareas                        o .gitkeep
+#   ├── evaluation/      → exámenes/rúbricas             o .gitkeep
+#   └── resources/
+#       ├── links.md     → enlaces y descargas
+#       └── readings/    → lecturas                      o .gitkeep
+#
+# Nombres FIJOS (estandarizados en todos los cursos): slides · practice ·
+# homework · evaluation · resources/readings · slides/slides.pdf · resources/_links.md
+title: "Título de la sesión"
+description: "Una línea sobre el contenido de la sesión."
+date: 2026-01-01
+order: 1                     # ordena la sesión dentro de la edición
+categories: [tema-1]
+image: /assets/img/default-preview.jpg
+---
+
+## Diapositivas
+
+::: {#fig-slides fig-cap="Diapositivas de la sesión"}
+```{=html}
+<object data="slides/slides.pdf" type="application/pdf" width="100%" height="760"><p><a href="slides/slides.pdf">Descargar diapositivas (PDF)</a></p></object>
+```
+:::
+
+## Materiales
+
+{{< include resources/_links.md >}}

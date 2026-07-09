@@ -205,6 +205,11 @@ __marimo__/
 *-blx.bib
 *.run.xml
 
+# Beamer (diapositivas)
+*.nav
+*.snm
+*.vrb
+
 # Build tools
 *.fdb_latexmk
 *.synctex

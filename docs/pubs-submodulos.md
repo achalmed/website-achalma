@@ -1,7 +1,7 @@
 # Los blogs satélite (`_pubs/pub_*`) como submódulos del hub
 
 > Reorganización aplicada el 2026-09-06 (fase F3a del diagnóstico integral,
-> `~/Documents/ecosistema/DIAGNOSTICO_INTEGRAL_2026-09.md`). Antes los 11
+> `~/Documents/meta/DIAGNOSTICO_INTEGRAL_2026-09.md`). Antes los 11
 > `pub_*` eran carpetas hermanas de `website-achalma` en `~/Documents`.
 
 ## Qué es y qué no es
@@ -103,6 +103,6 @@ Si alguna vez los blogs se mueven, cambiar solo esas variables.
 
 ## Reversión
 
-`~/Documents/ecosistema/reparaciones/F3a_pubs_submodulos_2026-09-06/UNDO.sh`
+`~/Documents/meta/reparaciones/F3a_pubs_submodulos_2026-09-06/UNDO.sh`
 (simula por defecto; `--aplicar` devuelve los 11 blogs a `~/Documents/pub_*`,
 quita los submódulos del hub, restaura las herramientas y regenera `04 index`).

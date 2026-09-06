@@ -24,13 +24,13 @@
 
 ```bash
 # 1) Escribir/editar en el blog y confirmar allí
-cd ~/Documents/website-achalma/_pubs/pub_axiomata
+cd ~/Documents/04 index/_pubs/pub_axiomata
 quarto preview            # o render
 git add -A && git commit -m "post: ..."
 git push                  # remote propio del blog (ssh)
 
 # 2) Mover el puntero del submódulo en el hub
-cd ~/Documents/website-achalma
+cd ~/Documents/04 index
 git add _pubs/pub_axiomata
 git commit -m "pubs: axiomata al último commit"
 git push

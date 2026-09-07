@@ -4,6 +4,16 @@ Arquitectura tipo *OpenCourseWare* que unifica lo que antes eran `talk/` y
 `teching/`. Diseño y decisiones completas en
 [`../docs/course-redesign-plan.md`](../docs/course-redesign-plan.md).
 
+## Fuente de verdad (F5.1/F5.2, 2026-09-06)
+
+- La sección **«Contenidos / Sílabo»** de cada ficha `<curso>/index.qmd` se genera desde el `temario.yml`
+  del curso en `10 Class/areas/…` (`10 Class/scripts/temario-generar.sh generar --que web --aplicar`);
+  está entre marcadores `temario:inicio/fin` y no se edita a mano.
+- Las **ediciones** se publican desde el framework: `publish-session.sh` congela cada sesión y
+  `publish-web.sh` enlaza sus PDF y materiales aquí **por hardlink** según `09_SEMESTRES/<periodo>/dictado.yml`.
+  `index.qmd` y `resources/_links.md` de cada sesión se crean si faltan y luego son editables.
+- Las fichas sin curso en el framework ni ediciones llevan `draft: true` hasta que exista contenido.
+
 ## Jerarquía
 
 ```

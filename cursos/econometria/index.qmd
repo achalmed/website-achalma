@@ -36,7 +36,108 @@ Modelos de regresión, inferencia y contrastación empírica. Niveles I y II com
 
 ## Contenidos / Sílabo
 
-> _Por completar._
+
+<!-- temario:inicio (generado por 10 Class/scripts/temario.py; no editar a mano) -->
+
+### Econometría I
+
+**1. Fundamentos**
+
+- `1.1` Econometria I
+- `1.2` Datos Economicos
+- `1.3` Modelo de Regresion
+- `1.4` Correlacion vs Causalidad
+
+**2. Regresión Simple**
+
+- `2.1` Minimos Cuadrados Ordinarios
+- `2.2` Estimadores MCO
+- `2.3` Interpretacion
+- `2.4` Bondad de Ajuste
+- `2.5` R Cuadrado
+- `2.6` Supuestos del Modelo
+
+**3. Regresión Múltiple**
+
+- `3.1` Regresion Multiple
+- `3.2` Estimacion MCO Multiple
+- `3.3` Interpretacion de Coeficientes
+- `3.4` Variables Dummy
+- `3.5` Multicolinealidad
+- `3.6` R Cuadrado Ajustado
+
+**4. Inferencia**
+
+- `4.1` Distribucion de los Estimadores
+- `4.2` Prueba t
+- `4.3` Prueba F
+- `4.4` Intervalos de Confianza
+- `4.5` Pruebas de Hipotesis
+- `4.6` Significancia Estadistica
+
+**5. Problemas del Modelo**
+
+- `5.1` Heterocedasticidad
+- `5.2` Autocorrelacion
+- `5.3` Errores de Especificacion
+- `5.4` Variables Omitidas
+- `5.5` Forma Funcional
+
+**6. Propiedades de los Estimadores**
+
+- `6.1` Teorema de Gauss-Markov
+- `6.2` Propiedades de los Estimadores
+
+_Fuente: `10 Class/areas/Academic_Class-Estadistica/course_13-econometria-i/temario.yml`._
+
+### Econometría II
+
+**1. Extensiones de MCO**
+
+- `1.1` Econometria II
+- `1.2` MCO Revisitado
+- `1.3` Minimos Cuadrados Generalizados
+- `1.4` Variables Instrumentales
+- `1.5` Minimos Cuadrados en Dos Etapas
+- `1.6` Endogeneidad
+
+**2. Máxima Verosimilitud y GMM**
+
+- `2.1` Estimacion por Maxima Verosimilitud
+- `2.2` Propiedades de Maxima Verosimilitud
+- `2.3` Metodo Generalizado de Momentos
+
+**3. Variable Dependiente Limitada**
+
+- `3.1` Modelo de Probabilidad Lineal
+- `3.2` Logit
+- `3.3` Probit
+- `3.4` Tobit
+- `3.5` Modelos de Conteo
+- `3.6` Seleccion de Muestra
+
+**4. Series de Tiempo**
+
+- `4.1` Procesos Estacionarios
+- `4.2` Modelos AR
+- `4.3` Modelos MA
+- `4.4` Modelos ARMA
+- `4.5` Modelos ARIMA
+- `4.6` Raices Unitarias
+- `4.7` Cointegracion
+- `4.8` Modelos VAR
+- `4.9` Modelos ARCH y GARCH
+
+**5. Datos de Panel**
+
+- `5.1` Efectos Fijos
+- `5.2` Efectos Aleatorios
+- `5.3` Prueba de Hausman
+- `5.4` Panel Dinamico
+
+_Fuente: `10 Class/areas/Academic_Class-Estadistica/course_16-econometria-ii/temario.yml`._
+
+<!-- temario:fin -->
 
 ## Bibliografía
 

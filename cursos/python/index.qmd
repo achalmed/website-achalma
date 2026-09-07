@@ -25,7 +25,404 @@ Programación en Python para el análisis y la ciencia de datos.
 
 ## Contenidos / Sílabo
 
-> _Por completar._
+
+<!-- temario:inicio (generado por 10 Class/scripts/temario.py; no editar a mano) -->
+
+### python — Curso Base
+
+**1. Unidad 01**
+
+- `1.1` Python: Primeros pasos
+
+**2. Unidad 02**
+
+- `2.1` Python: Sintaxis
+- `2.2` Python: Sentencias (Statements)
+
+**3. Unidad 03**
+
+- `3.1` Python: Salida con print()
+- `3.2` Python: Salida de Números con print()
+
+**4. Unidad 04**
+
+- `4.1` Python: Comentarios
+
+**5. Unidad 05**
+
+- `5.1` Python: Variables
+- `5.2` Python: Nombres de Variables
+- `5.3` Python: Asignación Múltiple de Variables
+- `5.4` Python: Salida de Variables
+- `5.5` Python: Variables Globales
+- `5.6` Python: Ejercicios de Variables
+
+**6. Unidad 06**
+
+- `6.1` Python: Tipos de Datos
+
+**7. Unidad 07**
+
+- `7.1` Python: Números
+
+**8. Unidad 08**
+
+- `8.1` Python: Casting (Conversión de Tipos)
+
+**9. Unidad 09**
+
+- `9.1` Python: Strings (Cadenas de Texto)
+- `9.2` Python: Slicing de Strings
+- `9.3` Python: Modificar Strings
+- `9.4` string concatenation
+- `9.5` format strings
+- `9.6` escape characters
+- `9.7` string methods
+- `9.8` string excercises
+
+**10. Unidad 10**
+
+- `10.1` booleans
+
+**11. Unidad 11**
+
+- `11.1` operators
+- `11.2` arithmetic operators
+- `11.3` assignment operators
+- `11.4` ternary operators
+- `11.5` comparison operators
+- `11.6` logical operators
+- `11.7` identity operators
+- `11.8` membership operators
+- `11.9` bitwise operators
+- `11.10` operator precedence
+
+**12. Unidad 12**
+
+- `12.1` lists
+- `12.2` access list items
+- `12.3` change list items
+- `12.4` add list items
+- `12.5` remove list items
+- `12.6` loop lists
+- `12.7` list comprehension
+- `12.8` sort lists
+- `12.9` copy lists
+- `12.10` join lists
+- `12.11` list methods
+- `12.12` list exercises
+
+**13. Unidad 13**
+
+- `13.1` tuples
+- `13.2` access tuple items
+- `13.3` update tuples
+- `13.4` unpack tuples
+- `13.5` loop tuples
+- `13.6` join tuples
+- `13.7` tuple methods
+- `13.8` tuple exercises
+
+**14. Unidad 14**
+
+- `14.1` sets
+- `14.2` access set items
+- `14.3` add set items
+- `14.4` remove set items
+- `14.5` loop sets
+- `14.6` join sets
+- `14.7` frozenset
+- `14.8` set methods
+- `14.9` set exercises
+
+**15. Unidad 15**
+
+- `15.1` dictionaries
+- `15.2` access dictionary items
+- `15.3` change dictionary items
+- `15.4` add dictionary items
+- `15.5` remove dictionary items
+- `15.6` loop dictionaries
+- `15.7` copy dictionaries
+- `15.8` nested dictionaries
+- `15.9` dictionary methods
+- `15.10` dictionary exercises
+
+**16. Unidad 16**
+
+- `16.1` if
+- `16.2` elif
+- `16.3` else
+- `16.4` shorthand if
+- `16.5` logical operators
+- `16.6` nested if
+- `16.7` pass statement
+
+**17. Unidad 17**
+
+- `17.1` match
+
+**18. Unidad 18**
+
+- `18.1` while loops
+
+**19. Unidad 19**
+
+- `19.1` for loops
+
+**20. Unidad 20**
+
+- `20.1` functions
+- `20.2` arguments
+- `20.3` args kwargs
+- `20.4` scope
+- `20.5` decorators
+- `20.6` lambda
+- `20.7` recursion
+- `20.8` generators
+
+**21. Unidad 21**
+
+- `21.1` range
+
+**22. Unidad 22**
+
+- `22.1` arrays
+
+**23. Unidad 23**
+
+- `23.1` iterators
+
+**24. Unidad 24**
+
+- `24.1` modules
+
+**25. Unidad 25**
+
+- `25.1` dates
+
+**26. Unidad 26**
+
+- `26.1` math
+
+**27. Unidad 27**
+
+- `27.1` json
+
+**28. Unidad 28**
+
+- `28.1` regex
+
+**29. Unidad 29**
+
+- `29.1` pip
+
+**30. Unidad 30**
+
+- `30.1` try except
+
+**31. Unidad 31**
+
+- `31.1` string formatting
+
+**32. Unidad 32**
+
+- `32.1` none
+
+**33. Unidad 33**
+
+- `33.1` user input
+
+**34. Unidad 34**
+
+- `34.1` virtualenv
+
+**35. Unidad 35**
+
+- `35.1` oop
+- `35.2` classes objects
+- `35.3` init method
+- `35.4` self parameter
+- `35.5` class properties
+- `35.6` class methods
+- `35.7` inheritance
+- `35.8` polymorphism
+- `35.9` encapsulation
+- `35.10` inner classes
+
+**36. Unidad 36**
+
+- `36.1` file handling
+- `36.2` read files
+- `36.3` write create files
+- `36.4` delete files
+
+**37. Unidad 37**
+
+- `37.1` numpy home
+- `37.2` numpy intro
+- `37.3` numpy getting started
+- `37.4` numpy creating arrays
+- `37.5` numpy array indexing
+- `37.6` numpy array slicing
+- `37.7` numpy data types
+- `37.8` numpy copy vs view
+- `37.9` numpy array shape
+- `37.10` numpy array reshape
+- `37.11` numpy array iterating
+- `37.12` numpy array join
+- `37.13` numpy array split
+- `37.14` numpy array search
+- `37.15` numpy array sort
+- `37.16` numpy array filter
+- `37.17` random intro
+- `37.18` data distribution
+- `37.19` random permutation
+- `37.20` seaborn module
+- `37.21` normal distribution
+- `37.22` binomial distribution
+- `37.23` poisson distribution
+- `37.24` uniform distribution
+- `37.25` logistic distribution
+- `37.26` multinomial distribution
+- `37.27` exponential distribution
+- `37.28` chi square distribution
+- `37.29` rayleigh distribution
+- `37.30` pareto distribution
+- `37.31` zipf distribution
+- `37.32` ufunc intro
+- `37.33` ufunc create function
+- `37.34` ufunc simple arithmetic
+- `37.35` ufunc rounding decimals
+- `37.36` ufunc logs
+- `37.37` ufunc summations
+- `37.38` ufunc products
+- `37.39` ufunc differences
+- `37.40` ufunc finding lcm
+- `37.41` ufunc finding gcd
+- `37.42` ufunc trigonometric
+- `37.43` ufunc hyperbolic
+- `37.44` ufunc set operations
+- `37.45` numpy certificate
+- `37.46` numpy editor
+- `37.47` numpy quiz
+- `37.48` numpy exercises
+- `37.49` numpy syllabus
+- `37.50` numpy study plan
+
+**38. Unidad 38**
+
+- `38.1` pandas home
+- `38.2` pandas intro
+- `38.3` pandas getting started
+- `38.4` pandas series
+- `38.5` pandas dataframes
+- `38.6` pandas read csv
+- `38.7` pandas read json
+- `38.8` pandas analyzing data
+- `38.9` pandas cleaning data
+- `38.10` pandas cleaning empty cells
+- `38.11` pandas cleaning wrong format
+- `38.12` pandas cleaning wrong data
+- `38.13` pandas removing duplicates
+- `38.14` pandas correlations
+- `38.15` pandas plotting
+- `38.16` pandas certificate
+- `38.17` pandas editor
+- `38.18` pandas quiz
+- `38.19` pandas exercises
+- `38.20` pandas syllabus
+- `38.21` pandas study plan
+- `38.22` pandas dataframes reference
+
+**39. Unidad 39**
+
+- `39.1` scipy home
+- `39.2` scipy intro
+- `39.3` scipy getting started
+- `39.4` scipy constants
+- `39.5` scipy optimizers
+- `39.6` scipy sparse data
+- `39.7` scipy graphs
+- `39.8` scipy spatial data
+- `39.9` scipy matlab arrays
+- `39.10` scipy interpolation
+- `39.11` scipy significance tests
+- `39.12` scipy certificate
+- `39.13` scipy editor
+- `39.14` scipy quiz
+- `39.15` scipy exercises
+- `39.16` scipy syllabus
+- `39.17` scipy study plan
+
+**40. Unidad 40**
+
+- `40.1` matplotlib intro
+- `40.2` matplotlib get started
+- `40.3` matplotlib pyplot
+- `40.4` matplotlib plotting
+- `40.5` matplotlib markers
+- `40.6` matplotlib line
+- `40.7` matplotlib labels
+- `40.8` matplotlib grid
+- `40.9` matplotlib subplot
+- `40.10` matplotlib scatter
+- `40.11` matplotlib bars
+- `40.12` matplotlib histograms
+- `40.13` matplotlib pie charts
+
+**41. Unidad 41**
+
+- `41.1` getting started
+- `41.2` mean median mode
+- `41.3` standard deviation
+- `41.4` percentile
+- `41.5` data distribution
+- `41.6` normal data distribution
+- `41.7` scatter plot
+- `41.8` linear regression
+- `41.9` polynomial regression
+- `41.10` multiple regression
+- `41.11` scale
+- `41.12` train test
+- `41.13` decision tree
+- `41.14` confusion matrix
+- `41.15` hierarchical clustering
+- `41.16` logistic regression
+- `41.17` grid search
+- `41.18` categorical data
+- `41.19` k-means
+- `41.20` bootstrap aggregation
+- `41.21` cross validation
+- `41.22` auc roc curve
+- `41.23` k-nearest neighbors
+
+**42. Unidad 42**
+
+- `42.1` python dsa
+- `42.2` lists and arrays
+- `42.3` stacks
+- `42.4` queues
+- `42.5` linked lists
+- `42.6` hash tables
+- `42.7` trees
+- `42.8` binary trees
+- `42.9` binary search trees
+- `42.10` avl trees
+- `42.11` graphs
+- `42.12` linear search
+- `42.13` binary search
+- `42.14` bubble sort
+- `42.15` selection sort
+- `42.16` insertion sort
+- `42.17` quick sort
+- `42.18` counting sort
+- `42.19` radix sort
+- `42.20` merge sort
+
+_Fuente: `10 Class/areas/Academic_Class-python/course_00_curso_base/temario.yml`._
+
+<!-- temario:fin -->
 
 ## Bibliografía
 

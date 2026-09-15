@@ -1,3 +1,9 @@
+---
+tipo: doc
+titulo: "Plan de rediseño de la arquitectura docente — de `talk`/`teching` a `Cursos`"
+estado: hecho
+---
+
 # Plan de rediseño de la arquitectura docente — de `talk`/`teching` a `Cursos`
 
 > **Estado:** ✅ **IMPLEMENTADO** (2026-07-09). El análisis y el plan siguen abajo

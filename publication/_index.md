@@ -1,4 +1,6 @@
 ---
+tipo: doc
+estado: archivado
 title: Publications
 description: |
   This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.

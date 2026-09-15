@@ -1,3 +1,14 @@
+---
+tipo: doc
+titulo: "Guía simplificada de metadatos de `_metadata.yml` para uso cotidiano"
+estado: activo
+---
+
+# Guía simplificada de metadatos de `_metadata.yml` para uso cotidiano
+
+Versión reducida de `_metadata-guia.md`: las opciones que de verdad se tocan al crear una sección o un post.
+
+```yaml
 # =============================================================================
 # CONFIGURACIÓN GENERAL DEL DOCUMENTO
 # =============================================================================
@@ -190,3 +201,4 @@ comments:
     issue-term: title
     theme: boxy-light
     label: "comments :crystal_ball:"
+```

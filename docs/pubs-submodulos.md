@@ -1,3 +1,9 @@
+---
+tipo: doc
+titulo: "Los blogs satélite (`_pubs/pub_*`) como submódulos del hub"
+estado: activo
+---
+
 # Los blogs satélite (`_pubs/pub_*`) como submódulos del hub
 
 > Reorganización aplicada el 2026-09-06 (fase F3a del diagnóstico integral,

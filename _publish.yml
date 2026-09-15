@@ -1,3 +1,4 @@
+# _publish.yml — registro de despliegue del sitio en Netlify; lo escribe quarto publish
 - source: project
   netlify:
     - id: 6d1408cc-afc8-4b2d-8706-26c28e536a05

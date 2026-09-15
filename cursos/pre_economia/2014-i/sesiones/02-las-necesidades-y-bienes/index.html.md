@@ -5,9 +5,7 @@ title: Necesidades humanas y clasificación bienes
 shorttitle: NECESIDADES Y BIENES
 abstract: Este abstract será actualizado una vez que se complete el contenido final
   del artículo.
-keywords:
-- keyword1
-- keyword2
+keywords: []
 categories:
 - Economia Basica
 tags:
@@ -33,17 +31,27 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes/index.pdf
-date: 01/07/2014
+date: 2014-01-07
 draft: true
 image: ../../../featured.jpg
 ---
 
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
+---
+tipo: fragmento
+titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
+---
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
+
+---
+tipo: fragmento
+titulo: navegación de economia preuniversitaria en sesiones (a mano)
+---
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.pdf) [Conceptos básicos de economía](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia)
 2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes/index.pdf) [Necesidades humanas y clasificación bienes](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes)
@@ -60,6 +68,11 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 13. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/13-el-desempleo/index.pdf) [Desempleo](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/13-el-desempleo)
 14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional/index.pdf) [Comercio internacional](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional)
 
+
+---
+tipo: fragmento
+titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
+---
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

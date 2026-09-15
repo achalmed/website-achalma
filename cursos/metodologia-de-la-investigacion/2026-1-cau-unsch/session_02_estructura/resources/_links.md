@@ -1,3 +1,8 @@
+---
+tipo: fragmento
+titulo: descargas y enlaces de la sesión 02: estructura
+---
+
 ### Descargas
 
 **Práctica**

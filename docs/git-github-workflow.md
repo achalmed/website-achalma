@@ -1,3 +1,9 @@
+---
+tipo: doc
+titulo: "Manual de Git y GitHub — flujo de trabajo de `website-achalma`"
+estado: activo
+---
+
 # Manual de Git y GitHub — flujo de trabajo de `website-achalma`
 
 > Guía completa, paso a paso y con ejemplos reales, del flujo de trabajo con Git y

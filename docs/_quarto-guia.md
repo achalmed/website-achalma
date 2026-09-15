@@ -1,3 +1,14 @@
+---
+tipo: doc
+titulo: "Referencia de opciones de `_quarto.yml` (sitio Quarto)"
+estado: activo
+---
+
+# Referencia de opciones de `_quarto.yml` (sitio Quarto)
+
+Referencia anotada de las opciones de `_quarto.yml` del hub y de los pub_*. Es documentación; el archivo vivo es `_quarto.yml` en la raíz de cada sitio.
+
+```yaml
 project:
   type: website
   output-dir: _site
@@ -118,4 +129,4 @@ execute:
   enabled: false  # Habilitar la ejecución: quarto render notebook.ipynb --execute
   freeze: true  # (true y auto) PARA EJECUTAR OJO: CONGELA solo en rederización global, en rendirizacion incremental siempre se ejecuta
   cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
-
+```

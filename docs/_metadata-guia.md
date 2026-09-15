@@ -1,3 +1,14 @@
+---
+tipo: doc
+titulo: "Guía completa de metadatos de un `_metadata.yml` (apaquarto y Quarto)"
+estado: activo
+---
+
+# Guía completa de metadatos de un `_metadata.yml` (apaquarto y Quarto)
+
+Referencia anotada de todas las opciones de metadatos que admite un `_metadata.yml` de sección (apaquarto + Quarto). Es documentación: se copia el bloque, no el archivo. Las claves son las del esquema de Quarto (con guion), por eso vive como Markdown y no como YAML propio.
+
+```yaml
 # ========================================================================
 # METADATOS DEL DOCUMENTO
 # ========================================================================
@@ -363,3 +374,4 @@ execute:
   error: false  # Ocultar errores
   enabled: false  # Habilitar la ejecución: quarto render notebook.ipynb --execute
   cache: true  # PARA RESULTADOS DE CALCULO: quarto render index.qmd --cache-refresh #singledoc quarto render --cache-refresh #entireproject
+```

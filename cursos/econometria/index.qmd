@@ -90,23 +90,7 @@ Modelos de regresión, inferencia y contrastación empírica. Niveles I y II com
 
 **Banco de exámenes rendidos:** `econometria` (21 exp.) · `econometria-i` (27 exp.)
 
-**Publicaciones relacionadas (13):**
-
-- [Recaudación tributaria y crecimiento 2017-2019](https://epsilon-y-beta.netlify.app/00-econometria-general/2022-01-11-recaudacion-de-impuestos-y-crecimiento-economico-2017-2019/)
-- [Modelo clásico de regresión lineal](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-03-01-01-modelo-clasico-de-regresion-lineal/)
-- [Estimador MCO](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-03-08-02-el-estimador-de-minimos-cuadrados-ordinarios-mco/)
-- [Álgebra y geometría del estimador MCO](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-03-15-03-algebra-y-geometria-de-mco/)
-- [Propiedades en muestras finitas de MCO](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-03-22-04-propiedades-en-muestras-finitas-del-estimador-mco/)
-- [Consistencia y propiedades asintóticas MCO](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-03-29-05-propiedades-en-muestras-infinitas-del-estimador-mco/)
-- [Trade-off sesgo-varianza en estimación](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-04-10-06-el-trade-off-sesgo-varianza/)
-- [Medidas de bondad de ajuste en regresión](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-04-19-07-bondad-de-ajuste/)
-- ['Multicolinealidad: detección y efectos'](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-04-26-08-multicolinealidad/)
-- [Inferencia estadística en regresión lineal](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-05-03-09-inferencia/)
-- [Modelo general con heterocedasticidad](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-05-10-10-el-modelo-general-de-regresion-lineal-permitiendo-heterocedasticidad-en-los-errores/)
-- [Endogeneidad](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-05-17-11-problemas-de-endogeneidad/)
-- [Perturbaciones no esféricas en regresión](https://epsilon-y-beta.netlify.app/01-fundamentos-econometria/2021-05-24-12-perturbaciones-no-esfericas/)
-
-_Fuente: `10 Class/areas/Academic_Class-Estadistica/course_13_econometria_i/temario.yml`._
+_Fuente: `10 Class/docencia/cursos/econometria-i/curso.yml`._
 
 ### Econometría II
 
@@ -155,28 +139,7 @@ _Fuente: `10 Class/areas/Academic_Class-Estadistica/course_13_econometria_i/tema
 
 **Banco de exámenes rendidos:** `econometria-ii` (16 exp.) · `topicos-de-econometria` (2 exp.)
 
-**Publicaciones relacionadas (18):**
-
-- [Análisis univariado de series temporales](https://epsilon-y-beta.netlify.app/02-macroeconometria/2021-09-20-01-analisis-univariado/)
-- [Análisis multivariado de series de tiempo](https://epsilon-y-beta.netlify.app/02-macroeconometria/2021-09-27-03-analisis-multivariado/)
-- [Modelos de factores latentes dinámicos](https://epsilon-y-beta.netlify.app/02-macroeconometria/2021-10-04-05-modelos-de-factores-latentes/)
-- [Modelos no lineales en la media condicional](https://epsilon-y-beta.netlify.app/02-macroeconometria/2021-10-11-06-modelos-no-lineales-en-la-media/)
-- [Modelando volatilidad en series financieras](https://epsilon-y-beta.netlify.app/04-econometria-financiera/2022-02-28-01-volatilidad-en-las-series-de-tiempo/)
-- [Introducción a econometría bayesiana](https://epsilon-y-beta.netlify.app/05-econometria-bayesiana/2022-03-07-01-introduccion-a-la-econometria-bayesiana/)
-- [Regresión lineal desde enfoque bayesiano](https://epsilon-y-beta.netlify.app/05-econometria-bayesiana/2022-03-14-02-modelo-de-regresion-lineal/)
-- [Distribuciones prior comunes en bayesiana](https://epsilon-y-beta.netlify.app/05-econometria-bayesiana/2022-03-18-03-familia-de-distribuciones-prior/)
-- [Simulación MCMC en estimación bayesiana](https://epsilon-y-beta.netlify.app/05-econometria-bayesiana/2022-03-21-04-simulacion-y-estimacion-bayesiana/)
-- [Aplicaciones bayesianas en econometría](https://epsilon-y-beta.netlify.app/05-econometria-bayesiana/2022-03-28-05-aplicaciones-econometricas/)
-- [Introducción general a la econometría](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-05-02-01-introduccion-a-la-econometria/)
-- [Métodos experimentales en economía](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-05-09-02-metodos-experimentales-en-economia/)
-- [Regresiones como herramienta fundamental](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-05-16-03-la-herramienta-fundamental-regresiones/)
-- [Variables instrumentales](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-05-23-04-variables-instrumentales/)
-- [Diseño robusto de regresión discontinua](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-05-30-05-diseño-de-regresion-discontinua-rdd/)
-- [Efectos fijos y diferencias en diferencias](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-06-06-06-efectos-fijos-diferencias-en-diferencias-y-datos-de-panel/)
-- [Event studies para estimación causal](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-06-13-07-event-studies-en-economia/)
-- [Tópicos diversos en econometría avanzada](https://epsilon-y-beta.netlify.app/07-topicos-de-econometria/2022-06-20-08-miscelanea/)
-
-_Fuente: `10 Class/areas/Academic_Class-Estadistica/course_16_econometria_ii/temario.yml`._
+_Fuente: `10 Class/docencia/cursos/econometria-ii/curso.yml`._
 
 <!-- temario:fin -->
 

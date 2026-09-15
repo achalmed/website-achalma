@@ -1,6 +1,6 @@
 ---
 tipo: fragmento
-titulo: descargas y enlaces de la sesión 06: inteligencia artificial
+titulo: "descargas y enlaces de la sesión 06: inteligencia artificial"
 ---
 
 ### Descargas

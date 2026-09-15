@@ -1,6 +1,6 @@
 ---
 tipo: fragmento
-titulo: descargas y enlaces de la sesión 09: practica estructura y citas apa
+titulo: "descargas y enlaces de la sesión 09: practica estructura y citas apa"
 ---
 
 ### Descargas

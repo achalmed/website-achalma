@@ -1,6 +1,6 @@
 ---
 tipo: fragmento
-titulo: descargas y enlaces de la sesión 08: tablas figuras y notas
+titulo: "descargas y enlaces de la sesión 08: tablas figuras y notas"
 ---
 
 ### Descargas

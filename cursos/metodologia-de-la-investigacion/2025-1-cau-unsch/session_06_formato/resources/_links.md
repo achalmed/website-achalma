@@ -1,6 +1,6 @@
 ---
 tipo: fragmento
-titulo: descargas y enlaces de la sesión 06: formato
+titulo: "descargas y enlaces de la sesión 06: formato"
 ---
 
 ### Descargas

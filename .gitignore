@@ -535,3 +535,14 @@ yarn.lock
 # Carpetas del vault Obsidian fusionadas aquí el 2026-09-06 (notas personales, no se versionan)
 _vault/
 _indice/
+
+# DOC2 (2026-09-20): temporales y derivados fuera de git (NORMATIVA §5, §15.8)
+estructura.txt
+
+# DOC2 (2026-09-20): temporales y derivados fuera de git (NORMATIVA §5, §15.8)
+/_site/
+/_freeze/
+.claude/
+.idea/
+.vscode/
+.directory

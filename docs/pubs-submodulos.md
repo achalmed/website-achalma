@@ -7,7 +7,7 @@ estado: activo
 # Los blogs satélite (`_pubs/pub_*`) como submódulos del hub
 
 > Reorganización aplicada el 2026-09-06 (fase F3a del diagnóstico integral,
-> `~/Documents/meta/DIAGNOSTICO_INTEGRAL_2026-09.md`). Antes los 11
+> `~/Documents/meta/diagnosticos/DIAGNOSTICO_INTEGRAL_2026-09.md`). Antes los 11
 > `pub_*` eran carpetas hermanas de `website-achalma` en `~/Documents`.
 
 ## Qué es y qué no es

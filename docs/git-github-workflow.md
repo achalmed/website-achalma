@@ -59,7 +59,7 @@ estado: activo
 | Dato                      | Valor                                                    |
 | ------------------------- | -------------------------------------------------------- |
 | Rama principal            | `main`                                                   |
-| Remoto                    | `origin` → `git@github.com:achalmed/website-achalma.git` |
+| Remoto                    | `origin` → git@github.com:achalmed/website-achalma.git   |
 | Web                       | <https://github.com/achalmed/website-achalma>            |
 | Licencia de **código**    | Mozilla Public License 2.0 (`LICENSE`)                   |
 | Licencia de **contenido** | CC BY-SA (frontmatter Quarto)                            |
@@ -255,8 +255,8 @@ que explican **cómo usarlo, contribuir, licenciarlo y reportar problemas**.
 | `CHANGELOG.md`                     | Historial legible de cambios por versión.                             | falta             |
 | `CITATION.cff`                     | Cómo citar el proyecto académicamente.                                |                   |
 | `.github/ISSUE_TEMPLATE/`          | Plantillas para reportar bugs/pedir features.                         | (`bug_report.md`) |
-| `.github/PULL_REQUEST_TEMPLATE.md` | Plantilla que rellena cada PR.                                        | falta             |
-| `.github/workflows/`               | Automatizaciones (CI/CD con GitHub Actions).                          | falta             |
+| .github/PULL_REQUEST_TEMPLATE.md   | Plantilla que rellena cada PR (no existe en este repo).               | falta             |
+| .github/workflows/                 | Automatizaciones (CI/CD con GitHub Actions; este repo publica por Netlify). | falta             |
 | `.github/FUNDING.yml`              | Botón "Sponsor".                                                      |                   |
 | `docs/`                            | Documentación extendida (¡esta guía vive aquí!).                      |                   |
 
@@ -465,14 +465,14 @@ Formato: **`<tipo>/<nombre-corto-con-guiones>`**, en minúsculas.
 | ----------- | -------------------------------------- | ------------------------------------------- |
 | `feat/`     | funcionalidad nueva                    | `feat/cursos-arquitectura-docente` (PR #10) |
 | `fix/`      | corregir un error                      | `fix/pdf-render-latex`                      |
-| `docs/`     | solo documentación                     | `docs/add-claude-md` (PR #8)                |
+| `docs/`     | solo documentación                     | docs/add-claude-md (PR #8)                  |
 | `refactor/` | reorganizar sin cambiar comportamiento | `refactor/scss-modular`                     |
 | `style/`    | formato/estética (sin lógica)          | `style/navbar-spacing`                      |
 | `test/`     | pruebas                                | `test/listing-render`                       |
 | `build/`    | compilación/estilos generados          | `build/page-css`                            |
 | `chore/`    | mantenimiento (deps, `.gitignore`)     | `chore/limpiar-artefactos`                  |
 | `hotfix/`   | arreglo urgente en producción          | `hotfix/enlace-roto`                        |
-| `release/`  | preparar una versión                   | `release/v1.0.0`                            |
+| `release/`  | preparar una versión                   | release/v1.0.0                              |
 
 ### Errores comunes (y cómo salir)
 
@@ -873,7 +873,7 @@ git checkout main
 git merge --no-ff feature/actualizar-monografia-eeuu -m "merge: integración actualización monografía EEUU"
 ```
 
-![alt text](image.png)
+![Resultado de `git merge --no-ff` en el historial de main](img/image.png)
 
 **Resultado en `git log` de `main`:**
 

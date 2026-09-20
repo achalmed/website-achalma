@@ -1,5 +1,5 @@
 ---
-tipo: doc
+tipo: plan
 titulo: "Plan de rediseño de la arquitectura docente — de `talk`/`teching` a `Cursos`"
 estado: hecho
 ---

@@ -1,0 +1,84 @@
+# _pubs/pubs.yml — registro de los 11 blogs satélite del hub: carpeta ↔ repo ↔ dominio ↔ tema (DOC5, 2026-09-20).
+# Fuente de verdad del nombre de cada blog en sus tres formas (carpeta `pub_<x>`, repo GitHub `achalmed/<x>`,
+# dominio Netlify) y de su tema y descripción. De aquí genera `scripts/pubs.py` el README y el CITATION.cff de
+# cada pub y el bloque «Los 11 blogs satélite» del README del hub; `scripts/pubs.py verificar` comprueba que
+# `.gitmodules`, el `site-url` de cada `_quarto.yml` y los archivos generados coinciden con este registro.
+# Las secciones temáticas (carpetas de entradas) se leen del disco al generar: no se declaran aquí.
+actualizado: 2026-09-20
+hub:
+  carpeta: 04 index
+  repo: website-achalma
+  url: https://achalmaedison.netlify.app/
+  despliegue: quarto publish netlify (_publish.yml)
+autor:
+  nombre: Edison Achalma
+  given_names: Edison
+  family_names: Achalma
+  orcid: https://orcid.org/0000-0001-6996-3364
+  github: achalmed
+# Licencia declarada hoy en los 12 sitios: LICENSE y CITATION.cff dicen MPL-2.0 (código); license.qmd del hub
+# dice CC BY-SA 4.0 (contenido). Unificarla es la decisión D9 del DIAGNOSTICO_DOCUMENTACION_2026-09; hasta
+# entonces el CITATION.cff generado repite lo que ya declaraba.
+licencia_codigo: MPL-2.0
+licencia_contenido: CC-BY-SA-4.0
+# Despliegue de los pubs (D1, pendiente de confirmar en el panel de Netlify): ningún pub tiene _publish.yml ni
+# netlify.toml y los 11 versionan _site/ con commits «render: _site actualizado»; todo indica que Netlify publica
+# el directorio _site empujado, sin build. Hasta confirmarlo, _site/ sigue en git.
+despliegue_pubs: Netlify publica _site/ empujado (sin build); D1 pendiente
+pubs:
+  - carpeta: pub_actus-mercator
+    repo: actus-mercator
+    url: https://actus-mercator.netlify.app/
+    tema: Gestión empresarial
+    descripcion: Administración, estrategia y gestión organizacional.
+  - carpeta: pub_aequilibria
+    repo: aequilibria
+    url: https://aequilibria.netlify.app/
+    tema: Macroeconomía
+    descripcion: Política monetaria y fiscal, crecimiento económico y ciclos.
+  - carpeta: pub_axiomata
+    repo: axiomata
+    url: https://axiomata.netlify.app/
+    tema: Matemática
+    descripcion: Cálculo, álgebra lineal, estadística y matemáticas aplicadas a la economía.
+  - carpeta: pub_chaska
+    repo: chaska
+    url: https://chaska-x.netlify.app/
+    tema: Tecnología y seguridad
+    descripcion: Ciberseguridad, privacidad digital, sistemas operativos y herramientas.
+    nota: el único dominio no derivable del nombre (`chaska-x`, porque `chaska` ya estaba tomado en Netlify).
+  - carpeta: pub_dialectica-y-mercado
+    repo: dialectica-y-mercado
+    url: https://dialectica-y-mercado.netlify.app/
+    tema: Filosofía y política
+    descripcion: Filosofía política, ética económica y teoría social.
+  - carpeta: pub_epsilon-y-beta
+    repo: epsilon-y-beta
+    url: https://epsilon-y-beta.netlify.app/
+    tema: Econometría
+    descripcion: Modelos econométricos, series de tiempo y análisis estadístico aplicado; secciones numeradas por nivel.
+  - carpeta: pub_methodica
+    repo: methodica
+    url: https://methodica.netlify.app/
+    tema: Investigación y metodología
+    descripcion: Métodos cualitativos y cuantitativos, APA y redacción académica.
+  - carpeta: pub_numerus-scriptum
+    repo: numerus-scriptum
+    url: https://numerus-scriptum.netlify.app/
+    tema: Programación y software
+    descripcion: R, Python, Stata, LaTeX, Quarto, Linux y herramientas para ciencia de datos; una sección por herramienta.
+  - carpeta: pub_optimums
+    repo: optimums
+    url: https://optimums.netlify.app/
+    tema: Microeconomía
+    descripcion: Teoría del consumidor y del productor, mercados, organización industrial y equilibrio general.
+  - carpeta: pub_pecunia-fluxus
+    repo: pecunia-fluxus
+    url: https://pecunia-fluxus.netlify.app/
+    tema: Finanzas
+    descripcion: Finanzas personales, corporativas e internacionales.
+  - carpeta: pub_res-publica
+    repo: res-publica
+    url: https://res-publica.netlify.app/
+    tema: Gestión pública
+    descripcion: Políticas públicas, administración del Estado y descentralización.

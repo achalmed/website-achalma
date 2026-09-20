@@ -91,7 +91,7 @@ diseño). Tras `--aplicar`, hacer commit en cada blog y luego en el hub.
 |---|---|---|
 | `scripts_quarto_studio/backend/script_blogs_manager` | `QBLOG_PUBS_SUBDIR` | `website-achalma/_pubs` |
 | `scripts_quarto_studio/backend/script_pub_index_symlink` (`04 index`) | `PUBINDEX_PUBS_SUBDIR` | `website-achalma/_pubs` |
-| `scripts_quarto_studio/backend/script_metadata_manager` | `PUBS_SUBDIR` (`lib/config.py`) | `website-achalma/_pubs` |
+| `scripts_quarto_studio/backend/script_metadata_manager` | `PUBS_SUBDIR` (`scripts_quarto_studio/backend/script_metadata_manager/lib/config.py`) | `website-achalma/_pubs` |
 | `scripts_document_studio/backends/page-counter` | `SUBDIR_PUBS` (`config.py`) | `website-achalma/_pubs` |
 | `scripts_for_linux/.../script_git_sync_respos` | `repos-config.yml` (`name` = ruta relativa) | `website-achalma/_pubs/pub_*` |
 

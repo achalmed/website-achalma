@@ -80,7 +80,7 @@ las aparta del render, como `cursos/_plantillas/`). Las tres guías `_metadata-g
 se quedan en `docs/`: son referencia, no plantilla.
 
 **3.5 El plan de `cursos/` pasa a `historial/`** (2026-09-20, DOC5) con `tipo: plan` y `estado: hecho`,
-que ya declaraba. `publication/_index.md` (frontmatter de Hugo/Blogdown, sin cuerpo, `estado: archivado`,
+que ya declaraba. publication/_index.md (frontmatter de Hugo/Blogdown, sin cuerpo, `estado: archivado`,
 sin referencias) se elimina; git conserva su historia.
 
 **3.6 La licencia se declara tal cual está, sin unificar** (2026-09-20, DOC5; decisión D9 pendiente).

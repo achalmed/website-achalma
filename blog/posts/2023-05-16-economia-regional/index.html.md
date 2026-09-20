@@ -42,7 +42,7 @@ citation:
   author:
   - Edison Achalma
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf
-date: 05/16/2023
+date: 2023-05-16
 draft: true
 image: ../featured.jpg
 ---
@@ -1459,10 +1459,20 @@ Nuestra realidad nacional no solo son los recursos también hay que considerar l
 desenvolvimiento histórico se debe considerar como un pasado que ha dado resultado el producto actual es el desenvolvimiento histórico.
 
 
+---
+tipo: fragmento
+titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
+---
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
+
+---
+tipo: fragmento
+titulo: índice de publicaciones de posts; lo genera script_generador_publicacion_similar
+---
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
 2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
@@ -1471,6 +1481,11 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf) [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990)
 6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
+
+---
+tipo: fragmento
+titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
+---
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

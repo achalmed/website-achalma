@@ -47,7 +47,7 @@ citation:
   - Brenda Gamboa
   - Margoth Gómez
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2022-06-02-impacto-del-cambio-climatico/index.pdf
-date: 06/02/2022
+date: 2022-06-02
 draft: false
 image: ../featured.jpg
 ---
@@ -451,10 +451,20 @@ La ecuación de regresión muestra que, por cada aumento en el precio del petró
 Para analizar la relación entre el volumen del cobre (medido en miles de toneladas) y el oro (medido en miles de onzas troy), consideramos las series mensuales de exportaciones de productos tradicionales del BCRP.
 Graficaremos y explicaremos su comportamiento, evaluando si existe una relación de largo plazo (cointegración) entre ambas variables en el Perú, utilizando el mismo período que en las preguntas anteriores (mencionar el período específico).
 
+---
+tipo: fragmento
+titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
+---
+
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
+
+---
+tipo: fragmento
+titulo: índice de publicaciones de posts; lo genera script_generador_publicacion_similar
+---
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
 2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
@@ -463,6 +473,11 @@ Si te interesó este artículo, te recomendamos que explores otros blogs y recur
 5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf) [La Economia Peruana Entre 1970 1990](https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990)
 6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
+
+---
+tipo: fragmento
+titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
+---
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

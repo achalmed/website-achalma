@@ -133,7 +133,7 @@ principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada siti
 ## Límite honesto
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
-- `_site/` sigue en git: {d.get('despliegue_pubs', 'sin _publish.yml ni netlify.toml')}. `SECURITY.md` es la plantilla de GitHub sin rellenar.
+- `_site/` sigue en git: {d.get('despliegue_pubs', 'sin _publish.yml ni netlify.toml')}. 
 - Licencia: código {d['licencia_codigo']} (`LICENSE`), contenido {d['licencia_contenido']} según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
 """
 

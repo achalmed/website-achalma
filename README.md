@@ -104,6 +104,4 @@ versiones, en `CHANGELOG.md`; lo cumplido, en `docs/historial/`.
   falta por confirmar en el panel: `docs/despliegue-netlify.md` (D1).
 - **Los nombres de un blog no se derivan unos de otros** (`pub_chaska` → repo `chaska` → dominio
   `chaska-x.netlify.app`): el único registro es `_pubs/pubs.yml`.
-- **`SECURITY.md` y `CODE_OF_CONDUCT.md`** son plantillas de GitHub sin rellenar, iguales en los 12 sitios;
-  rellenarlas o retirarlas está pendiente (`docs/decisiones.md`).
 - Los comentarios (Utterances) viven en los issues de `achalmed/website-achalma`, también los de los blogs.

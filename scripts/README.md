@@ -47,5 +47,5 @@ se edita allí.
 - `pubs.py` escribe solo entre marcas y solo lo que declara `_pubs/pubs.yml`: si un blog cambia de dominio
   y nadie toca el registro, el generador propaga el dato viejo. Tampoco toca `_quarto.yml` ni el menú
   «More» de la navegación: eso sigue siendo a mano.
-- No hay script para publicar: el hub se publica con `quarto publish netlify` y cada blog desde su carpeta
-  (`../docs/despliegue-netlify.md`).
+- No hay script para publicar: el hub y cada blog se publican con `quarto render`, commit de `_site/` y
+  `git push` desde su propia carpeta; Netlify sirve ese `_site` sin build (`../docs/despliegue-netlify.md`).

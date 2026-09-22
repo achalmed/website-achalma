@@ -25,7 +25,7 @@ satélite: eso se hace dentro del pub, que es su propio repositorio.
 quarto preview                                           # vista previa con recarga
 quarto render                                            # todo el sitio → _site/ (freeze: no re-ejecuta código)
 quarto render blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.qmd   # un solo documento (sí ejecuta)
-quarto publish netlify                                   # renderiza y publica el hub en el sitio de _publish.yml
+git add _site && git commit -m "render: _site actualizado" && git push   # publicar: Netlify sirve el _site del repo, sin build
 scripts/sync-theme-pubs.sh --verificar                   # ¿algún blog difiere del tema del hub? (sale 1 si sí)
 scripts/sync-theme-pubs.sh --aplicar                     # propaga el tema a los 11 blogs (sin --aplicar simula)
 python3 scripts/pubs.py verificar                        # README y CITATION.cff de los pubs y la tabla de abajo, al día
@@ -75,8 +75,9 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `docs/` | documentación permanente (fuera del render); índice generado; `historial/` con lo cumplido | a mano; `docs/README.md` lo genera `core/docs.py indice` |
 | `_plantillas/apaquarto/` | las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) para un documento nuevo | a mano; el guion bajo las aparta del render |
 | `resources/` | `cv.pdf` (copia manual del CV de `09 trabajo`) e `indice.ods` | a mano |
-| `_publish.yml` · `.gitmodules` · `CITATION.cff` · `LICENSE` · `CNAME` | registro del sitio Netlify (lo escribe `quarto publish`); submódulos; cita; MPL-2.0; residuo de GitHub Pages | `quarto publish`; git; a mano |
-| `_site/` · `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | artefactos de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts_quarto_studio` (`_indice/`) |
+| `_publish.yml` · `.gitmodules` · `CITATION.cff` · `LICENSE` · `CNAME` | id del sitio Netlify (lo escribió `quarto publish` al crearlo; hoy no es la vía de publicación); submódulos; cita; MPL-2.0; residuo de GitHub Pages | `quarto publish`; git; a mano |
+| `_site/` | el sitio renderizado, **versionado a propósito**: es lo que Netlify publica en cada `git push` (`docs/despliegue-netlify.md`, D1) | `quarto render` |
+| `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | caché de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts_quarto_studio` (`_indice/`) |
 
 ## Documentación
 

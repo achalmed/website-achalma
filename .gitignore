@@ -539,8 +539,13 @@ _indice/
 # DOC2 (2026-09-20): temporales y derivados fuera de git (NORMATIVA §5, §15.8)
 estructura.txt
 
-# DOC2 (2026-09-20): temporales y derivados fuera de git (NORMATIVA §5, §15.8)
-/_site/
+# DOC2 (2026-09-20): temporales y derivados fuera de git (NORMATIVA §5, §15.8).
+# `_site/` NO va aquí: Netlify publica el hub desde git con directorio `_site` y sin
+# comando de build (docs/despliegue-netlify.md, D1). Excluirlo en DOC2 dejó el sitio
+# vacío el 2026-09-21; se restauró ese día. Por eso `#_site/` está comentado arriba.
+# Las figuras de los posts (`_site/**/index_files/`) son parte del sitio publicado: se
+# re-incluyen frente a `*_files/` (línea 17), que solo debe actuar sobre las fuentes.
+!/_site/**/*_files/
 /_freeze/
 .claude/
 .idea/

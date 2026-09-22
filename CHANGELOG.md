@@ -8,6 +8,17 @@ Cambios del **sitio y su repositorio**, no de cada post (eso es el `git log` y e
 Fechas ISO del `git log` real, lo más reciente arriba. Las razones están en `docs/decisiones.md`; lo
 cumplido, en `docs/historial/`. `CITATION.cff` declara `version: '3.10'` y no se mueve con estas entradas.
 
+## 2026-09-21 — incidente: el hub caído con un deploy vacío en Netlify
+
+- Causa: DOC2 sacó `_site/` de git «por higiene» y el push siguiente publicó un sitio vacío, porque Netlify
+  sirve el `_site` del repo sin build (igual que en los 11 blogs). El `.gitignore` original ya tenía
+  `#_site/` comentado a propósito. Detalle en `docs/despliegue-netlify.md` («Incidente 2026-09-21»).
+- `_site/` vuelve a git (329 archivos, el render local verificado del 2026-09-20 18:10) y
+  `!/_site/**/*_files/` re-incluye las figuras de los posts frente a la regla general `*_files/`.
+- Corregida la documentación que desde DOC5 decía que el hub se publicaba con `quarto publish netlify`
+  (`README.md`, `CLAUDE.md`, `docs/despliegue-netlify.md`, `docs/publicar-un-post.md`,
+  `scripts/README.md`); D1 pasa a cubrir los 12 sitios y, mientras no se decida, `_site/` no se excluye.
+
 ## 2026-09-20 — DOC5: documentación de los sitios Quarto
 
 - `README.md` en la raíz (antes el README vivía en `docs/README.md` con rutas de dos reorganizaciones

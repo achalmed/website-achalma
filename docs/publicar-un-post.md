@@ -134,7 +134,8 @@ En el **hub** (`blog/posts/`): commit normal en `04 index`.
 
 ## 8. Publicar
 
-- **Hub:** `quarto publish netlify` (renderiza y sube `_site/`; destino en `_publish.yml`).
+- **Hub:** igual que un blog: `quarto render` → commit de `_site/` → `git push`; Netlify sirve el `_site`
+  del repo, sin build (confirmado el 2026-09-21: sacar `_site/` de git en DOC2 dejó el hub vacío).
 - **Blog:** hoy los 11 versionan `_site/` y todo indica que Netlify publica el `_site` empujado, sin build
   (`despliegue-netlify.md`, D1): el `quarto render` del paso 5 tiene que estar hecho **antes** del commit
   del paso 7, y `_site/` incluido en él. Si D1 cambia el modo, este paso cambia con él.
@@ -156,5 +157,5 @@ cd scripts_quarto_studio/backend/script_pub_index_symlink
 2. `title`, `shorttitle`, `abstract`, `keywords`, `categories`, `tags`, `description`, `citation` completos.
 3. Render del post sin errores; PDF generado; `pdf-url` correcta.
 4. `_contenido_*.qmd` regenerados (blog).
-5. Commit en el pub → puntero en el hub (blog) · `quarto publish netlify` (hub).
+5. Commit en el pub → puntero en el hub (blog) · render, commit de `_site/` y push (hub).
 6. `_indice/` regenerado.

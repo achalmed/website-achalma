@@ -92,7 +92,7 @@ autor.
 
 | id | qué | desde | estado |
 |---|---|---|---|
-| **D1** | sacar `_site/` de git en los 11 pubs (el hub ya lo tiene fuera desde DOC2) | 2026-09-20 | pendiente: confirmar en el panel de Netlify el modo de publicación de cada blog (`despliegue-netlify.md`) y elegir `quarto publish netlify` por pub o build en Netlify |
+| **D1** | sacar `_site/` de git en los 12 sitios (hub y 11 pubs). **Hoy `_site/` es lo que Netlify publica en cada push, sin build**: sacarlo del hub en DOC2 (2026-09-20) dejó el sitio vacío y se restauró el 2026-09-21 (`despliegue-netlify.md`, «Incidente 2026-09-21»). Mientras D1 no se decida, `_site/` se queda en git en los 12 y D08 del doctor avisará en el hub | 2026-09-20 | pendiente del autor: elegir entre (A) `quarto publish netlify` por sitio y `_site/` fuera de git, o (B) build en Netlify; probar primero en un pub. Hasta entonces, **no volver a excluir `_site/`** |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `pub_numerus-scriptum` o `pub_methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `SECURITY.md` · `CODE_OF_CONDUCT.md` | plantillas de GitHub sin rellenar, idénticas en los 12 sitios | 2026-09-20 | **hecho (DOC9, 2026-09-20)**: retiradas de los 12 sitios por delegación del autor (§7.1 del diagnóstico); si algún día hace falta una política de seguridad, se escribe de verdad |

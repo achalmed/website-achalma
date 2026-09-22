@@ -40,8 +40,9 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/decisiones.md`. `docs/`, `SECURITY.md` y `CODE_OF_CONDUCT.md` están fuera del render
   (`project.render` en `_quarto.yml`): un `.md` nuevo en `docs/` ya no se publica como página del sitio.
 - **Nada del despacho** ni identificadores de un cliente en este repo público (regla 8 del CLAUDE.md raíz).
-- **No decidir por el autor** lo que está en `decision`: D1 (`_site/` de los pubs en git y el modo de
-  publicación en Netlify), D9 (una sola licencia en los 12 sitios) y D16 (destino del manual de Git).
+- **No decidir por el autor** lo que está en `decision`: D1 (`_site/` del hub y de los pubs en git, que
+  es lo que Netlify publica, frente a NORMATIVA §5/§15.8), D9 (una sola licencia en los 12 sitios) y D16
+  (destino del manual de Git).
 
 ## Cómo se verifica un cambio
 
@@ -58,8 +59,10 @@ python3 core/docs.py verificar "04 index"         # índice de docs/ al día
 git submodule status                              # en qué commit está cada blog respecto al hub
 ```
 
-No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. Publicar el hub:
-`quarto publish netlify` (lee `_publish.yml`); publicar un blog: `docs/despliegue-netlify.md` (D1).
+No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub y cada blog es
+`quarto render` → commit de `_site/` → `git push`**: Netlify sirve el `_site` del repo, sin build. Por eso
+`_site/` está **versionado a propósito** en los 12 sitios y nunca se saca de git «por higiene»: hacerlo en
+DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
 
 ## Detalles que cuesta redescubrir
 

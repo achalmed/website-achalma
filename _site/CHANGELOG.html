@@ -382,6 +382,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="changelog-hub-04-index-repo-website-achalma" class="level1">
 <h1>CHANGELOG — hub <code>04 index</code> (repo <code>website-achalma</code>)</h1>
 <p>Cambios del <strong>sitio y su repositorio</strong>, no de cada post (eso es el <code>git log</code> y el listado del blog). Fechas ISO del <code>git log</code> real, lo más reciente arriba. Las razones están en <code>docs/decisiones.md</code>; lo cumplido, en <code>docs/historial/</code>. <code>CITATION.cff</code> declara <code>version: '3.10'</code> y no se mueve con estas entradas.</p>
+<section id="decisión-_site-se-versiona-en-los-12-sitios-cierra-d1" class="level2">
+<h2 class="anchored" data-anchor-id="decisión-_site-se-versiona-en-los-12-sitios-cierra-d1">2026-09-22 — decisión: <code>_site/</code> se versiona en los 12 sitios (cierra D1)</h2>
+<ul>
+<li>El autor decide que <code>_site/</code> queda en git en el hub y en los 11 pubs <strong>hasta que diga lo contrario</strong>: Netlify lo sirve sin build, así que el artefacto es el despliegue. <code>docs/decisiones.md</code> §4.1 (nueva sección «Despliegue»); D1 sale de la tabla de pendientes.</li>
+<li>Por encima de NORMATIVA §5/§15.8; el fallo <strong>D08</strong> del validador y del doctor en el hub queda aceptado como consecuencia, no como avería. <code>README.md</code>, <code>CLAUDE.md</code> y <code>docs/despliegue-netlify.md</code> lo dicen.</li>
+</ul>
+</section>
+<section id="incidente-el-hub-caído-con-un-deploy-vacío-en-netlify" class="level2">
+<h2 class="anchored" data-anchor-id="incidente-el-hub-caído-con-un-deploy-vacío-en-netlify">2026-09-21 — incidente: el hub caído con un deploy vacío en Netlify</h2>
+<ul>
+<li>Causa: DOC2 sacó <code>_site/</code> de git «por higiene» y el push siguiente publicó un sitio vacío, porque Netlify sirve el <code>_site</code> del repo sin build (igual que en los 11 blogs). El <code>.gitignore</code> original ya tenía <code>#_site/</code> comentado a propósito. Detalle en <code>docs/despliegue-netlify.md</code> («Incidente 2026-09-21»).</li>
+<li><code>_site/</code> vuelve a git (329 archivos, el render local verificado del 2026-09-20 18:10) y <code>!/_site/**/*_files/</code> re-incluye las figuras de los posts frente a la regla general <code>*_files/</code>.</li>
+<li>Corregida la documentación que desde DOC5 decía que el hub se publicaba con <code>quarto publish netlify</code> (<code>README.md</code>, <code>CLAUDE.md</code>, <code>docs/despliegue-netlify.md</code>, <code>docs/publicar-un-post.md</code>, <code>scripts/README.md</code>); D1 pasa a cubrir los 12 sitios y, mientras no se decida, <code>_site/</code> no se excluye.</li>
+</ul>
+</section>
 <section id="doc5-documentación-de-los-sitios-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="doc5-documentación-de-los-sitios-quarto">2026-09-20 — DOC5: documentación de los sitios Quarto</h2>
 <ul>

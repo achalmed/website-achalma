@@ -76,7 +76,7 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `_plantillas/apaquarto/` | las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) para un documento nuevo | a mano; el guion bajo las aparta del render |
 | `resources/` | `cv.pdf` (copia manual del CV de `09 trabajo`) e `indice.ods` | a mano |
 | `_publish.yml` · `.gitmodules` · `CITATION.cff` · `LICENSE` · `CNAME` | id del sitio Netlify (lo escribió `quarto publish` al crearlo; hoy no es la vía de publicación); submódulos; cita; MPL-2.0; residuo de GitHub Pages | `quarto publish`; git; a mano |
-| `_site/` | el sitio renderizado, **versionado a propósito**: es lo que Netlify publica en cada `git push` (`docs/despliegue-netlify.md`, D1) | `quarto render` |
+| `_site/` | el sitio renderizado, **versionado a propósito**: es lo que Netlify publica en cada `git push`; se queda en git hasta que el autor decida lo contrario (`docs/decisiones.md` §4.1) | `quarto render` |
 | `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | caché de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts_quarto_studio` (`_indice/`) |
 
 ## Documentación
@@ -91,7 +91,8 @@ versiones, en `CHANGELOG.md`; lo cumplido, en `docs/historial/`.
 ## Límite honesto
 
 - **Sin lint ni pruebas.** Se comprueba renderizando y mirando `_site/`; `python3 core/archivos.py validar
-  "04 index"` revisa la documentación, no el sitio.
+  "04 index"` revisa la documentación, no el sitio. Su único fallo, **D08** por versionar `_site/`, es
+  deliberado: `_site/` es el artefacto que Netlify publica (`docs/decisiones.md` §4.1).
 - **El hub no renderiza los blogs.** `_pubs/` empieza por `_` y Quarto lo ignora; cada pub se renderiza y
   publica desde su carpeta. Los README de los pubs los genera el hub, pero su contenido no se escribe aquí.
 - **Los requisitos no son reproducibles desde el repo.** Hacen falta Quarto (≥ 1.6; hoy 1.9), TinyTeX para

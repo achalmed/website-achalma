@@ -88,11 +88,29 @@ sin referencias) se elimina; git conserva su historia.
 ya lo formula como código MPL-2.0 / contenido CC BY-SA. Una sola licencia en los 12 sitios la elige el
 autor.
 
-## 4. Pendientes con dueño y fecha
+## 4. Despliegue
+
+**4.1 `_site/` se versiona en los 12 sitios; el push es el despliegue** (2026-09-22, decisión del autor;
+cierra D1). Netlify sirve el `_site` del repo con directorio de publicación `_site` y sin comando de
+build, así que el artefacto **es** el mecanismo de publicación: `quarto render` → commit de `_site/` →
+`git push`. Queda versionado **hasta que el autor diga lo contrario**, en el hub y en los 11 pubs.
+
+Esto contradice a propósito la NORMATIVA §5 y §15.8 («los derivados no se versionan»), que está escrita
+para artefactos reconstruibles que nadie sirve. Aquí la regla general choca con la realidad del
+despliegue y gana el despliegue. Consecuencia aceptada: `core/archivos.py` marca **D08** como fallo en el
+hub, y `meta/doctor` lo repetirá, mientras el validador no reconozca la excepción; es ruido conocido, no
+una avería. El precedente que obliga a dejarlo escrito: DOC2 lo sacó de git «por higiene» el 2026-09-20 y
+el hub quedó caído hasta el 2026-09-21 (`despliegue-netlify.md`, «Incidente 2026-09-21»).
+
+Las alternativas que se estudiaron y quedan descartadas mientras esta decisión siga en pie: publicar con
+`quarto publish netlify` por sitio (exige autorizar la cuenta en cada máquina y no sobrevive a una
+reinstalación sin más) y construir en Netlify (`quarto render` en CI necesitaría TinyTeX para los PDF de
+apaquarto y `_freeze/` en git).
+
+## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | estado |
 |---|---|---|---|
-| **D1** | sacar `_site/` de git en los 12 sitios (hub y 11 pubs). **Hoy `_site/` es lo que Netlify publica en cada push, sin build**: sacarlo del hub en DOC2 (2026-09-20) dejó el sitio vacío y se restauró el 2026-09-21 (`despliegue-netlify.md`, «Incidente 2026-09-21»). Mientras D1 no se decida, `_site/` se queda en git en los 12 y D08 del doctor avisará en el hub | 2026-09-20 | pendiente del autor: elegir entre (A) `quarto publish netlify` por sitio y `_site/` fuera de git, o (B) build en Netlify; probar primero en un pub. Hasta entonces, **no volver a excluir `_site/`** |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `pub_numerus-scriptum` o `pub_methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `SECURITY.md` · `CODE_OF_CONDUCT.md` | plantillas de GitHub sin rellenar, idénticas en los 12 sitios | 2026-09-20 | **hecho (DOC9, 2026-09-20)**: retiradas de los 12 sitios por delegación del autor (§7.1 del diagnóstico); si algún día hace falta una política de seguridad, se escribe de verdad |

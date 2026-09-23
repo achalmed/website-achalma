@@ -40,8 +40,11 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/decisiones.md`. `docs/`, `SECURITY.md` y `CODE_OF_CONDUCT.md` están fuera del render
   (`project.render` en `_quarto.yml`): un `.md` nuevo en `docs/` ya no se publica como página del sitio.
 - **Nada del despacho** ni identificadores de un cliente en este repo público (regla 8 del CLAUDE.md raíz).
-- **No decidir por el autor** lo que está en `decision`: D1 (`_site/` del hub y de los pubs en git, que
-  es lo que Netlify publica, frente a NORMATIVA §5/§15.8), D9 (una sola licencia en los 12 sitios) y D16
+- **`_site/` se versiona en los 12 sitios y no se saca de git** (decisión del autor, 2026-09-22,
+  `docs/decisiones.md` §4.1): Netlify lo sirve sin build, así que el artefacto es el despliegue. Vale
+  **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8; el fallo D08 del validador
+  y del doctor en el hub es su consecuencia aceptada, no una avería que haya que «arreglar» borrando.
+- **No decidir por el autor** lo que está en `decision`: D9 (una sola licencia en los 12 sitios) y D16
   (destino del manual de Git).
 
 ## Cómo se verifica un cambio

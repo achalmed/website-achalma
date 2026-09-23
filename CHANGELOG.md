@@ -8,6 +8,14 @@ Cambios del **sitio y su repositorio**, no de cada post (eso es el `git log` y e
 Fechas ISO del `git log` real, lo más reciente arriba. Las razones están en `docs/decisiones.md`; lo
 cumplido, en `docs/historial/`. `CITATION.cff` declara `version: '3.10'` y no se mueve con estas entradas.
 
+## 2026-09-22 — decisión: `_site/` se versiona en los 12 sitios (cierra D1)
+
+- El autor decide que `_site/` queda en git en el hub y en los 11 pubs **hasta que diga lo contrario**:
+  Netlify lo sirve sin build, así que el artefacto es el despliegue. `docs/decisiones.md` §4.1 (nueva
+  sección «Despliegue»); D1 sale de la tabla de pendientes.
+- Por encima de NORMATIVA §5/§15.8; el fallo **D08** del validador y del doctor en el hub queda aceptado
+  como consecuencia, no como avería. `README.md`, `CLAUDE.md` y `docs/despliegue-netlify.md` lo dicen.
+
 ## 2026-09-21 — incidente: el hub caído con un deploy vacío en Netlify
 
 - Causa: DOC2 sacó `_site/` de git «por higiene» y el push siguiente publicó un sitio vacío, porque Netlify

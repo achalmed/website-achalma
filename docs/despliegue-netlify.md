@@ -9,7 +9,8 @@ Los 12 sitios de la familia se sirven en Netlify. Nada de la configuración de N
 no hay `netlify.toml`, ni `_redirects`, ni variables de build versionadas. Este documento reúne lo que el
 repositorio permite afirmar y separa, con claridad, lo que solo el panel de Netlify puede confirmar. Es
 la base de la decisión **D1** del diagnóstico documental (`meta/diagnosticos/DIAGNOSTICO_DOCUMENTACION_2026-09.md`
-§7): sacar `_site/` de git en los 12 sitios (hub y 11 blogs).
+§7): sacar `_site/` de git en los 12 sitios (hub y 11 blogs), cerrada el 2026-09-22 en contra: `_site/` se
+queda versionado (`decisiones.md` §4.1).
 
 ## El hub (`04 index` → <https://achalmaedison.netlify.app>)
 
@@ -99,8 +100,9 @@ figura nueva de un render futuro no quede fuera en silencio. Commit y push: Netl
 después `/blog/`, `/cursos/`, una URL antigua (`/talk/2025-01-07-sesion-01-monografia-e-informe/`) y una
 figura (`/blog/posts/2022-04-22-economia-agraria/index_files/figure-html/figura1.png`).
 
-**Consecuencias.** `_site/` queda en git en los 12 sitios hasta que D1 se decida (`decisiones.md`); D08 del
-doctor avisará en el hub por ello. `quarto publish netlify` sigue siendo una vía alternativa al mismo
+**Consecuencias.** `_site/` queda en git en los 12 sitios: el autor lo decidió así el 2026-09-22, hasta
+que diga lo contrario (`decisiones.md` §4.1, que cierra D1); el fallo D08 del validador y del doctor en el
+hub es la consecuencia aceptada. `quarto publish netlify` sigue siendo una vía alternativa al mismo
 sitio, pero sin cuenta y sin terminal interactiva (`--no-prompt`, stdin cerrado) **sale con código 0 sin
 publicar nada ni avisar**: un script no puede fiarse de su código de salida.
 
@@ -120,27 +122,30 @@ con **directorio de publicación `_site` y sin comando de build**: el autor rend
 `_site/` y el `git push` es el despliegue. Es coherente con que los PDF apaquarto necesiten TinyTeX y con
 que ningún pub tenga `_publish.yml`.
 
-**Por qué importa (D1).** Si eso se confirma, sacar `_site/` de git en un pub **rompe su publicación**: el
-siguiente push dejaría a Netlify sin nada que servir. Sacar `_site/` exige antes elegir una de dos:
+**Por qué importa (D1).** Confirmado en el hub el 2026-09-21: sacar `_site/` de git **rompe la
+publicación**, porque el siguiente push deja a Netlify sin nada que servir. Por eso el autor decidió el
+2026-09-22 que `_site/` se queda versionado en los 12 sitios (`decisiones.md` §4.1). Las dos alternativas
+que exigiría sacarlo quedan descartadas mientras esa decisión siga en pie:
 
 | alternativa | qué implica | costo |
 |---|---|---|
 | **A. `quarto publish netlify` por pub** (como el hub) | desvincular el sitio del repo o dejar el build vacío; correr `quarto publish netlify` en cada pub la primera vez (crea su `_publish.yml`, que se versiona); `_site/` sale de git y del `.gitignore` compartido pasa a excluirlo | uno a uno, 11 veces; el render sigue en local (TinyTeX) |
 | **B. build en Netlify** | comando de build que instale Quarto y renderice (`quarto render`); `_freeze/` tendría que viajar en git o la ejecución estar desactivada; los PDF apaquarto necesitarían TinyTeX en la imagen | builds largos; PDF en CI sin garantía |
 
-La recomendación del diagnóstico es A, probada primero en un solo pub, con reversión `git revert` +
-`git checkout` del `_site` anterior.
+La recomendación del diagnóstico era A, probada primero en un solo pub, con reversión `git revert` +
+`git checkout` del `_site` anterior. Queda anotada por si la decisión §4.1 cambia; hoy no se aplica.
 
 **Lo que hay que confirmar en el panel, por cada blog:** el repo enlazado, la rama (`main`), el comando
-de build (se espera vacío) y el directorio de publicación (se espera `_site`). Hasta entonces, D1 queda sin
-aplicar y los 11 `_site/` siguen en git.
+de build (se espera vacío) y el directorio de publicación (se espera `_site`). Nada de eso urge mientras
+`_site/` siga versionado: los 11 se publican solos con el push, como se comprobó el 2026-09-21 (los 11
+respondían `200` con el hub caído) y el 2026-09-22.
 
 ## Verificación
 
 ```bash
 quarto inspect . | python3 -c "import json,sys; print(len(json.load(sys.stdin)['files']['input']))"  # entradas del hub
 quarto render && ls _site/                          # el sitio completo en local
-git ls-files _site | wc -l                          # el hub versiona su _site (329 el 2026-09-21); 0 = el sitio saldrá vacío
+git ls-files _site | wc -l                          # el hub versiona su _site (329 el 2026-09-22); 0 = el sitio saldrá vacío
 git status --short _site | head                     # tras un render: lo que cambia y hay que confirmar antes del push
 curl -sS -o /dev/null -w "%{http_code}\n" https://achalmaedison.netlify.app/   # 200 tras el push (Netlify tarda ~1 min)
 git -C _pubs/pub_axiomata log --oneline -3          # en un pub: ¿los commits siguen siendo «render: _site actualizado»?
@@ -151,5 +156,5 @@ git -C _pubs/pub_axiomata ls-files _site | wc -l    # cuántos archivos de _site
 
 Los 11 blogs (`_pubs/pub_*`) y `scripts_quarto_studio/backend/script_blogs_manager` (`main.sh publish
 <blog> [netlify]`, que envuelve `quarto publish`). El doctor (`meta/doctor/main.sh`) avisa mientras un
-sitio Quarto versione `_site/` (D08); los pubs no se validan (el validador no desciende a `_pubs/`) y el hub
-avisará hasta que D1 se decida.
+sitio Quarto versione `_site/` (D08); los pubs no se validan (el validador no desciende a `_pubs/`) y en el
+hub el aviso es permanente mientras rija la decisión §4.1 de `decisiones.md`.

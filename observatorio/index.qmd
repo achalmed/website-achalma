@@ -1,0 +1,80 @@
+---
+title: "Observatorio de datos del Perú"
+description: |
+  Indicadores de fuentes oficiales peruanas, con su serie histórica, su método
+  y su fuente identificada. Cada cifra dice quién la publicó y si se calculó aquí.
+format:
+  html:
+    page-layout: full
+    toc: false
+title-block-banner: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+## [Abrir el observatorio →](plataforma.html){target="_blank"}
+
+Catálogo temático, fichas por indicador, series históricas, comparación entre
+indicadores y territorios, y las notas de método. Se abre en una pestaña nueva.
+:::
+
+<!-- cifras:inicio -->
+<!-- GENERADO por tools/plataforma.py --cifras-en; no editar a mano. -->
+
+| | |
+|---:|---|
+| **384** | indicadores vigentes, de 12 estudios |
+| **139** | con serie histórica |
+| **1922–2026** | cobertura temporal |
+| **40** | instituciones como fuente |
+| **24** | departamentos con dato propio |
+| **7** | temas: economía y producción (64), empleo e ingresos (40), educación (25), salud y nutrición (82), seguridad ciudadana (133), presupuesto y gasto público (35), territorio y servicios (5) |
+
+<sub>Reconstruido el 2026-09-28 desde los paquetes publicados de cada estudio.</sub>
+
+<!-- cifras:fin -->
+
+## Qué es
+
+Reúne los indicadores que producen los estudios de
+[datafw](https://github.com/achalmed/datafw), el marco de adquisición y análisis
+de estadística pública peruana: 26 conectores institucionales, un catálogo de
+procedencia y un pipeline de doce fases desde la descarga del original hasta el
+paquete publicado.
+
+No es un repositorio de archivos ni un tablero. El orden es el de quien mira un
+dato: **panorama → tema → ficha**. La ficha de un indicador trae su serie, su
+método, su procesamiento, sus notas, la fuente completa con enlace al portal
+que la publicó, el identificador del archivo en el acervo y la firma del paquete
+del que salió.
+
+## Qué pone por delante
+
+Cada indicador declara **de dónde sale su cifra**, y eso va en el panorama, no
+en una nota al pie:
+
+- **dato** — lo publicó la institución tal cual.
+- **cálculo** — se calculó aquí a partir del microdato oficial.
+- **estimación** — resultado de un modelo, con su especificación declarada.
+
+Es la diferencia entre citar y afirmar.
+
+## Qué no puede dar
+
+La sección **Método** del observatorio lo dice en su propia página, y conviene
+leerla antes de usar una cifra: ningún coeficiente publicado mide un efecto
+causal; buena parte de los indicadores tiene un solo periodo y no admite
+lectura de tendencia; algunos vienen de un informe y no de un archivo del
+acervo; y las series cuya definición cambió se publican por separado y **no se
+empalman**.
+
+## Cómo se mantiene
+
+No se mantiene a mano. La página se reconstruye de los paquetes publicados:
+
+```bash
+python3 tools/plataforma.py --salida "04 index/observatorio/plataforma.html"
+```
+
+Cada corrida vuelve a leer la última versión publicada de cada estudio, recompone
+el catálogo y reescribe también las cifras de esta página. Lo que cambia en los
+datos aparece aquí sin que nadie edite nada.

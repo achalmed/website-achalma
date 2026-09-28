@@ -14,6 +14,11 @@ project:
   # Compila assets/scss/05-pages/*.scss → assets/css/pages/*.css en cada render
   pre-render: scripts/build-page-css.sh
   resources:
+    # El observatorio es una página autocontenida (datos, estilos y gráficos
+    # dentro) que reconstruye `02 analysis/tools/plataforma.py`. Se COPIA tal
+    # cual: pasarla por Quarto le impondría el tema del hub y rompería su
+    # paleta, que está validada aparte, y dejaría de poder regenerarse sola.
+    - observatorio/plataforma.html
     - resources/cv.pdf
     - blog/sidebar.jpg
     - cursos/sidebar.jpg
@@ -103,6 +108,9 @@ website:
       - text: Publications
         aria-label: "Publications"
         href: publication/index.qmd
+      - text: Datos
+        aria-label: "Observatorio de datos del Perú"
+        href: observatorio/index.qmd
       - text: "Blog"
         aria-label: "Meeting People Where They R"
         href: blog/index.qmd

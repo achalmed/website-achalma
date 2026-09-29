@@ -24,6 +24,7 @@ project:
     - cursos/sidebar.jpg
     - assets/css/pages/listing.css
     - assets/css/pages/courses.css
+    - assets/css/pages/observatorio.css
 
   #post-render:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352

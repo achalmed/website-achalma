@@ -1,39 +1,73 @@
 ---
 title: "Observatorio de datos del Perú"
+subtitle: "Estadística pública · fuentes oficiales · trazabilidad"
 description: |
-  Indicadores de fuentes oficiales peruanas, con su serie histórica, su método
-  y su fuente identificada. Cada cifra dice quién la publicó y si se calculó aquí.
+  Indicadores de fuentes oficiales peruanas con su serie histórica, su método y su
+  fuente identificada. Cada cifra dice quién la publicó y si se calculó aquí.
 format:
   html:
     page-layout: full
     toc: false
 title-block-banner: false
+header-includes: |
+  <link rel="stylesheet" href="/assets/css/pages/listing.css">
+  <link rel="stylesheet" href="/assets/css/pages/observatorio.css">
 ---
 
-::: {.callout-note appearance="simple" icon=false}
-## [Abrir el observatorio →](plataforma.html){target="_blank"}
+::: {.obs-hero}
 
-Catálogo temático, fichas por indicador, series históricas, comparación entre
-indicadores y territorios, y las notas de método. Se abre en una pestaña nueva.
+::: {.obs-hero-texto}
+
+<div class="obs-acciones">
+<a class="obs-btn" href="plataforma.html" target="_blank" rel="noopener">Abrir el observatorio <span aria-hidden="true">→</span></a>
+<a class="obs-btn-2" href="#cómo-se-lee-una-cifra">Cómo se lee una cifra</a>
+</div>
+
+<p class="obs-nota">Se abre en una pestaña nueva. Los datos van dentro de la página: no depende de ningún servidor.</p>
+
+<ol class="obs-vistas">
+<li><span class="obs-num">01</span><div><a href="plataforma.html#panorama" target="_blank" rel="noopener">Panorama</a><span class="obs-vista-desc">El acervo de un vistazo: quién produce cada cifra y los temas con sus series más largas.</span></div></li>
+<li><span class="obs-num">02</span><div><a href="plataforma.html#catalogo" target="_blank" rel="noopener">Catálogo</a><span class="obs-vista-desc">Todos los indicadores, con buscador y filtros por tema, institución, territorio y origen.</span></div></li>
+<li><span class="obs-num">03</span><div><a href="plataforma.html#comparar" target="_blank" rel="noopener">Comparar</a><span class="obs-vista-desc">Hasta seis series en un mismo eje; si las unidades difieren, se indexan a base 100.</span></div></li>
+<li><span class="obs-num">04</span><div><a href="plataforma.html#fuentes" target="_blank" rel="noopener">Fuentes</a><span class="obs-vista-desc">Las instituciones que publican los datos y los estudios que los citan, con su firma.</span></div></li>
+<li><span class="obs-num">05</span><div><a href="plataforma.html#metodo" target="_blank" rel="noopener">Método</a><span class="obs-vista-desc">Cómo llega una cifra desde el archivo oficial hasta la ficha, y qué no se le puede pedir.</span></div></li>
+</ol>
+
 :::
+
+::: {.obs-placa}
+
+<p class="obs-placa-l">El acervo, hoy</p>
 
 <!-- cifras:inicio -->
 <!-- GENERADO por tools/plataforma.py --cifras-en; no editar a mano. -->
-
-| | |
-|---:|---|
-| **384** | indicadores vigentes, de 12 estudios |
-| **139** | con serie histórica |
-| **1922–2026** | cobertura temporal |
-| **40** | instituciones como fuente |
-| **24** | departamentos con dato propio |
-| **7** | temas: economía y producción (64), empleo e ingresos (40), educación (25), salud y nutrición (82), seguridad ciudadana (133), presupuesto y gasto público (35), territorio y servicios (5) |
-
-<sub>Reconstruido el 2026-09-28 desde los paquetes publicados de cada estudio.</sub>
-
+<div class="obs-cifras">
+<div class="obs-cifra"><span class="obs-cifra-l">Indicadores</span><strong>384</strong><small>de 12 estudios publicados</small></div>
+<div class="obs-cifra"><span class="obs-cifra-l">Con serie histórica</span><strong>139</strong><small>el resto es un solo periodo</small></div>
+<div class="obs-cifra"><span class="obs-cifra-l">Cobertura</span><strong>1922–2026</strong><small>del año más antiguo al más reciente</small></div>
+<div class="obs-cifra"><span class="obs-cifra-l">Instituciones</span><strong>40</strong><small>que publican la fuente original</small></div>
+<div class="obs-cifra"><span class="obs-cifra-l">Departamentos</span><strong>24</strong><small>con dato territorial propio</small></div>
+</div>
+<p class="obs-temas"><span class="obs-cifra-l">7 temas</span>Economía y producción (64) · Empleo e ingresos (40) · Educación (25) · Salud y nutrición (82) · Seguridad ciudadana (133) · Presupuesto y gasto público (35) · Territorio y servicios (5)</p>
+<p class="obs-sello">Reconstruido el 2026-09-28 desde los paquetes publicados de cada estudio.</p>
 <!-- cifras:fin -->
 
-## Qué es
+:::
+
+:::
+
+## Cómo se lee una cifra {.lab-section}
+
+Cada indicador declara de dónde sale su número, y eso va en el panorama, no en
+una nota al pie. Es la diferencia entre citar y afirmar.
+
+<div class="obs-roles">
+<div class="obs-rol dato"><b>Dato</b><p>Lo publicó la institución tal cual. Se cita a la fuente.</p></div>
+<div class="obs-rol calculo"><b>Cálculo</b><p>Se calculó aquí a partir del microdato oficial, con el método declarado en la ficha.</p></div>
+<div class="obs-rol estimacion"><b>Estimación</b><p>Resultado de un modelo, con su especificación, su ponderador y su filtro escritos.</p></div>
+</div>
+
+## Qué es {.lab-section}
 
 Reúne los indicadores que producen los estudios de
 [datafw](https://github.com/achalmed/datafw), el marco de adquisición y análisis
@@ -47,18 +81,7 @@ método, su procesamiento, sus notas, la fuente completa con enlace al portal
 que la publicó, el identificador del archivo en el acervo y la firma del paquete
 del que salió.
 
-## Qué pone por delante
-
-Cada indicador declara **de dónde sale su cifra**, y eso va en el panorama, no
-en una nota al pie:
-
-- **dato** — lo publicó la institución tal cual.
-- **cálculo** — se calculó aquí a partir del microdato oficial.
-- **estimación** — resultado de un modelo, con su especificación declarada.
-
-Es la diferencia entre citar y afirmar.
-
-## Qué no puede dar
+## Qué no puede dar {.lab-section}
 
 La sección **Método** del observatorio lo dice en su propia página, y conviene
 leerla antes de usar una cifra: ningún coeficiente publicado mide un efecto
@@ -67,14 +90,17 @@ lectura de tendencia; algunos vienen de un informe y no de un archivo del
 acervo; y las series cuya definición cambió se publican por separado y **no se
 empalman**.
 
-## Cómo se mantiene
+## Cómo se mantiene {.lab-section}
 
-No se mantiene a mano. La página se reconstruye de los paquetes publicados:
+No se mantiene a mano. La página se reconstruye de los paquetes publicados, y
+las cifras de esta portada salen de la misma corrida:
 
 ```bash
-python3 tools/plataforma.py --salida "04 index/observatorio/plataforma.html"
+python3 tools/plataforma.py \
+    --salida    "04 index/observatorio/plataforma.html" \
+    --cifras-en "04 index/observatorio/index.qmd"
 ```
 
 Cada corrida vuelve a leer la última versión publicada de cada estudio, recompone
-el catálogo y reescribe también las cifras de esta página. Lo que cambia en los
-datos aparece aquí sin que nadie edite nada.
+el catálogo y reescribe el bloque de cifras. Lo que cambia en los datos aparece
+aquí sin que nadie edite nada.

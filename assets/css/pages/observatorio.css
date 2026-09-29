@@ -1,0 +1,334 @@
+/* GENERADO desde assets/scss/05-pages/observatorio.scss — NO editar a mano.
+   Regenerar con: ./scripts/build-page-css.sh (corre solo en cada render) */
+/* ── Subtítulo como etiqueta de instrumento (el idioma del hero de portada) ── */
+#title-block-header .subtitle {
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--lab-muted, #5B6670);
+  margin: 0.6rem 0 1rem;
+}
+
+/* ── Hero: acciones y vistas a la izquierda, placa de cifras a la derecha ── */
+.obs-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 2rem 4rem;
+  align-items: start;
+  margin: 0 0 1.5rem;
+}
+
+/* Retícula de papel milimetrado que se desvanece (como en la portada del sitio) */
+.obs-hero::before {
+  content: "";
+  position: absolute;
+  inset: -12rem 0 -2rem; /* sin desborde horizontal: el hero no puede crear scroll lateral */
+  background-image: linear-gradient(var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px), linear-gradient(90deg, var(--lab-grid-line, rgba(16, 24, 32, 0.045)) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 30%, #000 20%, transparent 70%);
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 30%, #000 20%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.obs-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Acciones: botón principal del sitio + contorno silencioso */
+.obs-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0 0.9rem;
+}
+
+.obs-btn,
+.obs-btn-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  padding: 0.7em 1.4em;
+  text-decoration: none !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.obs-btn {
+  color: var(--lab-bg, #FBFBF8) !important;
+  background: var(--lab-accent, #0F5CA8);
+  border: 1px solid var(--lab-accent, #0F5CA8);
+}
+
+.obs-btn:hover,
+.obs-btn:focus-visible {
+  background: var(--lab-accent-2, #0B6FCE);
+  border-color: var(--lab-accent-2, #0B6FCE);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px -8px var(--lab-accent, #0F5CA8);
+}
+
+.obs-btn-2 {
+  color: var(--lab-ink-2, #33404C) !important;
+  background: transparent;
+  border: 1px solid var(--lab-border-strong, #CDCDC2);
+}
+
+.obs-btn-2:hover,
+.obs-btn-2:focus-visible {
+  background: var(--lab-ink, #101820);
+  border-color: var(--lab-ink, #101820);
+  color: var(--lab-bg, #FBFBF8) !important;
+  transform: translateY(-1px);
+}
+
+main.content .obs-nota {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--lab-muted, #5B6670);
+  margin: 0 0 1.6rem;
+  max-width: 52ch;
+}
+
+/* Las cinco vistas: lista numerada de laboratorio, con reglas finas */
+.obs-vistas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--lab-border, #E5E5DD);
+  max-width: 60ch;
+}
+
+.obs-vistas li {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
+.obs-num {
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--lab-accent, #0F5CA8);
+  padding-top: 0.3em;
+}
+
+.obs-vistas a {
+  font-family: "Petrona", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--lab-ink, #101820);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.obs-vistas a:hover,
+.obs-vistas a:focus-visible {
+  color: var(--lab-accent, #0F5CA8);
+}
+
+.obs-vista-desc {
+  display: block;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--lab-ink-2, #33404C);
+  margin-top: 0.1rem;
+}
+
+/* ── Placa de cifras: superficie elevada con marco hairline (la placa de la portada) ── */
+.obs-placa {
+  background: var(--lab-bg-elevated, #FFFFFF);
+  border: 1px solid var(--lab-border, #E5E5DD);
+  border-radius: 14px;
+  padding: 1.35rem 1.5rem 1.25rem;
+  box-shadow: var(--lab-shadow-md, 0 6px 24px -8px rgba(16, 24, 32, 0.12));
+}
+
+main.content .obs-placa-l,
+.obs-cifra-l {
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lab-muted, #5B6670);
+  line-height: 1.3;
+}
+
+main.content .obs-placa-l {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
+/* Tarjetas estadísticas, en pares, separadas por reglas y no por cajas */
+.obs-cifras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.obs-cifra {
+  padding: 0.85rem 0 0.7rem;
+  border-bottom: 1px solid var(--lab-border, #E5E5DD);
+}
+
+.obs-cifra:nth-child(odd) {
+  padding-right: 1rem;
+  border-right: 1px solid var(--lab-border, #E5E5DD);
+}
+
+.obs-cifra:nth-child(even) {
+  padding-left: 1rem;
+}
+
+.obs-cifra:last-child:nth-child(odd) {
+  grid-column: 1/-1;
+  border-right: 0;
+  padding-right: 0;
+}
+
+.obs-cifra-l {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.obs-cifra strong {
+  display: block;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  color: var(--lab-ink, #101820);
+}
+
+.obs-cifra small {
+  display: block;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: var(--lab-muted, #5B6670);
+  margin-top: 0.3rem;
+}
+
+main.content .obs-temas {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--lab-ink-2, #33404C);
+  margin: 0.9rem 0 0;
+}
+
+main.content .obs-temas .obs-cifra-l {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+main.content .obs-sello {
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--lab-muted, #5B6670);
+  margin: 0.9rem 0 0;
+}
+
+/* ── Los tres orígenes de una cifra: color de rol, sin tarjetas ──────────── */
+.obs-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem 2.25rem;
+  margin: 1.25rem 0 0;
+}
+
+.obs-rol {
+  border-top: 2px solid var(--rol);
+  padding-top: 0.75rem;
+}
+
+.obs-rol.dato {
+  --rol: var(--lab-accent, #0F5CA8);
+}
+
+.obs-rol.calculo {
+  --rol: var(--lab-green, #2F7D5D);
+}
+
+.obs-rol.estimacion {
+  --rol: #8B5800;
+}
+
+body.quarto-dark .obs-rol.estimacion {
+  --rol: #B6770B;
+}
+
+.obs-rol b {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--lab-ink, #101820);
+}
+
+.obs-rol b::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--rol);
+  flex: none;
+}
+
+main.content .obs-rol p {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--lab-ink-2, #33404C);
+  margin: 0.45rem 0 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 991.98px) {
+  .obs-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .obs-placa {
+    max-width: 520px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .obs-cifras {
+    grid-template-columns: 1fr;
+  }
+  .obs-cifra:nth-child(odd) {
+    padding-right: 0;
+    border-right: 0;
+  }
+  .obs-cifra:nth-child(even) {
+    padding-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .obs-btn:hover,
+  .obs-btn-2:hover {
+    transform: none;
+  }
+}

@@ -2279,7 +2279,7 @@
     "href": "observatorio/index.html",
     "title": "Observatorio de datos del Perú",
     "section": "",
-    "text": "NotaAbrir el observatorio →\n\n\n\nCatálogo temático, fichas por indicador, series históricas, comparación entre indicadores y territorios, y las notas de método. Se abre en una pestaña nueva.\nReconstruido el 2026-09-28 desde los paquetes publicados de cada estudio."
+    "text": "Abrir el observatorio → Cómo se lee una cifra\n\n\nSe abre en una pestaña nueva. Los datos van dentro de la página: no depende de ningún servidor.\n\n\n\n01\n\nPanoramaEl acervo de un vistazo: quién produce cada cifra y los temas con sus series más largas.\n\n\n\n02\n\nCatálogoTodos los indicadores, con buscador y filtros por tema, institución, territorio y origen.\n\n\n\n03\n\nCompararHasta seis series en un mismo eje; si las unidades difieren, se indexan a base 100.\n\n\n\n04\n\nFuentesLas instituciones que publican los datos y los estudios que los citan, con su firma.\n\n\n\n05\n\nMétodoCómo llega una cifra desde el archivo oficial hasta la ficha, y qué no se le puede pedir.\n\n\n\n\n\n\nEl acervo, hoy\n\n\n\n\n\nIndicadores384de 12 estudios publicados\n\n\nCon serie histórica139el resto es un solo periodo\n\n\nCobertura1922–2026del año más antiguo al más reciente\n\n\nInstituciones40que publican la fuente original\n\n\nDepartamentos24con dato territorial propio\n\n\n\n7 temasEconomía y producción (64) · Empleo e ingresos (40) · Educación (25) · Salud y nutrición (82) · Seguridad ciudadana (133) · Presupuesto y gasto público (35) · Territorio y servicios (5)\n\n\nReconstruido el 2026-09-28 desde los paquetes publicados de cada estudio."
   },
   {
     "objectID": "observatorio/index.html#qué-es",
@@ -2307,6 +2307,13 @@
     "href": "observatorio/index.html#cómo-se-mantiene",
     "title": "Observatorio de datos del Perú",
     "section": "Cómo se mantiene",
-    "text": "Cómo se mantiene\nNo se mantiene a mano. La página se reconstruye de los paquetes publicados:\npython3 tools/plataforma.py --salida \"04 index/observatorio/plataforma.html\"\nCada corrida vuelve a leer la última versión publicada de cada estudio, recompone el catálogo y reescribe también las cifras de esta página. Lo que cambia en los datos aparece aquí sin que nadie edite nada."
+    "text": "Cómo se mantiene\nNo se mantiene a mano. La página se reconstruye de los paquetes publicados, y las cifras de esta portada salen de la misma corrida:\npython3 tools/plataforma.py \\\n    --salida    \"04 index/observatorio/plataforma.html\" \\\n    --cifras-en \"04 index/observatorio/index.qmd\"\nCada corrida vuelve a leer la última versión publicada de cada estudio, recompone el catálogo y reescribe el bloque de cifras. Lo que cambia en los datos aparece aquí sin que nadie edite nada."
+  },
+  {
+    "objectID": "observatorio/index.html#cómo-se-lee-una-cifra",
+    "href": "observatorio/index.html#cómo-se-lee-una-cifra",
+    "title": "Observatorio de datos del Perú",
+    "section": "Cómo se lee una cifra",
+    "text": "Cómo se lee una cifra\nCada indicador declara de dónde sale su número, y eso va en el panorama, no en una nota al pie. Es la diferencia entre citar y afirmar.\n\n\nDato\n\nLo publicó la institución tal cual. Se cita a la fuente.\n\n\n\nCálculo\n\nSe calculó aquí a partir del microdato oficial, con el método declarado en la ficha.\n\n\n\nEstimación\n\nResultado de un modelo, con su especificación, su ponderador y su filtro escritos."
   }
 ]

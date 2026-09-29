@@ -112,7 +112,11 @@
 
 /* ── Documento ───────────────────────────────────────────────────────────── */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* overflow-x: clip, no hidden: recorta lo que asome por el borde (un anillo de
+   2 px de la barra apilada, la etiqueta final de una serie) sin convertir el
+   documento en un contenedor de scroll. Los SVG necesitan overflow visible
+   para sus etiquetas; la página no debe tener scroll lateral por eso. */
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0; background: var(--lab-bg); color: var(--lab-ink);
   font-family: var(--sans); font-size: 15px; line-height: 1.6;

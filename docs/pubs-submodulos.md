@@ -6,17 +6,16 @@ estado: activo
 
 # Los blogs satélite (`_pubs/pub_*`) como submódulos del hub
 
-> Reorganización aplicada el 2026-09-06 (fase F3a del diagnóstico integral,
-> `~/Documents/meta/diagnosticos/DIAGNOSTICO_INTEGRAL_2026-09.md`). Antes los 11
-> `pub_*` eran carpetas hermanas de `website-achalma` en `~/Documents`.
+Cómo se trabaja con los 11 blogs satélite, que viven dentro del hub como submódulos git, y qué
+herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` §2.1.
 
 ## Qué es y qué no es
 
 - Cada `pub_*` **sigue siendo su propio repositorio** (remote ssh
   `git@github.com:achalmed/<nombre>.git`), su propio proyecto Quarto y su
   propio sitio Netlify. Nada de eso cambió.
-- El hub registra los 11 en `.gitmodules` con URL **https** (para que Netlify
-  y cualquier clon anónimo puedan traerlos) y `shallow = true` (clon
+- El hub registra los 11 en `.gitmodules` con URL **https** (para que
+  cualquier clon anónimo pueda traerlos) y `shallow = true` (clon
   superficial: solo el árbol de trabajo, no el historial).
 - La carpeta se llama `_pubs/` con guion bajo porque Quarto ignora los
   directorios que empiezan por `_`: el hub no renderiza ni copia los blogs
@@ -30,13 +29,13 @@ estado: activo
 
 ```bash
 # 1) Escribir/editar en el blog y confirmar allí
-cd ~/Documents/04 index/_pubs/pub_axiomata
-quarto preview            # o render
-git add -A && git commit -m "post: ..."
-git push                  # remote propio del blog (ssh)
+cd "04 index/_pubs/pub_axiomata"
+quarto preview            # o quarto render, que regenera _site/
+git add -- <rutas del post> _site && git commit -m "post: ..."
+git push                  # remote propio del blog (ssh); es el despliegue (despliegue-netlify.md)
 
 # 2) Mover el puntero del submódulo en el hub
-cd ~/Documents/04 index
+cd ../..
 git add _pubs/pub_axiomata
 git commit -m "pubs: axiomata al último commit"
 git push
@@ -85,30 +84,25 @@ No se sincronizan a propósito: `assets/scss/05-pages/`, `assets/css/pages/`,
 `assets/fonts/`, `assets/gtm-*.html` (difieren entre hub y satélites por
 diseño). Tras `--aplicar`, hacer commit en cada blog y luego en el hub.
 
-## Herramientas que conocen la nueva ruta
-
-| Herramienta | Variable | Valor por defecto |
-|---|---|---|
-| `scripts_quarto_studio/backend/script_blogs_manager` | `QBLOG_PUBS_SUBDIR` | `website-achalma/_pubs` |
-| `scripts_quarto_studio/backend/script_pub_index_symlink` (`04 index`) | `PUBINDEX_PUBS_SUBDIR` | `website-achalma/_pubs` |
-| `scripts_quarto_studio/backend/script_metadata_manager` | `PUBS_SUBDIR` (`scripts_quarto_studio/backend/script_metadata_manager/lib/config.py`) | `website-achalma/_pubs` |
-| `scripts_document_studio/backends/page-counter` | `SUBDIR_PUBS` (`config.py`) | `website-achalma/_pubs` |
-| `scripts_for_linux/.../script_git_sync_respos` | `repos-config.yml` (`name` = ruta relativa) | `website-achalma/_pubs/pub_*` |
-
-Todas aceptan el nombre de carpeta (`pub_axiomata`) o el corto (`axiomata`).
-Si alguna vez los blogs se mueven, cambiar solo esas variables.
-
 ## Netlify
 
-- Sitios de cada blog: sin cambios (construyen desde su propio repo).
-- Sitio del hub: al construir, Netlify inicializa los submódulos (https,
-  superficiales). Si el tiempo de build crece demasiado, la alternativa es
-  `git config -f .gitmodules submodule.<ruta>.update none` para que el hub no
-  los descargue en CI (localmente se fuerzan con
-  `git submodule update --init --checkout`).
+Cada blog se publica desde su propio repo con el push de su `_site/`, y el hub
+no construye ni sirve los blogs: `despliegue-netlify.md`.
 
-## Reversión
+## Consumidores
 
-`~/Documents/meta/reparaciones/F3a_pubs_submodulos_2026-09-06/UNDO.sh`
-(simula por defecto; `--aplicar` devuelve los 11 blogs a `~/Documents/pub_*`,
-quita los submódulos del hub, restaura las herramientas y regenera `04 index`).
+Herramientas del workspace que resuelven los blogs bajo `04 index/_pubs`. El
+valor por defecto de cada variable lo fija su herramienta; si los blogs se
+mueven, se cambia ahí.
+
+| Archivo que lo fija | Variable |
+|---|---|
+| `scripts_quarto_studio/backend/script_blogs_manager/lib/00-config.sh` | `QBLOG_WEBSITE_DIR`, `QBLOG_PUBS_SUBDIR` |
+| `scripts_quarto_studio/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
+| `scripts_quarto_studio/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
+| `scripts_document_studio/backends/page-counter/config.py` | `SUBDIR_PUBS` |
+| `scripts_for_linux/scripts_git_studio/backend/script_git_sync_respos/repos-config.yml` | una entrada por pub |
+
+Las de `scripts_quarto_studio` aceptan el nombre de carpeta (`pub_axiomata`) o
+el corto (`axiomata`). Qué escribe `scripts_quarto_studio` en el hub y en los
+pubs: su `README.md`, «Contrato con el hub».

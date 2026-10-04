@@ -250,11 +250,11 @@ que explican **cómo usarlo, contribuir, licenciarlo y reportar problemas**.
 | `.editorconfig`                    | Reglas de formato (indentación, saltos de línea) entre editores.      | falta             |
 | `.gitattributes`                   | Cómo trata Git ciertos archivos (fin de línea, binarios, `linguist`). | falta             |
 | `CONTRIBUTING.md`                  | Cómo contribuir (estilo de commits, ramas, PRs).                      | falta             |
-| `CODE_OF_CONDUCT.md`               | Normas de convivencia de la comunidad.                                |                   |
-| `SECURITY.md`                      | Cómo reportar vulnerabilidades.                                       |                   |
+| `CODE_OF_CONDUCT.md`               | Normas de convivencia de la comunidad.                                | falta             |
+| `SECURITY.md`                      | Cómo reportar vulnerabilidades.                                       | falta             |
 | `CHANGELOG.md`                     | Historial legible de cambios por versión.                             | falta             |
 | `CITATION.cff`                     | Cómo citar el proyecto académicamente.                                |                   |
-| `.github/ISSUE_TEMPLATE/`          | Plantillas para reportar bugs/pedir features.                         | (`bug_report.md`) |
+| .github/ISSUE_TEMPLATE/            | Plantillas para reportar bugs/pedir features (no existe en este repo). | falta             |
 | .github/PULL_REQUEST_TEMPLATE.md   | Plantilla que rellena cada PR (no existe en este repo).               | falta             |
 | .github/workflows/                 | Automatizaciones (CI/CD con GitHub Actions; este repo publica por Netlify). | falta             |
 | `.github/FUNDING.yml`              | Botón "Sponsor".                                                      |                   |

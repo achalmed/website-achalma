@@ -57,8 +57,7 @@ citation:
   pdf-url: https://achalmaedison.netlify.app/blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.pdf
 ```
 
-Referencia de cada clave: `_metadata-guia.md` (completa) y `_metadata-guia-simplificada.md` (cotidiana);
-`_quarto-guia.md` para el sitio. Para un documento académico completo (ensayo, artículo en dos columnas,
+Referencia de cada clave: `metadata-guia.md`; `quarto-guia.md` para el sitio. Para un documento académico completo (ensayo, artículo en dos columnas,
 manuscrito, trabajo de estudiante) se parte de `../_plantillas/apaquarto/index_{doc,jou,man,stu}.qmd`. Los
 posts se citan como *Actus Mercator*: volumen = año, número 1–4 = trimestre (ene–mar, abr–jun, jul–sep,
 oct–dic).
@@ -125,8 +124,8 @@ En un **blog**: commit y push dentro del pub y después el puntero en el hub.
 
 ```bash
 cd "04 index/_pubs/pub_axiomata"
-git add -A && git commit -m "post: <título>" && git push
-cd "04 index"
+git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: <título>" && git push
+cd ../..
 git add _pubs/pub_axiomata && git commit -m "pubs: axiomata al último commit" && git push
 ```
 
@@ -134,11 +133,10 @@ En el **hub** (`blog/posts/`): commit normal en `04 index`.
 
 ## 8. Publicar
 
-- **Hub:** igual que un blog: `quarto render` → commit de `_site/` → `git push`; Netlify sirve el `_site`
-  del repo, sin build (confirmado el 2026-09-21: sacar `_site/` de git en DOC2 dejó el hub vacío).
-- **Blog:** hoy los 11 versionan `_site/` y todo indica que Netlify publica el `_site` empujado, sin build
-  (`despliegue-netlify.md`, D1): el `quarto render` del paso 5 tiene que estar hecho **antes** del commit
-  del paso 7, y `_site/` incluido en él. Si D1 cambia el modo, este paso cambia con él.
+Los 12 sitios se publican igual: `quarto render` → commit de `_site/` → `git push`; Netlify sirve el
+`_site` empujado, sin build (`despliegue-netlify.md`). En un **blog**, el `quarto render` del paso 5 tiene
+que estar hecho **antes** del commit del paso 7, y `_site/` incluido en él; en el **hub**, igual, con el
+commit en `04 index`. Un push sin `_site/` publica un sitio vacío (`decisiones.md` §4.3).
 
 ## 9. El índice del vault
 

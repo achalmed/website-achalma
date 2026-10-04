@@ -13,9 +13,11 @@ PDF y DOCX con formato APA 7 desde un mismo `.qmd`. Los 11 blogs son submódulos
 uno con su repo, su `_quarto.yml` y su sitio Netlify; el hub es la **fuente de verdad del tema** (SCSS, JS,
 extensiones y filtros Lua, `meta/workspace.yml` → `verdad:`) y lo propaga con `scripts/sync-theme-pubs.sh`.
 
-Depende de dos vecinos del workspace: `scripts_quarto_studio` (metadatos por Excel, render y publicación de
-la familia, enlaces de `_indice/`) y `10 Class` (genera la sección «Contenidos / Sílabo» de cada ficha de
-curso y enlaza por hardlink los materiales de cada edición). **No es** un framework de documentos (eso es
+Lo alimentan cuatro vecinos del workspace, que escriben aquí o de los que se copia algo:
+`scripts_quarto_studio` (metadatos por Excel, índices `_contenido_*`, enlaces de `_indice/`; su `README.md`,
+«Contrato con el hub»), `10 Class` (la sección «Contenidos / Sílabo» de cada ficha de curso y los materiales
+de cada edición por hardlink; `10 Class/docs/estandar-docencia.md`), `02 analysis` (el observatorio de
+`observatorio/`) y `09 trabajo` (la copia de `resources/cv.pdf`). **No es** un framework de documentos (eso es
 `03 writing`), ni el estándar docente (eso es `10 Class`), ni el lugar donde se escribe un post de un blog
 satélite: eso se hace dentro del pub, que es su propio repositorio.
 
@@ -65,9 +67,10 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 |---|---|---|
 | `_quarto.yml` | el manifiesto: proyecto, navegación (incluido el menú «More» con los 11 blogs), tema, formatos, comentarios, `render` | a mano |
 | `index.qmd`, `about/`, `contact.qmd`, `appointment/`, `beschikbaarheid/`, `accessibility.qmd`, `license.qmd`, `404.qmd` | páginas del sitio | a mano |
-| `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts_quarto_studio` (`script_metadata_manager`); los `_contenido-*.qmd`, `script_generador_publicacion_similar` |
+| `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts_quarto_studio` (`script_metadata_manager`); los índices `_contenido_<sección>.qmd`, `script_generador_publicacion_similar`; `blog/_contenido-inicio.qmd` y `_contenido-final.qmd`, a mano |
 | `cursos/` | repositorio docente tipo OpenCourseWare: `<curso>/index.qmd` (ficha) → `<edicion>/` → `session_NN_slug/`; README propio | fichas a mano; la sección «Contenidos / Sílabo» la genera `10 Class/scripts/temario-generar.sh`; las ediciones las enlaza `10 Class/scripts/publish-web.sh` |
 | `publication/` | publicaciones formales (informe ENIS 2022–2023) | a mano |
+| `observatorio/` | sección «Datos»: `index.qmd` (entrada, con el tema del hub) y `plataforma.html` (observatorio autocontenido que se copia sin renderizar, `project.resources`) | `02 analysis/tools/plataforma.py` escribe `plataforma.html` (`--salida`) y el bloque `cifras:` de `index.qmd` (`--cifras-en`); el resto de `index.qmd`, a mano |
 | `_pubs/` | los 11 blogs como submódulos (`.gitmodules`: https, `shallow = true`) y `pubs.yml`, su registro | contenido en cada pub; README y `CITATION.cff` de cada pub, `scripts/pubs.py` |
 | `assets/` | design system «Quiet Laboratory»: `assets/scss/` (fuente), `assets/css/pages/` (**generado** por `scripts/build-page-css.sh`), `assets/css/global.css` y `assets/css/components/bibbase.css` (a mano), `assets/js/`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html` | a mano salvo `assets/css/pages/`; README en `assets/scss/` y `assets/js/` |
 | `_extensions/` · `_filters/` · `_partials/` | extensiones vendorizadas (apaquarto, fontawesome, lightbox); filtros Lua (`_metadata-pdf.lua`, `apa-floats-html.lua`); bloque de título propio | vendorizado y versionado; a mano |
@@ -83,16 +86,16 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 
 El índice, con tipo y estado de cada documento, está en `docs/README.md` (generado). Puertas de entrada:
 `docs/publicar-un-post.md` para escribir y publicar, `docs/pubs-submodulos.md` para los blogs,
-`docs/despliegue-netlify.md` para saber cómo llega cada sitio a producción, `docs/_metadata-guia.md` y
-`docs/_quarto-guia.md` como referencia de claves, `docs/decisiones.md` para el porqué y lo pendiente. Los README
-de carpeta: `cursos/README.md`, `assets/scss/README.md`, `assets/js/README.md`, `scripts/README.md`. Las
-versiones, en `CHANGELOG.md`; lo cumplido, en `docs/historial/`.
+`docs/despliegue-netlify.md` para saber cómo llega cada sitio a producción, `docs/metadata-guia.md` y
+`docs/quarto-guia.md` como referencia de claves, `docs/decisiones.md` para el porqué y lo pendiente. Los README
+de carpeta: `cursos/README.md`, `assets/scss/README.md`, `assets/js/README.md`, `scripts/README.md`. Lo
+cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
 
 ## Límite honesto
 
 - **Sin lint ni pruebas.** Se comprueba renderizando y mirando `_site/`; `python3 core/archivos.py validar
-  "04 index"` revisa la documentación, no el sitio. Su único fallo, **D08** por versionar `_site/`, es
-  deliberado: `_site/` es el artefacto que Netlify publica (`docs/decisiones.md` §4.1).
+  "04 index"` revisa la documentación, no el sitio. `_site/` está versionado a propósito (es lo que Netlify
+  publica) y el `.gitignore` lo declara, así que D08 no falla (`docs/decisiones.md` §4.1–§4.2).
 - **El hub no renderiza los blogs.** `_pubs/` empieza por `_` y Quarto lo ignora; cada pub se renderiza y
   publica desde su carpeta. Los README de los pubs los genera el hub, pero su contenido no se escribe aquí.
 - **Los requisitos no son reproducibles desde el repo.** Hacen falta Quarto (≥ 1.6; hoy 1.9), TinyTeX para

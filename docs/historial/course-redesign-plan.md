@@ -10,7 +10,7 @@ estado: hecho
 > como registro; la sección "Estado de implementación" (final del documento)
 > resume lo ejecutado y las decisiones tomadas.
 >
-> **Autor:** Claude Code · **Fecha:** 2026-07-09 · **Alcance:** solo `website-achalma`.
+> **Fecha:** 2026-07-09 · **Alcance:** solo `website-achalma`.
 
 ---
 
@@ -503,4 +503,4 @@ declarados solo a nivel de `sesiones/`, no en las páginas de índice.)
 - Añadir ediciones/sesiones a los 17 cursos vacíos copiando las plantillas.
 - Revisar el render completo del sitio (`quarto render`) — que sí dispara la
   compilación PDF apaquarto de las sesiones de economía (requiere TinyTeX).
-- Confirmar el despliegue en Netlify (sin cambios de configuración por parte de Claude).
+- Confirmar el despliegue en Netlify (sin cambios de configuración desde el repositorio).

@@ -17,8 +17,8 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 - **Los blogs se editan y confirman dentro de `_pubs/pub_*`** (cada uno es repo, `_quarto.yml` y sitio
   Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/pub_x && git commit`). Nunca
   `git rm` ni mover `_pubs/` a mano: `scripts_quarto_studio` (gestor de blogs, metadatos, `_indice/`) y
-  `scripts_document_studio` (`page-counter`) resuelven los blogs por `website-achalma/_pubs`. Detalle:
-  `docs/pubs-submodulos.md`.
+  `scripts_document_studio` (`page-counter`) resuelven los blogs por `04 index/_pubs` (lista en
+  `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con
   `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva).
@@ -37,13 +37,13 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   normaliza (`main.py fechas-iso`) y las deriva de la carpeta del post (`main.py sync-dates`).
 - **Documentación por contrato** (NORMATIVA §15): README con `Uso · Estructura · Límite honesto`, `docs/`
   en kebab con frontmatter `tipo`/`estado`/`titulo`, lo cumplido en `docs/historial/`, el porqué en
-  `docs/decisiones.md`. `docs/`, `SECURITY.md` y `CODE_OF_CONDUCT.md` están fuera del render
-  (`project.render` en `_quarto.yml`): un `.md` nuevo en `docs/` ya no se publica como página del sitio.
+  `docs/decisiones.md`. `docs/` está fuera del render (`!docs/` en `project.render`): un `.md` nuevo en
+  `docs/` no se publica; uno nuevo en la raíz, sí (`"*.md"`), así que la raíz no recibe `.md` sueltos.
 - **Nada del despacho** ni identificadores de un cliente en este repo público (regla 8 del CLAUDE.md raíz).
 - **`_site/` se versiona en los 12 sitios y no se saca de git** (decisión del autor, 2026-09-22,
   `docs/decisiones.md` §4.1): Netlify lo sirve sin build, así que el artefacto es el despliegue. Vale
-  **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8; el fallo D08 del validador
-  y del doctor en el hub es su consecuencia aceptada, no una avería que haya que «arreglar» borrando.
+  **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8. Cada `.gitignore` lo declara
+  con `!/_site/**/*_files/` (§4.2; el de `pub_epsilon-y-beta`, pendiente: §5), y por eso D08 pasa; quitar esa línea lo rompe y deja figuras sin publicar.
 - **No decidir por el autor** lo que está en `decision`: D9 (una sola licencia en los 12 sitios) y D16
   (destino del manual de Git).
 
@@ -53,7 +53,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 quarto preview                                    # vista previa con recarga
 quarto render                                     # todo el sitio; freeze: no re-ejecuta código
 quarto render cursos/index.qmd                    # un archivo suelto: sí ejecuta su código
-# cuántas entradas renderiza el proyecto (docs/, SECURITY.md y CODE_OF_CONDUCT.md no deben aparecer)
+# cuántas entradas renderiza el proyecto (docs/ no debe aparecer)
 quarto inspect . | python3 -c "import json,sys; print(len(json.load(sys.stdin)['files']['input']))"
 scripts/sync-theme-pubs.sh --verificar            # tema de los 11 blogs igual al del hub
 python3 scripts/pubs.py verificar                 # README/CITATION de los pubs y tabla del hub al día
@@ -81,12 +81,13 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
   áreas son `categories:` de la ficha y facetan solas; las URL antiguas `/talk/…` y `/teching/…`
   sobreviven por `aliases:`. Cómo se añade contenido: `cursos/README.md` y `cursos/_plantillas/`; por qué
   es así: `docs/historial/course-redesign-plan.md`.
-- **Dos escritores externos en `cursos/`**: `10 Class/scripts/temario-generar.sh` (la sección generada de
-  cada ficha) y `10 Class/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink). Por eso
-  `cursos/_metadata.yml` es un archivo físico independiente: un hardlink compartido propagaría cambios.
-- **`docs/` no se renderiza, pero sigue siendo referencia viva**: `_metadata-guia.md`,
-  `_metadata-guia-simplificada.md` y `_quarto-guia.md` anotan cada clave (YAML dentro de bloque de
-  código). Las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) están en `_plantillas/apaquarto/`.
+- **Escritores externos.** En `cursos/`: `10 Class/scripts/temario-generar.sh` (la sección generada de
+  cada ficha) y `10 Class/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
+  en `10 Class/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
+  independiente. En `observatorio/`: `02 analysis/tools/plataforma.py` (`plataforma.html` con `--salida`,
+  el bloque `cifras:` de `index.qmd` con `--cifras-en`); la plataforma no se renderiza ni se edita aquí.
+- **`docs/` no se renderiza, pero sigue siendo referencia viva**: `docs/metadata-guia.md` y
+  `docs/quarto-guia.md` anotan cada clave (YAML dentro de bloque de código). Las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) están en `_plantillas/apaquarto/`.
   Los posts se citan como *Actus Mercator*: volumen = año, número 1–4 = trimestre.
 - **Estilos por página** se autoran en `assets/scss/05-pages/*.scss` y cada página carga su CSS por
   `header-includes` + `resources`; `assets/css/global.css` y `assets/css/components/bibbase.css` son a
@@ -112,11 +113,23 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
 | los blogs como submódulos: flujo diario, clon, tema, herramientas, reversión | `docs/pubs-submodulos.md` |
 | cómo se publica el hub y, hasta donde se sabe, cada blog | `docs/despliegue-netlify.md` |
 | publicar un post de principio a fin | `docs/publicar-un-post.md` |
-| claves de `_metadata.yml` y de `_quarto.yml`, anotadas | `docs/_metadata-guia.md`, `docs/_quarto-guia.md` |
+| claves de `_metadata.yml` y de `_quarto.yml`, anotadas | `docs/metadata-guia.md`, `docs/quarto-guia.md` |
 | por qué se decidió así, con fecha; lo pendiente | `docs/decisiones.md` |
 | planes cumplidos | `docs/historial/` |
 | la sección docente y su jerarquía | `cursos/README.md` |
 | el design system y los módulos JS | `assets/scss/README.md`, `assets/js/README.md` |
 | los tres scripts del hub | `scripts/README.md` |
-| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md`, `10 Class/scripts/README.md` |
-| versiones con fecha | `CHANGELOG.md` |
+| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `02 analysis/tools/plataforma.py` (observatorio) |
+
+## Dónde va cada cosa nueva
+
+Concreción de NORMATIVA §15.11 para este repo; ningún `.md` nuevo en la raíz (se publicaría).
+
+| lo que apareció | va a |
+|---|---|
+| cómo se publica, se escribe un post o se opera un blog | `docs/publicar-un-post.md`, `docs/pubs-submodulos.md`, `docs/despliegue-netlify.md` |
+| una clave de `_metadata.yml` o `_quarto.yml` | `docs/metadata-guia.md`, `docs/quarto-guia.md` |
+| por qué se decidió algo; un pendiente (con dueño y fecha) | `docs/decisiones.md` (§5 para pendientes) |
+| un dato de un blog (nombre, repo, dominio, tema) | `_pubs/pubs.yml` y `python3 scripts/pubs.py readme --aplicar` |
+| qué cambió y cuándo | el mensaje de commit (no hay `CHANGELOG`) |
+| lo que pertenece a un pub | el pub, que no tiene más documento que su README generado |

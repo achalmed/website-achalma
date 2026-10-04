@@ -8,7 +8,7 @@ Arquitectura tipo *OpenCourseWare* que unifica lo que antes eran `talk/` y `tech
 completas en el plan cumplido [`../docs/historial/course-redesign-plan.md`](../docs/historial/course-redesign-plan.md);
 el porqué resumido, en `../docs/decisiones.md` §1.
 
-## Fuente de verdad (F5.1/F5.2, 2026-09-06)
+## Fuente de verdad
 
 - La sección **«Contenidos / Sílabo»** de cada ficha `<curso>/index.qmd` se genera desde el `curso.yml`
   del curso en `10 Class/docencia/cursos/<slug>/` (`10 Class/scripts/temario-generar.sh generar --que web --aplicar`);
@@ -41,9 +41,9 @@ cursos/
 agrega una nueva carpeta de edición y nada más.
 
 **Excepción heredada:** `pre_economia/2014-i/sesiones/` conserva un nivel `sesiones/` con carpetas `NN-slug`
-(14 sesiones migradas de `teching/`); es la única y no se replica. Hoy hay 32 fichas de curso y dos con
-ediciones (`metodologia-de-la-investigacion/` con `2025-1-cau-unsch` —legado— y `2026-1-cau-unsch`, y
-`pre_economia/2014-i`).
+(14 sesiones migradas de `teching/`); es la única y no se replica. Tienen ediciones `metodologia-de-la-investigacion/`
+(`2025-1-cau-unsch` —legado— y `2026-1-cau-unsch`) y `pre_economia/2014-i`; las fichas se cuentan con
+`ls -d cursos/*/index.qmd | wc -l`.
 
 ## Estructura ESTÁNDAR de una sesión (todos los cursos)
 
@@ -112,6 +112,6 @@ gestiona desde este repo (`../docs/despliegue-netlify.md`).
 
 ## Límite honesto
 
-- Solo 2 de los 32 cursos tienen ediciones publicadas; el resto son fichas (varias en `draft: true`).
+- Solo dos cursos tienen ediciones publicadas; el resto son fichas (varias en `draft: true`).
 - Esta carpeta no es la fuente docente: el contenido, el sílabo y el registro de alumnos viven en
   `10 Class`; aquí solo se publica lo que el framework enlaza o genera.

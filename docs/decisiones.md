@@ -161,4 +161,4 @@ pregunta al historial (`git log -- _site`) si alguna vez estuvo, no solo al árb
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `pub_numerus-scriptum` o `pub_methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |
 | `_site/_pubs/` | `resources: assets/css/pages/listing.css` de `_quarto.yml` casa también con las copias de cada blog y deja copias de esa hoja en `_site/_pubs/`; inocuo | 2026-09-21 | autor · por acotar |
-| `resources/cv.pdf` | copia manual desde `09 trabajo`; no hay script que la refresque | 2026-09-20 | autor |
+| `resources/cv.pdf` | copia manual desde `09 trabajo`; no hay script que la refresque (el contrato lo declara el proveedor: `09 trabajo/cv/docs/publicar.md` §Consumidores) | 2026-09-20 | autor |

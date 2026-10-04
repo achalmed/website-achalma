@@ -119,7 +119,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
 | la sección docente y su jerarquía | `cursos/README.md` |
 | el design system y los módulos JS | `assets/scss/README.md`, `assets/js/README.md` |
 | los tres scripts del hub | `scripts/README.md` |
-| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `02 analysis/tools/plataforma.py` (observatorio) |
+| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `02 analysis/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
 
 ## Dónde va cada cosa nueva
 

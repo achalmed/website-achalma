@@ -65,7 +65,7 @@ git submodule status                              # en qué commit está cada bl
 No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub y cada blog es
 `quarto render` → commit de `_site/` → `git push`**: Netlify sirve el `_site` del repo, sin build. Por eso
 `_site/` está **versionado a propósito** en los 12 sitios y nunca se saca de git «por higiene»: hacerlo en
-DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
+DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 
 ## Detalles que cuesta redescubrir
 
@@ -96,7 +96,8 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
 - **`_partials/title-block-link-buttons/title-block.html`** sustituye el bloque de título de Quarto
   (botones de acción bajo el título). `_extensions/` (apaquarto, fontawesome, lightbox) está vendorizado y
   versionado: `quarto update wjschne/apaquarto` para actualizar; nada se descarga en el build.
-- **Comentarios**: Utterances sobre los issues de `achalmed/website-achalma`, también desde los blogs.
+- **Comentarios**: Utterances sobre los issues de GitHub del propio sitio: `achalmed/website-achalma` en el
+  hub y el repo de cada blog en su `_quarto.yml` (`comments.utterances.repo`).
 - **Nombres no derivables**: `pub_chaska` publica en `chaska-x.netlify.app` y su repo se llama `chaska`;
   el único registro carpeta ↔ repo ↔ dominio ↔ tema es `_pubs/pubs.yml`.
 - **Residuos de GitHub Pages**: `CNAME` (`kapitan.net`) y `.nojekyll`; Netlify no los usa.
@@ -110,7 +111,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/despliegue-netlify.md`, D1).
 | pregunta | documento |
 |---|---|
 | qué es el repo, comandos, estructura, límites | `README.md` |
-| los blogs como submódulos: flujo diario, clon, tema, herramientas, reversión | `docs/pubs-submodulos.md` |
+| los blogs como submódulos: flujo diario, clon, tema, consumidores | `docs/pubs-submodulos.md` |
 | cómo se publica el hub y, hasta donde se sabe, cada blog | `docs/despliegue-netlify.md` |
 | publicar un post de principio a fin | `docs/publicar-un-post.md` |
 | claves de `_metadata.yml` y de `_quarto.yml`, anotadas | `docs/metadata-guia.md`, `docs/quarto-guia.md` |

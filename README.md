@@ -106,7 +106,8 @@ cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
   decisión D9, pendiente del autor.
 - **Netlify no se configura desde el repo.** No hay `netlify.toml` ni `_redirects`; las URL antiguas de
   `/talk/` y `/teching/` sobreviven por `aliases:` de Quarto. Cómo publica cada uno de los 12 sitios y qué
-  falta por confirmar en el panel: `docs/despliegue-netlify.md` (D1).
+  falta por confirmar en el panel: `docs/despliegue-netlify.md` (`docs/decisiones.md` §4.1).
 - **Los nombres de un blog no se derivan unos de otros** (`pub_chaska` → repo `chaska` → dominio
   `chaska-x.netlify.app`): el único registro es `_pubs/pubs.yml`.
-- Los comentarios (Utterances) viven en los issues de `achalmed/website-achalma`, también los de los blogs.
+- Los comentarios (Utterances) viven en los issues de GitHub de cada sitio: los del hub en
+  `achalmed/website-achalma`, los de cada blog en su propio repo (`comments.utterances.repo` de su `_quarto.yml`).

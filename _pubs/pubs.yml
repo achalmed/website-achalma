@@ -4,7 +4,7 @@
 # cada pub y el bloque «Los 11 blogs satélite» del README del hub; `scripts/pubs.py verificar` comprueba que
 # `.gitmodules`, el `site-url` de cada `_quarto.yml` y los archivos generados coinciden con este registro.
 # Las secciones temáticas (carpetas de entradas) se leen del disco al generar: no se declaran aquí.
-actualizado: 2026-09-20   # DOC9: SECURITY.md retirado de los 12 sitios
+actualizado: 2026-10-04   # DOC10: despliegue del hub y de los pubs según docs/decisiones.md §4.1
 hub:
   carpeta: 04 index
   repo: website-achalma

@@ -46,7 +46,7 @@ entrada, con el tema del hub; `observatorio/plataforma.html` es el observatorio 
 por el render le impondría el tema del hub y rompería su paleta, validada aparte. Los dos los escribe
 `02 analysis/tools/plataforma.py` (`--salida` para la plataforma; `--cifras-en` para el bloque
 `<!-- cifras:inicio/fin -->` de la página de entrada): no se editan aquí. El contrato del lado del
-proveedor está pendiente (§5).
+proveedor: `02 analysis/docs/integracion-ecosistema.md` §2 (el observatorio) y §4 (consumidores).
 
 ## 2. Los blogs satélite
 
@@ -88,20 +88,6 @@ en `_quarto.yml` los excluía; desde que DOC9 retiró esos dos archivos, solo qu
 `quarto inspect .` lo comprueba. Con ello, un documento nuevo en `docs/` ya no es
 una página del sitio: si algo de `docs/` debe publicarse, se publica como post.
 
-**3.7 La documentación se ajusta al perfil del ecosistema** (2026-10-04, DOC10; NORMATIVA §15.11). Las
-guías de claves pierden el guion bajo inicial (`metadata-guia.md`, `quarto-guia.md`): lo que las apartaba
-del render ya lo hace `!docs/`. La guía simplificada de metadatos se elimina: todas sus claves están ya en la
-completa, y el frontmatter de uso diario, en `publicar-un-post.md` §3. Sale la plantilla de issue de GitHub sin rellenar: los issues del repo los usa
-Utterances para los comentarios. Se apartan del perfil común, a sabiendas:
-
-- **`.github/FUNDING.yml` se conserva**: el autor lo creó con cuentas reales (Patreon, Buy Me a Coffee,
-  thanks.dev), así que acepta financiación en este repo; se queda solo con esas cuentas.
-- **Sin `CHANGELOG.md`**: ningún manifiesto declara una versión que alguien consuma (el `version: '3.10'`
-  de `CITATION.cff` no lo leía nadie y también sale). Lo que el changelog tenía de decisión vigente está
-  en este archivo (§1.5, §1.6, §4.1–§4.3); el resto, en `git log`.
-- **Sin `CLAUDE.md` en los pubs**: el del hub es su ancestro en disco y rige para los 11; el README de
-  cada pub es generado (`scripts/pubs.py`) y remite al hub.
-
 **3.4 Las plantillas apaquarto no son documentación** (2026-09-20, DOC5). `_index_{doc,jou,man,stu}.qmd`
 pasan a `_plantillas/apaquarto/` (§15.3: plantillas nunca dentro de `docs/`; el guion bajo de la carpeta
 las aparta del render, como `cursos/_plantillas/`). Las tres guías de claves (renombradas en §3.7)
@@ -115,6 +101,20 @@ sin referencias) se elimina; git conserva su historia.
 `LICENSE` y `CITATION.cff`: MPL-2.0; `license.qmd` y los `_metadata.yml`: CC BY-SA 4.0; el manual de Git
 ya lo formula como código MPL-2.0 / contenido CC BY-SA. Una sola licencia en los 12 sitios la elige el
 autor.
+
+**3.7 La documentación se ajusta al perfil del ecosistema** (2026-10-04, DOC10; NORMATIVA §15.11). Las
+guías de claves pierden el guion bajo inicial (`metadata-guia.md`, `quarto-guia.md`): lo que las apartaba
+del render ya lo hace `!docs/`. La guía simplificada de metadatos se elimina: todas sus claves están ya en la
+completa, y el frontmatter de uso diario, en `publicar-un-post.md` §3. Sale la plantilla de issue de GitHub sin rellenar: los issues del repo los usa
+Utterances para los comentarios. Se apartan del perfil común, a sabiendas:
+
+- **`.github/FUNDING.yml` se conserva**: el autor lo creó con cuentas reales (Patreon, Buy Me a Coffee,
+  thanks.dev), así que acepta financiación en este repo; se queda solo con esas cuentas.
+- **Sin `CHANGELOG.md`**: ningún manifiesto declara una versión que alguien consuma (el `version: '3.10'`
+  de `CITATION.cff` no lo leía nadie y también sale). Lo que el changelog tenía de decisión vigente está
+  en este archivo (§1.5, §1.6, §4.1–§4.3); el resto, en `git log`.
+- **Sin `CLAUDE.md` en los pubs**: el del hub es su ancestro en disco y rige para los 11; el README de
+  cada pub es generado (`scripts/pubs.py`) y remite al hub.
 
 ## 4. Despliegue
 
@@ -156,7 +156,6 @@ pregunta al historial (`git log -- _site`) si alguna vez estuvo, no solo al árb
 | figuras de numerus | `_pubs/pub_numerus-scriptum/_site/python/2025-05-10-visualizacion-de-datos-con-python/index_files/`: visibles desde §4.2, sin confirmar; confirmarlas las publica | 2026-10-04 | autor |
 | `_freeze/` de numerus | `pub_numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
 | `CHANGELOG.html` | la página publicada del changelog retirado sigue en `_site/` hasta el próximo render del hub, que ya no la produce | 2026-10-04 | autor · se resuelve con el próximo render |
-| contrato del observatorio | el proveedor (`02 analysis`) no documenta que escribe `observatorio/` (§1.6) | 2026-10-04 | orquestador DOC10 |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `pub_numerus-scriptum` o `pub_methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |

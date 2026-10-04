@@ -9,7 +9,7 @@ hub:
   carpeta: 04 index
   repo: website-achalma
   url: https://achalmaedison.netlify.app/
-  despliegue: quarto publish netlify (_publish.yml)
+  despliegue: push de _site/ a GitHub; Netlify lo sirve sin build (docs/decisiones.md §4.1)
 autor:
   nombre: Edison Achalma
   given_names: Edison
@@ -21,10 +21,9 @@ autor:
 # entonces el CITATION.cff generado repite lo que ya declaraba.
 licencia_codigo: MPL-2.0
 licencia_contenido: CC-BY-SA-4.0
-# Despliegue de los pubs (D1, pendiente de confirmar en el panel de Netlify): ningún pub tiene _publish.yml ni
-# netlify.toml y los 11 versionan _site/ con commits «render: _site actualizado»; todo indica que Netlify publica
-# el directorio _site empujado, sin build. Hasta confirmarlo, _site/ sigue en git.
-despliegue_pubs: Netlify publica _site/ empujado (sin build); D1 pendiente
+# Despliegue de los pubs: como el hub, Netlify publica el _site/ empujado, sin build; _site/ se versiona en los
+# 12 sitios por decisión del autor (docs/decisiones.md §4.1 del hub) y el .gitignore lo declara (§4.2).
+despliegue_pubs: Netlify publica el _site/ empujado, sin build (decisiones §4.1 del hub)
 pubs:
   - carpeta: pub_actus-mercator
     repo: actus-mercator

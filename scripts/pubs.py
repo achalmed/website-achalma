@@ -100,14 +100,15 @@ GitHub `{d['autor']['github']}/{p['repo']}` y dominio `{dominio}`; el registro d
 {nota}
 El tema visual (SCSS, JS, extensiones, filtros, `scripts/build-page-css.sh`) **no se edita aquí**: vive en el hub y
 llega por `04 index/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_quarto.yml`, `index.qmd`, `_contenido-*.qmd`,
-`assets/img/` y las entradas.
+`assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `scripts_quarto_studio`
+(`script_generador_publicacion_similar`) y no se editan a mano.
 
 ## Uso
 
 ```bash
 quarto preview                              # vista previa local
 quarto render                               # regenera _site/ (freeze: true: el código no se re-ejecuta)
-git add -A && git commit -m "post: …"       # confirmar AQUÍ primero…
+git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: …"   # confirmar AQUÍ primero…
 git push                                    # …al remoto propio (ssh git@github.com:{d['autor']['github']}/{p['repo']}.git)
 cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al último commit"   # y mover el puntero en el hub
 ```
@@ -119,7 +120,7 @@ cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al últ
 {chr(10).join(filas) if filas else '| — | sin entradas todavía | 0 |'}
 | `_quarto.yml`, `index.qmd`, `404.qmd`, `_contenido-inicio.qmd`, `_contenido-final.qmd` | configuración y portada propias del blog | |
 | `assets/`, `_extensions/`, `_filters/`, `_partials/`, `scripts/` | tema propagado desde el hub (salvo `assets/img/`) | |
-| `_site/` | sitio generado por `quarto render`; versionado mientras Netlify lo publique tal cual (D1) | |
+| `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`04 index/docs/decisiones.md` §4.1) | |
 
 {total} entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
 sus metadatos se editan en masa desde `scripts_quarto_studio` (`metadata_manager`).

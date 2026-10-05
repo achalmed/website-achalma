@@ -2,40 +2,61 @@
 # =============================================================================
 # puerta-r6.sh — Puerta de publicación R6 de la familia Quarto (normativa 7.10, RQ-PRE-03).
 # -----------------------------------------------------------------------------
-# Un sitio no se empuja si su `_site/index.html` falta, está vacío o es más viejo
-# que el `.qmd` rastreado más reciente (Netlify sirve el `_site/` empujado, sin
-# build: un push sin render publica un sitio vacío o viejo; decisiones §4.1–§4.3).
-#
+# No se empuja un sitio sin `_site/index.html` (o vacío), con fuentes sin confirmar
+# o con una fuente confirmada después que `_site/index.html`: se comparan fechas de
+# commit (`git log -1 --format=%ct`), no de archivo, que un reset o un clon reescriben
+# (lección 3.6 g). Fuentes: `.qmd`, `_quarto.yml`, `_metadata.yml` y el tema (FUENTES).
+# `_site/index.html` sin confirmar (recién renderizado) pasa; si un render confirmado
+# no lo cambió, vale el último commit de `_site/` (el hub el 2026-09-28, 79bfb9b).
 # Uso:
 #   scripts/puerta-r6.sh [<carpeta del sitio>]          # comprueba (por defecto, el hub); 0 pasa · 1 no pasa
-#   scripts/puerta-r6.sh --instalar --pub methodica     # simula instalar el hook pre-push en ese pub
-#   scripts/puerta-r6.sh --instalar --pub methodica --aplicar
+#   scripts/puerta-r6.sh --instalar --pub methodica [--aplicar]     # hook pre-push en ese pub (simula sin --aplicar)
 #   scripts/puerta-r6.sh --desinstalar --pub methodica --aplicar
-# Como hook (`<repo>/.git/hooks/pre-push`, copia de este archivo) comprueba el repo
-# que empuja; git aborta el push si sale distinto de 0 (Pro Git §8.3).
-# Límite: no sabe si el push lleva `_site/`; solo que el render local está al día.
+#   scripts/prueba-puerta-r6.sh                          # sus casos en un repo temporal
+# Como hook (`<repo>/.git/hooks/pre-push`) comprueba el repo que empuja; git aborta el push si sale ≠ 0.
+# Límite: no sabe si el push lleva `_site/`; solo que el render confirmado está al día.
 # =============================================================================
 set -euo pipefail
 
 HUB="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MARCA="# pre-push — GENERADO por \`04 index/scripts/puerta-r6.sh --instalar\`; no editar aquí"
+# Fuentes del sitio (pathspecs de git, relativos a la raíz del sitio); _site/ y _freeze/ nunca lo son.
+FUENTES=(':(glob)**/*.qmd' ':(glob)**/_quarto.yml' ':(glob)**/_metadata.yml'
+         '_extensions/' '_filters/' '_partials/' 'assets/scss/' 'assets/js/' 'assets/css/'
+         '_brand.yml' 'THEME_VERSION'
+         ':(exclude)_site/' ':(exclude)_freeze/' ':(exclude,glob)**/README.md')   # la guía de una carpeta del tema no se publica
 
 comprobar() {
-    local sitio="$1" idx mas="" t tmax=0 f
+    local sitio="$1" idx sucias t_idx t_site salida t_src f_src
     idx="$sitio/_site/index.html"
     if [[ ! -s "$idx" ]]; then
         echo "✖ R6: $sitio sin _site/index.html (o vacío): renderiza antes de empujar" >&2; return 1
     fi
-    while IFS= read -r -d '' f; do
-        [[ "$f" == _site/* || "$f" == _freeze/* ]] && continue
-        [[ -e "$sitio/$f" ]] || continue
-        t="$(stat -c %Y -- "$sitio/$f")"
-        if (( t > tmax )); then tmax=$t; mas="$f"; fi
-    done < <(git -C "$sitio" ls-files -z -- '*.qmd')
-    if (( tmax > $(stat -c %Y -- "$idx") )); then
-        echo "✖ R6: _site/index.html es más viejo que $mas: renderiza antes de empujar" >&2; return 1
+    sucias="$(git -C "$sitio" status --porcelain --untracked-files=all -- "${FUENTES[@]}")"
+    if [[ -n "$sucias" ]]; then
+        echo "✖ R6: fuentes con cambios sin confirmar ($(wc -l <<<"$sucias") ruta(s), p. ej. $(head -1 <<<"$sucias" | cut -c4-)): confirma y renderiza antes de empujar" >&2
+        return 1
     fi
-    echo "✔ R6: _site/index.html presente, no vacío y al día (fuente más reciente: ${mas:-ninguna})"
+    if [[ -n "$(git -C "$sitio" status --porcelain --untracked-files=all -- _site/index.html)" ]]; then
+        echo "✔ R6: _site/index.html recién renderizado (sin confirmar) y fuentes confirmadas"; return 0
+    fi
+    t_idx="$(git -C "$sitio" log -1 --format=%ct -- _site/index.html)"
+    if [[ -z "$t_idx" ]]; then
+        echo "✖ R6: _site/index.html no está en git (el sitio publica su _site/ versionado; decisiones §4.1)" >&2; return 1
+    fi
+    salida="$(git -C "$sitio" -c core.quotePath=false log -1 --format=%ct --name-only -- "${FUENTES[@]}")"
+    t_src="$(sed -n 1p <<<"$salida")"
+    f_src="$(sed '/^$/d' <<<"$salida" | sed -n 2p)"
+    if [[ -n "$t_src" ]] && (( t_src > t_idx )); then
+        t_site="$(git -C "$sitio" log -1 --format=%ct -- _site/)"
+        if (( t_site >= t_src )); then
+            echo "✔ R6: _site/ confirmado después de la última fuente ($f_src); _site/index.html no cambió en ese render"
+            return 0
+        fi
+        echo "✖ R6: el último commit de _site/index.html es anterior al de $f_src: renderiza y confirma antes de empujar" >&2
+        return 1
+    fi
+    echo "✔ R6: _site/index.html presente, no vacío y confirmado después de la última fuente (${f_src:-ninguna})"
 }
 
 # Invocado como hook pre-push: comprobar el repo que empuja.
@@ -50,7 +71,7 @@ while [[ $# -gt 0 ]]; do
         --desinstalar) ACCION="desinstalar" ;;
         --pub)         PUB="${2:?falta el nombre del pub}"; shift ;;
         --aplicar)     APLICAR=1 ;;
-        -h|--help)     sed -n '2,18p' "$0"; exit 0 ;;
+        -h|--help)     sed -n '2,/^# =\{10,\}$/p' "$0"; exit 0 ;;
         -*)            echo "Opción desconocida: $1" >&2; exit 2 ;;
         *)             SITIO="$1" ;;
     esac

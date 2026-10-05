@@ -74,10 +74,15 @@ El tema (SCSS, JS, filtros Lua, extensiones `apaquarto`/`fontawesome`/
 `lightbox`, `build-page-css.sh`) vive **en el hub** y se propaga a los blogs:
 
 ```bash
-scripts/sync-theme-pubs.sh              # simula: muestra qué cambiaría
-scripts/sync-theme-pubs.sh --aplicar    # escribe en cada _pubs/pub_*
-scripts/sync-theme-pubs.sh --verificar  # sale 1 si algún blog difiere
+scripts/sync-theme-pubs.sh                          # simula: muestra qué cambiaría
+scripts/sync-theme-pubs.sh --pub methodica --aplicar   # escribe en un blog (sin --pub, en todos)
+scripts/sync-theme-pubs.sh --verificar              # sale 1 si algún blog difiere
 ```
+
+`--aplicar` deja en el blog una **copia real** del tema: rompe los hardlinks que lo ataban al hub (con
+ellos, editar un blog editaba el hub y `--verificar` comparaba un archivo consigo mismo) y escribe
+`THEME_VERSION`, el sello con el commit del hub y la suma del conjunto (ADR-06). En la ola 6 pasan los
+demás blogs; hasta entonces `--verificar` los informa como pendientes.
 
 No se sincronizan a propósito: `assets/scss/05-pages/`, `assets/css/pages/`,
 `_filters/_metadata-pdf.lua`, `_quarto.yml`, `index.qmd`, `assets/img/`,

@@ -73,6 +73,29 @@ def sin_fecha(t):
     return FECHA.sub("(fecha)", t)
 
 
+# --- lo que un pub ya convertido (piloto 3, ola 6) añade a su README ----------------
+def convertido(pub_dir):
+    """(filas extra de «Estructura», línea extra de «Uso», cola de la línea de `_site/` en «Límite honesto»).
+
+    Solo depende de lo que el pub tiene en el disco, así que un pub sin convertir genera el README de siempre."""
+    filas = []
+    if (pub_dir / "THEME_VERSION").exists():
+        filas.append("| `THEME_VERSION` | sello del tema: commit del hub y sha256 del conjunto; lo escribe "
+                     "`sync-theme-pubs.sh --aplicar` (GENERADO) | |")
+    gi = pub_dir / ".gitignore"
+    if gi.exists() and any(l.strip() == "!/_freeze/" for l in gi.read_text(encoding="utf-8").splitlines()):
+        filas.append("| `_freeze/` | caché de ejecución de Quarto (`freeze: true`); se versiona cuando existe "
+                     "(normativa 5.16 y 7.6) | |")
+    netlify = (pub_dir / "netlify.toml").exists()
+    if netlify:
+        filas.append("| `netlify.toml` | configuración de Netlify: publica `_site/` sin comando de build | |")
+    uso = ("../../scripts/puerta-r6.sh .                # puerta R6: _site/index.html al día antes del push "
+           "(también es el hook pre-push)\n") if netlify else ""
+    cola = ("; `netlify.toml` lo declara (`publish = \"_site\"`, sin comando de build), y el hook pre-push de la "
+            "puerta R6 no viaja con el repo: lo instala `04 index/scripts/puerta-r6.sh --instalar`") if netlify else ""
+    return "".join(f + "\n" for f in filas), uso, cola
+
+
 # --- README de un pub ---------------------------------------------------------------
 def readme_pub(d, p):
     pub_dir = PUBS_DIR / p["carpeta"]
@@ -83,6 +106,7 @@ def readme_pub(d, p):
              for c, n in secciones(pub_dir)]
     total = sum(n for _, n in secciones(pub_dir))
     nota = f"\n{p['nota'][0].upper() + p['nota'][1:]}\n" if p.get("nota") else ""
+    extra, uso_r6, limite_site = convertido(pub_dir)
     return f"""---
 tipo: readme
 estado: activo
@@ -109,7 +133,7 @@ llega por `04 index/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_qua
 quarto preview                              # vista previa local
 quarto render                               # regenera _site/ (freeze: true: el código no se re-ejecuta)
 git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: …"   # confirmar AQUÍ primero…
-git push                                    # …al remoto propio (ssh git@github.com:{d['autor']['github']}/{p['repo']}.git)
+{uso_r6}git push                                    # …al remoto propio (ssh git@github.com:{d['autor']['github']}/{p['repo']}.git)
 cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al último commit"   # y mover el puntero en el hub
 ```
 
@@ -122,7 +146,7 @@ cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al últ
 | `assets/scss/`, `assets/js/`, `assets/css/global.css`, `assets/css/components/`, `_extensions/`, `_filters/apa-floats-html.lua`, `scripts/build-page-css.sh` | tema propagado desde el hub por `sync-theme-pubs.sh`: no se edita aquí | |
 | `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html`, `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`, `_partials/` | propios del blog (no los escribe la sincronización) | |
 | `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`04 index/docs/decisiones.md` §4.1) | |
-
+{extra}
 {total} entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
 sus metadatos se editan en masa desde `scripts_quarto_studio` (`metadata_manager`).
 
@@ -135,7 +159,7 @@ principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada siti
 ## Límite honesto
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
-- `_site/` sigue en git: {d.get('despliegue_pubs', 'sin _publish.yml ni netlify.toml')}.
+- `_site/` sigue en git: {d.get('despliegue_pubs', 'sin _publish.yml ni netlify.toml')}{limite_site}.
 - Licencia: código {d['licencia_codigo']} (`LICENSE`), contenido {d['licencia_contenido']} según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
 """
 

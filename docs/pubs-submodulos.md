@@ -106,7 +106,7 @@ mueven, se cambia ahí.
 | `scripts_quarto_studio/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
 | `scripts_quarto_studio/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
 | `scripts_document_studio/backends/page-counter/config.py` | `SUBDIR_PUBS` |
-| `scripts_for_linux/scripts_git_studio/backend/script_git_sync_respos/repos-config.yml` | una entrada por pub |
+| `scripts-linux/scripts_git_studio/backend/script_git_sync_respos/repos-config.yml` | una entrada por pub |
 
 Las de `scripts_quarto_studio` aceptan el nombre de carpeta (`pub_axiomata`) o
 el corto (`axiomata`). Qué escribe `scripts_quarto_studio` en el hub y en los

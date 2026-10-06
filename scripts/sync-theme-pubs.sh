@@ -150,6 +150,10 @@ for pub in "${PUBS[@]}"; do
     mapfile -t enlaces < <(hardlinks "$pub")
     tiene_sello=0; [[ -f "$pub/$SELLO" ]] && tiene_sello=1
     sello_igual=0; [[ $tiene_sello == 1 && "$(cat "$pub/$SELLO")" == "$SELLO_HUB" ]] && sello_igual=1
+    # La deriva es de contenido: un commit del hub que solo toca comentarios mueve commit_hub pero no el sha256 del
+    # conjunto, y eso no es deriva (ola 3: el renombre 02 analysis → datafw tocó un comentario de _quarto.yml).
+    conjunto_igual=0
+    [[ $tiene_sello == 1 && "$(grep '^sha256_conjunto:' "$pub/$SELLO")" == "$(grep '^sha256_conjunto:' <<<"$SELLO_HUB")" ]] && conjunto_igual=1
 
     case "$MODO" in
         aplicar)
@@ -162,7 +166,7 @@ for pub in "${PUBS[@]}"; do
             ;;
         verificar)
             if [[ $tiene_sello == 1 ]]; then
-                [[ $sello_igual == 0 ]] && cambios+="  $SELLO distinto del sello del hub"$'\n'
+                [[ $conjunto_igual == 0 ]] && cambios+="  $SELLO distinto del sello del hub (sha256 del conjunto)"$'\n'
                 [[ ${#enlaces[@]} -gt 0 ]] && cambios+="  ${#enlaces[@]} hardlinks: la verificación sería ciega"$'\n'
             fi
             ;;

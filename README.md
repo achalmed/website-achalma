@@ -18,7 +18,7 @@ Lo alimentan cuatro vecinos del workspace, que escriben aquí o de los que se co
 «Contrato con el hub»), `docencia` (la sección «Contenidos / Sílabo» de cada ficha de curso y los materiales
 de cada edición por hardlink; `docencia/docs/estandar-docencia.md`), `datafw` (el observatorio de
 `observatorio/`) y `09 trabajo` (la copia de `resources/cv.pdf`). **No es** un framework de documentos (eso es
-`03 writing`), ni el estándar docente (eso es `docencia`), ni el lugar donde se escribe un post de un blog
+`escritura`), ni el estándar docente (eso es `docencia`), ni el lugar donde se escribe un post de un blog
 satélite: eso se hace dentro del pub, que es su propio repositorio.
 
 ## Uso

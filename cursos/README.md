@@ -11,11 +11,11 @@ el porqué resumido, en `../docs/decisiones.md` §1.
 ## Fuente de verdad
 
 - La sección **«Contenidos / Sílabo»** de cada ficha `<curso>/index.qmd` se genera desde el `curso.yml`
-  del curso en `10 Class/contenido/cursos/<slug>/` (`10 Class/scripts/temario-generar.sh generar --que web --aplicar`);
+  del curso en `docencia/contenido/cursos/<slug>/` (`docencia/scripts/temario-generar.sh generar --que web --aplicar`);
   está entre marcadores `temario:inicio/fin` y no se edita a mano.
 - Las **ediciones** se publican desde el framework: `publish-session.sh` congela cada sesión y
   `publish-web.sh` enlaza sus PDF y materiales aquí **por hardlink** según `contenido/dictados/<clave>/dictado.yml`
-  (`10 Class/scripts/publish-web.sh <clave> --aplicar`; sin `--aplicar` simula). El `index.qmd` y el
+  (`docencia/scripts/publish-web.sh <clave> --aplicar`; sin `--aplicar` simula). El `index.qmd` y el
   `<sesión>/resources/_links.md` de cada sesión se crean si faltan y luego son editables.
 - Las fichas sin curso en el framework ni ediciones llevan `draft: true` hasta que exista contenido.
 
@@ -114,4 +114,4 @@ gestiona desde este repo (`../docs/despliegue-netlify.md`).
 
 - Solo dos cursos tienen ediciones publicadas; el resto son fichas (varias en `draft: true`).
 - Esta carpeta no es la fuente docente: el contenido, el sílabo y el registro de alumnos viven en
-  `10 Class`; aquí solo se publica lo que el framework enlaza o genera.
+  `docencia`; aquí solo se publica lo que el framework enlaza o genera.

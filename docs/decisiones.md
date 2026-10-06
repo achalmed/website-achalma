@@ -21,16 +21,16 @@ facetan solas. Las URL antiguas se conservan con `aliases:`; el `_redirects` de 
 aplicó. El plan completo: `historial/course-redesign-plan.md`. La excepción heredada
 `cursos/pre_economia/2014-i/sesiones/` no se migró al nombre `session_NN_slug`.
 
-**1.2 La ficha de un curso se genera desde `10 Class`** (2026-09-06, F5.1–F5.4). La sección «Contenidos /
+**1.2 La ficha de un curso se genera desde `docencia`** (2026-09-06, F5.1–F5.4). La sección «Contenidos /
 Sílabo» de `cursos/<curso>/index.qmd` sale de `contenido/cursos/<slug>/curso.yml` con
-`10 Class/scripts/temario-generar.sh generar --que web --aplicar`, entre marcas `temario:inicio/fin`; las
+`docencia/scripts/temario-generar.sh generar --que web --aplicar`, entre marcas `temario:inicio/fin`; las
 ediciones se enlazan por hardlink con `publish-web.sh`. Las fichas sin curso en el framework llevan
 `draft: true`. Corolario: `cursos/_metadata.yml` es un archivo físico independiente para que un hardlink no
 propague cambios.
 
 **1.3 Fechas ISO en toda la familia** (2026-09-15, M6). Todo `date:` es `AAAA-MM-DD`;
 `scripts-quarto` normaliza (`fechas-iso`) y deriva de la carpeta (`sync-dates`). Los nueve cursos
-renombrados en `10 Class` (M7) cambiaron de ruta aquí en la misma fecha; la edición `2025-1-cau-unsch` de
+renombrados en `docencia` (M7) cambiaron de ruta aquí en la misma fecha; la edición `2025-1-cau-unsch` de
 Metodología quedó marcada como legado por no tener fuentes en el framework.
 
 **1.4 Los posts se citan como *Actus Mercator*** (anterior a 2026-07): volumen = año, número 1–4 =

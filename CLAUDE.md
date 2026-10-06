@@ -27,7 +27,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   pub no se edita: el siguiente `--aplicar` la pisaría.
 - **Generado no se edita**: `assets/css/pages/*.css` (los compila `scripts/build-page-css.sh`, gancho
   `pre-render`), la sección «Contenidos / Sílabo» de `cursos/<curso>/index.qmd` entre las marcas
-  `temario:inicio/fin` (la escribe `10 Class/scripts/temario-generar.sh generar --que web --aplicar`),
+  `temario:inicio/fin` (la escribe `docencia/scripts/temario-generar.sh generar --que web --aplicar`),
   `docs/README.md` (`core/docs.py indice`), los README de los pubs, `_site/`, `_freeze/`, `.quarto/`,
   `_indice/`.
 - **Un color o medida nuevo entra por la paleta** (`assets/scss/00-settings/`), recibe rol `$lab-*` en los
@@ -81,9 +81,9 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
   áreas son `categories:` de la ficha y facetan solas; las URL antiguas `/talk/…` y `/teching/…`
   sobreviven por `aliases:`. Cómo se añade contenido: `cursos/README.md` y `cursos/_plantillas/`; por qué
   es así: `docs/historial/course-redesign-plan.md`.
-- **Escritores externos.** En `cursos/`: `10 Class/scripts/temario-generar.sh` (la sección generada de
-  cada ficha) y `10 Class/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
-  en `10 Class/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
+- **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de
+  cada ficha) y `docencia/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
+  en `docencia/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
   independiente. En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
   el bloque `cifras:` de `index.qmd` con `--cifras-en`); la plataforma no se renderiza ni se edita aquí.
 - **`docs/` no se renderiza, pero sigue siendo referencia viva**: `docs/metadata-guia.md` y
@@ -120,7 +120,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 | la sección docente y su jerarquía | `cursos/README.md` |
 | el design system y los módulos JS | `assets/scss/README.md`, `assets/js/README.md` |
 | los scripts del hub (CSS, tema, `pubs.yml`, puerta R6) | `scripts/README.md` |
-| herramientas externas que escriben aquí | `scripts-quarto/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `datafw/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
+| herramientas externas que escriben aquí | `scripts-quarto/README.md` («Contrato con el hub»), `docencia/docs/estandar-docencia.md`, `datafw/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
 
 ## Dónde va cada cosa nueva
 

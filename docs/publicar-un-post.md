@@ -6,8 +6,8 @@ estado: activo
 # Publicar un post de principio a fin: carpeta, frontmatter APA, metadatos, render, commit, puntero e índice
 
 Un post vive en el hub (`blog/posts/`) o en uno de los 11 blogs (`_pubs/pub_*`); el procedimiento es el
-mismo salvo en dónde se confirma y cómo llega a producción. Todos los comandos de `scripts_quarto_studio`
-se ejecutan desde la carpeta de la herramienta (`scripts_quarto_studio/backend/<herramienta>/`) y aceptan el
+mismo salvo en dónde se confirma y cómo llega a producción. Todos los comandos de `scripts-quarto`
+se ejecutan desde la carpeta de la herramienta (`scripts-quarto/backend/<herramienta>/`) y aceptan el
 nombre de carpeta (`pub_axiomata`) o el corto (`axiomata`); los que escriben en masa simulan con
 `--dry-run` y esa es siempre la primera corrida.
 
@@ -28,7 +28,7 @@ La carpeta es `AAAA-MM-DD-slug/` (la fecha es la de publicación y el slug, en k
 A mano (copiar un post vecino y vaciarlo) o con el asistente interactivo del gestor de blogs:
 
 ```bash
-cd scripts_quarto_studio/backend/script_blogs_manager
+cd scripts-quarto/backend/script_blogs_manager
 ./main.sh new-post pub_epsilon-y-beta      # formulario: título, slug, fecha, categorías…
 ```
 
@@ -65,7 +65,7 @@ oct–dic).
 Ordenar y entrecomillar el YAML, si se escribió a mano:
 
 ```bash
-cd scripts_quarto_studio/backend/script_format_yaml
+cd scripts-quarto/backend/script_format_yaml
 python3 main.py --file "<ruta al post>/index.qmd"
 python3 main.py --directory "<carpeta de posts>" --recursive --dry-run   # varios, simulando
 ```
@@ -73,12 +73,12 @@ python3 main.py --directory "<carpeta de posts>" --recursive --dry-run   # vario
 ## 4. Metadatos en masa (Excel) y derivados de la ruta
 
 La base de metadatos de toda la familia es
-`scripts_quarto_studio/backend/script_metadata_manager/excel_databases/quarto_metadata.xlsx`; **el frontmatter
+`scripts-quarto/backend/script_metadata_manager/excel_databases/quarto_metadata.xlsx`; **el frontmatter
 de los `.qmd` es la verdad** y el Excel, la herramienta para editarlo en lote. `~/Documents` es la raíz que
 la herramienta recorre (resuelve `04 index` y `_pubs/` por su configuración).
 
 ```bash
-cd scripts_quarto_studio/backend/script_metadata_manager
+cd scripts-quarto/backend/script_metadata_manager
 python3 main.py create-template ~/Documents --config metadata_config.yml     # Excel con lo que hay hoy
 python3 main.py update ~/Documents excel_databases/quarto_metadata.xlsx --dry-run   # qué cambiaría
 python3 main.py update ~/Documents excel_databases/quarto_metadata.xlsx             # aplica
@@ -104,7 +104,7 @@ quarto render                             # el sitio entero (freeze: no re-ejecu
 ```
 
 O con el gestor: `./main.sh preview pub_axiomata`, `./main.sh render pub_axiomata` desde
-`scripts_quarto_studio/backend/script_blogs_manager`. Revisar en `_site/` el HTML, el PDF (`index.pdf`) y
+`scripts-quarto/backend/script_blogs_manager`. Revisar en `_site/` el HTML, el PDF (`index.pdf`) y
 que `citation.pdf-url` apunte a él.
 
 ## 6. Índices de contenido del blog
@@ -113,7 +113,7 @@ Cada blog lleva índices `_contenido_<sección>.qmd` con enlaces al artículo y 
 generador, no se editan a mano:
 
 ```bash
-cd scripts_quarto_studio/backend/script_generador_publicacion_similar
+cd scripts-quarto/backend/script_generador_publicacion_similar
 ./main.sh "<ruta al pub>" --dry-run
 ./main.sh "<ruta al pub>"
 ```
@@ -144,7 +144,7 @@ commit en `04 index`. Un push sin `_site/` publica un sitio vacío (`decisiones.
 regenera, no se cura:
 
 ```bash
-cd scripts_quarto_studio/backend/script_pub_index_symlink
+cd scripts-quarto/backend/script_pub_index_symlink
 ./main.sh --dry-run
 ./main.sh
 ```

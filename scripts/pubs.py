@@ -124,7 +124,7 @@ GitHub `{d['autor']['github']}/{p['repo']}` y dominio `{dominio}`; el registro d
 {nota}
 El tema visual (SCSS, JS, extensiones, filtros, `scripts/build-page-css.sh`) **no se edita aquí**: vive en el hub y
 llega por `04 index/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_quarto.yml`, `index.qmd`, `_contenido-*.qmd`,
-`assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `scripts_quarto_studio`
+`assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `scripts-quarto`
 (`script_generador_publicacion_similar`) y no se editan a mano.
 
 ## Uso
@@ -148,7 +148,7 @@ cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al últ
 | `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`04 index/docs/decisiones.md` §4.1) | |
 {extra}
 {total} entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
-sus metadatos se editan en masa desde `scripts_quarto_studio` (`metadata_manager`).
+sus metadatos se editan en masa desde `scripts-quarto` (`metadata_manager`).
 
 ## Documentación
 

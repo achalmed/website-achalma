@@ -86,7 +86,7 @@ git -C _pubs/pub_axiomata ls-files _site | wc -l    # lo mismo en un pub
 
 Leen o publican lo que producen estos 12 sitios:
 
-- `scripts_quarto_studio/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
+- `scripts-quarto/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
   `quarto publish`, que no es el flujo vigente).
 - `scripts_document_studio`: `backends/page-counter` cuenta las páginas de los PDF de `04 index/_site` y
   de `_pubs/*/_site`; `backends/pdf-suite` incluye `04 index` entre sus carpetas de búsqueda.

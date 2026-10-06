@@ -14,7 +14,7 @@ uno con su repo, su `_quarto.yml` y su sitio Netlify; el hub es la **fuente de v
 extensiones y filtros Lua, `meta/workspace.yml` → `verdad:`) y lo propaga con `scripts/sync-theme-pubs.sh`.
 
 Lo alimentan cuatro vecinos del workspace, que escriben aquí o de los que se copia algo:
-`scripts_quarto_studio` (metadatos por Excel, índices `_contenido_*`, enlaces de `_indice/`; su `README.md`,
+`scripts-quarto` (metadatos por Excel, índices `_contenido_*`, enlaces de `_indice/`; su `README.md`,
 «Contrato con el hub»), `10 Class` (la sección «Contenidos / Sílabo» de cada ficha de curso y los materiales
 de cada edición por hardlink; `10 Class/docs/estandar-docencia.md`), `datafw` (el observatorio de
 `observatorio/`) y `09 trabajo` (la copia de `resources/cv.pdf`). **No es** un framework de documentos (eso es
@@ -67,7 +67,7 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 |---|---|---|
 | `_quarto.yml` | el manifiesto: proyecto, navegación (incluido el menú «More» con los 11 blogs), tema, formatos, comentarios, `render` | a mano |
 | `index.qmd`, `about/`, `contact.qmd`, `appointment/`, `beschikbaarheid/`, `accessibility.qmd`, `license.qmd`, `404.qmd` | páginas del sitio | a mano |
-| `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts_quarto_studio` (`script_metadata_manager`); los índices `_contenido_<sección>.qmd`, `script_generador_publicacion_similar`; `blog/_contenido-inicio.qmd` y `_contenido-final.qmd`, a mano |
+| `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts-quarto` (`script_metadata_manager`); los índices `_contenido_<sección>.qmd`, `script_generador_publicacion_similar`; `blog/_contenido-inicio.qmd` y `_contenido-final.qmd`, a mano |
 | `cursos/` | repositorio docente tipo OpenCourseWare: `<curso>/index.qmd` (ficha) → `<edicion>/` → `session_NN_slug/`; README propio | fichas a mano; la sección «Contenidos / Sílabo» la genera `10 Class/scripts/temario-generar.sh`; las ediciones las enlaza `10 Class/scripts/publish-web.sh` |
 | `publication/` | publicaciones formales (informe ENIS 2022–2023) | a mano |
 | `observatorio/` | sección «Datos»: `index.qmd` (entrada, con el tema del hub) y `plataforma.html` (observatorio autocontenido que se copia sin renderizar, `project.resources`) | `datafw/tools/plataforma.py` escribe `plataforma.html` (`--salida`) y el bloque `cifras:` de `index.qmd` (`--cifras-en`); el resto de `index.qmd`, a mano |
@@ -80,7 +80,7 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `resources/` | `cv.pdf` (copia manual del CV de `09 trabajo`) e `indice.ods` | a mano |
 | `_publish.yml` · `.gitmodules` · `CITATION.cff` · `LICENSE` · `CNAME` | id del sitio Netlify (lo escribió `quarto publish` al crearlo; hoy no es la vía de publicación); submódulos; cita; MPL-2.0; residuo de GitHub Pages | `quarto publish`; git; a mano |
 | `_site/` | el sitio renderizado, **versionado a propósito**: es lo que Netlify publica en cada `git push`; se queda en git hasta que el autor decida lo contrario (`docs/decisiones.md` §4.1) | `quarto render` |
-| `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | caché de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts_quarto_studio` (`_indice/`) |
+| `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | caché de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts-quarto` (`_indice/`) |
 
 ## Documentación
 

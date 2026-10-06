@@ -29,7 +29,7 @@ ediciones se enlazan por hardlink con `publish-web.sh`. Las fichas sin curso en 
 propague cambios.
 
 **1.3 Fechas ISO en toda la familia** (2026-09-15, M6). Todo `date:` es `AAAA-MM-DD`;
-`scripts_quarto_studio` normaliza (`fechas-iso`) y deriva de la carpeta (`sync-dates`). Los nueve cursos
+`scripts-quarto` normaliza (`fechas-iso`) y deriva de la carpeta (`sync-dates`). Los nueve cursos
 renombrados en `10 Class` (M7) cambiaron de ruta aquí en la misma fecha; la edición `2025-1-cau-unsch` de
 Metodología quedó marcada como legado por no tener fuentes en el framework.
 
@@ -64,7 +64,7 @@ propagadas lo dicen en su cabecera (`assets/scss/README.md`, `assets/js/README.m
 
 **2.3 Un registro para los nombres de los blogs** (2026-09-20, DOC5). Carpeta, repo, dominio, tema y
 descripción no se derivan unos de otros (`pub_chaska` → `chaska` → `chaska-x.netlify.app`) y estaban
-repartidos entre `_quarto.yml`, el menú «More», el README viejo y un comentario de `scripts_quarto_studio`.
+repartidos entre `_quarto.yml`, el menú «More», el README viejo y un comentario de `scripts-quarto`.
 Ahora viven en `_pubs/pubs.yml` y de ahí salen, con `scripts/pubs.py`, el `README.md` y el `CITATION.cff`
 de cada pub y la tabla del README del hub (NORMATIVA §15.9). El `_quarto.yml` de cada pub y el menú de
 navegación siguen a mano.

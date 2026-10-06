@@ -16,7 +16,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `README.md` los escribe `python3 scripts/pubs.py readme --aplicar` (sin `--aplicar` simula).
 - **Los blogs se editan y confirman dentro de `_pubs/pub_*`** (cada uno es repo, `_quarto.yml` y sitio
   Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/pub_x && git commit`). Nunca
-  `git rm` ni mover `_pubs/` a mano: `scripts_quarto_studio` (gestor de blogs, metadatos, `_indice/`) y
+  `git rm` ni mover `_pubs/` a mano: `scripts-quarto` (gestor de blogs, metadatos, `_indice/`) y
   `scripts_document_studio` (`page-counter`) resuelven los blogs por `04 index/_pubs` (lista en
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
@@ -33,7 +33,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 - **Un color o medida nuevo entra por la paleta** (`assets/scss/00-settings/`), recibe rol `$lab-*` en los
   dos archivos de tokens y recién entonces se usa; los módulos compartidos nunca usan `$spc-*` ni hex.
   Guía: `assets/scss/README.md`.
-- **Fechas ISO `AAAA-MM-DD`** en todo `date:` de la familia (NORMATIVA §3); `scripts_quarto_studio` las
+- **Fechas ISO `AAAA-MM-DD`** en todo `date:` de la familia (NORMATIVA §3); `scripts-quarto` las
   normaliza (`main.py fechas-iso`) y las deriva de la carpeta del post (`main.py sync-dates`).
 - **Documentación por contrato** (NORMATIVA §15): README con `Uso · Estructura · Límite honesto`, `docs/`
   en kebab con frontmatter `tipo`/`estado`/`titulo`, lo cumplido en `docs/historial/`, el porqué en
@@ -120,7 +120,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 | la sección docente y su jerarquía | `cursos/README.md` |
 | el design system y los módulos JS | `assets/scss/README.md`, `assets/js/README.md` |
 | los scripts del hub (CSS, tema, `pubs.yml`, puerta R6) | `scripts/README.md` |
-| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `datafw/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
+| herramientas externas que escriben aquí | `scripts-quarto/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `datafw/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
 
 ## Dónde va cada cosa nueva
 

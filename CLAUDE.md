@@ -84,7 +84,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **Escritores externos.** En `cursos/`: `10 Class/scripts/temario-generar.sh` (la sección generada de
   cada ficha) y `10 Class/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
   en `10 Class/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
-  independiente. En `observatorio/`: `02 analysis/tools/plataforma.py` (`plataforma.html` con `--salida`,
+  independiente. En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
   el bloque `cifras:` de `index.qmd` con `--cifras-en`); la plataforma no se renderiza ni se edita aquí.
 - **`docs/` no se renderiza, pero sigue siendo referencia viva**: `docs/metadata-guia.md` y
   `docs/quarto-guia.md` anotan cada clave (YAML dentro de bloque de código). Las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) están en `_plantillas/apaquarto/`.
@@ -120,7 +120,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 | la sección docente y su jerarquía | `cursos/README.md` |
 | el design system y los módulos JS | `assets/scss/README.md`, `assets/js/README.md` |
 | los scripts del hub (CSS, tema, `pubs.yml`, puerta R6) | `scripts/README.md` |
-| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `02 analysis/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
+| herramientas externas que escriben aquí | `scripts_quarto_studio/README.md` («Contrato con el hub»), `10 Class/docs/estandar-docencia.md`, `datafw/docs/integracion-ecosistema.md` §2 y §4 (observatorio), `09 trabajo/cv/docs/publicar.md` (`resources/cv.pdf`) |
 
 ## Dónde va cada cosa nueva
 

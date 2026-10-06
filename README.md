@@ -16,7 +16,7 @@ extensiones y filtros Lua, `meta/workspace.yml` → `verdad:`) y lo propaga con 
 Lo alimentan cuatro vecinos del workspace, que escriben aquí o de los que se copia algo:
 `scripts_quarto_studio` (metadatos por Excel, índices `_contenido_*`, enlaces de `_indice/`; su `README.md`,
 «Contrato con el hub»), `10 Class` (la sección «Contenidos / Sílabo» de cada ficha de curso y los materiales
-de cada edición por hardlink; `10 Class/docs/estandar-docencia.md`), `02 analysis` (el observatorio de
+de cada edición por hardlink; `10 Class/docs/estandar-docencia.md`), `datafw` (el observatorio de
 `observatorio/`) y `09 trabajo` (la copia de `resources/cv.pdf`). **No es** un framework de documentos (eso es
 `03 writing`), ni el estándar docente (eso es `10 Class`), ni el lugar donde se escribe un post de un blog
 satélite: eso se hace dentro del pub, que es su propio repositorio.
@@ -70,7 +70,7 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts_quarto_studio` (`script_metadata_manager`); los índices `_contenido_<sección>.qmd`, `script_generador_publicacion_similar`; `blog/_contenido-inicio.qmd` y `_contenido-final.qmd`, a mano |
 | `cursos/` | repositorio docente tipo OpenCourseWare: `<curso>/index.qmd` (ficha) → `<edicion>/` → `session_NN_slug/`; README propio | fichas a mano; la sección «Contenidos / Sílabo» la genera `10 Class/scripts/temario-generar.sh`; las ediciones las enlaza `10 Class/scripts/publish-web.sh` |
 | `publication/` | publicaciones formales (informe ENIS 2022–2023) | a mano |
-| `observatorio/` | sección «Datos»: `index.qmd` (entrada, con el tema del hub) y `plataforma.html` (observatorio autocontenido que se copia sin renderizar, `project.resources`) | `02 analysis/tools/plataforma.py` escribe `plataforma.html` (`--salida`) y el bloque `cifras:` de `index.qmd` (`--cifras-en`); el resto de `index.qmd`, a mano |
+| `observatorio/` | sección «Datos»: `index.qmd` (entrada, con el tema del hub) y `plataforma.html` (observatorio autocontenido que se copia sin renderizar, `project.resources`) | `datafw/tools/plataforma.py` escribe `plataforma.html` (`--salida`) y el bloque `cifras:` de `index.qmd` (`--cifras-en`); el resto de `index.qmd`, a mano |
 | `_pubs/` | los 11 blogs como submódulos (`.gitmodules`: https, `shallow = true`) y `pubs.yml`, su registro | contenido en cada pub; README y `CITATION.cff` de cada pub, `scripts/pubs.py` |
 | `assets/` | design system «Quiet Laboratory»: `assets/scss/` (fuente), `assets/css/pages/` (**generado** por `scripts/build-page-css.sh`), `assets/css/global.css` y `assets/css/components/bibbase.css` (a mano), `assets/js/`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html` | a mano salvo `assets/css/pages/`; README en `assets/scss/` y `assets/js/` |
 | `_extensions/` · `_filters/` · `_partials/` | extensiones vendorizadas (apaquarto, fontawesome, lightbox); filtros Lua (`_metadata-pdf.lua`, `apa-floats-html.lua`); bloque de título propio | vendorizado y versionado; a mano |

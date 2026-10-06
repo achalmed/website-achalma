@@ -5,7 +5,7 @@ estado: activo
 ---
 # Decisiones, convenciones y pendientes del hub
 
-Archivo único y acumulativo (NORMATIVA §15.6, modelo `02 analysis/docs/decisiones.md`): cada decisión con
+Archivo único y acumulativo (NORMATIVA §15.6, modelo `datafw/docs/decisiones.md`): cada decisión con
 su fecha, al final de la sección que le corresponde. `CLAUDE.md` resume; aquí está el porqué. Lo cumplido
 y fechado va a `historial/`; lo que cambió y cuándo, al historial de git (no hay `CHANGELOG`: §3.7).
 
@@ -44,9 +44,9 @@ versionan (`.gitignore`). `site_libs/` tampoco: lo reconstruye cada render (2026
 entrada, con el tema del hub; `observatorio/plataforma.html` es el observatorio completo, autocontenido
 (datos, estilos y gráficos dentro), y va en `project.resources` para que Quarto lo copie tal cual: pasarlo
 por el render le impondría el tema del hub y rompería su paleta, validada aparte. Los dos los escribe
-`02 analysis/tools/plataforma.py` (`--salida` para la plataforma; `--cifras-en` para el bloque
+`datafw/tools/plataforma.py` (`--salida` para la plataforma; `--cifras-en` para el bloque
 `<!-- cifras:inicio/fin -->` de la página de entrada): no se editan aquí. El contrato del lado del
-proveedor: `02 analysis/docs/integracion-ecosistema.md` §2 (el observatorio) y §4 (consumidores).
+proveedor: `datafw/docs/integracion-ecosistema.md` §2 (el observatorio) y §4 (consumidores).
 
 ## 2. Los blogs satélite
 

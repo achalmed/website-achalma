@@ -22,7 +22,7 @@ aplicó. El plan completo: `historial/course-redesign-plan.md`. La excepción he
 `cursos/pre_economia/2014-i/sesiones/` no se migró al nombre `session_NN_slug`.
 
 **1.2 La ficha de un curso se genera desde `10 Class`** (2026-09-06, F5.1–F5.4). La sección «Contenidos /
-Sílabo» de `cursos/<curso>/index.qmd` sale de `docencia/cursos/<slug>/curso.yml` con
+Sílabo» de `cursos/<curso>/index.qmd` sale de `contenido/cursos/<slug>/curso.yml` con
 `10 Class/scripts/temario-generar.sh generar --que web --aplicar`, entre marcas `temario:inicio/fin`; las
 ediciones se enlazan por hardlink con `publish-web.sh`. Las fichas sin curso en el framework llevan
 `draft: true`. Corolario: `cursos/_metadata.yml` es un archivo físico independiente para que un hardlink no

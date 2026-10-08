@@ -7,7 +7,8 @@
 # Salida: la de quarto render; 2 si la carpeta no es un repo git.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
-# la fecha del último commit que toca fuentes: un commit de _site/ (el render confirmado) no la mueve
-SOURCE_DATE_EPOCH="$(git log -1 --format=%ct -- . ':(exclude)_site' ':(exclude)_freeze' 2>/dev/null)" || { echo "render.sh: $(pwd) no es un repo git" >&2; exit 2; }
+# la fecha del último commit que toca fuentes: ni un commit de _site/ (el render confirmado) ni uno de los
+# punteros de _pubs/ (en el hub) la mueven
+SOURCE_DATE_EPOCH="$(git log -1 --format=%ct -- . ':(exclude)_site' ':(exclude)_freeze' ':(exclude)_pubs' 2>/dev/null)" || { echo "render.sh: $(pwd) no es un repo git" >&2; exit 2; }
 export SOURCE_DATE_EPOCH FORCE_SOURCE_DATE=1
 exec nice -n 10 quarto render "$@"

@@ -12,7 +12,9 @@ project:
   # bajo inicial hace que Quarto NO los renderice ni copie como parte del hub:
   # cada pub_* es su propio proyecto Quarto y su propio sitio Netlify.
   # Compila assets/scss/05-pages/*.scss → assets/css/pages/*.css en cada render
-  pre-render: scripts/build-page-css.sh
+  pre-render:
+    - scripts/build-page-css.sh
+    - scripts/fechas-desde-git.py --aplicar   # fecha de cada página = su último commit: render reproducible (ola 6)
   resources:
     # El observatorio es una página autocontenida (datos, estilos y gráficos
     # dentro) que reconstruye `datafw/tools/plataforma.py`. Se COPIA tal

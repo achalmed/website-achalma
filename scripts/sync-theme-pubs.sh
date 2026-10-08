@@ -51,6 +51,7 @@ THEME_PATHS=(
     "assets/css/global.css"
     "assets/css/components/"
     "scripts/build-page-css.sh"
+    "scripts/fechas-desde-git.py"
 )
 RSYNC_EXCLUDES=(--exclude '05-pages/' --exclude '.Rhistory' --exclude '.directory')
 SELLO="THEME_VERSION"

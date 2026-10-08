@@ -20,6 +20,7 @@ import sys
 import tempfile
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -93,7 +94,7 @@ def comparar(nombre, raiz, url, maximo):
                      and "site_libs" not in p.parts)
     res = {"iguales": 0, "distintas": [], "nuevas": [], "retiradas": [], "errores": []}
     for rel in locales[:maximo] if maximo else locales:
-        codigo, remoto = bajar(url + rel)
+        codigo, remoto = bajar(url + urllib.parse.quote(rel))     # espacios y tildes en las rutas
         if codigo == 404:
             res["nuevas"].append(rel)
             continue

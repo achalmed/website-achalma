@@ -148,6 +148,16 @@ habría conservado el anterior): todas las rutas daban el 404 genérico de Netli
 el render local verificado y la negación de `*_files/`. Lección de método: ante un artefacto ausente, se
 pregunta al historial (`git log -- _site`) si alguna vez estuvo, no solo al árbol actual.
 
+### 4.4 El tema se comparte por hardlink (autor, 2026-10-08)
+
+El ADR-06 (ola 1) y el piloto 3 rompían los hardlinks del tema para que cada pub tuviera una copia real. El
+autor lo revisa al abrir la ola 6: el tema **se comparte por hardlink**, administrado con
+`scripts-linux/script_hardlinks-creator`, para que una edición en un sitio llegue a los doce. Quedan así:
+`scripts/tema-hardlinks.txt` (los 60 nombres que el hub y los pubs ya compartían), `sync-theme-pubs.sh`
+(iguala, sella y enlaza; `--verificar` detecta un enlace roto) y el doctor RQ-MAN-08, que ya no cuenta un
+hardlink como hallazgo sino un enlace roto. `pub_methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos
+de antes y después en `$RESPALDOS_DIR/hardlinks/2026-10-08-tema-sitios/`.
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |

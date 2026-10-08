@@ -79,10 +79,12 @@ scripts/sync-theme-pubs.sh --pub methodica --aplicar   # escribe en un blog (sin
 scripts/sync-theme-pubs.sh --verificar              # sale 1 si algún blog difiere
 ```
 
-`--aplicar` deja en el blog una **copia real** del tema: rompe los hardlinks que lo ataban al hub (con
-ellos, editar un blog editaba el hub y `--verificar` comparaba un archivo consigo mismo) y escribe
-`THEME_VERSION`, el sello con el commit del hub y la suma del conjunto (ADR-06). En la ola 6 pasan los
-demás blogs; hasta entonces `--verificar` los informa como pendientes.
+El tema se comparte **por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): editar un archivo del
+tema en el hub lo cambia en los doce sitios. `--aplicar` iguala el contenido con `rsync`, escribe `THEME_VERSION`
+(el sello con el commit del hub y la suma del conjunto) y al final enlaza los archivos de igual nombre y contenido
+de `scripts/tema-hardlinks.txt` con `scripts-linux/script_hardlinks-creator`. `_extensions/` no se enlaza: se copia.
+`rsync`, `git checkout` y los editores que guardan con un temporal y un renombre rompen el enlace sin avisar:
+`--verificar` sale 1 si un archivo de la lista quedó sin enlazar, y `--aplicar` lo repara.
 
 No se sincronizan a propósito: `assets/scss/05-pages/`, `assets/css/pages/`,
 `_filters/_metadata-pdf.lua`, `_quarto.yml`, `index.qmd`, `assets/img/`,

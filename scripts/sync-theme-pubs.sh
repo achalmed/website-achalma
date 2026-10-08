@@ -3,8 +3,10 @@
 # sync-theme-pubs.sh — Propaga el tema compartido del hub a los pubs (_pubs/), con sello THEME_VERSION.
 # -----------------------------------------------------------------------------
 # Fuente de verdad del tema: ESTE repositorio (website-achalma). Los 11 blogs
-# satélite son submódulos en _pubs/ y reciben una copia real del tema por este
-# script, el único mecanismo (ADR-06, normativa 7.11): sin hardlinks.
+# satélite son submódulos en _pubs/ y comparten el tema con el hub por HARDLINKS
+# (decisión del autor, 2026-10-08; ADR-06 revisado, normativa 7.11): editar el tema
+# en un sitio lo cambia en los doce. Este script es el único mecanismo: iguala el
+# contenido y deja que scripts-linux/script_hardlinks-creator enlace.
 #
 # Conjunto sincronizado (THEME_PATHS): extensiones vendorizadas, filtro Lua de
 # flotantes APA, SCSS base (todo menos 05-pages), JS, CSS global y de
@@ -15,10 +17,14 @@
 #
 # Con --aplicar, en cada pub elegido:
 #   1. rsync del conjunto (solo lo que difiere, por suma);
-#   2. rompe TODO hardlink del pub (copia real en el mismo sitio, mismo contenido,
-#      modo y fecha): con hardlinks, --verificar es ciego y editar un pub edita el hub;
-#   3. escribe THEME_VERSION: commit del hub que fijó el tema por última vez y
-#      sha256 del conjunto (GENERADO; no se edita).
+#   2. escribe THEME_VERSION: commit del hub que fijó el tema por última vez y
+#      sha256 del conjunto (GENERADO; no se edita);
+#   3. al final, una sola vez, enlaza por hardlink los archivos de igual nombre y
+#      contenido de scripts/tema-hardlinks.txt en todo el hub (script_hardlinks-creator
+#      --batch; _site/ y _extensions/ quedan fuera, a cualquier profundidad).
+# rsync reescribe un archivo distinto con un temporal y lo renombra (rompe su enlace);
+# git checkout y los editores que guardan por renombrado también: el paso 3 lo repara
+# y --verificar lo detecta (sale 1 si un archivo de la lista quedó sin enlazar).
 #
 # Uso:
 #   scripts/sync-theme-pubs.sh                         # simula en los 11 (qué cambiaría)
@@ -29,7 +35,7 @@
 #   (--solo es sinónimo de --pub)
 # Transición (ola 6): un pub sin THEME_VERSION aún no pasó por --aplicar con esta
 # versión; --verificar lo informa sin contarlo como deriva. Un pub con THEME_VERSION
-# debe coincidir con el sello del hub y no tener hardlinks.
+# debe coincidir con el sello del hub.
 # Tras --aplicar: revisar, hacer commit en cada pub y luego en el hub
 # (actualiza los punteros de submódulo). Ver docs/pubs-submodulos.md.
 # =============================================================================
@@ -48,6 +54,8 @@ THEME_PATHS=(
 )
 RSYNC_EXCLUDES=(--exclude '05-pages/' --exclude '.Rhistory' --exclude '.directory')
 SELLO="THEME_VERSION"
+LISTA="$HUB/scripts/tema-hardlinks.txt"
+CREADOR="${SCRIPTS_LINUX:-$HUB/../scripts-linux}/script_hardlinks-creator/main.py"
 
 MODO="simular"; SOLO=""
 while [[ $# -gt 0 ]]; do
@@ -95,15 +103,11 @@ texto_sello() {
         "archivos: $n"
 }
 
-hardlinks() {       # archivos regulares del pub con más de un enlace (fuera de .git)
-    find "$1" -path "$1/.git" -prune -o -type f -links +1 -print
-}
-
-romper() {          # copia real en el mismo directorio y rename atómico: mismo contenido, modo y fecha
-    local f="$1" tmp
-    tmp="$(dirname "$f")/.romper.$$.$(basename "$f")"
-    cp -p -- "$f" "$tmp"
-    mv -f -- "$tmp" "$f"
+enlazar() {         # $1 = --dry-run o nada; imprime cuántos hardlinks crea (o crearía) el creador en el hub
+    local out
+    [[ -f "$CREADOR" && -f "$LISTA" ]] || { echo "Falta $CREADOR o $LISTA" >&2; exit 5; }
+    out="$(python3 "$CREADOR" --batch "$LISTA" -d "$HUB" --auto --no-color ${1:+"$1"} 2>&1)" || { printf '%s\n' "$out" >&2; exit 6; }
+    sed -n 's/.*Hard links creados: *\([0-9]*\).*/\1/p' <<<"$out" | tail -1
 }
 
 resolver_pub() {
@@ -147,7 +151,6 @@ for pub in "${PUBS[@]}"; do
         [[ -n "$out" ]] && cambios+="$out"$'\n'
     done
 
-    mapfile -t enlaces < <(hardlinks "$pub")
     tiene_sello=0; [[ -f "$pub/$SELLO" ]] && tiene_sello=1
     sello_igual=0; [[ $tiene_sello == 1 && "$(cat "$pub/$SELLO")" == "$SELLO_HUB" ]] && sello_igual=1
     # La deriva es de contenido: un commit del hub que solo toca comentarios mueve commit_hub pero no el sha256 del
@@ -157,8 +160,6 @@ for pub in "${PUBS[@]}"; do
 
     case "$MODO" in
         aplicar)
-            for f in "${enlaces[@]}"; do romper "$f"; done
-            [[ ${#enlaces[@]} -gt 0 ]] && cambios+="  ${#enlaces[@]} hardlinks rotos (copia real, mismo contenido)"$'\n'
             if [[ $sello_igual == 0 ]]; then
                 printf '%s\n' "$SELLO_HUB" > "$pub/$SELLO"
                 cambios+="  $SELLO escrito"$'\n'
@@ -167,11 +168,9 @@ for pub in "${PUBS[@]}"; do
         verificar)
             if [[ $tiene_sello == 1 ]]; then
                 [[ $conjunto_igual == 0 ]] && cambios+="  $SELLO distinto del sello del hub (sha256 del conjunto)"$'\n'
-                [[ ${#enlaces[@]} -gt 0 ]] && cambios+="  ${#enlaces[@]} hardlinks: la verificación sería ciega"$'\n'
             fi
             ;;
         *)
-            [[ ${#enlaces[@]} -gt 0 ]] && cambios+="  romper ${#enlaces[@]} hardlinks"$'\n'
             [[ $sello_igual == 0 ]] && cambios+="  $SELLO $([[ $tiene_sello == 1 ]] && echo 'se reescribiría' || echo 'se crearía')"$'\n'
             ;;
     esac
@@ -187,10 +186,16 @@ for pub in "${PUBS[@]}"; do
         echo "= $nombre: al día"
     fi
     if [[ "$MODO" == "verificar" && $tiene_sello == 0 ]]; then
-        echo "    · sin $SELLO y con ${#enlaces[@]} hardlinks: pendiente de --aplicar (ola 6); con hardlinks esta verificación es ciega"
+        echo "    · sin $SELLO: pendiente de --aplicar (ola 6)"
     fi
 done
 
+case "$MODO" in
+    aplicar) n="$(enlazar)"; echo "── hardlinks del tema: ${n:-0} creados (scripts/tema-hardlinks.txt)" ;;
+    *)       n="$(enlazar --dry-run)"
+             [[ "${n:-0}" -gt 0 ]] && { echo "✖ hardlinks del tema: ${n} archivos de la lista sin enlazar (--aplicar los enlaza)"; difieren=$((difieren + 1)); }
+             [[ "${n:-0}" -eq 0 ]] && echo "= hardlinks del tema: todo enlazado" ;;
+esac
 echo "── $MODO: ${#PUBS[@]} blogs, $difieren con diferencias"
 [[ "$MODO" == "verificar" && $difieren -gt 0 ]] && exit 1
 exit 0

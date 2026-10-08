@@ -308,8 +308,7 @@ format:
     # mathfont: "Latin Modern Math"  # Fuente para ecuaciones matemáticas
     
     # Motor de Compilación PDF
-    pdf-engine: xelatex  # Motor de PDF (pdflatex, xelatex, lualatex)
-                         # Recomendado: xelatex (mejor soporte Unicode y fuentes)
+    pdf-engine: lualatex  # Motor de PDF: LuaLaTeX + Biber en todo el ecosistema (normativa 5.14)
     keep-md: false
 
   # ----------------------------------------------------------------------

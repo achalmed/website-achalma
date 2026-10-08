@@ -21,10 +21,10 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con
-  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva).
+  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva o un enlace roto). **El tema se comparte por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): los nombres de `scripts/tema-hardlinks.txt` son un solo inodo en los 12 sitios. Se editan en su sitio, nunca con `sed -i` ni con un editor que guarde por renombre (rompe el enlace); `--aplicar` los vuelve a enlazar con `scripts-linux/script_hardlinks-creator`.
   Excluidos a propósito: `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`,
-  `_quarto.yml`, `index.qmd`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`. La copia que hay en un
-  pub no se edita: el siguiente `--aplicar` la pisaría.
+  `_quarto.yml`, `index.qmd`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`. `_extensions/` se copia (no se enlaza):
+  la copia que hay en un pub no se edita, el siguiente `--aplicar` la pisaría.
 - **Generado no se edita**: `assets/css/pages/*.css` (los compila `scripts/build-page-css.sh`, gancho
   `pre-render`), la sección «Contenidos / Sílabo» de `cursos/<curso>/index.qmd` entre las marcas
   `temario:inicio/fin` (la escribe `docencia/scripts/temario-generar.sh generar --que web --aplicar`),
@@ -63,7 +63,7 @@ git submodule status                              # en qué commit está cada bl
 ```
 
 No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub y cada blog es
-`quarto render` → commit de `_site/` → `git push`**: Netlify sirve el `_site` del repo, sin build. Por eso
+`scripts/render.sh` (render reproducible) → `scripts/comparar-produccion.py` → commit de `_site/` → `git push`**: Netlify sirve el `_site` del repo, sin build. Por eso
 `_site/` está **versionado a propósito** en los 12 sitios y nunca se saca de git «por higiene»: hacerlo en
 DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 

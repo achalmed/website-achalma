@@ -12,6 +12,7 @@
 #   scripts/puerta-r6.sh [<carpeta del sitio>]          # comprueba (por defecto, el hub); 0 pasa · 1 no pasa
 #   scripts/puerta-r6.sh --instalar --pub methodica [--aplicar]     # hook pre-push en ese pub (simula sin --aplicar)
 #   scripts/puerta-r6.sh --desinstalar --pub methodica --aplicar
+#   (--pub hub instala o retira el hook del propio hub)
 #   scripts/prueba-puerta-r6.sh                          # sus casos en un repo temporal
 # Como hook (`<repo>/.git/hooks/pre-push`) comprueba el repo que empuja; git aborta el push si sale ≠ 0.
 # Límite: no sabe si el push lleva `_site/`; solo que el render confirmado está al día.
@@ -81,7 +82,8 @@ done
 if [[ -z "$ACCION" ]]; then comprobar "${SITIO:-$HUB}"; exit $?; fi
 
 [[ -n "$PUB" ]] || { echo "--$ACCION exige --pub <x>" >&2; exit 2; }
-if [[ -d "$HUB/_pubs/$PUB" ]]; then dir="$HUB/_pubs/$PUB"
+if [[ "$PUB" == "hub" ]]; then dir="$HUB"
+elif [[ -d "$HUB/_pubs/$PUB" ]]; then dir="$HUB/_pubs/$PUB"
 elif [[ -d "$HUB/_pubs/pub_$PUB" ]]; then dir="$HUB/_pubs/pub_$PUB"
 else echo "No existe el pub: $PUB" >&2; exit 3; fi
 hooks="$(git -C "$dir" rev-parse --path-format=absolute --git-path hooks)"

@@ -9,7 +9,7 @@ Los 12 sitios de la familia se sirven en Netlify y **se publican igual**: `quart
 commit de `_site/` → `git push`. Cada sitio Netlify está enlazado a su repo de GitHub con directorio de
 publicación `_site` y sin comando de build, así que el `_site/` versionado **es** el despliegue. Por qué es
 así y por qué `_site/` no se saca de git: `decisiones.md` §4.1–§4.3. Nada de la configuración de Netlify
-vive en los repos: no hay `netlify.toml`, ni `_redirects`, ni variables de build versionadas.
+vive en los repos salvo un `netlify.toml` por sitio (ola 6) que fija lo mismo que la interfaz: `publish = "_site"` y ningún comando de build; no hay `_redirects` ni variables de build versionadas.
 
 ## El hub (`04 index` → <https://achalmaedison.netlify.app>)
 
@@ -62,7 +62,7 @@ que un clon anónimo pueda traerlos.
 
 ## Los 11 blogs (`_pubs/pub_*`)
 
-Ninguno tiene `_publish.yml`, `netlify.toml` ni `_redirects`; los 11 versionan `_site/` y lo declaran en su
+Ninguno tiene `_publish.yml` ni `_redirects`; todos llevan el mismo `netlify.toml` que el hub; los 11 versionan `_site/` y lo declaran en su
 `.gitignore` (`decisiones.md` §4.2; `pub_epsilon-y-beta`, pendiente de su render: §5). Su dominio consta en su `_quarto.yml` (`site-url`) y en
 `_pubs/pubs.yml`. Se publican como el hub: render en el pub, commit de `_site/` dentro del pub, `git push`
 a su remoto; después, el puntero en el hub (`pubs-submodulos.md`). Los 11 respondían `200` con el hub caído

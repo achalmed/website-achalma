@@ -874,20 +874,14 @@ Debe tenerse en consideración que la economía que se desarrolla en el Perú y 
 
 La economía agraria, entendida como la aplicación de la Economía a la producción, el procesamiento, el mercadeo y el consumo de alimentos y fibras, resulta insuficiente sin la mirada más amplia de la economía rural, que toma al hogar como unidad de análisis e incorpora la pobreza, la desigualdad y las instituciones. El análisis desarrollado permite extraer cuatro conclusiones. Primera: el problema fundamental del agro peruano es el tamaño de la tierra —el minifundio de 0.5 a 0.8 hectáreas promedio en Ayacucho—, agravado por un problema de distribución antes que de producción, pues los rendimientos han crecido más rápido que la población. Segunda: en un sector que es el que más se asemeja a la competencia perfecta, el precio lo impone el peor terreno en producción, y las rentas diferencial y absoluta explican los incentivos para mejorar la fertilidad, acortar la distancia al mercado e invertir en la explotación; la fase decisiva para la rentabilidad del agricultor es la comercialización. Tercera: la experiencia de la reforma agraria muestra que la colectivización, la excesiva participación estatal y la fragmentación de la propiedad eliminaron la eficiencia y la productividad, y dejaron un trauma asociativo heredado por las siguientes generaciones. Cuarta: los conocimientos emancipan a los agricultores de todos los niveles de dependencia, mientras los subsidios los condenan y perpetúan en la pobreza; por ello, las acciones estratégicas de desarrollo deben partir de los derechos de propiedad y la tenencia de la tierra —titulación, catastro y crédito—, de la capacitación como destino prioritario de los recursos públicos y de la libertad de mercado, con un Estado que regula, invierte en infraestructura y educación, y apoya a las instituciones emancipadoras que producen y difunden conocimiento.
 
----
-tipo: fragmento
-titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
----
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
----
-tipo: fragmento
-titulo: índice de publicaciones de posts; lo genera script_generador_publicacion_similar
----
+<!-- fragmento de inclusión — índice de publicaciones de posts; lo genera script_generador_publicacion_similar -->
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos/index.pdf) [Sitios Web Asombrosos](https://achalmaedison.netlify.app/blog/posts/2017-04-23-sitios-web-asombrosos)
 2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant/index.pdf) [Comandos De Google Assistant](https://achalmaedison.netlify.app/blog/posts/2020-05-23-comandos-de-google-assistant)
@@ -897,10 +891,7 @@ titulo: índice de publicaciones de posts; lo genera script_generador_publicacio
 6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional/index.pdf) [Economia Regional](https://achalmaedison.netlify.app/blog/posts/2023-05-16-economia-regional)
 
 
----
-tipo: fragmento
-titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
----
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

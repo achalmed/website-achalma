@@ -39,20 +39,14 @@ image: ../../../featured.jpg
 
 Este artículo está actualmente en proceso de edición, y todas las secciones serán ampliadas y refinadas en futuras revisiones.
 
----
-tipo: fragmento
-titulo: texto de apertura del bloque «Publicaciones similares» (incluido en cada post)
----
+<!-- fragmento de inclusión — texto de apertura del bloque «Publicaciones similares» (incluido en cada post) -->
 
 # Publicaciones Similares
 
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
----
-tipo: fragmento
-titulo: navegación de economia preuniversitaria en sesiones (a mano)
----
+<!-- fragmento de inclusión — navegación de economia preuniversitaria en sesiones (a mano) -->
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.pdf) [Conceptos básicos de economía](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia)
 2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes/index.pdf) [Necesidades humanas y clasificación bienes](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes)
@@ -70,10 +64,7 @@ titulo: navegación de economia preuniversitaria en sesiones (a mano)
 14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional/index.pdf) [Comercio internacional](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional)
 
 
----
-tipo: fragmento
-titulo: texto de cierre del bloque «Publicaciones similares» (incluido en cada post)
----
+<!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->
 
 Esperamos que encuentres estas publicaciones igualmente interesantes y útiles. ¡Disfruta de la lectura!
 

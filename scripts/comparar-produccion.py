@@ -13,6 +13,7 @@ Salida: 0 sin diferencias de contenido · 1 con diferencias · 2 error de uso o 
 """
 import argparse
 import difflib
+import http.client
 import html.parser
 import re
 import subprocess
@@ -74,7 +75,7 @@ def bajar(url, intentos=3):
                 return r.status, r.read()
         except urllib.error.HTTPError as e:
             return e.code, b""
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
+        except (urllib.error.URLError, http.client.HTTPException, OSError):   # incluye lecturas incompletas
             time.sleep(2 * (i + 1))
     return None, b""
 
@@ -162,6 +163,8 @@ def main():
         resultados.append((n, r))
         print(f"{n}: {r['iguales']} iguales · {len(r['distintas'])} distintas · {len(r['nuevas'])} nuevas · "
               f"{len(r['retiradas'])} retiradas · {len(r['errores'])} errores", flush=True)
+        if a.salida:                       # el informe se reescribe tras cada sitio: un corte no lo pierde todo
+            Path(a.salida).write_text(informe(resultados), encoding="utf-8")
     texto = informe(resultados)
     if a.salida:
         Path(a.salida).write_text(texto, encoding="utf-8")

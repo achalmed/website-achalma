@@ -17,7 +17,7 @@ Lo alimentan cuatro vecinos del workspace, que escriben aquí o de los que se co
 `scripts-quarto` (metadatos por Excel, índices `_contenido_*`, enlaces de `_indice/`; su `README.md`,
 «Contrato con el hub»), `docencia` (la sección «Contenidos / Sílabo» de cada ficha de curso y los materiales
 de cada edición por hardlink; `docencia/docs/estandar-docencia.md`), `datafw` (el observatorio de
-`observatorio/`) y `09 trabajo` (la copia de `resources/cv.pdf`). **No es** un framework de documentos (eso es
+`observatorio/`) y `cv` (`resources/cv.pdf`, por `scripts/generar-externos.sh`). **No es** un framework de documentos (eso es
 `escritura`), ni el estándar docente (eso es `docencia`), ni el lugar donde se escribe un post de un blog
 satélite: eso se hace dentro del pub, que es su propio repositorio.
 
@@ -77,7 +77,7 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `scripts/` | `build-page-css.sh` (gancho `pre-render`), `sync-theme-pubs.sh`, `pubs.py`; README propio | a mano |
 | `docs/` | documentación permanente (fuera del render); índice generado; `historial/` con lo cumplido | a mano; `docs/README.md` lo genera `core/docs.py indice` |
 | `_plantillas/apaquarto/` | las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) para un documento nuevo | a mano; el guion bajo las aparta del render |
-| `resources/` | `cv.pdf` (copia manual del CV de `09 trabajo`) e `indice.ods` | a mano |
+| `resources/` | `cv.pdf` (generado desde `cv` por `scripts/generar-externos.sh`: perfil docencia, sin anexos, correos institucionales) e `indice.ods` | `generar-externos.sh`; a mano |
 | `_publish.yml` · `.gitmodules` · `CITATION.cff` · `LICENSE` · `CNAME` | id del sitio Netlify (lo escribió `quarto publish` al crearlo; hoy no es la vía de publicación); submódulos; cita; MPL-2.0; residuo de GitHub Pages | `quarto publish`; git; a mano |
 | `_site/` | el sitio renderizado, **versionado a propósito**: es lo que Netlify publica en cada `git push`; se queda en git hasta que el autor decida lo contrario (`docs/decisiones.md` §4.1) | `quarto render` |
 | `_freeze/` · `.quarto/` · `_indice/` · `_vault/` | caché de render y carpetas del vault Obsidian: fuera de git (`.gitignore`) | `quarto render`; `scripts-quarto` (`_indice/`) |

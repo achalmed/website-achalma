@@ -101,7 +101,8 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **Nombres no derivables**: `pub_chaska` publica en `chaska-x.netlify.app` y su repo se llama `chaska`;
   el único registro carpeta ↔ repo ↔ dominio ↔ tema es `_pubs/pubs.yml`.
 - **Residuos de GitHub Pages**: `CNAME` (`kapitan.net`) y `.nojekyll`; Netlify no los usa.
-- **`resources/cv.pdf` es copia manual** del CV de `09 trabajo`; `_indice/` y `_vault/` son del vault
+- **`resources/cv.pdf` lo genera `scripts/generar-externos.sh`** desde `cv` (perfil docencia, sin anexos, `--web`: solo
+  correos institucionales); no se copia a mano. `_indice/` y `_vault/` son del vault
   Obsidian y están ignorados. `requirements.txt` no existe, aunque un README antiguo lo citara.
 - **Licencia, tal cual está**: `LICENSE` y `CITATION.cff` dicen MPL-2.0 (código); `license.qmd` y los
   `_metadata.yml` dicen CC BY-SA 4.0 (contenido). Unificarla en los 12 sitios es D9, sin decidir.

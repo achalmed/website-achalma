@@ -17,7 +17,7 @@ documentos. Las plantillas apaquarto no viven aquí sino en `_plantillas/apaquar
 | [git-github-workflow.md](git-github-workflow.md) | `doc` | `activo` | Manual de Git y GitHub — flujo de trabajo de `website-achalma` |
 | [metadata-guia.md](metadata-guia.md) | `doc` | `activo` | Guía completa de metadatos de un `_metadata.yml` (apaquarto y Quarto) |
 | [publicar-un-post.md](publicar-un-post.md) | `procedimiento` | `activo` | Publicar un post de principio a fin: carpeta, frontmatter APA, metadatos, render, commit, puntero e índice |
-| [pubs-submodulos.md](pubs-submodulos.md) | `doc` | `activo` | Los blogs satélite (`_pubs/pub_*`) como submódulos del hub |
+| [pubs-submodulos.md](pubs-submodulos.md) | `doc` | `activo` | Los blogs satélite (`_pubs/*`) como submódulos del hub |
 | [quarto-guia.md](quarto-guia.md) | `doc` | `activo` | Referencia de opciones de `_quarto.yml` (sitio Quarto) |
 | [historial/README.md](historial/README.md) | `readme` | `activo` | docs/historial/ — lo cumplido: planes ejecutados e instantáneas superadas del hub |
 | [historial/course-redesign-plan.md](historial/course-redesign-plan.md) | `plan` | `hecho` | Plan de rediseño de la arquitectura docente — de `talk`/`teching` a `Cursos` |

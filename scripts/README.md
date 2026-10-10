@@ -12,17 +12,17 @@ solo escriben con `--aplicar`; `build-page-css.sh` escribe siempre, porque es el
 
 ```bash
 scripts/build-page-css.sh                 # assets/scss/05-pages/*.scss → assets/css/pages/*.css (lo corre cada render)
-scripts/sync-theme-pubs.sh                # simula: qué cambiaría en cada _pubs/pub_*
+scripts/sync-theme-pubs.sh                # simula: qué cambiaría en cada _pubs/*
 scripts/sync-theme-pubs.sh --aplicar      # escribe el tema del hub en los 11 blogs
 scripts/sync-theme-pubs.sh --verificar    # sale 1 si algún blog difiere (lo usa el doctor)
-scripts/sync-theme-pubs.sh --pub methodica [--aplicar]   # un solo blog (pub_methodica o methodica; --solo es sinónimo)
+scripts/sync-theme-pubs.sh --pub methodica [--aplicar]   # un solo blog (methodica o methodica; --solo es sinónimo)
 scripts/sync-theme-pubs.sh --sello        # el THEME_VERSION que corresponde al tema del hub
-scripts/puerta-r6.sh _pubs/pub_methodica  # puerta R6: _site/index.html presente, no vacío y al día (0 pasa · 1 no)
+scripts/puerta-r6.sh _pubs/methodica  # puerta R6: _site/index.html presente, no vacío y al día (0 pasa · 1 no)
 scripts/puerta-r6.sh --instalar --pub methodica [--aplicar]   # la instala como hook pre-push del blog
 python3 scripts/pubs.py readme            # simula los README de los pubs y la tabla del README del hub
 python3 scripts/pubs.py readme --aplicar  # los escribe
 python3 scripts/pubs.py citation --aplicar   # el CITATION.cff de cada pub (título, repo y URL propios)
-python3 scripts/pubs.py readme --solo pub_axiomata   # un solo blog (readme y citation admiten --solo)
+python3 scripts/pubs.py readme --solo axiomata   # un solo blog (readme y citation admiten --solo)
 python3 scripts/pubs.py verificar         # sale 1 si el registro, .gitmodules, los site-url o lo generado no coinciden
 python3 scripts/pubs.py verificar --doctor   # la misma comprobación, en el formato del doctor
 ```
@@ -50,7 +50,7 @@ se edita allí.
 
 ## Límite honesto
 
-- `sync-theme-pubs.sh` exige `rsync` y trata `_pubs/pub_*` como submódulos ya inicializados: en un clon sin
+- `sync-theme-pubs.sh` exige `rsync` y trata `_pubs/*` como submódulos ya inicializados: en un clon sin
   `git submodule update --init` no hay nada que sincronizar.
 - `--verificar` detecta deriva de archivos, no de significado: un pub puede tener el tema al día y un
   `_quarto.yml` que no lo carga.

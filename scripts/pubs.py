@@ -64,7 +64,7 @@ def site_url(pub_dir):
 
 
 def submodulos():
-    """Rutas declaradas en .gitmodules del hub (`_pubs/pub_x`)."""
+    """Rutas declaradas en .gitmodules del hub (`_pubs/x`)."""
     f = HUB / ".gitmodules"
     return set(re.findall(r"^\s*path\s*=\s*(\S+)", f.read_text(encoding="utf-8"), re.M)) if f.exists() else set()
 

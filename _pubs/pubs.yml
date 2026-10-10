@@ -25,58 +25,58 @@ licencia_contenido: CC-BY-SA-4.0
 # 12 sitios por decisión del autor (docs/decisiones.md §4.1 del hub) y el .gitignore lo declara (§4.2).
 despliegue_pubs: Netlify publica el _site/ empujado, sin build (decisiones §4.1 del hub)
 pubs:
-  - carpeta: pub_actus-mercator
+  - carpeta: actus-mercator
     repo: actus-mercator
     url: https://actus-mercator.netlify.app/
     tema: Gestión empresarial
     descripcion: Administración, estrategia y gestión organizacional.
-  - carpeta: pub_aequilibria
+  - carpeta: aequilibria
     repo: aequilibria
     url: https://aequilibria.netlify.app/
     tema: Macroeconomía
     descripcion: Política monetaria y fiscal, crecimiento económico y ciclos.
-  - carpeta: pub_axiomata
+  - carpeta: axiomata
     repo: axiomata
     url: https://axiomata.netlify.app/
     tema: Matemática
     descripcion: Cálculo, álgebra lineal, estadística y matemáticas aplicadas a la economía.
-  - carpeta: pub_chaska
+  - carpeta: chaska
     repo: chaska
     url: https://chaska-x.netlify.app/
     tema: Tecnología y seguridad
     descripcion: Ciberseguridad, privacidad digital, sistemas operativos y herramientas.
     nota: el único dominio no derivable del nombre (`chaska-x`, porque `chaska` ya estaba tomado en Netlify).
-  - carpeta: pub_dialectica-y-mercado
+  - carpeta: dialectica-y-mercado
     repo: dialectica-y-mercado
     url: https://dialectica-y-mercado.netlify.app/
     tema: Filosofía y política
     descripcion: Filosofía política, ética económica y teoría social.
-  - carpeta: pub_epsilon-y-beta
+  - carpeta: epsilon-y-beta
     repo: epsilon-y-beta
     url: https://epsilon-y-beta.netlify.app/
     tema: Econometría
     descripcion: Modelos econométricos, series de tiempo y análisis estadístico aplicado; secciones numeradas por nivel.
-  - carpeta: pub_methodica
+  - carpeta: methodica
     repo: methodica
     url: https://methodica.netlify.app/
     tema: Investigación y metodología
     descripcion: Métodos cualitativos y cuantitativos, APA y redacción académica.
-  - carpeta: pub_numerus-scriptum
+  - carpeta: numerus-scriptum
     repo: numerus-scriptum
     url: https://numerus-scriptum.netlify.app/
     tema: Programación y software
     descripcion: R, Python, Stata, LaTeX, Quarto, Linux y herramientas para ciencia de datos; una sección por herramienta.
-  - carpeta: pub_optimums
+  - carpeta: optimums
     repo: optimums
     url: https://optimums.netlify.app/
     tema: Microeconomía
     descripcion: Teoría del consumidor y del productor, mercados, organización industrial y equilibrio general.
-  - carpeta: pub_pecunia-fluxus
+  - carpeta: pecunia-fluxus
     repo: pecunia-fluxus
     url: https://pecunia-fluxus.netlify.app/
     tema: Finanzas
     descripcion: Finanzas personales, corporativas e internacionales.
-  - carpeta: pub_res-publica
+  - carpeta: res-publica
     repo: res-publica
     url: https://res-publica.netlify.app/
     tema: Gestión pública

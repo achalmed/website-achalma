@@ -63,7 +63,7 @@ imágenes, fuentes y GTM se excluyen porque difieren por diseño. Desde DOC5 (20
 propagadas lo dicen en su cabecera (`assets/scss/README.md`, `assets/js/README.md`, `build-page-css.sh`).
 
 **2.3 Un registro para los nombres de los blogs** (2026-09-20, DOC5). Carpeta, repo, dominio, tema y
-descripción no se derivan unos de otros (`pub_chaska` → `chaska` → `chaska-x.netlify.app`) y estaban
+descripción no se derivan unos de otros (`chaska` → `chaska` → `chaska-x.netlify.app`) y estaban
 repartidos entre `_quarto.yml`, el menú «More», el README viejo y un comentario de `scripts-quarto`.
 Ahora viven en `_pubs/pubs.yml` y de ahí salen, con `scripts/pubs.py`, el `README.md` y el `CITATION.cff`
 de cada pub y la tabla del README del hub (NORMATIVA §15.9). El `_quarto.yml` de cada pub y el menú de
@@ -137,8 +137,8 @@ apaquarto y `_freeze/` en git).
 2026-09-29 el validador acepta `_site/` versionado si el repo lo declara con una línea de negación
 (NORMATIVA §15.10, D08). El hub ya la tenía (`!/_site/**/*_files/`, que además devuelve a git las figuras de
 los posts frente a la regla general `*_files/`) y pasa; diez pubs reciben el mismo bloque comentado y
-`pub_epsilon-y-beta` lo recibirá cuando se resuelva su render (§5).
-En `pub_numerus-scriptum` eso deja a la vista unas figuras de `_site/` que la regla general había dejado
+`epsilon-y-beta` lo recibirá cuando se resuelva su render (§5).
+En `numerus-scriptum` eso deja a la vista unas figuras de `_site/` que la regla general había dejado
 fuera de git: confirmarlas es publicar, y queda para el autor (§5).
 
 **4.3 El incidente del 2026-09-21, en breve.** DOC2 sacó `_site/` de git en el hub «por higiene» y añadió
@@ -155,19 +155,19 @@ autor lo revisa al abrir la ola 6: el tema **se comparte por hardlink**, adminis
 `scripts-linux/script_hardlinks-creator`, para que una edición en un sitio llegue a los doce. Quedan así:
 `scripts/tema-hardlinks.txt` (los 60 nombres que el hub y los pubs ya compartían), `sync-theme-pubs.sh`
 (iguala, sella y enlaza; `--verificar` detecta un enlace roto) y el doctor RQ-MAN-08, que ya no cuenta un
-hardlink como hallazgo sino un enlace roto. `pub_methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos
+hardlink como hallazgo sino un enlace roto. `methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos
 de antes y después en `$RESPALDOS_DIR/hardlinks/2026-10-08-tema-sitios/`.
 
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |
 |---|---|---|---|
-| **epsilon** | `pub_epsilon-y-beta` renderizado entero el 2026-10-08 (ola 6, `scripts/render.sh`, LuaLaTeX): 247 archivos de `_site/`, sin salidas sueltas en las carpetas fuente; confirmado y R6 en verde, **sin push**. Queda el bloque de `.gitignore` de §4.2 (ya presente) | 2026-10-04 | autor · resuelto en local; publicar con la comparación de la ola 6 |
+| **epsilon** | `epsilon-y-beta` renderizado entero el 2026-10-08 (ola 6, `scripts/render.sh`, LuaLaTeX): 247 archivos de `_site/`, sin salidas sueltas en las carpetas fuente; confirmado y R6 en verde, **sin push**. Queda el bloque de `.gitignore` de §4.2 (ya presente) | 2026-10-04 | autor · resuelto en local; publicar con la comparación de la ola 6 |
 | figuras de numerus | confirmadas con el render de la ola 6 (2026-10-08); se publican con el próximo push | 2026-10-04 | autor · resuelto en local |
-| `_freeze/` de numerus | `pub_numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
+| `_freeze/` de numerus | `numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
-| **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `pub_numerus-scriptum` o `pub_methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
+| **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |
 | `_site/_pubs/` | `resources: assets/css/pages/listing.css` de `_quarto.yml` casa también con las copias de cada blog y deja copias de esa hoja en `_site/_pubs/`; inocuo | 2026-09-21 | autor · por acotar |
 | `assets/fonts/DankMono-*.woff2` | fuera de git en los 12 sitios (ola 6, 2026-10-08): `git rm --cached`, ignorada en el disco y copiada en `$RESPALDOS_DIR/residuos/2026-10-08-dankmono`; ningún estilo la usaba. Queda en la historia pública | 2026-10-04 | autor · decidir si se reescribe la historia |

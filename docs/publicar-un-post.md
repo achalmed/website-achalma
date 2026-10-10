@@ -5,16 +5,16 @@ estado: activo
 ---
 # Publicar un post de principio a fin: carpeta, frontmatter APA, metadatos, render, commit, puntero e índice
 
-Un post vive en el hub (`blog/posts/`) o en uno de los 11 blogs (`_pubs/pub_*`); el procedimiento es el
+Un post vive en el hub (`blog/posts/`) o en uno de los 11 blogs (`_pubs/*`); el procedimiento es el
 mismo salvo en dónde se confirma y cómo llega a producción. Todos los comandos de `scripts-quarto`
 se ejecutan desde la carpeta de la herramienta (`scripts-quarto/backend/<herramienta>/`) y aceptan el
-nombre de carpeta (`pub_axiomata`) o el corto (`axiomata`); los que escriben en masa simulan con
+nombre de carpeta (`axiomata`) o el corto (`axiomata`); los que escriben en masa simulan con
 `--dry-run` y esa es siempre la primera corrida.
 
 ## 1. Dónde va
 
-- **Tema de un blog** → dentro de ese pub, en `posts/` o en su carpeta temática (`pub_axiomata` tiene
-  `posts/` y `economia-matematica/`; `pub_chaska`, `pub_epsilon-y-beta` y `pub_numerus-scriptum` no tienen
+- **Tema de un blog** → dentro de ese pub, en `posts/` o en su carpeta temática (`axiomata` tiene
+  `posts/` y `economia-matematica/`; `chaska`, `epsilon-y-beta` y `numerus-scriptum` no tienen
   `posts/`, solo carpetas temáticas). Qué blog cubre qué tema: `_pubs/pubs.yml` y la tabla «Los 11 blogs
   satélite» del `README.md`.
 - **Transversal o personal** → el hub, `blog/posts/`.
@@ -29,13 +29,13 @@ A mano (copiar un post vecino y vaciarlo) o con el asistente interactivo del ges
 
 ```bash
 cd scripts-quarto/backend/script_blogs_manager
-./main.sh new-post pub_epsilon-y-beta      # formulario: título, slug, fecha, categorías…
+./main.sh new-post epsilon-y-beta      # formulario: título, slug, fecha, categorías…
 ```
 
 ## 3. Frontmatter
 
 Los valores comunes ya están en el `_metadata.yml` de la sección (`blog/posts/_metadata.yml` en el hub;
-`_pubs/pub_axiomata/posts/_metadata.yml` en ese pub, y análogo en los demás): autor, afiliación, ORCID, formatos `html`, `apaquarto-pdf` y
+`_pubs/axiomata/posts/_metadata.yml` en ese pub, y análogo en los demás): autor, afiliación, ORCID, formatos `html`, `apaquarto-pdf` y
 `apaquarto-docx`, comentarios Utterances, `execute.enabled: false` y **`draft: true` por defecto**. El
 `index.qmd` declara lo propio:
 
@@ -91,19 +91,19 @@ python3 main.py audit-tags ~/Documents                                         #
 
 Dos límites que conviene saber: `sync-pdf-urls` **nunca crea** el bloque `citation`, solo actualiza uno
 existente (escríbelo en el post); y los posts sin `tags` se omiten en las operaciones de etiquetas. La URL
-base de cada blog se deduce por mayoría de las `pdf-url` existentes (`pub_chaska` → `chaska-x.netlify.app`)
+base de cada blog se deduce por mayoría de las `pdf-url` existentes (`chaska` → `chaska-x.netlify.app`)
 y puede fijarse en `blog_base_urls` de `metadata_config.yml`.
 
 ## 5. Renderizar y revisar
 
 ```bash
-cd "04 index/_pubs/pub_axiomata"          # o la raíz del hub
+cd "04 index/_pubs/axiomata"          # o la raíz del hub
 quarto preview                            # con recarga
 quarto render posts/<AAAA-MM-DD-slug>/index.qmd   # solo el post (ejecuta su código, produce HTML, PDF y DOCX)
 quarto render                             # el sitio entero (freeze: no re-ejecuta código)
 ```
 
-O con el gestor: `./main.sh preview pub_axiomata`, `./main.sh render pub_axiomata` desde
+O con el gestor: `./main.sh preview axiomata`, `./main.sh render axiomata` desde
 `scripts-quarto/backend/script_blogs_manager`. Revisar en `_site/` el HTML, el PDF (`index.pdf`) y
 que `citation.pdf-url` apunte a él.
 
@@ -123,10 +123,10 @@ cd scripts-quarto/backend/script_generador_publicacion_similar
 En un **blog**: commit y push dentro del pub y después el puntero en el hub.
 
 ```bash
-cd "04 index/_pubs/pub_axiomata"
+cd "04 index/_pubs/axiomata"
 git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: <título>" && git push
 cd ../..
-git add _pubs/pub_axiomata && git commit -m "pubs: axiomata al último commit" && git push
+git add _pubs/axiomata && git commit -m "pubs: axiomata al último commit" && git push
 ```
 
 En el **hub** (`blog/posts/`): commit normal en `04 index`.

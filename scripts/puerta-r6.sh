@@ -86,7 +86,7 @@ if [[ -z "$ACCION" ]]; then comprobar "${SITIO:-$HUB}"; exit $?; fi
 [[ -n "$PUB" ]] || { echo "--$ACCION exige --pub <x>" >&2; exit 2; }
 if [[ "$PUB" == "hub" ]]; then dir="$HUB"
 elif [[ -d "$HUB/_pubs/$PUB" ]]; then dir="$HUB/_pubs/$PUB"
-elif [[ -d "$HUB/_pubs/pub_$PUB" ]]; then dir="$HUB/_pubs/pub_$PUB"
+elif [[ -d "$HUB/_pubs/$PUB" ]]; then dir="$HUB/_pubs/$PUB"
 else echo "No existe el pub: $PUB" >&2; exit 3; fi
 hooks="$(git -C "$dir" rev-parse --path-format=absolute --git-path hooks)"
 destino="$hooks/pre-push"

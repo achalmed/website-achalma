@@ -9,7 +9,7 @@ estado: activo
 El sitio personal <https://achalmaedison.netlify.app>: un proyecto Quarto (`type: website`) en español con
 blog, repositorio docente (`cursos/`), publicaciones y páginas de contacto, que además es el **hub** de una
 familia de 11 blogs temáticos. Los artículos y entradas usan la extensión `apaquarto` para salir en HTML,
-PDF y DOCX con formato APA 7 desde un mismo `.qmd`. Los 11 blogs son submódulos git en `_pubs/pub_*`, cada
+PDF y DOCX con formato APA 7 desde un mismo `.qmd`. Los 11 blogs son submódulos git en `_pubs/*`, cada
 uno con su repo, su `_quarto.yml` y su sitio Netlify; el hub es la **fuente de verdad del tema** (SCSS, JS,
 extensiones y filtros Lua, `meta/workspace.yml` → `verdad:`) y lo propaga con `scripts/sync-theme-pubs.sh`.
 
@@ -46,17 +46,17 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 <!-- pubs:inicio -->
 | carpeta | tema | repo | sitio | entradas |
 |---|---|---|---|--:|
-| `_pubs/pub_actus-mercator` | Gestión empresarial | `achalmed/actus-mercator` | https://actus-mercator.netlify.app/ | 5 |
-| `_pubs/pub_aequilibria` | Macroeconomía | `achalmed/aequilibria` | https://aequilibria.netlify.app/ | 13 |
-| `_pubs/pub_axiomata` | Matemática | `achalmed/axiomata` | https://axiomata.netlify.app/ | 2 |
-| `_pubs/pub_chaska` | Tecnología y seguridad | `achalmed/chaska` | https://chaska-x.netlify.app/ | 32 |
-| `_pubs/pub_dialectica-y-mercado` | Filosofía y política | `achalmed/dialectica-y-mercado` | https://dialectica-y-mercado.netlify.app/ | 9 |
-| `_pubs/pub_epsilon-y-beta` | Econometría | `achalmed/epsilon-y-beta` | https://epsilon-y-beta.netlify.app/ | 49 |
-| `_pubs/pub_methodica` | Investigación y metodología | `achalmed/methodica` | https://methodica.netlify.app/ | 7 |
-| `_pubs/pub_numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 80 |
-| `_pubs/pub_optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 14 |
-| `_pubs/pub_pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 9 |
-| `_pubs/pub_res-publica` | Gestión pública | `achalmed/res-publica` | https://res-publica.netlify.app/ | 3 |
+| `_pubs/actus-mercator` | Gestión empresarial | `achalmed/actus-mercator` | https://actus-mercator.netlify.app/ | 5 |
+| `_pubs/aequilibria` | Macroeconomía | `achalmed/aequilibria` | https://aequilibria.netlify.app/ | 13 |
+| `_pubs/axiomata` | Matemática | `achalmed/axiomata` | https://axiomata.netlify.app/ | 2 |
+| `_pubs/chaska` | Tecnología y seguridad | `achalmed/chaska` | https://chaska-x.netlify.app/ | 32 |
+| `_pubs/dialectica-y-mercado` | Filosofía y política | `achalmed/dialectica-y-mercado` | https://dialectica-y-mercado.netlify.app/ | 9 |
+| `_pubs/epsilon-y-beta` | Econometría | `achalmed/epsilon-y-beta` | https://epsilon-y-beta.netlify.app/ | 49 |
+| `_pubs/methodica` | Investigación y metodología | `achalmed/methodica` | https://methodica.netlify.app/ | 7 |
+| `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 80 |
+| `_pubs/optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 14 |
+| `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 9 |
+| `_pubs/res-publica` | Gestión pública | `achalmed/res-publica` | https://res-publica.netlify.app/ | 3 |
 
 <sub>Bloque generado por `scripts/pubs.py readme --aplicar` desde `_pubs/pubs.yml` (2026-09-20); no se edita a mano.</sub>
 <!-- pubs:fin -->
@@ -107,7 +107,7 @@ cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
 - **Netlify no se configura desde el repo.** No hay `netlify.toml` ni `_redirects`; las URL antiguas de
   `/talk/` y `/teching/` sobreviven por `aliases:` de Quarto. Cómo publica cada uno de los 12 sitios y qué
   falta por confirmar en el panel: `docs/despliegue-netlify.md` (`docs/decisiones.md` §4.1).
-- **Los nombres de un blog no se derivan unos de otros** (`pub_chaska` → repo `chaska` → dominio
+- **Los nombres de un blog no se derivan unos de otros** (`chaska` → repo `chaska` → dominio
   `chaska-x.netlify.app`): el único registro es `_pubs/pubs.yml`.
 - Los comentarios (Utterances) viven en los issues de GitHub de cada sitio: los del hub en
   `achalmed/website-achalma`, los de cada blog en su propio repo (`comments.utterances.repo` de su `_quarto.yml`).

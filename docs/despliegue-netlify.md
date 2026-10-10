@@ -60,10 +60,10 @@ que un clon anónimo pueda traerlos.
 **Lo que queda por confirmar en el panel** (sitio `6d1408cc-…`): si hay un dominio propio configurado (el
 `CNAME` sugiere que lo hubo en GitHub Pages).
 
-## Los 11 blogs (`_pubs/pub_*`)
+## Los 11 blogs (`_pubs/*`)
 
 Ninguno tiene `_publish.yml` ni `_redirects`; todos llevan el mismo `netlify.toml` que el hub; los 11 versionan `_site/` y lo declaran en su
-`.gitignore` (`decisiones.md` §4.2; `pub_epsilon-y-beta`, pendiente de su render: §5). Su dominio consta en su `_quarto.yml` (`site-url`) y en
+`.gitignore` (`decisiones.md` §4.2; `epsilon-y-beta`, pendiente de su render: §5). Su dominio consta en su `_quarto.yml` (`site-url`) y en
 `_pubs/pubs.yml`. Se publican como el hub: render en el pub, commit de `_site/` dentro del pub, `git push`
 a su remoto; después, el puntero en el hub (`pubs-submodulos.md`). Los 11 respondían `200` con el hub caído
 el 2026-09-21: su despliegue no depende del hub.
@@ -79,7 +79,7 @@ quarto render && ls _site/                          # el sitio completo en local
 git ls-files _site | wc -l                          # cuántos archivos de _site versiona el hub; 0 = el sitio saldrá vacío
 git status --short _site | head                     # tras un render: lo que cambia y hay que confirmar antes del push
 curl -sS -o /dev/null -w "%{http_code}\n" https://achalmaedison.netlify.app/   # 200 tras el push (Netlify tarda ~1 min)
-git -C _pubs/pub_axiomata ls-files _site | wc -l    # lo mismo en un pub
+git -C _pubs/axiomata ls-files _site | wc -l    # lo mismo en un pub
 ```
 
 ## Consumidores

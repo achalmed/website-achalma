@@ -6,7 +6,7 @@ estado: activo
 
 # Referencia de opciones de `_quarto.yml` (sitio Quarto)
 
-Qué hace cada bloque del `_quarto.yml` del hub y de los 11 `_pubs/pub_*`, y en qué se diferencian. Es
+Qué hace cada bloque del `_quarto.yml` del hub y de los 11 `_pubs/*`, y en qué se diferencian. Es
 documentación: los valores viven en el `_quarto.yml` de la raíz de cada sitio (el archivo lleva sus propios
 comentarios) y no se copian aquí. Los 12 manifiestos comparten la misma plantilla: un pub difiere de otro
 solo en su nombre (cabecera, `comments.utterances.repo`, `site-url`, `repo-url`). La referencia completa de

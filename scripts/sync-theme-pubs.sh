@@ -28,7 +28,7 @@
 #
 # Uso:
 #   scripts/sync-theme-pubs.sh                         # simula en los 11 (qué cambiaría)
-#   scripts/sync-theme-pubs.sh --pub methodica         # simula en uno (pub_methodica o methodica)
+#   scripts/sync-theme-pubs.sh --pub methodica         # simula en uno (methodica o methodica)
 #   scripts/sync-theme-pubs.sh --pub methodica --aplicar
 #   scripts/sync-theme-pubs.sh --verificar             # sale 1 si algún pub difiere (doctor)
 #   scripts/sync-theme-pubs.sh --sello                 # imprime el THEME_VERSION que corresponde al hub

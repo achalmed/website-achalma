@@ -14,8 +14,8 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   menú «More» con los 11 blogs. Un blog nuevo o renombrado se declara ahí y en `_pubs/pubs.yml`, nunca a
   mano en un README: los README y `CITATION.cff` de los pubs y la tabla «Los 11 blogs satélite» del
   `README.md` los escribe `python3 scripts/pubs.py readme --aplicar` (sin `--aplicar` simula).
-- **Los blogs se editan y confirman dentro de `_pubs/pub_*`** (cada uno es repo, `_quarto.yml` y sitio
-  Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/pub_x && git commit`). Nunca
+- **Los blogs se editan y confirman dentro de `_pubs/*`** (cada uno es repo, `_quarto.yml` y sitio
+  Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/x && git commit`). Nunca
   `git rm` ni mover `_pubs/` a mano: `scripts-quarto` (gestor de blogs, metadatos, `_indice/`) y
   `scripts_document_studio` (`page-counter`) resuelven los blogs por `04 index/_pubs` (lista en
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
@@ -43,7 +43,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 - **`_site/` se versiona en los 12 sitios y no se saca de git** (decisión del autor, 2026-09-22,
   `docs/decisiones.md` §4.1): Netlify lo sirve sin build, así que el artefacto es el despliegue. Vale
   **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8. Cada `.gitignore` lo declara
-  con `!/_site/**/*_files/` (§4.2; el de `pub_epsilon-y-beta`, pendiente: §5), y por eso D08 pasa; quitar esa línea lo rompe y deja figuras sin publicar.
+  con `!/_site/**/*_files/` (§4.2; el de `epsilon-y-beta`, pendiente: §5), y por eso D08 pasa; quitar esa línea lo rompe y deja figuras sin publicar.
 - **No decidir por el autor** lo que está en `decision`: D9 (una sola licencia en los 12 sitios) y D16
   (destino del manual de Git).
 
@@ -98,7 +98,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
   versionado: `quarto update wjschne/apaquarto` para actualizar; nada se descarga en el build.
 - **Comentarios**: Utterances sobre los issues de GitHub del propio sitio: `achalmed/website-achalma` en el
   hub y el repo de cada blog en su `_quarto.yml` (`comments.utterances.repo`).
-- **Nombres no derivables**: `pub_chaska` publica en `chaska-x.netlify.app` y su repo se llama `chaska`;
+- **Nombres no derivables**: `chaska` publica en `chaska-x.netlify.app` y su repo se llama `chaska`;
   el único registro carpeta ↔ repo ↔ dominio ↔ tema es `_pubs/pubs.yml`.
 - **Residuos de GitHub Pages**: `CNAME` (`kapitan.net`) y `.nojekyll`; Netlify no los usa.
 - **`resources/cv.pdf` lo genera `scripts/generar-externos.sh`** desde `cv` (perfil docencia, sin anexos, `--web`: solo

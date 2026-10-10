@@ -1,10 +1,10 @@
 ---
 tipo: doc
-titulo: "Los blogs satélite (`_pubs/pub_*`) como submódulos del hub"
+titulo: "Los blogs satélite (`_pubs/*`) como submódulos del hub"
 estado: activo
 ---
 
-# Los blogs satélite (`_pubs/pub_*`) como submódulos del hub
+# Los blogs satélite (`_pubs/*`) como submódulos del hub
 
 Cómo se trabaja con los 11 blogs satélite, que viven dentro del hub como submódulos git, y qué
 herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` §2.1.
@@ -20,7 +20,7 @@ herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` �
 - La carpeta se llama `_pubs/` con guion bajo porque Quarto ignora los
   directorios que empiezan por `_`: el hub no renderiza ni copia los blogs
   (`quarto inspect .` → 0 inputs bajo `_pubs`). Al ejecutar `quarto render`
-  dentro de `_pubs/pub_x`, Quarto usa el `_quarto.yml` del propio blog.
+  dentro de `_pubs/x`, Quarto usa el `_quarto.yml` del propio blog.
 - El `.git` de cada pub sigue **dentro** de su carpeta (no se absorbió en
   `.git/modules` del hub), así que borrar `website-achalma/` borraría también
   los repos de los blogs: tratar `_pubs/` como parte del hub.
@@ -29,14 +29,14 @@ herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` �
 
 ```bash
 # 1) Escribir/editar en el blog y confirmar allí
-cd "04 index/_pubs/pub_axiomata"
+cd "04 index/_pubs/axiomata"
 quarto preview            # o quarto render, que regenera _site/
 git add -- <rutas del post> _site && git commit -m "post: ..."
 git push                  # remote propio del blog (ssh); es el despliegue (despliegue-netlify.md)
 
 # 2) Mover el puntero del submódulo en el hub
 cd ../..
-git add _pubs/pub_axiomata
+git add _pubs/axiomata
 git commit -m "pubs: axiomata al último commit"
 git push
 ```
@@ -65,7 +65,7 @@ Los submódulos se clonan por https (solo lectura). Para poder hacer push
 desde un clon nuevo, cambiar el remote de cada blog a ssh:
 
 ```bash
-git -C _pubs/pub_axiomata remote set-url origin git@github.com:achalmed/axiomata.git
+git -C _pubs/axiomata remote set-url origin git@github.com:achalmed/axiomata.git
 ```
 
 ## Tema compartido
@@ -110,6 +110,6 @@ mueven, se cambia ahí.
 | `scripts_document_studio/backends/page-counter/config.py` | `SUBDIR_PUBS` |
 | `scripts-linux/script_git_sync_respos/repos-config.yml` | una entrada por pub |
 
-Las de `scripts-quarto` aceptan el nombre de carpeta (`pub_axiomata`) o
+Las de `scripts-quarto` aceptan el nombre de carpeta (`axiomata`) o
 el corto (`axiomata`). Qué escribe `scripts-quarto` en el hub y en los
 pubs: su `README.md`, «Contrato con el hub».

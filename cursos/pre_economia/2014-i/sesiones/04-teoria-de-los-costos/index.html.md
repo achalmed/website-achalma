@@ -45,22 +45,22 @@ Este artículo está actualmente en proceso de edición, y todas las secciones s
 Si te interesó este artículo, te recomendamos que explores otros blogs y recursos relacionados que pueden ampliar tus conocimientos. Aquí te dejo algunas sugerencias:
 
 
-<!-- fragmento de inclusión — navegación de economia preuniversitaria en sesiones (a mano) -->
+<!-- fragmento de inclusión — navegación de economia preuniversitaria en sesiones (a mano; las sesiones en borrador van sin enlace: no se publican) -->
 
 1. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/index.pdf) [Conceptos básicos de economía](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia)
-2. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes/index.pdf) [Necesidades humanas y clasificación bienes](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/02-las-necesidades-y-bienes)
-3. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/03-teoria-de-la-produccion/index.pdf) [Teoría de la producción introductoria](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/03-teoria-de-la-produccion)
-4. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/04-teoria-de-los-costos/index.pdf) [Teoría de costos de producción](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/04-teoria-de-los-costos)
-5. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/05-teoria-de-la-oferta-y-demanda/index.pdf) ['Oferta y demanda: equilibrio de mercado'](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/05-teoria-de-la-oferta-y-demanda)
-6. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/06-los-mercados/index.pdf) [Tipos de mercados económicos](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/06-los-mercados)
-7. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/07-las-empresas/index.pdf) [La empresa y sus objetivos](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/07-las-empresas)
-8. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/08-sistema-financiero/index.pdf) [Sistema financiero básico](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/08-sistema-financiero)
-9. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/09-la-macroeconomia/index.pdf) [Introducción a la macroeconomía](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/09-la-macroeconomia)
-10. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/10-la-inflacion/index.pdf) [La inflación](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/10-la-inflacion)
-11. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/11-el-sector-publico/index.pdf) [Rol del sector público en economía](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/11-el-sector-publico)
-12. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/12-los-indicadores-economicos/index.pdf) [Indicadores económicos esenciales](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/12-los-indicadores-economicos)
-13. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/13-el-desempleo/index.pdf) [Desempleo](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/13-el-desempleo)
-14. [{{< fa regular file-pdf >}}](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional/index.pdf) [Comercio internacional](https://achalmaedison.netlify.app/cursos/pre_economia/2014-i/sesiones/14-comercio-internacional)
+2. Necesidades humanas y clasificación bienes *(en preparación)*
+3. Teoría de la producción introductoria *(en preparación)*
+4. Teoría de costos de producción *(en preparación)*
+5. Oferta y demanda: equilibrio de mercado *(en preparación)*
+6. Tipos de mercados económicos *(en preparación)*
+7. La empresa y sus objetivos *(en preparación)*
+8. Sistema financiero básico *(en preparación)*
+9. Introducción a la macroeconomía *(en preparación)*
+10. La inflación *(en preparación)*
+11. Rol del sector público en economía *(en preparación)*
+12. Indicadores económicos esenciales *(en preparación)*
+13. Desempleo *(en preparación)*
+14. Comercio internacional *(en preparación)*
 
 
 <!-- fragmento de inclusión — texto de cierre del bloque «Publicaciones similares» (incluido en cada post) -->

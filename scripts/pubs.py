@@ -227,8 +227,7 @@ def escribir(destino, nuevo, aplicar, mostrar=False):
 def seleccion(pubs, solo):
     if not solo:
         return pubs
-    solo = solo if solo.startswith("pub_") else "pub_" + solo
-    sel = [p for p in pubs if p["carpeta"] == solo]
+    sel = [p for p in pubs if solo in (p["carpeta"], p["carpeta"].removeprefix("pub_"), p.get("repo"))]   # carpeta, nombre corto o repo
     if not sel:
         sys.exit(f"{solo} no está en {REGISTRO.relative_to(HUB)}")
     return sel

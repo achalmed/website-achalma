@@ -19,7 +19,7 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 sitios=()
-for d in "$HUB"/_pubs/pub_*; do [[ -z "$SOLO" || "$SOLO" == "${d##*/}" || "pub_$SOLO" == "${d##*/}" ]] && sitios+=("$d"); done
+for d in "$HUB"/_pubs/*/; do d="${d%/}"; [[ -f "$d/_quarto.yml" ]] || continue; [[ -z "$SOLO" || "$SOLO" == "${d##*/}" || "pub_$SOLO" == "${d##*/}" || "$SOLO" == "${d##*/pub_}" ]] && sitios+=("$d"); done   # cada carpeta de _pubs/ con _quarto.yml es un blog (sin prefijo, 6f)
 [[ -z "$SOLO" || "$SOLO" == "hub" ]] && sitios+=("$HUB")
 fallos=0
 for d in "${sitios[@]}"; do

@@ -24,8 +24,10 @@ MARCA="# pre-push — GENERADO por \`04 index/scripts/puerta-r6.sh --instalar\`;
 # Fuentes del sitio (pathspecs de git, relativos a la raíz del sitio); _site/ y _freeze/ nunca lo son.
 FUENTES=(':(glob)**/*.qmd' ':(glob)**/_quarto.yml' ':(glob)**/_metadata.yml'
          '_extensions/' '_filters/' '_partials/' 'assets/scss/' 'assets/js/' 'assets/css/'
-         '_brand.yml' 'THEME_VERSION'
+         '_brand.yml'
          ':(exclude)_site/' ':(exclude)_freeze/' ':(exclude,glob)**/README.md')   # la guía de una carpeta del tema no se publica
+# THEME_VERSION no es fuente: es el sello (sha256) del conjunto del tema, que cambia también con scripts/ (tooling, no
+# contenido); las fuentes reales del tema ya están arriba y, si cambian, ellas mismas exigen el render (2026-10-10).
 
 comprobar() {
     local sitio="$1" idx sucias t_idx t_site salida t_src f_src

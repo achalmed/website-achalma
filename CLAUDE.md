@@ -2,7 +2,7 @@
 tipo: guia_ia
 estado: activo
 ---
-# CLAUDE.md — 04 index (repo `website-achalma`)
+# CLAUDE.md — web (repo `website-achalma`)
 
 Guía para el asistente. En español, como todo el ecosistema. `AGENTS.md` es un enlace a este archivo.
 Léase antes: `README.md` (qué es y cómo se usa), `docs/README.md` (índice), `_quarto.yml` (el manifiesto
@@ -17,7 +17,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 - **Los blogs se editan y confirman dentro de `_pubs/*`** (cada uno es repo, `_quarto.yml` y sitio
   Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/x && git commit`). Nunca
   `git rm` ni mover `_pubs/` a mano: `scripts-quarto` (gestor de blogs, metadatos, `_indice/`) y
-  `scripts_document_studio` (`page-counter`) resuelven los blogs por `04 index/_pubs` (lista en
+  `scripts_document_studio` (`page-counter`) resuelven los blogs por `web/_pubs` (lista en
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con
@@ -57,8 +57,8 @@ quarto render cursos/index.qmd                    # un archivo suelto: sí ejecu
 quarto inspect . | python3 -c "import json,sys; print(len(json.load(sys.stdin)['files']['input']))"
 scripts/sync-theme-pubs.sh --verificar            # tema de los 11 blogs igual al del hub
 python3 scripts/pubs.py verificar                 # README/CITATION de los pubs y tabla del hub al día
-python3 core/archivos.py validar "04 index"       # normativa A01–A14 y D01–D12
-python3 core/docs.py verificar "04 index"         # índice de docs/ al día
+python3 core/archivos.py validar "web"       # normativa A01–A14 y D01–D12
+python3 core/docs.py verificar "web"         # índice de docs/ al día
 git submodule status                              # en qué commit está cada blog respecto al hub
 ```
 

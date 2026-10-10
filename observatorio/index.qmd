@@ -97,8 +97,8 @@ las cifras de esta portada salen de la misma corrida:
 
 ```bash
 python3 tools/plataforma.py \
-    --salida    "04 index/observatorio/plataforma.html" \
-    --cifras-en "04 index/observatorio/index.qmd"
+    --salida    "web/observatorio/plataforma.html" \
+    --cifras-en "web/observatorio/index.qmd"
 ```
 
 Cada corrida vuelve a leer la última versión publicada de cada estudio, recompone

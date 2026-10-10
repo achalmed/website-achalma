@@ -130,7 +130,7 @@ def comparar(nombre, raiz, url, maximo):
 
 def informe(resultados):
     out = ["# Comparación del render local con producción", "",
-           "Generado por `04 index/scripts/comparar-produccion.py` (solo lectura). Texto visible de cada página; "
+           "Generado por `web/scripts/comparar-produccion.py` (solo lectura). Texto visible de cada página; "
            "los PDF por páginas y texto.", "",
            "| sitio | iguales | distintas | nuevas | retiradas | errores |", "|---|---|---|---|---|---|"]
     for n, r in resultados:

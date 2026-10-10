@@ -6,7 +6,7 @@
 # Las secciones temáticas (carpetas de entradas) se leen del disco al generar: no se declaran aquí.
 actualizado: 2026-10-04   # DOC10: despliegue del hub y de los pubs según docs/decisiones.md §4.1
 hub:
-  carpeta: 04 index
+  carpeta: web
   repo: website-achalma
   url: https://achalmaedison.netlify.app/
   despliegue: push de _site/ a GitHub; Netlify lo sirve sin build (docs/decisiones.md §4.1)

@@ -2,7 +2,7 @@
 tipo: readme
 estado: activo
 ---
-# docs/ — documentación permanente del hub `04 index`: cómo se publica, cómo se escribe un post, los blogs como submódulos y las referencias de claves
+# docs/ — documentación permanente del hub `web`: cómo se publica, cómo se escribe un post, los blogs como submódulos y las referencias de claves
 
 Orden de lectura, tipo y estado de cada documento (NORMATIVA §15.6). `metadata-guia.md` y `quarto-guia.md`
 son referencias anotadas (YAML dentro de bloques de código) y, como todo `docs/`, quedan fuera del render

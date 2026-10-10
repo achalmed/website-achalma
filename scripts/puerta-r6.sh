@@ -20,7 +20,7 @@
 set -euo pipefail
 
 HUB="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MARCA="# pre-push — GENERADO por \`04 index/scripts/puerta-r6.sh --instalar\`; no editar aquí"
+MARCA="# pre-push — GENERADO por \`web/scripts/puerta-r6.sh --instalar\`; no editar aquí"
 # Fuentes del sitio (pathspecs de git, relativos a la raíz del sitio); _site/ y _freeze/ nunca lo son.
 FUENTES=(':(glob)**/*.qmd' ':(glob)**/_quarto.yml' ':(glob)**/_metadata.yml'
          '_extensions/' '_filters/' '_partials/' 'assets/scss/' 'assets/js/' 'assets/css/'
@@ -90,7 +90,7 @@ elif [[ -d "$HUB/_pubs/$PUB" ]]; then dir="$HUB/_pubs/$PUB"
 else echo "No existe el pub: $PUB" >&2; exit 3; fi
 hooks="$(git -C "$dir" rev-parse --path-format=absolute --git-path hooks)"
 destino="$hooks/pre-push"
-if [[ -e "$destino" ]] && ! grep -qF "GENERADO por \`04 index/scripts/puerta-r6.sh" "$destino"; then
+if [[ -e "$destino" ]] && ! grep -qF "GENERADO por \`web/scripts/puerta-r6.sh" "$destino"; then
     echo "$destino ya existe y no es de esta herramienta: no se toca" >&2; exit 4
 fi
 case "$ACCION" in

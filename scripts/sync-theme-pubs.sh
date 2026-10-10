@@ -99,7 +99,7 @@ texto_sello() {
     commit="$(git -C "$HUB" log -1 --format=%H -- "${THEME_PATHS[@]}" 2>/dev/null || echo desconocido)"
     n="$(conjunto "$HUB" | wc -l)"
     printf '%s\n' \
-        "# THEME_VERSION — GENERADO por \`04 index/scripts/sync-theme-pubs.sh --aplicar\` desde el hub (website-achalma); no editar aquí" \
+        "# THEME_VERSION — GENERADO por \`web/scripts/sync-theme-pubs.sh --aplicar\` desde el hub (website-achalma); no editar aquí" \
         "# Sello del tema compartido (ADR-06, normativa 7.11): commit del hub que lo fijó por última vez y sha256 del conjunto." \
         "commit_hub: $commit" \
         "sha256_conjunto: $(suma_conjunto "$HUB")" \

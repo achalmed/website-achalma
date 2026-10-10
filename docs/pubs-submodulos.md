@@ -29,7 +29,7 @@ herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` �
 
 ```bash
 # 1) Escribir/editar en el blog y confirmar allí
-cd "04 index/_pubs/axiomata"
+cd "web/_pubs/axiomata"
 quarto preview            # o quarto render, que regenera _site/
 git add -- <rutas del post> _site && git commit -m "post: ..."
 git push                  # remote propio del blog (ssh); es el despliegue (despliegue-netlify.md)
@@ -98,7 +98,7 @@ no construye ni sirve los blogs: `despliegue-netlify.md`.
 
 ## Consumidores
 
-Herramientas del workspace que resuelven los blogs bajo `04 index/_pubs`. El
+Herramientas del workspace que resuelven los blogs bajo `web/_pubs`. El
 valor por defecto de cada variable lo fija su herramienta; si los blogs se
 mueven, se cambia ahí.
 

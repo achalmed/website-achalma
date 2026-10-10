@@ -2,7 +2,7 @@
 tipo: readme
 estado: activo
 ---
-# 04 index/ — hub académico Quarto de Edison Achalma y fuente del tema de sus 11 blogs (repo `website-achalma`)
+# web/ — hub académico Quarto de Edison Achalma y fuente del tema de sus 11 blogs (repo `website-achalma`)
 
 ## Qué es
 
@@ -94,7 +94,7 @@ cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
 ## Límite honesto
 
 - **Sin lint ni pruebas.** Se comprueba renderizando y mirando `_site/`; `python3 core/archivos.py validar
-  "04 index"` revisa la documentación, no el sitio. `_site/` está versionado a propósito (es lo que Netlify
+  "web"` revisa la documentación, no el sitio. `_site/` está versionado a propósito (es lo que Netlify
   publica) y el `.gitignore` lo declara, así que D08 no falla (`docs/decisiones.md` §4.1–§4.2).
 - **El hub no renderiza los blogs.** `_pubs/` empieza por `_` y Quarto lo ignora; cada pub se renderiza y
   publica desde su carpeta. Los README de los pubs los genera el hub, pero su contenido no se escribe aquí.

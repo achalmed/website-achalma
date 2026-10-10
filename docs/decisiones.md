@@ -36,7 +36,7 @@ Metodología quedó marcada como legado por no tener fuentes en el framework.
 **1.4 Los posts se citan como *Actus Mercator*** (anterior a 2026-07): volumen = año, número 1–4 =
 trimestre. Se declara en el `citation` del frontmatter; el esquema no está en ningún manifiesto.
 
-**1.5 El repo `website-achalma` vive en la carpeta `04 index`** (2026-09-06, fusión con el índice del
+**1.5 El repo `website-achalma` vive en la carpeta `web`** (2026-09-06, fusión con el índice del
 vault). El nombre del repo y del sitio no cambió; `_indice/` y `_vault/` son del vault Obsidian y no se
 versionan (`.gitignore`). `site_libs/` tampoco: lo reconstruye cada render (2026-07-01).
 
@@ -53,7 +53,7 @@ proveedor: `datafw/docs/integracion-ecosistema.md` §2 (el observatorio) y §4 (
 **2.1 Los 11 blogs son submódulos del hub en `_pubs/`** (2026-09-06, F3a). Cada uno conserva repo,
 `_quarto.yml` y sitio Netlify; el hub los registra por https y `shallow = true`. La carpeta lleva guion
 bajo para que Quarto no la renderice. Las herramientas los resolvían entonces por `website-achalma/_pubs`;
-hoy por `04 index/_pubs` (`pubs-submodulos.md`, «Consumidores»). La reversión de entonces vivía en las
+hoy por `web/_pubs` (`pubs-submodulos.md`, «Consumidores»). La reversión de entonces vivía en las
 reparaciones de meta, retiradas el 2026-09-20: hoy se revierte con git. Detalle: `pubs-submodulos.md`.
 
 **2.2 El hub es la fuente de verdad del tema** (2026-09-06). SCSS, JS, CSS global y de componentes,

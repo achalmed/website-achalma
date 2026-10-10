@@ -92,7 +92,7 @@ def convertido(pub_dir):
     uso = ("../../scripts/puerta-r6.sh .                # puerta R6: _site/index.html al día antes del push "
            "(también es el hook pre-push)\n") if netlify else ""
     cola = ("; `netlify.toml` lo declara (`publish = \"_site\"`, sin comando de build), y el hook pre-push de la "
-            "puerta R6 no viaja con el repo: lo instala `04 index/scripts/puerta-r6.sh --instalar`") if netlify else ""
+            "puerta R6 no viaja con el repo: lo instala `web/scripts/puerta-r6.sh --instalar`") if netlify else ""
     return "".join(f + "\n" for f in filas), uso, cola
 
 
@@ -113,17 +113,17 @@ estado: activo
 ---
 # {p['carpeta']}/ — {p['tema']}: blog satélite del hub `{hub['carpeta']}` (repo {p['repo']}, {dominio})
 
-<!-- GENERADO por `04 index/scripts/pubs.py readme --aplicar` desde `04 index/_pubs/pubs.yml` ({HOY}); no editar aquí: se regenera desde el hub -->
+<!-- GENERADO por `web/scripts/pubs.py readme --aplicar` desde `web/_pubs/pubs.yml` ({HOY}); no editar aquí: se regenera desde el hub -->
 
 ## Qué es
 
 {p['descripcion']} Es uno de los 11 blogs satélite de la familia Quarto de {d['autor']['nombre']}: un sitio Quarto
 con repositorio y sitio Netlify propios, incluido como submódulo git en el hub `{hub['carpeta']}` (repo
-`{hub['repo']}`) bajo `04 index/_pubs/{p['carpeta']}/`. El mismo blog tiene tres nombres: carpeta `{p['carpeta']}`, repo
-GitHub `{d['autor']['github']}/{p['repo']}` y dominio `{dominio}`; el registro de los tres es `04 index/_pubs/pubs.yml`.
+`{hub['repo']}`) bajo `web/_pubs/{p['carpeta']}/`. El mismo blog tiene tres nombres: carpeta `{p['carpeta']}`, repo
+GitHub `{d['autor']['github']}/{p['repo']}` y dominio `{dominio}`; el registro de los tres es `web/_pubs/pubs.yml`.
 {nota}
 El tema visual (SCSS, JS, extensiones, filtros, `scripts/build-page-css.sh`) **no se edita aquí**: vive en el hub y
-llega por `04 index/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_quarto.yml`, `index.qmd`, `_contenido-*.qmd`,
+llega por `web/scripts/sync-theme-pubs.sh`. Lo propio de este blog es `_quarto.yml`, `index.qmd`, `_contenido-*.qmd`,
 `assets/img/` y las entradas; los índices `_contenido_<sección>.qmd` los genera `scripts-quarto`
 (`script_generador_publicacion_similar`) y no se editan a mano.
 
@@ -145,16 +145,16 @@ cd ../.. && git add _pubs/{p['carpeta']} && git commit -m "pubs: {corto} al últ
 | `_quarto.yml`, `index.qmd`, `404.qmd`, `_contenido-inicio.qmd`, `_contenido-final.qmd` | configuración y portada propias del blog | |
 | `assets/scss/`, `assets/js/`, `assets/css/global.css`, `assets/css/components/`, `_extensions/`, `_filters/apa-floats-html.lua`, `scripts/build-page-css.sh` | tema propagado desde el hub por `sync-theme-pubs.sh`: no se edita aquí | |
 | `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html`, `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`, `_partials/` | propios del blog (no los escribe la sincronización) | |
-| `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`04 index/docs/decisiones.md` §4.1) | |
+| `_site/` | sitio generado por `quarto render`; versionado a propósito: su push es el despliegue (`web/docs/decisiones.md` §4.1) | |
 {extra}
 {total} entradas. Cada entrada es `<sección>/AAAA-MM-DD-slug/index.qmd` con frontmatter apaquarto y fecha ISO;
 sus metadatos se editan en masa desde `scripts-quarto` (`metadata_manager`).
 
 ## Documentación
 
-Toda la familia se documenta una vez, en el hub: `04 index/README.md` (qué es la familia y cómo se opera),
-`04 index/docs/pubs-submodulos.md` (submódulos y flujo de commit), `04 index/docs/publicar-un-post.md` (de
-principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada sitio) y `assets/scss/README.md` (el tema).
+Toda la familia se documenta una vez, en el hub: `web/README.md` (qué es la familia y cómo se opera),
+`web/docs/pubs-submodulos.md` (submódulos y flujo de commit), `web/docs/publicar-un-post.md` (de
+principio a fin), `web/docs/despliegue-netlify.md` (cómo publica cada sitio) y `assets/scss/README.md` (el tema).
 
 ## Límite honesto
 
@@ -167,7 +167,7 @@ principio a fin), `04 index/docs/despliegue-netlify.md` (cómo publica cada siti
 # --- CITATION.cff de un pub ---------------------------------------------------------
 def citation_pub(d, p):
     a = d["autor"]
-    return f"""# CITATION.cff — GENERADO por `04 index/scripts/pubs.py citation --aplicar` desde `04 index/_pubs/pubs.yml` ({HOY}); no editar aquí
+    return f"""# CITATION.cff — GENERADO por `web/scripts/pubs.py citation --aplicar` desde `web/_pubs/pubs.yml` ({HOY}); no editar aquí
 cff-version: 1.2.0
 title: "{p['tema']} — blog de {a['nombre']} ({p['repo']})"
 message: "Si citas una entrada de este blog, usa los metadatos de este archivo y la URL de la entrada."

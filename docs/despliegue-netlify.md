@@ -11,7 +11,7 @@ publicación `_site` y sin comando de build, así que el `_site/` versionado **e
 así y por qué `_site/` no se saca de git: `decisiones.md` §4.1–§4.3. Nada de la configuración de Netlify
 vive en los repos salvo un `netlify.toml` por sitio (ola 6) que fija lo mismo que la interfaz: `publish = "_site"` y ningún comando de build; no hay `_redirects` ni variables de build versionadas.
 
-## El hub (`04 index` → <https://achalmaedison.netlify.app>)
+## El hub (`web` → <https://achalmaedison.netlify.app>)
 
 **Cómo se publica.** Push de `_site/` a `main` de `website-achalma`; Netlify sirve ese directorio tal cual.
 Lo confirma el historial (`git log -- _site`: los cambios del sitio llegan como commits de `_site/`) y lo
@@ -88,7 +88,7 @@ Leen o publican lo que producen estos 12 sitios:
 
 - `scripts-quarto/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
   `quarto publish`, que no es el flujo vigente).
-- `scripts_document_studio`: `backends/page-counter` cuenta las páginas de los PDF de `04 index/_site` y
-  de `_pubs/*/_site`; `backends/pdf-suite` incluye `04 index` entre sus carpetas de búsqueda.
+- `scripts_document_studio`: `backends/page-counter` cuenta las páginas de los PDF de `web/_site` y
+  de `_pubs/*/_site`; `backends/pdf-suite` incluye `web` entre sus carpetas de búsqueda.
 - `meta/doctor/main.sh` y `core/archivos.py` (D08): aceptan `_site/` versionado solo donde el `.gitignore`
   lo declara con una negación.

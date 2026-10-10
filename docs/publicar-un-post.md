@@ -75,7 +75,7 @@ python3 main.py --directory "<carpeta de posts>" --recursive --dry-run   # vario
 La base de metadatos de toda la familia es
 `scripts-quarto/backend/script_metadata_manager/excel_databases/quarto_metadata.xlsx`; **el frontmatter
 de los `.qmd` es la verdad** y el Excel, la herramienta para editarlo en lote. `~/Documents` es la raíz que
-la herramienta recorre (resuelve `04 index` y `_pubs/` por su configuración).
+la herramienta recorre (resuelve `web` y `_pubs/` por su configuración).
 
 ```bash
 cd scripts-quarto/backend/script_metadata_manager
@@ -84,7 +84,7 @@ python3 main.py update ~/Documents excel_databases/quarto_metadata.xlsx --dry-ru
 python3 main.py update ~/Documents excel_databases/quarto_metadata.xlsx             # aplica
 python3 main.py sync-dates ~/Documents --config metadata_config.yml --dry-run   # date ← carpeta AAAA-MM-DD
 python3 main.py sync-pdf-urls ~/Documents --config metadata_config.yml --dry-run # citation.pdf-url ← ruta real
-python3 main.py fechas-iso "~/Documents/04 index" --dry-run                    # solo la grafía de date
+python3 main.py fechas-iso "~/Documents/web" --dry-run                    # solo la grafía de date
 python3 main.py normalize-tags ~/Documents --dry-run                           # tags a snake_case
 python3 main.py audit-tags ~/Documents                                         # informe de etiquetas
 ```
@@ -97,7 +97,7 @@ y puede fijarse en `blog_base_urls` de `metadata_config.yml`.
 ## 5. Renderizar y revisar
 
 ```bash
-cd "04 index/_pubs/axiomata"          # o la raíz del hub
+cd "web/_pubs/axiomata"          # o la raíz del hub
 quarto preview                            # con recarga
 quarto render posts/<AAAA-MM-DD-slug>/index.qmd   # solo el post (ejecuta su código, produce HTML, PDF y DOCX)
 quarto render                             # el sitio entero (freeze: no re-ejecuta código)
@@ -123,24 +123,24 @@ cd scripts-quarto/backend/script_generador_publicacion_similar
 En un **blog**: commit y push dentro del pub y después el puntero en el hub.
 
 ```bash
-cd "04 index/_pubs/axiomata"
+cd "web/_pubs/axiomata"
 git add -- <carpeta del post> _contenido_*.qmd _site && git commit -m "post: <título>" && git push
 cd ../..
 git add _pubs/axiomata && git commit -m "pubs: axiomata al último commit" && git push
 ```
 
-En el **hub** (`blog/posts/`): commit normal en `04 index`.
+En el **hub** (`blog/posts/`): commit normal en `web`.
 
 ## 8. Publicar
 
 Los 12 sitios se publican igual: `quarto render` → commit de `_site/` → `git push`; Netlify sirve el
 `_site` empujado, sin build (`despliegue-netlify.md`). En un **blog**, el `quarto render` del paso 5 tiene
 que estar hecho **antes** del commit del paso 7, y `_site/` incluido en él; en el **hub**, igual, con el
-commit en `04 index`. Un push sin `_site/` publica un sitio vacío (`decisiones.md` §4.3).
+commit en `web`. Un push sin `_site/` publica un sitio vacío (`decisiones.md` §4.3).
 
 ## 9. El índice del vault
 
-`04 index/_indice/` (ignorado en git) enlaza por año cada carpeta de publicación de la familia; se
+`web/_indice/` (ignorado en git) enlaza por año cada carpeta de publicación de la familia; se
 regenera, no se cura:
 
 ```bash

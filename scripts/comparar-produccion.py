@@ -102,7 +102,11 @@ def comparar(nombre, raiz, url, maximo):
         if codigo != 200:
             res["errores"].append(f"{rel}: {codigo}")
             continue
-        local = (site / rel).read_bytes()
+        try:
+            local = (site / rel).read_bytes()
+        except OSError:                    # un render en curso lo quitó: se anota y se sigue
+            res["errores"].append(f"{rel}: desapareció del _site durante la comparación")
+            continue
         if rel.endswith(".pdf"):
             (pl, tl), (pr, tr) = texto_pdf(local), texto_pdf(remoto)
             if tl == tr and pl == pr:

@@ -367,12 +367,28 @@ propuesta, aprobación, `core/renombrar.py` con etiqueta, simulación, respaldo 
 | **2. Render rápido** (independiente) | en los 12 sitios Quarto actuales, perfil `html` por defecto y PDF/DOCX en el perfil `documentos` con caché | de unos 47 min a pocos minutos; PDF idénticos byte a byte (`SOURCE_DATE_EPOCH`) | sí, sin cambiar contenido |
 | **3. `simuladores`** (**hecha** 2026-10-20: repo propio con 64 commits de historia, `SIMULADORES_DIR`, `main.py catalogo` → `catalogo.json` con 138 modelos, verificaciones idénticas; respaldo y `UNDO.sh` en `$RESPALDOS_DIR/renombres/2026-10-20-docencia-simuladores-a-simuladores/`; alta en `workspace.yml`, remoto y adaptador web pendientes) | repo propio con su historia; `SIMULADORES_DIR`; adaptador web con IS-LM y TCL | `main.py verificar` igual; `divulgacion` renderiza una pieza; el simulador corre a 375 px | no |
 | **4. `aula` (vitrina)** | repo nuevo; paquete Astro con la identidad «Laboratorio abierto»; generador `curso.yml` → pub; piloto **methodica** (tiene ediciones reales) | build en segundos; Lighthouse ≥ 90 a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
-| **5. Contenido** | por pub: generar la estructura, emparejar los esqueletos con sus temas, llevar las 18 notas y las ediciones de `web/cursos`; los artículos quedan como blog del área | cada tema con exactamente una lección; ningún contenido sin casa; redirección para cada URL vieja | no |
+| **5. Contenido** (mapa hecho 2026-10-20: `docencia/contenido/migracion/mapa-lecciones.csv`, 223 posts → 44 lecciones con tema, 80 sin tema, 54 blog, 45 a revisar; ver §6.1) | por pub: generar la estructura, emparejar los esqueletos con sus temas, llevar las 18 notas y las ediciones de `web/cursos`; los artículos quedan como blog del área | cada tema con exactamente una lección; ningún contenido sin casa; redirección para cada URL vieja | no |
 | **6. `aula` (API)** | FastAPI + PostgreSQL: cuentas, clases, tareas, entregas, notas, anuncios, exámenes calificados; política de privacidad; respaldo cifrado | pruebas de la API; un dictado real de prueba con cuentas ficticias | no |
 | **7. Cambio** | los 11 pubs (más el 12.º) publican la plataforma uno por uno, empezando por methodica; `web/cursos` → 301; se retiran los hardlinks | prueba de las unas 149 URL (200 o 301 a un destino 200); `comparar-produccion.py`; vuelta atrás probada | **sí** |
 | **8. Integraciones** | `divulgacion` publica su `catalogo.json`; los vídeos aparecen por tema | el vídeo aparece en la lección de su tema | sí |
 
 Las fases 2 y 3 no dependen de las demás. La 2 alivia hoy mismo el problema de los 47 min.
+
+### 6.1 Hallazgo del mapa: el temario de varios cursos es peor que la serie del pub
+
+`mapa-lecciones.py` empareja cada post con un tema de `curso.yml` por curso, numeración y título. La confianza alta acierta
+16 de 16 en la muestra revisada a mano y la media, alrededor del 81 %. Solo 44 de 223 posts casan, y la razón no es el emparejador:
+muchos temarios de `curso.yml` son esquemas genéricos. En las herramientas son índices tipo w3schools en inglés; en economía,
+unidades vagas. Las series de los pubs, en cambio, tienen una estructura real y pensada (Python 01–11, econometría 01–07,
+aequilibria 01–11). Que «mande el currículo» no puede querer decir que una lista genérica pise una serie mejor.
+
+**Propuesta (decisión C1 del autor):** el currículo sigue viviendo en `curso.yml` (A3), pero su temario se **reconstruye** curso
+por curso a partir de la mejor estructura que exista. Puede salir de la malla o sílabo oficial, de la serie del pub o de las
+sesiones dictadas, y se elige una de esas fuentes por curso. Las otras se emparejan contra ella. Así el currículo manda y no se
+pierde lo ya escrito. Primero van los cursos con contenido real: Python, R, econometría I–II, microeconometría, organización
+industrial, finanzas internacionales y Linux. Los casos que necesitan al autor (aequilibria 01–11 reparte temas de varios cursos
+de macro; los temas que solo existen en los pubs; los cursos Power BI y ciberseguridad) están en el informe del mapa.
+
 
 ## 7. Decisiones abiertas
 

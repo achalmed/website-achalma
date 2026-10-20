@@ -22,6 +22,7 @@ documentos. Las plantillas apaquarto no viven aquí sino en `_plantillas/apaquar
 | [quarto-guia.md](quarto-guia.md) | `doc` | `activo` | Referencia de opciones de `_quarto.yml` (sitio Quarto) |
 | [historial/README.md](historial/README.md) | `readme` | `activo` | docs/historial/ — lo cumplido: planes ejecutados e instantáneas superadas del hub |
 | [historial/course-redesign-plan.md](historial/course-redesign-plan.md) | `plan` | `hecho` | Plan de rediseño de la arquitectura docente — de `talk`/`teching` a `Cursos` |
+| [historial/diagnostico-plataforma-2026-10-20.md](historial/diagnostico-plataforma-2026-10-20.md) | `doc` | `hecho` | Diagnóstico de la web, los pubs, docencia, simuladores y divulgación (2026-10-20) |
 
 <sub>Bloque generado por `core/docs.py indice` desde el frontmatter de docs/ (2026-10-20); no se edita a mano.</sub>
 <!-- docs:fin -->

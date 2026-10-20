@@ -5,8 +5,9 @@ estado: activo
 ---
 # Despliegue en Netlify: cómo llegan a producción el hub y los 11 blogs
 
-Los 12 sitios de la familia se sirven en Netlify y **se publican igual**: `quarto render` en local →
-commit de `_site/` → `git push`. Cada sitio Netlify está enlazado a su repo de GitHub con directorio de
+Los 12 sitios de la familia se sirven en Netlify y **se publican igual**: `scripts/render.sh` (HTML) y
+`scripts/render.sh --documentos --aplicar` (PDF y DOCX que cambiaron) en local → commit de `_site/` →
+`git push`. Cada sitio Netlify está enlazado a su repo de GitHub con directorio de
 publicación `_site` y sin comando de build, así que el `_site/` versionado **es** el despliegue. Por qué es
 así y por qué `_site/` no se saca de git: `decisiones.md` §4.1–§4.3. Nada de la configuración de Netlify
 vive en los repos salvo un `netlify.toml` por sitio (ola 6) que fija lo mismo que la interfaz: `publish = "_site"` y ningún comando de build; no hay `_redirects` ni variables de build versionadas.
@@ -40,6 +41,25 @@ y `cursos/_metadata.yml` además fijan `execute.enabled: false`. Los PDF y DOCX 
 `apaquarto`, que necesita TinyTeX: por eso el render se hace en la máquina del autor, no en Netlify.
 `observatorio/plataforma.html` no pasa por el render: va en `project.resources` y se copia tal cual
 (`decisiones.md` §1.6).
+
+**Render rápido y documentos aparte** (fase 2 de `plataforma-educativa.md`, 2026-10-20; el porqué en
+`decisiones.md` §4.5). Cada post declara `html`, `apaquarto-pdf` y `apaquarto-docx`, y compilar los dos
+últimos con LuaLaTeX en cada render era casi todo el tiempo de publicar (unos 47 min los 12 sitios).
+`scripts/render.sh`, que viaja con el tema, hace ahora tres cosas:
+
+| orden | qué hace | methodica (7 posts) |
+|---|---|---|
+| `scripts/render.sh` | `quarto render --to html`; antes aparta los PDF y DOCX de `_site/` (un render completo de Quarto vacía `_site/`) y después devuelve los de las páginas que siguen publicadas | 20 s (antes 109 a 184 s) |
+| `scripts/render.sh --documentos [--aplicar]` | `scripts/documentos.py`: compila los formatos de documento solo de las páginas cuya clave cambió; simula sin `--aplicar` | 1 s sin cambios · unos 20 s por post cambiado · 157 s todo desde cero |
+| `scripts/render.sh --completo` | el render de antes: todos los formatos de cada página | 184 s |
+
+Los enlaces «Otros formatos» de cada página no dependen de esto: Quarto los escribe con los formatos
+declarados aunque no los compile. La caché es `_documentos.tsv` en la raíz de cada sitio (GENERADO,
+versionada con el `_site/` que describe; se confirma junto con él): página, formato, salida, clave y
+sha256 de la salida. Si alguien pisa o borra un PDF de `_site/`, el siguiente `--documentos` lo rehace.
+Para adoptar un sitio cuyo `_site/` salió de un render completo con las fuentes confirmadas, sin
+recompilar: `scripts/render.sh --documentos --registrar --aplicar`. `--verificar` sale 1 si a alguna
+página publicada le falta un documento al día.
 
 **Qué queda fuera del render.** `project.render` en `_quarto.yml` renderiza `*.qmd` y `*.md` y excluye
 `!docs/`; las carpetas y archivos que empiezan por `_` o `.` los excluye Quarto por defecto (`_pubs/`,
@@ -75,7 +95,8 @@ comando de build (se espera vacío) y el directorio de publicación (se espera `
 
 ```bash
 quarto inspect . | python3 -c "import json,sys; print(len(json.load(sys.stdin)['files']['input']))"  # entradas del hub
-quarto render && ls _site/                          # el sitio completo en local
+scripts/render.sh && ls _site/                      # el sitio completo en local, solo HTML (conserva PDF y DOCX)
+scripts/render.sh --documentos --verificar          # 0 si cada página publicada tiene sus PDF y DOCX al día
 git ls-files _site | wc -l                          # cuántos archivos de _site versiona el hub; 0 = el sitio saldrá vacío
 git status --short _site | head                     # tras un render: lo que cambia y hay que confirmar antes del push
 curl -sS -o /dev/null -w "%{http_code}\n" https://achalmaedison.netlify.app/   # 200 tras el push (Netlify tarda ~1 min)

@@ -25,7 +25,8 @@ satélite: eso se hace dentro del pub, que es su propio repositorio.
 
 ```bash
 quarto preview                                           # vista previa con recarga
-quarto render                                            # todo el sitio → _site/ (freeze: no re-ejecuta código)
+scripts/render.sh                                        # todo el sitio → _site/, solo HTML y reproducible (conserva PDF y DOCX)
+scripts/render.sh --documentos --aplicar                 # PDF y DOCX solo de lo que cambió (sin --aplicar simula; docs/despliegue-netlify.md)
 quarto render blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.qmd   # un solo documento (sí ejecuta)
 git add _site && git commit -m "render: _site actualizado" && git push   # publicar: Netlify sirve el _site del repo, sin build
 scripts/sync-theme-pubs.sh --verificar                   # ¿algún blog difiere del tema del hub? (sale 1 si sí)

@@ -158,6 +158,58 @@ autor lo revisa al abrir la ola 6: el tema **se comparte por hardlink**, adminis
 hardlink como hallazgo sino un enlace roto. `methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos
 de antes y después en `$RESPALDOS_DIR/hardlinks/2026-10-08-tema-sitios/`.
 
+### 4.5 Render solo HTML y documentos con caché por hash (2026-10-20, fase 2 de `plataforma-educativa.md`)
+
+Publicar los 12 sitios tardaba unos 47 min (registro de la ola 6: methodica 109 s, epsilon-y-beta 708 s,
+numerus-scriptum 729 s) y casi todo era apaquarto: los 37 `_metadata.yml` de sección (un solo inodo)
+declaran `html`, `apaquarto-pdf` (LuaLaTeX) y `apaquarto-docx`, y cada render los compilaba todos aunque
+solo 17 posts tienen código y nada hubiera cambiado. Desde hoy `scripts/render.sh` renderiza solo HTML y
+`scripts/render.sh --documentos` (`scripts/documentos.py`, en el tema) compila PDF y DOCX solo de las
+páginas cuya fuente cambió. Medido en methodica: HTML 20 s, documentos 1 s sin cambios y unos 20 s por
+post cambiado (184 s el render completo en la misma máquina); epsilon-y-beta, solo HTML, 43 s.
+
+Por qué así, comprobado en una copia de methodica antes de tocar los sitios:
+
+- **`--to html` y no perfiles.** Un perfil (`_quarto-<perfil>.yml`, `QUARTO_PROFILE`) solo se funde con la
+  configuración del proyecto: no quita los formatos que declara un `_metadata.yml` de carpeta (`quarto
+  inspect` de un post con un perfil `format: html` sigue dando los tres). Cambiar los 37 `_metadata.yml`
+  tampoco hace falta: `--to` elige el formato sin tocarlos, y los enlaces «Otros formatos» siguen saliendo
+  porque Quarto los escribe con los formatos declarados, no con los compilados.
+- **Apartar y devolver, no `--no-clean`.** El render completo de Quarto vacía `_site/` y se lleva los PDF y
+  DOCX. `--no-clean` los conservaría, pero también las páginas de un post retirado; `render.sh` mueve
+  antes los PDF y DOCX cuya fuente existe y después devuelve solo los de las páginas que siguen
+  publicadas (con su `.html`): lo de un borrador o un post retirado desaparece como antes. Si el render
+  falla, devuelve todo.
+- **La clave.** sha256 de lo que entra en el documento: la carpeta del post sin intermedios (`index.tex`,
+  `index.html.md`) ni páginas anidadas, sus `include` (de `quarto inspect`), `bibliography` y `csl`, la
+  cadena de `_metadata.yml`, `_filters/`, `_extensions/`, `_quarto.yml` sin `website` ni `format.html`, la
+  versión de Quarto, la fecha `SOURCE_DATE_EPOCH` de la página y la de modificación de su fuente (el DOCX
+  lleva `date-modified`). Lo que entra por otra vía (una imagen de fuera de la carpeta) no está: para eso,
+  `--forzar --solo <ruta>`.
+- **La fecha de cada documento es la de su página**, no la del sitio: el último commit de la carpeta del
+  post. Con la fecha del sitio, cualquier commit en otro post cambiaba la fecha interna de todos los PDF y
+  una recompilación de un post intacto no salía igual. Comprobado: recompilar con `--forzar` un post sin
+  cambios deja el `_site/` entero idéntico byte a byte, en la copia y en methodica.
+- **La caché es `_documentos.tsv`, versionada en la raíz de cada sitio** y no en `.quarto/` ni dentro de
+  `_site/`: describe los PDF y DOCX que están en git, así que tiene que viajar con ellos (un clon nuevo no
+  recompila nada) y no se publica (`_` inicial: Quarto la ignora). Guarda también el sha256 de cada salida:
+  un PDF pisado o borrado se rehace. No es fuente: `render.sh` la excluye de la fecha del sitio y la
+  puerta R6 no la mira.
+- **El `/ID` del PDF depende de la carpeta** en que se compila: la misma fuente con la misma fecha,
+  compilada en una copia del sitio en otra ruta, difiere solo en esos 64 bytes del identificador. Entre
+  renders en la misma carpeta, nada. Por eso la caché evita recompilar y no promete bytes iguales entre
+  máquinas con rutas distintas.
+- De paso, `fechas-desde-git.py` no fijaba la fecha de las páginas con ruta no ASCII (git las citaba
+  entre comillas); ahora usa `core.quotePath=false`, y el listado y el `sitemap.xml` de esas páginas
+  dejan de depender del `checkout`.
+
+Piloto aplicado en methodica: sus 7 PDF y 7 DOCX recompilados con la fecha de su página (mismo texto y
+páginas que producción, `comparar-produccion.py`: 16 iguales, 0 distintas). El hub y los otros 10 blogs
+tienen ya el `render.sh` nuevo (es el mismo inodo) y, en su árbol de trabajo, `documentos.py` y el
+`THEME_VERSION` nuevo (`sync-theme-pubs.sh --aplicar`), pendientes de confirmar en cada blog (§5); ninguno
+tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo una vez, o `--registrar
+--aplicar` adopta lo que hay sin compilar.
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |
@@ -166,6 +218,7 @@ de antes y después en `$RESPALDOS_DIR/hardlinks/2026-10-08-tema-sitios/`.
 | figuras de numerus | confirmadas con el render de la ola 6 (2026-10-08); se publican con el próximo push | 2026-10-04 | autor · resuelto en local |
 | `_freeze/` de numerus | `numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
+| **render rápido** | fase 2 (§4.5) en los 12 sitios: confirmar en los 10 blogs distintos de methodica `THEME_VERSION`, `scripts/documentos.py`, `render.sh` y `fechas-desde-git.py` (propagados el 2026-10-20 sin commit) y mover sus punteros en el hub; después, en cada sitio, `scripts/render.sh` y `scripts/render.sh --documentos --aplicar` (o `--registrar --aplicar`) y confirmar `_site/` y `_documentos.tsv` | 2026-10-20 | autor o director |
 | **plataforma** | los 11 pubs como aulas (Classroom + MOOC propios), currículo desde `docencia`, `web/cursos` se retira, `simuladores` repo propio, Quarto solo como compilador: `docs/plataforma-educativa.md` (decisiones A1–A8 del autor tomadas; §6 plan) | 2026-10-20 | autor · decidir B1–B6 (§7) |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |

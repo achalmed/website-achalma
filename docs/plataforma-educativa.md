@@ -1,324 +1,394 @@
 ---
 tipo: doc
-titulo: "Plataforma educativa: diagnóstico y arquitectura objetivo de la web personal"
+titulo: "Plataforma educativa: diagnóstico y arquitectura objetivo (los 11 pubs como aulas)"
 estado: borrador
 creado: 2026-10-20
 ---
 # Plataforma educativa: diagnóstico y arquitectura objetivo
 
-> Encargo del autor (2026-10-20): transformar la web personal en un ecosistema educativo y de divulgación
-> (cursos completos, blogs, materiales docentes, simuladores), con una identidad propia que tome principios del sitio
-> de demostración de Qillqa sin confundirse con él, y decidir qué se hace con Quarto y qué no. **Primero el
-> diagnóstico; nada se ha movido ni renombrado.** Cifras medidas el 2026-10-20 en solo lectura; las decisiones
-> abiertas están en §6 y no se ejecuta ninguna fase sin ellas.
+> Encargo del autor (2026-10-20): convertir la web en un ecosistema educativo (cursos completos, blogs, materiales
+> docentes, simuladores) con identidad propia, tomando principios del sitio de demostración de Qillqa sin confundirse con
+> él, y decidir qué se hace con Quarto. **Versión 2**, con las decisiones que el autor tomó el mismo día (§0). No se ha movido ni
+> renombrado nada. Las cifras se midieron el 2026-10-20 en solo lectura.
+
+## 0. Decisiones del autor (2026-10-20)
+
+| id | decisión |
+|---|---|
+| A1 | **Los 11 sitios Netlify de los pubs se quedan.** Se crean más solo si hace falta (§5 propone uno). |
+| A2 | **Cada pub se convierte en una plataforma de cursos** con las funciones de Google Classroom, Moodle y los MOOC. **No se usa Google Classroom**: la plataforma es propia. |
+| A3 | **`docencia` es la fuente única del currículo.** Los pubs, con sus sesiones en borrador o ya desarrolladas, se adaptan a él. |
+| A4 | **`web/cursos` desaparece.** Su función pasa a los pubs. |
+| A5 | **Los esqueletos se conservan.** Se aprovechan sus metadatos para ordenar los cursos y quedan listos para llenarse. |
+| A6 | **`simuladores` será un proyecto independiente**, igual que `divulgacion`. Depende del currículo y de `datafw` y da soporte a `docencia`, `divulgacion` y los pubs. |
+| A7 | **El render de 47 min es un problema** y se resuelve. |
+| A8 | **Las duplicaciones se eliminan.** Es el objetivo central del proyecto. |
 
 ## 1. Resumen
 
-1. **El contenido docente se escribe en tres sitios y se publica en catorce.** El currículo está en
-   `docencia/contenido` (52 `curso.yml`, 1 952 temas). Las lecciones están repartidas entre los 11 pubs (unos 160 posts con
-   forma de lección), `docencia` (18 notas) y `web/cursos` (2 cursos con ediciones). El resultado se publica en el hub y en 11 sitios Netlify.
-2. **Casi todo lo «publicado» como curso está vacío.** 146 de los 223 posts de los pubs son borradores y
-   unos 130 son esqueletos que solo contienen los includes. Hay 31 fichas de curso con sílabo generado, pero solo 2 tienen sesiones.
-   Una buena noticia para la migración: hay poco que mover y mucho que ordenar.
-3. **Quarto no es el problema; el acoplamiento sí.** De 223 posts solo 17 tienen código, y todos están congelados. El render
-   completo de la familia tarda unos **47 min** (pubs 2 800 s y hub entre 320 y 530 s; registro de la ola 6). La mayor parte de ese tiempo se va en el PDF
-   (LuaLaTeX) y el DOCX que apaquarto genera para cada post en cada render. Además hay 12 proyectos separados y el tema
-   copiado 11 veces.
-4. **Recomendación:** un sitio único, construido con un generador estático (Astro), que hace de plataforma. Quarto
-   y LuaLaTeX pasan a ser los **compiladores de documentos** (PDF, DOCX, diapositivas y lecciones con código), y solo se ejecutan cuando su
-   fuente cambia. `docencia` sigue siendo la fuente única del currículo, `simuladores` pasa a ser un repo propio que corre en el navegador
-   (Pyodide) y `divulgacion` sigue siendo independiente, aunque publica su catálogo.
-5. **Las rutas se conservan.** Hoy hay unas 149 URL publicadas (60 del hub y 89 de los pubs). Cada una tendrá su página o su
-   redirección 301, comprobadas con una prueba automática antes del cambio.
+1. El contenido docente se escribe hoy en tres lugares (`docencia`, los 11 pubs, `web/cursos`) y se publica en 12 sitios. Con A1–A4, la
+   regla pasa a ser **una casa por cada pieza**:
+   - el currículo vive en `docencia`;
+   - la lección, en su pub;
+   - el examen fuente y su clave, en `docencia` (repo privado);
+   - el simulador, en `simuladores`.
+
+   Todo lo demás lee esas fuentes o recibe artefactos generados.
+2. **La estructura de cada curso en su pub se genera desde `curso.yml`**: unidades, temas, sílabo y esqueletos. El autor solo escribe el
+   cuerpo de la lección. Si cambia el currículo, el generador ajusta la estructura sin tocar lo escrito. Así manda el currículo (A3)
+   sin duplicarlo.
+3. **Cada pub se construye en dos capas.** La vitrina pública (catálogo, cursos, lecciones, simuladores, autoevaluaciones) es **estática**:
+   carga rápido, la indexa Google y no necesita servidor. El aula con cuenta (inscripción, tareas, entregas, notas, anuncios)
+   es una **API compartida por los 11 pubs**, con la misma tecnología que Qillqa: FastAPI y PostgreSQL.
+4. **Quarto deja de construir los sitios** y queda como compilador de documentos (PDF, DOCX, lecciones con código, diapositivas
+   reveal.js), junto con LuaLaTeX para los exámenes y los decks Beamer. El sitio se construye con Astro en segundos. Los 47 min actuales se deben
+   sobre todo a que **cada post compila su PDF y su DOCX en cada render**.
+5. **Áreas y pubs casan 11 a 11 con ajustes** (§5): normalizar el vocabulario de `area`, mover 5 cursos de área y darle a `chaska` un área
+   propia. Además se propone un **12.º sitio para preuniversitario y nivelación**, porque su público es otro.
 
 ## 2. Diagnóstico
 
 ### 2.1 La web hoy (`web`, repo `website-achalma`)
 
-| sección | fuentes | qué es | observación |
-|---|---|---|---|
-| Inicio, About, Contact, Appointment | 4 `.qmd` | perfil | presentación estática; la portada no muestra lo que el autor hace |
-| Cursos | 70 `.qmd` y 30 `.md`, 100 MB | 31 fichas, facetas por área | 8 en `draft`; 22 con sílabo generado desde `curso.yml`; solo Metodología (ediciones 2025-1 y 2026-1) y `pre_economia` tienen sesiones |
-| Publications | 2 `.qmd` | lista bibliográfica | — |
-| Datos | 1 `.qmd` y `plataforma.html` | observatorio generado por `datafw/tools/plataforma.py` | autocontenido; funciona y no se toca |
-| Blog | 11 `.qmd`, 6 posts | artículos generales | separado de los 11 pubs |
-| «More» | menú con 11 enlaces | los pubs, cada uno en su dominio | el visitante sale del sitio para leer el 90 % del contenido |
-
-La identidad actual es el design system «Quiet Laboratory» (`assets/scss/`, tokens `$lab-*`, papel cálido `#FBFBF8`, tinta
-`#101820`, azul de revista `#0F5CA8`, verde `#2F7D5D`, rótulos en monoespaciada). Es sobria y coherente, y vale la pena conservarla. Su
-debilidad es la experiencia: tarjetas grises sin imagen ni progreso, ningún elemento interactivo en la portada y una navegación que dispersa
-al lector entre 12 dominios.
-
-### 2.2 Los 11 pubs (`web/_pubs`, 985 MB)
-
-| pub | tema | posts | esqueletos | naturaleza | destino propuesto |
-|---|---|---|---|---|---|
-| epsilon-y-beta | Econometría | 49 | 45 | ~92 % lecciones (01–07 por nivel) | lecciones → cursos de econometría; 2 investigaciones → blog |
-| numerus-scriptum | Programación | 80 | 56 | ~87 % lecciones (python, r, stata, matlab, ofimática…) | lecciones → cursos de herramientas; guías sueltas → blog |
-| aequilibria | Macroeconomía | 13 | 11 | serie 01–11 de macroeconomía I | lecciones → curso; 2 artículos → blog |
-| optimums | Microeconomía | 14 | 7 | micro I y organización industrial (apuntes reales) | lecciones → cursos |
-| pecunia-fluxus | Finanzas | 9 | 7 | finanzas I y finanzas internacionales | lecciones → cursos |
-| axiomata | Matemática | 2 | 0 | apuntes escaneados y un artículo | apuntes → curso; artículo → blog |
-| chaska | Linux y seguridad | 32 | 13 | tutoriales seriados (i3wm, Linux), no cursos dictados | **blog** con series |
-| methodica | Metodología | 7 | 0 | guías y recursos (Quarto, Zotero) | **blog** del área de metodología |
-| dialectica-y-mercado | Filosofía | 9 | 0 | ensayos y opinión | **blog** |
-| actus-mercator | Gestión | 5 | 0 | trabajos y casos (planes de negocio) | **blog** o casos de estudio |
-| res-publica | Gestión pública | 3 | 0 | artículos breves | **blog** |
-
-**Conclusión:** unos 160 de los 223 posts (~70 %) tienen forma de lección, y unos 130 de ellos son esqueletos. Si se descuentan los esqueletos, quedan unos 85 posts con contenido real: unos 30 son apuntes de curso (Python 01–11, R, organización industrial, finanzas
-internacionales, economía matemática) y unos 55 son blog. Todos los posts llevan `curso:` en el frontmatter, con ids que
-`curso.yml` ya resuelve por `alias`. Por eso el mapeo a cursos es mecánico.
-
-Peso: unos 417 MB son `.git` embebidos y unos 168 MB son `_site` versionados. `assets/` pesa 4,1 MB y está repetido 11 veces. Los 37 `_metadata.yml`
-de sección son idénticos. Ningún pub usa reveal.js.
-
-### 2.3 `docencia` (repo `CampusTeX-Research`) y su contenido
-
-`docencia` ya tiene el modelo de datos que la plataforma necesita; solo le falta salida web:
-
-- `curso.yml` es la fuente única del currículo. Contiene `unidades[].temas[]` con `archivo` y `recursos[]`, `bibliografia[].calibre_id`,
-  `datasets[].clave` (datafw), `banco_examenes`, `materia_web` (varios cursos pueden ir a una ficha), `tipo` y `area[]`.
-- Las sesiones tipadas (`clase`, `laboratorio`, `taller`, `evaluacion`) llevan `sesion.yml` y `guion.md`. Cada `dictado.yml` reúne las sesiones de una
-  edición real (institución y ciclo).
-- Contenido: 52 cursos, 303 unidades, 1 952 temas, **18 notas escritas**, 67 sesiones en 10 cursos y unos 850 `.tex` de
-  evaluación (exámenes desde 2012) que la web no publica hoy.
-- Escritores hacia la web: `temario-generar.sh` escribe el bloque del sílabo y `publish-web.sh` crea los hardlinks de PDF por edición.
-- Pendiente propio (`docencia/estado.md`): `temario.py`, `enlazar.py` y `publicar-web.py` todavía deducen `~/Documents` en lugar
-  de usar `core/env.py` (N 5.1).
-
-**Lo sensible se queda fuera.** `docencia/registro` (estudiantes y notas) no se toca ni se publica; la plataforma no lo lee
-nunca (regla 8).
-
-### 2.4 Duplicaciones medidas
-
-| tema | dónde aparece | fuente única propuesta |
+| sección | fuentes | observación |
 |---|---|---|
-| Metodología, APA, monografías | `sistema-apa` (6 sesiones), `monografias/s03`, web 2025-1 (9 sesiones sin fuente en docencia), web 2026-1 (hardlinks), 7 posts de methodica | `docencia`: cursos `monografias` y `sistema-apa`; methodica como su blog |
-| Python | 18 notas en `docencia`, 14 posts en numerus-scriptum, ficha web | `docencia/contenido/cursos/python` |
-| Excel y Power BI | 20 talleres en `docencia`, 20 posts de ofimática, ficha en borrador | `docencia` |
-| Econometría | econometria-i/ii, con-python (13 notebooks), r-y-python, 50 páginas de epsilon-y-beta, ficha | `docencia`; los temas que solo están en el pub (control sintético, bayesiana) se suman a `curso.yml` |
-| Macro y micro | `curso.yml` en `docencia`, series de aequilibria y optimums | `docencia` |
-| Solo en la web | álgebra lineal, cálculo, optimización, SQL y las tres preuniversitarias | se dan de alta en `docencia` o, las preuniversitarias, se enlazan con `11 Book` |
+| Inicio, About, Contact, Appointment | 4 `.qmd` | presentación estática; la portada no muestra lo que el autor hace |
+| Cursos | 70 `.qmd` y 30 `.md`, 100 MB | 31 fichas, 8 en `draft`; 22 con sílabo generado desde `curso.yml`; solo Metodología (2025-1, 2026-1) y `pre_economia` tienen sesiones |
+| Publications, Datos (observatorio de `datafw`), Blog (6 posts) | — | funcionan; el observatorio es un archivo autocontenido generado |
+| «More» | 11 enlaces | los pubs, cada uno en su dominio |
 
-### 2.5 Simuladores (`docencia/simuladores`, 5,5 MB)
+La identidad es el design system «Quiet Laboratory» (`assets/scss/`, tokens `$lab-*`): papel `#FBFBF8`, tinta `#101820`, azul `#0F5CA8`,
+verde `#2F7D5D` y rótulos en monoespaciada. Es sobria y coherente, y se conserva. Su debilidad es la experiencia: tarjetas grises sin
+imagen ni progreso y nada interactivo en la portada.
 
-- Contenido: 115 modelos de macro en 12 niveles (el nivel 12 usa series del BCRP vía datafw, con un snapshot de respaldo) y 23 de estadística,
-  más animaciones Manim.
-- Estructura: cada modelo es un `base.Modelo` con `Ficha` (contexto, derivación, supuestos, fuentes verificadas contra el PDF de Calibre),
-  parámetros, escenarios y verificaciones.
-- **Dependencias: solo `numpy`** en los modelos. matplotlib está únicamente en `graficos.py` y `app.py` (aplicación de escritorio).
-- Consumidores: `docencia` (29 recursos `tipo: simulador` en los `curso.yml`) y `divulgacion` (`lib/simuladores.py` llama a
-  `m.verificaciones` y a las curvas sin copiar ecuaciones).
-- Hoy no se publican en ningún sitio.
+### 2.2 Los 11 pubs (985 MB)
+
+| pub | tema | posts | esqueletos | naturaleza |
+|---|---|---|---|---|
+| epsilon-y-beta | Econometría | 49 | 45 | ~92 % lecciones (01–07 por nivel) y 2 investigaciones |
+| numerus-scriptum | Programación | 80 | 56 | ~87 % lecciones (python, r, stata, matlab, ofimática) y guías sueltas |
+| aequilibria | Macroeconomía | 13 | 11 | serie 01–11 de macroeconomía I y 2 artículos |
+| optimums | Microeconomía | 14 | 7 | micro I y organización industrial (apuntes reales) |
+| pecunia-fluxus | Finanzas | 9 | 7 | finanzas I y finanzas internacionales |
+| axiomata | Matemática | 2 | 0 | apuntes escaneados y 1 artículo |
+| chaska | Linux y seguridad | 32 | 13 | tutoriales seriados (i3wm, Linux) |
+| methodica | Metodología | 7 | 0 | guías (Quarto, Zotero) |
+| dialectica-y-mercado | Filosofía | 9 | 0 | ensayos |
+| actus-mercator | Gestión | 5 | 0 | casos (planes de negocio) |
+| res-publica | Gestión pública | 3 | 0 | artículos breves |
+
+Totales y características comunes:
+
+- **Contenido:** de los 223 posts, unos 160 tienen forma de lección y unos 130 son esqueletos; unos 30 son apuntes reales y unos 55, blog.
+- **Enlace con el currículo:** cada post lleva `curso:` con un id que `curso.yml` resuelve por `alias`.
+- **Peso:** unos 417 MB son `.git` embebidos; `assets/` (4,1 MB) se repite 11 veces.
+- **Formatos y código:** solo 17 posts tienen código, y todos están congelados. Todos los posts declaran salida HTML, PDF (apaquarto, LuaLaTeX) y DOCX.
+- **URL publicadas:** 89 (los borradores no se publican).
+
+### 2.3 `docencia`
+
+Tiene el modelo de datos que la plataforma necesita:
+
+- **`curso.yml`:** unidades, temas con `archivo` y `recursos`, `bibliografia[].calibre_id`, `datasets[].clave`, `banco_examenes`, `tipo`, `area`.
+- **Sesiones y dictados:** sesiones tipadas (`clase`, `laboratorio`, `taller`, `evaluacion`) y `dictado.yml` por cada edición real.
+- **Volumen:** 52 cursos, 303 unidades, 1 952 temas, **18 notas escritas**, 67 sesiones y unos 850 `.tex` de evaluación.
+- **Marcos LaTeX propios:**
+  - `classes/` (`academic-base`, `academic-exam`, `academic-report`, `academic-beamer`);
+  - `themes/academic` (Beamer);
+  - `templates/` (12 tipos de examen, 8 de presentación, 4 de informe);
+  - `scaffolds/sesion/` (`deck.tex` Beamer y `deck.qmd` reveal.js).
+
+Hechos que deciden dónde va cada cosa:
+
+- **Visibilidad.** `docencia` (`CampusTeX-Research`) es **público**. Su contenido (`contenido/`, `Academic_Class`) es **privado** y guarda los exámenes con
+  sus claves. Los 11 pubs son **públicos**. Ninguna clave ni examen inédito puede pasar a un pub.
+- **Lo sensible.** `docencia/registro` (estudiantes y notas) es sensible (regla 8) y no se toca.
+- **Diapositivas.** Las de clase **no dependen de `escritura`**. `docencia` tiene su Beamer y su reveal.js; `escritura` tiene `lamina.cls` y
+  `presentacion.cls` para defensas, ponencias y conferencias, y `docencia` solo toma de ella el esquema del guion. Son dos marcos con funciones
+  distintas. Ambos usan la capa de diseño `sistema-editorial` (§2.7).
+- **Rutas.** `temario.py`, `enlazar.py` y `publicar-web.py` deducen `~/Documents` en lugar de usar `core/env.py` (N 5.1).
+
+### 2.4 Duplicaciones
+
+| tema | dónde aparece hoy | casa única |
+|---|---|---|
+| Metodología, APA, monografías | `sistema-apa`, `monografias/s03`, web 2025-1 y 2026-1, 7 posts de methodica | currículo en `docencia`; lecciones y ediciones en **methodica** |
+| Python | 18 notas en `docencia`, 14 posts, ficha web | currículo en `docencia`; las 18 notas pasan a **numerus-scriptum** y se funden con sus 14 posts tema por tema |
+| Excel y Power BI | 20 talleres en `docencia`, 20 posts, ficha | currículo en `docencia`; lecciones en **numerus-scriptum** |
+| Econometría | `econometria-i/ii`, `-con-python`, `-r-y-python`, 50 páginas de epsilon-y-beta, ficha | currículo en `docencia` (los temas que solo están en el pub entran en `curso.yml`); lecciones en **epsilon-y-beta** |
+| Macro y micro | `curso.yml`, series de aequilibria y optimums | ídem, en **aequilibria** y **optimums** |
+| Solo en la web | álgebra lineal, cálculo, optimización, SQL, Power BI, preuniversitarias | alta en `curso.yml` (o mapeo a `matematicas-i/ii/iii`) antes de migrar |
+
+### 2.5 `simuladores` (hoy `docencia/simuladores`, 5,5 MB)
+
+- **Modelos:** 115 de macro en 12 niveles y 23 de estadística, más animaciones Manim. Cada uno es un `base.Modelo` con su `Ficha`, que lleva las fuentes verificadas contra el PDF de Calibre.
+- **Dependencias:** los modelos usan **solo `numpy`**; matplotlib está únicamente en la aplicación de escritorio. Por eso pueden correr en el navegador con Pyodide sin
+  reescribirse. El nivel 12 lee series del BCRP desde `datafw` (`DATAFW_DIR`) y tiene un snapshot de respaldo.
+- **Consumidores:** `docencia` (29 recursos `tipo: simulador`) y `divulgacion` (`lib/simuladores.py`, que usa `m.verificaciones` y las curvas).
 
 ### 2.6 `divulgacion`
 
-Es una suite de microdivulgación audiovisual (9:16, 16:9, 1:1, 4:5; canal «achalmaedison», 7 series). Funciona así:
+Es un estudio de producción de vídeo corto (9 piezas en borrador, Manim, canal «achalmaedison»), **no un archivo de documentos**:
 
-- Entradas: lee simuladores, paquetes de datafw, Calibre y los `curso.yml` en solo lectura. Cada pieza declara `curriculo: [{curso, tema}]`.
-- Productos: los deja en `$VIDEOS_DIR/divulgacion/`.
-- Estado: 9 piezas en borrador y `publicaciones: []` en todas. El «enlace de vuelta» (el vídeo como recurso del tema) está pendiente en su
-  `docs/decisiones.md`.
+- lee simuladores, `datafw`, Calibre y los `curso.yml`;
+- cada pieza declara `curriculo: [{curso, tema}]`;
+- deja sus productos en `$VIDEOS_DIR/divulgacion/`;
+- todavía no publica nada.
 
-**No es «divulgación de documentos»: es un estudio de producción de vídeo**, con dependencias pesadas (Manim y su entorno
-conda) y un ciclo propio. No conviene meterlo en la plataforma, pero sí cerrar su enlace de vuelta.
+Sigue independiente. Lo que falta es el «enlace de vuelta»: un catálogo que los pubs leen para mostrar el vídeo en la lección de su tema.
 
-### 2.7 Dependencias que no deben romperse
+### 2.7 Los marcos LaTeX y su capa de diseño
 
-| quién | depende de | cómo | qué cuida la propuesta |
-|---|---|---|---|
-| `docencia/scripts/temario.py` | `web/cursos/*/index.qmd`, `web/_pubs` | escribe un bloque entre marcas y lee `curso:` | se sustituye por un **lector** de `curso.yml` en la plataforma; el escritor se retira solo después del cambio de sitio |
-| `docencia/scripts/publicar-web.py` | `web/cursos/<materia>/<edicion>/` | hardlinks de PDF | la plataforma lee `dictado.yml` y `publicacion/` directamente; los hardlinks dejan de hacer falta |
-| simuladores (nivel 12), 3 exámenes de econometría II | `datafw` | `DATAFW_DIR` | sin cambios; el repo nuevo usa la misma variable |
-| `divulgacion/lib/simuladores.py` | `docencia/simuladores` | ruta | variable nueva `SIMULADORES_DIR` en `core/env.sh`, con el alias antiguo durante la migración |
-| `scripts-quarto`, `scripts_document_studio` (`page-counter`) | `web/_pubs` | ruta | siguen funcionando mientras `_pubs` exista; se migran en la fase 6 |
-| `observatorio/` | `datafw/tools/plataforma.py` | archivo autocontenido | se copia tal cual, igual que hoy |
-| `cv` | `web/resources/cv.pdf` | `generar-externos.sh` | sin cambios |
-| `docencia/classes`, `sistema-editorial` | LuaLaTeX y Biber | compilación de PDF | sin cambios (N 5.14) |
-
-### 2.8 El uso real de Quarto
-
-| uso | volumen | ¿necesita Quarto? |
+| proyecto | qué es | ejemplo |
 |---|---|---|
-| Páginas de presentación, listados, catálogo, fichas de curso | unas 100 | no: son plantillas y datos |
-| Posts y lecciones en prosa, con matemáticas y citas | unos 200 | no estrictamente: Markdown, KaTeX y citeproc lo resuelven en el generador |
-| Posts con código R o Python | 17 (congelados) | **sí**: Quarto ejecuta y congela |
-| PDF y DOCX APA de cada post (apaquarto) | todos los posts | **sí**, pero bajo demanda, no en cada render del sitio |
-| Diapositivas reveal.js y Beamer de las sesiones | `scaffolds/sesion/deck.qmd`, `deck.tex` | **sí** (Quarto y LuaLaTeX) |
-| Exámenes, sílabos, rúbricas | unos 850 `.tex` | no: los compila LuaLaTeX con las clases de `docencia` |
+| `sistema-editorial` | **capa de diseño**, no un marco: tipografías, colores y maquetas en YAML que generan `.tex` de configuración | `temas/docencia.yml` → `docencia/config/palette.tex` |
+| `docencia/classes` | marco de **docencia**: exámenes, sílabos, rúbricas, decks Beamer | `academic-exam` |
+| `escritura/classes` | marco de **producción académica**: tesis, artículos, informes, láminas de exposición | `lamina.cls` |
+| `marco_documental` (en `sgdp`) | marco de **documentos oficiales** del despacho | oficios, informes |
 
-## 3. Qué se toma del demo de Qillqa y qué no
+Son tres marcos de clases, uno por dominio, que comparten una misma capa de diseño. La plataforma no los cambia: publica sus PDF.
 
-El sitio de `qillqa/demo/vendor/sitio` (HTML, CSS y JS sin build, unas 1 400 líneas) funciona por cinco principios:
+### 2.8 El uso real de Quarto y el costo del render
 
-1. **Mostrar en vez de describir.** El recorrido es interactivo: el oficio avanza de borrador a archivado, el tablero se arrastra y el dock de módulos rota capturas reales.
-2. **Un solo acento.** Neutros, la tinta como protagonista y el color solo para estados y enlaces.
-3. **Profundidad translúcida.** Superficies de vidrio (`--vidrio`), sombras suaves y «manchas» de color de fondo.
-4. **Movimiento con freno.** El contenido se revela al hacer scroll y los contadores suben, todo dentro de `prefers-reduced-motion`. El avance automático se detiene en cuanto el usuario toca algo.
-5. **Diseñado primero para 375 px**, accesible (saltar al contenido, teclado en el tablero, `aria-live`) y con modo claro y oscuro.
+Tiempos del render completo (registro de la ola 6): pubs 2 800 s y hub entre 320 y 530 s, unos **47 min** en total. Casi no hay código que ejecutar, así que el
+tiempo se va en apaquarto: **un PDF con LuaLaTeX y un DOCX por cada post en cada render**, en 12 proyectos.
 
-**Lo que se adopta:** los cinco principios, el patrón «recorrido interactivo» y la disciplina de tokens.
+## 3. Identidad: qué se toma del demo de Qillqa
 
-**Lo que no se adopta**, para que no se confunda con Qillqa:
+El sitio `qillqa/demo/vendor/sitio` funciona por cinco principios:
 
-- la tipografía de sistema estilo Apple (SF Pro);
-- los grises neutros `#f5f5f7` y `#1d1d1f`;
-- el vocabulario de ventanas y docks de aplicación;
-- el estilo de captura flotante.
+1. **Mostrar en vez de describir:** el oficio avanza de estado, el tablero se arrastra.
+2. **Un solo acento.**
+3. **Superficies translúcidas.**
+4. **Movimiento con freno:** respeta `prefers-reduced-motion` y se detiene en cuanto el usuario toca algo.
+5. **Primero 375 px**, accesible y con modo claro y oscuro.
 
-**Identidad propia: «Laboratorio abierto».** Es una evolución de Quiet Laboratory y no un tema nuevo:
+**Se adoptan los cinco principios. No se adoptan** su tipografía de sistema estilo Apple, sus grises `#f5f5f7` y `#1d1d1f` ni su estética de ventanas y
+docks.
 
-- **Paleta:** papel cálido, tinta azulada, azul de revista y verde de laboratorio, más un acento por área o revista dentro de la misma paleta. Así cada
-  antiguo pub conserva un color y su nombre.
-- **Tipografía:** serif académica para la lectura larga, sans para la interfaz y monoespaciada para rótulos, datos y fórmulas. Es la «voz de laboratorio»
-  que ya tiene el sitio.
-- **Motivo gráfico:** retícula de papel milimetrado, ecuaciones y curvas. Encaja con la identidad de `divulgacion`, «Laboratorio en movimiento», así que la web
-  y el canal se reconocen como familia.
-- **El equivalente al recorrido de Qillqa:** un simulador vivo en la portada (por ejemplo, IS-LM con dos deslizadores) y una «lección en curso»
-  que muestra cómo se ve aprender aquí. Lo interactivo es el contenido, no la decoración.
+Identidad propia: **«Laboratorio abierto»**, una evolución de Quiet Laboratory:
+
+- papel cálido, tinta azulada, azul de revista y verde de laboratorio;
+- **un acento por pub** dentro de la misma paleta;
+- serif académica para leer, sans para la interfaz y monoespaciada para datos y fórmulas;
+- motivo gráfico de retícula milimetrada, ecuaciones y curvas, que emparenta con «Laboratorio en movimiento», la identidad de `divulgacion`.
+
+Cada pub conserva su nombre y su color. Todos comparten el mismo esqueleto, así que se reconocen como una sola institución. El equivalente al recorrido de Qillqa es un
+**simulador vivo** en la portada de cada pub (IS-LM en aequilibria, oferta y demanda en optimums, el TCL en epsilon-y-beta) y una
+«lección en curso» de muestra.
 
 ## 4. Arquitectura objetivo
 
-### 4.1 Separación lógica y física
+### 4.1 Una casa por pieza
 
 ```
-LÓGICA (lo que ve el visitante)              FÍSICA (repos)
-───────────────────────────────              ──────────────────────────────────────────────
-Inicio · Sobre mí · Contacto                 web            plataforma (Astro): plantillas, tema,
-Cursos ─┬─ catálogo y rutas                                 lectores de contenido, redirecciones
-        ├─ curso: temario, lecciones,        docencia       FUENTE del currículo y de las lecciones
-        │  materiales, evaluaciones,           └ contenido  (curso.yml, sesiones, dictados, exámenes)
-        │  simuladores, blog del curso
-        └─ ediciones (dictados con fechas)
-Revistas (antiguos pubs) ─ artículos         _pubs/*        FUENTE de los artículos (se conservan
-                                                            como repos; dejan de ser sitios)
-Laboratorio ─ simuladores                    simuladores    repo propio (sale de docencia), modelo
-                                                            numpy + adaptador web (Pyodide)
-Datos ─ observatorio                         datafw         plataforma.html, como hoy
-Divulgación ─ vídeos por tema                divulgacion    independiente; publica catalogo.json
-Publicaciones                                escritura, cv  sin cambios
+PROYECTO              QUÉ ES SU CASA (fuente única)                    QUÉ PUBLICA O DA A OTROS
+────────────────────  ──────────────────────────────────────────────  ─────────────────────────────────────
+docencia              currículo (curso.yml, rutas.yml), dictados,      la estructura de cada curso (generada
+ (taller del docente)  marcos LaTeX (classes, themes, templates),      en su pub), PDF compilados (decks,
+                       fuentes .tex de evaluaciones y claves           prácticas, exámenes liberados)
+                       (privado), registro (sensible)
+11 pubs (+1)          el TEXTO de lecciones y artículos, páginas de    los sitios: vitrina pública + aula
+ (las aulas)           cada edición, blog del área, acento visual
+aula (repo nuevo)     el CÓDIGO de la plataforma: componentes Astro,   un paquete versionado que los 12 sitios
+ (la plataforma)       esquemas del contenido, generadores, y la API   usan; la API compartida (cuentas,
+                       del aula (FastAPI + PostgreSQL)                 tareas, notas)
+simuladores           modelos numpy, fichas con fuentes, adaptador     simuladores en el navegador; modelos a
+ (repo propio)         web                                             docencia y divulgacion
+divulgacion           piezas de vídeo                                  catalogo.json → vídeo en la lección
+datafw                datos y observatorio                             datasets por curso; observatorio
+web (hub)             perfil, publicaciones, observatorio, catálogo    la puerta de entrada; /cursos/* → 301
+                       general de los 12 sitios (generado)             al pub que corresponda
 ```
 
-**Una fuente por contenido, muchas vistas.** La web no tiene contenido propio: lo lee de las fuentes.
+**Regla.** Un archivo tiene una sola casa. Fuera de ella solo se **lee** o se recibe una **copia generada** marcada `GENERADO …; no editar`
+(N 7.2, 7.7). Si algo aparece escrito a mano en dos casas, es un error que el doctor detecta.
 
-### 4.2 Qué se construye con qué
+### 4.2 Qué queda en `docencia` y qué se va
+
+| se queda en `docencia` | pasa a los pubs | pasa a `simuladores` | desaparece |
+|---|---|---|---|
+| `curso.yml` (currículo), `rutas.yml` nuevo, `dictado.yml` | el texto de las lecciones (18 notas, más lo escrito en los posts) | `simuladores/` con su historia | `web/cursos` (su contenido va a methodica y al 12.º sitio) |
+| marcos LaTeX: `classes/`, `themes/`, `templates/`, `scaffolds/` | las páginas de cada edición (hoy en `web/cursos/<materia>/<edicion>`) | | `temario.py --que web` y `publicar-web.py` hacia `web` (los sustituye el generador hacia los pubs) |
+| fuentes de evaluaciones y claves (`contenido/`, privado); guiones y `deck.tex` | los PDF compilados que el autor libera (decks, prácticas, exámenes ya tomados) | | |
+| `registro/` (sensible) | | | |
+
+`docencia` no desaparece: deja de ser un lugar donde se lee y pasa a ser el **taller del docente**. Allí se diseña el curso,
+se escriben y compilan las evaluaciones y se guarda lo privado. Lo que el estudiante ve vive en los pubs.
+
+### 4.3 Cómo manda el currículo sin duplicarse
+
+1. **Estructura generada.** `aula generar <pub>` lee los `curso.yml` del área del pub y escribe, en el pub, la estructura de cada curso:
+   `cursos/<curso>/index.md` (portada y sílabo), `cursos/<curso>/<NN-unidad>/<NN-tema>/index.qmd` (una lección por tema) y las páginas de
+   cada edición desde `dictado.yml`. El frontmatter va entre marcas (`<!-- curriculo:inicio … fin -->`) y lo reescribe el generador.
+   **El cuerpo es del autor y el generador nunca lo toca.**
+2. **Esqueleto de la lección.** Las secciones vacías y listas para llenar son Objetivos, Desarrollo, Ejemplos, Ejercicios, Autoevaluación y Recursos, con
+   indicaciones de lo que va en cada una.
+3. **Esqueletos actuales (A5).** Los unos 130 posts en borrador se emparejan con su tema por `curso:`, la numeración y el título. Su metadato (fecha,
+   categorías, título) pasa a la lección, y la URL publicada, si existe, queda como redirección. Los temas del pub que no están en `curso.yml`
+   (control sintético, bayesiana, VBA, Power Query…) se proponen como altas en el currículo; no se pierden.
+4. **Verificación.** El doctor comprueba que cada tema tenga exactamente una lección y que ninguna lección quede sin tema.
+
+### 4.4 La vitrina estática y el aula con cuenta
+
+**Qué significa «estático».** El servidor entrega archivos ya construidos (HTML, CSS, JS, PDF) sin calcular nada por cada visita. Es lo que hace hoy
+Netlify con los 12 sitios. Una página estática **puede ser muy interactiva**, porque la interactividad corre en el navegador del visitante:
+
+- simuladores con deslizadores;
+- autoevaluaciones que se corrigen solas;
+- progreso, marcadores y notas guardados en ese navegador;
+- búsqueda instantánea;
+- vídeo y descargas.
+
+Lo que no puede hacer sola es **guardar algo que otra persona deba ver**: la tarea que entrega un alumno, la nota que pone el docente, el anuncio a un grupo.
+Para eso hace falta un servidor con base de datos.
+
+Es la arquitectura de Platzi o de los MOOC: catálogo y lecciones rápidos y públicos, más un área con cuenta.
+
+| capa | tecnología | qué hace |
+|---|---|---|
+| Vitrina (12 sitios) | **Astro**: generador de sitios estáticos. Toma Markdown, `.qmd` ya compilados y YAML, y produce HTML. Las «islas» de React añaden interactividad solo donde hace falta | catálogo, cursos, lecciones, autoevaluaciones, simuladores, descargas, búsqueda (Pagefind) |
+| Aula (una API para los 12) | **FastAPI + PostgreSQL**, como Qillqa (`qillqa/backend`), en Docker | cuentas, inscripción con código, tareas y entregas, calificaciones, anuncios, foros, certificados |
+| Panel del docente | islas React dentro del mismo sitio, con MUI o los componentes propios, como el frontend de Qillqa | crear tareas, calificar con rúbrica, ver el libro de notas |
+
+**Respuesta a «¿usamos la tecnología de Qillqa?».** En el aula, sí: es la misma pila (FastAPI, PostgreSQL, React) que el autor ya opera.
+En la vitrina, no: Qillqa es una aplicación detrás de un login, mientras que un curso público debe cargar al instante, verse en el celular e
+indexarse en Google, y eso lo da un sitio estático.
+
+**Respuesta a «¿Astro es como Quarto?».** Sí, en lo esencial: ambos convierten archivos de texto en un sitio estático. La diferencia es que Quarto está pensado para
+documentos (artículos, libros, informes) y Astro para sitios con componentes (un lector de cursos, un catálogo con filtros, un panel). Por eso
+Quarto se queda para los documentos y Astro construye los sitios.
+
+### 4.5 Funciones: Classroom, Moodle y MOOC
+
+| función | inspirada en | capa |
+|---|---|---|
+| Catálogo por área con filtros (tipo, nivel, estado), rutas de aprendizaje, búsqueda de texto completo | Platzi, MOOC | vitrina |
+| Portada del curso: objetivos, requisitos, duración, nivel, unidades, docente, bibliografía (Calibre y Zotero) | MOOC | vitrina |
+| Lector de lección: índice de la unidad, anterior y siguiente, tiempo de lectura, matemáticas, código, figuras, modo lectura, impresión y PDF | Platzi | vitrina |
+| Vídeo de la lección con capítulos; vídeo de `divulgacion` por tema | Platzi | vitrina |
+| Materiales descargables por lección y por edición (decks, prácticas, datos, cuadernos) | Classroom | vitrina |
+| Autoevaluación con corrección inmediata (opción múltiple, numérica, verdadero o falso, emparejar) | MOOC, H5P | vitrina |
+| Ejercicios con pista y solución desplegable; banco de problemas por tema | Moodle | vitrina |
+| Simulador integrado y «laboratorio» del curso | propio | vitrina |
+| Glosario del curso y fórmulas clave | Moodle | vitrina |
+| Progreso, marcadores y notas personales sin cuenta (en el navegador) | Platzi | vitrina |
+| Ediciones o dictados con calendario de sesiones | Classroom | vitrina |
+| Blog del área y del curso | propio | vitrina |
+| Cuenta, perfil, inscripción a una clase con código o enlace | Classroom | aula |
+| Tablón de anuncios por clase y avisos por correo y push | Classroom | aula |
+| Tareas con fecha, entrega de archivos, devolución con nota y comentarios | Classroom | aula |
+| Rúbricas (las de `docencia/templates/report/rubrica`) | Classroom, Moodle | aula |
+| **Exámenes calificados en el servidor**, con tiempo y preguntas aleatorias de un banco | Moodle | aula |
+| Libro de calificaciones, exportación a Excel, ponderaciones | Classroom, Moodle | aula |
+| Progreso sincronizado entre dispositivos | Platzi | aula |
+| Foro por lección y por clase, con moderación | Moodle, MOOC | aula |
+| Liberación condicional (se abre la unidad 3 al aprobar la 2) | Moodle | aula |
+| Certificado verificable por enlace | Platzi, MOOC | aula |
+| Roles: docente, co-docente, estudiante, invitado | Classroom | aula |
+| Estadísticas del curso para el docente | Moodle | aula |
+
+Dos reglas que se desprenden de esta tabla:
+
+- **Las respuestas de un examen calificado no pueden viajar al navegador.** En una página estática el alumno podría leerlas. Por eso los
+  exámenes con nota se corrigen en la API; las autoevaluaciones de práctica sí se corrigen en el navegador.
+- **El aula guarda datos personales de estudiantes.** Eso exige tres cosas:
+  - entra en `sensibles:` de `workspace.yml` como `registro_docente`;
+  - tiene política de privacidad y consentimiento conforme a la Ley 29733 de protección de datos personales y su reglamento;
+  - tiene respaldo cifrado, y sus datos nunca entran en un repo (regla 8).
+
+### 4.6 Quarto, LuaLaTeX y el render rápido
 
 | producto | herramienta | cuándo corre |
 |---|---|---|
-| Sitio (páginas, catálogo, fichas, lector de lecciones, búsqueda) | **Astro** (estático, colecciones de contenido con esquema) y Pagefind para la búsqueda | en cada publicación, en unos segundos |
-| Lección o artículo en prosa (`.md`/`.qmd` sin código) | el lector Markdown de Astro, con KaTeX y citas (CSL APA, BibTeX de Better BibTeX) | ídem |
-| Lección o artículo con código (17 hoy) | **Quarto** → Markdown con figuras (`format: hugo-md` o `gfm`) y `freeze` | solo si cambió su fuente |
-| PDF y DOCX APA de artículos y apuntes | **Quarto/apaquarto**, perfil `documentos` | bajo demanda o por un trabajo nocturno, con caché por hash de la fuente |
-| Diapositivas de sesión | Quarto reveal.js (`deck.qmd`) o Beamer (`deck.tex`) | al preparar la sesión (`build-session.sh`, como hoy) |
-| Exámenes, solucionarios, sílabos, rúbricas | **LuaLaTeX y Biber** con las clases de `docencia` | al publicar el dictado |
-| Cuadernos de laboratorio | Jupyter ejecutado por Quarto (`freeze`) | solo si cambió |
-| Simuladores | Pyodide (numpy en el navegador) con gráficos en JS | en el navegador del alumno |
+| Los 12 sitios | Astro | en cada publicación; segundos por sitio |
+| Lección o artículo en prosa | Markdown con KaTeX y citas APA (CSL, BibTeX de Better BibTeX), leído por Astro | ídem |
+| Lección o artículo con código (17 hoy) | **Quarto** → Markdown con figuras, con `freeze` | solo si cambió su fuente |
+| PDF y DOCX APA de lecciones y artículos | **Quarto/apaquarto**, perfil `documentos` | bajo demanda o en un trabajo nocturno, con caché por hash de la fuente |
+| Decks de clase | **Beamer** (`academic`) o **reveal.js** (`deck.qmd`), desde `docencia` | al preparar la sesión |
+| Exámenes, prácticas, solucionarios, sílabos, rúbricas | **LuaLaTeX y Biber** con `docencia/classes` | al compilar en `docencia`; al pub solo va el PDF liberado |
+| Láminas de ponencias y defensas | **`escritura`** (`lamina.cls`) | sin cambios |
 
-Efecto esperado: publicar el sitio pasa de unos 47 min a **menos de 2 min**, porque los PDF ya compilados se reutilizan. Escribir
-sigue igual: `.qmd` y `.tex`, con las mismas plantillas APA y LuaLaTeX.
+Efecto esperado: publicar un pub pasa de minutos a segundos, porque los PDF ya compilados se reutilizan. El autor sigue escribiendo en `.qmd` y `.tex`.
 
-**Por qué Astro:**
+### 4.7 El código de la plataforma en un solo lugar
 
-- es estático, así que Netlify sirve archivos, como hoy;
-- sus colecciones validan cada `curso.yml` contra un esquema al construir, de modo que un campo mal escrito rompe la build y no la página;
-- las «islas» permiten interactividad solo donde hace falta (simulador, quiz, progreso) sin convertir el sitio en una SPA;
-- lee Markdown, MDX, YAML y JSON de cualquier carpeta.
+Hoy el tema de los 12 sitios se reparte con hardlinks (decisión del 2026-10-08). Con la plataforma, el código vive en el repo nuevo **`aula`**
+(el nombre lo elige el autor) y cada pub fija una versión del paquete, igual que fija la versión de una librería. Un pub queda reducido a su
+contenido, un `pub.yml` (nombre, acento, área, dominio) y su página de inicio. Los hardlinks se retiran al terminar la migración (hasta
+entonces se respetan).
 
-**Por qué no se descarta Quarto:** es la mejor herramienta para los documentos académicos reproducibles (APA, citas, código congelado,
-PDF) y el autor ya tiene su flujo, sus plantillas y su normativa construidos sobre él.
+### 4.8 `simuladores`
 
-**Alternativa sin cambiar de motor (opción B):** se queda Quarto como sitio, pero con perfil `html` rápido por defecto, PDF bajo demanda y
-pubs fusionados como subcarpetas. Reduce el tiempo de forma parecida, pero el lector de cursos (progreso, quiz, navegación por unidad)
-habría que escribirlo en JS dentro de las plantillas de Quarto, a contracorriente de su modelo de «sitio de documentos».
+| aspecto | diseño |
+|---|---|
+| Repo | `simuladores` propio (L3). Sale de `docencia/simuladores` conservando su historia (N 3.13) |
+| Depende de | `datafw` (`DATAFW_DIR`), Calibre (`core/py-common/biblioteca.py`) y el currículo: cada modelo declara `curriculo: [{curso, tema}]`, igual que una pieza de `divulgacion` |
+| Da a | `docencia` (`recursos: {tipo: simulador, id}`), `divulgacion` (`SIMULADORES_DIR` en `core/env.sh`, con alias temporal a la ruta vieja), los pubs (`catalogo.json` y el paquete web) |
+| Web | adaptador que corre el mismo `base.Modelo` en Pyodide (numpy en el navegador) con gráficos en JS; vista ligera con escenarios precalculados en JSON para el celular |
+| Escritorio | `python3 main.py` sigue igual |
+| No se rompe | `Modelo.curvas/parametros/escenarios/verificaciones/ecuaciones_calibradas/ficha`, que `divulgacion` usa directamente |
 
-### 4.3 El curso como plataforma
+## 5. Áreas del currículo y pubs
 
-Funciones tomadas de Platzi, los MOOC, CAF y Classroom, ordenadas por lo que puede dar un sitio estático (fase A) y lo que exige cuentas
-(fase B):
+El campo `area` de los 52 `curso.yml` tiene hoy 20 valores. Mezcla áreas (`macroeconomia`, `finanzas`) con nombres de herramientas (`python`, `stata`,
+`eviews`) y tiene grafías dobles (`math` y `matematicas`). Propuesta: un **vocabulario cerrado de 12 áreas**, una por sitio. El área decide el pub
+de cada curso; un curso vive en un pub y puede listarse en otros.
 
-| función | fase | de dónde sale |
+| sitio | área normalizada | cursos | cambio respecto de hoy |
+|---|---|---|---|
+| aequilibria | Macroeconomía | macroeconomia-i, -ii, -dinamica, crecimiento-economico, economia-monetaria, comercio-internacional, economia-computacional | ninguno |
+| optimums | Microeconomía | microeconomia-i, -ii, organizacion-industrial, economia-del-desarrollo, economia-recursos-naturales-ambientales | sale microeconometria-aplicada |
+| epsilon-y-beta | Estadística y econometría | estadistica, estadistica-para-economistas, econometria-i, -ii, **microeconometria-aplicada**, **econometria-con-python**, **econometria-r-y-python**, **indicadores-de-pobreza-enaho** | se renombra el área; entran 4 cursos (hoy en micro, python y stata) |
+| axiomata | Matemáticas | matematicas-i, -ii, -iii, investigacion-operativa | `math` → `matematicas`; álgebra lineal, cálculo y optimización de la web se mapean a estos o se dan de alta |
+| pecunia-fluxus | Finanzas | finanzas-i, -ii, -iii | ninguno |
+| actus-mercator | Gestión empresarial y proyectos | formulacion-de-proyectos, evaluacion-privada-de-proyectos, investigacion-de-mercados | sale evaluación social |
+| res-publica | Gestión y economía pública | economia-publica, **evaluacion-social-de-proyectos** | entra evaluación social (inversión pública) |
+| dialectica-y-mercado | Filosofía, historia y economía política | economia-politica, filosofia-politica, historia-economica | `filosofia` y `economia` se unen |
+| methodica | Metodología de la investigación | ensayo, monografias, seminario-de-investigacion, sistema-apa, más las ediciones de Metodología de `web/cursos` | ninguno |
+| numerus-scriptum | Programación y software | python, r, stata, eviews, spss, gretl, excel, latex, git, geogebra, conceptos-de-programacion; Power BI y SQL (alta) | 9 valores de herramienta se unen en uno |
+| chaska | **Sistemas y seguridad** | **bash** (sale de herramientas), más Linux y ciberseguridad (altas desde sus series) | **área nueva**: hoy chaska no tiene ningún curso en el currículo |
+| **12.º sitio** (nombre por decidir; p. ej. *Propaedeutica*) | Preuniversitario y nivelación | curso-0, pre_algebra, pre_aritmetica, pre_economia, más los libros de `11 Book` | **sitio nuevo**: otro público (escolares y postulantes) con otro lenguaje; mezclarlo con cursos universitarios confunde a los dos |
+
+Así, 10 de los 11 pubs ya casan con un área del currículo, `chaska` gana la suya y preuniversitario recibe un sitio. Las categorías actuales
+del hub (Ciencia de Datos, Economía, Gestión, Investigación, Preuniversitario) desaparecen con `web/cursos`. Esta normalización resuelve
+también la decisión D4 pendiente del diagnóstico de simuladores (vocabulario de áreas).
+
+## 6. Plan de implementación
+
+Cada fase deja todo funcionando. Los sitios en producción no cambian hasta la fase 7, y cada paso estructural sigue N 3.13 (auditoría,
+propuesta, aprobación, `core/renombrar.py` con etiqueta, simulación, respaldo y `UNDO.sh`).
+
+| fase | qué | prueba de salida | ¿producción? |
+|---|---|---|---|
+| **1. Currículo** | vocabulario de 12 áreas; mover los 5 cursos; altas que faltan (Linux, ciberseguridad, Power BI, SQL, temas que solo están en los pubs); esquema de `curso.yml` ampliado (nivel, duración, requisitos, `pub`), `rutas.yml`; scripts de `docencia` a `core/env.py` | cada curso con un área válida y un pub; validador sin empeorar | no |
+| **2. Render rápido** (independiente) | en los 12 sitios Quarto actuales, perfil `html` por defecto y PDF/DOCX en el perfil `documentos` con caché | de unos 47 min a pocos minutos; PDF idénticos byte a byte (`SOURCE_DATE_EPOCH`) | sí, sin cambiar contenido |
+| **3. `simuladores`** (independiente) | repo propio con su historia; `SIMULADORES_DIR`; adaptador web con IS-LM y TCL | `main.py verificar` igual; `divulgacion` renderiza una pieza; el simulador corre a 375 px | no |
+| **4. `aula` (vitrina)** | repo nuevo; paquete Astro con la identidad «Laboratorio abierto»; generador `curso.yml` → pub; piloto **methodica** (tiene ediciones reales) | build en segundos; Lighthouse ≥ 90 a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
+| **5. Contenido** | por pub: generar la estructura, emparejar los esqueletos con sus temas, llevar las 18 notas y las ediciones de `web/cursos`; los artículos quedan como blog del área | cada tema con exactamente una lección; ningún contenido sin casa; redirección para cada URL vieja | no |
+| **6. `aula` (API)** | FastAPI + PostgreSQL: cuentas, clases, tareas, entregas, notas, anuncios, exámenes calificados; política de privacidad; respaldo cifrado | pruebas de la API; un dictado real de prueba con cuentas ficticias | no |
+| **7. Cambio** | los 11 pubs (más el 12.º) publican la plataforma uno por uno, empezando por methodica; `web/cursos` → 301; se retiran los hardlinks | prueba de las unas 149 URL (200 o 301 a un destino 200); `comparar-produccion.py`; vuelta atrás probada | **sí** |
+| **8. Integraciones** | `divulgacion` publica su `catalogo.json`; los vídeos aparecen por tema | el vídeo aparece en la lección de su tema | sí |
+
+Las fases 2 y 3 no dependen de las demás. La 2 alivia hoy mismo el problema de los 47 min.
+
+## 7. Decisiones abiertas
+
+| id | pregunta | recomendación |
 |---|---|---|
-| Catálogo con filtros (área, tipo, nivel, estado) y búsqueda de texto completo | A | `curso.yml` y Pagefind |
-| Rutas de aprendizaje (p. ej., «Economista empírico»: estadística → econometría I y II → microeconometría con Python, R o Stata) | A | `rutas.yml` nuevo en `docencia` |
-| Portada del curso: objetivos, requisitos, duración, nivel, unidades, bibliografía | A | `curso.yml` y Calibre/Zotero por clave |
-| Lector de lección: índice lateral de la unidad, anterior y siguiente, tiempo de lectura, matemáticas, código, figuras | A | `temas[].archivo` |
-| Materiales descargables por lección (PDF, diapositivas, datos, cuadernos) | A | `recursos[]` y `publicacion/` del dictado |
-| Autoevaluación con corrección inmediata (opción múltiple, numérica, verdadero o falso) | A | bloque `quiz:` nuevo en la lección o en `sesion.yml` |
-| Ejercicios con solución desplegable y banco de exámenes con solucionario | A | `04-evaluaciones`: los PDF ya compilados; la clave solo si el autor la publica |
-| Simulador integrado en la lección | A | `recursos: {tipo: simulador, id}` |
-| Vídeo de divulgación vinculado al tema | A | `catalogo.json` de `divulgacion` |
-| Progreso, marcadores y notas personales | A | almacenamiento local del navegador, sin cuenta y sin datos en el servidor |
-| Comentarios por lección | A | giscus (las discusiones de GitHub sustituyen a Utterances) |
-| Ediciones o dictados con calendario de sesiones | A | `dictado.yml` |
-| Blog del curso | A | artículos de las revistas con `curso:` |
-| Inscripción, entregas, calificaciones, avisos a un grupo | B | **Google Classroom** del dictado (o un LMS libre): los datos de estudiantes no entran nunca en los repos (regla 8) |
-| Certificados | B | solo con cuentas; fuera del alcance inicial |
+| B1 | ¿Dónde vive la API del aula? Necesita estar en línea siempre; la laptop no sirve | un **VPS pequeño** con Docker (la misma receta de despliegue de Qillqa); alternativa sin servidor propio: Supabase (Postgres y autenticación gestionados), con más dependencia de un tercero |
+| B2 | ¿Dominio propio? Los 12 `*.netlify.app` son dominios distintos: una sesión iniciada en aequilibria no vale en optimums | un dominio propio con subdominios (`aequilibria.<dominio>`…) permite una sola sesión para los 12; sin él, se inicia sesión en cada sitio con la misma cuenta |
+| B3 | ¿12.º sitio para preuniversitario y nivelación? | sí (§5); el autor elige el nombre |
+| B4 | ¿Nombre del repo de la plataforma? | el autor elige; que no sea de la familia Qillqa (Qillqa, Tiqsi, Unancha) para no confundirlas |
+| B5 | ¿`_site` versionado (decisión del 2026-09-22)? | con Astro, Netlify construye el sitio y solo se versionan los PDF compilados |
+| B6 | ¿Licencia única de los 12 sitios? (D9 del diagnóstico de documentación) | cerrarla antes de la fase 7 |
 
-### 4.4 Categorías
+## 8. Límite honesto
 
-Las áreas salen de `curso.yml` y no se inventan:
-
-- **Economía:** micro, macro, desarrollo, pública, monetaria, internacional.
-- **Métodos cuantitativos:** matemáticas, estadística, econometría.
-- **Finanzas.**
-- **Gestión y proyectos.**
-- **Metodología de la investigación.**
-- **Herramientas:** programación y software.
-- **Filosofía y economía política.**
-- **Preuniversitario:** enlaza `11 Book`.
-
-Facetas transversales: `tipo` (asignatura, herramienta, taller, nivelación) y `estado`. Un curso en `borrador` no aparece en el catálogo, aunque sí en
-el temario interno.
-
-### 4.5 Rutas que se conservan
-
-- Las fichas `/cursos/<materia>/` y las ediciones `/cursos/<materia>/<edicion>/session_NN_slug/` mantienen su URL.
-- Los alias `/talk/…` y `/teching/…` se conservan como redirecciones.
-- Cada URL de los 11 pubs obtiene una 301 a su nueva casa. Los dominios `*.netlify.app` de cada pub siguen vivos con un `_redirects` mínimo, sin perder enlaces externos ni el posicionamiento.
-- Prueba de salida: un script toma los `sitemap.xml` de hoy (unas 149 URL) y exige 200 o 301 a un destino 200 para cada una.
-
-## 5. Plan de implementación progresivo
-
-Cada fase deja todo funcionando. Producción no cambia hasta la fase 7, y cada paso estructural sigue N 3.13 (auditoría →
-propuesta → aprobación → `core/renombrar.py` con etiqueta, simulación, respaldo y `UNDO.sh`).
-
-| fase | qué | prueba de salida | ¿toca producción? |
-|---|---|---|---|
-| **0** | Decisiones D1–D9 (§6) | acta en este documento | no |
-| **1** | Contrato: esquema de `curso.yml` ampliado (nivel, duración, requisitos, `quiz`, rutas) y de `catalogo.json`; corregir `temario.py`, `enlazar.py` y `publicar-web.py` para que usen `core/env.py` | `core/suites.py` y el validador sin empeorar; esquema publicado en `core/` | no |
-| **2** | Ganancia rápida en Quarto: perfil `html` por defecto y PDF/DOCX en un perfil `documentos` con caché | el render de la familia baja de unos 47 min; los PDF no cambian byte a byte (`SOURCE_DATE_EPOCH`) | sí, pero sin cambiar el contenido |
-| **3** | Prototipo de la plataforma en Astro en la rama `wip/` de `web`, con identidad «Laboratorio abierto» y 3 pilotos: **Metodología** (con ediciones), **Python** (con código y PDF) y la revista **methodica** | construcción en menos de 2 min; Lighthouse ≥ 90 en accesibilidad y rendimiento a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
-| **4** | `simuladores` como repo propio (sale de `docencia` con su historia) más un adaptador web con 2 modelos (IS-LM y TCL) | `main.py verificar` igual que antes; `divulgacion` renderiza una pieza con `SIMULADORES_DIR`; el simulador corre a 375 px | no |
-| **5** | Migración de contenidos: unos 30 apuntes reales de los pubs → `docencia/contenido`; los unos 130 esqueletos se retiran porque los temas ya están en `curso.yml`; los unos 55 artículos se quedan en su revista | ningún contenido sin destino; cada lección con exactamente una fuente | no |
-| **6** | Todos los cursos y revistas en la plataforma; `scripts-quarto` y `page-counter` apuntan a las fuentes nuevas | paridad de las unas 149 URL; los consumidores de `_pubs` en verde | no |
-| **7** | Cambio de sitio: Netlify publica la plataforma; los 11 dominios de los pubs pasan a redirecciones; el `_site` anterior queda etiquetado para volver atrás | `comparar-produccion.py` y la prueba de rutas en producción; plan de vuelta probado | **sí** |
-| **8** | Divulgación: `catalogo.json` y enlace de vuelta; fase B (Classroom) si el autor la quiere | el vídeo aparece en la lección de su tema | sí |
-
-Las fases 2 y 4 no dependen de la 3 y pueden avanzar en paralelo.
-
-## 6. Decisiones del autor
-
-| id | pregunta | recomendación | por qué |
-|---|---|---|---|
-| D1 | ¿Motor del sitio? | **Astro como plataforma y Quarto/LuaLaTeX como compiladores** (opción A); la B (todo Quarto, optimizado) queda como alternativa | el lector de cursos y la interactividad son naturales en A; los documentos siguen en Quarto |
-| D2 | ¿Los 11 pubs? | **Se conservan como repos y nombres, pero se publican dentro del sitio único como «revistas»**, con redirecciones desde sus dominios | lectores en un solo sitio, un tema en vez de 12 y 12 builds menos; cada revista conserva identidad y color |
-| D3 | ¿Dónde viven las lecciones? | **`docencia/contenido`**, junto al `curso.yml` | ya es la fuente del currículo; separar lección y temario repetiría la dispersión |
-| D4 | ¿Simuladores? | **Repo propio `simuladores`** (L3), con adaptador web Pyodide; el escritorio sigue igual | dos consumidores (`docencia`, `divulgacion`) más la web; ciclo propio; solo numpy |
-| D5 | ¿Funciones con cuenta (entregas, notas)? | **Fase B, mediante Google Classroom** por dictado; nada de backend propio por ahora | los datos de estudiantes no entran en los repos (regla 8); un sitio estático no los custodia |
-| D6 | ¿`_site` versionado (decisión del 2026-09-22)? | Con Astro, **Netlify construye el sitio** y solo los PDF compilados se versionan (o van como artefactos) | el sitio se reconstruye en segundos; lo caro de rehacer son los PDF |
-| D7 | ¿`divulgacion`? | **Independiente**; publica `catalogo.json` y la plataforma lo lee | ciclo y dependencias de producción de vídeo; no es contenido web |
-| D8 | ¿Tema por hardlinks (decisión del 2026-10-08)? | Se retira al llegar la fase 7: con un solo sitio no hay nada que propagar | hasta entonces se respeta tal cual |
-| D9 | ¿Nombre de la plataforma? | El autor lo elige; propuesta: mantener «Edison Achalma» como marca y, si quiere un nombre, uno propio que no sea de la familia Qillqa (ni Qillqa, ni Tiqsi, ni Unancha) | evitar la confusión con Qillqa que el encargo pide evitar |
-
-La licencia única (D9 del diagnóstico de documentación) sigue abierta y conviene cerrarla antes de la fase 7.
-
-## 7. Límite honesto
-
-- Las cifras de tiempo de la plataforma (menos de 2 min) son una estimación para unas 500 páginas en Astro; se miden en la fase 3 antes de
-  comprometerlas.
-- El progreso sin cuenta vive en el navegador del alumno: no pasa de un dispositivo a otro.
-- Los simuladores en Pyodide cargan unos 10 MB la primera vez; la fase 4 mide si es aceptable en móvil o si conviene precalcular escenarios en
-  JSON para la vista ligera.
-- Las 850 evaluaciones existen sobre todo como `.tex` sin transformar al estándar; publicarlas es trabajo de contenido, no de plataforma, y
-  el autor decide cuáles salen con clave.
-- Este diagnóstico no abrió `docencia/registro` (sensible).
+- Los tiempos de build con Astro son una estimación hasta medirlos en el piloto (fase 4).
+- La API del aula es software con usuarios reales: requiere servidor, mantenimiento, copias y cuidado legal. Es la fase más costosa y
+  la única con un costo mensual.
+- Pyodide pesa unos 10 MB en la primera carga; la vista ligera precalculada cubre los celulares lentos.
+- Las 850 evaluaciones existen sobre todo como `.tex` sin transformar al estándar. Publicarlas es trabajo de contenido, y el autor decide cuáles
+  salen y si salen con clave.
+- Este diagnóstico no abrió `docencia/registro` ni el contenido de ningún examen.

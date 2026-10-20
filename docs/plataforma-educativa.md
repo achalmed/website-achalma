@@ -23,6 +23,8 @@ creado: 2026-10-20
 | A6 | **`simuladores` será un proyecto independiente**, igual que `divulgacion`. Depende del currículo y de `datafw` y da soporte a `docencia`, `divulgacion` y los pubs. |
 | A7 | **El render de 47 min es un problema** y se resuelve. |
 | A8 | **Las duplicaciones se eliminan.** Es el objetivo central del proyecto. |
+| A9 | **Lo que necesita servidor corre en esta laptop**, como Qillqa: Docker y Tailscale Funnel (enlace fijo y gratuito, `qillqa/enlace.sh`). Cierra B1. |
+| A10 | **Los `.tex` de los exámenes se conservan en `docencia`**; los pubs muestran solo sus PDF. |
 
 ## 1. Resumen
 
@@ -361,7 +363,7 @@ propuesta, aprobación, `core/renombrar.py` con etiqueta, simulación, respaldo 
 
 | fase | qué | prueba de salida | ¿producción? |
 |---|---|---|---|
-| **1. Currículo** | vocabulario de 12 áreas; mover los 5 cursos; altas que faltan (Linux, ciberseguridad, Power BI, SQL, temas que solo están en los pubs); esquema de `curso.yml` ampliado (nivel, duración, requisitos, `pub`), `rutas.yml`; scripts de `docencia` a `core/env.py` | cada curso con un área válida y un pub; validador sin empeorar | no |
+| **1. Currículo** (en curso; 2026-10-20: vocabulario de 12 áreas en `docencia/config/areas.yml`, 29 cursos normalizados, `validate.sh` lo exige, altas de MATLAB y Linux, título de Matemáticas I) | vocabulario de 12 áreas; mover los 5 cursos; altas que faltan (Linux, ciberseguridad, Power BI, SQL, temas que solo están en los pubs); esquema de `curso.yml` ampliado (nivel, duración, requisitos, `pub`), `rutas.yml`; scripts de `docencia` a `core/env.py` | cada curso con un área válida y un pub; validador sin empeorar | no |
 | **2. Render rápido** (independiente) | en los 12 sitios Quarto actuales, perfil `html` por defecto y PDF/DOCX en el perfil `documentos` con caché | de unos 47 min a pocos minutos; PDF idénticos byte a byte (`SOURCE_DATE_EPOCH`) | sí, sin cambiar contenido |
 | **3. `simuladores`** (independiente) | repo propio con su historia; `SIMULADORES_DIR`; adaptador web con IS-LM y TCL | `main.py verificar` igual; `divulgacion` renderiza una pieza; el simulador corre a 375 px | no |
 | **4. `aula` (vitrina)** | repo nuevo; paquete Astro con la identidad «Laboratorio abierto»; generador `curso.yml` → pub; piloto **methodica** (tiene ediciones reales) | build en segundos; Lighthouse ≥ 90 a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
@@ -376,7 +378,7 @@ Las fases 2 y 3 no dependen de las demás. La 2 alivia hoy mismo el problema de 
 
 | id | pregunta | recomendación |
 |---|---|---|
-| B1 | ¿Dónde vive la API del aula? Necesita estar en línea siempre; la laptop no sirve | un **VPS pequeño** con Docker (la misma receta de despliegue de Qillqa); alternativa sin servidor propio: Supabase (Postgres y autenticación gestionados), con más dependencia de un tercero |
+| ~~B1~~ | ¿Dónde vive la API del aula? | **decidido (A9)**: en la laptop, con Docker y Tailscale Funnel; con la laptop apagada el aula no responde (la vitrina sigue en Netlify) y el enlace no cambia. Si algún día hace falta disponibilidad continua, la misma receta Docker sube a un VPS sin cambios |
 | B2 | ¿Dominio propio? Los 12 `*.netlify.app` son dominios distintos: una sesión iniciada en aequilibria no vale en optimums | un dominio propio con subdominios (`aequilibria.<dominio>`…) permite una sola sesión para los 12; sin él, se inicia sesión en cada sitio con la misma cuenta |
 | B3 | ¿12.º sitio para preuniversitario y nivelación? | sí (§5); el autor elige el nombre |
 | B4 | ¿Nombre del repo de la plataforma? | el autor elige; que no sea de la familia Qillqa (Qillqa, Tiqsi, Unancha) para no confundirlas |
@@ -389,6 +391,9 @@ Las fases 2 y 3 no dependen de las demás. La 2 alivia hoy mismo el problema de 
 - La API del aula es software con usuarios reales: requiere servidor, mantenimiento, copias y cuidado legal. Es la fase más costosa y
   la única con un costo mensual.
 - Pyodide pesa unos 10 MB en la primera carga; la vista ligera precalculada cubre los celulares lentos.
-- Las 850 evaluaciones existen sobre todo como `.tex` sin transformar al estándar. Publicarlas es trabajo de contenido, y el autor decide cuáles
-  salen y si salen con clave.
+- Los exámenes, según `docencia/contenido/migracion/estado-examenes.csv` (945 expedientes): **222 transformados**, es decir, el
+  original (PDF escaneado, Word o foto) ya está reescrito como `.tex` de la clase `academic-exam`, del que salen enunciado, clave y
+  solucionario; **698 pendientes**, con solo la ficha `.md` de procedencia y el original, todavía sin `.tex`; y **25 manuales**
+  (manuscritos o ilegibles). Nada se borra: los `.tex` y los originales se quedan en `docencia` (privado) y el pub muestra el PDF que el
+  autor libere. Transformar los pendientes es trabajo de contenido, no de plataforma.
 - Este diagnóstico no abrió `docencia/registro` ni el contenido de ningún examen.

@@ -21,11 +21,12 @@ set -euo pipefail
 
 HUB="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MARCA="# pre-push — GENERADO por \`web/scripts/puerta-r6.sh --instalar\`; no editar aquí"
-# Fuentes del sitio (pathspecs de git, relativos a la raíz del sitio); _site/ y _freeze/ nunca lo son.
+# Fuentes del sitio (pathspecs de git, relativos a la raíz del sitio); _site/ y _freeze/ nunca lo son, ni
+# _vitrina/ (salida de web/_aula) ni _ediciones/ (fuente de la vitrina, que Quarto ignora): fase 7, 2026-10-20.
 FUENTES=(':(glob)**/*.qmd' ':(glob)**/_quarto.yml' ':(glob)**/_metadata.yml'
          '_extensions/' '_filters/' '_partials/' 'assets/scss/' 'assets/js/' 'assets/css/'
          '_brand.yml'
-         ':(exclude)_site/' ':(exclude)_freeze/' ':(exclude,glob)**/README.md')   # la guía de una carpeta del tema no se publica
+         ':(exclude)_site/' ':(exclude)_freeze/' ':(exclude)_vitrina/' ':(exclude)_ediciones/' ':(exclude,glob)**/README.md')   # la guía de una carpeta del tema no se publica
 # THEME_VERSION no es fuente: es el sello (sha256) del conjunto del tema, que cambia también con scripts/ (tooling, no
 # contenido); las fuentes reales del tema ya están arriba y, si cambian, ellas mismas exigen el render (2026-10-10).
 

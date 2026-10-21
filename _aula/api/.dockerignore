@@ -1,0 +1,6 @@
+# api/.dockerignore — la imagen solo lleva el paquete y las dependencias.
+.venv
+tests
+docs
+__pycache__
+*.sh

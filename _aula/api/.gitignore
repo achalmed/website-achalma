@@ -1,0 +1,6 @@
+# api/.gitignore — entorno virtual y cachés de la API del aula; los datos y la configuración viven fuera del repo.
+.venv/
+.pytest_cache/
+__pycache__/
+.env
+*.env

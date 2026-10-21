@@ -1,0 +1,45 @@
+# api/docker-compose.yml — PostgreSQL 16 del aula y, con el perfil «api», la API en contenedor (iniciar.sh --docker).
+# Puertos solo en loopback y distintos de los de Qillqa (5432, 8000): base 5442, API 8040. La clave de la base y el
+# secreto JWT no viven en el repo: iniciar.sh los guarda en $XDG_CONFIG_HOME/aula/aula.env y los pasa con --env-file.
+# Memoria acotada (la laptop comparte RAM con otras sesiones). Sin `restart`: el aula corre solo cuando el autor
+# la levanta; los datos de la base quedan en el volumen «aula-db», fuera de todo repo.
+name: aula
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: aula
+      POSTGRES_USER: aula
+      POSTGRES_PASSWORD: ${AULA_POSTGRES_CLAVE:?Definir AULA_POSTGRES_CLAVE (la crea iniciar.sh; ver README)}
+    command: ["postgres", "-c", "shared_buffers=48MB", "-c", "max_connections=30", "-c", "work_mem=2MB"]
+    volumes:
+      - aula-db:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${AULA_PUERTO_DB:-5442}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U aula -d aula"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    mem_limit: 256m
+
+  api:
+    profiles: ["api"]
+    build: .
+    environment:
+      AULA_DATABASE_URL: postgresql+asyncpg://aula:${AULA_POSTGRES_CLAVE}@db:5432/aula
+      AULA_JWT_SECRETO: ${AULA_JWT_SECRETO:?Definir AULA_JWT_SECRETO}
+      AULA_DATOS_DIR: /datos
+      AULA_ORIGENES_EXTRA: ${AULA_ORIGENES_EXTRA:-}
+    volumes:
+      - "${AULA_DATOS_DIR:?Definir AULA_DATOS_DIR (fuera de todo repo)}:/datos"
+    ports:
+      - "127.0.0.1:${AULA_PUERTO_API:-8040}:8040"
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 256m
+
+volumes:
+  aula-db:

@@ -1,0 +1,5 @@
+# api/requirements-dev.txt — lo que solo usan las pruebas (pytest con el plugin de anyio y httpx contra la app ASGI).
+-r requirements.txt
+pytest==9.1.1
+httpx==0.28.1
+anyio==4.15.1

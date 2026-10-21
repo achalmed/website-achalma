@@ -31,7 +31,7 @@ const { ed } = Astro.props;
     <h2>Sesiones</h2>
     <ol class="sesiones">
       {ed.sesiones.map((s) => (
-        <li class="sesion">
+        <li class="sesion" id={s.ancla}>
           <span class="s-n dato" aria-hidden="true">{String(s.orden).padStart(2, '0')}</span>
           <div class="s-cuerpo">
             <h3><span class="sr">Sesión {s.orden}: </span>{s.titulo}</h3>

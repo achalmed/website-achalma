@@ -279,7 +279,10 @@ function construir(pubId) {
     const propios = (d.cursos ?? []).filter((id) => cursoPorId.get(id)?.vive);
     const heredada = !(d.cursos ?? []).length && d.web?.materia && materiaDePub.get(d.web.materia) === pubId;
     if (!propios.length && !heredada) continue;
-    const dirWeb = d.web ? join(RUTAS.cursosWeb, d.web.materia, d.web.edicion) : null;
+    // Fuente de las páginas y materiales de la edición: su pub (_pubs/<pub>/_ediciones/<dictado>/, fase 7);
+    // web/cursos/<materia>/<edicion>/ solo mientras exista (se retira con las redirecciones del hub).
+    const dirPub = join(INDEX_DIR, '_pubs', pubId, '_ediciones', d.id);
+    const dirWeb = existsSync(dirPub) ? dirPub : d.web ? join(RUTAS.cursosWeb, d.web.materia, d.web.edicion) : null;
     const fmEd = dirWeb && existsSync(join(dirWeb, 'index.qmd')) ? F.frontmatter(join(dirWeb, 'index.qmd')) : {};
     const url = `/ediciones/${d.id}/`;
     const sesiones = (d.sesiones ?? []).map((s) => {
@@ -306,6 +309,7 @@ function construir(pubId) {
       }
       return {
         orden: s.orden,
+        ancla: s.web ?? `sesion-${s.orden}`,   // las redirecciones del hub (/cursos/…/<sesion>/) llegan a #<sesion>
         titulo: s.titulo ?? fmS?.title ?? s.web,
         fecha: fmS?.date ? String(fmS.date).slice(0, 10) : null,
         curso: s.curso ? { id: s.curso, titulo: cursoPorId.get(s.curso)?.titulo ?? s.curso } : null,

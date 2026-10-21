@@ -186,6 +186,9 @@ Por qué así, comprobado en una copia de methodica antes de tocar los sitios:
   versión de Quarto, la fecha `SOURCE_DATE_EPOCH` de la página y la de modificación de su fuente (el DOCX
   lleva `date-modified`). Lo que entra por otra vía (una imagen de fuera de la carpeta) no está: para eso,
   `--forzar --solo <ruta>`.
+  Las copias numeradas `index.quarto_ipynb_N` que Quarto deja cuando no puede pisar el intermedio anterior
+  tampoco entran (corregido el 2026-10-20: con ellas la clave cambiaba en cada compilación y la página nunca
+  quedaba al día).
 - **La fecha de cada documento es la de su página**, no la del sitio: el último commit de la carpeta del
   post. Con la fecha del sitio, cualquier commit en otro post cambiaba la fecha interna de todos los PDF y
   una recompilación de un post intacto no salía igual. Comprobado: recompilar con `--forzar` un post sin
@@ -218,7 +221,7 @@ tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo un
 | figuras de numerus | confirmadas con el render de la ola 6 (2026-10-08); se publican con el próximo push | 2026-10-04 | autor · resuelto en local |
 | `_freeze/` de numerus | `numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
-| **render rápido** | fase 2 (§4.5) en los 12 sitios: confirmar en los 10 blogs distintos de methodica `THEME_VERSION`, `scripts/documentos.py`, `render.sh` y `fechas-desde-git.py` (propagados el 2026-10-20 sin commit) y mover sus punteros en el hub; después, en cada sitio, `scripts/render.sh` y `scripts/render.sh --documentos --aplicar` (o `--registrar --aplicar`) y confirmar `_site/` y `_documentos.tsv` | 2026-10-20 | autor o director |
+| ~~render rápido~~ | **hecho el 2026-10-20**: scripts confirmados en los 11 blogs, `_documentos.tsv` registrado en los 12 sitios y los PDF/DOCX que faltaban en aequilibria, axiomata, numerus-scriptum y optimums compilados; `--verificar` sale 0 en todos | 2026-10-20 | director |
 | **plataforma** | los 11 pubs como aulas (Classroom + MOOC propios), currículo desde `docencia`, `web/cursos` se retira, `simuladores` repo propio, Quarto solo como compilador: `docs/plataforma-educativa.md` (decisiones A1–A8 del autor tomadas; §6 plan) | 2026-10-20 | autor · decidir B1–B6 (§7) |
 | **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |

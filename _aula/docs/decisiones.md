@@ -115,3 +115,66 @@ Al entrar en la norma del hub, las rutas dinámicas dejaron las carpetas con cor
 se registran en `_aula/src/integracion/rutas.mjs` con `injectRoute` desde archivos en kebab-case de `_aula/src/rutas/`,
 y los componentes pasaron de PascalCase a kebab-case. Las URL generadas son idénticas (comprobado archivo por archivo).
 
+
+### §1.9 La API del aula: FastAPI, PostgreSQL y la vitrina que la usa solo si existe (2026-10-20)
+
+La API vive en `_aula/api/` con la misma pila que Qillqa, que el autor ya opera en la laptop (A9): FastAPI, SQLAlchemy 2
+asíncrono con asyncpg, PostgreSQL 16 en un `docker compose` propio (base en `127.0.0.1:5442`, API en `127.0.0.1:8040`;
+Qillqa usa 5432 y 8000), pydantic-settings y versiones fijadas en `requirements.txt`. No comparte código ni base con
+Qillqa: la receta es la misma, los datos no. La vitrina sigue siendo estática: el cliente `_aula/src/scripts/aula-api.js` y la
+página «Mi aula» (`_aula/src/rutas/aula-cuenta.astro`, ruta `/aula/`, enlace en la cabecera) solo se generan si el build
+recibe `AULA_API_URL`; sin ella el sitio sale idéntico al de antes. Publicar la API con Tailscale Funnel es decisión
+del autor; ningún script lo hace.
+
+### §1.10 Sesión sin cookies de terceros (2026-10-20)
+
+Los 12 sitios están en dominios distintos (`*.netlify.app`, sin dominio propio: B2), así que una cookie de la API sería
+de terceros y los navegadores la bloquean. El sitio manda `Authorization: Bearer <acceso>`; el acceso es un JWT HS256
+de 15 minutos y la renovación, un secreto opaco de 30 días del que la base guarda solo el resumen SHA-256. La
+renovación rota en cada uso y, si alguien presenta una ya rotada, se revocan todas las sesiones de la cuenta (señal de
+robo). Ambos viven en `localStorage` del sitio (`aula:sesion`), con el mismo `try/catch` que §1.6. CORS: lista blanca
+generada desde `web/_pubs/pubs.yml` (`_aula/api/aula/origenes.generado.json`: los 12 orígenes y sus vistas previas de Netlify
+`<rama>--<sitio>.netlify.app`) más `localhost` para desarrollo; sin `allow_credentials`. Contraseñas con Argon2id
+(argon2-cffi), límite de 5 intentos fallidos por correo en 15 minutos (en memoria: un proceso) y de códigos de clase
+equivocados por cuenta. Las tablas se crean al arrancar (`create_all`, como Qillqa) hasta que el modelo se estabilice;
+entonces, Alembic.
+
+### §1.11 Dónde viven los datos de estudiantes (2026-10-20)
+
+Nunca en un repo (regla 8). La base, en el volumen de Docker `aula_aula-db`; los archivos de las entregas, en
+`AULA_DATOS_DIR` (por omisión `$XDG_DATA_HOME/aula`, permisos 700/600, nombre aleatorio: el nombre original solo está en
+la base); los secretos (clave de la base, secreto JWT, destinatario del respaldo), en `$XDG_CONFIG_HOME/aula/aula.env`.
+La API se niega a arrancar si `AULA_DATOS_DIR` cae dentro de un repo git y `respaldar.sh` se niega a escribir en uno.
+El respaldo cifra con clave pública (age si está instalado, si no gpg) y escribe en `$RESPALDOS_DIR/aula/<fecha>/`
+sin pasar nunca por un archivo en claro. Los archivos subidos tienen límite (10 MB, cortado al escribir por trozos y
+antes, por `Content-Length`), lista de extensiones permitidas (sin HTML ni SVG) y se sirven siempre como descarga
+(`application/octet-stream`, `nosniff`). La API corre sin registro de accesos: no guarda direcciones IP.
+
+### §1.12 Cómo se corrige un examen (2026-10-20)
+
+La clave solo existe en el servidor (plan §4.5): el banco (`Pregunta`) guarda la clave; al empezar un intento se eligen
+`preguntas_por_intento` del banco al azar (`random.SystemRandom`) y, si el examen es aleatorio, se barajan preguntas y
+opciones; el intento guarda ese orden y la permutación de opciones de cada pregunta. El estudiante recibe solo
+enunciado, opciones en su orden y puntos; responde con el índice que vio, y el servidor lo traduce por la permutación.
+La numérica acepta coma o punto decimal con tolerancia absoluta. El tiempo lo manda el servidor: `vence_en` = inicio +
+minutos (o el cierre del examen, si llega antes); hay 30 s de gracia por la red; pasado eso, el intento se corrige con
+lo guardado (`PUT /intentos/{id}/respuestas`) y queda «vencido». La clave se le muestra al estudiante solo si el
+docente lo pidió (`revelar_claves`) y el examen ya cerró. Las pruebas recorren cada respuesta buscando campos de
+clave (`_aula/api/tests/test_examenes.py`). Las autoevaluaciones de práctica siguen en el navegador (§1.7).
+
+### §1.13 Pruebas en SQLite y en PostgreSQL (2026-10-20)
+
+El modelo usa solo tipos portables (JSON genérico, un `FechaUTC` que guarda instantes en UTC en los dos motores y
+claves foráneas activadas en SQLite), así que la misma suite corre en SQLite en memoria (por omisión: rápida, sin
+Docker, la que se corre en cada cambio) y en el PostgreSQL 16 del compose con `AULA_PRUEBAS_DATABASE_URL` (la base
+`aula_prueba` se crea si falta), que es la prueba de verdad antes de un commit que toque el modelo. Las dos dieron
+58 de 58 el 2026-10-20. Ninguna prueba usa datos reales: correos `@ejemplo.test` y nombres inventados.
+
+### §1.14 Privacidad: consentimiento, exportación y baja (2026-10-20)
+
+El registro exige `consentimiento: true` y la versión vigente de la política (`_aula/api/docs/privacidad.md`); la cuenta
+guarda versión y fecha. `GET /cuentas/yo/datos` exporta todo lo de la persona; `DELETE /cuentas/yo` (con la
+contraseña) lo borra, archivos incluidos; lo que un docente dejó en clases ajenas queda sin su nombre, y el único
+docente de una clase con estudiantes no puede borrarse sin antes sumar otro o retirarlos (borraría datos ajenos). El
+estudiante ve solo a los docentes de su clase, sin correos; quien no es miembro recibe 404 en vez de 403, para no
+confirmar que una clase, entrega o intento existe. Conservación: 730 días sin actividad (`python -m aula.cli depurar`).

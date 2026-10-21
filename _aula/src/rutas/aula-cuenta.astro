@@ -1,0 +1,301 @@
+---
+// src/rutas/aula-cuenta.astro — «Mi aula»: iniciar sesión, crear cuenta (con consentimiento), mis clases y progreso.
+// Solo existe si el build recibe AULA_API_URL (la dirección de web/_aula/api); sin ella el sitio se construye como
+// siempre y esta página no se genera (decisiones §1.9). Todo el contenido es del navegador: la página es estática.
+import Base from '../layouts/base.astro';
+import { datos } from '../lib/datos.mjs';
+
+export function getStaticPaths() {
+  return process.env.AULA_API_URL ? [{ params: { aula: 'aula' } }] : [];
+}
+const api = process.env.AULA_API_URL ?? '';
+const { pub } = datos();
+---
+<Base titulo="Mi aula" descripcion={`Clases, tareas y progreso de ${pub.nombre} con tu cuenta.`} seccion="aula">
+  <div class="envoltura mi-aula" data-aula data-api={api} data-pub={pub.id}>
+    <h1>Mi aula</h1>
+    <p class="estado-aula tenue" data-estado role="status" aria-live="polite">Conectando con el aula…</p>
+
+    <!-- Sin sesión -->
+    <section class="panel" data-sin-sesion hidden aria-labelledby="titulo-acceso">
+      <h2 id="titulo-acceso" class="sr">Acceso</h2>
+      <div class="pestanas" role="tablist" aria-label="Acceso">
+        <button type="button" role="tab" id="pestana-entrar" aria-controls="form-entrar" aria-selected="true" data-pestana="entrar">Iniciar sesión</button>
+        <button type="button" role="tab" id="pestana-crear" aria-controls="form-crear" aria-selected="false" tabindex="-1" data-pestana="crear">Crear cuenta</button>
+      </div>
+      <form id="form-entrar" class="formulario" role="tabpanel" aria-labelledby="pestana-entrar" data-form="entrar">
+        <label>Correo <input name="correo" type="email" autocomplete="username" required /></label>
+        <label>Contraseña <input name="clave" type="password" autocomplete="current-password" required minlength="8" /></label>
+        <button class="boton primario" type="submit">Entrar</button>
+      </form>
+      <form id="form-crear" class="formulario" role="tabpanel" aria-labelledby="pestana-crear" data-form="crear" hidden>
+        <label>Nombre visible <input name="nombre_visible" autocomplete="name" required minlength="2" maxlength="120" /></label>
+        <label>Correo <input name="correo" type="email" autocomplete="email" required /></label>
+        <label>Contraseña (8 caracteres o más) <input name="clave" type="password" autocomplete="new-password" required minlength="8" /></label>
+        <details class="politica" data-politica>
+          <summary>Qué datos guarda el aula y para qué</summary>
+          <div data-politica-texto><p class="tenue">Cargando la política…</p></div>
+        </details>
+        <label class="casilla"><input name="consentimiento" type="checkbox" required /> Leí la política de privacidad y acepto que el aula guarde mis datos para darme el servicio.</label>
+        <button class="boton primario" type="submit">Crear cuenta</button>
+      </form>
+    </section>
+
+    <!-- Con sesión -->
+    <section class="panel" data-con-sesion hidden aria-labelledby="titulo-clases">
+      <div class="saludo">
+        <p>Hola, <b data-nombre></b>.</p>
+        <button class="boton chico" type="button" data-salir>Cerrar sesión</button>
+      </div>
+      <h2 id="titulo-clases">Mis clases en {pub.nombre}</h2>
+      <ul class="clases" data-clases></ul>
+      <form class="formulario en-linea" data-form="codigo">
+        <label>Código de la clase <input name="codigo" autocomplete="off" required minlength="4" maxlength="12" /></label>
+        <button class="boton" type="submit">Unirme</button>
+      </form>
+
+      <h2>Progreso</h2>
+      <p class="tenue">Las lecciones que marcas como completadas se guardan en este navegador. Sincronízalas para verlas en tus otros dispositivos.</p>
+      <div class="acciones"><button class="boton" type="button" data-sincronizar>Sincronizar progreso</button></div>
+
+      <h2>Tus datos</h2>
+      <div class="acciones">
+        <button class="boton" type="button" data-exportar>Descargar mis datos (JSON)</button>
+      </div>
+      <details class="baja">
+        <summary>Cambiar mi contraseña</summary>
+        <form class="formulario" data-form="clave">
+          <label>Contraseña actual <input name="actual" type="password" autocomplete="current-password" required /></label>
+          <label>Contraseña nueva (8 caracteres o más) <input name="nueva" type="password" autocomplete="new-password" required minlength="8" /></label>
+          <button class="boton" type="submit">Cambiar</button>
+        </form>
+      </details>
+      <details class="baja">
+        <summary>Borrar mi cuenta</summary>
+        <form class="formulario" data-form="baja">
+          <p>Se borran tu cuenta, tus entregas, archivos, notas, intentos y progreso. No se puede deshacer.</p>
+          <label>Contraseña <input name="clave" type="password" autocomplete="current-password" required /></label>
+          <button class="boton" type="submit">Borrar definitivamente</button>
+        </form>
+      </details>
+    </section>
+  </div>
+</Base>
+
+<script>
+  import { crearCliente, ErrorAula } from '../scripts/aula-api.js';
+  import { completadas, reemplazarCompletadas } from '../scripts/almacen.js';
+
+  const raiz = document.querySelector<HTMLElement>('[data-aula]');
+  if (raiz) {
+    const aula = crearCliente(raiz.dataset.api);
+    const pub = raiz.dataset.pub || '';
+    const $ = <T extends Element = HTMLElement>(sel: string) => raiz.querySelector<T>(sel)!;
+    const estado = $('[data-estado]');
+    let politicaVersion = '';
+
+    const avisar = (texto: string) => { estado.textContent = texto; };
+    const fallo = (e: unknown) => avisar(e instanceof ErrorAula ? e.message : 'Algo salió mal.');
+    const texto = (s: string) => { const p = document.createElement('p'); p.textContent = s; return p; };
+
+    async function cargarPolitica() {
+      try {
+        const p = await aula.privacidad();
+        politicaVersion = p.version;
+        const caja = $('[data-politica-texto]');
+        caja.replaceChildren(
+          texto(`Datos: ${p.datos.join(', ')}.`),
+          texto(`Para qué: ${p.finalidad}.`),
+          texto(`Cuánto tiempo: mientras uses el aula; tras ${Math.round(p.conservacion_dias_sin_actividad / 365)} años sin actividad la cuenta se borra.`),
+          texto(`Tus derechos: ${p.derechos}. Marco: ${p.ley}. Versión ${p.version}.`),
+        );
+        return true;
+      } catch (e) {
+        fallo(e);
+        return false;
+      }
+    }
+
+    async function pintarClases() {
+      const lista = $('[data-clases]');
+      const clases = await aula.clases(pub);
+      lista.replaceChildren();
+      if (!clases.length) {
+        const li = document.createElement('li');
+        li.className = 'tenue';
+        li.textContent = 'Aún no estás en ninguna clase de este sitio. Pide el código a tu docente.';
+        lista.append(li);
+        return;
+      }
+      for (const c of clases) {
+        const li = document.createElement('li');
+        li.className = 'clase';
+        const det = document.createElement('details');
+        const sum = document.createElement('summary');
+        sum.textContent = `${c.nombre}${c.periodo ? ` · ${c.periodo}` : ''} · ${c.mi_rol === 'docente' ? `docente (código ${c.codigo})` : 'estudiante'}`;
+        det.append(sum);
+        det.addEventListener('toggle', async () => {
+          if (!det.open || det.dataset.cargada) return;
+          det.dataset.cargada = '1';
+          try {
+            const [anuncios, tareas, examenes] = await Promise.all([aula.anuncios(c.id), aula.tareas(c.id), aula.examenes(c.id)]);
+            const bloque = document.createElement('div');
+            bloque.className = 'detalle-clase';
+            const seccion = (titulo: string, items: string[], vacio: string) => {
+              const h = document.createElement('h3'); h.textContent = titulo;
+              const ul = document.createElement('ul');
+              for (const t of items.length ? items : [vacio]) { const i = document.createElement('li'); i.textContent = t; ul.append(i); }
+              bloque.append(h, ul);
+            };
+            const fecha = (f: string | null) => (f ? new Date(f).toLocaleString('es-PE', { dateStyle: 'medium', timeStyle: 'short' }) : 'sin fecha límite');
+            seccion('Anuncios', anuncios.map((a: any) => a.texto), 'Sin anuncios.');
+            seccion('Tareas', tareas.map((t: any) => `${t.titulo} — ${fecha(t.fecha_limite)}`), 'Sin tareas.');
+            seccion('Exámenes', examenes.map((x: any) => `${x.titulo}${x.minutos ? ` — ${x.minutos} min` : ''}`), 'Sin exámenes.');
+            det.append(bloque);
+          } catch (e) {
+            fallo(e);
+          }
+        });
+        li.append(det);
+        lista.append(li);
+      }
+    }
+
+    async function mostrar() {
+      const s = aula.sesion();
+      $('[data-sin-sesion]').hidden = Boolean(s);
+      $('[data-con-sesion]').hidden = !s;
+      if (!s) {
+        avisar('Inicia sesión con tu cuenta del aula (la misma en los 12 sitios).');
+        await cargarPolitica();
+        return;
+      }
+      try {
+        const yo = await aula.yo();
+        $('[data-nombre]').textContent = yo.nombre_visible;
+        await pintarClases();
+        avisar('');
+      } catch (e) {
+        if (e instanceof ErrorAula && e.estado === 401) return mostrar();
+        fallo(e);
+      }
+    }
+
+    // Pestañas accesibles (flechas izquierda y derecha).
+    const pestanas = [...raiz.querySelectorAll<HTMLButtonElement>('[data-pestana]')];
+    const elegir = (b: HTMLButtonElement) => {
+      for (const p of pestanas) {
+        const activa = p === b;
+        p.setAttribute('aria-selected', String(activa));
+        p.tabIndex = activa ? 0 : -1;
+        $(`[data-form="${p.dataset.pestana}"]`).hidden = !activa;
+      }
+    };
+    pestanas.forEach((b, i) => {
+      b.addEventListener('click', () => elegir(b));
+      b.addEventListener('keydown', (ev) => {
+        if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return;
+        const otra = pestanas[(i + (ev.key === 'ArrowRight' ? 1 : pestanas.length - 1)) % pestanas.length];
+        elegir(otra); otra.focus();
+      });
+    });
+
+    const enviar = (nombre: string, accion: (f: FormData, form: HTMLFormElement) => Promise<void>) => {
+      const form = $<HTMLFormElement>(`[data-form="${nombre}"]`);
+      form.addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+        const boton = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+        if (boton) boton.disabled = true;
+        try { await accion(new FormData(form), form); } catch (e) { fallo(e); } finally { if (boton) boton.disabled = false; }
+      });
+    };
+    enviar('entrar', async (f, form) => {
+      await aula.iniciarSesion(String(f.get('correo')), String(f.get('clave')));
+      form.reset();
+      await mostrar();
+    });
+    enviar('crear', async (f, form) => {
+      if (!politicaVersion && !(await cargarPolitica())) return;
+      await aula.registrarse({
+        correo: String(f.get('correo')), nombre_visible: String(f.get('nombre_visible')), clave: String(f.get('clave')),
+        consentimiento: f.get('consentimiento') === 'on', politica_version: politicaVersion,
+      });
+      form.reset();
+      await mostrar();
+    });
+    enviar('codigo', async (f, form) => {
+      const c = await aula.inscribirse(String(f.get('codigo')).trim().toUpperCase());
+      form.reset();
+      await pintarClases();
+      avisar(c.pub === pub ? `Te uniste a «${c.nombre}».` : `Te uniste a «${c.nombre}», que se dicta en otro sitio (${c.pub}).`);
+    });
+    enviar('clave', async (f, form) => {
+      const yo = await aula.yo();
+      await aula.cambiarClave(yo.correo, String(f.get('actual')), String(f.get('nueva')));
+      form.reset();
+      avisar('Contraseña cambiada; se cerraron tus otras sesiones.');
+    });
+    enviar('baja', async (f) => {
+      await aula.borrarCuenta(String(f.get('clave')));  // el progreso local sigue en este navegador
+      await mostrar();
+      avisar('Tu cuenta y tus datos se borraron del aula.');
+    });
+    $('[data-salir]').addEventListener('click', async () => { await aula.salir(); await mostrar(); });
+    $('[data-sincronizar]').addEventListener('click', async () => {
+      try {
+        const r = await aula.sincronizarProgreso(pub, completadas());
+        reemplazarCompletadas(r.completadas);
+        const n = Object.keys(r.completadas).length;
+        avisar(`Progreso sincronizado: ${n} ${n === 1 ? 'lección completada' : 'lecciones completadas'}.`);
+      } catch (e) { fallo(e); }
+    });
+    $('[data-exportar]').addEventListener('click', async () => {
+      try {
+        const datos = await aula.exportarDatos();
+        const url = URL.createObjectURL(new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' }));
+        const a = Object.assign(document.createElement('a'), { href: url, download: 'mis-datos-del-aula.json' });
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      } catch (e) { fallo(e); }
+    });
+
+    mostrar();
+  }
+</script>
+
+<style>
+  .mi-aula { padding-block: 2.5rem; max-width: 44rem; display: grid; gap: 1.25rem; }
+  h1 { font-size: var(--t-5); }
+  h2 { font-size: var(--t-4); margin-top: 1rem; }
+  .estado-aula:empty { display: none; }
+  .panel { display: grid; gap: 1rem; }
+  .pestanas { display: flex; gap: 0.25rem; border-bottom: 1px solid var(--linea); }
+  .pestanas button {
+    min-height: 2.75rem; padding: 0 1rem; font: 500 var(--t-1) var(--f-interfaz); color: var(--tinta-2);
+    background: transparent; border: 0; border-bottom: 2px solid transparent; cursor: pointer;
+  }
+  .pestanas button[aria-selected='true'] { color: var(--tinta); border-bottom-color: var(--acento); }
+  .formulario { display: grid; gap: 0.85rem; }
+  .formulario.en-linea { grid-template-columns: 1fr auto; align-items: end; }
+  .formulario label { display: grid; gap: 0.3rem; font-size: var(--t-1); color: var(--tinta-2); }
+  .formulario input:not([type='checkbox']) {
+    min-height: 2.75rem; padding: 0.45rem 0.75rem; font: 1rem var(--f-interfaz); color: var(--tinta);
+    background: var(--papel); border: 1px solid var(--linea-fuerte); border-radius: var(--r-2);
+  }
+  .formulario input:focus-visible { outline: 2px solid var(--acento); outline-offset: 1px; }
+  .casilla { display: flex !important; gap: 0.6rem; align-items: flex-start; }
+  .casilla input { accent-color: var(--acento); width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; flex: none; }
+  .politica, .baja { border: 1px solid var(--linea); border-radius: var(--r-2); padding: 0.75rem 1rem; }
+  .politica summary, .baja summary { cursor: pointer; font-weight: 500; }
+  .politica div { display: grid; gap: 0.4rem; margin-top: 0.6rem; font-size: var(--t-1); color: var(--tinta-2); }
+  .saludo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; }
+  .clases { list-style: none; display: grid; gap: 0.5rem; }
+  /* La lista de clases la arma el script: sus elementos no llevan el atributo de ámbito de Astro. */
+  .clases :global(.clase details) { border: 1px solid var(--linea); border-radius: var(--r-2); padding: 0.75rem 1rem; background: var(--elevado); }
+  .clases :global(.clase summary) { cursor: pointer; font-weight: 500; }
+  .clases :global(.detalle-clase) { display: grid; gap: 0.35rem; margin-top: 0.75rem; font-size: var(--t-1); }
+  .clases :global(.detalle-clase h3) { font-size: var(--t-2); margin-top: 0.4rem; }
+  .clases :global(.detalle-clase ul) { padding-left: 1.1rem; color: var(--tinta-2); }
+  @media (max-width: 639px) { .formulario.en-linea { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>

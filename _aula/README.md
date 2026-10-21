@@ -5,8 +5,8 @@ estado: borrador
 # _aula/ — la plataforma de cursos de los pubs
 
 `_aula` (en el hub `web`) es el código de la plataforma educativa: convierte cada pub (los blogs de `web/_pubs`) en un aula con
-catálogo, cursos, lecciones, materiales, autoevaluaciones y simuladores, y, más adelante, en un aula con cuenta
-(inscripción, tareas, entregas, notas). No guarda contenido: lo lee de sus fuentes (`docencia` para el currículo,
+catálogo, cursos, lecciones, materiales, autoevaluaciones y simuladores, y en un aula con cuenta
+(inscripción, tareas, entregas, notas, exámenes calificados) servida por la API de `api/`. No guarda contenido: lo lee de sus fuentes (`docencia` para el currículo,
 cada pub para el texto de las lecciones y los artículos, `simuladores` para los modelos). La arquitectura y las
 decisiones están en `web/docs/plataforma-educativa.md`.
 
@@ -23,7 +23,12 @@ npm run vista:numerus-scriptum             # ídem en el puerto 4332
 PUB=methodica npm run dev                  # desarrollo con recarga; incluye /demo/autoevaluacion/
 AULA_DEMO=1 PUB=methodica npm run build    # build con la página de demostración de la autoevaluación
 node scripts/tokens.mjs                    # simula la regeneración de la paleta desde el hub (--aplicar escribe)
+AULA_API_URL=http://127.0.0.1:8040 PUB=methodica npm run build   # añade «Mi aula» (/aula/) contra la API local
 ```
+
+La API del aula (cuentas, clases, tareas, exámenes, progreso) se levanta con `api/iniciar.sh` y se detiene con
+`api/detener.sh`; su uso, pruebas y respaldo están en `api/README.md`. Sin `AULA_API_URL` el build no genera «Mi aula»
+ni su enlace y el sitio sale como siempre.
 
 `PUB` es la carpeta del pub en `web/_pubs/pubs.yml`; sin él, el build falla con la lista de válidos. Cada build
 deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos de origen en
@@ -41,6 +46,9 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 | `src/components/` | retícula del temario, tarjeta de curso, lección en curso, autoevaluación, laboratorio, cabecera y pie |
 | `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (roles y acentos), `base.css`, `contenido.css` |
 | `src/scripts/almacen.js` | progreso y preferencias del visitante en `localStorage` |
+| `src/scripts/aula-api.js` | cliente de la API del aula (sesión por `Authorization: Bearer`, renovación, progreso) |
+| `src/rutas/aula-cuenta.astro` | «Mi aula»: entrar, crear cuenta con consentimiento, clases, progreso, datos propios (solo con `AULA_API_URL`) |
+| `api/` | la API del aula con cuenta (FastAPI + PostgreSQL 16; `api/README.md`) |
 | `src/integracion/recursos.mjs` | copia figuras, PDF, DOCX y materiales; escribe `_redirects` y el informe |
 | `scripts/` | `tokens.mjs` (paleta del hub → CSS) y `enlaces.mjs` (comprobador de enlaces) |
 | `docs/` | decisiones (`docs/decisiones.md`), capturas del prototipo (`docs/img/`) e índice generado |
@@ -52,5 +60,7 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 - El cuerpo de las lecciones sale del `_site/` de Quarto (decisiones §1.2): si el `_site` de un pub no está al
   día, la vitrina tampoco. Las lecciones de Python se ven sin salidas porque el pub no ejecuta su código.
 - Solo methodica y numerus-scriptum están probados; methodica aún no tiene ninguna lección publicada.
-- El aula con cuenta (API) no existe aún (fase 6); el progreso vive solo en el navegador del visitante.
+- El aula con cuenta es un MVP (fase 6) que corre solo en la laptop y no está publicado: sin `AULA_API_URL` el progreso
+  vive solo en el navegador. «Mi aula» aún no deja entregar tareas ni rendir exámenes (eso se hace por la API) y no hay
+  panel del docente (`api/README.md`, Límite honesto).
 - No se ha medido Lighthouse ni hay vista previa en Netlify (objetivos de la fase 4 que quedan pendientes).

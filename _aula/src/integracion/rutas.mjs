@@ -7,6 +7,7 @@ const RUTAS = [
   ['/cursos/[curso]/[leccion]', './src/rutas/leccion.astro'],
   ['/ediciones/[id]', './src/rutas/edicion.astro'],
   ['/[demo]/autoevaluacion', './src/rutas/demo-autoevaluacion.astro'],
+  ['/[aula]', './src/rutas/aula-cuenta.astro'], // «Mi aula»: solo se genera con AULA_API_URL (decisiones §1.9)
 ];
 
 export default function rutas() {

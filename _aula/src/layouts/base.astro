@@ -15,7 +15,7 @@ import { datos } from '../lib/datos.mjs';
 interface Props {
   titulo?: string;
   descripcion?: string | null;
-  seccion?: 'inicio' | 'cursos' | 'blog' | 'ediciones' | null;
+  seccion?: 'inicio' | 'cursos' | 'blog' | 'ediciones' | 'aula' | null;
   clase?: string;
 }
 const { titulo, descripcion, seccion = null, clase = '' } = Astro.props;

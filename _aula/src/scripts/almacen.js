@@ -35,6 +35,12 @@ export function marcar(id, hecho) {
   document.dispatchEvent(new CustomEvent('aula:progreso', { detail: { id, hecho } }));
   return v;
 }
+/** Sustituye todo el progreso del pub (lo usa la sincronización con el aula con cuenta, src/scripts/aula-api.js). */
+export function reemplazarCompletadas(v) {
+  const ok = escribir(clave(), v && typeof v === 'object' ? v : {});
+  document.dispatchEvent(new CustomEvent('aula:progreso', { detail: { sincronizado: true } }));
+  return ok;
+}
 export function preferencia(nombre, defecto) {
   return leer(`aula:${nombre}`, defecto);
 }

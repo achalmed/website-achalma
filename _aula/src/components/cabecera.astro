@@ -10,6 +10,8 @@ const enlaces = [
   { id: 'cursos', texto: 'Cursos', href: '/cursos/' },
   { id: 'blog', texto: 'Blog', href: '/blog/' },
   ...(hayEdiciones ? [{ id: 'ediciones', texto: 'Ediciones', href: '/ediciones/' }] : []),
+  // «Mi aula» (cuenta, clases, progreso sincronizado) solo aparece si el build conoce la API (AULA_API_URL).
+  ...(process.env.AULA_API_URL ? [{ id: 'aula', texto: 'Mi aula', href: '/aula/' }] : []),
 ];
 ---
 <header class="cabecera">

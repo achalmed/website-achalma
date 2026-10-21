@@ -73,19 +73,23 @@ def reglas() -> tuple[list[tuple[str, str]], list[str], list[str]]:
         if pub and not pub_de_materia.get(m):
             pub_de_materia[m] = pub
     cursos_dir = CLASS / "contenido" / "cursos"
-    for ficha in (HUB / "cursos").glob("*/index.qmd"):  # ficha con nombre de curso, o equivalente a uno
-        m = ficha.parent.name
+    # Las reglas salen del currículo, no del disco del hub (las carpetas se retiran después de escribirlas):
+    # materias web, materias de los dictados, equivalencias, ids de curso y las fichas que aún queden en web/cursos.
+    candidatas = sorted(set(materias) | {k[0] for k in ediciones} | set(EQUIVALENCIAS)
+                        | {d.name for d in cursos_dir.iterdir() if (d / "curso.yml").exists()}
+                        | {f.parent.name for f in (HUB / "cursos").glob("*/index.qmd")})
+    for m in candidatas:                                # ficha con nombre de curso, o equivalente a uno
         cid = EQUIVALENCIAS.get(m, m)
         if not pub_de_materia.get(m) and (cursos_dir / cid / "curso.yml").exists():
             pub_de_materia[m] = areas.pub_de(cursos_dir / cid / "curso.yml")
             materias.setdefault(m, []).append((cid, pub_de_materia[m]))
     ediciones = {k: (dic, pub or pub_de_materia.get(k[0]), ses) for k, (dic, pub, ses) in ediciones.items()}
     out, retirables, quedan = [], [], []
-    for ficha in sorted((HUB / "cursos").glob("*/index.qmd")):
-        m = ficha.parent.name
+    for m in candidatas:
         pub = pub_de_materia.get(m)
         if not pub or pub not in urls:
-            quedan.append(m)
+            if (HUB / "cursos" / m / "index.qmd").exists():
+                quedan.append(m)
             continue
         base = urls[pub]
         cs = [c for c, p in materias.get(m, []) if p == pub]
@@ -97,11 +101,44 @@ def reglas() -> tuple[list[tuple[str, str]], list[str], list[str]]:
             for s in sesiones:
                 if s:
                     out += [(f"/cursos/{m}/{ed}/{s}/", f"{bd}/#{s}"), (f"/cursos/{m}/{ed}/{s}/index.html", f"{bd}/#{s}")]
+                    # los `aliases:` de la sesión (URL aún más viejas, /talk/…) que Quarto ya no generará
+                    fm = HUB / "_pubs" / pubd / "_ediciones" / dic / s / "index.qmd"
+                    if fm.exists():
+                        cab = fm.read_text(encoding="utf-8").split("\n---", 1)[0]
+                        for alias in (yaml.safe_load(cab.lstrip("-\n")) or {}).get("aliases") or []:
+                            a = "/" + str(alias).strip("/") + "/"
+                            out += [(a, f"{bd}/#{s}"), (a + "index.html", f"{bd}/#{s}")]
             out += [(f"/cursos/{m}/{ed}/", f"{bd}/"), (f"/cursos/{m}/{ed}/index.html", f"{bd}/"),
                     (f"/cursos/{m}/{ed}/*", f"{bd}/:splat")]
         out += [(f"/cursos/{m}/", destino), (f"/cursos/{m}/index.html", destino)]
-        retirables.append(m)
+        if (HUB / "cursos" / m).exists():
+            retirables.append(m)
     return out, retirables, quedan
+
+
+def bloque_sitios() -> str:
+    """Tabla área → sitio para la portada de cursos del hub (cursos/index.qmd, entre las marcas sitios:)."""
+    pubs = {p["carpeta"]: p for p in leer(HUB / "_pubs" / "pubs.yml")["pubs"]}
+    filas = ["| Área | Sitio |", "|---|---|"]
+    for a in leer(CLASS / "config" / "areas.yml")["areas"]:
+        p = pubs.get(a.get("pub") or "")
+        if p:
+            nombre = p["carpeta"].replace("-", " ").title().replace(" Y ", " y ")
+            filas.append(f"| {a['nombre']} | [{nombre}]({p['url']}cursos/) |")
+    return ("Los cursos viven en el sitio de su área: allí están el temario, las lecciones, las ediciones dictadas y "
+            "los materiales. Lo preuniversitario sigue aquí abajo hasta que tenga su sitio.\n\n" + "\n".join(filas) + "\n")
+
+
+def escribir_portada(aplicar: bool) -> bool:
+    """Reescribe el bloque entre <!-- sitios:inicio --> y <!-- sitios:fin -->; devuelve si estaba al día."""
+    p = HUB / "cursos" / "index.qmd"
+    t = p.read_text(encoding="utf-8")
+    i = t.index("<!-- sitios:inicio"); i = t.index("-->", i) + 3
+    j = t.index("<!-- sitios:fin -->")
+    nuevo = t[:i] + "\n" + bloque_sitios() + t[j:]
+    if aplicar and nuevo != t:
+        p.write_text(nuevo, encoding="utf-8")
+    return nuevo == t
 
 
 def texto(rs: list[tuple[str, str]]) -> str:
@@ -135,17 +172,18 @@ def main(argv: list[str]) -> int:
     malos = [(a, b) for a, b in rs if destino_existe(b, urls) is False]
     sin_construir = sorted({b.split("/")[2] for a, b in rs if destino_existe(b, urls) is None})
     if "verificar" in argv:
-        al_dia = SALIDA.exists() and SALIDA.read_text(encoding="utf-8") == nuevo
+        al_dia = SALIDA.exists() and SALIDA.read_text(encoding="utf-8") == nuevo and escribir_portada(False)
         print(f"_redirects {'al día' if al_dia else 'desfasado'} · {len(rs)} reglas · {len(malos)} destinos inexistentes")
         for a, b in malos:
             print(f"  ✖ {a} → {b}")
         return 0 if al_dia and not malos else 1
     if "--aplicar" in argv:
         SALIDA.write_text(nuevo, encoding="utf-8")
+        escribir_portada(True)
         print(f"escrito {SALIDA.relative_to(HUB)} ({len(rs)} reglas)")
     else:
         print(nuevo, end="")
-    print(f"carpetas de web/cursos redirigidas (retirables): {', '.join(retirables)}")
+    print(f"carpetas de web/cursos aún en disco y ya redirigidas (retirables): {', '.join(retirables) or '—'}")
     print(f"se quedan en el hub (sin pub todavía): {', '.join(quedan) or '—'}")
     if sin_construir:
         print(f"sin vitrina construida para comprobar: {', '.join(sin_construir)}")

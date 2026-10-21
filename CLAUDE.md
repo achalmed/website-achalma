@@ -75,15 +75,14 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **El glob `*` de Quarto cruza `/`**: en un `listing`, `*/index.qmd` también trae las sesiones anidadas;
   `cursos/index.qmd` excluye con `!*/*/index.qmd` (y más profundo) y cada portada de edición con
   `!*/session_*/index.qmd`.
-- **Jerarquía real de `cursos/`**: `cursos/<curso>/<edicion>/session_NN_slug/index.qmd`, la sesión
-  directamente bajo la edición; la única excepción heredada es `cursos/pre_economia/2014-i/sesiones/`. Las
-  áreas son `categories:` de la ficha y facetan solas; las URL antiguas `/talk/…` y `/teching/…`
-  sobreviven por `aliases:`. Cómo se añade contenido: `cursos/README.md` y `cursos/_plantillas/`; por qué
-  es así: `docs/historial/course-redesign-plan.md`.
-- **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de
-  cada ficha) y `docencia/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
-  en `docencia/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
-  independiente. En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
+- **`cursos/` se retiró en la fase 7** (2026-10-20, `docs/decisiones.md` §4.7): cada curso y cada edición viven
+  en el pub de su área (vitrina `_aula`); `_redirects` (lo genera `scripts/redirecciones-cursos.py`, que también
+  escribe la tabla de sitios de `cursos/index.qmd`) lleva con 301 cada URL vieja, incluidos los alias `/talk/…`.
+  Quedan aquí solo lo preuniversitario (`pre_*`, `curso-0`) y `sql`, hasta que tengan pub; su jerarquía es la
+  heredada (`cursos/pre_economia/2014-i/sesiones/`), con `aliases:` hacia `/teching/…`.
+- **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de las
+  fichas que quedan); las ediciones las publica `docencia/scripts/publish-web.sh` en `_pubs/<pub>/_ediciones/`
+  (contrato en `docencia/docs/estandar-docencia.md`). En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
   el bloque `cifras:` de `index.qmd` con `--cifras-en`); la plataforma no se renderiza ni se edita aquí.
 - **`docs/` no se renderiza, pero sigue siendo referencia viva**: `docs/metadata-guia.md` y
   `docs/quarto-guia.md` anotan cada clave (YAML dentro de bloque de código). Las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) están en `_plantillas/apaquarto/`.

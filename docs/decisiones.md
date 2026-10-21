@@ -251,6 +251,16 @@ Límite: el generador no renderiza ni confirma; tras `--aplicar` siguen `mapa-le
 pub (`scripts/render.sh` y `--documentos --aplicar`), `scripts/pubs.py readme --aplicar` (los README cuentan las
 entradas) y los commits en el pub, en `docencia/contenido` y en el hub. Los cursos sin `temario: revisado` no entran.
 
+### 4.7 Retiro de `cursos/` (2026-10-20, fase 7 de `plataforma-educativa.md`)
+
+Con los 11 pubs publicando la vitrina, el hub deja de ser la casa de los cursos: cada curso, edición y sesión vive en
+el pub de su área (decisión A4 del autor). `scripts/redirecciones-cursos.py --aplicar` escribe `_redirects` (recurso
+de `_quarto.yml`, Netlify lo lee de `_site/`) con un 301 por ficha, edición, sesión (al ancla de su sesión), material
+y alias `/talk/…`, derivado del currículo y no del disco, y comprueba cada destino contra la vitrina construida; además
+escribe la tabla área → sitio de `cursos/index.qmd`. Las fuentes de las ediciones pasaron a
+`_pubs/methodica/_ediciones/` (con sus hardlinks de `docencia`). Quedan en el hub lo preuniversitario y `sql`, que aún
+no tienen pub (12.º sitio, decisión B3). El render del hub pasó de 5–9 min a 80 s (solo HTML, §4.5).
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |

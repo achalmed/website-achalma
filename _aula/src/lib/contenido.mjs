@@ -14,6 +14,61 @@ import { join, posix } from 'node:path';
 import { esArchivo } from './fuentes.mjs';
 import { icono } from './iconos.mjs';
 
+// Ancho visible aproximado de un trozo de TeX, en caracteres: cada comando cuenta como uno; llaves, subíndices y
+// espacios no cuentan. Alcanza para decidir si una ecuación cabe en un celular (unos 26 caracteres a 17 px).
+function anchoTex(t) {
+  return t.replace(/\\(left|right|big|Big|bigg|Bigg|,|;|:|!|quad|qquad)\b/g, '')
+    .replace(/\\[a-zA-Z]+/g, 'x').replace(/[{}_^\s]/g, '').length;
+}
+
+const RELACIONES = ['\\approx', '\\equiv', '\\leq', '\\geq', '\\le', '\\ge', '='];
+
+/** Versión partida de una ecuación larga: `LHS = t1 + t2 \\ + t3 …` en un `aligned` alineado tras la relación, con
+ *  cortes solo en sumas y restas del nivel superior. null si no hace falta o no se puede (sin relación, ya alineada,
+ *  cabe en el celular, o no hay dónde cortar). */
+export function partirEcuacion(tex, anchoMax = 26) {
+  if (/\\\\|\\begin\{|\\tag\b/.test(tex) || anchoTex(tex) <= anchoMax + 2) return null;
+  let prof = 0, rel = null, cortes = [];
+  for (let i = 0; i < tex.length; i++) {
+    const c = tex[i];
+    if (c === '\\') {
+      const m = tex.slice(i).match(/^\\([a-zA-Z]+|.)/);
+      const cmd = m[1];
+      if (cmd === 'left') prof++;
+      else if (cmd === 'right') prof--;
+      else if (prof === 0 && !rel) {
+        const r = RELACIONES.find((x) => x.slice(1) === cmd);
+        if (r) rel = { i, fin: i + m[0].length, sig: r };
+      }
+      i += m[0].length - 1;
+      continue;
+    }
+    if (c === '{') prof++;
+    else if (c === '}') prof--;
+    else if (prof === 0 && c === '=' && !rel) rel = { i, fin: i + 1, sig: '=' };
+    else if (prof === 0 && rel && (c === '+' || c === '-')) {
+      const antes = tex.slice(rel.fin, i).trimEnd();
+      if (antes && !/[=+\-*/(,^_{]$|\\(cdot|times)$/.test(antes)) cortes.push(i);
+    }
+  }
+  if (!rel || !cortes.length) return null;
+  const izq = tex.slice(0, rel.i).trim();
+  const der = tex.slice(rel.fin);
+  const trozos = [];
+  let desde = 0;
+  for (const c of cortes.map((x) => x - rel.fin)) { trozos.push(der.slice(desde, c).trim()); desde = c; }
+  trozos.push(der.slice(desde).trim());
+  const presupuesto = Math.max(14, anchoMax - anchoTex(izq) - 1);
+  const lineas = [];
+  for (const t of trozos) {
+    const ultima = lineas[lineas.length - 1];
+    if (ultima && anchoTex(ultima + t) <= presupuesto) lineas[lineas.length - 1] = `${ultima} ${t}`;
+    else lineas.push(t);
+  }
+  if (lineas.length < 2) return null;
+  return `\\begin{aligned}${izq} ${rel.sig}{} &${lineas[0]} \\\\ ${lineas.slice(1).map((l) => `&{} ${l}`).join(' \\\\ ')}\\end{aligned}`;
+}
+
 const PROTOCOLOS_FUERA = /^(mailto:|tel:|data:|javascript:)/i;
 
 /**
@@ -47,14 +102,28 @@ export function extraer(o) {
   });
 
   // 2. Matemáticas: KaTeX en la construcción, sin JS en el navegador.
+  //    a) Un párrafo cuyo único contenido es una fórmula en línea es, de hecho, una ecuación: se muestra como bloque
+  //       (si no, el navegador la corta donde cae, sin alinear; pasaba en epsilon-y-beta, 2026-10-21).
+  main.find('p').each((_, p) => {
+    const $p = $(p);
+    const hijos = $p.contents().filter((_, n) => !(n.type === 'text' && !n.data.trim()));
+    if (hijos.length === 1 && $(hijos[0]).is('span.math.inline')) $(hijos[0]).removeClass('inline').addClass('display');
+  });
+  //    b) Una ecuación de bloque larga con un signo de relación lleva además una versión partida en varias líneas,
+  //       alineada justo después de ese signo, que solo se ve en pantallas angostas (contenido.css: .ec-angosta).
   let hayMatematicas = false;
+  const opciones = (display) => ({ displayMode: display, throwOnError: false, output: 'htmlAndMathml', strict: 'ignore' });
   main.find('span.math').each((_, el) => {
     const $el = $(el);
     const display = $el.hasClass('display');
     let tex = $el.text().trim();
     tex = tex.replace(/^\\\(|\\\)$/g, '').replace(/^\\\[|\\\]$/g, '');
     try {
-      $el.replaceWith(katex.renderToString(tex, { displayMode: display, throwOnError: false, output: 'htmlAndMathml', strict: 'ignore' }));
+      const ancha = katex.renderToString(tex, opciones(display));
+      const partida = display ? partirEcuacion(tex) : null;
+      $el.replaceWith(partida
+        ? `<div class="ec-larga"><div class="ec-ancha">${ancha}</div><div class="ec-angosta">${katex.renderToString(partida, opciones(true))}</div></div>`
+        : ancha);
       hayMatematicas = true;
     } catch {
       /* se deja el texto fuente */
@@ -165,7 +234,10 @@ export function extraer(o) {
     const $el = $(el);
     // Los anchos fijos de Pandoc (colgroup) obligan a la tabla a no caber en un celular: el navegador reparte mejor.
     $el.children('colgroup').remove();
-    if (!$el.parent().hasClass('tabla')) $el.wrap('<div class="tabla"></div>');
+    // Cinco columnas o más: en el celular va compacta (contenido.css) para caber sin desplazarse.
+    const columnas = Math.max(0, ...$el.find('tr').map((_, tr) => $(tr).children('th,td').length).get());
+    // El marco lleva el borde redondeado; dentro, .tabla es lo que se desliza (así el desvanecido no borra el borde).
+    if (!$el.parent().hasClass('tabla')) $el.wrap(`<div class="tabla-marco${columnas >= 5 ? ' tabla-densa' : ''}"><div class="tabla"></div></div>`);
   });
   // Pie de figura y de tabla al estilo APA 7: el rótulo («Tabla 1») en su línea y el título debajo.
   main.find('figcaption, caption').each((_, el) => {

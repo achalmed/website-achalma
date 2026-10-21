@@ -18,6 +18,10 @@ const urlCanonica = new URL(item.url, pub.url).href;
 const anio = (item.fecha || '').slice(0, 4);
 const autor = `${pub.autor.family_names}, ${pub.autor.given_names.charAt(0)}.`;
 const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
+// Índice de la página: solo el primer nivel (autor, 2026-10-21: dos o tres niveles abruman). Si la página tiene una
+// sola sección principal, se muestran sus subsecciones.
+const primerNivel = item.indice.filter((h) => h.nivel === 2);
+const indice = primerNivel.length > 1 ? primerNivel : item.indice.filter((h) => h.nivel === 3);
 ---
 <Base titulo={item.titulo} descripcion={item.descripcion} seccion={tipo === 'leccion' ? 'cursos' : 'blog'} clase="pagina-lector">
   <div class="avance-lectura" aria-hidden="true"><span data-avance-lectura></span></div>
@@ -83,12 +87,12 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
       )}
     </article>
 
-    {item.indice.length > 1 && (
+    {indice.length > 1 && (
       <nav class="lector-indice" aria-label="En esta página">
         <p>En esta página</p>
         <ol>
-          {item.indice.map((h) => (
-            <li class={h.nivel === 3 ? 'sub' : ''}><a href={`#${h.id}`} data-indice={h.id}>{h.texto}</a></li>
+          {indice.map((h) => (
+            <li><a href={`#${h.id}`} data-indice={h.id}>{h.texto}</a></li>
           ))}
         </ol>
       </nav>
@@ -147,6 +151,17 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
       setTimeout(() => { rotulo.textContent = 'Copiar'; }, 1600);
     });
   });
+
+  // Tablas que aún no caben: se marcan para el desvanecido del borde derecho (contenido.css), que se quita al llegar al final.
+  const marcarTablas = () => document.querySelectorAll<HTMLElement>('.prosa .tabla').forEach((t) => {
+    const desborda = t.scrollWidth > t.clientWidth + 8;   // unos pocos píxeles son solo relleno: no se marcan
+    t.classList.toggle('desborda', desborda);
+    t.classList.toggle('al-final', !desborda || t.scrollLeft + t.clientWidth >= t.scrollWidth - 2);
+  });
+  document.querySelectorAll<HTMLElement>('.prosa .tabla').forEach((t) => t.addEventListener('scroll', marcarTablas, { passive: true }));
+  addEventListener('resize', marcarTablas, { passive: true });
+  marcarTablas();
+  document.fonts?.ready.then(marcarTablas);   // con la fuente real cambian los anchos
 
   // Barra de avance de la lectura y sección activa del índice.
   const articulo = document.querySelector<HTMLElement>('[data-articulo]');
@@ -211,7 +226,6 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   .lector-lateral:hover::-webkit-scrollbar-thumb, .lector-indice:hover::-webkit-scrollbar-thumb { background: var(--linea-fuerte); border-radius: 3px; }
   .lector-indice p { font-size: 0.75rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tenue); margin-bottom: 0.6rem; }
   .lector-indice ol { list-style: none; display: grid; gap: 0.05rem; }
-  .lector-indice li.sub { padding-left: 0.8rem; }
   .lector-indice a { position: relative; display: block; padding: 0.28rem 0 0.28rem 0.85rem; color: var(--tenue); text-decoration: none; line-height: 1.4; transition: color 0.15s; }
   .lector-indice a:hover { color: var(--tinta); }
   .lector-indice a[aria-current] { color: var(--tinta); font-weight: 600; }

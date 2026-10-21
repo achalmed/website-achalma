@@ -91,8 +91,8 @@ toc-title: " "               # Título (vacío para solo mostrar el ícono)
 # toc-title: "Contenidos"    # O con título explícito
 
 toc-location: right          # Ubicación: left, right, body (derecha: no interrumpe la lectura)
-toc-depth: 3                 # Profundidad de niveles (1-6)
-toc-expand: 2                # Nivel inicial expandido
+toc-depth: 1                 # Solo el primer nivel: un índice corto no abruma (autor, 2026-10-21)
+toc-expand: 1                # Nivel inicial expandido
 
 # Solo HTML:
 toc-float: true              # TOC flotante, visible al hacer scroll
@@ -184,8 +184,8 @@ format:
   html:
     # --- TABLA DE CONTENIDOS ---
     toc: true
-    toc-depth: 3
-    toc-expand: 2
+    toc-depth: 1                  # solo el primer nivel (autor, 2026-10-21)
+    toc-expand: 1
     toc-title: "Contenidos"
     toc-location: right           # left, right, body (derecha: no interrumpe la lectura)
     
@@ -194,10 +194,9 @@ format:
     link-external-newwindow: true # Enlaces externos en nueva pestaña
 
     # --- NUMERACIÓN DE SECCIONES ---
-    # Jerárquica (1, 1.1, 1.1.1) como los PDF/DOCX apaquarto (ya la usan).
-    # El estilo visual vive en assets/scss/04-components/_section-numbers.scss
-    number-sections: true
-    number-depth: 3               # h1–h3 numerados; h4+ sin número (= toc-depth)
+    # En la web, sin números: distraen de la lectura (autor, 2026-10-21). Los PDF/DOCX
+    # apaquarto conservan su numeración jerárquica (sus propios bloques más abajo).
+    number-sections: false
     
     # --- CITAS Y NOTAS ---
     citations-hover: true         # Popup con cita al pasar el mouse

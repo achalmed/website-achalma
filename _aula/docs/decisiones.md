@@ -314,3 +314,12 @@ transmita rigor: sin distracciones, una o dos tintas como máximo, como una revi
 - **Referencias y notas** separadas por un filete, más pequeñas, con sangría francesa y los enlaces largos partidos.
 - **Avisos** en papel teñido, sin colores de semáforo.
 
+**Segunda vuelta (autor, 2026-10-21, el mismo día).** El índice de la derecha muestra solo el primer nivel (si la página
+tiene una sola sección principal, sus subsecciones). Sin números de sección en el cuerpo (siguen en el PDF). Los
+títulos van todos en Petrona 600 y la jerarquía la da el tamaño, de mayor a menor. Sin guiones de partición al final de
+línea. Las tablas siguen al visor de Markdown de Claude: un recuadro redondeado que se ajusta al ancho y celdas que
+parten el texto; las de cinco columnas o más van compactas en el celular y, si aún no caben, se deslizan sin barra con
+un desvanecido en el borde derecho (`.tabla-marco` / `.tabla`, marcado en `lector.astro`). Una fórmula sola en su
+párrafo se muestra como ecuación de bloque, y una ecuación larga lleva además una versión partida y alineada tras el
+signo igual para pantallas angostas (`partirEcuacion` en `contenido.mjs`).
+

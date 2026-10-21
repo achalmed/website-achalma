@@ -16,17 +16,22 @@
 @media (min-width: 720px) { .prosa { font-size: var(--t-lectura); line-height: 1.7; } }
 .prosa > * + *, .prosa section > * + * { margin-top: 1.05em; }
 .prosa p, .prosa li { max-width: var(--medida); text-wrap: pretty; }
-/* A 375 px la columna tiene unas 38 letras: se parte con guiones (lang="es") para que el borde derecho no quede roto. */
-@media (max-width: 560px) { .prosa p, .prosa li { hyphens: auto; -webkit-hyphens: auto; } }
+/* Sin guiones de partición al final de línea (autor, 2026-10-21: en el celular eran muchas rayas). El borde derecho
+   queda irregular, como en un libro en bandera: text-wrap: pretty evita las viudas y los huecos grandes. */
+.prosa p, .prosa li, .prosa td, .prosa th, .prosa figcaption { hyphens: manual; -webkit-hyphens: manual; }
 
-/* Títulos: jerarquía por tamaño y aire, no por color. */
+/* Títulos: una sola familia y un solo peso; la jerarquía la da el tamaño, de mayor a menor (autor, 2026-10-21), y el
+   aire. Sin números de sección: distraen (siguen en el PDF). */
 .prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { margin-top: 2em; margin-bottom: 0.15em; scroll-margin-top: 5rem; color: var(--tinta); }
 .prosa section > h2:first-child, .prosa section > h3:first-child { margin-top: 2em; }
-.prosa h2 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, var(--t-4)); font-weight: 600; letter-spacing: -0.015em; }
-.prosa h3 { font-size: clamp(1.1875rem, 1.1rem + 0.4vw, var(--t-3)); font-weight: 600; }
-.prosa h4 { font-size: 1.0625rem; font-family: var(--f-interfaz); font-weight: 650; letter-spacing: 0; }
-.prosa h5, .prosa h6 { font-size: 1rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; color: var(--tinta-2); }
-.prosa .header-section-number { font-family: var(--f-datos); font-size: 0.58em; color: var(--tenue); margin-right: 0.55em; vertical-align: 0.2em; font-weight: 400; letter-spacing: 0; }
+.prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { font-family: var(--f-titulo); font-weight: 600; line-height: 1.25; }
+.prosa h2 { font-size: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem); letter-spacing: -0.015em; line-height: 1.18; }
+.prosa h3 { font-size: clamp(1.25rem, 1.15rem + 0.45vw, 1.4375rem); letter-spacing: -0.01em; }
+.prosa h4 { font-size: clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem); }
+.prosa h5 { font-size: 1.0625rem; }
+.prosa h6 { font-size: 1rem; font-style: italic; }
+.prosa h4, .prosa h5, .prosa h6 { margin-top: 1.6em; }
+.prosa .header-section-number { display: none; }
 
 .prosa ul, .prosa ol { padding-left: 1.35em; }
 .prosa li + li { margin-top: 0.3em; }
@@ -38,18 +43,8 @@
 .prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5em auto; max-width: 8rem; }
 .prosa .enlace-sin-destino { text-decoration: underline dotted var(--tenue); }
 
-/* ── Desplazamiento horizontal con aviso: una sombra suave en el borde por donde sigue el contenido ────────── */
-.prosa .tabla, .prosa .table-wrap, .prosa .katex-display {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-width: thin;
-  scrollbar-color: var(--linea-fuerte) transparent;
-  background:
-    linear-gradient(to right, var(--papel) 30%, transparent) left / 2rem 100% no-repeat local,
-    linear-gradient(to left, var(--papel) 30%, transparent) right / 2rem 100% no-repeat local,
-    radial-gradient(farthest-side at 0 50%, var(--sombra-borde), transparent) left / 0.6rem 100% no-repeat scroll,
-    radial-gradient(farthest-side at 100% 50%, var(--sombra-borde), transparent) right / 0.6rem 100% no-repeat scroll;
-}
+/* Una ecuación que aún no cabe se desplaza sola, con barra fina (en el celular casi todas se parten: .ec-angosta). */
+.prosa .katex-display { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--linea-fuerte) transparent; }
 
 /* ── Código en línea ─────────────────────────────────────────────────────── */
 .prosa code { font-family: var(--f-datos); font-size: 0.84em; font-variant-ligatures: none; }
@@ -131,25 +126,50 @@
 .prosa .rotulo { display: block; font-weight: 650; color: var(--tinta); letter-spacing: 0.01em; }
 .prosa .titulo-float { display: block; font-style: italic; }
 
-/* ── Tablas: tres filetes (arriba, bajo la cabecera, abajo), sin rayas interiores, cifras tabulares ─────── */
-.prosa .tabla { margin-top: 1.2em; }
-.prosa figure .tabla { margin-top: 0; }
-.prosa table {
-  border-collapse: collapse; width: 100%; min-width: min(100%, 32rem);
-  font-family: var(--f-interfaz); font-size: 0.875rem; line-height: 1.45; color: var(--tinta);
-  font-variant-numeric: lining-nums tabular-nums;
-  border-top: 1.5px solid var(--tinta); border-bottom: 1.5px solid var(--tinta);
+/* ── Tablas: como el visor de Markdown de Claude (autor, 2026-10-21): un recuadro de esquinas redondeadas que se ajusta
+   al ancho; las celdas parten el texto en vez de empujar la tabla hacia la derecha. Solo una tabla de muchas
+   columnas numéricas se desplaza, y dentro de su recuadro. Cabecera en papel apenas teñido, filetes finos. ─────── */
+.prosa .tabla-marco, .prosa .table-wrap {
+  margin-top: 1.2em; max-width: 100%; border: 1px solid var(--linea); border-radius: 12px; overflow: hidden;
 }
-.prosa thead th { border-bottom: 1px solid var(--tinta); font-weight: 600; vertical-align: bottom; }
-.prosa th, .prosa td { padding: 0.5em 0.75em; vertical-align: top; }
-.prosa th:first-child, .prosa td:first-child { padding-left: 0.2em; }
-.prosa th:last-child, .prosa td:last-child { padding-right: 0.2em; }
-.prosa tbody tr + tr td { border-top: 1px solid color-mix(in oklab, var(--linea) 55%, transparent); }
-.prosa tbody tr:hover td { background: color-mix(in oklab, var(--papel-2) 70%, transparent); }
+.prosa figure .tabla-marco { margin-top: 0; }
+.prosa .tabla, .prosa .table-wrap { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--linea-fuerte) transparent; }
+/* Si aún no cabe (intervalos, muchas columnas de cifras): se desliza con el dedo, sin barra visible, y un desvanecido
+   en el borde derecho avisa que sigue; lo marcan .desborda y .al-final (lector.astro). */
+.prosa .tabla.desborda { scrollbar-width: none; }
+.prosa .tabla.desborda::-webkit-scrollbar { display: none; }
+.prosa .tabla.desborda:not(.al-final) {
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
+  mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
+}
+.prosa table {
+  border-collapse: separate; border-spacing: 0; width: 100%; border: 0;
+  font-family: var(--f-interfaz); font-size: 0.9375rem; line-height: 1.5; color: var(--tinta);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.prosa thead th {
+  background: var(--papel-2); font-weight: 600; text-align: left; vertical-align: bottom;
+  border-bottom: 1px solid var(--linea);
+}
+.prosa th, .prosa td { padding: 0.7em 1em; vertical-align: top; overflow-wrap: break-word; }
+.prosa tbody tr + tr td, .prosa tbody tr + tr th { border-top: 1px solid var(--linea); }
+.prosa tbody tr:hover td { background: color-mix(in oklab, var(--papel-2) 55%, transparent); }
 @media (max-width: 560px) {
-  .prosa table { font-size: 0.8125rem; }
-  .prosa th, .prosa td { padding: 0.45em 0.55em; }
-  .prosa thead th { hyphens: auto; -webkit-hyphens: auto; }
+  .prosa table { font-size: 0.875rem; }
+  .prosa th, .prosa td { padding: 0.6em 0.7em; }
+  .prosa .tabla-densa table { font-size: 0.75rem; line-height: 1.4; }
+  .prosa .tabla-densa th, .prosa .tabla-densa td { padding: 0.5em 0.28em; }
+  .prosa .tabla-densa th:first-child, .prosa .tabla-densa td:first-child { padding-left: 0.5em; }
+  .prosa .tabla-densa th:last-child, .prosa .tabla-densa td:last-child { padding-right: 0.5em; }
+}
+
+/* ── Ecuaciones largas: en pantallas angostas, la versión partida y alineada tras el signo igual (contenido.mjs) ── */
+.prosa .ec-larga { margin: 1.3em 0; max-width: var(--medida); }
+.prosa .ec-larga .katex-display { margin: 0; }
+.prosa .ec-angosta { display: none; }
+@media (max-width: 640px) {
+  .prosa .ec-ancha { display: none; }
+  .prosa .ec-angosta { display: block; }
 }
 
 /* ── Avisos de Quarto: papel teñido apenas, sin iconos ni colores de semáforo ────────────────────────── */

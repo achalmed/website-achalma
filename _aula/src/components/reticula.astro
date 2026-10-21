@@ -1,5 +1,5 @@
 ---
-// Reticula.astro — el temario de un curso como papel milimetrado: cada tema es un milímetro.
+// Reticula.astro — el temario de un curso como una retícula: cada tema es una celda.
 // Lleno = lección publicada; en blanco con borde punteado = en preparación; color del acento = completada
 // por el visitante (lo pinta almacen.js desde localStorage). En modo «mini» es una sola imagen con su
 // resumen para lectores de pantalla; en modo «completa» las celdas publicadas son enlaces.
@@ -72,7 +72,7 @@ const resumen = total
   .reticula { display: flex; flex-wrap: wrap; align-items: flex-start; }
   .unidad { display: inline-flex; flex-wrap: wrap; }
   .celda {
-    display: inline-block; flex: none;
+    display: inline-block; flex: none; border-radius: 1.5px;
     width: var(--lado); height: var(--lado);
     background: var(--elevado);
     outline: 1px dashed color-mix(in oklab, var(--tenue) 45%, transparent); outline-offset: -1px;
@@ -82,7 +82,8 @@ const resumen = total
 
   .mini { --lado: 7px; gap: 4px; }
   .mini .unidad { gap: 1px; }
-  .mini .celda { outline: 0; background: var(--linea); }
+  .mini .celda { outline: 0; background: var(--linea-fuerte); opacity: 0.7; }
+  .mini .celda.publicada, .mini .celda.hecha { opacity: 1; }
   .mini .celda.publicada { background: var(--tinta-2); }
   .mini .celda.hecha { background: var(--acento); }
 

@@ -1,7 +1,8 @@
 ---
 // Ediciones dictadas de los cursos del pub (docencia/contenido/dictados/*/dictado.yml).
 import Base from '../../layouts/base.astro';
-import { datos, plural } from '../../lib/datos.mjs';
+import TarjetaEdicion from '../../components/tarjeta-edicion.astro';
+import { datos } from '../../lib/datos.mjs';
 const { pub, ediciones } = datos();
 ---
 <Base titulo="Ediciones" descripcion={`Ediciones dictadas de los cursos de ${pub.nombre}.`} seccion="ediciones">
@@ -13,30 +14,16 @@ const { pub, ediciones } = datos();
     {ediciones.length === 0 ? (
       <p class="tenue">Los cursos de este pub aún no tienen ediciones registradas.</p>
     ) : (
-      <ul class="entradas">
-        {ediciones.map((e) => (
-          <li class="entrada">
-            <span class="dato tenue">{e.periodo}</span>
-            <div>
-              <h2><a href={e.url}>{e.titulo}</a></h2>
-              {e.descripcion && <p>{e.descripcion}</p>}
-              <p class="metadatos">
-                <span>{plural(e.sesiones.length, 'sesión', 'sesiones')}</span>
-                <span>{plural(e.nMateriales, 'material', 'materiales')}</span>
-                {e.cursos.length > 0 && <span>{e.cursos.map((c) => c.titulo).join(', ')}</span>}
-              </p>
-            </div>
-          </li>
-        ))}
+      <ul class="rejilla">
+        {ediciones.map((e) => <li><TarjetaEdicion ed={e} nivel="h2" /></li>)}
       </ul>
     )}
   </div>
 </Base>
 <style>
-  .pagina { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem); max-width: 60rem; }
+  .pagina { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
   header { display: grid; gap: 0.75rem; margin-bottom: 2rem; }
   h1 { font-size: var(--t-5); }
   header p { color: var(--tinta-2); max-width: 60ch; }
-  .entrada h2 { font-size: var(--t-3); }
-  .entrada h2 a { text-decoration: none; }
+  .rejilla { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
 </style>

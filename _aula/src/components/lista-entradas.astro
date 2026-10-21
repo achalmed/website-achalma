@@ -1,26 +1,18 @@
 ---
-// ListaEntradas.astro — lista de artículos del blog: fecha, título, descripción y tiempo de lectura.
-import { fechaLarga } from '../lib/datos.mjs';
-interface Props { entradas: any[] }
-const { entradas } = Astro.props;
+// ListaEntradas.astro — artículos del blog en una rejilla de tarjetas con imagen (tarjeta-entrada.astro).
+import TarjetaEntrada from './tarjeta-entrada.astro';
+interface Props { entradas: any[]; nivel?: 'h2' | 'h3' }
+const { entradas, nivel = 'h3' } = Astro.props;
 ---
 {entradas.length === 0 ? (
   <p class="tenue">El blog de este pub aún no tiene entradas publicadas.</p>
 ) : (
-  <ul class="entradas">
-    {entradas.map((a) => (
-      <li class="entrada">
-        <time class="dato" datetime={a.fecha}>{a.fecha}</time>
-        <div>
-          <h3><a href={a.url}>{a.titulo}</a></h3>
-          {a.descripcion && <p>{a.descripcion}</p>}
-          <p class="metadatos">
-            <span>{a.minutos} min de lectura</span>
-            {a.categorias.length > 0 && <span>{a.categorias.join(', ')}</span>}
-            <span class="sr">Publicado el {fechaLarga(a.fecha)}</span>
-          </p>
-        </div>
-      </li>
-    ))}
+  <ul class="rejilla-entradas">
+    {entradas.map((a) => <li><TarjetaEntrada entrada={a} nivel={nivel} /></li>)}
   </ul>
 )}
+
+<style>
+  .rejilla-entradas { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); }
+  .rejilla-entradas > li { display: grid; }
+</style>

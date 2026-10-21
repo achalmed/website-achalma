@@ -9,7 +9,7 @@ export function getStaticPaths() {
 const { ed } = Astro.props;
 ---
 <Base titulo={ed.titulo} descripcion={ed.descripcion} seccion="ediciones">
-  <section class="ed-cabeza milimetrado">
+  <section class="ed-cabeza cabeza-pagina">
     <div class="envoltura">
       <nav aria-label="Ruta"><ol class="migas"><li><a href="/ediciones/">Ediciones</a></li><li><span>{ed.periodo}</span></li></ol></nav>
       <h1>{ed.titulo}</h1>
@@ -66,15 +66,15 @@ const { ed } = Astro.props;
   .ed-cabeza { border-bottom: 1px solid var(--linea); padding-block: 2rem 2.5rem; }
   .ed-cabeza .envoltura { display: grid; gap: 0.9rem; }
   .ed-cabeza h1 { font-size: var(--t-5); max-width: 24ch; }
-  .ed-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 58ch; }
+  .ed-desc { font-family: var(--f-lectura); font-size: 1.125rem; line-height: 1.5; color: var(--tinta-2); max-width: 58ch; }
   .metadatos b { color: var(--tinta); font-weight: 600; }
   .ed-cursos { font-size: var(--t-1); }
-  .ed-nota { font-size: var(--t-1); color: var(--tinta-2); max-width: 62ch; padding: 0.6rem 0.9rem; border-left: 3px solid var(--acento); background: var(--vidrio); }
+  .ed-nota { font-size: var(--t-1); color: var(--tinta-2); max-width: 62ch; padding: 0.7rem 0.95rem; border: 1px solid var(--linea); border-radius: var(--r-2); background: var(--vidrio); }
   .ed-cuerpo { padding-block: 2.5rem; max-width: 62rem; }
   .ed-cuerpo h2 { font-size: var(--t-4); margin-bottom: 1rem; }
   .sesiones { list-style: none; display: grid; }
   .sesion { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding-block: 1.25rem; border-top: 1px solid var(--linea); }
-  .s-n { font-size: 1.4rem; color: var(--acento); line-height: 1.2; }
+  .s-n { font-size: 1.15rem; color: var(--acento-tinta); line-height: 1.4; }
   .s-cuerpo { display: grid; gap: 0.5rem; min-width: 0; }
   .s-cuerpo h3 { font-size: var(--t-3); }
   .materiales { list-style: none; display: grid; gap: 0.4rem; margin-top: 0.35rem; }
@@ -84,7 +84,7 @@ const { ed } = Astro.props;
     text-decoration: none; font-size: var(--t-1);
   }
   .materiales a:hover { border-color: var(--acento); }
-  .m-tipo { font-size: var(--t-0); color: var(--acento); font-weight: 600; }
+  .m-tipo { font-size: var(--t-0); color: var(--acento-tinta); font-weight: 600; }
   .m-nombre { overflow-wrap: anywhere; }
   .m-peso { color: var(--tenue); font-size: 0.72rem; white-space: nowrap; }
   @media (max-width: 560px) { .materiales a { grid-template-columns: 1fr; gap: 0.2rem; } .sesion { grid-template-columns: 2.25rem 1fr; } }

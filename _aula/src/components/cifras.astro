@@ -1,0 +1,87 @@
+---
+// Cifras.astro — la banda de cifras de la portada: lo que el pub tiene, contado desde el modelo (nunca a mano).
+// Solo cifras mayores que cero, salvo cursos y temas, que dicen de qué tamaño es el currículo aunque falten lecciones.
+// Al entrar en pantalla los números suben desde cero una sola vez (≈0,9 s); con prefers-reduced-motion, sin JS o fuera
+// de pantalla se ven quietos con su valor real, que es el que está en el HTML. El lector de pantalla lee la frase
+// completa de .sr y nunca el número que se anima.
+import { datos } from '../lib/datos.mjs';
+
+const { totales } = datos();
+const todas = [
+  { n: totales.cursos, uno: 'curso', varios: 'cursos', fija: true },
+  { n: totales.temas, uno: 'tema del currículo', varios: 'temas del currículo', fija: true },
+  { n: totales.lecciones + totales.complementarias, uno: 'lección publicada', varios: 'lecciones publicadas' },
+  { n: totales.articulos, uno: 'artículo', varios: 'artículos' },
+  { n: totales.ediciones, uno: 'edición dictada', varios: 'ediciones dictadas' },
+];
+const cifras = todas.filter((c) => c.fija || c.n > 0);
+---
+<ul class="cifras" aria-label="El pub en cifras" data-cifras>
+  {cifras.map((c) => (
+    <li class="cifra">
+      <span class="numero" aria-hidden="true" data-cifra={c.n} style={`min-width: ${String(c.n).length}ch`}>{c.n}</span>
+      <span class="rotulo" aria-hidden="true">{c.n === 1 ? c.uno : c.varios}</span>
+      <span class="sr">{c.n} {c.n === 1 ? c.uno : c.varios}</span>
+    </li>
+  ))}
+</ul>
+
+<script>
+  const banda = document.querySelector<HTMLElement>('[data-cifras]');
+  const quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (banda && !quieto && 'IntersectionObserver' in window) {
+    const numeros = [...banda.querySelectorAll<HTMLElement>('[data-cifra]')];
+    // Solo se anima si la banda aún no está a la vista: la que ya se ve al cargar no parpadea a cero.
+    const r = banda.getBoundingClientRect();
+    if (r.top > innerHeight) {
+      banda.classList.add('en-espera');
+      numeros.forEach((el) => { el.textContent = '0'; });
+      const obs = new IntersectionObserver((entradas) => {
+        if (!entradas.some((e) => e.isIntersecting)) return;
+        obs.disconnect();
+        banda.classList.remove('en-espera');
+        const inicio = performance.now();
+        const paso = (t: number) => {
+          const p = Math.min(1, (t - inicio) / 900);
+          const suave = 1 - Math.pow(1 - p, 3);
+          numeros.forEach((el) => { el.textContent = String(Math.round(Number(el.dataset.cifra) * suave)); });
+          if (p < 1) requestAnimationFrame(paso);
+        };
+        requestAnimationFrame(paso);
+      }, { threshold: 0.4 });
+      obs.observe(banda);
+    }
+  }
+</script>
+
+<style>
+  .cifras {
+    list-style: none; display: grid; gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+    background: var(--vidrio); -webkit-backdrop-filter: var(--desenfoque); backdrop-filter: var(--desenfoque);
+    border: 1px solid var(--linea); border-radius: var(--r-3); box-shadow: inset 0 1px 0 var(--brillo), var(--sombra-capa);
+    overflow: hidden;
+  }
+  /* Una sola placa de vidrio dividida por líneas finas, como un panel de indicadores. */
+  .cifra {
+    display: grid; align-content: start; gap: 0.35rem; padding: 1.1rem 1.25rem 1.05rem;
+    border-left: 1px solid var(--linea); margin-left: -1px;
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.6s;
+  }
+  .numero {
+    font-family: var(--f-datos); font-weight: 500; font-size: clamp(1.9rem, 1.4rem + 1.5vw, 2.6rem); line-height: 1;
+    font-variant-numeric: tabular-nums; letter-spacing: -0.04em; color: var(--tinta);
+  }
+  .rotulo { font-size: var(--t-0); color: var(--tenue); line-height: 1.3; }
+  /* Los números suben escalonados una sola vez. */
+  .en-espera .cifra { transform: translateY(0.6rem); opacity: 0; }
+  .cifra:nth-child(2) { transition-delay: 60ms; }
+  .cifra:nth-child(3) { transition-delay: 120ms; }
+  .cifra:nth-child(4) { transition-delay: 180ms; }
+  .cifra:nth-child(5) { transition-delay: 240ms; }
+  @media (max-width: 420px) {
+    .cifras { grid-template-columns: 1fr 1fr; }
+    .cifra { border-top: 1px solid var(--linea); margin-top: -1px; }
+    .cifra:first-child:nth-last-child(odd) { grid-column: span 2; }
+  }
+</style>

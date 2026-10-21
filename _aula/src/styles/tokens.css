@@ -1,10 +1,22 @@
-/* src/styles/tokens.css — tokens de «Laboratorio abierto», la identidad del aula.
-   Evolución de «Quiet Laboratory» (web/assets/scss/00-settings): los valores crudos vienen de
-   paleta.generado.css; aquí se les da rol. Un color nuevo entra AQUÍ (extensión del aula) y nunca como hex
-   suelto en un componente. Los acentos por pub son tonos de la misma familia (azul de revista, verde de
-   laboratorio y sus vecinos), uno por pub, elegido en config/vitrina.yml. */
+/* src/styles/tokens.css — tokens de la vitrina (docs/decisiones.md §1.16).
+   Grafito y neutros fríos, un solo acento por pub usado con moderación, materiales translúcidos con sombras de capa
+   y una sola familia sans (Inter) con la monoespaciada para datos y código. Los acentos parten de la paleta del hub
+   («Quiet Laboratory», paleta.generado.css); los neutros y los acentos propios son extensión del aula y viven AQUÍ:
+   ningún componente lleva un hex suelto. */
 
 :root {
+  /* ── Extensión del aula: neutros grafito (claro / oscuro) ─────────────────── */
+  --lab-fondo: #F3F5F8;           --lab-fondo-o: #0B0D11;
+  --lab-panel: #EBEEF2;           --lab-panel-o: #12151B;
+  --lab-superficie: #FFFFFF;      --lab-superficie-o: #161A21;
+  --lab-texto: #0D1117;           --lab-texto-o: #E8EBEF;
+  --lab-texto-2: #3A4350;         --lab-texto-2-o: #B3BCC7;
+  --lab-tenue: #5A6370;           --lab-tenue-o: #8C96A3;
+  --lab-linea: #E0E4EA;           --lab-linea-o: #232933;
+  --lab-linea-fuerte: #C8CED6;    --lab-linea-fuerte-o: #353D49;
+  --lab-codigo: #F6F8FA;          --lab-codigo-o: #0F1217;
+  --lab-blanco: #FFFFFF;          --lab-negro: #000000;
+
   /* ── Extensión del aula: acentos por pub (claro / oscuro) ─────────────────── */
   --lab-revista: var(--spc-secondary);          --lab-revista-o: var(--spc-dark-primary);
   --lab-laboratorio: var(--spc-accent);         --lab-laboratorio-o: var(--spc-dark-accent);
@@ -17,46 +29,51 @@
   --lab-marino: #1E3A6E;                        --lab-marino-o: #9BB4E3;
   --lab-tinta: var(--spc-primary-light);        --lab-tinta-o: #C2CCD6;
   --lab-glaciar: #2A6F97;                       --lab-glaciar-o: #8CC4E6;
+  --lab-grafito: #2B313A;                       --lab-grafito-o: #C7CED8;
 
   /* ── Tipografía ─────────────────────────────────────────────────────────── */
-  --f-lectura: 'Source Serif 4 Variable', 'Source Serif 4', Charter, 'Iowan Old Style', Georgia, serif;
-  --f-titulo: 'Petrona Variable', Petrona, Georgia, serif;
-  --f-interfaz: 'Red Hat Text Variable', 'Red Hat Text', system-ui, sans-serif;
+  --f-interfaz: 'Inter Variable', Inter, ui-sans-serif, system-ui, sans-serif;
+  --f-titulo: var(--f-interfaz);
+  --f-lectura: var(--f-interfaz);
   --f-datos: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
 
-  /* Escala modular 1.2 sobre 16 px; la lectura va a 18 px. */
+  /* Escala 1.2 sobre 16 px; la lectura larga va a 17 px con más interlínea. */
   --t-0: 0.8125rem;
   --t-1: 0.9375rem;
   --t-2: 1rem;
-  --t-lectura: 1.125rem;
-  --t-3: 1.3125rem;
-  --t-4: 1.625rem;
-  --t-5: clamp(1.875rem, 1.3rem + 2.6vw, 2.625rem);
-  --t-6: clamp(2.5rem, 1.4rem + 5.6vw, 4.75rem);
+  --t-lectura: 1.0625rem;
+  --t-3: 1.25rem;
+  --t-4: 1.5rem;
+  --t-5: clamp(1.875rem, 1.35rem + 2.2vw, 2.5rem);
+  --t-6: clamp(2.5rem, 1.5rem + 4.6vw, 4.25rem);
 
   /* ── Medidas ────────────────────────────────────────────────────────────── */
-  --medida: 68ch;               /* columna de lectura */
+  --medida: 70ch;               /* columna de lectura */
   --ancho: 76rem;               /* ancho máximo de página */
   --margen: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
-  --r-1: 4px;                   /* radios del hub: contenidos, casi técnicos */
-  --r-2: 6px;
-  --r-3: 10px;
-  --mm: 6px;                    /* lado de un milímetro de la retícula (en pantalla) */
+  --r-1: 6px;                   /* radios por jerarquía: control, botón, tarjeta, panel */
+  --r-2: 9px;
+  --r-3: 14px;
+  --r-4: 20px;
+  --mm: 6px;                    /* lado de una celda de la retícula del temario */
 
   /* ── Roles, tema claro ──────────────────────────────────────────────────── */
   color-scheme: light;
-  --papel: var(--spc-bg);
-  --papel-2: var(--spc-bg-dark);
-  --elevado: var(--spc-bg-elevated);
-  --tinta: var(--spc-primary);
-  --tinta-2: var(--spc-primary-light);
-  --tenue: var(--spc-text-muted);
-  --linea: var(--spc-border);
-  --linea-fuerte: var(--spc-border-strong);
-  --codigo-fondo: var(--spc-code-bg);
+  --papel: var(--lab-fondo);
+  --papel-2: var(--lab-panel);
+  --elevado: var(--lab-superficie);
+  --tinta: var(--lab-texto);
+  --tinta-2: var(--lab-texto-2);
+  --tenue: var(--lab-tenue);
+  --linea: var(--lab-linea);
+  --linea-fuerte: var(--lab-linea-fuerte);
+  --codigo-fondo: var(--lab-codigo);
   --seleccion: var(--spc-selection);
-  --sombra: 0 1px 2px rgb(16 24 32 / 0.05);
-  --sombra-flotante: 0 18px 48px -18px rgb(16 24 32 / 0.28), 0 2px 6px rgb(16 24 32 / 0.06);
+  --sombra: 0 1px 2px rgb(13 17 23 / 0.05);
+  --sombra-capa: 0 1px 1px rgb(13 17 23 / 0.04), 0 4px 14px -4px rgb(13 17 23 / 0.08), 0 18px 36px -18px rgb(13 17 23 / 0.14);
+  --sombra-flotante: 0 1px 2px rgb(13 17 23 / 0.06), 0 24px 64px -20px rgb(13 17 23 / 0.32);
+  --brillo: rgb(255 255 255 / 0.7);  /* filo superior de los materiales de vidrio */
+  --punto: rgb(13 17 23 / 0.09);
 
   --cod-palabra: var(--spc-secondary);
   --cod-cadena: #14524F;
@@ -70,51 +87,53 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
-    --papel: var(--spc-dark-bg);
-    --papel-2: var(--spc-dark-bg-accent);
-    --elevado: var(--spc-dark-bg-elevated);
-    --tinta: var(--spc-dark-text-primary);
-    --tinta-2: var(--spc-dark-text-secondary);
-    --tenue: var(--spc-dark-text-muted);
-    --linea: var(--spc-dark-border);
-    --linea-fuerte: var(--spc-dark-border-strong);
-    --codigo-fondo: var(--spc-dark-code-bg);
+    --papel: var(--lab-fondo-o);
+    --papel-2: var(--lab-panel-o);
+    --elevado: var(--lab-superficie-o);
+    --tinta: var(--lab-texto-o);
+    --tinta-2: var(--lab-texto-2-o);
+    --tenue: var(--lab-tenue-o);
+    --linea: var(--lab-linea-o);
+    --linea-fuerte: var(--lab-linea-fuerte-o);
+    --codigo-fondo: var(--lab-codigo-o);
     --seleccion: var(--spc-dark-selection);
-    --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
-    --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+    --sombra: 0 1px 2px rgb(0 0 0 / 0.4);
+    --sombra-capa: 0 1px 1px rgb(0 0 0 / 0.3), 0 8px 24px -8px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.02);
+    --sombra-flotante: 0 1px 2px rgb(0 0 0 / 0.4), 0 28px 70px -20px rgb(0 0 0 / 0.75);
+    --brillo: rgb(255 255 255 / 0.06);
+    --punto: rgb(255 255 255 / 0.07);
     --cod-palabra: var(--spc-dark-primary);
     --cod-cadena: var(--spc-dark-accent);
     --cod-numero: #E3B172;
     --cod-comentario: var(--spc-dark-text-muted);
     --cod-funcion: #C3A8F0;
-    --ret-menor: 6%;
-    --ret-mayor: 13%;
   }
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --papel: var(--spc-dark-bg);
-  --papel-2: var(--spc-dark-bg-accent);
-  --elevado: var(--spc-dark-bg-elevated);
-  --tinta: var(--spc-dark-text-primary);
-  --tinta-2: var(--spc-dark-text-secondary);
-  --tenue: var(--spc-dark-text-muted);
-  --linea: var(--spc-dark-border);
-  --linea-fuerte: var(--spc-dark-border-strong);
-  --codigo-fondo: var(--spc-dark-code-bg);
+  --papel: var(--lab-fondo-o);
+  --papel-2: var(--lab-panel-o);
+  --elevado: var(--lab-superficie-o);
+  --tinta: var(--lab-texto-o);
+  --tinta-2: var(--lab-texto-2-o);
+  --tenue: var(--lab-tenue-o);
+  --linea: var(--lab-linea-o);
+  --linea-fuerte: var(--lab-linea-fuerte-o);
+  --codigo-fondo: var(--lab-codigo-o);
   --seleccion: var(--spc-dark-selection);
-  --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
-  --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+  --sombra: 0 1px 2px rgb(0 0 0 / 0.4);
+  --sombra-capa: 0 1px 1px rgb(0 0 0 / 0.3), 0 8px 24px -8px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.02);
+  --sombra-flotante: 0 1px 2px rgb(0 0 0 / 0.4), 0 28px 70px -20px rgb(0 0 0 / 0.75);
+  --brillo: rgb(255 255 255 / 0.06);
+  --punto: rgb(255 255 255 / 0.07);
   --cod-palabra: var(--spc-dark-primary);
   --cod-cadena: var(--spc-dark-accent);
   --cod-numero: #E3B172;
   --cod-comentario: var(--spc-dark-text-muted);
   --cod-funcion: #C3A8F0;
-  --ret-menor: 6%;
-  --ret-mayor: 13%;
 }
 
-/* ── El acento del pub: <html data-acento="…"> ─────────────────────────────── */
+/* ── El acento del pub: data-acento en <html> y en cada sitio de «La familia» ── */
 [data-acento='revista'] { --acento-c: var(--lab-revista); --acento-o: var(--lab-revista-o); }
 [data-acento='laboratorio'] { --acento-c: var(--lab-laboratorio); --acento-o: var(--lab-laboratorio-o); }
 [data-acento='indigo'] { --acento-c: var(--lab-indigo); --acento-o: var(--lab-indigo-o); }
@@ -126,25 +145,33 @@
 [data-acento='marino'] { --acento-c: var(--lab-marino); --acento-o: var(--lab-marino-o); }
 [data-acento='tinta'] { --acento-c: var(--lab-tinta); --acento-o: var(--lab-tinta-o); }
 [data-acento='glaciar'] { --acento-c: var(--lab-glaciar); --acento-o: var(--lab-glaciar-o); }
+[data-acento='grafito'] { --acento-c: var(--lab-grafito); --acento-o: var(--lab-grafito-o); }
 
-:root { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: #fff; }
+/* El acento y sus derivados se declaran también en [data-acento] (no solo en :root) para que cada sitio de la familia
+   tome el suyo. */
+:root, [data-acento] { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: var(--lab-blanco); }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+  :root:not([data-theme='light']), :root:not([data-theme='light']) [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--lab-fondo-o); }
 }
-:root[data-theme='dark'] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+:root[data-theme='dark'], :root[data-theme='dark'] [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--lab-fondo-o); }
 
-/* Derivados del acento y de la retícula (se recalculan solos en cada tema). */
-:root {
-  --acento-suave: color-mix(in oklab, var(--acento) 9%, var(--papel));
+:root, [data-acento] {
+  --acento-suave: color-mix(in oklab, var(--acento) 9%, var(--elevado));
   --acento-medio: color-mix(in oklab, var(--acento) 28%, var(--papel));
-  --vidrio: color-mix(in oklab, var(--elevado) 72%, transparent);
-  --vidrio-fuerte: color-mix(in oklab, var(--papel) 88%, transparent);
-  --reticula-menor: color-mix(in oklab, var(--acento) var(--ret-menor, 10%), transparent);
-  --reticula-mayor: color-mix(in oklab, var(--acento) var(--ret-mayor, 22%), transparent);
-  /* Papel milimetrado: 1 mm, 5 mm y 10 mm. */
-  --milimetrado:
-    linear-gradient(var(--reticula-mayor) 1px, transparent 1px) 0 0 / calc(var(--mm) * 10) calc(var(--mm) * 10),
-    linear-gradient(90deg, var(--reticula-mayor) 1px, transparent 1px) 0 0 / calc(var(--mm) * 10) calc(var(--mm) * 10),
-    linear-gradient(var(--reticula-menor) 1px, transparent 1px) 0 0 / var(--mm) var(--mm),
-    linear-gradient(90deg, var(--reticula-menor) 1px, transparent 1px) 0 0 / var(--mm) var(--mm);
+  /* Texto en el color del pub sobre un fondo teñido: el acento con un quinto de tinta (AA también con el verde). */
+  --acento-tinta: color-mix(in oklab, var(--acento) 78%, var(--tinta));
+  --acento-linea: color-mix(in oklab, var(--acento) 40%, var(--linea));
+  /* El ícono del pub (squircle) usa siempre el acento profundo, también en oscuro, como un ícono de aplicación. */
+  --icono-alto: color-mix(in oklab, var(--acento-c, var(--acento-base)) 82%, var(--lab-blanco));
+  --icono-bajo: color-mix(in oklab, var(--acento-c, var(--acento-base)) 78%, var(--lab-negro));
+  /* Materiales: vidrio para barras y paneles flotantes; si el navegador no difumina, superficie opaca. */
+  --vidrio: color-mix(in oklab, var(--elevado) 68%, transparent);
+  --vidrio-fuerte: color-mix(in oklab, var(--papel) 78%, transparent);
+  --desenfoque: saturate(170%) blur(18px);
+  /* Trama de puntos casi imperceptible (solo portadas) y el halo del acento. */
+  --puntos: radial-gradient(circle at 1px 1px, var(--punto) 1px, transparent 1.3px) 0 0 / 22px 22px;
+  --halo: radial-gradient(60% 70% at 78% 0%, color-mix(in oklab, var(--acento) 13%, transparent), transparent 70%);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root, [data-acento] { --vidrio: var(--elevado); --vidrio-fuerte: var(--papel); }
 }

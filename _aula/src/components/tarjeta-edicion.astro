@@ -1,0 +1,57 @@
+---
+// TarjetaEdicion.astro — una edición dictada (dictado.yml): el periodo como insignia, sus sesiones como una fila de
+// milímetros (lleno = la sesión tiene materiales publicados) y los cursos del currículo que dictó.
+import { plural } from '../lib/datos.mjs';
+interface Props { ed: any; nivel?: 'h2' | 'h3' }
+const { ed, nivel = 'h3' } = Astro.props;
+const H = nivel;
+const conMateriales = ed.sesiones.filter((s) => s.materiales.length > 0).length;
+---
+<article class="ted">
+  <p class="ted-cabeza">
+    <span class="insignia dato">{ed.periodo}</span>
+    {ed.institucion && <span class="ted-inst">{String(ed.institucion).toUpperCase()}</span>}
+  </p>
+  <H class="ted-titulo"><a href={ed.url}>{ed.titulo}</a></H>
+  {ed.descripcion && <p class="ted-desc">{ed.descripcion}</p>}
+  {ed.sesiones.length > 0 && (
+    <div class="ted-sesiones" role="img" aria-label={`${plural(ed.sesiones.length, 'sesión', 'sesiones')}, ${conMateriales} con materiales publicados`}>
+      {ed.sesiones.map((s) => <span class:list={['celda', s.materiales.length > 0 && 'llena']}></span>)}
+    </div>
+  )}
+  <p class="ted-meta">
+    <span>{plural(ed.sesiones.length, 'sesión', 'sesiones')}</span>
+    <span>{plural(ed.nMateriales, 'material', 'materiales')}</span>
+    {ed.legado && <span>Anterior al estándar de cursos</span>}
+  </p>
+  {ed.cursos.length > 0 && <p class="ted-cursos">{ed.cursos.map((c) => c.titulo).join(', ')}</p>}
+</article>
+
+<style>
+  .ted {
+    position: relative; display: grid; gap: 0.6rem; align-content: start; height: 100%;
+    padding: 1.15rem 1.25rem 1.15rem;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3); box-shadow: var(--sombra);
+    transition: transform 0.2s ease-out, box-shadow 0.2s, border-color 0.2s;
+  }
+  .ted:hover { transform: translateY(-2px); box-shadow: var(--sombra-capa); border-color: var(--linea-fuerte); }
+  .ted:focus-within { border-color: var(--acento-linea); }
+  .ted-cabeza { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.75rem; font-size: var(--t-0); color: var(--tenue); }
+  .insignia {
+    display: inline-flex; align-items: center; padding: 0.15rem 0.55rem; border-radius: 999px;
+    background: var(--acento-suave); color: var(--acento-tinta); border: 1px solid var(--acento-linea); font-size: 0.75rem; font-weight: 500;
+  }
+  .ted-inst { letter-spacing: 0.02em; }
+  .ted-titulo { font-size: 1.1875rem; letter-spacing: -0.02em; }
+  .ted-titulo a { text-decoration: none; color: var(--tinta); }
+  .ted-titulo a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .ted-titulo a:focus-visible { outline: none; }
+  .ted-titulo a:focus-visible::after { outline: 2px solid var(--acento); outline-offset: 2px; }
+  .ted:hover .ted-titulo a { color: var(--acento-tinta); }
+  .ted-desc { font-size: var(--t-1); color: var(--tinta-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ted-sesiones { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 0.15rem; }
+  .celda { width: 9px; height: 9px; border-radius: 1.5px; background: var(--linea-fuerte); opacity: 0.7; }
+  .celda.llena { background: var(--acento); opacity: 1; }
+  .ted-meta { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-size: var(--t-0); color: var(--tenue); }
+  .ted-cursos { font-size: var(--t-0); color: var(--tinta-2); border-top: 1px dashed var(--linea); padding-top: 0.55rem; }
+</style>

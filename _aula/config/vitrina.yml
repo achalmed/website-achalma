@@ -1,17 +1,24 @@
 # config/vitrina.yml — presentación de cada pub en la vitrina del aula (provisional, fase 4).
-# Solo lo que ninguna fuente dice todavía: el acento (un token de src/styles/tokens.css, nunca un hex) y, si
-# hace falta, el nombre visible con tildes. En la fase 7 esto pasa al `pub.yml` de cada pub
+# Solo lo que ninguna fuente dice todavía. En la fase 7 esto pasa al `pub.yml` de cada pub
 # (web/docs/plataforma-educativa.md §4.7) y este archivo desaparece.
-# leccion_destacada (opcional): «curso/slug» de la lección que muestra la portada; si falta, se elige sola.
+#   acento: un token de src/styles/tokens.css (nunca un hex).
+#   monograma: las dos letras del ícono del pub (docs/decisiones.md §1.16): mayúscula y minúscula si el nombre es una
+#     palabra (Me, Ns…), dos mayúsculas si son dos (EA del hub). scripts/marca.py las convierte en trazos con Inter;
+#     si cambias uno, corre `python3 scripts/marca.py --aplicar`.
+#   tono: «tecnico» deja ver un poco más la consola (rótulos en monoespaciada, cursor); «sobrio», nada de eso.
+#   nombre (opcional): el nombre visible con tildes, si no se deriva bien de la carpeta.
+#   leccion_destacada (opcional): «curso/slug» de la lección que muestra la portada; si falta, se elige sola.
+# hub: el sitio de la familia que no es un pub; su URL viene de web/_pubs/pubs.yml (hub.url).
+hub:              { nombre: Edison Achalma, area: Hub académico, acento: grafito, monograma: EA }
 pubs:
-  methodica:          { acento: revista }
-  numerus-scriptum:   { acento: laboratorio }
-  epsilon-y-beta:     { acento: indigo }
-  aequilibria:        { acento: cobalto }
-  optimums:           { acento: petroleo }
-  axiomata:           { acento: pizarra }
-  pecunia-fluxus:     { acento: musgo }
-  actus-mercator:     { acento: abeto }
-  res-publica:        { acento: marino }
-  dialectica-y-mercado: { acento: tinta, nombre: Dialéctica y Mercado }
-  chaska:             { acento: glaciar }
+  methodica:          { acento: revista, monograma: Me, tono: sobrio }
+  numerus-scriptum:   { acento: laboratorio, monograma: Ns, tono: tecnico }
+  epsilon-y-beta:     { acento: indigo, monograma: Eb, tono: sobrio }
+  aequilibria:        { acento: cobalto, monograma: Ae, tono: sobrio }
+  optimums:           { acento: petroleo, monograma: Op, tono: sobrio }
+  axiomata:           { acento: pizarra, monograma: Ax, tono: sobrio }
+  pecunia-fluxus:     { acento: musgo, monograma: Pf, tono: sobrio }
+  actus-mercator:     { acento: abeto, monograma: Am, tono: sobrio }
+  res-publica:        { acento: marino, monograma: Rp, tono: sobrio }
+  dialectica-y-mercado: { acento: tinta, monograma: Dm, tono: sobrio, nombre: Dialéctica y Mercado }
+  chaska:             { acento: glaciar, monograma: Ch, tono: tecnico }

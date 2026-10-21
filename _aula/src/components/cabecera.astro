@@ -1,6 +1,8 @@
 ---
-// Cabecera.astro — marca del pub, navegación y cambio de tema. Translúcida sobre el papel.
+// Cabecera.astro — barra de vidrio: la marca del pub (ícono, nombre y firma), la navegación, la búsqueda (⌘K) y el
+// cambio de tema.
 import Marca from './marca.astro';
+import Icono from './icono.astro';
 import { datos } from '../lib/datos.mjs';
 
 interface Props { seccion: string | null; hayEdiciones: boolean }
@@ -16,9 +18,12 @@ const enlaces = [
 ---
 <header class="cabecera">
   <div class="envoltura cabecera-fila">
-    <a class="marca" href="/" aria-label={`${pub.nombre}, inicio`} aria-current={seccion === 'inicio' ? 'page' : undefined}>
-      <Marca />
-      <span class="marca-nombre">{pub.nombre}</span>
+    <a class="marca" href="/" aria-current={seccion === 'inicio' ? 'page' : undefined}>
+      <Marca tamano={30} sufijo="cab" />
+      <span class="marca-texto">
+        <span class="marca-nombre">{pub.nombre}</span>
+        <span class="marca-firma">por {pub.autor.nombre}</span>
+      </span>
     </a>
     <nav class="navegacion" aria-label="Secciones">
       <ul>
@@ -27,10 +32,17 @@ const enlaces = [
         ))}
       </ul>
     </nav>
-    <button class="tema" type="button" data-tema aria-label="Cambiar a tema oscuro" title="Tema claro u oscuro">
-      <svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" /></svg>
-      <svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.5 8.5 0 0 1 9.4 4a8.5 8.5 0 1 0 10.6 10.6Z" /></svg>
-    </button>
+    <div class="herramientas">
+      <button class="buscar" type="button" data-abrir-paleta aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K">
+        <Icono nombre="search" tamano={16} />
+        <span class="buscar-texto">Buscar</span>
+        <kbd class="buscar-atajo" data-atajo>Ctrl K</kbd>
+      </button>
+      <button class="tema" type="button" data-tema aria-label="Cambiar a tema oscuro" title="Tema claro u oscuro">
+        <Icono nombre="sun" tamano={17} clase="sol" />
+        <Icono nombre="moon" tamano={17} clase="luna" />
+      </button>
+    </div>
   </div>
 </header>
 
@@ -47,44 +59,55 @@ const enlaces = [
     guardarPreferencia('tema', nuevo);
     rotular();
   });
+  // En Mac el atajo se escribe ⌘K.
+  if (/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) document.querySelectorAll('[data-atajo]').forEach((k) => { k.textContent = '⌘K'; });
 </script>
 
 <style>
   .cabecera {
     position: sticky; top: 0; z-index: 40;
     background: var(--vidrio-fuerte);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
-    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: var(--desenfoque); backdrop-filter: var(--desenfoque);
     border-bottom: 1px solid var(--linea);
   }
-  .cabecera-fila { display: flex; align-items: center; gap: 0.5rem 1.5rem; min-height: 3.75rem; flex-wrap: wrap; }
-  .marca { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--tinta); margin-right: auto; padding-block: 0.5rem; }
-  .marca-nombre { font-family: var(--f-titulo); font-size: 1.3rem; font-weight: 500; letter-spacing: -0.01em; }
-  .navegacion ul { list-style: none; display: flex; gap: 0.25rem; }
+  .cabecera-fila { display: flex; align-items: center; gap: 0.5rem 1.25rem; min-height: 3.75rem; }
+  .marca { display: inline-flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--tinta); margin-right: auto; padding-block: 0.5rem; border-radius: var(--r-2); }
+  .marca-texto { display: grid; line-height: 1.1; }
+  .marca-nombre { font-size: 1rem; font-weight: 650; letter-spacing: -0.015em; }
+  .marca-firma { font-size: 0.72rem; color: var(--tenue); letter-spacing: 0.005em; }
+  .navegacion ul { list-style: none; display: flex; gap: 0.15rem; }
   .navegacion a {
-    display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0 0.75rem;
+    display: inline-flex; align-items: center; min-height: 2.25rem; padding: 0 0.75rem;
     font-size: var(--t-1); font-weight: 500; color: var(--tinta-2); text-decoration: none; border-radius: var(--r-2);
+    transition: background-color 0.15s, color 0.15s;
   }
-  .navegacion a:hover { color: var(--tinta); background: var(--papel-2); }
-  .navegacion a[aria-current='page'] { color: var(--tinta); box-shadow: inset 0 -2px 0 var(--acento); border-radius: 0; }
-  .tema {
-    width: 2.5rem; height: 2.5rem; display: grid; place-items: center; flex: none;
-    background: transparent; border: 1px solid var(--linea); border-radius: var(--r-2); color: var(--tinta-2); cursor: pointer;
+  .navegacion a:hover { color: var(--tinta); background: color-mix(in oklab, var(--tinta) 6%, transparent); }
+  .navegacion a[aria-current='page'] { color: var(--tinta); background: color-mix(in oklab, var(--tinta) 8%, transparent); }
+  .herramientas { display: flex; align-items: center; gap: 0.5rem; }
+  .buscar, .tema {
+    display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem 0 0.7rem;
+    font: 500 var(--t-0)/1 var(--f-interfaz); color: var(--tenue); cursor: pointer;
+    background: color-mix(in oklab, var(--elevado) 70%, transparent); border: 1px solid var(--linea); border-radius: var(--r-2);
+    transition: border-color 0.15s, color 0.15s;
   }
-  .tema:hover { color: var(--acento); border-color: var(--acento); }
-  .tema svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
-  .tema .luna { display: none; }
-  :global(:root[data-theme='dark']) .tema .sol { display: none; }
-  :global(:root[data-theme='dark']) .tema .luna { display: block; }
+  .buscar { min-width: 11.5rem; }
+  .buscar-atajo { margin-left: auto; }
+  .buscar:hover, .tema:hover { color: var(--tinta); border-color: var(--linea-fuerte); }
+  .tema { width: 2.25rem; padding: 0; justify-content: center; }
+  .tema :global(.luna) { display: none; }
+  :global(:root[data-theme='dark']) .tema :global(.sol) { display: none; }
+  :global(:root[data-theme='dark']) .tema :global(.luna) { display: inline-block; }
   @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme='light'])) .tema .sol { display: none; }
-    :global(:root:not([data-theme='light'])) .tema .luna { display: block; }
+    :global(:root:not([data-theme='light'])) .tema :global(.sol) { display: none; }
+    :global(:root:not([data-theme='light'])) .tema :global(.luna) { display: inline-block; }
   }
-  /* 375 px: marca y tema en la primera fila; la navegación debajo, a todo el ancho. */
+  @media (max-width: 899px) { .buscar { min-width: 0; } .buscar-atajo { display: none; } }
+  /* 375 px: marca, búsqueda y tema en la primera fila; la navegación debajo, a todo el ancho. */
   @media (max-width: 639px) {
-    .navegacion { order: 3; width: 100%; margin-inline: -0.75rem; }
-    .navegacion a { min-height: 2.5rem; }
-    .cabecera-fila { padding-bottom: 0.25rem; }
+    .cabecera-fila { flex-wrap: wrap; padding-bottom: 0.35rem; }
+    .navegacion { order: 3; width: 100%; margin-inline: -0.6rem; }
+    .buscar { width: 2.25rem; padding: 0; justify-content: center; }
+    .buscar-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
     .cabecera { position: relative; }
   }
 </style>

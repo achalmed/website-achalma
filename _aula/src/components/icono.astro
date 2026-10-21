@@ -1,0 +1,7 @@
+---
+// Icono.astro — un ícono de Lucide en línea (src/lib/iconos.mjs).
+import { icono } from '../lib/iconos.mjs';
+interface Props { nombre: string; tamano?: number; clase?: string; titulo?: string | null }
+const { nombre, tamano = 18, clase = '', titulo = null } = Astro.props;
+---
+<Fragment set:html={icono(nombre, { tamano, clase, titulo })} />

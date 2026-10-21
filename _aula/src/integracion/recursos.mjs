@@ -26,7 +26,8 @@ export default function recursos(pub) {
         const lineas = [
           `# _redirects — GENERADO por aula (src/integracion/recursos.mjs); no editar.`,
           `# Cada post del sitio Quarto de ${pub} lleva a su página nueva; los archivos del post (PDF, DOCX, figuras) también.`,
-          ...m.redirecciones.map((r) => `${r.desde}*  ${r.hacia}:splat  301`),
+          // Netlify compara la regla con la ruta codificada (%C3%B3): una ruta vieja con tildes va también codificada.
+          ...m.redirecciones.flatMap((r) => [...new Set([r.desde, encodeURI(r.desde)])].map((d) => `${d}*  ${r.hacia}:splat  301`)),
         ];
         await writeFile(join(salida, '_redirects'), lineas.join('\n') + '\n');
         await mkdir(join(AULA_DIR, '.cache'), { recursive: true });

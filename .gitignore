@@ -553,3 +553,6 @@ estructura.txt
 
 # Dank Mono: fuente comercial sin uso; fuera de git (ola 6), copia en $RESPALDOS_DIR/residuos/2026-10-08-dankmono
 assets/fonts/DankMono-*
+
+# _aula/src/lib/ es código de la plataforma (no un directorio lib/ de Python): se versiona (2026-10-20)
+!/_aula/src/lib/

@@ -33,7 +33,9 @@ export function nombreDePub(carpeta, vitrina = {}) {
 
 /** Slug estable de un post: sin fecha ni número de serie (2021-06-21-05-iteraciones → iteraciones). */
 export function slugDePost(carpeta) {
-  return carpeta.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/^\d{2,3}-/, '');
+  // kebab-case ASCII (normativa 2.3): sin tildes ni eñes, para que la URL nueva no dependa de cómo se codifique
+  return carpeta.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/^\d{2,3}-/, '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9-]/g, '-').toLowerCase();
 }
 
 /** Las descripciones de relleno de los esqueletos («Estructura estándar 00–09…») no se publican. */

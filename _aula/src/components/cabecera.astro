@@ -1,0 +1,112 @@
+---
+// Cabecera.astro — colofón y nombre del pub, navegación, búsqueda (⌘K) y cambio de tema. Translúcida sobre el papel.
+import Marca from './marca.astro';
+import Icono from './icono.astro';
+import { datos } from '../lib/datos.mjs';
+
+interface Props { seccion: string | null; hayEdiciones: boolean }
+const { seccion, hayEdiciones } = Astro.props;
+const { pub } = datos();
+const enlaces = [
+  { id: 'cursos', texto: 'Cursos', href: '/cursos/' },
+  { id: 'blog', texto: 'Blog', href: '/blog/' },
+  ...(hayEdiciones ? [{ id: 'ediciones', texto: 'Ediciones', href: '/ediciones/' }] : []),
+  // «Mi aula» (cuenta, clases, progreso sincronizado) solo aparece si el build conoce la API (AULA_API_URL).
+  ...(process.env.AULA_API_URL ? [{ id: 'aula', texto: 'Mi aula', href: '/aula/' }] : []),
+];
+---
+<header class="cabecera">
+  <div class="envoltura cabecera-fila">
+    <a class="marca" href="/" aria-current={seccion === 'inicio' ? 'page' : undefined}>
+      <Marca tamano={30} />
+      <span class="marca-texto">
+        <span class="marca-nombre">{pub.nombre}</span>
+        <span class="marca-firma">por {pub.autor.nombre}</span>
+      </span>
+    </a>
+    <nav class="navegacion" aria-label="Secciones">
+      <ul>
+        {enlaces.map((e) => (
+          <li><a href={e.href} aria-current={seccion === e.id ? 'page' : undefined}>{e.texto}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="herramientas">
+      <button class="buscar" type="button" data-abrir-paleta aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K">
+        <Icono nombre="search" tamano={16} />
+        <span class="buscar-texto">Buscar</span>
+        <kbd class="buscar-atajo" data-atajo>Ctrl K</kbd>
+      </button>
+      <button class="tema" type="button" data-tema aria-label="Cambiar a tema oscuro" title="Tema claro u oscuro">
+        <Icono nombre="sun" tamano={17} clase="sol" />
+        <Icono nombre="moon" tamano={17} clase="luna" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  import { guardarPreferencia } from '../scripts/almacen.js';
+  const raiz = document.documentElement;
+  const boton = document.querySelector<HTMLButtonElement>('[data-tema]');
+  const esOscuro = () => (raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+  const rotular = () => boton?.setAttribute('aria-label', esOscuro() ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+  rotular();
+  boton?.addEventListener('click', () => {
+    const nuevo = esOscuro() ? 'light' : 'dark';
+    raiz.dataset.theme = nuevo;
+    guardarPreferencia('tema', nuevo);
+    rotular();
+  });
+  // En Mac el atajo se escribe ⌘K.
+  if (/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) document.querySelectorAll('[data-atajo]').forEach((k) => { k.textContent = '⌘K'; });
+</script>
+
+<style>
+  .cabecera {
+    position: sticky; top: 0; z-index: 40;
+    background: var(--vidrio-fuerte);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--linea);
+  }
+  .cabecera-fila { display: flex; align-items: center; gap: 0.5rem 1.5rem; min-height: 3.75rem; flex-wrap: wrap; }
+  .marca { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--tinta); margin-right: auto; padding-block: 0.5rem; }
+  .marca-texto { display: grid; line-height: 1.1; }
+  .marca-nombre { font-family: var(--f-titulo); font-size: 1.25rem; font-weight: 500; letter-spacing: -0.01em; }
+  .marca-firma { font-size: 0.75rem; color: var(--tenue); }
+  .navegacion ul { list-style: none; display: flex; gap: 0.25rem; }
+  .navegacion a {
+    display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0 0.75rem;
+    font-size: var(--t-1); font-weight: 500; color: var(--tinta-2); text-decoration: none; border-radius: var(--r-2);
+  }
+  .navegacion a:hover { color: var(--tinta); background: var(--papel-2); }
+  .navegacion a[aria-current='page'] { color: var(--tinta); box-shadow: inset 0 -2px 0 var(--acento); border-radius: 0; }
+  .herramientas { display: flex; align-items: center; gap: 0.5rem; }
+  .buscar, .tema {
+    display: inline-flex; align-items: center; gap: 0.5rem; height: 2.5rem; padding: 0 0.55rem 0 0.75rem; flex: none;
+    font: 500 var(--t-0)/1 var(--f-interfaz); color: var(--tinta-2); cursor: pointer;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-2);
+  }
+  .buscar { min-width: 10.5rem; }
+  .buscar-atajo { margin-left: auto; }
+  .buscar:hover, .tema:hover { color: var(--acento-tinta); border-color: var(--acento-linea); }
+  .tema { width: 2.5rem; padding: 0; justify-content: center; }
+  .tema :global(.luna) { display: none; }
+  :global(:root[data-theme='dark']) .tema :global(.sol) { display: none; }
+  :global(:root[data-theme='dark']) .tema :global(.luna) { display: inline-block; }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .tema :global(.sol) { display: none; }
+    :global(:root:not([data-theme='light'])) .tema :global(.luna) { display: inline-block; }
+  }
+  @media (max-width: 899px) { .buscar { min-width: 0; } .buscar-atajo { display: none; } }
+  /* 375 px: marca y tema en la primera fila; la navegación debajo, a todo el ancho. */
+  @media (max-width: 639px) {
+    .buscar { width: 2.5rem; padding: 0; justify-content: center; }
+    .buscar-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .navegacion { order: 3; width: 100%; margin-inline: -0.75rem; }
+    .navegacion a { min-height: 2.5rem; }
+    .cabecera-fila { padding-bottom: 0.25rem; }
+    .cabecera { position: relative; }
+  }
+</style>

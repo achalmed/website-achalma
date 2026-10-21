@@ -44,8 +44,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/decisiones.md` §4.1): Netlify lo sirve sin build, así que el artefacto es el despliegue. Vale
   **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8. Cada `.gitignore` lo declara
   con `!/_site/**/*_files/` (§4.2; el de `epsilon-y-beta`, pendiente: §5), y por eso D08 pasa; quitar esa línea lo rompe y deja figuras sin publicar.
-- **No decidir por el autor** lo que está en `decision`: D9 (una sola licencia en los 12 sitios) y D16
-  (destino del manual de Git).
+- **No decidir por el autor** lo que está en `decision`: D16 (destino del manual de Git).
 
 ## Cómo se verifica un cambio
 
@@ -76,15 +75,14 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **El glob `*` de Quarto cruza `/`**: en un `listing`, `*/index.qmd` también trae las sesiones anidadas;
   `cursos/index.qmd` excluye con `!*/*/index.qmd` (y más profundo) y cada portada de edición con
   `!*/session_*/index.qmd`.
-- **Jerarquía real de `cursos/`**: `cursos/<curso>/<edicion>/session_NN_slug/index.qmd`, la sesión
-  directamente bajo la edición; la única excepción heredada es `cursos/pre_economia/2014-i/sesiones/`. Las
-  áreas son `categories:` de la ficha y facetan solas; las URL antiguas `/talk/…` y `/teching/…`
-  sobreviven por `aliases:`. Cómo se añade contenido: `cursos/README.md` y `cursos/_plantillas/`; por qué
-  es así: `docs/historial/course-redesign-plan.md`.
-- **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de
-  cada ficha) y `docencia/scripts/publish-web.sh` (PDF y materiales de una edición, por hardlink; contrato
-  en `docencia/docs/estandar-docencia.md`); por eso `cursos/_metadata.yml` es un archivo físico
-  independiente. En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
+- **`cursos/` se retiró en la fase 7** (2026-10-20, `docs/decisiones.md` §4.7): cada curso y cada edición viven
+  en el pub de su área (vitrina `_aula`); `_redirects` (lo genera `scripts/redirecciones-cursos.py`, que también
+  escribe la tabla de sitios de `cursos/index.qmd`) lleva con 301 cada URL vieja, incluidos los alias `/talk/…`.
+  Quedan aquí solo lo preuniversitario (`pre_*`, `curso-0`) y `sql`, hasta que tengan pub; su jerarquía es la
+  heredada (`cursos/pre_economia/2014-i/sesiones/`), con `aliases:` hacia `/teching/…`.
+- **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de las
+  fichas que quedan); las ediciones las publica `docencia/scripts/publish-web.sh` en `_pubs/<pub>/_ediciones/`
+  (contrato en `docencia/docs/estandar-docencia.md`). En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,
   el bloque `cifras:` de `index.qmd` con `--cifras-en`); la plataforma no se renderiza ni se edita aquí.
 - **`docs/` no se renderiza, pero sigue siendo referencia viva**: `docs/metadata-guia.md` y
   `docs/quarto-guia.md` anotan cada clave (YAML dentro de bloque de código). Las cuatro plantillas apaquarto (`doc`, `jou`, `man`, `stu`) están en `_plantillas/apaquarto/`.
@@ -104,8 +102,11 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **`resources/cv.pdf` lo genera `scripts/generar-externos.sh`** desde `cv` (perfil docencia, sin anexos, `--web`: solo
   correos institucionales); no se copia a mano. `_indice/` y `_vault/` son del vault
   Obsidian y están ignorados. `requirements.txt` no existe, aunque un README antiguo lo citara.
-- **Licencia, tal cual está**: `LICENSE` y `CITATION.cff` dicen MPL-2.0 (código); `license.qmd` y los
-  `_metadata.yml` dicen CC BY-SA 4.0 (contenido). Unificarla en los 12 sitios es D9, sin decidir.
+- **Licencia (D9, `docs/decisiones.md` §3.6)**: contenido CC BY-SA 4.0 (`license.qmd`, `_metadata.yml`,
+  `CITATION.cff`), código MPL-2.0 (`LICENSE`), igual en los 12 sitios.
+
+- **`_aula/` es la plataforma de cursos de los pubs** (Astro; `web/docs/plataforma-educativa.md`): tiene su propio
+  `CLAUDE.md`, `estado.md` y `docs/`; Quarto la ignora por el guion bajo; `node_modules/` y `dist/` no se versionan.
 
 ## Dónde está cada cosa
 

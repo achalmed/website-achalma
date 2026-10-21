@@ -1,0 +1,127 @@
+---
+// Catálogo de cursos del pub con filtros (tipo, estado, nivel) y búsqueda en el navegador.
+import Base from '../../layouts/base.astro';
+import TarjetaCurso from '../../components/tarjeta-curso.astro';
+import { datos, plural } from '../../lib/datos.mjs';
+
+const { pub, cursos, propios } = datos();
+const listados = cursos.filter((c) => !c.vive);
+const grupos = [
+  { id: 'tipo', nombre: 'Tipo', campo: 'tipoEtiqueta' },
+  { id: 'estado', nombre: 'Estado', campo: 'estadoEtiqueta' },
+  { id: 'nivel', nombre: 'Nivel', campo: 'nivelEtiqueta' },
+].map((g) => {
+  const vistos = new Map();
+  for (const c of cursos) if (c[g.id] && !vistos.has(c[g.id])) vistos.set(c[g.id], { valor: c[g.id], texto: c[g.campo], n: 0 });
+  for (const c of cursos) if (c[g.id]) vistos.get(c[g.id]).n++;
+  return { ...g, opciones: [...vistos.values()].sort((a, b) => b.n - a.n) };
+});
+const ordenados = [...propios].sort((a, b) => b.nLecciones - a.nLecciones || a.titulo.localeCompare(b.titulo, 'es'));
+---
+<Base titulo="Cursos" descripcion={`Catálogo de cursos de ${pub.nombre}: ${pub.area?.nombre ?? pub.tema}.`} seccion="cursos">
+  <div class="envoltura catalogo">
+    <header class="catalogo-cabeza">
+      <h1>Cursos</h1>
+      <p>
+        {plural(propios.length, 'curso vive', 'cursos viven')} en {pub.nombre}{pub.area ? `, el aula de ${pub.area.nombre.toLowerCase()}` : ''}.
+        {listados.length > 0 && ` ${plural(listados.length, 'curso de otro pub se lista', 'cursos de otros pubs se listan')} también aquí por su área.`}
+        Cada cuadrado de la retícula es un tema del currículo.
+      </p>
+    </header>
+
+    <form class="filtros" role="search" data-filtros onsubmit="return false">
+      <div class="buscar">
+        <label for="buscar">Buscar en los cursos</label>
+        <input id="buscar" type="search" name="q" placeholder="Título, tema o palabra clave" autocomplete="off" data-buscar />
+      </div>
+      {grupos.map((g) => (
+        <fieldset class="grupo">
+          <legend>{g.nombre}</legend>
+          <div class="opciones">
+            {g.opciones.map((o) => (
+              <label class="opcion">
+                <input type="checkbox" name={g.id} value={o.valor} data-filtro={g.id} />
+                <span>{o.texto} <span class="dato">{o.n}</span></span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      ))}
+    </form>
+
+    <p class="conteo" aria-live="polite" data-conteo>{plural(cursos.length, 'curso', 'cursos')}</p>
+
+    <div class="rejilla-tarjetas" data-lista>
+      {ordenados.map((c) => <TarjetaCurso curso={c} />)}
+      {listados.map((c) => <TarjetaCurso curso={c} />)}
+    </div>
+    <div class="vacio" data-vacio hidden>
+      <p>Ningún curso coincide con la búsqueda y los filtros elegidos.</p>
+      <button class="boton" type="button" data-limpiar>Quitar la búsqueda y los filtros</button>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-filtros]')!;
+  const tarjetas = [...document.querySelectorAll<HTMLElement>('[data-lista] > .tarjeta')];
+  const conteo = document.querySelector<HTMLElement>('[data-conteo]')!;
+  const vacio = document.querySelector<HTMLElement>('[data-vacio]')!;
+  const plegar = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
+
+  function aplicar() {
+    const q = plegar((form.querySelector<HTMLInputElement>('[data-buscar]')?.value) || '');
+    const palabras = q.split(/\s+/).filter(Boolean);
+    const elegidos: Record<string, string[]> = {};
+    form.querySelectorAll<HTMLInputElement>('[data-filtro]:checked').forEach((i) => { (elegidos[i.name] ||= []).push(i.value); });
+    let n = 0;
+    for (const t of tarjetas) {
+      const pasaFiltros = Object.entries(elegidos).every(([campo, vals]) => vals.includes(t.dataset[campo] || ''));
+      const pasaTexto = palabras.every((p) => (t.dataset.texto || '').includes(p));
+      t.hidden = !(pasaFiltros && pasaTexto);
+      if (!t.hidden) n++;
+    }
+    conteo.textContent = n === tarjetas.length ? `${n} cursos` : `${n} de ${tarjetas.length} cursos`;
+    vacio.hidden = n > 0;
+  }
+  form.addEventListener('input', aplicar);
+  document.querySelector('[data-limpiar]')?.addEventListener('click', () => { form.reset(); aplicar(); form.querySelector<HTMLInputElement>('[data-buscar]')?.focus(); });
+</script>
+
+<style>
+  .catalogo { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+  .catalogo-cabeza { display: grid; gap: 0.75rem; margin-bottom: 2rem; }
+  .catalogo-cabeza h1 { font-size: var(--t-5); }
+  .catalogo-cabeza p { color: var(--tinta-2); max-width: 62ch; }
+
+  .filtros {
+    display: grid; gap: 1rem 2rem; padding: 1.1rem; margin-bottom: 1.25rem;
+    background: var(--papel-2); border: 1px solid var(--linea); border-radius: var(--r-3);
+  }
+  @media (min-width: 900px) { .filtros { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, auto); align-items: start; } }
+  .buscar { display: grid; gap: 0.4rem; }
+  .buscar label, .grupo legend { font-size: var(--t-0); font-weight: 600; color: var(--tinta-2); }
+  .buscar input {
+    width: 100%; min-height: 2.75rem; padding: 0.5rem 0.8rem; font: inherit; color: var(--tinta);
+    background: var(--elevado); border: 1px solid var(--linea-fuerte); border-radius: var(--r-2);
+  }
+  .buscar input:focus-visible { outline: 2px solid var(--acento); outline-offset: 1px; }
+  .grupo { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .grupo legend { padding: 0; margin-bottom: 0.4rem; }
+  .opciones { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .opcion { position: relative; }
+  .opcion input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .opcion > span {
+    display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.25rem; padding: 0.3rem 0.75rem;
+    font-size: var(--t-1); background: var(--elevado); border: 1px solid var(--linea-fuerte); border-radius: 999px;
+  }
+  .opcion .dato { color: var(--tenue); font-size: 0.75rem; }
+  .opcion input:checked + span { background: var(--acento); border-color: var(--acento); color: var(--sobre-acento); }
+  .opcion input:checked + span .dato { color: inherit; }
+  .opcion input:focus-visible + span { outline: 2px solid var(--acento); outline-offset: 2px; }
+
+  .conteo { font-size: var(--t-0); color: var(--tenue); margin-bottom: 1rem; }
+  .rejilla-tarjetas { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+  .rejilla-tarjetas > :global([hidden]) { display: none; }
+  .vacio { display: grid; justify-items: start; gap: 1rem; padding: 2rem 0; color: var(--tinta-2); }
+</style>

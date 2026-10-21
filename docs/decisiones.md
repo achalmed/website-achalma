@@ -97,10 +97,14 @@ se quedan en `docs/`: son referencia, no plantilla.
 que ya declaraba. publication/_index.md (frontmatter de Hugo/Blogdown, sin cuerpo, `estado: archivado`,
 sin referencias) se elimina; git conserva su historia.
 
-**3.6 La licencia se declara tal cual está, sin unificar** (2026-09-20, DOC5; decisión D9 pendiente).
-`LICENSE` y `CITATION.cff`: MPL-2.0; `license.qmd` y los `_metadata.yml`: CC BY-SA 4.0; el manual de Git
-ya lo formula como código MPL-2.0 / contenido CC BY-SA. Una sola licencia en los 12 sitios la elige el
-autor.
+**3.6 Contenido CC BY-SA 4.0, código MPL-2.0, igual en los 12 sitios** (D9; el autor pidió al director
+elegirla, 2026-10-20). Hasta entonces `CITATION.cff` decía MPL-2.0, una licencia de software, para citar
+el contenido, mientras `license.qmd` y los `_metadata.yml` decían CC BY-SA 4.0. Se elige CC BY-SA 4.0 para el
+contenido (posts, lecciones, PDF, materiales): es la licencia habitual de los recursos educativos abiertos,
+permite usar y adaptar citando al autor y mantiene abierto lo derivado, y ya la declaraban todas las páginas.
+El código (scripts, tema) sigue en MPL-2.0 (`LICENSE`). `CITATION.cff` pasa a CC BY-SA 4.0 porque cita el
+contenido; lo genera `scripts/pubs.py` desde `_pubs/pubs.yml`. `simuladores` y `aula` son privados y no
+llevan licencia mientras lo sean.
 
 **3.7 La documentación se ajusta al perfil del ecosistema** (2026-10-04, DOC10; NORMATIVA §15.11). Las
 guías de claves pierden el guion bajo inicial (`metadata-guia.md`, `quarto-guia.md`): lo que las apartaba
@@ -158,15 +162,117 @@ autor lo revisa al abrir la ola 6: el tema **se comparte por hardlink**, adminis
 hardlink como hallazgo sino un enlace roto. `methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos
 de antes y después en `$RESPALDOS_DIR/hardlinks/2026-10-08-tema-sitios/`.
 
+### 4.5 Render solo HTML y documentos con caché por hash (2026-10-20, fase 2 de `plataforma-educativa.md`)
+
+Publicar los 12 sitios tardaba unos 47 min (registro de la ola 6: methodica 109 s, epsilon-y-beta 708 s,
+numerus-scriptum 729 s) y casi todo era apaquarto: los 37 `_metadata.yml` de sección (un solo inodo)
+declaran `html`, `apaquarto-pdf` (LuaLaTeX) y `apaquarto-docx`, y cada render los compilaba todos aunque
+solo 17 posts tienen código y nada hubiera cambiado. Desde hoy `scripts/render.sh` renderiza solo HTML y
+`scripts/render.sh --documentos` (`scripts/documentos.py`, en el tema) compila PDF y DOCX solo de las
+páginas cuya fuente cambió. Medido en methodica: HTML 20 s, documentos 1 s sin cambios y unos 20 s por
+post cambiado (184 s el render completo en la misma máquina); epsilon-y-beta, solo HTML, 43 s.
+
+Por qué así, comprobado en una copia de methodica antes de tocar los sitios:
+
+- **`--to html` y no perfiles.** Un perfil (`_quarto-<perfil>.yml`, `QUARTO_PROFILE`) solo se funde con la
+  configuración del proyecto: no quita los formatos que declara un `_metadata.yml` de carpeta (`quarto
+  inspect` de un post con un perfil `format: html` sigue dando los tres). Cambiar los 37 `_metadata.yml`
+  tampoco hace falta: `--to` elige el formato sin tocarlos, y los enlaces «Otros formatos» siguen saliendo
+  porque Quarto los escribe con los formatos declarados, no con los compilados.
+- **Apartar y devolver, no `--no-clean`.** El render completo de Quarto vacía `_site/` y se lleva los PDF y
+  DOCX. `--no-clean` los conservaría, pero también las páginas de un post retirado; `render.sh` mueve
+  antes los PDF y DOCX cuya fuente existe y después devuelve solo los de las páginas que siguen
+  publicadas (con su `.html`): lo de un borrador o un post retirado desaparece como antes. Si el render
+  falla, devuelve todo.
+- **La clave.** sha256 de lo que entra en el documento: la carpeta del post sin intermedios (`index.tex`,
+  `index.html.md`) ni páginas anidadas, sus `include` (de `quarto inspect`), `bibliography` y `csl`, la
+  cadena de `_metadata.yml`, `_filters/`, `_extensions/`, `_quarto.yml` sin `website` ni `format.html`, la
+  versión de Quarto, la fecha `SOURCE_DATE_EPOCH` de la página y la de modificación de su fuente (el DOCX
+  lleva `date-modified`). Lo que entra por otra vía (una imagen de fuera de la carpeta) no está: para eso,
+  `--forzar --solo <ruta>`.
+  Las copias numeradas `index.quarto_ipynb_N` que Quarto deja cuando no puede pisar el intermedio anterior
+  tampoco entran (corregido el 2026-10-20: con ellas la clave cambiaba en cada compilación y la página nunca
+  quedaba al día).
+- **La fecha de cada documento es la de su página**, no la del sitio: el último commit de la carpeta del
+  post. Con la fecha del sitio, cualquier commit en otro post cambiaba la fecha interna de todos los PDF y
+  una recompilación de un post intacto no salía igual. Comprobado: recompilar con `--forzar` un post sin
+  cambios deja el `_site/` entero idéntico byte a byte, en la copia y en methodica.
+- **La caché es `_documentos.tsv`, versionada en la raíz de cada sitio** y no en `.quarto/` ni dentro de
+  `_site/`: describe los PDF y DOCX que están en git, así que tiene que viajar con ellos (un clon nuevo no
+  recompila nada) y no se publica (`_` inicial: Quarto la ignora). Guarda también el sha256 de cada salida:
+  un PDF pisado o borrado se rehace. No es fuente: `render.sh` la excluye de la fecha del sitio y la
+  puerta R6 no la mira.
+- **El `/ID` del PDF depende de la carpeta** en que se compila: la misma fuente con la misma fecha,
+  compilada en una copia del sitio en otra ruta, difiere solo en esos 64 bytes del identificador. Entre
+  renders en la misma carpeta, nada. Por eso la caché evita recompilar y no promete bytes iguales entre
+  máquinas con rutas distintas.
+- De paso, `fechas-desde-git.py` no fijaba la fecha de las páginas con ruta no ASCII (git las citaba
+  entre comillas); ahora usa `core.quotePath=false`, y el listado y el `sitemap.xml` de esas páginas
+  dejan de depender del `checkout`.
+
+Piloto aplicado en methodica: sus 7 PDF y 7 DOCX recompilados con la fecha de su página (mismo texto y
+páginas que producción, `comparar-produccion.py`: 16 iguales, 0 distintas). El hub y los otros 10 blogs
+tienen ya el `render.sh` nuevo (es el mismo inodo) y, en su árbol de trabajo, `documentos.py` y el
+`THEME_VERSION` nuevo (`sync-theme-pubs.sh --aplicar`), pendientes de confirmar en cada blog (§5); ninguno
+tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo una vez, o `--registrar
+--aplicar` adopta lo que hay sin compilar.
+
+### 4.6 Una lección por tema, declarada en el post (2026-10-20, fase 5 de `plataforma-educativa.md`)
+
+`scripts/cursos.py` da a cada tema de un curso con `temario: revisado` (los 10 que reconstruyó C1) una lección en el
+pub del curso: la que ya existe o un esqueleto en borrador listo para llenar. Por qué así:
+
+- **La correspondencia se declara, no se adivina.** `mapa-lecciones.py` (docencia) emparejaba posts y temas por
+  numeración y título, con confianza alta, media o baja. Un emparejamiento revisado no debe volver a calcularse en
+  cada corrida: el post lleva `curso: <id>` y `tema: "<id>"` en su frontmatter y desde entonces el mapa lo toma tal
+  cual (confianza «declarada», que manda sobre todo, sus asignaciones fijas incluidas). El `tema` va entre comillas:
+  sin ellas YAML lee `3.10` como `3.1`.
+- **Edición mínima de texto.** El generador cambia o inserta solo esas dos líneas; no re-serializa el YAML ni toca el
+  cuerpo, para que el diff de cada post sea de dos líneas y lo escrito por el autor no se mueva.
+- **Esqueletos con la convención de su sección.** El frontmatter se copia de un esqueleto existente de la sección
+  (las mismas claves; las etiquetas, las comunes a la sección) y lleva además `generado: curriculo`; el cuerpo, las
+  secciones guía (Objetivos, Desarrollo, Ejemplos, Ejercicios, Autoevaluación con un ejemplo del bloque `quiz:` de
+  `_aula/docs/decisiones.md` §1.7, Recursos) con la indicación en un comentario, y los `include` de la sección. No
+  llevan texto de lección: el mapa no cuenta los encabezados guía como palabras, así que un esqueleto sin llenar
+  sigue en 0 palabras. Mientras siga así, si el título del tema cambia en `curso.yml`, el generador actualiza solo su
+  `title:`; con texto, no lo toca.
+- **Sección.** La de las lecciones de la unidad del tema; si la unidad no tiene, la más común del curso; si el curso
+  no tiene ninguna, `<curso>/`. Con solo la regla del curso, los esqueletos de MCG, máxima verosimilitud y GMM de
+  Econometría II habrían caído en `05-econometria-bayesiana/` (la sección con más lecciones del curso) y no junto a
+  las de su unidad, en `07-topicos-de-econometria/`.
+- **Duplicados.** Solo salen (`git rm` en el pub) los que el mapa marca como duplicado y son esqueletos: 0 palabras
+  reales y `draft: true`. Un duplicado con texto se avisa y queda.
+- **Las notas de docencia van al pub.** La nota de `02-contenido/` de un tema sin lección pasa a ser la lección
+  (A3: el texto vive en el pub; `plataforma-educativa.md` §4.2): sin su frontmatter ni su título, sin el menú final
+  del tutor y con el frontmatter y los `include` de su sección, publicada (`draft: false`); el `archivo` del tema apunta al post, relativo a `DOCS_ROOT`, y
+  la nota sale del repo privado. Antes se comprueba contra `meta/doctor/patrones_sensibles.txt`; el pub es público.
+
+Límite: el generador no renderiza ni confirma; tras `--aplicar` siguen `mapa-lecciones.py --aplicar`, el render del
+pub (`scripts/render.sh` y `--documentos --aplicar`), `scripts/pubs.py readme --aplicar` (los README cuentan las
+entradas) y los commits en el pub, en `docencia/contenido` y en el hub. Los cursos sin `temario: revisado` no entran.
+
+### 4.7 Retiro de `cursos/` (2026-10-20, fase 7 de `plataforma-educativa.md`)
+
+Con los 11 pubs publicando la vitrina, el hub deja de ser la casa de los cursos: cada curso, edición y sesión vive en
+el pub de su área (decisión A4 del autor). `scripts/redirecciones-cursos.py --aplicar` escribe `_redirects` (recurso
+de `_quarto.yml`, Netlify lo lee de `_site/`) con un 301 por ficha, edición, sesión (al ancla de su sesión), material
+y alias `/talk/…`, derivado del currículo y no del disco, y comprueba cada destino contra la vitrina construida; además
+escribe la tabla área → sitio de `cursos/index.qmd`. Las fuentes de las ediciones pasaron a
+`_pubs/methodica/_ediciones/` (con sus hardlinks de `docencia`). Quedan en el hub lo preuniversitario y `sql`, que aún
+no tienen pub (12.º sitio, decisión B3). El render del hub pasó de 5–9 min a 80 s (solo HTML, §4.5).
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |
 |---|---|---|---|
 | **epsilon** | `epsilon-y-beta` renderizado entero el 2026-10-08 (ola 6, `scripts/render.sh`, LuaLaTeX): 247 archivos de `_site/`, sin salidas sueltas en las carpetas fuente; confirmado y R6 en verde, **sin push**. Queda el bloque de `.gitignore` de §4.2 (ya presente) | 2026-10-04 | autor · resuelto en local; publicar con la comparación de la ola 6 |
 | figuras de numerus | confirmadas con el render de la ola 6 (2026-10-08); se publican con el próximo push | 2026-10-04 | autor · resuelto en local |
-| `_freeze/` de numerus | `numerus-scriptum` versiona `_freeze/` (caché de ejecución de sus posts con código); ningún otro sitio lo hace y nada lo declara, así que D08 sigue fallando en ese pub. Decidir si se declara (como `_site/`) o sale de git | 2026-10-04 | autor |
+| ~~`_freeze/` de numerus~~ | **resuelto el 2026-10-20**: se versiona a propósito (las lecciones de Python se ejecutan una vez con `freeze`, decisión del autor) y su `.gitignore` lo declara con `!/_freeze/`, como `_site/` | 2026-10-04 | resuelto |
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
-| **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
+| ~~render rápido~~ | **hecho el 2026-10-20**: scripts confirmados en los 11 blogs, `_documentos.tsv` registrado en los 12 sitios y los PDF/DOCX que faltaban en aequilibria, axiomata, numerus-scriptum y optimums compilados; `--verificar` sale 0 en todos | 2026-10-20 | director |
+| **plataforma** | los 11 pubs como aulas (Classroom + MOOC propios), currículo desde `docencia`, `web/cursos` se retira, `simuladores` repo propio, Quarto solo como compilador: `docs/plataforma-educativa.md` (decisiones A1–A8 del autor tomadas; §6 plan) | 2026-10-20 | autor · decidir B1–B6 (§7) |
+| **lecciones** | fase 5 (§4.6): 10 cursos con temario revisado ya tienen una lección por tema; los otros 45 esperan a que C1 revise su temario (`temario: revisado`) para entrar en `scripts/cursos.py`. Finanzas III tiene sección propia desde el 2026-10-20 (`_pubs/pecunia-fluxus/derivados-y-riesgo/`, unidades 1–5; finanzas internacionales sigue en la suya), y las notas de Python 1.1 y 2.1 están fundidas en sus lecciones (decisiones del autor) | 2026-10-20 | autor · C1 curso por curso |
+| ~~D9~~ | licencia única: **decidida el 2026-10-20** (§3.6): contenido CC BY-SA 4.0, código MPL-2.0 | 2026-09-20 | resuelto |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |
 | `_site/_pubs/` | `resources: assets/css/pages/listing.css` de `_quarto.yml` casa también con las copias de cada blog y deja copias de esa hoja en `_site/_pubs/`; inocuo | 2026-09-21 | autor · por acotar |

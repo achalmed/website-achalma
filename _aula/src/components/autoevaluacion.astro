@@ -1,0 +1,114 @@
+---
+// Autoevaluacion.astro — preguntas de práctica con corrección inmediata en el navegador.
+// Lee la lista `quiz:` del frontmatter de la lección (formato en docs/decisiones.md §1.7):
+//   - tipo: opcion      enunciado, opciones: [...], correcta: <índice desde 0>, explicacion?
+//   - tipo: vf          enunciado, respuesta: true|false, explicacion?
+//   - tipo: numerica    enunciado, respuesta: <número>, tolerancia?: <número>, unidad?, explicacion?
+// Es práctica: la respuesta viaja en la página. Los exámenes con nota se corrigen en la API (fase 6).
+interface Props { preguntas: any[]; id: string; titulo?: string }
+const { preguntas, id, titulo = 'Autoevaluación' } = Astro.props;
+const validas = preguntas.filter((p) => p && p.enunciado && ['opcion', 'vf', 'numerica'].includes(p.tipo));
+---
+{validas.length > 0 && (
+  <section class="autoevaluacion" aria-labelledby={`${id}-t`} data-autoevaluacion>
+    <h2 id={`${id}-t`}>{titulo}</h2>
+    <p class="tenue">Responde y comprueba cada pregunta. Nada de esto se guarda ni se califica.</p>
+    <ol class="preguntas">
+      {validas.map((p, i) => {
+        const pid = `${id}-${i}`;
+        const correcta = p.tipo === 'opcion' ? String(p.correcta) : p.tipo === 'vf' ? String(Boolean(p.respuesta)) : String(p.respuesta);
+        const textoCorrecto = p.tipo === 'opcion' ? p.opciones?.[p.correcta] : p.tipo === 'vf' ? (p.respuesta ? 'Verdadero' : 'Falso') : `${p.respuesta}${p.unidad ? ` ${p.unidad}` : ''}`;
+        return (
+          <li>
+            <form class="pregunta" data-pregunta data-tipo={p.tipo} data-correcta={correcta} data-tolerancia={p.tolerancia ?? 0} data-texto-correcto={textoCorrecto}>
+              <fieldset>
+                <legend><span class="dato">{i + 1}.</span> {p.enunciado}</legend>
+                {p.tipo === 'opcion' && (
+                  <div class="opciones">
+                    {(p.opciones ?? []).map((o, j) => (
+                      <label><input type="radio" name={pid} value={j} required /> <span>{o}</span></label>
+                    ))}
+                  </div>
+                )}
+                {p.tipo === 'vf' && (
+                  <div class="opciones en-linea">
+                    <label><input type="radio" name={pid} value="true" required /> <span>Verdadero</span></label>
+                    <label><input type="radio" name={pid} value="false" /> <span>Falso</span></label>
+                  </div>
+                )}
+                {p.tipo === 'numerica' && (
+                  <div class="numerica">
+                    <label for={`${pid}-n`}>Tu respuesta{p.unidad ? ` (${p.unidad})` : ''}</label>
+                    <input id={`${pid}-n`} name={pid} type="text" inputmode="decimal" autocomplete="off" required />
+                  </div>
+                )}
+              </fieldset>
+              <div class="pie-pregunta">
+                <button class="boton chico" type="submit">Comprobar</button>
+                <p class="resultado" role="status" data-resultado></p>
+              </div>
+              {p.explicacion && <p class="explicacion" data-explicacion hidden>{p.explicacion}</p>}
+            </form>
+          </li>
+        );
+      })}
+    </ol>
+    <p class="marcador" aria-live="polite" data-marcador></p>
+  </section>
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-autoevaluacion]').forEach((sec) => {
+    const formularios = [...sec.querySelectorAll<HTMLFormElement>('[data-pregunta]')];
+    const marcador = sec.querySelector<HTMLElement>('[data-marcador]');
+    const estado = new Map<HTMLFormElement, boolean>();
+    const numero = (s: string) => Number(s.trim().replace(/\s/g, '').replace(',', '.'));
+    formularios.forEach((f) => {
+      f.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const tipo = f.dataset.tipo;
+        const dato = new FormData(f).values().next().value as string | undefined;
+        if (dato == null || dato === '') return;
+        let bien = false;
+        if (tipo === 'numerica') {
+          const v = numero(dato);
+          if (Number.isNaN(v)) { f.querySelector<HTMLElement>('[data-resultado]')!.textContent = 'Escribe un número (puedes usar coma o punto decimal).'; return; }
+          bien = Math.abs(v - Number(f.dataset.correcta)) <= Number(f.dataset.tolerancia || 0);
+        } else bien = dato === f.dataset.correcta;
+        estado.set(f, bien);
+        f.classList.toggle('bien', bien);
+        f.classList.toggle('mal', !bien);
+        f.querySelector<HTMLElement>('[data-resultado]')!.textContent = bien ? 'Correcto.' : `No es correcta. La respuesta es: ${f.dataset.textoCorrecto}.`;
+        const exp = f.querySelector<HTMLElement>('[data-explicacion]');
+        if (exp) exp.hidden = false;
+        const n = [...estado.values()].filter(Boolean).length;
+        if (marcador) marcador.textContent = `Respondiste bien ${n} de ${formularios.length}.`;
+      });
+    });
+  });
+</script>
+
+<style>
+  .autoevaluacion { margin-top: 3rem; padding: 1.4rem; border: 1px solid var(--linea-fuerte); border-radius: var(--r-3); background: var(--elevado); display: grid; gap: 0.75rem; }
+  .autoevaluacion h2 { font-size: var(--t-4); }
+  .preguntas { list-style: none; display: grid; gap: 1rem; }
+  .pregunta { display: grid; gap: 0.75rem; padding: 1rem; border: 1px solid var(--linea); border-radius: var(--r-2); border-left-width: 3px; }
+  .pregunta.bien { border-left-color: var(--acento); }
+  .pregunta.mal { border-left-color: var(--cod-numero); }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  legend { font-family: var(--f-lectura); font-size: 1.08rem; line-height: 1.5; padding: 0; margin-bottom: 0.6rem; }
+  legend .dato { color: var(--acento); }
+  .opciones { display: grid; gap: 0.35rem; }
+  .opciones.en-linea { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  .opciones label { display: flex; gap: 0.6rem; align-items: baseline; padding: 0.35rem 0.25rem; cursor: pointer; border-radius: var(--r-1); }
+  .opciones label:hover { background: var(--papel-2); }
+  input[type='radio'] { accent-color: var(--acento); width: 1.05rem; height: 1.05rem; }
+  .numerica { display: grid; gap: 0.35rem; max-width: 16rem; }
+  .numerica label { font-size: var(--t-0); color: var(--tinta-2); }
+  .numerica input { min-height: 2.5rem; padding: 0.4rem 0.7rem; font: 1rem var(--f-datos); color: var(--tinta); background: var(--papel); border: 1px solid var(--linea-fuerte); border-radius: var(--r-2); }
+  .pie-pregunta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+  .resultado { font-size: var(--t-1); font-weight: 600; }
+  .bien .resultado { color: var(--acento); }
+  .explicacion { font-size: var(--t-1); color: var(--tinta-2); border-top: 1px dashed var(--linea); padding-top: 0.6rem; }
+  .marcador { font-weight: 600; }
+</style>

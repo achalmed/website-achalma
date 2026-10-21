@@ -100,12 +100,23 @@ y puede fijarse en `blog_base_urls` de `metadata_config.yml`.
 cd "web/_pubs/axiomata"          # o la raíz del hub
 quarto preview                            # con recarga
 quarto render posts/<AAAA-MM-DD-slug>/index.qmd   # solo el post (ejecuta su código, produce HTML, PDF y DOCX)
-quarto render                             # el sitio entero (freeze: no re-ejecuta código)
+git add -- posts/<AAAA-MM-DD-slug> && git commit -m "post: <título>"   # la fuente, confirmada antes del render que se publica
+scripts/render.sh                         # el sitio entero, solo HTML (segundos; conserva los PDF y DOCX de _site/)
+scripts/render.sh --documentos            # simula: qué PDF y DOCX hay que compilar (el post nuevo o cambiado)
+scripts/render.sh --documentos --aplicar  # los compila, solo esos, y anota la caché _documentos.tsv
 ```
 
+Desde el 2026-10-20 (`decisiones.md` §4.5) el render del sitio es **solo HTML** y los PDF y DOCX de
+apaquarto se compilan aparte y solo para las páginas cuya fuente cambió: así un blog se publica en
+segundos y no en minutos. La fecha interna de cada PDF y DOCX es la del último commit de su post, por eso
+la fuente se confirma antes de `--documentos`; un documento cuya fuente no cambió sale idéntico byte a
+byte. Tras cambiar algo que afecte a los documentos sin estar en la carpeta del post (por ejemplo una
+plantilla incluida desde otro sitio), `scripts/render.sh --documentos --aplicar --forzar --solo posts/<…>`.
+`scripts/render.sh --completo` renderiza todos los formatos como antes (para una comprobación general).
+
 O con el gestor: `./main.sh preview axiomata`, `./main.sh render axiomata` desde
-`scripts-quarto/backend/script_blogs_manager`. Revisar en `_site/` el HTML, el PDF (`index.pdf`) y
-que `citation.pdf-url` apunte a él.
+`scripts-quarto/backend/script_blogs_manager` (su `render` llama a `quarto render`: todos los formatos,
+lento). Revisar en `_site/` el HTML, el PDF (`index.pdf`) y que `citation.pdf-url` apunte a él.
 
 ## 6. Índices de contenido del blog
 
@@ -133,10 +144,10 @@ En el **hub** (`blog/posts/`): commit normal en `web`.
 
 ## 8. Publicar
 
-Los 12 sitios se publican igual: `quarto render` → commit de `_site/` → `git push`; Netlify sirve el
-`_site` empujado, sin build (`despliegue-netlify.md`). En un **blog**, el `quarto render` del paso 5 tiene
-que estar hecho **antes** del commit del paso 7, y `_site/` incluido en él; en el **hub**, igual, con el
-commit en `web`. Un push sin `_site/` publica un sitio vacío (`decisiones.md` §4.3).
+Los 12 sitios se publican igual: `scripts/render.sh` y `scripts/render.sh --documentos --aplicar` →
+commit de `_site/` y `_documentos.tsv` → `git push`; Netlify sirve el `_site` empujado, sin build
+(`despliegue-netlify.md`). En un **blog**, el render del paso 5 tiene que estar hecho **antes** del commit
+del paso 7, y `_site/` incluido en él; en el **hub**, igual, con el commit en `web`. Un push sin `_site/` publica un sitio vacío (`decisiones.md` §4.3).
 
 ## 9. El índice del vault
 
@@ -153,7 +164,7 @@ cd scripts-quarto/backend/script_pub_index_symlink
 
 1. Carpeta `AAAA-MM-DD-slug/` con `index.qmd`; `date` igual a la carpeta; `draft: false`.
 2. `title`, `shorttitle`, `abstract`, `keywords`, `categories`, `tags`, `description`, `citation` completos.
-3. Render del post sin errores; PDF generado; `pdf-url` correcta.
+3. Render del post sin errores; `scripts/render.sh --documentos --verificar` en 0 (PDF y DOCX al día); `pdf-url` correcta.
 4. `_contenido_*.qmd` regenerados (blog).
 5. Commit en el pub → puntero en el hub (blog) · render, commit de `_site/` y push (hub).
 6. `_indice/` regenerado.

@@ -1,0 +1,210 @@
+---
+// Lector.astro — lector de lecciones y artículos: barra de avance, índice lateral, índice de la página,
+// tiempo de lectura, descargas, modo lectura, «marcar como completada», autoevaluación y anterior/siguiente.
+import 'katex/dist/katex.min.css';
+import '@fontsource-variable/source-serif-4/wght-italic.css';
+import '../styles/contenido.css';
+import Base from './base.astro';
+import Autoevaluacion from '../components/autoevaluacion.astro';
+import Icono from '../components/icono.astro';
+import { datos, fechaLarga, peso } from '../lib/datos.mjs';
+
+interface Props { item: any; tipo: 'leccion' | 'articulo'; migas: { texto: string; href?: string }[] }
+const { item, tipo, migas } = Astro.props;
+const { pub } = datos();
+const idLeccion = tipo === 'leccion' ? `${item.curso}/${item.slug}` : null;
+const urlCanonica = new URL(item.url, pub.url).href;
+const anio = (item.fecha || '').slice(0, 4);
+const autor = `${pub.autor.family_names}, ${pub.autor.given_names.charAt(0)}.`;
+const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
+---
+<Base titulo={item.titulo} descripcion={item.descripcion} seccion={tipo === 'leccion' ? 'cursos' : 'blog'} clase="pagina-lector">
+  <div class="avance-lectura" aria-hidden="true"><span data-avance-lectura></span></div>
+  <div class="lector envoltura">
+    <aside class="lector-lateral" aria-label={tipo === 'leccion' ? 'Índice del curso' : 'Más del blog'}>
+      <slot name="lateral" />
+    </aside>
+
+    <article class="lector-articulo" data-articulo>
+      <header class="lector-cabeza">
+        <nav aria-label="Ruta">
+          <ol class="migas">
+            {migas.map((m) => <li>{m.href ? <a href={m.href}>{m.texto}</a> : <span>{m.texto}</span>}</li>)}
+          </ol>
+        </nav>
+        <h1>{item.titulo}</h1>
+        {item.descripcion && <p class="lector-desc">{item.descripcion}</p>}
+        <p class="metadatos">
+          <time datetime={item.fecha}><Icono nombre="calendar" tamano={15} />{fechaLarga(item.fecha)}</time>
+          <span><Icono nombre="clock" tamano={15} />{item.minutos} min de lectura</span>
+          {item.pdf && <a href={item.pdf.url}><Icono nombre="file-down" tamano={15} />PDF <span class="sr">de esta {tipo === 'leccion' ? 'lección' : 'entrada'}</span>({peso(item.pdf.bytes)})</a>}
+          {item.docx && <a href={item.docx.url}><Icono nombre="file-down" tamano={15} />DOCX ({peso(item.docx.bytes)})</a>}
+        </p>
+        <div class="acciones lector-acciones">
+          <button class="boton chico" type="button" data-modo-lectura aria-pressed="false"><Icono nombre="book-open" tamano={15} /><span data-modo-texto>Modo lectura</span></button>
+          {idLeccion && (
+            <button class="boton chico" type="button" data-completar={idLeccion} aria-pressed="false">
+              <Icono nombre="circle-check" tamano={15} />
+              <span data-completar-texto>Marcar como completada</span>
+            </button>
+          )}
+          <span class="sr" aria-live="polite" data-aviso></span>
+        </div>
+      </header>
+
+      <div class="prosa" set:html={item.cuerpo} />
+
+      {item.quiz && <Autoevaluacion preguntas={item.quiz} id={`quiz-${item.slug}`} />}
+
+      <section class="citar" aria-labelledby="t-citar">
+        <h2 id="t-citar">Cómo citar</h2>
+        <p>{autor} ({anio}{fechaCita ? `, ${fechaCita}` : ''}). <i>{item.titulo}</i>. {pub.nombre}. <a href={urlCanonica}>{urlCanonica}</a></p>
+      </section>
+
+      {(item.anterior || item.siguiente) && (
+        <nav class="paginacion" aria-label="Lecciones del curso">
+          {item.anterior ? <a class="ant" href={item.anterior.url} rel="prev"><span><Icono nombre="arrow-left" tamano={14} /> Anterior</span>{item.anterior.titulo}</a> : <span />}
+          {item.siguiente ? <a class="sig" href={item.siguiente.url} rel="next"><span>Siguiente <Icono nombre="arrow-right" tamano={14} /></span>{item.siguiente.titulo}</a> : <span />}
+        </nav>
+      )}
+    </article>
+
+    {item.indice.length > 1 && (
+      <nav class="lector-indice" aria-label="En esta página">
+        <p>En esta página</p>
+        <ol>
+          {item.indice.map((h) => (
+            <li class={h.nivel === 3 ? 'sub' : ''}><a href={`#${h.id}`} data-indice={h.id}>{h.texto}</a></li>
+          ))}
+        </ol>
+      </nav>
+    )}
+  </div>
+</Base>
+
+<script>
+  import { completadas, marcar, preferencia, guardarPreferencia } from '../scripts/almacen.js';
+  const raiz = document.documentElement;
+  const aviso = document.querySelector<HTMLElement>('[data-aviso]');
+
+  // Modo lectura: oculta todo lo que no es el texto; se recuerda en este navegador. Esc lo cierra.
+  const modo = document.querySelector<HTMLButtonElement>('[data-modo-lectura]');
+  const ponerModo = (activo: boolean, guardar = true) => {
+    raiz.classList.toggle('modo-lectura', activo);
+    modo?.setAttribute('aria-pressed', String(activo));
+    const t = modo?.querySelector('[data-modo-texto]');
+    if (t) t.textContent = activo ? 'Salir del modo lectura' : 'Modo lectura';
+    if (guardar) guardarPreferencia('lectura', activo);
+  };
+  ponerModo(preferencia('lectura', false) === true, false);
+  modo?.addEventListener('click', () => ponerModo(!raiz.classList.contains('modo-lectura')));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && raiz.classList.contains('modo-lectura')) ponerModo(false); });
+
+  // Marcar como completada.
+  const completar = document.querySelector<HTMLButtonElement>('[data-completar]');
+  if (completar) {
+    const id = completar.dataset.completar!;
+    const texto = completar.querySelector('[data-completar-texto]')!;
+    const pintar = () => {
+      const hecho = Boolean(completadas()[id]);
+      completar.setAttribute('aria-pressed', String(hecho));
+      texto.textContent = hecho ? 'Completada' : 'Marcar como completada';
+      document.querySelectorAll<HTMLElement>(`[data-leccion="${id}"]`).forEach((el) => el.classList.toggle('hecha', hecho));
+    };
+    pintar();
+    completar.addEventListener('click', () => {
+      const hecho = !completadas()[id];
+      marcar(id, hecho);
+      pintar();
+      if (aviso) aviso.textContent = hecho ? 'Lección marcada como completada.' : 'La lección ya no está marcada como completada.';
+    });
+    document.querySelectorAll<HTMLElement>('[data-leccion]').forEach((el) => el.classList.toggle('hecha', Boolean(completadas()[el.dataset.leccion!])));
+  }
+
+  // Copiar cada bloque de código (la cabecera la escribe el build: src/lib/contenido.mjs).
+  if (navigator.clipboard) document.querySelectorAll<HTMLButtonElement>('.prosa [data-copiar]').forEach((b) => {
+    b.hidden = false;
+    b.setAttribute('aria-label', 'Copiar el código');
+    const rotulo = b.querySelector('span')!;
+    b.addEventListener('click', async () => {
+      const pre = b.closest('div.sourceCode')?.querySelector('pre');
+      try { await navigator.clipboard.writeText(pre?.innerText || ''); rotulo.textContent = 'Copiado'; if (aviso) aviso.textContent = 'Código copiado.'; }
+      catch { rotulo.textContent = 'No se pudo copiar'; }
+      setTimeout(() => { rotulo.textContent = 'Copiar'; }, 1600);
+    });
+  });
+
+  // Barra de avance de la lectura y sección activa del índice.
+  const articulo = document.querySelector<HTMLElement>('[data-articulo]');
+  const barra = document.querySelector<HTMLElement>('[data-avance-lectura]');
+  const enlaces = new Map([...document.querySelectorAll<HTMLAnchorElement>('[data-indice]')].map((a) => [a.dataset.indice, a]));
+  let pendiente = false;
+  const medir = () => {
+    pendiente = false;
+    if (!articulo || !barra) return;
+    const r = articulo.getBoundingClientRect();
+    const total = r.height - innerHeight;
+    barra.style.transform = `scaleX(${Math.min(1, Math.max(0, -r.top / (total > 0 ? total : 1)))})`;
+  };
+  addEventListener('scroll', () => { if (!pendiente) { pendiente = true; requestAnimationFrame(medir); } }, { passive: true });
+  medir();
+  if (enlaces.size) {
+    const obs = new IntersectionObserver((entradas) => {
+      for (const e of entradas) {
+        if (!e.isIntersecting) continue;
+        enlaces.forEach((a) => a.removeAttribute('aria-current'));
+        enlaces.get(e.target.id)?.setAttribute('aria-current', 'location');
+      }
+    }, { rootMargin: '-15% 0px -70% 0px' });
+    enlaces.forEach((_, id) => { const s = id ? document.getElementById(id) : null; if (s) obs.observe(s); });
+  }
+</script>
+
+<style>
+  .avance-lectura { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 60; pointer-events: none; }
+  .avance-lectura span { display: block; height: 100%; background: var(--acento); transform: scaleX(0); transform-origin: left; }
+
+  .lector { display: grid; gap: 2rem; padding-block: 2rem 1rem; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .lector { grid-template-columns: 15.5rem minmax(0, 1fr); gap: 3rem; } }
+  @media (min-width: 1280px) { .lector { grid-template-columns: 15.5rem minmax(0, 1fr) 13rem; } }
+  .lector-lateral { min-width: 0; }
+  @media (min-width: 1000px) { .lector-lateral { position: sticky; top: 5rem; align-self: start; max-height: calc(100vh - 6rem); overflow: auto; } }
+  .lector-articulo { min-width: 0; max-width: calc(var(--medida) + 4rem); }
+
+  .lector-cabeza { display: grid; gap: 0.9rem; padding-bottom: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--linea); }
+  .lector-cabeza h1 { font-size: var(--t-5); }
+  .lector-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 56ch; }
+  .lector-acciones { gap: 0.5rem; }
+  .lector-cabeza .metadatos > * { display: inline-flex; align-items: center; gap: 0.35rem; }
+
+  .lector-indice { display: none; }
+  @media (min-width: 1280px) {
+    .lector-indice { display: block; position: sticky; top: 5rem; align-self: start; max-height: calc(100vh - 6rem); overflow: auto; font-size: var(--t-0); }
+  }
+  .lector-indice p { font-weight: 600; color: var(--tinta-2); margin-bottom: 0.5rem; }
+  .lector-indice ol { list-style: none; display: grid; gap: 0.1rem; border-left: 1px solid var(--linea); }
+  .lector-indice li.sub { padding-left: 0.75rem; }
+  .lector-indice a { display: block; padding: 0.25rem 0 0.25rem 0.75rem; margin-left: -1px; border-left: 2px solid transparent; color: var(--tenue); text-decoration: none; line-height: 1.35; }
+  .lector-indice a:hover { color: var(--tinta); }
+  .lector-indice a[aria-current] { color: var(--acento); border-left-color: var(--acento); }
+
+  .citar { margin-top: 3rem; padding: 1rem 1.1rem; background: var(--papel-2); border-radius: var(--r-2); font-size: var(--t-1); }
+  .citar h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.4rem; }
+  .citar p { overflow-wrap: anywhere; color: var(--tinta-2); }
+
+  .paginacion { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .paginacion a { display: grid; gap: 0.2rem; padding: 0.9rem 1rem; border: 1px solid var(--linea); border-radius: var(--r-2); text-decoration: none; font-weight: 500; }
+  .paginacion a:hover { border-color: var(--acento); }
+  .paginacion a span { display: inline-flex; align-items: center; gap: 0.3rem; font-size: var(--t-0); color: var(--tenue); font-weight: 400; }
+  .paginacion .sig span { justify-content: flex-end; }
+  .paginacion .sig { text-align: right; }
+  @media (max-width: 560px) { .paginacion { grid-template-columns: 1fr; } .paginacion .sig { text-align: left; } .paginacion .sig span { justify-content: flex-start; } }
+
+  /* Modo lectura: solo el texto, centrado y un punto más grande. */
+  :global(html.modo-lectura) .lector { grid-template-columns: minmax(0, 1fr); }
+  :global(html.modo-lectura) .lector-lateral, :global(html.modo-lectura) .lector-indice { display: none; }
+  :global(html.modo-lectura) .lector-articulo { margin-inline: auto; }
+  :global(html.modo-lectura) :global(.prosa) { font-size: 1.1875rem; }
+  :global(html.modo-lectura .cabecera), :global(html.modo-lectura .pie) { display: none; }
+  :global(html.modo-lectura) .lector-acciones { position: sticky; top: 0.5rem; z-index: 5; justify-self: start; padding: 0.35rem; background: var(--vidrio-fuerte); border-radius: var(--r-2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+</style>

@@ -54,6 +54,7 @@ THEME_PATHS=(
     "scripts/fechas-desde-git.py"
     "scripts/render.sh"
     "scripts/quitar-borradores.py"
+    "scripts/documentos.py"
 )
 RSYNC_EXCLUDES=(--exclude '05-pages/' --exclude '.Rhistory' --exclude '.directory')
 SELLO="THEME_VERSION"
@@ -109,7 +110,7 @@ texto_sello() {
 enlazar() {         # $1 = --dry-run o nada; imprime cuántos hardlinks crea (o crearía) el creador en el hub
     local out
     [[ -f "$CREADOR" && -f "$LISTA" ]] || { echo "Falta $CREADOR o $LISTA" >&2; exit 5; }
-    out="$(python3 "$CREADOR" --batch "$LISTA" -d "$HUB" --auto --no-color ${1:+"$1"} 2>&1)" || { printf '%s\n' "$out" >&2; exit 6; }
+    out="$(python3 "$CREADOR" --batch "$LISTA" -d "$HUB" --auto --no-color --exclude _aula ${1:+"$1"} 2>&1)"   # _aula: plataforma (node_modules, .venv), sin archivos del tema || { printf '%s\n' "$out" >&2; exit 6; }
     sed -n 's/.*Hard links creados: *\([0-9]*\).*/\1/p' <<<"$out" | tail -1
 }
 

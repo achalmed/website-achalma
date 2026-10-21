@@ -1,0 +1,102 @@
+/* src/styles/base.css — documento, tipografía de interfaz, enlaces, foco, botones y piezas comunes.
+   Consume solo tokens (tokens.css). Los componentes llevan su propio <style> con ámbito. */
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 5rem; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--f-interfaz);
+  font-size: var(--t-2);
+  line-height: 1.55;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+::selection { background: var(--seleccion); }
+img, svg, video { max-width: 100%; height: auto; }
+h1, h2, h3, h4 { font-family: var(--f-titulo); font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
+dl, dd { margin: 0; }
+
+a { color: inherit; text-decoration-color: color-mix(in oklab, var(--acento) 45%, transparent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { color: var(--acento); text-decoration-color: currentColor; }
+
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; border-radius: var(--r-1); }
+
+.saltar {
+  position: absolute; left: var(--margen); top: -100px; z-index: 100;
+  background: var(--tinta); color: var(--papel); padding: 0.6rem 1rem; border-radius: var(--r-2);
+  font-weight: 600; text-decoration: none;
+}
+.saltar:focus-visible { top: 0.75rem; }
+
+.icono { flex: none; display: inline-block; vertical-align: -0.18em; }
+
+/* Atajo de teclado (⌘K, Ctrl K, Esc): una tecla de papel con filete. */
+kbd {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 1.6em; height: 1.5em; padding: 0 0.35em;
+  font: 500 0.72rem/1 var(--f-datos); color: var(--tinta-2);
+  background: var(--elevado); border: 1px solid var(--linea-fuerte); border-bottom-width: 2px; border-radius: var(--r-1);
+}
+
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ── Contenedores ───────────────────────────────────────────────────────── */
+.envoltura { width: 100%; max-width: var(--ancho); margin-inline: auto; padding-inline: var(--margen); }
+.seccion { padding-block: clamp(2.5rem, 2rem + 3vw, 4.5rem); }
+.seccion + .seccion { border-top: 1px solid var(--linea); }
+.seccion-cabeza { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem; margin-bottom: 1.5rem; }
+.seccion-cabeza h2 { font-size: var(--t-4); }
+.seccion-cabeza p { color: var(--tenue); max-width: 60ch; }
+.seccion-cabeza > a { display: inline-flex; align-items: center; gap: 0.3rem; }
+.milimetrado { background: var(--milimetrado), var(--papel); }
+
+/* ── Botones ───────────────────────────────────────────────────────────── */
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 2.75rem; padding: 0.55rem 1.1rem;
+  font: 600 var(--t-1)/1.2 var(--f-interfaz);
+  color: var(--tinta); background: var(--elevado);
+  border: 1px solid var(--linea-fuerte); border-radius: var(--r-2);
+  text-decoration: none; cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+.boton:hover { border-color: var(--acento); color: var(--acento); }
+.boton.primario { background: var(--acento); border-color: var(--acento); color: var(--sobre-acento); }
+.boton.primario:hover { background: color-mix(in oklab, var(--acento) 86%, var(--tinta)); color: var(--sobre-acento); }
+.boton.chico { min-height: 2.25rem; padding: 0.35rem 0.75rem; font-size: var(--t-0); }
+.boton[aria-pressed='true'] { background: var(--acento-suave); border-color: var(--acento); color: var(--acento); }
+.boton svg { width: 1.1em; height: 1.1em; flex: none; }
+.boton kbd { margin-left: 0.15rem; }
+.acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* ── Piezas de texto ───────────────────────────────────────────────────── */
+.dato { font-family: var(--f-datos); font-size: 0.86em; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.tenue { color: var(--tenue); }
+.migas { display: flex; flex-wrap: wrap; gap: 0.35rem; font-size: var(--t-0); color: var(--tenue); margin-bottom: 1rem; }
+.migas a { color: inherit; }
+.migas li { list-style: none; display: flex; gap: 0.35rem; }
+.migas li + li::before { content: '/'; color: var(--linea-fuerte); }
+
+.estado {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  font-size: var(--t-0); color: var(--tinta-2); white-space: nowrap;
+}
+.estado::before { content: ''; width: 0.6em; height: 0.6em; border: 1px solid currentColor; border-radius: 1px; }
+.estado.publicada { color: var(--acento); }
+.estado.publicada::before { background: currentColor; }
+.estado.preparacion { color: var(--tenue); }
+.estado.preparacion::before { border-style: dashed; }
+
+.metadatos { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: var(--t-0); color: var(--tenue); }
+
+/* Movimiento con freno */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

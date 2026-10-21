@@ -1,0 +1,103 @@
+---
+// Reticula.astro — el temario de un curso como papel milimetrado: cada tema es un milímetro.
+// Lleno = lección publicada; en blanco con borde punteado = en preparación; color del acento = completada
+// por el visitante (lo pinta almacen.js desde localStorage). En modo «mini» es una sola imagen con su
+// resumen para lectores de pantalla; en modo «completa» las celdas publicadas son enlaces.
+
+interface Props { curso: any; modo?: 'mini' | 'completa' }
+const { curso, modo = 'mini' } = Astro.props;
+const total = curso.nTemas;
+const resumen = total
+  ? `${curso.nPublicadas} de ${total} temas con lección publicada`
+  : 'Temario en preparación';
+---
+{total === 0 ? (
+  <p class="reticula-vacia">El temario de este curso aún no tiene unidades.</p>
+) : modo === 'mini' ? (
+  <div class="reticula mini" role="img" aria-label={resumen}>
+    {curso.unidades.map((u) => (
+      <span class="unidad">
+        {u.temas.map((t) => (
+          <span class={t.leccion ? 'celda publicada' : 'celda'} data-leccion={t.leccion ? `${curso.id}/${t.leccion.slug}` : undefined}></span>
+        ))}
+      </span>
+    ))}
+  </div>
+) : (
+  <figure class="reticula-figura" data-reticula>
+    <div class="reticula completa">
+      {curso.unidades.map((u) => (
+        <div class="unidad" role="group" aria-label={`Unidad ${u.id}: ${u.titulo}`}>
+          <span class="unidad-n dato" aria-hidden="true">{u.id}</span>
+          {u.temas.map((t) =>
+            t.leccion ? (
+              <a class="celda publicada" href={t.leccion.url} data-leccion={`${curso.id}/${t.leccion.slug}`} data-rotulo={`${t.id} · ${t.titulo} — lección publicada`} aria-label={`Tema ${t.id}: ${t.titulo}. Lección publicada: ${t.leccion.titulo}`}></a>
+            ) : (
+              <span class="celda" data-rotulo={`${t.id} · ${t.titulo} — en preparación`} title={`${t.id} ${t.titulo} (en preparación)`}></span>
+            )
+          )}
+        </div>
+      ))}
+    </div>
+    <figcaption>
+      <span class="rotulo" data-rotulo-salida aria-live="polite">{resumen}. Pasa sobre una celda o recorre las publicadas con el teclado.</span>
+      <span class="leyenda" aria-hidden="true">
+        <span><i class="celda publicada"></i> lección publicada</span>
+        <span><i class="celda"></i> en preparación</span>
+        <span><i class="celda publicada hecha"></i> completada por ti</span>
+      </span>
+    </figcaption>
+  </figure>
+)}
+
+<script>
+  import { pintarProgreso } from '../scripts/almacen.js';
+  pintarProgreso();
+  document.addEventListener('aula:progreso', () => pintarProgreso());
+  document.querySelectorAll<HTMLElement>('[data-reticula]').forEach((fig) => {
+    const salida = fig.querySelector<HTMLElement>('[data-rotulo-salida]');
+    if (!salida) return;
+    const inicial = salida.textContent;
+    const mostrar = (e: Event) => {
+      const c = (e.target as HTMLElement).closest<HTMLElement>('[data-rotulo]');
+      if (c) salida.textContent = c.dataset.rotulo || '';
+    };
+    fig.addEventListener('pointerover', mostrar);
+    fig.addEventListener('focusin', mostrar);
+    fig.addEventListener('pointerleave', () => { salida.textContent = inicial; });
+  });
+</script>
+
+<style>
+  .reticula { display: flex; flex-wrap: wrap; align-items: flex-start; }
+  .unidad { display: inline-flex; flex-wrap: wrap; }
+  .celda {
+    display: inline-block; flex: none;
+    width: var(--lado); height: var(--lado);
+    background: var(--elevado);
+    outline: 1px dashed color-mix(in oklab, var(--tenue) 45%, transparent); outline-offset: -1px;
+  }
+  .celda.publicada { background: var(--tinta-2); outline: 1px solid var(--tinta-2); }
+  .celda.hecha { background: var(--acento); outline-color: var(--acento); }
+
+  .mini { --lado: 7px; gap: 4px; }
+  .mini .unidad { gap: 1px; }
+  .mini .celda { outline: 0; background: var(--linea); }
+  .mini .celda.publicada { background: var(--tinta-2); }
+  .mini .celda.hecha { background: var(--acento); }
+
+  .reticula-figura { margin: 0; }
+  .completa { --lado: 15px; gap: 0.6rem 0.9rem; }
+  .completa .unidad { gap: 2px; align-items: center; }
+  .unidad-n { color: var(--tenue); font-size: 0.68rem; min-width: 1.3em; margin-right: 0.15rem; }
+  a.celda { transition: transform 0.12s; }
+  a.celda:hover, a.celda:focus-visible { transform: scale(1.35); background: var(--acento); outline-color: var(--acento); }
+  a.celda:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+  span.celda[data-rotulo]:hover { background: var(--acento-suave); }
+  figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; margin-top: 1rem; font-size: var(--t-0); color: var(--tenue); }
+  .rotulo { min-height: 1.5em; color: var(--tinta-2); }
+  .leyenda { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+  .leyenda span { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .leyenda .celda { --lado: 10px; }
+  .reticula-vacia { font-size: var(--t-0); color: var(--tenue); }
+</style>

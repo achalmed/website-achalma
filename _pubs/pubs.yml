@@ -16,9 +16,9 @@ autor:
   family_names: Achalma
   orcid: https://orcid.org/0000-0001-6996-3364
   github: achalmed
-# Licencia declarada hoy en los 12 sitios: LICENSE y CITATION.cff dicen MPL-2.0 (código); license.qmd del hub
-# dice CC BY-SA 4.0 (contenido). Unificarla es la decisión D9 del DIAGNOSTICO_DOCUMENTACION_2026-09; hasta
-# entonces el CITATION.cff generado repite lo que ya declaraba.
+# Licencias de los 12 sitios (D9, decidida el 2026-10-20; docs/decisiones.md §3.6): el contenido (posts, lecciones,
+# PDF, materiales) es CC BY-SA 4.0 y lo declaran license.qmd, los _metadata.yml y CITATION.cff; el código (scripts,
+# tema) es MPL-2.0 y lo declara LICENSE.
 licencia_codigo: MPL-2.0
 licencia_contenido: CC-BY-SA-4.0
 # Despliegue de los pubs: como el hub, Netlify publica el _site/ empujado, sin build; _site/ se versiona en los

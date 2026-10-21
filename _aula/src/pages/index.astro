@@ -1,0 +1,80 @@
+---
+// Inicio del pub: identidad, una lección real en curso, cursos destacados, ediciones y blog.
+import Base from '../layouts/base.astro';
+import LeccionEnCurso from '../components/leccion-en-curso.astro';
+import TarjetaCurso from '../components/tarjeta-curso.astro';
+import ListaEntradas from '../components/lista-entradas.astro';
+import TarjetaEdicion from '../components/tarjeta-edicion.astro';
+import Cifras from '../components/cifras.astro';
+import Icono from '../components/icono.astro';
+import { datos } from '../lib/datos.mjs';
+
+const { pub, propios, destacados, blog, ediciones, enCurso } = datos();
+const cursoDeEnCurso = enCurso?.origen === 'leccion' ? propios.find((c) => c.id === enCurso.item.curso) : null;
+---
+<Base seccion="inicio">
+  <section class="portada milimetrado">
+    <div class="envoltura portada-rejilla">
+      <div class="portada-texto">
+        {pub.area && <p class="portada-area">{pub.area.nombre}</p>}
+        <h1>{pub.nombre}</h1>
+        <p class="portada-lema">{pub.descripcion}</p>
+        <div class="acciones">
+          <a class="boton primario" href="/cursos/">Ver los cursos <Icono nombre="arrow-right" tamano={16} /></a>
+          <button class="boton" type="button" data-abrir-paleta aria-haspopup="dialog"><Icono nombre="search" tamano={16} /> Buscar <kbd data-atajo>Ctrl K</kbd></button>
+        </div>
+      </div>
+      <div class="portada-muestra">
+        {enCurso ? <LeccionEnCurso enCurso={enCurso} cursoTitulo={cursoDeEnCurso?.titulo} /> : (
+          <p class="tenue">Este pub aún no tiene lecciones ni artículos publicados.</p>
+        )}
+      </div>
+    </div>
+    <div class="envoltura portada-cifras"><Cifras /></div>
+  </section>
+
+  <section class="seccion envoltura" aria-labelledby="t-cursos">
+    <div class="seccion-cabeza">
+      <h2 id="t-cursos">Cursos</h2>
+      <a href="/cursos/">Todos los cursos ({propios.length}) <Icono nombre="arrow-right" tamano={15} /></a>
+    </div>
+    <div class="rejilla-tarjetas">
+      {destacados.map((c) => <TarjetaCurso curso={c} />)}
+    </div>
+  </section>
+
+  {ediciones.length > 0 && (
+    <section class="seccion envoltura" aria-labelledby="t-ediciones">
+      <div class="seccion-cabeza">
+        <h2 id="t-ediciones">Ediciones dictadas</h2>
+        <p>Cada edición es un dictado real del curso, con sus sesiones y materiales.</p>
+      </div>
+      <ol class="rejilla-tarjetas">
+        {ediciones.map((e) => <li><TarjetaEdicion ed={e} /></li>)}
+      </ol>
+    </section>
+  )}
+
+  <section class="seccion envoltura" aria-labelledby="t-blog">
+    <div class="seccion-cabeza">
+      <h2 id="t-blog">Del blog</h2>
+      <a href="/blog/">Todas las entradas ({blog.length}) <Icono nombre="arrow-right" tamano={15} /></a>
+    </div>
+    <ListaEntradas entradas={blog.slice(0, 4)} />
+  </section>
+</Base>
+
+<style>
+  .portada { border-bottom: 1px solid var(--linea); }
+  .portada-rejilla { display: grid; gap: 2.5rem; padding-block: clamp(2.5rem, 1.5rem + 5vw, 5.5rem) clamp(2rem, 1.5rem + 2.5vw, 3.5rem); align-items: center; }
+  @media (min-width: 1000px) { .portada-rejilla { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 4rem; } }
+  .portada-texto { display: grid; gap: 1.1rem; justify-items: start; }
+  .portada-area { font-size: var(--t-1); font-weight: 600; color: var(--acento); }
+  .portada h1 { font-size: var(--t-6); font-weight: 400; line-height: 0.98; letter-spacing: -0.025em; }
+  .portada-lema { font-family: var(--f-lectura); font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem); line-height: 1.45; color: var(--tinta-2); max-width: 30ch; }
+  .portada-cifras { padding-bottom: clamp(2rem, 1.5rem + 2vw, 3rem); }
+  .portada-texto .acciones { margin-top: 0.5rem; }
+  .portada-muestra { min-width: 0; }
+  .rejilla-tarjetas { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+
+</style>

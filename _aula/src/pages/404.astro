@@ -1,0 +1,19 @@
+---
+// Página no encontrada.
+import Base from '../layouts/base.astro';
+---
+<Base titulo="Página no encontrada">
+  <div class="envoltura nf">
+    <h1>Esta página no existe</h1>
+    <p>Puede que la dirección esté mal escrita o que la página haya cambiado de lugar al pasar a la plataforma de cursos.</p>
+    <div class="acciones">
+      <a class="boton primario" href="/cursos/">Ir a los cursos</a>
+      <a class="boton" href="/blog/">Ir al blog</a>
+    </div>
+  </div>
+</Base>
+<style>
+  .nf { padding-block: 4rem; display: grid; gap: 1rem; max-width: 44rem; }
+  h1 { font-size: var(--t-5); }
+  p { color: var(--tinta-2); }
+</style>

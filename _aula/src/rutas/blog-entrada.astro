@@ -1,0 +1,28 @@
+---
+// Artículo del blog, con el mismo lector que las lecciones.
+import Lector from '../layouts/lector.astro';
+import { datos } from '../lib/datos.mjs';
+
+export function getStaticPaths() {
+  return datos().blog.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+const { item } = Astro.props;
+const otros = datos().blog.filter((b) => b.url !== item.url).slice(0, 6);
+---
+<Lector item={item} tipo="articulo" migas={[{ texto: 'Blog', href: '/blog/' }, { texto: item.categorias[0] ?? 'Artículo' }]}>
+  <div slot="lateral" class="mas">
+    <h2>Más del blog</h2>
+    <ul>
+      {otros.map((b) => <li><a href={b.url}>{b.titulo}</a><span class="dato tenue">{b.fecha}</span></li>)}
+    </ul>
+  </div>
+</Lector>
+<style>
+  .mas h2 { font-family: var(--f-interfaz); font-size: var(--t-0); font-weight: 600; color: var(--tinta-2); margin-bottom: 0.5rem; letter-spacing: 0; }
+  .mas ul { list-style: none; display: grid; }
+  .mas li { display: grid; gap: 0.1rem; padding-block: 0.55rem; border-top: 1px solid var(--linea); font-size: var(--t-1); line-height: 1.35; }
+  .mas a { text-decoration: none; }
+  .mas a:hover { text-decoration: underline; }
+  .mas .dato { font-size: 0.72rem; }
+  @media (max-width: 999px) { .mas { display: none; } }
+</style>

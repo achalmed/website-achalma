@@ -1,0 +1,85 @@
+---
+// Lector de lección: el cuerpo viene del HTML que Quarto ya renderizó en el pub (decisiones §1.2).
+import Lector from '../layouts/lector.astro';
+import { datos } from '../lib/datos.mjs';
+
+export function getStaticPaths() {
+  return datos().propios.flatMap((curso) =>
+    curso.lecciones.map((item) => ({ params: { curso: curso.id, leccion: item.slug }, props: { item, curso } })),
+  );
+}
+const { item, curso } = Astro.props;
+const unidad = item.unidad ? curso.unidades.find((u) => u.id === item.unidad.id) : null;
+const otras = curso.lecciones.filter((l) => !unidad || !l.unidad || l.unidad.id !== unidad.id);
+const migas = [
+  { texto: 'Cursos', href: '/cursos/' },
+  { texto: curso.titulo, href: curso.url },
+  { texto: item.unidad ? `Unidad ${item.unidad.id}` : 'Lectura complementaria' },
+];
+---
+<Lector item={item} tipo="leccion" migas={migas}>
+  <div slot="lateral" class="indice-curso">
+    <details class="plegable" open>
+      <summary><a href={curso.url}>{curso.titulo}</a><span class="tenue">{curso.nPublicadas} de {curso.nTemas} temas con lección</span></summary>
+      {unidad && (
+        <section aria-labelledby="t-unidad">
+          <h2 id="t-unidad"><span class="dato">{unidad.id}</span> {unidad.titulo}</h2>
+          <ol class="temas-unidad">
+            {unidad.temas.map((t) => (
+              <li class:list={[t.leccion ? 'con' : 'sin', t.leccion?.url === item.url && 'actual']}>
+                <span class="dato">{t.id}</span>
+                {t.leccion ? (
+                  <a href={t.leccion.url} aria-current={t.leccion.url === item.url ? 'page' : undefined} data-leccion={`${curso.id}/${t.leccion.slug}`}>{t.leccion.titulo}</a>
+                ) : (
+                  <span>{t.titulo} <span class="sr">(en preparación)</span></span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+      {otras.length > 0 && (
+        <section aria-labelledby="t-otras">
+          <h2 id="t-otras">{unidad ? 'Otras lecciones del curso' : 'Lecciones del curso'}</h2>
+          <ol class="temas-unidad">
+            {otras.map((l) => (
+              <li class:list={['con', l.url === item.url && 'actual']}>
+                <span class="dato">{l.tema?.id ?? '·'}</span>
+                <a href={l.url} aria-current={l.url === item.url ? 'page' : undefined} data-leccion={`${curso.id}/${l.slug}`}>{l.titulo}</a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+    </details>
+  </div>
+</Lector>
+
+<script>
+  // En el celular el índice del curso empieza plegado para que el texto quede arriba.
+  if (matchMedia('(max-width: 999px)').matches) document.querySelectorAll<HTMLDetailsElement>('.plegable').forEach((d) => { d.open = false; });
+</script>
+
+<style>
+  .indice-curso { font-size: var(--t-1); }
+  .plegable > summary { display: grid; gap: 0.2rem; cursor: pointer; padding-bottom: 0.75rem; border-bottom: 1px solid var(--linea); list-style: none; }
+  .plegable > summary::-webkit-details-marker { display: none; }
+  .plegable > summary a { font-family: var(--f-titulo); font-size: 1.2rem; text-decoration: none; }
+  .plegable > summary .tenue { font-size: var(--t-0); }
+  @media (max-width: 999px) {
+    .plegable { border: 1px solid var(--linea); border-radius: var(--r-2); padding: 0.75rem 0.9rem; background: var(--papel-2); }
+    .plegable:not([open]) > summary { border-bottom: 0; padding-bottom: 0; }
+    .plegable > summary::after { content: 'Índice del curso'; font-size: var(--t-0); color: var(--acento); font-weight: 600; }
+  }
+  section { margin-top: 1rem; }
+  h2 { font-family: var(--f-interfaz); font-size: var(--t-0); font-weight: 600; color: var(--tinta-2); margin-bottom: 0.4rem; letter-spacing: 0; }
+  h2 .dato { color: var(--acento); }
+  .temas-unidad { list-style: none; display: grid; }
+  .temas-unidad li { display: grid; grid-template-columns: 2.6rem 1fr; gap: 0.4rem; padding: 0.35rem 0; line-height: 1.35; }
+  .temas-unidad .dato { color: var(--tenue); font-size: 0.72rem; padding-top: 0.15rem; }
+  .temas-unidad li.sin { color: var(--tenue); }
+  .temas-unidad a { text-decoration: none; }
+  .temas-unidad a:hover { text-decoration: underline; }
+  .temas-unidad a[aria-current] { color: var(--acento); font-weight: 600; }
+  .temas-unidad a.hecha::before { content: ''; display: inline-block; width: 0.5em; height: 0.5em; background: var(--acento); margin-right: 0.4em; vertical-align: 0.1em; }
+</style>

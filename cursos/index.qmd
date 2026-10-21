@@ -1,9 +1,7 @@
 ---
 title: "Cursos"
 description: |
-  Repositorio docente abierto: cada curso reúne su descripción, sílabo y todas
-  sus ediciones con sesiones, diapositivas, ejercicios y materiales descargables.<br>
-  Organizado por áreas — Economía, Matemática, Investigación, Ciencia de Datos y Gestión.
+  Cada área tiene su propio sitio con sus cursos, lecciones, ediciones y materiales descargables.
 listing:
   - id: cursos
     contents:
@@ -33,6 +31,24 @@ toc: false
 search: true
 comments: false
 ---
+
+<!-- sitios:inicio — GENERADO por scripts/redirecciones-cursos.py desde docencia/config/areas.yml y _pubs/pubs.yml; no editar -->
+Los cursos viven en el sitio de su área: allí están el temario, las lecciones, las ediciones dictadas y los materiales. Lo preuniversitario sigue aquí abajo hasta que tenga su sitio.
+
+| Área | Sitio |
+|---|---|
+| Macroeconomía | [Aequilibria](https://aequilibria.netlify.app/cursos/) |
+| Microeconomía | [Optimums](https://optimums.netlify.app/cursos/) |
+| Estadística y econometría | [Epsilon y Beta](https://epsilon-y-beta.netlify.app/cursos/) |
+| Matemáticas | [Axiomata](https://axiomata.netlify.app/cursos/) |
+| Finanzas | [Pecunia Fluxus](https://pecunia-fluxus.netlify.app/cursos/) |
+| Gestión empresarial y proyectos | [Actus Mercator](https://actus-mercator.netlify.app/cursos/) |
+| Gestión y economía pública | [Res Publica](https://res-publica.netlify.app/cursos/) |
+| Filosofía, historia y economía política | [Dialectica y Mercado](https://dialectica-y-mercado.netlify.app/cursos/) |
+| Metodología de la investigación | [Methodica](https://methodica.netlify.app/cursos/) |
+| Programación y software | [Numerus Scriptum](https://numerus-scriptum.netlify.app/cursos/) |
+| Sistemas y seguridad | [Chaska](https://chaska-x.netlify.app/cursos/) |
+<!-- sitios:fin -->
 
 ::: {#cursos}
 :::

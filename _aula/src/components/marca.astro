@@ -1,0 +1,24 @@
+---
+// Marca.astro — el colofón de un sitio de la familia (src/lib/marca.mjs): su monograma en Petrona dentro de un cuadrado
+// de doble filete, en el acento del data-acento más cercano. Decorativo: el nombre del sitio va siempre escrito al lado.
+import { colocarMonograma, SELLO } from '../lib/marca.mjs';
+import { datos } from '../lib/datos.mjs';
+
+interface Props { sitio?: string; tamano?: number; clase?: string }
+const { sitio = datos().pub.id, tamano = 28, clase = '' } = Astro.props;
+const m = colocarMonograma(sitio);
+const { exterior: e, interior: i } = SELLO;
+---
+<svg class:list={['sello', clase]} width={tamano} height={tamano} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <rect class="fondo" x={e.x} y={e.y} width={e.lado} height={e.lado} />
+  <rect class="filete" x={i.x} y={i.y} width={i.lado} height={i.lado} />
+  <path class="letras" d={m.d} transform={m.transform} />
+</svg>
+
+<style>
+  .sello { flex: none; display: block; }
+  /* Filetes en píxeles reales (no escalan): 1,25 y 0,75 px se ven nítidos de 20 a 64 px de lado. */
+  .fondo { fill: var(--elevado); stroke: var(--acento); stroke-width: 1.25px; vector-effect: non-scaling-stroke; }
+  .filete { fill: none; stroke: var(--acento); stroke-width: 0.75px; vector-effect: non-scaling-stroke; }
+  .letras { fill: var(--acento); }
+</style>

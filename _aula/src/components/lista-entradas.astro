@@ -1,0 +1,18 @@
+---
+// ListaEntradas.astro — artículos del blog en una rejilla de tarjetas (tarjeta-entrada.astro).
+import TarjetaEntrada from './tarjeta-entrada.astro';
+interface Props { entradas: any[]; nivel?: 'h2' | 'h3' }
+const { entradas, nivel = 'h3' } = Astro.props;
+---
+{entradas.length === 0 ? (
+  <p class="tenue">El blog de este pub aún no tiene entradas publicadas.</p>
+) : (
+  <ul class="rejilla-entradas">
+    {entradas.map((a) => <li><TarjetaEntrada entrada={a} nivel={nivel} /></li>)}
+  </ul>
+)}
+
+<style>
+  .rejilla-entradas { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); }
+  .rejilla-entradas > li { display: grid; }
+</style>

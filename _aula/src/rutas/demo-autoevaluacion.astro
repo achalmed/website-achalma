@@ -1,0 +1,30 @@
+---
+// Página interna de demostración del componente de autoevaluación. NO es contenido publicado:
+// solo existe con `astro dev` o al construir con AULA_DEMO=1, y lo dice en la propia página.
+import { load } from 'js-yaml';
+import Base from '../layouts/base.astro';
+import Autoevaluacion from '../components/autoevaluacion.astro';
+import ejemplo from '../demo/quiz-ejemplo.yml?raw';
+
+export function getStaticPaths() {
+  const activa = import.meta.env.DEV || process.env.AULA_DEMO === '1';
+  return activa ? [{ params: { demo: 'demo' } }] : [];
+}
+const preguntas = load(ejemplo).quiz;
+---
+<Base titulo="Componente de ejemplo: autoevaluación" descripcion="Página interna de demostración; no es contenido publicado.">
+  <div class="envoltura demo">
+    <p class="aviso" role="note"><b>Componente de ejemplo.</b> Esta página solo existe en desarrollo (o al construir con
+      <code>AULA_DEMO=1</code>) para probar la autoevaluación. Sus preguntas son de muestra y no pertenecen a
+      ninguna lección.</p>
+    <h1>Autoevaluación</h1>
+    <p class="tenue">Así se ve el bloque cuando una lección declara <code>quiz:</code> en su frontmatter.</p>
+    <Autoevaluacion preguntas={preguntas} id="demo" titulo="Preguntas de muestra" />
+  </div>
+</Base>
+<style>
+  .demo { padding-block: 2.5rem; max-width: 50rem; display: grid; gap: 1rem; }
+  h1 { font-size: var(--t-5); }
+  .aviso { padding: 0.9rem 1rem; border: 2px dashed var(--acento); border-radius: var(--r-2); background: var(--acento-suave); }
+  code { font-family: var(--f-datos); font-size: 0.85em; }
+</style>

@@ -1,0 +1,75 @@
+---
+// TarjetaEntrada.astro — un artículo del blog o una lección en una tarjeta de filete: su miniatura (src/lib/imagenes.mjs)
+// o, si el post no tiene imagen propia, el índice del texto (sus primeras secciones) sobre la retícula milimetrada con el
+// colofón del pub; fecha, título, resumen y tiempo de lectura. La imagen es decorativa (alt vacío): el título, que es
+// el enlace, ya dice qué es. Toda la tarjeta es clicable.
+import Marca from './marca.astro';
+import { fechaLarga } from '../lib/datos.mjs';
+
+interface Props { entrada: any; nivel?: 'h2' | 'h3' | 'h4'; leccion?: string | null }
+const { entrada: a, nivel = 'h3', leccion = null } = Astro.props;
+const H = nivel;
+const esqueleto = a.imagen ? [] : (a.indice ?? []).filter((h) => h.nivel === 2).slice(0, 4);
+---
+<article class="te">
+  <div class="te-imagen">
+    {a.imagen ? (
+      <img src={a.imagen.url} width={a.imagen.ancho} height={a.imagen.alto} alt="" loading="lazy" decoding="async" />
+    ) : (
+      <div class="te-sin milimetrado" aria-hidden="true">
+        <Marca tamano={esqueleto.length ? 26 : 46} clase={esqueleto.length ? 'te-marca' : 'te-marca sola'} />
+        {esqueleto.length > 0 && (
+          <ol class="te-esqueleto">
+            {esqueleto.map((h, i) => <li><span class="dato">{h.numero || i + 1}</span>{h.texto}</li>)}
+          </ol>
+        )}
+      </div>
+    )}
+  </div>
+  <div class="te-cuerpo">
+    <p class="te-meta">
+      <time class="dato" datetime={a.fecha}>{a.fecha}</time>
+      <span>{a.minutos} min de lectura</span>
+    </p>
+    <H class="te-titulo"><a href={a.url} data-leccion={leccion ?? undefined}>{a.titulo}</a></H>
+    {a.descripcion && <p class="te-desc">{a.descripcion}</p>}
+    {a.categorias?.length > 0 && <p class="te-cat">{a.categorias.slice(0, 3).join(', ')}</p>}
+    <span class="sr">Publicado el {fechaLarga(a.fecha)}</span>
+  </div>
+</article>
+
+<style>
+  .te {
+    position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3);
+    transition: border-color 0.15s;
+  }
+  .te:hover { border-color: var(--acento-linea); }
+  .te:focus-within { border-color: var(--acento); }
+  .te-imagen { aspect-ratio: 16 / 10; background: var(--papel-2); border-bottom: 1px solid var(--linea); overflow: hidden; }
+  .te-imagen img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .te-sin { position: relative; width: 100%; height: 100%; }
+  .te-sin :global(.te-marca) { position: absolute; right: 0.85rem; bottom: 0.85rem; }
+  .te-sin :global(.te-marca.sola) { right: auto; bottom: auto; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+  .te-esqueleto {
+    position: absolute; inset: 0.9rem 3.25rem auto 0.9rem; list-style: none; display: grid; gap: 0.3rem;
+    font: 0.74rem/1.3 var(--f-interfaz); color: var(--tinta-2);
+  }
+  .te-esqueleto li {
+    width: fit-content; max-width: 100%; padding: 0.2rem 0.45rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-1);
+  }
+  .te-esqueleto li span { color: var(--acento-tinta); margin-right: 0.45rem; }
+  .te-cuerpo { display: grid; gap: 0.45rem; padding: 0.95rem 1.1rem 1.1rem; align-content: start; }
+  .te-meta { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: var(--t-0); color: var(--tenue); }
+  .te-meta time { color: var(--acento-tinta); }
+  .te-titulo { font-size: 1.2rem; line-height: 1.25; }
+  .te-titulo a { text-decoration: none; color: var(--tinta); }
+  .te-titulo a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .te-titulo a:focus-visible { outline: none; }
+  .te-titulo a:focus-visible::after { outline: 2px solid var(--acento); outline-offset: 2px; }
+  .te:hover .te-titulo a { color: var(--acento-tinta); }
+  .te-titulo a:global(.hecha)::before { content: ''; display: inline-block; width: 0.55em; height: 0.55em; background: var(--acento); margin-right: 0.45em; vertical-align: 0.12em; }
+  .te-desc { font-size: var(--t-1); color: var(--tinta-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .te-cat { font-size: var(--t-0); color: var(--tenue); }
+</style>

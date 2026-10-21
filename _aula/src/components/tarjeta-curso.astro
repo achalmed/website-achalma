@@ -1,0 +1,68 @@
+---
+// TarjetaCurso.astro — un curso en el catálogo: qué es, cuánto tiene publicado y su retícula.
+import Reticula from './reticula.astro';
+import { plural } from '../lib/datos.mjs';
+
+interface Props { curso: any; nivelTitulo?: 'h2' | 'h3' }
+const { curso, nivelTitulo = 'h3' } = Astro.props;
+const H = nivelTitulo;
+const href = curso.vive ? curso.url : curso.urlCasa;
+const texto = [curso.titulo, curso.descripcion ?? '', curso.tipoEtiqueta, ...curso.unidades.flatMap((u) => u.temas.map((t) => t.titulo))].join(' ');
+const ids = curso.lecciones.map((l) => `${curso.id}/${l.slug}`).join(' ');
+---
+<article
+  class="tarjeta"
+  data-curso={curso.id}
+  data-tipo={curso.tipo}
+  data-estado={curso.estado}
+  data-nivel={curso.nivel}
+  data-texto={texto.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()}
+>
+  <p class="tarjeta-meta">
+    <span>{curso.tipoEtiqueta}</span>
+    <span>{curso.nivelEtiqueta}</span>
+    <span class:list={['tarjeta-estado', curso.estado]}>{curso.estadoEtiqueta}</span>
+  </p>
+  <H class="tarjeta-titulo"><a href={href}>{curso.titulo}</a></H>
+  {curso.descripcion && <p class="tarjeta-desc">{curso.descripcion}</p>}
+  <div class="tarjeta-reticula"><Reticula curso={curso} /></div>
+  <p class="tarjeta-cifras">
+    {curso.nTemas > 0 ? (
+      <span><b class="dato">{curso.nPublicadas}</b> de <b class="dato">{curso.nTemas}</b> temas con lección</span>
+    ) : (
+      <span>Temario en preparación</span>
+    )}
+    {curso.complementarias.length > 0 && <span>{plural(curso.complementarias.length, 'lectura complementaria', 'lecturas complementarias')}</span>}
+  </p>
+  {!curso.vive && <p class="tarjeta-casa">Vive en {curso.casaNombre}; se lista aquí por su área secundaria.</p>}
+  {curso.vive && ids && (
+    <p class="tarjeta-progreso" data-progreso-curso={ids} data-ocultar-sin-progreso hidden>
+      <span data-progreso-texto></span>
+    </p>
+  )}
+</article>
+
+<style>
+  .tarjeta {
+    position: relative; display: flex; flex-direction: column; gap: 0.75rem;
+    padding: 1.25rem 1.25rem 1.1rem;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3);
+    transition: border-color 0.15s;
+  }
+  .tarjeta:hover { border-color: var(--acento-linea); }
+  .tarjeta:hover .tarjeta-titulo a { color: var(--acento-tinta); }
+  .tarjeta:focus-within { border-color: var(--acento); }
+  .tarjeta-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; font-size: var(--t-0); color: var(--tenue); }
+  .tarjeta-estado.activo { color: var(--acento-tinta); }
+  .tarjeta-titulo { font-size: var(--t-3); }
+  .tarjeta-titulo a { text-decoration: none; color: var(--tinta); }
+  .tarjeta-titulo a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .tarjeta-titulo a:focus-visible { outline: none; }
+  .tarjeta-titulo a:focus-visible::after { outline: 2px solid var(--acento); outline-offset: 3px; }
+  .tarjeta-desc { color: var(--tinta-2); font-size: var(--t-1); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .tarjeta-reticula { margin-top: auto; padding-top: 0.5rem; }
+  .tarjeta-cifras { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--t-0); color: var(--tenue); }
+  .tarjeta-cifras b { color: var(--tinta); font-weight: 500; }
+  .tarjeta-casa { font-size: var(--t-0); color: var(--tinta-2); border-top: 1px dashed var(--linea); padding-top: 0.6rem; }
+  .tarjeta-progreso { font-size: var(--t-0); color: var(--acento); font-weight: 600; }
+</style>

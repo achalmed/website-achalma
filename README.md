@@ -25,7 +25,8 @@ satélite: eso se hace dentro del pub, que es su propio repositorio.
 
 ```bash
 quarto preview                                           # vista previa con recarga
-quarto render                                            # todo el sitio → _site/ (freeze: no re-ejecuta código)
+scripts/render.sh                                        # todo el sitio → _site/, solo HTML y reproducible (conserva PDF y DOCX)
+scripts/render.sh --documentos --aplicar                 # PDF y DOCX solo de lo que cambió (sin --aplicar simula; docs/despliegue-netlify.md)
 quarto render blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.qmd   # un solo documento (sí ejecuta)
 git add _site && git commit -m "render: _site actualizado" && git push   # publicar: Netlify sirve el _site del repo, sin build
 scripts/sync-theme-pubs.sh --verificar                   # ¿algún blog difiere del tema del hub? (sale 1 si sí)
@@ -51,14 +52,14 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `_pubs/axiomata` | Matemática | `achalmed/axiomata` | https://axiomata.netlify.app/ | 2 |
 | `_pubs/chaska` | Tecnología y seguridad | `achalmed/chaska` | https://chaska-x.netlify.app/ | 32 |
 | `_pubs/dialectica-y-mercado` | Filosofía y política | `achalmed/dialectica-y-mercado` | https://dialectica-y-mercado.netlify.app/ | 9 |
-| `_pubs/epsilon-y-beta` | Econometría | `achalmed/epsilon-y-beta` | https://epsilon-y-beta.netlify.app/ | 49 |
+| `_pubs/epsilon-y-beta` | Econometría | `achalmed/epsilon-y-beta` | https://epsilon-y-beta.netlify.app/ | 55 |
 | `_pubs/methodica` | Investigación y metodología | `achalmed/methodica` | https://methodica.netlify.app/ | 7 |
-| `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 80 |
-| `_pubs/optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 14 |
-| `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 9 |
+| `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 97 |
+| `_pubs/optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 35 |
+| `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 31 |
 | `_pubs/res-publica` | Gestión pública | `achalmed/res-publica` | https://res-publica.netlify.app/ | 3 |
 
-<sub>Bloque generado por `scripts/pubs.py readme --aplicar` desde `_pubs/pubs.yml` (2026-09-20); no se edita a mano.</sub>
+<sub>Bloque generado por `scripts/pubs.py readme --aplicar` desde `_pubs/pubs.yml` (2026-10-20); no se edita a mano.</sub>
 <!-- pubs:fin -->
 
 ## Estructura
@@ -101,9 +102,8 @@ cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
 - **Los requisitos no son reproducibles desde el repo.** Hacen falta Quarto (≥ 1.6; hoy 1.9), TinyTeX para
   los PDF apaquarto y, solo para renderizar un documento con código, R o Python. No hay `requirements.txt`
   ni `renv`; con `freeze: true` un render global no ejecuta nada.
-- **La licencia está partida y así se declara:** `LICENSE` y `CITATION.cff` dicen MPL-2.0 (código);
-  `license.qmd` y los `_metadata.yml` dicen CC BY-SA 4.0 (contenido). Unificarla en los 12 sitios es la
-  decisión D9, pendiente del autor.
+- **Dos licencias, una por tipo de obra** (D9, `docs/decisiones.md` §3.6): el contenido es CC BY-SA 4.0
+  (`license.qmd`, `_metadata.yml`, `CITATION.cff`) y el código MPL-2.0 (`LICENSE`), igual en los 12 sitios.
 - **Netlify no se configura desde el repo.** No hay `netlify.toml` ni `_redirects`; las URL antiguas de
   `/talk/` y `/teching/` sobreviven por `aliases:` de Quarto. Cómo publica cada uno de los 12 sitios y qué
   falta por confirmar en el panel: `docs/despliegue-netlify.md` (`docs/decisiones.md` §4.1).

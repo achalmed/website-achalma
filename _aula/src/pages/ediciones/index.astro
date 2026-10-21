@@ -1,0 +1,29 @@
+---
+// Ediciones dictadas de los cursos del pub (docencia/contenido/dictados/*/dictado.yml).
+import Base from '../../layouts/base.astro';
+import TarjetaEdicion from '../../components/tarjeta-edicion.astro';
+import { datos } from '../../lib/datos.mjs';
+const { pub, ediciones } = datos();
+---
+<Base titulo="Ediciones" descripcion={`Ediciones dictadas de los cursos de ${pub.nombre}.`} seccion="ediciones">
+  <div class="envoltura pagina">
+    <header>
+      <h1>Ediciones</h1>
+      <p>Cada edición es un dictado real de uno o más cursos de {pub.nombre}, con sus sesiones en orden y los materiales que se entregaron.</p>
+    </header>
+    {ediciones.length === 0 ? (
+      <p class="tenue">Los cursos de este pub aún no tienen ediciones registradas.</p>
+    ) : (
+      <ul class="rejilla">
+        {ediciones.map((e) => <li><TarjetaEdicion ed={e} nivel="h2" /></li>)}
+      </ul>
+    )}
+  </div>
+</Base>
+<style>
+  .pagina { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+  header { display: grid; gap: 0.75rem; margin-bottom: 2rem; }
+  h1 { font-size: var(--t-5); }
+  header p { color: var(--tinta-2); max-width: 60ch; }
+  .rejilla { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+</style>

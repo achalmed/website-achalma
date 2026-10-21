@@ -1,0 +1,28 @@
+{
+  "_": "Datos de MUESTRA para la página interna /demo/videos/ y para scripts/prueba-videos.mjs; no son piezas reales ni publicaciones del canal.",
+  "piezas": [
+    {
+      "id": "eco-900-ejemplo-youtube",
+      "titulo": "Pieza de ejemplo con YouTube",
+      "descripcion": "Una pieza ficticia publicada en YouTube y en TikTok: se incrusta la de YouTube y TikTok queda como enlace.",
+      "curriculo": [{ "curso": "curso-ejemplo", "tema": "1.1" }],
+      "publicaciones": [
+        { "red": "tiktok", "fecha": "2026-10-02", "url": "https://www.tiktok.com/@ejemplo/video/7000000000000000000" },
+        { "red": "youtube", "fecha": "2026-10-01", "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ" }
+      ]
+    },
+    {
+      "id": "dat-901-ejemplo-facebook",
+      "titulo": "Pieza de ejemplo solo en Facebook",
+      "descripcion": "Una pieza ficticia publicada solo en Facebook: se muestra un enlace simple.",
+      "curriculo": [{ "curso": "curso-ejemplo", "tema": "1.1" }],
+      "publicaciones": [{ "red": "facebook", "fecha": "2026-10-03", "url": "https://www.facebook.com/watch/?v=100000000000000" }]
+    },
+    {
+      "id": "dat-902-ejemplo-sin-publicar",
+      "titulo": "Pieza de ejemplo sin publicar",
+      "curriculo": [{ "curso": "curso-ejemplo", "tema": "1.1" }],
+      "publicaciones": []
+    }
+  ]
+}

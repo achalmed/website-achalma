@@ -12,10 +12,11 @@
 import { existsSync, readdirSync } from 'node:fs';
 import { basename, join, relative } from 'node:path';
 import * as F from './fuentes.mjs';
-import { RUTAS, INDEX_DIR } from './rutas.mjs';
+import { RUTAS, INDEX_DIR, SIMULADORES_DIR } from './rutas.mjs';
 import { extraer } from './contenido.mjs';
 import { figuraUtil, huella, imagenDeclarada, miniatura } from './imagenes.mjs';
 import { MARCA } from './marca.generado.mjs';
+import { videosDelTema } from './videos.mjs';
 
 export const ETIQUETAS = {
   tipo: { asignatura: 'Asignatura', herramienta: 'Herramienta', taller: 'Taller', nivelacion: 'Nivelación' },
@@ -116,6 +117,10 @@ function construir(pubId) {
       titulo: u.titulo,
       temas: (u.temas ?? []).map((t) => ({ id: String(t.id), titulo: t.titulo, leccion: null })),
     }));
+    // Recursos {tipo: simulador} que el curso.yml declara en sus temas (la otra mitad de la asociación con el laboratorio).
+    const simuladores = (c.unidades ?? []).flatMap((u) => (u.temas ?? []).flatMap((t) => (t.recursos ?? [])
+      .filter((r) => r?.tipo === 'simulador' && r.laboratorio && r.modelo)
+      .map((r) => ({ ref: `${r.laboratorio}/${r.modelo}`, tema: String(t.id) }))));
     const regCasa = registro.pubs.find((p) => p.carpeta === casa);
     cursos.push({
       id: c.id,
@@ -135,6 +140,7 @@ function construir(pubId) {
       complementarias: [],
       ediciones: [],
       modelos: [],
+      simuladores,
     });
   }
   const cursoPorId = new Map(cursos.map((c) => [c.id, c]));
@@ -336,12 +342,55 @@ function construir(pubId) {
   }
   ediciones.sort((a, b) => String(b.periodo).localeCompare(String(a.periodo)));
 
-  // ── Laboratorio (simuladores/catalogo.json) ───────────────────────────────
-  for (const m of F.catalogoSimuladores()) {
-    for (const ref of m.cursos ?? []) {
-      const c = cursoPorId.get(ref.curso);
-      if (c && c.vive) c.modelos.push({ id: m.id, ref: m.ref, titulo: m.titulo, tema: ref.tema, nivel: m.nivel, pregunta: m.ficha?.pregunta ?? null, disciplina: m.disciplina });
+  // ── Laboratorio (simuladores: catalogo.json, navegador.json y los recursos {tipo: simulador} de curso.yml) ──
+  // Un modelo entra en el pub si algún curso que VIVE aquí lo asocia a un tema, por cualquiera de las dos fuentes. Si
+  // corre en el navegador (navegador.json), tiene página /laboratorio/<id>/ y sus .py viajan a dist; si no, se lista
+  // con el motivo (decisiones §1.20).
+  const catalogo = new Map(F.catalogoSimuladores().map((m) => [m.ref, m]));
+  const web = F.navegadorSimuladores();
+  const enNavegador = new Map(web.modelos.map((m) => [m.ref, m]));
+  const fueraWeb = new Map(web.fuera.map((m) => [m.ref, m.motivo]));
+  const asociaciones = new Map();
+  const asociar = (ref, cursoId, tema) => {
+    const c = cursoPorId.get(cursoId);
+    if (!c || !c.vive) return;
+    if (!catalogo.has(ref)) { avisos.push(`${cursoId} ${tema} enlaza un simulador que no está en catalogo.json: ${ref}`); return; }
+    const lista = asociaciones.get(ref) ?? [];
+    if (!lista.some((x) => x.curso === cursoId && x.tema === tema)) lista.push({ curso: cursoId, tema });
+    asociaciones.set(ref, lista);
+  };
+  for (const m of catalogo.values()) for (const r of m.cursos ?? []) asociar(m.ref, r.curso, String(r.tema));
+  for (const c of cursos) for (const s of c.simuladores) asociar(s.ref, c.id, s.tema);
+  const laboratorio = [];
+  for (const [ref, lista] of asociaciones) {
+    const m = catalogo.get(ref);
+    const w = enNavegador.get(ref) ?? null;
+    const url = w ? `/laboratorio/${m.id}/` : null;
+    const temas = lista.map(({ curso: cid, tema }) => {
+      const c = cursoPorId.get(cid);
+      const t = c.unidades.flatMap((u) => u.temas).find((x) => x.id === tema);
+      return { curso: cid, cursoTitulo: c.titulo, cursoUrl: c.url, tema, temaTitulo: t?.titulo ?? null, leccion: t?.leccion ?? null };
+    }).sort((a, b) => a.curso.localeCompare(b.curso) || a.tema.localeCompare(b.tema, 'es', { numeric: true }));
+    for (const x of temas) {
+      cursoPorId.get(x.curso).modelos.push({
+        id: m.id, ref, titulo: m.titulo, tema: x.tema, nivel: m.nivel, pregunta: m.ficha?.pregunta ?? null, disciplina: m.disciplina,
+        url, motivo: w ? null : fueraWeb.get(ref) ?? 'aún no se exporta al navegador',
+      });
     }
+    if (w) {
+      laboratorio.push({ ...w, url, temas, catalogo: m });
+      for (const archivo of w.archivos) recursos.push({ src: join(SIMULADORES_DIR, archivo), dest: `/laboratorio/py/${archivo}` });
+    }
+  }
+  for (const c of cursos) c.modelos.sort((a, b) => a.tema.localeCompare(b.tema, 'es', { numeric: true }) || a.id.localeCompare(b.id, 'es', { numeric: true }));
+  laboratorio.sort((a, b) => a.disciplina.localeCompare(b.disciplina) || (a.nivel ?? 99) - (b.nivel ?? 99) || a.id.localeCompare(b.id, 'es', { numeric: true }));
+
+  // Cada lección muestra los modelos con página y los vídeos publicados de su tema (divulgacion/catalogo.json).
+  const piezas = F.piezasDivulgacion();
+  for (const l of lecciones) {
+    const curso = cursoPorId.get(l.curso);
+    l.modelos = l.tema ? curso.modelos.filter((x) => x.tema === l.tema.id && x.url) : [];
+    l.videos = l.tema ? videosDelTema(piezas, l.curso, l.tema.id) : [];
   }
 
   // ── Portada: lección en curso y cursos destacados ─────────────────────────
@@ -378,7 +427,7 @@ function construir(pubId) {
   }
 
   return {
-    pub, red, cursos, propios, destacados, lecciones, blog, ediciones, enCurso,
+    pub, red, cursos, propios, destacados, lecciones, blog, ediciones, enCurso, laboratorio,
     recursos: dedupe(recursos),
     miniaturas: [...miniaturas.values()],
     redirecciones: [...lecciones, ...blog].map((x) => ({ desde: x.rutaVieja, hacia: x.url })),
@@ -391,6 +440,8 @@ function construir(pubId) {
       complementarias: lecciones.filter((l) => !l.tema).length,
       articulos: blog.length,
       ediciones: ediciones.length,
+      laboratorio: laboratorio.length,
+      videos: lecciones.reduce((s, l) => s + l.videos.length, 0),
     },
   };
 }

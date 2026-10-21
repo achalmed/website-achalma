@@ -1,0 +1,64 @@
+---
+// videos.astro — los vídeos de divulgacion publicados para el tema de una lección (src/lib/videos.mjs, decisiones §1.21).
+// Sin publicaciones con url no se muestra nada. YouTube no se carga hasta que se pulsa (youtube-nocookie, sin cookies
+// de terceros antes del clic); sin JavaScript queda un enlace al vídeo. TikTok, Facebook y demás van como enlace.
+import Icono from './icono.astro';
+interface Props { videos: any[]; titulo?: string }
+const { videos, titulo = 'En vídeo' } = Astro.props;
+const fecha = (iso) => (iso ? new Date(`${iso}T12:00:00`).toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }) : '');
+---
+{videos.length > 0 && (
+  <section class="videos" aria-labelledby="t-videos">
+    <h2 id="t-videos">{titulo}</h2>
+    {videos.map((v) => (
+      <article class="video">
+        {v.principal.youtube ? (
+          <div class="video-marco" data-video>
+            <a class="video-portada" href={v.principal.url} data-incrustar={v.principal.incrustar} data-titulo={v.titulo}>
+              <Icono nombre="play" tamano={28} />
+              <span>Ver el vídeo aquí <span class="tenue">(se carga desde YouTube al pulsar, sin cookies)</span></span>
+            </a>
+          </div>
+        ) : (
+          <p><a class="boton chico" href={v.principal.url} rel="noopener"><Icono nombre="external-link" tamano={15} />Ver en {v.principal.nombreRed}</a></p>
+        )}
+        <h3>{v.titulo}</h3>
+        {v.descripcion && <p class="tenue">{v.descripcion}</p>}
+        <p class="video-pie">
+          <span>{v.principal.nombreRed}{v.principal.fecha && <>, {fecha(v.principal.fecha)}</>}</span>
+          {v.otras.map((o) => <a href={o.url} rel="noopener">También en {o.nombreRed}</a>)}
+        </p>
+      </article>
+    ))}
+  </section>
+)}
+
+<script>
+  // Fachada: el iframe de youtube-nocookie entra solo cuando el lector lo pide.
+  document.querySelectorAll<HTMLAnchorElement>('[data-incrustar]').forEach((a) => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const marco = document.createElement('iframe');
+    marco.src = `${a.dataset.incrustar}&autoplay=1`;
+    marco.title = a.dataset.titulo || 'Vídeo';
+    marco.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    marco.allowFullscreen = true;
+    marco.referrerPolicy = 'strict-origin-when-cross-origin';
+    a.replaceWith(marco);
+    marco.focus();
+  }));
+</script>
+
+<style>
+  .videos { display: grid; gap: 1rem; margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea-fuerte); }
+  .videos h2 { font-size: var(--t-3); }
+  .video { display: grid; gap: 0.4rem; }
+  .video h3 { font-size: var(--t-2); font-family: var(--f-interfaz); }
+  .video-marco { aspect-ratio: 16 / 9; border: 1px solid var(--linea); border-radius: var(--r-2); overflow: hidden; background: var(--papel-2); }
+  .video-marco :global(iframe) { width: 100%; height: 100%; border: 0; display: block; }
+  .video-portada { width: 100%; height: 100%; display: grid; place-content: center; justify-items: center; gap: 0.6rem; text-align: center;
+    padding: 1rem; text-decoration: none; color: var(--tinta); background: var(--milimetrado), var(--papel-2); font-size: var(--t-1); }
+  .video-portada :global(svg) { color: var(--acento); }
+  .video-portada:hover, .video-portada:focus-visible { color: var(--acento); }
+  .video-portada .tenue { display: block; font-size: var(--t-0); }
+  .video-pie { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; font-size: var(--t-0); color: var(--tenue); }
+</style>

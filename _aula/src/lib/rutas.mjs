@@ -2,7 +2,8 @@
 //
 // La raíz del ecosistema es la carpeta que contiene core/env.py (el mismo marcador que usa core/env.py).
 // Cada carpeta puede fijarse por variable de entorno con el mismo nombre que en core/env.py
-// (DOCS_ROOT, CLASS_DIR, INDEX_DIR, SIMULADORES_DIR); si no, se deriva de la raíz como allí.
+// (DOCS_ROOT, CLASS_DIR, INDEX_DIR, SIMULADORES_DIR); si no, se deriva de la raíz como allí. DIVULGACION_DIR aún no está
+// en core/env.py: se deriva igual (<raíz>/divulgacion) y admite la misma variable.
 // Nada de este módulo escribe: el aula solo lee sus fuentes.
 
 import { existsSync, readFileSync } from 'node:fs';
@@ -32,6 +33,7 @@ export const DOCS_ROOT = buscarRaiz();
 export const CLASS_DIR = v('CLASS_DIR', join(DOCS_ROOT, 'docencia'));
 export const INDEX_DIR = v('INDEX_DIR', join(DOCS_ROOT, 'web'));
 export const SIMULADORES_DIR = v('SIMULADORES_DIR', join(DOCS_ROOT, 'simuladores'));
+export const DIVULGACION_DIR = v('DIVULGACION_DIR', join(DOCS_ROOT, 'divulgacion'));
 
 /** Carpeta del proyecto aula: la primera, subiendo desde cwd, con el package.json de «aula».
  *  (No se deriva de import.meta.url: en el build este módulo vive dentro de un chunk de dist.) */
@@ -59,5 +61,7 @@ export const RUTAS = {
   cursosWeb: join(INDEX_DIR, 'cursos'),
   paletas: join(INDEX_DIR, 'assets', 'scss', '00-settings'),
   catalogoSimuladores: join(SIMULADORES_DIR, 'catalogo.json'),
+  navegadorSimuladores: join(SIMULADORES_DIR, 'navegador.json'),
+  catalogoDivulgacion: join(DIVULGACION_DIR, 'catalogo.json'),
   vitrina: join(AULA_DIR, 'config', 'vitrina.yml'),
 };

@@ -65,6 +65,16 @@
   --cod-funcion: #5B3C9E;
 
   --acento-base: var(--lab-revista);
+
+  /* ── Gráficos del laboratorio (src/lib/grafico-lab.mjs): la paleta de simuladores con rol del aula ───── */
+  --lab-rojo: #A23B2C;                          --lab-rojo-o: #EE9A8A;
+  --lab-oro: #946F0B;                           --lab-oro-o: #E2BE57;
+  --graf-1: var(--spc-secondary);              /* AZUL2 del laboratorio: la curva principal */
+  --graf-2: var(--lab-rojo);                    /* ROJO: segunda serie, shocks */
+  --graf-3: var(--spc-accent);                  /* VERDE: tercera serie, población */
+  --graf-eq: var(--lab-oro);                    /* DORADO: equilibrio y puntos clave */
+  --graf-aux: color-mix(in oklab, var(--tenue) 75%, var(--papel));   /* GRIS: auxiliares, discontinuas */
+  --graf-tinta: var(--tinta-2);                 /* AZUL: títulos y anotaciones */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,6 +99,10 @@
     --cod-funcion: #C3A8F0;
     --ret-menor: 6%;
     --ret-mayor: 13%;
+    --graf-1: var(--spc-dark-primary);
+    --graf-2: var(--lab-rojo-o);
+    --graf-3: var(--spc-dark-accent);
+    --graf-eq: var(--lab-oro-o);
   }
 }
 :root[data-theme='dark'] {
@@ -112,6 +126,10 @@
   --cod-funcion: #C3A8F0;
   --ret-menor: 6%;
   --ret-mayor: 13%;
+  --graf-1: var(--spc-dark-primary);
+  --graf-2: var(--lab-rojo-o);
+  --graf-3: var(--spc-dark-accent);
+  --graf-eq: var(--lab-oro-o);
 }
 
 /* ── El acento del pub: <html data-acento="…"> ─────────────────────────────── */

@@ -5,9 +5,9 @@ estado: borrador
 # _aula/ — la plataforma de cursos de los pubs
 
 `_aula` (en el hub `web`) es el código de la plataforma educativa: convierte cada pub (los blogs de `web/_pubs`) en un aula con
-catálogo, cursos, lecciones, materiales, autoevaluaciones y simuladores, y en un aula con cuenta
+catálogo, cursos, lecciones, materiales, autoevaluaciones, vídeos y simuladores que corren en el navegador, y en un aula con cuenta
 (inscripción, tareas, entregas, notas, exámenes calificados) servida por la API de `api/`. No guarda contenido: lo lee de sus fuentes (`docencia` para el currículo,
-cada pub para el texto de las lecciones y los artículos, `simuladores` para los modelos). La arquitectura y las
+cada pub para el texto de las lecciones y los artículos, `simuladores` para los modelos, `divulgacion` para los vídeos). La arquitectura y las
 decisiones están en `web/docs/plataforma-educativa.md`.
 
 ## Uso
@@ -22,8 +22,10 @@ node scripts/rutas.mjs methodica           # prueba de rutas: cada URL del sitio
 scripts/publicar.sh methodica [--aplicar]  # cambio del pub a la vitrina: construye, prueba, copia a _vitrina/ y apunta netlify.toml (--volver deshace)
 npm run vista:methodica                    # sirve dist/methodica en http://127.0.0.1:4331 (npx astro preview stop lo detiene)
 npm run vista:numerus-scriptum             # ídem en el puerto 4332
+npm run vista:aequilibria                  # ídem en el 4333 (IS-LM en /laboratorio/m10/); vista:epsilon-y-beta en el 4334 (TCL en /laboratorio/e67/)
+npm run prueba                             # prueba de los vídeos de divulgacion (src/lib/videos.mjs) con datos de muestra
 PUB=methodica npm run dev                  # desarrollo con recarga; incluye /demo/autoevaluacion/
-AULA_DEMO=1 PUB=methodica npm run build    # build con la página de demostración de la autoevaluación
+AULA_DEMO=1 PUB=methodica npm run build    # build con las páginas de demostración (autoevaluación y vídeos, /demo/…)
 node scripts/tokens.mjs                    # simula la regeneración de la paleta desde el hub (--aplicar escribe)
 python3 scripts/marca.py                   # simula los trazos del colofón y de la imagen Open Graph (--aplicar escribe)
 AULA_API_URL=http://127.0.0.1:8040 PUB=methodica npm run build   # añade «Mi aula» (/aula/) contra la API local
@@ -46,7 +48,10 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 | `src/lib/` | lectura de las fuentes (`rutas.mjs`, `fuentes.mjs`), extracción del HTML de Quarto (`contenido.mjs`) y el modelo del pub (`modelo.mjs`) |
 | `src/pages/` | inicio, `cursos/` (catálogo, curso, lección), `blog/`, `ediciones/`, 404 y la demo interna de autoevaluación |
 | `src/layouts/` | `base.astro` (esqueleto) y `lector.astro` (lector de lecciones y artículos) |
-| `src/components/` | colofón (`marca.astro`), íconos Lucide, búsqueda ⌘K, banda de cifras, tarjetas de curso, entrada y edición, retícula del temario, lección en curso, autoevaluación, laboratorio, cabecera y pie |
+| `src/components/` | colofón (`marca.astro`), íconos Lucide, búsqueda ⌘K, banda de cifras, tarjetas de curso, entrada y edición, retícula del temario, lección en curso, autoevaluación, laboratorio, vídeos, cabecera y pie |
+| `src/rutas/laboratorio-*.astro` | `/laboratorio/` y `/laboratorio/<id>/`: el modelo de simuladores en el navegador (decisiones §1.20) |
+| `src/lib/grafico-lab.mjs`, `src/scripts/laboratorio*.js` | el gráfico SVG del laboratorio (build y navegador) y el trabajador con Pyodide |
+| `src/lib/videos.mjs` | los vídeos de divulgacion por tema (decisiones §1.21) |
 | `src/lib/marca.mjs`, `imagenes.mjs`, `iconos.mjs` | el colofón en la página y en archivos (favicon, PNG, Open Graph), la miniatura de cada tarjeta y los íconos (decisiones §1.16–§1.18) |
 | `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (roles y acentos), `base.css`, `contenido.css` |
 | `src/scripts/almacen.js` | progreso y preferencias del visitante en `localStorage` |
@@ -69,3 +74,7 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
   panel del docente (`api/README.md`, Límite honesto).
 - Lighthouse móvil en methodica servida en local (2026-10-20): rendimiento 96–98 y 100 en accesibilidad, buenas
   prácticas y SEO (inicio, un curso y un artículo). No hay vista previa en Netlify.
+- El laboratorio en el navegador pide unos 12 MB (Pyodide y numpy) la primera vez y tarda unos 7 s en estar listo con
+  la caché vacía (2–3 s después); sin red muestra solo la figura por defecto. Los modelos del nivel 12 de macro (datos
+  del BCRP desde datafw) y e26 (lento) no corren en el navegador. Los vídeos aparecen cuando una pieza de divulgacion
+  registre una publicación con url: hoy ninguna.

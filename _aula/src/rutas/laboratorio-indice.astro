@@ -1,0 +1,54 @@
+---
+// laboratorio-indice.astro — /laboratorio/: los modelos del laboratorio que este pub publica en el navegador. Solo se
+// genera si hay alguno (un pub sin modelos asociados a sus cursos no tiene esta página).
+import Base from '../layouts/base.astro';
+import Icono from '../components/icono.astro';
+import { datos } from '../lib/datos.mjs';
+
+export function getStaticPaths() {
+  return datos().laboratorio.length ? [{ params: { indice: undefined } }] : [];
+}
+const { laboratorio, pub } = datos();
+const disciplina = { macro: 'Macroeconomía', estadistica: 'Estadística' };
+const grupos = [...new Set(laboratorio.map((m) => m.disciplina))].map((d) => ({ d, modelos: laboratorio.filter((m) => m.disciplina === d) }));
+---
+<Base titulo="Laboratorio" descripcion={`Modelos del laboratorio computacional de ${pub.nombre}: se mueven los parámetros y el cálculo corre en el navegador.`} seccion="cursos">
+  <div class="envoltura lab-indice">
+    <nav aria-label="Ruta"><ol class="migas"><li><a href="/cursos/">Cursos</a></li><li><span aria-current="page">Laboratorio</span></li></ol></nav>
+    <h1>Laboratorio</h1>
+    <p class="intro">Cada modelo reconstruye una teoría o un método como código ejecutable: se mueven sus parámetros, se prueban
+      sus escenarios y se lee su ficha (contexto, supuestos, limitaciones y fuentes). El cálculo corre en tu navegador con el
+      mismo código Python del laboratorio de escritorio.</p>
+    {grupos.map(({ d, modelos }) => (
+      <section aria-labelledby={`t-${d}`}>
+        <h2 id={`t-${d}`}>{disciplina[d] ?? d}</h2>
+        <ul>
+          {modelos.map((m) => (
+            <li>
+              <span class="dato tenue">{m.id}</span>
+              <div>
+                <a href={m.url}>{m.titulo}<Icono nombre="arrow-right" tamano={14} /></a>
+                {m.ficha?.pregunta && <p>{m.ficha.pregunta}</p>}
+                <p class="tenue cursos">{m.temas.map((t) => `${t.cursoTitulo} ${t.tema}`).join(' · ')}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .lab-indice { padding-block: 2rem 3rem; display: grid; gap: 1.5rem; max-width: 56rem; grid-template-columns: minmax(0, 1fr); }
+  h1 { font-size: var(--t-5); }
+  .intro { font-family: var(--f-lectura); font-size: var(--t-lectura); color: var(--tinta-2); max-width: var(--medida); }
+  h2 { font-size: var(--t-3); margin-bottom: 0.5rem; }
+  ul { list-style: none; display: grid; }
+  li { display: grid; grid-template-columns: 3rem 1fr; gap: 0.75rem; padding-block: 0.8rem; border-top: 1px solid var(--linea); }
+  li a { font-weight: 600; text-decoration: none; }
+  li a :global(svg) { vertical-align: -0.15em; margin-left: 0.25rem; }
+  li a:hover { text-decoration: underline; }
+  li p { font-family: var(--f-lectura); color: var(--tinta-2); }
+  .cursos { font-family: var(--f-interfaz); font-size: var(--t-0); }
+</style>

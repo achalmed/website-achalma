@@ -25,7 +25,10 @@
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "enlaces": "node scripts/enlaces.mjs",
     "vista:methodica": "ASTRO_TELEMETRY_DISABLED=1 PUB=methodica astro preview --port 4331 --host 127.0.0.1",
-    "vista:numerus-scriptum": "ASTRO_TELEMETRY_DISABLED=1 PUB=numerus-scriptum astro preview --port 4332 --host 127.0.0.1"
+    "vista:numerus-scriptum": "ASTRO_TELEMETRY_DISABLED=1 PUB=numerus-scriptum astro preview --port 4332 --host 127.0.0.1",
+    "vista:aequilibria": "ASTRO_TELEMETRY_DISABLED=1 PUB=aequilibria astro preview --port 4333 --host 127.0.0.1",
+    "vista:epsilon-y-beta": "ASTRO_TELEMETRY_DISABLED=1 PUB=epsilon-y-beta astro preview --port 4334 --host 127.0.0.1",
+    "prueba": "node --test scripts/prueba-videos.mjs"
   },
   "devDependencies": {
     "@fontsource/petrona": "5.3.0",

@@ -4,7 +4,8 @@
 //           contenido/migracion/mapa-lecciones.csv
 // web:      _pubs/pubs.yml, _pubs/<pub>/**/index.qmd (frontmatter) y su _site/ ya renderizado,
 //           cursos/<materia>/<edicion>/ (páginas y materiales de las ediciones, hasta la fase 5)
-// simuladores: catalogo.json
+// simuladores: catalogo.json y navegador.json (los modelos que corren en el navegador y los .py que necesitan)
+// divulgacion: catalogo.json (piezas audiovisuales con su currículo y sus publicaciones)
 // aula:     config/vitrina.yml (presentación de cada pub: acento y nombre visible)
 
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
@@ -83,6 +84,18 @@ export function mapaLecciones() {
 export function catalogoSimuladores() {
   if (!existsSync(RUTAS.catalogoSimuladores)) return [];
   return JSON.parse(leer(RUTAS.catalogoSimuladores)).modelos ?? [];
+}
+
+/** navegador.json de simuladores (`main.py web --aplicar`): { motor, modelos, fuera }; vacío si no existe. */
+export function navegadorSimuladores() {
+  if (!existsSync(RUTAS.navegadorSimuladores)) return { motor: [], modelos: [], fuera: [] };
+  return JSON.parse(leer(RUTAS.navegadorSimuladores));
+}
+
+/** Piezas de divulgacion/catalogo.json (`main.py catalogo --json --aplicar`); [] si no existe. */
+export function piezasDivulgacion() {
+  if (!existsSync(RUTAS.catalogoDivulgacion)) return [];
+  return JSON.parse(leer(RUTAS.catalogoDivulgacion)).piezas ?? [];
 }
 
 export function esArchivo(ruta) {

@@ -6,6 +6,7 @@ import '@fontsource-variable/source-serif-4/wght-italic.css';
 import '../styles/contenido.css';
 import Base from './base.astro';
 import Autoevaluacion from '../components/autoevaluacion.astro';
+import Videos from '../components/videos.astro';
 import Icono from '../components/icono.astro';
 import { datos, fechaLarga, peso } from '../lib/datos.mjs';
 
@@ -53,6 +54,19 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
       </header>
 
       <div class="prosa" set:html={item.cuerpo} />
+
+      {item.videos?.length > 0 && <Videos videos={item.videos} />}
+
+      {item.modelos?.length > 0 && (
+        <section class="en-laboratorio" aria-labelledby="t-en-lab">
+          <h2 id="t-en-lab">En el laboratorio</h2>
+          <ul>
+            {item.modelos.map((m) => (
+              <li><a href={m.url}><Icono nombre="flask-conical" tamano={16} />{m.titulo}</a>{m.pregunta && <span class="tenue">{m.pregunta}</span>}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {item.quiz && <Autoevaluacion preguntas={item.quiz} id={`quiz-${item.slug}`} />}
 
@@ -188,6 +202,12 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   .lector-indice a:hover { color: var(--tinta); }
   .lector-indice a[aria-current] { color: var(--acento); border-left-color: var(--acento); }
 
+  .en-laboratorio { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea-fuerte); display: grid; gap: 0.6rem; }
+  .en-laboratorio h2 { font-size: var(--t-3); }
+  .en-laboratorio ul { list-style: none; display: grid; gap: 0.6rem; }
+  .en-laboratorio li { display: grid; gap: 0.15rem; }
+  .en-laboratorio a { font-weight: 600; display: inline-flex; gap: 0.4rem; align-items: center; }
+  .en-laboratorio .tenue { font-size: var(--t-1); }
   .citar { margin-top: 3rem; padding: 1rem 1.1rem; background: var(--papel-2); border-radius: var(--r-2); font-size: var(--t-1); }
   .citar h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.4rem; }
   .citar p { overflow-wrap: anywhere; color: var(--tinta-2); }

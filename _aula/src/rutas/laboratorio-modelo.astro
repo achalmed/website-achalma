@@ -1,0 +1,230 @@
+---
+// laboratorio-modelo.astro — /laboratorio/<id>/: un modelo de simuladores que corre en el navegador (decisiones §1.20).
+// La figura inicial, los parámetros, los escenarios y la ficha salen de simuladores/navegador.json en el build; el
+// cálculo interactivo lo hace el mismo `base.Modelo` con Pyodide (src/scripts/laboratorio.js), que solo se carga aquí.
+import katex from 'katex';
+import Base from '../layouts/base.astro';
+import Icono from '../components/icono.astro';
+import { datos } from '../lib/datos.mjs';
+import { graficoSvg, leyendaHtml, anotacionHtml, fmt, fmtParametro, matHtml, textoHtml } from '../lib/grafico-lab.mjs';
+
+/** Versión exacta de Pyodide (jsDelivr). Trae Python 3.13 y numpy 2.2; cambiarla exige volver a probar los pilotos. */
+const PYODIDE = 'https://cdn.jsdelivr.net/pyodide/v0.29.5/full/';
+
+export function getStaticPaths() {
+  return datos().laboratorio.map((m) => ({ params: { modelo: m.id }, props: { m } }));
+}
+const { m } = Astro.props;
+const f = m.ficha ?? {};
+// MathML nativo (sin la hoja ni las fuentes de KaTeX): las flechas extensibles de KaTeX en HTML (\\xrightarrow) son SVG de
+// 400em que el móvil tarda segundos en pintar (Lighthouse: 77 → 97 sin ellas; decisiones §1.20).
+const tex = (s, display = true) => katex.renderToString(s, { throwOnError: false, strict: 'ignore', displayMode: display, output: 'mathml' });
+const grupos = [];
+for (const p of m.parametros) {
+  const g = grupos.find((x) => x.nombre === (p.grupo || 'parámetros'));
+  if (g) g.parametros.push(p); else grupos.push({ nombre: p.grupo || 'parámetros', parametros: [p] });
+}
+const cliente = {
+  titulo: m.titulo, xlabel: m.xlabel, ylabel: m.ylabel, disciplina: m.disciplina, modulo: m.modulo, archivos: m.archivos,
+  base: '/laboratorio/py/', pyodide: PYODIDE, inicial: m.inicial,
+  parametros: m.parametros.map(({ nombre, valor, unidad, paso }) => ({ nombre, valor, unidad, paso })),
+  escenarios: m.escenarios,
+};
+const json = JSON.stringify(cliente).replace(/</g, '\\u003c');
+const svg = graficoSvg(m.inicial.curvas, { ancho: 640, xlabel: m.xlabel, ylabel: m.ylabel, titulo: m.titulo, id: 'lab' });
+const disciplina = { macro: 'Macroeconomía', estadistica: 'Estadística' }[m.disciplina] ?? m.disciplina;
+const decimales = (paso) => Math.max(0, Math.min(4, -Math.floor(Math.log10(paso) + 1e-9)));
+const valorTexto = (p) => fmtParametro(p.valor, p.paso, p.unidad);
+---
+<Base titulo={`${m.titulo} · Laboratorio`} descripcion={f.pregunta || `Modelo del laboratorio computacional: ${m.titulo}.`} seccion="cursos">
+  <div class="envoltura lab-pagina">
+    <nav aria-label="Ruta">
+      <ol class="migas">
+        <li><a href="/cursos/">Cursos</a></li>
+        <li><a href="/laboratorio/">Laboratorio</a></li>
+        <li><span aria-current="page">{m.titulo}</span></li>
+      </ol>
+    </nav>
+    <header class="lab-cabeza">
+      <p class="lab-sobre dato">{disciplina} · {m.seccion ?? `nivel ${m.nivel}`} · {m.id}</p>
+      <h1>{m.titulo}</h1>
+      {f.pregunta && <p class="lab-pregunta" set:html={textoHtml(f.pregunta)} />}
+      <p class="lab-usado">
+        <span class="tenue">En el curso:</span>
+        {m.temas.map((t, i) => (
+          <>{i > 0 && ' · '}<a href={t.leccion?.url ?? t.cursoUrl}>{t.cursoTitulo}, tema <span class="dato">{t.tema}</span>{t.temaTitulo && <> ({t.temaTitulo})</>}</a></>
+        ))}
+      </p>
+    </header>
+
+    <section class="lab-banco" data-lab aria-labelledby="t-modelo">
+      <h2 id="t-modelo" class="sr">El modelo en vivo</h2>
+      <script type="application/json" set:html={json} />
+      <div class="lab-figura-col">
+        <figure class="lab-figura">
+          <div class="lab-lienzo" data-lab-figura set:html={svg} />
+          <figcaption>
+            <ul class="lab-leyenda" data-lab-leyenda set:html={leyendaHtml(m.inicial.curvas)} />
+            <p class="lab-anotacion" data-lab-anotacion hidden={!m.inicial.curvas.anotacion} set:html={anotacionHtml(m.inicial.curvas.anotacion)} />
+          </figcaption>
+        </figure>
+        <p class="lab-estado" role="status" data-lab-estado data-estado="cargando">
+          <Icono nombre="cpu" tamano={15} />
+          <span>La figura muestra el modelo con sus valores por defecto. Para moverlo, esta página carga Python (Pyodide y numpy, unos 12 MB la primera vez) desde cdn.jsdelivr.net.</span>
+        </p>
+        <noscript><p class="lab-estado" data-estado="error">Sin JavaScript el modelo no se puede mover: la figura y los resultados son los de sus valores por defecto.</p></noscript>
+        <p class="lab-tiempos dato tenue" data-lab-tiempos></p>
+      </div>
+
+      <div class="lab-controles">
+        {grupos.map((g) => (
+          <fieldset>
+            <legend>{g.nombre}</legend>
+            {g.parametros.map((p) => (
+              <div class="lab-param">
+                <label for={`p-${p.nombre}`}><span set:html={matHtml(p.etiqueta || p.nombre)} /><output for={`p-${p.nombre}`} class="dato" data-valor={p.nombre}>{valorTexto(p)}</output></label>
+                <input type="range" id={`p-${p.nombre}`} data-param={p.nombre} min={p.minimo} max={p.maximo} step={p.paso} value={p.valor}
+                  aria-valuetext={valorTexto(p)} aria-describedby={p.definicion ? `d-${p.nombre}` : undefined} disabled />
+                <span class="lab-rango dato" aria-hidden="true"><span>{p.minimo.toFixed(decimales(p.paso))}</span><span>{p.maximo.toFixed(decimales(p.paso))}</span></span>
+                {p.definicion && <p class="lab-def" id={`d-${p.nombre}`} set:html={textoHtml(p.definicion)} />}
+              </div>
+            ))}
+          </fieldset>
+        ))}
+        <button class="boton chico" type="button" data-restablecer disabled><Icono nombre="rotate-ccw" tamano={15} />Restablecer</button>
+      </div>
+
+      {m.escenarios.length > 0 && (
+        <section class="lab-escenarios" aria-labelledby="t-escenarios">
+          <h2 id="t-escenarios">Escenarios</h2>
+          <p class="tenue">Cada escenario cambia algunos parámetros a partir de los valores por defecto.</p>
+          <ul>
+            {m.escenarios.map((e) => (
+              <li><button class="boton chico" type="button" data-escenario={e.nombre} aria-pressed="false" disabled><Icono nombre="play" tamano={14} /><span set:html={textoHtml(e.descripcion)} /></button></li>
+            ))}
+          </ul>
+          <div class="lab-lectura" data-lab-lectura aria-live="polite" hidden>
+            <h3 data-lectura-titulo></h3>
+            <p data-lectura-texto></p>
+            <ol class="lab-cadena" data-lectura-cadena aria-label="Mecanismo paso a paso"></ol>
+          </div>
+        </section>
+      )}
+
+      {m.inicial.resultados.length > 0 && (
+        <section class="lab-resultados" aria-labelledby="t-resultados">
+          <h2 id="t-resultados">Resultados</h2>
+          <table>
+            <caption class="sr">Magnitudes que calcula el modelo con los parámetros actuales</caption>
+            <tbody data-lab-resultados>
+              {m.inicial.resultados.map(([k, v]) => <tr><th scope="row" set:html={matHtml(k)} /><td class="dato">{fmt(v)}</td></tr>)}
+            </tbody>
+          </table>
+        </section>
+      )}
+      <p class="sr" aria-live="polite" data-lab-aviso></p>
+    </section>
+
+    <div class="lab-ficha">
+      <h2>Ficha del modelo</h2>
+      {f.contexto && <><h3>Contexto</h3><p set:html={textoHtml(f.contexto)} /></>}
+      {f.supuestos?.length > 0 && <><h3>Supuestos</h3><ul>{f.supuestos.map((s) => <li set:html={textoHtml(s)} />)}</ul></>}
+      {f.ecuaciones?.length > 0 && (
+        <>
+          <h3>Ecuaciones</h3>
+          <dl class="lab-ecuaciones">
+            {f.ecuaciones.map((e) => (<div><dt>{e.nombre}</dt><dd><div set:html={tex(e.latex)} /><p set:html={textoHtml(e.significado)} /></dd></div>))}
+          </dl>
+        </>
+      )}
+      {f.intuicion && <><h3>Intuición</h3><p set:html={textoHtml(f.intuicion)} /></>}
+      {f.limitaciones?.length > 0 && <><h3>Limitaciones</h3><ul>{f.limitaciones.map((s) => <li set:html={textoHtml(s)} />)}</ul></>}
+      {f.evolucion && <><h3>Qué viene después</h3><p set:html={textoHtml(f.evolucion)} /></>}
+      <h3>Fuentes y procedencia</h3>
+      {f.autores && <p>{f.autores}</p>}
+      {f.fuentes?.length > 0 && (
+        <ul>{f.fuentes.map((x) => <li>Calibre <span class="dato">{x.calibre_id}</span>, p. {x.pagina}{x.afirma && <> — {x.afirma}</>}</li>)}</ul>
+      )}
+      <p class="tenue">Procedencia: {f.procedencia}. El modelo pasa <span class="dato">{m.verificaciones}</span> verificaciones numéricas en el laboratorio (<code>python3 main.py verificar</code>); es un modelo pedagógico, no un pronóstico.</p>
+      <h3>Código</h3>
+      <p class="lab-codigo">El cálculo es el mismo que el del laboratorio de escritorio (licencia MPL-2.0): <a href={`/laboratorio/py/${m.archivo}`}>{m.archivo}</a>, sobre el motor <a href="/laboratorio/py/base.py">base.py</a> y el adaptador <a href="/laboratorio/py/navegador.py">navegador.py</a>.</p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import '../scripts/laboratorio.js';
+</script>
+
+<style>
+  .lab-pagina { padding-block: 2rem 3rem; display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+  .lab-cabeza { display: grid; gap: 0.6rem; max-width: 52rem; }
+  .lab-sobre { color: var(--acento-tinta); font-size: 0.75rem; }
+  .lab-cabeza h1 { font-size: var(--t-5); }
+  .lab-pregunta { font-family: var(--f-lectura); font-size: var(--t-lectura); color: var(--tinta-2); }
+  .lab-usado { font-size: var(--t-1); }
+  .lab-banco { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--linea-fuerte); padding-top: 1.5rem; }
+  @media (min-width: 960px) {
+    .lab-banco { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: 2rem; }
+    .lab-figura-col { grid-row: span 3; }
+  }
+  .lab-figura { margin: 0; display: grid; gap: 0.75rem; }
+  .lab-lienzo { width: 100%; min-height: 16rem; }
+  .lab-lienzo :global(svg) { display: block; width: 100%; height: auto; }
+  .lab-leyenda { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; font-size: var(--t-0); color: var(--tinta-2); }
+  .lab-leyenda :global(li) { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .lab-leyenda :global(line) { stroke-width: 2.5; }
+  .lab-anotacion { font-size: var(--t-0); color: var(--tinta-2); border-left: 2px solid var(--acento-linea); padding: 0.2rem 0 0.2rem 0.75rem; }
+  .lab-estado { display: flex; gap: 0.5rem; align-items: flex-start; font-size: var(--t-0); color: var(--tinta-2); margin-top: 0.75rem; }
+  .lab-estado :global(svg) { flex: none; margin-top: 0.15rem; color: var(--acento); }
+  .lab-estado[data-estado='error'] { color: var(--tinta); }
+  .lab-tiempos { font-size: 0.72rem; min-height: 1em; margin-top: 0.25rem; }
+  .lab-controles { display: grid; gap: 1rem; align-content: start; }
+  fieldset { border: 0; border-top: 1px solid var(--linea); padding: 0.6rem 0 0; display: grid; gap: 0.85rem; min-width: 0; }
+  legend { font-size: 0.75rem; font-family: var(--f-datos); color: var(--tenue); text-transform: lowercase; padding-right: 0.5rem; }
+  .lab-param { display: grid; gap: 0.25rem; }
+  .lab-param label { display: flex; justify-content: space-between; gap: 0.75rem; font-size: var(--t-1); font-weight: 600; }
+  .lab-param output { color: var(--acento-tinta); font-weight: 500; white-space: nowrap; }
+  .lab-param input[type='range'] { width: 100%; accent-color: var(--acento); min-height: 1.75rem; }
+  .lab-param input:disabled { opacity: 0.55; }
+  .lab-rango { display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--tenue); }
+  .lab-def { font-size: var(--t-0); color: var(--tenue); }
+  .lab-controles .boton { justify-self: start; }
+  .lab-escenarios, .lab-resultados { display: grid; gap: 0.6rem; align-content: start; }
+  .lab-escenarios h2, .lab-resultados h2 { font-size: var(--t-3); }
+  .lab-escenarios > p { font-size: var(--t-0); }
+  .lab-escenarios ul { list-style: none; display: grid; gap: 0.4rem; }
+  .lab-escenarios .boton { text-align: left; height: auto; white-space: normal; justify-content: flex-start; }
+  .lab-lectura { border-top: 1px solid var(--linea); padding-top: 0.75rem; display: grid; gap: 0.4rem; font-size: var(--t-1); }
+  .lab-lectura h3 { font-size: var(--t-1); }
+  .lab-lectura p { font-family: var(--f-lectura); }
+  .lab-cadena { display: flex; flex-wrap: wrap; gap: 0.3rem; list-style: none; font-family: var(--f-datos); font-size: 0.75rem; }
+  .lab-cadena :global(li) { padding: 0.15rem 0.45rem; border: 1px solid var(--acento-linea); border-radius: var(--r-1); background: var(--acento-suave); color: var(--acento-tinta); }
+  .lab-resultados table { border-collapse: collapse; width: 100%; font-size: var(--t-1); }
+  .lab-resultados th { text-align: left; font-weight: 400; padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid var(--linea); }
+  .lab-resultados td { text-align: right; padding: 0.35rem 0; border-bottom: 1px solid var(--linea); white-space: nowrap; }
+  .lab-ficha { max-width: var(--medida); border-top: 1px solid var(--linea-fuerte); padding-top: 1.5rem; }
+  .lab-ficha h2 { font-size: var(--t-4); }
+  .lab-ficha h3 { font-size: var(--t-3); margin-top: 1.6rem; }
+  .lab-ficha > :is(p, ul, dl) { margin-top: 0.6rem; }
+  .lab-ficha > p, .lab-ficha li { font-family: var(--f-lectura); font-size: var(--t-lectura); line-height: 1.6; }
+  .lab-ficha ul { padding-left: 1.2rem; display: grid; gap: 0.35rem; }
+  .lab-ficha .tenue { font-family: var(--f-interfaz); font-size: var(--t-1); }
+  .lab-ecuaciones { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+  .lab-ecuaciones dt { font-weight: 600; font-family: var(--f-interfaz); font-size: var(--t-1); }
+  .lab-ecuaciones dd { margin: 0; overflow-x: auto; }
+  .lab-ecuaciones :global(math) { font-size: 1.1em; padding-block: 0.4rem; }
+  .lab-codigo { overflow-wrap: anywhere; }
+  .lab-ecuaciones dd p { font-size: var(--t-1); color: var(--tinta-2); }
+
+  /* El gráfico (grafico-lab.mjs): solo tokens. */
+  .lab-lienzo :global(.g-reticula line) { stroke: var(--linea); stroke-width: 1; }
+  .lab-lienzo :global(.g-ejes line) { stroke: var(--linea-fuerte); stroke-width: 1; }
+  .lab-lienzo :global(.g-cero) { stroke: var(--linea-fuerte); stroke-width: 1; stroke-dasharray: 2 3; }
+  .lab-lienzo :global(text) { fill: var(--tenue); font-family: var(--f-datos); font-size: 11px; }
+  .lab-lienzo :global(.g-eje-titulo) { fill: var(--tinta-2); font-family: var(--f-lectura); font-size: 13px; }
+  .lab-lienzo :global(.g-linea) { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .lab-lienzo :global(.g-barra) { opacity: 0.88; }
+  .lab-lienzo :global(.g-punto), .lab-lienzo :global(.g-equilibrio), .lab-leyenda :global(.g-equilibrio) { fill: var(--graf-eq); stroke: var(--papel); stroke-width: 1.5; }
+  .lab-lienzo :global(.g-punto-rotulo) { fill: var(--tinta); font-family: var(--f-interfaz); font-size: 12px; font-weight: 600; paint-order: stroke; stroke: var(--papel); stroke-width: 3px; }
+</style>

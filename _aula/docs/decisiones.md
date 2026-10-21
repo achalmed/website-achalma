@@ -240,3 +240,55 @@ bajaban 360 KB de fuentes, entre ellos Source Serif con eje óptico (122 KB) y s
 páginas. Ahora Source Serif carga solo su eje de peso (51 KB), la cursiva solo en el lector (donde hay texto en
 cursiva), la firma de la cabecera va sin cursiva y el CSS va en línea (`inlineStylesheets: 'always'` en
 `_aula/astro.config.mjs`). Con eso methodica marca 96–98 en móvil y 100 en accesibilidad, buenas prácticas y SEO.
+
+### §1.20 El laboratorio en el navegador: el mismo `base.Modelo` en Pyodide (2026-10-21)
+
+Fase 3 del plan (`web/docs/plataforma-educativa.md` §4.8). El navegador ejecuta el MISMO código Python que el
+laboratorio de escritorio, sin reescribir una sola ecuación en JavaScript:
+
+- **Contrato.** `simuladores/main.py web --aplicar` escribe `simuladores/navegador.json`: por cada modelo que corre en el
+  navegador, los `.py` mínimos (`base.py`, el adaptador `navegador.py`, el `config.py` de la disciplina, los `__init__.py`
+  y el módulo con sus auxiliares, por análisis estático de sus `import`), sus parámetros con rango y paso, escenarios,
+  ficha y una vista inicial (las curvas con los valores por defecto, 300 puntos por línea). Los que importan algo más que
+  numpy y la biblioteca estándar sin archivos (el nivel 12 de macro lee datafw) o tardan más de 0,3 s de CPU quedan
+  fuera, con su motivo, y el curso los lista como «solo en el escritorio».
+- **Asociación.** Un modelo tiene página en un pub si un curso que vive en ese pub lo asocia a un tema, por
+  `catalogo.json` (los `temario.yml` de simuladores) o por un recurso `{tipo: simulador}` de su `curso.yml`
+  (`_aula/src/lib/modelo.mjs`). Hoy: aequilibria 22, epsilon-y-beta 18 y optimums 1.
+- **Página `/laboratorio/<id>/`** (`_aula/src/rutas/laboratorio-modelo.astro`) e índice `/laboratorio/`: deslizadores
+  nativos con `<label>`, `aria-valuetext` y la definición como descripción; escenarios con su lectura y su cadena de
+  transmisión; «Restablecer»; tabla de resultados; ficha (contexto, supuestos, ecuaciones, intuición, limitaciones,
+  procedencia y fuentes) y enlace a los `.py`, que el build copia a `/laboratorio/py/` (solo los de los modelos del pub).
+- **Gráfico.** `_aula/src/lib/grafico-lab.mjs` dibuja en SVG el contrato de `Modelo.curvas` (líneas, barras, puntos,
+  equilibrio, anotación) con la paleta del laboratorio traducida a roles (`--graf-1`, `--graf-2`, `--graf-3`,
+  `--graf-eq`, `--graf-aux` en `_aula/src/styles/tokens.css`, claro y oscuro), retícula de filetes, auxiliares
+  discontinuas y la notación `$…$` en cursiva con índices. El mismo módulo pinta la figura del build (visible sin
+  JavaScript) y cada recálculo, así que ambas son idénticas.
+- **Pyodide 0.29.5** (Python 3.13, numpy 2.2; versión exacta, `cdn.jsdelivr.net`) corre en un Web Worker
+  (`_aula/src/scripts/laboratorio-trabajador.js`): la página no se congela mientras Python arranca. Se pide solo en esta
+  página, tras el evento `load` y en un momento ocioso (con plazo de 1,5 s, porque en una pestaña de fondo
+  `requestIdleCallback` puede no llegar). Sus mensajes de carga no van a la consola. Si no carga (sin red, sin
+  trabajadores) la página lo dice y conserva la figura por defecto; sin JavaScript, igual (`<noscript>`).
+- **Las ecuaciones de la ficha van en MathML nativo** (KaTeX con `output: 'mathml'`), sin la hoja ni las fuentes de
+  KaTeX: en HTML, la flecha extensible de `\xrightarrow` es un SVG de 400em que un móvil tarda segundos en pintar
+  (Lighthouse: 77 con KaTeX en HTML, 97 sin él).
+
+Medido el 2026-10-21 en la laptop, servido en local: primera carga del motor 7,2 s con la caché vacía (unos 12 MB:
+Pyodide, numpy y los `.py`) y 2,3–2,9 s con la caché del navegador; cada recálculo de IS-LM, 5–10 ms, y del TCL
+(4 000 muestras), 25–65 ms. Los 22 modelos de aequilibria, los 18 de epsilon-y-beta y el de optimums cargan y calculan
+su valor por defecto y cada escenario en el navegador (prueba en la propia página con el trabajador del build).
+Lighthouse móvil: `/laboratorio/e67/` y `/laboratorio/m10/` dan 97 de rendimiento y 100 en accesibilidad, buenas
+prácticas y SEO; Lighthouse no espera a Pyodide, que va en otro hilo y después de la carga. Capturas:
+`_aula/docs/img/laboratorio-islm-375-claro.webp`, `_aula/docs/img/laboratorio-tcl-375-oscuro.webp` y
+`_aula/docs/img/laboratorio-tcl-escritorio-claro.webp`.
+
+### §1.21 Los vídeos de divulgacion en la lección de su tema (2026-10-21)
+
+Fase 8 del plan. La vitrina lee `divulgacion/catalogo.json` (`DIVULGACION_DIR`, o `<raíz>/divulgacion`; contrato:
+piezas con `curriculo: [{curso, tema}]` y `publicaciones: [{red, fecha, url}]`) y, en la lección del tema, muestra
+«En vídeo» solo con las piezas que tienen al menos una publicación con url `https` (`_aula/src/lib/videos.mjs`).
+YouTube va primero y se incrusta con `youtube-nocookie.com` detrás de una fachada: nada se pide a YouTube hasta que el
+lector pulsa, y sin JavaScript queda un enlace al vídeo. TikTok, Facebook y las demás redes son enlaces simples. Hoy
+ninguna pieza está publicada, así que la sección no aparece en ningún pub; el componente se prueba con datos de
+muestra en `_aula/scripts/prueba-videos.mjs` (`npm run prueba`) y en la página interna `/demo/videos/`, que solo
+existe con `astro dev` o `AULA_DEMO=1` (captura: `_aula/docs/img/videos-demo.webp`).

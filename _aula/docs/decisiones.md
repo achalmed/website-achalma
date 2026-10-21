@@ -323,3 +323,15 @@ un desvanecido en el borde derecho (`.tabla-marco` / `.tabla`, marcado en `lecto
 párrafo se muestra como ecuación de bloque, y una ecuación larga lleva además una versión partida y alineada tras el
 signo igual para pantallas angostas (`partirEcuacion` en `contenido.mjs`).
 
+**Tercera vuelta (autor, 2026-10-21).** Pies de tabla y figura en la letra y el tamaño del texto, con el título arriba
+(también en las figuras: `contenido.mjs` sube el `figcaption`) y la nota («Nota.», «Fuente:») debajo, un punto menor.
+Tablas como el visor de Markdown de Claude: marco fino sin relleno en la cabecera, cabecera delgada y centrada en
+vertical, columnas de al menos 6,5 rem con espacio; en modo lectura una tabla o una imagen puede ser más ancha que el
+texto (hasta 72 rem dentro de la ventana) y se centra sobre él. Ningún título por debajo del texto. Citas en bloque sin
+barra. Modo claro por defecto (el oscuro solo si el lector lo elige). Se quitan al construir los índices escritos a
+mano al inicio del texto y los emojis (no del código; ✓ y ✗ se quedan). «Cómo citar» sin caja. La retícula milimetrada
+deja la vitrina (papel liso con un degradado mínimo) y el colofón ya no se repite en las tarjetas ni en «La familia»;
+las cifras van sin filetes. En modo lectura, en pantallas anchas, cada nota al pie se ve al margen junto a su llamada.
+Ecuaciones: varias seguidas se alinean en su relación con su número a la derecha (`.ec-grupo`), las fracciones van a
+tamaño de display salvo en índices, los `cases` con relaciones se alinean y los miles no llevan el espacio de la coma.
+

@@ -237,8 +237,10 @@ const indice = primerNivel.length > 1 ? primerNivel : item.indice.filter((h) => 
   .en-laboratorio li { display: grid; gap: 0.15rem; }
   .en-laboratorio a { font-weight: 600; display: inline-flex; gap: 0.4rem; align-items: center; }
   .en-laboratorio .tenue { font-size: var(--t-1); }
-  .citar { margin-top: 3rem; padding: 1rem 1.1rem; background: var(--papel-2); border-radius: var(--r-2); font-size: var(--t-1); }
-  .citar h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.4rem; }
+  /* «Cómo citar»: sin caja (autor, 2026-10-21); un filete arriba, rótulo pequeño y la cita en la letra del texto. */
+  .citar { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--linea); font-size: var(--t-1); }
+  .citar h2 { font: 650 0.75rem/1.2 var(--f-interfaz); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); margin-bottom: 0.6rem; }
+  .citar p { font-family: var(--f-lectura); font-size: 1rem; line-height: 1.6; }
   .citar p { overflow-wrap: anywhere; color: var(--tinta-2); }
 
   .paginacion { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }

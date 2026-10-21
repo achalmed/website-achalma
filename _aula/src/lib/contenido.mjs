@@ -23,6 +23,57 @@ function anchoTex(t) {
 
 const RELACIONES = ['\\approx', '\\equiv', '\\leq', '\\geq', '\\le', '\\ge', '='];
 
+/** Divide una ecuación en su primera relación del nivel superior: { izq, rel, der } o null. */
+export function dividirRelacion(tex) {
+  let prof = 0;
+  for (let i = 0; i < tex.length; i++) {
+    const c = tex[i];
+    if (c === '\\') {
+      const m = tex.slice(i).match(/^\\([a-zA-Z]+|.)/);
+      if (m[1] === 'left' || m[1] === 'begin') prof++;
+      else if (m[1] === 'right' || m[1] === 'end') prof--;
+      else if (prof === 0) {
+        const r = RELACIONES.find((x) => x.slice(1) === m[1]);
+        if (r) return { izq: tex.slice(0, i).trim(), rel: r, der: tex.slice(i + m[0].length).trim() };
+      }
+      i += m[0].length - 1;
+      continue;
+    }
+    if (c === '{') prof++;
+    else if (c === '}') prof--;
+    else if (prof === 0 && c === '=') return { izq: tex.slice(0, i).trim(), rel: '=', der: tex.slice(i + 1).trim() };
+  }
+  return null;
+}
+
+/** Presentación formal de una ecuación de bloque (autor, 2026-10-21): fracciones a tamaño de display (\dfrac) salvo en
+ *  subíndices y exponentes, separador de miles sin el espacio de puntuación (34{,}285.71) y `cases` con relaciones
+ *  alineadas en la primera relación de cada fila. */
+export function formalizar(tex) {
+  let t = tex.replace(/(\d),(?=\d{3}(?!\d))/g, '$1{,}');
+  // \frac → \dfrac fuera de ^{…} y _{…}
+  let out = '', pila = [];
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if ((c === '^' || c === '_') && t[i + 1] === '{') { out += c + '{'; pila.push(true); i++; continue; }
+    if (c === '{') { pila.push(pila.length ? pila[pila.length - 1] : false); out += c; continue; }
+    if (c === '}') { pila.pop(); out += c; continue; }
+    if (t.startsWith('\\frac', i) && !/[a-zA-Z]/.test(t[i + 5] || '')) {
+      out += pila.some(Boolean) ? '\\frac' : '\\dfrac'; i += 4; continue;
+    }
+    if (c === '\\') { const m = t.slice(i).match(/^\\([a-zA-Z]+|.)/); out += m[0]; i += m[0].length - 1; continue; }
+    out += c;
+  }
+  // cases → llave con aligned, si cada fila tiene una relación y ninguna trae ya su &
+  return out.replace(/\\begin\{cases\}([\s\S]*?)\\end\{cases\}/g, (todo, cuerpo) => {
+    if (cuerpo.includes('&')) return todo;
+    const filas = cuerpo.split(/\\\\/).map((f) => f.trim()).filter(Boolean);
+    const partes = filas.map(dividirRelacion);
+    if (!partes.length || partes.some((x) => !x)) return todo;
+    return `\\left\\{\\begin{aligned}${partes.map((x) => `${x.izq} &${x.rel} ${x.der}`).join(' \\\\ ')}\\end{aligned}\\right.`;
+  });
+}
+
 /** Versión partida de una ecuación larga: `LHS = t1 + t2 \\ + t3 …` en un `aligned` alineado tras la relación, con
  *  cortes solo en sumas y restas del nivel superior. null si no hace falta o no se puede (sin relación, ya alineada,
  *  cabe en el celular, o no hay dónde cortar). */
@@ -109,15 +160,48 @@ export function extraer(o) {
     const hijos = $p.contents().filter((_, n) => !(n.type === 'text' && !n.data.trim()));
     if (hijos.length === 1 && $(hijos[0]).is('span.math.inline')) $(hijos[0]).removeClass('inline').addClass('display');
   });
-  //    b) Una ecuación de bloque larga con un signo de relación lleva además una versión partida en varias líneas,
-  //       alineada justo después de ese signo, que solo se ve en pantallas angostas (contenido.css: .ec-angosta).
-  let hayMatematicas = false;
+  //    b) Ecuaciones de bloque seguidas (cada una sola en su párrafo, o varias en uno) con una relación cada una: se
+  //       muestran juntas y alineadas en esa relación, con su número a la derecha (autor, 2026-10-21).
   const opciones = (display) => ({ displayMode: display, throwOnError: false, output: 'htmlAndMathml', strict: 'ignore' });
+  const texDe = (el) => $(el).text().trim().replace(/^\\\(|\\\)$/g, '').replace(/^\\\[|\\\]$/g, '').trim();
+  // Una ecuación numerada ({#eq-…}) llega envuelta en un <span id="eq-…">: cuenta como la ecuación que contiene.
+  const ecuacionDe = (n) => ($(n).is('span.math.display') ? n : ($(n).is('span') && $(n).children().length === 1 && $(n).children('span.math.display').length ? $(n).children()[0] : null));
+  const soloEcuaciones = (p) => {
+    const hijos = $(p).contents().filter((_, n) => !(n.type === 'text' && !n.data.trim()));
+    return hijos.length > 0 && hijos.toArray().every((n) => ecuacionDe(n));
+  };
+  const grupos = [];
+  main.find('p').each((_, p) => {
+    if (!soloEcuaciones(p)) return;
+    const previo = $(p).prev();
+    const g = grupos[grupos.length - 1];
+    if (g && previo.length && previo[0] === g.ultimo) { g.ps.push(p); g.ultimo = p; } else grupos.push({ ps: [p], ultimo: p });
+  });
+  let hayMatematicas = false;
+  for (const g of grupos) {
+    // Cada ecuación con su id (el de su envoltura {#eq-…}), para que las referencias del texto sigan llegando a ella.
+    const ecs = g.ps.flatMap((p) => $(p).children().toArray().filter(ecuacionDe).map((n) => ({ tex: texDe(ecuacionDe(n)), id: $(n).attr('id') || null })));
+    if (ecs.length < 2) continue;
+    const filas = ecs.map(({ tex, id }) => {
+      const tag = tex.match(/\\tag\{([^}]*)\}/);
+      const limpio = tex.replace(/\\tag\{[^}]*\}/, '').trim();
+      const d = /\\\\|\\begin\{/.test(limpio) ? null : dividirRelacion(limpio);
+      return d && { ...d, tag: tag ? tag[1] : null, id };
+    });
+    if (filas.some((f) => !f)) continue;
+    const k = (t) => katex.renderToString(`\\displaystyle ${formalizar(t)}`, opciones(false));
+    const html = filas.map((f) => `<span class="ec-izq"${f.id ? ` id="${f.id}"` : ''}>${k(f.izq)}</span><span class="ec-der">${k(`{}${f.rel} ${f.der}`)}</span><span class="ec-num">${f.tag ? `(${f.tag})` : ''}</span>`).join('');
+    $(g.ps[0]).replaceWith(`<div class="ec-grupo" role="group" aria-label="Ecuaciones">${html}</div>`);
+    g.ps.slice(1).forEach((p) => $(p).remove());
+    hayMatematicas = true;
+  }
+  //    c) Una ecuación de bloque larga con un signo de relación lleva además una versión partida en varias líneas,
+  //       alineada justo después de ese signo, que solo se ve en pantallas angostas (contenido.css: .ec-angosta).
   main.find('span.math').each((_, el) => {
     const $el = $(el);
     const display = $el.hasClass('display');
-    let tex = $el.text().trim();
-    tex = tex.replace(/^\\\(|\\\)$/g, '').replace(/^\\\[|\\\]$/g, '');
+    let tex = texDe(el);
+    tex = display ? formalizar(tex) : tex.replace(/(\d),(?=\d{3}(?!\d))/g, '$1{,}');   // miles sin espacio de puntuación
     try {
       const ancha = katex.renderToString(tex, opciones(display));
       const partida = display ? partirEcuacion(tex) : null;
@@ -245,6 +329,56 @@ export function extraer(o) {
     if ($el.find('.rotulo').length) return;
     const m = ($el.html() || '').match(/^\s*((?:Tabla|Figura|Cuadro|Gráfico|Gráfica|Listado|Ecuación|Table|Figure)(?:&nbsp;|\s)+[\w.-]+)\s*[:.]\s*/u);
     if (m) $el.html(`<span class="rotulo">${m[1].replace(/&nbsp;/g, ' ')}</span> <span class="titulo-float">${($el.html() || '').slice(m[0].length)}</span>`);
+  });
+
+  // Índices escritos a mano al inicio del texto («Índice», «Contenido»…): sobran, el de la derecha ya está (autor, 2026-10-21).
+  const TITULO_INDICE = /^\s*(índice|indice|contenidos?|tabla de contenidos?|tabla de contenido)\s*$/i;
+  main.find('h2,h3,h4,h5,h6').each((_, h) => {
+    const $h = $(h).clone();
+    $h.find('.header-section-number').remove();
+    if (!TITULO_INDICE.test($h.text())) return;
+    const $sec = $(h).parent('section');
+    const resto = ($sec.length ? $sec.children().not(h) : $(h).nextUntil('h2,h3,h4,h5,h6'));
+    // Debajo solo hay listas de enlaces internos (o los que quedaron sin destino) y, si acaso, un filete.
+    const listas = resto.filter((_, n) => $(n).is('ol,ul'));
+    const soloLista = listas.length > 0 && resto.toArray().every((n) => $(n).is('ol,ul,hr'))
+      && listas.toArray().every((n) => $(n).find('a[href^="#"], .enlace-sin-destino').length >= $(n).children('li').length * 0.8);
+    if (!soloLista) return;
+    if ($sec.length) $sec.remove(); else { resto.remove(); $(h).remove(); }
+  });
+
+  // Sin emojis en las publicaciones (autor, 2026-10-21): se quitan del texto, nunca del código.
+  // ✓ y ✗ (U+2713, U+2717) se quedan: en las tablas comparativas son datos, no adorno.
+  const EMOJI = /(?:[\u{1F000}-\u{1FAFF}]|(?![\u{2713}\u{2717}])[\u{2600}-\u{27BF}]|[\u{2B00}-\u{2BFF}]|[\u{1F1E6}-\u{1F1FF}])[\u{FE0F}\u{200D}\u{1F3FB}-\u{1F3FF}]*|\u{FE0F}|\u{200D}/gu;
+  main.find('*').not('pre, code, pre *, code *, .katex, .katex *, .footnote-back').contents().each((_, n) => {
+    if (n.type === 'text' && EMOJI.test(n.data)) { EMOJI.lastIndex = 0; n.data = n.data.replace(EMOJI, '').replace(/ {2,}/g, ' '); }
+    EMOJI.lastIndex = 0;
+  });
+
+  // Figuras: el título va arriba y abajo solo las notas (APA 7; autor, 2026-10-21). Quarto deja el pie debajo de la imagen.
+  main.find('figure').each((_, f) => {
+    const $f = $(f);
+    const cap = $f.children('figcaption').first();
+    if (cap.length && $f.children().first()[0] !== cap[0]) { cap.addClass('pie-arriba'); $f.prepend(cap); }
+  });
+  // Una nota («Nota.» o «Fuente:») justo después de una tabla o figura es su nota: se marca para su estilo.
+  main.find('figure, .tabla-marco, div.quarto-float').each((_, f) => {
+    const sig = $(f).next('p');
+    if (sig.length && /^\s*(nota|notas|fuente|fuentes)\s*[.:]/i.test(sig.text())) sig.addClass('nota-float');
+  });
+
+  // Notas al pie también al margen, junto a su llamada: solo se ven en modo lectura en pantallas anchas (contenido.css);
+  // la lista del final se queda para el resto de casos.
+  main.find('a.footnote-ref').each((_, a) => {
+    const $a = $(a);
+    const id = ($a.attr('href') || '').replace(/^#/, '');
+    const li = id ? main.find(`li#${id}`).first() : null;
+    if (!li || !li.length) return;
+    const c = li.clone();
+    c.find('.footnote-back').remove();
+    c.find('p').each((_, x) => { x.name = 'span'; });
+    const n = $a.text().trim();
+    $a.after(`<span class="nota-margen" aria-hidden="true"><span class="nota-margen-n">${n}</span>${(c.html() || '').trim()}</span>`);
   });
 
   // Enlaces externos: sin dar acceso a la página de origen.

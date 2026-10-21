@@ -49,7 +49,7 @@ const enlaces = [
   import { guardarPreferencia } from '../scripts/almacen.js';
   const raiz = document.documentElement;
   const boton = document.querySelector<HTMLButtonElement>('[data-tema]');
-  const esOscuro = () => (raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+  const esOscuro = () => raiz.dataset.theme === 'dark';   // claro por defecto (autor, 2026-10-21)
   const rotular = () => boton?.setAttribute('aria-label', esOscuro() ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
   rotular();
   boton?.addEventListener('click', () => {
@@ -95,10 +95,6 @@ const enlaces = [
   .tema :global(.luna) { display: none; }
   :global(:root[data-theme='dark']) .tema :global(.sol) { display: none; }
   :global(:root[data-theme='dark']) .tema :global(.luna) { display: inline-block; }
-  @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme='light'])) .tema :global(.sol) { display: none; }
-    :global(:root:not([data-theme='light'])) .tema :global(.luna) { display: inline-block; }
-  }
   @media (max-width: 899px) { .buscar { min-width: 0; } .buscar-atajo { display: none; } }
   /* 375 px: marca y tema en la primera fila; la navegación debajo, a todo el ancho. */
   @media (max-width: 639px) {

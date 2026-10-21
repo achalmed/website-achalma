@@ -113,7 +113,7 @@ const accesos = [
       if (!it) return;
       if (it.accion === 'tema') {
         const raiz = document.documentElement;
-        const oscuro = raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        const oscuro = raiz.dataset.theme === 'dark';
         raiz.dataset.theme = oscuro ? 'light' : 'dark';
         guardarPreferencia('tema', raiz.dataset.theme);
         dialogo!.close();

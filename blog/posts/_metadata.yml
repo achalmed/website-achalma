@@ -197,6 +197,10 @@ format:
     # En la web, sin números: distraen de la lectura (autor, 2026-10-21). Los PDF/DOCX
     # apaquarto conservan su numeración jerárquica (sus propios bloques más abajo).
     number-sections: false
+    # --- PIES DE FIGURA Y TABLA ---
+    # Título arriba y nota abajo, como en APA 7 (autor, 2026-10-21).
+    fig-cap-location: top
+    tbl-cap-location: top
     
     # --- CITAS Y NOTAS ---
     citations-hover: true         # Popup con cita al pasar el mouse

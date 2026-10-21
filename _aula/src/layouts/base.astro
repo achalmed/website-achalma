@@ -52,7 +52,7 @@ const imagenOg = new URL('/og.png', Astro.site).href;
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script is:inline>
-    // Tema y modo lectura elegidos, antes de pintar (sin parpadeo). Si el almacenamiento falla, manda el sistema.
+    // Tema elegido, antes de pintar (sin parpadeo). Sin elección, claro (autor, 2026-10-21).
     try {
       const t = JSON.parse(localStorage.getItem('aula:tema'));
       if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;

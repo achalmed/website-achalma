@@ -44,7 +44,7 @@
   --r-3: 10px;
   --mm: 6px;                    /* lado de un milímetro de la retícula (en pantalla) */
 
-  /* ── Roles, tema claro ──────────────────────────────────────────────────── */
+  /* ── Roles, tema claro (el predeterminado: el oscuro solo si el lector lo elige, autor 2026-10-21) ──────────────────────────────────────────────────── */
   color-scheme: light;
   --papel: var(--spc-bg);
   --papel-2: var(--spc-bg-dark);
@@ -86,35 +86,6 @@
   --graf-tinta: var(--tinta-2);                 /* AZUL: títulos y anotaciones */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    color-scheme: dark;
-    --papel: var(--spc-dark-bg);
-    --papel-2: var(--spc-dark-bg-accent);
-    --elevado: var(--spc-dark-bg-elevated);
-    --tinta: var(--spc-dark-text-primary);
-    --tinta-2: var(--spc-dark-text-secondary);
-    --tenue: var(--spc-dark-text-muted);
-    --linea: var(--spc-dark-border);
-    --linea-fuerte: var(--spc-dark-border-strong);
-    --codigo-fondo: var(--spc-dark-code-bg);
-    --seleccion: var(--spc-dark-selection);
-    --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
-    --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
-    --sombra-borde: rgb(0 0 0 / 0.55);
-    --cod-palabra: var(--spc-dark-primary);
-    --cod-cadena: var(--spc-dark-accent);
-    --cod-numero: #E3B172;
-    --cod-comentario: var(--spc-dark-text-muted);
-    --cod-funcion: #C3A8F0;
-    --ret-menor: 6%;
-    --ret-mayor: 13%;
-    --graf-1: var(--spc-dark-primary);
-    --graf-2: var(--lab-rojo-o);
-    --graf-3: var(--spc-dark-accent);
-    --graf-eq: var(--lab-oro-o);
-  }
-}
 :root[data-theme='dark'] {
   color-scheme: dark;
   --papel: var(--spc-dark-bg);
@@ -160,9 +131,6 @@
 /* El acento lo fija el data-acento más cercano: <html> para el pub y cada sitio de «La familia» (pie) para el suyo.
    Por eso el acento y sus derivados se declaran también en [data-acento] y no solo en :root. */
 :root, [data-acento] { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: #fff; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']), :root:not([data-theme='light']) [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
-}
 :root[data-theme='dark'], :root[data-theme='dark'] [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
 
 /* Derivados del acento y de la retícula (se recalculan solos en cada tema). */

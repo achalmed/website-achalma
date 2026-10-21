@@ -1,7 +1,7 @@
 /* src/styles/contenido.css — el cuerpo de lecciones y artículos (HTML extraído de Quarto).
    Pauta editorial (decisión del autor, 2026-10-21): serif de lectura, tinta sobre papel y un solo acento por sitio,
-   reservado para enlaces y lo que importa; tablas de tres filetes, pies de figura y tabla al estilo APA 7, código en
-   tarjeta oscura sobria (la de la demo de Qillqa) y referencias aireadas. Todo dentro de .prosa para no tocar la
+   reservado para enlaces y lo que importa; tablas como el visor de Markdown de Claude, pies de tabla y figura al estilo
+   APA 7 (título arriba, nota abajo), código en tarjeta oscura sobria (la de la demo de Qillqa) y referencias aireadas. Todo dentro de .prosa para no tocar la
    interfaz. Celular primero: 17 px en el celular, 18 px desde 720 px. */
 
 .prosa {
@@ -27,9 +27,10 @@
 .prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { font-family: var(--f-titulo); font-weight: 600; line-height: 1.25; }
 .prosa h2 { font-size: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem); letter-spacing: -0.015em; line-height: 1.18; }
 .prosa h3 { font-size: clamp(1.25rem, 1.15rem + 0.45vw, 1.4375rem); letter-spacing: -0.01em; }
-.prosa h4 { font-size: clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem); }
-.prosa h5 { font-size: 1.0625rem; }
-.prosa h6 { font-size: 1rem; font-style: italic; }
+/* Ningún título por debajo del texto (18 px en escritorio): el más pequeño, h6, iguala al cuerpo. */
+.prosa h4 { font-size: clamp(1.1875rem, 1.12rem + 0.3vw, 1.3125rem); }
+.prosa h5 { font-size: clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem); }
+.prosa h6 { font-size: clamp(1.0625rem, 1.03rem + 0.15vw, 1.125rem); }
 .prosa h4, .prosa h5, .prosa h6 { margin-top: 1.6em; }
 .prosa .header-section-number { display: none; }
 
@@ -39,7 +40,7 @@
 .prosa a { color: var(--acento); text-decoration-color: color-mix(in oklab, var(--acento) 35%, transparent); }
 .prosa a:hover { text-decoration-color: currentColor; }
 .prosa strong { font-weight: 650; }
-.prosa blockquote { margin: 1.6em 0; padding: 0 0 0 1.1em; border-left: 1px solid var(--linea-fuerte); color: var(--tinta-2); font-style: italic; }
+.prosa blockquote { margin: 1.6em 0; padding: 0 1.5em; border: 0; color: var(--tinta-2); font-style: italic; }   /* sangría, sin barra */
 .prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5em auto; max-width: 8rem; }
 .prosa .enlace-sin-destino { text-decoration: underline dotted var(--tenue); }
 
@@ -115,22 +116,23 @@
 .prosa figure { margin: 2em 0; max-width: var(--medida); }
 .prosa .cell-output-display figure, .prosa .cell-output-display .figure { margin: 0.8em 0 0; }
 .prosa .cell + .cell, .prosa .cell + div.sourceCode, .prosa .cell + p { margin-top: 1.6em; }
-/* Pie al estilo APA 7: rótulo en negrita en su línea y título en cursiva; sans pequeña, gris, con el interlineado
-   propio de un pie (no el de la prosa). Arriba en tablas, abajo en figuras, como lo deja Quarto. */
+/* Pies de tabla y figura (APA 7; autor, 2026-10-21): el título va arriba, en la letra y el tamaño del texto (rótulo en
+   negrita, título en cursiva); la nota va debajo, un punto más pequeña. contenido.mjs sube el pie de las figuras. */
 .prosa figcaption, .prosa .figure-caption, .prosa caption {
-  font-family: var(--f-interfaz); font-size: 0.875rem; line-height: 1.5; color: var(--tinta-2);
-  text-align: left; max-width: var(--medida); caption-side: top;
+  font-family: var(--f-lectura); font-size: 1em; line-height: 1.5; color: var(--tinta);
+  text-align: left; max-width: var(--medida); caption-side: top; margin: 0 0 0.75em;
 }
-.prosa figcaption { margin-top: 0.75em; }
-.prosa .quarto-float-caption-top, .prosa caption { margin: 0 0 0.7em; }
-.prosa .rotulo { display: block; font-weight: 650; color: var(--tinta); letter-spacing: 0.01em; }
+.prosa figcaption:not(:has(.rotulo)) { font-style: italic; }
+.prosa .rotulo { display: block; font-weight: 650; }
 .prosa .titulo-float { display: block; font-style: italic; }
+.prosa .nota-float { font-size: 0.94em; line-height: 1.55; color: var(--tinta-2); margin-top: 0.75em; }
+.prosa figure + .nota-float, .prosa .tabla-marco + .nota-float { margin-top: 0.75em; }
 
-/* ── Tablas: como el visor de Markdown de Claude (autor, 2026-10-21): un recuadro de esquinas redondeadas que se ajusta
-   al ancho; las celdas parten el texto en vez de empujar la tabla hacia la derecha. Solo una tabla de muchas
-   columnas numéricas se desplaza, y dentro de su recuadro. Cabecera en papel apenas teñido, filetes finos. ─────── */
+/* ── Tablas: como el visor de Markdown de Claude (autor, 2026-10-21). Un marco fino de esquinas suaves, sin relleno en la
+   cabecera ni rayas gruesas; cabecera delgada y centrada en vertical; las celdas parten el texto. En modo lectura la
+   tabla puede ser más ancha que el texto (hasta 72 rem, siempre dentro de la ventana) y se centra sobre él. ─────── */
 .prosa .tabla-marco, .prosa .table-wrap {
-  margin-top: 1.2em; max-width: 100%; border: 1px solid var(--linea); border-radius: 12px; overflow: hidden;
+  margin-top: 1.2em; max-width: 100%; border: 1px solid var(--linea); border-radius: 10px; overflow: hidden;
 }
 .prosa figure .tabla-marco { margin-top: 0; }
 .prosa .tabla, .prosa .table-wrap { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--linea-fuerte) transparent; }
@@ -148,20 +150,42 @@
   font-variant-numeric: lining-nums tabular-nums;
 }
 .prosa thead th {
-  background: var(--papel-2); font-weight: 600; text-align: left; vertical-align: bottom;
-  border-bottom: 1px solid var(--linea);
+  background: none; font-weight: 600; line-height: 1.35; vertical-align: middle; text-wrap: balance;
+  padding: 0.6em 0.9em; border-bottom: 1px solid var(--linea-fuerte);
 }
-.prosa th, .prosa td { padding: 0.7em 1em; vertical-align: top; overflow-wrap: break-word; }
-.prosa tbody tr + tr td, .prosa tbody tr + tr th { border-top: 1px solid var(--linea); }
-.prosa tbody tr:hover td { background: color-mix(in oklab, var(--papel-2) 55%, transparent); }
+.prosa thead tr + tr th { border-top: 0; }
+.prosa th, .prosa td { padding: 0.6em 0.9em; vertical-align: top; overflow-wrap: break-word; }
+.prosa tbody tr + tr td, .prosa tbody tr + tr th { border-top: 1px solid color-mix(in oklab, var(--linea) 75%, transparent); }
+.prosa tbody tr:hover td { background: color-mix(in oklab, var(--papel-2) 45%, transparent); }
+/* Con espacio, una columna no baja de ~6,5 rem: así una cabecera no se parte en tres o cuatro líneas. */
+@media (min-width: 720px) { .prosa thead th { min-width: 6.5rem; } }
 @media (max-width: 560px) {
   .prosa table { font-size: 0.875rem; }
-  .prosa th, .prosa td { padding: 0.6em 0.7em; }
+  .prosa th, .prosa td { padding: 0.55em 0.7em; }
   .prosa .tabla-densa table { font-size: 0.75rem; line-height: 1.4; }
   .prosa .tabla-densa th, .prosa .tabla-densa td { padding: 0.5em 0.28em; }
   .prosa .tabla-densa th:first-child, .prosa .tabla-densa td:first-child { padding-left: 0.5em; }
   .prosa .tabla-densa th:last-child, .prosa .tabla-densa td:last-child { padding-right: 0.5em; }
 }
+/* Modo lectura: tablas e imágenes pueden ser más anchas que el texto y se centran sobre él (como el visor de Claude). */
+html.modo-lectura .prosa .tabla-marco {
+  width: max-content; min-width: 100%; max-width: min(72rem, calc(100vw - 2 * var(--margen)));
+  position: relative; left: 50%; transform: translateX(-50%);
+}
+html.modo-lectura .prosa figure img {
+  width: auto; max-width: min(72rem, calc(100vw - 2 * var(--margen)));
+  position: relative; left: 50%; transform: translateX(-50%); margin-inline: 0;
+}
+
+/* ── Ecuaciones seguidas: alineadas en su relación, con su número a la derecha (contenido.mjs, .ec-grupo) ───── */
+.prosa .ec-grupo {
+  display: grid; grid-template-columns: minmax(2.5rem, 1fr) auto auto minmax(2.5rem, 1fr); align-items: baseline;
+  row-gap: 0.7em; margin: 1.5em 0; max-width: var(--medida); overflow-x: auto; overflow-y: hidden; padding-block: 0.2em;
+  scrollbar-width: thin; scrollbar-color: var(--linea-fuerte) transparent;
+}
+.prosa .ec-izq { grid-column: 2; text-align: right; white-space: nowrap; }
+.prosa .ec-der { grid-column: 3; text-align: left; white-space: nowrap; }
+.prosa .ec-num { grid-column: 4; justify-self: end; font-family: var(--f-lectura); color: var(--tinta-2); }
 
 /* ── Ecuaciones largas: en pantallas angostas, la versión partida y alineada tras el signo igual (contenido.mjs) ── */
 .prosa .ec-larga { margin: 1.3em 0; max-width: var(--medida); }
@@ -200,6 +224,20 @@
 .prosa .footnotes li + li { margin-top: 0.5em; }
 .prosa .footnote-back { text-decoration: none; margin-left: 0.25em; }
 .prosa sup a.footnote-ref, .prosa a.footnote-ref { text-decoration: none; font-family: var(--f-interfaz); font-weight: 600; font-size: 0.8em; }
+
+/* ── Notas al margen en modo lectura (autor, 2026-10-21): cada nota a la derecha de su llamada; la lista del final se
+   oculta. Solo con espacio a la derecha del texto; en el resto de casos, las notas siguen al final. ─────────────── */
+.prosa .nota-margen { display: none; }
+@media (min-width: 1300px) {
+  html.modo-lectura .prosa .nota-margen {
+    display: block; float: right; clear: right; width: 14rem; margin: 0.25em -16.5rem 0.9em 0;
+    font: 0.8125rem/1.5 var(--f-interfaz); font-style: normal; color: var(--tinta-2); text-indent: 0;
+  }
+  html.modo-lectura .prosa .nota-margen-n { font-weight: 650; color: var(--acento); margin-right: 0.4em; }
+  html.modo-lectura .prosa .footnotes { display: none; }
+  /* Texto y notas se centran juntos: el artículo se corre a la izquierda lo que ocupa media columna de notas. */
+  html.modo-lectura .lector-articulo:has(.nota-margen) { position: relative; left: -8rem; }
+}
 
 /* Un subtítulo que sigue directo a su título no necesita el aire de una sección nueva. */
 .prosa h2 + section > h3:first-child, .prosa h3 + section > h4:first-child { margin-top: 1em; }

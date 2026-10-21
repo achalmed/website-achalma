@@ -70,7 +70,9 @@ aula) para los 12 pubs y en el tema compartido (`_code.scss`, `_tables.scss`, `_
 tarjeta de código) para las páginas del hub. Segunda vuelta del mismo día: índice de un solo nivel (`toc-depth: 1`),
 sin números de sección en la web (`number-sections: false` solo en HTML; los PDF y DOCX los conservan), títulos con un
 solo peso y tamaños decrecientes, tablas en recuadro redondeado que se ajusta al ancho y, en el celular, compactas y sin
-barra de desplazamiento, y sin guiones de partición al final de línea.
+barra de desplazamiento, y sin guiones de partición al final de línea. Tercera vuelta: pies de tabla y figura arriba,
+en la letra y el tamaño del texto (`fig-cap-location: top`), notas un punto menores, cabecera de tabla sin relleno y
+centrada en vertical, citas en bloque sin barra.
 
 ## 2. Los blogs satélite
 

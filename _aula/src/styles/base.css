@@ -55,7 +55,8 @@ kbd {
 .seccion-cabeza h2 { font-size: var(--t-4); }
 .seccion-cabeza p { color: var(--tenue); max-width: 60ch; }
 .seccion-cabeza > a { display: inline-flex; align-items: center; gap: 0.3rem; }
-.milimetrado { background: var(--milimetrado), var(--papel); }
+/* Antes papel milimetrado; desde el 2026-10-21 (autor: «se ve escolar»), un papel liso con un degradado apenas perceptible. */
+.milimetrado { background: linear-gradient(180deg, var(--papel-2), var(--papel) 85%); }
 
 /* ── Botones ───────────────────────────────────────────────────────────── */
 .boton {

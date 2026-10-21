@@ -2,16 +2,11 @@
 // 1. copia los recursos que las páginas citan (figuras de los posts, PDF y DOCX de Quarto, materiales de
 //    las ediciones) desde sus fuentes, que solo se leen;
 // 2. escribe `_redirects` (formato de Netlify) con una redirección 301 por cada URL vieja del pub;
-// 3. escribe las miniaturas de las tarjetas (640 × 400, WebP) con sharp (src/lib/imagenes.mjs, decisiones §1.17);
-// 4. escribe la marca del pub como archivos: favicon.svg, favicon-32.png, apple-touch-icon.png (180) y og.png
-//    (1200 × 630), desde src/lib/marca.mjs (decisiones §1.16);
-// 5. deja un informe del modelo (cifras, avisos de los datos de origen) en .cache/informe-<pub>.json.
+// 3. deja un informe del modelo (cifras, avisos de los datos de origen) en .cache/informe-<pub>.json.
 
 import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import sharp from 'sharp';
-import { svgIcono, svgOg } from '../lib/marca.mjs';
 import { modelo } from '../lib/modelo.mjs';
 import { AULA_DIR } from '../lib/rutas.mjs';
 
@@ -28,22 +23,6 @@ export default function recursos(pub) {
           await mkdir(dirname(destino), { recursive: true });
           await copyFile(r.src, destino);
         }
-        // Miniaturas: recorte a 16:10; la foto propia busca la zona con más detalle y la figura se centra sobre blanco
-        // (las gráficas de Quarto tienen fondo transparente o blanco).
-        for (const im of m.miniaturas) {
-          const destino = join(salida, im.url);
-          await mkdir(dirname(destino), { recursive: true });
-          let t = sharp(im.src, { limitInputPixels: 1e8 }).rotate();
-          if (im.origen === 'figura') t = t.flatten({ background: { r: 255, g: 255, b: 255 } });
-          await t.resize(im.ancho, im.alto, { fit: 'cover', position: im.origen === 'figura' ? 'centre' : 'attention' })
-            .webp({ quality: 72, effort: 5 }).toFile(destino);
-        }
-        // Marca del pub como archivos.
-        const icono = svgIcono(pub, m.pub.acento);
-        await writeFile(join(salida, 'favicon.svg'), icono);
-        await sharp(Buffer.from(icono), { density: 300 }).resize(32, 32).png().toFile(join(salida, 'favicon-32.png'));
-        await sharp(Buffer.from(svgIcono(pub, m.pub.acento, { cuadrado: true })), { density: 300 }).resize(180, 180).png().toFile(join(salida, 'apple-touch-icon.png'));
-        await sharp(Buffer.from(svgOg(pub, m.pub.acento))).png({ compressionLevel: 9 }).toFile(join(salida, 'og.png'));
         const lineas = [
           `# _redirects — GENERADO por aula (src/integracion/recursos.mjs); no editar.`,
           `# Cada post del sitio Quarto de ${pub} lleva a su página nueva; los archivos del post (PDF, DOCX, figuras) también.`,
@@ -54,9 +33,9 @@ export default function recursos(pub) {
         await mkdir(join(AULA_DIR, '.cache'), { recursive: true });
         await writeFile(
           join(AULA_DIR, '.cache', `informe-${pub}.json`),
-          JSON.stringify({ pub, totales: m.totales, recursos: m.recursos.length, miniaturas: m.miniaturas.length, redirecciones: m.redirecciones.length, avisos: m.avisos, anclasReparadas: m.anclasReparadas, sinResolver: m.sinResolver }, null, 2),
+          JSON.stringify({ pub, totales: m.totales, recursos: m.recursos.length, redirecciones: m.redirecciones.length, avisos: m.avisos, anclasReparadas: m.anclasReparadas, sinResolver: m.sinResolver }, null, 2),
         );
-        logger.info(`${m.recursos.length} recursos copiados, ${m.miniaturas.length} miniaturas, ${m.redirecciones.length} redirecciones; ${m.avisos.length} avisos de datos (.cache/informe-${pub}.json)`);
+        logger.info(`${m.recursos.length} recursos copiados, ${m.redirecciones.length} redirecciones; ${m.avisos.length} avisos de datos (.cache/informe-${pub}.json)`);
       },
     },
   };

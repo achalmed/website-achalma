@@ -5,7 +5,6 @@ import 'katex/dist/katex.min.css';
 import '../styles/contenido.css';
 import Base from './base.astro';
 import Autoevaluacion from '../components/autoevaluacion.astro';
-import Icono from '../components/icono.astro';
 import { datos, fechaLarga, peso } from '../lib/datos.mjs';
 
 interface Props { item: any; tipo: 'leccion' | 'articulo'; migas: { texto: string; href?: string }[] }
@@ -34,16 +33,16 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
         <h1>{item.titulo}</h1>
         {item.descripcion && <p class="lector-desc">{item.descripcion}</p>}
         <p class="metadatos">
-          <time datetime={item.fecha}><Icono nombre="calendar" tamano={15} />{fechaLarga(item.fecha)}</time>
-          <span><Icono nombre="clock" tamano={15} />{item.minutos} min de lectura</span>
-          {item.pdf && <a href={item.pdf.url}><Icono nombre="file-down" tamano={15} />PDF <span class="sr">de esta {tipo === 'leccion' ? 'lección' : 'entrada'}</span>({peso(item.pdf.bytes)})</a>}
-          {item.docx && <a href={item.docx.url}><Icono nombre="file-down" tamano={15} />DOCX ({peso(item.docx.bytes)})</a>}
+          <time datetime={item.fecha}>{fechaLarga(item.fecha)}</time>
+          <span>{item.minutos} min de lectura</span>
+          {item.pdf && <a href={item.pdf.url}>PDF <span class="sr">de esta {tipo === 'leccion' ? 'lección' : 'entrada'}</span>({peso(item.pdf.bytes)})</a>}
+          {item.docx && <a href={item.docx.url}>DOCX ({peso(item.docx.bytes)})</a>}
         </p>
         <div class="acciones lector-acciones">
-          <button class="boton chico" type="button" data-modo-lectura aria-pressed="false"><Icono nombre="book-open" tamano={15} /><span data-modo-texto>Modo lectura</span></button>
+          <button class="boton chico" type="button" data-modo-lectura aria-pressed="false">Modo lectura</button>
           {idLeccion && (
             <button class="boton chico" type="button" data-completar={idLeccion} aria-pressed="false">
-              <Icono nombre="circle-check" tamano={15} />
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
               <span data-completar-texto>Marcar como completada</span>
             </button>
           )}
@@ -62,8 +61,8 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
 
       {(item.anterior || item.siguiente) && (
         <nav class="paginacion" aria-label="Lecciones del curso">
-          {item.anterior ? <a class="ant" href={item.anterior.url} rel="prev"><span><Icono nombre="arrow-left" tamano={14} /> Anterior</span>{item.anterior.titulo}</a> : <span />}
-          {item.siguiente ? <a class="sig" href={item.siguiente.url} rel="next"><span>Siguiente <Icono nombre="arrow-right" tamano={14} /></span>{item.siguiente.titulo}</a> : <span />}
+          {item.anterior ? <a class="ant" href={item.anterior.url} rel="prev"><span>Anterior</span>{item.anterior.titulo}</a> : <span />}
+          {item.siguiente ? <a class="sig" href={item.siguiente.url} rel="next"><span>Siguiente</span>{item.siguiente.titulo}</a> : <span />}
         </nav>
       )}
     </article>
@@ -91,8 +90,7 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   const ponerModo = (activo: boolean, guardar = true) => {
     raiz.classList.toggle('modo-lectura', activo);
     modo?.setAttribute('aria-pressed', String(activo));
-    const t = modo?.querySelector('[data-modo-texto]');
-    if (t) t.textContent = activo ? 'Salir del modo lectura' : 'Modo lectura';
+    if (modo) modo.textContent = activo ? 'Salir del modo lectura' : 'Modo lectura';
     if (guardar) guardarPreferencia('lectura', activo);
   };
   ponerModo(preferencia('lectura', false) === true, false);
@@ -120,17 +118,16 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
     document.querySelectorAll<HTMLElement>('[data-leccion]').forEach((el) => el.classList.toggle('hecha', Boolean(completadas()[el.dataset.leccion!])));
   }
 
-  // Copiar cada bloque de código (la barra la escribe el build: src/lib/contenido.mjs).
-  if (navigator.clipboard) document.querySelectorAll<HTMLButtonElement>('.prosa [data-copiar]').forEach((b) => {
-    b.hidden = false;
-    b.setAttribute('aria-label', 'Copiar el código');
-    const rotulo = b.querySelector('span')!;
+  // Botón para copiar cada bloque de código.
+  document.querySelectorAll<HTMLElement>('.prosa div.sourceCode').forEach((bloque) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'boton-copiar'; b.textContent = 'Copiar';
     b.addEventListener('click', async () => {
-      const pre = b.closest('div.sourceCode')?.querySelector('pre');
-      try { await navigator.clipboard.writeText(pre?.innerText || ''); rotulo.textContent = 'Copiado'; if (aviso) aviso.textContent = 'Código copiado.'; }
-      catch { rotulo.textContent = 'No se pudo copiar'; }
-      setTimeout(() => { rotulo.textContent = 'Copiar'; }, 1600);
+      try { await navigator.clipboard.writeText(bloque.querySelector('pre')?.innerText || ''); b.textContent = 'Copiado'; }
+      catch { b.textContent = 'No se pudo copiar'; }
+      setTimeout(() => { b.textContent = 'Copiar'; }, 1600);
     });
+    bloque.appendChild(b);
   });
 
   // Barra de avance de la lectura y sección activa del índice.
@@ -171,10 +168,8 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   .lector-articulo { min-width: 0; max-width: calc(var(--medida) + 4rem); }
 
   .lector-cabeza { display: grid; gap: 0.9rem; padding-bottom: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--linea); }
-  .lector-cabeza h1 { font-size: var(--t-5); letter-spacing: -0.035em; }
-  .lector-desc { font-size: 1.15rem; line-height: 1.55; color: var(--tinta-2); max-width: 58ch; }
-  .lector-cabeza .metadatos > * { display: inline-flex; align-items: center; gap: 0.35rem; }
-  .lector-cabeza .metadatos :global(.icono) { margin: 0; }
+  .lector-cabeza h1 { font-size: var(--t-5); }
+  .lector-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 56ch; }
   .lector-acciones { gap: 0.5rem; }
 
   .lector-indice { display: none; }
@@ -186,19 +181,18 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   .lector-indice li.sub { padding-left: 0.75rem; }
   .lector-indice a { display: block; padding: 0.25rem 0 0.25rem 0.75rem; margin-left: -1px; border-left: 2px solid transparent; color: var(--tenue); text-decoration: none; line-height: 1.35; }
   .lector-indice a:hover { color: var(--tinta); }
-  .lector-indice a[aria-current] { color: var(--acento-tinta); border-left-color: var(--acento); }
+  .lector-indice a[aria-current] { color: var(--acento); border-left-color: var(--acento); }
 
-  .citar { margin-top: 3rem; padding: 1rem 1.15rem; background: var(--papel-2); border: 1px solid var(--linea); border-radius: var(--r-3); font-size: var(--t-1); }
+  .citar { margin-top: 3rem; padding: 1rem 1.1rem; background: var(--papel-2); border-radius: var(--r-2); font-size: var(--t-1); }
   .citar h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.4rem; }
   .citar p { overflow-wrap: anywhere; color: var(--tinta-2); }
 
   .paginacion { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
-  .paginacion a { display: grid; gap: 0.25rem; padding: 0.9rem 1.05rem; background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3); box-shadow: var(--sombra); text-decoration: none; font-weight: 550; transition: border-color 0.15s, box-shadow 0.15s; }
-  .paginacion a:hover { border-color: var(--linea-fuerte); box-shadow: var(--sombra-capa); color: var(--acento-tinta); }
-  .paginacion a span { display: inline-flex; align-items: center; gap: 0.3rem; font-size: var(--t-0); color: var(--tenue); font-weight: 400; }
-  .paginacion .sig span { justify-content: flex-end; }
+  .paginacion a { display: grid; gap: 0.2rem; padding: 0.9rem 1rem; border: 1px solid var(--linea); border-radius: var(--r-2); text-decoration: none; font-weight: 500; }
+  .paginacion a:hover { border-color: var(--acento); }
+  .paginacion a span { font-size: var(--t-0); color: var(--tenue); font-weight: 400; }
   .paginacion .sig { text-align: right; }
-  @media (max-width: 560px) { .paginacion { grid-template-columns: 1fr; } .paginacion .sig { text-align: left; } .paginacion .sig span { justify-content: flex-start; } }
+  @media (max-width: 560px) { .paginacion { grid-template-columns: 1fr; } .paginacion .sig { text-align: left; } }
 
   /* Modo lectura: solo el texto, centrado y un punto más grande. */
   :global(html.modo-lectura) .lector { grid-template-columns: minmax(0, 1fr); }

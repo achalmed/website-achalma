@@ -4,7 +4,6 @@
 import Base from '../layouts/base.astro';
 import Reticula from '../components/reticula.astro';
 import Laboratorio from '../components/laboratorio.astro';
-import TarjetaEntrada from '../components/tarjeta-entrada.astro';
 import { datos, peso, plural } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
@@ -17,7 +16,7 @@ const unidadesConLeccion = new Set(curso.unidades.filter((u) => u.temas.some((t)
 const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
 ---
 <Base titulo={curso.titulo} descripcion={curso.descripcion ?? `Curso de ${curso.titulo}.`} seccion="cursos">
-  <section class="curso-cabeza cabeza-pagina">
+  <section class="curso-cabeza milimetrado">
     <div class="envoltura">
       <nav aria-label="Ruta"><ol class="migas"><li><a href="/cursos/">Cursos</a></li><li><span aria-current="page">{curso.titulo}</span></li></ol></nav>
       <div class="cabeza-rejilla">
@@ -93,9 +92,9 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
         <section class="complementarias" aria-labelledby="t-complementarias">
           <h3 id="t-complementarias">Lecturas complementarias</h3>
           <p class="tenue">Publicadas en el pub y asociadas al curso, todavía sin un tema del currículo.</p>
-          <ul class="rejilla-lecturas">
+          <ul>
             {curso.complementarias.map((l) => (
-              <li><TarjetaEntrada entrada={l} nivel="h4" leccion={`${curso.id}/${l.slug}`} /></li>
+              <li><a href={l.url} data-leccion={`${curso.id}/${l.slug}`}>{l.titulo}</a> <span class="tenue">{l.minutos} min</span></li>
             ))}
           </ul>
         </section>
@@ -167,22 +166,22 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   @media (min-width: 960px) { .cabeza-rejilla { grid-template-columns: minmax(0, 1fr) 20rem; gap: 4rem; } }
   .cabeza-texto { display: grid; gap: 1rem; }
   .cabeza-texto h1 { font-size: var(--t-5); }
-  .curso-desc { font-family: var(--f-lectura); font-size: 1.125rem; line-height: 1.5; color: var(--tinta-2); max-width: 52ch; }
+  .curso-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 52ch; }
   .acciones { align-items: center; margin-top: 0.5rem; }
   .progreso { display: grid; gap: 0.35rem; min-width: 12rem; flex: 1; max-width: 22rem; }
   .progreso p { font-size: var(--t-0); color: var(--tenue); }
   .barra { height: 4px; background: var(--linea); border-radius: 2px; overflow: hidden; }
   .barra span { display: block; height: 100%; background: var(--acento); transform: scaleX(var(--avance, 0)); transform-origin: left; transition: transform 0.4s; }
 
-  .ficha { display: grid; grid-template-columns: 1fr 1fr; background: var(--vidrio); -webkit-backdrop-filter: var(--desenfoque); backdrop-filter: var(--desenfoque); border: 1px solid var(--linea); border-radius: var(--r-3); box-shadow: inset 0 1px 0 var(--brillo), var(--sombra-capa); }
+  .ficha { display: grid; grid-template-columns: 1fr 1fr; background: var(--vidrio); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid var(--linea); border-radius: var(--r-3); }
   .ficha div { padding: 0.75rem 1rem; border-bottom: 1px solid var(--linea); }
   .ficha div:nth-child(odd) { border-right: 1px solid var(--linea); }
   .ficha div:nth-last-child(-n + 2) { border-bottom: 0; }
   .ficha dt { font-size: var(--t-0); color: var(--tenue); }
   .ficha dd { font-size: var(--t-1); font-weight: 500; margin-top: 0.15rem; }
-  .ficha dd.dato { font-size: 1.15rem; font-weight: 500; }
+  .ficha dd.dato { font-size: 1.05rem; }
 
-  .reticula-grande { margin-top: 2.25rem; padding: 1.25rem; background: var(--vidrio); border: 1px solid var(--linea); border-radius: var(--r-3); -webkit-backdrop-filter: var(--desenfoque); backdrop-filter: var(--desenfoque); box-shadow: inset 0 1px 0 var(--brillo), var(--sombra); }
+  .reticula-grande { margin-top: 2.25rem; padding: 1.25rem; background: var(--vidrio); border: 1px solid var(--linea); border-radius: var(--r-3); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
 
   .curso-cuerpo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; padding-block: 2.5rem; }
   @media (min-width: 960px) { .curso-cuerpo { grid-template-columns: minmax(0, 1fr) 20rem; gap: 4rem; } }
@@ -197,9 +196,9 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   summary::-webkit-details-marker { display: none; }
   summary:hover .u-t { color: var(--acento); }
   .u-n { color: var(--tenue); }
-  .u-t { font-family: var(--f-titulo); font-size: 1.0625rem; font-weight: 550; letter-spacing: -0.01em; }
+  .u-t { font-family: var(--f-titulo); font-size: 1.15rem; }
   .u-c { font-size: var(--t-0); color: var(--tenue); text-align: right; }
-  details[open] summary .u-n { color: var(--acento-tinta); }
+  details[open] summary .u-n { color: var(--acento); }
   .temas { list-style: none; padding: 0 0 1rem 0; }
   .temas li { display: grid; grid-template-columns: 2.75rem 1fr auto; gap: 0.75rem; align-items: baseline; padding: 0.45rem 0.25rem; border-top: 1px dashed var(--linea); }
   .t-n { color: var(--tenue); font-size: 0.8rem; }
@@ -207,7 +206,7 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   .temas a { font-weight: 500; text-decoration: none; display: grid; }
   .temas a:hover { text-decoration: underline; }
   .t-tema { font-size: var(--t-0); color: var(--tenue); font-weight: 400; }
-  .temas a.hecha::after { content: 'Completada'; font-size: var(--t-0); color: var(--acento-tinta); font-weight: 600; }
+  .temas a.hecha::after { content: 'Completada'; font-size: var(--t-0); color: var(--acento); font-weight: 600; }
   @media (max-width: 520px) {
     .temas li { grid-template-columns: 2.5rem 1fr; }
     .temas .estado { grid-column: 2; }
@@ -216,8 +215,7 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   }
   .complementarias { margin-top: 2rem; display: grid; gap: 0.6rem; }
   .complementarias h3 { font-size: var(--t-3); }
-  .rejilla-lecturas { list-style: none; display: grid; gap: 1rem; margin-top: 0.4rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
-  .rejilla-lecturas > li { display: grid; }
+  .complementarias ul { list-style: none; display: grid; gap: 0.4rem; }
 
   .lateral { display: grid; gap: 2.25rem; align-content: start; }
   .lista-simple { list-style: none; display: grid; }

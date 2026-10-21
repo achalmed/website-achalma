@@ -14,8 +14,6 @@ import { basename, join, relative } from 'node:path';
 import * as F from './fuentes.mjs';
 import { RUTAS, INDEX_DIR } from './rutas.mjs';
 import { extraer } from './contenido.mjs';
-import { figuraUtil, huella, imagenDeclarada, miniatura } from './imagenes.mjs';
-import { MARCA } from './marca.generado.mjs';
 
 export const ETIQUETAS = {
   tipo: { asignatura: 'Asignatura', herramienta: 'Herramienta', taller: 'Taller', nivelacion: 'Nivelación' },
@@ -70,25 +68,7 @@ function construir(pubId) {
   const dominio = new URL(reg.url);
   const avisos = [];
 
-  // «La familia» (pie): los 11 pubs de pubs.yml y el hub, con su área (areas.yml), su acento y su ícono (vitrina.yml →
-  // scripts/marca.py → marca.generado.mjs).
-  const areaDePub = Object.fromEntries(areas.filter((a) => a.pub).map((a) => [a.pub, a.nombre]));
-  for (const p of registro.pubs) {
-    if (MARCA.sitios[p.carpeta]?.letras !== vit?.pubs?.[p.carpeta]?.monograma) {
-      throw new Error(`${p.carpeta}: el monograma de config/vitrina.yml no coincide con marca.generado.mjs; corre python3 scripts/marca.py --aplicar`);
-    }
-  }
-  const red = [
-    ...registro.pubs.map((p) => ({
-      id: p.carpeta, nombre: nombreDePub(p.carpeta, vit), url: p.url, tema: p.tema,
-      area: areaDePub[p.carpeta] ?? p.tema, acento: vit?.pubs?.[p.carpeta]?.acento ?? 'revista', marca: p.carpeta,
-      actual: p.carpeta === pubId,
-    })),
-    {
-      id: registro.hub.carpeta, nombre: vit?.hub?.nombre ?? registro.autor.nombre, url: registro.hub.url, tema: vit?.hub?.area ?? '',
-      area: vit?.hub?.area ?? '', acento: vit?.hub?.acento ?? 'grafito', marca: 'hub', actual: false, hub: true,
-    },
-  ];
+  const red = registro.pubs.map((p) => ({ id: p.carpeta, nombre: nombreDePub(p.carpeta, vit), url: p.url, tema: p.tema, actual: p.carpeta === pubId }));
   const pub = {
     id: pubId,
     nombre: nombreDePub(pubId, vit),
@@ -96,8 +76,6 @@ function construir(pubId) {
     tema: reg.tema,
     descripcion: reg.descripcion,
     acento: presentacion.acento ?? 'revista',
-    tono: presentacion.tono === 'tecnico' ? 'tecnico' : 'sobrio',
-    monograma: presentacion.monograma ?? null,
     area: area ? { id: area.id, nombre: area.nombre } : null,
     autor: registro.autor,
     hub: registro.hub,
@@ -171,7 +149,6 @@ function construir(pubId) {
       html: p.html,
       dirSite: join(siteRoot, p.rel),
       confianza: f.confianza,
-      imagenPropia: imagenDeclarada(fm.image, f._abs, dirPub),
     };
     if (f.destino === 'blog') {
       let slug = slugDePost(p.carpeta);
@@ -198,7 +175,7 @@ function construir(pubId) {
   let anclasReparadas = 0;
   for (const x of [...lecciones, ...blog]) {
     const e = extraer({ html: x.html, siteRoot, rutaVieja: x.rutaVieja, rutaNueva: x.url, dominio, mapaUrls });
-    Object.assign(x, { cuerpo: e.html, indice: e.indice, secciones: e.secciones, palabras: e.palabras, minutos: e.minutos, hayMatematicas: e.hayMatematicas, figuras: e.figuras });
+    Object.assign(x, { cuerpo: e.html, indice: e.indice, secciones: e.secciones, palabras: e.palabras, minutos: e.minutos, hayMatematicas: e.hayMatematicas });
     recursos.push(...e.recursos);
     anclasReparadas += e.anclasReparadas;
     sinResolver.push(...e.sinResolver.map((s) => ({ ...s, pagina: x.url })));
@@ -216,20 +193,6 @@ function construir(pubId) {
       for (const n of readdirSync(figurasPdf)) recursos.push({ src: join(figurasPdf, n), dest: `${x.url}index_files/figure-pdf/${n}` });
     }
     delete x.html;
-  }
-
-  // Miniaturas de las tarjetas (src/lib/imagenes.mjs): la imagen propia del post, si ningún otro post del pub la
-  // comparte; si no, la primera figura útil del cuerpo; si no, ninguna (la tarjeta muestra el esqueleto del texto).
-  const usos = new Map();
-  for (const x of [...lecciones, ...blog]) if (x.imagenPropia) usos.set(huella(x.imagenPropia), (usos.get(huella(x.imagenPropia)) ?? 0) + 1);
-  const miniaturas = new Map();
-  for (const x of [...lecciones, ...blog]) {
-    const propia = x.imagenPropia && usos.get(huella(x.imagenPropia)) === 1 ? x.imagenPropia : null;
-    const figura = propia ? null : x.figuras.find(figuraUtil) ?? null;
-    x.imagen = propia ? miniatura(propia, 'portada') : figura ? miniatura(figura, 'figura') : null;
-    if (x.imagen) miniaturas.set(x.imagen.url, x.imagen);
-    delete x.imagenPropia;
-    delete x.figuras;
   }
 
   // Lecciones en el temario de su curso.
@@ -378,7 +341,6 @@ function construir(pubId) {
   return {
     pub, red, cursos, propios, destacados, lecciones, blog, ediciones, enCurso,
     recursos: dedupe(recursos),
-    miniaturas: [...miniaturas.values()],
     redirecciones: [...lecciones, ...blog].map((x) => ({ desde: x.rutaVieja, hacia: x.url })),
     avisos, sinResolver, anclasReparadas,
     totales: {

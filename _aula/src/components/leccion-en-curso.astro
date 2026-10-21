@@ -117,15 +117,15 @@ const contexto = enCurso.origen === 'leccion'
     position: relative; display: grid; gap: 1rem;
     padding: clamp(1rem, 0.6rem + 1.5vw, 1.5rem);
     background: var(--vidrio);
-    -webkit-backdrop-filter: var(--desenfoque); backdrop-filter: var(--desenfoque);
-    border: 1px solid var(--linea); border-radius: var(--r-4);
-    box-shadow: inset 0 1px 0 var(--brillo), var(--sombra-flotante);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    backdrop-filter: blur(10px) saturate(130%);
+    border: 1px solid var(--linea-fuerte); border-radius: var(--r-3);
+    box-shadow: var(--sombra-flotante);
     min-width: 0;
   }
-  .en-curso-contexto { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; font-size: var(--t-0); font-weight: 600; color: var(--acento-tinta); }
-  .en-curso-contexto::before { content: ''; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 3px color-mix(in oklab, var(--acento) 22%, transparent); }
+  .en-curso-contexto { display: flex; flex-wrap: wrap; gap: 0.25rem 0.6rem; font-size: var(--t-0); font-weight: 600; color: var(--acento); }
   .en-curso-contexto .tenue { font-weight: 400; }
-  .en-curso h2 { font-size: var(--t-4); margin-top: 0.45rem; letter-spacing: -0.025em; }
+  .en-curso h2 { font-size: var(--t-4); margin-top: 0.35rem; }
   .en-curso h2 a { text-decoration: none; }
   .en-curso-meta { font-size: var(--t-0); color: var(--tenue); margin-top: 0.35rem; }
 
@@ -139,16 +139,16 @@ const contexto = enCurso.origen === 'leccion'
   }
   .pasos .paso-t { overflow: hidden; text-overflow: ellipsis; }
   .pasos .paso-n { color: var(--tenue); }
-  .pasos button.visto .paso-n { color: var(--acento-tinta); }
-  .pasos button[aria-selected='true'] { background: var(--elevado); border-color: var(--acento-linea); color: var(--tinta); box-shadow: var(--sombra); }
-  .pasos button[aria-selected='true'] .paso-n { color: var(--acento-tinta); }
+  .pasos button.visto .paso-n { color: var(--acento); }
+  .pasos button[aria-selected='true'] { background: var(--elevado); border-color: var(--acento); color: var(--tinta); box-shadow: var(--sombra); }
+  .pasos button[aria-selected='true'] .paso-n { color: var(--acento); }
 
   .paneles { min-height: 15.5rem; }
   .panel { display: grid; gap: 0.7rem; align-content: start; }
   .panel.entra { animation: aparecer 0.35s ease-out; }
   @keyframes aparecer { from { opacity: 0; transform: translateY(4px); } }
   .panel h3 { font-size: var(--t-3); }
-  .panel h3 .dato { color: var(--acento-tinta); font-size: 0.7em; vertical-align: 0.12em; margin-right: 0.3em; }
+  .panel h3 .dato { color: var(--acento); font-size: 0.7em; vertical-align: 0.12em; margin-right: 0.3em; }
   .panel p { font-family: var(--f-lectura); font-size: 1.02rem; line-height: 1.6; color: var(--tinta-2); }
   .codigo {
     margin: 0; padding: 0.75rem 0.9rem; overflow-x: auto;
@@ -159,8 +159,7 @@ const contexto = enCurso.origen === 'leccion'
   .codigo :global(span.st), .codigo :global(span.ss), .codigo :global(span.sc) { color: var(--cod-cadena); }
   .codigo :global(span.dv), .codigo :global(span.fl), .codigo :global(span.cn) { color: var(--cod-numero); }
   .codigo :global(span.bu), .codigo :global(span.fu), .codigo :global(span.dt) { color: var(--cod-funcion); }
-  .seguir { font-size: var(--t-1); font-weight: 600; color: var(--acento-tinta); justify-self: start; text-decoration: none; }
-  .seguir:hover { text-decoration: underline; }
+  .seguir { font-size: var(--t-1); font-weight: 600; color: var(--acento); justify-self: start; }
 
   .en-curso-pie { display: flex; align-items: center; gap: 1rem; }
   .avance { flex: 1; height: 2px; background: var(--linea); overflow: hidden; border-radius: 2px; }

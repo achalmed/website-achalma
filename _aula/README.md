@@ -25,7 +25,6 @@ npm run vista:numerus-scriptum             # ídem en el puerto 4332
 PUB=methodica npm run dev                  # desarrollo con recarga; incluye /demo/autoevaluacion/
 AULA_DEMO=1 PUB=methodica npm run build    # build con la página de demostración de la autoevaluación
 node scripts/tokens.mjs                    # simula la regeneración de la paleta desde el hub (--aplicar escribe)
-python3 scripts/marca.py                   # simula los trazos de la marca (ícono, OG) desde config/vitrina.yml (--aplicar escribe)
 AULA_API_URL=http://127.0.0.1:8040 PUB=methodica npm run build   # añade «Mi aula» (/aula/) contra la API local
 ```
 
@@ -42,21 +41,19 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 | carpeta | qué contiene |
 |---|---|
 | `astro.config.mjs` | un proyecto, un pub por build (`PUB`), salida en `dist/<pub>/` |
-| `config/vitrina.yml` | lo que ninguna fuente dice aún: acento, monograma, tono y nombre visible de cada pub (provisional) |
+| `config/vitrina.yml` | lo que ninguna fuente dice aún: acento y nombre visible de cada pub (provisional) |
 | `src/lib/` | lectura de las fuentes (`rutas.mjs`, `fuentes.mjs`), extracción del HTML de Quarto (`contenido.mjs`) y el modelo del pub (`modelo.mjs`) |
 | `src/pages/` | inicio, `cursos/` (catálogo, curso, lección), `blog/`, `ediciones/`, 404 y la demo interna de autoevaluación |
 | `src/layouts/` | `base.astro` (esqueleto) y `lector.astro` (lector de lecciones y artículos) |
-| `src/components/` | marca (ícono del sitio), íconos Lucide, paleta de comandos (⌘K), cifras, tarjetas de curso, entrada y edición, retícula del temario, lección en curso, autoevaluación, laboratorio, cabecera y pie |
-| `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (neutros, roles y acentos), `base.css`, `contenido.css` |
-| `src/lib/marca.mjs`, `marca.generado.mjs` | la marca de los 12 sitios: ícono en la página y favicon, PNG y Open Graph en archivos (decisiones §1.16) |
-| `src/lib/imagenes.mjs`, `iconos.mjs` | miniatura de cada tarjeta (§1.17) e íconos de Lucide en línea |
+| `src/components/` | retícula del temario, tarjeta de curso, lección en curso, autoevaluación, laboratorio, cabecera y pie |
+| `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (roles y acentos), `base.css`, `contenido.css` |
 | `src/scripts/almacen.js` | progreso y preferencias del visitante en `localStorage` |
 | `src/scripts/aula-api.js` | cliente de la API del aula (sesión por `Authorization: Bearer`, renovación, progreso) |
 | `src/rutas/aula-cuenta.astro` | «Mi aula»: entrar, crear cuenta con consentimiento, clases, progreso, datos propios (solo con `AULA_API_URL`) |
 | `api/` | la API del aula con cuenta (FastAPI + PostgreSQL 16; `api/README.md`) |
 | `src/integracion/recursos.mjs` | copia figuras, PDF, DOCX y materiales; escribe `_redirects` y el informe |
-| `scripts/` | `tokens.mjs` (paleta del hub → CSS), `marca.py` (monogramas y textos → trazos), `enlaces.mjs` (enlaces), `rutas.mjs` (URL viejas) y `publicar.sh` |
-| `docs/` | decisiones (`docs/decisiones.md`), capturas de la vitrina (`docs/img/`) e índice generado |
+| `scripts/` | `tokens.mjs` (paleta del hub → CSS) y `enlaces.mjs` (comprobador de enlaces) |
+| `docs/` | decisiones (`docs/decisiones.md`), capturas del prototipo (`docs/img/`) e índice generado |
 
 ## Límite honesto
 
@@ -68,5 +65,4 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 - El aula con cuenta es un MVP (fase 6) que corre solo en la laptop y no está publicado: sin `AULA_API_URL` el progreso
   vive solo en el navegador. «Mi aula» aún no deja entregar tareas ni rendir exámenes (eso se hace por la API) y no hay
   panel del docente (`api/README.md`, Límite honesto).
-- Lighthouse móvil en methodica servida en local (2026-10-20): rendimiento 97–98 y 100 en accesibilidad, buenas
-  prácticas y SEO (inicio, un curso y un artículo). Las capturas de `docs/img/` son de esa fecha y de esos datos.
+- No se ha medido Lighthouse ni hay vista previa en Netlify (objetivos de la fase 4 que quedan pendientes).

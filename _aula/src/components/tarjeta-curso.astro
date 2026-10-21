@@ -16,7 +16,6 @@ const ids = curso.lecciones.map((l) => `${curso.id}/${l.slug}`).join(' ');
   data-tipo={curso.tipo}
   data-estado={curso.estado}
   data-nivel={curso.nivel}
-  data-casa={curso.vive ? 'propia' : 'fuera'}
   data-texto={texto.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()}
 >
   <p class="tarjeta-meta">
@@ -47,28 +46,22 @@ const ids = curso.lecciones.map((l) => `${curso.id}/${l.slug}`).join(' ');
   .tarjeta {
     position: relative; display: flex; flex-direction: column; gap: 0.75rem;
     padding: 1.25rem 1.25rem 1.1rem;
-    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3); box-shadow: var(--sombra);
-    transition: transform 0.2s ease-out, border-color 0.2s, box-shadow 0.2s;
+    background: var(--elevado); border: 1px solid var(--linea); border-radius: var(--r-3);
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
-  .tarjeta:hover { transform: translateY(-2px); border-color: var(--linea-fuerte); box-shadow: var(--sombra-capa); }
-  .tarjeta:hover .tarjeta-titulo a { color: var(--acento-tinta); }
-  .tarjeta:focus-within { border-color: var(--acento-linea); }
-  /* Un curso que vive en otro pub se lista con borde punteado. */
-  .tarjeta[data-casa='fuera'] { border-style: dashed; box-shadow: none; }
-  .tarjeta-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.9rem; font-size: var(--t-0); color: var(--tenue); }
-  .tarjeta-estado { display: inline-flex; align-items: center; gap: 0.35rem; }
-  .tarjeta-estado::before { content: ''; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--linea-fuerte); }
-  .tarjeta-estado.activo { color: var(--acento-tinta); font-weight: 550; }
-  .tarjeta-estado.activo::before { background: var(--acento); }
-  .tarjeta-titulo { font-size: 1.1875rem; letter-spacing: -0.02em; }
+  .tarjeta:hover { border-color: var(--linea-fuerte); box-shadow: var(--sombra-flotante); }
+  .tarjeta:focus-within { border-color: var(--acento); }
+  .tarjeta-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; font-size: var(--t-0); color: var(--tenue); }
+  .tarjeta-estado.activo { color: var(--acento); }
+  .tarjeta-titulo { font-size: var(--t-3); }
   .tarjeta-titulo a { text-decoration: none; color: var(--tinta); }
   .tarjeta-titulo a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
   .tarjeta-titulo a:focus-visible { outline: none; }
   .tarjeta-titulo a:focus-visible::after { outline: 2px solid var(--acento); outline-offset: 3px; }
   .tarjeta-desc { color: var(--tinta-2); font-size: var(--t-1); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .tarjeta-reticula { margin-top: auto; padding: 0.7rem 0.75rem; background: var(--papel); border: 1px solid var(--linea); border-radius: var(--r-2); }
+  .tarjeta-reticula { margin-top: auto; padding-top: 0.5rem; }
   .tarjeta-cifras { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--t-0); color: var(--tenue); }
   .tarjeta-cifras b { color: var(--tinta); font-weight: 500; }
   .tarjeta-casa { font-size: var(--t-0); color: var(--tinta-2); border-top: 1px dashed var(--linea); padding-top: 0.6rem; }
-  .tarjeta-progreso { font-size: var(--t-0); color: var(--acento-tinta); font-weight: 600; }
+  .tarjeta-progreso { font-size: var(--t-0); color: var(--acento); font-weight: 600; }
 </style>

@@ -1,32 +1,17 @@
 ---
-// Marca.astro — el ícono de un sitio de la familia (src/lib/marca.mjs): squircle con el degradado del acento del
-// data-acento más cercano y el monograma en blanco. Decorativo: el nombre del sitio va siempre escrito al lado.
-// `sufijo` distingue los id del degradado cuando el mismo ícono aparece dos veces en la página.
-import { colocarMonograma, SQUIRCLE } from '../lib/marca.mjs';
-import { datos } from '../lib/datos.mjs';
-
-interface Props { sitio?: string; tamano?: number; sufijo?: string; clase?: string }
-const { sitio = datos().pub.id, tamano = 32, sufijo = 'a', clase = '' } = Astro.props;
-const m = colocarMonograma(sitio);
-const id = `m-${sitio}-${sufijo}`;
+// Marca.astro — el signo común de los pubs: una celda de papel milimetrado con un milímetro ocupado.
+// Todos los pubs llevan el mismo signo; cambia el acento (data-acento en <html>).
+interface Props { tamano?: number }
+const { tamano = 24 } = Astro.props;
 ---
-<svg class:list={['logo', clase]} width={tamano} height={tamano} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id={`${id}-a`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="alto" /><stop offset="1" class="bajo" /></linearGradient>
-    <linearGradient id={`${id}-b`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="brillo" /><stop offset="0.5" class="brillo-fin" /></linearGradient>
-  </defs>
-  <path d={SQUIRCLE} fill={`url(#${id}-a)`} />
-  <path d={SQUIRCLE} fill={`url(#${id}-b)`} />
-  <path d={SQUIRCLE} class="filo" />
-  <path d={m.d} transform={m.transform} class="letras" />
+<svg class="signo" width={tamano} height={tamano} viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="1" y="1" width="22" height="22" rx="3" class="signo-marco" />
+  <path d="M8.33 1v22M15.67 1v22M1 8.33h22M1 15.67h22" class="signo-reticula" />
+  <rect x="8.33" y="8.33" width="7.34" height="7.34" class="signo-celda" />
 </svg>
-
 <style>
-  .logo { flex: none; display: block; filter: drop-shadow(0 1px 1.5px rgb(0 0 0 / 0.18)); }
-  .alto { stop-color: var(--icono-alto); }
-  .bajo { stop-color: var(--icono-bajo); }
-  .brillo { stop-color: var(--lab-blanco); stop-opacity: 0.24; }
-  .brillo-fin { stop-color: var(--lab-blanco); stop-opacity: 0; }
-  .filo { fill: none; stroke: var(--lab-blanco); stroke-opacity: 0.18; stroke-width: 1; vector-effect: non-scaling-stroke; }
-  .letras { fill: var(--lab-blanco); }
+  .signo { flex: none; }
+  .signo-marco { fill: var(--elevado); stroke: var(--tinta); stroke-width: 1.5; }
+  .signo-reticula { stroke: var(--acento); stroke-width: 0.75; opacity: 0.55; fill: none; }
+  .signo-celda { fill: var(--acento); }
 </style>

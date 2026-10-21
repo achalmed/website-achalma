@@ -45,6 +45,12 @@ node scripts/enlaces.mjs "dist/$pub"
 if ((aplicar)); then
   rsync -a --delete --checksum "dist/$pub/" "$dir_pub/_vitrina/"
   echo "copiado dist/$pub/ → $dir_pub/_vitrina/ ($(du -sh "$dir_pub/_vitrina" | cut -f1))"
+  # Nada de la vitrina puede quedar fuera de git: Netlify publica lo empujado (pasó con index_files/, 2026-10-20).
+  ignorados="$(git -C "$dir_pub" status --porcelain --ignored _vitrina | grep -c '^!!' || true)"
+  if [[ "$ignorados" != 0 ]]; then
+    git -C "$dir_pub" status --porcelain --ignored _vitrina | grep '^!!' >&2
+    echo "✖ $ignorados rutas de _vitrina/ ignoradas por el .gitignore de $pub: re-inclúyelas (!/_vitrina/…)" >&2; exit 1
+  fi
 else
   echo "simulación: rsync dist/$pub/ → $dir_pub/_vitrina/ ($(du -sh "dist/$pub" | cut -f1))"
 fi

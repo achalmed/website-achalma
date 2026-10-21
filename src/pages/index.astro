@@ -1,0 +1,103 @@
+---
+// Inicio del pub: identidad, una lección real en curso, cursos destacados, ediciones y blog.
+import Base from '../layouts/Base.astro';
+import LeccionEnCurso from '../components/LeccionEnCurso.astro';
+import TarjetaCurso from '../components/TarjetaCurso.astro';
+import ListaEntradas from '../components/ListaEntradas.astro';
+import { datos, plural } from '../lib/datos.mjs';
+
+const { pub, propios, destacados, blog, ediciones, enCurso, totales } = datos();
+const cursoDeEnCurso = enCurso?.origen === 'leccion' ? propios.find((c) => c.id === enCurso.item.curso) : null;
+const partes = [
+  plural(totales.cursos, 'curso', 'cursos'),
+  plural(totales.temas, 'tema en el currículo', 'temas en el currículo'),
+  plural(totales.lecciones + totales.complementarias, 'lección publicada', 'lecciones publicadas'),
+  plural(totales.articulos, 'artículo', 'artículos'),
+  ...(totales.ediciones ? [plural(totales.ediciones, 'edición dictada', 'ediciones dictadas')] : []),
+];
+const cifras = partes.slice(0, -1).join(', ') + ' y ' + partes.at(-1) + '.';
+---
+<Base seccion="inicio">
+  <section class="portada milimetrado">
+    <div class="envoltura portada-rejilla">
+      <div class="portada-texto">
+        {pub.area && <p class="portada-area">{pub.area.nombre}</p>}
+        <h1>{pub.nombre}</h1>
+        <p class="portada-lema">{pub.descripcion}</p>
+        <p class="portada-cifras">{cifras}</p>
+        <div class="acciones">
+          <a class="boton primario" href="/cursos/">Ver los cursos</a>
+          <a class="boton" href="/blog/">Leer el blog</a>
+        </div>
+      </div>
+      <div class="portada-muestra">
+        {enCurso ? <LeccionEnCurso enCurso={enCurso} cursoTitulo={cursoDeEnCurso?.titulo} /> : (
+          <p class="tenue">Este pub aún no tiene lecciones ni artículos publicados.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion envoltura" aria-labelledby="t-cursos">
+    <div class="seccion-cabeza">
+      <h2 id="t-cursos">Cursos</h2>
+      <a href="/cursos/">Todos los cursos ({propios.length})</a>
+    </div>
+    <div class="rejilla-tarjetas">
+      {destacados.map((c) => <TarjetaCurso curso={c} />)}
+    </div>
+  </section>
+
+  {ediciones.length > 0 && (
+    <section class="seccion envoltura" aria-labelledby="t-ediciones">
+      <div class="seccion-cabeza">
+        <h2 id="t-ediciones">Ediciones dictadas</h2>
+        <p>Cada edición es un dictado real del curso, con sus sesiones y materiales.</p>
+      </div>
+      <ol class="ediciones">
+        {ediciones.map((e) => (
+          <li>
+            <a href={e.url}>
+              <span class="ed-periodo dato">{e.periodo}</span>
+              <span class="ed-titulo">{e.titulo}</span>
+              <span class="ed-meta">{plural(e.sesiones.length, 'sesión', 'sesiones')}, {plural(e.nMateriales, 'material', 'materiales')}{e.legado ? ', edición anterior al estándar' : ''}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+
+  <section class="seccion envoltura" aria-labelledby="t-blog">
+    <div class="seccion-cabeza">
+      <h2 id="t-blog">Del blog</h2>
+      <a href="/blog/">Todas las entradas ({blog.length})</a>
+    </div>
+    <ListaEntradas entradas={blog.slice(0, 4)} />
+  </section>
+</Base>
+
+<style>
+  .portada { border-bottom: 1px solid var(--linea); }
+  .portada-rejilla { display: grid; gap: 2.5rem; padding-block: clamp(2.5rem, 1.5rem + 5vw, 5.5rem); align-items: center; }
+  @media (min-width: 1000px) { .portada-rejilla { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 4rem; } }
+  .portada-texto { display: grid; gap: 1.1rem; justify-items: start; }
+  .portada-area { font-size: var(--t-1); font-weight: 600; color: var(--acento); }
+  .portada h1 { font-size: var(--t-6); font-weight: 400; line-height: 0.98; letter-spacing: -0.025em; }
+  .portada-lema { font-family: var(--f-lectura); font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem); line-height: 1.45; color: var(--tinta-2); max-width: 30ch; }
+  .portada-cifras { color: var(--tenue); max-width: 44ch; }
+  .portada-texto .acciones { margin-top: 0.5rem; }
+  .portada-muestra { min-width: 0; }
+  .rejilla-tarjetas { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+
+  .ediciones { list-style: none; display: grid; gap: 0.75rem; }
+  .ediciones a {
+    display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.2rem 1.25rem; padding: 1rem 1.1rem;
+    border: 1px solid var(--linea); border-radius: var(--r-3); background: var(--elevado); text-decoration: none;
+  }
+  .ediciones a:hover { border-color: var(--acento); }
+  .ed-periodo { color: var(--acento); grid-row: span 2; padding-top: 0.25rem; }
+  .ed-titulo { font-family: var(--f-titulo); font-size: var(--t-3); color: var(--tinta); }
+  .ed-meta { font-size: var(--t-0); color: var(--tenue); }
+  @media (max-width: 480px) { .ediciones a { grid-template-columns: 1fr; } .ed-periodo { grid-row: auto; } }
+</style>

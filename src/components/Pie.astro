@@ -1,0 +1,50 @@
+---
+// Pie.astro — la red de aulas (los pubs de pubs.yml), autoría y licencia.
+import Marca from './Marca.astro';
+import { datos } from '../lib/datos.mjs';
+const { pub, red } = datos();
+const anio = new Date().getFullYear();
+---
+<footer class="pie">
+  <div class="envoltura pie-rejilla">
+    <div class="pie-firma">
+      <p class="pie-marca"><Marca tamano={20} /> {pub.nombre}</p>
+      <p>{pub.descripcion}</p>
+      <p class="tenue">
+        Textos de <a href={pub.hub.url}>{pub.autor.nombre}</a>, con licencia
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license noopener">CC BY-SA 4.0</a>.
+      </p>
+    </div>
+    <nav class="pie-red" aria-label="Red de aulas">
+      <h2>La red de aulas</h2>
+      <ul>
+        {red.map((p) => (
+          <li>
+            {p.actual
+              ? <span aria-current="page"><b>{p.nombre}</b> <span class="tenue">{p.tema}</span></span>
+              : <a href={p.url}><b>{p.nombre}</b> <span class="tenue">{p.tema}</span></a>}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+  <div class="envoltura pie-nota">
+    <p>Prototipo de la plataforma de cursos (fase 4, {anio}). Los sitios publicados siguen construyéndose con Quarto hasta el cambio.</p>
+  </div>
+</footer>
+
+<style>
+  .pie { margin-top: 4rem; border-top: 1px solid var(--linea); background: var(--papel-2); font-size: var(--t-1); }
+  .pie-rejilla { display: grid; gap: 2rem; padding-block: 2.5rem 1.5rem; grid-template-columns: 1fr; }
+  @media (min-width: 860px) { .pie-rejilla { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 4rem; } }
+  .pie-firma { display: grid; gap: 0.6rem; max-width: 42ch; color: var(--tinta-2); }
+  .pie-marca { display: flex; align-items: center; gap: 0.5rem; font-family: var(--f-titulo); font-size: 1.15rem; color: var(--tinta); }
+  .pie-red h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.75rem; }
+  .pie-red ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 0.15rem 1.5rem; }
+  .pie-red a, .pie-red [aria-current] { display: flex; gap: 0.5rem; align-items: baseline; padding-block: 0.3rem; text-decoration: none; color: var(--tinta); }
+  .pie-red b { font-weight: 600; }
+  .pie-red a:hover b { color: var(--acento); }
+  .pie-red [aria-current] b { color: var(--acento); }
+  .pie-red .tenue { font-size: var(--t-0); }
+  .pie-nota { padding-block: 1rem 2rem; color: var(--tenue); font-size: var(--t-0); border-top: 1px solid var(--linea); }
+</style>

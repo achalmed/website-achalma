@@ -1,0 +1,32 @@
+/* GENERADO por scripts/tokens.mjs desde web/assets/scss/00-settings/_palette-{light,dark}.scss; no editar.
+   Valores crudos de «Quiet Laboratory» (hub). Los roles se asignan en tokens.css. */
+:root {
+  --spc-bg: #FBFBF8; /* papel: blanco cálido casi neutro */
+  --spc-bg-dark: #F2F2EC; /* superficie secundaria (paneles, TOC) */
+  --spc-bg-elevated: #FFFFFF; /* superficies elevadas (cards, menús) */
+  --spc-primary: #101820; /* tinta principal: negro suave azulado */
+  --spc-primary-light: #33404C; /* tinta secundaria (subtítulos) */
+  --spc-text-muted: #5B6670; /* metadatos, fechas (AA sobre $spc-bg) */
+  --spc-secondary: #0F5CA8; /* azul de journal */
+  --spc-secondary-light: #0B6FCE; /* hover */
+  --spc-accent: #2F7D5D;
+  --spc-accent-light: #EAF2EC; /* fondo verdoso muy suave (código inline) */
+  --spc-border: #E5E5DD; /* hairlines */
+  --spc-border-strong: #CDCDC2; /* bordes con más presencia */
+  --spc-code-bg: #F5F6F2; /* fondo de bloques de código */
+  --spc-selection: #CFE3F6; /* selección de texto */
+  --spc-dark-bg: #0E1116; /* grafito azulado profundo */
+  --spc-dark-bg-elevated: #151B22; /* superficies elevadas */
+  --spc-dark-bg-accent: #1B232C; /* hover / paneles activos */
+  --spc-dark-text-primary: #E6E9ED; /* blanco humo (no puro) */
+  --spc-dark-text-secondary: #A9B4BF; /* texto secundario */
+  --spc-dark-text-muted: #8A95A0; /* metadatos (AA sobre fondo) */
+  --spc-dark-primary: #7CB5E8;
+  --spc-dark-primary-light: #9DC9F2;
+  --spc-dark-accent: #7BC4A2;
+  --spc-dark-accent-bg: #14211C;
+  --spc-dark-border: #262E38;
+  --spc-dark-border-strong: #38424E;
+  --spc-dark-code-bg: #12171E;
+  --spc-dark-selection: #2B4562;
+}

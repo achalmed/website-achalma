@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aula-numerus-scriptum",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "vista:numerus-scriptum"],
+      "port": 4332
+    },
+    {
+      "name": "aula-methodica",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "vista:methodica"],
+      "port": 4331
+    }
+  ]
+}

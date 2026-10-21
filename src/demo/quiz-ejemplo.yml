@@ -1,0 +1,21 @@
+# src/demo/quiz-ejemplo.yml — preguntas de MUESTRA para la página interna /demo/autoevaluacion/.
+# No son contenido de ninguna lección ni se publican (la página solo existe con astro dev o AULA_DEMO=1).
+# Tratan del propio componente para no inventar contenido académico.
+quiz:
+  - tipo: opcion
+    enunciado: ¿Dónde se escriben las preguntas de autoevaluación de una lección?
+    opciones:
+      - En el frontmatter de la lección, en la lista quiz
+      - En la base de datos del aula
+      - En curso.yml
+    correcta: 0
+    explicacion: Las preguntas de práctica viajan con la lección; el aula con cuenta (fase 6) guardará los exámenes calificados.
+  - tipo: vf
+    enunciado: Las respuestas de un examen calificado pueden viajar en una página estática.
+    respuesta: false
+    explicacion: Cualquiera podría leerlas en el código de la página; por eso los exámenes con nota se corrigen en la API.
+  - tipo: numerica
+    enunciado: ¿Cuántos tipos de pregunta admite este componente?
+    respuesta: 3
+    tolerancia: 0
+    explicacion: Opción múltiple, verdadero o falso y numérica (con tolerancia).

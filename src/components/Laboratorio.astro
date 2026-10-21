@@ -1,0 +1,35 @@
+---
+// Laboratorio.astro — los modelos de simuladores/catalogo.json que declaran este curso.
+// Si el curso no tiene ninguno, no se muestra nada (no se inventa contenido).
+interface Props { modelos: any[] }
+const { modelos } = Astro.props;
+---
+{modelos.length > 0 && (
+  <section aria-labelledby="t-laboratorio" class="laboratorio">
+    <h2 id="t-laboratorio">Laboratorio</h2>
+    <p class="tenue">Modelos del laboratorio computacional asociados a temas del curso. Hoy se abren en el
+      laboratorio de escritorio; la versión en el navegador llega con el adaptador web de simuladores.</p>
+    <ul>
+      {modelos.map((m) => (
+        <li>
+          <span class="m-tema dato">{m.tema}</span>
+          <span class="m-titulo">{m.titulo}</span>
+          {m.pregunta && <span class="m-pregunta">{m.pregunta}</span>}
+          <span class="m-ref dato">{m.ref}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .laboratorio { display: grid; gap: 0.75rem; }
+  .laboratorio h2 { font-size: var(--t-3); }
+  .laboratorio p { font-size: var(--t-0); }
+  ul { list-style: none; display: grid; }
+  li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.15rem 0.6rem; padding-block: 0.6rem; border-top: 1px solid var(--linea); }
+  .m-tema { color: var(--acento); grid-row: span 3; }
+  .m-titulo { font-weight: 600; font-size: var(--t-1); }
+  .m-pregunta { font-family: var(--f-lectura); font-size: var(--t-1); color: var(--tinta-2); }
+  .m-ref { color: var(--tenue); font-size: 0.72rem; }
+</style>

@@ -1,0 +1,167 @@
+---
+// LeccionEnCurso.astro — la portada muestra una lección real en vez de describir la plataforma.
+// Recorre las secciones de una lección publicada (o, si el pub aún no tiene lecciones, de un artículo del
+// blog): título, primer párrafo y, si la hay, su primera celda de código corta. Avanza sola mientras está a
+// la vista; se detiene para siempre en cuanto el visitante la toca, y no se mueve con
+// prefers-reduced-motion. El botón de pausa cumple WCAG 2.2.2.
+interface Props { enCurso: any; cursoTitulo?: string | null }
+const { enCurso, cursoTitulo = null } = Astro.props;
+const item = enCurso.item;
+const secciones = item.secciones.slice(0, 6);
+const contexto = enCurso.origen === 'leccion'
+  ? [cursoTitulo, item.unidad ? `Unidad ${item.unidad.id}` : null].filter(Boolean).join(', ')
+  : 'Del blog';
+---
+<section class="en-curso" aria-labelledby="en-curso-titulo" data-en-curso>
+  <header class="en-curso-cabeza">
+    <p class="en-curso-contexto">
+      {enCurso.origen === 'leccion' ? 'Lección en curso' : 'Lectura en curso'}<span class="tenue">{contexto}</span>
+    </p>
+    <h2 id="en-curso-titulo"><a href={item.url}>{item.titulo}</a></h2>
+    <p class="en-curso-meta"><span class="dato">{item.minutos} min</span> de lectura, {secciones.length} de {item.secciones.length} secciones en esta muestra</p>
+  </header>
+
+  <ol class="pasos" role="tablist" aria-label="Secciones de la lección">
+    {secciones.map((s, i) => (
+      <li role="presentation">
+        <button type="button" role="tab" id={`paso-${i}`} aria-controls={`panel-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-paso={i}>
+          <span class="paso-n dato">{s.numero || i + 1}</span>
+          <span class="paso-t">{s.titulo}</span>
+        </button>
+      </li>
+    ))}
+  </ol>
+
+  <div class="paneles">
+    {secciones.map((s, i) => (
+      <div class="panel" role="tabpanel" id={`panel-${i}`} aria-labelledby={`paso-${i}`} hidden={i !== 0}>
+        <h3><span class="dato">{s.numero}</span> {s.titulo}</h3>
+        <p>{s.parrafo}</p>
+        {s.codigo && <pre class="codigo"><code set:html={s.codigo} /></pre>}
+        <a class="seguir" href={`${item.url}#${s.id}`}>Seguir leyendo esta sección</a>
+      </div>
+    ))}
+  </div>
+
+  <footer class="en-curso-pie">
+    <div class="avance" aria-hidden="true"><span data-avance></span></div>
+    <button type="button" class="boton chico" data-pausa aria-pressed="false">Pausar</button>
+  </footer>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-en-curso]').forEach((raiz) => {
+    const pestanas = [...raiz.querySelectorAll<HTMLButtonElement>('[data-paso]')];
+    const paneles = [...raiz.querySelectorAll<HTMLElement>('[role="tabpanel"]')];
+    const avance = raiz.querySelector<HTMLElement>('[data-avance]');
+    const pausa = raiz.querySelector<HTMLButtonElement>('[data-pausa]');
+    const calma = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const INTERVALO = 6000;
+    let actual = 0, temporizador: number | undefined, visible = false, detenido = calma;
+
+    const mostrar = (i: number, enfocar = false) => {
+      actual = (i + pestanas.length) % pestanas.length;
+      pestanas.forEach((p, j) => { p.setAttribute('aria-selected', String(j === actual)); p.tabIndex = j === actual ? 0 : -1; p.classList.toggle('visto', j < actual); });
+      paneles.forEach((p, j) => {
+        const antes = p.hidden;
+        p.hidden = j !== actual;
+        if (antes && !p.hidden) { p.classList.add('entra'); p.addEventListener('animationend', () => p.classList.remove('entra'), { once: true }); }
+      });
+      if (enfocar) pestanas[actual].focus();
+      if (avance) {
+        avance.style.transition = 'none';
+        avance.style.transform = 'scaleX(0)';
+        if (!detenido && visible) {
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            avance.style.transition = `transform ${INTERVALO}ms linear`;
+            avance.style.transform = 'scaleX(1)';
+          }));
+        }
+      }
+    };
+    const programar = () => {
+      clearTimeout(temporizador);
+      if (!detenido && visible) temporizador = window.setTimeout(() => { mostrar(actual + 1); programar(); }, INTERVALO);
+    };
+    const detener = () => {
+      if (detenido) return;
+      detenido = true;
+      clearTimeout(temporizador);
+      if (avance) { avance.style.transition = 'none'; avance.style.transform = 'scaleX(0)'; }
+      pausa?.setAttribute('aria-pressed', 'true');
+      if (pausa) pausa.textContent = 'Reanudar';
+    };
+    if (calma && pausa) { pausa.hidden = true; }
+
+    pestanas.forEach((p, i) => p.addEventListener('click', () => { detener(); mostrar(i); }));
+    raiz.querySelector('[role="tablist"]')?.addEventListener('keydown', (e: Event) => {
+      const k = (e as KeyboardEvent).key;
+      const destino = k === 'ArrowRight' || k === 'ArrowDown' ? actual + 1 : k === 'ArrowLeft' || k === 'ArrowUp' ? actual - 1 : k === 'Home' ? 0 : k === 'End' ? pestanas.length - 1 : null;
+      if (destino === null) return;
+      e.preventDefault(); detener(); mostrar(destino, true);
+    });
+    raiz.addEventListener('pointerdown', (e) => { if (!(e.target as HTMLElement).closest('[data-pausa]')) detener(); });
+    raiz.addEventListener('focusin', (e) => { if (!(e.target as HTMLElement).closest('[data-pausa]')) detener(); });
+    pausa?.addEventListener('click', () => {
+      if (detenido) {
+        detenido = false; pausa.setAttribute('aria-pressed', 'false'); pausa.textContent = 'Pausar';
+        mostrar(actual + 1); programar();
+      } else detener();
+    });
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; mostrar(actual); programar(); }, { threshold: 0.4 }).observe(raiz);
+  });
+</script>
+
+<style>
+  .en-curso {
+    position: relative; display: grid; gap: 1rem;
+    padding: clamp(1rem, 0.6rem + 1.5vw, 1.5rem);
+    background: var(--vidrio);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    backdrop-filter: blur(10px) saturate(130%);
+    border: 1px solid var(--linea-fuerte); border-radius: var(--r-3);
+    box-shadow: var(--sombra-flotante);
+    min-width: 0;
+  }
+  .en-curso-contexto { display: flex; flex-wrap: wrap; gap: 0.25rem 0.6rem; font-size: var(--t-0); font-weight: 600; color: var(--acento); }
+  .en-curso-contexto .tenue { font-weight: 400; }
+  .en-curso h2 { font-size: var(--t-4); margin-top: 0.35rem; }
+  .en-curso h2 a { text-decoration: none; }
+  .en-curso-meta { font-size: var(--t-0); color: var(--tenue); margin-top: 0.35rem; }
+
+  .pasos { list-style: none; display: flex; gap: 0.35rem; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .pasos::-webkit-scrollbar { display: none; }
+  .pasos button {
+    display: flex; align-items: center; gap: 0.45rem; max-width: 15rem;
+    min-height: 2.25rem; padding: 0.3rem 0.65rem;
+    font: 500 var(--t-0)/1.25 var(--f-interfaz); color: var(--tinta-2); text-align: left;
+    background: transparent; border: 1px solid var(--linea); border-radius: var(--r-2); cursor: pointer; white-space: nowrap;
+  }
+  .pasos .paso-t { overflow: hidden; text-overflow: ellipsis; }
+  .pasos .paso-n { color: var(--tenue); }
+  .pasos button.visto .paso-n { color: var(--acento); }
+  .pasos button[aria-selected='true'] { background: var(--elevado); border-color: var(--acento); color: var(--tinta); box-shadow: var(--sombra); }
+  .pasos button[aria-selected='true'] .paso-n { color: var(--acento); }
+
+  .paneles { min-height: 15.5rem; }
+  .panel { display: grid; gap: 0.7rem; align-content: start; }
+  .panel.entra { animation: aparecer 0.35s ease-out; }
+  @keyframes aparecer { from { opacity: 0; transform: translateY(4px); } }
+  .panel h3 { font-size: var(--t-3); }
+  .panel h3 .dato { color: var(--acento); font-size: 0.7em; vertical-align: 0.12em; margin-right: 0.3em; }
+  .panel p { font-family: var(--f-lectura); font-size: 1.02rem; line-height: 1.6; color: var(--tinta-2); }
+  .codigo {
+    margin: 0; padding: 0.75rem 0.9rem; overflow-x: auto;
+    font: 0.82rem/1.55 var(--f-datos); background: var(--codigo-fondo); border: 1px solid var(--linea); border-radius: var(--r-2);
+  }
+  .codigo :global(span.co) { color: var(--cod-comentario); font-style: italic; }
+  .codigo :global(span.kw), .codigo :global(span.cf), .codigo :global(span.im) { color: var(--cod-palabra); }
+  .codigo :global(span.st), .codigo :global(span.ss), .codigo :global(span.sc) { color: var(--cod-cadena); }
+  .codigo :global(span.dv), .codigo :global(span.fl), .codigo :global(span.cn) { color: var(--cod-numero); }
+  .codigo :global(span.bu), .codigo :global(span.fu), .codigo :global(span.dt) { color: var(--cod-funcion); }
+  .seguir { font-size: var(--t-1); font-weight: 600; color: var(--acento); justify-self: start; }
+
+  .en-curso-pie { display: flex; align-items: center; gap: 1rem; }
+  .avance { flex: 1; height: 2px; background: var(--linea); overflow: hidden; border-radius: 2px; }
+  .avance span { display: block; height: 100%; background: var(--acento); transform: scaleX(0); transform-origin: left; }
+</style>

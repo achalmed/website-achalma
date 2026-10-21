@@ -1,0 +1,150 @@
+/* src/styles/tokens.css — tokens de «Laboratorio abierto», la identidad del aula.
+   Evolución de «Quiet Laboratory» (web/assets/scss/00-settings): los valores crudos vienen de
+   paleta.generado.css; aquí se les da rol. Un color nuevo entra AQUÍ (extensión del aula) y nunca como hex
+   suelto en un componente. Los acentos por pub son tonos de la misma familia (azul de revista, verde de
+   laboratorio y sus vecinos), uno por pub, elegido en config/vitrina.yml. */
+
+:root {
+  /* ── Extensión del aula: acentos por pub (claro / oscuro) ─────────────────── */
+  --lab-revista: var(--spc-secondary);          --lab-revista-o: var(--spc-dark-primary);
+  --lab-laboratorio: var(--spc-accent);         --lab-laboratorio-o: var(--spc-dark-accent);
+  --lab-indigo: #3B4BA0;                        --lab-indigo-o: #A5B0EE;
+  --lab-cobalto: #1D4FB8;                       --lab-cobalto-o: #8FB0F0;
+  --lab-petroleo: #1F6B73;                      --lab-petroleo-o: #7CC3CA;
+  --lab-pizarra: #45607A;                       --lab-pizarra-o: #A9BDD2;
+  --lab-musgo: #55702B;                         --lab-musgo-o: #B3CC86;
+  --lab-abeto: #24594A;                         --lab-abeto-o: #8CC7B3;
+  --lab-marino: #1E3A6E;                        --lab-marino-o: #9BB4E3;
+  --lab-tinta: var(--spc-primary-light);        --lab-tinta-o: #C2CCD6;
+  --lab-glaciar: #2A6F97;                       --lab-glaciar-o: #8CC4E6;
+
+  /* ── Tipografía ─────────────────────────────────────────────────────────── */
+  --f-lectura: 'Source Serif 4 Variable', 'Source Serif 4', Charter, 'Iowan Old Style', Georgia, serif;
+  --f-titulo: 'Petrona Variable', Petrona, Georgia, serif;
+  --f-interfaz: 'Red Hat Text Variable', 'Red Hat Text', system-ui, sans-serif;
+  --f-datos: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  /* Escala modular 1.2 sobre 16 px; la lectura va a 18 px. */
+  --t-0: 0.8125rem;
+  --t-1: 0.9375rem;
+  --t-2: 1rem;
+  --t-lectura: 1.125rem;
+  --t-3: 1.3125rem;
+  --t-4: 1.625rem;
+  --t-5: clamp(1.875rem, 1.3rem + 2.6vw, 2.625rem);
+  --t-6: clamp(2.5rem, 1.4rem + 5.6vw, 4.75rem);
+
+  /* ── Medidas ────────────────────────────────────────────────────────────── */
+  --medida: 68ch;               /* columna de lectura */
+  --ancho: 76rem;               /* ancho máximo de página */
+  --margen: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --r-1: 4px;                   /* radios del hub: contenidos, casi técnicos */
+  --r-2: 6px;
+  --r-3: 10px;
+  --mm: 6px;                    /* lado de un milímetro de la retícula (en pantalla) */
+
+  /* ── Roles, tema claro ──────────────────────────────────────────────────── */
+  color-scheme: light;
+  --papel: var(--spc-bg);
+  --papel-2: var(--spc-bg-dark);
+  --elevado: var(--spc-bg-elevated);
+  --tinta: var(--spc-primary);
+  --tinta-2: var(--spc-primary-light);
+  --tenue: var(--spc-text-muted);
+  --linea: var(--spc-border);
+  --linea-fuerte: var(--spc-border-strong);
+  --codigo-fondo: var(--spc-code-bg);
+  --seleccion: var(--spc-selection);
+  --sombra: 0 1px 2px rgb(16 24 32 / 0.05);
+  --sombra-flotante: 0 18px 48px -18px rgb(16 24 32 / 0.28), 0 2px 6px rgb(16 24 32 / 0.06);
+
+  --cod-palabra: var(--spc-secondary);
+  --cod-cadena: #14524F;
+  --cod-numero: #8A4B08;
+  --cod-comentario: var(--spc-text-muted);
+  --cod-funcion: #5B3C9E;
+
+  --acento-base: var(--lab-revista);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --papel: var(--spc-dark-bg);
+    --papel-2: var(--spc-dark-bg-accent);
+    --elevado: var(--spc-dark-bg-elevated);
+    --tinta: var(--spc-dark-text-primary);
+    --tinta-2: var(--spc-dark-text-secondary);
+    --tenue: var(--spc-dark-text-muted);
+    --linea: var(--spc-dark-border);
+    --linea-fuerte: var(--spc-dark-border-strong);
+    --codigo-fondo: var(--spc-dark-code-bg);
+    --seleccion: var(--spc-dark-selection);
+    --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
+    --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+    --cod-palabra: var(--spc-dark-primary);
+    --cod-cadena: var(--spc-dark-accent);
+    --cod-numero: #E3B172;
+    --cod-comentario: var(--spc-dark-text-muted);
+    --cod-funcion: #C3A8F0;
+    --ret-menor: 6%;
+    --ret-mayor: 13%;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --papel: var(--spc-dark-bg);
+  --papel-2: var(--spc-dark-bg-accent);
+  --elevado: var(--spc-dark-bg-elevated);
+  --tinta: var(--spc-dark-text-primary);
+  --tinta-2: var(--spc-dark-text-secondary);
+  --tenue: var(--spc-dark-text-muted);
+  --linea: var(--spc-dark-border);
+  --linea-fuerte: var(--spc-dark-border-strong);
+  --codigo-fondo: var(--spc-dark-code-bg);
+  --seleccion: var(--spc-dark-selection);
+  --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
+  --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+  --cod-palabra: var(--spc-dark-primary);
+  --cod-cadena: var(--spc-dark-accent);
+  --cod-numero: #E3B172;
+  --cod-comentario: var(--spc-dark-text-muted);
+  --cod-funcion: #C3A8F0;
+  --ret-menor: 6%;
+  --ret-mayor: 13%;
+}
+
+/* ── El acento del pub: <html data-acento="…"> ─────────────────────────────── */
+[data-acento='revista'] { --acento-c: var(--lab-revista); --acento-o: var(--lab-revista-o); }
+[data-acento='laboratorio'] { --acento-c: var(--lab-laboratorio); --acento-o: var(--lab-laboratorio-o); }
+[data-acento='indigo'] { --acento-c: var(--lab-indigo); --acento-o: var(--lab-indigo-o); }
+[data-acento='cobalto'] { --acento-c: var(--lab-cobalto); --acento-o: var(--lab-cobalto-o); }
+[data-acento='petroleo'] { --acento-c: var(--lab-petroleo); --acento-o: var(--lab-petroleo-o); }
+[data-acento='pizarra'] { --acento-c: var(--lab-pizarra); --acento-o: var(--lab-pizarra-o); }
+[data-acento='musgo'] { --acento-c: var(--lab-musgo); --acento-o: var(--lab-musgo-o); }
+[data-acento='abeto'] { --acento-c: var(--lab-abeto); --acento-o: var(--lab-abeto-o); }
+[data-acento='marino'] { --acento-c: var(--lab-marino); --acento-o: var(--lab-marino-o); }
+[data-acento='tinta'] { --acento-c: var(--lab-tinta); --acento-o: var(--lab-tinta-o); }
+[data-acento='glaciar'] { --acento-c: var(--lab-glaciar); --acento-o: var(--lab-glaciar-o); }
+
+:root { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+}
+:root[data-theme='dark'] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+
+/* Derivados del acento y de la retícula (se recalculan solos en cada tema). */
+:root {
+  --acento-suave: color-mix(in oklab, var(--acento) 9%, var(--papel));
+  --acento-medio: color-mix(in oklab, var(--acento) 28%, var(--papel));
+  --vidrio: color-mix(in oklab, var(--elevado) 72%, transparent);
+  --vidrio-fuerte: color-mix(in oklab, var(--papel) 88%, transparent);
+  --reticula-menor: color-mix(in oklab, var(--acento) var(--ret-menor, 10%), transparent);
+  --reticula-mayor: color-mix(in oklab, var(--acento) var(--ret-mayor, 22%), transparent);
+  /* Papel milimetrado: 1 mm, 5 mm y 10 mm. */
+  --milimetrado:
+    linear-gradient(var(--reticula-mayor) 1px, transparent 1px) 0 0 / calc(var(--mm) * 10) calc(var(--mm) * 10),
+    linear-gradient(90deg, var(--reticula-mayor) 1px, transparent 1px) 0 0 / calc(var(--mm) * 10) calc(var(--mm) * 10),
+    linear-gradient(var(--reticula-menor) 1px, transparent 1px) 0 0 / var(--mm) var(--mm),
+    linear-gradient(90deg, var(--reticula-menor) 1px, transparent 1px) 0 0 / var(--mm) var(--mm);
+}

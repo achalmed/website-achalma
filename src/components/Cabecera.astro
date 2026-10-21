@@ -1,0 +1,88 @@
+---
+// Cabecera.astro — marca del pub, navegación y cambio de tema. Translúcida sobre el papel.
+import Marca from './Marca.astro';
+import { datos } from '../lib/datos.mjs';
+
+interface Props { seccion: string | null; hayEdiciones: boolean }
+const { seccion, hayEdiciones } = Astro.props;
+const { pub } = datos();
+const enlaces = [
+  { id: 'cursos', texto: 'Cursos', href: '/cursos/' },
+  { id: 'blog', texto: 'Blog', href: '/blog/' },
+  ...(hayEdiciones ? [{ id: 'ediciones', texto: 'Ediciones', href: '/ediciones/' }] : []),
+];
+---
+<header class="cabecera">
+  <div class="envoltura cabecera-fila">
+    <a class="marca" href="/" aria-label={`${pub.nombre}, inicio`} aria-current={seccion === 'inicio' ? 'page' : undefined}>
+      <Marca />
+      <span class="marca-nombre">{pub.nombre}</span>
+    </a>
+    <nav class="navegacion" aria-label="Secciones">
+      <ul>
+        {enlaces.map((e) => (
+          <li><a href={e.href} aria-current={seccion === e.id ? 'page' : undefined}>{e.texto}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <button class="tema" type="button" data-tema aria-label="Cambiar a tema oscuro" title="Tema claro u oscuro">
+      <svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" /></svg>
+      <svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.5 8.5 0 0 1 9.4 4a8.5 8.5 0 1 0 10.6 10.6Z" /></svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  import { guardarPreferencia } from '../scripts/almacen.js';
+  const raiz = document.documentElement;
+  const boton = document.querySelector<HTMLButtonElement>('[data-tema]');
+  const esOscuro = () => (raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+  const rotular = () => boton?.setAttribute('aria-label', esOscuro() ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+  rotular();
+  boton?.addEventListener('click', () => {
+    const nuevo = esOscuro() ? 'light' : 'dark';
+    raiz.dataset.theme = nuevo;
+    guardarPreferencia('tema', nuevo);
+    rotular();
+  });
+</script>
+
+<style>
+  .cabecera {
+    position: sticky; top: 0; z-index: 40;
+    background: var(--vidrio-fuerte);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--linea);
+  }
+  .cabecera-fila { display: flex; align-items: center; gap: 0.5rem 1.5rem; min-height: 3.75rem; flex-wrap: wrap; }
+  .marca { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--tinta); margin-right: auto; padding-block: 0.5rem; }
+  .marca-nombre { font-family: var(--f-titulo); font-size: 1.3rem; font-weight: 500; letter-spacing: -0.01em; }
+  .navegacion ul { list-style: none; display: flex; gap: 0.25rem; }
+  .navegacion a {
+    display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0 0.75rem;
+    font-size: var(--t-1); font-weight: 500; color: var(--tinta-2); text-decoration: none; border-radius: var(--r-2);
+  }
+  .navegacion a:hover { color: var(--tinta); background: var(--papel-2); }
+  .navegacion a[aria-current='page'] { color: var(--tinta); box-shadow: inset 0 -2px 0 var(--acento); border-radius: 0; }
+  .tema {
+    width: 2.5rem; height: 2.5rem; display: grid; place-items: center; flex: none;
+    background: transparent; border: 1px solid var(--linea); border-radius: var(--r-2); color: var(--tinta-2); cursor: pointer;
+  }
+  .tema:hover { color: var(--acento); border-color: var(--acento); }
+  .tema svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+  .tema .luna { display: none; }
+  :global(:root[data-theme='dark']) .tema .sol { display: none; }
+  :global(:root[data-theme='dark']) .tema .luna { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .tema .sol { display: none; }
+    :global(:root:not([data-theme='light'])) .tema .luna { display: block; }
+  }
+  /* 375 px: marca y tema en la primera fila; la navegación debajo, a todo el ancho. */
+  @media (max-width: 639px) {
+    .navegacion { order: 3; width: 100%; margin-inline: -0.75rem; }
+    .navegacion a { min-height: 2.5rem; }
+    .cabecera-fila { padding-bottom: 0.25rem; }
+    .cabecera { position: relative; }
+  }
+</style>

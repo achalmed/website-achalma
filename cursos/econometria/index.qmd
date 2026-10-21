@@ -81,34 +81,27 @@ _Fuente: `docencia/contenido/cursos/econometria-i/curso.yml`._
 - `1.3` Mínimos cuadrados generalizados
 - `1.4` Estimación por máxima verosimilitud
 - `1.5` Método generalizado de momentos
+- `1.6` Variables instrumentales
 
-**2. Identificación causal**
+**2. Series de tiempo macroeconómicas y financieras**
 
-- `2.1` Métodos experimentales en economía
-- `2.2` Variables instrumentales
-- `2.3` Diseño de regresión discontinua
-- `2.4` Efectos fijos, diferencias en diferencias y datos de panel
-- `2.5` Estudios de eventos (event studies) en economía
+- `2.1` Análisis univariado de series de tiempo
+- `2.2` Análisis multivariado de series de tiempo
+- `2.3` Modelos de factores latentes dinámicos
+- `2.4` Modelos no lineales en la media condicional
+- `2.5` Volatilidad en las series de tiempo financieras
 
-**3. Series de tiempo macroeconómicas y financieras**
+**3. Econometría bayesiana**
 
-- `3.1` Análisis univariado de series de tiempo
-- `3.2` Análisis multivariado de series de tiempo
-- `3.3` Modelos de factores latentes dinámicos
-- `3.4` Modelos no lineales en la media condicional
-- `3.5` Volatilidad en las series de tiempo financieras
+- `3.1` Introducción a la econometría bayesiana
+- `3.2` Modelo de regresión lineal desde el enfoque bayesiano
+- `3.3` Familias de distribuciones a priori
+- `3.4` Simulación y estimación bayesiana (MCMC)
+- `3.5` Aplicaciones bayesianas en econometría
 
-**4. Econometría bayesiana**
+**4. Tópicos complementarios**
 
-- `4.1` Introducción a la econometría bayesiana
-- `4.2` Modelo de regresión lineal desde el enfoque bayesiano
-- `4.3` Familias de distribuciones a priori
-- `4.4` Simulación y estimación bayesiana (MCMC)
-- `4.5` Aplicaciones bayesianas en econometría
-
-**5. Tópicos complementarios**
-
-- `5.1` Tópicos diversos en econometría avanzada
+- `4.1` Tópicos diversos en econometría avanzada
 
 **Banco de exámenes rendidos:** `banco` (1 exp.) · `examen_final` (11 exp.) · `examen_parcial` (19 exp.) · `laboratorios` (11 exp.) · `practicas` (30 exp.) · `tareas` (1 exp.)
 

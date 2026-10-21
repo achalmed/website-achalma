@@ -43,9 +43,14 @@ set -a; source "${XDG_CONFIG_HOME:-$HOME/.config}/aula/aula.env"; set +a
 AULA_PRUEBAS_DATABASE_URL="postgresql+asyncpg://aula:$AULA_POSTGRES_CLAVE@127.0.0.1:5442/aula_prueba" .venv/bin/pytest
 ```
 
-**Publicarla** (lo decide el autor; ningún script lo hace): con la API arriba, `tailscale funnel --bg 8040` da un enlace
-fijo `https://<laptop>.<red>.ts.net`, como `qillqa/enlace.sh`. Luego cada sitio se construye con
-`AULA_API_URL=https://<laptop>.<red>.ts.net PUB=<pub> npm run build` (en `web/_aula`), que añade la página «Mi aula».
+**Publicarla** (lo decide el autor; ningún script lo hace): con la API arriba, `tailscale funnel --bg --https=8443 8040`
+da un enlace fijo `https://<equipo>.<red>.ts.net:8443`. **No** `tailscale funnel --bg 8040`: eso toma el puerto 443, que
+en esta laptop ya publica `qillqa/enlace.sh`, y lo reemplazaría. Comprobar antes y después con `tailscale funnel status`.
+El enlace queda escrito en los 12 sitios públicos, así que `<equipo>` debe ser un nombre neutro: si el de la laptop no
+lo es, cambiarlo en la consola de Tailscale (Machines → Edit machine name) o servir el aula desde un nodo propio. Luego
+cada sitio se construye con `AULA_API_URL=https://<equipo>.<red>.ts.net:8443 PUB=<pub> npm run build` (en `web/_aula`),
+que añade la página «Mi aula». Antes de abrirla a estudiantes: `AULA_CONTACTO` en `aula.env` (iniciar.sh avisa si
+falta) y lo demás de `docs/privacidad.md` §7.
 
 **Respaldo.** Declare en `aula.env` un destinatario: `AULA_RESPALDO_AGE=age1…` (si `age` está instalado:
 `sudo apt install age`) o `AULA_RESPALDO_GPG=<clave>` (gpg ya está en la laptop). La clave privada vive fuera de la

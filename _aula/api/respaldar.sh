@@ -5,6 +5,9 @@
 #   ./respaldar.sh --aplicar       escribe $RESPALDOS_DIR/aula/<AAAA-MM-DD_HHMMSS>/{base.dump,datos.tar.gz}.{age|gpg}
 #   ./respaldar.sh --destino DIR   otra carpeta de destino (nunca dentro de un repo)
 #
+# Conservación (docs/privacidad.md §4): tras un respaldo bueno se borran las carpetas <AAAA-MM-DD_HHMMSS> del destino
+# con más de AULA_RESPALDO_DIAS días (90 por omisión), pero nunca las 3 más recientes; la simulación dice cuáles.
+#
 # Cifra con clave pública, sin contraseñas en la terminal: `age -r $AULA_RESPALDO_AGE` si age está instalado, o
 # `gpg --encrypt -r $AULA_RESPALDO_GPG`; ambos destinatarios se declaran en $XDG_CONFIG_HOME/aula/aula.env. Nada se
 # escribe sin cifrar: el volcado y el tar van por tubería al cifrador. Restaurar: README §Respaldo.
@@ -39,6 +42,17 @@ if [ -z "$DESTINO_BASE" ]; then
 fi
 SELLO="$(date +%Y-%m-%d_%H%M%S)"
 DESTINO="$DESTINO_BASE/$SELLO"
+DIAS_CONSERVAR="${AULA_RESPALDO_DIAS:-90}"
+[[ "$DIAS_CONSERVAR" =~ ^[0-9]+$ ]] || { echo "AULA_RESPALDO_DIAS debe ser un número de días" >&2; exit 1; }
+
+# Respaldos vencidos: carpetas con sello de fecha más viejas que el plazo, salvo las 3 más recientes.
+vencidos() {
+  [ -d "$DESTINO_BASE" ] || return 0
+  local limite; limite="$(date -d "-$DIAS_CONSERVAR days" +%Y-%m-%d)"
+  find "$DESTINO_BASE" -mindepth 1 -maxdepth 1 -type d -regextype posix-extended \
+       -regex '.*/[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{6}' -printf '%f\n' | sort -r | tail -n +4 \
+    | while read -r d; do [[ "${d%%_*}" < "$limite" ]] && echo "$d"; done
+}
 DATOS="${AULA_DATOS_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aula}"
 
 dentro_de_repo() {
@@ -76,6 +90,8 @@ if [ -d "$DATOS" ]; then
 else
   echo "  datos: $DATOS no existe aún (sin entregas): se omite"
 fi
+echo "  conservación: $DIAS_CONSERVAR días (siempre quedan los 3 más recientes)"
+vencidos | sed 's/^/  se borraría (vencido): /'
 if [ "$APLICAR" = 0 ]; then
   echo "[simulación] use --aplicar para escribirlo"
   exit 0
@@ -93,3 +109,4 @@ fi
 ( cd "$DESTINO" && sha256sum ./* >SHA256SUMS )
 echo "escrito: $DESTINO"
 ls -l "$DESTINO"
+vencidos | while read -r d; do rm -rf -- "${DESTINO_BASE:?}/$d" && echo "borrado (vencido): $DESTINO_BASE/$d"; done

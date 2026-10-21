@@ -1,4 +1,4 @@
-"""api/tests/test_cors.py — origen cruzado: solo los 12 sitios de pubs.yml, sus vistas previas de Netlify y localhost."""
+"""api/tests/test_cors.py — origen cruzado: solo los 13 sitios de pubs.yml (el hub y los 12 pubs), sus vistas previas de Netlify y localhost."""
 
 import pytest
 
@@ -57,4 +57,4 @@ def test_lista_generada_al_dia_con_pubs_yml():
     except FileNotFoundError:
         pytest.skip("web/_pubs/pubs.yml no está a la vista (contenedor)")
     assert origenes.cargar() == calculado, "python -m aula.origenes --aplicar"
-    assert len(calculado["origenes"]) == 12
+    assert len(calculado["origenes"]) == 13

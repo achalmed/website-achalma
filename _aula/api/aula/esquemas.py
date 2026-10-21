@@ -27,6 +27,8 @@ class Registro(Modelo):
     nombre_visible: str = Field(min_length=2, max_length=120)
     clave: str = Field(max_length=256)
     consentimiento: bool
+    # Ley 29733, reglamento (D. S. 016-2024-JUS) art. 22: desde los 14 años se consiente por sí mismo; antes, el tutor.
+    tengo_14_o_mas: bool
     politica_version: str
 
     @field_validator("correo")

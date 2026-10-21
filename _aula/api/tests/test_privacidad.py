@@ -24,6 +24,7 @@ async def _con_datos(cliente, aula):
 async def test_politica_publica(cliente):
     r = await cliente.get("/privacidad")
     assert r.status_code == 200 and r.json()["version"] == config.politica_version and "29733" in r.json()["ley"]
+    assert r.json()["edad_minima"] == 14 and "contacto" in r.json()
 
 
 async def test_exportar_solo_lo_propio(cliente, aula):

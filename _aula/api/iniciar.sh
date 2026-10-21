@@ -120,3 +120,6 @@ else
   printf '  [simulación] nohup %s &\n' "${UVICORN[*]}"
 fi
 paso "listo: http://127.0.0.1:$PUERTO_API/docs · detener con ./detener.sh"
+if [ -z "${AULA_CONTACTO:-}" ]; then
+  echo "aviso: AULA_CONTACTO está vacío en $ENTORNO: sin un correo para ejercer los derechos el aula no se abre a estudiantes reales (docs/privacidad.md §7)" >&2
+fi

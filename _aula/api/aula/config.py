@@ -57,7 +57,10 @@ class Configuracion(BaseSettings):
     origenes_extra: str = ""
 
     # Privacidad: versión vigente de docs/privacidad.md; el registro exige aceptar esta versión.
-    politica_version: str = "2026-10-20"
+    politica_version: str = "2026-10-21"
+    # Medio de contacto para ejercer los derechos (un correo del aula); sale en la política y en «Mi aula». Vacío: el
+    # aula funciona en local, pero iniciar.sh avisa de que no puede abrirse a estudiantes reales sin él.
+    contacto: str = ""
     # Días sin actividad tras los que una cuenta se propone para baja (`python -m aula.cli depurar`).
     dias_inactividad: int = 730
 

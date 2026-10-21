@@ -5,6 +5,8 @@ Todo lo que escribe simula por defecto y pide `--aplicar` (normativa 5.10):
     python -m aula.cli tablas [--aplicar]                  crea las tablas que falten
     python -m aula.cli rol <correo> <rol> [--aplicar]      estudiante · docente · admin
     python -m aula.cli clave <correo> [--aplicar]          contraseña temporal al azar (no hay correo de recuperación)
+    python -m aula.cli cuenta <correo> <nombre> [--aplicar] cuenta de estudiante menor de 14 años, con el consentimiento
+                                                           firmado de su tutor ya recibido (docs/privacidad.md §4 bis)
     python -m aula.cli sembrar [--aplicar]                 datos FICTICIOS para probar (correos @ejemplo.test)
     python -m aula.cli depurar [--dias N] [--aplicar]      borra cuentas sin actividad (docs/privacidad.md §4)
 """
@@ -74,6 +76,34 @@ async def _clave(correo: str, aplicar: bool) -> int:
         await seguridad.revocar_todas(sesion, usuario.id)
         await sesion.commit()
         print(f"{usuario.correo}: contraseña temporal {temporal} (comuníquela por un canal privado; que la cambie en «Mi aula»)")
+    return 0
+
+
+async def _cuenta(correo: str, nombre: str, aplicar: bool) -> int:
+    """Cuenta de estudiante creada por el docente para un menor de 14 años (reglamento de la Ley 29733, art. 22): el
+    consentimiento lo dio su tutor por escrito, fuera del aula; aquí queda la versión de la política que aceptó."""
+    import secrets
+
+    correo = correo.strip().lower()
+    nombre = nombre.strip()
+    if not 2 <= len(nombre) <= 120:
+        print("el nombre visible debe tener entre 2 y 120 caracteres", file=sys.stderr)
+        return 2
+    async with db.fabrica()() as sesion:
+        if (await sesion.execute(select(Usuario.id).where(Usuario.correo == correo))).first():
+            print(f"ya hay una cuenta con el correo {correo}", file=sys.stderr)
+            return 1
+        if not aplicar:
+            print(f"[simulación] se crearía la cuenta de estudiante {correo} («{nombre}») con el consentimiento del tutor "
+                  f"(política {config.politica_version}) y una contraseña temporal (use --aplicar)")
+            return 0
+        temporal = secrets.token_urlsafe(9)
+        ahora = tiempo.ahora()
+        sesion.add(Usuario(correo=correo, nombre_visible=nombre, clave_hash=seguridad.hashear_clave(temporal),
+                           rol_global="estudiante", consentimiento_version=config.politica_version,
+                           consentimiento_en=ahora, ultimo_acceso_en=ahora))
+        await sesion.commit()
+        print(f"{correo}: cuenta creada; contraseña temporal {temporal} (entréguela al tutor por un canal privado)")
     return 0
 
 
@@ -181,6 +211,10 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("clave", help="contraseña temporal al azar para una cuenta")
     p.add_argument("correo")
     p.add_argument("--aplicar", action="store_true")
+    p = sub.add_parser("cuenta", help="cuenta de estudiante menor de 14 años, con el consentimiento de su tutor")
+    p.add_argument("correo")
+    p.add_argument("nombre")
+    p.add_argument("--aplicar", action="store_true")
     p = sub.add_parser("sembrar", help="datos ficticios para probar (solo en una base sin cuentas reales)")
     p.add_argument("--aplicar", action="store_true")
     p = sub.add_parser("depurar", help="borra cuentas de estudiante sin actividad")
@@ -193,6 +227,8 @@ def main(argv: list[str] | None = None) -> int:
         corrutina = _rol(args.correo, args.rol, args.aplicar)
     elif args.orden == "clave":
         corrutina = _clave(args.correo, args.aplicar)
+    elif args.orden == "cuenta":
+        corrutina = _cuenta(args.correo, args.nombre, args.aplicar)
     elif args.orden == "sembrar":
         corrutina = _sembrar(args.aplicar)
     else:

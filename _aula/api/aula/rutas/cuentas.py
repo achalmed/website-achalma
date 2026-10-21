@@ -31,6 +31,8 @@ async def registrar(datos: esquemas.Registro, request: Request, sesion: AsyncSes
         raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, "Demasiados registros desde esta conexión.", headers={"Retry-After": str(espera)})
     if not datos.consentimiento:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Para crear la cuenta debes aceptar la política de privacidad.")
+    if not datos.tengo_14_o_mas:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_CONTENT, "Si tienes menos de 14 años, tu madre, padre o tutor debe pedir tu cuenta al docente y aceptar la política por ti.")
     if datos.politica_version != config.politica_version:
         raise HTTPException(status.HTTP_409_CONFLICT, f"La política de privacidad vigente es la del {config.politica_version}; léela y acéptala de nuevo.")
     seguridad.validar_clave(datos.clave, datos.correo)

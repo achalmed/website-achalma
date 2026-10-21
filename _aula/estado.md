@@ -26,8 +26,8 @@ local (2026-10-20), sin publicar; siguiente paso: el dictado de prueba con cuent
 
 ## Por hacer
 
-- 2026-10-20 · dueño: autor · Antes de abrir el aula a estudiantes reales: contacto para los derechos, inscripción del banco de datos si corresponde, consentimiento de tutores para menores, rotación de respaldos (`api/docs/privacidad.md` §7); generar la clave de respaldo (age o gpg) y guardarla fuera de la laptop.
-- 2026-10-20 · dueño: autor · Decidir cuándo publicar la API con Tailscale Funnel (`tailscale funnel --bg 8040`) y construir los sitios con `AULA_API_URL`.
+- 2026-10-21 · dueño: autor · Antes de abrir el aula a estudiantes reales (`api/docs/privacidad.md` §7; lo técnico quedó hecho el 2026-10-21: edad mínima de 14 años y cuenta por tutor con `aula.cli cuenta`, `AULA_CONTACTO`, respaldos de 90 días, ley y reglamento en Calibre 10535/10536): escribir `AULA_CONTACTO` en `aula.env`; inscribir el banco de datos «Aula» en el Registro Nacional de Protección de Datos Personales (gratuito); generar la clave de respaldo (age o gpg) y guardarla fuera de la laptop.
+- 2026-10-21 · dueño: autor · Publicar la API con `tailscale funnel --bg --https=8443 8040` (no en 443, que usa el enlace de Qillqa) con un nombre de equipo neutro en la tailnet, y construir los sitios con `AULA_API_URL` (`api/README.md`, «Publicarla»).
 - 2026-10-20 · dueño: director · Un dictado real de prueba con cuentas ficticias (prueba de salida de la fase 6 del plan).
 - 2026-10-20 · dueño: director · Lo que falta del aula: panel del docente en la vitrina (crear tareas y exámenes, calificar con rúbrica, libro de notas), rendir exámenes y entregar tareas desde la vitrina, foros, certificados verificables, liberación condicional, avisos por correo o push, Alembic.
 

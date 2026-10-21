@@ -81,6 +81,9 @@ def crear_app() -> FastAPI:
             "finalidad": "dar el servicio educativo del aula: clases, tareas, exámenes, notas y progreso",
             "conservacion_dias_sin_actividad": config.dias_inactividad,
             "derechos": "descargar todos tus datos o borrar tu cuenta con todo lo tuyo cuando quieras, desde «Mi aula»",
+            "contacto": config.contacto,
+            "edad_minima": 14,
+            "menores": "desde los 14 años aceptas tú; si tienes menos, tu madre, padre o tutor pide la cuenta al docente",
             "max_archivo_mb": config.max_archivo_mb,
         }
 

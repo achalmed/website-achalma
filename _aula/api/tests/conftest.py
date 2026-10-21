@@ -68,7 +68,7 @@ async def cliente(base):
 async def registrar(cliente, correo: str, nombre: str = "Persona Ficticia", clave: str = CLAVE) -> dict:
     r = await cliente.post("/cuentas/registro", json={
         "correo": correo, "nombre_visible": nombre, "clave": clave,
-        "consentimiento": True, "politica_version": config.politica_version,
+        "consentimiento": True, "tengo_14_o_mas": True, "politica_version": config.politica_version,
     })
     assert r.status_code == 201, r.text
     datos = r.json()

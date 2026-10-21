@@ -13,9 +13,12 @@ pytestmark = pytest.mark.anyio
 
 
 async def test_registro_exige_consentimiento_y_politica_vigente(cliente):
-    base = {"correo": "x@ejemplo.test", "nombre_visible": "Equis", "clave": CLAVE, "politica_version": config.politica_version}
+    base = {"correo": "x@ejemplo.test", "nombre_visible": "Equis", "clave": CLAVE, "politica_version": config.politica_version,
+            "tengo_14_o_mas": True}
     r = await cliente.post("/cuentas/registro", json={**base, "consentimiento": False})
     assert r.status_code == 422
+    r = await cliente.post("/cuentas/registro", json={**base, "consentimiento": True, "tengo_14_o_mas": False})
+    assert r.status_code == 422 and "tutor" in r.json()["detail"]
     r = await cliente.post("/cuentas/registro", json={**base, "consentimiento": True, "politica_version": "2000-01-01"})
     assert r.status_code == 409
     r = await cliente.post("/cuentas/registro", json={**base, "consentimiento": True, "clave": "corta"})
@@ -103,3 +106,14 @@ async def test_cambiar_clave_pide_la_actual_y_cierra_sesiones(cliente):
     assert (await cliente.post("/cuentas/renovar", json={"renovacion": u["renovacion"]})).status_code == 401
     r = await cliente.post("/cuentas/sesion", json={"correo": "cambia@ejemplo.test", "clave": "otra-clave-larga"})
     assert r.status_code == 200
+
+
+async def test_cuenta_de_menor_la_crea_el_docente(base, capsys):
+    """Menor de 14 años: no se registra solo (422 arriba); el docente crea la cuenta con el consentimiento del tutor."""
+    from aula import cli
+
+    assert await cli._cuenta("Menor@Ejemplo.test", "Menor Ficticio", aplicar=False) == 0
+    assert "[simulación]" in capsys.readouterr().out
+    assert await cli._cuenta("menor@ejemplo.test", "Menor Ficticio", aplicar=True) == 0
+    assert "contraseña temporal" in capsys.readouterr().out
+    assert await cli._cuenta("menor@ejemplo.test", "Menor Ficticio", aplicar=True) == 1

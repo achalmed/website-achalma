@@ -36,6 +36,7 @@ const { pub } = datos();
           <summary>Qué datos guarda el aula y para qué</summary>
           <div data-politica-texto><p class="tenue">Cargando la política…</p></div>
         </details>
+        <label class="casilla"><input name="tengo_14_o_mas" type="checkbox" required /> Tengo 14 años o más (si tienes menos, tu madre, padre o tutor pide tu cuenta al docente).</label>
         <label class="casilla"><input name="consentimiento" type="checkbox" required /> Leí la política de privacidad y acepto que el aula guarde mis datos para darme el servicio.</label>
         <button class="boton primario" type="submit">Crear cuenta</button>
       </form>
@@ -108,7 +109,9 @@ const { pub } = datos();
           texto(`Para qué: ${p.finalidad}.`),
           texto(`Cuánto tiempo: mientras uses el aula; tras ${Math.round(p.conservacion_dias_sin_actividad / 365)} años sin actividad la cuenta se borra.`),
           texto(`Tus derechos: ${p.derechos}. Marco: ${p.ley}. Versión ${p.version}.`),
+          texto(`Menores de edad: ${p.menores}.`),
         );
+        if (p.contacto) caja.append(texto(`Para ejercer tus derechos o consultar sobre tus datos: ${p.contacto}.`));
         return true;
       } catch (e) {
         fallo(e);
@@ -218,7 +221,7 @@ const { pub } = datos();
       if (!politicaVersion && !(await cargarPolitica())) return;
       await aula.registrarse({
         correo: String(f.get('correo')), nombre_visible: String(f.get('nombre_visible')), clave: String(f.get('clave')),
-        consentimiento: f.get('consentimiento') === 'on', politica_version: politicaVersion,
+        consentimiento: f.get('consentimiento') === 'on', tengo_14_o_mas: f.get('tengo_14_o_mas') === 'on', politica_version: politicaVersion,
       });
       form.reset();
       await mostrar();

@@ -3,13 +3,14 @@ tipo: doc
 forma: referencia
 titulo: "Política de privacidad del aula"
 estado: borrador
-version: 2026-10-20
+version: 2026-10-21
 ---
 # Política de privacidad del aula
 
-Versión **2026-10-20** (`AULA_POLITICA_VERSION`). Es el texto que la vitrina resume antes del registro (`GET
+Versión **2026-10-21** (`AULA_POLITICA_VERSION`). Es el texto que la vitrina resume antes del registro (`GET
 /privacidad`) y que cada persona acepta al crear su cuenta; la API guarda la versión aceptada y la fecha. Marco: Ley
-29733, de Protección de Datos Personales, y su reglamento vigente. Es un **borrador técnico**: describe con exactitud
+29733, de Protección de Datos Personales, y su reglamento vigente (Decreto Supremo 016-2024-JUS; ambos en
+Calibre, ids 10535 y 10536). Es un **borrador técnico**: describe con exactitud
 lo que el código hace; los puntos marcados «al autor» (§7) los decide y completa el autor antes de abrir el aula a
 estudiantes reales.
 
@@ -18,6 +19,9 @@ estudiantes reales.
 El titular del aula (el autor, docente de los cursos de los 12 sitios) trata los datos con **una sola finalidad**: dar
 el servicio educativo del aula (cuentas, clases, anuncios, tareas y entregas, calificaciones, exámenes y progreso de
 lecciones). No hay publicidad, analítica, perfiles ni cesión a terceros, y la API no usa cookies.
+
+**Contacto** para ejercer los derechos o consultar sobre los datos: el correo de `AULA_CONTACTO`, que la API publica
+en `GET /privacidad` y «Mi aula» muestra junto a la política.
 
 ## 2. Qué datos se guardan
 
@@ -51,8 +55,18 @@ accesos, `--no-access-log`), el navegador, la ubicación ni la actividad de lect
 
 Mientras la cuenta se use. Una cuenta de estudiante sin actividad durante **730 días** (`AULA_DIAS_INACTIVIDAD`) se
 borra con todo lo suyo al correr `python -m aula.cli depurar --aplicar` (simula sin `--aplicar`), que el autor
-ejecuta en la revisión semestral del ecosistema. Las copias cifradas se conservan según la rotación del disco de
-respaldos (§7).
+ejecuta en la revisión semestral del ecosistema. Las copias cifradas se conservan **90 días**
+(`AULA_RESPALDO_DIAS`; `respaldar.sh --aplicar` borra las vencidas tras cada respaldo bueno y siempre deja las 3 más
+recientes), así que una cuenta borrada desaparece también de los respaldos en ese plazo. La clave de los respaldos se
+rota una vez al año o en cuanto la laptop o la clave se pierdan.
+
+## 4 bis. Menores de edad
+
+Según el artículo 22 del reglamento, desde los **14 años** cada persona consiente por sí misma; por eso el registro
+pide declarar «tengo 14 años o más» además del consentimiento, y la política está escrita en lenguaje llano. Si
+alguien tiene **menos de 14 años**, no se registra sola: su madre, padre o tutor pide la cuenta al docente, que la
+crea con `python -m aula.cli cuenta <correo> <nombre> --aplicar` después de recibir el consentimiento firmado del tutor, y la guarda con los
+documentos de la clase. El aula no da obsequios ni beneficios a cambio del registro (artículo 3.3).
 
 ## 5. Derechos: acceso, rectificación, cancelación y oposición
 
@@ -74,8 +88,14 @@ de entrega con límite de tamaño y tipos permitidos, guardados con nombre aleat
 
 ## 7. Al autor (antes de abrir el aula a estudiantes reales)
 
-- Poner un medio de contacto para ejercer los derechos (correo del aula) en esta política y en «Mi aula».
-- Verificar con la Autoridad Nacional de Protección de Datos Personales si el banco de datos del aula debe
-  inscribirse en su registro, y cargar la ley y su reglamento en Calibre para citarlos.
-- Decidir el consentimiento de padres o tutores si el aula recibirá menores de edad (preuniversitario).
-- Fijar cuánto se conservan los respaldos cifrados y cuándo se rota la clave.
+Hecho el 2026-10-21: ley y reglamento en Calibre; edad mínima de 14 años y vía del tutor (§4 bis); conservación y
+rotación de respaldos (§4); `AULA_CONTACTO` en la API y en «Mi aula». Queda:
+
+- Escribir `AULA_CONTACTO=<correo del aula>` en `$XDG_CONFIG_HOME/aula/aula.env` (iniciar.sh avisa si falta).
+- **Inscribir el banco de datos «Aula»** en el Registro Nacional de Protección de Datos Personales de la Autoridad
+  Nacional de Protección de Datos Personales (Ministerio de Justicia y Derechos Humanos): el trámite es gratuito
+  (reglamento, art. 43.3) y se hace en línea con la identidad del titular; inscribirlo despeja la duda de si es
+  obligatorio. Datos para el formulario: titular (el autor), finalidad (§1), datos (§2), ubicación (§3), plazo (§4),
+  medidas de seguridad (§6), sin transferencias.
+- Generar la clave de los respaldos (age o gpg), guardar la privada fuera de la laptop y declarar la pública en
+  `aula.env` (`respaldar.sh` explica cómo).

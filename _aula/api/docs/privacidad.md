@@ -45,7 +45,7 @@ accesos, `--no-access-log`), el navegador, la ubicación ni la actividad de lect
 - Acceso por internet: Tailscale Funnel con HTTPS; el sitio manda el token en una cabecera, no en cookies.
 - Dentro del aula: cada estudiante ve solo lo suyo (entregas, notas, intentos, progreso) y, de su clase, solo el nombre
   de los docentes; el docente de una clase ve las entregas, intentos y notas de esa clase y los correos de sus
-  miembros. Nadie ve datos de otra clase. Lo comprueban las pruebas (`tests/test_permisos.py`).
+  miembros. Nadie ve datos de otra clase. Lo comprueban las pruebas (`_aula/api/tests/test_permisos.py`).
 
 ## 4. Cuánto tiempo
 

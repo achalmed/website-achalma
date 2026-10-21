@@ -18,6 +18,8 @@ npm install                                # una vez; versiones exactas en packa
 PUB=methodica npm run build                # → dist/methodica/        (unos 4 s)
 PUB=numerus-scriptum npm run build         # → dist/numerus-scriptum/ (unos 7 s)
 node scripts/enlaces.mjs dist/methodica    # enlaces internos rotos (sale 1 si hay alguno)
+node scripts/rutas.mjs methodica           # prueba de rutas: cada URL del sitio Quarto vive o redirige (sale 1 si alguna se pierde)
+scripts/publicar.sh methodica [--aplicar]  # cambio del pub a la vitrina: construye, prueba, copia a _vitrina/ y apunta netlify.toml (--volver deshace)
 npm run vista:methodica                    # sirve dist/methodica en http://127.0.0.1:4331 (npx astro preview stop lo detiene)
 npm run vista:numerus-scriptum             # ídem en el puerto 4332
 PUB=methodica npm run dev                  # desarrollo con recarga; incluye /demo/autoevaluacion/

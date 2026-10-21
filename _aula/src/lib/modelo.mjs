@@ -184,6 +184,12 @@ function construir(pubId) {
         recursos.push({ src, dest: `${x.url}index.${formato}` });
       } else x[formato] = null;
     }
+    // Las figuras en PDF que Quarto compila para el documento (index_files/figure-pdf/) también están publicadas en el
+    // sitio viejo: viajan con el post para que la redirección de su carpeta no deje ninguna URL sin destino.
+    const figurasPdf = join(x.dirSite, 'index_files', 'figure-pdf');
+    if (existsSync(figurasPdf)) {
+      for (const n of readdirSync(figurasPdf)) recursos.push({ src: join(figurasPdf, n), dest: `${x.url}index_files/figure-pdf/${n}` });
+    }
     delete x.html;
   }
 

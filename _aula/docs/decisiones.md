@@ -178,3 +178,14 @@ contraseña) lo borra, archivos incluidos; lo que un docente dejó en clases aje
 docente de una clase con estudiantes no puede borrarse sin antes sumar otro o retirarlos (borraría datos ajenos). El
 estudiante ve solo a los docentes de su clase, sin correos; quien no es miembro recibe 404 en vez de 403, para no
 confirmar que una clase, entrega o intento existe. Conservación: 730 días sin actividad (`python -m aula.cli depurar`).
+
+### §1.15 El cambio de un pub: `_vitrina/` y una línea de `netlify.toml` (2026-10-20)
+
+Netlify publica lo que está en git, sin compilar (decisión del autor del 2026-09-22). El `_site/` de Quarto no se
+reemplaza porque es la fuente de las lecciones (§1.2): la vitrina se copia a `web/_pubs/<pub>/_vitrina/` y el cambio
+es la línea `publish` del `netlify.toml` del pub, de `"_site"` a `"_vitrina"`; volver atrás es devolverla
+(`_aula/scripts/publicar.sh <pub> --volver --aplicar`). Antes de copiar, `_aula/scripts/rutas.mjs` exige que cada
+página, PDF y DOCX que el sitio viejo publicaba siga en la vitrina o redirija (301) a un archivo que exista; por eso
+las figuras en PDF que Quarto deja junto a cada post (carpeta figure-pdf de sus recursos) viajan con él. Se cambia un pub a la vez: rama,
+*pull request* con vista previa de Netlify, revisión y merge a `main`.
+

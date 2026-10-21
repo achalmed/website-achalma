@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""scripts/pubs.py — README y CITATION.cff de los 11 blogs satélite y el bloque «pubs» del README del hub, generados
+"""scripts/pubs.py — README y CITATION.cff de los blogs satélite y el bloque «pubs» del README del hub, generados
 desde _pubs/pubs.yml (DOC5, 2026-09-20).
 
 Objetivo: que cada pub_* tenga un README propio (de qué trata, URL, repo, relación con el hub, flujo de commit,
@@ -117,7 +117,7 @@ estado: activo
 
 ## Qué es
 
-{p['descripcion']} Es uno de los 11 blogs satélite de la familia Quarto de {d['autor']['nombre']}: un sitio Quarto
+{p['descripcion']} Es uno de los blogs satélite de la familia Quarto de {d['autor']['nombre']}: un sitio Quarto
 con repositorio y sitio Netlify propios, incluido como submódulo git en el hub `{hub['carpeta']}` (repo
 `{hub['repo']}`) bajo `web/_pubs/{p['carpeta']}/`. El mismo blog tiene tres nombres: carpeta `{p['carpeta']}`, repo
 GitHub `{d['autor']['github']}/{p['repo']}` y dominio `{dominio}`; el registro de los tres es `web/_pubs/pubs.yml`.

@@ -4,6 +4,7 @@
 import Base from '../layouts/base.astro';
 import Reticula from '../components/reticula.astro';
 import Laboratorio from '../components/laboratorio.astro';
+import TarjetaEntrada from '../components/tarjeta-entrada.astro';
 import { datos, peso, plural } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
@@ -92,9 +93,9 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
         <section class="complementarias" aria-labelledby="t-complementarias">
           <h3 id="t-complementarias">Lecturas complementarias</h3>
           <p class="tenue">Publicadas en el pub y asociadas al curso, todavía sin un tema del currículo.</p>
-          <ul>
+          <ul class="rejilla-lecturas">
             {curso.complementarias.map((l) => (
-              <li><a href={l.url} data-leccion={`${curso.id}/${l.slug}`}>{l.titulo}</a> <span class="tenue">{l.minutos} min</span></li>
+              <li><TarjetaEntrada entrada={l} nivel="h4" leccion={`${curso.id}/${l.slug}`} /></li>
             ))}
           </ul>
         </section>
@@ -215,7 +216,8 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   }
   .complementarias { margin-top: 2rem; display: grid; gap: 0.6rem; }
   .complementarias h3 { font-size: var(--t-3); }
-  .complementarias ul { list-style: none; display: grid; gap: 0.4rem; }
+  .rejilla-lecturas { list-style: none; display: grid; gap: 1rem; margin-top: 0.4rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+  .rejilla-lecturas > li { display: grid; }
 
   .lateral { display: grid; gap: 2.25rem; align-content: start; }
   .lista-simple { list-style: none; display: grid; }

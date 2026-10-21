@@ -1,5 +1,7 @@
 ---
-// Pie.astro — la red de aulas (los pubs de pubs.yml), autoría y licencia.
+// Pie.astro — autoría y licencia, y «La familia»: los 11 pubs y el hub, cada uno con su colofón, su nombre y su área.
+// Los datos salen del modelo (web/_pubs/pubs.yml, docencia/config/areas.yml y config/vitrina.yml); aquí no se escribe
+// ningún nombre ni color a mano. Cada sitio lleva su data-acento, así que su colofón toma su color.
 import Marca from './marca.astro';
 import { datos } from '../lib/datos.mjs';
 const { pub, red } = datos();
@@ -8,43 +10,59 @@ const anio = new Date().getFullYear();
 <footer class="pie">
   <div class="envoltura pie-rejilla">
     <div class="pie-firma">
-      <p class="pie-marca"><Marca tamano={20} /> {pub.nombre}</p>
+      <p class="pie-marca">
+        <Marca tamano={40} />
+        <span><b>{pub.nombre}</b><span class="firma">por {pub.autor.nombre}</span></span>
+      </p>
       <p>{pub.descripcion}</p>
       <p class="tenue">
         Textos de <a href={pub.hub.url}>{pub.autor.nombre}</a>, con licencia
         <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license noopener">CC BY-SA 4.0</a>.
       </p>
     </div>
-    <nav class="pie-red" aria-label="Red de aulas">
-      <h2>La red de aulas</h2>
+    <nav class="familia" aria-labelledby="t-familia">
+      <h2 id="t-familia">La familia</h2>
       <ul>
         {red.map((p) => (
-          <li>
-            {p.actual
-              ? <span aria-current="page"><b>{p.nombre}</b> <span class="tenue">{p.tema}</span></span>
-              : <a href={p.url}><b>{p.nombre}</b> <span class="tenue">{p.tema}</span></a>}
+          <li data-acento={p.acento}>
+            <a href={p.url} aria-current={p.actual ? 'page' : undefined}>
+              <Marca sitio={p.marca} tamano={30} />
+              <span class="nombre">{p.nombre}</span>
+              <span class="area">{p.area}</span>
+            </a>
           </li>
         ))}
       </ul>
     </nav>
   </div>
   <div class="envoltura pie-nota">
-    <p>Prototipo de la plataforma de cursos (fase 4, {anio}). Los sitios publicados siguen construyéndose con Quarto hasta el cambio.</p>
+    <p>© {anio} {pub.autor.nombre}. Plataforma de cursos de los pubs.</p>
   </div>
 </footer>
 
 <style>
   .pie { margin-top: 4rem; border-top: 1px solid var(--linea); background: var(--papel-2); font-size: var(--t-1); }
-  .pie-rejilla { display: grid; gap: 2rem; padding-block: 2.5rem 1.5rem; grid-template-columns: 1fr; }
-  @media (min-width: 860px) { .pie-rejilla { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 4rem; } }
-  .pie-firma { display: grid; gap: 0.6rem; max-width: 42ch; color: var(--tinta-2); }
-  .pie-marca { display: flex; align-items: center; gap: 0.5rem; font-family: var(--f-titulo); font-size: 1.15rem; color: var(--tinta); }
-  .pie-red h2 { font-family: var(--f-interfaz); font-size: var(--t-1); font-weight: 600; margin-bottom: 0.75rem; }
-  .pie-red ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 0.15rem 1.5rem; }
-  .pie-red a, .pie-red [aria-current] { display: flex; gap: 0.5rem; align-items: baseline; padding-block: 0.3rem; text-decoration: none; color: var(--tinta); }
-  .pie-red b { font-weight: 600; }
-  .pie-red a:hover b { color: var(--acento); }
-  .pie-red [aria-current] b { color: var(--acento); }
-  .pie-red .tenue { font-size: var(--t-0); }
+  .pie-rejilla { display: grid; gap: 2.25rem; padding-block: 2.75rem 1.75rem; grid-template-columns: 1fr; }
+  @media (min-width: 960px) { .pie-rejilla { grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: 4rem; } }
+  .pie-firma { display: grid; gap: 0.7rem; align-content: start; max-width: 40ch; color: var(--tinta-2); }
+  .pie-marca { display: flex; align-items: center; gap: 0.75rem; color: var(--tinta); }
+  .pie-marca > span { display: grid; line-height: 1.25; }
+  .pie-marca b { font-family: var(--f-titulo); font-size: 1.2rem; font-weight: 500; }
+  .pie-marca .firma { font-size: var(--t-0); color: var(--tenue); }
+
+  .familia h2 { font-family: var(--f-titulo); font-size: var(--t-3); font-weight: 500; padding-bottom: 0.5rem; margin-bottom: 0.25rem; border-bottom: 1px solid var(--tinta); }
+  .familia ul { list-style: none; display: grid; column-gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+  .familia li { border-bottom: 1px solid var(--linea); }
+  .familia a {
+    display: grid; grid-template-columns: 1.875rem 1fr; grid-template-rows: auto auto; column-gap: 0.7rem; align-items: center;
+    padding-block: 0.55rem; text-decoration: none; color: var(--tinta);
+  }
+  .familia a > :global(.sello) { grid-row: span 2; }
+  .nombre { font-family: var(--f-titulo); font-size: 1.02rem; line-height: 1.2; align-self: end; }
+  .area { font-size: var(--t-0); color: var(--tenue); line-height: 1.3; align-self: start; }
+  .familia a:hover .nombre { color: var(--acento-tinta); text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+  .familia a[aria-current] .nombre { color: var(--acento-tinta); }
+  .familia a[aria-current] .area::after { content: ' (este sitio)'; }
+  @media (max-width: 560px) { .familia ul { grid-template-columns: 1fr 1fr; column-gap: 1rem; } .area { display: none; } .nombre { align-self: center; font-size: 0.95rem; } .familia a > :global(.sello) { grid-row: auto; } }
   .pie-nota { padding-block: 1rem 2rem; color: var(--tenue); font-size: var(--t-0); border-top: 1px solid var(--linea); }
 </style>

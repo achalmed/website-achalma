@@ -127,16 +127,22 @@
 [data-acento='tinta'] { --acento-c: var(--lab-tinta); --acento-o: var(--lab-tinta-o); }
 [data-acento='glaciar'] { --acento-c: var(--lab-glaciar); --acento-o: var(--lab-glaciar-o); }
 
-:root { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: #fff; }
+/* El acento lo fija el data-acento más cercano: <html> para el pub y cada sitio de «La familia» (pie) para el suyo.
+   Por eso el acento y sus derivados se declaran también en [data-acento] y no solo en :root. */
+:root, [data-acento] { --acento: var(--acento-c, var(--acento-base)); --sobre-acento: #fff; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+  :root:not([data-theme='light']), :root:not([data-theme='light']) [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
 }
-:root[data-theme='dark'] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
+:root[data-theme='dark'], :root[data-theme='dark'] [data-acento] { --acento: var(--acento-o, var(--lab-revista-o)); --sobre-acento: var(--spc-dark-bg); }
 
 /* Derivados del acento y de la retícula (se recalculan solos en cada tema). */
-:root {
+:root, [data-acento] {
   --acento-suave: color-mix(in oklab, var(--acento) 9%, var(--papel));
   --acento-medio: color-mix(in oklab, var(--acento) 28%, var(--papel));
+  /* Texto en el color del pub sobre un fondo teñido (insignias, rótulos): el acento con un quinto de tinta, que en
+     claro lo oscurece y en oscuro lo aclara; así el verde de laboratorio también pasa AA sobre --acento-suave. */
+  --acento-tinta: color-mix(in oklab, var(--acento) 78%, var(--tinta));
+  --acento-linea: color-mix(in oklab, var(--acento) 45%, var(--linea));
   --vidrio: color-mix(in oklab, var(--elevado) 72%, transparent);
   --vidrio-fuerte: color-mix(in oklab, var(--papel) 88%, transparent);
   --reticula-menor: color-mix(in oklab, var(--acento) var(--ret-menor, 10%), transparent);

@@ -1,7 +1,8 @@
 ---
 // Base.astro — el esqueleto común de todas las páginas de un pub.
-import '@fontsource-variable/source-serif-4/opsz.css';
-import '@fontsource-variable/source-serif-4/opsz-italic.css';
+// Source Serif solo con su eje de peso (51 KB en vez de 122 KB con el óptico); la cursiva la carga el lector, que es
+// donde hay texto en cursiva (decisiones §1.19).
+import '@fontsource-variable/source-serif-4/wght.css';
 import '@fontsource-variable/red-hat-text';
 import '@fontsource-variable/petrona';
 import '@fontsource-variable/jetbrains-mono';
@@ -10,6 +11,7 @@ import '../styles/tokens.css';
 import '../styles/base.css';
 import Cabecera from '../components/cabecera.astro';
 import Pie from '../components/pie.astro';
+import PaletaComandos from '../components/paleta-comandos.astro';
 import { datos } from '../lib/datos.mjs';
 
 interface Props {
@@ -23,6 +25,7 @@ const { pub, ediciones } = datos();
 const tituloCompleto = titulo ? `${titulo} — ${pub.nombre}` : `${pub.nombre} — ${pub.area?.nombre ?? pub.tema}`;
 const desc = descripcion || pub.descripcion;
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const imagenOg = new URL('/og.png', Astro.site).href;
 ---
 <!doctype html>
 <html lang="es" data-pub={pub.id} data-acento={pub.acento}>
@@ -32,11 +35,22 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
   <title>{tituloCompleto}</title>
   <meta name="description" content={desc} />
   <link rel="canonical" href={canonica} />
+  <meta name="author" content={pub.autor.nombre} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={pub.nombre} />
   <meta property="og:title" content={tituloCompleto} />
   <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonica} />
+  <meta property="og:image" content={imagenOg} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={`${pub.nombre}, ${pub.area?.nombre ?? pub.tema}, por ${pub.autor.nombre}`} />
   <meta property="og:locale" content="es_PE" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="generator" content="aula (prototipo, fase 4)" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script is:inline>
     // Tema y modo lectura elegidos, antes de pintar (sin parpadeo). Si el almacenamiento falla, manda el sistema.
     try {
@@ -52,5 +66,6 @@ const canonica = new URL(Astro.url.pathname, Astro.site).href;
     <slot />
   </main>
   <Pie />
+  <PaletaComandos />
 </body>
 </html>

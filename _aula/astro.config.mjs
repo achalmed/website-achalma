@@ -16,7 +16,8 @@ export default defineConfig({
   outDir: `./dist/${pub}`,
   cacheDir: `./.cache/astro-${pub}`,
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  // CSS en línea: la hoja (unos 10 KB) deja de bloquear la primera pintura en un móvil lento (decisiones §1.19).
+  build: { format: 'directory', inlineStylesheets: 'always' },
   compressHTML: true,
   devToolbar: { enabled: false },
   integrations: [rutas(), recursos(pub)],

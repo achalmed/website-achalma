@@ -1,0 +1,193 @@
+---
+// PaletaComandos.astro — buscar y saltar con el teclado: ⌘K / Ctrl+K (o «/») abre un diálogo con un cuadro de búsqueda
+// y una lista de resultados (cursos, lecciones, artículos, ediciones y accesos de la vitrina). Patrón ARIA de combobox
+// con listbox: ↑ ↓ eligen, ↵ abre, Esc cierra y el foco vuelve a donde estaba. El índice (/buscar.json) se pide la
+// primera vez que se abre, así que no pesa en la carga de la página. Sin JS, el botón no hace nada y la navegación y
+// el catálogo con filtros siguen ahí.
+import { icono } from '../lib/iconos.mjs';
+import { datos } from '../lib/datos.mjs';
+
+const { ediciones } = datos();
+const ICONOS = {
+  curso: icono('book-open', { tamano: 17 }),
+  leccion: icono('file-text', { tamano: 17 }),
+  articulo: icono('newspaper', { tamano: 17 }),
+  edicion: icono('calendar', { tamano: 17 }),
+  ir: icono('arrow-right', { tamano: 17 }),
+  tema: icono('sun-moon', { tamano: 17 }),
+};
+const accesos = [
+  { t: 'ir', titulo: 'Ir a los cursos', contexto: 'Catálogo con filtros', url: '/cursos/' },
+  { t: 'ir', titulo: 'Ir al blog', contexto: 'Artículos y guías', url: '/blog/' },
+  ...(ediciones.length ? [{ t: 'ir', titulo: 'Ir a las ediciones', contexto: 'Dictados con sus materiales', url: '/ediciones/' }] : []),
+  { t: 'tema', titulo: 'Cambiar entre tema claro y oscuro', contexto: 'Preferencia de este navegador', accion: 'tema' },
+];
+---
+<dialog class="paleta" aria-label="Buscar en el sitio" data-paleta>
+  <div class="paleta-caja">
+    <div class="paleta-entrada">
+      <Fragment set:html={icono('search', { tamano: 18, clase: 'lupa' })} />
+      <input
+        type="text" role="combobox" aria-expanded="true" aria-controls="paleta-lista" aria-autocomplete="list"
+        aria-label="Buscar cursos, lecciones y artículos" placeholder="Buscar cursos, lecciones y artículos…"
+        autocomplete="off" spellcheck="false" data-paleta-q
+      />
+      <kbd>Esc</kbd>
+    </div>
+    <ul class="paleta-lista" id="paleta-lista" role="listbox" aria-label="Resultados" data-paleta-lista></ul>
+    <p class="paleta-vacia" data-paleta-vacia hidden>Nada coincide. Prueba con otra palabra o abre el <a href="/cursos/">catálogo</a>.</p>
+    <footer class="paleta-pie" aria-hidden="true">
+      <span><kbd set:html={icono('arrow-up', { tamano: 11, trazo: 2 })} /><kbd set:html={icono('arrow-down', { tamano: 11, trazo: 2 })} /> elegir</span>
+      <span><kbd set:html={icono('corner-down-left', { tamano: 11, trazo: 2 })} /> abrir</span>
+      <span><kbd>Esc</kbd> cerrar</span>
+    </footer>
+    <p class="sr" aria-live="polite" data-paleta-estado></p>
+  </div>
+</dialog>
+<script type="application/json" data-paleta-datos set:html={JSON.stringify({ iconos: ICONOS, accesos })}></script>
+
+<script>
+  import { guardarPreferencia } from '../scripts/almacen.js';
+  type Item = { t: string; titulo: string; contexto: string; url?: string; accion?: string };
+  const dialogo = document.querySelector<HTMLDialogElement>('[data-paleta]');
+  const config = JSON.parse(document.querySelector('[data-paleta-datos]')?.textContent || '{}');
+  if (dialogo && typeof dialogo.showModal === 'function') {
+    const q = dialogo.querySelector<HTMLInputElement>('[data-paleta-q]')!;
+    const lista = dialogo.querySelector<HTMLUListElement>('[data-paleta-lista]')!;
+    const vacia = dialogo.querySelector<HTMLElement>('[data-paleta-vacia]')!;
+    const estado = dialogo.querySelector<HTMLElement>('[data-paleta-estado]')!;
+    const TIPOS: Record<string, string> = { curso: 'Curso', leccion: 'Lección', articulo: 'Artículo', edicion: 'Edición', ir: 'Ir a', tema: 'Acción' };
+    const plegar = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+    let indice: (Item & { clave: string })[] | null = null;
+    let visibles: Item[] = [];
+    let activo = 0;
+
+    async function cargar() {
+      if (indice) return;
+      try {
+        const r = await fetch('/buscar.json');
+        const items: Item[] = await r.json();
+        indice = items.map((i) => ({ ...i, clave: plegar(`${i.titulo} ${i.contexto}`) }));
+      } catch { indice = []; }
+    }
+    function buscar(texto: string): Item[] {
+      const palabras = plegar(texto).split(/\s+/).filter(Boolean);
+      if (!palabras.length) return [...config.accesos, ...(indice || []).filter((i) => i.t === 'curso').slice(0, 6)];
+      const puntos = (i: Item & { clave: string }) => {
+        const tit = plegar(i.titulo);
+        return (tit.startsWith(palabras[0]) ? 4 : 0) + (tit.includes(palabras.join(' ')) ? 2 : 0) + (i.t === 'curso' ? 1 : 0);
+      };
+      return (indice || [])
+        .filter((i) => palabras.every((p) => i.clave.includes(p)))
+        .sort((a, b) => puntos(b) - puntos(a))
+        .slice(0, 40);
+    }
+    function pintar() {
+      visibles = buscar(q.value);
+      activo = Math.min(activo, Math.max(0, visibles.length - 1));
+      lista.innerHTML = '';
+      visibles.forEach((it, i) => {
+        const li = document.createElement('li');
+        li.id = `paleta-op-${i}`;
+        li.setAttribute('role', 'option');
+        li.setAttribute('aria-selected', String(i === activo));
+        li.dataset.i = String(i);
+        li.innerHTML = `<span class="op-icono">${config.iconos[it.t] || ''}</span><span class="op-texto"><span class="op-titulo"></span><span class="op-contexto"></span></span><span class="op-tipo"></span>`;
+        li.querySelector('.op-titulo')!.textContent = it.titulo;
+        li.querySelector('.op-contexto')!.textContent = it.contexto;
+        li.querySelector('.op-tipo')!.textContent = TIPOS[it.t] || '';
+        lista.appendChild(li);
+      });
+      vacia.hidden = visibles.length > 0;
+      q.setAttribute('aria-activedescendant', visibles.length ? `paleta-op-${activo}` : '');
+      estado.textContent = q.value ? `${visibles.length} resultados` : '';
+    }
+    function mover(d: number) {
+      if (!visibles.length) return;
+      activo = (activo + d + visibles.length) % visibles.length;
+      lista.querySelectorAll('[role="option"]').forEach((li, i) => li.setAttribute('aria-selected', String(i === activo)));
+      q.setAttribute('aria-activedescendant', `paleta-op-${activo}`);
+      document.getElementById(`paleta-op-${activo}`)?.scrollIntoView({ block: 'nearest' });
+    }
+    function abrirItem(it?: Item) {
+      if (!it) return;
+      if (it.accion === 'tema') {
+        const raiz = document.documentElement;
+        const oscuro = raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        raiz.dataset.theme = oscuro ? 'light' : 'dark';
+        guardarPreferencia('tema', raiz.dataset.theme);
+        dialogo!.close();
+        return;
+      }
+      if (it.url) location.href = it.url;
+    }
+    async function abrir() {
+      if (dialogo!.open) return;
+      dialogo!.showModal();
+      q.value = '';
+      activo = 0;
+      pintar();
+      await cargar();
+      pintar();
+    }
+
+    document.querySelectorAll('[data-abrir-paleta]').forEach((b) => b.addEventListener('click', abrir));
+    document.addEventListener('keydown', (e) => {
+      const enCampo = (e.target as HTMLElement)?.closest?.('input, textarea, select, [contenteditable]');
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); dialogo!.open ? dialogo!.close() : abrir(); }
+      else if (e.key === '/' && !enCampo && !dialogo!.open) { e.preventDefault(); abrir(); }
+    });
+    q.addEventListener('input', () => { activo = 0; pintar(); });
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); mover(1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); mover(-1); }
+      else if (e.key === 'Enter') { e.preventDefault(); abrirItem(visibles[activo]); }
+    });
+    lista.addEventListener('click', (e) => {
+      const li = (e.target as HTMLElement).closest<HTMLElement>('[role="option"]');
+      if (li) abrirItem(visibles[Number(li.dataset.i)]);
+    });
+    lista.addEventListener('pointermove', (e) => {
+      const li = (e.target as HTMLElement).closest<HTMLElement>('[role="option"]');
+      if (li && Number(li.dataset.i) !== activo) mover(Number(li.dataset.i) - activo);
+    });
+    // Un clic en el fondo (fuera de la caja) cierra.
+    dialogo.addEventListener('click', (e) => { if (e.target === dialogo) dialogo.close(); });
+  }
+</script>
+
+<style>
+  /* Una ficha de papel con filete sobre la página atenuada: nada de vidrio ni de ventana. */
+  .paleta {
+    width: min(40rem, calc(100vw - 1.5rem)); max-height: min(34rem, calc(100dvh - 6rem));
+    margin: 12vh auto auto; padding: 0; border: 0; background: transparent; color: var(--tinta); overflow: visible;
+  }
+  .paleta::backdrop { background: color-mix(in oklab, var(--papel) 72%, transparent); }
+  .paleta[open] { animation: aparecer 0.14s ease-out; }
+  @keyframes aparecer { from { opacity: 0; transform: translateY(-4px); } }
+  .paleta-caja {
+    display: flex; flex-direction: column; max-height: inherit; overflow: hidden;
+    background: var(--elevado); border: 1px solid var(--linea-fuerte); border-top: 3px solid var(--acento); border-radius: var(--r-2);
+    box-shadow: var(--sombra);
+  }
+  .paleta-entrada { display: flex; align-items: center; gap: 0.7rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--linea); color: var(--tenue); }
+  .paleta-entrada input { flex: 1; min-width: 0; font: 1.125rem/1.4 var(--f-lectura); color: var(--tinta); background: none; border: 0; outline: none; }
+  .paleta-entrada input::placeholder { color: var(--tenue); }
+  .paleta-lista { list-style: none; overflow-y: auto; padding: 0.35rem 0; overscroll-behavior: contain; }
+  .paleta-lista :global([role='option']) {
+    display: grid; grid-template-columns: 1.75rem 1fr auto; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 1rem; border-left: 2px solid transparent; cursor: pointer;
+  }
+  .paleta-lista :global([role='option'] + [role='option']) { border-top: 1px dashed var(--linea); }
+  .paleta-lista :global([aria-selected='true']) { background: var(--acento-suave); border-left-color: var(--acento); }
+  .paleta-lista :global(.op-icono) { display: grid; place-items: center; color: var(--tenue); }
+  .paleta-lista :global([aria-selected='true'] .op-icono) { color: var(--acento-tinta); }
+  .paleta-lista :global(.op-texto) { display: grid; min-width: 0; }
+  .paleta-lista :global(.op-titulo) { font-family: var(--f-titulo); font-size: 1.02rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .paleta-lista :global(.op-contexto) { font-size: var(--t-0); color: var(--tenue); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .paleta-lista :global(.op-tipo) { font: 0.7rem/1 var(--f-datos); color: var(--tenue); letter-spacing: 0.02em; }
+  .paleta-vacia { padding: 1.25rem 1rem; color: var(--tinta-2); font-size: var(--t-1); }
+  .paleta-pie { display: flex; gap: 1.1rem; padding: 0.5rem 1rem; border-top: 1px solid var(--linea); background: var(--papel-2); font-size: var(--t-0); color: var(--tenue); }
+  .paleta-pie span { display: inline-flex; align-items: center; gap: 0.25rem; }
+  @media (max-width: 560px) { .paleta { margin-top: 1rem; } .paleta-pie { display: none; } .paleta-lista :global(.op-tipo) { display: none; } }
+</style>

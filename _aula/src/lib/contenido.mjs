@@ -12,6 +12,7 @@ import katex from 'katex';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, posix } from 'node:path';
 import { esArchivo } from './fuentes.mjs';
+import { icono } from './iconos.mjs';
 
 const PROTOCOLOS_FUERA = /^(mailto:|tel:|data:|javascript:)/i;
 
@@ -29,6 +30,7 @@ export function extraer(o) {
   const main = $('main#quarto-document-content').first();
   const recursos = [];
   const sinResolver = [];
+  const figuras = [];
 
   // 1. Lo que no es contenido.
   // Las notas al pie y la bibliografía viven en el apéndice de Quarto: se rescatan antes de quitarlo.
@@ -62,9 +64,20 @@ export function extraer(o) {
   // 3. Encabezados un nivel abajo: el h1 de la página es el título.
   for (let n = 5; n >= 1; n--) main.find(`h${n}`).each((_, el) => { el.name = `h${n + 1}`; });
 
-  // 4. Código: fuera los anclajes vacíos de número de línea (enlaces sin texto).
+  // 4. Código: fuera los anclajes vacíos de número de línea (enlaces sin texto) y, sobre cada bloque, una cabecera
+  //    discreta con el lenguaje y el botón de copiar (nace oculto: lo activa el lector si hay JS y portapapeles).
   main.find('pre code a:empty').remove();
   main.find('pre.number-lines, pre.numberSource').removeClass('number-lines numberSource');
+  const NO_LENGUA = new Set(['sourceCode', 'code-with-copy', 'cell-code', 'numberSource', 'number-lines', 'code-annotation-code']);
+  const CONSOLA = /^(bash|sh|shell|zsh|console|powershell|ps1|cmd|bat|fish)$/i;
+  main.find('div.sourceCode').each((_, el) => {
+    const $b = $(el);
+    const pre = $b.children('pre').first();
+    if (!pre.length || $b.children('.codigo-barra').length) return;
+    const lengua = (pre.attr('class') || '').split(/\s+/).find((c) => c && !NO_LENGUA.has(c)) || 'código';
+    const ic = icono(CONSOLA.test(lengua) ? 'terminal' : 'code', { tamano: 14 });
+    pre.before(`<div class="codigo-barra"><span class="codigo-lengua">${ic}${lengua}</span><button type="button" class="codigo-copiar" data-copiar hidden>${icono('copy', { tamano: 14 })}<span>Copiar</span></button></div>`);
+  });
 
   // 5. Rutas.
   const resolverRef = (valor) => {
@@ -95,7 +108,7 @@ export function extraer(o) {
         // recurso propio del post: se copia junto a la página nueva y la referencia relativa no cambia
         const rel = abs.slice(o.rutaVieja.length);
         recursos.push({ src: archivo, dest: o.rutaNueva + rel });
-        return { tipo: 'nueva', valor: encodeURI(o.rutaNueva + rel) + anc };
+        return { tipo: 'nueva', valor: encodeURI(o.rutaNueva + rel) + anc, archivo };
       }
       // recurso compartido del sitio: se copia con la misma ruta absoluta
       recursos.push({ src: archivo, dest: abs });
@@ -112,7 +125,10 @@ export function extraer(o) {
     main.find(sel).each((_, el) => {
       const $el = $(el);
       const r = resolverRef($el.attr(attr));
-      if (r.tipo === 'nueva') $el.attr(attr, r.valor);
+      if (r.tipo === 'nueva') {
+        $el.attr(attr, r.valor);
+        if (el.name === 'img' && r.archivo) figuras.push(r.archivo); // candidatas a miniatura (src/lib/imagenes.mjs)
+      }
       else if (r.tipo === 'roto') {
         sinResolver.push({ ref: $el.attr(attr), abs: r.abs });
         if (el.name === 'a') $el.replaceWith(`<span class="enlace-sin-destino" title="Enlace sin destino en el sitio original">${$el.html() ?? ''}</span>`);
@@ -136,6 +152,18 @@ export function extraer(o) {
       sinResolver.push({ ref: `#${frag}`, abs: '(ancla sin sección en la página)' });
       $el.replaceWith(`<span class="enlace-sin-destino" title="Enlace sin destino en el sitio original">${$el.html() ?? ''}</span>`);
     }
+  });
+
+  // Figuras: carga diferida (arriba siempre está el título, que es la primera pintura) y tablas en un contenedor que se
+  // desplaza solo él, para que la tabla conserve su ancho natural sin desbordar a 375 px.
+  main.find('img').each((_, el) => {
+    const $el = $(el);
+    if (!$el.attr('loading')) $el.attr('loading', 'lazy');
+    if (!$el.attr('decoding')) $el.attr('decoding', 'async');
+  });
+  main.find('table').each((_, el) => {
+    const $el = $(el);
+    if (!$el.parent().hasClass('tabla')) $el.wrap('<div class="tabla"></div>');
   });
 
   // Enlaces externos: sin dar acceso a la página de origen.
@@ -181,5 +209,5 @@ export function extraer(o) {
   const palabras = copia.text().split(/\s+/).filter(Boolean).length;
   const minutos = Math.max(1, Math.ceil(palabras / 200 + lineasCodigo / 30));
 
-  return { html: main.html() ?? '', anclasReparadas, indice, secciones, palabras, minutos, hayMatematicas, recursos, sinResolver };
+  return { html: main.html() ?? '', anclasReparadas, indice, secciones, palabras, minutos, hayMatematicas, recursos, sinResolver, figuras };
 }

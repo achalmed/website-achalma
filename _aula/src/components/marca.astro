@@ -1,17 +1,24 @@
 ---
-// Marca.astro — el signo común de los pubs: una celda de papel milimetrado con un milímetro ocupado.
-// Todos los pubs llevan el mismo signo; cambia el acento (data-acento en <html>).
-interface Props { tamano?: number }
-const { tamano = 24 } = Astro.props;
+// Marca.astro — el colofón de un sitio de la familia (src/lib/marca.mjs): su monograma en Petrona dentro de un cuadrado
+// de doble filete, en el acento del data-acento más cercano. Decorativo: el nombre del sitio va siempre escrito al lado.
+import { colocarMonograma, SELLO } from '../lib/marca.mjs';
+import { datos } from '../lib/datos.mjs';
+
+interface Props { sitio?: string; tamano?: number; clase?: string }
+const { sitio = datos().pub.id, tamano = 28, clase = '' } = Astro.props;
+const m = colocarMonograma(sitio);
+const { exterior: e, interior: i } = SELLO;
 ---
-<svg class="signo" width={tamano} height={tamano} viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="1" y="1" width="22" height="22" rx="3" class="signo-marco" />
-  <path d="M8.33 1v22M15.67 1v22M1 8.33h22M1 15.67h22" class="signo-reticula" />
-  <rect x="8.33" y="8.33" width="7.34" height="7.34" class="signo-celda" />
+<svg class:list={['sello', clase]} width={tamano} height={tamano} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <rect class="fondo" x={e.x} y={e.y} width={e.lado} height={e.lado} />
+  <rect class="filete" x={i.x} y={i.y} width={i.lado} height={i.lado} />
+  <path class="letras" d={m.d} transform={m.transform} />
 </svg>
+
 <style>
-  .signo { flex: none; }
-  .signo-marco { fill: var(--elevado); stroke: var(--tinta); stroke-width: 1.5; }
-  .signo-reticula { stroke: var(--acento); stroke-width: 0.75; opacity: 0.55; fill: none; }
-  .signo-celda { fill: var(--acento); }
+  .sello { flex: none; display: block; }
+  /* Filetes en píxeles reales (no escalan): 1,25 y 0,75 px se ven nítidos de 20 a 64 px de lado. */
+  .fondo { fill: var(--elevado); stroke: var(--acento); stroke-width: 1.25px; vector-effect: non-scaling-stroke; }
+  .filete { fill: none; stroke: var(--acento); stroke-width: 0.75px; vector-effect: non-scaling-stroke; }
+  .letras { fill: var(--acento); }
 </style>

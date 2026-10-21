@@ -189,3 +189,54 @@ página, PDF y DOCX que el sitio viejo publicaba siga en la vitrina o redirija (
 las figuras en PDF que Quarto deja junto a cada post (carpeta figure-pdf de sus recursos) viajan con él. Se cambia un pub a la vez: rama,
 *pull request* con vista previa de Netlify, revisión y merge a `main`.
 
+
+### §1.16 Se queda «Quiet Laboratory»; se mejoran íconos, búsqueda y cifras (2026-10-20)
+
+El autor probó una estética de macOS (grafito, vidrio, Inter, íconos de aplicación) y la descartó el mismo día: «parece
+una copia barata». Rige la identidad que ya estaba en producción en methodica: papel cálido, tinta azulada, serif
+académica para títulos y lectura, sans para la interfaz, monoespaciada para datos y la retícula milimetrada en la
+portada. El intento se deshizo con un solo commit de reversión y sobre ese estilo se rehizo solo lo que mejora la
+experiencia sin imitar a nadie, dibujado con filetes finos y papel (sin vidrio, sin sombras flotantes nuevas):
+
+- **Íconos:** un único juego de línea, Lucide (`lucide-static`, versión exacta), en línea desde `_aula/src/lib/iconos.mjs`
+  con trazo 1,5, en lugar de los SVG y glifos sueltos (tema, flechas, copiar, fecha, descargas, teclas).
+- **Búsqueda ⌘K / Ctrl K / «/»** (`_aula/src/components/paleta-comandos.astro`): cursos, lecciones, artículos y
+  ediciones, con el patrón ARIA de combobox; aspecto de ficha de papel con filete y la franja del acento arriba. Su
+  índice (`/buscar.json`, `_aula/src/pages/buscar.json.js`) se pide solo al abrirla.
+- **Bloques de código** con una cabecera discreta (lenguaje y copiar) que escribe el build (`_aula/src/lib/contenido.mjs`).
+- **Banda de cifras** de la portada (`_aula/src/components/cifras.astro`): solo cifras del modelo, números en Petrona y
+  rótulos en monoespaciada, entre dos filetes como la cabecera de una tabla; suben una vez al entrar en pantalla.
+- **Tarjetas** de artículos, lecturas complementarias y ediciones con filete y sin sombra; el pie «La familia» lista
+  los 12 sitios con su colofón y su área, desde `pubs.yml`, `areas.yml` y `_aula/config/vitrina.yml`.
+- **Lectura:** tablas de tres filetes en un contenedor que se desplaza solo él, figuras con carga diferida y pegadas a
+  su código, guiones a 375 px.
+
+### §1.17 Las tarjetas muestran la imagen propia del post o su índice (2026-10-20)
+
+Los posts declaran `image:`, pero casi todos apuntan a la misma foto genérica de la serie (el `featured.jpg` de la
+carpeta superior, una sola imagen en 38 carpetas): repetida en cada tarjeta no distingue nada.
+`_aula/src/lib/imagenes.mjs` usa la imagen propia del post solo si ningún otro post del pub la comparte (por huella del
+contenido); si no, la primera figura del cuerpo con tamaño y proporción de tarjeta; si tampoco hay, la tarjeta muestra
+el índice del texto (sus primeras secciones) sobre la retícula, con el colofón del pub. La miniatura sale a 640 × 400
+en WebP con `sharp`, con `width`, `height`, `loading="lazy"`, `decoding="async"` y `alt` vacío, porque el título
+enlazado ya dice qué es.
+
+### §1.18 El colofón: la marca de los 12 sitios (2026-10-20)
+
+Cada sitio firma con un colofón al modo de una editorial universitaria: su monograma en Petrona (Me, Ns, Eb, Ae, Op,
+Ax, Pf, Am, Rp, Dm, Ch y EA para el hub) dentro de un cuadrado de doble filete, en el acento del sitio, con el nombre
+en Petrona y «por Edison Achalma» al lado. Las letras al estilo de la tabla periódica evitan el choque de iniciales
+(tres pubs empiezan por A); el sello cuadrado de filete no se confunde con Qillqa, cuya marca es una pluma en un
+squircle oscuro. Hay dos variantes del mismo signo: de filete (cabecera, pie, familia, tarjetas) y lleno, con el
+cuadrado en el acento (favicon e ícono de pantalla de inicio, donde un filete fino no se vería). `_aula/scripts/marca.py`
+convierte monogramas y textos en trazos (`_aula/src/lib/marca.generado.mjs`) y `_aula/src/integracion/recursos.mjs`
+escribe en cada build el favicon (SVG y PNG 32), el `apple-touch-icon` (180) y la imagen Open Graph (1200 × 630, papel
+con retícula, colofón, nombre, área y firma), sin depender de las fuentes instaladas.
+
+### §1.19 Rendimiento: menos fuente y CSS en línea (2026-10-20)
+
+La primera medición del estilo de producción dio 83–88 en móvil: la hoja de estilos bloqueaba la primera pintura y se
+bajaban 360 KB de fuentes, entre ellos Source Serif con eje óptico (122 KB) y su cursiva (127 KB) en todas las
+páginas. Ahora Source Serif carga solo su eje de peso (51 KB), la cursiva solo en el lector (donde hay texto en
+cursiva), la firma de la cabecera va sin cursiva y el CSS va en línea (`inlineStylesheets: 'always'` en
+`_aula/astro.config.mjs`). Con eso methodica marca 96–98 en móvil y 100 en accesibilidad, buenas prácticas y SEO.

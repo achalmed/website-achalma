@@ -36,6 +36,15 @@ a:hover { color: var(--acento); text-decoration-color: currentColor; }
 }
 .saltar:focus-visible { top: 0.75rem; }
 
+.icono { flex: none; display: inline-block; vertical-align: -0.18em; }
+
+/* Atajo de teclado (⌘K, Ctrl K, Esc): una tecla de papel con filete. */
+kbd {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 1.6em; height: 1.5em; padding: 0 0.35em;
+  font: 500 0.72rem/1 var(--f-datos); color: var(--tinta-2);
+  background: var(--elevado); border: 1px solid var(--linea-fuerte); border-bottom-width: 2px; border-radius: var(--r-1);
+}
+
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* ── Contenedores ───────────────────────────────────────────────────────── */
@@ -45,6 +54,7 @@ a:hover { color: var(--acento); text-decoration-color: currentColor; }
 .seccion-cabeza { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem; margin-bottom: 1.5rem; }
 .seccion-cabeza h2 { font-size: var(--t-4); }
 .seccion-cabeza p { color: var(--tenue); max-width: 60ch; }
+.seccion-cabeza > a { display: inline-flex; align-items: center; gap: 0.3rem; }
 .milimetrado { background: var(--milimetrado), var(--papel); }
 
 /* ── Botones ───────────────────────────────────────────────────────────── */
@@ -63,6 +73,7 @@ a:hover { color: var(--acento); text-decoration-color: currentColor; }
 .boton.chico { min-height: 2.25rem; padding: 0.35rem 0.75rem; font-size: var(--t-0); }
 .boton[aria-pressed='true'] { background: var(--acento-suave); border-color: var(--acento); color: var(--acento); }
 .boton svg { width: 1.1em; height: 1.1em; flex: none; }
+.boton kbd { margin-left: 0.15rem; }
 .acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 /* ── Piezas de texto ───────────────────────────────────────────────────── */
@@ -84,20 +95,6 @@ a:hover { color: var(--acento); text-decoration-color: currentColor; }
 .estado.preparacion::before { border-style: dashed; }
 
 .metadatos { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: var(--t-0); color: var(--tenue); }
-
-/* Lista de entradas (blog, ediciones) */
-.entradas { list-style: none; display: grid; }
-.entrada { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.25rem 1.25rem; padding-block: 1.1rem; border-top: 1px solid var(--linea); }
-.entrada:last-child { border-bottom: 1px solid var(--linea); }
-.entrada time { color: var(--tenue); padding-top: 0.2rem; }
-.entrada h3 { font-size: var(--t-3); }
-.entrada h3 a { text-decoration: none; }
-.entrada h3 a:hover { text-decoration: underline; }
-.entrada p { color: var(--tinta-2); margin-top: 0.3rem; max-width: 66ch; }
-.entrada .metadatos { margin-top: 0.4rem; }
-@media (max-width: 560px) {
-  .entrada { grid-template-columns: 1fr; }
-}
 
 /* Movimiento con freno */
 @media (prefers-reduced-motion: reduce) {

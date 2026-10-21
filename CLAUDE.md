@@ -82,7 +82,7 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
   escribe la tabla de sitios de `cursos/index.qmd`) lleva con 301 cada URL vieja, incluidos los alias `/talk/…`.
   Lo preuniversitario pasó el 2026-10-21 a `propaedeutica` (12.º pub, B3): las sesiones de `pre_economia/2014-i` son
   posts de `_pubs/propaedeutica/economia/` y declaran sus URL viejas del hub en `aliases_hub:` (no en `aliases:`, que
-  las crearía en el dominio del pub), de donde salen sus 301. Queda aquí solo `sql`, hasta que tenga pub.
+  las crearía en el dominio del pub), de donde salen sus 301. `sql` (borrador sin curso, nunca publicado) se retiró el mismo día.
 - **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de las
   fichas que quedan); las ediciones las publica `docencia/scripts/publish-web.sh` en `_pubs/<pub>/_ediciones/`
   (contrato en `docencia/docs/estandar-docencia.md`). En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,

@@ -93,8 +93,8 @@ diseño). Tras `--aplicar`, hacer commit en cada blog y luego en el hub.
 
 ## Netlify
 
-Cada blog se publica desde su propio repo con el push de su `_site/`, y el hub
-no construye ni sirve los blogs: `despliegue-netlify.md`.
+Cada pub se publica desde su propio repo con el push de su `_vitrina/` (la vitrina que construye
+`_aula/scripts/publicar.sh`; antes, su `_site/`), y el hub no sirve los blogs: `despliegue-netlify.md`.
 
 ## Consumidores
 

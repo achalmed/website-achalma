@@ -66,9 +66,10 @@ página publicada le falta un documento al día.
 `_plantillas/`, `_extensions/`, `_filters/`, `_partials/`, los `_metadata.yml`); los `README.md` tampoco
 se renderizan. `quarto inspect .` lista las entradas exactas.
 
-**URL antiguas.** Las sesiones migradas de `talk/` y `teching/` a `cursos/` conservan su URL por
-`aliases:` en el frontmatter: Quarto genera páginas de redirección dentro de `_site/`. No hay `_redirects`
-de Netlify; el plan de rediseño lo contemplaba (`historial/course-redesign-plan.md` §7) y no se aplicó.
+**URL antiguas.** Desde el retiro de `cursos/` (`decisiones.md` §4.7) el hub lleva `_redirects` (recurso de
+`_quarto.yml`, generado por `scripts/redirecciones-cursos.py`): cada curso, edición, sesión, material y alias
+`/talk/…` va con 301 a su pub. Lo preuniversitario que queda en `cursos/` conserva sus `aliases:` (Quarto genera
+la página de redirección).
 
 **Residuos.** `CNAME` (`kapitan.net`) y `.nojekyll` son de la época de GitHub Pages; Netlify no los lee.
 `.github/` solo tiene `FUNDING.yml`: no hay GitHub Actions.
@@ -80,16 +81,24 @@ que un clon anónimo pueda traerlos.
 **Lo que queda por confirmar en el panel** (sitio `6d1408cc-…`): si hay un dominio propio configurado (el
 `CNAME` sugiere que lo hubo en GitHub Pages).
 
-## Los 11 blogs (`_pubs/*`)
+## Los pubs (`_pubs/*`): publican la vitrina
 
-Ninguno tiene `_publish.yml` ni `_redirects`; todos llevan el mismo `netlify.toml` que el hub; los 11 versionan `_site/` y lo declaran en su
-`.gitignore` (`decisiones.md` §4.2; `epsilon-y-beta`, pendiente de su render: §5). Su dominio consta en su `_quarto.yml` (`site-url`) y en
-`_pubs/pubs.yml`. Se publican como el hub: render en el pub, commit de `_site/` dentro del pub, `git push`
-a su remoto; después, el puntero en el hub (`pubs-submodulos.md`). Los 11 respondían `200` con el hub caído
-el 2026-09-21: su despliegue no depende del hub.
+Desde la fase 7 de `plataforma-educativa.md` (2026-10-20) cada pub publica `_vitrina/`, el sitio que construye
+`_aula` (catálogo, cursos, lecciones, ediciones, blog), y no el `_site/` de Quarto, que sigue en el repo como fuente
+del texto de las lecciones y de sus PDF/DOCX. Su `netlify.toml` dice `base = "/"` (cinco sitios tenían `_site` como
+base en el panel) y `publish = "_vitrina"`; `_vitrina/_redirects` lleva con 301 cada URL del sitio Quarto. Publicar un
+pub, de principio a fin:
 
-Por confirmar en el panel, por cada blog, si alguna vez cambia algo: el repo enlazado, la rama (`main`), el
-comando de build (se espera vacío) y el directorio de publicación (se espera `_site`).
+1. En el pub: escribir y confirmar; `scripts/render.sh` (solo HTML) y, si cambió un documento,
+   `scripts/render.sh --documentos --aplicar`; confirmar `_site/`, `_freeze/` y `_documentos.tsv`.
+2. En el hub: `_aula/scripts/publicar.sh <pub> --aplicar` (construye la vitrina, exige 0 rutas perdidas y 0 enlaces
+   rotos, falla si el `.gitignore` deja fuera algo de `_vitrina/`) y confirmar `_vitrina/` en el pub.
+3. `git push` del pub (la puerta R6 del gancho `pre-push` comprueba el render) y el puntero en el hub
+   (`pubs-submodulos.md`). Un cambio grande (estructura, rutas) va por rama y *pull request*: Netlify da una vista
+   previa (`deploy-preview-N--<sitio>.netlify.app`) antes del merge.
+
+Volver al sitio Quarto de un pub: `_aula/scripts/publicar.sh <pub> --volver --aplicar` (`publish = "_site"`).
+Su despliegue no depende del hub: los pubs respondían `200` con el hub caído el 2026-09-21.
 
 ## Verificación
 

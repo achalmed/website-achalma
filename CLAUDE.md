@@ -61,8 +61,10 @@ python3 core/docs.py verificar "web"         # índice de docs/ al día
 git submodule status                              # en qué commit está cada blog respecto al hub
 ```
 
-No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub y cada blog es
-`scripts/render.sh` (render reproducible) → `scripts/comparar-produccion.py` → commit de `_site/` → `git push`**: Netlify sirve el `_site` del repo, sin build. Por eso
+No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub es `scripts/render.sh`
+(render reproducible, solo HTML) → `scripts/comparar-produccion.py` → commit de `_site/` → `git push`**; **cada pub
+publica su vitrina**: render en el pub, `_aula/scripts/publicar.sh <pub> --aplicar`, commit de `_vitrina/` y push
+(`docs/despliegue-netlify.md`). Netlify sirve lo del repo, sin build. Por eso
 `_site/` está **versionado a propósito** en los 12 sitios y nunca se saca de git «por higiene»: hacerlo en
 DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 

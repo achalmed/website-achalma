@@ -1,0 +1,93 @@
+---
+// Una edición (dictado.yml): sus sesiones en orden, con la fecha y los materiales que se publicaron.
+import Base from '../../../layouts/Base.astro';
+import { datos, fechaLarga, peso, plural } from '../../../lib/datos.mjs';
+
+export function getStaticPaths() {
+  return datos().ediciones.map((ed) => ({ params: { id: ed.id }, props: { ed } }));
+}
+const { ed } = Astro.props;
+---
+<Base titulo={ed.titulo} descripcion={ed.descripcion} seccion="ediciones">
+  <section class="ed-cabeza milimetrado">
+    <div class="envoltura">
+      <nav aria-label="Ruta"><ol class="migas"><li><a href="/ediciones/">Ediciones</a></li><li><span>{ed.periodo}</span></li></ol></nav>
+      <h1>{ed.titulo}</h1>
+      {ed.descripcion && <p class="ed-desc">{ed.descripcion}</p>}
+      <p class="metadatos">
+        <span>Periodo <b class="dato">{ed.periodo}</b></span>
+        <span>Institución <b>{ed.institucion?.toUpperCase()}</b></span>
+        <span>{plural(ed.sesiones.length, 'sesión', 'sesiones')}</span>
+        <span>{plural(ed.nMateriales, 'material descargable', 'materiales descargables')}</span>
+      </p>
+      {ed.cursos.length > 0 && (
+        <p class="ed-cursos">Cursos del currículo: {ed.cursos.map((c, i) => <>{i > 0 && ', '}<a href={c.url}>{c.titulo}</a></>)}</p>
+      )}
+      {ed.legado && <p class="ed-nota">Edición anterior al estándar de cursos: se conserva tal como se publicó y sus sesiones no están ligadas a temas del currículo.</p>}
+    </div>
+  </section>
+
+  <div class="envoltura ed-cuerpo">
+    <h2>Sesiones</h2>
+    <ol class="sesiones">
+      {ed.sesiones.map((s) => (
+        <li class="sesion">
+          <span class="s-n dato" aria-hidden="true">{String(s.orden).padStart(2, '0')}</span>
+          <div class="s-cuerpo">
+            <h3><span class="sr">Sesión {s.orden}: </span>{s.titulo}</h3>
+            <p class="metadatos">
+              {s.fecha && <time datetime={s.fecha}>{fechaLarga(s.fecha)}</time>}
+              {s.curso && <span>{s.curso.titulo}</span>}
+            </p>
+            {s.materiales.length > 0 ? (
+              <ul class="materiales">
+                {s.materiales.map((m) => (
+                  <li>
+                    <a href={encodeURI(m.url)} download={m.ext !== 'pdf' ? m.nombre : undefined}>
+                      <span class="m-tipo">{m.tipoEtiqueta}</span>
+                      <span class="m-nombre">{m.nombre}</span>
+                      <span class="m-peso dato">{m.ext.toUpperCase()}, {peso(m.bytes)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="tenue sin-materiales">Sin materiales publicados.</p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+    {ed.urlHub && <p class="tenue hub">Hasta el cambio de plataforma, esta edición también se publica en el hub: <a href={ed.urlHub}>{ed.urlHub}</a>.</p>}
+  </div>
+</Base>
+
+<style>
+  .ed-cabeza { border-bottom: 1px solid var(--linea); padding-block: 2rem 2.5rem; }
+  .ed-cabeza .envoltura { display: grid; gap: 0.9rem; }
+  .ed-cabeza h1 { font-size: var(--t-5); max-width: 24ch; }
+  .ed-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 58ch; }
+  .metadatos b { color: var(--tinta); font-weight: 600; }
+  .ed-cursos { font-size: var(--t-1); }
+  .ed-nota { font-size: var(--t-1); color: var(--tinta-2); max-width: 62ch; padding: 0.6rem 0.9rem; border-left: 3px solid var(--acento); background: var(--vidrio); }
+  .ed-cuerpo { padding-block: 2.5rem; max-width: 62rem; }
+  .ed-cuerpo h2 { font-size: var(--t-4); margin-bottom: 1rem; }
+  .sesiones { list-style: none; display: grid; }
+  .sesion { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding-block: 1.25rem; border-top: 1px solid var(--linea); }
+  .s-n { font-size: 1.4rem; color: var(--acento); line-height: 1.2; }
+  .s-cuerpo { display: grid; gap: 0.5rem; min-width: 0; }
+  .s-cuerpo h3 { font-size: var(--t-3); }
+  .materiales { list-style: none; display: grid; gap: 0.4rem; margin-top: 0.35rem; }
+  .materiales a {
+    display: grid; grid-template-columns: 6.5rem 1fr auto; gap: 0.75rem; align-items: baseline;
+    padding: 0.55rem 0.8rem; border: 1px solid var(--linea); border-radius: var(--r-2); background: var(--elevado);
+    text-decoration: none; font-size: var(--t-1);
+  }
+  .materiales a:hover { border-color: var(--acento); }
+  .m-tipo { font-size: var(--t-0); color: var(--acento); font-weight: 600; }
+  .m-nombre { overflow-wrap: anywhere; }
+  .m-peso { color: var(--tenue); font-size: 0.72rem; white-space: nowrap; }
+  @media (max-width: 560px) { .materiales a { grid-template-columns: 1fr; gap: 0.2rem; } .sesion { grid-template-columns: 2.25rem 1fr; } }
+  .sin-materiales { font-size: var(--t-0); }
+  .hub { margin-top: 2rem; font-size: var(--t-0); overflow-wrap: anywhere; }
+</style>

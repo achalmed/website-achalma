@@ -1,0 +1,17 @@
+# config/vitrina.yml — presentación de cada pub en la vitrina del aula (provisional, fase 4).
+# Solo lo que ninguna fuente dice todavía: el acento (un token de src/styles/tokens.css, nunca un hex) y, si
+# hace falta, el nombre visible con tildes. En la fase 7 esto pasa al `pub.yml` de cada pub
+# (web/docs/plataforma-educativa.md §4.7) y este archivo desaparece.
+# leccion_destacada (opcional): «curso/slug» de la lección que muestra la portada; si falta, se elige sola.
+pubs:
+  methodica:          { acento: revista }
+  numerus-scriptum:   { acento: laboratorio }
+  epsilon-y-beta:     { acento: indigo }
+  aequilibria:        { acento: cobalto }
+  optimums:           { acento: petroleo }
+  axiomata:           { acento: pizarra }
+  pecunia-fluxus:     { acento: musgo }
+  actus-mercator:     { acento: abeto }
+  res-publica:        { acento: marino }
+  dialectica-y-mercado: { acento: tinta, nombre: Dialéctica y Mercado }
+  chaska:             { acento: glaciar }

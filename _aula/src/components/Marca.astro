@@ -1,0 +1,17 @@
+---
+// Marca.astro — el signo común de los pubs: una celda de papel milimetrado con un milímetro ocupado.
+// Todos los pubs llevan el mismo signo; cambia el acento (data-acento en <html>).
+interface Props { tamano?: number }
+const { tamano = 24 } = Astro.props;
+---
+<svg class="signo" width={tamano} height={tamano} viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="1" y="1" width="22" height="22" rx="3" class="signo-marco" />
+  <path d="M8.33 1v22M15.67 1v22M1 8.33h22M1 15.67h22" class="signo-reticula" />
+  <rect x="8.33" y="8.33" width="7.34" height="7.34" class="signo-celda" />
+</svg>
+<style>
+  .signo { flex: none; }
+  .signo-marco { fill: var(--elevado); stroke: var(--tinta); stroke-width: 1.5; }
+  .signo-reticula { stroke: var(--acento); stroke-width: 0.75; opacity: 0.55; fill: none; }
+  .signo-celda { fill: var(--acento); }
+</style>

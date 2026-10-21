@@ -1,0 +1,99 @@
+/* src/styles/contenido.css — el cuerpo de lecciones y artículos (HTML extraído de Quarto).
+   Serif de lectura, matemáticas KaTeX, código con las clases de resaltado de Pandoc, figuras, tablas y
+   avisos (callouts). Todo dentro de .prosa para no tocar la interfaz. */
+
+.prosa {
+  font-family: var(--f-lectura);
+  font-size: var(--t-lectura);
+  font-optical-sizing: auto;
+  line-height: 1.7;
+  color: var(--tinta);
+  hanging-punctuation: first;
+  overflow-wrap: break-word;
+}
+.prosa > * + *, .prosa section > * + * { margin-top: 1.1em; }
+.prosa p, .prosa li { max-width: var(--medida); }
+.prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { margin-top: 2.2em; margin-bottom: 0.2em; scroll-margin-top: 5rem; }
+.prosa section > h2:first-child, .prosa section > h3:first-child { margin-top: 2.2em; }
+.prosa h2 { font-size: var(--t-4); }
+.prosa h3 { font-size: var(--t-3); }
+.prosa h4 { font-size: 1.125rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; }
+.prosa h5, .prosa h6 { font-size: 1rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; }
+.prosa .header-section-number { font-family: var(--f-datos); font-size: 0.62em; color: var(--acento); margin-right: 0.6em; vertical-align: 0.18em; font-weight: 400; }
+.prosa ul, .prosa ol { padding-left: 1.4em; }
+.prosa li + li { margin-top: 0.3em; }
+.prosa li::marker { color: var(--tenue); }
+.prosa a { color: var(--acento); }
+.prosa strong { font-weight: 650; }
+.prosa blockquote { margin: 1.5em 0; padding-left: 1.2em; border-left: 2px solid var(--acento); color: var(--tinta-2); font-style: italic; }
+.prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5em 0; }
+.prosa .enlace-sin-destino { text-decoration: underline dotted var(--tenue); }
+
+/* Código en línea y en bloque */
+.prosa code { font-family: var(--f-datos); font-size: 0.84em; }
+.prosa :not(pre) > code {
+  background: var(--acento-suave); padding: 0.1em 0.35em; border-radius: var(--r-1);
+  border: 1px solid color-mix(in oklab, var(--acento) 18%, transparent);
+}
+.prosa pre {
+  margin: 0; padding: 1rem 1.1rem; overflow-x: auto;
+  background: var(--codigo-fondo); border: 1px solid var(--linea); border-radius: var(--r-2);
+  font-size: 0.9rem; line-height: 1.6; tab-size: 4;
+}
+.prosa div.sourceCode, .prosa .cell { margin-top: 1.2em; position: relative; }
+.prosa .code-copy-outer-scaffold { position: relative; }
+.prosa pre code { font-size: inherit; background: none; border: 0; padding: 0; white-space: pre; }
+.prosa pre code > span { display: inline; }
+.prosa .cell-output pre, .prosa .cell-output-stdout pre { background: transparent; border-style: dashed; color: var(--tinta-2); }
+.prosa .boton-copiar {
+  position: absolute; top: 0.4rem; right: 0.4rem; padding: 0.2rem 0.5rem; min-height: 0;
+  font: 500 var(--t-0)/1.4 var(--f-interfaz); color: var(--tenue);
+  background: var(--vidrio-fuerte); border: 1px solid var(--linea); border-radius: var(--r-1); cursor: pointer;
+  opacity: 0; transition: opacity 0.15s;
+}
+.prosa div.sourceCode:hover .boton-copiar, .prosa .boton-copiar:focus-visible { opacity: 1; }
+@media (hover: none) { .prosa .boton-copiar { opacity: 1; } }
+
+/* Resaltado de Pandoc (clases cortas) */
+.prosa code span.kw, .prosa code span.cf, .prosa code span.im { color: var(--cod-palabra); font-weight: 500; }
+.prosa code span.dt, .prosa code span.at { color: var(--cod-funcion); }
+.prosa code span.st, .prosa code span.ss, .prosa code span.vs, .prosa code span.ch, .prosa code span.sc { color: var(--cod-cadena); }
+.prosa code span.dv, .prosa code span.bn, .prosa code span.fl, .prosa code span.cn { color: var(--cod-numero); }
+.prosa code span.co, .prosa code span.do, .prosa code span.an, .prosa code span.cv, .prosa code span.in { color: var(--cod-comentario); font-style: italic; }
+.prosa code span.fu, .prosa code span.bu { color: var(--cod-funcion); }
+.prosa code span.op, .prosa code span.ot, .prosa code span.va { color: var(--tinta); }
+.prosa code span.al, .prosa code span.er, .prosa code span.wa { color: var(--cod-numero); font-weight: 600; }
+
+/* Matemáticas */
+.prosa .katex { font-size: 1.05em; }
+.prosa .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 0.4em; margin: 1.2em 0; }
+
+/* Figuras y tablas */
+.prosa img { border-radius: var(--r-1); }
+.prosa figure { margin: 1.6em 0; }
+.prosa figcaption, .prosa .figure-caption, .prosa caption {
+  font-family: var(--f-interfaz); font-size: var(--t-0); color: var(--tenue); margin-top: 0.6em; text-align: left;
+}
+.prosa table { border-collapse: collapse; width: 100%; font-family: var(--f-interfaz); font-size: var(--t-1); font-variant-numeric: tabular-nums; }
+.prosa .table-wrap, .prosa .cell-output-display { overflow-x: auto; }
+.prosa table { display: block; overflow-x: auto; max-width: 100%; }
+.prosa thead th { border-bottom: 1px solid var(--tinta); text-align: left; }
+.prosa th, .prosa td { padding: 0.45em 0.75em; border-bottom: 1px solid var(--linea); vertical-align: top; }
+.prosa table { border-top: 1px solid var(--tinta); border-bottom: 1px solid var(--tinta); }
+
+/* Avisos de Quarto */
+.prosa .callout { border: 1px solid var(--linea); border-left: 3px solid var(--acento); border-radius: var(--r-2); background: var(--elevado); margin-top: 1.4em; }
+.prosa .callout-header { font-family: var(--f-interfaz); font-weight: 600; font-size: var(--t-1); padding: 0.7rem 1rem 0; }
+.prosa .callout-icon-container { display: none; }
+.prosa .callout-body-container, .prosa .callout-body { padding: 0.4rem 1rem 0.9rem; }
+.prosa .callout-body > * + * { margin-top: 0.8em; }
+.prosa .callout-tip, .prosa .callout-important { border-left-color: var(--acento); }
+.prosa .callout-warning, .prosa .callout-caution { border-left-color: var(--cod-numero); }
+
+/* Pestañas de Quarto sin Bootstrap: se muestran todas, una tras otra */
+.prosa .panel-tabset .nav { display: none; }
+.prosa .tab-pane + .tab-pane { margin-top: 1.5em; padding-top: 1em; border-top: 1px dashed var(--linea); }
+
+/* Notas al pie y referencias */
+.prosa .footnotes, .prosa #refs { font-size: var(--t-1); color: var(--tinta-2); }
+.prosa .csl-entry { padding-left: 1.5em; text-indent: -1.5em; margin-top: 0.6em; }

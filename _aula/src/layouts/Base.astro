@@ -1,0 +1,56 @@
+---
+// Base.astro — el esqueleto común de todas las páginas de un pub.
+import '@fontsource-variable/source-serif-4/opsz.css';
+import '@fontsource-variable/source-serif-4/opsz-italic.css';
+import '@fontsource-variable/red-hat-text';
+import '@fontsource-variable/petrona';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/paleta.generado.css';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import Cabecera from '../components/Cabecera.astro';
+import Pie from '../components/Pie.astro';
+import { datos } from '../lib/datos.mjs';
+
+interface Props {
+  titulo?: string;
+  descripcion?: string | null;
+  seccion?: 'inicio' | 'cursos' | 'blog' | 'ediciones' | null;
+  clase?: string;
+}
+const { titulo, descripcion, seccion = null, clase = '' } = Astro.props;
+const { pub, ediciones } = datos();
+const tituloCompleto = titulo ? `${titulo} — ${pub.nombre}` : `${pub.nombre} — ${pub.area?.nombre ?? pub.tema}`;
+const desc = descripcion || pub.descripcion;
+const canonica = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="es" data-pub={pub.id} data-acento={pub.acento}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{tituloCompleto}</title>
+  <meta name="description" content={desc} />
+  <link rel="canonical" href={canonica} />
+  <meta property="og:title" content={tituloCompleto} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:locale" content="es_PE" />
+  <meta name="generator" content="aula (prototipo, fase 4)" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script is:inline>
+    // Tema y modo lectura elegidos, antes de pintar (sin parpadeo). Si el almacenamiento falla, manda el sistema.
+    try {
+      const t = JSON.parse(localStorage.getItem('aula:tema'));
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch {}
+  </script>
+</head>
+<body class={clase}>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+  <Cabecera seccion={seccion} hayEdiciones={ediciones.length > 0} />
+  <main id="principal" tabindex="-1">
+    <slot />
+  </main>
+  <Pie />
+</body>
+</html>

@@ -9,7 +9,7 @@ actualizado: 2026-10-20
 
 | fecha | qué | dónde se ve |
 |---|---|---|
-| 2026-10-20 | Alta del repo con el nombre que eligió el autor (B4) | este commit |
+| 2026-10-20 | Alta del repo con el nombre que eligió el autor (B4) y entrada en `meta/workspace.yml` | `528a696` · `meta/workspace.yml` |
 
 ## En curso
 
@@ -18,8 +18,7 @@ Punto exacto: esqueleto de gobierno hecho; siguiente paso: proyecto Astro con do
 
 ## Por hacer
 
-- 2026-10-20 · director · Entrada en `meta/workspace.yml` (alta, procedimiento §1), junto con la de `simuladores`, cuando se confirme el `workspace.yml` de la sesión de Qillqa.
-- 2026-10-20 · autor · Remoto en GitHub: decidir si es público (no lleva datos personales) o privado.
+- 2026-10-20 · dueño: autor · Remoto en GitHub: decidir si es público (no lleva datos personales) o privado.
 
 ## Futuro
 

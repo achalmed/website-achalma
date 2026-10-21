@@ -10,7 +10,7 @@ Rigen las reglas del `CLAUDE.md` raíz de `~/Documents`: aquí solo lo que el ra
 
 ## Reglas propias
 
-- **Solo lee las fuentes; nunca las escribe**: `docencia` (currículo: `curso.yml`, `config/areas.yml`), los pubs
+- **Solo lee las fuentes; nunca las escribe**: `docencia` (currículo: `curso.yml`, `docencia/config/areas.yml`), los pubs
   (`web/_pubs/<pub>`), `simuladores` (`catalogo.json`). Rutas por `core/env.py` / `core/env.sh`.
 - **Nada de datos de estudiantes en el repo** (regla 8): el aula con cuenta guarda sus datos fuera, con respaldo cifrado.
 - **Identidad «Laboratorio abierto»**: los tokens vienen del design system del hub (`web/assets/scss/00-settings/`);

@@ -2,7 +2,7 @@
 tipo: readme
 estado: borrador
 ---
-# aula — la plataforma de cursos de los pubs
+# aula/ — la plataforma de cursos de los pubs
 
 `aula` es el código de la plataforma educativa: convierte cada pub (los blogs de `web/_pubs`) en un aula con
 catálogo, cursos, lecciones, materiales, autoevaluaciones y simuladores, y, más adelante, en un aula con cuenta

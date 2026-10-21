@@ -11,17 +11,17 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 ## Reglas que no se negocian
 
 - **`_quarto.yml` es el único sitio que cablea la navegación**: navbar, pie, tema, comentarios, SEO y el
-  menú «More» con los 11 blogs. Un blog nuevo o renombrado se declara ahí y en `_pubs/pubs.yml`, nunca a
-  mano en un README: los README y `CITATION.cff` de los pubs y la tabla «Los 11 blogs satélite» del
+  menú «More» con los 12 blogs. Un blog nuevo o renombrado se declara ahí y en `_pubs/pubs.yml`, nunca a
+  mano en un README: los README y `CITATION.cff` de los pubs y la tabla «Los 12 blogs satélite» del
   `README.md` los escribe `python3 scripts/pubs.py readme --aplicar` (sin `--aplicar` simula).
 - **Los blogs se editan y confirman dentro de `_pubs/*`** (cada uno es repo, `_quarto.yml` y sitio
   Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/x && git commit`). Nunca
   `git rm` ni mover `_pubs/` a mano: `scripts-quarto` (gestor de blogs, metadatos, `_indice/`) y
   `scripts_document_studio` (`page-counter`) resuelven los blogs por `web/_pubs` (lista en
-  `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 11.
+  `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 12.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con
-  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva o un enlace roto). **El tema se comparte por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): los nombres de `scripts/tema-hardlinks.txt` son un solo inodo en los 12 sitios. Se editan en su sitio, nunca con `sed -i` ni con un editor que guarde por renombre (rompe el enlace); `--aplicar` los vuelve a enlazar con `scripts-linux/script_hardlinks-creator`.
+  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva o un enlace roto). **El tema se comparte por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): los nombres de `scripts/tema-hardlinks.txt` son un solo inodo en los 13 sitios (el hub y los 12 pubs). Se editan en su sitio, nunca con `sed -i` ni con un editor que guarde por renombre (rompe el enlace); `--aplicar` los vuelve a enlazar con `scripts-linux/script_hardlinks-creator`.
   Excluidos a propósito: `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`,
   `_quarto.yml`, `index.qmd`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`. `_extensions/` se copia (no se enlaza):
   la copia que hay en un pub no se edita, el siguiente `--aplicar` la pisaría.
@@ -54,7 +54,7 @@ quarto render                                     # todo el sitio; freeze: no re
 quarto render cursos/index.qmd                    # un archivo suelto: sí ejecuta su código
 # cuántas entradas renderiza el proyecto (docs/ no debe aparecer)
 quarto inspect . | python3 -c "import json,sys; print(len(json.load(sys.stdin)['files']['input']))"
-scripts/sync-theme-pubs.sh --verificar            # tema de los 11 blogs igual al del hub
+scripts/sync-theme-pubs.sh --verificar            # tema de los 12 blogs igual al del hub
 python3 scripts/pubs.py verificar                 # README/CITATION de los pubs y tabla del hub al día
 python3 core/archivos.py validar "web"       # normativa A01–A14 y D01–D12
 python3 core/docs.py verificar "web"         # índice de docs/ al día
@@ -80,8 +80,9 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **`cursos/` se retiró en la fase 7** (2026-10-20, `docs/decisiones.md` §4.7): cada curso y cada edición viven
   en el pub de su área (vitrina `_aula`); `_redirects` (lo genera `scripts/redirecciones-cursos.py`, que también
   escribe la tabla de sitios de `cursos/index.qmd`) lleva con 301 cada URL vieja, incluidos los alias `/talk/…`.
-  Quedan aquí solo lo preuniversitario (`pre_*`, `curso-0`) y `sql`, hasta que tengan pub; su jerarquía es la
-  heredada (`cursos/pre_economia/2014-i/sesiones/`), con `aliases:` hacia `/teching/…`.
+  Lo preuniversitario pasó el 2026-10-21 a `propaedeutica` (12.º pub, B3): las sesiones de `pre_economia/2014-i` son
+  posts de `_pubs/propaedeutica/economia/` y declaran sus URL viejas del hub en `aliases_hub:` (no en `aliases:`, que
+  las crearía en el dominio del pub), de donde salen sus 301. Queda aquí solo `sql`, hasta que tenga pub.
 - **Escritores externos.** En `cursos/`: `docencia/scripts/temario-generar.sh` (la sección generada de las
   fichas que quedan); las ediciones las publica `docencia/scripts/publish-web.sh` en `_pubs/<pub>/_ediciones/`
   (contrato en `docencia/docs/estandar-docencia.md`). En `observatorio/`: `datafw/tools/plataforma.py` (`plataforma.html` con `--salida`,

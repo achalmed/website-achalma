@@ -6,7 +6,7 @@ estado: activo
 
 # Los blogs satélite (`_pubs/*`) como submódulos del hub
 
-Cómo se trabaja con los 11 blogs satélite, que viven dentro del hub como submódulos git, y qué
+Cómo se trabaja con los 12 blogs satélite, que viven dentro del hub como submódulos git, y qué
 herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` §2.1.
 
 ## Qué es y qué no es
@@ -14,7 +14,7 @@ herramientas dependen de esa ruta. Por qué se organizó así: `decisiones.md` �
 - Cada `pub_*` **sigue siendo su propio repositorio** (remote ssh
   `git@github.com:achalmed/<nombre>.git`), su propio proyecto Quarto y su
   propio sitio Netlify. Nada de eso cambió.
-- El hub registra los 11 en `.gitmodules` con URL **https** (para que
+- El hub registra los 12 en `.gitmodules` con URL **https** (para que
   cualquier clon anónimo pueda traerlos) y `shallow = true` (clon
   superficial: solo el árbol de trabajo, no el historial).
 - La carpeta se llama `_pubs/` con guion bajo porque Quarto ignora los

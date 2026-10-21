@@ -1,4 +1,4 @@
-# _pubs/pubs.yml — registro de los 11 blogs satélite del hub: carpeta ↔ repo ↔ dominio ↔ tema (DOC5, 2026-09-20).
+# _pubs/pubs.yml — registro de los blogs satélite del hub (11 + propaedeutica, el 12.º desde 2026-10-21): carpeta ↔ repo ↔ dominio ↔ tema (DOC5, 2026-09-20).
 # Fuente de verdad del nombre de cada blog en sus tres formas (carpeta `pub_<x>`, repo GitHub `achalmed/<x>`,
 # dominio Netlify) y de su tema y descripción. De aquí genera `scripts/pubs.py` el README y el CITATION.cff de
 # cada pub y el bloque «Los 11 blogs satélite» del README del hub; `scripts/pubs.py verificar` comprueba que
@@ -76,6 +76,12 @@ pubs:
     url: https://pecunia-fluxus.netlify.app/
     tema: Finanzas
     descripcion: Finanzas personales, corporativas e internacionales.
+  - carpeta: propaedeutica
+    repo: propaedeutica
+    url: https://propaedeutica.netlify.app/
+    tema: Preuniversitario y nivelación
+    descripcion: Álgebra, aritmética, trigonometría, física y economía para el ingreso universitario, y cursos de nivelación.
+    nota: el 12.º blog, creado el 2026-10-21 para el área `preuniversitario` del currículo (decisión B3, `web/docs/plataforma-educativa.md` §7); nació ya como vitrina de `web/_aula`.
   - carpeta: res-publica
     repo: res-publica
     url: https://res-publica.netlify.app/

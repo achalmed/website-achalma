@@ -99,7 +99,7 @@ quiz:
     respuesta: 3.14
     tolerancia: 0.01"""
 # claves del frontmatter del patrón que son de un post concreto y no pasan al esqueleto
-NO_COPIAR = {"aliases", "bibliography", "csl", "nocite", "execute", "jupyter", "format", "quiz", "date-modified",
+NO_COPIAR = {"aliases", "aliases_hub", "bibliography", "csl", "nocite", "execute", "jupyter", "format", "quiz", "date-modified",
              "curso", "tema", "generado", "keep-ipynb"}
 FM = re.compile(r"^---\n(.*?)\n---\n", re.S)
 

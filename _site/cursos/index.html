@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-subtitle','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -158,7 +158,7 @@ window.Quarto = {
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:title" content="Cursos">
 <meta name="twitter:description" content="Cada área tiene su propio sitio con sus cursos, lecciones, ediciones y materiales descargables.">
-<meta name="twitter:image" content="https://achalmaedison.netlify.app/assets/img/default-preview.jpg">
+<meta name="twitter:image" content="https://achalmaedison.netlify.app//assets/img/default-preview.jpg">
 <meta name="twitter:creator" content="@achalmaedison">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -418,6 +418,10 @@ window.Quarto = {
  <span class="dropdown-text">Seguridad informática</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="https://propaedeutica.netlify.app/">
+ <span class="dropdown-text">Preuniversitario y nivelación</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://achalmed.github.io/lliphi/">
  <span class="dropdown-text">Lliphi · temas para KDE Plasma</span></a>
   </li>  
@@ -443,7 +447,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RWNvbm9tJUMzJUFEYQ==">Economía <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJldW5pdmVyc2l0YXJpbw==">Preuniversitario <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -525,7 +529,7 @@ window.Quarto = {
 
 
 <!-- sitios:inicio — GENERADO por scripts/redirecciones-cursos.py desde docencia/config/areas.yml y _pubs/pubs.yml; no editar -->
-<p>Los cursos viven en el sitio de su área: allí están el temario, las lecciones, las ediciones dictadas y los materiales. Lo preuniversitario sigue aquí abajo hasta que tenga su sitio.</p>
+<p>Los cursos viven en el sitio de su área: allí están el temario, las lecciones, las ediciones dictadas y los materiales. Lo que aún no tiene sitio sigue aquí abajo.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -578,6 +582,10 @@ window.Quarto = {
 <td>Sistemas y seguridad</td>
 <td><a href="https://chaska-x.netlify.app/cursos/">Chaska</a></td>
 </tr>
+<tr class="even">
+<td>Preuniversitario y nivelación</td>
+<td><a href="https://propaedeutica.netlify.app/cursos/">Propaedeutica</a></td>
+</tr>
 </tbody>
 </table>
 <!-- sitios:fin -->
@@ -589,44 +597,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RWNvbm9tJUMzJUFEYQ==" data-listing-file-modified-sort="1791633267000" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
-<a href="../cursos/curso-0/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../assets/img/default-preview.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curso 0
-</h5>
-<div class="card-subtitle listing-subtitle">
-Economía
-</div>
-<div class="card-text listing-description delink">
-<p>Nivelación en fundamentos matemáticos e introducción a la economía, previa al primer semestre.</p>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UHJldW5pdmVyc2l0YXJpbw==" data-listing-file-modified-sort="1783591443000" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
-<a href="../cursos/pre_economia/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../cursos/pre_economia/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Economía Preuniversitaria
-</h5>
-<div class="card-subtitle listing-subtitle">
-Preuniversitario
-</div>
-<div class="card-text listing-description delink">
-<p>Fundamentos de la ciencia económica para el ingreso universitario: escasez, mercados, dinero y magnitudes macroeconómicas.</p>
-</div>
-</div>
-</div></a>
-</div>
+
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
 </div>

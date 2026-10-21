@@ -7,7 +7,11 @@ Reglas (en `_redirects`, formato de Netlify, que el render copia a _site/):
                                           varios, al catálogo https://<pub>/cursos/
   · edición /cursos/<materia>/<edicion>/ → https://<pub>/ediciones/<dictado>/ ; cada sesión, al ancla de su sesión;
                                           sus materiales (slides/, practice/…), uno a uno a la misma ruta bajo la edición
-  · lo que no tiene pub todavía (preuniversitario: decisión B3, sitio por crear) NO se redirige y se queda en el hub.
+  · post trasladado del hub a un pub (frontmatter `aliases_hub:` con sus URL viejas, p. ej. las sesiones de
+    pre_economia/2014-i en propaedeutica/economia/) → su página en la vitrina del pub (la regla de su carpeta en
+    `_redirects` de la vitrina), o la portada de su curso si sigue en borrador; la portada de su edición
+    (/cursos/<materia>/<edicion>/) y lo que cuelgue de ella sin regla propia, también a la portada del curso
+  · lo que no tiene pub todavía (sql) NO se redirige y se queda en el hub.
 Las carpetas redirigidas se pueden retirar de web/cursos/; este script no borra nada: lo dice.
 
 Uso: python3 scripts/redirecciones-cursos.py [--aplicar]   (sin --aplicar simula: imprime las reglas y las pruebas)
@@ -17,6 +21,7 @@ Salida: 0 bien · 1 _redirects desfasado o destino inexistente · 2 uso incorrec
 """
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -62,6 +67,60 @@ def contexto():
 
 # Fichas del hub que no son un curso sino unidades de uno (decisión de la fase 1, 2026-10-20).
 EQUIVALENCIAS = {"algebra-lineal": "matematicas-ii", "calculo": "matematicas-ii", "optimizacion": "matematicas-iii"}
+EDICION_VIEJA = re.compile(r"^/cursos/([^/]+)/([^/]+)/sesiones/[^/]+/$")
+
+
+def frontmatter(qmd: Path) -> dict:
+    t = qmd.read_text(encoding="utf-8")
+    if not t.startswith("---"):
+        return {}
+    return yaml.safe_load(t.split("\n---", 1)[0].lstrip("-\n")) or {}
+
+
+def reglas_vitrina(pub: str) -> dict[str, str]:
+    """{/<sección>/<post>/: ruta nueva} del _redirects de la vitrina del pub (la construida en _aula/dist o la
+    publicada en _pubs/<pub>/_vitrina): así la URL nueva de un post es la que la vitrina le da, no una copia de su regla."""
+    for f in (AULA_DIST / pub / "_redirects", HUB / "_pubs" / pub / "_vitrina" / "_redirects"):
+        if f.exists():
+            out = {}
+            for linea in f.read_text(encoding="utf-8").splitlines():
+                partes = linea.split()
+                if len(partes) == 3 and not linea.startswith("#") and partes[0].endswith("/*"):
+                    out.setdefault(partes[0][:-1], partes[1].removesuffix(":splat"))
+            return out
+    return {}
+
+
+def trasladados(urls: dict[str, str]) -> list[tuple[str, str]]:
+    """301 de los posts que vivían en el hub y pasaron a un pub (frontmatter `aliases_hub:`), y de la portada de su
+    edición vieja. Primero las reglas exactas; al final, por edición, la regla `*` que recoge el resto."""
+    exactas, ediciones = [], {}
+    for pub, base in sorted(urls.items()):
+        raiz = HUB / "_pubs" / pub
+        posts = sorted(q for q in raiz.glob("*/*/index.qmd") if not q.parts[-3].startswith((".", "_")))
+        vitrina = None
+        for q in posts:
+            fm = frontmatter(q)
+            viejas = fm.get("aliases_hub") or []
+            if not viejas:
+                continue
+            if vitrina is None:
+                vitrina = reglas_vitrina(pub)
+            curso = f"{base}/cursos/{fm['curso']}/" if fm.get("curso") else f"{base}/"
+            nueva = vitrina.get(f"/{q.parent.parent.name}/{q.parent.name}/")
+            for a in viejas:
+                a = "/" + str(a).strip("/") + "/"
+                if nueva:
+                    exactas += [(a, base + nueva), (a + "index.html", base + nueva), (a + "*", base + nueva + ":splat")]
+                else:                                   # borrador: aún sin página propia en la vitrina
+                    exactas += [(a, curso), (a + "index.html", curso)]
+                m = EDICION_VIEJA.match(a)
+                if m:
+                    ediciones.setdefault((m.group(1), m.group(2)), curso)
+    for (mat, ed), curso in sorted(ediciones.items()):
+        e = f"/cursos/{mat}/{ed}/"
+        exactas += [(e, curso), (e + "index.html", curso)]
+    return exactas + [(f"/cursos/{mat}/{ed}/*", curso) for (mat, ed), curso in sorted(ediciones.items())]
 
 
 def reglas() -> tuple[list[tuple[str, str]], list[str], list[str]]:
@@ -84,7 +143,7 @@ def reglas() -> tuple[list[tuple[str, str]], list[str], list[str]]:
             pub_de_materia[m] = areas.pub_de(cursos_dir / cid / "curso.yml")
             materias.setdefault(m, []).append((cid, pub_de_materia[m]))
     ediciones = {k: (dic, pub or pub_de_materia.get(k[0]), ses) for k, (dic, pub, ses) in ediciones.items()}
-    out, retirables, quedan = [], [], []
+    out, retirables, quedan = trasladados(urls), [], []
     for m in candidatas:
         pub = pub_de_materia.get(m)
         if not pub or pub not in urls:
@@ -126,7 +185,7 @@ def bloque_sitios() -> str:
             nombre = p["carpeta"].replace("-", " ").title().replace(" Y ", " y ")
             filas.append(f"| {a['nombre']} | [{nombre}]({p['url']}cursos/) |")
     return ("Los cursos viven en el sitio de su área: allí están el temario, las lecciones, las ediciones dictadas y "
-            "los materiales. Lo preuniversitario sigue aquí abajo hasta que tenga su sitio.\n\n" + "\n".join(filas) + "\n")
+            "los materiales. Lo que aún no tiene sitio sigue aquí abajo.\n\n" + "\n".join(filas) + "\n")
 
 
 def escribir_portada(aplicar: bool) -> bool:

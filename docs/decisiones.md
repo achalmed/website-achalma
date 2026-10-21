@@ -19,7 +19,8 @@ sesión (`session_NN_slug/` con subcarpetas fijas `slides`, `practice`, `homewor
 `resources/readings`). El curso nunca cambia; se añaden ediciones. Las áreas son `categories:` de la ficha y
 facetan solas. Las URL antiguas se conservan con `aliases:`; el `_redirects` de Netlify previsto no se
 aplicó. El plan completo: `historial/course-redesign-plan.md`. La excepción heredada
-`cursos/pre_economia/2014-i/sesiones/` no se migró al nombre `session_NN_slug`.
+(las sesiones de `pre_economia` 2014-I) no se migró al nombre `session_NN_slug`; desde el 2026-10-21 son posts de
+`propaedeutica` (§4.7).
 
 **1.2 La ficha de un curso se genera desde `docencia`** (2026-09-06, F5.1–F5.4). La sección «Contenidos /
 Sílabo» de `cursos/<curso>/index.qmd` sale de `contenido/cursos/<slug>/curso.yml` con
@@ -261,11 +262,21 @@ escribe la tabla área → sitio de `cursos/index.qmd`. Las fuentes de las edici
 `_pubs/methodica/_ediciones/` (con sus hardlinks de `docencia`). Quedan en el hub lo preuniversitario y `sql`, que aún
 no tienen pub (12.º sitio, decisión B3). El render del hub pasó de 5–9 min a 80 s (solo HTML, §4.5).
 
+**12.º sitio (2026-10-21, B3).** Lo preuniversitario pasó a `_pubs/propaedeutica` (repo público `achalmed/propaedeutica`,
+`propaedeutica.netlify.app`), que nació ya como vitrina de `_aula` (`netlify.toml` publica `_vitrina`). El área
+`preuniversitario` de `docencia/config/areas.yml` apunta a él; sus cursos (álgebra, aritmética, trigonometría, física y
+economía preuniversitarias, más `curso-0`) tienen el temario del libro de curso de `11 Book` (una semana por tema). Las 14
+sesiones de la edición 2014-I de la ficha `pre_economia` (retirada del hub) son posts de su sección `economia/`; sus URL del hub van en `aliases_hub:` y no en
+`aliases:`: en un pub, `aliases:` crea las páginas de reenvío en el dominio del pub (donde esas URL nunca existieron) y la
+prueba de rutas de la vitrina las da por perdidas; el hub es quien debe responder con 301, y `redirecciones-cursos.py` las
+lee de ahí (la portada de la edición y lo que cuelgue de ella van a la portada del curso). En `cursos/` queda solo `sql`.
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |
 |---|---|---|---|
 | **Netlify del hub** | **El hub no se publica desde git desde el 2026-10-04**: Netlify sirve `main@a920cee` y cada despliegue nuevo (incluido el PR #11 de la fase 7) falla al clonar con «This resource could not be found», es decir, Netlify no puede leer `achalmed/website-achalma` (probablemente el enlace quedó con el nombre viejo `website`). Arreglo, en la cuenta del autor: Netlify → sitio `achalmaedison` → Site configuration → Build & deploy → Repository → volver a enlazar `achalmed/website-achalma` (rama `main`, publish `_site`) y desplegar. Mientras tanto producción sigue con lo del 2026-10-04 (incluido `web/cursos`, cuyas páginas siguen funcionando); al arreglarlo se publican de golpe el retiro de `cursos/` y sus 301 | 2026-10-20 | autor |
+| **Netlify de propaedeutica** | El 12.º sitio (§4.7) tiene repo (`achalmed/propaedeutica`, rama `main`, con `_vitrina/` empujada) pero no sitio en Netlify: crearlo es de la cuenta del autor. Pasos: Netlify → **Add new site** → **Import an existing project** → **Deploy with GitHub** → elegir `achalmed/propaedeutica` → rama `main`; no tocar los campos de build (los lee de `netlify.toml`: base `/`, publish `_vitrina`, sin comando) → **Deploy**; luego **Site configuration → Change site name** → `propaedeutica` (para que la URL sea `propaedeutica.netlify.app`, la de `_pubs/pubs.yml`). Comprobar `https://propaedeutica.netlify.app/cursos/` y una 301 del hub (`/cursos/pre_economia/` → propaedeutica) cuando el hub vuelva a publicarse (fila «Netlify del hub») | 2026-10-21 | autor |
 | **epsilon** | `epsilon-y-beta` renderizado entero el 2026-10-08 (ola 6, `scripts/render.sh`, LuaLaTeX): 247 archivos de `_site/`, sin salidas sueltas en las carpetas fuente; confirmado y R6 en verde, **sin push**. Queda el bloque de `.gitignore` de §4.2 (ya presente) | 2026-10-04 | autor · resuelto en local; publicar con la comparación de la ola 6 |
 | figuras de numerus | confirmadas con el render de la ola 6 (2026-10-08); se publican con el próximo push | 2026-10-04 | autor · resuelto en local |
 | ~~`_freeze/` de numerus~~ | **resuelto el 2026-10-20**: se versiona a propósito (las lecciones de Python se ejecutan una vez con `freeze`, decisión del autor) y su `.gitignore` lo declara con `!/_freeze/`, como `_site/` | 2026-10-04 | resuelto |

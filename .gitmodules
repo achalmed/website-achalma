@@ -53,3 +53,8 @@
 	url = https://github.com/achalmed/res-publica.git
 	branch = main
 	shallow = true
+[submodule "_pubs/propaedeutica"]
+	path = _pubs/propaedeutica
+	url = https://github.com/achalmed/propaedeutica.git
+	branch = main
+	shallow = true

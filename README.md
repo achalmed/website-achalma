@@ -2,14 +2,14 @@
 tipo: readme
 estado: activo
 ---
-# web/ — hub académico Quarto de Edison Achalma y fuente del tema de sus 11 blogs (repo `website-achalma`)
+# web/ — hub académico Quarto de Edison Achalma y fuente del tema de sus 12 blogs (repo `website-achalma`)
 
 ## Qué es
 
 El sitio personal <https://achalmaedison.netlify.app>: un proyecto Quarto (`type: website`) en español con
 blog, repositorio docente (`cursos/`), publicaciones y páginas de contacto, que además es el **hub** de una
-familia de 11 blogs temáticos. Los artículos y entradas usan la extensión `apaquarto` para salir en HTML,
-PDF y DOCX con formato APA 7 desde un mismo `.qmd`. Los 11 blogs son submódulos git en `_pubs/*`, cada
+familia de 12 blogs temáticos. Los artículos y entradas usan la extensión `apaquarto` para salir en HTML,
+PDF y DOCX con formato APA 7 desde un mismo `.qmd`. Los 12 blogs son submódulos git en `_pubs/*`, cada
 uno con su repo, su `_quarto.yml` y su sitio Netlify; el hub es la **fuente de verdad del tema** (SCSS, JS,
 extensiones y filtros Lua, `meta/workspace.yml` → `verdad:`) y lo propaga con `scripts/sync-theme-pubs.sh`.
 
@@ -30,7 +30,7 @@ scripts/render.sh --documentos --aplicar                 # PDF y DOCX solo de lo
 quarto render blog/posts/2023-05-12-la-economia-peruana-entre-1970-1990/index.qmd   # un solo documento (sí ejecuta)
 git add _site && git commit -m "render: _site actualizado" && git push   # publicar: Netlify sirve el _site del repo, sin build
 scripts/sync-theme-pubs.sh --verificar                   # ¿algún blog difiere del tema del hub? (sale 1 si sí)
-scripts/sync-theme-pubs.sh --aplicar                     # propaga el tema a los 11 blogs (sin --aplicar simula)
+scripts/sync-theme-pubs.sh --aplicar                     # propaga el tema a los 12 blogs (sin --aplicar simula)
 python3 scripts/pubs.py verificar                        # README y CITATION.cff de los pubs y la tabla de abajo, al día
 python3 scripts/pubs.py readme --aplicar                 # los regenera desde _pubs/pubs.yml (sin --aplicar simula)
 git submodule update --remote --merge                    # trae main de cada blog y mueve los punteros del hub
@@ -39,7 +39,7 @@ git submodule update --remote --merge                    # trae main de cada blo
 Publicar un post, de principio a fin: `docs/publicar-un-post.md`. Trabajar con los blogs como submódulos
 (commit dentro del pub, puntero en el hub, clon nuevo): `docs/pubs-submodulos.md`.
 
-## Los 11 blogs satélite
+## Los 12 blogs satélite
 
 Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La tabla la escribe
 `python3 scripts/pubs.py readme --aplicar`; no se edita a mano.
@@ -57,22 +57,23 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 97 |
 | `_pubs/optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 35 |
 | `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 31 |
+| `_pubs/propaedeutica` | Preuniversitario y nivelación | `achalmed/propaedeutica` | https://propaedeutica.netlify.app/ | 205 |
 | `_pubs/res-publica` | Gestión pública | `achalmed/res-publica` | https://res-publica.netlify.app/ | 3 |
 
-<sub>Bloque generado por `scripts/pubs.py readme --aplicar` desde `_pubs/pubs.yml` (2026-10-20); no se edita a mano.</sub>
+<sub>Bloque generado por `scripts/pubs.py readme --aplicar` desde `_pubs/pubs.yml` (2026-10-21); no se edita a mano.</sub>
 <!-- pubs:fin -->
 
 ## Estructura
 
 | carpeta / archivo | qué es | dueño / generador |
 |---|---|---|
-| `_quarto.yml` | el manifiesto: proyecto, navegación (incluido el menú «More» con los 11 blogs), tema, formatos, comentarios, `render` | a mano |
+| `_quarto.yml` | el manifiesto: proyecto, navegación (incluido el menú «More» con los 12 blogs), tema, formatos, comentarios, `render` | a mano |
 | `index.qmd`, `about/`, `contact.qmd`, `appointment/`, `beschikbaarheid/`, `accessibility.qmd`, `license.qmd`, `404.qmd` | páginas del sitio | a mano |
 | `blog/posts/<AAAA-MM-DD-slug>/index.qmd` | entradas con metadatos APA completos; `blog/posts/_metadata.yml` fija autor, formatos y `draft: true` por defecto | a mano; el frontmatter lo edita en masa `scripts-quarto` (`script_metadata_manager`); los índices `_contenido_<sección>.qmd`, `script_generador_publicacion_similar`; `blog/_contenido-inicio.qmd` y `_contenido-final.qmd`, a mano |
 | `cursos/` | repositorio docente tipo OpenCourseWare: `<curso>/index.qmd` (ficha) → `<edicion>/` → `session_NN_slug/`; README propio | fichas a mano; la sección «Contenidos / Sílabo» la genera `docencia/scripts/temario-generar.sh`; las ediciones las enlaza `docencia/scripts/publish-web.sh` |
 | `publication/` | publicaciones formales (informe ENIS 2022–2023) | a mano |
 | `observatorio/` | sección «Datos»: `index.qmd` (entrada, con el tema del hub) y `plataforma.html` (observatorio autocontenido que se copia sin renderizar, `project.resources`) | `datafw/tools/plataforma.py` escribe `plataforma.html` (`--salida`) y el bloque `cifras:` de `index.qmd` (`--cifras-en`); el resto de `index.qmd`, a mano |
-| `_pubs/` | los 11 blogs como submódulos (`.gitmodules`: https, `shallow = true`) y `pubs.yml`, su registro | contenido en cada pub; README y `CITATION.cff` de cada pub, `scripts/pubs.py` |
+| `_pubs/` | los 12 blogs como submódulos (`.gitmodules`: https, `shallow = true`) y `pubs.yml`, su registro | contenido en cada pub; README y `CITATION.cff` de cada pub, `scripts/pubs.py` |
 | `assets/` | design system «Quiet Laboratory»: `assets/scss/` (fuente), `assets/css/pages/` (**generado** por `scripts/build-page-css.sh`), `assets/css/global.css` y `assets/css/components/bibbase.css` (a mano), `assets/js/`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`, `assets/interactions.html` | a mano salvo `assets/css/pages/`; README en `assets/scss/` y `assets/js/` |
 | `_extensions/` · `_filters/` · `_partials/` | extensiones vendorizadas (apaquarto, fontawesome, lightbox); filtros Lua (`_metadata-pdf.lua`, `apa-floats-html.lua`); bloque de título propio | vendorizado y versionado; a mano |
 | `scripts/` | `build-page-css.sh` (gancho `pre-render`), `sync-theme-pubs.sh`, `pubs.py`; README propio | a mano |

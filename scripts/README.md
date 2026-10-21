@@ -28,7 +28,15 @@ python3 scripts/pubs.py citation --aplicar   # el CITATION.cff de cada pub (tít
 python3 scripts/pubs.py readme --solo axiomata   # un solo blog (readme y citation admiten --solo)
 python3 scripts/pubs.py verificar         # sale 1 si el registro, .gitmodules, los site-url o lo generado no coinciden
 python3 scripts/pubs.py verificar --doctor   # la misma comprobación, en el formato del doctor
+python3 scripts/cursos.py                 # simula: una lección por tema en el pub de cada curso con temario revisado
+python3 scripts/cursos.py --aplicar --pub optimums   # declara curso/tema, retira duplicados, mueve notas, crea esqueletos
+python3 scripts/cursos.py verificar       # sale 1 si a algún tema le falta su lección declarada o algo no cuadra
 ```
+
+Tras `cursos.py --aplicar`: `python3 docencia/contenido/migracion/mapa-lecciones.py --aplicar` (el mapa toma lo
+declarado), `scripts/pubs.py readme --aplicar` (los README cuentan las entradas), el render del pub
+(`scripts/render.sh` y `scripts/render.sh --documentos --aplicar`) y los commits: en el pub, en `docencia/contenido`
+si se movieron notas o cambió un `archivo`, y los punteros en el hub y en `docencia`. Por qué así: `../docs/decisiones.md` §4.6.
 
 Tras `sync-theme-pubs.sh --aplicar` o `pubs.py … --aplicar`: revisar, hacer commit **en cada pub** y luego
 en el hub (mueve los punteros de submódulo). Ver `../docs/pubs-submodulos.md`.
@@ -48,6 +56,7 @@ en el hub (mueve los punteros de submódulo). Ver `../docs/pubs-submodulos.md`.
 | `quitar-borradores.py` | `post-render` de los 12 sitios: los borradores no se publican (decisión del autor, 2026-10-08); quita del `_site/` la carpeta de cada `index.qmd` con `draft: true` (Quarto deja una página vacía y un PDF con la portada) y avisa si una página publicada enlaza un borrador (`--estricto` sale 1); simula sin `--aplicar`; viaja con el tema | las fuentes con `draft: true` | `_site/` |
 | `publicar.sh` | publica la familia: comprueba que cada sitio está limpio y con la puerta R6 en verde y empuja los pubs y después el hub (Netlify despliega con cada push); `--pub <x>` o `--hub` para uno; simula sin `--aplicar` | git de los 12 sitios | sus remotos de GitHub (solo con `--aplicar`) |
 | `pubs.py` | genera desde `_pubs/pubs.yml` (registro carpeta ↔ repo ↔ dominio ↔ tema ↔ descripción de los 11 blogs) el `README.md` y el `CITATION.cff` completos de cada pub (con marca GENERADO) y el bloque `<!-- pubs:inicio -->` … `<!-- pubs:fin -->` del `README.md` del hub; las secciones temáticas de cada blog las lee del disco; `verificar` compara con `.gitmodules` y el `site-url` de cada `_quarto.yml` sin escribir. Solo requiere PyYAML; no carga `core/` (el hub es un repo público y clonable) | `_pubs/pubs.yml`, `.gitmodules`, el `_quarto.yml` y las carpetas de entradas de cada pub | los 11 pubs y `README.md` del hub (solo con `--aplicar`) |
+| `cursos.py` | fase 5 de la plataforma educativa: para cada curso de `docencia` con `temario: revisado` y su pub (`docencia/scripts/areas.py pub`), (a) declara `curso:` y `tema:` en el frontmatter de cada lección que da `mapa-lecciones.csv` (edición de dos líneas; un `tema:` ya declarado manda), (b) retira con `git rm` los duplicados que son esqueletos, (c) lleva al pub la nota de `02-contenido/` de un tema sin lección (si no casa con los patrones sensibles del doctor) y apunta a ella el `archivo` del tema, (d) crea un esqueleto en borrador (`AAAA-MM-DD-NN-<slug>`, `generado: curriculo`, secciones guía) para cada tema restante y mantiene su título mientras siga sin texto; simula sin `--aplicar`; `--pub`, `--curso`; `verificar` sale 1 si algo queda pendiente; rutas por `core/env.py` | `curso.yml`, `docencia/config/areas.yml`, `mapa-lecciones.csv`, los posts del pub, `meta/doctor/patrones_sensibles.txt` | los posts del pub, `curso.yml` (`archivo`) y las notas de `docencia/contenido` (solo con `--aplicar`; `git rm` en esos repos, sin commit) |
 
 `build-page-css.sh` viaja con el tema: la copia que hay en cada pub la escribe `sync-theme-pubs.sh` y no
 se edita allí.
@@ -70,3 +79,6 @@ se edita allí.
 - No hay comando único de publicación (RQ-WIP-08, ola 6): el hub y cada blog se publican con `quarto render`,
   commit de `_site/` y `git push` desde su propia carpeta; Netlify sirve ese `_site` sin build
   (`../docs/despliegue-netlify.md`). La puerta R6 existe como script y como hook, no como orden de la familia.
+- `cursos.py` necesita el workspace (`core/env.py`, `docencia` con su contenido privado y el mapa de lecciones): en
+  un clon suelto del hub no corre. No detecta nombres de estudiantes en una nota (el registro es sensible y no se
+  abre): solo los patrones del doctor; la revisión de lo demás es humana antes de `--aplicar`.

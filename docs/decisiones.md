@@ -217,6 +217,40 @@ tienen ya el `render.sh` nuevo (es el mismo inodo) y, en su árbol de trabajo, `
 tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo una vez, o `--registrar
 --aplicar` adopta lo que hay sin compilar.
 
+### 4.6 Una lección por tema, declarada en el post (2026-10-20, fase 5 de `plataforma-educativa.md`)
+
+`scripts/cursos.py` da a cada tema de un curso con `temario: revisado` (los 10 que reconstruyó C1) una lección en el
+pub del curso: la que ya existe o un esqueleto en borrador listo para llenar. Por qué así:
+
+- **La correspondencia se declara, no se adivina.** `mapa-lecciones.py` (docencia) emparejaba posts y temas por
+  numeración y título, con confianza alta, media o baja. Un emparejamiento revisado no debe volver a calcularse en
+  cada corrida: el post lleva `curso: <id>` y `tema: "<id>"` en su frontmatter y desde entonces el mapa lo toma tal
+  cual (confianza «declarada», que manda sobre todo, sus asignaciones fijas incluidas). El `tema` va entre comillas:
+  sin ellas YAML lee `3.10` como `3.1`.
+- **Edición mínima de texto.** El generador cambia o inserta solo esas dos líneas; no re-serializa el YAML ni toca el
+  cuerpo, para que el diff de cada post sea de dos líneas y lo escrito por el autor no se mueva.
+- **Esqueletos con la convención de su sección.** El frontmatter se copia de un esqueleto existente de la sección
+  (las mismas claves; las etiquetas, las comunes a la sección) y lleva además `generado: curriculo`; el cuerpo, las
+  secciones guía (Objetivos, Desarrollo, Ejemplos, Ejercicios, Autoevaluación con un ejemplo del bloque `quiz:` de
+  `_aula/docs/decisiones.md` §1.7, Recursos) con la indicación en un comentario, y los `include` de la sección. No
+  llevan texto de lección: el mapa no cuenta los encabezados guía como palabras, así que un esqueleto sin llenar
+  sigue en 0 palabras. Mientras siga así, si el título del tema cambia en `curso.yml`, el generador actualiza solo su
+  `title:`; con texto, no lo toca.
+- **Sección.** La de las lecciones de la unidad del tema; si la unidad no tiene, la más común del curso; si el curso
+  no tiene ninguna, `<curso>/`. Con solo la regla del curso, los esqueletos de MCG, máxima verosimilitud y GMM de
+  Econometría II habrían caído en `05-econometria-bayesiana/` (la sección con más lecciones del curso) y no junto a
+  las de su unidad, en `07-topicos-de-econometria/`.
+- **Duplicados.** Solo salen (`git rm` en el pub) los que el mapa marca como duplicado y son esqueletos: 0 palabras
+  reales y `draft: true`. Un duplicado con texto se avisa y queda.
+- **Las notas de docencia van al pub.** La nota de `02-contenido/` de un tema sin lección pasa a ser la lección
+  (A3: el texto vive en el pub; `plataforma-educativa.md` §4.2): sin su frontmatter ni su título, sin el menú final
+  del tutor y con el frontmatter y los `include` de su sección, publicada (`draft: false`); el `archivo` del tema apunta al post, relativo a `DOCS_ROOT`, y
+  la nota sale del repo privado. Antes se comprueba contra `meta/doctor/patrones_sensibles.txt`; el pub es público.
+
+Límite: el generador no renderiza ni confirma; tras `--aplicar` siguen `mapa-lecciones.py --aplicar`, el render del
+pub (`scripts/render.sh` y `--documentos --aplicar`), `scripts/pubs.py readme --aplicar` (los README cuentan las
+entradas) y los commits en el pub, en `docencia/contenido` y en el hub. Los cursos sin `temario: revisado` no entran.
+
 ## 5. Pendientes con dueño y fecha
 
 | id | qué | desde | dueño · estado |
@@ -227,6 +261,7 @@ tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo un
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
 | ~~render rápido~~ | **hecho el 2026-10-20**: scripts confirmados en los 11 blogs, `_documentos.tsv` registrado en los 12 sitios y los PDF/DOCX que faltaban en aequilibria, axiomata, numerus-scriptum y optimums compilados; `--verificar` sale 0 en todos | 2026-10-20 | director |
 | **plataforma** | los 11 pubs como aulas (Classroom + MOOC propios), currículo desde `docencia`, `web/cursos` se retira, `simuladores` repo propio, Quarto solo como compilador: `docs/plataforma-educativa.md` (decisiones A1–A8 del autor tomadas; §6 plan) | 2026-10-20 | autor · decidir B1–B6 (§7) |
+| **lecciones** | fase 5 (§4.6): 10 cursos con temario revisado ya tienen una lección por tema; los otros 45 esperan a que C1 revise su temario (`temario: revisado`) para entrar en `scripts/cursos.py`; los esqueletos de Finanzas III viven en `_pubs/pecunia-fluxus/finanzas-internacionales/` (la única sección con lecciones del curso) con su categoría: decidir si el curso pide sección propia | 2026-10-20 | autor · C1 curso por curso |
 | ~~D9~~ | licencia única: **decidida el 2026-10-20** (§3.6): contenido CC BY-SA 4.0, código MPL-2.0 | 2026-09-20 | resuelto |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |

@@ -97,10 +97,14 @@ se quedan en `docs/`: son referencia, no plantilla.
 que ya declaraba. publication/_index.md (frontmatter de Hugo/Blogdown, sin cuerpo, `estado: archivado`,
 sin referencias) se elimina; git conserva su historia.
 
-**3.6 La licencia se declara tal cual está, sin unificar** (2026-09-20, DOC5; decisión D9 pendiente).
-`LICENSE` y `CITATION.cff`: MPL-2.0; `license.qmd` y los `_metadata.yml`: CC BY-SA 4.0; el manual de Git
-ya lo formula como código MPL-2.0 / contenido CC BY-SA. Una sola licencia en los 12 sitios la elige el
-autor.
+**3.6 Contenido CC BY-SA 4.0, código MPL-2.0, igual en los 12 sitios** (D9; el autor pidió al director
+elegirla, 2026-10-20). Hasta entonces `CITATION.cff` decía MPL-2.0, una licencia de software, para citar
+el contenido, mientras `license.qmd` y los `_metadata.yml` decían CC BY-SA 4.0. Se elige CC BY-SA 4.0 para el
+contenido (posts, lecciones, PDF, materiales): es la licencia habitual de los recursos educativos abiertos,
+permite usar y adaptar citando al autor y mantiene abierto lo derivado, y ya la declaraban todas las páginas.
+El código (scripts, tema) sigue en MPL-2.0 (`LICENSE`). `CITATION.cff` pasa a CC BY-SA 4.0 porque cita el
+contenido; lo genera `scripts/pubs.py` desde `_pubs/pubs.yml`. `simuladores` y `aula` son privados y no
+llevan licencia mientras lo sean.
 
 **3.7 La documentación se ajusta al perfil del ecosistema** (2026-10-04, DOC10; NORMATIVA §15.11). Las
 guías de claves pierden el guion bajo inicial (`metadata-guia.md`, `quarto-guia.md`): lo que las apartaba
@@ -223,7 +227,7 @@ tiene aún `_documentos.tsv`: el primer `--documentos --aplicar` compila todo un
 | `CHANGELOG.html` | el render de la ola 6 (2026-10-08) ya no la produce | 2026-10-04 | resuelto en local |
 | ~~render rápido~~ | **hecho el 2026-10-20**: scripts confirmados en los 11 blogs, `_documentos.tsv` registrado en los 12 sitios y los PDF/DOCX que faltaban en aequilibria, axiomata, numerus-scriptum y optimums compilados; `--verificar` sale 0 en todos | 2026-10-20 | director |
 | **plataforma** | los 11 pubs como aulas (Classroom + MOOC propios), currículo desde `docencia`, `web/cursos` se retira, `simuladores` repo propio, Quarto solo como compilador: `docs/plataforma-educativa.md` (decisiones A1–A8 del autor tomadas; §6 plan) | 2026-10-20 | autor · decidir B1–B6 (§7) |
-| **D9** | una sola licencia en los 12 sitios (hoy MPL-2.0 en `LICENSE`/`CITATION.cff` y CC BY-SA en `license.qmd`) | 2026-09-20 | pendiente del autor; el README lo cuenta partido |
+| ~~D9~~ | licencia única: **decidida el 2026-10-20** (§3.6): contenido CC BY-SA 4.0, código MPL-2.0 | 2026-09-20 | resuelto |
 | **D16** | destino de `git-github-workflow.md` (manual de Git de 1 088 líneas, material educativo del autor, no documentación del repo): `prompts/` (skill o guía), un post de `numerus-scriptum` o `methodica`, o quedarse | 2026-09-20 | pendiente del autor; mientras tanto sigue en `docs/` con sus rutas corregidas |
 | `_redirects` de Netlify | el plan de `cursos/` lo previó para las rutas de sección y no se aplicó; hoy solo hay `aliases:` | 2026-07-09 | autor; D1 se cerró sin él (§4.1) |
 | `_site/_pubs/` | `resources: assets/css/pages/listing.css` de `_quarto.yml` casa también con las copias de cada blog y deja copias de esa hoja en `_site/_pubs/`; inocuo | 2026-09-21 | autor · por acotar |

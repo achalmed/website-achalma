@@ -44,8 +44,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/decisiones.md` §4.1): Netlify lo sirve sin build, así que el artefacto es el despliegue. Vale
   **hasta que el autor diga lo contrario**, por encima de NORMATIVA §5/§15.8. Cada `.gitignore` lo declara
   con `!/_site/**/*_files/` (§4.2; el de `epsilon-y-beta`, pendiente: §5), y por eso D08 pasa; quitar esa línea lo rompe y deja figuras sin publicar.
-- **No decidir por el autor** lo que está en `decision`: D9 (una sola licencia en los 12 sitios) y D16
-  (destino del manual de Git).
+- **No decidir por el autor** lo que está en `decision`: D16 (destino del manual de Git).
 
 ## Cómo se verifica un cambio
 
@@ -104,8 +103,8 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **`resources/cv.pdf` lo genera `scripts/generar-externos.sh`** desde `cv` (perfil docencia, sin anexos, `--web`: solo
   correos institucionales); no se copia a mano. `_indice/` y `_vault/` son del vault
   Obsidian y están ignorados. `requirements.txt` no existe, aunque un README antiguo lo citara.
-- **Licencia, tal cual está**: `LICENSE` y `CITATION.cff` dicen MPL-2.0 (código); `license.qmd` y los
-  `_metadata.yml` dicen CC BY-SA 4.0 (contenido). Unificarla en los 12 sitios es D9, sin decidir.
+- **Licencia (D9, `docs/decisiones.md` §3.6)**: contenido CC BY-SA 4.0 (`license.qmd`, `_metadata.yml`,
+  `CITATION.cff`), código MPL-2.0 (`LICENSE`), igual en los 12 sitios.
 
 ## Dónde está cada cosa
 

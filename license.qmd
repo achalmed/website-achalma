@@ -1,10 +1,19 @@
 ---
 comments: false
 date: 2021-06-01
-title: "License"
+title: "Licencia"
 ---
 
-My [blog posts](/blog) are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+El **contenido** de este sitio y de sus blogs satélite —entradas, lecciones, apuntes, materiales de los cursos y
+sus versiones en PDF y DOCX— se publica con la licencia
+[Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
+Puedes copiarlo, adaptarlo y usarlo en tus clases o trabajos, incluso con fines comerciales, siempre que cites al
+autor y compartas lo que derives con esta misma licencia.
+
+El **código** que hace funcionar los sitios (scripts y tema) se publica con la
+[Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/) y está en el archivo `LICENSE` de cada repositorio.
+
+Para citar una entrada, usa los metadatos de cita de su página o el archivo `CITATION.cff` del repositorio.
 
 <center>
 {{< fa brands creative-commons size=2xl >}} {{< fa brands creative-commons-by size=2xl >}} {{< fa brands creative-commons-sa size=2xl >}}

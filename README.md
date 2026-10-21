@@ -102,9 +102,8 @@ cumplido, en `docs/historial/`; qué cambió y cuándo, en `git log`.
 - **Los requisitos no son reproducibles desde el repo.** Hacen falta Quarto (≥ 1.6; hoy 1.9), TinyTeX para
   los PDF apaquarto y, solo para renderizar un documento con código, R o Python. No hay `requirements.txt`
   ni `renv`; con `freeze: true` un render global no ejecuta nada.
-- **La licencia está partida y así se declara:** `LICENSE` y `CITATION.cff` dicen MPL-2.0 (código);
-  `license.qmd` y los `_metadata.yml` dicen CC BY-SA 4.0 (contenido). Unificarla en los 12 sitios es la
-  decisión D9, pendiente del autor.
+- **Dos licencias, una por tipo de obra** (D9, `docs/decisiones.md` §3.6): el contenido es CC BY-SA 4.0
+  (`license.qmd`, `_metadata.yml`, `CITATION.cff`) y el código MPL-2.0 (`LICENSE`), igual en los 12 sitios.
 - **Netlify no se configura desde el repo.** No hay `netlify.toml` ni `_redirects`; las URL antiguas de
   `/talk/` y `/teching/` sobreviven por `aliases:` de Quarto. Cómo publica cada uno de los 12 sitios y qué
   falta por confirmar en el panel: `docs/despliegue-netlify.md` (`docs/decisiones.md` §4.1).

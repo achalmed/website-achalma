@@ -160,7 +160,7 @@ principio a fin), `web/docs/despliegue-netlify.md` (cómo publica cada sitio) y 
 
 - Este README es el único documento propio del blog y se regenera desde el hub: lo escrito aquí a mano se pierde.
 - `_site/` sigue en git: {d.get('despliegue_pubs', 'sin _publish.yml ni netlify.toml')}{limite_site}.
-- Licencia: código {d['licencia_codigo']} (`LICENSE`), contenido {d['licencia_contenido']} según `license.qmd` del hub; unificarlas en los 12 sitios es la decisión D9.
+- Licencia: el contenido es {d['licencia_contenido']} (`license.qmd` del hub) y el código {d['licencia_codigo']} (`LICENSE`), igual en los 12 sitios (D9, `web/docs/decisiones.md` §3.6).
 """
 
 
@@ -182,7 +182,7 @@ identifiers:
 repository-code: 'https://github.com/{a['github']}/{p['repo']}'
 url: '{p['url']}'
 abstract: "{p['descripcion']} Blog satélite del hub {d['hub']['url']} ({d['hub']['repo']})."
-license: {d['licencia_codigo']}
+license: {d['licencia_contenido']}   # se cita el contenido; el código va en LICENSE ({d['licencia_codigo']})
 """
 
 

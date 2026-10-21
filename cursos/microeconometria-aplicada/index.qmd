@@ -41,52 +41,35 @@ Métodos con datos microeconómicos: identificación causal y evaluación de imp
 
 ### Microeconometría Aplicada
 
-**1. Fundamentos de Inferencia Causal**
+**1. Elección discreta y variable dependiente limitada**
 
-- `1.1` Microeconometria Aplicada
-- `1.2` Inferencia Causal
-- `1.3` Contrafactual
-- `1.4` Modelo de Resultados Potenciales
-- `1.5` Sesgo de Seleccion
+- `1.1` Modelos de elección discreta: probit y logit
+- `1.2` Modelos para variables fraccionadas
+- `1.3` Modelos multinomiales y ordenados
+- `1.4` Modelos con variables censuradas y truncadas (Tobit)
+- `1.5` Corrección del sesgo de selección
 
-**2. Experimentos**
+**2. Ecuaciones simultáneas y datos de panel**
 
-- `2.1` Experimentos Aleatorizados — 🧪 e34 Experimentos aleatorios
-- `2.2` Efecto Tratamiento Promedio
-- `2.3` Asignacion Aleatoria
+- `2.1` Modelos de ecuaciones simultáneas
+- `2.2` Modelos de datos de panel estáticos
+- `2.3` Modelos dinámicos de datos de panel
 
-**3. Métodos Cuasi-experimentales**
+**3. Evaluación de impacto**
 
-- `3.1` Variables Instrumentales
-- `3.2` Diferencias en Diferencias
-- `3.3` Regresion Discontinua
-- `3.4` Emparejamiento
-- `3.5` Propensity Score Matching
+- `3.1` Introducción a la evaluación de impacto
+- `3.2` Experimentos aleatorios controlados — 🧪 e34 Experimentos aleatorios
+- `3.3` Métodos de emparejamiento (propensity score matching)
+- `3.4` Diferencias en diferencias
+- `3.5` Diseño de regresión discontinua (RD)
+- `3.6` RD nítida y difusa (sharp vs fuzzy)
+- `3.7` Análisis de artículos con RDD usando Stata y R
+- `3.8` Método de control sintético
 
-**4. Datos de Panel**
+**4. Modelos de duración**
 
-- `4.1` Efectos Fijos
-- `4.2` Efectos Aleatorios
-- `4.3` Estimadores de Panel
-
-**5. Modelos de Elección Discreta**
-
-- `5.1` Logit
-- `5.2` Probit
-- `5.3` Logit Multinomial
-- `5.4` Modelos Ordenados
-
-**6. Modelos de Duración**
-
-- `6.1` Analisis de Supervivencia
-- `6.2` Modelos de Duracion
-- `6.3` Modelos de Riesgo
-
-**7. Práctica**
-
-- `7.1` Datos Microeconomicos
-- `7.2` Software Econometrico
-- `7.3` Interpretacion de Resultados
+- `4.1` Análisis de supervivencia y modelos de duración
+- `4.2` Modelos de riesgo
 
 **Banco de exámenes rendidos:** `practicas` (20 exp.)
 

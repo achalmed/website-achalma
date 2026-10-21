@@ -253,7 +253,7 @@ propuesta, aprobación, `core/renombrar.py` con etiqueta, simulación, respaldo 
 | **5. Contenido** (mapa hecho 2026-10-20: `docencia/contenido/migracion/mapa-lecciones.csv`, 223 posts → 44 lecciones con tema, 80 sin tema, 54 blog, 45 a revisar; ver §6.1) | por pub: generar la estructura, emparejar los esqueletos con sus temas, llevar las notas de `02-contenido` y las ediciones de `web/cursos`; los artículos quedan como blog del área | cada tema con exactamente una lección; ningún contenido sin casa; redirección para cada URL vieja | no |
 | **6. `aula` (API)** | FastAPI + PostgreSQL: cuentas, clases, tareas, entregas, notas, anuncios, exámenes calificados; política de privacidad; respaldo cifrado | pruebas de la API; un dictado real de prueba con cuentas ficticias | no |
 | **7. Cambio** | los 11 pubs (más el 12.º) publican la plataforma uno por uno, empezando por methodica; `web/cursos` → 301; se retiran los hardlinks | prueba de las unas 149 URL (200 o 301 a un destino 200); `comparar-produccion.py`; vuelta atrás probada | **sí** |
-| **8. Integraciones** | `divulgacion` publica su `catalogo.json`; los vídeos aparecen por tema | el vídeo aparece en la lección de su tema | sí |
+| **8. Integraciones** (contrato hecho 2026-10-20: `divulgacion/main.py catalogo --json` → `catalogo.json`; falta que `web/_aula` lo lea, y que haya piezas publicadas) | `divulgacion` publica su `catalogo.json`; los vídeos aparecen por tema | el vídeo aparece en la lección de su tema | sí |
 
 Las fases 2 y 3 no dependen de las demás. La 2 alivia hoy mismo el problema de los 47 min.
 

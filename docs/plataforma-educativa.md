@@ -279,9 +279,9 @@ de macro; los temas que solo existen en los pubs; los cursos Power BI y ciberseg
 |---|---|---|
 | ~~B1~~ | ¿Dónde vive la API del aula? | **decidido (A9)**: en la laptop, con Docker y Tailscale Funnel; con la laptop apagada el aula no responde (la vitrina sigue en Netlify) y el enlace no cambia. Si algún día hace falta disponibilidad continua, la misma receta Docker sube a un VPS sin cambios |
 | B2 | ¿Dominio propio? Los 12 `*.netlify.app` son dominios distintos: una sesión iniciada en aequilibria no vale en optimums | un dominio propio con subdominios (`aequilibria.<dominio>`…) permite una sola sesión para los 12; sin él, se inicia sesión en cada sitio con la misma cuenta |
-| B3 | ¿12.º sitio para preuniversitario y nivelación? | sí (§5); el autor elige el nombre |
-| B4 | ¿Nombre del repo de la plataforma? | el autor elige; que no sea de la familia Qillqa (Qillqa, Tiqsi, Unancha) para no confundirlas |
-| B5 | ¿`_site` versionado (decisión del 2026-09-22)? | con Astro, Netlify construye el sitio y solo se versionan los PDF compilados |
+| ~~B3~~ | ¿12.º sitio para preuniversitario y nivelación? | **decidido** (director por encargo del autor, 2026-10-20): sí; nombre propuesto *Propaedeutica*; crear el repo y el sitio Netlify es publicar, así que entra en la fase 7 con el visto bueno del autor. Hasta entonces el área `preuniversitario` de `docencia/config/areas.yml` lleva `pub: null` |
+| ~~B4~~ | ¿Nombre del repo de la plataforma? | **decidido por el autor: `aula`** (alta en `meta/workspace.yml`, 2026-10-20) |
+| ~~B5~~ | ¿`_site` versionado (decisión del 2026-09-22)? | **decidido** (director, 2026-10-20): se mantiene la decisión del autor: los sitios se construyen en la laptop y se versiona lo publicado; Netlify no construye, porque no puede leer `docencia` (privado) ni Quarto/LuaLaTeX. Con Astro, `dist/<pub>` ocupa el lugar de `_site/` |
 | B6 | ¿Licencia única de los 12 sitios? (D9 del diagnóstico de documentación) | cerrarla antes de la fase 7 |
 
 ## 8. Límite honesto

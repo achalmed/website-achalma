@@ -55,8 +55,15 @@ kbd {
 .seccion-cabeza h2 { font-size: var(--t-4); }
 .seccion-cabeza p { color: var(--tenue); max-width: 60ch; }
 .seccion-cabeza > a { display: inline-flex; align-items: center; gap: 0.3rem; }
-/* Antes papel milimetrado; desde el 2026-10-21 (autor: «se ve escolar»), un papel liso con un degradado apenas perceptible. */
-.milimetrado { background: linear-gradient(180deg, var(--papel-2), var(--papel) 85%); }
+/* Antes papel milimetrado; desde el 2026-10-21 (autor: «se ve escolar», y el papel liso «quedó vacío»): un halo de luz
+   difusa en el acento del sitio, arriba a la derecha y más tenue abajo a la izquierda, sobre papel. Profundidad sin
+   patrón; cada pub toma su propio color. */
+.milimetrado {
+  background:
+    radial-gradient(60rem 36rem at 92% -12%, color-mix(in oklab, var(--acento) 24%, transparent), transparent 66%),
+    radial-gradient(46rem 30rem at -8% 115%, color-mix(in oklab, var(--acento) 13%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--papel), var(--papel-2));
+}
 
 /* ── Botones ───────────────────────────────────────────────────────────── */
 .boton {

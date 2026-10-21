@@ -29,11 +29,11 @@ export function dividirRelacion(tex) {
   for (let i = 0; i < tex.length; i++) {
     const c = tex[i];
     if (c === '\\') {
-      const m = tex.slice(i).match(/^\\([a-zA-Z]+|.)/);
+      const m = tex.slice(i).match(/^\\([a-zA-Z]+|[\s\S])/) ?? ['\\', ''];
       if (m[1] === 'left' || m[1] === 'begin') prof++;
       else if (m[1] === 'right' || m[1] === 'end') prof--;
       else if (prof === 0) {
-        const r = RELACIONES.find((x) => x.slice(1) === m[1]);
+        const r = RELACIONES.find((x) => x.startsWith('\\') && m[1] && x.slice(1) === m[1]);
         if (r) return { izq: tex.slice(0, i).trim(), rel: r, der: tex.slice(i + m[0].length).trim() };
       }
       i += m[0].length - 1;
@@ -61,7 +61,7 @@ export function formalizar(tex) {
     if (t.startsWith('\\frac', i) && !/[a-zA-Z]/.test(t[i + 5] || '')) {
       out += pila.some(Boolean) ? '\\frac' : '\\dfrac'; i += 4; continue;
     }
-    if (c === '\\') { const m = t.slice(i).match(/^\\([a-zA-Z]+|.)/); out += m[0]; i += m[0].length - 1; continue; }
+    if (c === '\\') { const m = t.slice(i).match(/^\\([a-zA-Z]+|[\s\S])/) ?? ['\\']; out += m[0]; i += m[0].length - 1; continue; }
     out += c;
   }
   // cases → llave con aligned, si cada fila tiene una relación y ninguna trae ya su &
@@ -83,12 +83,12 @@ export function partirEcuacion(tex, anchoMax = 26) {
   for (let i = 0; i < tex.length; i++) {
     const c = tex[i];
     if (c === '\\') {
-      const m = tex.slice(i).match(/^\\([a-zA-Z]+|.)/);
+      const m = tex.slice(i).match(/^\\([a-zA-Z]+|[\s\S])/) ?? ['\\', ''];
       const cmd = m[1];
       if (cmd === 'left') prof++;
       else if (cmd === 'right') prof--;
       else if (prof === 0 && !rel) {
-        const r = RELACIONES.find((x) => x.slice(1) === cmd);
+        const r = RELACIONES.find((x) => x.startsWith('\\') && cmd && x.slice(1) === cmd);
         if (r) rel = { i, fin: i + m[0].length, sig: r };
       }
       i += m[0].length - 1;

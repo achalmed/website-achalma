@@ -334,4 +334,6 @@ deja la vitrina (papel liso con un degradado mínimo) y el colofón ya no se rep
 las cifras van sin filetes. En modo lectura, en pantallas anchas, cada nota al pie se ve al margen junto a su llamada.
 Ecuaciones: varias seguidas se alinean en su relación con su número a la derecha (`.ec-grupo`), las fracciones van a
 tamaño de display salvo en índices, los `cases` con relaciones se alinean y los miles no llevan el espacio de la coma.
+El papel liso que reemplazó a la retícula se veía vacío (autor, el mismo día): las cabeceras llevan ahora un halo de luz
+difusa en el acento de cada pub (`.milimetrado` en `base.css`), y una tarjeta sin imagen propia va solo con texto.
 

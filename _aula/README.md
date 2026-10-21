@@ -2,9 +2,9 @@
 tipo: readme
 estado: borrador
 ---
-# aula/ — la plataforma de cursos de los pubs
+# _aula/ — la plataforma de cursos de los pubs
 
-`aula` es el código de la plataforma educativa: convierte cada pub (los blogs de `web/_pubs`) en un aula con
+`_aula` (en el hub `web`) es el código de la plataforma educativa: convierte cada pub (los blogs de `web/_pubs`) en un aula con
 catálogo, cursos, lecciones, materiales, autoevaluaciones y simuladores, y, más adelante, en un aula con cuenta
 (inscripción, tareas, entregas, notas). No guarda contenido: lo lee de sus fuentes (`docencia` para el currículo,
 cada pub para el texto de las lecciones y los artículos, `simuladores` para los modelos). La arquitectura y las
@@ -13,6 +13,7 @@ decisiones están en `web/docs/plataforma-educativa.md`.
 ## Uso
 
 ```bash
+cd web/_aula                               # desde ~/Documents
 npm install                                # una vez; versiones exactas en package.json (Astro 7.4.1)
 PUB=methodica npm run build                # → dist/methodica/        (unos 4 s)
 PUB=numerus-scriptum npm run build         # → dist/numerus-scriptum/ (unos 7 s)
@@ -36,7 +37,7 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 | `config/vitrina.yml` | lo que ninguna fuente dice aún: acento y nombre visible de cada pub (provisional) |
 | `src/lib/` | lectura de las fuentes (`rutas.mjs`, `fuentes.mjs`), extracción del HTML de Quarto (`contenido.mjs`) y el modelo del pub (`modelo.mjs`) |
 | `src/pages/` | inicio, `cursos/` (catálogo, curso, lección), `blog/`, `ediciones/`, 404 y la demo interna de autoevaluación |
-| `src/layouts/` | `Base.astro` (esqueleto) y `Lector.astro` (lector de lecciones y artículos) |
+| `src/layouts/` | `base.astro` (esqueleto) y `lector.astro` (lector de lecciones y artículos) |
 | `src/components/` | retícula del temario, tarjeta de curso, lección en curso, autoevaluación, laboratorio, cabecera y pie |
 | `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (roles y acentos), `base.css`, `contenido.css` |
 | `src/scripts/almacen.js` | progreso y preferencias del visitante en `localStorage` |

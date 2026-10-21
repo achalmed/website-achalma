@@ -1,9 +1,9 @@
 ---
 // Inicio del pub: identidad, una lección real en curso, cursos destacados, ediciones y blog.
-import Base from '../layouts/Base.astro';
-import LeccionEnCurso from '../components/LeccionEnCurso.astro';
-import TarjetaCurso from '../components/TarjetaCurso.astro';
-import ListaEntradas from '../components/ListaEntradas.astro';
+import Base from '../layouts/base.astro';
+import LeccionEnCurso from '../components/leccion-en-curso.astro';
+import TarjetaCurso from '../components/tarjeta-curso.astro';
+import ListaEntradas from '../components/lista-entradas.astro';
 import { datos, plural } from '../lib/datos.mjs';
 
 const { pub, propios, destacados, blog, ediciones, enCurso, totales } = datos();

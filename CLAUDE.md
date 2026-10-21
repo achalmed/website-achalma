@@ -106,6 +106,9 @@ DOC2 dejó el hub vacío el 2026-09-21 (`docs/decisiones.md` §4.3).
 - **Licencia (D9, `docs/decisiones.md` §3.6)**: contenido CC BY-SA 4.0 (`license.qmd`, `_metadata.yml`,
   `CITATION.cff`), código MPL-2.0 (`LICENSE`), igual en los 12 sitios.
 
+- **`_aula/` es la plataforma de cursos de los pubs** (Astro; `web/docs/plataforma-educativa.md`): tiene su propio
+  `CLAUDE.md`, `estado.md` y `docs/`; Quarto la ignora por el guion bajo; `node_modules/` y `dist/` no se versionan.
+
 ## Dónde está cada cosa
 
 | pregunta | documento |

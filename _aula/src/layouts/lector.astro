@@ -3,8 +3,8 @@
 // tiempo de lectura, descargas, modo lectura, «marcar como completada», autoevaluación y anterior/siguiente.
 import 'katex/dist/katex.min.css';
 import '../styles/contenido.css';
-import Base from './Base.astro';
-import Autoevaluacion from '../components/Autoevaluacion.astro';
+import Base from './base.astro';
+import Autoevaluacion from '../components/autoevaluacion.astro';
 import { datos, fechaLarga, peso } from '../lib/datos.mjs';
 
 interface Props { item: any; tipo: 'leccion' | 'articulo'; migas: { texto: string; href?: string }[] }

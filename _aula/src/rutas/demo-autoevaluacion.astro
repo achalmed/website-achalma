@@ -2,9 +2,9 @@
 // Página interna de demostración del componente de autoevaluación. NO es contenido publicado:
 // solo existe con `astro dev` o al construir con AULA_DEMO=1, y lo dice en la propia página.
 import { load } from 'js-yaml';
-import Base from '../../layouts/Base.astro';
-import Autoevaluacion from '../../components/Autoevaluacion.astro';
-import ejemplo from '../../demo/quiz-ejemplo.yml?raw';
+import Base from '../layouts/base.astro';
+import Autoevaluacion from '../components/autoevaluacion.astro';
+import ejemplo from '../demo/quiz-ejemplo.yml?raw';
 
 export function getStaticPaths() {
   const activa = import.meta.env.DEV || process.env.AULA_DEMO === '1';

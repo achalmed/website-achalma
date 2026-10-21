@@ -1,10 +1,10 @@
 ---
 // Portada de un curso: descripción, metadatos, retícula y temario por unidades, progreso del visitante,
 // materiales, ediciones (dictados), bibliografía y laboratorio.
-import Base from '../../../layouts/Base.astro';
-import Reticula from '../../../components/Reticula.astro';
-import Laboratorio from '../../../components/Laboratorio.astro';
-import { datos, peso, plural } from '../../../lib/datos.mjs';
+import Base from '../layouts/base.astro';
+import Reticula from '../components/reticula.astro';
+import Laboratorio from '../components/laboratorio.astro';
+import { datos, peso, plural } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
   return datos().propios.map((curso) => ({ params: { curso: curso.id }, props: { curso } }));
@@ -146,7 +146,7 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
 </Base>
 
 <script>
-  import { completadas, pintarProgreso } from '../../../scripts/almacen.js';
+  import { completadas, pintarProgreso } from '../scripts/almacen.js';
   pintarProgreso();
   const boton = document.querySelector<HTMLAnchorElement>('[data-continuar]');
   if (boton) {

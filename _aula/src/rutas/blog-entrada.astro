@@ -1,7 +1,7 @@
 ---
 // Artículo del blog, con el mismo lector que las lecciones.
-import Lector from '../../../layouts/Lector.astro';
-import { datos } from '../../../lib/datos.mjs';
+import Lector from '../layouts/lector.astro';
+import { datos } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
   return datos().blog.map((item) => ({ params: { slug: item.slug }, props: { item } }));

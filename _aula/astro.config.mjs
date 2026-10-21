@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import { registroPubs } from './src/lib/fuentes.mjs';
 import recursos from './src/integracion/recursos.mjs';
+import rutas from './src/integracion/rutas.mjs';
 
 const pub = process.env.PUB;
 const pubs = registroPubs().pubs;
@@ -18,5 +19,5 @@ export default defineConfig({
   build: { format: 'directory' },
   compressHTML: true,
   devToolbar: { enabled: false },
-  integrations: [recursos(pub)],
+  integrations: [rutas(), recursos(pub)],
 });

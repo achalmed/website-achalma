@@ -1,7 +1,7 @@
 ---
 // Una edición (dictado.yml): sus sesiones en orden, con la fecha y los materiales que se publicaron.
-import Base from '../../../layouts/Base.astro';
-import { datos, fechaLarga, peso, plural } from '../../../lib/datos.mjs';
+import Base from '../layouts/base.astro';
+import { datos, fechaLarga, peso, plural } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
   return datos().ediciones.map((ed) => ({ params: { id: ed.id }, props: { ed } }));

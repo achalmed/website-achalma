@@ -20,7 +20,7 @@ la vitrina y, después, el de la API del aula; los 12 sitios lo usan como depend
 Se lee `web/_pubs/<pub>/_site/<post>/index.html` y se toma `main#quarto-document-content` (opción a del encargo),
 no `index.html.md`. Razón: el HTML es lo que hoy ve el lector, con las matemáticas, el código resaltado (clases de
 Pandoc), las tablas, las figuras y las notas tal como Quarto las compuso; el `.md` intermedio obligaría a repetir
-filtros, citas y extensiones de Quarto. `src/lib/contenido.mjs` limpia el bloque de título, el apéndice (rescata
+filtros, citas y extensiones de Quarto. `_aula/src/lib/contenido.mjs` limpia el bloque de título, el apéndice (rescata
 las notas al pie y la bibliografía), los `<style>`/`<script>` incrustados y la sección «Publicaciones similares»
 que cada pub añade al final; compone las matemáticas con KaTeX en la construcción (sin JS en el navegador); baja
 un nivel los encabezados (el `h1` es el título); repara las anclas de los índices escritos a mano al estilo de
@@ -65,11 +65,11 @@ Cada build escribe `dist/<pub>/_redirects` (formato de Netlify) con una regla 30
 ### §1.5 Un proyecto, un pub por build (2026-10-20)
 
 `PUB=<carpeta> npm run build` escribe `dist/<pub>/`; `astro.config.mjs` falla si `PUB` no está en
-`web/_pubs/pubs.yml`. Las rutas a las fuentes se resuelven como en `core/env.py` (`src/lib/rutas.mjs`: raíz =
+`web/_pubs/pubs.yml`. Las rutas a las fuentes se resuelven como en `core/env.py` (`_aula/src/lib/rutas.mjs`: raíz =
 carpeta con `core/env.py`, y `DOCS_ROOT`, `CLASS_DIR`, `INDEX_DIR`, `SIMULADORES_DIR` por entorno). Lo que ninguna
-fuente dice aún (acento del pub y nombre visible con tildes) está en `config/vitrina.yml`, provisional hasta el
+fuente dice aún (acento del pub y nombre visible con tildes) está en `_aula/config/vitrina.yml`, provisional hasta el
 `pub.yml` de cada pub (§4.7 del plan). Los tokens de color salen de la paleta del hub: `npm run build` regenera
-`src/styles/paleta.generado.css` desde `web/assets/scss/00-settings/_palette-*.scss` y `tokens.css` les da rol;
+`_aula/src/styles/paleta.generado.css` desde `web/assets/scss/00-settings/_palette-*.scss` y `tokens.css` les da rol;
 los acentos por pub son la única extensión, y viven en `tokens.css`. Sin islas React: el poco JavaScript
 (filtros, progreso, lector, autoevaluación) va en `<script>` de cada componente.
 
@@ -77,13 +77,13 @@ los acentos por pub son la única extensión, y viven en `tokens.css`. Sin islas
 
 Sin cuenta, el progreso vive en `localStorage` del visitante: `aula:<pub>:completadas` (`{"curso/slug":
 "AAAA-MM-DD"}`), `aula:tema` (`light`/`dark`) y `aula:lectura` (modo lectura). Todo acceso va envuelto en
-`try/catch` (`src/scripts/almacen.js`): en una ventana privada o con el almacenamiento bloqueado la página
+`try/catch` (`_aula/src/scripts/almacen.js`): en una ventana privada o con el almacenamiento bloqueado la página
 funciona igual y no recuerda nada. No sale del navegador; la sincronización entre dispositivos es del aula con
 cuenta (fase 6).
 
 ### §1.7 Autoevaluación: formato `quiz:` (2026-10-20)
 
-Una lección declara sus preguntas en el frontmatter; el componente `Autoevaluacion.astro` las corrige al instante.
+Una lección declara sus preguntas en el frontmatter; el componente `autoevaluacion.astro` las corrige al instante.
 
 ```yaml
 quiz:
@@ -105,3 +105,13 @@ quiz:
 Es práctica: la respuesta viaja en la página. Los exámenes con nota se corrigen en la API (plan §4.5). Ninguna
 lección tiene `quiz:` todavía; la página `/demo/autoevaluacion/` (preguntas de muestra sobre el propio
 componente) solo existe con `npm run dev` o al construir con `AULA_DEMO=1`, y lo dice en pantalla.
+
+### §1.8 Vive en el hub, con rutas registradas por código (2026-10-20)
+
+El autor no quiere repos sueltos: `aula` pasó a `web/_aula` con su historia. El hub ya era el dueño del tema de los
+12 sitios y tiene los pubs como submódulos; la dependencia queda en un solo sentido (los sitios leen el currículo de
+`docencia`, nunca al revés). El guion bajo hace que Quarto lo ignore mientras siga construyendo los sitios actuales.
+Al entrar en la norma del hub, las rutas dinámicas dejaron las carpetas con corchetes (`src/pages/cursos/[curso]/`):
+se registran en `_aula/src/integracion/rutas.mjs` con `injectRoute` desde archivos en kebab-case de `_aula/src/rutas/`,
+y los componentes pasaron de PascalCase a kebab-case. Las URL generadas son idénticas (comprobado archivo por archivo).
+

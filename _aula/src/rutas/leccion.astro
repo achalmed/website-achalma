@@ -1,7 +1,7 @@
 ---
 // Lector de lección: el cuerpo viene del HTML que Quarto ya renderizó en el pub (decisiones §1.2).
-import Lector from '../../../../layouts/Lector.astro';
-import { datos } from '../../../../lib/datos.mjs';
+import Lector from '../layouts/lector.astro';
+import { datos } from '../lib/datos.mjs';
 
 export function getStaticPaths() {
   return datos().propios.flatMap((curso) =>

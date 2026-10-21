@@ -2,16 +2,18 @@
 tipo: guia_ia
 estado: activo
 ---
-# CLAUDE.md — aula
+# CLAUDE.md — web/_aula
 
-El código de la plataforma de cursos de los pubs (vitrina estática con Astro; más adelante, la API del aula). No es
-contenido. Léase antes: `README.md`, `estado.md`, `docs/README.md` y `web/docs/plataforma-educativa.md`.
+El código de la plataforma de cursos de los pubs (vitrina estática con Astro; más adelante, la API del aula), dentro
+del hub `web` desde el 2026-10-20 (el autor no quiere repos sueltos). No es contenido. Rigen además `web/CLAUDE.md`. Léase antes: `README.md`, `estado.md`, `docs/README.md` y `web/docs/plataforma-educativa.md`.
 Rigen las reglas del `CLAUDE.md` raíz de `~/Documents`: aquí solo lo que el raíz no dice.
 
 ## Reglas propias
 
 - **Solo lee las fuentes; nunca las escribe**: `docencia` (currículo: `curso.yml`, `docencia/config/areas.yml`), los pubs
   (`web/_pubs/<pub>`), `simuladores` (`catalogo.json`). Rutas por `core/env.py` / `core/env.sh`.
+- **Rutas dinámicas por `src/integracion/rutas.mjs`** (`injectRoute`), nunca carpetas con corchetes bajo `src/pages/`; archivos y
+  componentes en kebab-case.
 - **Nada de datos de estudiantes en el repo** (regla 8): el aula con cuenta guarda sus datos fuera, con respaldo cifrado.
 - **Identidad «Laboratorio abierto»**: los tokens vienen del design system del hub (`web/assets/scss/00-settings/`);
   un color nuevo entra por los tokens, nunca como hex suelto en un componente.

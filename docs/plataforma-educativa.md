@@ -92,7 +92,7 @@ docencia              currículo (curso.yml, rutas.yml), dictados,      la estru
                        (privado), registro (sensible)
 11 pubs (+1)          el TEXTO de lecciones y artículos, páginas de    los sitios: vitrina pública + aula
  (las aulas)           cada edición, blog del área, acento visual
-aula (repo nuevo)     el CÓDIGO de la plataforma: componentes Astro,   un paquete versionado que los 12 sitios
+web/_aula             el CÓDIGO de la plataforma: componentes Astro,   un paquete versionado que los 12 sitios
  (la plataforma)       esquemas del contenido, generadores, y la API   usan; la API compartida (cuentas,
                        del aula (FastAPI + PostgreSQL)                 tareas, notas)
 simuladores           modelos numpy, fichas con fuentes, adaptador     simuladores en el navegador; modelos a
@@ -215,8 +215,8 @@ Efecto esperado: publicar un pub pasa de minutos a segundos, porque los PDF ya c
 
 ### 4.7 El código de la plataforma en un solo lugar
 
-Hoy el tema de los 12 sitios se reparte con hardlinks (decisión del 2026-10-08). Con la plataforma, el código vive en el repo nuevo **`aula`**
-(el nombre lo elige el autor) y cada pub fija una versión del paquete, igual que fija la versión de una librería. Un pub queda reducido a su
+Hoy el tema de los 12 sitios se reparte con hardlinks (decisión del 2026-10-08). Con la plataforma, el código vive en **`web/_aula`**
+(dentro del hub, que ya era el dueño del tema; el autor no quiere repos sueltos) y construye cada pub leyendo su contenido. Un pub queda reducido a su
 contenido, un `pub.yml` (nombre, acento, área, dominio) y su página de inicio. Los hardlinks se retiran al terminar la migración (hasta
 entonces se respetan).
 
@@ -249,7 +249,7 @@ propuesta, aprobación, `core/renombrar.py` con etiqueta, simulación, respaldo 
 | **1. Currículo** (**hecha** 2026-10-20: vocabulario de 12 áreas en `docencia/config/areas.yml`, 29 cursos normalizados, `validate.sh` lo exige, altas de MATLAB y Linux, título de Matemáticas I; las rutas por `core/env.py` ya estaban; los campos nuevos de `curso.yml` y `rutas.yml` pasan a la fase 4, donde los fija el generador que los lee) | vocabulario de 12 áreas; mover los 5 cursos; altas que faltan (Linux, ciberseguridad, Power BI, SQL, temas que solo están en los pubs); esquema de `curso.yml` ampliado (nivel, duración, requisitos, `pub`), `rutas.yml`; scripts de `docencia` a `core/env.py` | cada curso con un área válida y un pub; validador sin empeorar | no |
 | **2. Render rápido** (**hecha en el hub y en methodica** 2026-10-20: `scripts/render.sh` solo HTML y `--documentos` con caché `_documentos.tsv`; methodica 184 s → 20 s, epsilon-y-beta 708 s → 43 s; uso y porqué en `decisiones.md` §4.5; falta confirmar los scripts propagados en los otros 10 pubs y registrar sus documentos) | en los 12 sitios Quarto actuales, perfil `html` por defecto y PDF/DOCX en el perfil `documentos` con caché | de unos 47 min a pocos minutos; PDF idénticos byte a byte (`SOURCE_DATE_EPOCH`) | sí, sin cambiar contenido |
 | **3. `simuladores`** (**hecha** 2026-10-20: repo propio con 64 commits de historia, `SIMULADORES_DIR`, `main.py catalogo` → `catalogo.json` con 138 modelos, verificaciones idénticas; respaldo y `UNDO.sh` en `$RESPALDOS_DIR/renombres/2026-10-20-docencia-simuladores-a-simuladores/`; alta en `workspace.yml`, remoto y adaptador web pendientes) | repo propio con su historia; `SIMULADORES_DIR`; adaptador web con IS-LM y TCL | `main.py verificar` igual; `divulgacion` renderiza una pieza; el simulador corre a 375 px | no |
-| **4. `aula` (vitrina)** | repo nuevo; paquete Astro con la identidad «Laboratorio abierto»; generador `curso.yml` → pub; piloto **methodica** (tiene ediciones reales) | build en segundos; Lighthouse ≥ 90 a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
+| **4. `aula` (vitrina)** (**prototipo hecho** 2026-10-20 en `web/_aula`: methodica y numerus-scriptum en segundos, 0 enlaces rotos, escritorio y 375 px, claro y oscuro; faltan Lighthouse y la vista previa en Netlify) | paquete Astro con la identidad «Laboratorio abierto»; generador `curso.yml` → pub; piloto **methodica** (tiene ediciones reales) | build en segundos; Lighthouse ≥ 90 a 375 px; claro y oscuro; vista previa en Netlify | no (vista previa) |
 | **5. Contenido** (mapa hecho 2026-10-20: `docencia/contenido/migracion/mapa-lecciones.csv`, 223 posts → 44 lecciones con tema, 80 sin tema, 54 blog, 45 a revisar; ver §6.1) | por pub: generar la estructura, emparejar los esqueletos con sus temas, llevar las notas de `02-contenido` y las ediciones de `web/cursos`; los artículos quedan como blog del área | cada tema con exactamente una lección; ningún contenido sin casa; redirección para cada URL vieja | no |
 | **6. `aula` (API)** | FastAPI + PostgreSQL: cuentas, clases, tareas, entregas, notas, anuncios, exámenes calificados; política de privacidad; respaldo cifrado | pruebas de la API; un dictado real de prueba con cuentas ficticias | no |
 | **7. Cambio** | los 11 pubs (más el 12.º) publican la plataforma uno por uno, empezando por methodica; `web/cursos` → 301; se retiran los hardlinks | prueba de las unas 149 URL (200 o 301 a un destino 200); `comparar-produccion.py`; vuelta atrás probada | **sí** |
@@ -280,7 +280,7 @@ de macro; los temas que solo existen en los pubs; los cursos Power BI y ciberseg
 | ~~B1~~ | ¿Dónde vive la API del aula? | **decidido (A9)**: en la laptop, con Docker y Tailscale Funnel; con la laptop apagada el aula no responde (la vitrina sigue en Netlify) y el enlace no cambia. Si algún día hace falta disponibilidad continua, la misma receta Docker sube a un VPS sin cambios |
 | B2 | ¿Dominio propio? Los 12 `*.netlify.app` son dominios distintos: una sesión iniciada en aequilibria no vale en optimums | un dominio propio con subdominios (`aequilibria.<dominio>`…) permite una sola sesión para los 12; sin él, se inicia sesión en cada sitio con la misma cuenta |
 | ~~B3~~ | ¿12.º sitio para preuniversitario y nivelación? | **decidido** (director por encargo del autor, 2026-10-20): sí; nombre propuesto *Propaedeutica*; crear el repo y el sitio Netlify es publicar, así que entra en la fase 7 con el visto bueno del autor. Hasta entonces el área `preuniversitario` de `docencia/config/areas.yml` lleva `pub: null` |
-| ~~B4~~ | ¿Nombre del repo de la plataforma? | **decidido por el autor: `aula`** (alta en `meta/workspace.yml`, 2026-10-20) |
+| ~~B4~~ | ¿Nombre y lugar de la plataforma? | **decidido por el autor: `aula`, dentro del hub como `web/_aula`** (2026-10-20); sin repo ni remoto propios |
 | ~~B5~~ | ¿`_site` versionado (decisión del 2026-09-22)? | **decidido** (director, 2026-10-20): se mantiene la decisión del autor: los sitios se construyen en la laptop y se versiona lo publicado; Netlify no construye, porque no puede leer `docencia` (privado) ni Quarto/LuaLaTeX. Con Astro, `dist/<pub>` ocupa el lugar de `_site/` |
 | B6 | ¿Licencia única de los 12 sitios? (D9 del diagnóstico de documentación) | cerrarla antes de la fase 7 |
 

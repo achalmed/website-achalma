@@ -17,6 +17,7 @@
   --lab-marino: #1E3A6E;                        --lab-marino-o: #9BB4E3;
   --lab-tinta: var(--spc-primary-light);        --lab-tinta-o: #C2CCD6;
   --lab-glaciar: #2A6F97;                       --lab-glaciar-o: #8CC4E6;
+  --lab-ocre: #8A5A1C;                          --lab-ocre-o: #E0B36E;   /* propaedeutica: cálido, AA 5,7:1 sobre papel */
 
   /* ── Tipografía ─────────────────────────────────────────────────────────── */
   --f-lectura: 'Source Serif 4 Variable', 'Source Serif 4', Charter, 'Iowan Old Style', Georgia, serif;
@@ -144,6 +145,7 @@
 [data-acento='marino'] { --acento-c: var(--lab-marino); --acento-o: var(--lab-marino-o); }
 [data-acento='tinta'] { --acento-c: var(--lab-tinta); --acento-o: var(--lab-tinta-o); }
 [data-acento='glaciar'] { --acento-c: var(--lab-glaciar); --acento-o: var(--lab-glaciar-o); }
+[data-acento='ocre'] { --acento-c: var(--lab-ocre); --acento-o: var(--lab-ocre-o); }
 
 /* El acento lo fija el data-acento más cercano: <html> para el pub y cada sitio de «La familia» (pie) para el suyo.
    Por eso el acento y sus derivados se declaran también en [data-acento] y no solo en :root. */

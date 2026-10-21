@@ -67,6 +67,14 @@
 
   --acento-base: var(--lab-revista);
 
+  /* ── Tarjeta de código (demo de Qillqa, 2026-10-21): oscura y sobria, igual en los dos temas ──────────── */
+  --tc-fondo: #1d1d1f;  --tc-barra: #262628;  --tc-borde: #2e2e31;  --tc-texto: #ececf1;  --tc-tenue: #8e8e93;
+  --tc-rotulo: #b4b4b9;  --tc-boton: #d1d1d6;  --tc-fuerte: #ffffff;  --tc-desliz: #48484a;
+  --tc-cadena: #c5d3b4;  --tc-numero: #e2c99b;  --tc-funcion: #d6dcf2;  --tc-error: #f2a99b;
+  --tc-velo: rgb(255 255 255 / 0.06);  --tc-velo-fuerte: rgb(255 255 255 / 0.14);
+  --tc-sombra: 0 12px 32px -18px rgb(0 0 0 / 0.45);
+  --sombra-borde: rgb(0 0 0 / 0.12);   /* aviso de desplazamiento horizontal en tablas y ecuaciones */
+
   /* ── Gráficos del laboratorio (src/lib/grafico-lab.mjs): la paleta de simuladores con rol del aula ───── */
   --lab-rojo: #A23B2C;                          --lab-rojo-o: #EE9A8A;
   --lab-oro: #946F0B;                           --lab-oro-o: #E2BE57;
@@ -93,6 +101,7 @@
     --seleccion: var(--spc-dark-selection);
     --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
     --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+    --sombra-borde: rgb(0 0 0 / 0.55);
     --cod-palabra: var(--spc-dark-primary);
     --cod-cadena: var(--spc-dark-accent);
     --cod-numero: #E3B172;
@@ -120,6 +129,7 @@
   --seleccion: var(--spc-dark-selection);
   --sombra: 0 1px 3px rgb(0 0 0 / 0.35);
   --sombra-flotante: 0 24px 60px -20px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+  --sombra-borde: rgb(0 0 0 / 0.55);
   --cod-palabra: var(--spc-dark-primary);
   --cod-cadena: var(--spc-dark-accent);
   --cod-numero: #E3B172;

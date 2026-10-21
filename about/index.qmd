@@ -1,294 +1,271 @@
 ---
-title: "Edison Achalma"
-subtitle: Economista ∙ Docente ∙ Análisis de Datos ∙ Sector Público
+title: "Sobre mí"
+pagetitle: "Sobre mí · Edison Achalma"
+description: "Economista peruano: sector público, docencia universitaria y análisis de datos. Trayectoria, formación y competencias."
 image: ../assets/img/profile.png
-image-alt: "Smiling man with a tan complexion, dark eyes, and dark short wavy hair styled to one side"
-about:
-  template: trestles
-  image-width: 20em
-  image-shape: rounded
-  id: hero-heading
-  links:
-    - text: "{{< fa universal-access >}}"
-      aria-label: "Accessibility statement"
-      href: accessibility.qmd
-    - text: "{{< fa brands bluesky >}}"
-      aria-label: "Bluesky"
-      href: https://bsky.app/profile/achalmaedison.com
-    - icon: linkedin
-      aria-label: "LinkedIn"
-      href: https://linkedin.com/in/achalmaedison
-    - icon: github
-      aria-label: GitHub
-      href: https://github.com/achalmed
-    # - icon: mastodon
-    #   href: https://mastodon.social/@achalmaedison
-    #- text: "{{< ai orcid >}}"
-      #href: https://orcid.org/0000-0001-6996-3364
-    #- text: "{{< ai google-scholar >}}"
-      #aria-label: "Google Scholar"
-      #href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
-    - text: "{{< fa envelope >}}"
-      aria-label: Newsletter
-      href: https://buttondown.com/achalmaedison
-listing: 
-- id: blog
-  contents: 
-    - "../blog/posts/*/index.qmd"
-    - "../blog/posts/*/index.markdown"
-  sort: date desc
-  type: grid
-  grid-columns: 1
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, subtitle, image]
-  max-items: 1
-  image-height: "200"
-- id: talk
-  contents:
-    - "../cursos/*/*/sesiones/*/index.qmd"   # última sesión de cualquier curso
-  sort: date desc
-  type: grid
-  grid-columns: 1
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, subtitle, image]
-  max-items: 1
-  image-height: "200"
-- id: publication
-  contents: 
-    - "../publication/*/index.qmd"
-    - "../publication/*/index.markdown"
-  sort: date desc
-  type: grid
-  grid-columns: 1
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, image]
-  max-items: 1
-  image-height: "200"
-  image-placeholder: ../publication/featured.jpg
-- id: project
-  contents: 
-    - "../project/*/index.qmd"
-    - "../project/*/index.markdown"
-  sort: date desc
-  type: grid
-  grid-columns: 1
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, subtitle, image]
-  max-items: 1
-  image-height: "200"
-format: 
-  html: 
-    page-layout: full
-
+image-alt: "Retrato de Edison Achalma"
+page-layout: full
+title-block-banner: false
+listing:
+  - id: escritos
+    contents:
+      - "../blog/posts/*/index.qmd"
+      - "../blog/posts/*/index.markdown"
+    sort: date desc
+    type: default
+    fields: [date, title]
+    date-format: "D MMM YYYY"
+    max-items: 3
+    sort-ui: false
+    filter-ui: false
+    categories: false
 header-includes: >
   <link rel="stylesheet" href="../assets/css/pages/about.css">
+  <script src="trayectoria.js" defer></script>
 resources:
   - ../assets/css/pages/about.css
-  - ../publication/featured.jpg
+  - trayectoria.js
 ---
 
-::: {#hero-heading}
-<div class="h1">Hola, me alegro de que estés aquí.</div>
+```{=html}
+<header class="ficha" aria-labelledby="ficha-nombre">
+  <img class="ficha-retrato" src="../assets/img/profile.png" alt="Retrato de Edison Achalma" width="320" height="320">
+  <div class="ficha-texto">
+    <p class="ficha-sobre">Sobre mí</p>
+    <h1 id="ficha-nombre">Elmer Edison Achalma Mendoza</h1>
+    <p class="ficha-roles">Economista · Sector público · Docencia · Análisis de datos</p>
+```
 
-¡Gracias por pasar por aquí!
+<!-- ahora:inicio · GENERADO por scripts/cv-a-web.py desde el CV; no editar a mano -->
+```{=html}
+<ul class="ahora-lista"><li><span class="ahora-cargo">Auxiliar de Despacho Congresal</span><span class="ahora-org">Congreso de la República del Perú</span><span class="ahora-desde">desde ago. 2026</span></li></ul>
+```
+<!-- ahora:fin -->
 
-Soy **Elmer Edison Achalma Mendoza**, economista comprometido con el servicio público y el desarrollo del país. Con formación sólida en economía, análisis de datos y gestión pública, busco contribuir al fortalecimiento institucional y a la toma de decisiones basadas en evidencia para mejorar la calidad de vida de los ciudadanos. Más información sobre mis intereses de investigación en [publicaciones](/publication).
+```{=html}
+    <div class="ficha-acciones">
+      <a class="ficha-boton primario" href="../resources/cv.pdf">Descargar CV</a>
+      <a class="ficha-boton" href="../contact.html">Escríbeme</a>
+      <a class="ficha-icono" href="https://linkedin.com/in/achalmaedison" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+      <a class="ficha-icono" href="https://github.com/achalmed" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+      <a class="ficha-icono" href="https://bsky.app/profile/achalmaedison.com" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</header>
 
-¡Ponte en contacto [conmigo enviándome una nota](/contact.qmd)! {{< fa feather-pointed >}}
+<nav class="ficha-indice" aria-label="Secciones de esta página">
+  <a href="#perfil">Perfil</a>
+  <a href="#trayectoria">Trayectoria</a>
+  <a href="#formacion">Formación</a>
+  <a href="#competencias">Competencias</a>
+  <a href="#reconocimientos">Reconocimientos</a>
+</nav>
+```
 
+::: {.ficha-seccion #perfil}
+
+## Perfil
+
+::: {.ficha-columnas}
+
+::: {}
+**Economista de la Universidad Nacional de San Cristóbal de Huamanga, curioso por las intersecciones entre los datos y la sociedad.**
+
+Tengo experiencia en informes técnicos, procesamiento de bases de datos del sector público, análisis de indicadores sociales y económicos y seguimiento de políticas públicas. Conozco los sistemas de información del Estado (SIAF, SIGA, SEACE) y el marco normativo del sector público peruano.
 :::
 
-## Perfil {.lab-section}
+::: {}
+Desde agosto de 2026 apoyo la labor legislativa en el Congreso de la República. Me interesa la investigación que combina la ciencia de datos con fuentes abiertas, con prioridad en la equidad social de las comunidades.
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 #about-me-1}
-
-**Economista de la UNSCH, curioso por todas las intersecciones de los datos y la sociedad.**
-
-Tengo experiencia en elaboración de informes técnicos, procesamiento de bases de datos del sector público, análisis de indicadores sociales y económicos, y seguimiento de políticas públicas. Estoy familiarizado con los sistemas de información estatal (SIAF, SIGA, SEACE) y el marco normativo del sector público peruano.
-
-Disfruto usar [R](https://www.r-project.org/about.html) para optimizar mi flujo de trabajo en ciencia de datos y lo he visto aparecer como invitado en otros ámbitos de mi vida. Sigue mis experimentos con R en mi [blog](/blog) y en mis [cursos](/cursos).
-
+Uso [R](https://www.r-project.org/about.html) y Python en mi trabajo con datos, y comparto lo que aprendo en mi [blog](../blog/) y en mis [cursos](../cursos/).
 :::
-
-::: {.g-col-12 .g-col-md-6 #about-me-2}
-
-Me interesa especialmente la investigación que combina la ciencia de datos con fuentes de datos abiertos, priorizando la equidad social en las comunidades.
-
-Busco formar parte de una institución pública comprometida con la transparencia, la eficiencia y el servicio a la ciudadanía, donde pueda aportar mis conocimientos técnicos, capacidad analítica y valores de integridad para contribuir al logro de objetivos institucionales y al bienestar común.
-
-:::
-
-:::
-<!-- end grid -->
-
-## Experiencia profesional {.lab-section}
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-briefcase"></i></span><strong>Capacitador Convencional</strong> ∙ ONPE — ODPE Andahuaylas ∙ may.–jun. 2026<br>Capacitación y asistencia técnica a miembros de mesa y electores en la Segunda Elección Presidencial 2026: instalación, sufragio, escrutinio, cadena de custodia de materiales electorales y reportes de incidencias en campo.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-briefcase"></i></span><strong>Coordinador de Centro Poblado</strong> ∙ ONPE — ODPE Parinacochas ∙ ene.–abr. 2026<br>Coordinación operativa de las Elecciones Generales 2026: supervisión de mesas de sufragio bajo protocolos ONPE, articulación con miembros de mesa, personeros y autoridades locales, y gestión de incidencias en campo.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-person-chalkboard"></i></span><strong>Docente de Metodología de la Investigación e IA</strong> ∙ Corporación Académica Universitaria (CAU), Ayacucho ∙ oct. 2025 – feb. 2026<br>Enseñanza de diseño de investigación cuantitativa, cualitativa y mixta; talleres de IA aplicada a la investigación (uso ético de ChatGPT, búsqueda académica y gestión bibliográfica); normas APA 7, prevención de plagio y análisis de datos con R/SPSS.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-briefcase"></i></span><strong>Censista — Recolección de Datos Estadísticos</strong> ∙ INEI — ODEI Ayacucho ∙ ago.–oct. 2025<br>Levantamiento y validación de información socioeconómica de hogares según metodología oficial del INEI, con captura digital de datos, control de calidad en campo y estricta ética estadística.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-person-chalkboard"></i></span><strong>Docente de Metodología de la Investigación</strong> ∙ Corporación Académica Universitaria (CAU), Ayacucho ∙ ene.–mar. 2025<br>Formación en epistemología, enfoques metodológicos, elaboración y validación de instrumentos, técnicas de muestreo y estrategias de análisis de datos, con énfasis en la elaboración de monografías de investigación.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-briefcase"></i></span><strong>Coordinador</strong> ∙ Corporación Educativa Sofía S.R.L., Ayacucho ∙ dic. 2024 – dic. 2025<br>Coordinación de procesos académicos y administrativos, supervisión de cronogramas, articulación entre áreas y gestión de la documentación institucional.</li>
-   <li><span class="fa-li"><i class="fa-solid fa-chart-line"></i></span><strong>Analista de datos</strong> ∙ Dirección de Información Agraria y Estudios Económicos, DRA-Ayacucho ∙ abr.–jul. 2022<br>Procesamiento y validación de bases de datos del sector agrario (30,000+ registros), scripts en R para automatización de ETL, boletines estadísticos mensuales y visualizaciones con ggplot2 para tomadores de decisión. Stack: R (dplyr, tidyr, ggplot2), Excel avanzado, Stata, SQL básico.</li>
-</ul>
-
-## Formación y certificaciones {.lab-section}
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 #about-education}
-
-#### Formación
-
-<ul class="fa-ul">
-    <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Economía — Egresado ∙ Universidad Nacional de San Cristóbal de Huamanga (FCEAC) ∙ 2017–2025<br>221 créditos y 63 asignaturas aprobadas ∙ énfasis en Econometría, Macroeconomía, Finanzas Públicas y Estadística Aplicada</li>
-    <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Inglés — Nivel Básico (B10) ∙ Instituto Cultural Peruano Norteamericano (ICPNA), Huamanga ∙ 2019–2022</li>
-</ul>
-
-#### Diplomados y cursos de especialización
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Diplomado en Sistemas Gubernamentales: SIAF, SIGA y SEACE ∙ IIAAE ∙ 300 horas ∙ 2022</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Diplomado en Ofimática Profesional ∙ IIAAE ∙ 240 horas ∙ 2022</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Macroeconomía II ∙ CAF / MiriadaX — Telefónica Educación Digital ∙ 120 horas ∙ 2024</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Redacción de Documentos Académicos ∙ Centro de Competencias del Agua — Programa Agua Andes ∙ 2022</li>
-</ul>
-
-:::
-
-::: {.g-col-12 .g-col-md-6 #about-certifications}
-
-#### Certificaciones
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://capacitaciones-ea.caf.com/certificate/d8785cf2d650ce379efd87b6ef84a">Certificate in Econometría I</a> ∙ CAF Banco de desarrollo de América Latina y el Caribe ∙ 120 horas ∙ 2024</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.linkedin.com/in/achalmaedison/details/certifications/1635550023508/single-media-viewer/?profileId=ACoAAB73yjUBKj0yy7RA10UHdDh1C9D96CfMrgY">Get Connected del programa Cisco Networking Academy</a> ∙ Cisco (Convenio MTPE – Perú) ∙ 2023</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>NDG Linux Unhatched ∙ Cisco Networking Academy (Convenio MTPE – Perú) ∙ 2023</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.linkedin.com/learning/certificates/8da78b1fa489ab7f6755f5104979873d3f5f8923c98500cd2b19327ebb4538ea">Certificate in Liderazgo y trabajo en equipo</a> ∙ LinkedIn ∙ 2023</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Perspectivas e Impacto Logístico del Mega Puerto de Chancay ∙ Instituto Peruano de Negocios ∙ 2024</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Finanzas Básicas y Planeamiento Estratégico ∙ IDDEA ∙ 2020</li>
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span>Plataformas de Marketing Digital & Social Media Business ∙ Google for Education ∙ 80 horas ∙ 2017</li>
-</ul>
 
 :::
 
 :::
-<!-- end grid -->
 
-## Competencias e idiomas {.lab-section}
+::: {.ficha-seccion #trayectoria}
 
-::: {.grid}
+## Trayectoria
 
-::: {.g-col-12 .g-col-md-6 #about-skills}
-
-#### Competencias profesionales
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-landmark"></i></span><strong>Sistemas gubernamentales</strong> ∙ SIAF, SIGA, SEACE (conocimiento funcional)</li>
-   <li><span class="fa-li"><i class="fa-solid fa-database"></i></span><strong>Análisis de datos públicos</strong> ∙ bases INEI/MEF/MIDIS, indicadores sociales, Excel avanzado</li>
-   <li><span class="fa-li"><i class="fa-solid fa-chart-column"></i></span><strong>Software estadístico</strong> ∙ R, Stata, SPSS, procesamiento de encuestas oficiales</li>
-   <li><span class="fa-li"><i class="fa-solid fa-clipboard-check"></i></span><strong>Gestión pública</strong> ∙ planificación estratégica, presupuesto por resultados, marco lógico</li>
-   <li><span class="fa-li"><i class="fa-solid fa-file-lines"></i></span><strong>Elaboración de documentos</strong> ∙ informes técnicos, términos de referencia, memorandos institucionales</li>
-   <li><span class="fa-li"><i class="fa-solid fa-scale-balanced"></i></span><strong>Normativa</strong> ∙ Ley de Contrataciones, SERVIR, presupuesto público</li>
-</ul>
-
-:::
-
-::: {.g-col-12 .g-col-md-6 #about-languages}
-
-#### Idiomas
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-language"></i></span>Español ∙ nativo</li>
-   <li><span class="fa-li"><i class="fa-solid fa-language"></i></span>Quechua ∙ conversacional</li>
-   <li><span class="fa-li"><i class="fa-solid fa-language"></i></span>Inglés ∙ básico (ICPNA, nivel B10)</li>
-</ul>
-
-#### Habilidades destacadas
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-angle-right"></i></span>Capacidad analítica e iniciativa en proyectos de datos</li>
-   <li><span class="fa-li"><i class="fa-solid fa-angle-right"></i></span>Trabajo en equipo y adaptación rápida a nuevas herramientas</li>
-   <li><span class="fa-li"><i class="fa-solid fa-angle-right"></i></span>Organización al detalle en bases de datos y reportes</li>
-</ul>
+<!-- trayectoria:inicio · GENERADO por scripts/cv-a-web.py desde el CV; no editar a mano -->
+```{=html}
+<div class="trayectoria" data-trayectoria>
+<div class="trayectoria-filtros" role="group" aria-label="Filtrar la trayectoria por área"><button type="button" data-filtro="todo" aria-pressed="true">Todo</button><button type="button" data-filtro="sector-publico" aria-pressed="false">Sector público</button><button type="button" data-filtro="docencia" aria-pressed="false">Docencia</button></div>
+<ol class="hitos">
+<li class="hito hito-actual" data-areas="sector-publico docencia"><p class="hito-fecha"><time>ago. 2026 – actualidad</time><span class="hito-ahora">En curso</span></p><div class="hito-cuerpo"><h3>Auxiliar de Despacho Congresal</h3><p class="hito-org">Congreso de la República del Perú · Lima, Perú</p><p class="hito-resumen">Apoyo técnico al despacho de un congresista de la República en la labor legislativa, de representación y de control político.</p><p class="hito-areas"><span class="hito-area">Sector público</span><span class="hito-area">Docencia</span></p><details><summary>Funciones y logros</summary><ul><li>Análisis económico y técnico de proyectos de ley, dictámenes y normas en debate</li><li>Elaboración de informes, ayudas memoria y documentos de trabajo para la toma de decisiones</li><li>Seguimiento de la agenda legislativa, de las comisiones y del Pleno</li><li>Sistematización de información estadística y normativa para la representación regional</li></ul></details></div></li>
+<li class="hito" data-areas="sector-publico"><p class="hito-fecha"><time>may. 2026 – jun. 2026</time></p><div class="hito-cuerpo"><h3>Capacitador Convencional</h3><p class="hito-org">Oficina Nacional de Procesos Electorales (ONPE) — ODPE Andahuaylas · Andahuaylas, Apurímac</p><p class="hito-resumen">Capacitación y asistencia técnica a miembros de mesa y electores en el marco de la Segunda Elección Presidencial 2026, garantizando el correcto desarrollo del proceso electoral en la jurisdicción de la ODPE Andahuaylas.</p><p class="hito-areas"><span class="hito-area">Sector público</span></p><details><summary>Funciones y logros</summary><ul><li>Capacitación a miembros de mesa sobre funciones, protocolos y uso de materiales electorales</li><li>Supervisión in situ del desarrollo del sufragio, asegurando el cumplimiento de los procedimientos ONPE</li><li>Asistencia técnica durante la instalación, sufragio, escrutinio y cierre de mesas, resolviendo incidencias en campo</li><li>Verificación de la cadena de custodia de documentos y materiales electorales (actas, cédulas)</li><li>Elaboración de reportes diarios de incidencias y coordinación con el Jefe de ODPE para la toma de decisiones operativas</li></ul><p class="hito-meta">Proceso: Segunda Elección Presidencial 2026</p></details></div></li>
+<li class="hito" data-areas="sector-publico"><p class="hito-fecha"><time>ene. 2026 – abr. 2026</time></p><div class="hito-cuerpo"><h3>Coordinador de Centro Poblado</h3><p class="hito-org">Oficina Nacional de Procesos Electorales (ONPE) — ODPE Parinacochas · Coracora, Ayacucho</p><p class="hito-resumen">Coordinación operativa en el marco de las Elecciones Generales 2026, con responsabilidad directa sobre la gestión de personal, documentación oficial y supervisión del proceso electoral en la ODPE Parinacochas.</p><p class="hito-areas"><span class="hito-area">Sector público</span></p><details><summary>Funciones y logros</summary><ul><li>Supervisión del proceso de instalación, desarrollo y cierre de mesas de sufragio bajo protocolos ONPE</li><li>Coordinación con miembros de mesa, personeros y autoridades locales para garantizar el proceso</li><li>Gestión de incidencias en campo y reporte a la ODPE según procedimientos institucionales establecidos</li><li>Trabajo bajo contrato de locación de servicios con cumplimiento de metas operativas institucionales</li></ul><p class="hito-meta">Proceso: Elecciones Generales 2026</p></details></div></li>
+<li class="hito" data-areas="sector-publico docencia"><p class="hito-fecha"><time>nov. 2025 – ene. 2026</time></p><div class="hito-cuerpo"><h3>Docente de Metodología de la Investigación e IA</h3><p class="hito-org">Corporación Académica Universitaria (CAU) · Ayacucho</p><p class="hito-resumen">Formación académica en metodología de investigación científica e inteligencia artificial aplicada, con énfasis en rigor metodológico, ética investigativa y redacción de documentos técnicos.</p><p class="hito-areas"><span class="hito-area">Sector público</span><span class="hito-area">Docencia</span></p><details><summary>Funciones y logros</summary><ul><li>Enseñanza de diseño de investigación cuantitativa, cualitativa y mixta aplicada a ciencias sociales</li><li>Talleres de IA aplicada a la investigación: uso ético de ChatGPT, búsqueda académica y gestión bibliográfica</li><li>Formación en normas APA 7, prevención de plagio y redacción de informes técnicos y científicos</li><li>Sesiones prácticas de análisis de datos con R/SPSS y elaboración de marcos teóricos</li><li>Evaluación formativa mediante rúbricas y retroalimentación constructiva continua</li></ul><p class="hito-herramientas"><span>Google Classroom</span><span>Turnitin</span><span>Zotero</span><span>Mendeley</span><span>R/SPSS</span><span>modalidad híbrida</span></p></details></div></li>
+<li class="hito" data-areas="sector-publico"><p class="hito-fecha"><time>ago. 2025 – oct. 2025</time></p><div class="hito-cuerpo"><h3>Censista — Recolección de Datos Estadísticos</h3><p class="hito-org">Instituto Nacional de Estadística e Informática (INEI) · Ayacucho</p><p class="hito-resumen">Recolección, validación y reporte de datos socioeconómicos en campo para la Oficina Departamental de Estadística e Informática de Ayacucho (ODEI), en el marco de operaciones estadísticas del Estado.</p><p class="hito-areas"><span class="hito-area">Sector público</span></p><details><summary>Funciones y logros</summary><ul><li>Levantamiento de información socioeconómica de hogares según metodología oficial del INEI</li><li>Aplicación de instrumentos estructurados con control de calidad y consistencia de datos en campo</li><li>Manejo de dispositivos electrónicos y sistemas de registro digital para captura de información</li><li>Coordinación con supervisores y equipos técnicos para validación de datos y cobertura de metas</li><li>Cumplimiento estricto de protocolos institucionales de confidencialidad y ética estadística</li></ul></details></div></li>
+<li class="hito" data-areas="sector-publico docencia"><p class="hito-fecha"><time>ene. 2025 – mar. 2025</time></p><div class="hito-cuerpo"><h3>Docente de Metodología de la Investigación</h3><p class="hito-org">Corporación Académica Universitaria (CAU) · Ayacucho</p><p class="hito-resumen">Formación en fundamentos metodológicos para el diseño de proyectos de investigación aplicada, con énfasis en ciencias sociales y políticas públicas.</p><p class="hito-areas"><span class="hito-area">Sector público</span><span class="hito-area">Docencia</span></p><details><summary>Funciones y logros</summary><ul><li>Enseñanza de epistemología, tipos de investigación y enfoques metodológicos cuantitativos y cualitativos</li><li>Diseño de investigaciones aplicadas a problemáticas sociales, económicas y de gestión pública</li><li>Elaboración, validación y confiabilización de instrumentos de recolección de datos</li><li>Técnicas de muestreo probabilístico y no probabilístico para estudios sociales</li><li>Estrategias de análisis de datos: estadística descriptiva, análisis de contenido y triangulación</li></ul><p class="hito-herramientas"><span>Moodle</span><span>Google Classroom</span><span>rúbricas analíticas</span><span>Mentimeter</span><span>Kahoot</span></p></details></div></li>
+<li class="hito" data-areas="sector-publico docencia"><p class="hito-fecha"><time>dic. 2023 – dic. 2024</time></p><div class="hito-cuerpo"><h3>Coordinador</h3><p class="hito-org">Corporación Educativa Sofía S.R.L. · Ayacucho</p><p class="hito-resumen">Coordinación de actividades académicas y administrativas en institución educativa, con responsabilidad sobre la gestión operativa y el cumplimiento de metas institucionales.</p><p class="hito-areas"><span class="hito-area">Sector público</span><span class="hito-area">Docencia</span></p><details><summary>Funciones y logros</summary><ul><li>Coordinación de procesos académicos y administrativos de la institución</li><li>Supervisión del cumplimiento de cronogramas, presupuestos y actividades programadas</li><li>Articulación entre áreas académicas y la gerencia general</li><li>Gestión de la documentación institucional bajo criterios de responsabilidad y honestidad</li></ul></details></div></li>
+<li class="hito" data-areas="docencia"><p class="hito-fecha"><time>abr. 2024 – jul. 2024</time></p><div class="hito-cuerpo"><h3>Docente — Gestión de Proyectos II</h3><p class="hito-org">Universidad Nacional Autónoma de Huanta · Huanta</p><p class="hito-resumen">Docencia en gestión y evaluación de proyectos de inversión con enfoque cuantitativo, análisis de viabilidad y componente de análisis de datos.</p><p class="hito-areas"><span class="hito-area">Docencia</span></p><details><summary>Funciones y logros</summary><ul><li>Enseñanza de análisis costo-beneficio, VAN y TIR aplicados a proyectos de inversión</li><li>Evaluación económica y financiera de proyectos bajo lineamientos del Sistema Nacional de Inversión Pública</li><li>Elaboración de reportes técnicos, fichas de proyecto y presentaciones ejecutivas con indicadores de desempeño</li><li>Uso de herramientas de gestión: cronogramas, presupuestos, indicadores y marcos lógicos</li><li>Diseño de dashboards y reportes visuales para seguimiento de indicadores de proyectos</li><li>Retroalimentación personalizada basada en competencias y rúbricas analíticas</li></ul></details></div></li>
+<li class="hito" data-areas=""><p class="hito-fecha"><time>ene. 2024</time></p><div class="hito-cuerpo"><h3>Analista de Datos Freelance</h3><p class="hito-org">Proyectos Personales · Remoto</p><p class="hito-resumen">Desarrollo de proyectos de análisis de datos económicos y financieros para portafolio técnico y aprendizaje continuo.</p><p class="hito-areas"></p><details><summary>Funciones y logros</summary><ul><li>Dashboard interactivo de coyuntura económica regional con datos del INEI/BCRP usando Shiny</li><li>Análisis de series de tiempo de variables macroeconómicas: inflación, tipo de cambio, tasas de interés</li><li>Web scraping de datos económicos y financieros públicos y automatización de actualización de datasets</li><li>Análisis exploratorio de encuestas nacionales (ENAHO, ENE) con R y Python</li><li>Documentación de proyectos en GitHub con README detallados y notebooks reproducibles</li></ul></details></div></li>
+<li class="hito" data-areas="sector-publico"><p class="hito-fecha"><time>abr. 2022 – jul. 2022</time></p><div class="hito-cuerpo"><h3>Data Analyst</h3><p class="hito-org">Dirección de Información Agraria y Estudios Económicos · DRA-Ayacucho</p><p class="hito-resumen">Análisis de datos económicos y estadísticos del sector agrario regional para generación de información estratégica, desarrollado en el marco de prácticas pre-profesionales en la Sub Dirección de Estudios Económicos y Difusión.</p><p class="hito-areas"><span class="hito-area">Sector público</span></p><details><summary>Funciones y logros</summary><ul><li>Procesamiento, limpieza y validación de bases de datos estructuradas del sector agrario (30,000+ registros)</li><li>Desarrollo de scripts en R para automatización de procesos de ETL y generación de reportes</li><li>Elaboración de boletines estadísticos mensuales con análisis de coyuntura económica regional</li><li>Análisis cuantitativo de indicadores: producción agrícola, precios en chacra, empleo rural</li><li>Creación de visualizaciones con ggplot2 para comunicación de hallazgos a tomadores de decisión</li><li>Colaboración con equipos técnicos para consolidación de información económica intersectorial</li></ul></details></div></li>
+</ol>
+<p class="trayectoria-fuente">Fuente: <a href="/resources/cv.pdf">CV en PDF</a> · 10 cargos</p>
+</div>
+```
+<!-- trayectoria:fin -->
 
 :::
 
-:::
-<!-- end grid -->
+::: {.ficha-seccion #formacion}
 
-## Logros y reconocimientos {.lab-section}
+## Formación y certificaciones
 
-::: {.grid}
+::: {.ficha-columnas}
 
-::: {.g-col-12 .g-col-md-6 #about-awards}
+::: {}
+### Formación
 
-#### Reconocimientos
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-trophy"></i></span>Publicaciones técnicas en la DIAEE – DRA Ayacucho: Boletín Estadístico de Palto, Encuesta Nacional de Intenciones de Siembra 2022–2023 y Boletín Estadístico de Quinua ∙ 2022</li>
-   <li><span class="fa-li"><i class="fa-solid fa-trophy"></i></span>Tercio superior de la Escuela Profesional de Economía de la UNSCH ∙ 2022</li>
-   <li><span class="fa-li"><i class="fa-solid fa-trophy"></i></span>Parlamentario Joven 2018 — seleccionado para el Plenario Regional ∙ Congreso de la República del Perú / Hanns Seidel Stiftung ∙ 2018</li>
-   <li><span class="fa-li"><i class="fa-solid fa-trophy"></i></span>Beneficiario de la Beca Permanencia (PRONABEC) ∙ 2017</li>
-</ul>
-
+::: {.ficha-lista}
+- **Economía**, egresado · Universidad Nacional de San Cristóbal de Huamanga (FCEAC) · 2017–2025
+  221 créditos y 63 asignaturas aprobadas; énfasis en econometría, macroeconomía, finanzas públicas y estadística aplicada.
+- **Inglés**, nivel básico (B10) · Instituto Cultural Peruano Norteamericano (ICPNA), Huamanga · 2019–2022
 :::
 
-::: {.g-col-12 .g-col-md-6 #about-volunteering}
+### Diplomados y especialización
 
-#### Voluntariado
+::: {.ficha-lista}
+- **Sistemas gubernamentales: SIAF, SIGA y SEACE** · IIAAE · 300 horas · 2022
+- **Ofimática profesional** · IIAAE · 240 horas · 2022
+- **Macroeconomía II** · CAF / MiriadaX, Telefónica Educación Digital · 120 horas · 2024
+- **Redacción de documentos académicos** · Centro de Competencias del Agua, Programa Agua Andes · 2022
+:::
+:::
 
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-hand-holding-heart"></i></span>Voluntario en MANTHOC (programa NATS), promoviendo los derechos y el desarrollo integral de niños y adolescentes trabajadores en la región ∙ 2016</li>
-   <li><span class="fa-li"><i class="fa-solid fa-tv"></i></span>Corresponsal del magazine televisivo juvenil "No Apto Para Adultos" (NAPA), difundido por 40 canales de Red TV en todo el Perú ∙ 2014</li>
-</ul>
+::: {}
+### Certificaciones
+
+::: {.ficha-lista}
+- [**Econometría I**](https://capacitaciones-ea.caf.com/certificate/d8785cf2d650ce379efd87b6ef84a) · CAF, Banco de Desarrollo de América Latina y el Caribe · 120 horas · 2024
+- **Perspectivas e impacto logístico del Megapuerto de Chancay** · Instituto Peruano de Negocios · 2024
+- [**Get Connected**](https://www.linkedin.com/in/achalmaedison/details/certifications/1635550023508/single-media-viewer/?profileId=ACoAAB73yjUBKj0yy7RA10UHdDh1C9D96CfMrgY) · Cisco Networking Academy (convenio MTPE) · 2023
+- **NDG Linux Unhatched** · Cisco Networking Academy (convenio MTPE) · 2023
+- [**Liderazgo y trabajo en equipo**](https://www.linkedin.com/learning/certificates/8da78b1fa489ab7f6755f5104979873d3f5f8923c98500cd2b19327ebb4538ea) · LinkedIn Learning · 2023
+- **Finanzas básicas y planeamiento estratégico** · IDDEA · 2020
+- **Marketing digital y social media business** · Google for Education · 80 horas · 2017
+:::
+:::
 
 :::
 
 :::
-<!-- end grid -->
 
-## Últimamente {.lab-section}
+::: {.ficha-seccion #competencias}
 
-:::: {.grid}
+## Competencias
 
-::: {.g-col-3}
-#### Blog
-::: {#blog}
-:::
-[Ver todo &rarr;](../blog){.about-links .subtitle}
-:::
+::: {.ficha-columnas}
 
-::: {.g-col-3}
-#### Cursos
-::: {#talk}
-:::
-[Ver todo &rarr;](../cursos){.about-links .subtitle}
-:::
+::: {}
+### Profesionales
 
-::: {.g-col-3}
-#### Publications
-::: {#publication}
-:::
-[Ver todo &rarr;](../publication){.about-links .subtitle}
+::: {.ficha-chips}
+- Sistemas gubernamentales (SIAF, SIGA, SEACE)
+- Datos públicos (INEI, MEF, MIDIS)
+- Indicadores sociales
+- Gestión pública
+- Presupuesto por resultados
+- Marco lógico
+- Planificación estratégica
+- Informes técnicos
+- Términos de referencia
+- Ley de Contrataciones
+- SERVIR
 :::
 
-::: {.g-col-3}
-#### Projects
-::: {#project}
+### Herramientas
+
+::: {.ficha-chips}
+- R
+- Python
+- Stata
+- SPSS
+- Excel avanzado
+- LaTeX
+- Quarto
+- Git
 :::
-[Ver todo &rarr;](../project){.about-links .subtitle}
 :::
 
-::::
+::: {}
+### Idiomas
+
+::: {.ficha-idiomas}
+- **Español** · nativo
+- **Quechua** · conversacional
+- **Inglés** · básico (ICPNA, B10)
+:::
+
+### Cómo trabajo
+
+::: {.ficha-lista}
+- Capacidad analítica e iniciativa en proyectos de datos
+- Trabajo en equipo y adaptación rápida a nuevas herramientas
+- Orden y detalle en bases de datos y reportes
+:::
+:::
+
+:::
+
+:::
+
+::: {.ficha-seccion #reconocimientos}
+
+## Reconocimientos y voluntariado
+
+::: {.ficha-columnas}
+
+::: {}
+### Reconocimientos
+
+::: {.ficha-lista}
+- **Publicaciones técnicas de la DIAEE, DRA Ayacucho**: Boletín Estadístico de Palto, Encuesta Nacional de Intenciones de Siembra 2022–2023 y Boletín Estadístico de Quinua · 2022
+- **Tercio superior** de la Escuela Profesional de Economía de la UNSCH · 2022
+- **Parlamentario Joven 2018**, seleccionado para el Plenario Regional · Congreso de la República del Perú y Hanns Seidel Stiftung · 2018
+- **Beca Permanencia** (PRONABEC) · 2017
+:::
+:::
+
+::: {}
+### Voluntariado
+
+::: {.ficha-lista}
+- **MANTHOC** (programa NATS): derechos y desarrollo integral de niños y adolescentes trabajadores · 2016
+- **Corresponsal de *No Apto Para Adultos* (NAPA)**, magazine televisivo juvenil difundido por 40 canales de Red TV · 2014
+:::
+:::
+
+:::
+
+:::
+
+::: {.ficha-seccion #ultimamente}
+
+## Últimamente
+
+::: {.ficha-columnas}
+
+::: {}
+### En el blog
+
+::: {#escritos}
+:::
+
+[Todos los escritos →](../blog/){.ficha-mas}
+:::
+
+::: {}
+### En otros sitios
+
+[Publicaciones](../publication/){.ficha-enlace} y [cursos abiertos](../cursos/){.ficha-enlace}: doce sitios, uno por disciplina.
+
+¿Conversamos? [Escríbeme](../contact.html){.ficha-enlace} o descarga mi [CV en PDF](../resources/cv.pdf){.ficha-enlace}.
+:::
+
+:::
+
+:::

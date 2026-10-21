@@ -1,49 +1,37 @@
 ---
-title: "Edison Achalma, B.Sc."
-pagetitle: "Edison Achalma B.Sc. Econ."
-subtitle: "Economist at the University San Cristobal of Huamanga"
-image: assets/img/skyline-philly-dual.png
-image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
+title: "Edison Achalma"
+pagetitle: "Edison Achalma · Economista"
+description: "Economista peruano: sector público, docencia y análisis de datos. Apuntes, cursos y escritos."
+image: assets/img/achalma-social.png
+image-alt: "Retrato de Edison Achalma"
 
 twitter-card:
     title: Edison Achalma
     description: |
-      Researcher, educator, and economist with data science expertise.
+      Economista: sector público, docencia y análisis de datos.
     image: assets/img/achalma-social.png
     creador: "@achalmaedison"
 
-open-graph: true # Mejorará la vista previa de su contenido al pegar un enlace en aplicaciones como Slack, Discord, Facebook, LinkedIn y otras. 
+open-graph: true # vista previa del enlace en Slack, Discord, Facebook, LinkedIn y otras
 
-about:
-  template: solana
-  image-width: 28em
-  id: hero-heading
-  links:
-    - text: "{{< fa universal-access >}}"
-      aria-label: "Accessibility statement"
-      href: accessibility.qmd
-    - text: "{{< fa brands bluesky >}}"
-      aria-label: "Bluesky"
-      href: https://bsky.app/profile/achalmaedison.com
-    - icon: linkedin
-      aria-label: "LinkedIn"
-      href: https://linkedin.com/in/achalmaedison
-    - icon: github
-      aria-label: GitHub
-      href: https://github.com/achalmed
-    # - icon: mastodon
-    #   href: https://hachyderm.io/@achalmaedison
-    #- text: "{{< ai orcid >}}"
-    #  href: https://orcid.org/0000-0001-6996-3364
-    #- text: "{{< ai google-scholar >}}"
-    #  aria-label: "Google Scholar"
-    #  href: https://scholar.google.com/citations?hl=en&user=LvAkIvcAAAAJ
-    - text: "{{< fa envelope >}}"
-      aria-label: Newsletter
-      href: https://buttondown.com/achalmaedison
 page-layout: full
+title-block-banner: false
 
-execute: 
+listing:
+  - id: recientes
+    contents:
+      - "blog/posts/*/index.qmd"
+      - "blog/posts/*/index.markdown"
+    sort: date desc
+    type: default
+    fields: [date, title, description]
+    date-format: "D MMM YYYY"
+    max-items: 4
+    sort-ui: false
+    filter-ui: false
+    categories: false
+
+execute:
   freeze: false
   echo: false
   warning: false
@@ -54,10 +42,73 @@ resources:
   - assets/css/pages/home.css
 ---
 
-::: {#hero-heading}
+```{=html}
+<section class="portada" aria-labelledby="portada-nombre">
+  <div class="portada-texto">
+    <p class="portada-sobre">Economista · Ayacucho, Perú</p>
+    <h1 id="portada-nombre">Edison Achalma</h1>
+    <p class="portada-lema">Trabajo en la intersección de la economía, el Estado y los datos. Enseño metodología de la investigación y comparto lo que aprendo en apuntes, cursos y escritos abiertos.</p>
+```
 
-¡Hola! Soy [achalmaedison](https://achalmaedison.netlify.app/resources/cv.pdf), un economista en proceso y entusiasta de las matemáticas y de la informática. Compartiré mis apuntes de clase, guías de problemas, resúmenes y exámenes resueltos, ya que estoy convencido de que compartir mis apuntes con la comunidad es provechoso para todos.
+<!-- ahora:inicio · GENERADO por scripts/cv-a-web.py desde el CV; no editar a mano -->
+```{=html}
+<ul class="ahora-lista"><li><span class="ahora-cargo">Auxiliar de Despacho Congresal</span><span class="ahora-org">Congreso de la República del Perú</span><span class="ahora-desde">desde ago. 2026</span></li></ul>
+```
+<!-- ahora:fin -->
 
-[Learn more about me &rarr;](/about){.about-links .subtitle}
+```{=html}
+    <div class="portada-acciones">
+      <a class="portada-boton primario" href="about/">Conóceme</a>
+      <a class="portada-boton" href="resources/cv.pdf">CV en PDF</a>
+      <a class="portada-boton" href="contact.html">Escríbeme</a>
+    </div>
+    <ul class="portada-redes" aria-label="Redes">
+      <li><a href="https://linkedin.com/in/achalmaedison" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://github.com/achalmed" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+      <li><a href="https://bsky.app/profile/achalmaedison.com" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a></li>
+      <li><a href="https://buttondown.com/achalmaedison" aria-label="Boletín por correo"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+  <figure class="portada-retrato">
+    <img src="assets/img/profile.png" alt="Retrato de Edison Achalma" width="560" height="560" fetchpriority="high">
+  </figure>
+</section>
+```
+
+::: {.portada-bloque .portada-escritos}
+
+## Escritos recientes
+
+::: {#recientes}
+:::
+
+[Todos los escritos →](blog/){.portada-mas}
+
+:::
+
+::: {.portada-bloque .portada-sitios}
+
+## Mis sitios
+
+Doce publicaciones abiertas, una por disciplina: cursos completos, lecciones y artículos.
+
+<!-- sitios:inicio · GENERADO por scripts/pubs.py readme desde _pubs/pubs.yml; no editar a mano -->
+```{=html}
+<ol class="sitios">
+<li><a href="https://actus-mercator.netlify.app/"><span class="sitio-tema">Gestión empresarial</span><span class="sitio-nombre">Actus Mercator</span><span class="sitio-desc">Administración, estrategia y gestión organizacional.</span></a></li>
+<li><a href="https://aequilibria.netlify.app/"><span class="sitio-tema">Macroeconomía</span><span class="sitio-nombre">Aequilibria</span><span class="sitio-desc">Política monetaria y fiscal, crecimiento económico y ciclos.</span></a></li>
+<li><a href="https://axiomata.netlify.app/"><span class="sitio-tema">Matemática</span><span class="sitio-nombre">Axiomata</span><span class="sitio-desc">Cálculo, álgebra lineal, estadística y matemáticas aplicadas a la economía.</span></a></li>
+<li><a href="https://chaska-x.netlify.app/"><span class="sitio-tema">Tecnología y seguridad</span><span class="sitio-nombre">Chaska</span><span class="sitio-desc">Ciberseguridad, privacidad digital, sistemas operativos y herramientas.</span></a></li>
+<li><a href="https://dialectica-y-mercado.netlify.app/"><span class="sitio-tema">Filosofía y política</span><span class="sitio-nombre">Dialéctica y Mercado</span><span class="sitio-desc">Filosofía política, ética económica y teoría social.</span></a></li>
+<li><a href="https://epsilon-y-beta.netlify.app/"><span class="sitio-tema">Econometría</span><span class="sitio-nombre">Epsilon y Beta</span><span class="sitio-desc">Modelos econométricos, series de tiempo y análisis estadístico aplicado; secciones numeradas por nivel.</span></a></li>
+<li><a href="https://methodica.netlify.app/"><span class="sitio-tema">Investigación y metodología</span><span class="sitio-nombre">Methodica</span><span class="sitio-desc">Métodos cualitativos y cuantitativos, APA y redacción académica.</span></a></li>
+<li><a href="https://numerus-scriptum.netlify.app/"><span class="sitio-tema">Programación y software</span><span class="sitio-nombre">Numerus Scriptum</span><span class="sitio-desc">R, Python, Stata, LaTeX, Quarto, Linux y herramientas para ciencia de datos; una sección por herramienta.</span></a></li>
+<li><a href="https://optimums.netlify.app/"><span class="sitio-tema">Microeconomía</span><span class="sitio-nombre">Optimums</span><span class="sitio-desc">Teoría del consumidor y del productor, mercados, organización industrial y equilibrio general.</span></a></li>
+<li><a href="https://pecunia-fluxus.netlify.app/"><span class="sitio-tema">Finanzas</span><span class="sitio-nombre">Pecunia Fluxus</span><span class="sitio-desc">Finanzas personales, corporativas e internacionales.</span></a></li>
+<li><a href="https://propaedeutica.netlify.app/"><span class="sitio-tema">Preuniversitario y nivelación</span><span class="sitio-nombre">Propaedeutica</span><span class="sitio-desc">Álgebra, aritmética, trigonometría, física y economía para el ingreso universitario, y cursos de nivelación.</span></a></li>
+<li><a href="https://res-publica.netlify.app/"><span class="sitio-tema">Gestión pública</span><span class="sitio-nombre">Res Publica</span><span class="sitio-desc">Políticas públicas, administración del Estado y descentralización.</span></a></li>
+</ol>
+```
+<!-- sitios:fin -->
 
 :::

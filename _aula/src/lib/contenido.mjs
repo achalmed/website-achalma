@@ -163,7 +163,16 @@ export function extraer(o) {
   });
   main.find('table').each((_, el) => {
     const $el = $(el);
+    // Los anchos fijos de Pandoc (colgroup) obligan a la tabla a no caber en un celular: el navegador reparte mejor.
+    $el.children('colgroup').remove();
     if (!$el.parent().hasClass('tabla')) $el.wrap('<div class="tabla"></div>');
+  });
+  // Pie de figura y de tabla al estilo APA 7: el rótulo («Tabla 1») en su línea y el título debajo.
+  main.find('figcaption, caption').each((_, el) => {
+    const $el = $(el);
+    if ($el.find('.rotulo').length) return;
+    const m = ($el.html() || '').match(/^\s*((?:Tabla|Figura|Cuadro|Gráfico|Gráfica|Listado|Ecuación|Table|Figure)(?:&nbsp;|\s)+[\w.-]+)\s*[:.]\s*/u);
+    if (m) $el.html(`<span class="rotulo">${m[1].replace(/&nbsp;/g, ' ')}</span> <span class="titulo-float">${($el.html() || '').slice(m[0].length)}</span>`);
   });
 
   // Enlaces externos: sin dar acceso a la página de origen.

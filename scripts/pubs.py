@@ -7,9 +7,10 @@ Objetivo: que cada pub_* tenga un README propio (de qué trata, URL, repo, relac
   solo sitio (`_pubs/pubs.yml`), comprobable contra `.gitmodules` y el `site-url` de cada `_quarto.yml`.
 Método: lee pubs.yml y, por pub, las secciones temáticas del disco (carpetas de entradas con `*/index.qmd`);
   escribe `_pubs/<pub>/README.md` y `_pubs/<pub>/CITATION.cff` completos (con marca GENERADO) y el bloque entre
-  `<!-- pubs:inicio -->` y `<!-- pubs:fin -->` del README del hub. Simula por defecto; `--aplicar` escribe.
+  `<!-- pubs:inicio -->` y `<!-- pubs:fin -->` del README del hub y, desde el 2026-10-21, la lista «Mis sitios» de la
+  portada (`index.qmd`, entre `<!-- sitios:inicio -->` y `<!-- sitios:fin -->`). Simula por defecto; `--aplicar` escribe.
   `verificar` sale 1 si el registro, los submódulos, los site-url o los archivos generados no coinciden (doctor).
-Límite: no toca `_quarto.yml`, `index.qmd` ni las entradas; no propaga el tema (eso es sync-theme-pubs.sh);
+Límite: no toca `_quarto.yml` ni las entradas, y de `index.qmd` solo su bloque; no propaga el tema (sync-theme-pubs.sh);
   no sabe cómo publica Netlify cada pub (D1): lo que escribe en «Límite honesto» es lo que pubs.yml declara.
 Sin dependencias del workspace (`core/`): el hub es un repo público y clonable; solo requiere PyYAML.
 
@@ -33,6 +34,8 @@ HUB = Path(__file__).resolve().parents[1]
 PUBS_DIR = HUB / "_pubs"
 REGISTRO = PUBS_DIR / "pubs.yml"
 MARCAS = ("<!-- pubs:inicio -->", "<!-- pubs:fin -->")
+MARCAS_PORTADA = ("<!-- sitios:inicio", "<!-- sitios:fin -->")   # bloque «Mis sitios» de index.qmd (2026-10-21)
+VITRINA = HUB / "_aula" / "config" / "vitrina.yml"                 # nombre visible con tildes, si se declara
 HOY = date.today().isoformat()
 NO_SECCION = {"assets", "docs", "scripts", "site_libs"}        # carpetas que no son secciones de entradas
 FECHA = re.compile(r"\d{4}-\d{2}-\d{2}")
@@ -197,6 +200,35 @@ def bloque_hub(d, pubs):
     return "\n".join(lineas)
 
 
+def nombre_visible(carpeta):
+    """El nombre con tildes de config/vitrina.yml del aula o, si no lo declara, el de la carpeta en título."""
+    if VITRINA.exists():
+        v = (yaml.safe_load(VITRINA.read_text(encoding="utf-8")) or {}).get("pubs") or {}
+        if isinstance(v.get(carpeta), dict) and v[carpeta].get("nombre"):
+            return v[carpeta]["nombre"]
+    menores = {"y", "de", "del", "la", "el"}
+    return " ".join(w if w in menores else w.capitalize() for w in carpeta.split("-"))
+
+
+def bloque_portada(pubs):
+    """La lista «Mis sitios» de la portada del hub (index.qmd): un índice de revista, un sitio por fila."""
+    filas = "\n".join(
+        f'<li><a href="{p["url"]}"><span class="sitio-tema">{p["tema"]}</span>'
+        f'<span class="sitio-nombre">{nombre_visible(p["carpeta"])}</span>'
+        f'<span class="sitio-desc">{p["descripcion"]}</span></a></li>' for p in pubs)
+    return ("```{=html}\n" f'<ol class="sitios">\n{filas}\n</ol>\n' "```")
+
+
+def con_bloque_portada(texto, cuerpo):
+    a, b = MARCAS_PORTADA
+    if a not in texto or b not in texto:
+        return None
+    pre, resto = texto.split(a, 1)
+    cabeza, resto = resto.split("-->", 1)
+    _, post = resto.split(b, 1)
+    return pre + a + cabeza + "-->\n" + cuerpo + "\n" + b + post
+
+
 def con_bloque(texto, cuerpo):
     a, b = MARCAS
     if a in texto and b in texto:
@@ -248,6 +280,12 @@ def cmd_readme(aplicar, solo):
             print("  ✖ falta README.md del hub: el bloque pubs: no tiene dónde ir")
         else:
             cambios += escribir(hub_readme, con_bloque(actual, bloque_hub(d, pubs)), aplicar)
+        portada = HUB / "index.qmd"
+        nuevo = con_bloque_portada(portada.read_text(encoding="utf-8"), bloque_portada(pubs)) if portada.exists() else None
+        if nuevo is None:
+            print("  ✖ index.qmd sin marcas sitios:inicio/fin: el bloque «Mis sitios» no tiene dónde ir")
+        else:
+            cambios += escribir(portada, nuevo, aplicar)
     print(f"[pubs] readme: {cambios} archivo(s) {'escritos' if aplicar else 'cambiarían (--aplicar escribe)'}")
     return 0
 
@@ -294,6 +332,14 @@ def cmd_verificar(doctor):
             fallos.append("README.md del hub: sin marcas pubs:inicio/fin")
         elif sin_fecha(con_bloque(t, bloque_hub(d, pubs))) != sin_fecha(t):
             fallos.append("README.md del hub: bloque pubs desfasado (scripts/pubs.py readme --aplicar)")
+    portada = HUB / "index.qmd"
+    if portada.exists():
+        t = portada.read_text(encoding="utf-8")
+        nuevo = con_bloque_portada(t, bloque_portada(pubs))
+        if nuevo is None:
+            fallos.append("index.qmd: sin marcas sitios:inicio/fin")
+        elif nuevo != t:
+            fallos.append("index.qmd: bloque «Mis sitios» desfasado (scripts/pubs.py readme --aplicar)")
     if not doctor:
         for f in fallos:
             print("  [desfase]", f)

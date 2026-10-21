@@ -36,7 +36,7 @@ project:
   #  - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
 website:
-  title: "Edison Achalma B.Sc. Econ."
+  title: "Edison Achalma"
   description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social."
   favicon: assets/img/favicon.png 
   # Previews Images
@@ -73,7 +73,7 @@ website:
 
   # Open graph
   open-graph:
-    title: "Edison Achalma B.Sc. Econ."            # Título por defecto
+    title: "Edison Achalma"            # Título por defecto
     description: "Investigador y educador que aplica la ciencia de datos de forma que se dé prioridad a la equidad social." # Descripción por defecto
     image: /assets/img/sidebar.jpg    # Imagen por defecto
     image-width: 1200                # Ancho de imagen recomendado
@@ -106,26 +106,26 @@ website:
         href: https://github.com/achalmed
         text: "GitHub profile"
     right:
-      - text: About
-        aria-label: "About Me"
+      - text: Sobre mí
+        aria-label: "Sobre mí"
         href: about/index.qmd
       - text: Cursos
         aria-label: "Cursos y materiales docentes"
         href: cursos/index.qmd
-      - text: Publications
-        aria-label: "Publications"
+      - text: Publicaciones
+        aria-label: "Publicaciones"
         href: publication/index.qmd
       - text: Datos
         aria-label: "Observatorio de datos del Perú"
         href: observatorio/index.qmd
       - text: "Blog"
-        aria-label: "Meeting People Where They R"
+        aria-label: "Blog"
         href: blog/index.qmd
-      - text: "More"
-        aria-label: "More"
+      - text: "Más"
+        aria-label: "Más sitios"
         icon: ellipsis-h
         menu:
-          - text: "Econometria"
+          - text: "Econometría"
             href: https://epsilon-y-beta.netlify.app/
           - text: "Filosofía"
             href: https://dialectica-y-mercado.netlify.app/
@@ -151,12 +151,12 @@ website:
             href: https://propaedeutica.netlify.app/
           - text: "Lliphi · temas para KDE Plasma"
             href: https://achalmed.github.io/lliphi/
-          - text: "Book an appointment"
+          - text: "Agendar una cita"
             href: appointment/index.qmd
 
   page-footer:
     left: >-
-      &#169; 2026 Edison Achalma &#8729; Made with [Quarto](https://quarto.org)
+      &#169; 2026 Edison Achalma &#8729; Hecho con [Quarto](https://quarto.org)
     center: |
       <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
       <a class="link-dark me-1" href="https://fosstodon.org/@achalmaedison" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>

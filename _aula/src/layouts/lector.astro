@@ -189,18 +189,33 @@ const fechaCita = fechaLarga(item.fecha).replace(/ de \d{4}$/, '');
   .lector-cabeza h1 { font-size: var(--t-5); }
   .lector-desc { font-family: var(--f-lectura); font-size: 1.2rem; line-height: 1.5; color: var(--tinta-2); max-width: 56ch; }
   .lector-acciones { gap: 0.5rem; }
+  /* En el celular las acciones son chips discretos: no compiten con el título. */
+  @media (max-width: 560px) {
+    .lector-acciones :global(.boton.chico) { min-height: 2rem; padding: 0.25rem 0.65rem; font-weight: 500; border-color: var(--linea); }
+    .lector-cabeza { gap: 0.75rem; }
+    .lector-desc { font-size: 1.0625rem; }
+  }
   .lector-cabeza .metadatos > * { display: inline-flex; align-items: center; gap: 0.35rem; }
 
   .lector-indice { display: none; }
   @media (min-width: 1280px) {
     .lector-indice { display: block; position: sticky; top: 5rem; align-self: start; max-height: calc(100vh - 6rem); overflow: auto; font-size: var(--t-0); }
   }
-  .lector-indice p { font-weight: 600; color: var(--tinta-2); margin-bottom: 0.5rem; }
-  .lector-indice ol { list-style: none; display: grid; gap: 0.1rem; border-left: 1px solid var(--linea); }
-  .lector-indice li.sub { padding-left: 0.75rem; }
-  .lector-indice a { display: block; padding: 0.25rem 0 0.25rem 0.75rem; margin-left: -1px; border-left: 2px solid transparent; color: var(--tenue); text-decoration: none; line-height: 1.35; }
+  /* Índice de la página: una lista tranquila, sin barra vertical; la sección en curso se marca con tinta y un punto. */
+  /* Las dos columnas laterales se desplazan solas cuando son largas: la barra de desplazamiento no se ve en reposo y
+     aparece fina al pasar el cursor (antes era una barra gruesa que distraía de la lectura). */
+  .lector-lateral, .lector-indice { scrollbar-width: none; overscroll-behavior: contain; }
+  .lector-lateral::-webkit-scrollbar, .lector-indice::-webkit-scrollbar { width: 0; }
+  .lector-lateral:hover, .lector-indice:hover { scrollbar-width: thin; scrollbar-color: var(--linea-fuerte) transparent; }
+  .lector-lateral:hover::-webkit-scrollbar, .lector-indice:hover::-webkit-scrollbar { width: 6px; }
+  .lector-lateral:hover::-webkit-scrollbar-thumb, .lector-indice:hover::-webkit-scrollbar-thumb { background: var(--linea-fuerte); border-radius: 3px; }
+  .lector-indice p { font-size: 0.75rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tenue); margin-bottom: 0.6rem; }
+  .lector-indice ol { list-style: none; display: grid; gap: 0.05rem; }
+  .lector-indice li.sub { padding-left: 0.8rem; }
+  .lector-indice a { position: relative; display: block; padding: 0.28rem 0 0.28rem 0.85rem; color: var(--tenue); text-decoration: none; line-height: 1.4; transition: color 0.15s; }
   .lector-indice a:hover { color: var(--tinta); }
-  .lector-indice a[aria-current] { color: var(--acento); border-left-color: var(--acento); }
+  .lector-indice a[aria-current] { color: var(--tinta); font-weight: 600; }
+  .lector-indice a[aria-current]::before { content: ''; position: absolute; left: 0.1rem; top: 0.82em; width: 0.32rem; height: 0.32rem; border-radius: 50%; background: var(--acento); }
 
   .en-laboratorio { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea-fuerte); display: grid; gap: 0.6rem; }
   .en-laboratorio h2 { font-size: var(--t-3); }

@@ -1,117 +1,185 @@
 /* src/styles/contenido.css — el cuerpo de lecciones y artículos (HTML extraído de Quarto).
-   Serif de lectura, matemáticas KaTeX, código con las clases de resaltado de Pandoc, figuras, tablas y
-   avisos (callouts). Todo dentro de .prosa para no tocar la interfaz. */
+   Pauta editorial (decisión del autor, 2026-10-21): serif de lectura, tinta sobre papel y un solo acento por sitio,
+   reservado para enlaces y lo que importa; tablas de tres filetes, pies de figura y tabla al estilo APA 7, código en
+   tarjeta oscura sobria (la de la demo de Qillqa) y referencias aireadas. Todo dentro de .prosa para no tocar la
+   interfaz. Celular primero: 17 px en el celular, 18 px desde 720 px. */
 
 .prosa {
   font-family: var(--f-lectura);
-  font-size: var(--t-lectura);
+  font-size: 1.0625rem;
   font-optical-sizing: auto;
-  line-height: 1.7;
+  line-height: 1.68;
   color: var(--tinta);
   hanging-punctuation: first;
   overflow-wrap: break-word;
 }
-.prosa > * + *, .prosa section > * + * { margin-top: 1.1em; }
+@media (min-width: 720px) { .prosa { font-size: var(--t-lectura); line-height: 1.7; } }
+.prosa > * + *, .prosa section > * + * { margin-top: 1.05em; }
 .prosa p, .prosa li { max-width: var(--medida); text-wrap: pretty; }
 /* A 375 px la columna tiene unas 38 letras: se parte con guiones (lang="es") para que el borde derecho no quede roto. */
 @media (max-width: 560px) { .prosa p, .prosa li { hyphens: auto; -webkit-hyphens: auto; } }
-.prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { margin-top: 2.2em; margin-bottom: 0.2em; scroll-margin-top: 5rem; }
-.prosa section > h2:first-child, .prosa section > h3:first-child { margin-top: 2.2em; }
-.prosa h2 { font-size: var(--t-4); }
-.prosa h3 { font-size: var(--t-3); }
-.prosa h4 { font-size: 1.125rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; }
-.prosa h5, .prosa h6 { font-size: 1rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; }
-.prosa .header-section-number { font-family: var(--f-datos); font-size: 0.62em; color: var(--acento); margin-right: 0.6em; vertical-align: 0.18em; font-weight: 400; }
-.prosa ul, .prosa ol { padding-left: 1.4em; }
+
+/* Títulos: jerarquía por tamaño y aire, no por color. */
+.prosa h2, .prosa h3, .prosa h4, .prosa h5, .prosa h6 { margin-top: 2em; margin-bottom: 0.15em; scroll-margin-top: 5rem; color: var(--tinta); }
+.prosa section > h2:first-child, .prosa section > h3:first-child { margin-top: 2em; }
+.prosa h2 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, var(--t-4)); font-weight: 600; letter-spacing: -0.015em; }
+.prosa h3 { font-size: clamp(1.1875rem, 1.1rem + 0.4vw, var(--t-3)); font-weight: 600; }
+.prosa h4 { font-size: 1.0625rem; font-family: var(--f-interfaz); font-weight: 650; letter-spacing: 0; }
+.prosa h5, .prosa h6 { font-size: 1rem; font-family: var(--f-interfaz); font-weight: 600; letter-spacing: 0; color: var(--tinta-2); }
+.prosa .header-section-number { font-family: var(--f-datos); font-size: 0.58em; color: var(--tenue); margin-right: 0.55em; vertical-align: 0.2em; font-weight: 400; letter-spacing: 0; }
+
+.prosa ul, .prosa ol { padding-left: 1.35em; }
 .prosa li + li { margin-top: 0.3em; }
 .prosa li::marker { color: var(--tenue); }
-.prosa a { color: var(--acento); }
+.prosa a { color: var(--acento); text-decoration-color: color-mix(in oklab, var(--acento) 35%, transparent); }
+.prosa a:hover { text-decoration-color: currentColor; }
 .prosa strong { font-weight: 650; }
-.prosa blockquote { margin: 1.5em 0; padding-left: 1.2em; border-left: 2px solid var(--acento); color: var(--tinta-2); font-style: italic; }
-.prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5em 0; }
+.prosa blockquote { margin: 1.6em 0; padding: 0 0 0 1.1em; border-left: 1px solid var(--linea-fuerte); color: var(--tinta-2); font-style: italic; }
+.prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2.5em auto; max-width: 8rem; }
 .prosa .enlace-sin-destino { text-decoration: underline dotted var(--tenue); }
 
-/* Código en línea y en bloque */
-.prosa code { font-family: var(--f-datos); font-size: 0.84em; }
-.prosa :not(pre) > code {
-  background: var(--acento-suave); padding: 0.1em 0.35em; border-radius: var(--r-1);
-  border: 1px solid color-mix(in oklab, var(--acento) 18%, transparent);
+/* ── Desplazamiento horizontal con aviso: una sombra suave en el borde por donde sigue el contenido ────────── */
+.prosa .tabla, .prosa .table-wrap, .prosa .katex-display {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--linea-fuerte) transparent;
+  background:
+    linear-gradient(to right, var(--papel) 30%, transparent) left / 2rem 100% no-repeat local,
+    linear-gradient(to left, var(--papel) 30%, transparent) right / 2rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--sombra-borde), transparent) left / 0.6rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--sombra-borde), transparent) right / 0.6rem 100% no-repeat scroll;
 }
-.prosa pre {
-  margin: 0; padding: 1rem 1.1rem; overflow-x: auto;
-  background: var(--codigo-fondo); border: 1px solid var(--linea); border-radius: var(--r-2);
-  font-size: 0.9rem; line-height: 1.6; tab-size: 4;
+
+/* ── Código en línea ─────────────────────────────────────────────────────── */
+.prosa code { font-family: var(--f-datos); font-size: 0.84em; font-variant-ligatures: none; }
+.prosa :not(pre) > code { background: var(--papel-2); padding: 0.08em 0.32em; border-radius: var(--r-1); color: var(--tinta); }
+.prosa a > code { color: inherit; }
+
+/* ── Bloques de código: tarjeta oscura sobria, igual en tema claro y oscuro (demo de Qillqa) ─────────────── */
+.prosa div.sourceCode, .prosa .cell { margin-top: 1.4em; position: relative; }
+.prosa div.sourceCode {
+  background: var(--tc-fondo); border: 1px solid var(--tc-borde); border-radius: 14px; overflow: hidden;
+  box-shadow: var(--tc-sombra);
 }
-.prosa div.sourceCode, .prosa .cell { margin-top: 1.2em; position: relative; }
-/* Bloque de código con una cabecera discreta: lenguaje a la izquierda, copiar a la derecha, separados por un filete. */
-.prosa div.sourceCode { border: 1px solid var(--linea); border-radius: var(--r-2); overflow: hidden; background: var(--codigo-fondo); }
-.prosa div.sourceCode > pre { border: 0; border-radius: 0; }
 .prosa .codigo-barra {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.1rem; padding: 0 0.45rem 0 0.85rem;
-  font: 0.72rem/1 var(--f-datos); color: var(--tenue); border-bottom: 1px solid var(--linea);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.5rem; padding: 0 0.6rem;
+  background: var(--tc-barra); border-bottom: 1px solid var(--tc-borde);
 }
-.prosa .codigo-lengua { display: inline-flex; align-items: center; gap: 0.45rem; text-transform: lowercase; }
+.prosa .codigo-lengua {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.75rem; border-radius: 999px;
+  font: 500 0.75rem/1.2 var(--f-interfaz); color: var(--tc-rotulo); background: var(--tc-velo); text-transform: lowercase;
+}
+.prosa .codigo-lengua svg { opacity: 0.7; }
 .prosa .codigo-copiar {
-  display: inline-flex; align-items: center; gap: 0.35rem; min-height: 1.7rem; padding: 0 0.5rem;
-  font: 500 var(--t-0)/1 var(--f-interfaz); color: var(--tenue); background: none; border: 1px solid transparent; border-radius: var(--r-1); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.35rem; min-height: 1.75rem; padding: 0 0.7rem; border-radius: 999px;
+  font: 500 0.75rem/1 var(--f-interfaz); color: var(--tc-boton); background: var(--tc-velo);
+  border: 1px solid var(--tc-velo-fuerte); cursor: pointer; transition: background-color 0.15s;
 }
-.prosa .codigo-copiar:hover { color: var(--acento-tinta); border-color: var(--linea); background: var(--elevado); }
+.prosa .codigo-copiar:hover { background: var(--tc-velo-fuerte); color: var(--tc-fuerte); }
+.prosa .codigo-copiar:focus-visible { outline-color: var(--tc-fuerte); }
 .prosa .code-copy-outer-scaffold { position: relative; }
-.prosa pre code { font-size: inherit; background: none; border: 0; padding: 0; white-space: pre; }
+.prosa div.sourceCode > pre {
+  margin: 0; padding: 1.1rem 1.25rem; overflow-x: auto; background: none; border: 0; border-radius: 0;
+  color: var(--tc-texto); font-size: 0.875rem; line-height: 1.7; tab-size: 4;
+  scrollbar-width: thin; scrollbar-color: var(--tc-desliz) transparent;
+}
+@media (max-width: 560px) {
+  .prosa div.sourceCode { border-radius: 12px; }
+  .prosa div.sourceCode > pre { font-size: 0.8125rem; padding: 0.95rem 1rem; }
+}
+.prosa pre code { font-size: inherit; background: none; border: 0; padding: 0; white-space: pre; color: inherit; }
 .prosa pre code > span { display: inline; }
-.prosa .cell-output pre, .prosa .cell-output-stdout pre { background: transparent; border-style: dashed; color: var(--tinta-2); }
+/* Resaltado contenido: casi monocromo; solo palabras clave, cadenas y números se distinguen, sin chillar. */
+.prosa div.sourceCode code span.kw, .prosa div.sourceCode code span.cf, .prosa div.sourceCode code span.im { color: var(--tc-fuerte); font-weight: 600; }
+.prosa div.sourceCode code span.st, .prosa div.sourceCode code span.ss, .prosa div.sourceCode code span.vs,
+.prosa div.sourceCode code span.ch, .prosa div.sourceCode code span.sc { color: var(--tc-cadena); }
+.prosa div.sourceCode code span.dv, .prosa div.sourceCode code span.bn, .prosa div.sourceCode code span.fl,
+.prosa div.sourceCode code span.cn { color: var(--tc-numero); }
+.prosa div.sourceCode code span.fu, .prosa div.sourceCode code span.bu, .prosa div.sourceCode code span.dt,
+.prosa div.sourceCode code span.at { color: var(--tc-funcion); }
+.prosa div.sourceCode code span.co, .prosa div.sourceCode code span.do, .prosa div.sourceCode code span.an,
+.prosa div.sourceCode code span.cv, .prosa div.sourceCode code span.in { color: var(--tc-tenue); font-style: normal; }
+.prosa div.sourceCode code span.op, .prosa div.sourceCode code span.ot, .prosa div.sourceCode code span.va { color: var(--tc-texto); }
+.prosa div.sourceCode code span.al, .prosa div.sourceCode code span.er, .prosa div.sourceCode code span.wa { color: var(--tc-error); font-weight: 600; }
+/* Un <pre> suelto (sin div.sourceCode) y la salida de una celda: papel, no tarjeta. */
+.prosa pre {
+  margin: 0; padding: 0.9rem 1.1rem; overflow-x: auto; background: var(--papel-2); border-radius: var(--r-3);
+  font-size: 0.85rem; line-height: 1.6; color: var(--tinta-2);
+}
+.prosa .cell-output pre, .prosa .cell-output-stdout pre { margin-top: 0.6em; background: var(--papel-2); border: 0; }
 
-/* Resaltado de Pandoc (clases cortas) */
-.prosa code span.kw, .prosa code span.cf, .prosa code span.im { color: var(--cod-palabra); font-weight: 500; }
-.prosa code span.dt, .prosa code span.at { color: var(--cod-funcion); }
-.prosa code span.st, .prosa code span.ss, .prosa code span.vs, .prosa code span.ch, .prosa code span.sc { color: var(--cod-cadena); }
-.prosa code span.dv, .prosa code span.bn, .prosa code span.fl, .prosa code span.cn { color: var(--cod-numero); }
-.prosa code span.co, .prosa code span.do, .prosa code span.an, .prosa code span.cv, .prosa code span.in { color: var(--cod-comentario); font-style: italic; }
-.prosa code span.fu, .prosa code span.bu { color: var(--cod-funcion); }
-.prosa code span.op, .prosa code span.ot, .prosa code span.va { color: var(--tinta); }
-.prosa code span.al, .prosa code span.er, .prosa code span.wa { color: var(--cod-numero); font-weight: 600; }
+/* ── Matemáticas ─────────────────────────────────────────────────────────── */
+.prosa .katex { font-size: 1.04em; }
+.prosa .katex-display { overflow-y: hidden; padding-block: 0.5em; margin: 1.3em 0; max-width: var(--medida); }
+.prosa .katex-display > .katex { padding-inline: 0.25rem; }
+@media (max-width: 560px) { .prosa .katex-display > .katex { font-size: 0.98em; } }
 
-/* Matemáticas */
-.prosa .katex { font-size: 1.05em; }
-.prosa .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 0.4em; margin: 1.2em 0; max-width: var(--medida); }
-
-/* Figuras y tablas */
-.prosa img { border-radius: var(--r-1); height: auto; }
-.prosa figure { margin: 1.6em 0; }
-/* La salida de una celda (gráfico) va pegada a su código: el margen entre ambos era el de dos párrafos. */
-.prosa .cell-output-display figure, .prosa .cell-output-display .figure { margin: 0.6em 0 0; }
+/* ── Figuras ─────────────────────────────────────────────────────────────── */
+.prosa img { border-radius: var(--r-2); height: auto; display: block; margin-inline: auto; }
+.prosa figure { margin: 2em 0; max-width: var(--medida); }
+.prosa .cell-output-display figure, .prosa .cell-output-display .figure { margin: 0.8em 0 0; }
 .prosa .cell + .cell, .prosa .cell + div.sourceCode, .prosa .cell + p { margin-top: 1.6em; }
+/* Pie al estilo APA 7: rótulo en negrita en su línea y título en cursiva; sans pequeña, gris, con el interlineado
+   propio de un pie (no el de la prosa). Arriba en tablas, abajo en figuras, como lo deja Quarto. */
 .prosa figcaption, .prosa .figure-caption, .prosa caption {
-  font-family: var(--f-interfaz); font-size: var(--t-0); color: var(--tenue); margin-top: 0.6em; text-align: left;
+  font-family: var(--f-interfaz); font-size: 0.875rem; line-height: 1.5; color: var(--tinta-2);
+  text-align: left; max-width: var(--medida); caption-side: top;
 }
-.prosa .tabla, .prosa .table-wrap, .prosa .cell-output-display { overflow-x: auto; }
-.prosa .tabla { margin-top: 1.4em; }
-/* Tabla de tres filetes (superior, bajo la cabecera e inferior), como en una revista. */
-.prosa table {
-  border-collapse: collapse; width: 100%; font-family: var(--f-interfaz); font-size: var(--t-1); line-height: 1.45;
-  font-variant-numeric: lining-nums tabular-nums; border-top: 1.5px solid var(--tinta); border-bottom: 1.5px solid var(--tinta);
-}
-.prosa thead th { border-bottom: 1px solid var(--tinta); text-align: left; font-weight: 600; white-space: nowrap; }
-.prosa th, .prosa td { padding: 0.5em 0.85em; border-bottom: 1px solid var(--linea); vertical-align: top; }
-.prosa th:first-child, .prosa td:first-child { padding-left: 0.25em; }
-.prosa tbody tr:last-child td { border-bottom: 0; }
+.prosa figcaption { margin-top: 0.75em; }
+.prosa .quarto-float-caption-top, .prosa caption { margin: 0 0 0.7em; }
+.prosa .rotulo { display: block; font-weight: 650; color: var(--tinta); letter-spacing: 0.01em; }
+.prosa .titulo-float { display: block; font-style: italic; }
 
-/* Avisos de Quarto */
-.prosa .callout { border: 1px solid var(--linea); border-left: 3px solid var(--acento); border-radius: var(--r-2); background: var(--elevado); margin-top: 1.4em; }
-.prosa .callout-header { font-family: var(--f-interfaz); font-weight: 600; font-size: var(--t-1); padding: 0.7rem 1rem 0; }
+/* ── Tablas: tres filetes (arriba, bajo la cabecera, abajo), sin rayas interiores, cifras tabulares ─────── */
+.prosa .tabla { margin-top: 1.2em; }
+.prosa figure .tabla { margin-top: 0; }
+.prosa table {
+  border-collapse: collapse; width: 100%; min-width: min(100%, 32rem);
+  font-family: var(--f-interfaz); font-size: 0.875rem; line-height: 1.45; color: var(--tinta);
+  font-variant-numeric: lining-nums tabular-nums;
+  border-top: 1.5px solid var(--tinta); border-bottom: 1.5px solid var(--tinta);
+}
+.prosa thead th { border-bottom: 1px solid var(--tinta); font-weight: 600; vertical-align: bottom; }
+.prosa th, .prosa td { padding: 0.5em 0.75em; vertical-align: top; }
+.prosa th:first-child, .prosa td:first-child { padding-left: 0.2em; }
+.prosa th:last-child, .prosa td:last-child { padding-right: 0.2em; }
+.prosa tbody tr + tr td { border-top: 1px solid color-mix(in oklab, var(--linea) 55%, transparent); }
+.prosa tbody tr:hover td { background: color-mix(in oklab, var(--papel-2) 70%, transparent); }
+@media (max-width: 560px) {
+  .prosa table { font-size: 0.8125rem; }
+  .prosa th, .prosa td { padding: 0.45em 0.55em; }
+  .prosa thead th { hyphens: auto; -webkit-hyphens: auto; }
+}
+
+/* ── Avisos de Quarto: papel teñido apenas, sin iconos ni colores de semáforo ────────────────────────── */
+.prosa .callout { border: 0; border-left: 2px solid var(--linea-fuerte); border-radius: 0 var(--r-3) var(--r-3) 0; background: var(--papel-2); margin-top: 1.6em; }
+.prosa .callout-tip, .prosa .callout-important, .prosa .callout-note { border-left-color: var(--acento); }
+.prosa .callout-header { font-family: var(--f-interfaz); font-weight: 650; font-size: 0.8125rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--tinta-2); padding: 0.85rem 1.1rem 0; }
 .prosa .callout-icon-container { display: none; }
-.prosa .callout-body-container, .prosa .callout-body { padding: 0.4rem 1rem 0.9rem; }
+.prosa .callout-body-container, .prosa .callout-body { padding: 0.35rem 1.1rem 1rem; }
 .prosa .callout-body > * + * { margin-top: 0.8em; }
-.prosa .callout-tip, .prosa .callout-important { border-left-color: var(--acento); }
-.prosa .callout-warning, .prosa .callout-caution { border-left-color: var(--cod-numero); }
 
 /* Pestañas de Quarto sin Bootstrap: se muestran todas, una tras otra */
 .prosa .panel-tabset .nav { display: none; }
 .prosa .tab-pane + .tab-pane { margin-top: 1.5em; padding-top: 1em; border-top: 1px dashed var(--linea); }
 
-/* Notas al pie y referencias */
-.prosa .footnotes, .prosa #refs { font-size: var(--t-1); color: var(--tinta-2); }
-.prosa .csl-entry { padding-left: 1.5em; text-indent: -1.5em; margin-top: 0.6em; }
+/* ── Notas al pie y referencias: más pequeñas, con aire y sangría francesa; los enlaces largos se parten ── */
+.prosa .footnotes, .prosa #refs, .prosa #quarto-bibliography {
+  margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--linea);
+  font-size: 0.9375rem; line-height: 1.55; color: var(--tinta-2);
+}
+.prosa #quarto-bibliography > h2, .prosa .footnotes > h2, .prosa #refs > h2 {
+  margin-top: 0; font-family: var(--f-interfaz); font-size: 0.8125rem; font-weight: 650; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--tenue);
+}
+.prosa #quarto-bibliography #refs { margin-top: 0.75rem; padding-top: 0; border-top: 0; }
+.prosa .csl-entry { padding-left: 1.6em; text-indent: -1.6em; margin-top: 0.75em; max-width: var(--medida); overflow-wrap: anywhere; }
+.prosa .csl-entry a, .prosa .footnotes a { color: var(--tinta-2); text-decoration-color: var(--linea-fuerte); }
+.prosa .footnotes ol { padding-left: 1.2em; }
+.prosa .footnotes li + li { margin-top: 0.5em; }
+.prosa .footnote-back { text-decoration: none; margin-left: 0.25em; }
+.prosa sup a.footnote-ref, .prosa a.footnote-ref { text-decoration: none; font-family: var(--f-interfaz); font-weight: 600; font-size: 0.8em; }
 
 /* Un subtítulo que sigue directo a su título no necesita el aire de una sección nueva. */
-.prosa h2 + section > h3:first-child, .prosa h3 + section > h4:first-child { margin-top: 1.1em; }
+.prosa h2 + section > h3:first-child, .prosa h3 + section > h4:first-child { margin-top: 1em; }

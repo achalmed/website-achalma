@@ -49,6 +49,26 @@ por el render le impondría el tema del hub y rompería su paleta, validada apar
 `<!-- cifras:inicio/fin -->` de la página de entrada): no se editan aquí. El contrato del lado del
 proveedor: `datafw/docs/integracion-ecosistema.md` §2 (el observatorio) y §4 (consumidores).
 
+**1.7 Portada personal y «Sobre mí» desde el CV** (autor, 2026-10-21). La portada deja de parecerse a una página de
+curso: sin la retícula milimetrada (seña de los cursos y de la vitrina), tipografía editorial, retrato, el cargo en curso,
+los escritos recientes como lista de revista y «Mis sitios» como índice de los 12 pubs. «Sobre mí» pasa a ser una ficha
+interactiva (índice deslizable, trayectoria con filtros por área y funciones desplegables), legible a 375 px. Los datos
+no se copian a mano: la trayectoria y el bloque «Ahora» los escribe `scripts/cv-a-web.py` desde el repo `cv` (selector
+`2_experiencias_larga.tex`; los filtros, de los perfiles «sector público» y «docencia» del CV), y «Mis sitios» lo escribe
+`scripts/pubs.py readme` desde `_pubs/pubs.yml`; `generar-externos.sh --verificar` avisa si el About quedó atrás del CV.
+El empleo del Congreso figura como «Auxiliar de Despacho Congresal» sin nombrar al despacho (regla 7 del `CLAUDE.md`
+raíz: es cliente y el repo es público). La barra de navegación queda en español y el título del sitio en «Edison Achalma».
+`home.scss` y `about.scss` (y sus `.css`) dejan de compartir inodo con los pubs: `05-pages/` está fuera del tema a
+propósito (§4.4) y la portada del hub no debe ser la de un pub.
+
+**1.8 Pauta editorial de lectura** (autor, 2026-10-21). Tinta sobre papel y un solo acento por sitio, reservado para
+enlaces y lo que importa; serif de lectura (Source Serif 4, ahora autoalojada también en el hub) con sans para tablas,
+pies y código; tablas de tres filetes sin rayas interiores ni versalitas; código en una tarjeta oscura sobria, igual en
+los dos temas (la de la demo de Qillqa), con resaltado casi monocromo; índice lateral sin filete vertical y con la barra
+de desplazamiento oculta en reposo. La pauta vive en la vitrina (`_aula/src/styles/contenido.css`, decisiones §1.22 del
+aula) para los 12 pubs y en el tema compartido (`_code.scss`, `_tables.scss`, `_toc.scss`, paleta y tokens de la
+tarjeta de código) para las páginas del hub.
+
 ## 2. Los blogs satélite
 
 **2.1 Los 11 blogs son submódulos del hub en `_pubs/`** (2026-09-06, F3a). Cada uno conserva repo,

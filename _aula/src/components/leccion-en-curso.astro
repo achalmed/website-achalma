@@ -150,15 +150,17 @@ const contexto = enCurso.origen === 'leccion'
   .panel h3 { font-size: var(--t-3); }
   .panel h3 .dato { color: var(--acento); font-size: 0.7em; vertical-align: 0.12em; margin-right: 0.3em; }
   .panel p { font-family: var(--f-lectura); font-size: 1.02rem; line-height: 1.6; color: var(--tinta-2); }
+  /* La misma tarjeta de código que las lecciones (contenido.css): oscura, sobria y casi monocroma. */
   .codigo {
-    margin: 0; padding: 0.75rem 0.9rem; overflow-x: auto;
-    font: 0.82rem/1.55 var(--f-datos); background: var(--codigo-fondo); border: 1px solid var(--linea); border-radius: var(--r-2);
+    margin: 0; padding: 0.9rem 1rem; overflow-x: auto; color: var(--tc-texto);
+    font: 0.8125rem/1.65 var(--f-datos); background: var(--tc-fondo); border: 1px solid var(--tc-borde); border-radius: 12px;
+    scrollbar-width: thin; scrollbar-color: var(--tc-desliz) transparent;
   }
-  .codigo :global(span.co) { color: var(--cod-comentario); font-style: italic; }
-  .codigo :global(span.kw), .codigo :global(span.cf), .codigo :global(span.im) { color: var(--cod-palabra); }
-  .codigo :global(span.st), .codigo :global(span.ss), .codigo :global(span.sc) { color: var(--cod-cadena); }
-  .codigo :global(span.dv), .codigo :global(span.fl), .codigo :global(span.cn) { color: var(--cod-numero); }
-  .codigo :global(span.bu), .codigo :global(span.fu), .codigo :global(span.dt) { color: var(--cod-funcion); }
+  .codigo :global(span.co) { color: var(--tc-tenue); }
+  .codigo :global(span.kw), .codigo :global(span.cf), .codigo :global(span.im) { color: var(--tc-fuerte); font-weight: 600; }
+  .codigo :global(span.st), .codigo :global(span.ss), .codigo :global(span.sc) { color: var(--tc-cadena); }
+  .codigo :global(span.dv), .codigo :global(span.fl), .codigo :global(span.cn) { color: var(--tc-numero); }
+  .codigo :global(span.bu), .codigo :global(span.fu), .codigo :global(span.dt) { color: var(--tc-funcion); }
   .seguir { font-size: var(--t-1); font-weight: 600; color: var(--acento); justify-self: start; }
 
   .en-curso-pie { display: flex; align-items: center; gap: 1rem; }

@@ -292,3 +292,25 @@ lector pulsa, y sin JavaScript queda un enlace al vídeo. TikTok, Facebook y las
 ninguna pieza está publicada, así que la sección no aparece en ningún pub; el componente se prueba con datos de
 muestra en `_aula/scripts/prueba-videos.mjs` (`npm run prueba`) y en la página interna `/demo/videos/`, que solo
 existe con `astro dev` o `AULA_DEMO=1` (captura: `_aula/docs/img/videos-demo.webp`).
+
+### §1.22 Pauta editorial de lectura (2026-10-21)
+
+El autor pidió que leer una lección o un artículo en el celular sea tan limpio como una buena app de lectura y que
+transmita rigor: sin distracciones, una o dos tintas como máximo, como una revista académica. Decisiones (autor):
+**tinta sobre papel y un solo acento por pub**, solo para enlaces y lo que importa (el número de sección pasa a gris);
+**serif de lectura** con sans para tablas, pies y código, a 17 px en el celular y 18 px desde 720 px. En
+`src/styles/contenido.css` y `src/layouts/lector.astro`:
+
+- **Tablas** de tres filetes, sin rayas interiores, cifras tabulares, 13 px en el celular; `contenido.mjs` quita los
+  anchos fijos de Pandoc (`colgroup`) y el contenedor muestra una sombra en el borde por donde la tabla sigue. Las
+  ecuaciones anchas usan el mismo aviso.
+- **Pies de figura y tabla al estilo APA 7**: `contenido.mjs` separa el rótulo («Tabla 1») del título; el rótulo va en
+  negrita en su línea y el título en cursiva, en sans de 14 px con su propio interlineado.
+- **Código** en la tarjeta oscura de la demo de Qillqa (`--tc-*` en `tokens.css`, igual en claro y oscuro): pastilla con
+  el lenguaje, botón «Copiar» en píldora, resaltado casi monocromo. La muestra de código de la portada del curso usa la
+  misma tarjeta.
+- **Índice de la página** sin filete vertical: la sección en curso va en tinta con un punto del acento; las barras de
+  desplazamiento de las dos columnas laterales no se ven en reposo.
+- **Referencias y notas** separadas por un filete, más pequeñas, con sangría francesa y los enlaces largos partidos.
+- **Avisos** en papel teñido, sin colores de semáforo.
+

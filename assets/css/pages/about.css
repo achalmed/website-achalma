@@ -1,105 +1,577 @@
 /* GENERADO desde assets/scss/05-pages/about.scss — NO editar a mano.
    Regenerar con: ./scripts/build-page-css.sh (corre solo en cada render) */
 /* ============================================================================
-   PÁGINA ABOUT (plantilla trestles) — ficha de investigador
+   FICHA PERSONAL — editorial e interactiva (decisión del autor, 2026-10-21)
    ============================================================================
-   Usa los tokens --lab-* definidos por los temas claro y oscuro.
+   Tinta sobre papel; el acento solo marca el cargo en curso, el filtro activo y
+   el botón principal. La trayectoria la escribe scripts/cv-a-web.py desde el CV.
+   Celular primero: todo en una columna hasta 860 px.
    ============================================================================ */
-/* Título y subtítulo */
+:root {
+  --ficha-titulo: "Petrona", Georgia, "Times New Roman", serif;
+  --ficha-lectura: "Source Serif 4", "Source Serif Pro", Charter, "Iowan Old Style", Georgia, serif;
+  --ficha-interfaz: "Red Hat Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ficha-ancho: 68rem;
+}
+
 #title-block-header {
-  margin-bottom: 0;
+  display: none;
 }
 
-/* Panel de identidad: superficie sutil con marco hairline */
-.about-entity {
-  background-color: var(--lab-bg-surface, #F2F2EC);
-  border: 1px solid var(--lab-border, #E5E5DD);
-  border-radius: 14px;
-  padding: 3em 1em !important;
-  margin: 0 2em;
+main.content {
+  padding-top: 0;
 }
 
-/* Retrato */
-.about-entity .about-image {
-  border: 1px solid var(--lab-border, #E5E5DD);
-  box-shadow: var(--lab-shadow-md, 0 6px 24px -8px rgba(16, 24, 32, 0.12));
+html {
+  scroll-padding-top: 5.5rem;
 }
 
-/* Nombre y especialidad */
-.about-entity .title {
-  letter-spacing: -0.015em;
+/* Todo dentro de main.content: así gana a la prosa global del tema (main.content p, li) sin !important. */
+main.content {
+  /* ── Presentación ─────────────────────────────────────────────────────────── */
+  /* «Ahora» (generado desde el CV) */
+  /* Índice de la página: en el celular se desliza en horizontal. No se pega arriba: la barra de Quarto ya lo hace. */
+  /* ── Secciones ────────────────────────────────────────────────────────────── */
+  /* Listas de la ficha: sin iconos, con filete fino entre elementos. */
+  /* ── Trayectoria (bloque generado desde el CV) ────────────────────────────── */
+  /* Línea de tiempo: un filete fino y un punto por cargo; el cargo en curso lleva el acento. */
 }
-
-.about-entity .subtitle {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.78rem;
+main.content .ficha {
+  display: grid;
+  gap: 1.5rem;
+  max-width: var(--ficha-ancho);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 1rem + 3vw, 4rem) 0 clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+@media (min-width: 860px) {
+  main.content .ficha {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+  }
+}
+main.content .ficha-retrato {
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+  border: 1px solid var(--lab-border);
+}
+@media (min-width: 860px) {
+  main.content .ficha-retrato {
+    width: 15rem;
+    height: auto;
+    aspect-ratio: 4/5;
+    border-radius: 18px;
+  }
+}
+main.content .ficha-sobre {
+  margin: 0 0 0.6rem;
+  font: 600 0.78rem/1.2 var(--ficha-interfaz);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--lab-muted, #5B6670);
+  color: var(--lab-muted);
 }
-
-/* Enlaces "Ver todo" (como subtítulos) */
-.about-links.subtitle {
-  font-family: "Red Hat Text", sans-serif;
+main.content .ficha h1 {
+  margin: 0;
+  font: 500 clamp(2rem, 1.4rem + 2.8vw, 3.25rem)/1.05 var(--ficha-titulo);
+  letter-spacing: -0.025em;
+  color: var(--lab-ink);
+  border: 0;
 }
-
-/* Enlaces sociales: bloque de enlaces */
-.about-entity .about-links {
-  justify-content: center !important;
-  column-gap: 0.35em !important;
-  font-size: 1.2em !important;
+main.content .ficha-roles {
+  margin: 0.75rem 0 0;
+  font: 500 1rem/1.5 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
 }
-
-/* Enlaces sociales: enlaces individuales */
-.about-entity .about-link {
-  padding: 0.25em 0.4em !important;
-  border: none !important;
+main.content .ficha .ahora-lista {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+main.content .ficha .ahora-lista li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.6rem;
+  padding: 0.75rem 1rem 0.75rem 1.9rem;
+  position: relative;
+  border: 1px solid var(--lab-border);
+  border-radius: 12px;
+  background: var(--lab-bg-elevated);
+  max-width: 40rem;
+}
+main.content .ficha .ahora-lista li::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 1.2rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--lab-accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--lab-accent) 16%, transparent);
+}
+main.content .ficha .ahora-cargo {
+  font: 650 0.98rem/1.35 var(--ficha-interfaz);
+  color: var(--lab-ink);
+}
+main.content .ficha .ahora-org {
+  font: 400 0.93rem/1.35 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .ficha .ahora-desde {
+  font: 500 0.8125rem/1.35 var(--ficha-interfaz);
+  color: var(--lab-muted);
+}
+main.content .ficha-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+main.content .ficha-boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--lab-border-strong);
+  border-radius: 999px;
+  font: 600 0.9375rem/1 var(--ficha-interfaz);
+  color: var(--lab-ink);
+  text-decoration: none;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+main.content .ficha-boton:hover {
+  border-color: var(--lab-ink);
+  color: var(--lab-ink);
+}
+main.content .ficha-boton.primario {
+  background: var(--lab-ink);
+  border-color: var(--lab-ink);
+  color: var(--lab-bg);
+}
+main.content .ficha-boton.primario:hover {
+  background: var(--lab-accent);
+  border-color: var(--lab-accent);
+  color: var(--lab-bg);
+}
+main.content .ficha-icono {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--lab-muted);
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+main.content .ficha-icono:hover {
+  color: var(--lab-ink);
+  background: var(--lab-bg-surface);
+}
+main.content .ficha-indice {
+  display: flex;
+  gap: 0.25rem;
+  max-width: var(--ficha-ancho);
+  margin: 0 auto;
+  padding: 0.6rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--lab-border);
+}
+main.content .ficha-indice::-webkit-scrollbar {
+  display: none;
+}
+main.content .ficha-indice a {
+  flex: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font: 500 0.875rem/1 var(--ficha-interfaz);
+  color: var(--lab-muted);
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s;
+}
+main.content .ficha-indice a:hover {
+  color: var(--lab-ink);
+  background: var(--lab-bg-surface);
+}
+main.content .ficha-indice a[aria-current] {
+  color: var(--lab-ink);
+  background: var(--lab-bg-surface);
+  font-weight: 600;
+}
+main.content .ficha-seccion {
+  max-width: var(--ficha-ancho);
+  margin: 0 auto;
+  padding: clamp(2rem, 1.5rem + 2.5vw, 3.5rem) 0;
+}
+main.content .ficha-seccion + .ficha-seccion {
+  border-top: 1px solid var(--lab-border);
+}
+main.content .ficha-seccion > h2 {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+  font: 500 clamp(1.5rem, 1.3rem + 0.9vw, 2rem)/1.15 var(--ficha-titulo);
+  letter-spacing: -0.015em;
+  color: var(--lab-ink);
+}
+main.content .ficha-seccion > h2::after {
+  display: none;
+}
+main.content .ficha-seccion h3 {
+  margin: 1.75rem 0 0.75rem;
+  font: 650 0.78rem/1.2 var(--ficha-interfaz);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lab-muted);
+  border: 0;
+}
+main.content .ficha-seccion h3:first-child {
+  margin-top: 0;
+}
+main.content .ficha-columnas {
+  display: grid;
+  gap: 1.5rem 3rem;
+}
+@media (min-width: 860px) {
+  main.content .ficha-columnas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+main.content #perfil p {
+  font-family: var(--ficha-lectura);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  color: var(--lab-ink);
+  max-width: 38rem;
+}
+main.content #perfil p strong {
+  font-weight: 600;
+}
+main.content .ficha-lista ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main.content .ficha-lista li {
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--lab-border);
+  font: 400 0.9375rem/1.55 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .ficha-lista li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+main.content .ficha-lista li strong {
+  color: var(--lab-ink);
+  font-weight: 600;
+}
+main.content .ficha-lista li a {
+  color: inherit;
+  text-decoration-color: var(--lab-border-strong);
+}
+main.content .ficha-lista li a:hover {
+  color: var(--lab-accent);
+}
+main.content .ficha-chips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+main.content .ficha-chips li {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  font: 500 0.875rem/1.2 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+  background: var(--lab-bg-elevated);
+}
+main.content .ficha-idiomas ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+main.content .ficha-idiomas li {
+  font: 400 0.9375rem/1.4 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .ficha-idiomas li strong {
+  color: var(--lab-ink);
+  font-weight: 600;
+}
+main.content .ficha-mas, main.content .ficha-enlace {
+  font-family: var(--ficha-interfaz);
+  font-weight: 600;
+}
+main.content #ultimamente p {
+  font: 400 1rem/1.6 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content #ultimamente .quarto-listing-default {
+  display: grid;
+}
+main.content #ultimamente .quarto-post {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.75rem 0;
+  margin: 0;
+  border-bottom: 1px solid var(--lab-border);
+}
+main.content #ultimamente .quarto-post .thumbnail {
+  display: none;
+}
+main.content #ultimamente .quarto-post .listing-title {
+  margin: 0;
+  font: 500 1.125rem/1.3 var(--ficha-titulo);
+}
+main.content #ultimamente .quarto-post a {
+  color: var(--lab-ink);
+  text-decoration: none;
+}
+main.content #ultimamente .quarto-post a:hover .listing-title {
+  color: var(--lab-accent);
+}
+main.content #ultimamente .quarto-post .metadata, main.content #ultimamente .listing-date {
+  font: 500 0.8125rem/1.3 var(--ficha-interfaz);
+  color: var(--lab-muted);
+}
+main.content .trayectoria-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+main.content .trayectoria-filtros button {
+  min-height: 2.25rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--lab-border-strong);
+  border-radius: 999px;
+  background: transparent;
+  font: 500 0.875rem/1 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+main.content .trayectoria-filtros button:hover {
+  border-color: var(--lab-ink);
+  color: var(--lab-ink);
+}
+main.content .trayectoria-filtros button[aria-pressed=true] {
+  background: var(--lab-ink);
+  border-color: var(--lab-ink);
+  color: var(--lab-bg);
+}
+main.content .hitos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+main.content .hito {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0 0 1.75rem 1.6rem;
+}
+main.content .hito::before {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.55rem;
+  bottom: -0.55rem;
+  width: 1px;
+  background: var(--lab-border);
+}
+main.content .hito:last-child::before {
+  display: none;
+}
+main.content .hito::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--lab-bg);
+  border: 1.5px solid var(--lab-border-strong);
+}
+main.content .hito-actual::after {
+  background: var(--lab-accent);
+  border-color: var(--lab-accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--lab-accent) 16%, transparent);
+}
+@media (min-width: 860px) {
+  main.content .hito {
+    grid-template-columns: 11rem minmax(0, 1fr);
+    column-gap: 2rem;
+    padding-left: 0;
+  }
+  main.content .hito::before {
+    left: 12.3rem;
+  }
+  main.content .hito::after {
+    left: 12rem;
+  }
+  main.content .hito-cuerpo {
+    padding-left: 1.5rem;
+  }
+}
+main.content .hito[hidden] {
+  display: none;
+}
+main.content .hito-fecha {
+  margin: 0;
+  align-self: start;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  font: 500 0.8125rem/1.4 var(--ficha-interfaz);
+  color: var(--lab-muted);
+  font-variant-numeric: tabular-nums;
+}
+main.content .hito-ahora {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--lab-accent);
+  background: color-mix(in oklab, var(--lab-accent) 10%, transparent);
+}
+main.content .hito-cuerpo h3 {
+  margin: 0;
+  font: 500 1.1875rem/1.3 var(--ficha-titulo);
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--lab-ink);
+}
+main.content .hito-org {
+  margin: 0.2rem 0 0;
+  font: 500 0.9375rem/1.45 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .hito-resumen {
+  margin: 0.5rem 0 0;
+  font: 400 1rem/1.6 var(--ficha-lectura);
+  color: var(--lab-ink);
+  max-width: 40rem;
+}
+main.content .hito-areas {
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+main.content .hito-area {
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  font: 500 0.75rem/1.3 var(--ficha-interfaz);
+  color: var(--lab-muted);
+}
+main.content .hito details {
+  margin-top: 0.6rem;
+  max-width: 40rem;
+}
+main.content .hito summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  list-style: none;
+  font: 600 0.875rem/1.3 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .hito summary::-webkit-details-marker {
+  display: none;
+}
+main.content .hito summary::before {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid var(--lab-border-strong);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+main.content .hito details[open] summary::before {
+  content: "−";
+}
+main.content .hito summary:hover {
+  color: var(--lab-ink);
+}
+main.content .hito details ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+main.content .hito details li {
+  font: 400 0.9375rem/1.55 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .hito details li + li {
+  margin-top: 0.25rem;
+}
+main.content .hito details li::marker {
+  color: var(--lab-muted);
+}
+main.content .hito-meta {
+  margin: 0.5rem 0 0;
+  font: 400 0.875rem/1.45 var(--ficha-interfaz);
+  color: var(--lab-muted);
+}
+main.content .hito-herramientas {
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+main.content .hito-herramientas span {
+  padding: 0.15rem 0.5rem;
   border-radius: 6px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  background: var(--lab-bg-surface);
+  font: 500 0.78rem/1.4 var(--ficha-interfaz);
+  color: var(--lab-ink-2);
+}
+main.content .trayectoria-fuente {
+  margin: 0.5rem 0 0;
+  font: 400 0.875rem/1.4 var(--ficha-interfaz);
+  color: var(--lab-muted);
+}
+@media (prefers-reduced-motion: no-preference) {
+  main.content .hito {
+    animation: ficha-aparece 0.35s ease both;
+  }
 }
 
-.about-entity .about-link:hover {
-  background: var(--lab-bg-elevated, #FFFFFF);
-  transform: translateY(-2px);
+/* Quarto envuelve cada ### en su propia <section class="level3">: el aire entre subsecciones va en la sección. */
+main.content .ficha-seccion section.level3 + section.level3 {
+  margin-top: 2rem;
 }
 
-/* Encabezados de secciones del cuerpo (Lately, etc.) */
-#about-me h2,
-#lately h2 {
-  letter-spacing: -0.01em;
-}
-
-/* Consulta de medios para pantallas móviles hasta ~992px de ancho */
-@media screen and (max-width: 991.98px) {
-  #lately .grid {
-    display: flex;
-    flex-wrap: wrap;
+@keyframes ficha-aparece {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
-  #blog, #talks, #publications, #projects {
-    flex-basis: 40% !important;
-    flex-grow: 1;
-  }
-  .about-entity .about-links {
-    font-size: 1.2em !important;
-  }
-}
-/* Consulta de medios para pantallas móviles hasta ~576px de ancho */
-@media screen and (max-width: 576px) {
-  #about-me .grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #lately .grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #blog, #talks, #publications, #projects {
-    flex-basis: 100% !important;
-  }
-  .about-entity .about-links {
-    font-size: 1em !important;
-  }
-  .about-entity {
-    margin: 0;
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

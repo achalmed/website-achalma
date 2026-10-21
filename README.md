@@ -48,15 +48,15 @@ Registro canónico carpeta ↔ repo ↔ dominio ↔ tema: `_pubs/pubs.yml`. La t
 | carpeta | tema | repo | sitio | entradas |
 |---|---|---|---|--:|
 | `_pubs/actus-mercator` | Gestión empresarial | `achalmed/actus-mercator` | https://actus-mercator.netlify.app/ | 5 |
-| `_pubs/aequilibria` | Macroeconomía | `achalmed/aequilibria` | https://aequilibria.netlify.app/ | 13 |
+| `_pubs/aequilibria` | Macroeconomía | `achalmed/aequilibria` | https://aequilibria.netlify.app/ | 14 |
 | `_pubs/axiomata` | Matemática | `achalmed/axiomata` | https://axiomata.netlify.app/ | 2 |
 | `_pubs/chaska` | Tecnología y seguridad | `achalmed/chaska` | https://chaska-x.netlify.app/ | 32 |
 | `_pubs/dialectica-y-mercado` | Filosofía y política | `achalmed/dialectica-y-mercado` | https://dialectica-y-mercado.netlify.app/ | 9 |
 | `_pubs/epsilon-y-beta` | Econometría | `achalmed/epsilon-y-beta` | https://epsilon-y-beta.netlify.app/ | 55 |
 | `_pubs/methodica` | Investigación y metodología | `achalmed/methodica` | https://methodica.netlify.app/ | 7 |
-| `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 97 |
+| `_pubs/numerus-scriptum` | Programación y software | `achalmed/numerus-scriptum` | https://numerus-scriptum.netlify.app/ | 121 |
 | `_pubs/optimums` | Microeconomía | `achalmed/optimums` | https://optimums.netlify.app/ | 35 |
-| `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 31 |
+| `_pubs/pecunia-fluxus` | Finanzas | `achalmed/pecunia-fluxus` | https://pecunia-fluxus.netlify.app/ | 34 |
 | `_pubs/propaedeutica` | Preuniversitario y nivelación | `achalmed/propaedeutica` | https://propaedeutica.netlify.app/ | 205 |
 | `_pubs/res-publica` | Gestión pública | `achalmed/res-publica` | https://res-publica.netlify.app/ | 3 |
 

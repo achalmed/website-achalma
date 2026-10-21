@@ -5,6 +5,8 @@
 #   plataforma datafw/tools/plataforma.py --salida            → observatorio/plataforma.html (con marca GENERADO)
 #   cv         cv/scripts/construir-pdf.sh --web               → resources/cv.pdf (perfil docencia, sin anexos; solo los
 #              correos institucionales; marca GENERADO en los metadatos)
+#   trayectoria scripts/cv-a-web.py (lee cv/main/sections/experiencias) → la trayectoria de about/index.qmd y el bloque
+#              «Ahora» de index.qmd y del About (bloques entre marcas, con marca GENERADO; 2026-10-21)
 # Simula por defecto; --aplicar escribe. Los repos se buscan por CLASS_DIR y DATAFW_DIR (core/env.sh) o junto al hub;
 # si uno no está (un clon del hub solo), se dice y se sigue: el hub no depende de ellos para renderizar.
 # --verificar (el doctor, RQ-DOC-07): en seco, cada derivado está confirmado en el hub después del último commit de
@@ -36,6 +38,10 @@ if [[ "${1:-}" == "--verificar" ]]; then
         echo "✔ $derivado: confirmado después del último commit de su maestro"
     }
     verificar resources/cv.pdf "$CV" "main scripts Makefile" "GENERADO"
+    if [[ -d "$CV/main" ]]; then
+        if CV_DIR="$CV" python3 "$HUB/scripts/cv-a-web.py" --verificar >/dev/null; then echo "✔ about/index.qmd e index.qmd: trayectoria y «Ahora» iguales al CV"
+        else echo "✖ about/index.qmd o index.qmd: desfasados del CV: scripts/generar-externos.sh --aplicar"; fallos=1; fi
+    fi
     verificar observatorio/plataforma.html "$DATOS" "tools/plataforma.py data/publicado" "GENERADO"
     exit $fallos
 fi
@@ -50,4 +56,7 @@ else echo "── plataforma: no está $DATOS/tools/plataforma.py (se omite)"; f
 if [[ -x "$CV/scripts/construir-pdf.sh" ]]; then
     echo "── cv"; "$CV/scripts/construir-pdf.sh" --perfil docencia --sin-anexos --web --salida "$HUB/resources/cv.pdf" $APLICAR | tail -2 || fallos=1
 else echo "── cv: no está $CV/scripts/construir-pdf.sh (se omite)"; fi
+if [[ -d "$CV/main" ]]; then
+    echo "── trayectoria (cv)"; CV_DIR="$CV" python3 "$HUB/scripts/cv-a-web.py" $APLICAR | tail -3 || fallos=1
+else echo "── trayectoria: no está $CV/main (se omite)"; fi
 exit $fallos

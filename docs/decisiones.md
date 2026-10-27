@@ -182,7 +182,7 @@ pregunta al historial (`git log -- _site`) si alguna vez estuvo, no solo al árb
 
 El ADR-06 (ola 1) y el piloto 3 rompían los hardlinks del tema para que cada pub tuviera una copia real. El
 autor lo revisa al abrir la ola 6: el tema **se comparte por hardlink**, administrado con
-`scripts-linux/script_hardlinks-creator`, para que una edición en un sitio llegue a los doce. Quedan así:
+`scripts-linux/script_hardlinks-creator` (desde el 2026-10-27, `filesystem-studio/script_hardlinks-creator`), para que una edición en un sitio llegue a los doce. Quedan así:
 `scripts/tema-hardlinks.txt` (los 60 nombres que el hub y los pubs ya compartían), `sync-theme-pubs.sh`
 (iguala, sella y enlaza; `--verificar` detecta un enlace roto) y el doctor RQ-MAN-08, que ya no cuenta un
 hardlink como hallazgo sino un enlace roto. `methodica` recuperó sus 61 enlaces (63 creados). Mapa de inodos

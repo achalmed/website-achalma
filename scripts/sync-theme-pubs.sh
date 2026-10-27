@@ -6,7 +6,7 @@
 # satélite son submódulos en _pubs/ y comparten el tema con el hub por HARDLINKS
 # (decisión del autor, 2026-10-08; ADR-06 revisado, normativa 7.11): editar el tema
 # en un sitio lo cambia en los doce. Este script es el único mecanismo: iguala el
-# contenido y deja que scripts-linux/script_hardlinks-creator enlace.
+# contenido y deja que filesystem-studio/script_hardlinks-creator enlace.
 #
 # Conjunto sincronizado (THEME_PATHS): extensiones vendorizadas, filtro Lua de
 # flotantes APA, SCSS base (todo menos 05-pages), JS, CSS global y de
@@ -59,7 +59,7 @@ THEME_PATHS=(
 RSYNC_EXCLUDES=(--exclude '05-pages/' --exclude '.Rhistory' --exclude '.directory')
 SELLO="THEME_VERSION"
 LISTA="$HUB/scripts/tema-hardlinks.txt"
-CREADOR="${SCRIPTS_LINUX:-$HUB/../scripts-linux}/script_hardlinks-creator/main.py"
+CREADOR="${FILESYSTEM_STUDIO_DIR:-$HUB/../filesystem-studio}/script_hardlinks-creator/main.py"   # FILESYSTEM_STUDIO_DIR de core/env (2026-10-27)
 
 MODO="simular"; SOLO=""
 while [[ $# -gt 0 ]]; do

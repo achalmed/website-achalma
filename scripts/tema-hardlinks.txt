@@ -1,5 +1,5 @@
 # tema-hardlinks.txt — nombres de archivo que el hub y los 11 pubs comparten por hardlink (decisión del autor, 2026-10-08)
-# Lista --batch de scripts-linux/script_hardlinks-creator; la usa scripts/sync-theme-pubs.sh --aplicar. Solo se enlazan
+# Lista --batch de filesystem-studio/script_hardlinks-creator; la usa scripts/sync-theme-pubs.sh --aplicar. Solo se enlazan
 # archivos de igual nombre y contenido idéntico (SHA-256). _extensions/ queda fuera (exclusión del creador): se copia.
 404.qmd
 LICENSE

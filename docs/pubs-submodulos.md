@@ -82,7 +82,7 @@ scripts/sync-theme-pubs.sh --verificar              # sale 1 si algún blog difi
 El tema se comparte **por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): editar un archivo del
 tema en el hub lo cambia en los doce sitios. `--aplicar` iguala el contenido con `rsync`, escribe `THEME_VERSION`
 (el sello con el commit del hub y la suma del conjunto) y al final enlaza los archivos de igual nombre y contenido
-de `scripts/tema-hardlinks.txt` con `scripts-linux/script_hardlinks-creator`. `_extensions/` no se enlaza: se copia.
+de `scripts/tema-hardlinks.txt` con `filesystem-studio/script_hardlinks-creator`. `_extensions/` no se enlaza: se copia.
 `rsync`, `git checkout` y los editores que guardan con un temporal y un renombre rompen el enlace sin avisar:
 `--verificar` sale 1 si un archivo de la lista quedó sin enlazar, y `--aplicar` lo repara.
 
@@ -108,7 +108,7 @@ mueven, se cambia ahí.
 | `scripts-quarto/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
 | `scripts-quarto/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
 | `raphi/raphi/fuentes/hub.py` | `INDEX_DIR` y `core/py-common/pubs.py` |
-| `scripts-linux/script_git_sync_respos/repos-config.yml` | una entrada por pub |
+| `git-studio/script_git_sync_respos/repos-config.yml` | una entrada por pub |
 
 Las de `scripts-quarto` aceptan el nombre de carpeta (`axiomata`) o
 el corto (`axiomata`). Qué escribe `scripts-quarto` en el hub y en los

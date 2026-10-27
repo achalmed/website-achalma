@@ -21,7 +21,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 12.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con
-  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva o un enlace roto). **El tema se comparte por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): los nombres de `scripts/tema-hardlinks.txt` son un solo inodo en los 13 sitios (el hub y los 12 pubs). Se editan en su sitio, nunca con `sed -i` ni con un editor que guarde por renombre (rompe el enlace); `--aplicar` los vuelve a enlazar con `scripts-linux/script_hardlinks-creator`.
+  `scripts/sync-theme-pubs.sh` (simula; `--aplicar` escribe; `--verificar` sale 1 si hay deriva o un enlace roto). **El tema se comparte por hardlink** (decisión del autor, 2026-10-08; normativa 7.11): los nombres de `scripts/tema-hardlinks.txt` son un solo inodo en los 13 sitios (el hub y los 12 pubs). Se editan en su sitio, nunca con `sed -i` ni con un editor que guarde por renombre (rompe el enlace); `--aplicar` los vuelve a enlazar con `filesystem-studio/script_hardlinks-creator`.
   Excluidos a propósito: `assets/scss/05-pages/`, `assets/css/pages/`, `_filters/_metadata-pdf.lua`,
   `_quarto.yml`, `index.qmd`, `assets/img/`, `assets/fonts/`, `assets/gtm-*.html`. `_extensions/` se copia (no se enlaza):
   la copia que hay en un pub no se edita, el siguiente `--aplicar` la pisaría.

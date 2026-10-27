@@ -299,7 +299,7 @@ El autor pidió que leer una lección o un artículo en el celular sea tan limpi
 transmita rigor: sin distracciones, una o dos tintas como máximo, como una revista académica. Decisiones (autor):
 **tinta sobre papel y un solo acento por pub**, solo para enlaces y lo que importa (el número de sección pasa a gris);
 **serif de lectura** con sans para tablas, pies y código, a 17 px en el celular y 18 px desde 720 px. En
-`src/styles/contenido.css` y `src/layouts/lector.astro`:
+`_aula/src/styles/contenido.css` y `_aula/src/layouts/lector.astro`:
 
 - **Tablas** de tres filetes, sin rayas interiores, cifras tabulares, 13 px en el celular; `contenido.mjs` quita los
   anchos fijos de Pandoc (`colgroup`) y el contenedor muestra una sombra en el borde por donde la tabla sigue. Las

@@ -107,7 +107,7 @@ mueven, se cambia ahí.
 | `scripts-quarto/backend/script_blogs_manager/lib/00-config.sh` | `QBLOG_WEBSITE_DIR`, `QBLOG_PUBS_SUBDIR` |
 | `scripts-quarto/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
 | `scripts-quarto/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
-| `scripts_document_studio/backends/page-counter/config.py` | `SUBDIR_PUBS` |
+| `raphi/backends/page-counter/config.py` | `SUBDIR_PUBS` |
 | `scripts-linux/script_git_sync_respos/repos-config.yml` | una entrada por pub |
 
 Las de `scripts-quarto` aceptan el nombre de carpeta (`axiomata`) o

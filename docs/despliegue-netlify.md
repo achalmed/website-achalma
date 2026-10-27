@@ -118,7 +118,7 @@ Leen o publican lo que producen estos 12 sitios:
 
 - `scripts-quarto/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
   `quarto publish`, que no es el flujo vigente).
-- `scripts_document_studio`: `backends/page-counter` cuenta las páginas de los PDF de `web/_site` y
+- `raphi`: `backends/page-counter` cuenta las páginas de los PDF de `web/_site` y
   de `_pubs/*/_site`; `backends/pdf-suite` incluye `web` entre sus carpetas de búsqueda.
 - `meta/doctor/main.sh` y `core/archivos.py` (D08): aceptan `_site/` versionado solo donde el `.gitignore`
   lo declara con una negación.

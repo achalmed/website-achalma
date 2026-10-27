@@ -17,7 +17,7 @@ del sitio) y, si se toca un blog, `docs/pubs-submodulos.md` y `_pubs/pubs.yml`.
 - **Los blogs se editan y confirman dentro de `_pubs/*`** (cada uno es repo, `_quarto.yml` y sitio
   Netlify propios) y después se mueve el puntero en el hub (`git add _pubs/x && git commit`). Nunca
   `git rm` ni mover `_pubs/` a mano: `scripts-quarto` (gestor de blogs, metadatos, `_indice/`) y
-  `raphi` (`page-counter`) resuelven los blogs por `web/_pubs` (lista en
+  `raphi` (la fuente «blogs del hub» de su inventario de páginas) resuelven los blogs por `web/_pubs` (lista en
   `docs/pubs-submodulos.md`, «Consumidores»). Los pubs no llevan `CLAUDE.md`: este rige para los 12.
 - **El tema vive aquí y se propaga**: SCSS, JS, CSS global y de componentes, `_extensions/`,
   `_filters/apa-floats-html.lua` y `scripts/build-page-css.sh` se editan en el hub y van a los blogs con

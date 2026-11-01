@@ -116,7 +116,7 @@ git -C _pubs/axiomata ls-files _site | wc -l    # lo mismo en un pub
 
 Leen o publican lo que producen estos 12 sitios:
 
-- `scripts-quarto/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
+- `quarto-studio/backend/script_blogs_manager` (`main.sh render|publish <blog>`; `publish` envuelve
   `quarto publish`, que no es el flujo vigente).
 - `raphi`: su «Inventario de páginas» con la fuente «blogs del hub» (`raphi/raphi/fuentes/hub.py`, receta
   `paginas-de-los-blogs`) cuenta las páginas de los PDF de `web/_site` y de `_pubs/*/_site`.

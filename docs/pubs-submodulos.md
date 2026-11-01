@@ -104,12 +104,12 @@ mueven, se cambia ahí.
 
 | Archivo que lo fija | Variable |
 |---|---|
-| `scripts-quarto/backend/script_blogs_manager/lib/00-config.sh` | `QBLOG_WEBSITE_DIR`, `QBLOG_PUBS_SUBDIR` |
-| `scripts-quarto/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
-| `scripts-quarto/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
+| `quarto-studio/backend/script_blogs_manager/lib/00-config.sh` | `QBLOG_WEBSITE_DIR`, `QBLOG_PUBS_SUBDIR` |
+| `quarto-studio/backend/script_pub_index_symlink/lib/00-config.sh` | `PUBINDEX_PUBS_SUBDIR` |
+| `quarto-studio/backend/script_metadata_manager/lib/config.py` | `HUB_DIR`, `PUBS_SUBDIR` |
 | `raphi/raphi/fuentes/hub.py` | `INDEX_DIR` y `core/py-common/pubs.py` |
 | `git-studio/script_git_sync_respos/repos-config.yml` | una entrada por pub |
 
-Las de `scripts-quarto` aceptan el nombre de carpeta (`axiomata`) o
-el corto (`axiomata`). Qué escribe `scripts-quarto` en el hub y en los
+Las de `quarto-studio` aceptan el nombre de carpeta (`axiomata`) o
+el corto (`axiomata`). Qué escribe `quarto-studio` en el hub y en los
 pubs: su `README.md`, «Contrato con el hub».

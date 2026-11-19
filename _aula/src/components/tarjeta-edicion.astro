@@ -23,6 +23,7 @@ const conMateriales = ed.sesiones.filter((s) => s.materiales.length > 0).length;
     <span>{plural(ed.sesiones.length, 'sesión', 'sesiones')}</span>
     <span>{plural(ed.nMateriales, 'material', 'materiales')}</span>
     {ed.legado && <span>Anterior al estándar de cursos</span>}
+    {ed.estado === 'borrador' && <span class="estado preparacion">{ed.estadoEtiqueta}</span>}
   </p>
   {ed.cursos.length > 0 && <p class="ted-cursos">{ed.cursos.map((c) => c.titulo).join(', ')}</p>}
 </article>

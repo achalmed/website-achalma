@@ -1,7 +1,7 @@
 ---
 tipo: estado
 estado: activo
-actualizado: 2026-10-21
+actualizado: 2026-11-18
 ---
 # estado.md — web/_aula
 
@@ -9,6 +9,7 @@ actualizado: 2026-10-21
 
 | fecha | qué | dónde se ve |
 |---|---|---|
+| 2026-11-18 | La página del curso muestra el estándar §10 de docencia: resultados de aprendizaje con su evidencia y su sesión, evaluación con su uso de IA, rúbricas y el repaso de cada sesión sin claves, con el enlace al mazo para Anki cuando una edición lo publicó; ediciones en borrador marcadas «En construcción». Probado con econometria-i en epsilon-y-beta (build hacia `~/.cache/aula-ensayo/`, 375 px y escritorio, 0 enlaces rotos) | `docs/decisiones.md` §1.23 |
 | 2026-10-21 | Simuladores en el navegador (fase 3): `/laboratorio/<id>/` con el mismo `base.Modelo` en Pyodide 0.29.5 (Web Worker), deslizadores, escenarios, «Restablecer», ficha y figura SVG idéntica en el build y en vivo; 41 modelos con página (aequilibria 22, epsilon-y-beta 18, optimums 1), pilotos IS-LM y TCL; Lighthouse móvil 97/100/100/100. Vídeos de divulgacion por tema (fase 8), probados con datos de muestra (`npm run prueba`, `/demo/videos/`) | `docs/decisiones.md` §1.20–§1.21 · `docs/img/laboratorio-*.webp`, `docs/img/videos-demo.webp` |
 | 2026-10-20 | Mejoras visuales sobre «Quiet Laboratory» (tras descartar una estética de macOS): íconos Lucide, búsqueda ⌘K, cabecera en los bloques de código, banda de cifras, tarjetas con imagen propia o índice, pie «La familia», colofón de los 12 sitios (favicon, PNG y Open Graph), lectura de tablas y figuras; fuentes más ligeras y CSS en línea; Lighthouse móvil 96–98/100/100/100 en methodica | `docs/decisiones.md` §1.16–§1.19 · `docs/img/` |
 | 2026-10-20 | Alta del repo con el nombre que eligió el autor (B4) y entrada en `meta/workspace.yml` | `528a696` · `meta/workspace.yml` |

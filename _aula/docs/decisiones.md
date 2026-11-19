@@ -337,3 +337,21 @@ tamaño de display salvo en índices, los `cases` con relaciones se alinean y lo
 El papel liso que reemplazó a la retícula se veía vacío (autor, el mismo día): las cabeceras llevan ahora un halo de luz
 difusa en el acento de cada pub (`.milimetrado` en `base.css`), y una tarjeta sin imagen propia va solo con texto.
 
+
+### §1.23 La página del curso muestra el estándar §10 de docencia; el banco va sin claves (2026-11-18)
+
+Un curso que declara en su `curso.yml` el alineamiento, la política de IA, rúbricas o bancos de recuperación
+(`docencia/docs/estandar-docencia.md` §10) los muestra en su página, leídos de la fuente por `_aula/src/lib/alineamiento.mjs`
+(el cargador de `fuentes.mjs` suma las sesiones del curso, su `recuperacion.yml` y sus rúbricas): los resultados de
+aprendizaje con la evaluación que los comprueba y la sesión que los trabaja; la evaluación con su tipo, su peso, lo que
+mide y el uso de IA que admite (el vocabulario cerrado de `docencia/scripts/alineamiento.py`, repetido en
+`POLITICA_IA`), con la regla, la declaración y los datos vedados del curso; cada rúbrica una vez, con las evaluaciones
+que la usan y el resultado que mide cada criterio, en la tabla de las lecciones (`.prosa .tabla-marco`); y, por sesión,
+el banco de recuperación **sin claves**: de cada pregunta solo viajan `id`, `resultado`, `tipo`, `enunciado` y
+`opciones`, porque se responde sin apuntes y la clave se revisa en la puesta en común (Roediger y Karpicke, 2006). El
+mazo para Anki que `publish-session.sh` publica con la sesión (`mazo.tsv` en practice, con la respuesta al reverso para
+repasar fuera de clase; Cepeda et al., 2006) se enlaza desde el banco de su sesión cuando alguna edición lo publicó, y
+en la edición sale como «Mazo de repaso para Anki». Una edición en `estado: borrador` se sigue mostrando, como hasta
+ahora, marcada «En construcción» (la etiqueta de un curso en borrador); una sesión sin título en `dictado.yml` ni
+página en el pub toma el de su `sesion.yml`. Sin estilos nuevos: las filas del temario, los desplegables de las
+unidades y las tablas de las lecciones.

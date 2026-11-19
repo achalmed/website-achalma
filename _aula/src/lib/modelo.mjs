@@ -7,7 +7,11 @@
 //   complementarias» del curso. Los posts con destino `revisar` ya publicados también van ahí.
 // - El blog del pub son sus posts con destino `blog` publicados.
 // - Una edición (dictado.yml) pertenece al pub donde vive alguno de sus cursos; una edición legado sin
-//   cursos hereda el pub de otra edición con la misma materia web.
+//   cursos hereda el pub de otra edición con la misma materia web. Una edición en `estado: borrador` se muestra como
+//   las demás, marcada «En construcción» (la misma etiqueta que un curso en borrador).
+// - El curso que declara el estándar §10 de docencia (alineamiento, política de IA, rúbricas, bancos de recuperación)
+//   lo muestra en su página (src/lib/alineamiento.mjs): el banco va sin claves; el mazo de repaso (practice/mazo.tsv)
+//   se enlaza cuando una edición lo publicó con su sesión.
 
 import { existsSync, readdirSync } from 'node:fs';
 import { basename, join, relative } from 'node:path';
@@ -17,6 +21,7 @@ import { extraer } from './contenido.mjs';
 import { figuraUtil, huella, imagenDeclarada, miniatura } from './imagenes.mjs';
 import { MARCA } from './marca.generado.mjs';
 import { videosDelTema } from './videos.mjs';
+import { aprendizajeDelCurso } from './alineamiento.mjs';
 
 export const ETIQUETAS = {
   tipo: { asignatura: 'Asignatura', herramienta: 'Herramienta', taller: 'Taller', nivelacion: 'Nivelación' },
@@ -48,6 +53,8 @@ function descripcionUtil(d) {
 }
 
 const ORDEN_CONFIANZA = { alta: 0, media: 1, baja: 2, ninguna: 3 };
+// Nombre visible de los materiales que la publicación de una sesión genera con nombre fijo (publish-session.sh).
+const ROTULOS = { 'practice/mazo.tsv': 'Mazo de repaso para Anki' };
 const EXT_FUERA = /\.(tex|md|qmd|yml|yaml|log|aux)$/i;
 
 const memo = new Map();
@@ -141,6 +148,8 @@ function construir(pubId) {
       ediciones: [],
       modelos: [],
       simuladores,
+      aprendizaje: vive ? aprendizajeDelCurso(c, avisos) : null,
+      dir: c._dir,
     });
   }
   const cursoPorId = new Map(cursos.map((c) => [c.id, c]));
@@ -281,6 +290,13 @@ function construir(pubId) {
     if ((d.cursos ?? []).some((id) => cursoPorId.get(id)?.vive) && d.web?.materia) materiaDePub.set(d.web.materia, pubId);
   }
   const ediciones = [];
+  const titulosSesion = new Map();
+  const tituloDeSesion = (cursoId, carpeta) => {
+    const dir = cursoPorId.get(cursoId)?.dir;
+    if (!dir || !carpeta) return null;
+    if (!titulosSesion.has(dir)) titulosSesion.set(dir, new Map(F.sesionesDeCurso(dir).map((x) => [x.carpeta, x.sesion.titulo])));
+    return titulosSesion.get(dir).get(carpeta) ?? null;
+  };
   for (const d of dictados) {
     const propios = (d.cursos ?? []).filter((id) => cursoPorId.get(id)?.vive);
     const heredada = !(d.cursos ?? []).length && d.web?.materia && materiaDePub.get(d.web.materia) === pubId;
@@ -309,16 +325,18 @@ function construir(pubId) {
             vistos.add(clave);
             const dest = `${url}${s.web}/${clave}`;
             recursos.push({ src, dest });
-            materiales.push({ tipo: basename(tipo), tipoEtiqueta: etiqueta('material', basename(tipo)), nombre, url: dest, bytes: F.tamano(src), ext: (nombre.split('.').pop() || '').toLowerCase() });
+            materiales.push({ tipo: basename(tipo), tipoEtiqueta: etiqueta('material', basename(tipo)), nombre, rotulo: ROTULOS[clave] ?? null, url: dest, bytes: F.tamano(src), ext: (nombre.split('.').pop() || '').toLowerCase() });
           }
         }
       }
       return {
         orden: s.orden,
         ancla: s.web ?? `sesion-${s.orden}`,   // las redirecciones del hub (/cursos/…/<sesion>/) llegan a #<sesion>
-        titulo: s.titulo ?? fmS?.title ?? s.web,
+        // sin título en dictado.yml ni página en el pub: el de la sesión del curso (sesion.yml), antes que la carpeta web
+        titulo: s.titulo ?? fmS?.title ?? tituloDeSesion(s.curso, s.sesion) ?? s.web,
         fecha: fmS?.date ? String(fmS.date).slice(0, 10) : null,
         curso: s.curso ? { id: s.curso, titulo: cursoPorId.get(s.curso)?.titulo ?? s.curso } : null,
+        sesion: s.sesion ?? null,   // la carpeta sNN-… del curso (estándar de docencia §4.4)
         materiales,
       };
     });
@@ -329,6 +347,7 @@ function construir(pubId) {
       periodo: d.periodo,
       institucion: d.institucion,
       estado: d.estado,
+      estadoEtiqueta: etiqueta('estado', d.estado),
       legado: !!d.legado,
       nota: d.nota ?? null,
       descripcion: d.descripcion ?? fmEd?.description ?? null,
@@ -338,7 +357,17 @@ function construir(pubId) {
       nMateriales: sesiones.reduce((s, x) => s + x.materiales.length, 0),
     };
     ediciones.push(ed);
-    for (const id of propios) cursoPorId.get(id).ediciones.push({ id: ed.id, url: ed.url, titulo: ed.titulo, periodo: ed.periodo, estado: ed.estado, nSesiones: sesiones.filter((s) => !s.curso || s.curso.id === id).length });
+    for (const id of propios) cursoPorId.get(id).ediciones.push({ id: ed.id, url: ed.url, titulo: ed.titulo, periodo: ed.periodo, estado: ed.estado, estadoEtiqueta: ed.estadoEtiqueta, nSesiones: sesiones.filter((s) => !s.curso || s.curso.id === id).length });
+    // El mazo de repaso que publish-session.sh dejó con cada sesión: la página del curso lo enlaza en su banco
+    // (si dos ediciones lo publicaron, gana la del periodo más reciente).
+    for (const s of sesiones) {
+      const mazo = s.materiales.find((m) => m.tipo === 'practice' && m.nombre === 'mazo.tsv');
+      const banco = s.curso && s.sesion ? cursoPorId.get(s.curso.id)?.aprendizaje?.repaso.find((r) => r.carpeta === s.sesion) : null;
+      if (mazo) mazo.descarga = `${s.curso?.id ?? ed.id}-${(s.sesion ?? s.ancla).slice(0, 3)}-mazo.tsv`;   // mazo.tsv de cada sesión, sin chocar en Descargas
+      if (mazo && banco && (!banco.mazo || String(ed.periodo) > String(banco.mazo.periodo))) {
+        banco.mazo = { url: mazo.url, bytes: mazo.bytes, descarga: mazo.descarga, edicion: ed.titulo, periodo: ed.periodo };
+      }
+    }
   }
   ediciones.sort((a, b) => String(b.periodo).localeCompare(String(a.periodo)));
 

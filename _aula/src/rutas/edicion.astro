@@ -1,5 +1,6 @@
 ---
-// Una edición (dictado.yml): sus sesiones en orden, con la fecha y los materiales que se publicaron.
+// Una edición (dictado.yml): sus sesiones en orden, con la fecha y los materiales que se publicaron. Una edición en
+// borrador se muestra marcada «En construcción».
 import Base from '../layouts/base.astro';
 import { datos, fechaLarga, peso, plural } from '../lib/datos.mjs';
 
@@ -15,6 +16,7 @@ const { ed } = Astro.props;
       <h1>{ed.titulo}</h1>
       {ed.descripcion && <p class="ed-desc">{ed.descripcion}</p>}
       <p class="metadatos">
+        {ed.estado === 'borrador' && <span class="estado preparacion">{ed.estadoEtiqueta}</span>}
         <span>Periodo <b class="dato">{ed.periodo}</b></span>
         <span>Institución <b>{ed.institucion?.toUpperCase()}</b></span>
         <span>{plural(ed.sesiones.length, 'sesión', 'sesiones')}</span>
@@ -43,9 +45,9 @@ const { ed } = Astro.props;
               <ul class="materiales">
                 {s.materiales.map((m) => (
                   <li>
-                    <a href={encodeURI(m.url)} download={m.ext !== 'pdf' ? m.nombre : undefined}>
+                    <a href={encodeURI(m.url)} download={m.ext !== 'pdf' ? (m.descarga ?? m.nombre) : undefined}>
                       <span class="m-tipo">{m.tipoEtiqueta}</span>
-                      <span class="m-nombre">{m.nombre}</span>
+                      <span class="m-nombre">{m.rotulo ?? m.nombre}</span>
                       <span class="m-peso dato">{m.ext.toUpperCase()}, {peso(m.bytes)}</span>
                     </a>
                   </li>

@@ -1,11 +1,14 @@
 ---
 // Portada de un curso: descripción, metadatos, retícula y temario por unidades, progreso del visitante,
-// materiales, ediciones (dictados), bibliografía y laboratorio.
+// materiales, ediciones (dictados), bibliografía y laboratorio; si el curso declara el estándar §10 de docencia,
+// también los resultados de aprendizaje con su evidencia, la evaluación con su uso de IA, las rúbricas y el repaso de
+// cada sesión (banco de recuperación sin claves y, si se publicó, su mazo para Anki).
 import Base from '../layouts/base.astro';
 import Reticula from '../components/reticula.astro';
 import Laboratorio from '../components/laboratorio.astro';
 import TarjetaEntrada from '../components/tarjeta-entrada.astro';
 import { datos, peso, plural } from '../lib/datos.mjs';
+import '../styles/contenido.css';   // las tablas de las rúbricas: las mismas de las lecciones (.prosa .tabla-marco)
 
 export function getStaticPaths() {
   return datos().propios.map((curso) => ({ params: { curso: curso.id }, props: { curso } }));
@@ -15,6 +18,9 @@ const ids = curso.lecciones.map((l) => `${curso.id}/${l.slug}`);
 const conMateriales = curso.lecciones.filter((l) => l.pdf || l.docx);
 const unidadesConLeccion = new Set(curso.unidades.filter((u) => u.temas.some((t) => t.leccion)).map((u) => u.id));
 const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
+const ap = curso.aprendizaje;
+const pct = (n) => `${String(n).replace('.', ',')} %`;
+const sesionesTxt = (lista) => lista.map((x) => `${x.numero} ${x.titulo}`).join('; ');
 ---
 <Base titulo={curso.titulo} descripcion={curso.descripcion ?? `Curso de ${curso.titulo}.`} seccion="cursos">
   <section class="curso-cabeza milimetrado">
@@ -55,6 +61,7 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   </section>
 
   <div class="envoltura curso-cuerpo">
+    <div class="columna">
     <section class="temario" aria-labelledby="t-temario">
       <h2 id="t-temario">Temario</h2>
       {curso.unidades.length === 0 ? (
@@ -102,13 +109,147 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
       )}
     </section>
 
+    {ap && ap.resultados.length > 0 && (
+      <section class="aprendizaje" id="resultados" aria-labelledby="t-resultados">
+        <h2 id="t-resultados">Resultados de aprendizaje</h2>
+        <p class="tenue">{ap.alcance && <>Alcance: {ap.alcance}. </>}Cada resultado tiene la evaluación que lo comprueba y la sesión que lo trabaja.</p>
+        <ol class="temas">
+          {ap.resultados.map((r) => (
+            <li>
+              <span class="t-n dato">{r.id}</span>
+              <div class="t-cuerpo">
+                <p>{r.enunciado}</p>
+                <p class="metadatos">
+                  {r.nivelEtiqueta && <span>Nivel {r.nivelEtiqueta.toLowerCase()}</span>}
+                  {r.evidencias.length > 0 && <span>Se comprueba en: {r.evidencias.map((e) => `${e.titulo}: ${e.tipoEtiqueta.toLowerCase()}${e.peso ? `, ${pct(e.peso)}` : ''}`).join('; ')}</span>}
+                  {r.sesiones.length > 0 && <span>Se trabaja en: {sesionesTxt(r.sesiones)}</span>}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        {ap.fuente && <p class="fuente tenue">Por qué: alineamiento constructivo · {ap.fuente}.</p>}
+      </section>
+    )}
+
+    {ap && (ap.evaluaciones.length > 0 || ap.politica) && (
+      <section class="aprendizaje" id="evaluacion" aria-labelledby="t-evaluacion">
+        <h2 id="t-evaluacion">Evaluación y uso de la IA</h2>
+        {ap.politica && <p class="regla">{ap.politica.regla}</p>}
+        {ap.evaluaciones.length > 0 && (
+          <ol class="temas">
+            {ap.evaluaciones.map((e, i) => (
+              <li>
+                <span class="t-n dato">{String(i + 1).padStart(2, '0')}</span>
+                <div class="t-cuerpo">
+                  <p class="t-titulo">{e.titulo}</p>
+                  <p class="metadatos">
+                    <span>{e.tipoEtiqueta}{e.peso ? `, ${pct(e.peso)}` : ''}</span>
+                    <span>Mide: {e.resultados.join(', ')}</span>
+                    {e.sesion && <span>Sesión {e.sesion.numero}</span>}
+                  </p>
+                  {e.rubrica && <p class="ia">Rúbrica: <a href={`#rubrica-${e.rubrica.clave}`}>{e.rubrica.titulo}</a></p>}
+                  {e.politica && <p class="ia">Uso de IA: <b>{e.politica.etiqueta}</b>. {e.politica.descripcion}</p>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        )}
+        {ap.politica && (ap.politica.declaracion || ap.politica.datos) && (
+          <ul class="lista-simple">
+            {ap.politica.declaracion && <li><span><b>Cómo se declara.</b> {ap.politica.declaracion}</span></li>}
+            {ap.politica.datos && <li><span><b>Datos que nunca van a una herramienta de IA.</b> {ap.politica.datos}</span></li>}
+          </ul>
+        )}
+        {ap.politica?.fuente && <p class="fuente tenue">Por qué: {ap.politica.fuente}.</p>}
+      </section>
+    )}
+
+    {ap && ap.rubricas.length > 0 && (
+      <section class="aprendizaje" id="rubricas" aria-labelledby="t-rubricas">
+        <h2 id="t-rubricas">Rúbricas</h2>
+        <p class="tenue">Se comparten antes de la entrega: úsalas para revisar tu propio trabajo. La nota sobre 100 suma, por criterio, su peso por el puntaje entre el puntaje máximo; la vigesimal es esa nota entre 5.</p>
+        <div class="unidades">
+          {ap.rubricas.map((r, i) => (
+            <details id={`rubrica-${r.clave}`} open={ap.rubricas.length === 1}>
+              <summary>
+                <span class="u-n dato">{String(i + 1).padStart(2, '0')}</span>
+                <span class="u-t">{r.titulo}</span>
+                <span class="u-c">{plural(r.criterios.length, 'criterio', 'criterios')}</span>
+              </summary>
+              <div class="rubrica">
+                <p class="tenue">La usa{r.usan.length > 1 ? 'n' : ''}: {r.usan.join('; ')}.</p>
+                <div class="prosa">
+                  <div class="tabla-marco"><div class="tabla">
+                    <table>
+                      <thead>
+                        <tr><th scope="col">Criterio</th>{r.escala.map((n) => <th scope="col">{n.nombre} <span class="dato tenue">({n.puntaje})</span></th>)}<th scope="col">Peso</th></tr>
+                      </thead>
+                      <tbody>
+                        {r.criterios.map((c) => (
+                          <tr>
+                            <th scope="row">{c.nombre}{c.resultado && <span class="mide dato tenue">{c.resultado}</span>}</th>
+                            {c.niveles.map((d) => <td>{d}</td>)}
+                            <td class="dato">{pct(c.peso)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div></div>
+                </div>
+                {r.fuente && <p class="fuente tenue">Por qué esta rúbrica · {r.fuente}.</p>}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {ap && ap.repaso.length > 0 && (
+      <section class="aprendizaje" id="repaso" aria-labelledby="t-repaso">
+        <h2 id="t-repaso">Repaso de cada sesión</h2>
+        <p class="tenue">Preguntas para responder sin mirar apuntes al inicio de la clase siguiente; las respuestas se revisan en la puesta en común. Recuperar lo aprendido, y volver a hacerlo con días de distancia, fija más que releer.</p>
+        <div class="unidades">
+          {ap.repaso.map((r) => (
+            <details>
+              <summary>
+                <span class="u-n dato">{r.numero}</span>
+                <span class="u-t">{r.titulo}</span>
+                <span class="u-c">{plural(r.preguntas.length, 'pregunta', 'preguntas')}</span>
+              </summary>
+              <ol class="temas">
+                {r.preguntas.map((q, i) => (
+                  <li>
+                    <span class="t-n dato">{i + 1}</span>
+                    <div class="t-cuerpo">
+                      <p>{q.enunciado}</p>
+                      {Array.isArray(q.opciones) && q.opciones.length > 0 && <ul class="opciones">{q.opciones.map((o) => <li>{o}</li>)}</ul>}
+                    </div>
+                    {q.resultado && <span class="t-ra dato">{q.resultado}</span>}
+                  </li>
+                ))}
+              </ol>
+              {r.mazo && (
+                <p class="mazo">
+                  <a class="boton chico" href={encodeURI(r.mazo.url)} download={r.mazo.descarga}>Mazo para Anki <span class="dato">TSV, {peso(r.mazo.bytes)}</span></a>
+                  <span class="tenue">Las mismas preguntas con su respuesta al reverso, para repasar a tu ritmo (Anki: Archivo › Importar).</span>
+                </p>
+              )}
+            </details>
+          ))}
+        </div>
+        {ap.fuenteRepaso && <p class="fuente tenue">Por qué: {ap.fuenteRepaso}.</p>}
+      </section>
+    )}
+    </div>
+
     <aside class="lateral">
       {curso.ediciones.length > 0 && (
         <section aria-labelledby="t-ediciones">
           <h2 id="t-ediciones">Ediciones</h2>
           <ul class="lista-simple">
             {curso.ediciones.map((e) => (
-              <li><a href={e.url}>{e.titulo}</a><span class="tenue">{plural(e.nSesiones, 'sesión de este curso', 'sesiones de este curso')}</span></li>
+              <li><a href={e.url}>{e.titulo}</a><span class="tenue">{plural(e.nSesiones, 'sesión de este curso', 'sesiones de este curso')}</span>{e.estado === 'borrador' && <span class="estado preparacion">{e.estadoEtiqueta}</span>}</li>
             ))}
           </ul>
         </section>
@@ -219,6 +360,27 @@ const abrirTodo = unidadesConLeccion.size === 0 && curso.unidades.length <= 8;
   .rejilla-lecturas { list-style: none; display: grid; gap: 1rem; margin-top: 0.4rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
   .rejilla-lecturas > li { display: grid; }
 
+  .columna { display: grid; gap: 3rem; align-content: start; min-width: 0; }
+  .aprendizaje { display: grid; gap: 0.75rem; align-content: start; }
+  .aprendizaje h2 { margin-bottom: 0.25rem; }
+  .aprendizaje > .tenue, .regla { max-width: 62ch; }
+  .aprendizaje > .temas { border-top: 1px solid var(--linea); padding-bottom: 0; }
+  .t-cuerpo { display: grid; gap: 0.3rem; min-width: 0; }
+  .t-cuerpo > p:first-child { color: var(--tinta); }
+  .t-titulo { font-weight: 500; }
+  .ia { font-size: var(--t-0); color: var(--tinta-2); }
+  .ia b { color: var(--tinta); font-weight: 600; }
+  .ia a { display: inline; }   /* .temas a es bloque para las lecciones del temario */
+  .opciones { list-style: lower-alpha; padding-left: 1.4rem; display: grid; gap: 0.15rem; color: var(--tinta-2); font-size: var(--t-1); }
+  .temas .opciones li { display: list-item; padding: 0; border: 0; }   /* .temas li es la fila del temario */
+  .t-ra { color: var(--tenue); font-size: 0.8rem; }
+  .fuente { font-size: var(--t-0); }
+  .rubrica { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.6rem; padding: 0 0.25rem 1rem; }   /* la tabla se desliza dentro de su marco, no la página */
+  .rubrica .prosa table { font-size: var(--t-0); }
+  .rubrica th[scope='row'] { font-weight: 600; text-align: left; }
+  .mide { display: block; font-weight: 400; margin-top: 0.2rem; }
+  .mazo { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; padding: 0 0.25rem 1rem; font-size: var(--t-0); }
+  @media (max-width: 520px) { .temas .t-ra { grid-column: 2; } }
   .lateral { display: grid; gap: 2.25rem; align-content: start; }
   .lista-simple { list-style: none; display: grid; }
   .lista-simple li { display: grid; gap: 0.2rem; padding-block: 0.65rem; border-top: 1px solid var(--linea); font-size: var(--t-1); }

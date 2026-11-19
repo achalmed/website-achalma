@@ -45,7 +45,7 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 |---|---|
 | `astro.config.mjs` | un proyecto, un pub por build (`PUB`), salida en `dist/<pub>/` |
 | `config/vitrina.yml` | lo que ninguna fuente dice aún: acento, monograma y nombre visible de cada pub (provisional) |
-| `src/lib/` | lectura de las fuentes (`rutas.mjs`, `fuentes.mjs`), extracción del HTML de Quarto (`contenido.mjs`) y el modelo del pub (`modelo.mjs`) |
+| `src/lib/` | lectura de las fuentes (`rutas.mjs`, `fuentes.mjs`), extracción del HTML de Quarto (`contenido.mjs`), el modelo del pub (`modelo.mjs`) y lo que la página de un curso muestra del estándar §10 de docencia: resultados, evaluación con su uso de IA, rúbricas y bancos de recuperación sin claves (`alineamiento.mjs`, decisiones §1.23) |
 | `src/pages/` | inicio, `cursos/` (catálogo, curso, lección), `blog/`, `ediciones/`, 404 y la demo interna de autoevaluación |
 | `src/layouts/` | `base.astro` (esqueleto) y `lector.astro` (lector de lecciones y artículos) |
 | `src/components/` | colofón (`marca.astro`), íconos Lucide, búsqueda ⌘K, banda de cifras, tarjetas de curso, entrada y edición, retícula del temario, lección en curso, autoevaluación, laboratorio, vídeos, cabecera y pie |

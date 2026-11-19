@@ -1,7 +1,8 @@
 // src/lib/fuentes.mjs — lectura (solo lectura) de las fuentes del aula.
 //
 // docencia: config/areas.yml, contenido/cursos/*/curso.yml, contenido/dictados/*/dictado.yml,
-//           contenido/migracion/mapa-lecciones.csv
+//           contenido/migracion/mapa-lecciones.csv; de cada curso, sus sesiones (03-sesiones/sNN-*/sesion.yml), su banco
+//           de recuperación (recuperacion.yml) y sus rúbricas (01-diseno/rubricas/*.yml), estándar de docencia §10
 // web:      _pubs/pubs.yml, _pubs/<pub>/**/index.qmd (frontmatter) y su _site/ ya renderizado,
 //           cursos/<materia>/<edicion>/ (páginas y materiales de las ediciones, hasta la fase 5)
 // simuladores: catalogo.json y navegador.json (los modelos que corren en el navegador y los .py que necesitan)
@@ -65,7 +66,27 @@ export function cursos() {
   return readdirSync(RUTAS.cursos)
     .filter((d) => existsSync(join(RUTAS.cursos, d, 'curso.yml')))
     .sort()
-    .map((d) => yaml(join(RUTAS.cursos, d, 'curso.yml')));
+    .map((d) => ({ ...yaml(join(RUTAS.cursos, d, 'curso.yml')), _dir: join(RUTAS.cursos, d) }));
+}
+
+/** Sesiones de un curso (carpetas sNN-* con sesion.yml), en orden, con su banco de recuperación si lo tiene (o null). */
+export function sesionesDeCurso(dirCurso) {
+  const base = join(dirCurso, '03-sesiones');
+  if (!existsSync(base)) return [];
+  return readdirSync(base)
+    .filter((d) => /^s\d{2}-/.test(d) && existsSync(join(base, d, 'sesion.yml')))
+    .sort()
+    .map((d) => ({
+      carpeta: d,
+      sesion: yaml(join(base, d, 'sesion.yml')) ?? {},
+      banco: existsSync(join(base, d, 'recuperacion.yml')) ? yaml(join(base, d, 'recuperacion.yml')) ?? null : null,
+    }));
+}
+
+/** Una rúbrica del curso (ruta relativa a la carpeta del curso, como la declara curso.yml); null si no existe. */
+export function rubricaDeCurso(dirCurso, ruta) {
+  const abs = join(dirCurso, ruta);
+  return existsSync(abs) ? yaml(abs) : null;
 }
 
 export function dictados() {

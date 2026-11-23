@@ -8,6 +8,10 @@
 # (lección 3.6 g). Fuentes: `.qmd`, `_quarto.yml`, `_metadata.yml` y el tema (FUENTES).
 # `_site/index.html` sin confirmar (recién renderizado) pasa; si un render confirmado
 # no lo cambió, vale el último commit de `_site/` (el hub el 2026-09-28, 79bfb9b).
+# Borradores (2026-11-24): si todas las fuentes que cambiaron desde el último commit de `_site/` son `.qmd` con
+# `draft: true` ahora y también entonces (o que entonces no existían), pasa: Quarto no publica un borrador, así que el
+# render no cambiaría `_site/` (lo mostraron los esqueletos de lección que actualiza `cursos.py`). Una página que pasa
+# de publicada a borrador sí exige el render, que la retira.
 # Uso:
 #   scripts/puerta-r6.sh [<carpeta del sitio>]          # comprueba (por defecto, el hub); 0 pasa · 1 no pasa
 #   scripts/puerta-r6.sh --instalar --pub methodica [--aplicar]     # hook pre-push en ese pub (simula sin --aplicar)
@@ -30,6 +34,25 @@ FUENTES=(':(glob)**/*.qmd' ':(glob)**/_quarto.yml' ':(glob)**/_metadata.yml'
 # THEME_VERSION no es fuente: es el sello (sha256) del conjunto del tema, que cambia también con scripts/ (tooling, no
 # contenido); las fuentes reales del tema ya están arriba y, si cambian, ellas mismas exigen el render (2026-10-10).
 
+es_borrador() {                                 # es_borrador <texto>: el frontmatter declara draft: true
+    awk 'NR==1 && !/^---[[:space:]]*$/ {exit 1} NR==1 {next} /^---[[:space:]]*$/ {exit (b ? 0 : 1)}
+         /^draft:[[:space:]]*true[[:space:]]*(#.*)?$/ {b=1} END {if (NR < 2) exit 1}'
+}
+solo_borradores() {                             # solo_borradores <sitio>: las fuentes cambiadas desde el último _site/
+    local sitio="$1" base f n=0                 # son todas .qmd en borrador, ahora y en ese commit
+    base="$(git -C "$sitio" log -1 --format=%H -- _site/)"
+    [[ -n "$base" ]] || return 1
+    while IFS= read -r f; do
+        [[ -n "$f" ]] || continue
+        n=$((n + 1))
+        [[ "$f" == *.qmd && -f "$sitio/$f" ]] || return 1
+        es_borrador < "$sitio/$f" || return 1
+        if git -C "$sitio" cat-file -e "$base:$f" 2>/dev/null; then
+            git -C "$sitio" show "$base:$f" | es_borrador || return 1
+        fi
+    done < <(git -C "$sitio" -c core.quotePath=false diff --name-only "$base" HEAD -- "${FUENTES[@]}")
+    (( n > 0 ))
+}
 comprobar() {
     local sitio="$1" idx sucias t_idx t_site salida t_src f_src
     idx="$sitio/_site/index.html"
@@ -55,6 +78,10 @@ comprobar() {
         t_site="$(git -C "$sitio" log -1 --format=%ct -- _site/)"
         if (( t_site >= t_src )); then
             echo "✔ R6: _site/ confirmado después de la última fuente ($f_src); _site/index.html no cambió en ese render"
+            return 0
+        fi
+        if solo_borradores "$sitio"; then
+            echo "✔ R6: lo cambiado desde el último render confirmado son borradores (draft: true), que no se publican"
             return 0
         fi
         echo "✖ R6: el último commit de _site/index.html es anterior al de $f_src: renderiza y confirma antes de empujar" >&2

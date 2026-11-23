@@ -11,6 +11,8 @@
 #   6. tema confirmado después del render      → falla
 #   7. sin _site/index.html                    → falla
 #   8. como hook pre-push (la copia que hace --instalar) → mismo veredicto
+#   9. solo borradores confirmados después del render → pasa; uno que pasa de publicado a borrador, o un borrador
+#      que se publica, → falla
 # Uso: scripts/prueba-puerta-r6.sh        # 0 si todos los casos dan lo esperado
 # Límite: no toca el hub ni los pubs; el repo temporal se borra al salir.
 # =============================================================================
@@ -93,5 +95,27 @@ printf -- '---\ntitle: Entrada\n---\ncuatro\n' > "$S/blog/entrada.qmd"
 confirmar "fuente nueva" blog/entrada.qmd
 espera 1 "8b. hook pre-push con una fuente posterior" hook
 
+printf '<html>v5</html>\n' > "$S/_site/index.html"
+confirmar "render" _site/index.html
+espera 0 "9. render al día"
+printf -- '---\ntitle: Esqueleto\ndraft: true\n---\nvacío\n' > "$S/blog/esqueleto.qmd"
+confirmar "esqueleto nuevo en borrador" blog/esqueleto.qmd
+espera 0 "9a. un borrador nuevo después del render"
+printf -- '---\ntitle: Esqueleto\ndraft: true\nquiz: []\n---\npropuesta\n' > "$S/blog/esqueleto.qmd"
+confirmar "borrador actualizado" blog/esqueleto.qmd
+espera 0 "9b. el borrador actualizado otra vez" hook
+printf -- '---\ntitle: Esqueleto\ndraft: false\n---\npublicado\n' > "$S/blog/esqueleto.qmd"
+confirmar "el borrador se publica" blog/esqueleto.qmd
+espera 1 "9c. el borrador pasa a publicado"
+printf '<html>v6</html>\n' > "$S/_site/index.html"
+confirmar "render" _site/index.html
+printf -- '---\ntitle: Entrada\ndraft: true\n---\ncuatro\n' > "$S/blog/entrada.qmd"
+confirmar "una página publicada pasa a borrador" blog/entrada.qmd
+espera 1 "9d. una página publicada pasa a borrador"
+printf '<html>v7</html>\n' > "$S/_site/index.html"
+confirmar "render" _site/index.html
+printf -- '---\ntitle: Nota\n---\ndraft: true\n' > "$S/blog/nota.qmd"
+confirmar "draft en el cuerpo, no en el frontmatter" blog/nota.qmd
+espera 1 "9e. «draft: true» fuera del frontmatter no cuenta"
 if (( fallos )); then echo "prueba-puerta-r6: $fallos caso(s) fallaron"; exit 1; fi
 echo "prueba-puerta-r6: todos los casos dan lo esperado"

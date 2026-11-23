@@ -20,13 +20,26 @@ Método, por curso revisado y su pub (`docencia/scripts/areas.py pub <curso>`):
                 esqueleto de esa sección más `curso`, `tema` y `generado: curriculo`, y las secciones guía Objetivos,
                 Desarrollo, Ejemplos, Ejercicios, Autoevaluación y Recursos. Si el título del tema cambió, se actualiza
                 solo `title:` de los esqueletos generados que siguen sin texto.
+  e) propuesta  (plan «aprender y enseñar», fase 4.3, 2026-11-24) si docencia sabe algo del tema, el esqueleto nace
+                lleno: bajo cada sección guía, un comentario «Propuesta» con lo que da `docencia/scripts/leccion.py`
+                (los resultados del alineamiento que el tema trabaja, las ideas de los apuntes del autor que lo declaran
+                como «Curso anfitrión», lo estudiado en el curso tomado y las fichas propias por `calibre_id`, las
+                preguntas abiertas del banco y las fuentes). Todo va en comentarios: no se publica ni cuenta como
+                palabra, y el autor escribe. Un esqueleto generado que sigue sin texto se rellena igual (`rellenar`),
+                solo si su cuerpo es el del generador (el esqueleto vacío o la propuesta anterior, por su huella
+                `propuesta:`); si el autor tocó algo, se avisa y no se toca. Nunca se copia texto de material ajeno.
+  f) quiz       el `quiz:` del frontmatter de un esqueleto generado es una vista del banco: las preguntas del tema que
+                se corrigen solas, de `alineamiento.py exportar CURSO sNN --formato quiz`, con `quiz_origen:`. Se
+                inserta si falta (solo mientras el esqueleto siga sin texto) y se actualiza si el banco cambió; un `quiz:`
+                sin `quiz_origen` es del autor y no se toca.
   Idempotente: un tema que ya tiene un post con su `curso` + `tema` no recibe otro.
 Límite: no renderiza ni confirma (eso es scripts/render.sh y git en cada pub, docencia/contenido y el hub); no inventa
-  texto de lección; no mira nombres de estudiantes (el registro es sensible): solo los patrones del doctor.
+  texto de lección: la propuesta es estructura, preguntas y fuentes, en comentarios; no mira nombres de estudiantes (el
+  registro es sensible): solo los patrones del doctor. Sin `docencia/scripts/leccion.py`, los esqueletos nacen vacíos.
 Rutas por core/env.py (DOCS_ROOT, INDEX_DIR, CLASS_DIR, META_DIR).
 
 Uso:
-  python3 scripts/cursos.py [--pub PUB] [--curso CURSO]            # simula: qué declararía, retiraría, movería y crearía
+  python3 scripts/cursos.py [--pub PUB] [--curso CURSO]            # simula: qué declararía, retiraría, movería, crearía y rellenaría
   python3 scripts/cursos.py --aplicar [--pub PUB] [--curso CURSO]  # escribe
   python3 scripts/cursos.py verificar [--pub PUB] [--curso CURSO]  # 0 todo cuadra · 1 algo pendiente o incoherente
 Salida: 0 bien · 1 pendiente o incoherencia (verificar) o fallo al aplicar · 2 error de uso.
@@ -35,6 +48,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import importlib.util
 import re
 import subprocess
@@ -74,6 +88,10 @@ areas = _modulo("areas", CLASS / "scripts" / "areas.py")
 # El mapa define qué es «palabra real» (sin includes, comentarios, la frase de plantilla ni los encabezados guía):
 # se reutiliza su lector para que cursos.py y el mapa cuenten igual.
 mapa = _modulo("mapa_lecciones", CONTENIDO / "migracion" / "mapa-lecciones.py")
+# La propuesta de cada lección (fase 4.3) la arma docencia, dueña del currículo, del banco y de lo estudiado; sin ella,
+# los esqueletos nacen vacíos, como antes.
+_LECCION = CLASS / "scripts" / "leccion.py"
+leccion = _modulo("docencia_leccion", _LECCION) if _LECCION.is_file() else None
 
 GUIA = {  # sección → qué va allí (una línea, como comentario del esqueleto)
     "Objetivos": "qué podrá hacer el estudiante al terminar la lección: de tres a cinco objetivos observables (explicar, calcular, estimar, programar…).",
@@ -100,7 +118,8 @@ quiz:
     tolerancia: 0.01"""
 # claves del frontmatter del patrón que son de un post concreto y no pasan al esqueleto
 NO_COPIAR = {"aliases", "aliases_hub", "bibliography", "csl", "nocite", "execute", "jupyter", "format", "quiz", "date-modified",
-             "curso", "tema", "generado", "keep-ipynb"}
+             "curso", "tema", "generado", "keep-ipynb", "propuesta", "quiz_origen"}
+CABECERA = re.compile(r"<!-- Esqueleto generado desde el currículo .*?-->", re.S)
 FM = re.compile(r"^---\n(.*?)\n---\n", re.S)
 
 
@@ -143,7 +162,7 @@ def fijar_lineas(texto: str, cambios: dict[str, str]) -> str:
         i = next((k for k, x in enumerate(lineas) if re.match(rf"^{re.escape(clave)}:", x)), None)
         if i is not None:
             j = i + 1
-            while j < len(lineas) and lineas[j].startswith((" ", "\t")):
+            while j < len(lineas) and lineas[j].startswith((" ", "\t", "- ")):
                 j += 1
             lineas[i:j] = [linea]
         else:
@@ -154,6 +173,30 @@ def fijar_lineas(texto: str, cambios: dict[str, str]) -> str:
                 lineas.append(linea)
         previa = clave
     return "---\n" + "\n".join(lineas) + "\n---\n" + cuerpo
+
+
+def quitar_lineas(texto: str, claves: list[str]) -> str:
+    """Quita del frontmatter las claves dadas (con sus líneas de continuación); el resto, intacto."""
+    fm, cuerpo = partir(texto)
+    lineas, out, saltar = fm.split("\n"), [], False
+    for x in lineas:
+        if saltar and x.startswith((" ", "\t", "- ")):
+            continue
+        saltar = any(re.match(rf"^{re.escape(c)}:", x) for c in claves)
+        if not saltar:
+            out.append(x)
+    return "---\n" + "\n".join(out) + "\n---\n" + cuerpo
+
+
+def huella(cuerpo: str) -> str:
+    """La huella del cuerpo que escribió el generador: si sigue igual, el generador puede rehacerlo."""
+    return hashlib.sha256(cuerpo.encode("utf-8")).hexdigest()[:12]
+
+
+def bloque_quiz(quiz: list[dict]) -> str:
+    """`quiz:` con su lista sangrada, para cambiarlo en el frontmatter sin re-serializar el resto."""
+    cuerpo = yaml.safe_dump(quiz, allow_unicode=True, sort_keys=False, width=1000, default_flow_style=False)
+    return "quiz:\n" + "\n".join("  " + x for x in cuerpo.rstrip("\n").split("\n"))
 
 
 def patrones_sensibles() -> list[str]:
@@ -213,13 +256,46 @@ def leer_mapa() -> dict[str, dict]:
         return {r["ruta_post"]: r for r in csv.DictReader(f, delimiter=";")}
 
 
+# ── la propuesta (fase 4.3) ───────────────────────────────────────────────────────────────────────────────────
+
+_PROPUESTAS: dict[tuple[str, str], dict | None] = {}
+
+
+def propuesta(curso: dict, tid: str) -> dict | None:
+    """Lo que docencia propone para la lección del tema (`docencia/scripts/leccion.py`), o None si no hay leccion.py."""
+    clave = (curso["id"], tid)
+    if clave not in _PROPUESTAS:
+        _PROPUESTAS[clave] = leccion.proponer(curso["yml"].parent, tid) if leccion else None
+    return _PROPUESTAS[clave]
+
+
+def comentario_guia(sec: str) -> str:
+    guia = GUIA[sec]
+    return f"<!-- {guia[0].upper()}{guia[1:]}" + (f"\n{QUIZ_EJEMPLO}\n" if sec == "Autoevaluación" else " ") + "-->"
+
+
+def esqueleto_vacio(cuerpo: str) -> bool:
+    """El cuerpo es el del esqueleto vacío que escribe el generador: su cabecera, las secciones guía con su comentario,
+    la frase de plantilla y los include; nada más (ni texto ni comentarios del autor)."""
+    resto = CABECERA.sub(" ", cuerpo)
+    for sec in GUIA:
+        resto = resto.replace(comentario_guia(sec), " ")
+    resto = re.sub(r"^\{\{<\s*include\s.*?>\}\}\s*$", " ", resto, flags=re.M).replace(mapa.PLANTILLA, " ")
+    resto = re.sub(rf"^##\s*(?:{'|'.join(GUIA)})\s*$", " ", resto, flags=re.M)
+    return not resto.strip()
+
+
+def tiene_propuesta(prop: dict | None) -> bool:
+    return bool(prop and prop.get("hay"))
+
+
 # ── el plan ───────────────────────────────────────────────────────────────────────────────────────────────────
 
 def planear(curso: dict, posts: dict[str, dict], filas: dict[str, dict], resolver: dict[str, str]) -> dict:
     cid, pub = curso["id"], curso["pub"]
     temas = {t["id"]: t for t in curso["temas"]}
-    plan = {"declarar": [], "retirar": [], "notas": [], "esqueletos": [], "titulos": [], "problemas": [], "avisos": [],
-            "lecciones": defaultdict(list)}
+    plan = {"declarar": [], "retirar": [], "notas": [], "esqueletos": [], "titulos": [], "rellenar": [], "quiz": [],
+            "problemas": [], "avisos": [], "lecciones": defaultdict(list)}
     lec = plan["lecciones"]
     # 1. lo ya declarado en el frontmatter manda
     for p in posts.values():
@@ -307,6 +383,32 @@ def planear(curso: dict, posts: dict[str, dict], filas: dict[str, dict], resolve
         t = temas.get(p["tema_fm"])
         if t and p["palabras"] == 0 and str(p["fm"].get("title") or "") != t["titulo"]:
             plan["titulos"].append((p, t))
+    # 7. e) y f) la propuesta y el quiz de los esqueletos generados (fase 4.3)
+    for p in posts.values():
+        if str(p["fm"].get("generado") or "") != "curriculo" or resolver.get(p["curso_fm"]) != cid:
+            continue
+        t = temas.get(p["tema_fm"])
+        if not t:
+            continue
+        prop = propuesta(curso, t["id"])
+        cuerpo = partir(p["texto"])[1]
+        if tiene_propuesta(prop) and p["palabras"] == 0:
+            nuevo = "\n" + cuerpo_esqueleto(curso, t, p, prop)
+            if nuevo != cuerpo:
+                if esqueleto_vacio(cuerpo) or str(p["fm"].get("propuesta") or "") == huella(cuerpo):
+                    plan["rellenar"].append((p, t, prop))
+                else:
+                    plan["avisos"].append(f"tema {cid} {t['id']}: {p['rel']} tiene comentarios o cambios del autor; no se rellena "
+                                          f"(la propuesta: python3 docencia/scripts/leccion.py proponer {cid} {t['id']})")
+        quiz = (prop or {}).get("quiz") or []
+        actual, origen = p["fm"].get("quiz"), p["fm"].get("quiz_origen")
+        # se inserta solo en un esqueleto sin texto (con texto, quitarlo es decisión del autor y no se deshace); con
+        # `quiz_origen` se mantiene al día siempre
+        if (quiz and actual is None and p["palabras"] == 0) or (origen and (quiz != actual or (prop or {}).get("quiz_origen", "") != origen)):
+            plan["quiz"].append((p, t, quiz, (prop or {}).get("quiz_origen", "")))
+        elif quiz and actual is not None and not origen:
+            plan["avisos"].append(f"tema {cid} {t['id']}: {p['rel']} tiene un quiz escrito a mano; el banco tiene {len(quiz)} "
+                                  "pregunta(s) del tema (alineamiento.py exportar … --formato quiz)")
     return plan
 
 
@@ -331,7 +433,7 @@ def etiquetas_comunes(sec: str, posts: dict[str, dict]) -> list[str]:
 
 
 def frontmatter_nuevo(base: dict, curso: dict, tema: dict, pub: str, sec: str, carpeta: str, posts: dict,
-                      draft: bool, descripcion: str, generado: bool) -> str:
+                      draft: bool, descripcion: str, generado: bool, extra: dict | None = None) -> str:
     fm = {}
     for k, v in base.items():
         if k in NO_COPIAR:
@@ -357,6 +459,7 @@ def frontmatter_nuevo(base: dict, curso: dict, tema: dict, pub: str, sec: str, c
     fm["tema"] = tema["id"]
     if generado:
         fm["generado"] = "curriculo"
+    fm.update(extra or {})
     texto = yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, width=1000, default_flow_style=False)
     texto = re.sub(r"^tema: .*$", lambda _: linea_yaml("tema", tema["id"]).replace("'", '"'), texto, count=1, flags=re.M)
     return "---\n" + texto + "---\n"
@@ -369,13 +472,27 @@ def includes(base_post: dict | None) -> str:
     return ("\n" + "\n\n".join(lineas) + "\n") if lineas else ""
 
 
-def cuerpo_esqueleto(curso: dict, tema: dict, base_post: dict | None) -> str:
-    out = [f"<!-- Esqueleto generado desde el currículo (docencia/contenido/cursos/{curso['id']}/curso.yml, tema {tema['id']}) "
-           f"por web/scripts/cursos.py. El cuerpo es del autor: el generador solo actualiza el título mientras siga sin texto. -->", ""]
+def cuerpo_esqueleto(curso: dict, tema: dict, base_post: dict | None, prop: dict | None = None) -> str:
+    """El cuerpo del esqueleto: las secciones guía con su indicación y, si docencia propone algo para el tema, la
+    propuesta de cada sección en un comentario aparte (no se publica ni cuenta como palabra; el autor escribe)."""
+    cabecera = (f"<!-- Esqueleto generado desde el currículo (docencia/contenido/cursos/{curso['id']}/curso.yml, tema {tema['id']}) "
+                f"por web/scripts/cursos.py. El cuerpo es del autor: el generador solo actualiza el título mientras siga sin texto.")
+    lineas = leccion.lineas(prop) if tiene_propuesta(prop) else {}
+    if lineas:
+        cabecera += (" Cada «Propuesta» la armó docencia/scripts/leccion.py desde el alineamiento, tus apuntes, tus fichas, el "
+                     "curso tomado y el banco: estructura, preguntas y fuentes. El texto es tuyo; nada ajeno se copia. Mientras "
+                     "el cuerpo siga como lo dejó el generador (su huella en `propuesta:`), la propuesta se rehace sola.")
+    out = [cabecera + " -->", ""]
     if base_post and mapa.PLANTILLA in base_post["texto"]:
         out += [mapa.PLANTILLA, ""]
-    for sec, guia in GUIA.items():
-        out += [f"## {sec}", "", f"<!-- {guia[0].upper()}{guia[1:]}" + (f"\n{QUIZ_EJEMPLO}\n" if sec == "Autoevaluación" else " ") + "-->", ""]
+    for sec in GUIA:
+        out += [f"## {sec}", ""]
+        if sec == "Autoevaluación" and lineas and (prop or {}).get("quiz"):
+            out += [f"<!-- {GUIA[sec][0].upper()}{GUIA[sec][1:]} -->", ""]   # el quiz ya está: sin el ejemplo del bloque
+        else:
+            out += [comentario_guia(sec), ""]
+        if lineas.get(sec):
+            out += ["<!-- Propuesta:\n" + "\n".join(lineas[sec]) + "\n-->", ""]
     return "\n".join(out) + includes(base_post)
 
 
@@ -457,16 +574,41 @@ def aplicar(curso: dict, plan: dict, posts: dict[str, dict]) -> list[str]:
     for t, destino in plan["esqueletos"]:
         sec = destino.parent.name
         base = patron(pub, sec, posts)
+        prop = propuesta(curso, t["id"])
+        cuerpo = "\n" + cuerpo_esqueleto(curso, t, base, prop)
+        extra = {}
+        if tiene_propuesta(prop):
+            extra["propuesta"] = huella(cuerpo)
+            if prop.get("quiz"):
+                extra |= {"quiz_origen": prop["quiz_origen"], "quiz": prop["quiz"]}
         fm = frontmatter_nuevo(base["fm"] if base else {}, curso, t, pub, sec, destino.name, posts, draft=True,
-                               descripcion=f"Lección {t['id']} de {curso['titulo']}: {t['titulo']}.", generado=True)
+                               descripcion=f"Lección {t['id']} de {curso['titulo']}: {t['titulo']}.", generado=True, extra=extra)
         destino.mkdir(parents=True)
-        (destino / "index.qmd").write_text(fm + "\n" + cuerpo_esqueleto(curso, t, base), encoding="utf-8")
-        hechos.append(f"esqueleto {destino.relative_to(DOCS)}")
+        (destino / "index.qmd").write_text(fm + cuerpo, encoding="utf-8")
+        hechos.append(f"esqueleto {destino.relative_to(DOCS)}" + (" (con propuesta)" if extra else ""))
     # títulos
     for p, t in plan["titulos"]:
         texto = p["qmd"].read_text(encoding="utf-8")
         p["qmd"].write_text(fijar_lineas(texto, {"title": linea_yaml("title", t["titulo"])}), encoding="utf-8")
         hechos.append(f"título {p['rel']} → «{t['titulo']}»")
+    # e) rellenar con la propuesta (solo comentarios; la huella permite rehacerla mientras nadie la toque)
+    for p, t, prop in plan["rellenar"]:
+        texto = p["qmd"].read_text(encoding="utf-8")
+        fm, _ = partir(texto)
+        cuerpo = "\n" + cuerpo_esqueleto(curso, t, p, prop)
+        nuevo = fijar_lineas("---\n" + fm + "\n---\n" + cuerpo, {"propuesta": linea_yaml("propuesta", huella(cuerpo))})
+        p["qmd"].write_text(nuevo, encoding="utf-8")
+        hechos.append(f"propuesta {p['rel']} ({leccion.resumen(prop)})")
+    # f) el quiz, vista del banco
+    for p, t, quiz, origen in plan["quiz"]:
+        texto = p["qmd"].read_text(encoding="utf-8")
+        if quiz:
+            nuevo = fijar_lineas(texto, {"quiz_origen": linea_yaml("quiz_origen", origen), "quiz": bloque_quiz(quiz)})
+        else:
+            nuevo = quitar_lineas(texto, ["quiz_origen", "quiz"])
+        if nuevo != texto:
+            p["qmd"].write_text(nuevo, encoding="utf-8")
+            hechos.append(f"quiz {p['rel']} ({len(quiz)} pregunta(s) del banco)" if quiz else f"quiz retirado {p['rel']} (el banco ya no tiene)")
     return hechos
 
 
@@ -477,7 +619,7 @@ def informe(curso: dict, plan: dict) -> None:
     con = sum(1 for t in curso["temas"] if plan["lecciones"].get(t["id"]))
     print(f"== {curso['pub']} · {curso['id']}: {n} temas · {con} con lección · declarar {len(plan['declarar'])} · "
           f"retirar {len(plan['retirar'])} · notas {len(plan['notas'])} · esqueletos {len(plan['esqueletos'])} · "
-          f"títulos {len(plan['titulos'])}")
+          f"títulos {len(plan['titulos'])} · propuestas {len(plan['rellenar'])} · quiz {len(plan['quiz'])}")
     for p, tid, por in plan["declarar"]:
         print(f"   declarar  {tid:5} {p['rel']}  ({por})")
     for p, motivo in plan["retirar"]:
@@ -485,9 +627,15 @@ def informe(curso: dict, plan: dict) -> None:
     for t, nota, destino in plan["notas"]:
         print(f"   nota      {t['id']:5} {nota.relative_to(CURSOS)} → {destino.relative_to(DOCS)}/index.qmd")
     for t, destino in plan["esqueletos"]:
-        print(f"   esqueleto {t['id']:5} {destino.relative_to(DOCS)}")
+        prop = propuesta(curso, t["id"])
+        print(f"   esqueleto {t['id']:5} {destino.relative_to(DOCS)}" + (f"  (con propuesta: {leccion.resumen(prop)})"
+                                                                         if tiene_propuesta(prop) else ""))
     for p, t in plan["titulos"]:
         print(f"   título    {t['id']:5} {p['rel']} → «{t['titulo']}»")
+    for p, t, prop in plan["rellenar"]:
+        print(f"   propuesta {t['id']:5} {p['rel']}  ({leccion.resumen(prop)})")
+    for p, t, quiz, _ in plan["quiz"]:
+        print(f"   quiz      {t['id']:5} {p['rel']}  ({len(quiz)} pregunta(s) del banco)")
     for x in plan["avisos"]:
         print(f"   aviso: {x}")
     for x in plan["problemas"]:
@@ -518,30 +666,32 @@ def main(argv: list[str]) -> int:
         print(f"cursos revisados sin pub: {', '.join(sin_pub)}", file=sys.stderr)
         cursos = [c for c in cursos if c["id"] not in sin_pub]
     filas = leer_mapa()
-    pendientes = problemas = 0
+    pendientes = problemas = propuestas = 0
     hechos_total = []
     for pub in sorted({c["pub"] for c in cursos}):
         posts = leer_posts(pub)
         for curso in sorted((c for c in cursos if c["pub"] == pub), key=lambda c: c["id"]):
             plan = planear(curso, posts, filas, resolver)
             informe(curso, plan)
-            n = sum(len(plan[k]) for k in ("declarar", "retirar", "notas", "esqueletos", "titulos"))
+            n = sum(len(plan[k]) for k in ("declarar", "retirar", "notas", "esqueletos", "titulos", "quiz"))
             pendientes += n
+            propuestas += len(plan["rellenar"])   # una propuesta por aplicar no es incoherencia: verificar no falla por ella
             problemas += len(plan["problemas"])
-            if a.aplicar and n:
+            if a.aplicar and (n or plan["rellenar"]):
                 hechos = aplicar(curso, plan, posts)
                 hechos_total += hechos
                 posts = leer_posts(pub)        # lo escrito cuenta para el curso siguiente del mismo pub
     print()
     if a.accion == "verificar":
         ok = pendientes == 0 and problemas == 0
-        print(f"{'OK' if ok else 'FALLA'}: {len(cursos)} curso(s) revisado(s) · {pendientes} acción(es) pendiente(s) · {problemas} problema(s)")
+        print(f"{'OK' if ok else 'FALLA'}: {len(cursos)} curso(s) revisado(s) · {pendientes} acción(es) pendiente(s) · {problemas} problema(s)"
+              + (f" · {propuestas} lección(es) que se pueden rellenar con su propuesta" if propuestas else ""))
         return 0 if ok else 1
     if a.aplicar:
         print(f"APLICADO: {len(hechos_total)} cambio(s) · {problemas} problema(s). Siguen: mapa-lecciones.py --aplicar, "
               "render y commits (web/scripts/README.md).")
         return 1 if problemas else 0
-    print(f"SIMULACIÓN: {pendientes} acción(es) · {problemas} problema(s); con --aplicar se escriben.")
+    print(f"SIMULACIÓN: {pendientes} acción(es) · {propuestas} propuesta(s) · {problemas} problema(s); con --aplicar se escriben.")
     return 0
 
 

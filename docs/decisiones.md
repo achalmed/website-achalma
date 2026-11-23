@@ -273,9 +273,23 @@ pub del curso: la que ya existe o un esqueleto en borrador listo para llenar. Po
   del tutor y con el frontmatter y los `include` de su sección, publicada (`draft: false`); el `archivo` del tema apunta al post, relativo a `DOCS_ROOT`, y
   la nota sale del repo privado. Antes se comprueba contra `meta/doctor/patrones_sensibles.txt`; el pub es público.
 
+- **La propuesta, en comentarios** (2026-11-24, fase 4.3 del plan «aprender y enseñar»). Cuando docencia sabe algo del
+  tema (`docencia/scripts/leccion.py`: los resultados que recuperan las preguntas del banco con ese `tema`, los apuntes
+  que lo declaran en «Curso anfitrión», el curso tomado, las fichas propias y las fuentes por `calibre_id`), el
+  esqueleto lleva bajo cada sección guía un comentario «Propuesta». Comentarios y no texto: no se publica, el mapa
+  sigue contando 0 palabras y el título se sigue actualizando. Un esqueleto generado que sigue vacío se rellena; uno
+  con propuesta se rehace solo si su cuerpo conserva la huella de `propuesta:`; si el autor tocó algo, se avisa y no se
+  toca. De lo ajeno solo pasan títulos y números de Calibre; el porqué completo, en `docencia/docs/decisiones.md`
+  § Currículo y publicación.
+- **El `quiz:` del esqueleto es una vista del banco**: las preguntas del tema que se corrigen solas, de
+  `alineamiento.py exportar CURSO sNN --formato quiz`, con `quiz_origen:`. Se inserta (mientras el esqueleto siga sin texto), se actualiza o se quita cuando
+  el banco cambia; un `quiz:` sin `quiz_origen` es del autor y no se toca. `fijar_lineas` cuenta ahora como
+  continuación de una clave las líneas `- …` de una lista de bloque, para poder cambiarlo sin re-serializar.
+
 Límite: el generador no renderiza ni confirma; tras `--aplicar` siguen `mapa-lecciones.py --aplicar`, el render del
 pub (`scripts/render.sh` y `--documentos --aplicar`), `scripts/pubs.py readme --aplicar` (los README cuentan las
 entradas) y los commits en el pub, en `docencia/contenido` y en el hub. Los cursos sin `temario: revisado` no entran.
+Para un dictado, ese recorrido (sin los commits ni el push) lo hace `docencia/scripts/publicar.py` (2026-11-24).
 
 ### 4.7 Retiro de `cursos/` (2026-10-20, fase 7 de `plataforma-educativa.md`)
 
@@ -300,6 +314,7 @@ lee de ahí (la portada de la edición y lo que cuelgue de ella van a la portada
 
 | id | qué | desde | dueño · estado |
 |---|---|---|---|
+| **propuestas de lección** | `scripts/cursos.py --aplicar` rellenaría hoy 7 lecciones generadas con su propuesta (6 de organización industrial en `optimums`, 1 de finanzas III en `pecunia-fluxus`); no se aplicó porque esos pubs tienen cambios sin confirmar de otra sesión. `scripts/test_cursos.py` es la primera prueba del repo: corre con `CLASS_DIR` en un `docencia` que tenga `scripts/leccion.py` y su contenido (se salta si falta) | 2026-11-24 | autor · aplicar cuando los pubs estén limpios |
 | **Netlify del hub** | **Resuelto el 2026-10-21.** El hub no se publicaba desde git desde el 2026-10-04 («This resource could not be found»): el sitio `achalmaedison` tenía `_site` como **directorio base** en la configuración de Netlify (como los pubs antes de la fase 7), no un problema de acceso al repo. Arreglo: `base = "/"` en `netlify.toml` (2b08a80), que desplegó solo; antes se publicó a mano el `_site` de main con `netlify deploy --prod` (CLI instalada y con sesión del autor). Comprobado: la 301 `/cursos/pre_economia/2014-i/sesiones/01-conceptos-basicos-de-economia/` → propaedeutica. Ese día se fijó también `NODE_VERSION = "22"` en el hub y los 12 pubs (Netlify avisaba de Node 16; si el aviso sigue: Site configuration → Build & deploy → Continuous deployment → Dependency management → Node.js 22.x) | 2026-10-20 | autor · resuelto 2026-10-21 |
 | **Netlify de propaedeutica** | **Resuelto el 2026-10-21**: sitio `propaedeutica` creado con la CLI de Netlify y enlazado a `achalmed/propaedeutica` (rama `main`, publish `_vitrina` por `netlify.toml`); primer despliegue listo, `https://propaedeutica.netlify.app/` y `/cursos/` dan 200, y la 301 del hub llega a una página que existe | 2026-10-21 | autor · resuelto 2026-10-21 |
 | **epsilon** | `epsilon-y-beta` renderizado entero el 2026-10-08 (ola 6, `scripts/render.sh`, LuaLaTeX): 247 archivos de `_site/`, sin salidas sueltas en las carpetas fuente; confirmado y R6 en verde, **sin push**. Queda el bloque de `.gitignore` de §4.2 (ya presente) | 2026-10-04 | autor · resuelto en local; publicar con la comparación de la ola 6 |

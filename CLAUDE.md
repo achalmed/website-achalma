@@ -61,7 +61,8 @@ python3 core/docs.py verificar "web"         # índice de docs/ al día
 git submodule status                              # en qué commit está cada blog respecto al hub
 ```
 
-No hay lint ni pruebas: se comprueba renderizando y mirando `_site/`. **Publicar el hub es `scripts/render.sh`
+No hay lint; la única prueba es `python3 -m pytest scripts/test_cursos.py -q` (el generador de lecciones, sobre un
+ecosistema de juguete; se salta sin `docencia/scripts/leccion.py`). Lo demás se comprueba renderizando y mirando `_site/`. **Publicar el hub es `scripts/render.sh`
 (render reproducible, solo HTML) → `scripts/comparar-produccion.py` → commit de `_site/` → `git push`**; **cada pub
 publica su vitrina**: render en el pub, `_aula/scripts/publicar.sh <pub> --aplicar`, commit de `_vitrina/` y push
 (`docs/despliegue-netlify.md`). Netlify sirve lo del repo, sin build. Por eso

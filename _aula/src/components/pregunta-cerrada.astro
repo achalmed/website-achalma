@@ -1,0 +1,72 @@
+---
+// pregunta-cerrada.astro — una pregunta del formato `quiz:` (docs/decisiones.md §1.7) como formulario que se corrige en el
+// navegador. La usan la autoevaluación de una lección y el repaso espaciado del curso; quien la contiene escucha su
+// `submit` y la corrige con src/scripts/pregunta.js (la lógica, sin DOM, en src/lib/quiz.mjs).
+// Si la pregunta de opción trae `retro` (el error común de cada distractor, alineado con `opciones`), al elegir un
+// distractor se muestra ese error junto con la respuesta correcta y la explicación (decisiones §1.24).
+interface Props { p: any; pid: string; numero?: number | string; oculta?: boolean }
+const { p, pid, numero, oculta = false } = Astro.props;
+// Solo lo que la corrección necesita; la explicación va en el marcado.
+const quiz = { tipo: p.tipo, correcta: p.correcta, respuesta: p.respuesta, tolerancia: p.tolerancia ?? 0, unidad: p.unidad, opciones: p.opciones, retro: p.retro };
+---
+<form class="pregunta" data-pregunta data-id={p.id} data-quiz={JSON.stringify(quiz)} hidden={oculta}>
+  <fieldset>
+    <legend>{numero != null && <span class="dato">{numero}.</span>} {p.enunciado}</legend>
+    {p.tipo === 'opcion' && (
+      <div class="opciones">
+        {(p.opciones ?? []).map((o, j) => (
+          <label data-opcion={j}><input type="radio" name={pid} value={j} required /> <span>{o}</span></label>
+        ))}
+      </div>
+    )}
+    {p.tipo === 'vf' && (
+      <div class="opciones en-linea">
+        <label data-opcion="true"><input type="radio" name={pid} value="true" required /> <span>Verdadero</span></label>
+        <label data-opcion="false"><input type="radio" name={pid} value="false" /> <span>Falso</span></label>
+      </div>
+    )}
+    {p.tipo === 'numerica' && (
+      <div class="numerica">
+        <label for={`${pid}-n`}>Tu respuesta{p.unidad ? ` (${p.unidad})` : ''}</label>
+        <input id={`${pid}-n`} name={pid} type="text" inputmode="decimal" autocomplete="off" required />
+      </div>
+    )}
+  </fieldset>
+  <div class="pie-pregunta">
+    <button class="boton chico" type="submit" data-comprobar>Comprobar</button>
+    <div class="devolucion" role="status" data-devolucion>
+      <p class="resultado" data-resultado></p>
+      <p class="retro" data-retro hidden><b>El error detrás de esa opción.</b> <span data-retro-texto></span></p>
+    </div>
+  </div>
+  {p.explicacion && <p class="explicacion" data-explicacion hidden><b>Por qué.</b> {p.explicacion}</p>}
+  <slot />
+</form>
+
+<style>
+  .pregunta { display: grid; gap: 0.75rem; padding: 1rem; border: 1px solid var(--linea); border-radius: var(--r-2); border-left-width: 3px; }
+  .pregunta[hidden] { display: none; }
+  .pregunta.bien { border-left-color: var(--acento); }
+  .pregunta.mal { border-left-color: var(--cod-numero); }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  legend { font-family: var(--f-lectura); font-size: 1.08rem; line-height: 1.5; padding: 0; margin-bottom: 0.6rem; }
+  legend .dato { color: var(--acento); }
+  .opciones { display: grid; gap: 0.35rem; }
+  .opciones.en-linea { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  .opciones label { display: flex; gap: 0.6rem; align-items: baseline; padding: 0.35rem 0.25rem; cursor: pointer; border-radius: var(--r-1); border: 1px solid transparent; }
+  .opciones label:hover { background: var(--papel-2); }
+  /* Tras comprobar: la correcta, con fondo; la elegida que no lo era, con borde punteado (el texto ya lo dice; el color no
+     es la única señal). */
+  .opciones label.es-correcta { background: var(--acento-suave); }
+  .opciones label.elegida-mal { border-style: dashed; border-color: var(--cod-numero); }
+  input[type='radio'] { accent-color: var(--acento); width: 1.05rem; height: 1.05rem; }
+  .numerica { display: grid; gap: 0.35rem; max-width: 16rem; }
+  .numerica label { font-size: var(--t-0); color: var(--tinta-2); }
+  .numerica input { min-height: 2.5rem; padding: 0.4rem 0.7rem; font: 1rem var(--f-datos); color: var(--tinta); background: var(--papel); border: 1px solid var(--linea-fuerte); border-radius: var(--r-2); }
+  .pie-pregunta { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.5rem 1rem; }
+  .devolucion { flex: 1 1 16rem; display: grid; gap: 0.4rem; min-width: 0; }
+  .resultado { font-size: var(--t-1); font-weight: 600; min-height: 1.5em; }
+  .bien .resultado { color: var(--acento); }
+  .retro { font-size: var(--t-1); color: var(--tinta); padding: 0.5rem 0.7rem; border-left: 3px solid var(--cod-numero); background: var(--papel-2); border-radius: 0 var(--r-1) var(--r-1) 0; }
+  .explicacion { font-size: var(--t-1); color: var(--tinta-2); border-top: 1px dashed var(--linea); padding-top: 0.6rem; }
+</style>

@@ -11,7 +11,9 @@ Rigen las reglas del `CLAUDE.md` raíz de `~/Documents`: aquí solo lo que el ra
 ## Reglas propias
 
 - **Solo lee las fuentes; nunca las escribe**: `docencia` (currículo: `curso.yml`, `docencia/config/areas.yml`), los pubs
-  (`web/_pubs/<pub>`), `simuladores` (`catalogo.json`). Rutas por `core/env.py` / `core/env.sh`.
+  (`web/_pubs/<pub>`), `simuladores` (`catalogo.json`). Rutas por `core/env.py` / `core/env.sh`. La clave de una
+  pregunta del banco no se lee de `recuperacion.yml`: sale de su exportador (`alineamiento.py exportar --formato quiz`,
+  decisiones §1.25).
 - **Rutas dinámicas por `src/integracion/rutas.mjs`** (`injectRoute`), nunca carpetas con corchetes bajo `src/pages/`; archivos y
   componentes en kebab-case.
 - **Nada de datos de estudiantes en el repo** (regla 8): el aula con cuenta guarda sus datos fuera, con respaldo cifrado.

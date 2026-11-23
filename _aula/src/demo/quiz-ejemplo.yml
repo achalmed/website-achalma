@@ -9,7 +9,22 @@ quiz:
       - En la base de datos del aula
       - En curso.yml
     correcta: 0
+    retro:
+      - null
+      - Confundir la práctica con el examen calificado, que sí vive en la API del aula.
+      - Confundir el registro del curso (su temario) con el contenido de cada lección.
     explicacion: Las preguntas de práctica viajan con la lección; el aula con cuenta (fase 6) guardará los exámenes calificados.
+  - tipo: opcion
+    enunciado: ¿De dónde salen las preguntas del repaso espaciado de un curso?
+    opciones:
+      - De una copia del banco guardada en el aula
+      - Del banco de cada sesión en docencia, por su exportador
+      - De lo que el estudiante respondió antes
+    correcta: 1
+    retro:
+      - Creer que el aula guarda su propia copia; la fuente es una sola y el aula solo la lee.
+      - null
+    explicacion: El build llama a alineamiento.py exportar; el navegador solo guarda cuándo toca volver a cada pregunta.
   - tipo: vf
     enunciado: Las respuestas de un examen calificado pueden viajar en una página estática.
     respuesta: false

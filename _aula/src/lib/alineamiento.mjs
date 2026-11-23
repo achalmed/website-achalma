@@ -6,6 +6,8 @@
 // escritura/config/entrega/rubrica.schema.yml); 03-sesiones/sNN-*/sesion.yml y recuperacion.yml.
 // Las claves del banco (`respuesta`, `explicacion`) nunca entran al modelo: de cada pregunta se copian solo los campos
 // de PREGUNTA_PUBLICA; las claves se revisan en la puesta en común de la clase (y viajan en el mazo, que es aparte).
+// Lo que propuso la IA y no se verificó (`origen.autor: llm` sin `verificacion: verificada`) no se muestra: la misma regla
+// que `publicable()` de docencia/scripts/alineamiento.py (FLUJO_DE_CONOCIMIENTO C3.3; decisiones §1.24).
 
 import * as F from './fuentes.mjs';
 
@@ -22,6 +24,14 @@ const TIPO_EVALUACION = { formativa: 'Formativa', sumativa: 'Sumativa' };
 const PREGUNTA_PUBLICA = ['id', 'resultado', 'tipo', 'enunciado', 'opciones'];
 
 const numeroDe = (carpeta) => carpeta.slice(0, 3);   // s01-diseno-… → s01
+
+/** La pregunta puede salir al estudiante: no es una propuesta de la IA pendiente de verificar (`publicable()` de
+ *  docencia/scripts/alineamiento.py). */
+export function publicable(p) {
+  const org = p?.origen;
+  return !(org && typeof org === 'object' && org.autor === 'llm' && org.verificacion !== 'verificada');
+}
+const publicables = (banco) => (Array.isArray(banco?.preguntas) ? banco.preguntas.filter(publicable) : []);
 
 function rubrica(dirCurso, ruta, mide) {
   const r = F.rubricaDeCurso(dirCurso, ruta);
@@ -52,7 +62,7 @@ export function aprendizajeDelCurso(curso, avisos = []) {
   const al = curso.alineamiento ?? null;
   const pia = curso.politica_ia?.regla ? curso.politica_ia : null;
   const sesiones = dir ? F.sesionesDeCurso(dir) : [];
-  const conBanco = sesiones.filter((s) => Array.isArray(s.banco?.preguntas) && s.banco.preguntas.length);
+  const conBanco = sesiones.filter((s) => publicables(s.banco).length);
   if (!al && !pia && !conBanco.length) return null;
 
   const tituloSesion = new Map(sesiones.map((s) => [s.carpeta, s.sesion.titulo ?? s.carpeta]));
@@ -103,11 +113,12 @@ export function aprendizajeDelCurso(curso, avisos = []) {
     titulo: tituloSesion.get(s.carpeta),
     resultados: resultadosDe.get(s.carpeta),
     fuente: s.banco.fuente ?? null,
-    preguntas: s.banco.preguntas.map((p) => Object.fromEntries(PREGUNTA_PUBLICA.filter((k) => p[k] != null).map((k) => [k, p[k]]))),
+    preguntas: publicables(s.banco).map((p) => Object.fromEntries(PREGUNTA_PUBLICA.filter((k) => p[k] != null).map((k) => [k, p[k]]))),
     mazo: null,   // modelo.mjs lo enlaza si alguna edición publicó practice/mazo.tsv de esta sesión
   }));
 
   return {
+    repasar: repasoDelCurso(curso, conBanco, tituloSesion, avisos),
     alcance: al?.alcance ?? null,
     fuente: al?.fuente ?? null,
     resultados,
@@ -117,4 +128,35 @@ export function aprendizajeDelCurso(curso, avisos = []) {
     repaso,
     fuenteRepaso: conBanco[0]?.banco.fuente ?? null,
   };
+}
+
+/**
+ * Las preguntas cerradas de los bancos del curso, con su clave, para el repaso espaciado de su página «Repasar»
+ * (src/rutas/curso-repasar.astro; decisiones §1.25). Vienen del exportador de docencia (F.quizDeSesion), no de leer aquí
+ * `respuesta`: la clave del ítem tiene un solo dueño. null si ninguna sesión tiene preguntas que se corrijan solas o si el
+ * exportador no corre (entonces, un aviso y la página no se genera).
+ */
+function repasoDelCurso(curso, conBanco, tituloSesion, avisos) {
+  const preguntas = [];
+  const sesiones = [];
+  for (const s of conBanco) {
+    let quiz;
+    try {
+      quiz = F.quizDeSesion(curso._dir, s.carpeta);
+    } catch (e) {
+      avisos.push(`${curso.id}: sin página de repaso, el exportador del banco falló (${e.message})`);
+      return null;
+    }
+    const delBanco = new Set(publicables(s.banco).map((p) => String(p.id)));
+    const propias = quiz.filter((q) => {
+      if (delBanco.has(String(q.id))) return true;
+      avisos.push(`${curso.id}: el exportador dio la pregunta ${q.id}, que la vitrina no ve en ${s.carpeta}/recuperacion.yml`);
+      return false;
+    });
+    if (!propias.length) continue;
+    const numero = numeroDe(s.carpeta);
+    sesiones.push({ numero, titulo: tituloSesion.get(s.carpeta), n: propias.length });
+    for (const q of propias) preguntas.push({ ...q, sesion: numero });
+  }
+  return preguntas.length ? { preguntas, sesiones, url: `/cursos/${curso.id}/repasar/` } : null;
 }

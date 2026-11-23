@@ -56,6 +56,7 @@ export const RUTAS = {
   cursos: join(CLASS_DIR, 'contenido', 'cursos'),
   dictados: join(CLASS_DIR, 'contenido', 'dictados'),
   mapaLecciones: join(CLASS_DIR, 'contenido', 'migracion', 'mapa-lecciones.csv'),
+  alineamiento: join(CLASS_DIR, 'scripts', 'alineamiento.py'),   // el exportador del banco (`exportar --formato quiz`)
   pubs: join(INDEX_DIR, '_pubs'),
   pubsYml: join(INDEX_DIR, '_pubs', 'pubs.yml'),
   cursosWeb: join(INDEX_DIR, 'cursos'),

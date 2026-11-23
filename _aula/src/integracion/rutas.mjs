@@ -4,6 +4,7 @@
 const RUTAS = [
   ['/blog/[slug]', './src/rutas/blog-entrada.astro'],
   ['/cursos/[curso]', './src/rutas/curso.astro'],
+  ['/cursos/[curso]/repasar', './src/rutas/curso-repasar.astro'], // solo si el curso tiene preguntas cerradas (decisiones §1.25)
   ['/cursos/[curso]/[leccion]', './src/rutas/leccion.astro'],
   ['/ediciones/[id]', './src/rutas/edicion.astro'],
   ['/laboratorio/[modelo]', './src/rutas/laboratorio-modelo.astro'],

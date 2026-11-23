@@ -3,12 +3,15 @@
 // docencia: config/areas.yml, contenido/cursos/*/curso.yml, contenido/dictados/*/dictado.yml,
 //           contenido/migracion/mapa-lecciones.csv; de cada curso, sus sesiones (03-sesiones/sNN-*/sesion.yml), su banco
 //           de recuperación (recuperacion.yml) y sus rúbricas (01-diseno/rubricas/*.yml), estándar de docencia §10
+//           y, por su exportador (scripts/alineamiento.py exportar CURSO sNN --formato quiz, que solo imprime), las
+//           preguntas cerradas de cada banco con su clave, para el repaso espaciado (decisiones §1.25)
 // web:      _pubs/pubs.yml, _pubs/<pub>/**/index.qmd (frontmatter) y su _site/ ya renderizado,
 //           cursos/<materia>/<edicion>/ (páginas y materiales de las ediciones, hasta la fase 5)
 // simuladores: catalogo.json y navegador.json (los modelos que corren en el navegador y los .py que necesitan)
 // divulgacion: catalogo.json (piezas audiovisuales con su currículo y sus publicaciones)
 // aula:     config/vitrina.yml (presentación de cada pub: acento y nombre visible)
 
+import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { load } from 'js-yaml';
@@ -81,6 +84,26 @@ export function sesionesDeCurso(dirCurso) {
       sesion: yaml(join(base, d, 'sesion.yml')) ?? {},
       banco: existsSync(join(base, d, 'recuperacion.yml')) ? yaml(join(base, d, 'recuperacion.yml')) ?? null : null,
     }));
+}
+
+/**
+ * Las preguntas cerradas del banco de una sesión, con su clave, tal como las da el exportador de docencia
+ * (`alineamiento.py exportar <curso> <sNN> --formato quiz`): la clave del ítem se calcula allí y en ningún otro lugar, y
+ * lo que propuso la IA sin verificar ya viene fuera. [] si la sesión no tiene ninguna pregunta que se corrija sola.
+ * Lanza un error si el exportador no corre (sin python3, sin PyYAML o con el banco mal formado): quien llama lo vuelve
+ * aviso. PYTHON fija el intérprete (por omisión, python3).
+ */
+export function quizDeSesion(dirCurso, carpeta) {
+  try {
+    const salida = execFileSync(process.env.PYTHON || 'python3', [RUTAS.alineamiento, 'exportar', dirCurso, carpeta, '--formato', 'quiz'], {
+      encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], timeout: 60_000,
+    });
+    return load(salida)?.quiz ?? [];
+  } catch (e) {
+    // Salida 1 con «ninguna pregunta que exportar»: la sesión solo tiene abiertas (o numéricas sin `valor`).
+    if (e.status === 1 && /ninguna pregunta que exportar/.test(String(e.stderr))) return [];
+    throw new Error(`alineamiento.py exportar ${carpeta}: ${String(e.stderr || e.message).trim().split('\n').pop()}`);
+  }
 }
 
 /** Una rúbrica del curso (ruta relativa a la carpeta del curso, como la declara curso.yml); null si no existe. */

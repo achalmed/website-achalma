@@ -23,7 +23,7 @@ scripts/publicar.sh methodica [--aplicar]  # cambio del pub a la vitrina: constr
 npm run vista:methodica                    # sirve dist/methodica en http://127.0.0.1:4331 (npx astro preview stop lo detiene)
 npm run vista:numerus-scriptum             # ídem en el puerto 4332
 npm run vista:aequilibria                  # ídem en el 4333 (IS-LM en /laboratorio/m10/); vista:epsilon-y-beta en el 4334 (TCL en /laboratorio/e67/)
-npm run prueba                             # prueba de los vídeos de divulgacion (src/lib/videos.mjs) con datos de muestra
+npm run prueba                             # pruebas de los vídeos (src/lib/videos.mjs) y de la autoevaluación y el repaso espaciado (quiz.mjs, espaciado.mjs, alineamiento.mjs; con el exportador de docencia)
 PUB=methodica npm run dev                  # desarrollo con recarga; incluye /demo/autoevaluacion/
 AULA_DEMO=1 PUB=methodica npm run build    # build con las páginas de demostración (autoevaluación y vídeos, /demo/…)
 node scripts/tokens.mjs                    # simula la regeneración de la paleta desde el hub (--aplicar escribe)
@@ -52,6 +52,8 @@ deja `dist/<pub>/_redirects` (las URL viejas del pub) y un informe de los datos 
 | `src/rutas/laboratorio-*.astro` | `/laboratorio/` y `/laboratorio/<id>/`: el modelo de simuladores en el navegador (decisiones §1.20) |
 | `src/lib/grafico-lab.mjs`, `src/scripts/laboratorio*.js` | el gráfico SVG del laboratorio (build y navegador) y el trabajador con Pyodide |
 | `src/lib/videos.mjs` | los vídeos de divulgacion por tema (decisiones §1.21) |
+| `src/lib/quiz.mjs`, `src/scripts/pregunta.js`, `src/components/pregunta-cerrada.astro` | una pregunta del `quiz:` y su corrección con retroalimentación por distractor, compartida por la autoevaluación y el repaso (decisiones §1.24) |
+| `src/rutas/curso-repasar.astro`, `src/lib/espaciado.mjs` | `/cursos/<curso>/repasar/`: repaso espaciado de las preguntas cerradas del banco, desde el exportador de docencia, con el calendario en `localStorage` (decisiones §1.25) |
 | `src/lib/marca.mjs`, `imagenes.mjs`, `iconos.mjs` | el colofón en la página y en archivos (favicon, PNG, Open Graph), la miniatura de cada tarjeta y los íconos (decisiones §1.16–§1.18) |
 | `src/styles/` | `paleta.generado.css` (GENERADO desde el hub), `tokens.css` (roles y acentos), `base.css`, `contenido.css` |
 | `src/scripts/almacen.js` | progreso y preferencias del visitante en `localStorage` |

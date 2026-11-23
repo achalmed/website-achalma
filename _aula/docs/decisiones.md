@@ -91,6 +91,7 @@ quiz:
     enunciado: "…"
     opciones: ["…", "…", "…"]
     correcta: 0         # índice desde 0
+    retro: [null, "…", "…"]   # opcional, alineada con opciones: el error común de cada distractor (§1.24)
     explicacion: "…"    # opcional, se muestra al comprobar
   - tipo: vf
     enunciado: "…"
@@ -102,7 +103,9 @@ quiz:
     unidad: "%"         # opcional
 ```
 
-Es práctica: la respuesta viaja en la página. Los exámenes con nota se corrigen en la API (plan §4.5). Ninguna
+Es práctica: la respuesta viaja en la página. Los exámenes con nota se corrigen en la API (plan §4.5). La lista no
+se escribe a mano: la da `docencia/scripts/alineamiento.py exportar CURSO sNN --formato quiz` desde el banco de la
+sesión (estándar de docencia §10.2), que es la única fuente del ítem y de su clave. Ninguna
 lección tiene `quiz:` todavía; la página `/demo/autoevaluacion/` (preguntas de muestra sobre el propio
 componente) solo existe con `npm run dev` o al construir con `AULA_DEMO=1`, y lo dice en pantalla.
 
@@ -355,3 +358,64 @@ en la edición sale como «Mazo de repaso para Anki». Una edición en `estado: 
 ahora, marcada «En construcción» (la etiqueta de un curso en borrador); una sesión sin título en `dictado.yml` ni
 página en el pub toma el de su `sesion.yml`. Sin estilos nuevos: las filas del temario, los desplegables de las
 unidades y las tablas de las lecciones.
+
+### §1.24 Retroalimentación por distractor; la vitrina no muestra lo que la IA propuso sin verificar (2026-11-24)
+
+**Retroalimentación por distractor.** Si una pregunta de opción trae `retro` (la da el exportador de docencia desde
+`errores: [{opcion, error}]` del ítem), al elegir un distractor la devolución dice, además de que no es correcta y cuál
+es la respuesta, el error común que delata esa opción («El error detrás de esa opción»), y luego la explicación. La
+correcta nunca muestra `retro`, aunque la lista la traiga; un distractor sin error escrito, tampoco. Cada pregunta es
+ahora un componente propio (`src/components/pregunta-cerrada.astro`) que comparten la autoevaluación de una lección y
+el repaso espaciado (§1.25); la corrección, sin DOM, vive en `src/lib/quiz.mjs` (probada en `scripts/prueba-repaso.mjs`)
+y la devolución en `src/scripts/pregunta.js`. Accesible: el resultado, el error común y la respuesta correcta van en
+una sola región `role="status"`, que el lector de pantalla anuncia de una vez; la opción correcta se marca con fondo y
+la elegida con borde punteado, pero el texto lo dice todo (el color no es la única señal); todo se maneja con teclado.
+Que la retroalimentación siga al intento y nombre el error es decisión de diseño: la obra que lo funda (Butler y
+Roediger, 2008) no está en Calibre (`docencia/estado.md` § Por hacer).
+
+**Lo que propuso la IA sin verificar no se muestra.** `src/lib/alineamiento.mjs` aplica al banco de cada sesión la
+misma regla que `publicable()` de `docencia/scripts/alineamiento.py`: una pregunta con `origen.autor: llm` y
+`verificacion` distinta de `verificada` (o sin ella) no entra en la página del curso, ni cuenta para decidir si la
+sesión tiene banco (FLUJO_DE_CONOCIMIENTO C3.3; estándar de docencia §10.2). Las demás siguen sin claves (§1.23).
+
+### §1.25 Repaso espaciado del curso, en el navegador (2026-11-24)
+
+**Qué.** Un curso con preguntas que se corrigen solas en sus bancos (`opcion`, `vf` y `numerica` con `valor`) tiene la
+página `/cursos/<curso>/repasar/` (`src/rutas/curso-repasar.astro`), enlazada desde «Repaso de cada sesión» de su
+portada, que dice cuántas tocan hoy. Las preguntas vuelven por cajas de Leitner: cada acierto seguido las aleja 1, 3,
+7, 14 y 30 días (el techo se repite); un fallo las devuelve a la caja 0 y vuelven al final de la vuelta de hoy, hasta
+acertarlas (y entonces, mañana). La vuelta de hoy pone primero las vencidas (la más atrasada antes) y luego hasta diez
+nuevas, en el orden del curso; cada grupo alterna las sesiones. El estudiante elige qué sesiones repasa (las que ya vio
+en clase) y puede borrar su calendario. Una pregunta a la vez; «Comprobar» se vuelve «Siguiente pregunta» en el mismo
+botón, así el foco no salta, y el título de la vuelta («Pregunta N · quedan M») recibe el foco en cada pregunta.
+
+**Por qué así.** Probarse y repartir la práctica son las dos técnicas más eficaces de las revisadas (Dunlosky, 2013,
+p. 13, Calibre 11124); conviene probarse con devolución hasta recordar cada pregunta al menos una vez y volver a
+acertarla otro día (p. 14); estudiar
+en bloques breves repartidos en la semana, con lo nuevo y lo anterior (p. 15), e intercalar temas (p. 16). El
+intervalo que mejor retiene crece con el plazo hasta la prueba; para plazos de 6 meses o más es de al menos un mes, y
+los intervalos que crecen rinden igual o mejor que los fijos (Cepeda et al., 2006, p. 366, Calibre 11159). Medido
+contra el plazo, el intervalo óptimo baja del 20-40 % de una semana al 5-10 % de un año; para 35 y 70 días fue de 11 y
+21 días (Cepeda et al., 2008, pp. 1095 y 1099, Calibre 11265). Un semestre son unos 120 días: el techo de 30 queda en
+ese orden y los primeros pasos sostienen las semanas de clase. Las cifras exactas (1, 3, 7, 14, 30; diez nuevas por
+día; afianzada desde la caja 4) son decisión de diseño, no de las obras, y se revisan con los resultados de la prueba
+antes y después del curso (`alineamiento.py pre-post`).
+
+**Fuente única.** Las preguntas y sus claves salen, en el build, del exportador de docencia: `src/lib/fuentes.mjs`
+(`quizDeSesion`) llama a `python3 docencia/scripts/alineamiento.py exportar <curso> <sNN> --formato quiz` por cada
+sesión con banco (la orden solo imprime; nada se escribe en docencia). Así la clave del ítem, la regla de qué se
+corrige solo y lo que la IA propuso sin verificar se deciden en un solo lugar; el aula no lee `respuesta`. Una
+llamada por sesión, y no una por curso, porque el `quiz:` no dice de qué sesión es cada pregunta. Si el exportador no
+corre (sin `python3` o sin PyYAML; `PYTHON` fija otro intérprete), la página no se genera y queda un aviso en
+`.cache/informe-<pub>.json`; si da una pregunta que la vitrina no ve en el banco, también. La respuesta viaja en la
+página, como en la autoevaluación y en el mazo para Anki.
+
+**Dónde se guarda.** Solo en el `localStorage` del visitante, `aula:<pub>:repaso:<curso>` =
+`{"v": 1, "sesiones": null | ["s01", …], "preguntas": {"<id>": {"caja", "proxima", "ultima", "aciertos", "fallos"}}}`,
+con las fechas locales (no las de UTC). Son id de preguntas y fechas: nada personal. No se sincroniza con el aula con
+cuenta (ella sincroniza solo `completadas`, §1.6); sin almacenamiento (ventana privada) se puede repasar y la página lo
+avisa. Un estado de otra versión o roto se descarta (`normalizar`). El calendario es `src/lib/espaciado.mjs`, sin DOM,
+probado en `scripts/prueba-repaso.mjs`.
+
+**Límite.** Si una pregunta cambia de texto y conserva su `id`, su calendario sigue: el `id` es el del banco. La ruta
+`/cursos/<curso>/repasar/` le gana a una lección con slug `repasar` (no hay ninguna).

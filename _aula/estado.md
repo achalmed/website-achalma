@@ -1,7 +1,7 @@
 ---
 tipo: estado
 estado: activo
-actualizado: 2026-11-18
+actualizado: 2026-11-24
 ---
 # estado.md — web/_aula
 
@@ -9,6 +9,7 @@ actualizado: 2026-11-18
 
 | fecha | qué | dónde se ve |
 |---|---|---|
+| 2026-11-24 | Plan «aprender y enseñar», fases 5.1 y 5.2. **Retroalimentación por distractor** en la autoevaluación (`retro` del `quiz:`: el error común de la opción elegida, con la respuesta y la explicación, en una región `role="status"`); cada pregunta es `pregunta-cerrada.astro`, compartida. **La vitrina del banco deja fuera lo que la IA propuso sin verificar**, con la regla de `alineamiento.py`. **Repaso espaciado** en `/cursos/<curso>/repasar/`: las preguntas cerradas del banco, desde el exportador de docencia (`alineamiento.py exportar --formato quiz`, una llamada por sesión en el build), con cajas de 1, 3, 7, 14 y 30 días en el `localStorage` del visitante y el aviso de cuántas tocan hoy en la portada del curso. Probado: `npm run prueba` 18 de 18 (con el banco real de econometria-i), build de epsilon-y-beta (36 páginas, 0 enlaces rotos), en el navegador a 375 px y escritorio, claro y oscuro, con teclado y sin errores en la consola | `docs/decisiones.md` §1.24–§1.25 · `scripts/prueba-repaso.mjs` |
 | 2026-11-18 | La página del curso muestra el estándar §10 de docencia: resultados de aprendizaje con su evidencia y su sesión, evaluación con su uso de IA, rúbricas y el repaso de cada sesión sin claves, con el enlace al mazo para Anki cuando una edición lo publicó; ediciones en borrador marcadas «En construcción». Probado con econometria-i en epsilon-y-beta (build hacia `~/.cache/aula-ensayo/`, 375 px y escritorio, 0 enlaces rotos) | `docs/decisiones.md` §1.23 |
 | 2026-10-21 | Simuladores en el navegador (fase 3): `/laboratorio/<id>/` con el mismo `base.Modelo` en Pyodide 0.29.5 (Web Worker), deslizadores, escenarios, «Restablecer», ficha y figura SVG idéntica en el build y en vivo; 41 modelos con página (aequilibria 22, epsilon-y-beta 18, optimums 1), pilotos IS-LM y TCL; Lighthouse móvil 97/100/100/100. Vídeos de divulgacion por tema (fase 8), probados con datos de muestra (`npm run prueba`, `/demo/videos/`) | `docs/decisiones.md` §1.20–§1.21 · `docs/img/laboratorio-*.webp`, `docs/img/videos-demo.webp` |
 | 2026-10-20 | Mejoras visuales sobre «Quiet Laboratory» (tras descartar una estética de macOS): íconos Lucide, búsqueda ⌘K, cabecera en los bloques de código, banda de cifras, tarjetas con imagen propia o índice, pie «La familia», colofón de los 12 sitios (favicon, PNG y Open Graph), lectura de tablas y figuras; fuentes más ligeras y CSS en línea; Lighthouse móvil 96–98/100/100/100 en methodica | `docs/decisiones.md` §1.16–§1.19 · `docs/img/` |
@@ -38,6 +39,10 @@ local (2026-10-20), sin publicar; siguiente paso: el dictado de prueba con cuent
 
 - 2026-10-21 · dueño: director · Medir el laboratorio en un celular real con red móvil (la primera carga de Pyodide se midió en la laptop) y decidir si hace falta la vista ligera precalculada por escenario (`web/docs/plataforma-educativa.md` §4.8).
 - 2026-10-21 · dueño: autor · Publicar los vídeos: cuando una pieza registre `publicaciones:` con url en divulgacion y se regenere su `catalogo.json`, el siguiente build de cada pub la muestra en la lección de su tema.
+
+- 2026-11-24 · dueño: director · Llevar el `quiz:` del banco a la lección de cada tema (fase 5.1 del plan): hoy el banco es por sesión y la lección por tema; el ítem ya admite `tema`, pero ningún banco lo usa. Decidir si el build lo arma por `tema` (sin escribir en los pubs) o si la lección declara su sesión.
+- 2026-11-24 · dueño: autor · Para que la retroalimentación por distractor se vea con datos reales, los bancos de `econometria-i` necesitan sus `errores` por distractor (y las numéricas, `valor`): hoy 5 de 16 preguntas entran al repaso y ninguna trae `retro` (`docencia/estado.md` § Por hacer).
+- 2026-11-24 · dueño: director · Probar `/cursos/<curso>/repasar/` en un celular real con un lector de pantalla (TalkBack) y revisar, con los resultados de la prueba antes y después del curso, los intervalos 1, 3, 7, 14 y 30.
 
 ## Futuro
 

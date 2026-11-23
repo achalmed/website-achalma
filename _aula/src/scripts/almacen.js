@@ -41,6 +41,35 @@ export function reemplazarCompletadas(v) {
   document.dispatchEvent(new CustomEvent('aula:progreso', { detail: { sincronizado: true } }));
   return ok;
 }
+/** El calendario del repaso espaciado de un curso (`aula:<pub>:repaso:<curso>`, decisiones §1.25): solo los id de las
+ *  preguntas con su caja y sus fechas; nada personal y nada que salga del navegador (no se sincroniza con el aula). */
+export const claveRepaso = (curso) => `aula:${pub()}:repaso:${curso}`;
+export function leerRepaso(curso) {
+  return leer(claveRepaso(curso), null);
+}
+export function guardarRepaso(curso, estado) {
+  return escribir(claveRepaso(curso), estado);
+}
+export function borrarRepaso(curso) {
+  try {
+    localStorage.removeItem(claveRepaso(curso));
+    return true;
+  } catch {
+    return false;
+  }
+}
+/** Si este navegador deja guardar (en una ventana privada o con el almacenamiento bloqueado, no). */
+export function sePuedeGuardar() {
+  try {
+    const k = 'aula:prueba';
+    localStorage.setItem(k, '1');
+    localStorage.removeItem(k);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function preferencia(nombre, defecto) {
   return leer(`aula:${nombre}`, defecto);
 }

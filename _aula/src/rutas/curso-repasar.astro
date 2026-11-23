@@ -1,0 +1,285 @@
+---
+// «Repasar» de un curso: las preguntas cerradas de los bancos de sus sesiones vuelven según un calendario espaciado que
+// se guarda en el navegador del visitante (decisiones §1.25). Solo existe si el curso tiene alguna pregunta que se
+// corrige sola; sus preguntas y sus claves salen de `docencia/scripts/alineamiento.py exportar --formato quiz`
+// (src/lib/alineamiento.mjs → repasoDelCurso). El calendario: src/lib/espaciado.mjs; la vuelta: el script de abajo.
+import Base from '../layouts/base.astro';
+import PreguntaCerrada from '../components/pregunta-cerrada.astro';
+import { datos, plural } from '../lib/datos.mjs';
+import { valida } from '../lib/quiz.mjs';
+import { INTERVALOS, MAX_NUEVAS } from '../lib/espaciado.mjs';
+
+export function getStaticPaths() {
+  return datos().propios
+    .filter((curso) => curso.aprendizaje?.repasar)
+    .map((curso) => ({ params: { curso: curso.id }, props: { curso } }));
+}
+const { curso } = Astro.props;
+const rep = curso.aprendizaje.repasar;
+const preguntas = rep.preguntas.filter(valida);
+const indice = preguntas.map((p) => ({ id: String(p.id), sesion: p.sesion }));
+const intervalosTxt = INTERVALOS.slice(1, -1).join(', ') + ' y ' + INTERVALOS.at(-1);   // tras el primero (1 día)
+---
+<Base titulo={`Repasar: ${curso.titulo}`} descripcion={`Repaso espaciado de las preguntas de cada sesión de ${curso.titulo}.`} seccion="cursos">
+  <div class="envoltura repasar">
+    <nav aria-label="Ruta"><ol class="migas"><li><a href="/cursos/">Cursos</a></li><li><a href={curso.url}>{curso.titulo}</a></li><li><span aria-current="page">Repasar</span></li></ol></nav>
+    <header class="cabeza">
+      <h1>Repasar</h1>
+      <p class="entrada">Las preguntas del banco de cada sesión de <a href={curso.url}>{curso.titulo}</a> vuelven cuando estás por olvidarlas:
+        si aciertas, al día siguiente y luego a los {intervalosTxt} días de la anterior; si fallas, otra vez hoy y de nuevo mañana. Pocos
+        minutos varias veces por semana fijan más que una noche de estudio.</p>
+      <p class="tenue privacidad">Tu calendario se guarda solo en este navegador: no hace falta cuenta y no se envía nada. Si borras los datos
+        del sitio o cambias de navegador, empieza de cero.</p>
+    </header>
+
+    <noscript><p class="aviso">El repaso necesita JavaScript. Sin él, las preguntas de cada sesión están en la
+      <a href={`${curso.url}#repaso`}>página del curso</a>.</p></noscript>
+
+    <section class="panel fin" aria-labelledby="t-fin" data-fin hidden>
+      <h2 id="t-fin" tabindex="-1">Listo por hoy</h2>
+      <p data-texto-fin></p>
+    </section>
+
+    <section class="panel hoy" aria-labelledby="t-hoy" data-hoy hidden>
+      <h2 id="t-hoy">Hoy</h2>
+      <p class="estado-hoy" data-estado-hoy></p>
+      <p class="tenue" data-sin-almacen hidden>Este navegador no deja guardar datos (¿ventana privada?): puedes repasar, pero el
+        calendario no se recordará.</p>
+      <div class="acciones">
+        <button type="button" class="boton primario" data-empezar hidden>Empezar</button>
+      </div>
+    </section>
+
+    <section class="panel vuelta" aria-labelledby="t-vuelta" data-vuelta hidden>
+      <div class="vuelta-cabeza">
+        <h2 id="t-vuelta" tabindex="-1" data-titulo-vuelta>Pregunta</h2>
+        <button type="button" class="boton chico" data-terminar>Terminar por hoy</button>
+      </div>
+      <div class="formularios">
+        {preguntas.map((p, i) => <PreguntaCerrada p={p} pid={`rep-${i}`} oculta />)}
+      </div>
+    </section>
+
+    <div class="rejilla">
+      <section class="panel" aria-labelledby="t-calendario" data-calendario hidden>
+        <h2 id="t-calendario">Tu calendario</h2>
+        <dl class="cifras-repaso">
+          <div><dt>Sin ver</dt><dd class="dato" data-n="nuevas">0</dd></div>
+          <div><dt>Aprendiendo</dt><dd class="dato" data-n="aprendiendo">0</dd></div>
+          <div><dt>Afianzadas</dt><dd class="dato" data-n="afianzadas">0</dd></div>
+        </dl>
+        <p class="tenue">Afianzada: la acertaste varias veces seguidas y vuelve a dos semanas o más.</p>
+        <h3>Próximos 14 días</h3>
+        <ol class="dias" data-dias></ol>
+        <p class="tenue" data-despues hidden></p>
+      </section>
+
+      <section class="panel" aria-labelledby="t-sesiones" data-sesiones hidden>
+        <h2 id="t-sesiones">Qué sesiones repasas</h2>
+        <p class="tenue">Deja fuera las que aún no viste en clase: recuperar sirve sobre lo que ya estudiaste.</p>
+        <fieldset>
+          <legend class="sr">Sesiones del curso</legend>
+          {rep.sesiones.map((s) => (
+            <label class="sesion"><input type="checkbox" value={s.numero} checked data-sesion /> <span class="dato">{s.numero}</span> <span>{s.titulo}</span> <span class="tenue">{plural(s.n, 'pregunta', 'preguntas')}</span></label>
+          ))}
+        </fieldset>
+        <button type="button" class="boton chico" data-borrar>Borrar mi calendario de este curso</button>
+        <p class="tenue" role="status" data-borrado></p>
+      </section>
+    </div>
+
+    <p class="fuente tenue">Solo entran las preguntas que se corrigen solas (de opción, verdadero o falso y numéricas); las
+      abiertas se trabajan en clase. Hasta {MAX_NUEVAS} preguntas nuevas por día. Por qué: práctica de recuperación y
+      práctica distribuida (Dunlosky, 2013); el intervalo que mejor retiene crece con el plazo (Cepeda et al., 2006, 2008).</p>
+  </div>
+  <script type="application/json" id="repaso-datos" set:html={JSON.stringify({ curso: curso.id, preguntas: indice })} />
+</Base>
+
+<script>
+  import { comprobar, reiniciar } from '../scripts/pregunta.js';
+  import { leerRepaso, guardarRepaso, borrarRepaso, sePuedeGuardar } from '../scripts/almacen.js';
+  import { normalizar, registrar, vueltaDeHoy, calendario, resumen, fechaLocal, MAX_NUEVAS } from '../lib/espaciado.mjs';
+
+  const datos = JSON.parse(document.getElementById('repaso-datos')?.textContent || '{}');
+  const curso: string = datos.curso;
+  const preguntas: { id: string; sesion: string }[] = datos.preguntas ?? [];
+  const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
+  const formularios = new Map<string, HTMLFormElement>();
+  document.querySelectorAll<HTMLFormElement>('.formularios [data-pregunta]').forEach((f) => formularios.set(f.dataset.id!, f));
+
+  const guarda = sePuedeGuardar();
+  let estado = normalizar(leerRepaso(curso));
+  const hoy = () => fechaLocal();
+  const plural = (n: number, uno: string, varios: string) => `${n} ${n === 1 ? uno : varios}`;
+  const FECHA = new Intl.DateTimeFormat('es-PE', { weekday: 'long', day: 'numeric', month: 'long' });
+  const fechaTxt = (iso: string) => { const [a, m, d] = iso.split('-').map(Number); return FECHA.format(new Date(a, m - 1, d)); };
+  const guardar = () => { if (guarda) guardarRepaso(curso, estado); };
+
+  // ── Lo que toca hoy, el calendario y las sesiones elegidas ────────────────────────────────────────────
+  function pintar() {
+    const { vencidas, nuevas, nuevasRestantes } = vueltaDeHoy(estado, preguntas, hoy());
+    const n = vencidas.length + nuevas.length;
+    const r = resumen(estado, preguntas);
+    const empezar = $<HTMLButtonElement>('[data-empezar]');
+    let texto;
+    if (r.total === 0) texto = 'No elegiste ninguna sesión: marca abajo las que quieres repasar.';
+    else if (n === 0) {
+      const prox = calendario(estado, preguntas, hoy(), 3650).filas[0];
+      texto = `Nada pendiente hoy.${prox ? ` La próxima vuelta es el ${fechaTxt(prox.fecha)} (${plural(prox.n, 'pregunta', 'preguntas')}).` : ''}`;
+    } else {
+      const partes = [vencidas.length && plural(vencidas.length, 'para repasar', 'para repasar'), nuevas.length && plural(nuevas.length, 'nueva', 'nuevas')].filter(Boolean);
+      texto = `Hoy te tocan ${plural(n, 'pregunta', 'preguntas')}: ${partes.join(' y ')}.${nuevasRestantes ? ` Quedan ${nuevasRestantes} sin ver para los próximos días (hasta ${MAX_NUEVAS} nuevas por día).` : ''}`;
+    }
+    $('[data-estado-hoy]').textContent = texto;
+    empezar.hidden = n === 0;
+    empezar.textContent = `Empezar (${plural(n, 'pregunta', 'preguntas')})`;
+
+    for (const k of ['nuevas', 'aprendiendo', 'afianzadas'] as const) $(`[data-n="${k}"]`).textContent = String(r[k]);
+    const { filas, despues } = calendario(estado, preguntas, hoy(), 14);
+    const lista = $('[data-dias]');
+    lista.replaceChildren(...(filas.length ? filas.map((f) => {
+      const li = document.createElement('li');
+      const dia = document.createElement('span');
+      dia.textContent = f.en === 1 ? `Mañana, ${fechaTxt(f.fecha)}` : fechaTxt(f.fecha).replace(/^./, (c) => c.toUpperCase());
+      const cuantas = document.createElement('span');
+      cuantas.className = 'dato';
+      cuantas.textContent = plural(f.n, 'pregunta', 'preguntas');
+      li.append(dia, cuantas);
+      return li;
+    }) : [Object.assign(document.createElement('li'), { className: 'tenue', textContent: 'Nada programado todavía: empieza con las de hoy.' })]));
+    const des = $('[data-despues]');
+    des.hidden = despues === 0;
+    des.textContent = `Y ${plural(despues, 'pregunta', 'preguntas')} más adelante.`;
+    document.querySelectorAll<HTMLInputElement>('[data-sesion]').forEach((c) => { c.checked = !estado.sesiones || estado.sesiones.includes(c.value); });
+  }
+
+  // ── La vuelta: una pregunta a la vez; la que se falla vuelve al final de la vuelta ───────────────────
+  let cola: string[] = [];
+  let hechas = 0, primera = 0, aLaPrimera = 0;
+  let actual: HTMLFormElement | null = null;
+  const vistas = new Set<string>();
+
+  function mostrar(id: string | undefined) {
+    actual?.setAttribute('hidden', '');
+    if (!id) return terminar();
+    actual = formularios.get(id) ?? null;
+    if (!actual) { cola.shift(); return mostrar(cola[0]); }
+    reiniciar(actual);
+    actual.dataset.comprobada = '';
+    const boton = actual.querySelector<HTMLButtonElement>('[data-comprobar]')!;
+    boton.textContent = 'Comprobar';
+    actual.hidden = false;
+    const titulo = $<HTMLElement>('[data-titulo-vuelta]');
+    titulo.textContent = `Pregunta ${hechas + 1} · ${plural(cola.length, 'queda', 'quedan')} en la vuelta de hoy`;
+    titulo.focus();
+  }
+
+  function empezar() {
+    const { vencidas, nuevas } = vueltaDeHoy(estado, preguntas, hoy());
+    cola = [...vencidas, ...nuevas].map((p) => p.id);
+    hechas = 0; primera = 0; aLaPrimera = 0; vistas.clear();
+    $('[data-hoy]').hidden = true;
+    $('[data-fin]').hidden = true;
+    $('[data-vuelta]').hidden = false;
+    mostrar(cola[0]);
+  }
+
+  function terminar() {
+    actual?.setAttribute('hidden', '');
+    actual = null;
+    $('[data-vuelta]').hidden = true;
+    const fin = $('[data-fin]');
+    const prox = calendario(estado, preguntas, hoy(), 3650).filas[0];
+    const pendientes = cola.length;
+    $('[data-texto-fin]').textContent = [
+      primera ? `Acertaste ${aLaPrimera} de ${plural(primera, 'pregunta', 'preguntas')} a la primera.` : 'No respondiste ninguna pregunta.',
+      pendientes ? `${plural(pendientes, 'queda', 'quedan')} para hoy: vuelve cuando quieras.` : '',
+      prox ? `La próxima vuelta: ${fechaTxt(prox.fecha)}.` : '',
+    ].filter(Boolean).join(' ');
+    fin.hidden = false;
+    $('[data-hoy]').hidden = false;
+    pintar();
+    $<HTMLElement>('#t-fin').focus();
+  }
+
+  formularios.forEach((f) => {
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (f !== actual) return;
+      const boton = f.querySelector<HTMLButtonElement>('[data-comprobar]')!;
+      if (f.dataset.comprobada) {   // segunda pulsación: la siguiente (el foco no se mueve del botón)
+        hechas++;
+        return mostrar(cola[0]);
+      }
+      const r = comprobar(f);
+      if (!r) return;
+      const id = f.dataset.id!;
+      const bien = r === 'bien';
+      if (!vistas.has(id)) { vistas.add(id); primera++; if (bien) aLaPrimera++; }
+      registrar(estado, id, bien, hoy());
+      guardar();
+      cola.shift();
+      if (!bien) cola.push(id);   // hasta acertarla una vez hoy (y entonces, mañana)
+      f.dataset.comprobada = '1';
+      boton.textContent = cola.length ? 'Siguiente pregunta' : 'Terminar';
+    });
+  });
+
+  $('[data-empezar]').addEventListener('click', empezar);
+  $('[data-terminar]').addEventListener('click', () => terminar());
+  document.querySelectorAll<HTMLInputElement>('[data-sesion]').forEach((c) => c.addEventListener('change', () => {
+    const marcadas = [...document.querySelectorAll<HTMLInputElement>('[data-sesion]')].filter((x) => x.checked).map((x) => x.value);
+    estado.sesiones = marcadas.length === preguntas.reduce((s, p) => s.add(p.sesion), new Set<string>()).size ? null : marcadas;
+    guardar();
+    pintar();
+  }));
+  $('[data-borrar]').addEventListener('click', () => {
+    if (!window.confirm('¿Borrar tu calendario de repaso de este curso? Las preguntas volverán como nuevas.')) return;
+    borrarRepaso(curso);
+    estado = normalizar(null);
+    $('[data-borrado]').textContent = 'Calendario borrado.';
+    $('[data-fin]').hidden = true;
+    pintar();
+  });
+
+  $('[data-sin-almacen]').hidden = guarda;
+  for (const s of ['[data-hoy]', '[data-calendario]', '[data-sesiones]']) $(s).hidden = false;
+  pintar();
+</script>
+
+<style>
+  .repasar { padding-block: 2rem 3rem; display: grid; gap: 1.5rem; max-width: 60rem; }
+  .cabeza { display: grid; gap: 0.75rem; }
+  .cabeza h1 { font-size: var(--t-5); }
+  .entrada { font-family: var(--f-lectura); font-size: 1.15rem; line-height: 1.55; color: var(--tinta-2); max-width: 62ch; }
+  .privacidad { max-width: 62ch; }
+  .aviso { padding: 0.9rem 1rem; border: 1px dashed var(--linea-fuerte); border-radius: var(--r-2); }
+  .panel { display: grid; gap: 0.75rem; align-content: start; padding: 1.25rem; border: 1px solid var(--linea-fuerte); border-radius: var(--r-3); background: var(--elevado); }
+  .panel[hidden] { display: none; }
+  .panel h2 { font-size: var(--t-4); }
+  .panel h3 { font-size: var(--t-2); margin-top: 0.5rem; }
+  .estado-hoy { font-size: 1.05rem; }
+  .acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .vuelta-cabeza { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; }
+  .vuelta-cabeza h2 { font-size: var(--t-2); font-family: var(--f-datos); font-weight: 500; color: var(--tinta-2); }
+  .vuelta-cabeza h2:focus { outline: none; }
+  .vuelta-cabeza h2:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+  .fin h2:focus { outline: none; }
+  .rejilla { display: grid; gap: 1.5rem; }
+  @media (min-width: 860px) { .rejilla { grid-template-columns: 1fr 1fr; } }
+  .cifras-repaso { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--linea); border-radius: var(--r-2); }
+  .cifras-repaso div { padding: 0.6rem 0.75rem; }
+  .cifras-repaso div + div { border-left: 1px solid var(--linea); }
+  .cifras-repaso dt { font-size: var(--t-0); color: var(--tenue); }
+  .cifras-repaso dd { font-size: 1.3rem; margin-top: 0.15rem; }
+  /* Las filas las crea el script: :global para que el estilo con ámbito de Astro las alcance. */
+  .dias { list-style: none; display: grid; }
+  .dias :global(li) { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding-block: 0.55rem; border-top: 1px solid var(--linea); font-size: var(--t-1); }
+  .dias :global(li.tenue) { color: var(--tenue); }
+  fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 0.25rem; min-width: 0; }
+  .sesion { display: flex; flex-wrap: wrap; gap: 0.25rem 0.6rem; align-items: baseline; padding: 0.4rem 0.25rem; border-radius: var(--r-1); cursor: pointer; }
+  .sesion:hover { background: var(--papel-2); }
+  .sesion input { accent-color: var(--acento); width: 1.05rem; height: 1.05rem; }
+  .sesion .dato { color: var(--acento); }
+  .fuente { font-size: var(--t-0); max-width: 70ch; }
+</style>

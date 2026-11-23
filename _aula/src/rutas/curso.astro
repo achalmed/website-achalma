@@ -209,6 +209,12 @@ const sesionesTxt = (lista) => lista.map((x) => `${x.numero} ${x.titulo}`).join(
       <section class="aprendizaje" id="repaso" aria-labelledby="t-repaso">
         <h2 id="t-repaso">Repaso de cada sesión</h2>
         <p class="tenue">Preguntas para responder sin mirar apuntes al inicio de la clase siguiente; las respuestas se revisan en la puesta en común. Recuperar lo aprendido, y volver a hacerlo con días de distancia, fija más que releer.</p>
+        {ap.repasar && (
+          <p class="repasar-enlace" data-repaso-curso={curso.id} data-repaso-indice={JSON.stringify(ap.repasar.preguntas.map((q) => ({ id: String(q.id), sesion: q.sesion })))}>
+            <a class="boton primario chico" href={ap.repasar.url}>Repasar con calendario</a>
+            <span class="tenue" data-repaso-hoy>{plural(ap.repasar.preguntas.length, 'pregunta se corrige sola', 'preguntas se corrigen solas')} y vuelven según un calendario espaciado que se guarda en este navegador.</span>
+          </p>
+        )}
         <div class="unidades">
           {ap.repaso.map((r) => (
             <details>
@@ -288,8 +294,22 @@ const sesionesTxt = (lista) => lista.map((x) => `${x.numero} ${x.titulo}`).join(
 </Base>
 
 <script>
-  import { completadas, pintarProgreso } from '../scripts/almacen.js';
+  import { completadas, pintarProgreso, leerRepaso } from '../scripts/almacen.js';
+  import { normalizar, vueltaDeHoy, fechaLocal } from '../lib/espaciado.mjs';
   pintarProgreso();
+  // Cuántas preguntas del repaso espaciado tocan hoy (decisiones §1.25), solo si el visitante ya empezó.
+  const repaso = document.querySelector<HTMLElement>('[data-repaso-curso]');
+  if (repaso) {
+    const crudo = leerRepaso(repaso.dataset.repasoCurso!);
+    if (crudo) {
+      let indice = [];
+      try { indice = JSON.parse(repaso.dataset.repasoIndice || '[]'); } catch {}
+      const { vencidas, nuevas } = vueltaDeHoy(normalizar(crudo), indice, fechaLocal());
+      const n = vencidas.length + nuevas.length;
+      const t = repaso.querySelector<HTMLElement>('[data-repaso-hoy]');
+      if (t) t.textContent = n ? `Hoy te ${n === 1 ? 'toca 1 pregunta' : `tocan ${n} preguntas`}.` : 'Nada pendiente hoy en tu repaso.';
+    }
+  }
   const boton = document.querySelector<HTMLAnchorElement>('[data-continuar]');
   if (boton) {
     const ids = (boton.dataset.ids || '').split(' ');
@@ -363,6 +383,8 @@ const sesionesTxt = (lista) => lista.map((x) => `${x.numero} ${x.titulo}`).join(
   .columna { display: grid; gap: 3rem; align-content: start; min-width: 0; }
   .aprendizaje { display: grid; gap: 0.75rem; align-content: start; }
   .aprendizaje h2 { margin-bottom: 0.25rem; }
+  .repasar-enlace { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+  .repasar-enlace .tenue { font-size: var(--t-0); max-width: 48ch; }
   .aprendizaje > .tenue, .regla { max-width: 62ch; }
   .aprendizaje > .temas { border-top: 1px solid var(--linea); padding-bottom: 0; }
   .t-cuerpo { display: grid; gap: 0.3rem; min-width: 0; }
